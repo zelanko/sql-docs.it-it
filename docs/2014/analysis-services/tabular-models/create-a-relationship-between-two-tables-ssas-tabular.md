@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067543"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Creare una relazione tra due tabelle (SSAS tabulare)
@@ -49,7 +49,7 @@ ms.locfileid: "66067543"
   
 6.  Per **Colonna di ricerca correlata**, selezionare una colonna che dispone di valori univoci che corrispondono ai valori della colonna selezionata per **Colonna**.  
   
-7.  Fare clic su **Crea**.  
+7.  Scegliere **Crea**.  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Per creare una relazione tra due tabelle in Vista dati  
   
@@ -67,9 +67,9 @@ ms.locfileid: "66067543"
   
 5.  Per **Colonna di ricerca correlata**, selezionare una colonna che dispone di valori univoci che corrispondono ai valori della colonna selezionata per **Colonna**.  
   
-6.  Fare clic su **Crea**.  
+6.  Scegliere **Crea**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eliminare relazioni &#40;SSAS tabulare&#41;](delete-relationships-ssas-tabular.md)   
  [Relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md)  
   

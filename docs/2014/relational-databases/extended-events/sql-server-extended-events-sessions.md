@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705758"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessioni Eventi estesi di SQL Server
@@ -50,7 +50,7 @@ ms.locfileid: "62705758"
   
  Nella figura seguente viene illustrato il contenuto di una sessione e la relazione tra pacchetti e sessioni.  
   
- ![Coesistenza e condivisione di oggetti nelle sessioni](../../database-engine/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
+ ![Coesistenza e condivisione di oggetti nelle sessioni.](../../database-engine/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
   
  Con riferimento all'illustrazione precedente, si noti che:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62705758"
   
  L'architettura degli eventi estesi fornisce un sistema flessibile che consente a una varietà di oggetti di essere utilizzata insieme per risolvere problemi specifici.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](extended-events.md)  
   
   

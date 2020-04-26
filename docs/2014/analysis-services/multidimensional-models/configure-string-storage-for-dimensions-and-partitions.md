@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076535"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
   È possibile riconfigurare l'archiviazione di stringhe per contenere stringhe molto grandi in attributi di dimensione o partizioni che superano il limite di dimensioni del file di 4 GB impostato per gli archivi di stringhe. Se nelle dimensioni o partizioni sono inclusi archivi di stringhe di queste dimensioni, è possibile risolvere il problema del vincolo delle dimensioni file modificando la proprietà **StringStoresCompatibilityLevel** a livello di dimensione o di partizione, per oggetti locali nonché collegati (locali o remoti).  
   
- Si noti che è possibile aumentare l'archivio di stringhe solo per gli oggetti che richiedono una capacità aggiuntiva. Nella maggior parte dei modelli multidimensionali i dati di tipo stringa sono associati alle dimensioni. Tuttavia, anche le partizioni che contengono misure Distinct Count basate su stringhe possono trarre vantaggio da questa impostazione. Poiché l'impostazione è relativa alle stringhe, i dati numerici non sono interessati.  
+ Si noti che è possibile aumentare l'archivio di stringhe solo per gli oggetti che richiedono una capacità aggiuntiva. Nella maggior parte dei modelli multidimensionali i dati di tipo stringa sono associati alle dimensioni. Tuttavia, anche le partizioni che contengono misure totale valori distinti basate su stringhe possono trarre vantaggio da questa impostazione. Poiché l'impostazione è relativa alle stringhe, i dati numerici non sono interessati.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
@@ -38,30 +38,30 @@ ms.locfileid: "66076535"
   
 -   [Prerequisiti](#bkmk_prereq)  
   
--   [Passaggio 1: impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools](#bkmk_step1)  
+-   [Passaggio 1: Impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools](#bkmk_step1)  
   
--   [Passaggio 2: elaborare gli oggetti](#bkmk_step2)  
+-   [Passaggio 2: Elaborazione degli oggetti](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a>Informazioni sugli archivi di stringhe  
+##  <a name="about-string-stores"></a><a name="bkmk_background"></a>Informazioni sugli archivi di stringhe  
  La configurazione dell'archiviazione di stringhe è facoltativa, pertanto anche nei nuovi database creati viene usata l'architettura predefinita soggetta al limite massimo di 4 GB per le dimensioni dei file. L'utilizzo di questa architettura più ampia comporta un lieve ma percettibile impatto sulle prestazioni. È necessario utilizzarla solo se le dimensioni dei file dell'archivio di stringhe sono prossime o al limite massimo di 4 GB.  
   
 > [!NOTE]  
 >  Questa impostazione non si applica ai modelli di data mining. Attualmente è comunque possibile riscontrare il limite delle dimensioni dei file di GB nei modelli contenenti strutture di data mining.  
   
- In un database multidimensionale di Analysis Services le stringhe vengono archiviate separatamente dai dati numerici per consentire l'ottimizzazione in base alle caratteristiche dei dati. I dati in formato stringa sono contenuti in genere negli attributi di dimensione che rappresentano nomi o descrizioni, ma possono essere presenti anche nelle misure Distinct Count o essere utilizzati nelle chiavi.  
+ In un database multidimensionale di Analysis Services le stringhe vengono archiviate separatamente dai dati numerici per consentire l'ottimizzazione in base alle caratteristiche dei dati. I dati in formato stringa sono contenuti in genere negli attributi di dimensione che rappresentano nomi o descrizioni, ma possono essere presenti anche nelle misure totale valori distinti o essere utilizzati nelle chiavi.  
   
  È possibile identificare un archivio di stringhe in base all'estensione file (ad esempio, file con estensione asstore, bstore, ksstore o string). Per impostazione predefinita, ognuno di questi file è soggetto a un limite massimo di 4 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]è possibile ignorare le dimensioni massime del file specificando un meccanismo di archiviazione alternativo che consente di aumentare le dimensioni dell'archivio di stringhe in base alle necessità.  
   
  Diversamente dall'architettura dell'archivio di stringhe predefinita che comporta un limite delle dimensioni fisiche del file, l'archivio di stringhe più ampio è basato su un numero massimo di stringhe. Il limite massimo per questo tipo di archivio è 4 miliardi di stringhe univoche o 4 miliardi di record, a seconda della condizione che si verifica per prima. L'archivio di stringhe più ampio consente di creare record di dimensioni pari, dove ogni record corrisponde a una pagina di 64 KB. Se si dispone di stringhe molto lunghe che non rientrano in un solo record, il limite effettivo sarà minore di 4 miliardi di stringhe.  
   
-##  <a name="bkmk_prereq"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Prerequisiti  
  È necessario disporre della versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o di una versione successiva.  
   
  Per le dimensioni e le partizioni deve essere utilizzata l'archiviazione MOLAP.  
   
  Il livello di compatibilità del database deve essere impostato su 1100. Se è stato creato o distribuito un database usando [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o una versione successiva, il livello di compatibilità del database è già impostato su 1100. Se è stato spostato un database creato in una versione precedente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in ssSQL11 o versione successiva, è necessario aggiornare il livello di compatibilità. Per database spostati ma non ridistribuiti è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per impostare il livello di compatibilità. Per ulteriori informazioni, vedere [impostare il livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a>Passaggio 1: impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools  
+##  <a name="step-1-set-the-stringstorecompatiblitylevel-property-in-sql-server-data-tools"></a><a name="bkmk_step1"></a>Passaggio 1: impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools  
   
 1.  Se si usa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto contenente le dimensioni o le partizioni che si desidera modificare.  
   
@@ -79,14 +79,14 @@ ms.locfileid: "66076535"
   
 8.  Salvare il file.  
   
-##  <a name="bkmk_step2"></a>Passaggio 2: elaborare gli oggetti  
+##  <a name="step-2-process-the-objects"></a><a name="bkmk_step2"></a>Passaggio 2: elaborare gli oggetti  
  La nuova architettura di archiviazione verrà utilizzata dopo l'elaborazione degli oggetti. Questa operazione consente di dimostrare anche la corretta risoluzione del problema relativo al vincolo dell'archivio in quanto l'errore, tramite cui era stata segnalata una precedente condizione di overflow dell'archivio di stringhe, non verrà più generato.  
   
 -   In Esplora soluzioni fare clic con il pulsante destro del mouse sulla dimensione appena modificata e selezionare **Elabora**.  
   
  È necessario utilizzare l'opzione Elaborazione completa su ogni oggetto in cui viene utilizzata la nuova architettura dell'archivio di stringhe. Prima dell'elaborazione, assicurarsi di eseguire un'analisi di impatto sulla dimensione per controllare se anche per gli oggetti dipendenti è necessaria la rielaborazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
  [Elaborazione e modalità di archiviazione delle partizioni](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   

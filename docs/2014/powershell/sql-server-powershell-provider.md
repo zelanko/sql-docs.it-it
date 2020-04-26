@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762843"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
@@ -46,7 +46,7 @@ ms.locfileid: "62762843"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oggetti come progetti, pacchetti e ambienti.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oggetti come cubi, aggregazioni e dimensioni.|  
   
- È ad esempio possibile utilizzare la cartella SQLSERVER:\SQL per iniziare percorsi che possono rappresentare qualsiasi oggetto supportato dal modello a oggetti SMO. La parte iniziale di un percorso SQLSERVER:\SQL è SQLSERVER:\SQL\\*NomeComputer*\\*NomeIstanza*. I nodi che seguono il nome dell'istanza possono essere raccolte di oggetti, come *Database* o *Viste*, e nomi di oggetti, ad esempio AdventureWorks2012. Gli schemi non sono rappresentati come classi di oggetti. Quando si specifica il nodo per un oggetto di livello principale in uno schema, ad esempio una tabella o una vista, è necessario specificare il nome dell'oggetto nel formato *NomeSchema.NomeOggetto*.  
+ È ad esempio possibile utilizzare la cartella SQLSERVER:\SQL per iniziare percorsi che possono rappresentare qualsiasi oggetto supportato dal modello a oggetti SMO. La parte principale di un percorso SqlServer: \ SQL è SqlServer: \ SQL\\*nomecomputer*\\*NomeIstanza*. I nodi che seguono il nome dell'istanza possono essere raccolte di oggetti, come *Database* o *Viste*, e nomi di oggetti, ad esempio AdventureWorks2012. Gli schemi non sono rappresentati come classi di oggetti. Quando si specifica il nodo per un oggetto di livello principale in uno schema, ad esempio una tabella o una vista, è necessario specificare il nome dell'oggetto nel formato *NomeSchema.NomeOggetto*.  
   
  Di seguito è riportato il percorso della tabella Vendor nello schema Purchasing del database AdventureWorks2012 in un'istanza predefinita del [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale:  
   
@@ -72,7 +72,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Convertire URN in percorsi di provider di SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
 |Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

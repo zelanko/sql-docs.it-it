@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678494"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lezione 1: Creazione della struttura di data mining Bike Buyer
@@ -87,7 +87,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   Modifica della query per creare la struttura di data mining.  
   
--   Eseguire la query.  
+-   Esecuzione della query.  
   
 ## <a name="creating-the-query"></a>Creazione della query  
  Il primo passaggio consiste nella connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e nella creazione di una nuova query DMX in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

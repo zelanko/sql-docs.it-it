@@ -26,31 +26,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211040"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
-  
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è un'interfaccia completa per la creazione e la gestione di tracce e l'analisi e la riproduzione dei risultati delle tracce. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verrà deprecato per le caratteristiche Trace Capture e Trace Replay del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Queste funzionalità verranno supportate nella versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma verranno in seguito rimosse. La versione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stata determinata. Anche lo spazio dei nomi *Microsoft.SqlServer.Management.Trace* che contiene gli oggetti Trace e Replay di Microsoft SQL Server verranno deprecati. Si noti che [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per i carichi di lavoro di Analysis Services non verrà deprecato, e continuerà a essere supportato.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verrà deprecato per le caratteristiche Trace Capture e Trace Replay del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Queste funzionalità verranno supportate nella versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma verranno in seguito rimosse. La versione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stata determinata. Anche lo spazio dei nomi *Microsoft.SqlServer.Management.Trace* che contiene gli oggetti Trace e Replay di Microsoft SQL Server verranno deprecati. Si noti che [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per i carichi di lavoro di Analysis Services non verrà deprecato, e continuerà a essere supportato.  
 >   
 >  Nella tabella seguente vengono mostrate le funzionalità che si consiglia di utilizzare in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per acquisire e riprodurre i dati di traccia:  
   
 ||||  
 |-|-|-|  
-|**Carico di lavoro funzionalità \**|**Motore relazionale**|**Analysis Services**|  
+|**Funzionalità\Carico di lavoro di destinazione**|**Motore relazionale**|**Analysis Services**|  
 |**Acquisizione traccia**|Interfaccia utente grafica degli eventi estesi in SQL Server Management Studio|SQL Server Profiler|  
-|**Riproduzione traccia**|Distributed Replay|SQL Server Profiler|  
+|**Riproduzione della traccia**|Distributed Replay|SQL Server Profiler|  
   
 ## <a name="benefits-of-sql-server-profiler"></a>Vantaggi di SQL Server Profiler  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è un'interfaccia utente grafica della funzionalità Traccia SQL che consente di monitorare un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di Analysis Services. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare quali stored procedure hanno effetto sulle prestazioni a causa di un'esecuzione troppo lenta. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene usato per attività quali:  
+ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è un'interfaccia utente grafica della funzionalità Traccia SQL che consente di monitorare un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di Analysis Services. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare quali stored procedure hanno effetto sulle prestazioni a causa di un'esecuzione troppo lenta. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene usato per attività quali:  
   
 -   Esecuzione dei singoli passaggi di query problematiche allo scopo di individuare la causa del problema.  
   
@@ -62,8 +59,7 @@ ms.locfileid: "68211040"
   
 -   Correlazione dei contatori delle prestazioni per la diagnosi dei problemi.  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] supporta inoltre il controllo delle azioni eseguite sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I controlli registrano le azioni relative alla sicurezza per un'analisi successiva da parte di un amministratore della sicurezza.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] supporta inoltre il controllo delle azioni eseguite sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I controlli registrano le azioni relative alla sicurezza per un'analisi successiva da parte di un amministratore della sicurezza.  
   
 ## <a name="sql-server-profiler-concepts"></a>Concetti di base su SQL Server Profiler  
  Per utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è necessario conoscere il significato dei termini che descrivono la modalità di funzionamento dello strumento.  
@@ -99,15 +95,15 @@ ms.locfileid: "68211040"
  **EventClass**  
  Una classe di evento è un tipo di evento che è possibile tracciare. La classe di evento contiene tutti i dati che possono essere restituiti da un evento. Sono esempi di classi di evento:  
   
--   **SQL: BatchCompleted**  
+-   **SQL:BatchCompleted**  
   
--   **Connessione di controllo**  
+-   **Audit Login**  
   
--   **Disconnessione di controllo**  
+-   **Audit Logout**  
   
--   **Blocco: acquisito**  
+-   **Lock:Acquired**  
   
--   **Blocco: rilasciato**  
+-   **Lock:Released**  
   
  **EventCategory**  
  Una categoria di eventi definisce la modalità con la quale gli eventi vengono raggruppati all'interno di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ad esempio, tutte le classi degli eventi di blocco sono raggruppate nella categoria **Blocchi** . Le categorie di eventi sono tuttavia disponibili soltanto in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Il termine non si applica alla modalità di raggruppamento degli eventi del motore.  
@@ -118,7 +114,7 @@ ms.locfileid: "68211040"
  **Modello**  
  Un modello consente di definire la configurazione predefinita per una traccia. In particolare, include le classi di evento di cui si desidera eseguire il monitoraggio con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. È ad esempio possibile creare un modello e specificare gli eventi, le colonne di dati e i filtri da utilizzare. I modelli non vengono eseguiti, ma salvati in un file con estensione tdf. Dopo il salvataggio, i modelli consentono di controllare i dati di traccia acquisiti quando viene avviata una traccia basata sul modello.  
   
- **Traccia**  
+ **Trace**  
  Una traccia consente di acquisire i dati in base alle classi di eventi, alle colonne di dati e ai filtri selezionati. È ad esempio possibile creare una traccia per il monitoraggio delle eccezioni. A tale scopo, selezionare la classe di evento **Exception** e le colonne di dati **Error**, **State**e **Severity** . Affinché i risultati della traccia includano dati significativi, è necessario raccogliere i dati di queste tre colonne. È quindi possibile eseguire una traccia configurata in tale modo e raccogliere i dati in tutti gli eventi **Exception** che si verificano nel server. I dati di traccia possono essere salvati o utilizzati immediatamente per attività di analisi. Le tracce possono essere riprodotte in un secondo momento, sebbene alcuni eventi, quali quelli **Exception** , non vengano mai riprodotti. È inoltre possibile salvare la traccia come modello e compilare tracce simili in futuro.  
   
  Sono disponibili due metodi per tracciare un'istanza di SQL Server, ovvero tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oppure stored procedure di sistema.  
@@ -139,22 +135,22 @@ ms.locfileid: "68211040"
 |Viene illustrato come salvare i risultati della traccia in un file.|[Salvare i risultati della traccia in un file &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)|  
 |Viene illustrato come salvare i risultati della traccia in una tabella.|[Salvare i risultati della traccia in una tabella &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)|  
 |Viene illustrato come filtrare gli eventi in una traccia.|[Filtrare eventi in una traccia &#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)|  
-|Viene illustrato come visualizzare informazioni sui filtri.|[Visualizza informazioni sui filtri &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)|  
+|Viene illustrato come visualizzare informazioni sui filtri.|[Visualizzare informazioni sui filtri &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)|  
 |Viene illustrato come modificare un filtro.|[Modificare un filtro &#40;SQL Server Profiler&#41;](modify-a-filter-sql-server-profiler.md)|  
 |Viene illustrato come impostare le dimensioni massime di un file di traccia (SQL Server Profiler).|[Impostare le dimensioni massime di un file di traccia &#40;SQL Server Profiler&#41;](set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)|  
 |Viene illustrato come impostare le dimensioni massime di una tabella di traccia.|[Impostare le dimensioni massime di un file di traccia &#40;SQL Server Profiler&#41;](set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)|  
 |Viene illustrato come avviare una traccia.|[Avviare una traccia](start-a-trace.md)|  
 |Viene illustrato come avviare automaticamente una traccia dopo la connessione a un server.|[Avviare una traccia automaticamente dopo la connessione a un server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
-|Viene illustrato come filtrare gli eventi in base all'ora di inizio.|[Filtrare gli eventi in base all'ora di inizio dell'evento &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
+|Viene illustrato come filtrare gli eventi in base all'ora di inizio.|[Filtrare gli eventi in base all'ora di inizio &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |Viene illustrato come filtrare gli eventi in base all'ora di fine.|[Filtrare gli eventi in base all'ora di fine &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
-|Viene illustrato come filtrare gli ID del processo server (SPID) in una traccia.|[Filtrare gli ID del processo server &#40;gli SPID&#41; in una traccia &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
+|Viene illustrato come filtrare gli ID del processo server (SPID) in una traccia.|[Filtrare gli ID del processo server &#40;SPIDs&#41; in una traccia &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |Viene illustrato come sospendere una traccia.|[Sospendere una traccia &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)|  
 |Viene illustrato come arrestare una traccia.|[Arrestare in pausa una traccia &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
 |Viene illustrato come eseguire una traccia dopo la sospensione o l'arresto.|[Eseguire una traccia dopo la sospensione o l'arresto &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)|  
 |Viene illustrato come cancellare il contenuto di una finestra di traccia.|[Cancellare il contenuto di una finestra di traccia &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)|  
 |Viene illustrato come chiudere una finestra di traccia.|[Chiudere una finestra di traccia &#40;SQL Server Profiler&#41;](close-a-trace-window-sql-server-profiler.md)|  
-|Viene illustrato come impostare i valori predefiniti per la definizione della traccia.|[Impostare le impostazioni predefinite della definizione della traccia &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)|  
-|Viene illustrato come impostare i valori predefiniti per la visualizzazione della traccia.|[Impostare i valori predefiniti per la visualizzazione delle tracce &#40;SQL Server Profiler&#41;](set-trace-display-defaults-sql-server-profiler.md)|  
+|Viene illustrato come impostare i valori predefiniti per la definizione della traccia.|[Impostare i valori predefiniti per una definizione di traccia &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)|  
+|Viene illustrato come impostare i valori predefiniti per la visualizzazione della traccia.|[Impostare i valori predefiniti per la visualizzazione di una traccia &#40;SQL Server Profiler&#41;](set-trace-display-defaults-sql-server-profiler.md)|  
 |Viene illustrato come aprire un file di traccia.|[Aprire un file di traccia &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)|  
 |Viene illustrato come aprire una tabella di traccia.|[Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)|  
 |Viene illustrato come riprodurre una tabella di traccia.|[Riprodurre una tabella di traccia &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)|  
@@ -166,14 +162,14 @@ ms.locfileid: "68211040"
 |Viene illustrato come creare un modello di traccia.|[Creare un modello di traccia &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)|  
 |Viene illustrato come modificare un modello di traccia.|[Modificare modello di traccia &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)|  
 |Viene illustrato come impostare le opzioni di traccia globali.|[Impostare opzioni di traccia globali &#40;SQL Server Profiler&#41;](set-global-trace-options-sql-server-profiler.md)|  
-|Viene illustrato come trovare un valore o una colonna di dati durante l'esecuzione di una traccia.|[Trovare un valore o una colonna di dati durante la traccia &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
+|Viene illustrato come trovare un valore o una colonna di dati durante l'esecuzione di una traccia.|[Trovare un valore o una colonna di dati durante l'esecuzione di una traccia &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |Viene illustrato come creare un modello basato su una traccia in esecuzione.|[Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
 |Viene illustrato come derivare un modello da un file o tabella di traccia.|[Derivare un modello da un file di traccia o da una tabella di traccia &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
-|Viene illustrato come creare uno script Transact-SQL per l'esecuzione di una traccia.|[Creazione di uno script Transact-SQL per l'esecuzione di una traccia &#40;SQL Server Profiler&#41;](create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
+|Viene illustrato come creare uno script Transact-SQL per l'esecuzione di una traccia.|[Creare uno script Transact-SQL per l'esecuzione di una traccia &#40;SQL Server Profiler&#41;](create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |Viene illustrato come esportare un modello di traccia.|[Esportare un modello di traccia &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)|  
-|Viene illustrato come importare un modello di traccia.|[Importare un modello di traccia &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
+|Viene illustrato come importare un modello di traccia.|[Esportare un modello di traccia &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
 |Viene illustrato come estrarre uno script da una traccia.|[Estrarre uno script da una traccia &#40;SQL Server Profiler&#41;](extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Viene illustrato come eseguire la correlazione tra una traccia e i dati dei log delle prestazioni di Windows.|[Correlare una traccia con i dati del log delle prestazioni di Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Viene illustrato come eseguire la correlazione tra una traccia e i dati dei log delle prestazioni di Windows.|[Correlare una traccia e i dati dei registri di prestazioni di Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |Viene illustrato come organizzare le colonne visualizzate in una traccia.|[Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Viene illustrato come avviare SQL Server Profiler.|[Avviare SQL Server Profiler](start-sql-server-profiler.md)|  
 |Viene illustrato come salvare tracce e modelli di traccia.|[Salvare tracce e modelli di traccia](save-traces-and-trace-templates.md)|  
@@ -187,7 +183,7 @@ ms.locfileid: "68211040"
 |Vengono elencati gli argomenti della Guida sensibile al contesto di SQL Server Profiler.|[Guida sensibile al contesto di SQL Server Profiler](sql-server-profiler-f1-help.md)|  
 |Vengono elencate le stored procedure di sistema utilizzate da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per monitorare prestazioni e attività.|[Stored procedure di SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Categoria di eventi blocchi](../../relational-databases/event-classes/locks-event-category.md)   
  [Categoria di eventi sessioni](../../relational-databases/event-classes/sessions-event-category.md)   
  [Categoria di eventi stored procedure](../../relational-databases/event-classes/stored-procedures-event-category.md)   

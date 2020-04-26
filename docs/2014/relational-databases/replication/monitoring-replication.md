@@ -19,10 +19,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666869"
 ---
 # <a name="monitoring-replication"></a>Monitoraggio (replica)
@@ -34,11 +34,9 @@ ms.locfileid: "62666869"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     
-  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] consente di accedere a Monitoraggio replica. Consente inoltre di visualizzare lo stato attuale e l'ultimo messaggio registrato dall'agente di lettura log, dall'agente snapshot, dall'agente di merge e dall'agente di distribuzione, con la possibilità di avviare e arrestare ognuno di loro. Per altre informazioni, vedere [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] consente di accedere a Monitoraggio replica. Consente inoltre di visualizzare lo stato attuale e l'ultimo messaggio registrato dall'agente di lettura log, dall'agente snapshot, dall'agente di merge e dall'agente di distribuzione, con la possibilità di avviare e arrestare ognuno di loro. Per altre informazioni, vedere [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] e oggetti RMO (Replication Management Objects)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] e oggetti RMO (Replication Management Objects)  
   
      Entrambe le interfacce consentono di monitorare tutti i tipi di replica dal server di distribuzione. La replica di tipo merge consente inoltre di monitorare la replica dal Sottoscrittore.  
   
@@ -50,9 +48,9 @@ ms.locfileid: "62666869"
   
      Questa opzione può essere utile per monitorare le prestazioni della replica tramite vari contatori. Per altre informazioni, vedere [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Domande frequenti sull'amministrazione della replica](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+ [Procedure consigliate per l'amministrazione della replica](administration/best-practices-for-replication-administration.md)   
 
   
   

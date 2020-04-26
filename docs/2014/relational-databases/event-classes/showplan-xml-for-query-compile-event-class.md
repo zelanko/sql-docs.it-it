@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62650404"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile - classe di evento
-  La classe di evento Showplan XML for Query Compile viene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generata quando compila un'istruzione SQL. Includere la classe questa per identificare gli operatori Showplan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in.  
+  La classe di evento Showplan XML For Query Compile viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila un'istruzione SQL. Includere questa classe di evento per identificare gli operatori Showplan in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Poiché la classe di evento Showplan XML For Query Compile consente di visualizzare dati completi relativi al momento della compilazione, le tracce che contengono questa classe di evento possono essere soggette a una riduzione significativa delle prestazioni. Per ridurre al minimo tale rischio, limitare l'utilizzo di questa classe di evento alle tracce che consentono di monitorare problemi specifici per brevi periodi di tempo.  
   
- Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web di Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan XML for Query Compile  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62650404"
 |ApplicationName|`nvarchar`|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BinaryData|`image`|Costo stimato della query.|2|No|  
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
-|DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]consente di visualizzare il nome del database se la colonna di dati ServerName viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Event Class|`int`|Tipo di evento = 168.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -61,8 +61,8 @@ ms.locfileid: "62650404"
 |XactSequence|`bigint`|Token usato per descrivere la transazione corrente.|50|Sì|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
   
-## <a name="see-also"></a>Vedere anche  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Guida di riferimento a operatori Showplan logici e fisici](../showplan-logical-and-physical-operators-reference.md)  
   
   

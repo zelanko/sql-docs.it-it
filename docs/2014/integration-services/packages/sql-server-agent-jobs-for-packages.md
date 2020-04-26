@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767176"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
-  È possibile automatizzare e pianificare l'esecuzione dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
+  È possibile automatizzare e pianificare l'esecuzione dei pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
   
 ## <a name="sections-in-this-topic"></a>Sezioni dell'argomento  
  In questo argomento sono incluse le sezioni seguenti:  
@@ -32,11 +32,10 @@ ms.locfileid: "62767176"
   
 -   [Pianificazione dei pacchetti di Integration Services](#packages)  
   
--   [Risoluzione dei problemi relativi ai pacchetti pianificati](#trouble)  
+-   [Risoluzione dei problemi dei pacchetti pianificati](#trouble)  
   
-##  <a name="jobs"></a>Pianificazione dei processi in SQL Server Agent  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è il servizio installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente di automatizzare e pianificare le attività eseguendo processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile eseguire automaticamente processi solo se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione. Per altre informazioni, vedere [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a>Pianificazione dei processi in SQL Server Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è il servizio installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente di automatizzare e pianificare le attività eseguendo processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile eseguire automaticamente processi solo se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione. Per altre informazioni, vedere [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  Il nodo **SQL Server Agent** viene visualizzato in Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando ci si connette a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62767176"
   
  È possibile migliorare il processo impostando opzioni di notifica, ad esempio aggiungendo avvisi o specificando l'operatore che deve inviare un messaggio di posta elettronica al completamento del processo. Per altre informazioni, vedere [Avvisi](../../ssms/agent/alerts.md).  
   
-##  <a name="packages"></a>Pianificazione dei pacchetti di Integration Services  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Quando si crea un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per pianificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è necessario aggiungere almeno un passaggio e impostare il tipo di passaggio su **Pacchetto SQL Server Integration Services**. In un processo possono essere inclusi più passaggi che consentono di eseguire pacchetti diversi.  
   
  L'esecuzione di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da un passaggio di processo è simile all'esecuzione di un pacchetto tramite le utilità **dtexec** (dtexec.exe) e **DTExecUI** (dtexecui.exe). Le opzioni di runtime per un pacchetto non vengono impostate tramite opzioni della riga di comando o nella finestra di dialogo **Utilità di esecuzione pacchetti** , ma nella finestra di dialogo **Nuovo passaggio di processo** . Per altre informazioni sulle opzioni per l'esecuzione di un pacchetto, vedere [Utilità dtexec](dtexec-utility.md).  
@@ -57,10 +56,10 @@ ms.locfileid: "62767176"
   
  Per visualizzare un video in cui viene illustrato come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di un pacchetto, vedere la home page del video [Procedura: Automazione dell'esecuzione di un pacchetto SSIS utilizzando SQL Server Agent (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771)in MSDN Library.  
   
-##  <a name="trouble"></a> Risoluzione dei problemi  
- Un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non riuscire ad avviare un pacchetto anche se il pacchetto viene eseguito correttamente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e dalla riga di comando. Per questo problema esistono alcuni motivi comuni e diverse soluzioni consigliate. Per altre informazioni, vedere le risorse seguenti:  
+##  <a name="troubleshooting"></a><a name="trouble"></a>Risoluzione dei problemi  
+ Un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non riuscire ad avviare un pacchetto anche se il pacchetto viene eseguito correttamente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e dalla riga di comando. Per questo problema esistono alcuni motivi comuni e diverse soluzioni consigliate. Per ulteriori informazioni, vedere le risorse seguenti.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Articolo della Knowledge base, [un pacchetto SSIS non viene eseguito quando si chiama il pacchetto SSIS da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
 -   Video, [risoluzione dei problemi: esecuzione di pacchetti tramite SQL Server Agent (SQL Server video)](https://go.microsoft.com/fwlink/?LinkId=141772)in MSDN Library.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62767176"
   
 -   Per i pacchetti archiviati nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDB, nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] o in una cartella del computer locale, è possibile usare **Visualizzatore file di log** , nonché qualsiasi log e file di dump del debug generato durante l'esecuzione del pacchetto.  
   
-     **Per utilizzare il Visualizzatore file di log, eseguire le operazioni seguenti.**  
+     **Per utilizzare Visualizzatore file di log, effettuare le operazioni seguenti.**  
   
     1.  Fare clic con il pulsante destro del mouse sul processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, quindi fare clic su **Visualizza cronologia**.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62767176"
   
 -   Per i pacchetti archiviati nel database SSISDB, è inoltre possibile usare **Visualizzatore file di log** , nonché qualsiasi log e file di dump del debug generato durante l'esecuzione del pacchetto. Inoltre, è possibile usare i report per il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     **Per trovare informazioni nei report per l'esecuzione del pacchetto associata all'esecuzione di un processo, effettuare le operazioni seguenti.**  
+     **Per trovare informazioni nei report per l'esecuzione del pacchetto associata all'esecuzione del processo, effettuare le operazioni seguenti.**  
   
     1.  Attenersi ai passaggi precedenti per visualizzare i dettagli del messaggio per il passaggio di processo.  
   

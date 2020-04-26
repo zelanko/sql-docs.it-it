@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62714868"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizzatore conflitti di replica Microsoft (replica transazionale)
@@ -36,7 +36,7 @@ ms.locfileid: "62714868"
  **Pubblicazione**  
  Consente di scegliere una pubblicazione contenente tabelle con conflitti.  
   
- **Tabella**  
+ **tavolo**  
  Consente di scegliere una tabella contenente conflitti.  
   
  **Definisci filtro**  
@@ -60,14 +60,14 @@ ms.locfileid: "62714868"
  **Mostra le prime cinque colonne e le altre colonne con dati in conflitto**  
  Selezionare questa opzione per visualizzare le prime cinque colonne e tutte le colonne contenenti conflitti. Questa opzione risulta utile quando nella tabella sono presenti numerose colonne, ma si desidera visualizzare solo le colonne più significative per la risoluzione dei conflitti. Le prime cinque colonne vengono sempre visualizzate perché i campi di identificazione di una riga, ad esempio i campi del nome o della chiave primaria, sono solitamente inclusi tra le prime colonne della tabella.  
   
- **Visualizza informazioni colonna** (**...**)  
+ **Visualizza informazioni sulla colonna** (**...**)  
  Fare clic per visualizzare le informazioni sulla colonna, ovvero **Nome tabella**, **Nome colonna**, **Tipo di dati**e **Valore colonna**.  
   
  **Registra informazioni dettagliate sul conflitto**  
  Selezionare questa casella per registrare le informazioni dettagliate sul conflitto in un file. Per specificare il percorso del file, scegliere **Opzioni** dal menu **Visualizza**. Immettere un valore oppure fare clic sul pulsante **...** e spostarsi sul file appropriato. Fare clic su **OK** per chiudere la finestra di dialogo **Opzioni** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Peer-to-peer - Rilevamento dei conflitti nella replica](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Rilevamento dei conflitti nella replica peer-to-peer](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Visualizzare i conflitti di dati per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
   

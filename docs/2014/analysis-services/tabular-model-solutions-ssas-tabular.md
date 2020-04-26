@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067896"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluzioni di modelli tabulari (SSAS tabulare)
@@ -43,7 +43,7 @@ ms.locfileid: "66067896"
   
  [Misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md)  
   
- [Indicatori KPI &#40;&#41;tabulare SSAS](tabular-models/kpis-ssas-tabular.md)  
+ [Indicatori KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md)  
   
  [Gerarchie &#40;SSAS tabulare&#41;](tabular-models/hierarchies-ssas-tabular.md)  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66067896"
   
  [Ruoli &#40;SSAS tabulare&#41;](tabular-models/roles-ssas-tabular.md)  
   
- [Analizza in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analizzare in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Distribuzione di soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

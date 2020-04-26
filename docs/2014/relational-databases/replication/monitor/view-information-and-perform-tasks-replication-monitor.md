@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667134"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica
@@ -38,10 +38,10 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
     -   Agente di lettura log, utilizzato da tutte le pubblicazioni transazionali.    
     -   Agente di lettura coda, utilizzato dalle pubblicazioni transazionali contenenti sottoscrizioni ad aggiornamento in coda.  
   
--   **Avvisi** (per i distributori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] che eseguono e versioni successive)   
+-   **Avvisi** (per server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive)   
     -   Questa scheda consente di specificare avvisi per gli agenti.  
   
--   **Token di traccia** (solo replica transazionale, per i distributori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] che eseguono e versioni successive)  
+-   **Token di traccia** (solo replica transazionale, per server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive).  
   
      Questa scheda consente di misurare la latenza, ovvero l'intervallo di tempo che intercorre tra il commit di una transazione nel server di pubblicazione e il commit della transazione corrispondente nel Sottoscrittore.  
   
@@ -64,7 +64,7 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
   
 -   **Pubblicazioni** : questa scheda Visualizza le informazioni su tutte le pubblicazioni nel server di pubblicazione selezionato.  
   
--   **Elenco** verifica sottoscrizioni: questa scheda consente di visualizzare informazioni sulle sottoscrizioni di tutte le pubblicazioni disponibili nel server di pubblicazione selezionato che presentano errori, avvisi o prestazioni più ridotte. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Elenco** verifica sottoscrizioni: questa scheda consente di visualizzare informazioni sulle sottoscrizioni di tutte le pubblicazioni disponibili nel server di pubblicazione selezionato che presentano errori, avvisi o prestazioni più ridotte. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni precedenti a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 -   Scheda **agenti** : questa scheda consente di visualizzare informazioni dettagliate sugli agenti e sui processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
@@ -74,12 +74,12 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro e quindi fare clic su un server di pubblicazione.    
 2.  Per visualizzare informazioni su tutte le pubblicazioni, fare clic sulla scheda **Pubblicazioni** .    
-3.  Per visualizzare informazioni sulle sottoscrizioni, fare clic sulla scheda **Elenco verifica sottoscrizioni** . In questa scheda, è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività.    
+3.  Per visualizzare le informazioni sulle sottoscrizioni, fare clic sulla scheda **elenco** verifica sottoscrizioni. È inoltre possibile accedere a informazioni più dettagliate ed eseguire attività da questa scheda:    
     -   Per visualizzare informazioni dettagliate sull'agente associato a una sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza dettagli**.    
     -   Per visualizzare le proprietà di una sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**.    
     -   Per sincronizzare una sottoscrizione push, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Avvia sincronizzazione**.    
     -   Per reinizializzare una sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Reinizializza sottoscrizione**.   
-4.  Per visualizzare informazioni sugli agenti, fare clic sulla scheda **Agenti** . In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività:    
+4.  Per visualizzare le informazioni sugli agenti, fare clic sulla scheda **agenti** . È inoltre possibile accedere a informazioni più dettagliate ed eseguire attività in questa scheda:    
     -   Per visualizzare informazioni dettagliate su un agente, ad esempio messaggi informativi ed eventuali messaggi di errore, fare clic con il pulsante destro del mouse sull'agente e quindi scegliere **Visualizza dettagli**.    
     -   Per visualizzare informazioni dettagliate sul processo eseguito dall'agente, ad esempio la pianificazione, i dettagli sui passaggi del processo e così via, fare clic con il pulsante destro del mouse sull'agente e quindi scegliere **Proprietà**.    
     -   Per gestire i profili dell'agente, fare clic con il pulsante destro del mouse sull'agente e quindi scegliere **Profilo agente**. Per altre informazioni, vedere [Usare i profili agenti di replica](../agents/replication-agent-profiles.md).    

@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667247"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
@@ -54,7 +54,7 @@ ms.locfileid: "62667247"
   
  [Oggetti RMO (Replication Management Objects)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Per monitorare i server di pubblicazione, le pubblicazioni e le sottoscrizioni dal database di distribuzione  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667247"
   
     -   Un valore pari a **1** per **@mode** per abilitare la metrica di soglia di monitoraggio o un valore pari a **2** per disabilitarla.  
   
-##  <a name="RMO"></a> Oggetti RMO (Replication Management Objects)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Oggetti RMO (Replication Management Objects)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Per monitorare una sottoscrizione di una pubblicazione di tipo merge nel Sottoscrittore  
   
@@ -268,20 +268,13 @@ ms.locfileid: "62667247"
   
         |valore|Descrizione|  
         |-----------|-----------------|  
-        |1|
-  `expiration`: esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.|  
-        |2|
-  `latency`: esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
-        |4|
-  `mergeexpiration`: esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.|  
-        |5|
-  `mergeslowrunduration`: esegue il monitoraggio della durata delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
-        |6|
-  `mergefastrunduration`: esegue il monitoraggio della durata delle sincronizzazioni di tipo merge attraverso connessioni LAN ad alta larghezza di banda.|  
-        |7|
-  `mergefastrunspeed` - esegue il monitoraggio della frequenza delle sincronizzazioni di tipo merge su connessioni tramite rete locale (LAN) a larghezza di banda elevata.|  
-        |8|
-  `mergeslowrunspeed`: esegue il monitoraggio della velocità delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
+        |1|`expiration`: esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.|  
+        |2|`latency`: esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
+        |4|`mergeexpiration`: esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.|  
+        |5|`mergeslowrunduration`: esegue il monitoraggio della durata delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
+        |6|`mergefastrunduration`: esegue il monitoraggio della durata delle sincronizzazioni di tipo merge attraverso connessioni LAN ad alta larghezza di banda.|  
+        |7|`mergefastrunspeed` - esegue il monitoraggio della frequenza delle sincronizzazioni di tipo merge su connessioni tramite rete locale (LAN) a larghezza di banda elevata.|  
+        |8|`mergeslowrunspeed`: esegue il monitoraggio della velocità delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
   
     -   *enable* - <xref:System.Boolean> che indica se la misurazione è attivata per la pubblicazione.  
   

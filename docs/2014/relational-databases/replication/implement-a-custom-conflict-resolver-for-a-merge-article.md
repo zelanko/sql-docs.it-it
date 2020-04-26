@@ -17,24 +17,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721235"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge
-  In questo argomento viene descritto come implementare un sistema di risoluzione dei conflitti personalizzato [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per un [!INCLUDE[tsql](../../includes/tsql-md.md)] articolo di merge in tramite o un sistema di [risoluzione personalizzato basato su com](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+   Questo argomento illustra come implementare il sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [sistema di risoluzione personalizzato basato su COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **Contenuto dell'articolo**  
   
--   **Per implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di merge, utilizzando:**  
+-   **Per implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge, utilizzando:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [Sistema di risoluzione basato su COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile scrivere un sistema di risoluzione dei conflitti personalizzato come stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] in ogni server di pubblicazione. Durante la sincronizzazione questa stored procedure viene richiamata quando vengono rilevati conflitti in un articolo per il quale il sistema di risoluzione è stato registrato e l'agente di merge passa le informazioni sulla riga con conflitti ai parametri obbligatori della procedura. I sistemi di risoluzione dei conflitti personalizzati basati su stored procedure vengono sempre creati nel server di pubblicazione.  
   
 > [!NOTE]  
@@ -51,7 +51,7 @@ ms.locfileid: "62721235"
     |**@rowguid**|`uniqueidentifier`|Identificatore univoco per la riga in cui è presente il conflitto.|  
     |**@subscriber**|`sysname`|Nome del server da cui viene propagata una modifica in conflitto.|  
     |**@subscriber_db**|`sysname`|Nome del database da cui viene propagata una modifica in conflitto.|  
-    |**@log_conflictOUTPUT**|`int`|Indica se il processo di merge deve registrare un conflitto da risolvere in un secondo momento:<br /><br /> **0** = non registra il conflitto.<br /><br /> **1** = il Sottoscrittore è il conflitto fallito.<br /><br /> **2** = l'autore è il conflitto fallito.|  
+    |**@log_conflictOUTPUT**|`int`|Indica se il processo di merge deve registrare un conflitto da risolvere in un secondo momento:<br /><br /> **0** = Il conflitto non viene registrato.<br /><br /> **1** = La riga in conflitto è quella del Sottoscrittore.<br /><br /> **2** = La riga in conflitto è quella del server di pubblicazione.|  
     |**@conflict_messageOUTPUT**|`nvarchar(512)`|Messaggio da visualizzare per la risoluzione se il conflitto viene registrato.|  
     |**@destowner**|`sysname`|Proprietario della tabella pubblicata nel Sottoscrittore.|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62721235"
   
 2.  Eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), **@publication**specificando **@article**,, il valore **resolver_info** per **@property**e il nome del stored procedure che implementa la logica del sistema di risoluzione dei **@value**conflitti per.  
   
-##  <a name="COM"></a>Uso di un sistema di risoluzione personalizzato basato su COM  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a>Uso di un sistema di risoluzione personalizzato basato su COM  
  Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi e i risolvere conflitti che si verificano durante il processo di sincronizzazione della replica di tipo merge. Per ulteriori informazioni, vedere [implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md). Per risolvere i conflitti, è inoltre possibile scrivere una logica di business personalizzata basata su codice nativo. Tale logica viene compilata come un componente COM in DLL, utilizzando prodotti quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un sistema di risoluzione dei conflitti personalizzato basato su COM deve implementare l'interfaccia **ICustomResolver con** , progettata specificamente per la risoluzione dei conflitti.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Per creare e registrare un sistema di risoluzione dei conflitti personalizzato basato su COM  
@@ -136,8 +136,8 @@ ms.locfileid: "62721235"
   
 6.  Nella cartella **subspres** trovare tutte le occorrenze di **#include sqlres.h** in tutti i file di origine e sostituirle con **#import "replrec.dll" no_namespace, raw_interfaces_only**  
   
-## <a name="see-also"></a>Vedere anche  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Resolver personalizzati basati su COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)  
   

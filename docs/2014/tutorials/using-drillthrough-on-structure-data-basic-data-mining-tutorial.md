@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745542"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Utilizzo del drill-through sui dati della struttura (Esercitazione di base sul data mining)
@@ -36,7 +36,7 @@ ms.locfileid: "62745542"
   
 2.  Selezionare il modello di **TM_Decision_Tree** nell'elenco **modello di data mining** .  
   
-3.  Modificare il **** valore di sfondo `1`in. In questo modo, verrà visualizzata solo la parte del modello correlata ai clienti che hanno acquistato biciclette.  
+3.  Modificare il **Background** valore di sfondo `1`in. In questo modo, verrà visualizzata solo la parte del modello correlata ai clienti che hanno acquistato biciclette.  
   
 4.  Selezionare il Visualizzatore Microsoft Decision Trees dall'elenco **Visualizzatore** . In questo modo verrà eseguito l'aggiornamento del visualizzatore con le nuove condizioni di filtro. Individuare quindi il nodo **Age >= 34 e <41** , quindi fare clic con il pulsante destro del mouse sul nodo.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62745542"
  È stata completata l'esercitazione di base sul data mining. Dopo avere familiarizzato con l'utilizzo degli strumenti di data mining, si consiglia di completare anche l'esercitazione intermedia sul data mining, in cui viene illustrato come creare modelli per le previsioni, le analisi degli acquisti e il clustering delle sequenze.  
   
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
- [Creazione di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una query di stima utilizzando Generatore query di stima](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

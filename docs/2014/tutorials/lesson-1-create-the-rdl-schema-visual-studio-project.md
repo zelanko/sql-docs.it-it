@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678519"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lezione 1: Creazione del progetto di Visual Studio per lo schema RDL
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lezione 1: Creare il progetto di Visual Studio per lo schema RDL
   Per questa esercitazione verrà creata una semplice applicazione console. Questa esercitazione presuppone che si stia sviluppando in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
@@ -199,7 +199,7 @@ ms.locfileid: "62678519"
 ## <a name="next-lesson"></a>Lezione successiva  
  Nella lezione successiva verrà utilizzato lo strumento per la definizione di XML Schema (Xsd.exe) per generare classi dallo schema RDL e includerle nel progetto. Vedere [lezione 2: generare classi dallo schema RDL usando lo strumento XSD](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

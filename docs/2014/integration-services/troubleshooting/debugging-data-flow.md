@@ -17,23 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766194"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssIS](../../includes/ssis-md.md)] progettazione includono funzionalità e strumenti che è possibile utilizzare per risolvere i problemi relativi ai flussi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dati in un pacchetto.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione offre visualizzatori dati.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione offre visualizzatori dati.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione e le trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offrono conteggi delle righe.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione e le trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offrono conteggi delle righe.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione genera report di stato in fase di runtime.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione genera report di stato in fase di runtime.  
   
 ## <a name="data-viewers"></a>Visualizzatori dati  
  I visualizzatori dati visualizzano i dati scambiati tra due componenti in un flusso di dati. I dati possono essere visualizzati quando vengono estratti da un'origine dei dati e immessi per la prima volta in un flusso di dati, prima e dopo l'aggiornamento da parte di una trasformazione e prima che vengano caricati nella destinazione.  
@@ -69,9 +66,9 @@ ms.locfileid: "62766194"
 |Nessuno|In attesa di essere chiamato dal motore flusso di dati.|  
 |Giallo|È in corso una trasformazione, un'operazione di estrazione o un'operazione di caricamento dei dati.|  
 |Green|L'esecuzione è stata completata.|  
-|red|Il componente è stato eseguito con errori.|  
+|rosso|Il componente è stato eseguito con errori.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti per la risoluzione dei problemi di sviluppo di pacchetti](troubleshooting-tools-for-package-development.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting-tools-for-package-development.md)  
   
   

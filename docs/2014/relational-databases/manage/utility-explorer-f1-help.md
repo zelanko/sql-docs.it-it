@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467855"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
@@ -31,7 +31,7 @@ ms.locfileid: "62467855"
   
  [Amministrazione utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Effettuare la connessione a Utilità SQL Server.](connect-to-a-sql-server-utility.md)  
@@ -42,8 +42,8 @@ ms.locfileid: "62467855"
   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md)   
- [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Funzionalità e attività di Utilità SQL Server](sql-server-utility-features-and-tasks.md)   
+ [Risoluzione dei problemi relativi a Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

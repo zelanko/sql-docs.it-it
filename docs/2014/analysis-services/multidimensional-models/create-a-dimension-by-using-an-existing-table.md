@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076417"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
@@ -85,7 +85,7 @@ ms.locfileid: "66076417"
   
  Nella pagina **Completamento procedura guidata** si completa la procedura guidata digitando un nome per la dimensione nuova e rivedendo la struttura della dimensione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
  [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)   

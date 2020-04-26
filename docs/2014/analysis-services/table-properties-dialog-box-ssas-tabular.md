@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067844"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Finestra di dialogo Proprietà tabella (SSAS - Tabulare)
@@ -31,9 +31,9 @@ ms.locfileid: "66067844"
 |**Nome**|Visualizza il nome della tabella.|  
 |**ID**|Visualizza l'identificatore della tabella.|  
 |**Descrizione**|Visualizza la descrizione della tabella.|  
-|**Crea timestamp**|Visualizza la data e l'ora di creazione della tabella.|  
+|**Timestamp creazione**|Visualizza la data e l'ora di creazione della tabella.|  
 |**Ultimo aggiornamento schema**|Visualizza la data e l'ora dell'ultimo aggiornamento dei metadati della tabella.|  
-|**Stato**|Visualizza lo stato di elaborazione della tabella. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Visualizza lo stato di elaborazione della tabella. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Ultima elaborazione**|Visualizza la data e l'ora dell'ultima elaborazione della tabella.|  
 |**Modalità di archiviazione corrente**|Visualizzala modalità di archiviazione corrente per la tabella. La modalità di archiviazione viene impostata al livello di database e è ereditata da tutte le tabelle. Non è possibile utilizzare modalità di archiviazione diverse al livello di tabella. I valori validi sono InMemory (valore predefinito), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory.|  
   

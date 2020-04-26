@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076284"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando non sono disponibili tabelle temporali nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
   
--   **Genera una tabella dei tempi nell'origine dati** Selezionare questa opzione quando si dispone dell'autorizzazione per creare oggetti nell'origine dei dati sottostante. La procedura guidata consente di generare una tabella dei tempi e di archiviare questa tabella nell'origine dati. La procedura guidata consente di creare la dimensione temporale dalla tabella dei tempi.  
+-   Se si dispone delle autorizzazioni per creare oggetti nell'origine dati sottostante, utilizzare l'opzione**Genera una tabella dei tempi nell'origine dei dati** . La procedura guidata consente di generare una tabella dei tempi e di archiviare questa tabella nell'origine dati. La procedura guidata consente di creare la dimensione temporale dalla tabella dei tempi.  
   
--   **Genera una tabella dei tempi nel server** Selezionare questa opzione se non si dispone dell'autorizzazione per creare oggetti nell'origine dei dati sottostante. La procedura guidata consente di generare e archiviare una tabella sul server invece che nell'origine dati. (La dimensione creata da una tabella dei tempi nel server è denominata *dimensione temporale del server*.) La procedura guidata consente di creare la dimensione temporale del server da questa tabella.  
+-   Se si dispone delle autorizzazioni per creare oggetti nell'origine dati sottostante, utilizzare l'opzione**Genera una tabella dei tempi sul server** . La procedura guidata consente di generare e archiviare una tabella sul server invece che nell'origine dati. (La dimensione creata da una tabella dei tempi nel server è denominata *dimensione temporale del server*.) La procedura guidata consente di creare la dimensione temporale del server da questa tabella.  
   
  Quando si crea una dimensione temporale, si specificano i periodi di tempo nonché le date di inizio e di fine della dimensione. I periodi di tempo specificati verranno utilizzati dalla procedura guidata per creare gli attributi temporali. Quando si elabora la dimensione, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera e archivia i dati per il supporto delle date e dei periodi specificati. La procedura guidata utilizza gli attributi creati per una dimensione temporale per suggerire gerarchie per la dimensione. Tali gerarchie si basano sulle relazioni esistenti tra diversi periodi di tempo e tengono conto di diversi calendari. Ad esempio, in una gerarchia con il calendario standard un livello delle settimane appare sotto un livello degli anni ma non sotto un livello dei mesi perché le settimane vengono suddivise in modo uniforme tra gli anni ma non tra i mesi. In una gerarchia con il calendario di produzione o report, invece, le settimane vengono suddivise in modo uniforme tra i mesi, pertanto un livello delle settimane viene visualizzato sotto un livello dei mesi.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66076284"
 ## <a name="completing-the-dimension-wizard"></a>Completamento di Creazione guidata dimensione  
  Nella pagina **Completamento procedura guidata** controllare gli attributi e le gerarchie creati dalla procedura guidata e quindi assegnare un nome alla dimensione temporale. Fare clic su **Fine** per completare la procedura guidata e creare la dimensione. Dopo avere completato la dimensione, è possibile modificarla in Progettazione dimensioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Creare una dimensione di tipo data](database-dimensions-create-a-date-type-dimension.md)   
  [Proprietà delle dimensioni del database](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   

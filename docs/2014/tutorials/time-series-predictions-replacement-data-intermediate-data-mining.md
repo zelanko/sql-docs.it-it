@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312876"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Stime basate su serie temporali utilizzando dati di sostituzione (Esercitazione intermedia sul data mining)
@@ -129,7 +129,7 @@ ms.locfileid: "63312876"
 9. Fare clic su **risultati**.  
   
 ## <a name="creating-the-cross-prediction-query-in-dmx"></a>Creazione della query di stima incrociata in DMX  
- È possibile che si sia notato un problema durante la stima incrociata, ovvero che per applicare il modello generale a una serie di dati diversa, ad esempio il modello del prodotto T1000 nell'area North America, è necessario creare una query diversa per ogni serie per poter eseguire il mapping di ogni set di input al modello.  
+ È possibile che si sia notato un problema durante la stima incrociata, ovvero che per applicare il modello generale a una serie di dati diversa, ad esempio il modello del prodotto T1000 nell'area America del Nord, è necessario creare una query diversa per ogni serie per poter eseguire il mapping di ogni set di input al modello.  
   
  Anziché compilare la query nella finestra di progettazione, è tuttavia possibile passare a vista DMX e modificare l'istruzione DMX creata. Ad esempio, l'istruzione DMX seguente rappresenta la query che è stata appena compilata:  
   
@@ -155,12 +155,12 @@ AND
   
  Per applicare questo codice a un modello diverso, è sufficiente modificare l'istruzione della query in modo da sostituire la condizione di filtro e aggiornare le etichette associate a ogni risultato.  
   
- Se ad esempio si modificano le condizioni di filtro e le etichette delle colonne sostituendo "Pacific" con "North America", si otterranno stime per il prodotto T1000 in Nord America, sulla base degli schemi nel modello generale.  
+ Se ad esempio si modificano le condizioni di filtro e le etichette delle colonne sostituendo "Pacific" con "America del Nord", si otterranno stime per il prodotto T1000 in America del Nord, sulla base degli schemi nel modello generale.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Confronto delle stime per i modelli di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di query sul modello Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   

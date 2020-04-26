@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467897"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria
@@ -38,14 +38,13 @@ ms.locfileid: "62467897"
   
      Per installare la generazione di report (che[determina se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ) e (per gestire oltp in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] memoria tramite Esplora oggetti), selezionare **strumenti di gestione-di base** o **strumenti di gestione-avanzate** quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-hek_2"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   Le dimensioni totali in memoria di tutte le tabelle durevoli di un database non devono superare i 250 GB. Per altre informazioni, vedere [durabilità per le tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
   
 -   Questo rilascio di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è mirato per essere usato in modo ottimale con 2 o 4 socket e meno di 60 core.  
   
--   I file di checkpoint non devono essere eliminati manualmente. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue automaticamente il processo di Garbage Collection sui file di checkpoint non necessari. Per ulteriori informazioni, vedere la discussione sull'Unione di file di dati e differenziali in [durabilità per le tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
+-   I file di checkpoint non devono essere eliminati manualmente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue automaticamente il processo di Garbage Collection sui file di checkpoint non necessari. Per ulteriori informazioni, vedere la discussione sull'Unione di file di dati e differenziali in [durabilità per le tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
   
 -   Nella prima versione di OLTP in memoria (in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), l'unico modo per rimuovere un filegroup ottimizzato per la memoria consiste nell'eliminare il database.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62467897"
 ## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Stiamo ascoltando  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Sono in ascolto dei commenti e suggerimenti per migliorare il contenuto. Inviare i commenti a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

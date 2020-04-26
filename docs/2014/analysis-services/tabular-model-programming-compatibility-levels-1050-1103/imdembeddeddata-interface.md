@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757782"
 ---
 # <a name="imdembedded-interface"></a>Interfaccia IMDEmbedded
@@ -38,7 +38,7 @@ ms.locfileid: "62757782"
   
 -   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  Il riferimento seguente documenta l' `IMDEmbedded` interfaccia come presentata nel file di intestazione **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>File di origine: PXOEmbeddedData.idl  
@@ -217,7 +217,7 @@ HRESULT Cancel ( void )
  Annulla l'operazione del database incorporato corrente.  
   
 #### <a name="parameters"></a>Parametri  
- No.  
+ Nessuno.  
   
 #### <a name="return-value"></a>Valore restituito  
  `S_OK`  

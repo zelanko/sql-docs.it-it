@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472931"
 ---
 # <a name="pick-schedule-for-job"></a>Seleziona pianificazione per il processo
@@ -31,7 +31,7 @@ ms.locfileid: "62472931"
  **Nome**  
  Consente di visualizzare il nome della pianificazione.  
   
- **Enabled**  
+ **Attivata**  
  Questa opzione è selezionata se la pianificazione è abilitata.  
   
  **Descrizione**  
@@ -43,7 +43,7 @@ ms.locfileid: "62472931"
  **Proprietà**  
  Apre la finestra di dialogo **Proprietà pianificazione processo** tramite la quale è possibile visualizzare informazioni sulla pianificazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)  
   
   

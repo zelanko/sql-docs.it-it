@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773430"
 ---
 # <a name="view-a-list-of-modified-files"></a>Visualizzazione di un elenco di file modificati
@@ -32,7 +32,7 @@ ms.locfileid: "62773430"
   
 2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la finestra **archiviazioni in sospeso** sul lato destro dell' [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo da poter archiviare i file al termine del lavoro.  
   
-     **Archivia**  
+     **Archiviare**  
      Consente di eseguire l'archiviazione della soluzione.  
   
      **Commenti**  
@@ -66,7 +66,7 @@ ms.locfileid: "62773430"
      **Nome**  
      Consente di visualizzare un elenco degli elementi disponibili per l'archiviazione. Accanto a ciascun elemento viene visualizzata la casella di controllo selezionata. Se non si desidera archiviare un determinato elemento, deselezionare la relativa casella di controllo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   

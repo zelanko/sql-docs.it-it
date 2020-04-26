@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512635"
 ---
 # <a name="creating-extended-stored-procedures"></a>Creazione di stored procedure estese
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Usare invece l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
   
  Una stored procedure estesa è una funzione con un prototipo:  
   
@@ -73,7 +73,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  Per eseguire il debug della DLL di una stored procedure estesa, copiare la DLL nella directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Per specificare il file eseguibile per la sessione di debug, immettere il percorso e il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome del file eseguibile, ad esempio c:\Programmi\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Per informazioni sugli argomenti sqlservr, vedere [applicazione sqlservr](../../tools/sqlservr-application.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [srv_got_attention &#40;API stored procedure estesa&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

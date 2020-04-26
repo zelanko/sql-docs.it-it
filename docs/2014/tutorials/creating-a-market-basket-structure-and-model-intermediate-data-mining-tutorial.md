@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190822"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello Market Basket (Esercitazione intermedia sul data mining)
@@ -55,17 +55,16 @@ ms.locfileid: "63190822"
   
     |Colonne|Content Type|Tipo di dati|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |Order Number|Chiave|Text|  
-    |Region|Discrete|Text|  
+    |IncomeGroup|Discrete|Testo|  
+    |Order Number|Chiave|Testo|  
+    |Region|Discrete|Testo|  
     |vAssocSeqLineItems|||  
-    |Modello|Chiave|Text|  
+    |Modello|Chiave|Testo|  
   
 12. Nella pagina **Crea set di testing** il valore predefinito per l'opzione **percentuale di dati per il testing** è il 30%. Modificare in **0**. Fare clic su **Avanti**.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce diversi grafici per misurare l'accuratezza del modello. Tuttavia, alcuni tipi di grafici di accuratezza, ad esempio il grafico di accuratezza e il report di convalida incrociata, sono progettati per l'esecuzione di classificazioni e stime. Non sono supportati per la stima associativa.  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce diversi grafici per misurare l'accuratezza del modello. Tuttavia, alcuni tipi di grafici di accuratezza, ad esempio il grafico di accuratezza e il report di convalida incrociata, sono progettati per l'esecuzione di classificazioni e stime. Non sono supportati per la stima associativa.  
   
 13. Nella pagina **Completamento procedura guidata** Digitare `Association`in **Nome struttura di data mining**.  
   
@@ -78,8 +77,8 @@ ms.locfileid: "63190822"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica ed elaborazione del modello Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Tipi di contenuto &#40;&#41;di data mining](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [Tipi di contenuto &#40;Data mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

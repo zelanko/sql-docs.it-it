@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767449"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>Passaggio 1: Copia del pacchetto della lezione 3
@@ -24,7 +24,7 @@ ms.locfileid: "62767449"
   
 1.  Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools non è già aperto, fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**e selezionare **SQL Server Data Tools**.  
   
-2.  Scegliere **Apri**dal menu **file** , fare clic su **progetto/soluzione**, selezionare **SSIS Tutorial** , fare clic su **Apri**, quindi fare doppio clic su **SSIS Tutorial. sln**.  
+2.  Scegliere **Apri** dal menu **File**, fare clic su **Progetto/Soluzione**, selezionare **SSIS Tutorial** e fare clic su **Apri**, quindi fare doppio clic su **SSIS Tutorial.sln**.  
   
 3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Lesson 3.dtsx**e scegliere **Copia**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767449"
   
 3.  Nella finestra **di dialogo Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **file System**.  
   
-4.  Fare clic sul pulsante sfoglia **(...)**, passare a Lesson 3.dtsx nel computer, quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante Sfoglia **(...)** , passare a Lesson 3. dtsx nel computer e quindi fare clic su **Apri**.  
   
      Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   

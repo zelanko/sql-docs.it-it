@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185437"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lezione 5: Test di modelli (Esercitazione di base sul data mining)
@@ -26,7 +26,7 @@ ms.locfileid: "63185437"
   
 1.  Si eseguiranno stime sul set di testing per verificare l'accuratezza del modello nei risultati noti. Si userà un *grafico di accuratezza* per misurarne l'efficacia.  
   
-     [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+     [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 2.  I modelli verranno quindi testati su un subset filtrato dei dati. Sarà possibile confrontare più modelli nello stesso grafico di accuratezza.  
   
@@ -35,19 +35,19 @@ ms.locfileid: "63185437"
  Per ulteriori informazioni sulla convalida dei modelli in generale, vedere [concetti di data mining](../../2014/analysis-services/data-mining/data-mining-concepts.md).  
   
 ## <a name="first-task-in-lesson"></a>Prima attività della lezione  
- [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>Lezione precedente  
  [Lezione 4: esplorazione dei modelli di mailing diretto &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: creazione e utilizzo di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lezione 6: Creazione e utilizzo di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scheda grafico di accuratezza &#40;vista Grafico accuratezza modello di data mining&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
  [Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Test e convalida &#40;&#41;di data mining](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Scheda matrice di classificazione &#40;vista Grafico accuratezza modello di data mining&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [Matrice di classificazione &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

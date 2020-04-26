@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067693"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analizzare in Excel (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "66067693"
   
 -   [Attività correlate](#bkmk_rt)  
   
-##  <a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
  La caratteristica Analizza in Excel consente agli autori di modelli di verificare l'efficacia di un progetto di modello utilizzando l'applicazione per l'analisi dei dati comuni, ovvero Microsoft Excel. Per usare la caratteristica Analizza in Excel, è necessario che Microsoft Office 2003 o versione successiva sia installato nello stesso computer di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
@@ -47,15 +47,15 @@ ms.locfileid: "66067693"
  **Ruolo**  
  Un ruolo viene utilizzato per definire le autorizzazioni utente sui metadati e dati dell'oggetto. I ruoli vengono generalmente definiti per un utente di Windows o un gruppo di utenti di Windows particolare. In alcuni ruoli possono essere inclusi ulteriori filtri a livello di riga definiti in una formula DAX. Se si utilizza la caratteristica Analizza in Excel, è possibile selezionare facoltativamente un ruolo da utilizzare. Le viste dei metadati e dei dati dell'oggetto saranno limitate dall'autorizzazione e dai filtri definiti per il ruolo. Per altre informazioni, vedere [Creare e gestire ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md).  
   
- Oltre all'utente o al ruolo effettivo, è possibile specificare una prospettiva. Le prospettive consentono agli autori di modelli di definire viste di oggetti e dati del modello in scenari aziendali particolari. Per impostazione predefinita, non viene utilizzata alcuna prospettiva. Per utilizzare una prospettiva con Analizza in Excel, le prospettive devono essere già state definite tramite la finestra di dialogo Prospettive in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Se viene specificata una prospettiva, nell'elenco di campi della tabella pivot saranno contenuti solo gli oggetti selezionati nella prospettiva. Per altre informazioni, vedere [Creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md).  
+ Oltre all'utente o al ruolo effettivo, è possibile specificare una prospettiva. Le prospettive consentono agli autori di modelli di definire viste di oggetti e dati del modello in scenari aziendali particolari. Per impostazione predefinita, non viene utilizzata alcuna prospettiva. Per utilizzare una prospettiva con Analizza in Excel, le prospettive devono essere già state definite tramite la finestra di dialogo Prospettive in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Se viene specificata una prospettiva, nell'elenco di campi della tabella pivot saranno contenuti solo gli oggetti selezionati nella prospettiva. Per altre informazioni, vedere [creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Attività correlate  
   
 |**Argomento**|**Descrizione**|  
 |---------------|---------------------|  
 |[Analizzare un modello tabulare in Excel &#40;SSAS tabulare&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|In questo argomento viene descritto come utilizzare la caratteristica Analizza in Excel in Progettazione modelli per aprire Excel, creare una connessione dell'origine dati al database dell'area di lavoro modello e aggiungere una tabella pivot al foglio di lavoro.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Analizzare un modello tabulare in Excel &#40;SSAS tabulare&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)  

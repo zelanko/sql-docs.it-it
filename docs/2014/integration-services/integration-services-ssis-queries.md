@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767663"
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
@@ -55,9 +55,9 @@ ms.locfileid: "62767663"
  Per altre informazioni, vedere [Generatore di query](../../2014/integration-services/query-builder.md).  
   
 ## <a name="sql-in-files"></a>SQL nei file  
- L'istruzione SQL dell'attività Esegui SQL può essere inclusa inoltre in un file distinto. È possibile, ad esempio, scrivere query utilizzando strumenti quali l'editor di query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvare la query in un file e quindi leggere la query dal file durante l'esecuzione di un pacchetto. Il file può contenere soltanto le istruzioni SQL da eseguire e commenti. Per eseguire un'istruzione SQL archiviata in un file, è necessario fornire una connessione file che specifica il nome e la posizione del file. Per ulteriori informazioni, vedere [gestione connessione file](connection-manager/file-connection-manager.md).  
+ L'istruzione SQL dell'attività Esegui SQL può essere inclusa inoltre in un file distinto. È possibile, ad esempio, scrivere query utilizzando strumenti quali l'editor di query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvare la query in un file e quindi leggere la query dal file durante l'esecuzione di un pacchetto. Il file può contenere soltanto le istruzioni SQL da eseguire e commenti. Per eseguire un'istruzione SQL archiviata in un file, è necessario fornire una connessione file che specifica il nome e la posizione del file. Per altre informazioni, vedere [File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL nelle variabili  
- Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per ulteriori informazioni, vedere [Integration Services &#40;le variabili&#41; SSIS](integration-services-ssis-variables.md) e [utilizzare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md).  
+ Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md).  
   
   

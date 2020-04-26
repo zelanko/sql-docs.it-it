@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767609"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione
@@ -41,7 +41,7 @@ ms.locfileid: "62767609"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 1 dell'esercitazione  
   
-1.  Scegliere **Avvia debug** dal menu **Debug**.  
+1.  Scegliere **Avvia debug**dal menu **debug** .  
   
      Il pacchetto verrà eseguito e verranno aggiunte 1097 righe alla tabella dei fatti **FactCurrency** in **AdventureWorksDW2012**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767609"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Aggiunta di cicli](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)  
   
   

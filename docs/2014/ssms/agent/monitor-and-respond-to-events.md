@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720132"
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitoraggio e risposta agli eventi
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent può monitorare e rispondere automaticamente agli *eventi*, ad esempio messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condizioni delle prestazioni specifiche e eventi Strumentazione gestione Windows (WMI).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può monitorare e rispondere automaticamente agli *eventi*, ad esempio messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a condizioni specifiche delle prestazioni e agli eventi del servizio Strumentazione gestione Windows (WMI).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Avvisi](alerts.md)  
@@ -44,13 +44,11 @@ ms.locfileid: "62720132"
 ## <a name="about-monitoring-and-responding-to-events"></a>Informazioni sul monitoraggio e sulla risposta agli eventi  
  Le risposte automatiche agli eventi sono denominate *Avvisi*. È possibile definire un avviso relativo a uno o più eventi per specificare la risposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando vengono generati tali eventi. Un avviso può rispondere a un evento informando un amministratore o eseguendo un processo oppure in entrambi i modi. Un avviso può inoltre inviare un evento al registro applicazioni di Microsoft Windows in un computer diverso. È possibile specificare che un operatore deve ricevere immediatamente una notifica se viene generato un evento con livello di gravità 19. La definizione di avvisi consente agli amministratori di database di monitorare e gestire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]con maggiore efficienza.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent risponde solo agli eventi per cui è stato definito un avviso. Il metodo utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per il monitoraggio degli eventi varia in base al tipo di evento.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent risponde solo agli eventi per cui è stato definito un avviso. Il metodo utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per il monitoraggio degli eventi varia in base al tipo di evento.  
   
  Se è stato definito un avviso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per un contatore delle prestazioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegue direttamente il monitoraggio di tale contatore. Per un evento WMI, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra la query di eventi.  
   
- Per rispondere ai messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegue il monitoraggio del registro applicazioni di Windows. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può rispondere solo ai messaggi contenuti in tale registro. Per impostazione predefinita, SQL Server inserisce nel registro applicazioni di Windows i messaggi seguenti:  
+ Per rispondere ai messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegue il monitoraggio del registro applicazioni di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può rispondere solo ai messaggi contenuti in tale registro. Per impostazione predefinita, SQL Server inserisce nel registro applicazioni di Windows i messaggi seguenti:  
   
 -   Errori sysmessages con livello di gravità 19 o superiore.  
   
@@ -69,7 +67,7 @@ ms.locfileid: "62720132"
   
  Indipendentemente dall'origine dell'evento, il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent risponde all'evento eseguendo le attività specificate nell'avviso corrispondente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_altermessage &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

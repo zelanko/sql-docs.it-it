@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067596"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Livello di compatibilità (SSAS tabulare SP1)
@@ -51,6 +51,6 @@ ms.locfileid: "66067596"
  È possibile controllare il livello di compatibilità per un database modello tabulare in SSMS visualizzando la proprietà **livello di compatibilità** ( [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]nuovo in) in **Proprietà database**.  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>Verificare il livello di compatibilità supportato per un'istanza di Analysis Services in SSMS  
- È possibile controllare il livello di compatibilità supportato in SSMS visualizzando la proprietà **livello di compatibilità supportato** nella pagina **informazioni** (nuovo in [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) in **Analysis Services proprietà**. Il livello di compatibilità supportato 1103 indica che SQL Server SP1 o versione successiva è installato. Il livello di compatibilità supportato non può essere modificato.  
+ È possibile controllare il livello di compatibilità supportato in SSMS visualizzando la proprietà **livello di compatibilità supportato** nella pagina **informazioni** (nuovo in [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) in **Analysis Services proprietà**. Il livello di compatibilità supportato 1103 indica che SQL Server SP1 o versione successiva è installato. Non è possibile modificare il livello di compatibilità supportato.  
   
   

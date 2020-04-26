@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766628"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62766628"
 -   Importazione ed esportazione di pacchetti  
   
 > [!IMPORTANT]  
->  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]supporta il servizio per la compatibilità con le versioni precedenti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]di. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
+>  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
 ## <a name="package-store"></a>Archivio pacchetti  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornisce due cartelle di primo livello per l'accesso [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ai pacchetti: **esecuzione di pacchetti** e **pacchetti archiviati**. La cartella **Pacchetti in esecuzione** include i pacchetti in esecuzione nel server. La cartella **Pacchetti archiviati** include i pacchetti che vengono salvati nell'archivio pacchetti. Questi sono gli unici pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'archivio pacchetti può includere sia il database msdb sia le cartelle del file system elencate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il file di configurazione specifica le cartelle msdb e del file system da gestire. Possono inoltre essere presenti pacchetti archiviati in un'altra posizione nel file system non gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -73,8 +73,7 @@ ms.locfileid: "62766628"
  Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importazione ed esportazione di pacchetti  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] I pacchetti possono essere salvati nel database msdb o nel file system. Per copiare un pacchetto da un archivio all'altro, è necessario utilizzare la funzionalità di importazione o esportazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È inoltre possibile importare un pacchetto nello stesso tipo di archivio e modificare il nome del pacchetto in modo da crearne una copia. Per importare ed esportare pacchetti, è anche possibile usare l'utilità del prompt dei comandi **dtutil** (dtutil.exe).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] I pacchetti possono essere salvati nel database msdb o nel file system. Per copiare un pacchetto da un archivio all'altro, è necessario utilizzare la funzionalità di importazione o esportazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È inoltre possibile importare un pacchetto nello stesso tipo di archivio e modificare il nome del pacchetto in modo da crearne una copia. Per importare ed esportare pacchetti, è anche possibile usare l'utilità del prompt dei comandi **dtutil** (dtutil.exe).  
   
  Per altre informazioni, vedere [dtutil Utility](../dtutil-utility.md).  
   
@@ -82,9 +81,9 @@ ms.locfileid: "62766628"
   
 -   [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Visualizzare i pacchetti Integration Services in SQL Server Management Studio &#40;servizio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Visualizzare pacchetti di Integration Services in SQL Server Management Studio &#40;servizio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](integration-services-service-ssis-service.md)  
   
   

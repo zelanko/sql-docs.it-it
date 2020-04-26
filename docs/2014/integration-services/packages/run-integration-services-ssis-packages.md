@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767083"
 ---
 # <a name="execution-of-projects-and-packages"></a>Esecuzione di progetti e pacchetti
-  Per eseguire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è possibile usare vari strumenti, a seconda della posizione in cui sono archiviati tali pacchetti. Gli strumenti sono descritti nella tabella seguente.  
+  Per eseguire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile usare vari strumenti, a seconda della posizione in cui sono archiviati tali pacchetti. Gli strumenti sono descritti nella tabella seguente.  
   
  Per archiviare un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile utilizzare il modello di distribuzione del progetto per distribuire il progetto nel server. Per informazioni, vedere [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md).  
   
@@ -35,19 +35,19 @@ ms.locfileid: "62767083"
 |Strumento|Pacchetti archiviati nel server Integration Services|Pacchetti archiviati nell'archivio pacchetti SSIS o nel database msdb|Pacchetti archiviati nel file system, all'esterno del percorso che fa parte dell'archivio pacchetti SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|No|No<br /><br /> È tuttavia possibile aggiungere un pacchetto esistente a un progetto dall'archivio pacchetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in cui è incluso il database msdb. L'aggiunta di un pacchetto esistente al progetto comporta la creazione di una copia locale del pacchetto nel file system.|Sì|  
-|**SQL Server Management Studio quando si è connessi a un'istanza del motore di database che ospita il server di Integration Services**<br /><br /> Per altre informazioni, vedere [Finestra di dialogo Esecuzione pacchetto](../execute-package-dialog-box.md)|Sì|No<br /><br /> È tuttavia possibile importare un pacchetto nel server da questi percorsi.|No<br /><br /> È tuttavia possibile importare un pacchetto nel server dal file system.|  
-|**SQL Server Management Studio, quando è connesso al servizio Integration Services che gestisce l'archivio pacchetti SSIS**|No|Sì|No<br /><br /> È tuttavia possibile importare un pacchetto nell'archivio pacchetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] dal file system.|  
+|**SQL Server Management Studio, quando si è connessi a un'istanza del Motore di database in cui è ospitato il server Integration Services**<br /><br /> Per altre informazioni, vedere [Finestra di dialogo Esecuzione pacchetto](../execute-package-dialog-box.md)|Sì|No<br /><br /> È tuttavia possibile importare un pacchetto nel server da questi percorsi.|No<br /><br /> È tuttavia possibile importare un pacchetto nel server dal file system.|  
+|**SQL Server Management Studio, quando è connesso al servizio Integration Services tramite cui viene gestito l'archivio pacchetti di SSIS**|No|Sì|No<br /><br /> È tuttavia possibile importare un pacchetto nell'archivio pacchetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] dal file system.|  
 |**dtexec**<br /><br /> Per altre informazioni, vedere [dtexec Utility](dtexec-utility.md).|Sì|Sì|Sì|  
 |**dtexecui**<br /><br /> Per altre informazioni, vedere [Riferimento all’interfaccia utente dell’utilità di esecuzione pacchetti &#40;DtExecUI&#41;](execute-package-utility-dtexecui-ui-reference.md)|No|Sì|Sì|  
 |**SQL Server Agent**<br /><br /> Per pianificare un pacchetto, è possibile utilizzare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.<br /><br /> Per altre informazioni, vedere [Processi di SQL Server Agent per i pacchetti](sql-server-agent-jobs-for-packages.md).|Sì|Sì|Sì|  
-|**stored procedure incorporato**<br /><br /> Per altre informazioni, vedere [catalog.start_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sì|No|No|  
-|**API gestita, tramite tipi e membri nello** <xref:Microsoft.SqlServer.Management.IntegrationServices> spazio dei nomi|Sì|No|No|  
-|**API gestita, tramite tipi e membri nello** <xref:Microsoft.SqlServer.Dts.Runtime> spazio dei nomi|Non attualmente|Sì|Sì|  
+|**Stored procedure predefinita**<br /><br /> Per altre informazioni, vedere [catalog.start_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sì|No|No|  
+|**API gestita, tramite tipi e membri dello spazio dei nomi ** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sì|No|No|  
+|**API gestita, tramite tipi e membri dello spazio dei nomi ** <xref:Microsoft.SqlServer.Dts.Runtime>|Non attualmente|Sì|Sì|  
   
 ## <a name="execution-and-logging"></a>Esecuzione e registrazione  
- È possibile abilitare la registrazione per i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], nonché acquisire informazioni di run-time in file di log. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  
+ È possibile abilitare la registrazione per i pacchetti di[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , nonché acquisire informazioni di run-time in file di log. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  
   
- Per monitorare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che vengono distribuiti ed eseguiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], utilizzare i report delle operazioni. I report sono disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [report per il server Integration Services](../reports-for-the-integration-services-server.md).  
+ Per monitorare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che vengono distribuiti ed eseguiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , utilizzare i report delle operazioni. I report sono disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [report per il server Integration Services](../reports-for-the-integration-services-server.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62767083"
   
 -   [Eseguire un pacchetto sul server SSIS mediante SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilità dtexec](dtexec-utility.md)   
  [Importazione/Esportazione guidata SQL Server](../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   

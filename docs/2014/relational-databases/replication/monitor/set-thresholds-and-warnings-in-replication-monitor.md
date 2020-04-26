@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667184"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
@@ -51,11 +51,11 @@ ms.locfileid: "62667184"
   
 -   [Impostare soglie e avvisi per una pubblicazione transazionale](#Transactional)  
   
--   [Impostare soglie e avvisi per una pubblicazione di tipo merge](#Merge)  
+-   [Impostare valore soglia e avvisi per una pubblicazione di tipo merge](#Merge)  
   
 -   [Impostare soglie e avvisi per una pubblicazione snapshot](#Snapshot)  
   
-##  <a name="Transactional"></a>Per impostare soglie e avvisi per una pubblicazione transazionale  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a>Per impostare soglie e avvisi per una pubblicazione transazionale  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62667184"
   
 4.  Impostare una soglia per gli avvisi nella colonna **Soglia** . Se, ad esempio, nel passaggio 3 è stata selezionata la casella di controllo **Avvisa se la latenza supera il valore soglia** , è possibile impostare una latenza di **60 secondi** nella colonna **Soglia** .  
   
-5.  Fare clic su **Save Changes**.  
+5.  Fare clic su **Salva modifiche**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
-##  <a name="Merge"></a>Impostare soglie e avvisi per una pubblicazione di tipo merge  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>Impostare soglie e avvisi per una pubblicazione di tipo merge  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
@@ -95,19 +95,19 @@ ms.locfileid: "62667184"
   
 3.  Abilitare un avviso selezionando la casella di controllo appropriata tra  
   
-    -   **Avvisa se una sottoscrizione scade entro la soglia**  
+    -   **Avvisa se una sottoscrizione scade entro il valore soglia**  
   
-    -   **Avvisa se la durata del merge per le connessioni remote supera la soglia**  
+    -   **Avvisa se la durata del processo di merge per le connessioni remote supera il valore soglia**  
   
-    -   **Avvisa se la durata del merge per le connessioni LAN supera la soglia**  
+    -   **Avvisa se la durata del processo di merge per le connessioni LAN supera il valore soglia**  
   
-    -   **Avvisa se le righe unite al secondo per le connessioni LAN sono inferiori alla soglia**  
+    -   **Avvisa se il numero di righe al secondo di cui è stato eseguito il merge per le connessioni LAN è minore del valore soglia**  
   
-    -   **Avvisa se le righe unite al secondo per le connessioni remote sono inferiori alla soglia**  
+    -   **Avvisa se il numero di righe al secondo di cui è stato eseguito il merge per le connessioni remote è minore del valore soglia**  
   
 4.  Impostare i valore soglia per gli avvisi nella colonna **Soglia** . Ad esempio, se si seleziona **Avvisa se la durata del processo di merge per le connessioni remote supera il valore soglia** nel passaggio 3, è possibile selezionare un periodo di **10 minuti** nella colonna **Soglia** .  
   
-5.  Fare clic su **Save Changes**.  
+5.  Fare clic su **Salva modifiche**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
@@ -127,9 +127,9 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
-##  <a name="Snapshot"></a>Impostare soglie e avvisi per una pubblicazione snapshot  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Impostare valore soglia e avvisi per una pubblicazione di snapshot  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62667184"
   
 4.  Impostare una soglia per l'avviso nella colonna **Soglia** . È ad esempio possibile selezionare un valore di **70%** nella colonna **Soglia** .  
   
-5.  Fare clic su **Save Changes**.  
+5.  Fare clic su **Salva modifiche**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
@@ -159,9 +159,9 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitoraggio della replica](../monitoring-replication.md)  
   
   

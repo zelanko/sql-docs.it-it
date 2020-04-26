@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638751"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "62638751"
   
  Un pacchetto può contenere alcuni o tutti gli oggetti seguenti, che vengono discussi in maggior dettaglio più avanti in questo argomento:  
   
--   Eventi  
+-   Events  
   
 -   Server di destinazione  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638751"
   
  ![Relazione tra un modulo, pacchetti e un oggetto](../../database-engine/media/xepackagesobjects.gif "Relazione tra un modulo, pacchetti e un oggetto")  
   
-### <a name="events"></a>Eventi  
+### <a name="events"></a>Events  
  Gli eventi monitorano i punti di interesse nel percorso di esecuzione di un programma, ad esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La generazione di un evento implica che il punto di interesse è stato raggiunto e fornisce informazioni sullo stato derivanti dall'ora in cui l'evento è stato generato.  
   
  Gli eventi possono essere utilizzati solamente per scopi di traccia o per azioni di trigger. Queste azioni possono essere sincrone o asincrone.  
@@ -70,7 +70,7 @@ ms.locfileid: "62638751"
 #### <a name="event-categorization"></a>Categorizzazione dell'evento  
  Negli eventi estesi viene utilizzato un modello di categorizzazione dell'evento simile a Analisi eventi per Windows (ETW). Due proprietà dell'evento sono utilizzate per categorizzazione, canale e parola chiave. L'utilizzo di queste proprietà supporta l'integrazione degli eventi estesi con ETW e i suoi strumenti.  
   
- **Channel**  
+ **Canale**  
   
  Un canale identifica il pubblico per un evento. Questi canali sono descritti nella tabella seguente.  
   
@@ -137,7 +137,7 @@ where name = 'keyword_map'
 ### <a name="types"></a>Tipi  
  Poiché i dati sono una raccolta di byte, la lunghezza e le funzionalità della raccolta dei byte sono necessarie per interpretarli. Queste informazioni sono incapsulate nell'oggetto Tipo. I tipi seguenti sono forniti per gli oggetti del pacchetto:  
   
--   evento  
+-   event  
   
 -   action  
   
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   tipo  
   
  Per altre informazioni, vedere [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
@@ -213,8 +213,8 @@ where name = 'lock_mode'
   
  Utilizzare tabella come esempio, supponendo di avere una modalità di colonna denominata il cui valore è 5. La tabella indica che è stato eseguito il mapping di 5 a X, ovvero il tipo di blocco è Esclusivo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Sessioni Eventi estesi di SQL Server](sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>Vedi anche  
+ [SQL Server sessioni eventi estesi](sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](sql-server-extended-events-engine.md)   
  [Destinazioni degli eventi estesi di SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   

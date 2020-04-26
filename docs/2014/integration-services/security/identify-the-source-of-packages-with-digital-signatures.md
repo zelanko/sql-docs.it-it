@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766653"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificazione dell'origine dei pacchetti con firme digitali
@@ -42,8 +42,8 @@ ms.locfileid: "62766653"
 > [!NOTE]  
 >  Il valore facoltativo **BlockedSignatureStates** del registro di sistema può specificare un'impostazione più restrittiva rispetto all'opzione per la firma digitale impostata in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o alla riga di comando **dtexec** . In questo caso, l'impostazione del Registro di sistema più restrittiva ha la precedenza rispetto ad altre impostazioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Pacchetti di Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services &#40;pacchetti&#41; SSIS](../integration-services-ssis-packages.md)   
  [Panoramica sulla sicurezza &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

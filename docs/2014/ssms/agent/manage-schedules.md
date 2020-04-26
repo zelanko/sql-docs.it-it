@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255067"
 ---
 # <a name="manage-schedules"></a>Gestione pianificazioni
@@ -29,7 +29,7 @@ ms.locfileid: "63255067"
  **Nome**  
  Consente di visualizzare il nome della pianificazione.  
   
- **Enabled**  
+ **Attivata**  
  Selezionare questa opzione per abilitare la pianificazione.  
   
  **Descrizione**  
@@ -38,7 +38,7 @@ ms.locfileid: "63255067"
  **Processi nella pianificazione**  
  Consente di visualizzare l'elenco dei numeri di processo collegati alla pianificazione. Fare clic su un numero per visualizzare le proprietà del processo.  
   
- **Nuovo**  
+ **Nuova**  
  Fare clic su questo pulsante per creare una nuova pianificazione.  
   
  **Elimina**  
@@ -47,7 +47,7 @@ ms.locfileid: "63255067"
  **Proprietà**  
  Fare clic su questo pulsante per modificare le proprietà della pianificazione selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211343"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Proprietà Operatore e Nuovo operatore (pagina Generale)
@@ -26,22 +26,22 @@ ms.locfileid: "68211343"
  **Nome**  
  Consente di modificare il nome dell'operatore.  
   
- **Enabled**  
+ **Attivata**  
  Consente di abilitare l'operatore. Se non è abilitato, all'operatore non verranno inviate notifiche.  
   
- **Nome posta elettronica**  
+ **Indirizzo posta elettronica**  
  Specifica l'indirizzo di posta elettronica dell'operatore.  
   
- **Indirizzo net send**  
+ **Indirizzo Net Send**  
  Specifica l'indirizzo da usare per **Net Send**.  
   
- **Nome posta elettronica cercapersone**  
+ **Indirizzo cercapersone**  
  Specifica l'indirizzo di posta elettronica da utilizzare per il cercapersone dell'operatore.  
   
- **Pianificazione cercapersone per servizio**  
+ **Pianificazione cercapersone per operatore in servizio**  
  Consente di impostare gli orari in cui il cercapersone è attivo.  
   
- **Lunedì-domenica**  
+ **Lunedì - Domenica**  
  Consente di selezionare i giorni in cui il cercapersone è attivo.  
   
  **Inizio giornata lavorativa**  
@@ -50,7 +50,7 @@ ms.locfileid: "68211343"
  **Fine giornata lavorativa**  
  Consente di selezionare l'ora oltre cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non invierà più messaggi al cercapersone.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Operatori](operators.md)  
   
   

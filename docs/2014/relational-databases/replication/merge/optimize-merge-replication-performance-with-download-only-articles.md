@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250372"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Ottimizzazione delle prestazioni della replica di tipo merge con gli articoli di solo download
@@ -46,7 +46,7 @@ ms.locfileid: "63250372"
 ## <a name="using-different-article-types-in-your-applications"></a>Utilizzo di tipi di articolo differenti nelle applicazioni  
  Se si analizzano i requisiti dell'applicazione in uso, è possibile valutare la soluzione migliore tra massima flessibilità e prestazioni ottimali. Le applicazioni caratterizzate da numerosi conflitti e modifiche sia nel server di pubblicazione che nei Sottoscrittori utilizzeranno, ad esempio, una pubblicazione costituita da articoli standard. Alcune applicazioni, come quelle di automazione della forza vendita (SFA), possono contenere articoli potenzialmente soggetti a conflitti e altri articoli che fungono da tabelle di ricerca e che possono essere specificati come di solo download. Le applicazioni di immissione dati, ad esempio i sistemi POS (Point Of Sales) e le applicazioni di automazione del personale esterno (FFA), spesso partizionano i dati in modo da eliminare i conflitti e non consentirne il passaggio da un Sottoscrittore all'altro. In queste situazioni una combinazione di partizioni non sovrapposte, di articoli di solo download e di partizioni pre-calcolate garantisce prestazioni e scalabilità massime. Per ulteriori informazioni sulle partizioni non sovrapposte e pre-calcolate, vedere [Filtri di riga parametrizzati](parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Opzioni degli articoli per la replica di tipo merge](article-options-for-merge-replication.md)   
  [Ottimizzare le prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   

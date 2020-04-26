@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62626216"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributi dell'istruzione che influiscono sui parametri con valori di tabella
@@ -28,7 +28,7 @@ ms.locfileid: "62626216"
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_NAME_SCOPE, vedere [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Parametri con valori di tabella &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

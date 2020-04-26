@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076431"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Creare una dimensione utilizzando la Creazione guidata dimensione
@@ -24,7 +24,7 @@ ms.locfileid: "66076431"
   
 ### <a name="to-create-a-new-dimension"></a>Per creare una nuova dimensione  
   
-1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Dimensioni**e quindi scegliere **Nuova dimensione**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **dimensioni**, quindi scegliere **nuova dimensione**.  
   
 2.  Nella pagina **Selezione metodo di creazione** della Creazione guidata dimensione selezionare **Utilizza una tabella esistente**e quindi fare clic su **Avanti**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66076431"
     > [!NOTE]  
     >  È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una dimensione utilizzando una tabella esistente](create-a-dimension-by-using-an-existing-table.md)  
   
   

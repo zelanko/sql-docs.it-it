@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076563"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Creare un cubo tramite una vista origine dati
@@ -49,7 +49,7 @@ ms.locfileid: "66076563"
 -   Nella scheda **Diagramma** viene visualizzato lo schema della vista origine dati. Le tabelle sono codificate con colori diversi a seconda che si tratti di tabelle dei fatti o delle dimensioni. Fare clic su qualsiasi tabella nello schema, quindi su **Fatti** o **Dimensioni** per selezionare o deselezionare l'impostazione in tale tabella. Utilizzare il pulsante **Zoom** per modificare l'ingrandimento.  
   
 > [!NOTE]  
->  Nella scheda **Diagramma** è possibile allargare o ingrandire al massimo la finestra della procedura guidata per visualizzare lo schema.  
+>   Nella scheda **Diagramma** è possibile allargare o ingrandire al massimo la finestra della procedura guidata per visualizzare lo schema.  
   
  Se nella vista origine dati è presente una tabella delle dimensioni temporali, selezionarla nell'elenco **Tabella dimensioni temporali** . Se non è presente alcun valore ** \<** , lasciare selezionata l'opzione Nessuno>. Si tratta dell'elemento predefinito dell'elenco. Se si seleziona una tabella come tabella delle dimensioni temporali, tale tabella viene selezionata anche come tabella delle dimensioni nelle schede **Tabelle** e **Diagramma** .  
   

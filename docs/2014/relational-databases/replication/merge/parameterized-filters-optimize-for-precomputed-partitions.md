@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250552"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Ottimizzazione delle prestazioni dei filtri con parametri con le partizioni pre-calcolate
@@ -26,7 +26,7 @@ ms.locfileid: "63250552"
   
  Quando viene eseguita la sincronizzazione tra un Sottoscrittore e un server di pubblicazione, quest'ultimo deve valutare i filtri del Sottoscrittore per stabilire quali righe appartengono alla partizione o al set di dati di tale Sottoscrittore. Questo processo di determinazione dell'appartenenza alla partizione delle modifiche del server di pubblicazione per ogni Sottoscrittore che riceve un set di dati filtrato viene definita *valutazione della partizione*. In assenza di partizioni pre-calcolate, la valutazione della partizione deve essere eseguita per ogni modifica apportata a una colonna filtrata nel server di pubblicazione dall'ultima esecuzione dell'agente di merge per uno specifico Sottoscrittore e questo processo deve essere ripetuto per ogni Sottoscrittore sincronizzato con il server di pubblicazione.  
   
- Se tuttavia il server di pubblicazione e il Sottoscrittore vengono eseguiti su [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva e si usano partizioni pre-calcolate, l'appartenenza alla partizione per tutte le modifiche sul server di pubblicazione viene pre-calcolata e mantenuta durante l'inserimento delle modifiche. Di conseguenza, quando un Sottoscrittore viene sincronizzato con il server di pubblicazione, può iniziare immediatamente a scaricare le modifiche relative alla propria partizione senza essere sottoposto al processo di valutazione della partizione. In questo modo è possibile ottenere significativi miglioramenti delle prestazioni quando una pubblicazione presenta un numero elevato di modifiche, Sottoscrittori o articoli.  
+ Tuttavia, se il server di pubblicazione e il Sottoscrittore sono in esecuzione in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva e si utilizzano partizioni pre-calcolate, l'appartenenza alla partizione per tutte le modifiche nel server di pubblicazione viene pre-calcolata e resa permanente nel momento in cui vengono apportate le modifiche. Di conseguenza, quando un Sottoscrittore viene sincronizzato con il server di pubblicazione, può iniziare immediatamente a scaricare le modifiche relative alla propria partizione senza essere sottoposto al processo di valutazione della partizione. In questo modo è possibile ottenere significativi miglioramenti delle prestazioni quando una pubblicazione presenta un numero elevato di modifiche, Sottoscrittori o articoli.  
   
  Oltre a utilizzare partizioni pre-calcolate, creare snapshot preliminari e/o consentire ai Sottoscrittori di richiedere la generazione e l'applicazione di snapshot alla prima sincronizzazione. Utilizzare una o entrambe le opzioni per generare snapshot per le pubblicazioni che utilizzando filtri con parametri. Se non si specifica alcuna opzione, le sottoscrizioni vengono inizializzate tramite una serie di istruzioni SELECT e INSERT, anziché tramite l'utilità **bcp** . Questo processo risulta decisamente più lento. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63250552"
 ## <a name="performance-of-precomputed-partitions"></a>Prestazioni delle partizioni pre-calcolate  
  Il calo delle prestazioni delle partizioni pre-calcolate è ridotto quando le modifiche vengono caricate dal Sottoscrittore nel server di pubblicazione, ma il tempo per l'elaborazione dei processi merge viene impiegato per la valutazione delle partizioni e il download delle modifiche dal server di pubblicazione al Sottoscrittore e pertanto il guadagno netto può risultare ancora significativo. I vantaggi in termini di prestazioni varieranno a seconda del numero di Sottoscrittori che eseguono contemporaneamente la sincronizzazione e del numero di aggiornamenti per sincronizzazione che comportano lo spostamento delle righe da una partizione all'altra.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Filtri di riga con parametri](parameterized-filters-parameterized-row-filters.md)  
   
   

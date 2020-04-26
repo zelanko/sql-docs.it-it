@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721103"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lezione 3: Configurazione della distribuzione
@@ -51,7 +51,7 @@ ms.locfileid: "62721103"
   
 2.  Nella pagina **generale** fare clic su **Cerca**, immettere \< _Machine_Name>_ **\ repl_snapshot** nella casella **immettere il nome dell'oggetto da selezionare** , dove \< *Machine_Name>* è il nome del server di pubblicazione locale, fare clic su **Controlla nomi**e quindi su **OK**.  
   
-3.  Nell'elenco utenti con mapping **a questo account di accesso** nella pagina **mapping** utenti selezionare i database **** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la distribuzione.  
+3.  Nell'elenco utenti con mapping **a questo account di accesso** nella pagina **mapping** utenti selezionare i database **distribution** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la distribuzione.  
   
      Nell'elenco **appartenenza a ruoli del database** selezionare `db_owner` il ruolo per l'account di accesso per entrambi i database.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "62721103"
   
 7.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_merge. Questo account deve avere mapping di utenti nel database di **distribuzione** e nel database **AdventureWorks** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Configura distribuzione](configure-distribution.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Configurare la distribuzione](configure-distribution.md)   
  [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md)  
   
   

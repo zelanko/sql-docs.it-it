@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667217"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Monitoraggio replica consente di monitorare le prestazioni della replica transazionale e della replica di tipo merge nei modi seguenti:  
+  Monitoraggio replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di monitorare le prestazioni della replica transazionale e della replica di tipo merge nei modi seguenti:  
   
 -   Impostazione di avvisi e soglie  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62667217"
  La replica transazionale consente di misurare la latenza di un sistema inserendo un token (una piccola quantità di dati) nel log delle transazioni del database di pubblicazione e misurando il tempo impiegato dal token per arrivare al database di distribuzione e ai Sottoscrittori. Il token consente inoltre di rilevare se i dati non raggiungono il database di distribuzione o il Sottoscrittore. Per altre informazioni, vedere [Misurazione della latenza e convalida delle connessioni per la replica transazionale](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Visualizzazione di statistiche dettagliate sulle prestazioni di sincronizzazione per la replica di tipo merge  
- Per la replica di tipo merge in Monitoraggio replica vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per ulteriori informazioni sulla visualizzazione di statistiche dettagliate, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+ Per la replica di tipo merge in Monitoraggio replica vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per altre informazioni sulla visualizzazione di statistiche dettagliate, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Visualizzazione delle transazioni e dei tempi di recapito della replica transazionale  
  Per la replica transazionale in Monitoraggio replica vengono visualizzate informazioni sul numero di transazioni nel database di distribuzione non ancora distribuite a un Sottoscrittore e il tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  

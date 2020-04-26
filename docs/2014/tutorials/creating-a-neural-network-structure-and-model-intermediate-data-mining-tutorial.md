@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856317"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di rete neurale (Esercitazione intermedia sul data mining)
@@ -42,7 +42,7 @@ ms.locfileid: "62856317"
   
  [Elabora tutti i modelli](#bkmk_SeedProcess)  
   
-## Creare la struttura predefinita del Call Center<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>Creare la struttura predefinita del Call Center<a name="bkmk_defaul"></a>  
   
 1.  In Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse su **strutture di data mining** e scegliere **nuova struttura di data mining**  
   
@@ -75,16 +75,16 @@ ms.locfileid: "62856317"
     |AutomaticResponses|Input|  
     |AverageTimePerIssue|Input/Stima|  
     |Calls|Input|  
-    |DateKey|Non usare|  
+    |DateKey|Non utilizzare|  
     |DayOfWeek|Input|  
     |FactCallCenterID|Chiave|  
     |IssuesRaised|Input|  
     |LevelOneOperators|Input/Stima|  
     |LevelTwoOperators|Input|  
-    |Ordini|Input/Stima|  
+    |Orders|Input/Stima|  
     |ServiceGrade|Input/Stima|  
-    |MAIUSC|Input|  
-    |TotalOperators|Non usare|  
+    |Turno|Input|  
+    |TotalOperators|Non utilizzare|  
     |WageType|Input|  
   
      Notare che sono state selezionate più colonne stimabili. Uno degli aspetti positivi dell'algoritmo Neural Network è la capacità di analizzare tutte le possibili combinazioni di attributi di input e output. Questa operazione non può essere eseguita per un set di dati di grandi dimensioni, perché potrebbe aumentare in modo esponenziale il tempo di elaborazione.  
@@ -96,15 +96,15 @@ ms.locfileid: "62856317"
     |AutomaticResponses|Continuo|long|  
     |AverageTimePerIssue|Continuo|long|  
     |Calls|Continuo|long|  
-    |DayOfWeek|Discrete|Text|  
+    |DayOfWeek|Discrete|Testo|  
     |FactCallCenterID|Chiave|long|  
     |IssuesRaised|Continuo|long|  
     |LevelOneOperators|Continuo|long|  
     |LevelTwoOperators|Continuo|long|  
-    |Ordini|Continuo|long|  
-    |ServiceGrade|Continuo|DOUBLE|  
-    |MAIUSC|Discrete|Text|  
-    |WageType|Discrete|Text|  
+    |Orders|Continuo|long|  
+    |ServiceGrade|Continuo|Double|  
+    |Turno|Discrete|Testo|  
+    |WageType|Discrete|Testo|  
   
 13. Nella pagina **Crea set di testing** deselezionare la casella di testo per l'opzione, **percentuale di dati per il testing**. Fare clic su **Avanti**.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "62856317"
   
  Modello predefinito (continuo)  
   
-|VALORE|SUPPORTO|  
+|VALORE|SUPPORT|  
 |-----------|-------------|  
 |Missing|0|  
 |0,09875|120|  
   
  Suddiviso tramite clustering  
   
-|VALORE|SUPPORTO|  
+|VALORE|SUPPORT|  
 |-----------|-------------|  
 |\<0,0748051948|34|  
 |0,0748051948-0,09716216215|27|  
@@ -153,7 +153,7 @@ ms.locfileid: "62856317"
   
  Suddiviso in base al metodo delle aree uguali  
   
-|VALORE|SUPPORTO|  
+|VALORE|SUPPORT|  
 |-----------|-------------|  
 |\<0,07|26|  
 |0,07-0,00|22|  
@@ -181,12 +181,12 @@ ms.locfileid: "62856317"
   
  In alternativa, anziché usare i valori numerici, è possibile aggiungere una colonna derivata distinta che classifica i livelli di servizio in intervalli di destinazione predefiniti, ad esempio **Best** (ServiceGrade \<= 0,05), **accettabile** (0,10 > ServiceGrade > 0,05) e **poor** (ServiceGrade >= 0,10).  
   
-###  <a name="bkmk_newColumn"></a>Creare una copia di una colonna e modificare il metodo di discretizzazione  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>Creare una copia di una colonna e modificare il metodo di discretizzazione  
  Verrà fatta una copia della colonna di data mining che contiene l'attributo di destinazione, ServiceGrade, e verrà modificata la modalità di raggruppamento dei numeri. Verranno quindi create più copie di qualsiasi colonna in una struttura di data mining, incluso l'attributo stimabile.  
   
  Ai fini di questa esercitazione, verrà utilizzato il metodo di discretizzazione delle aree uguali e verranno specificati quattro bucket. I raggruppamenti risultanti da questo metodo sono piuttosto vicini ai valori di destinazione di interesse per gli utenti aziendali.  
   
-####  <a name="bkmk_ColumnCopy"></a>Per creare una copia personalizzata di una colonna nella struttura di data mining  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>Per creare una copia personalizzata di una colonna nella struttura di data mining  
   
 1.  In Esplora soluzioni fare doppio clic sulla struttura di data mining creata.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "62856317"
   
      Si noti che quando si aggiunge una copia di una colonna della struttura di data mining, il flag di utilizzo per la copia viene impostato automaticamente su `Ignore`. Quando si aggiunge una copia di una colonna a una struttura di data mining, la copia non viene in genere utilizzata per l'analisi insieme alla colonna originale perché, in caso contrario, l'algoritmo individuerebbe una stretta correlazione tra le due colonne, nascondendo altre relazioni.  
   
-##  <a name="bkmk_NewModel"></a>Aggiungere un nuovo modello di data mining alla struttura di data mining  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>Aggiungere un nuovo modello di data mining alla struttura di data mining  
  Dopo avere creato un nuovo raggruppamento per l'attributo di destinazione, è necessario aggiungere un nuovo modello di data mining che utilizzi la colonna discretizzata. Al termine, la struttura di data mining CallCenter includerà due modelli di data mining:  
   
 -   Il modello di data mining Call Center Default NN gestisce i valori di ServiceGrade come intervallo continuo.  
@@ -243,10 +243,10 @@ ms.locfileid: "62856317"
   
 6.  Analogamente, individuare ServiceGrade Binned e modificare l'utilizzo da `Ignore` a `Predict`.  
   
-##  <a name="bkmk_Alias2"></a>Creare un alias per la colonna di destinazione  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>Creare un alias per la colonna di destinazione  
  Non è in genere possibile confrontare modelli di data mining che utilizzano attributi stimabili diversi. È tuttavia possibile creare un alias per una colonna del modello di data mining. Ovvero, è possibile rinominare la colonna ServiceGrade in contenitori, all'interno del modello di data mining in modo che abbia lo stesso nome della colonna originale. È quindi possibile confrontare direttamente i due modelli in un grafico di accuratezza, anche se i dati vengono discretizzati in modo diverso.  
   
-###  <a name="bkmk_Alias"></a>Per aggiungere un alias per una colonna della struttura di data mining in un modello di data mining  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>Per aggiungere un alias per una colonna della struttura di data mining in un modello di data mining  
   
 1.  Nella scheda **modelli di data mining** , in **struttura**, selezionare ServiceGrade contenitori.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "62856317"
     |**Flag di modellazione**||  
     |**Nome**|Service Grade|  
     |**SourceColumn ID**|Service Grade 1|  
-    |**Utilizzo**|Stima|  
+    |**Uso**|Stima|  
   
 5.  Fare clic in un punto qualsiasi della scheda **modello di data mining** .  
   
@@ -286,10 +286,10 @@ ms.locfileid: "62856317"
     |IssuesRaised|Input|Input|  
     |LevelOneOperators|Input|Input|  
     |LevelTwoOperators|Input|Input|  
-    |Ordini|Input|Input|  
+    |Orders|Input|Input|  
     |ServiceGrade Binned|Ignora|Predict (ServiceGrade)|  
     |ServiceGrade|Stima|Ignora|  
-    |MAIUSC|Input|Input|  
+    |Turno|Input|Input|  
     |TotalOperators|Input|Input|  
     |WageType|Input|Input|  
   
@@ -299,7 +299,7 @@ ms.locfileid: "62856317"
 > [!NOTE]  
 >  Se non si specifica un valore numerico per il parametro del valore di inizializzazione, in SQL Server Analysis Services verrà generato un valore di inizializzazione basato sul nome del modello. Poiché i modelli hanno nomi diversi, è necessario impostare un valore di inizializzazione per garantire che elaborino i dati nello stesso ordine.  
   
-###  <a name="bkmk_SeedProcess"></a>Per specificare il valore di inizializzazione ed elaborare i modelli  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>Per specificare il valore di inizializzazione ed elaborare i modelli  
   
 1.  Nella scheda **modello di data mining** fare clic con il pulsante destro del mouse sulla colonna per il modello denominato Call Center-LR, quindi scegliere **Imposta parametri algoritmo**.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "62856317"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esplorazione del modello di Call Center &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

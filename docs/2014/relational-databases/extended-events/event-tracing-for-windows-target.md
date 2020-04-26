@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519305"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
@@ -75,7 +75,7 @@ ms.locfileid: "62519305"
     > [!IMPORTANT]  
     >  Impossibile modificare il percorso del file dopo l'inizio della prima sessione.  
   
--   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
+-   I file Managed Object Format (MOF) si trovano nel * \<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione ETW a una sessione di Eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  
@@ -86,10 +86,10 @@ ADD TARGET package0.etw_classic_sync_target
   
  Per altre informazioni su un esempio completo che mostra come usare la destinazione ETW e come visualizzare i dati, vedere [Monitorare l'attività del sistema mediante gli eventi estesi](monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Destinazioni degli eventi estesi di SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [SQL Server destinazioni degli eventi estesi](../../database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CREARE una sessione eventi &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

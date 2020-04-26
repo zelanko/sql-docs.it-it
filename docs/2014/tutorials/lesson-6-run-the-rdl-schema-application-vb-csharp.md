@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63254498"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lezione 6: eseguire l'applicazione dello schema RDL (VB-C #)
@@ -45,7 +45,7 @@ ms.locfileid: "63254498"
   
 3.  Dopo aver eseguito l'applicazione di esempio nel server di report verrà salvata una copia aggiornata del report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757933"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributi CSDLBI per la progettazione di report
@@ -25,7 +25,7 @@ ms.locfileid: "62757933"
   
 |Nome attributo|Tipo di dati|Descrizione|  
 |--------------------|---------------|-----------------|  
-|Impostazioni cultura|Text|Indica le impostazioni cultura utilizzate per i formati della valuta. Se omesso, viene utilizzato EN-US.|  
+|Impostazioni cultura|Testo|Indica le impostazioni cultura utilizzate per i formati della valuta. Se omesso, viene utilizzato EN-US.|  
 |IsRightToLeft|Boolean|Indica se i valori dei campi di testo devono essere letti da destra a sinistra per impostazione predefinita|  
   
 ## <a name="entity-attributes"></a>Attributi di entità  
@@ -33,11 +33,11 @@ ms.locfileid: "62757933"
   
 |Nome attributo|Tipo di dati|Descrizione|  
 |--------------------|---------------|-----------------|  
-|`ReferenceName`|Text|Identificatore utilizzato per fare riferimento a questa entità in una query DAX. Se omesso, viene utilizzato il nome.|  
-|`Caption`|Text|Nome visualizzato per l'entità.|  
-|`Documentation`|Text|Testo descrittivo per agevolare la comprensione del significato dei dati in ambito aziendale.|  
+|`ReferenceName`|Testo|Identificatore utilizzato per fare riferimento a questa entità in una query DAX. Se omesso, viene utilizzato il nome.|  
+|`Caption`|Testo|Nome visualizzato per l'entità.|  
+|`Documentation`|Testo|Testo descrittivo per agevolare la comprensione del significato dei dati in ambito aziendale.|  
 |`Hidden`|Boolean|Indica se l'entità deve essere visualizzata. Il valore predefinito è `false`.|  
-|`CollectionCaption`|Text|Nome plurale per fare riferimento a un set di istanze dell'entità. Se omesso, viene utilizzato l'attributo Caption.|  
+|`CollectionCaption`|Testo|Nome plurale per fare riferimento a un set di istanze dell'entità. Se omesso, viene utilizzato l'attributo Caption.|  
 |`DisplayKey`|MemberRef[]|Elenco ordinato di campi utilizzato per identificare un'istanza di entità per gli utenti in ambito aziendale. I riferimenti possono includere proprietà di navigazione e proprietà di istanza. Quando viene fatto riferimento a una proprietà di navigazione, viene visualizzato il valore `DisplayKey` dell'entità di destinazione. Se il valore `DisplayKey` viene omesso, viene utilizzato il campo chiave.|  
 |`DefaultImage`|MemberRef|Riferimento al campo contenente un'immagine utilizzata per identificare visivamente un'istanza di entità per gli utenti in ambito aziendale. Se omesso, viene utilizzato il primo campo immagine nell'entità, se presente.|  
 |`DefaultDetails`|MemberRef[]|Elenco ordinato di campi che rappresentano il set predefinito di informazioni dettagliate visualizzato agli utenti in ambito aziendale relativamente a una istanza di entità. Se omesso, vengono utilizzati i primi cinque (5) campi dell'entità, escludendo quelli a cui `Key`, `DisplayKey` o `DefaultImage` fanno riferimento.|  
@@ -50,15 +50,15 @@ ms.locfileid: "62757933"
   
 |Nome attributo|Tipo di dati|Descrizione|  
 |--------------------|---------------|-----------------|  
-|`ReferenceName`|Text|Identificatore utilizzato per fare riferimento a questa entità in una query DAX. Se omesso, viene utilizzato il nome del campo.|  
-|`Caption`|Text|Nome visualizzato per l'entità. Se omesso, `ReferenceName` viene utilizzato il campo.|  
-|`Documentation`|Text|Testo descrittivo per agevolare la comprensione del significato del campo in ambito aziendale.|  
+|`ReferenceName`|Testo|Identificatore utilizzato per fare riferimento a questa entità in una query DAX. Se omesso, viene utilizzato il nome del campo.|  
+|`Caption`|Testo|Nome visualizzato per l'entità. Se omesso, `ReferenceName` viene utilizzato il campo.|  
+|`Documentation`|Testo|Testo descrittivo per agevolare la comprensione del significato del campo in ambito aziendale.|  
 |`Hidden`|Boolean|Indica se il campo deve essere visualizzato. Il valore predefinito è `false` che indica che il campo verrà visualizzato.|  
-|`DisplayFolder`|Text|Nome (percorso completo) della cartella in cui viene visualizzato questo campo. Se omesso, il campo viene visualizzato alla radice del modello.|  
+|`DisplayFolder`|Testo|Nome (percorso completo) della cartella in cui viene visualizzato questo campo. Se omesso, il campo viene visualizzato alla radice del modello.|  
 |`ContextualNameRule`|Enum|Valore che indica se e come deve essere modificato il nome della proprietà in base al contesto in cui viene utilizzato. I valori possibili sono i seguenti: `None`, `Role`, `Merge`.|  
 |`Alignment`|Enum|Valore che indica come devono essere allineati i valori del campo in una presentazione tabulare. I valori possibili sono i seguenti: `Default`, `Center`, `Left`, `Right`. Se omesso, il valore predefinito determina l'allineamento in base al tipo di dati del campo.|  
-|`FormatString`|Text|Stringa di formato .NET che indica il modo in cui il valore del campo deve essere formattato per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> -Campi DateTime: data breve regionale o "d"<br />-Campi a virgola mobile e campi integrali con una funzione di aggregazione predefinita: numero regionale o "n"<br />-Integer senza funzione di aggregazione predefinita: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
-|`Units`|Text|Simbolo applicato ai valori del campo per esprimere unità. Se omesso, si presuppone che le unità non siano note.|  
+|`FormatString`|Testo|Stringa di formato .NET che indica il modo in cui il valore del campo deve essere formattato per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> -Campi DateTime: data breve regionale o "d"<br />-Campi a virgola mobile e campi integrali con una funzione di aggregazione predefinita: numero regionale o "n"<br />-Integer senza funzione di aggregazione predefinita: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
+|`Units`|Testo|Simbolo applicato ai valori del campo per esprimere unità. Se omesso, si presuppone che le unità non siano note.|  
 |`Width`|Integer|Larghezza preferita in caratteri che devono essere riservati per visualizzare i valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita è basata sul tipo di dati del campo.|  
 |`SortDirection`|Enum|Valore che indica la modalità di ordinamento dei valori del campo. I valori possibili sono i seguenti: `Default`, `Ascending`, `Descending`. Se omesso, il valore predefinito assegna una direzione di ordinamento è basato sul tipo di dati del campo.|  
 |`IsRightToLeft`|Boolean|Indica se il campo contiene testo che deve essere letto da destra a sinistra. Se omesso, si presuppone l'impostazione del modello.|  

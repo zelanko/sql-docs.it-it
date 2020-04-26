@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468194"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Studio per OLTP in memoria
@@ -84,7 +84,7 @@ ms.locfileid: "62468194"
   
     -   In **Esplora oggetti**fare clic con il pulsante destro del mouse sul database, scegliere **Proprietà**, quindi fare clic sulla pagina **Generale** . Il valore della proprietà **Memoria allocata agli oggetti ottimizzati in memoria** indica la memoria allocata agli oggetti ottimizzati per la memoria nel database. Il valore della proprietà **Memoria utilizzata dagli oggetti ottimizzati in memoria** indica la memoria usata dagli oggetti ottimizzati per la memoria nel database.  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Funzionalità supportate in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>Funzionalità supportate in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supporta le funzionalità e le operazioni supportate dal motore di database nei database con filegroup di dati ottimizzati per la memoria, tabelle ottimizzate per la memoria, indici e stored procedure compilate in modo nativo.  
   
  Per gli oggetti di database, tabella, stored procedure, tipo di tabella definito dall'utente o indice, le seguenti funzionalità di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono state aggiornate o estese per supportare OLTP in memoria.  
@@ -150,7 +150,7 @@ ms.locfileid: "62468194"
   
 -   Esplora modelli  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Funzionalità non supportate in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>Funzionalità non supportate in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Per gli oggetti di OLTP in memoria, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non sono supportate funzionalità e operazioni non supportate anche dal motore di database.  
   
  Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità non supportate, vedere funzionalità di [SQL Server supportate](unsupported-sql-server-features-for-in-memory-oltp.md).  

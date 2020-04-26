@@ -22,18 +22,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704768"
 ---
 # <a name="monitor-job-activity"></a>Monitoraggio delle attività del processo
-  Per eseguire il monitoraggio dell'attività corrente di tutti i processi definiti in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile utilizzare Monitoraggio attività processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Per eseguire il monitoraggio dell'attività corrente di tutti i processi definiti in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile utilizzare Monitoraggio attività processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="sql-server-agent-sessions"></a>Sessioni di SQL Server Agent  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crea una nuova sessione ogni volta che viene avviato. Quando viene creata una nuova sessione, la tabella **sysjobactivity** del database **msdb** viene popolata con tutti i processi esistenti definiti. Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nella tabella viene mantenuta l'ultima attività relativa ai processi. Ogni sessione registra l'attività dei processi normale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, dall'inizio al termine del processo. Le informazioni relative alle sessioni sono archiviate nella tabella **syssessions** del database **msdb** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crea una nuova sessione ogni volta che viene avviato. Quando viene creata una nuova sessione, la tabella **sysjobactivity** del database **msdb** viene popolata con tutti i processi esistenti definiti. Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nella tabella viene mantenuta l'ultima attività relativa ai processi. Ogni sessione registra l'attività dei processi normale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, dall'inizio al termine del processo. Le informazioni relative alle sessioni sono archiviate nella tabella **syssessions** del database **msdb** .  
   
 ## <a name="job-activity-monitor"></a>Monitoraggio attività processi  
  Monitoraggio attività processi consente di visualizzare la tabella **sysjobactivity** tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile visualizzare tutti i processi del server oppure definire filtri che consentono di limitare il numero dei processi visualizzati. È inoltre possibile ordinare le informazioni relative ai processi facendo clic su un'intestazione di colonna nella griglia di **Attività processi agente** . Ad esempio, se si seleziona l'intestazione di colonna **Ultima esecuzione** , i processi verranno visualizzati nell'ordine in cui sono stati eseguiti l'ultima volta. Se si fa di nuovo clic sull'intestazione di colonna, i processi verranno ordinati in ordine crescente o decrescente in base alla data dell'ultima esecuzione.  
@@ -61,7 +60,7 @@ ms.locfileid: "62704768"
 |**Descrizione**|**Argomento**|  
 |Viene illustrato come visualizzare lo stato di runtime dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Visualizza attività processi](view-job-activity.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizza attività processi](view-job-activity.md)   
  [dbo. sysjobactivity &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
  [dbo. syssessions &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   

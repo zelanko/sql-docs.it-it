@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937197"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Avanzate)
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina Avanzate)
   Utilizzare questa pagina per visualizzare e modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
- **Operazione riuscita**  
+ **Azione in caso di esito positivo**  
  Consente di impostare l'azione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire in caso di esito positivo del passaggio di processo.  
   
  **Tentativi**  
@@ -32,7 +32,7 @@ ms.locfileid: "62937197"
  **Intervallo tra i tentativi (minuti)**  
  Consente di impostare l'intervallo di attesa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tra l'esecuzione di un tentativo e l'altro.  
   
- **Azione in caso di errore**  
+ **Azione in caso di esito negativo**  
  Consente di impostare l'azione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire in caso di esito negativo del passaggio di processo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opzioni per i passaggi del processo Transact-SQL  
@@ -145,7 +145,7 @@ ms.locfileid: "62937197"
  **Includi output passaggio nella cronologia**  
  Selezionare questa opzione per includere l'output del passaggio di processo nella cronologia processo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestire passaggi di processo](manage-job-steps.md)  
   
   

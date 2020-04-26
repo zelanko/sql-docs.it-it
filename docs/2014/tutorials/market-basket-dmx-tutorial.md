@@ -19,21 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185648"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Esercitazione su DMX per Market Basket
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione dei modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime che indicano quali prodotti tendono a essere acquistati contemporaneamente.  
   
- I modelli di data mining verranno creati a partire dai dati contenuti nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], in cui sono memorizzati i dati relativi alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una grande società multinazionale. che produce e vende biciclette in metallo e a struttura mista per i mercati di America del nord, Europa e Asia. La sede operativa si trova a Bothell, nello stato di Washington, in cui lavorano 290 dipendenti, e la società dispone di numerosi reparti vendite dislocati nelle diverse aree di mercato a livello internazionale.  
+ I modelli di data mining verranno creati a partire dai dati contenuti nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], in cui sono memorizzati i dati relativi alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una grande società multinazionale. che produce e vende biciclette in metallo e a struttura mista per i mercati di America del nord, Europa e Asia. La sede operativa si trova a Bothell, nello stato di Washington, in cui lavorano 290 dipendenti, e la società dispone di numerosi reparti vendite dislocati nelle diverse aree di mercato a livello internazionale.  
   
 ## <a name="tutorial-scenario"></a>Scenario dell'esercitazione  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di creare un'applicazione personalizzata dotata di funzionalità di data mining per stimare quali tipi di prodotti i clienti tendono ad acquistare contemporaneamente. L'obiettivo dell'applicazione personalizzata consiste nella possibilità di specificare un set di prodotti e di stimare quali prodotti aggiuntivi verranno acquistati insieme a quelli specificati. Queste informazioni verranno quindi utilizzate da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per aggiungere una caratteristica di suggerimento nel sito Web e ottimizzare la presentazione delle informazioni alla clientela.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di creare un'applicazione personalizzata dotata di funzionalità di data mining per stimare quali tipi di prodotti i clienti tendono ad acquistare contemporaneamente. L'obiettivo dell'applicazione personalizzata consiste nella possibilità di specificare un set di prodotti e di stimare quali prodotti aggiuntivi verranno acquistati insieme a quelli specificati. Queste informazioni verranno quindi utilizzate da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per aggiungere una caratteristica di suggerimento nel sito Web e ottimizzare la presentazione delle informazioni alla clientela.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in sono disponibili diversi strumenti che possono essere utilizzati per completare questa [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attività:  
   
@@ -114,9 +112,9 @@ ms.locfileid: "63185648"
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere i pulsanti **argomento successivo** e **argomento precedente** alla barra degli strumenti del Visualizzatore di documenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazione DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lezione 3: creazione di uno scenario Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

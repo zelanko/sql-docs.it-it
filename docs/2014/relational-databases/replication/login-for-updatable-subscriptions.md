@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058097"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Account di accesso per sottoscrizioni aggiornabili
@@ -36,7 +36,7 @@ ms.locfileid: "63058097"
  In questa procedura guidata è possibile specificare le prime due opzioni. L'ultima opzione può essere specificata solo utilizzando [sp_link_publication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); specificare il valore **1** per il parametro **@security_mode**.  
   
 ## <a name="options"></a>Opzioni  
- **Creare un server collegato che si connette utilizzando l'account di accesso SQL Server autenticazione seguente:**  
+ **Crea un server collegato che stabilisce la connessione utilizzando l'autenticazione di SQL Server**  
  La replica crea un server collegato utilizzando le credenziali specificate nei campi **Nome account di accesso** e **Password** .  
   
  **Accesso**  
@@ -45,16 +45,16 @@ ms.locfileid: "63058097"
  **Password**  
  Consente di immettere una password complessa per l'account di accesso specificato nel campo **Nome account di accesso**.  
   
- **Conferma password**  
+ **Confirm Password**  
  Consente di immettere nuovamente la password per confermarla.  
   
  **Usa un server collegato o remoto già definito**  
  Per questa opzione è necessario un server collegato o remoto già definito. Per altre informazioni, vedere [Server collegati &#40;motore di database&#41;](../linked-servers/linked-servers-database-engine.md) e [Server remoti](../../database-engine/configure-windows/remote-servers.md). Accertarsi che l'account di accesso utilizzato per il server collegato o remoto disponga di una password complessa e delle sole autorizzazioni descritte in questo argomento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Visualizzare e modificare le impostazioni di sicurezza della replica](security/view-and-modify-replication-security-settings.md)   
- [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  
+ [Sottoscrizioni aggiornabili per la replica transazionale](transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

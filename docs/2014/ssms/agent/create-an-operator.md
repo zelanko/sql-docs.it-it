@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136423"
 ---
 # <a name="create-an-operator"></a>Create an Operator
@@ -41,23 +41,22 @@ ms.locfileid: "63136423"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
 -   Si noti che per inviare notifiche tramite posta elettronica e cercapersone agli operatori, è necessario configurare SQL Server Agent per l'utilizzo di Posta elettronica database. Per ulteriori informazioni, vedere [Procedura: Assegnazione di avvisi a un operatore (SQL Server Management Studio)](assign-alerts-to-an-operator.md).  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono creare gli operatori.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-an-operator"></a>Per creare un operatore  
   
@@ -72,22 +71,22 @@ ms.locfileid: "63136423"
      **Nome**  
      Consente di modificare il nome dell'operatore.  
   
-     **Enabled**  
+     **Attivata**  
      Consente di abilitare l'operatore. Se non è abilitato, all'operatore non verranno inviate notifiche.  
   
-     **Nome posta elettronica**  
+     **Indirizzo posta elettronica**  
      Specifica l'indirizzo di posta elettronica dell'operatore.  
   
-     **Indirizzo net send**  
+     **Indirizzo Net Send**  
      Specifica l'indirizzo da usare per **Net Send**.  
   
-     **Nome posta elettronica cercapersone**  
+     **Indirizzo cercapersone**  
      Specifica l'indirizzo di posta elettronica da utilizzare per il cercapersone dell'operatore.  
   
-     **Pianificazione cercapersone per servizio**  
+     **Pianificazione cercapersone per operatore in servizio**  
      Consente di impostare gli orari in cui il cercapersone è attivo.  
   
-     **Lunedì-domenica**  
+     **Lunedì - Domenica**  
      Consente di selezionare i giorni in cui il cercapersone è attivo.  
   
      **Inizio giornata lavorativa**  
@@ -113,7 +112,7 @@ ms.locfileid: "63136423"
      **Posta elettronica**  
      Consente di inviare una notifica all'operatore tramite posta elettronica.  
   
-     **Pager**  
+     **Cercapersone**  
      Inviare una notifica all'operatore tramite un messaggio di posta elettronica all'indirizzo del cercapersone.  
   
      **NET SEND**  
@@ -121,7 +120,7 @@ ms.locfileid: "63136423"
   
 4.  Al termine della creazione del nuovo operatore, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-an-operator"></a>Per creare un operatore  
   

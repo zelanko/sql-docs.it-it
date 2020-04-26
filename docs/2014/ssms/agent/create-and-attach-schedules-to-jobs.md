@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136278"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Creazione e collegamento di pianificazioni ai processi
@@ -75,8 +75,7 @@ ms.locfileid: "63136278"
  È possibile modificare la data di inizio della pianificazione dopo avere collegato la pianificazione a un processo.  
   
 ## <a name="cpu-idle-schedules"></a>Pianificazioni con CPU inattiva  
- Per ottimizzare l'utilizzo della CPU, è possibile definire una condizione di inattività della CPU per Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tale impostazione consente all'agente di eseguire i processi nei momenti di minor carico di lavoro della CPU. Ad esempio è possibile pianificare un processo di ricompilazione degli indici quando la CPU è in stato inattivo o durante i periodi di produzione ridotta.  
+ Per ottimizzare l'utilizzo della CPU, è possibile definire una condizione di inattività della CPU per Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tale impostazione consente all'agente di eseguire i processi nei momenti di minor carico di lavoro della CPU. Ad esempio è possibile pianificare un processo di ricompilazione degli indici quando la CPU è in stato inattivo o durante i periodi di produzione ridotta.  
   
  Prima di definire i processi da eseguire durante l'inattività della CPU, è necessario determinare il carico di lavoro della CPU durante l'elaborazione normale. A tale scopo, utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Performance Monitor per monitorare il traffico nel server e raccogliere statistiche. Le informazioni raccolte saranno utili per la definizione di una percentuale di utilizzo corrispondente allo stato di inattività della CPU e della durata di tale stato.  
   
@@ -88,10 +87,10 @@ ms.locfileid: "63136278"
 |-|-|  
 |**Descrizione**|**Argomento**|  
 |Viene descritto come creare una pianificazione per un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Create a Schedule](create-a-schedule.md)|  
-|Viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Schedule a Job](schedule-a-job.md)|  
-|Viene illustrato come definire la condizione di inattività della CPU per il server.|[Impostazione del tempo di inattività della CPU e della durata &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|Viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Pianificare un processo](schedule-a-job.md)|  
+|Viene illustrato come definire la condizione di inattività della CPU per il server.|[Impostare tempo e durata di inattività della CPU &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_help_jobschedule &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
  [dbo. sysjobschedules &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   

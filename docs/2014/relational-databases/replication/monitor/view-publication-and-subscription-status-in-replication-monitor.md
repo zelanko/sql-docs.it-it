@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666946"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Visualizzazione dello stato delle pubblicazioni e delle sottoscrizioni in Monitoraggio replica
-  Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] visualizza informazioni sullo stato delle pubblicazioni e delle sottoscrizioni:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] In Monitoraggio replica vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni:  
   
 -   Lo stato di una pubblicazione è determinato dallo stato con priorità più alta delle relative sottoscrizioni. Ad esempio, se una sottoscrizione a una pubblicazione presenta un errore e in un'altra sottoscrizione viene rilevato un problema di prestazioni, per la pubblicazione viene visualizzato uno stato di errore.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62666946"
 |Sincronizzazione in corso|![Icona interfaccia utente: agente di replica in esecuzione](../media/repl-icon-running.gif "Icona interfaccia utente: agente di replica in esecuzione")|  
 |Non in sincronizzazione|![Icona interfaccia utente: agente di replica arrestato](../media/repl-icon-stopped.gif "Icona interfaccia utente: agente di replica arrestato")|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitoraggio della replica](../monitoring-replication.md)  
   
   

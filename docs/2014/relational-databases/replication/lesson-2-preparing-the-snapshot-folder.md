@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721018"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lezione 2: Preparazione della cartella snapshot
@@ -53,7 +53,7 @@ ms.locfileid: "62721018"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata configurata la condivisione per la cartella snapshot. Il passaggio successivo consiste nella configurazione della distribuzione. Vedere [Lezione 3: Configurazione della distribuzione](lesson-3-configuring-distribution.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza della cartella snapshot](security/secure-the-snapshot-folder.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Proteggere la cartella snapshot](security/secure-the-snapshot-folder.md)  
   
   

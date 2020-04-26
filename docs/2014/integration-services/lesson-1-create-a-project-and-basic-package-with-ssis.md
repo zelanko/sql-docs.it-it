@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767503"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lezione 1: Creazione del progetto e del pacchetto di base
@@ -26,7 +26,7 @@ ms.locfileid: "62767503"
 ## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
  Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
   
- Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
+ Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
  Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Dopo avere acquisito familiarità con questi due formati di dati sarà possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62767503"
   
 -   [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Passaggio 8: Semplificazione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511826"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Dati Unicode e tabelle codici del server
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Usare invece l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
   
  L'API Stored procedure estesa è abilitata per i dati Unicode ma non lo è per i metadati Unicode. La direttiva Unicode #define non produce alcun effetto sull'API Stored procedure estesa.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62511826"
   
     ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [srv_wsendmsg &#40;API stored procedure estesa&#41;](../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

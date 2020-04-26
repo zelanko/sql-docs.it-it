@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473050"
 ---
 # <a name="post-download-instructions"></a>Invia istruzioni di download
   Utilizzare questa pagina per specificare le istruzioni di download per un server di destinazione.  
   
 ## <a name="options"></a>Opzioni  
- **Tipo di istruzione**  
+ **Tipo istruzione**  
  Consente di specificare il tipo di istruzione di download da inviare.  
   
  **Descrizione**  
@@ -35,10 +35,10 @@ ms.locfileid: "62473050"
  **Tutti i server di destinazione**  
  Selezionare questa opzione per inviare l'istruzione di download a tutti i server di destinazione.  
   
- **Questi server di destinazione**  
+ **Solo i server di destinazione seguenti**  
  Selezionare questa opzione per inviare l'istruzione di download ai server di destinazione selezionati.  
   
- **Selezionare**  
+ **Seleziona**  
  Consente di specificare che il server di destinazione deve ricevere l'istruzione di download.  
   
  **Server di destinazione**  
@@ -50,7 +50,7 @@ ms.locfileid: "62473050"
  **Intervallo di polling**  
  Consente di visualizzare l'intervallo di polling corrente per il server di destinazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   
   

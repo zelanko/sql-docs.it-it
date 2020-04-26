@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657810"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
@@ -49,8 +49,8 @@ ms.locfileid: "62657810"
   
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQLSetStmtAttr (funzione)](https://go.microsoft.com/fwlink/?LinkId=59370)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

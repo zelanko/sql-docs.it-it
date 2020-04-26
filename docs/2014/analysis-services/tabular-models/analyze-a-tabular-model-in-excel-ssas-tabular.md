@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067757"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Analizzare un modello tabulare in Excel (SSAS tabulare)
@@ -45,12 +45,12 @@ ms.locfileid: "66067757"
   
 3.  Per usare una prospettiva, nella casella di riepilogo **Prospettiva** selezionare una prospettiva.  
   
-     Le prospettive (diverse dall'impostazione predefinita) devono essere definite tramite la finestra di dialogo Prospettive. Per altre informazioni, vedere [Creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md).  
+     Le prospettive (diverse dall'impostazione predefinita) devono essere definite tramite la finestra di dialogo Prospettive. Per altre informazioni, vedere [creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md).  
   
 > [!NOTE]  
 >  L'elenco di campi della tabella pivot in Excel non viene aggiornato automaticamente mentre si apportano modifiche al progetto di modello in Progettazione modelli. Per aggiornare l'elenco di campi della tabella pivot, fare clic su **Aggiorna** nella barra multifunzione **Opzioni**di Excel.  
   
-## <a name="see-also"></a>Vedere anche  
- [Analizza in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)  
   
   

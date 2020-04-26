@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473639"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>La documentazione di SQL Server 2014 viene trasferita a Docs
@@ -27,7 +27,7 @@ I collegamenti seguenti sono relativi alla documentazione di SQL Server 2014 arc
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *Documentazione online di SQL Server 2014*
+- *Documentazione online per SQL Server 2014*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
 MSDN è un iniziale per *Microsoft Developer Network*.
@@ -48,7 +48,7 @@ Dopo il passaggio a *docs*, l'indirizzo dell'articolo della documentazione radic
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
-## <a name="related-links"></a>Collegamenti correlati
+## <a name="related-links"></a>Link correlati
 
 - [Articolo della documentazione radice per SQL Server 2016 e versioni successive](https://docs.microsoft.com/sql/?view=sql-server-2016)
 

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476991"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Attività 13: Aggiunta di Destinazione OLE DB a Scrivi dati fornitore nella tabella di gestione temporanea MDS
@@ -49,6 +49,6 @@ ms.locfileid: "65476991"
      ![Flusso di dati completato](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Flusso di dati completato")  
   
 ## <a name="next-step"></a>passaggio successivo  
- [Attività 14: Aggiunta dell'Attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [Attività 14: Attività dell'attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

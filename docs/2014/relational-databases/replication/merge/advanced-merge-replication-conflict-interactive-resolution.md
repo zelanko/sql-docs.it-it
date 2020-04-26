@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63245115"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la replica fornisce un sistema di risoluzione interattivo che consente di risolvere i conflitti manualmente durante la sincronizzazione su [!INCLUDE[msCoName](../../../includes/msconame-md.md)] richiesta in Gestione sincronizzazione Microsoft Windows. Attivato in fase di esecuzione, il sistema di risoluzione interattivo è un'interfaccia grafica che visualizza i dati relativi a ogni riga in conflitto e offre opzioni per la visualizzazione e la modifica dei dati in conflitto, nonché per la risoluzione distinta dei singoli conflitti.  
+  La replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre un sistema di risoluzione interattivo che consente di risolvere i conflitti in modo manuale durante la sincronizzazione su richiesta in Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Attivato in fase di esecuzione, il sistema di risoluzione interattivo è un'interfaccia grafica che visualizza i dati relativi a ogni riga in conflitto e offre opzioni per la visualizzazione e la modifica dei dati in conflitto, nonché per la risoluzione distinta dei singoli conflitti.  
   
  Il sistema di risoluzione interattivo presenta alcune analogie con il Visualizzatore conflitti. Nel Visualizzatore conflitti vengono tuttavia visualizzati i risultati dei conflitti già risolti dopo la sincronizzazione di tipo merge, mentre il sistema di risoluzione interattivo visualizza ogni conflitto prima della risoluzione e consente di determinarne l'esito durante la sincronizzazione di tipo merge. È necessario che sia disponibile un utente per il monitoraggio del sistema di risoluzione interattivo in caso di conflitto.  
   

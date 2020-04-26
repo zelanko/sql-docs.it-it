@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650202"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proprietà account proxy e Nuovo account proxy (pagina Generale)
@@ -26,7 +26,7 @@ ms.locfileid: "62650202"
  **Nome proxy**  
  Consente di digitare il nome del proxy.  
   
- **Nome delle credenziali**  
+ **Credential name (Nome credenziali)**  
  Consente di digitare il nome delle credenziali per il proxy.  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "62650202"
  **Riassegna i passaggi del processo a**  
  Consente di selezionare il proxy al quale riassegnare i passaggi del processo. Questo elenco è abilitato quando si revoca l'accesso a un sottosistema al quale il proxy aveva accesso in precedenza.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un proxy di SQL Server Agent](create-a-sql-server-agent-proxy.md)  
   
   

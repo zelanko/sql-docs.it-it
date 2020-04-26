@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489703"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Attività 8: Aggiunta di un nuovo valore per l'entità State in Excel
@@ -53,6 +53,6 @@ ms.locfileid: "65489703"
 12. In Excel, fare clic con il pulsante destro del mouse sul foglio di lavoro **stato** in basso e fare clic su **Elimina** per eliminare il foglio di lavoro. L'eliminazione del foglio di lavoro non comporta l'eliminazione dei dati dal server MDS.  
   
 ## <a name="next-step"></a>passaggio successivo  
- [Attività 9: Creazione di una gerarchia derivata mediante Gestione dati master](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [Attività 9: Creazione di una gerarchia derivata tramite Gestione dati master](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

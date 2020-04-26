@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721149"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inizializzazione di una sottoscrizione transazionale senza uno snapshot
@@ -73,7 +73,7 @@ ms.locfileid: "62721149"
   
  Per inizializzare una sottoscrizione con un metodo alternativo, vedere [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Inizializzare una sottoscrizione](initialize-a-subscription.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Inizializzazione di una sottoscrizione](initialize-a-subscription.md)  
   
   

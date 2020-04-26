@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721683"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
@@ -31,9 +31,9 @@ ms.locfileid: "62721683"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per impostazione predefinita, se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione, l'agente snapshot genera uno snapshot subito dopo la creazione di una pubblicazione mediante la Creazione guidata nuova pubblicazione. Sempre per impostazione predefinita, tale snapshot viene quindi applicato dall'agente di distribuzione (per la replica snapshot e transazionale) o dall'agente di merge (per le sottoscrizioni di tipo merge) per tutte le sottoscrizioni. È anche possibile generare uno snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>Per creare uno snapshot in Management Studio  
@@ -68,7 +68,7 @@ ms.locfileid: "62721683"
   
      Per ulteriori informazioni sulla sincronizzazione delle sottoscrizioni, vedere [Synchronize a Push Subscription](synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Gli snapshot iniziali possono essere creati a livello di programmazione creando ed eseguendo un processo dell'agente snapshot o eseguendo il file eseguibile dell'agente snapshot da un file batch. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. Se si esegue l'agente snapshot da un prompt dei comandi o un file batch, sarà necessario rieseguirlo ogni volta che lo snapshot esistente diventa non valido.  
   
 > [!IMPORTANT]  
@@ -76,17 +76,17 @@ ms.locfileid: "62721683"
   
 #### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>Per creare ed eseguire un processo dell'agente snapshot per generare lo snapshot iniziale  
   
-1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per altre informazioni, vedere [Create a Publication](publish/create-a-publication.md).  
+1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una pubblicazione](publish/create-a-publication.md).  
   
 2.  Eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare **@publication** e i parametri seguenti:  
   
-    -   **Oggetto @job_loginche specifica** le credenziali di autenticazione di Windows utilizzate per l'esecuzione del agente di snapshot nel database di distribuzione.  
+    -   **@job_login, che specifica** le credenziali dell'autenticazione di Windows con cui l'agente snapshot viene eseguito nel database di distribuzione.  
   
-    -   , Ovvero la password per le credenziali di Windows specificate. ** @job_password **  
+    -   **@job_password**, che corrisponde alla password per le credenziali di Windows specificate.  
   
     -   (Facoltativo) Valore **0** per **@publisher_security_mode** se l'agente utilizzerà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso per l' **@publisher_login** autenticazione **@publisher_password**SQL Server per e.  
   
-    -   (Facoltativo) Pianificazione della sincronizzazione per il processo dell'agente snapshot. Per altre informazioni, vedere [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   (Facoltativo) Pianificazione della sincronizzazione per il processo dell'agente snapshot. Per altre informazioni, vedere [specificare le pianificazioni della sincronizzazione](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "62721683"
   
 #### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>Per eseguire l'agente snapshot per generare lo snapshot iniziale  
   
-1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per altre informazioni, vedere [Create a Publication](publish/create-a-publication.md).  
+1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una pubblicazione](publish/create-a-publication.md).  
   
 2.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](publish/define-an-article.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62721683"
   
     -   **-PublisherSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio viene illustrato come creare una pubblicazione transazionale e aggiungere un processo dell'agente snapshot per la nuova pubblicazione (utilizzando le variabili di scripting **SQLCMD** ). Viene inoltre avviato il processo.  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -143,11 +143,11 @@ ms.locfileid: "62721683"
   
  [!code-sql[HowTo#startmergesnapshot_10](../../snippets/tsql/SQL15/replication/howto/tsql/createmergesnapshot_10.bat)]  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  L'agente snapshot genera gli snapshot al termine della creazione di una pubblicazione. È possibile generare questi snapshot a livello di programmazione tramite gli oggetti RMO (Replication Management Objects) e l'accesso diretto tramite codice gestito alle funzionalità dell'agente di replica. Gli oggetti utilizzati dipendono dal tipo di replica. L'agente snapshot può essere avviato in modo sincrono tramite l'oggetto <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> o in modo asincrono tramite il processo dell'agente. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. È necessario rieseguire l'agente ogni volta che lo snapshot esistente non contiene più dati validi e aggiornati. Per altre informazioni, vedere [Gestire le pubblicazioni](publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) forniti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Per generare lo snapshot iniziale per una pubblicazione snapshot o transazionale avviando il processo dell'agente snapshot (modo asincrono)  
   
@@ -175,11 +175,9 @@ ms.locfileid: "62721683"
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> : nome del server di distribuzione  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di pubblicazione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di pubblicazione. L'autenticazione di Windows è la scelta consigliata.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di pubblicazione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di pubblicazione. L'autenticazione di Windows è la scelta consigliata.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di distribuzione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di distribuzione. L'autenticazione di Windows è la scelta consigliata.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di distribuzione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di distribuzione. L'autenticazione di Windows è la scelta consigliata.  
   
 2.  Impostare il valore <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> o <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> per <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
@@ -211,17 +209,15 @@ ms.locfileid: "62721683"
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> : nome del server di distribuzione  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di pubblicazione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di pubblicazione. L'autenticazione di Windows è la scelta consigliata.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di pubblicazione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di pubblicazione. L'autenticazione di Windows è la scelta consigliata.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di distribuzione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di distribuzione. L'autenticazione di Windows è la scelta consigliata.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> : valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per utilizzare l'autenticazione di Windows per le connessioni al server di distribuzione o valore <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> e valori relativi a <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni al server di distribuzione. L'autenticazione di Windows è la scelta consigliata.  
   
 2.  Impostare un valore di <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> per <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
   
-###  <a name="PShellExample"></a> Esempi (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene eseguito l'agente snapshot in modo sincrono per generare lo snapshot iniziale per una pubblicazione transazionale.  
   
  [!code-csharp[HowTo#rmo_GenerateSnapshot](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatesnapshot)]  
@@ -237,13 +233,13 @@ ms.locfileid: "62721683"
 ## <a name="see-also"></a>Vedere anche  
  [Create a Publication](publish/create-a-publication.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [Creare una sottoscrizione push](create-a-push-subscription.md)   
  [Specificare le pianificazioni della sincronizzazione](specify-synchronization-schedules.md)   
  [Creare e applicare lo snapshot](create-and-apply-the-snapshot.md)   
  [Inizializzare una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Concetti di Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)   
+ [Concetti relativi alle stored procedure del sistema di replica](concepts/replication-system-stored-procedures-concepts.md)   
  [Utilizzo di sqlcmd con variabili di scripting](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

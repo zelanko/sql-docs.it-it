@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705515"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
@@ -71,7 +71,7 @@ STATE = STOP
   
  Per esportare una sessione Eventi estesi in **Esplora oggetti**:  
   
-1.  Espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
+1.  Espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni**  
   
 2.  Fare clic con il pulsante destro del mouse sulla sessione che si vuole esportare e selezionare **Esporta sessione**.  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Espandere la casella di riepilogo a discesa **Modello** .  
   
-5.  Fare clic su **Apri \<file da...>** e cercare la sessione (file XML) da importare.  
+5.  Fare clic su ** \<file da... >aprire** e cercare la sessione (file XML) che si vuole importare.  
   
  La sessione verrà visualizzata nel nodo **Sessioni** . Per impostazione predefinita,la sessione non viene avviata.  
   
@@ -105,7 +105,7 @@ STATE = STOP
   
  Per modificare una sessione Eventi estesi:  
   
-1.  In **Esplora oggetti**espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
+1.  In **Esplora oggetti**espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse su una sessione e selezionare **Proprietà**.  
   
@@ -113,7 +113,7 @@ STATE = STOP
   
 4.  Dopo avere completato l'esame della sessione eventi, fare clic su **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sia nella Creazione guidata nuova sessione che nella finestra di dialogo Nuova sessione è presente un'opzione Script che consente di generare codice [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire la sessione Eventi estesi.  
   
  Per accedere a [!INCLUDE[tsql](../../includes/tsql-md.md)] per una sessione Eventi estesi esistente, fare clic con il pulsante destro del mouse sul nome della sessione, scegliere **Crea script per sessione**e selezionare quindi **Genera codice per istruzione CREATE in**.  

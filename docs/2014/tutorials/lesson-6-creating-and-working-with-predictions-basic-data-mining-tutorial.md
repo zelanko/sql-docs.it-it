@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185391"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lezione 6: Creazione e utilizzo di stime (Esercitazione di base sul data mining)
@@ -26,7 +26,7 @@ ms.locfileid: "63185391"
   
  In questa lezione sono inclusi gli argomenti seguenti:  
   
- [Creazione di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Utilizzo del drill-through sui dati della struttura &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63185391"
  [Lezione 5: Testing models &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining per i modelli di albero delle decisioni &#40;Analysis Services-Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   
  [Creare una query di stima utilizzando Generatore query di stima](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

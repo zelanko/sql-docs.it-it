@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721367"
 ---
 # <a name="distribution-database"></a>Database di distribuzione
@@ -26,9 +26,9 @@ ms.locfileid: "62721367"
   
 ## <a name="options"></a>Opzioni  
  **Nome database di distribuzione**  
- Consente di immettere un nome per il database di distribuzione. Il nome predefinito del database di distribuzione è 'distribution'. Se si specifica un nome, il nome può essere costituito da un massimo di 128 caratteri, deve essere univoco all' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]interno di un'istanza di e deve essere conforme alle regole per gli identificatori. Per altre informazioni, vedere [Identificatori del database](../databases/database-identifiers.md).  
+ Consente di immettere un nome per il database di distribuzione. Il nome predefinito del database di distribuzione è 'distribution'. Se si specifica un nome, questo può avere una lunghezza massima di 128 caratteri, deve essere univoco nell'ambito di un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e conforme alle regole per gli identificatori. Per altre informazioni, vedere [Identificatori del database](../databases/database-identifiers.md).  
   
- **Cartella per il file del database di distribuzione** e la **cartella per il file di log del database di distribuzione**  
+ **Cartella per il file del database di distribuzione** e **Cartella per il file di log del database di distribuzione**  
  Immettere il percorso del database di distribuzione e dei file di log. I percorsi devono fare riferimento a dischi locali del server di distribuzione e iniziare con una lettera di unità locale seguita da due punti, ad esempio C:. Le lettere di unità mappate e i percorsi di rete non sono consentiti.  
   
 > [!NOTE]  

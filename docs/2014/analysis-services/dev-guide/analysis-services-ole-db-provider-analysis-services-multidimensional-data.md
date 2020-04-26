@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62732187"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Provider OLE DB per Analysis Services (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "62732187"
   
  Come provider autonomo, il provider OLE DB per Analysis Services fornisce applicazioni client per la creazione di file di cubo e modelli di data mining locali da origini relazionali e multidimensionali. Le applicazioni client possono essere connesse a un cubo locale per l'esecuzione di query tramite MDX (Multidimensional Expressions) senza interagire con l'intero server in cui è in esecuzione l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Accesso ai dati del modello multidimensionale &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
   

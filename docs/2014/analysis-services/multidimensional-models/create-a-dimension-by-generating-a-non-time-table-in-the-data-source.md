@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076442"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Creare una dimensione generando una tabella non temporale nell'origine dati
@@ -31,9 +31,9 @@ ms.locfileid: "66076442"
   
 -   Customer  
   
--   Data  
+-   Date  
   
--   Department  
+-   department  
   
 -   Destination Currency  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66076442"
   
 -   Internet Sales Order Details  
   
--   Organizzazione  
+-   Organization  
   
 -   Prodotto  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66076442"
 ## <a name="completing-the-dimension-wizard"></a>Completamento di Creazione guidata dimensione  
  Nella pagina **Completamento procedura guidata** assegnare un nome alla nuova dimensione e quindi verificarne la struttura. Selezionare la casella di controllo **Genera schema adesso** per avviare Generazione guidata schema dopo avere fatto clic su **Fine**. Nella maggior parte dei casi non è necessario selezionare questa casella di controllo quando si pianifica la creazione di oggetti aggiuntivi. Se non si seleziona questa casella di controllo, è possibile utilizzare Progettazione dimensioni per generare lo schema in un secondo momento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
  [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721363"
 ---
 # <a name="distributor-information-dialog-box"></a>Finestra di dialogo informazioni server di distribuzione 
@@ -45,7 +45,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
   Nelle informazioni per le sottoscrizioni delle pubblicazioni snapshot è incluso il nome del server di pubblicazione. In caso contrario, la funzionalità e le informazioni fornite in questa finestra di dialogo sono le stesse della vista Server di pubblicazione. Per altre informazioni su come usare questa finestra di dialogo, vedere [Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni &#40;pubblicazione snapshot, SQL Server 2005 e versioni successive&#41;](publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agenti
-  Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione e al Sottoscrittore.  
+   Nella scheda **Agenti** sono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione e al Sottoscrittore.  
   
  Tra gli agenti disponibili nella scheda **Agenti** per un server di distribuzione nella vista Server di distribuzione sono inclusi tutti gli agenti disponibili nella scheda **Agenti** per un server di pubblicazione. Tuttavia, in **tale scheda** sono inclusi anche un agente del server di distribuzione e un agente di merge.  
   
@@ -55,7 +55,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per l'agente del server di distribuzione e per quello di merge.  
   
 ### <a name="distributor-agent"></a>Agente del server di distribuzione  
- **Status**  
+ **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -64,22 +64,22 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
 -   Non in esecuzione    
 -   Mai avviato  
   
- **Autore**  
+ **Editore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
  Nome della pubblicazione a cui è associato l'agente.  
   
- **Sottoscrizione**  
+ **Abbonamento**  
  Nome della sottoscrizione nel formato [*SubscriberName*].[*Database*].  
   
- **Tipo**  
+ **Type**  
  Tipo di replica: push, pull o anonima.  
   
- **Ultima ora inizio**  
+ **Ultima ora di inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Duration**  
+ **Durata**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -88,7 +88,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit dei comandi di inizializzazione nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **Latency**  
+ **Latenza**  
  Tempo, espresso in secondi, trascorso tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
  **N. transazioni**  
@@ -101,7 +101,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
 ### <a name="merge-agent"></a>Agente di merge  
- **Status**  
+ **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -110,22 +110,22 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
 -   Non in esecuzione    
 -   Mai avviato  
   
- **Autore**  
+ **Editore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
  Nome della pubblicazione a cui è associato l'agente.  
   
- **Sottoscrizione**  
+ **Abbonamento**  
  Nome della sottoscrizione nel formato [*SubscriberName*].[*Database*].  
   
- **Tipo**  
+ **Type**  
  Tipo di replica: push, pull o anonima.  
   
- **Ultima ora inizio**  
+ **Ultima ora di inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Duration**  
+ **Durata**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -159,7 +159,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  Numero di conflitti che si verificano nel Sottoscrittore durante il processo di merge.  
   
  
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   

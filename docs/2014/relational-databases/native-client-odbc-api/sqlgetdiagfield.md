@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657704"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -38,7 +38,7 @@ ms.locfileid: "62657704"
   
 |Codice di funzione dinamica|Source (Sorgente)|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|Istruzione ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE - istruzione|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Istruzione CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|L'errore si è verificato nella clausola WHERE o HAVING di un'istruzione.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Istruzione CREATE DATABASE|  
@@ -73,7 +73,7 @@ ms.locfileid: "62657704"
 |SQL_DIAG_DFC_SS_READTEXT|Istruzione READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Istruzione RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Istruzione per il controllo di flusso RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|Istruzione SELECT INTO|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO - istruzione|  
 |SQL_DIAG_DFC_SS_SET|Istruzione SET (generica, tutte le opzioni) |  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT - istruzione|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT - istruzione|  
@@ -99,8 +99,8 @@ ms.locfileid: "62657704"
   
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQLGetDiagField (funzione)](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

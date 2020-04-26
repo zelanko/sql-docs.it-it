@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667816"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
@@ -50,20 +50,20 @@ ms.locfileid: "62667816"
   
      [oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  I token di traccia possono inoltre essere utili quando si mette un sistema in stato di inattività, il che richiede l'arresto di tutte le attività e la verifica dell'avvenuta ricezione di tutte le modifiche in attesa da parte di tutti i nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Per usare i token di traccia, sono necessarie alcune versioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Per utilizzare i token di traccia, è necessario utilizzare determinate versioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]di:  
   
--   Il server di distribuzione deve essere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
+-   Il server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] deve essere o versione successiva.  
   
 -   Il server di pubblicazione deve essere [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva, oppure deve essere un server di pubblicazione Oracle.  
   
--   Per le sottoscrizioni push, le statistiche dei token di traccia vengono raccolte dal server di pubblicazione, dal server di distribuzione e dai sottoscrittori se il Sottoscrittore è [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o versione successiva.  
+-   Per le sottoscrizioni push, le statistiche dei token di traccia vengono raccolte dal server di pubblicazione, dal server di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distribuzione e dai Sottoscrittori se il Sottoscrittore è 7,0.  
   
--   Per le sottoscrizioni pull, le statistiche dei token di traccia vengono raccolte dai soli Sottoscrittori se il Sottoscrittore è [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva. Se il Sottoscrittore è [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], le statistiche vengono raccolte solo dal server di pubblicazione e dal server di distribuzione.  
+-   Per le sottoscrizioni pull, le statistiche dei token di traccia vengono raccolte dai soli Sottoscrittori se il Sottoscrittore è [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva. Se il Sottoscrittore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]7,0 o, le statistiche vengono raccolte solo dal server di pubblicazione e dal server di distribuzione.  
   
  È inoltre necessario considerare altre problematiche e limitazioni, ovvero:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62667816"
   
 -   Dopo il failover a un database secondario, Monitoraggio replica non è in grado di regolare il nome dell'istanza di pubblicazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e continuerà a visualizzare informazioni sulla replica con il nome dell'istanza primaria originale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dopo il failover, non è possibile immettere un token di traccia tramite Monitoraggio replica, nondimeno un token di traccia immesso nel nuovo server di pubblicazione tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]è visibile in Monitoraggio replica.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Monitoraggio replica per SQL Server  
+##  <a name="using-sql-server-replication-monitor"></a><a name="SSMSProcedure"></a>Utilizzo di replica di SQL Server Monitor  
  Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](start-the-replication-monitor.md).  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Per inserire un token di traccia e visualizzarne le informazioni  
@@ -88,7 +88,7 @@ ms.locfileid: "62667816"
   
 3.  Fare clic su **Inserisci utilità di traccia**.  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **in sospeso** indica che il token non ha raggiunto un determinato punto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Per visualizzare informazioni su un token di traccia inserito in precedenza  
   
@@ -98,12 +98,12 @@ ms.locfileid: "62667816"
   
 3.  Selezionare un'ora dall'elenco a discesa **Ora di inserimento** .  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **in sospeso** indica che il token non ha raggiunto un determinato punto.  
   
     > [!NOTE]  
     >  Le informazioni sul token di traccia vengono mantenute per lo stesso periodo di tempo degli altri dati cronologici, ovvero in base all'impostazione del periodo di memorizzazione della cronologia del database di distribuzione. Per informazioni sulla modifica delle proprietà del database di distribuzione, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Per inviare un token di traccia a una pubblicazione transazionale  
   
@@ -127,12 +127,12 @@ ms.locfileid: "62667816"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) specificando **@publication** e l'ID del token di traccia da eliminare indicato nel passaggio 2 per **@tracer_id**.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio viene inserito un record di token di traccia e viene utilizzato l'ID restituito del token di traccia inviato per visualizzare le informazioni sulla latenza.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Per inviare un token di traccia a una pubblicazione transazionale  
   

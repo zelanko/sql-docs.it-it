@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731986"
 ---
 # <a name="xml-elements-xmla"></a>Elementi XML (XMLA)
@@ -34,8 +34,8 @@ ms.locfileid: "62731986"
 |[Oggetti &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|Descrive gli elementi superiori ricevuti da un'applicazione in una busta SOAP da un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in risposta a un metodo XMLA.|  
 |[Proprietà &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|Descrive gli elementi figlio per intestazioni, metodi, oggetti o comandi XMLA.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi di dati XML &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
- [Sviluppo con Analysis Services linguaggio di scripting &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

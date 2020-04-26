@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224602"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Esplorazione del modello Decision Trees (Esercitazione di base sul data mining)
@@ -22,7 +22,7 @@ ms.locfileid: "63224602"
   
 
   
-##  <a name="Decision_Tree_Tab"></a>Scheda albero delle decisioni  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>Scheda albero delle decisioni  
  Nella scheda **albero delle decisioni** è possibile visualizzare gli alberi delle decisioni per ogni attributo stimabile nel set di dati.  
   
  In questo caso, il modello stima solo una colonna, Bike Buyer, quindi è presente un solo albero da visualizzare. Se sono presenti più alberi, è possibile usare la casella **albero** per scegliere un altro albero.  
@@ -43,7 +43,7 @@ ms.locfileid: "63224602"
   
 3.  Scorrere **Mostra livello** sulla quarta barra.  
   
-4.  Modificare il **** valore di sfondo `1`in.  
+4.  Modificare il **Background** valore di sfondo `1`in.  
   
      Modificando l'impostazione dello **sfondo** , è possibile visualizzare rapidamente il numero di case in ogni nodo il cui valore di `1` destinazione è [Bike Buyer]. In questo particolare scenario ogni case rappresenta un cliente. Il valore `1` indica che il cliente ha acquistato in precedenza una bicicletta; il valore **0** indica che il cliente non ha acquistato una bicicletta. Quanto più scura appare l'ombreggiatura del nodo, tanto più alta sarà la percentuale di case nel nodo che presentano il valore di destinazione.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63224602"
      Verrà visualizzato lo stesso foglio di calcolo con le colonne della struttura aggiunte alla fine.  
   
   
-###  <a name="Dependency_Network_Tab"></a>Scheda rete di dipendenze  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>Scheda rete di dipendenze  
  Nella scheda **rete di dipendenze** vengono visualizzate le relazioni tra gli attributi che contribuiscono alla capacità predittiva del modello di data mining. Il Visualizzatore rete di dipendenze consolida il concetto dedotto dai risultati ottenuti, in base al quale l'età e l'area geografica sono fattori importanti nella stima dell'acquisto di biciclette.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Per esplorare il modello nella scheda Rete di dipendenze  
@@ -99,7 +99,7 @@ ms.locfileid: "63224602"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esplorazione del modello di clustering &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative al Visualizzatore modello di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Scheda albero delle decisioni &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Scheda rete di dipendenze &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   

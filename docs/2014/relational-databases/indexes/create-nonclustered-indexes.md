@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62651490"
 ---
 # <a name="create-nonclustered-indexes"></a>Creare indici non cluster
@@ -30,19 +30,19 @@ ms.locfileid: "62651490"
   
 -   **Prima di iniziare:**  
   
-     [Modalità di implementazione tipiche](#Implementations)  
+     [Implementazioni tipiche](#Implementations)  
   
      [Sicurezza](#Security)  
   
--   **Per creare un indice non cluster utilizzando:**  
+-   **Per creare un indice non cluster tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Implementations"></a> Modalità di implementazione tipiche  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Modalità di implementazione tipiche  
  Gli indici non cluster vengono implementati nei modi seguenti:  
   
 -   **Vincoli UNIQUE**  
@@ -53,16 +53,16 @@ ms.locfileid: "62651490"
   
      Per impostazione predefinita, viene creato un indice non cluster se non è stato specificato l'indice cluster. Il numero massimo di indici non cluster che è possibile creare per tabella è 999. Sono inclusi gli indici creati tramite i vincoli PRIMARY KEY o UNIQUE, ma non gli indici XML.  
   
--   **Indice non cluster in una vista indicizzata**  
+-   **Indice non cluster su una vista indicizzata**  
   
      Dopo la creazione di un indice cluster univoco su una vista, è possibile creare indici non cluster. Per altre informazioni, vedere [Creare viste indicizzate](../views/views.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>Per creare un indice non cluster tramite Progettazione tabelle  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62651490"
   
 7.  Nella griglia selezionare **Crea come CLUSTERED**, quindi scegliere **No** dall'elenco a discesa a destra della proprietà.  
   
-8.  Fare clic su **Close**.  
+8.  Fare clic su **Chiudi**.  
   
-9. Scegliere **salva**_table_name_dal menu **file** .  
+9. Nel menu **File** scegliere **Salva**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Per creare un indice non cluster tramite Esplora oggetti  
   
@@ -92,19 +92,19 @@ ms.locfileid: "62651490"
   
 3.  Espandere la tabella in cui si desidera creare un indice non cluster.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **indici** , scegliere **nuovo indice**e selezionare **indice non cluster.**  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
 6.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ Selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice non cluster.  
+7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice non cluster.  
   
 8.  Fare clic su **OK**.  
   
 9. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Per creare un indice non cluster in una tabella  
   

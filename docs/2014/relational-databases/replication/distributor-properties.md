@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721401"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Proprietà del server di distribuzione replica di SQL Server
 In questo argomento vengono illustrate le proprietà disponibili nelle pagine **generale**, server di **pubblicazione**e **database di distribuzione** all'interno della finestra **Proprietà** database di distribuzione. 
 
 ## <a name="general"></a>Generale
-  La pagina **generale** della finestra di dialogo **Proprietà Server** di distribuzione consente di aggiungere ed eliminare i database di distribuzione e impostare le proprietà del database di distribuzione.  
+   La pagina **Generale** della finestra di dialogo **Proprietà server di distribuzione** consente di aggiungere ed eliminare i database di distribuzione e di impostarne le relative proprietà.  
   
  Nel database di distribuzione vengono archiviati i metadati e i dati di cronologia relativi a tutti i tipi di replica, nonché le transazioni per la replica transazionale. In molti casi, è sufficiente un singolo database di distribuzione. Se tuttavia un singolo server di distribuzione viene utilizzato da più server di pubblicazione, è opportuno creare un database di distribuzione per ogni server di pubblicazione, in modo da garantire che il flusso di dati di ogni database di distribuzione risulti distinto.  
   
@@ -50,13 +50,13 @@ In questo argomento vengono illustrate le proprietà disponibili nelle pagine **
   La pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione** consente di abilitare l'utilizzo del server di distribuzione corrente da parte dei server di pubblicazione. È inoltre possibile impostare le proprietà associate a tali server di pubblicazione. Tenere presente che, se si abilita un server di pubblicazione per l'utilizzo di questo server come server di distribuzione remoto, il server non diventerà un server di pubblicazione. È infatti necessario connettersi al server di pubblicazione, configurarlo per la pubblicazione e selezionare questo server come server di distribuzione. Utilizzando la Creazione guidata nuova pubblicazione è possibile configurare il server di pubblicazione e selezionare un server di distribuzione.  
   
 ### <a name="options"></a>Opzioni  
- **Server di pubblicazione**  
- Consente di selezionare i server autorizzati all'utilizzo del server di distribuzione corrente. Fare clic sul pulsante delle proprietà **(...)** accanto a un server di pubblicazione per visualizzare e impostare proprietà aggiuntive.  
+ **Autori**  
+ Consente di selezionare i server autorizzati all'utilizzo del server di distribuzione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un server di pubblicazione.  
   
  **Aggiungere**  
  Se il server desiderato non è incluso nell'elenco, fare clic su **Aggiungi** per aggiungere un server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Oracle all'elenco dei server di pubblicazione disponibili. Se il server aggiunto è il primo server a utilizzare il server di distribuzione corrente come server di distribuzione remoto, viene richiesto di digitare una password per il collegamento amministrativo.  
   
- **Password collegamento amministrativo**  
+ **Password per collegamento amministrativo**  
  Utilizzare questa opzione per specificare o aggiornare la password per la connessione che la replica stabilisce tra il server di pubblicazione e il server di distribuzione remoto utilizzando l'account di accesso **distributor_admin** :  
   
 -   Se il server di distribuzione viene utilizzato solo come server di distribuzione locale, tale password viene generata in modo casuale e viene configurata automaticamente.  
@@ -66,16 +66,16 @@ In questo argomento vengono illustrate le proprietà disponibili nelle pagine **
  Per altre informazioni sulla sicurezza dei database di distribuzione, vedere [Proteggere il database di distribuzione](security/secure-the-distributor.md).  
 
 ## <a name="distribution-database"></a>Database di distribuzione
- La finestra di dialogo **Proprietà database di distribuzione** consente di visualizzare varie proprietà e di impostare il periodo di memorizzazione della transazione e il periodo di memorizzazione della cronologia per il database.  
+  La finestra di dialogo **Proprietà database di distribuzione** consente di visualizzare varie proprietà e di impostare il periodo di memorizzazione della transazione e della cronologia per il database.  
   
 ### <a name="options"></a>Opzioni  
  **Nome**  
  Il nome del database di distribuzione, il cui valore predefinito è "distribution" (sola lettura).  
   
- **Percorsi file**  
+ **Percorsi dei file**  
  Il percorso del file di database e del file di log (sola lettura).  
   
- **Periodo di memorizzazione delle transazioni**  
+ **Periodo di memorizzazione della transazione**  
  Questa proprietà è nota anche come periodo di memorizzazione della distribuzione. Si tratta della quantità di tempo di memorizzazione delle transazioni ai fini della replica transazionale. Per altre informazioni, vedere [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Periodo di memorizzazione cronologia**  
@@ -93,8 +93,8 @@ In questo argomento vengono illustrate le proprietà disponibili nelle pagine **
  Per ulteriori informazioni, vedere \\ [Replication Agent Security Model](security/replication-agent-security-model.md). 
 
   
-## <a name="see-also"></a>Vedere anche  
- [Configura distribuzione](configure-distribution.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Configurare la distribuzione](configure-distribution.md)   
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
 
   

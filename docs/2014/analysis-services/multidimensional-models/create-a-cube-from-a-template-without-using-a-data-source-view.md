@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076513"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
@@ -23,8 +23,7 @@ ms.locfileid: "66076513"
 ## <a name="selecting-the-build-method"></a>Selezione del metodo di compilazione  
  Nella pagina **Selezione metodo di creazione** della procedura guidata fare clic su **Build the cube without using a data source**(Crea il cubo senza usare un'origine dati). Per creare il cubo usando un modello di cubo esistente, selezionare la casella di controllo **Use a cube template** (Usa un modello di cubo). . Se non si seleziona l'utilizzo di un modello, è necessario impostare le opzioni manualmente.  
   
- Nei modelli di cubo sono inclusi misure, gruppi di misure, dimensioni, gerarchie e attributi predefiniti. Se si seleziona un modello, nella procedura guidata vengono utilizzate le definizioni di oggetti nei modelli come base per l'impostazione delle opzioni nelle pagine seguenti. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene installato con diversi modelli di cubi standard. L'amministratore del server può aggiungere inoltre modelli di cubo o di dimensioni progettati espressamente per i dati dell'organizzazione.  
+ Nei modelli di cubo sono inclusi misure, gruppi di misure, dimensioni, gerarchie e attributi predefiniti. Se si seleziona un modello, nella procedura guidata vengono utilizzate le definizioni di oggetti nei modelli come base per l'impostazione delle opzioni nelle pagine seguenti. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene installato con diversi modelli di cubi standard. L'amministratore del server può aggiungere inoltre modelli di cubo o di dimensioni progettati espressamente per i dati dell'organizzazione.  
   
 ## <a name="selecting-dimensions"></a>Selezione delle dimensioni  
  Utilizzare la pagina per selezionare le dimensioni della procedura guidata per aggiungere dimensioni esistenti al cubo. **** Questa pagina viene visualizzata solo se esistono già dimensioni condivise senza un'origine dati nel progetto o nel database. In essa non sono elencate dimensioni che dispongono di un'origine dati.  
@@ -58,10 +57,10 @@ ms.locfileid: "66076513"
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
-|**Tipo**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
+|**Type**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
 |`Name`|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore imposta la `Name` proprietà per l'oggetto dimensione.|  
-|**SCD**|Viene specificato che si tratta di una dimensione a modifica lenta. Se si seleziona questa casella di controllo, alla dimensione vengono aggiunti gli attributi relativi alla data di inizio, alla data di fine, all'ID originale e allo stato della dimensione a modifica lenta. **SCD** è selezionato per impostazione predefinita se si utilizza un modello per creare il cubo e la procedura guidata rileva questi quattro tipi di attributo in una dimensione del modello.|  
-|**Attributes**|Vengono visualizzati gli attributi che devono essere creati per la dimensione. Ogni nome di attributo nell'elenco è preceduto dal nome della dimensione. Questo elenco è di sola lettura. È possibile modificare gli attributi tramite Progettazione dimensioni dopo il completamento della procedura guidata.|  
+|**Dimensione a modifica lenta**|Viene specificato che si tratta di una dimensione a modifica lenta. Se si seleziona questa casella di controllo, alla dimensione vengono aggiunti gli attributi relativi alla data di inizio, alla data di fine, all'ID originale e allo stato della dimensione a modifica lenta. L'opzione**Dimensione a modifica lenta** è selezionata per impostazione predefinita se si usa un modello per creare il cubo e la procedura guidata rileva questi quattro tipi di attributo in una dimensione del modello.|  
+|**Attributi**|Vengono visualizzati gli attributi che devono essere creati per la dimensione. Ogni nome di attributo nell'elenco è preceduto dal nome della dimensione. Questo elenco è di sola lettura. È possibile modificare gli attributi tramite Progettazione dimensioni dopo il completamento della procedura guidata.|  
   
 ## <a name="defining-time-periods"></a>Definizione dei periodi di tempo  
  Usare la pagina **Definizione periodi di tempo** della procedura guidata per specificare l'intervallo di date da includere nella dimensione. È possibile scegliere, ad esempio, un intervallo che inizia dal primo gennaio del primo anno a cui si riferiscono i dati e che si estende fino agli anni successivi alla transazione più recente. Le transazioni che non rientrano in questo intervallo non verranno visualizzate oppure verranno visualizzate come membri sconosciuti nella dimensione in base all'impostazione della proprietà `UnknownMemberVisible` della dimensione. La proprietà `UnknownMemberName` consente di specificare la didascalia per il membro sconosciuto. È inoltre possibile modificare il primo giorno della settimana utilizzato nei dati. Il giorno predefinito è domenica.  
@@ -80,7 +79,7 @@ ms.locfileid: "66076513"
 ## <a name="specifying-additional-calendars"></a>Specifica di calendari aggiuntivi  
  Nella pagina **Impostazione calendari aggiuntivi** della procedura guidata selezionare i calendari su cui basare le gerarchie nella dimensione. È possibile scegliere i calendari indicati di seguito.  
   
-|Calendario|Descrizione|  
+|Calendar|Descrizione|  
 |--------------|-----------------|  
 |Calendario fiscale|Calendario fiscale di dodici mesi. Se si seleziona questo calendario, specificare il giorno e il mese di inizio dell'anno fiscale in uso nell'organizzazione.|  
 |Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e il mese di inizio e il modello di tre mesi di 4-4-5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane in un mese.|  

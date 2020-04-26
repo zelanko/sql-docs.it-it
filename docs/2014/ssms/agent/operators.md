@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189022"
 ---
 # <a name="operators"></a>Operatori
@@ -43,13 +43,13 @@ ms.locfileid: "68189022"
 ### <a name="naming-an-operator"></a>Denominazione di un operatore  
  A ogni operatore deve essere assegnato un nome. I nomi degli operatori devono essere univoci nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non possono essere formati da più di **128** caratteri.  
   
-### <a name="contact-information"></a>Informazioni di contatto  
+### <a name="contact-information"></a>Informazioni sul contatto  
  Le informazioni sul contatto di un operatore definiscono la modalità di trasmissione delle notifiche all'operatore. Gli operatori possono ricevere notifiche tramite posta elettronica o cercapersone oppure tramite il comando **Net Send** :  
   
 > [!IMPORTANT]  
 >  Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
--   **Notifica tramite posta elettronica**  
+-   **Notifica di posta elettronica**  
   
      La notifica tramite posta elettronica prevede l'invio di un messaggio di posta elettronica all'operatore. Per la notifica tramite posta elettronica, è necessario specificare l'indirizzo di posta elettronica dell'operatore.  
   
@@ -73,14 +73,14 @@ ms.locfileid: "68189022"
   
          **Oggetto:**  
   
-         **CC**:  
+         **Cc**:  
   
-         **Per**:  
+         **A**:  
   
     > [!NOTE]  
     >  Se si utilizza un sistema di cercapersone alfanumerico a capacità limitata, è possibile ridurre il numero di caratteri escludendo dalla notifica su cercapersone il testo del messaggio di errore. Vi sono, ad esempio, sistemi di cercapersone alfanumerici con un limite di 64 caratteri per chiamata.  
   
--   **SendNotification NET**  
+-   **notifica Net Send**  
   
      Questa modalità prevede l'invio all'operatore di un messaggio tramite il comando **Net Send** . Per la notifica tramite comando **Net Send**, è necessario specificare il destinatario, costituito da un computer o un utente, di un messaggio di rete.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189022"
   
      L'impossibilità di raggiungere tali operatori potrebbe essere dovuta a un errore negli indirizzi dei cercapersone o al fatto che gli operatori non sono in servizio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent non è in grado di accedere alle tabelle di sistema nel database **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è in grado di accedere alle tabelle di sistema nel database **msdb** .  
   
      La tabella di sistema **sysnotifications** specifica le responsabilità degli operatori per i vari tipi di avvisi.  
   
@@ -118,10 +118,10 @@ ms.locfileid: "68189022"
 |||  
 |-|-|  
 |**Attività**|**Argomento**|  
-|Attività correlate alla creazione di un operatore|[Creazione di un operatore](create-an-operator.md)<br /><br /> [Impostazione di un operatore alternativo](designate-a-fail-safe-operator.md)|  
-|Attività correlate all'assegnazione di avvisi|[Assegnazione di avvisi a un operatore](assign-alerts-to-an-operator.md)<br /><br /> [Definire la risposta a un avviso &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assegnazione di avvisi a un operatore](assign-alerts-to-an-operator.md)|  
+|Attività correlate alla creazione di un operatore|[Create an Operator](create-an-operator.md)<br /><br /> [Impostazione di un operatore alternativo](designate-a-fail-safe-operator.md)|  
+|Attività correlate all'assegnazione di avvisi|[Assegnazione di avvisi a un operatore](assign-alerts-to-an-operator.md)<br /><br /> [Definizione della risposta a un avviso &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assegnazione di avvisi a un operatore](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  
   
   

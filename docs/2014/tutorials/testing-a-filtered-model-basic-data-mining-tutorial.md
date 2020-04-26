@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044096"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Test di un modello filtrato (Esercitazione di base sul data mining)
@@ -83,11 +83,11 @@ ms.locfileid: "63044096"
      Sono ora disponibili due nuovi modelli nella scheda **modelli di data mining** .  
   
 ## <a name="evaluate-the-results"></a>Valutazione dei risultati  
- Visualizzare i risultati e stimare l'accuratezza dei modelli filtrati seguendo gli stessi passaggi effettuati per i tre modelli precedenti. Per altre informazioni, vedere:  
+ Visualizzare i risultati e stimare l'accuratezza dei modelli filtrati seguendo gli stessi passaggi effettuati per i tre modelli precedenti. Per altre informazioni, vedi:  
   
  [Esplorazione del modello Decision Trees &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Per esplorare i modelli filtrati  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63044096"
   
 3.  Diapositiva **Mostra livello** a `3`.  
   
-4.  Modificare il **** valore di sfondo `1`in.  
+4.  Modificare il **Background** valore di sfondo `1`in.  
   
 5.  Posizionare il cursore sul nodo con l'etichetta **tutti** per visualizzare il numero di acquirenti di biciclette rispetto agli acquirenti non bike.  
   
@@ -129,15 +129,15 @@ ms.locfileid: "63044096"
  Per un esempio di applicazione di filtri alle tabelle nidificate, vedere [esercitazione intermedia sul data mining &#40;Analysis Services-&#41;di data mining ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
- [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: creazione e utilizzo di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lezione 6: Creazione e utilizzo di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazione intermedia sul data mining &#40;Analysis Services-&#41;di data mining](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

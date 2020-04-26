@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510955"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
+# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina Generale)
   Utilizzare questa pagina per visualizzare e modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent oppure per definire un nuovo passaggio di processo.  
   
  Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  
@@ -28,7 +28,7 @@ ms.locfileid: "62510955"
  **Nome passaggio**  
  Consente di impostare il nome del passaggio del processo.  
   
- **Tipo**  
+ **Type**  
  Consente di impostare il sottosistema utilizzato dal passaggio del processo. In base al sottosistema scelto, le opzioni visualizzate per la definizione del passaggio del processo sono diverse.  
   
  **Esegui come**  
@@ -53,7 +53,7 @@ ms.locfileid: "62510955"
  **Incolla**  
  Consente di incollare il contenuto degli Appunti.  
   
- **Analizza**  
+ **Analizzare**  
  Consente di verificare la sintassi del comando.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Opzioni per i passaggi del processo Script ActiveX  
@@ -67,7 +67,7 @@ ms.locfileid: "62510955"
  **JScript**  
  Consente di specificare JScript come linguaggio per i passaggi del processo.  
   
- **Altri**  
+ **Altro**  
  Consente di digitare il nome del linguaggio per i passaggi del processo scritti in un altro linguaggio di scripting.  
   
  **Apri**  
@@ -83,7 +83,7 @@ ms.locfileid: "62510955"
  Consente di incollare il contenuto degli Appunti.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Opzioni per i passaggi del processo Sistema operativo (CmdExec)  
- **Elabora codice di uscita di un comando riuscito**  
+ **Elabora codice di uscita di un comando eseguito correttamente**  
  Consente di digitare il codice di uscita restituito dal comando per indicare il corretto completamento.  
   
  **Apri**  
@@ -209,7 +209,7 @@ ms.locfileid: "62510955"
   
 -   **SQL Server**  
   
--   **File System**  
+-   **File system**  
   
 -   **Archivio pacchetti SSIS**  
   
@@ -223,8 +223,7 @@ ms.locfileid: "62510955"
  Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona questo metodo di autenticazione, immettere il **Nome utente** e la **Password corretti**.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'autenticazione è disponibile per garantire la compatibilità con le versioni precedenti. Per un livello di sicurezza migliore, utilizzare l'autenticazione di Windows, se possibile.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'autenticazione è disponibile per garantire la compatibilità con le versioni precedenti. Per un livello di sicurezza migliore, utilizzare l'autenticazione di Windows, se possibile.  
   
  **Pacchetto**  
  Consente di digitare la posizione del pacchetto.  
@@ -283,7 +282,7 @@ ms.locfileid: "62510955"
 ### <a name="execution-options-tab"></a>Scheda Opzioni di esecuzione  
  Consente di visualizzare o modificare le opzioni di esecuzione per il pacchetto.  
   
- **Interrompi pacchetto per avvisi di convalida**  
+ **Interrompi il pacchetto in caso di avvisi di convalida**  
  Selezionare questa opzione per interrompere l'esecuzione del pacchetto in caso di avvisi di convalida.  
   
  **Convalida pacchetto senza esecuzione**  
@@ -292,7 +291,7 @@ ms.locfileid: "62510955"
  **Numero massimo di file eseguibili simultanei**  
  Numero massimo di file eseguibili che è possibile eseguire simultaneamente.  
   
- **Abilita Checkpoint pacchetto**  
+ **Abilita checkpoint pacchetto**  
  Selezionare questa opzione affinché il passaggio del processo utilizzi i checkpoint del pacchetto.  
   
  **File del checkpoint**  
@@ -340,7 +339,7 @@ ms.locfileid: "62510955"
  **Verificare la compilazione del pacchetto**  
  Consente di eseguire solo i pacchetti con un numero di build specifico. Se questa opzione è selezionata, il passaggio del processo viene interrotto se il pacchetto non dispone del numero di build specifico.  
   
- **Compilare**  
+ **Build**  
  Consente di digitare il numero di build del pacchetto.  
   
  **Verifica ID pacchetto**  
@@ -358,16 +357,16 @@ ms.locfileid: "62510955"
 ### <a name="command-line-tab"></a>Scheda Riga di comando  
  Consente di specificare le opzioni della riga di comando per il pacchetto. In questa scheda sono disponibili le opzioni seguenti.  
   
- **Ripristinare le opzioni originali**  
+ **Ripristina opzioni originali**  
  Consente di utilizzare le opzioni della riga di comando impostate in questa finestra di dialogo.  
   
- **Modificare la riga di comando manualmente**  
+ **Modifica riga di comando manualmente**  
  Consente di specificare le opzioni nella finestra della riga di comando.  
   
  **Riga di comando**  
  Consente di digitare le opzioni della riga di comando da utilizzare per il pacchetto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestire i passaggi del processo](manage-job-steps.md)   
  [SQL Server Agent processi per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md)  

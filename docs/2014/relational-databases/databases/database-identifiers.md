@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762080"
 ---
 # <a name="database-identifiers"></a>Identificatori del database
-  Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. Tutti gli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elementi in possono avere un identificatore. ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  
+  Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. È possibile associare un identificatore a qualunque elemento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  
   
  L'identificatore viene creato in fase di definizione dell'oggetto e viene successivamente utilizzato per fare riferimento all'oggetto. Ad esempio, l'istruzione seguente crea una tabella a cui viene associato l'identificatore `TableX`e due colonne a cui vengono associati gli identificatori `KeyCol` e `Description`:  
   
@@ -96,8 +96,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   Il simbolo di chiocciola, il simbolo di dollaro ($), il simbolo di cancelletto o il carattere di sottolineatura.  
   
-3.  L'identificatore non deve essere una parola riservata [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riserva sia le versioni maiuscole sia quelle minuscole delle parole riservate. Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre. Le parole riservate dipendono dal livello di compatibilità del database. Questo livello può essere impostato usando l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
+3.  L'identificatore non deve essere una parola riservata [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riserva sia le versioni maiuscole sia quelle minuscole delle parole riservate. Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre. Le parole riservate dipendono dal livello di compatibilità del database. Questo livello può essere impostato usando l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
   
 4.  Non sono consentiti spazi incorporati o caratteri speciali.  
   
@@ -110,17 +109,17 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [CREAZIONE di &#40;di DATABASE SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
- [CREARE una regola &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-rule-transact-sql)   
+ [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
- [CREAZIONE di una vista &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-view-transact-sql)   
- [DICHIARARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Parole chiave riservate &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [Parole chiave riservate &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

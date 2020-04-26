@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721081"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale
@@ -24,7 +24,7 @@ ms.locfileid: "62721081"
   
 ### <a name="to-create-the-subscription"></a>Per creare la sottoscrizione  
   
-1.  Connettersi al server di pubblicazione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, espandere il nodo del server, quindi espandere la cartella **replica** .  
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il nodo del server e quindi la cartella **Replica** .  
   
 2.  Nella cartella **Pubblicazioni locali** fare clic con il pulsante destro del mouse sulla pubblicazione **AdvWorksProductTrans** e quindi scegliere **Nuove sottoscrizioni**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62721081"
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Per visualizzare lo stato di sincronizzazione della sottoscrizione  
   
-1.  Connettersi al server di pubblicazione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, espandere il nodo del server, quindi espandere la cartella **replica** .  
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il nodo del server e quindi la cartella **Replica** .  
   
 2.  Nella cartella **Pubblicazioni locali** espandere la pubblicazione **AdvWorksProductTrans** , fare clic con il pulsante destro del mouse sulla sottoscrizione nel database **ProductReplica** e quindi scegliere **Visualizza stato sincronizzazione**.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62721081"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata una sottoscrizione per la pubblicazione transazionale. Poiché l'agente di distribuzione per questa sottoscrizione è in esecuzione continua, la sottoscrizione viene inizializzata al momento della creazione. Il passaggio successivo consiste nell'utilizzo di token di traccia per verificare che le modifiche sono state replicate nel Sottoscrittore e per determinare la latenza. Vedere [Lezione 3: Convalida della sottoscrizione e misurazione della latenza](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Inizializzare una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
- [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  
+ [Creare una sottoscrizione push](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315074"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Call Center (Esercitazione intermedia sul data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "63315074"
   
 -   [Microsoft Generic Content Tree Viewer](#bkmk_genviewer) **:** questo visualizzatore standard fornisce informazioni dettagliate sui modelli e le statistiche individuati dall'algoritmo durante la generazione del modello.  
   
-##  <a name="bkmk_NNviewer"></a>Visualizzatore Microsoft Neural Network  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Visualizzatore Microsoft Neural Network  
  Il visualizzatore include tre riquadri: **input**, **output**e **variabili**.  
   
  Utilizzando il riquadro di **output** , è possibile selezionare valori diversi per l'attributo stimabile o variabile dipendente. Se il modello contiene più attributi stimabili, è possibile selezionare l'attributo dall'elenco degli attributi di **output** .  
@@ -114,7 +114,7 @@ ms.locfileid: "63315074"
   
  [Torna all'inizio](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Microsoft Generic Content Tree Viewer  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Microsoft Generic Content Tree Viewer  
  Questo visualizzatore può essere utilizzato per visualizzare informazioni ancora più dettagliate create dall'algoritmo quando il modello viene elaborato. **MicrosoftGeneric Content Tree Viewer** rappresenta il modello di data mining come una serie di nodi, in cui ogni nodo rappresenta le conoscenze acquisite sui dati di training. Questo visualizzatore può essere utilizzato con tutti i modelli, ma il contenuto dei nodi è diverso a seconda del tipo di modello.  
   
  Per i modelli di rete neurale o i modelli di regressione logistica, il `marginal statistics node` può risultare particolarmente utile. Questo nodo contiene statistiche derivate sulla distribuzione di valori nei dati. Queste informazioni possono risultare utili se si desidera ottenere un riepilogo dei dati senza dovere scrivere molte query T-SQL. Il grafico dei valori per la creazione di contenitori nell'argomento precedente deriva dal nodo delle statistiche marginali.  
@@ -150,7 +150,7 @@ WHERE NODE_NAME = '10000000000000000'
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Aggiunta di un modello di regressione logistica alla struttura del Call Center &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di rete neurale](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   

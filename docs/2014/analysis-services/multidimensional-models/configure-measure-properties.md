@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076610"
 ---
 # <a name="configure-measure-properties"></a>Configurare le proprietà delle misure
@@ -58,8 +58,7 @@ ms.locfileid: "66076610"
   
 |Proprietà|Definizione|  
 |--------------|----------------|  
-|`AggregateFunction`|Obbligatorio. Determina la modalità di aggregazione delle misure. 
-  `Sum`è l'aggregazione predefinita. Per altre informazioni, vedere [Utilizzare le funzioni di aggregazione](use-aggregate-functions.md) per una descrizione di ogni funzione.|  
+|`AggregateFunction`|Obbligatorio. Determina la modalità di aggregazione delle misure. `Sum`è l'aggregazione predefinita. Per altre informazioni, vedere [Utilizzare le funzioni di aggregazione](use-aggregate-functions.md) per una descrizione di ogni funzione.|  
 |`DataType`|Obbligatorio. Specifica il tipo di dati della colonna della tabella dei fatti sottostante a cui è associata la misura. Per impostazione predefinita, questo valore viene ereditato dalla colonna di origine.|  
 |`Description`|Fornisce una descrizione della misura, che può essere esposta in applicazioni client.|  
 |`DisplayFolder`|Specifica la cartella in cui verrà visualizzata la misura quando gli utenti si connettono al cubo. Quando in un cubo sono presenti numerose misure, è possibile usare le cartelle di visualizzazione per categorizzare le misure e migliorare l'esplorazione dell'utente.|  
@@ -70,7 +69,7 @@ ms.locfileid: "66076610"
 |`Source`|Obbligatorio. Specifica la colonna nella vista origine dati a cui è associata la misura. Vedere [Origini dati e associazioni &#40;SSAS - multidimensionale&#41;](data-sources-and-bindings-ssas-multidimensional.md).|  
 |`Visible`|Determina la visibilità della misura nelle applicazioni client.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare le proprietà del gruppo di misure](configure-measure-group-properties.md)   
  [Modifica delle misure](../lesson-3-1-modifying-measures.md)  
   

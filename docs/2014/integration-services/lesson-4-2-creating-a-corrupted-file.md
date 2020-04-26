@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767383"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Passaggio 2: Creazione di un file danneggiato
@@ -45,7 +45,7 @@ ms.locfileid: "62767383"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Per accertarsi che in fase di runtime si verifichi un errore  
   
-1.  Scegliere **Avvia debug** dal menu **Debug**.  
+1.  Scegliere **Avvia debug**dal menu **debug** .  
   
      Alla terza iterazione del flusso di dati, la trasformazione Lookup Currency Key tenta di elaborare il file Currency_BAD.txt e ha esito negativo. L'errore della trasformazione provoca l'errore dell'intero pacchetto.  
   

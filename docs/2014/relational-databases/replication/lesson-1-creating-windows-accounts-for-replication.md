@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721165"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lezione 1: Creazione di account di Windows per la replica
@@ -25,10 +25,10 @@ ms.locfileid: "62721165"
   
 |Agente|Location|Nome account|  
 |-----------|--------------|------------------|  
-|agente snapshot|Editore|\<*machine_name*> \ repl_snapshot|  
-|Agente di lettura log|Editore|\<*machine_name*> \ repl_logreader|  
-|Agente di distribuzione|Server di pubblicazione e Sottoscrittore|\<*machine_name*> \ repl_distribution|  
-|Agente di merge|Server di pubblicazione e Sottoscrittore|\<*machine_name*> \ repl_merge|  
+|agente snapshot|Editore|\<*nome_computer*>\repl_snapshot|  
+|Agente di lettura log|Editore|\<*nome_computer*>\repl_logreader|  
+|Agente di distribuzione|Server di pubblicazione e Sottoscrittore|\<*nome_computer*>\repl_distribution|  
+|Agente di merge|Server di pubblicazione e Sottoscrittore|\<*nome_computer*>\repl_merge|  
   
 > [!NOTE]  
 >  Nelle esercitazioni sulla replica i server di pubblicazione e il server di distribuzione condividono la stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il server di pubblicazione e il Sottoscrittore possono utilizzare la stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma ciò non è un requisito. Se il server di pubblicazione e il Sottoscrittore condividono la stessa istanza, i passaggi utilizzati per creare gli account del Sottoscrittore non sono obbligatori.  
@@ -45,7 +45,7 @@ ms.locfileid: "62721165"
   
 5.  Ripetere il passaggio precedente per creare gli account repl_logreader, repl_distribution e repl_merge.  
   
-6.  Fare clic su **Close**.  
+6.  Fare clic su **Chiudi**.  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>Per creare account di Windows locali per gli agenti di replica nel Sottoscrittore  
   
@@ -59,12 +59,12 @@ ms.locfileid: "62721165"
   
 5.  Ripetere il passaggio precedente per creare l'account repl_merge.  
   
-6.  Fare clic su **Close**.  
+6.  Fare clic su **Chiudi**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo sono stati creati gli account di Windows per gli agenti di replica. Il passaggio successivo consiste nella configurazione della cartella snapshot. Vedere [Lezione 2: Preparazione della cartella snapshot](lesson-2-preparing-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)  
   
   

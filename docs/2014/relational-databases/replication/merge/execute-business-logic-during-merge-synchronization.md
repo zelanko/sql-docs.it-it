@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62999571"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Esecuzione di logiche di business durante la sincronizzazione di tipo merge
@@ -59,7 +59,7 @@ ms.locfileid: "62999571"
      Operazione utile per le applicazioni in cui è necessario sostituire operazioni o valori di dati specifici. In un'applicazione, ad esempio, un'eliminazione di riga potrebbe essere trasformata in un aggiornamento speciale che imposta una colonna **status** della riga sul valore "deleted" e quindi rileva l'identità del client che ha eseguito l'eliminazione. Questa operazione potrebbe risultare utile per effettuare controlli e monitorare il flusso di lavoro.  
   
 ### <a name="custom-conflict-resolution"></a>Risoluzione personalizzata dei conflitti  
- La replica di tipo merge consente di rilevare e risolvere i conflitti, permettendo di accettare una strategia di risoluzione predefinita o di scegliere la risoluzione personalizzata per i conflitti. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](advanced-merge-replication-conflict-detection-and-resolution.md). Il gestore della logica di business può essere richiamato durante l'elaborazione di modifiche ai dati in conflitto e consente di eseguire una delle due azioni seguenti:  
+ La replica di tipo merge consente di rilevare e risolvere i conflitti, permettendo di accettare una strategia di risoluzione predefinita o di scegliere la risoluzione personalizzata per i conflitti. Per ulteriori informazioni, vedere [rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](advanced-merge-replication-conflict-detection-and-resolution.md). Il gestore della logica di business può essere richiamato durante l'elaborazione di modifiche ai dati in conflitto e consente di eseguire una delle due azioni seguenti:  
   
 -   Accettare la risoluzione predefinita  
   
@@ -89,9 +89,9 @@ ms.locfileid: "62999571"
   
 -   Server IIS (Internet Information Services), se si utilizza la sincronizzazione tramite il Web. Utilizzare una sottoscrizione pull sincronizzata tramite il Web per eseguire il gestore della logica di business nel server IIS.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Replica di tipo merge](merge-replication.md)   
- [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [Sincronizzare i dati](../synchronize-data.md)   
  [Sincronizzazione Web per la replica di tipo merge](../web-synchronization-for-merge-replication.md)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162469"
 ---
 # <a name="create-jobs"></a>Crea processi
@@ -27,8 +27,7 @@ ms.locfileid: "63162469"
   
  È possibile creare processi da eseguire nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure in più istanze all'interno di un'organizzazione. Per eseguire i processi in più server, è necessario impostare almeno un server master e uno o più server di destinazione. Per altre informazioni sui server master e di destinazione, vedere [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra i dati relativi al processo e ai passaggi di processo nella cronologia del processo.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra i dati relativi al processo e ai passaggi di processo nella cronologia del processo.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -39,7 +38,7 @@ ms.locfileid: "63162469"
 |Viene descritto come riassegnare la proprietà dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un altro utente.|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
 |Viene descritto come impostare il log di cronologia processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Impostare il log di cronologia processi](set-up-the-job-history-log.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestire i passaggi del processo](manage-job-steps.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)   
  [Creazione e alconnessione di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   

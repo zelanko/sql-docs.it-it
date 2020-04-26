@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767433"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Passaggio 3: Modifica della gestione connessione file flat
@@ -26,11 +26,11 @@ ms.locfileid: "62767433"
   
 1.  Nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data**e scegliere **Proprietà**.  
   
-2.  Nella finestra Proprietà fare clic sulla cella vuota relativa a **Espressioni**e fare clic sul pulsante con i puntini di sospensione **(...)**.  
+2.  Nel Finestra Proprietà, per le **espressioni**, fare clic nella cella vuota, quindi fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
-3.  Nella finestra di dialogo **Editor espressioni di proprietà** Digitare o **** selezionare `ConnectionString`nella colonna proprietà.  
+3.  Nella finestra di dialogo **Editor espressioni di proprietà** Digitare o **Property** selezionare `ConnectionString`nella colonna proprietà.  
   
-4.  Nella colonna **Espressione** fare clic sul pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni**.  
+4.  Nella colonna **espressione** fare clic sul pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni** .  
   
 5.  Nella finestra di dialogo **Generatore di espressioni** espandere il nodo **Variabili** .  
   

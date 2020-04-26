@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650497"
 ---
 # <a name="proxy-editor-and--add-principal"></a>Editor proxy e Aggiungi entità
@@ -32,7 +32,7 @@ ms.locfileid: "62650497"
  **Nome**  
  Selezionare il nome dell'entità per concedere l'accesso a tale entità oppure selezionare **Nome** per concedere l'accesso a tutte le entità incluse nell'elenco.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un proxy di SQL Server Agent](create-a-sql-server-agent-proxy.md)  
   
   

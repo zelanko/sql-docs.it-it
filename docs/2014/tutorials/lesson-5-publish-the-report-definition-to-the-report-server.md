@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272873"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lezione 5: Pubblicazione della definizione del report nel Server report
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lezione 5: Pubblicare la definizione del report nel server di report
   L'ultimo passaggio dell'aggiornamento della definizione del report consiste nella pubblicazione della definizione nel server di report.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Per pubblicare il report nel catalogo dei report  
@@ -79,7 +79,7 @@ ms.locfileid: "63272873"
 ## <a name="next-lesson"></a>Lezione successiva  
  Nella lezione successiva verrà compilata ed eseguita l' `SampleRDLSchema` applicazione. Vedere [lezione 6: eseguire l'applicazione dello schema RDL &#40;&#35;&#41;VB-C ](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

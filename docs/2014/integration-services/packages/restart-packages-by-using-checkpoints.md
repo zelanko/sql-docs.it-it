@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767033"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
@@ -76,7 +76,7 @@ ms.locfileid: "62767033"
 >  L'opzione **/CheckPointing on on** di dtexec equivale a impostare la `SaveCheckpoints` proprietà del pacchetto `True`su e la `CheckpointUsage` proprietà su Always. Per altre informazioni, vedere [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sicurezza dei file del checkpoint  
- Poiché la protezione a livello di pacchetto non include la protezione dei file del checkpoint, è necessario proteggere tali file separatamente. I dati di checkpoint possono essere archiviati esclusivamente nel file system ed è necessario utilizzare un elenco di controllo di accesso (ACL) del sistema operativo per proteggere il percorso o la cartella in cui è archiviato il file. È importante proteggere i file del checkpoint perché contengono informazioni sullo stato del pacchetto, inclusi i valori correnti delle variabili. Un variabile può ad esempio contenere un recordset con numerose righe di dati privati, quali numeri di telefono. Per ulteriori informazioni, vedere [accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
+ Poiché la protezione a livello di pacchetto non include la protezione dei file del checkpoint, è necessario proteggere tali file separatamente. I dati di checkpoint possono essere archiviati esclusivamente nel file system ed è necessario utilizzare un elenco di controllo di accesso (ACL) del sistema operativo per proteggere il percorso o la cartella in cui è archiviato il file. È importante proteggere i file del checkpoint perché contengono informazioni sullo stato del pacchetto, inclusi i valori correnti delle variabili. Un variabile può ad esempio contenere un recordset con numerose righe di dati privati, quali numeri di telefono. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
   
 ### <a name="to-configure-the-checkpoint-properties"></a>Per configurare le proprietà dei checkpoint  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62767033"
   
 -   Articolo del supporto tecnico [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633)(Mancata applicazione dei checkpoint SSIS per gli elementi contenitori Ciclo For e Foreach) nel sito Web support.microsoft.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

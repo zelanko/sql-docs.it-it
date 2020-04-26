@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac041e19aeb5948a644a9fcf82b3e687472b7259
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468294"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>Simulazione di una clausola EXISTS in una stored procedure compilata in modo nativo
@@ -26,8 +26,8 @@ SELECT TOP 1 @exists = 1 FROM MyTable WHERE ...
 IF @exists = 1  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](migration-issues-for-natively-compiled-stored-procedures.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Problemi di migrazione per le stored procedure compilate in modo nativo](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076259"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Creare e gestire una partizione remota (Analysis Services)
@@ -27,15 +27,14 @@ ms.locfileid: "66076259"
   
  Un database secondario dedicato può archiviare partizioni remote per un solo database master, ma il database master può utilizzare più database secondari, purché si trovino tutti nella stessa istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le dimensioni in un database dedicato a partizioni remote vengono create come dimensioni collegate.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Prima di creare una partizione remota, è necessario che siano soddisfatte le condizioni seguenti:  
   
 -   È necessario disporre di una seconda istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e di un database dedicato per archiviare partizioni. Il database secondario è finalizzato a un unico scopo: fornire l'archiviazione di partizioni remote per un database master.  
   
 -   Entrambe le istanze del server devono essere della stessa versione. Entrambi i database devono essere dello stesso livello funzionale.  
   
--   Entrambe le istanze devono essere configurate per le connessioni TCP. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è supportata la creazione di partizioni remote tramite il protocollo HTTP.  
+-   Entrambe le istanze devono essere configurate per le connessioni TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è supportata la creazione di partizioni remote tramite il protocollo HTTP.  
   
 -   Le impostazioni del firewall in entrambi i computer devono essere impostate per accettare connessioni esterne. Per altre informazioni sull'impostazione del firewall, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -125,15 +124,14 @@ ms.locfileid: "66076259"
 5.  Nel server master: fare clic con il pulsante destro del mouse sul nome del cubo in Esplora soluzioni, scegliere **Elabora** ed elaborare completamente il cubo.  
   
 ## <a name="administering-remote-partitions"></a>Amministrazione di partizioni remote  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportate sia l'elaborazione parallela sia quella sequenziale di partizioni remote. Nel database master, ovvero dove sono state definite le partizioni, vengono coordinate le transazioni fra tutte le istanze che partecipano all'elaborazione delle partizioni di un cubo. I report di elaborazione vengono inviati quindi a tutte le istanze in cui è stata elaborata una partizione.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportate sia l'elaborazione parallela sia quella sequenziale di partizioni remote. Nel database master, ovvero dove sono state definite le partizioni, vengono coordinate le transazioni fra tutte le istanze che partecipano all'elaborazione delle partizioni di un cubo. I report di elaborazione vengono inviati quindi a tutte le istanze in cui è stata elaborata una partizione.  
   
  Un cubo contenente partizioni remote può essere amministrato insieme alle relative partizioni in una singola istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tuttavia, i metadati per la partizione remota possono essere visualizzati e aggiornati solo nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dove la partizione e il relativo cubo padre sono stati definiti. La partizione remota non può essere visualizzata o aggiornata nell'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  Anche se database dedicati all'archiviazione di partizioni remote non sono esposti a set di righe dello schema, le applicazioni in cui viene utilizzata la libreria AMO (Analysis Management Objects) possono ancora individuare un database dedicato utilizzando il comando di individuazione (Discover) di XML for Analysis. Un comando CREATE o DELETE inviato direttamente a un database dedicato tramite un client TCP o HTTP avrà esito positivo, tuttavia verrà restituito un avviso dal server indicante che l'azione può danneggiare notevolmente questo database gestito.  
   
-## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
