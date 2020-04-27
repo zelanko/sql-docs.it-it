@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012814"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Backup e ripristino di indici e cataloghi full-text
@@ -30,9 +30,9 @@ ms.locfileid: "66012814"
 > [!IMPORTANT]  
 >  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkID=121052)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-##  <a name="backingup"></a> Backup degli indici full-text di un catalogo full-text  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Backup degli indici full-text di un catalogo full-text  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> Individuazione degli indici full-text di un catalogo full-text  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> Individuazione degli indici full-text di un catalogo full-text  
  È possibile recuperare le proprietà degli indici full-text usando l'istruzione [SELECT](/sql/t-sql/queries/select-transact-sql) seguente che consente di selezionare le colonne dalle viste del catalogo [sys.fulltext_indexes](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql) e [sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql) .  
   
 ```  
@@ -49,7 +49,7 @@ GO
   
 
   
-###  <a name="Find_FG_of_FTI"></a> Individuazione del filegroup o del file che contiene un indice full-text  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> Individuazione del filegroup o del file che contiene un indice full-text  
  Quando viene creato, l'indice full-text viene inserito in una delle posizioni seguenti:  
   
 -   Filegroup specificato dall'utente.  
@@ -73,7 +73,7 @@ GO
   
 
   
-###  <a name="Back_up_FTIs_of_FTC"></a> Backup dei filegroup che contengono gli indici full-text  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> Backup dei filegroup che contengono gli indici full-text  
  Dopo avere trovato i filegroup che contengono gli indici di un catalogo full-text, è necessario eseguire il backup di ognuno. Durante il processo di backup non è consentito eliminare o aggiungere cataloghi full-text.  
   
  Il primo backup di un filegroup deve essere un backup di file completo. Dopo avere creato un backup di file completo per un filegroup, è possibile eseguire il backup delle sole modifiche avvenute in un filegroup creando una serie di uno o più backup di file differenziali basati sul backup di file completo.  
@@ -86,7 +86,7 @@ GO
   
 
   
-##  <a name="Restore_FTI"></a> Ripristino di un indice full-text  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> Ripristino di un indice full-text  
  Il ripristino del backup di un filegroup include il ripristino dei file di indice full-text e degli altri file nel filegroup. Per impostazione predefinita, il filegroup viene ripristinato nel percorso del disco in cui è stato eseguito il backup.  
   
  Se alla creazione del backup era online una tabella indicizzata full-text con un popolamento in corso, quest'ultimo verrà ripreso dopo il ripristino.  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478815"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Convalida dei dati (componente aggiuntivo MDS per Excel)
@@ -54,8 +54,8 @@ ms.locfileid: "65478815"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Determinare quali valori non passano le regole business definite.|[Applicare regole business &#40;Componente aggiuntivo MDS per Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
-|Per correggere gli errori di convalida, visualizzare tutte le transazioni eseguite per un membro.|[Visualizzare tutte le annotazioni o transazioni per un membro &#40;Componente aggiuntivo MDS per Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|Determinare quali valori non passano le regole business definite.|[Applicare le regole di business &#40;componente aggiuntivo MDS per Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|Per correggere gli errori di convalida, visualizzare tutte le transazioni eseguite per un membro.|[Visualizzare tutte le annotazioni o transazioni per un membro &#40;componente aggiuntivo MDS per Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

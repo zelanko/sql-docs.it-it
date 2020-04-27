@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63276956"
 ---
 # <a name="add-objects"></a>Aggiungi oggetti
@@ -26,10 +26,10 @@ ms.locfileid: "63276956"
  **Oggetti specifici**  
  Consente di visualizzare la finestra di dialogo **Seleziona oggetti** per ottimizzare la ricerca di oggetti.  
   
- **Tutti gli oggetti dei tipi**  
+ **Tutti gli oggetti di tipo**  
  Consente di visualizzare la finestra di dialogo **Seleziona tipi di oggetti** per specificare il tipo di oggetti da includere nell'elenco sottostante.  
   
- ****_Server\<nomeserver>_    
+ **The server**_Server\<nomeserver>_    
  Consente di aggiungere tutti gli oggetti appropriati nel server specificato. Questa opzione viene visualizzata solo quando viene aperta da finestre di dialogo con ambito server, ad esempio la finestra di dialogo **Account di accesso - Nuovo** .  
   
  **Tutti gli oggetti appartenenti allo schema**  

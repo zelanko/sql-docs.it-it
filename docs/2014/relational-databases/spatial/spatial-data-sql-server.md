@@ -18,17 +18,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014061"
 ---
 # <a name="spatial-data-sql-server"></a>Dati spaziali (SQL Server)
   I dati spaziali rappresentano informazioni sulla posizione fisica e sulla forma degli oggetti geometrici. Questi oggetti possono essere dei punti oppure oggetti più complessi, come ad esempio paesi, strade o laghi.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di dati spaziali: il tipo di dati `geometry` e il tipo di dati `geography`.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di dati spaziali: il tipo di dati `geometry` e il tipo di dati `geography`.  
   
 -   Questo tipo `geometry` rappresenta i dati in un sistema di coordinate euclideo (piano).  
   
@@ -39,17 +38,17 @@ ms.locfileid: "66014061"
 > [!IMPORTANT]  
 >  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], scaricare il white paper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nuove funzionalità spaziali in SQL Server 2012).  
   
-##  <a name="reltasks"></a> Attività correlate  
- [Creare, costruire ed eseguire query di istanze di geometria](create-construct-and-query-geometry-instances.md)  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Attività correlate  
+ [Creazione, costruzione e query di istanze geometry](create-construct-and-query-geometry-instances.md)  
  Vengono descritti i metodi da utilizzare con le istanze del tipo di dati geometry.  
   
  [Creare, costruire ed eseguire query di istanze geografiche](create-construct-and-query-geography-instances.md)  
  Vengono descritti i metodi che è possibile utilizzare con istanze del tipo di dati geography.  
   
- [Eseguire query dei dati spaziali per Nearest Neighbor](query-spatial-data-for-nearest-neighbor.md)  
+ [Query dei dati spaziali per Nearest Neighbor](query-spatial-data-for-nearest-neighbor.md)  
  Viene descritto il modello di query utilizzato per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico.  
   
- [Creare, modificare ed eliminare indici spaziali](create-modify-and-drop-spatial-indexes.md)  
+ [Creazione, modifica ed eliminazione di indici spaziali](create-modify-and-drop-spatial-indexes.md)  
  Fornisce informazioni sulla creazione, la modifica e il rilascio di un indice spaziale.  
   
 ## <a name="related-content"></a>Contenuto correlato  

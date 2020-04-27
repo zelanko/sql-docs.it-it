@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011762"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011762"
 > [!IMPORTANT]  
 >  Per i dati in formato nativo, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. È possibile che si verifichino conflitti tra i caratteri di terminazione e i dati in formato nativo, in quanto per i file di dati in formato nativo viene utilizzato il formato binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Lunghezze del prefisso per l'esportazione bulk  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Lunghezze del prefisso per l'esportazione bulk  
   
 > [!NOTE]  
 >  Il valore predefinito visualizzato alla richiesta della lunghezza del prefisso quando si esegue l'esportazione di un campo rappresenta la lunghezza del prefisso ottimale per il campo.  
@@ -83,7 +83,7 @@ ms.locfileid: "66011762"
   
  <sup>1</sup> i `ntext`tipi `text`di dati `image` , e verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
   
-##  <a name="PrefixLengthsImport"></a>Lunghezze del prefisso per l'importazione bulk  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  
   
 > [!NOTE]  
@@ -92,8 +92,8 @@ ms.locfileid: "66011762"
 ## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Specificare la lunghezza del campo utilizzando bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Specificare i terminatori del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Specificare il tipo di archiviazione di file utilizzando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

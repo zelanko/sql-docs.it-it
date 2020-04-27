@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011481"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le query full-text consentono di eseguire una ricerca di sinonimi dei termini specificati dall'utente tramite l'utilizzo di un thesaurus. In un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *di* viene definito un set di sinonimi per una lingua specifica. Gli amministratori di sistema possono definire due forme di sinonimi, i set di espansione e i set di sostituzione. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. La corrispondenza con il thesaurus si verifica per tutte le query [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) e per tutte le query [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) che specificano la clausola FORMSOF THESAURUS.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le query full-text consentono di eseguire una ricerca di sinonimi dei termini specificati dall'utente tramite l'utilizzo di un thesaurus. In un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *di* viene definito un set di sinonimi per una lingua specifica. Gli amministratori di sistema possono definire due forme di sinonimi, i set di espansione e i set di sostituzione. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. La corrispondenza con il thesaurus si verifica per tutte le query [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) e per tutte le query [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) che specificano la clausola FORMSOF THESAURUS.  
   
-##  <a name="tasks"></a>Attività di base per la configurazione di un file del thesaurus  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>Attività di base per la configurazione di un file del thesaurus  
  Prima che le query di ricerca full-text nell'istanza del server siano in grado di eseguire la ricerca di sinonimi in una determinata lingua, è necessario definire mapping del thesaurus (sinonimi) per tale lingua. È necessario configurare manualmente ogni thesaurus per definire gli elementi seguenti:  
   
 -   Impostazione dei segni diacritici  
@@ -42,7 +42,7 @@ ms.locfileid: "66011481"
      Un set di sostituzione include un criterio di testo da sostituire con parole specifiche. Vedere, ad esempio, la sezione "Struttura XML di un set di sostituzione" più avanti in questo argomento.  
   
   
-##  <a name="initial_thesaurus_files"></a>Contenuto iniziale dei file del thesaurus  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>Contenuto iniziale dei file del thesaurus  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di file XML del thesaurus, uno per ogni lingua supportata. Tali file sono essenzialmente vuoti e contengono solo la struttura XML di livello principale comune a tutti i thesaurus di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un thesaurus di esempio costituito da commenti.  
   
  Tutti i file del thesaurus disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contengono il codice XML seguente:  
@@ -74,7 +74,7 @@ ms.locfileid: "66011481"
 ```  
   
   
-##  <a name="location"></a>Percorso dei file del thesaurus  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>Percorso dei file del thesaurus  
  Il percorso predefinito dei file del thesaurus è il seguente:  
   
  *<SQL_Server_data_files_path>* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
@@ -102,11 +102,11 @@ ms.locfileid: "66011481"
  Il file del thesaurus globale corrisponde alla lingua neutra con LCID 0. Questo valore può essere modificato solo dagli amministratori.  
   
   
-##  <a name="how_queries_use_tf"></a>Modalità di utilizzo dei file del thesaurus nelle query  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>Modalità di utilizzo dei file del thesaurus nelle query  
  Una query sul thesaurus usano sia un thesaurus specifico della lingua sia un thesaurus globale. La query esegue innanzitutto la ricerca in un file specifico della lingua e lo carica per l'elaborazione, a meno che non sia già caricato. La query viene quindi espansa per includere i sinonimi specifici della lingua indicati dalle regole del set di espansione e del set di sostituzione nel file del thesaurus. Questi passaggi vengono quindi ripetuti per il thesaurus globale. Se, tuttavia, nel file del thesaurus specifico della lingua è già stata individuata una corrispondenza per un termine, tale termine non può essere considerato valido per la corrispondenza nel thesaurus globale.  
   
   
-##  <a name="structure"></a>Informazioni sulla struttura di un file del thesaurus  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>Informazioni sulla struttura di un file del thesaurus  
  Ogni file del thesaurus definisce un contenitore XML, il cui ID è `Microsoft Search Thesaurus`, e un commento `<!--` ... `-->` che contiene un thesaurus di esempio. Il thesaurus è definito in un \<elemento del thesaurus> contenente esempi degli elementi figlio che definiscono l'impostazione dei segni diacritici, i set di espansione e i set di sostituzione, come indicato di seguito:  
   
 -   Struttura XML dell'impostazione dei segni diacritici  
@@ -173,7 +173,7 @@ ms.locfileid: "66011481"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>Utilizzo dei file del thesaurus  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>Utilizzo dei file del thesaurus  
  **Per modificare un file del thesaurus**  
   
 -   [Modifica di un file del thesaurus](#editing)  
@@ -184,10 +184,10 @@ ms.locfileid: "66011481"
   
  **Per visualizzare il risultato della suddivisione in token di una combinazione di word breaker, thesaurus ed elenchi di parole non significative**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [sys. dm_fts_parser &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>Modifica di un file del thesaurus  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>Modifica di un file del thesaurus  
  È possibile configurare il thesaurus per una lingua specifica modificando il relativo file XML. Durante l'installazione, vengono installati file del thesaurus vuoti \<che contengono solo il contenitore di> XML e un \<elemento del thesaurus di esempio commentato>. Per consentire il corretto funzionamento delle query di ricerca full-text che cercano sinonimi, è necessario creare un \<thesaurus effettivo> elemento che definisce un set di sinonimi. È possibile definire due forme di sinonimi, i set di espansione e i set di sostituzione.  
   
  **Restrizioni relative ai file del thesaurus**  
@@ -234,8 +234,8 @@ ms.locfileid: "66011481"
     ```  
   
   
-## <a name="see-also"></a>Vedere anche  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [CONTIENE &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   

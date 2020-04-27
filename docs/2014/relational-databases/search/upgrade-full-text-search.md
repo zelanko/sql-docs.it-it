@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010956"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
@@ -40,7 +40,7 @@ ms.locfileid: "66010956"
   
 -   [Collegamento di un database di SQL Server 2005 a SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
-##  <a name="Upgrade_Server"></a>Aggiornamento di un'istanza del server  
+##  <a name="upgrading-a-server-instance"></a><a name="Upgrade_Server"></a>Aggiornamento di un'istanza del server  
  Per un aggiornamento sul posto, un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene installata in modalità side-by-side con la versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi viene eseguita la migrazione dei dati. Se nella versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installata la ricerca full-text, viene installata automaticamente una nuova versione della ricerca full-text. L'installazione side-by-side implica l'esistenza di ognuno dei componenti seguenti a livello di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Word breaker, stemmer e filtri  
@@ -50,15 +50,14 @@ ms.locfileid: "66010956"
  Gli host del daemon di filtri full-text sono processi che consentono di caricare e controllare in modo sicuro i componenti estensibili esterni utilizzati per indici e query, quali word breaker, stemmer e filtri, senza compromettere l'integrità del motore di ricerca full-text. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ha introdotto un account del servizio per l'utilità di avvio FDHOST (MSSQLFDLauncher). Questo servizio propaga le informazioni sull'account del servizio nei processi dell'host del daemon di filtri di un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulla configurazione dell'account del servizio, vedere [Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ha introdotto un account del servizio per l'utilità di avvio FDHOST (MSSQLFDLauncher). Questo servizio propaga le informazioni sull'account del servizio nei processi dell'host del daemon di filtri di un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulla configurazione dell'account del servizio, vedere [Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ogni indice full-text risiede in un catalogo full-text che appartiene a un filegroup, dispone di un percorso fisico e viene considerato un file di database. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive un catalogo full-text è un oggetto logico o virtuale che contiene un gruppo di indici full-text. Pertanto, un nuovo catalogo full-text non viene considerato un file di database con un percorso fisico. Tuttavia, durante l'aggiornamento di un catalogo full-text contenente file di dati viene creato un nuovo filegroup nello stesso disco mantenendo in questo modo il vecchio comportamento I/O su disco dopo l'aggiornamento. Tutti gli indici full-text di quel catalogo vengono posizionati nel nuovo filegroup se esiste il percorso radice. Se il percorso precedente del catalogo full-text non è valido, l'indice full-text rimane nello stesso filegroup della tabella di base o nel filegroup primario nel caso di una tabella partizionata.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] Le istruzioni DDL che specificano cataloghi full-text continuano a funzionare correttamente.  
   
-##  <a name="FT_Upgrade_Options"></a>Opzioni di aggiornamento full-text  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>Opzioni di aggiornamento full-text  
  Quando si aggiorna un'istanza del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interfaccia utente consente di scegliere una delle opzioni di aggiornamento full-text seguenti.  
   
  Importa  
@@ -71,19 +70,18 @@ ms.locfileid: "66010956"
   
  Per informazioni sull'impatto dell'importazione di un indice full-text, vedere "Considerazioni per la scelta di un'opzione di aggiornamento full-text" più avanti in questo argomento.  
   
- Ricompilazione  
+ Ricompila  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere tempo. Dopo l'aggiornamento, inoltre, potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
- Reimposta  
+ Reset  
  I cataloghi full-text vengono ripristinati. Quando si esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file dei cataloghi full-text vengono rimossi, ma i metadati per i cataloghi full-text e gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
-##  <a name="Choosing_Upgade_Option"></a>Considerazioni per la scelta di un'opzione di aggiornamento full-text  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a>Considerazioni per la scelta di un'opzione di aggiornamento full-text  
  Quando si sceglie l'opzione di aggiornamento, considerare gli elementi seguenti:  
   
 -   È richiesta coerenza nei risultati delle query?  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuovi word breaker da usare per la ricerca full-text e semantica. I word breaker vengono usati sia in fase di indicizzazione che di esecuzione delle query. Se non si ricompilano i cataloghi full-text, i risultati di ricerca potrebbero risultare incoerenti. Se si esegue una query full-text che esegue la ricerca di una frase divisa in modo diverso dal word breaker in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto a quello corrente, è possibile che si verifichi il mancato recupero di una riga o documento contenente la frase. Questo problema si verifica perché le frasi indicizzate sono state divise in base a una logica diversa da quella utilizzata dalla query. Per risolvere il problema, ripopolare (ricompilare) i cataloghi full-text con i nuovi word breaker in modo che il comportamento in fase di indicizzazione e di esecuzione delle query sia lo stesso. A tale scopo, è possibile scegliere l'opzione Ricompila oppure scegliere l'opzione Importa e avviare manualmente la ricompilazione.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuovi word breaker da usare per la ricerca full-text e semantica. I word breaker vengono utilizzati sia in fase di indicizzazione che di esecuzione delle query. Se non si ricompilano i cataloghi full-text, i risultati di ricerca potrebbero risultare incoerenti. Se si esegue una query full-text che esegue la ricerca di una frase divisa in modo diverso dal word breaker in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto a quello corrente, è possibile che si verifichi il mancato recupero di una riga o documento contenente la frase. Questo problema si verifica perché le frasi indicizzate sono state divise in base a una logica diversa da quella utilizzata dalla query. Per risolvere il problema, ripopolare (ricompilare) i cataloghi full-text con i nuovi word breaker in modo che il comportamento in fase di indicizzazione e di esecuzione delle query sia lo stesso. A tale scopo, è possibile scegliere l'opzione Ricompila oppure scegliere l'opzione Importa e avviare manualmente la ricompilazione.  
   
 -   Eventuale presenza di indici full-text compilati in colonne chiave full-text di tipo integer  
   
@@ -130,9 +128,8 @@ ms.locfileid: "66010956"
   
  I cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]rappresentano ancora file di database nel proprio filegroup. Il processo di backup di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] continua a essere applicato per i cataloghi full-text ad eccezione del fatto che il servizio MSFTESQL non esiste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sul processo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=209154) nella documentazione online di SQL Server 2005.  
   
-##  <a name="Upgrade_Db"></a>Migrazione degli indici full-text durante l'aggiornamento di un database a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- I file di database e i cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere aggiornati a un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esistente mediante il collegamento, il ripristino o la Copia guidata database. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Gli indici full-text, se presenti, vengono importati, reimpostati o ricompilati. La proprietà del server **upgrade_option** consente di controllare l'opzione di aggiornamento full-text usata dall'istanza del server durante questi aggiornamenti del database.  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a>Migrazione degli indici full-text durante l'aggiornamento di un database a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ I file di database e i cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere aggiornati a un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esistente mediante il collegamento, il ripristino o la Copia guidata database. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Gli indici full-text, se presenti, vengono importati, reimpostati o ricompilati. La proprietà del server **upgrade_option** consente di controllare l'opzione di aggiornamento full-text usata dall'istanza del server durante questi aggiornamenti del database.  
   
  Una volta collegato, ripristinato o copiato un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e viene aggiornato automaticamente. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, se non è disponibile un catalogo full-text vengono ricompilati gli indici full-text associati.  
   
@@ -140,9 +137,9 @@ ms.locfileid: "66010956"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usare l' **azione\_opzione di aggiornamento** di [\_SP\_FULLTEXT Service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**:** Utilizzare l' **opzione di aggiornamento full-text** della finestra di dialogo **Proprietà Server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare l'opzione di **aggiornamento full-text** della finestra di dialogo **Proprietà server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
-##  <a name="Considerations_for_Restore"></a>Considerazioni per il ripristino [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] di un catalogo full-text in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Considerazioni per il ripristino di un catalogo full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Un metodo di aggiornamento dei dati full-text da un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste nel ripristinare il backup completo di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Durante l'importazione di un catalogo di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è possibile eseguire il backup e ripristinare il file di database e di catalogo. Il comportamento è uguale a quello di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -161,7 +158,7 @@ ms.locfileid: "66010956"
   
 -   [Backup completo del database &#40;SQL Server&#41;](../backup-restore/full-database-backups-sql-server.md)  
   
--   [Backup del log delle transazioni &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (solo modello di recupero con registrazione completa)  
+-   [Backup del Log delle transazioni & #40;SQL Server & #41;](../backup-restore/transaction-log-backups-sql-server.md) (solo modello di recupero con registrazione completa)  
   
  **Per ripristinare un backup del database**  
   
@@ -185,7 +182,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a>Connessione di un database SQL Server 2005 a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a>Connessione di un database SQL Server 2005 a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, un catalogo full-text è un concetto logico che fa riferimento a un gruppo di indici full-text. Il catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Tuttavia, quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Lo stato di ogni catalogo full-text collegato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] corrisponde a quello di quando il database è scollegato da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Se il popolamento dell'indice full-text è stato sospeso mediante un'operazione di scollegamento, esso viene ripreso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e l'indice full-text viene reso disponibile per la ricerca full-text.  
@@ -197,6 +194,6 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione alla ricerca full-text](get-started-with-full-text-search.md)   
  [Configurare e gestire Word breaker e stemmer per la ricerca](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurare e gestire filtri per la ricerca](configure-and-manage-filters-for-search.md)  
+ [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md)  
   
   

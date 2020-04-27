@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011255"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
   Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
   
-##  <a name="causes"></a>Cause comuni dei problemi di prestazioni  
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a>Cause comuni dei problemi di prestazioni  
  La causa principale del calo delle prestazioni di esecuzione dell'indicizzazione full-text è data dai limiti delle risorse hardware:  
   
 -   Se l'uso della CPU da parte del processo host del daemon di filtri (fdhost.exe) o del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) ha quasi raggiunto il 100%, il collo di bottiglia è rappresentato dalla CPU stessa.  
@@ -55,7 +55,7 @@ ms.locfileid: "66011255"
   
   
   
-##  <a name="tuning"></a>Ottimizzazione delle prestazioni degli indici full-text  
+##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Ottimizzazione delle prestazioni degli indici full-text  
  Per ottimizzare le prestazioni degli indici full-text, implementare le procedure consigliate seguenti:  
   
 -   Per usare tutti i processori o i core al massimo, impostare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' sul numero di CPU nel sistema. Per informazioni su questa opzione di configurazione, vedere [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "66011255"
   
   
   
-##  <a name="full"></a>Risoluzione dei problemi relativi alle prestazioni di popolamenti completi  
+##  <a name="troubleshooting-the-performance-of-full-populations"></a><a name="full"></a>Risoluzione dei problemi relativi alle prestazioni di popolamenti completi  
  Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text. Per informazioni sui log di ricerca per indicizzazione, vedere [Popolamento degli indici full-text](../indexes/indexes.md).  
   
  Nel caso in cui le prestazioni dei popolamenti completi non raggiungano livelli soddisfacenti, è consigliabile eseguire la procedura di risoluzione dei problemi illustrata di seguito nell'ordine in cui è riportata.  
@@ -117,9 +117,9 @@ ms.locfileid: "66011255"
   
  Nella tabella seguente vengono illustrate le linee guida da seguire per stimare i requisiti di memoria di fdhost.exe. Le formule contenute in questa tabella utilizzano i valori riportati di seguito.  
   
--   *F*, ovvero una stima della memoria richiesta da fdhost. exe (in MB).  
+-   *F*: stima della memoria richiesta da fdhost.exe (in MB).  
   
--   *T*, ovvero la memoria fisica totale disponibile nel sistema (in MB).  
+-   *T*: memoria fisica totale disponibile nel sistema (in MB).  
   
 -   *M*, che rappresenta l'impostazione `max server memory` ottimale.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66011255"
 |Piattaforma|Stima dei requisiti di memoria di FDHOST. exe in MB-*F*<sup>1</sup>|Formula per il calcolo di max server memory-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|Numero _F_ **=** _di intervalli di ricerca per indicizzazione_ **&#42;** 50|_M_ **= minimo (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_Numero F_ **=** _di intervalli di ricerca per indicizzazione_ **&#42;** 10 **&#42;** 8|_M_ **=** __ T **-** __ F **-** 500|  
+|x64|_Numero F_ **=** _di intervalli di ricerca per indicizzazione_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
   
  <sup>1</sup> se sono in corso più popolamenti completi, calcolare i requisiti di memoria di FDHOST. exe per ciascuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come _T_**-** sigma **(**_F_i **)**.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66011255"
   
  `F = 8*10*8=640`  
   
- Il calcolo successivo ottiene il valore ottimale per `max server memory` - *M*. ** Il totale della memoria fisica disponibile in questo sistema in MB-*T*-è `8192`.  
+ Il calcolo successivo ottiene il valore ottimale per `max server memory` - *M*. *T*Il totale della memoria fisica disponibile in questo sistema in MB-*T*-è `8192`.  
   
  `M = 8192-640-500=7052`  
   
@@ -198,7 +198,7 @@ GO
   
   
   
-##  <a name="filters"></a>Risoluzione dei problemi relativi alle prestazioni dell'indicizzazione lenta a causa di filtri  
+##  <a name="troubleshooting-slow-indexing-performance-due-to-filters"></a><a name="filters"></a>Risoluzione dei problemi relativi alle prestazioni dell'indicizzazione lenta a causa di filtri  
  Durante il popolamento di un indice full-text, il motore di ricerca full-text utilizza due tipi di filtri, a thread singolo e multithread. Alcuni documenti, quali i documenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, vengono filtrati utilizzando un filtro multithread, mentre altri, ad esempio i documenti PDF (Portable Document Format) di Adobe Acrobat, vengono filtrati utilizzando un filtro a thread singolo.  
   
  Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe provocare errori irreversibili nel processo di filtraggio. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
@@ -207,12 +207,12 @@ GO
   
   
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Opzioni di configurazione del server di memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Popolamento degli indici full-text](populate-full-text-indexes.md)   
  [Creazione e gestione di indici full-text](create-and-manage-full-text-indexes.md)   
- [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
+ [sys. dm_fts_memory_buffers &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys. dm_fts_memory_pools &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
  [Risoluzione dei problemi nell'indicizzazione full-text](troubleshoot-full-text-indexing.md)  
   

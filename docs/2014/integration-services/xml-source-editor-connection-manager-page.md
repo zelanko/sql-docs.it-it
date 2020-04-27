@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054301"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor origine XML (pagina Gestione connessione)
@@ -33,7 +33,7 @@ ms.locfileid: "66054301"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Percorso file XML|Consente di recuperare i dati da un file XML.|  
-|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
+|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
 |Dati XML da variabile|Consente di recuperare i dati XML da una variabile.|  
   
  **Usa schema inline**  
@@ -65,8 +65,8 @@ ms.locfileid: "66054301"
  **Nome variabile**  
  Consente di selezionare la variabile contenente i dati XML.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine XML &#40;pagina colonne&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Editor origine XML &#40;pagina output degli errori&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Estrazione dei dati tramite l'origine XML](data-flow/extract-data-by-using-the-xml-source.md)  

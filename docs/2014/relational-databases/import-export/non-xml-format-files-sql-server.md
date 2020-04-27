@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011883"
 ---
 # <a name="non-xml-format-files-sql-server"></a>File in formato non XML (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011883"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vantaggi dei file di formato non XML  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Vantaggi dei file di formato non XML  
   
 -   È possibile creare automaticamente un file di formato non XML specificando l'opzione **format** in un comando **bcp** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011883"
 > [!NOTE]  
 >  I file di formato XML offrono diversi vantaggi rispetto ai file di formato non XML. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Struttura dei file di formato non XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Struttura dei file di formato non XML  
  Un file di formato non XML è un file di testo con una struttura specifica. Il file di formato non XML contiene informazioni sul tipo di archiviazione di file, sulla lunghezza del prefisso, sulla lunghezza del campo e sul carattere di terminazione del campo di ogni colonna della tabella.  
   
  Nella figura seguente vengono illustrati i campi del file di formato per un file di formato non XML di esempio.  
@@ -77,7 +77,7 @@ ms.locfileid: "66011883"
 > [!NOTE]  
 >  È possibile modificare un file di formato per consentire l'importazione bulk da un file di dati in cui il numero o l'ordine dei campi è diverso dal numero o dall'ordine delle colonne della tabella. Per ulteriori informazioni, vedere l'elenco [Attività correlate](#RelatedTasks) più avanti in questo argomento.  
   
-##  <a name="Examples"></a> Esempio di file di formato non XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Esempio di file di formato non XML  
  Nell'esempio seguente viene illustrato un file di formato non XML creato in precedenza (`myDepartmentIdentical-f-c.fmt`). Questo file descrive un campo dati di tipo carattere per ogni colonna della tabella `HumanResources.Department` nel database di esempio `AdventureWorks2012` .  
   
  Il file di formato generato, `myDepartmentIdentical-f-c.fmt`, contiene le informazioni seguenti:  
@@ -94,7 +94,7 @@ ms.locfileid: "66011883"
 > [!NOTE]  
 >  Per una figura in cui vengono illustrati i campi del file di formato in relazione a questo file di formato non XML di esempio, vedere [Struttura dei file di formato non XML](#Structure)più indietro in questo argomento.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

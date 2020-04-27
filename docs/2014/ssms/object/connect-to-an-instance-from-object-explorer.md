@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63277424"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Connettersi a un'istanza da Esplora oggetti
@@ -43,7 +43,7 @@ ms.locfileid: "63277424"
     |**Dimensioni del pacchetto di rete**|La configurazione deve essere espressa in byte. L'impostazione predefinita è 4096 byte.|  
     |**Timeout connessione**|La configurazione deve essere espressa in secondi. L'impostazione predefinita è 15 secondi.|  
     |**Timeout esecuzione**|La configurazione deve essere espressa in secondi. L'impostazione predefinita (0) indica che l'esecuzione non andrà mai in timeout.|  
-    |**Crittografia connessione**|Forza la crittografia.|  
+    |**Crittografa connessione**|Forza la crittografia.|  
   
 5.  Per aggiungere il server specificato all'elenco dei server registrati, fare clic sulla scheda **Server registrato** , scegliere la posizione desiderata per il nuovo server e quindi completare la connessione.  
   

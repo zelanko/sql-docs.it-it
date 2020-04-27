@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012645"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012645"
     child::Customer  
     ```  
   
-     Nella query XPath seguente, `child` è l'asse. 
-  `Customer` è il test del nodo.  
+     Nella query XPath seguente, `child` è l'asse. `Customer` è il test del nodo.  
   
 -   `parent`  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66012645"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. 
-  `Customer` e `Order` sono i test di nodo.  
+     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. `Customer` e `Order` sono i test di nodo.  
   
 -   `attribute`  
   

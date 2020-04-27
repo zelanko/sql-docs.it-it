@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482684"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Eliminare una riga (componente aggiuntivo MDS per Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482684"
 > [!NOTE]  
 >  Gli amministratori possono riattivare membri eliminati. Per altre informazioni, vedere [Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Visualizzatore** .  
@@ -38,7 +38,7 @@ ms.locfileid: "65482684"
   
 3.  Nella finestra di dialogo di conferma fare clic su **Sì**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pubblicazione dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

@@ -18,14 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014347"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Componenti per l'accesso ai dati SQLXML 4.0
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include tre provider di dati in grado di inserire dati XML in e recuperare dati XML da un database in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   provider SQLXMLOLEDB  

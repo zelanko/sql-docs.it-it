@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013453"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Linee guida e limitazioni per il caricamento bulk XML (SQLXML 4.0)
@@ -171,7 +171,6 @@ ms.locfileid: "66013453"
   
 -   Se si inseriscono valori di data tramite il caricamento bulk XML, i valori devono essere specificati nel formato (-)AAAA-MM-GG((+-)FO). Si tratta del formato XSD standard per la data.  
   
--   Alcuni flag della proprietà non sono compatibili con altri flag della proprietà stessa. Il caricamento bulk, ad esempio, non supporta il flag `Ignoreduplicatekeys=true` utilizzato con `Keepidentity=false`. Nel caso in cui `Keepidentity=false`, durante il caricamento bulk si prevede che il server generi i valori della chiave. Nelle tabelle deve essere presente un vincolo `IDENTITY` sulla chiave. Il server non genererà chiavi duplicate, il che significa che non c'è bisogno di impostare `Ignoreduplicatekeys` su `true`. 
-  `Ignoreduplicatekeys` deve essere impostato su `true` solo quando viene eseguito il caricamento di valori di chiave primaria dai dati in entrata in una tabella con righe ed è possibile un conflitto di valori di chiave primaria.  
+-   Alcuni flag della proprietà non sono compatibili con altri flag della proprietà stessa. Il caricamento bulk, ad esempio, non supporta il flag `Ignoreduplicatekeys=true` utilizzato con `Keepidentity=false`. Nel caso in cui `Keepidentity=false`, durante il caricamento bulk si prevede che il server generi i valori della chiave. Nelle tabelle deve essere presente un vincolo `IDENTITY` sulla chiave. Il server non genererà chiavi duplicate, il che significa che non c'è bisogno di impostare `Ignoreduplicatekeys` su `true`. `Ignoreduplicatekeys` deve essere impostato su `true` solo quando viene eseguito il caricamento di valori di chiave primaria dai dati in entrata in una tabella con righe ed è possibile un conflitto di valori di chiave primaria.  
   
   

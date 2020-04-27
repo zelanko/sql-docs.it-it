@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014659"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66014659"
 ## <a name="examples"></a>Esempi  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Creazione di un updategram con uno schema di mapping semplice  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Creazione di un updategram con uno schema di mapping semplice  
  Lo schema XSD seguente (SampleSchema. Xml) è uno schema di mapping che esegue il mapping dell' ** \<elemento Customer>** alla tabella Sales. Customer:  
   
 ```  
@@ -234,11 +234,9 @@ ms.locfileid: "66014659"
   
  In questo esempio si presuppone che le tabelle seguenti si trovino nel database **tempdb** :  
   
--   
-  `Cust (CustomerID, CompanyName)`, dove `CustomerID` è la chiave primaria  
+-   `Cust (CustomerID, CompanyName)`, dove `CustomerID` è la chiave primaria  
   
--   
-  `Ord (OrderID, CustomerID)`, dove `CustomerID` è una chiave esterna che fa riferimento alla chiave primaria `CustomerID` nella tabella `Cust`.  
+-   `Ord (OrderID, CustomerID)`, dove `CustomerID` è una chiave esterna che fa riferimento alla chiave primaria `CustomerID` nella tabella `Cust`.  
   
  L'updategram utilizza lo schema XSD seguente per inserire i record nelle tabelle Cust e Ord:  
   
@@ -324,7 +322,7 @@ ms.locfileid: "66014659"
   
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

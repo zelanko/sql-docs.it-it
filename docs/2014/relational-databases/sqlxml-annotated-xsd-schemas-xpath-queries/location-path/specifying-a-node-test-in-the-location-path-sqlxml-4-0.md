@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012670"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Specifica di un test di nodo nel percorso (SQLXML 4.0)
@@ -44,17 +44,14 @@ ms.locfileid: "66012670"
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintassi abbreviata per gli assi  
  Per il percorso è supportata la sintassi abbreviata seguente:  
   
--   
-  `attribute::` può essere abbreviato utilizzando `@`.  
+-   `attribute::` può essere abbreviato utilizzando `@`.  
   
      Il percorso `Customer[@CustomerID="ALFKI"]` è uguale a `child::Customer[attribute::CustomerID="ALFKI"]`.  
   
--   
-  `child::` può essere omesso da un passo.  
+-   `child::` può essere omesso da un passo.  
   
      In questo caso, `child` è l'asse predefinito. Il percorso `Customer/Order` è uguale a `child::Customer/child::Order`.  
   
--   
-  `self::node()` può essere abbreviato utilizzando un punto (.), mentre `parent::node()` può essere abbreviato utilizzando due punti (..).  
+-   `self::node()` può essere abbreviato utilizzando un punto (.), mentre `parent::node()` può essere abbreviato utilizzando due punti (..).  
   
   

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014471"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilizzo di schemi XSD con annotazioni in query (SQLXML 4.0)
@@ -116,8 +116,7 @@ ms.locfileid: "66014471"
   
  Il modello specifica inoltre due query XPath. Ognuno degli elementi ** \<>di query XPath** identifica in modo univoco lo schema di mapping specificando `mapping-schema` l'attributo.  
   
- Quando si specifica uno schema inline nel modello, è necessario `sql:is-mapping-schema` specificare anche l'annotazione nell'elemento ** \<xsd: schema>** . 
-  `sql:is-mapping-schema` utilizza un valore booleano (0=false, 1=true). Uno schema inline con **SQL: is-mapping-schema = "1"** viene considerato come schema con annotazioni inline e non viene restituito nel documento XML.  
+ Quando si specifica uno schema inline nel modello, è necessario `sql:is-mapping-schema` specificare anche l'annotazione nell'elemento ** \<xsd: schema>** . `sql:is-mapping-schema` utilizza un valore booleano (0=false, 1=true). Uno schema inline con **SQL: is-mapping-schema = "1"** viene considerato come schema con annotazioni inline e non viene restituito nel documento XML.  
   
  L'annotazione `sql:is-mapping-schema` appartiene allo spazio dei nomi del modello `urn:schemas-microsoft-com:xml-sql`.  
   

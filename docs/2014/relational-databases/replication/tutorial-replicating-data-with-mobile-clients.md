@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255405"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Esercitazione: Replica di dati con client mobili
@@ -38,8 +38,7 @@ ms.locfileid: "63255405"
   
 -   Sottoscrittore (destinazione):  
   
-    -   Qualsiasi edizione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] non è supportato dalla pubblicazione creata in questa esercitazione.  
+    -   Qualsiasi edizione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] non è supportato dalla pubblicazione creata in questa esercitazione.  
   
     > [!NOTE]  
     >  La replica non è installata per impostazione predefinita in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
@@ -51,13 +50,13 @@ ms.locfileid: "63255405"
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
   
--   [Lezione 1: pubblicazione dei dati tramite la replica di tipo merge](lesson-1-publishing-data-using-merge-replication.md)  
+-   [Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [Lezione 2: creazione di una sottoscrizione per la pubblicazione di tipo merge](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [Avviare l'esercitazione](merge/merge-replication.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concetti di base relativi alla programmazione della replica](concepts/replication-programming-concepts.md)  
   
   

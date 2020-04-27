@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015085"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Risoluzione dei problemi nell'indicizzazione full-text
      
-##  <a name="failure"></a> Risoluzione degli errori nell'indicizzazione full-text  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Risoluzione degli errori nell'indicizzazione full-text  
  Durante il popolamento o la gestione di un indice full-text, l'indicizzatore full-text potrebbe non eseguire correttamente l'indicizzazione di una o più righe per i motivi descritti di seguito. Questi errori a livello di riga non impediscono il completamento del popolamento. L'indicizzatore ignora queste righe, pertanto non sarà possibile recuperare il contenuto di tali righe tramite query.  
   
  È possibile che si verifichino errori di indicizzazione nelle situazioni seguenti.  
@@ -54,7 +54,7 @@ ms.locfileid: "66015085"
   
 
   
-##  <a name="state"></a> Stato incoerente di un indice full-text dopo il ripristino del log delle transazioni  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Stato incoerente di un indice full-text dopo il ripristino del log delle transazioni  
  Durante il ripristino del log delle transazioni di un database, è possibile che venga visualizzato un avviso che indica che lo stato dell'indice full-text non è coerente. Questo accade perché l'indice full-text di una tabella è stato modificato dopo il backup del database. Per riportare l'indice full-text a uno stato coerente, è necessario eseguire un popolamento completo (ricerca per indicizzazione) della tabella. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](../indexes/indexes.md).  
   
 

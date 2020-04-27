@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012727"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
@@ -32,7 +32,7 @@ ms.locfileid: "66012727"
 > [!NOTE]  
 >  Per specificare una lingua a livello di colonna per una colonna di un indice full-text, usare la clausola *language_term* LANGUAGE quando si specifica la colonna. Per altre informazioni, vedere [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql) e [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
-##  <a name="langsupp"></a> Supporto della lingua nella ricerca full-text  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> Supporto della lingua nella ricerca full-text  
  In questa sezione viene fornita un'introduzione ai word breaker e agli stemmer e viene illustrato l'utilizzo dell'LCID della lingua a livello di colonna da parte della ricerca full-text.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introduzione ai word breaker e agli stemmer  
@@ -73,7 +73,7 @@ ms.locfileid: "66012727"
   
 
   
-##  <a name="breaking"></a> Word breaking  
+##  <a name="word-breaking"></a><a name="breaking"></a> Word breaking  
  Il word breaker ha la funzione di suddividere in token il testo da indicizzare in base ai delimitatori delle parole specifici della lingua. Il comportamento del word breaker varierà pertanto a seconda della lingua scelta. Se si utilizza una lingua, x, per indicizzare più lingue, {x, y e z}, è possibile che si verifichino risultati imprevisti. È ad esempio possibile che un elemento di interruzione delle parole quale il trattino (-) o la virgola (,) venga eliminato in una lingua, ma non in un'altra. In alcuni casi, si potrebbe inoltre ottenere un comportamento imprevisto per lo stemming, in quanto è possibile che a una determinata parola venga applicato uno stemmer diverso nelle diverse lingue. Nella lingua inglese, ad esempio, i delimitatori delle parole sono dati in genere da spazi o da elementi di punteggiatura. In altre lingue come il tedesco, invece, le parole o i caratteri vengono spesso uniti insieme. La lingua a livello di colonna scelta dovrebbe pertanto rappresentare la lingua che si desidera venga archiviata nelle righe di quella colonna.  
   
 ### <a name="western-languages"></a>Lingue occidentali  
@@ -100,12 +100,12 @@ ms.locfileid: "66012727"
   
 
   
-##  <a name="stemming"></a> Stemming  
+##  <a name="stemming"></a><a name="stemming"></a> Stemming  
  Quando si sceglie la lingua a livello di colonna è anche necessario prendere in considerazione lo stemming. Nell'ambito delle query full-text il termine*stemming* definisce il processo di ricerca di tutte le forme flessive di una parola di una determinata lingua. Quando si utilizza un word breaker generico per elaborare più lingue, il processo di stemming funziona solo per la lingua specificata per la colonna, non per le altre lingue presenti nella colonna. Ad esempio, gli stemmer del tedesco non funzionano per l'inglese o lo spagnolo e così via. Tutto questo potrebbe influire sulla chiamata a seconda della lingua scelta in fase di query.  
   
 
   
-##  <a name="type"></a> Effetto del tipo di colonna sulla ricerca full-text  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Effetto del tipo di colonna sulla ricerca full-text  
  Un'altra considerazione relativa alla scelta della lingua riguarda la modalità di rappresentazione dei dati. Ai dati non archiviati nella colonna `varbinary(max)` non vengono applicati filtri speciali. Il testo, al contrario, viene normalmente passato tramite il componente per l'esecuzione del word breaking così com'è.  
   
  I word breaker, inoltre, vengono progettati soprattutto per elaborare il testo scritto. Ne consegue che, se il testo include un tipo qualsiasi di markup (ad esempio HTML) le operazioni di indicizzazione e ricerca potrebbero non essere sufficientemente accurate dal punto di vista linguistico. In tal caso, sono disponibili due opzioni: il metodo preferito consiste semplicemente nell'archiviare i dati di testo `varbinary(max)` nella colonna e indicare il tipo di documento in modo che possa essere filtrato. Se questa operazione non è possibile, valutare la possibilità di utilizzare il word breaker neutro ed eventualmente di aggiungere dati di markup, ad esempio "br" nel codice HTML, agli elenchi delle parole non significative.  
@@ -115,7 +115,7 @@ ms.locfileid: "66012727"
   
 
   
-##  <a name="nondef"></a> Scelta di una lingua a livello di colonna non predefinita in una query full-text  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> Scelta di una lingua a livello di colonna non predefinita in una query full-text  
  Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]la ricerca full-text analizza i termini delle query usando la lingua specificata per ogni colonna inclusa nella clausola full-text. Per modificare questo comportamento, specificare una lingua non predefinita in fase di query. Per le lingue supportate di cui sono state installate le risorse, è possibile usare la clausola *language_term* LANGUAGE di una query [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) per specificare la lingua usata per l'esecuzione del word breaker, dello stemming, del thesaurus e delle parole non significative dei termini della query.  
   
 

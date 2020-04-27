@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316089"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Progettare diagrammi di database (Visual Database Tools)
@@ -37,35 +37,35 @@ ms.locfileid: "63316089"
 ## <a name="tables-and-columns-in-a-database-diagram"></a>Tabelle e colonne in un diagramma di database  
  In un diagramma di database ogni tabella può presentarsi con tre caratteristiche distinte: una barra del titolo, un selettore di riga e un set di colonne delle proprietà.  
   
- **Barra del titolo** La barra del titolo Mostra il nome della tabella  
+ **Barra del titolo** La barra del titolo indica il nome della tabella  
   
  Se una tabella è stata modificata ma non ancora salvata, alla fine del nome della tabella sarà presente un asterisco (*) per segnalare che le modifiche non sono state salvate. Per informazioni sul salvataggio di tabelle e diagrammi modificati, vedere [Usare i diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- **Selettore di riga** È possibile fare clic sul selettore di riga per selezionare una colonna del database nella tabella. Se la colonna è inclusa nella chiave primaria della tabella, con il selettore di riga verrà visualizzato un simbolo di chiave. Per informazioni sulle chiavi primarie, vedere [vincoli di chiave primaria ed esterna](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
+ **Selettore di riga** Per selezionare una colonna del database nella tabella, è possibile fare clic sul selettore di riga. Se la colonna è inclusa nella chiave primaria della tabella, con il selettore di riga verrà visualizzato un simbolo di chiave. Per informazioni sulle chiavi primarie, vedere [vincoli di chiave primaria ed esterna](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
- **Colonne delle proprietà** Il set di colonne delle proprietà è visibile solo in determinate visualizzazioni della tabella. Per semplificare la gestione delle dimensioni e del layout del diagramma, è possibile visualizzare una tabella in cinque viste diverse.  
+ **Colonne delle proprietà** Il set di colonne delle proprietà è visibile solo in determinate viste della tabella. Per semplificare la gestione delle dimensioni e del layout del diagramma, è possibile visualizzare una tabella in cinque viste diverse.  
   
  Per altre informazioni sulle viste delle tabelle, vedere [Personalizzazione della quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md).  
   
 ## <a name="relationships-in-a-database-diagram"></a>Relazioni in un diagramma di database  
  In un diagramma di database ogni relazione può presentarsi con tre caratteristiche distinte: gli endpoint, lo stile linea e le tabelle correlate.  
   
- **Endpoint** Gli endpoint della linea indicano se la relazione è uno-a-uno o uno-a-molti. Quando una relazione presenta una chiave su un endpoint e un simbolo di infinito sull'altro, rappresenta una relazione uno-a-molti. Quando una relazione presenta una chiave su ciascun endpoint, rappresenta una relazione uno-a-uno.  
+ **Endpoint** Gli endpoint della linea indicano se la relazione è di tipo uno-a-uno o uno-a-molti. Quando una relazione presenta una chiave su un endpoint e un simbolo di infinito sull'altro, rappresenta una relazione uno-a-molti. Quando una relazione presenta una chiave su ciascun endpoint, rappresenta una relazione uno-a-uno.  
   
- **Stile linea** La linea stessa (non gli endpoint) indica se il sistema di gestione di database (DBMS) impone l'integrità referenziale per la relazione quando vengono aggiunti nuovi dati alla tabella chiave esterna. Se la linea è continua, nel sistema DBMS l'integrità referenziale per la relazione verrà attivata quando vengono aggiunte o modificate alcune righe nella tabella chiave esterna. Se la linea è tratteggiata, nel sistema DBMS l'integrità referenziale per la relazione non verrà attivata quando vengono aggiunte o modificate alcune righe nella tabella chiave esterna.  
+ **Stile linea** La linea stessa (non i relativi endpoint) indica se nel sistema di gestione del database (DBMS, Database Management System) viene attivata l'integrità referenziale per la relazione quando vengono aggiunti nuovi dati alla tabella chiave esterna. Se la linea è continua, nel sistema DBMS l'integrità referenziale per la relazione verrà attivata quando vengono aggiunte o modificate alcune righe nella tabella chiave esterna. Se la linea è tratteggiata, nel sistema DBMS l'integrità referenziale per la relazione non verrà attivata quando vengono aggiunte o modificate alcune righe nella tabella chiave esterna.  
   
- **Tabelle correlate** La linea della relazione indica che esiste una relazione di chiave esterna tra una tabella e un'altra. Per una relazione uno-a-molti, la tabella chiave esterna è la tabella accanto al simbolo di infinito della linea. Se entrambi gli endpoint della linea sono collegati alla stessa tabella, la relazione sarà di tipo riflessivo. Per altre informazioni, vedere [Creazione di relazioni riflessive &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md).  
+ **Tabelle correlate** La linea della relazione indica che esiste una relazione di chiave esterna fra due tabelle. Per una relazione uno-a-molti, la tabella chiave esterna è la tabella accanto al simbolo di infinito della linea. Se entrambi gli endpoint della linea sono collegati alla stessa tabella, la relazione sarà di tipo riflessivo. Per altre informazioni, vedere [Creazione di relazioni riflessive &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Informazioni sulla proprietà dei diagrammi di database &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
- [Spostarsi in Progettazione diagrammi di database &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
+ [Navigare all'interno di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
   
- [Configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
+ [Impostazione di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
   
  [Aggiornamento di diagrammi di database delle precedenti edizioni &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
- [Aprire Progettazione diagrammi di database &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
+ [Apertura di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)   

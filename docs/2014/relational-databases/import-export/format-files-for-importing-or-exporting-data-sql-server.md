@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011946"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>File di formato per l'importazione o l'esportazione di dati (SQL Server)
@@ -28,13 +28,13 @@ ms.locfileid: "66011946"
   
  
   
-##  <a name="Benefits"></a> Vantaggi dei file di formato  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> Vantaggi dei file di formato  
   
 -   Fornisce un sistema flessibile per la scrittura di file di dati che non richiede alcuna modifica o richiede modifiche minime per la conformità con altri formati di dati o la lettura di file di dati da un altro prodotto software.  
   
 -   Consente di eseguire l'importazione bulk dei dati senza necessità di aggiungere o eliminare dati superflui o di ripetere l'ordinamento dei dati esistenti nel file di dati. I file di formato sono particolarmente utili quando è presente una mancata corrispondenza tra i campi nel file di dati e le colonne nella tabella.  
   
-##  <a name="ExamplesOfFFs"></a> Esempi di file di formato  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Esempi di file di formato  
  Negli esempi seguenti viene illustrato il layout di un file di formato non XML e di un file di formato XML. Questi file di formato corrispondono alla tabella `HumanResources.myTeam` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questa tabella contiene quattro colonne: `EmployeeID`, `Name`, `Title`e `ModifiedDate`.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-##  <a name="WhenFFrequired"></a> Quando è necessario un file di formato?  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> Quando è necessario un file di formato?  
  Un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) richiede sempre un file di formato.  
   
 -   Per **bcp** o BULK INSERT, in situazioni non complesse, l'uso di un file di formato è facoltativo e solo raramente necessario. In situazioni di importazione bulk complesse, tuttavia, un file di formato è spesso necessario.  
@@ -114,7 +114,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -129,7 +129,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
   
 ## <a name="see-also"></a>Vedere anche  
- [File di formato non XML &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+ [File in formato non XML &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   

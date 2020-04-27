@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011074"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
@@ -30,7 +30,7 @@ ms.locfileid: "66011074"
   
  La possibilità di usare la ricerca basata su proprietà in un tipo specifico di documento è determinata dal [filtro](configure-and-manage-filters-for-search.md) (IFilter) associato. Per alcuni tipi di documento, il filtro IFilter associato estrae alcune o tutte le proprietà definite per quel tipo di documento, nonché il contenuto del corpo del documento. È possibile configurare un indice full-text per supportare la ricerca basata su proprietà solo in proprietà estratte da un filtro IFilter durante l'indicizzazione full-text. I filtri IFilter in grado di estrarre alcune proprietà del documento comprendono i filtri IFilter per tipi di documento di Microsoft Office, ad esempio docx, xlsx e pptx. D'altra parte, il filtro IFilter XML non genera proprietà.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> Funzionamento della ricerca full-text con proprietà di ricerca  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> Funzionamento della ricerca full-text con proprietà di ricerca  
   
 ### <a name="internal-property-ids"></a>ID di proprietà interni  
  Tramite il motore di ricerca full-text viene arbitrariamente assegnato un ID di proprietà interno a ogni proprietà registrata, che identifica in modo univoco la proprietà in tale particolare elenco di ricerca ed è specifico di quell'elenco. Pertanto, se una proprietà viene aggiunta a più elenchi di proprietà di ricerca, è probabile che l'ID di proprietà interno sia diverso nei diversi elenchi.  
@@ -58,16 +58,16 @@ ms.locfileid: "66011074"
   
   
   
-##  <a name="impact"></a> Impatto dell'abilitazione della ricerca basata su proprietà  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> Impatto dell'abilitazione della ricerca basata su proprietà  
  La configurazione di un indice full-text per supportare la ricerca basata su una o più proprietà aumenta le dimensioni dell'indice, a seconda del numero di proprietà specificate nell'elenco di proprietà di ricerca e del contenuto di ogni proprietà.  
   
  Per testare i tipici corpi di<sup>Microsoft Word?</sup>, Excel<sup>??</sup>e PowerPoint<sup>?</sup> Documents, è stato configurato un indice full-text per indicizzare le tipiche proprietà di ricerca. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
   
   
   
-##  <a name="creating"></a> Creazione di un elenco di proprietà di ricerca e abilitazione della ricerca basata su proprietà  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a>Creazione di un elenco di proprietà di ricerca e abilitazione della ricerca delle proprietà  
   
-###  <a name="creating_sub"></a> Creazione di un elenco di proprietà di ricerca  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a>Creazione di un elenco di proprietà di ricerca  
  **Per creare un elenco di proprietà di ricerca con Transact-SQL**  
   
  Usare l'istruzione [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) e fornire almeno un nome per l'elenco.  
@@ -98,7 +98,7 @@ ms.locfileid: "66011074"
   
  
   
-###  <a name="adding"></a> Aggiunta di proprietà a un elenco di proprietà di ricerca  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>Aggiunta di proprietà a un elenco di proprietà di ricerca  
  La ricerca basata su proprietà richiede la creazione di un *elenco di proprietà di ricerca* e l'indicazione di una o più proprietà in cui è possibile eseguire la ricerca. Quando si aggiunge una proprietà a un elenco di proprietà di ricerca, la proprietà viene registrata per quel particolare elenco. Per aggiungere una proprietà a un elenco di proprietà di ricerca sono necessari i valori seguenti:  
   
 -   GUID set di proprietà  
@@ -149,7 +149,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
   
-###  <a name="associating"></a> Associazione di un elenco di proprietà di ricerca a un indice full-text  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> Associazione di un elenco di proprietà di ricerca a un indice full-text  
  Affinché un indice full-text supporti la ricerca basata su proprietà delle proprietà registrate per un elenco di proprietà di ricerca, è necessario associare tale elenco all'indice e ripopolare l'indice. Il ripopolamento dell'indice full-text consente di creare voci di indice specifiche della proprietà per i termini di ricerca in ognuna delle proprietà registrate.  
   
  Finché l'indice full-text rimane associato a tale elenco di proprietà di ricerca, nelle query full-text potrà essere utilizzata l'opzione PROPERTY del predicato CONTAINS per la ricerca basata su proprietà registrate per tale elenco di proprietà di ricerca.  
@@ -166,7 +166,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Query delle proprietà di ricerca con CONTAINS  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a>Esecuzione di query sulle proprietà di ricerca con CONTAINs  
  Di seguito è riportata la sintassi di base di [CONTAINS](/sql/t-sql/queries/contains-transact-sql) per una query full-text con ambito proprietà:  
   
 ```sql  
@@ -188,9 +188,9 @@ GO
   
   
   
-##  <a name="managing"></a> Gestione degli elenchi di proprietà di ricerca  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a>Gestione degli elenchi delle proprietà di ricerca  
   
-###  <a name="viewing"></a> Visualizzazione e modifica di un elenco di proprietà di ricerca  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a>Visualizzazione e modifica di un elenco di proprietà di ricerca  
  **Per modificare un elenco di proprietà di ricerca con Transact-SQL**  
   
  Usare l'istruzione [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) per aggiungere o rimuovere proprietà di ricerca.  
@@ -211,7 +211,7 @@ GO
   
     1.  Per rimuovere una proprietà del documento, fare clic sull'intestazione di riga a sinistra della proprietà e premere CANC.  
   
-    2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di **\*** , quindi immette i valori per la nuova proprietà.  
+    2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di **\*** e immettere i valori per la nuova proprietà.  
   
          Per informazioni su questi valori, vedere [Editor dell'elenco delle proprietà di ricerca](../../database-engine/search-property-list-editor.md). Per informazioni su come ottenere questi valori per le proprietà definite da Microsoft, vedere [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Per informazioni sulle proprietà definite da un fornitore di software indipendente (ISV, Independent Software Vendor), vedere la documentazione di tale fornitore.  
   
@@ -219,7 +219,7 @@ GO
   
   
   
-###  <a name="deleting"></a> Eliminazione di un elenco di proprietà di ricerca  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a>Eliminazione di un elenco di proprietà di ricerca  
  Non è possibile eliminare un elenco di proprietà da un database se l'elenco è associato a un indice full-text.  
   
  **Per eliminare un elenco di proprietà di ricerca con Transact-SQL**  
@@ -239,8 +239,8 @@ GO
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configurare e gestire filtri per la ricerca](configure-and-manage-filters-for-search.md)  
+ [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md)  
   
   

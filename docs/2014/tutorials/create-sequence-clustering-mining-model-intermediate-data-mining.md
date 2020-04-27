@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273483"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Sequence Clustering (Esercitazione intermedia sul data mining)
@@ -71,12 +71,12 @@ ms.locfileid: "63273483"
   
     |Tabelle/Colonne|Content Type|Tipo di dati|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |OrderNumber|Chiave|Text|  
-    |Region|Discrete|Text|  
+    |IncomeGroup|Discrete|Testo|  
+    |OrderNumber|Chiave|Testo|  
+    |Region|Discrete|Testo|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|long|  
-    |Modello|Discrete|Text|  
+    |Modello|Discrete|Testo|  
   
 9. Nella pagina **Crea set di testing** modificare la **percentuale di dati per il testing** su 20, quindi fare clic su **Avanti**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63273483"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Elaborazione del modello Sequence Clustering](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   

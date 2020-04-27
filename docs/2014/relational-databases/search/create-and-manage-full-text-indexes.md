@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011551"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
@@ -31,7 +31,7 @@ ms.locfileid: "66011551"
   
  Il processo di creazione e gestione di un indice full-text è definito *popolamento* (noto anche come *ricerca per indicizzazione*). Sono disponibili tre tipi di popolamento dell'indice full-text: popolamento completo, popolamento basato sul rilevamento delle modifiche e popolamento incrementale basato su timestamp. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a>Attività comuni  
+##  <a name="common-tasks"></a><a name="tasks"></a>Attività comuni  
  **Per creare un indice full-text**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -46,7 +46,7 @@ ms.locfileid: "66011551"
   
  [Contenuto dell'articolo](#top)  
   
-##  <a name="structure"></a>Struttura dell'indice full-text  
+##  <a name="full-text-index-structure"></a><a name="structure"></a>Struttura dell'indice full-text  
  Comprendere a fondo la struttura di un indice full-text è fondamentale per comprendere il funzionamento del motore di ricerca full-text. In questo argomento viene usato come esempio l'estratto seguente della tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] . In questo estratto sono visualizzate solo due colonne, la colonna **DocumentID** e la colonna **Title** , e tre righe della tabella.  
   
  In questo esempio si suppone che nella colonna **Title** sia stato creato un indice full-text.  
@@ -63,14 +63,14 @@ ms.locfileid: "66011551"
   
  Si noti inoltre che la parola chiave "and" è stata rimossa dall'indice full-text, trattandosi di una parola non significativa, e che la rimozione di tali parole da un indice full-text può contribuire a risparmiare spazio su disco, migliorando di conseguenza le prestazioni delle query. Per altre informazioni sulle parole non significative e sugli elenchi di parole non significative, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- **Frammento 1**  
+ **Fragment 1**  
   
 |Parola chiave|ColId|DocId|Occorrenza|  
 |-------------|-----------|-----------|----------------|  
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Manutenzione |1|1|5|  
+|Manutenzione|1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -92,7 +92,7 @@ ms.locfileid: "66011551"
   
  [Contenuto dell'articolo](#top)  
   
-##  <a name="fragments"></a>Frammenti di indice full-text  
+##  <a name="full-text-index-fragments"></a><a name="fragments"></a>Frammenti di indice full-text  
  L'indice full-text logico viene in genere suddiviso tra più tabelle interne. Ogni tabella interna viene definita un frammento di indice full-text. Alcuni di questi frammenti potrebbero contenere dati più recenti di altri. Ad esempio, se un utente aggiorna la riga seguente il cui DocId è 3 e per la tabella è impostato il rilevamento automatico delle modifiche, viene creato un nuovo frammento.  
   
 |DocumentID|Titolo|  
@@ -101,7 +101,7 @@ ms.locfileid: "66011551"
   
  Nell'esempio seguente, Fragment 2, il frammento contiene dati più recenti su DocId 3, rispetto a Fragment 1. Pertanto, quando viene eseguita una query per "Rear Reflector" i dati di Fragment 2 vengono utilizzati per DocId 3. Ogni frammento viene contrassegnato con un timestamp di creazione su cui è possibile eseguire query tramite la vista del catalogo [sys.fulltext_index_fragments](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql) .  
   
- **Frammento 2**  
+ **Fragment 2**  
   
 |Parola chiave|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
@@ -117,7 +117,7 @@ ms.locfileid: "66011551"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Manutenzione |1|1|5|  
+|Manutenzione|1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  

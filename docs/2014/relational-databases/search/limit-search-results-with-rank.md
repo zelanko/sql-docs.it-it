@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011152"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
@@ -35,7 +35,7 @@ ms.locfileid: "66011152"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordina le corrispondenze per pertinenza e restituisce solo il numero specificato di righe. Questa opzione può comportare un miglioramento significativo delle prestazioni. Una query che normalmente restituisce 100.000 righe di una tabella che contiene un milione di righe, ad esempio, viene elaborata più rapidamente se vengono richieste solo le prime 100 righe.  
   
-##  <a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio A: Ricerca delle prime tre corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire solo le prime tre corrispondenze.  
@@ -90,7 +90,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Classificazione per pertinenza dei risultati delle query di ricerca  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Classificazione per pertinenza dei risultati delle query di ricerca  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la ricerca full-text può generare un punteggio facoltativo (o valore di pertinenza) che indica la pertinenza dei dati restituiti da una query full-text. Questo valore di pertinenza viene calcolato in ogni riga e può essere utilizzato come criteri di ordinamento del set di risultati di una query basato sulla pertinenza. Il valore di pertinenza indica solo un ordine di pertinenza relativo delle righe nel set di risultati. I valori effettivi sono senza importanza e in genere variano ogni volta che viene eseguita la query. Il valore di pertinenza non mantiene alcun significato nelle query.  
   
 ### <a name="statistics-for-ranking"></a>Statistiche per il calcolo della pertinenza  

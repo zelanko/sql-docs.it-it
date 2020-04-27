@@ -11,23 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479440"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Funzionalità di Master Data Services non più supportate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Funzionalità non più utilizzate  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Funzionalità non più utilizzate  
  Non sono presenti funzionalità non più disponibili in questa versione.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Funzionalità non più utilizzate  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Funzionalità non più utilizzate  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
  Per semplificare l'assegnazione della sicurezza, non è più possibile assegnare autorizzazioni per oggetti modello agli oggetti Gerarchia derivata, Gerarchia esplicita e Gruppo di attributi.  
   
 -   Le autorizzazioni della gerarchia derivata sono ora basate sul modello. Se ad esempio si desidera che un utente disponga delle autorizzazioni per una gerarchia derivata, è necessario assegnare l' **aggiornamento** all'oggetto modello. È quindi possibile assegnare l'autorizzazione **Nega** accesso a tutte le entità a cui non si vuole che l'utente abbia accesso.  
@@ -55,7 +53,7 @@ ms.locfileid: "65479440"
  I pacchetti possono inoltre essere distribuiti solo nella versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata per crearli. Pertanto non è possibile distribuire pacchetti creati in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. È necessario distribuire il pacchetto all'ambiente [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e aggiornare quindi il database a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Regole business per generazione codice  
- Le regole business che generano automaticamente valori per l'attributo Code sono ora amministrate differentemente. In precedenza, per generare valori per l'attributo Code, è stato utilizzato l' **attributo default per un'azione di valore generato** nell'area funzionale **Amministrazione sistema** in **regole business**. A questo punto, in **Amministrazione sistema**è necessario modificare l'entità per abilitare i valori del codice generati automaticamente. Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Le regole business che generano automaticamente valori per l'attributo Code sono ora amministrate differentemente. In precedenza, per generare valori per l'attributo Code, è stato utilizzato l' **attributo default per un'azione di valore generato** nell'area funzionale **Amministrazione sistema** in **regole business**. A questo punto, in **Amministrazione sistema**è necessario modificare l'entità per abilitare i valori del codice generati automaticamente. Per ulteriori informazioni, vedere [creazione automatica di codice &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Se si dispone di un pacchetto di distribuzione per modelli [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] che contiene una regola di questo tipo, quando si aggiorna il database a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la regola business è esclusa.  
   
@@ -75,7 +73,7 @@ ms.locfileid: "65479440"
 ### <a name="powershell-cmdlets"></a>Cmdlet di PowerShell  
  In MDS non sono più inclusi i cmdlet di PowerShell.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità deprecate di Master Data Services in SQL Server 2014](deprecated-master-data-services-features.md)  
   
   

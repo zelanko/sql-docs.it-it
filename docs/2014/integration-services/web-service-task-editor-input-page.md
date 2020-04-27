@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054520"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor attività Servizio Web (pagina Input)
@@ -39,7 +39,7 @@ ms.locfileid: "66054520"
  **Nome**  
  Elenca i nomi degli input per il metodo Web.  
   
- **Tipo**  
+ **Type**  
  Elenca il tipo di dati degli input.  
   
 > [!NOTE]  
@@ -51,8 +51,8 @@ ms.locfileid: "66054520"
  **Valore**  
  Se le caselle di controllo Variabile sono selezionate, selezionare le variabili nell'elenco per l'invio degli input. In caso contrario, digitare i valori da utilizzare negli input.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività servizio Web &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività servizio Web &#40;pagina output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d319c8ac512be55ef93a9d0e55802da2de22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478499"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Testare le autorizzazioni di un utente (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65478499"
   
 4.  Alla successiva apertura della finestra del browser, verrà richiesto di immettere un nome utente e una password.  
   
-## <a name="see-also"></a>Vedere anche  
- [&#40;di sicurezza Master Data Services&#41;](security-master-data-services.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Sicurezza &#40;Master Data Services&#41;](security-master-data-services.md)  
   
   

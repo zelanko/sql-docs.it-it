@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010366"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
@@ -38,7 +38,7 @@ ms.locfileid: "66010366"
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano come le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e l'accesso Win32 FILESTREAM possano creare conflitti.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>R. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
  Nell'esempio seguente viene mostrato l'effetto dell'apertura di un file per il solo accesso in scrittura.  
   
 ```  
@@ -140,8 +140,8 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Accesso ai dati FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Accedere ai dati FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Uso di MARS &#40;Multiple Active Result Set&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011672"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
@@ -53,8 +53,8 @@ ms.locfileid: "66011672"
   
 |Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
-|**BCP**|**-c**|Comporta l'utilizzo di dati di tipo carattere da parte dell'utilità **bcp** . <sup>1</sup>|  
-|BULK INSERT|FileType **=' Char '**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
+|**bcp**|**-c**|Comporta l'utilizzo di dati di tipo carattere da parte dell'utilità **bcp** . <sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
   
  <sup>1</sup> per caricare i dati di tipo carattere (**-c**) in un formato compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le versioni precedenti dei client, usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-c**|Specifica il formato carattere.|  
-|**-t**`,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: il carattere di terminazione del campo predefinito è il carattere di tabulazione (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: il carattere di terminazione del campo predefinito è il carattere di tabulazione (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Nell'esempio seguente viene eseguita l'esportazione bulk di dati in formato carattere dalla tabella `myTestCharData` a un nuovo file di dati denominato `myTestCharData-c.Dat` in cui il carattere di terminazione dei campi è la virgola (,). Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
@@ -125,7 +125,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

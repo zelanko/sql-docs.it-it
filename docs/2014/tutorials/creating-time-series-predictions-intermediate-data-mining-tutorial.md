@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313886"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Creazione di stime basate su serie temporali (Esercitazione intermedia sul data mining)
@@ -172,7 +172,7 @@ ms.locfileid: "63313886"
   
 3.  Nella colonna **nome tabella** Digitare un nuovo nome di tabella temporanea, ad esempio **stime dei test**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
     > [!NOTE]  
     >  Per visualizzare la tabella creata, creare una connessione al motore di database dell'istanza in cui sono stati salvati i dati, quindi creare una query.  
@@ -185,7 +185,7 @@ ms.locfileid: "63313886"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Stime avanzate basate su serie temporali &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

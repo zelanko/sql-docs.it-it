@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011466"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
   Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Si tratta di un concetto logico che fa riferimento a un gruppo di indici full-text.  
   
-##  <a name="creating"></a>Creazione di un catalogo full-text  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>Creazione di un catalogo full-text  
   
 #### <a name="to-create-a-full-text-catalog"></a>Per creare un catalogo full-text  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011466"
   
   
   
-##  <a name="props"></a>Visualizzazione delle proprietà di un catalogo full-text  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>Visualizzazione delle proprietà di un catalogo full-text  
  Per ottenere il valore di varie proprietà di indicizzazione full-text, è possibile utilizzare funzioni quali [!INCLUDE[tsql](../../includes/tsql-md.md)] FULLTEXTCATALOGPROPERTY. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-text.  
@@ -60,7 +60,7 @@ ms.locfileid: "66011466"
   
   
   
-##  <a name="rebuildone"></a>Ricompilazione di un catalogo full-text  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>Ricompilazione di un catalogo full-text  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Per ricompilare un catalogo full-text  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011466"
   
   
   
-##  <a name="rebuildall"></a>Ricompilazione di tutti i cataloghi full-text per un database  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>Ricompilazione di tutti i cataloghi full-text per un database  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Per ricompilare i cataloghi full-text di un database  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66011466"
   
   
   
-##  <a name="removing"></a>Rimozione di un catalogo full-text da un database  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>Rimozione di un catalogo full-text da un database  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>Per rimuovere un catalogo full-text da un database  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66011466"
   
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

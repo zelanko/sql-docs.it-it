@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264778"
 ---
 # <a name="custom-report-items"></a>Elementi dei report personalizzati
@@ -44,13 +44,13 @@ ms.locfileid: "63264778"
  [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](creating-a-custom-report-item-design-time-component.md)  
  Vengono descritte le procedure per la creazione di un componente dell'elemento del report personalizzato in fase in progettazione.  
   
- [Procedura: Distribuzione di un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
+ [Procedura: Distribuire un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
  Vengono descritte le procedure per la distribuzione di un elemento del report personalizzato.  
   
  [Librerie di classi dell'elemento del report personalizzato](custom-report-item-class-libraries.md)  
  Vengono descritte le classi di infrastruttura dell'elemento del report personalizzato e classi wrapper gestite nello spazio dei nomi `Microsoft.ReportDesigner`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento tecnico &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

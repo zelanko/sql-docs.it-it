@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054475"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor gestione connessione WMI
@@ -36,7 +36,7 @@ ms.locfileid: "66054475"
  **Nome server**  
  Consente di specificare il nome del server al quale si desidera connettersi tramite WMI.  
   
- **Spazio dei nomi**  
+ **Namespace**  
  Consente di specificare lo spazio dei nomi WMI.  
   
  **Usa autenticazione di Windows**  
@@ -51,8 +51,8 @@ ms.locfileid: "66054475"
  **Test**  
  Consente di verificare le impostazioni della gestione connessioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Concetti relativi al provider WMI per la gestione della configurazione](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Concetti relativi al provider WMI per eventi del server](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

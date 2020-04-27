@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013270"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Esempi di caricamento bulk XML (SQLXML 4.0)
@@ -110,7 +110,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>R. Caricamento bulk di un file XML in una tabella  
+## <a name="a-bulk-loading-xml-in-a-table"></a>A. Caricamento bulk di un file XML in una tabella  
  In questo esempio viene stabilita una connessione all' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza di specificata nella proprietà ConnectionString (MyServer). Nell'esempio viene inoltre specificata la Proprietà ErrorLogFile. L'output degli errori viene pertanto salvato nel file specificato ("C:\error.log"), che può essere anche spostato in un percorso diverso. Si noti inoltre che il metodo Execute ha come parametri sia il file dello schema di mapping (SampleSchema. Xml) che il file di dati XML (SampleXMLData. Xml). Quando si esegue il caricamento bulk, la tabella Cust creata nel database **tempdb** conterrà nuovi record basati sul contenuto del file di dati XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Per testare un caricamento bulk di esempio  
@@ -452,8 +452,7 @@ Product (ProductID, ProductName)
 OrderDetail (OrderID, ProductID)  
 ```  
   
- In questo esempio di caricamento bulk XML, la proprietà KeepIdentity del modello a oggetti BulkLoad è impostata su false. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera pertanto valori Identity per le colonne ProductID e OrderID rispettivamente nelle tabelle Product e Ord. Qualsiasi valore fornito nei documenti di cui eseguire un caricamento bulk viene ignorato.  
+ In questo esempio di caricamento bulk XML, la proprietà KeepIdentity del modello a oggetti BulkLoad è impostata su false. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera pertanto valori Identity per le colonne ProductID e OrderID rispettivamente nelle tabelle Product e Ord. Qualsiasi valore fornito nei documenti di cui eseguire un caricamento bulk viene ignorato.  
   
  In questo caso, il caricamento bulk XML identifica la relazione di chiave primaria/chiave esterna nelle tabelle. Il caricamento bulk inserisce innanzitutto record nelle tabelle con la chiave primaria, quindi propaga il valore Identity generato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle tabelle con le colonne chiavi esterne. Nell'esempio seguente il caricamento bulk XML inserisce dati nelle tabelle in base all'ordine seguente:  
   

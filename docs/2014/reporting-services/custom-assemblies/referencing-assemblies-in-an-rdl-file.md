@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bc52419f382ea44fc718a47e99bbd0981275d240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264800"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Impostazione di un riferimento agli assembly in un file RDL
@@ -49,7 +49,7 @@ ms.locfileid: "63264800"
   
  Per altre informazioni, vedere [Accesso agli assembly personalizzati tramite espressioni](accessing-custom-assemblies-through-expressions.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Utilizzo di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)  
   
   

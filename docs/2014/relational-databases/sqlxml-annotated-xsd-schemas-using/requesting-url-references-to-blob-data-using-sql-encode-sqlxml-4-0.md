@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013725"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Richiesta di riferimenti URL a dati BLOB utilizzando sql:encode (SQLXML 4.0)
@@ -31,8 +31,7 @@ ms.locfileid: "66013725"
   
  Se si desidera che venga restituito un riferimento ai dati (un URI) che possa essere utilizzato successivamente per recuperare i dati BLOB in un formato binario, specificare l'annotazione `sql:encode`. È possibile specificare `sql:encode` su un attributo o un elemento di tipo semplice.  
   
- Specificare l'annotazione `sql:encode` per indicare che deve essere restituito un URL al campo invece del valore del campo. 
-  `sql:encode` dipende dalla chiave primaria per generare un singleton scelto nell'URL. La chiave primaria può essere specificata utilizzando l'annotazione `sql:key-fields`.  
+ Specificare l'annotazione `sql:encode` per indicare che deve essere restituito un URL al campo invece del valore del campo. `sql:encode` dipende dalla chiave primaria per generare un singleton scelto nell'URL. La chiave primaria può essere specificata utilizzando l'annotazione `sql:key-fields`.  
   
  All'annotazione `sql:encode` è possibile assegnare il valore "url" o "default". Il valore "default" restituisce dati in formato con codifica Base 64.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66013725"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>R. Specifica di sql:encode per ottenere un riferimento URL ai dati BLOB  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Specifica di sql:encode per ottenere un riferimento URL ai dati BLOB  
  In questo esempio, lo schema di mapping `sql:encode` specifica sull'attributo **LargePhoto** per recuperare il riferimento URI a una foto del prodotto specifica, anziché recuperare i dati binari nel formato con codifica base 64.  
   
 ```  

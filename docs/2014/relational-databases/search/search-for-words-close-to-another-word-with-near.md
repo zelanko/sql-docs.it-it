@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011071"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
   Per cercare parole o frasi vicine, è possibile usare un termine di prossimità (NEAR) in un predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o in una funzione [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) . È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine di ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o parole e frasi nell'ordine in cui sono state specificate. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]supporta sia il [termine di prossimità generico](#Generic_NEAR)precedente, che è ora deprecato, che il [termine di prossimità personalizzato](#Custom_NEAR), che è [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]nuovo in.  
   
-##  <a name="Custom_NEAR"></a>Termine di prossimità personalizzato  
+##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Termine di prossimità personalizzato  
  Con il termine di prossimità personalizzato vengono introdotte le seguenti nuove funzionalità:  
   
 -   È possibile specificare il numero massimo di termini non di ricerca, oppure la *distanza massima*che separa il primo e l'ultimo termine di ricerca per formare una corrispondenza.  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a>Considerazioni aggiuntive per le ricerche per prossimità  
+##  <a name="additional-considerations-for-proximity-searches"></a><a name="Additional_Considerations"></a>Considerazioni aggiuntive per le ricerche per prossimità  
  In questa sezione vengono illustrate alcune considerazioni riguardanti le ricerche per prossimità sia generiche che personalizzate:  
   
 -   Occorrenze di termini di ricerca sovrapposte  
@@ -153,7 +153,7 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a>Termine di prossimità generico deprecato  
+##  <a name="the-deprecated-generic-proximity-term"></a><a name="Generic_NEAR"></a>Termine di prossimità generico deprecato  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Si consiglia di usare il [termine di prossimità personalizzato](#Custom_NEAR).  
@@ -224,7 +224,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Eseguire query con ricerca full-text](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  

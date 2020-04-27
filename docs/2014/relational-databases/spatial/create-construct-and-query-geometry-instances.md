@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014304"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Creazione, costruzione e query di istanze geometry
@@ -35,9 +35,9 @@ ms.locfileid: "66014304"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset dello standard GML 3.1 esistente che viene definito nello schema seguente: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
-##  <a name="creating"></a> Creazione o costruzione di una nuova istanza geometry  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> Creazione o costruzione di una nuova istanza geometry  
   
-###  <a name="existing"></a> Creazione di una nuova istanza geometry da un'istanza esistente  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> Creazione di una nuova istanza geometry da un'istanza esistente  
  Il tipo di dati `geometry` offre molti metodi predefiniti che è possibile utilizzare per creare nuove istanze `geometry` in base a quelle esistenti.  
   
  **Per creare un buffer relativo a una geometria**  
@@ -68,7 +68,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="wkt"></a> Costruzione di un'istanza geometry da un input WKT (well-known text)  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> Costruzione di un'istanza geometry da un input WKT (well-known text)  
  Il tipo di dati `geometry` fornisce molti metodi predefiniti che generano una geometria dalla rappresentazione WKT OGC (Open Geospatial Consortium). Lo standard WKT è una stringa di testo che consente lo scambio di dati geometrici in formato testuale.  
   
  **Per costruire qualsiasi tipo di istanza geometry da input WKT**  
@@ -99,7 +99,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="wkb"></a> Costruzione di un'istanza geometry da un input WKB (well-known binary)  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> Costruzione di un'istanza geometry da un input WKB (well-known binary)  
  WKB è un formato binario definito da OGC (Open Geospatial Consortium) che consente di scambiare i dati `geometry` tra un'applicazione client e un database SQL. Le funzioni seguenti accettano input WKB per costruire le geometrie:  
   
  **Per costruire qualsiasi tipo di istanza geometry da un input WKB**  
@@ -128,7 +128,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="gml"></a> Costruzione di un'istanza geometry da un input di testo GML  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Costruzione di un'istanza geometry da un input di testo GML  
  Il `geometry` tipo di dati fornisce un metodo che genera `geometry` un'istanza da GML, una rappresentazione XML di oggetti geometrici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
   
  **Per costruire qualsiasi tipo di istanza geometry da un input GML**  
@@ -136,7 +136,7 @@ ms.locfileid: "66014304"
   
   
   
-##  <a name="returning"></a> Restituzione di WKT e WKB da un'istanza geometry  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> Restituzione di WKT e WKB da un'istanza geometry  
  È possibile utilizzare i metodi seguenti per restituire il formato WKT o WKB di un'istanza `geometry`:  
   
  **Per restituire la rappresentazione WKT di un'istanza geometry**  
@@ -155,10 +155,10 @@ ms.locfileid: "66014304"
   
   
   
-##  <a name="querying"></a> Esecuzione di query sulle proprietà e i comportamenti delle istanze geometry  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Esecuzione di query sulle proprietà e i comportamenti delle istanze geometry  
  Tutte `geometry` le istanze hanno un certo numero di proprietà che possono essere recuperate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite metodi disponibili in. Negli argomenti seguenti vengono definiti le proprietà e i comportamenti dei tipi di geometria, nonché i metodi per l'esecuzione di query per ognuno di essi.  
   
-###  <a name="valid"></a> Informazioni sulla validità, sul tipo di istanza e su GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informazioni sulla validità, sul tipo di istanza e su GeometryCollection  
  Dopo aver costruito un'istanza `geometry`, è possibile utilizzare i metodi seguenti per determinare se essa è corretta, per restituire il tipo di istanza o, se si tratta di un'istanza di raccolta, per restituire un'istanza `geometry` specifica.  
   
  **Per restituire il tipo di istanza di una geometria**  
@@ -181,7 +181,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="number"></a> Numero di punti  
+###  <a name="number-of-points"></a><a name="number"></a> Numero di punti  
  Tutte le istanze `geometry` non vuote sono costituite da *punti*. Tali punti rappresentano le coordinate X e Y del piano su cui vengono tracciate le geometrie. Il tipo di dati `geometry` offre numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
   
  **Per restituire il numero di punti che comprendono un'istanza**  
@@ -210,7 +210,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="dimension"></a> Dimensione  
+###  <a name="dimension"></a><a name="dimension"></a> Dimensione  
  Un'istanza `geometry` non vuota può essere a 0, 1 o 2 dimensioni. Le istanze `geometries` senza dimensioni, ad esempio `Point` e `MultiPoint` non dispongono di lunghezza o area. Gli oggetti unidimensionali, ad esempio `LineString, CircularString, CompoundCurve` e `MultiLineString`, dispongono della lunghezza. Le istanze bidimensionali, ad esempio `Polygon`, `CurvePolygon` e `MultiPolygon`, dispongono di area e lunghezza. Per le istanze vuote verrà indicata una dimensione di -1 e per `GeometryCollection` verrà indicata un'area dipendente dai tipi del contenuto.  
   
  **Per restituire la dimensione di un'istanza**  
@@ -224,7 +224,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="empty"></a> Vuoto  
+###  <a name="empty"></a><a name="empty"></a> Vuoto  
  Un'istanza *vuota* `geometry` non contiene punti. La lunghezza delle istanze `LineString, CircularString`, `CompoundCurve` e `MultiLineString` vuote è pari a zero. L'area delle istanze `Polygon`, `CurvePolygon` e `MultiPolygon` vuote è pari a 0.  
   
  **Per determinare se un'istanza è vuota**  
@@ -232,7 +232,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="simple"></a> Simple  
+###  <a name="simple"></a><a name="simple"></a> Simple  
  Affinché un `geometry` dell'istanza sia *semplice*, deve soddisfare entrambi questi requisiti:  
   
 -   Ogni figura dell'istanza non deve intersecarsi, salvo agli endpoint.  
@@ -247,7 +247,7 @@ ms.locfileid: "66014304"
   
   
   
-###  <a name="boundary"></a> Limite interno ed esterno  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Limite interno ed esterno  
  L' *interno* di un' `geometry` istanza è lo spazio occupato dall'istanza e l' *esterno* è lo spazio non occupato.  
   
  Il*limite* è definito da OGC come segue:  
@@ -275,7 +275,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="envelope"></a> Envelope  
+###  <a name="envelope"></a><a name="envelope"></a> Envelope  
  La *busta* di un' `geometry` istanza, nota anche come *riquadro delimitatore*, è il rettangolo allineato all'asse formato dalle coordinate minime e massime (X, Y) dell'istanza.  
   
  **Per restituire l'envelope di un'istanza**  
@@ -283,7 +283,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="closure"></a> Chiusura  
+###  <a name="closure"></a><a name="closure"></a> Chiusura  
  Un'istanza *chiusa* `geometry` è una figura i cui punti di inizio e di fine sono gli stessi. Le istanze `Polygon` sono considerate chiuse. Le istanze `Point` non sono considerate chiuse.  
   
  Un anello è un'istanza `LineString` semplice chiusa.  
@@ -305,7 +305,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="srid"></a> Identificatore SRID  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> Identificatore SRID  
  L'identificatore SRID specifica in quale sistema di coordinate è rappresentata l'istanza `geometry`. Due istanze con identificatori SRID diversi non possono essere confrontate.  
   
  **Per impostare o restituire l'identificatore SRID di un'istanza**  
@@ -315,7 +315,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-##  <a name="rel"></a> Determinazione delle relazioni esistenti tra istanze geometry  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> Determinazione delle relazioni esistenti tra istanze geometry  
  Il tipo di dati `geometry` offre molti metodi predefiniti che è possibile utilizzare per determinare relazioni tra due istanze `geometry`.  
   
  **Per determinare se due istanze includono lo stesso punto impostato**  
@@ -353,10 +353,10 @@ SELECT @g.STBoundary().ToString();
   
   
   
-##  <a name="defaultsrid"></a> Istanze geometry con SRID zero per impostazione predefinita  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> Istanze geometry con SRID zero per impostazione predefinita  
  L'identificatore SRID predefinito per le istanze `geometry` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è 0. Con i dati spaziali `geometry` lo specifico identificatore SRID dell'istanza spaziale non deve eseguire i calcoli. Di conseguenza le istanze possono risiedere nello spazio planare indefinito. Per indicare lo spazio planare indefinito nei calcoli di metodi del tipo di dati `geometry`, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizza SRID 0.  
   
-##  <a name="examples"></a> Esempi  
+##  <a name="examples"></a><a name="examples"></a> Esempi  
  Nei due esempi seguenti viene illustrato come aggiungere ed eseguire query su dati di tipo geometry.  
   
 -   Nel primo esempio viene creata una tabella con una colonna di identità e una colonna `geometry``GeomCol1`. Una terza colonna effettua il rendering della colonna `geometry` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()` . Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geometry`e in una seconda è contenuta un'istanza `Polygon` .  
@@ -395,7 +395,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dati spaziali &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

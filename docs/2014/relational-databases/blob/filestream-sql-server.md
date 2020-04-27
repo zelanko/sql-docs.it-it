@@ -15,17 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010136"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM consente l'archiviazione nel file system di dati non strutturati, ad esempio documenti e immagini, da parte delle applicazioni basate su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le applicazioni possono sfruttare le numerose API di flusso e le prestazioni del file system e contemporaneamente mantenere la coerenza transazionale tra i dati non strutturati e i corrispondenti dati strutturati.  
   
- FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando `varbinary(max)` dati BLOB (Binary Large Object) come file nel file System. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  
+ FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando `varbinary(max)` dati BLOB (Binary Large Object) come file nel file System. [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  
   
  FILESTREAM utilizza la cache di sistema NT per memorizzare nella cache i dati del file. Ciò consente di ridurre qualsiasi effetto che i dati FILESTREAM potrebbero avere sulle prestazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Il pool di buffer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è utilizzato; pertanto questa memoria è disponibile per l'elaborazione di query.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66010136"
   
  Per ulteriori informazioni sull'installazione e sull'utilizzo di FILESTREAM, vedere l'elenco di [attività correlate](#reltasks).  
   
-##  <a name="whentouse"></a>Quando utilizzare FILESTREAM  
+##  <a name="when-to-use-filestream"></a><a name="whentouse"></a>Quando utilizzare FILESTREAM  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i BLOB possono essere dati standard `varbinary(max)` che archiviano i dati nelle tabelle oppure oggetti `varbinary(max)` di FILESTREAM che archiviano i dati nel file system. La dimensione e l'utilizzo dei dati determinano se è necessario utilizzare l'archiviazione nel database o l'archiviazione nel file system. Se le condizioni indicate di seguito vengono soddisfatte, è necessario utilizzare FILESTREAM:  
   
 -   Gli oggetti che si stanno archiviando sono, in media, più grandi di 1 MB.  
@@ -45,7 +44,7 @@ ms.locfileid: "66010136"
  Per oggetti più piccoli, l'archiviazione di BLOB `varbinary(max)` nel database offre spesso migliori prestazioni di flusso.  
   
   
-##  <a name="storage"></a>Archiviazione FILESTREAM  
+##  <a name="filestream-storage"></a><a name="storage"></a>Archiviazione FILESTREAM  
  L'archiviazione FILESTREAM viene implementata come una colonna `varbinary(max)` nella quale i dati sono archiviati come BLOB nel file system. Le dimensioni dei BLOB sono limitate solo dalle dimensioni del volume del file system. Il limite `varbinary(max)` standard di 2 GB delle dimensioni del file non si applica ai BLOB archiviati nel file system.  
   
  Per indicare che una colonna deve archiviare dati nel file system, specificare l'attributo FILESTREAM in una colonna `varbinary(max)`. In questo modo [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivia tutti i dati per quella colonna nel file system, ma non nel file di database.  
@@ -79,7 +78,7 @@ ms.locfileid: "66010136"
 > [!NOTE]  
 >  Gli account di accesso SQL non funzioneranno con contenitori FILESTREAM. Solo l'autenticazione NTFS funziona con contenitori FILESTREAM.  
   
-##  <a name="dual"></a>Accesso ai dati BLOB con Transact-SQL e accesso tramite flusso al file System  
+##  <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> Accesso a dati BLOB con Transact-SQL e accesso tramite flusso al file system  
  Dopo avere archiviato dati in una colonna FILESTREAM, è possibile accedere ai file usando le transazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure le API Win32.  
   
 ### <a name="transact-sql-access"></a>Accesso Transact-SQL  
@@ -96,11 +95,11 @@ ms.locfileid: "66010136"
   
  Dato che le operazioni con i file sono transazionali, non è possibile eliminare o rinominare i file FILESTREAM tramite il file system.  
   
- **Modello di istruzione**  
+ **Modello istruzione**  
   
  L'accesso al file system di FILESTREAM consente di modellare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando le operazioni di apertura e chiusura dei file. L'istruzione si avvia quando un handle di file è aperto e termina quando l'handle è chiuso. Ad esempio, se un handle di scrittura è chiuso, qualsiasi possibile trigger AFTER registrato nella tabella si attiva come se un'istruzione UPDATE fosse completata.  
   
- **Spazio dei nomi di archiviazione**  
+ **Spazio dei nomi dell'archiviazione**  
   
  In FILESTREAM, [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di controllare lo spazio dei nomi del file system fisico di BLOB. Una nuova funzione intrinseca [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)fornisce il percorso UNC logico di BLOB che corrisponde a ogni cella di FILESTREAM nella tabella. L'applicazione usa questo percorso logico per ottenere l'handle Win32 e operare sui dati BLOB con le normali interfacce del file system Win32. La funzione restituisce NULL se il valore della colonna FILESTREAM è NULL.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66010136"
   
  Con FILESTREAM, su commit della transazione, viene assicurata nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] la durevolezza delle transazioni per i dati BLOB di FILESTREAM modificati dall'accesso di flusso al file system.  
   
- **Semantica di isolamento**  
+ **Semantica dell'isolamento**  
   
  La semantica dell'isolamento è gestita dai livelli di isolamento delle transazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Il livello di isolamento Read Committed è supportato per [!INCLUDE[tsql](../../includes/tsql-md.md)] e per l'accesso al file system. Sono supportati le operazioni di lettura ripetibili e gli isolamenti serializzabili e degli snapshot. La lettura dirty non è supportata.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66010136"
   
  Se FSCTL viene eseguito dopo la scrittura sull'handle, l'ultima operazione di scrittura verrà resa persistente e le scritture precedenti eseguite sull'handle andranno perdute.  
   
- **API del file System e livelli di isolamento supportati**  
+ **API del file system e livelli di isolamento supportati**  
   
  Quando una API del file system non può aprire un file a causa di una violazione dell'isolamento, viene restituita un'eccezione ERROR_SHARING_VIOLATION. Si verifica questa violazione dell'isolamento quando due transazioni tentano di accedere allo stesso file. Il risultato dell'operazione di accesso dipende dalla modalità in cui è stato aperto il file e dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene eseguita la transazione. Nella tabella seguente vengono illustrati i possibili risultati se due transazioni accedono allo stesso file.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "66010136"
   
  La creazione di viste con mapping alla memoria (I/O con mapping alla memoria) utilizzando handle FILESTREAM non è supportata. Se il mapping di memoria viene usato per i dati FILESTREAM, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non può garantire coerenza e durabilità dei dati o l'integrità del database.  
   
-##  <a name="reltasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Attività correlate  
  [Abilitare e configurare FILESTREAM](enable-and-configure-filestream.md)  
   [Creazione di un database abilitato per FILESTREAM](create-a-filestream-enabled-database.md)  
   [Creazione di una tabella per archiviare dati FILESTREAM](create-a-table-for-storing-filestream-data.md)  
@@ -164,6 +163,6 @@ ms.locfileid: "66010136"
   [Configurazione di FILESTREAM in un cluster di failover](set-up-filestream-on-a-failover-cluster.md)  
   [Configurare un firewall per l'accesso FILESTREAM](configure-a-firewall-for-filestream-access.md)  
   
-##  <a name="relcontent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="relcontent"></a> Contenuto correlato  
  [Compatibilità FILESTREAM con altre funzionalità di SQL Server](filestream-compatibility-with-other-sql-server-features.md)  
   

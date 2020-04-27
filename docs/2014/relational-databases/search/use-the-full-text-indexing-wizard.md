@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010903"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
@@ -44,8 +44,7 @@ ms.locfileid: "66010903"
      Per includere una colonna nell'indice, selezionare la casella di controllo accanto al nome della colonna. Le colonne non idonee per l'indicizzazione full-text vengono visualizzate in grigio con le relative caselle di controllo disabilitate.  
   
      **Lingua per il Word breaker**  
-     Consente di selezionare una lingua nell'elenco a discesa. La selezione effettuata verrà utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per identificare i word breaker corretti per l'indice. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa i word breaker per individuare i delimitatori delle parole nei dati con indicizzazione full-text.  
+     Consente di selezionare una lingua nell'elenco a discesa. La selezione effettuata verrà utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per identificare i word breaker corretti per l'indice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa i word breaker per individuare i delimitatori delle parole nei dati con indicizzazione full-text.  
   
      **Digitare una colonna**  
      Consente di selezionare il nome della colonna che contiene il tipo di documento della colonna sottoposta all'indicizzazione full-text.  
@@ -59,7 +58,7 @@ ms.locfileid: "66010903"
   
 2.  Selezionare le opzioni di rilevamento delle modifiche.  
   
-     **Automaticamente**  
+     **Automatico**  
      Selezionare questo pulsante di opzione per aggiornare automaticamente l'indice full-text a mano a mano che le modifiche vengono apportate ai dati sottostanti.  
   
      **Manualmente**  
@@ -73,7 +72,7 @@ ms.locfileid: "66010903"
   
 3.  Selezionare il catalogo, il filegroup indice e l'elenco di parole non significative.  
   
-     **Selezione catalogo full-text**  
+     **Seleziona catalogo full-text**  
      Consente di selezionare un catalogo full-text dall'elenco. Il catalogo predefinito del database corrisponderà all'elemento selezionato per impostazione predefinita nell'elenco. Se non è disponibile alcun catalogo, l'elenco sarà disabilitato e la casella di controllo **Crea un nuovo catalogo** sarà selezionata e disabilitata.  
   
     |||  
@@ -86,7 +85,7 @@ ms.locfileid: "66010903"
      **Imposta come catalogo predefinito**  
      Selezionare questa opzione per impostare il catalogo come predefinito per il database.  
   
-     **Distinzione tra caratteri accentati**  
+     **Distinzione caratteri accentati/non accentati**  
      Consente di specificare se nel catalogo viene fatta distinzione tra caratteri accentati e non accentati. Se il database supporta la distinzione tra caratteri accentati e non accentati, l'opzione **Attiva** sarà selezionata per impostazione predefinita.  
   
      **Selezione filegroup indice**  
@@ -97,10 +96,10 @@ ms.locfileid: "66010903"
     |valore|Descrizione|  
     |-----------|-----------------|  
     |**\<>predefinito**|Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o vista è partizionata, viene utilizzato il filegroup primario.|  
-    |**PRIMARIO**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|  
-    |*filegroup predefinito specificato dall'utente*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per utilizzare tale filegroup per il nuovo indice full-text.|  
+    |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|  
+    |*user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per utilizzare tale filegroup per il nuovo indice full-text.|  
   
-     **Selezione di parole non significative full-text**  
+     **Selezione elenco di parole non significative full-text**  
      Consente di specificare un elenco di parole non significative da utilizzare per l'indice full-text o di disabilitare l'utilizzo dell'elenco di parole non significative.  
   
      In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive le parole non significative vengono gestite nei database tramite oggetti denominati elenchi di parole non significative. Un *elenco di parole non significative* è un elenco che, quando associato a un indice full-text, viene applicato alle query full-text su tale indice. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
@@ -111,14 +110,14 @@ ms.locfileid: "66010903"
     |-----------|-----------------|  
     |**\<>di sistema**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
     |**\<>off**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
-    |*definito dall'utente-nome di parole non significative*|Nell'elenco viene visualizzato il nome di ogni elenco di parole non significative definito dall'utente, se presente, creato nel database. Selezionare qualsiasi elenco di parole non significative definito dall'utente da utilizzare per il nuovo indice full-text.|  
+    |*user-defined-stoplist-name*|Nell'elenco viene visualizzato il nome di ogni elenco di parole non significative definito dall'utente, se presente, creato nel database. Selezionare qualsiasi elenco di parole non significative definito dall'utente da utilizzare per il nuovo indice full-text.|  
   
 4.  Facoltativamente, definire la pianificazione di popolamento. Le operazioni di indicizzazione avranno inizio immediatamente, a meno che non siano state pianificate per un'esecuzione futura. Le pianificazioni verranno create immediatamente, anche se l'esecuzione avverrà solo all'ora pianificata.  
   
      **Nuova pianificazione tabella**  
      Consente di definire una pianificazione di popolamento per una tabella.  
   
-     **Nuova pianificazione Catalogo**  
+     **Nuova pianificazione catalogo**  
      Consente di definire una pianificazione di popolamento per un catalogo full-text.  
   
      **Modifica**  
@@ -129,7 +128,7 @@ ms.locfileid: "66010903"
   
 5.  Visualizzare o controllare lo stato dell'Indicizzazione guidata full-text.  
   
-     **Stop**  
+     **Arresta**  
      Consente di interrompere l'operazione corrente e impedire l'esecuzione di operazioni full-text successive da parte della procedura guidata nel corso della sessione.  
   
      **Report**  

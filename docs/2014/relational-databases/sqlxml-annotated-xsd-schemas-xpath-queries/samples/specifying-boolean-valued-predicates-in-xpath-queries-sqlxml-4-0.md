@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012455"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Specifica di predicati con valori booleani nelle query XPath (SQLXML 4.0)
@@ -89,7 +89,7 @@ ms.locfileid: "66012455"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Specificare predicati successivi e nidificati  
- Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti gli **** **** ** \<** elementi figlio del cliente>del nodo di contesto con un attributo SalesPersonID con valore 277 e un attributo TerritoryID con valore 3:  
+ Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti gli **SalesPersonID** **TerritoryID** ** \<** elementi figlio del cliente>del nodo di contesto con un attributo SalesPersonID con valore 277 e un attributo TerritoryID con valore 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
@@ -103,7 +103,7 @@ ms.locfileid: "66012455"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. **** La query restituisce tutti gli ** \<** elementi figlio del cliente>del nodo di contesto che includono ** \<Order>** elementi figlio con almeno un ** \<elemento Order>** con valore di attributo SalesPersonID pari a 2.  
+ Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. **SalesPersonID** La query restituisce tutti gli ** \<** elementi figlio del cliente>del nodo di contesto che includono ** \<Order>** elementi figlio con almeno un ** \<elemento Order>** con valore di attributo SalesPersonID pari a 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  

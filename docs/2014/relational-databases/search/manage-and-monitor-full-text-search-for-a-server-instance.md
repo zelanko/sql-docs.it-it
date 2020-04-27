@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011165"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
@@ -29,7 +29,7 @@ ms.locfileid: "66011165"
   
 -   Configurazione di un database utente per la ricerca full-text. Include la creazione di uno o più cataloghi full-text per il database e la definizione di un indice full-text in ciascuna tabella o vista indicizzata in cui eseguire query full-text.  
   
-##  <a name="props"></a> Visualizzazione e modifica delle proprietà del server per la ricerca full-text  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Visualizzazione e modifica delle proprietà del server per la ricerca full-text  
  È possibile visualizzare le proprietà full-text di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Per visualizzare e modificare le proprietà del server per la ricerca full-text  
@@ -67,7 +67,7 @@ ms.locfileid: "66011165"
         > [!NOTE]  
         >  L'opzione di aggiornamento full-text può anche essere impostata con l'azione [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** .  
   
-##  <a name="metadata"></a> Visualizzazione di proprietà server full-text aggiuntive  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Visualizzazione di proprietà server full-text aggiuntive  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] È possibile usare le funzioni per ottenere il valore di varie proprietà a livello server della ricerca full-text. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente solo elencate le proprietà full-text di un'istanza del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le funzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] correlate.  
@@ -78,7 +78,7 @@ ms.locfileid: "66011165"
 |`LoadOSResources`|Indica se i word breaker e i filtri del sistema operativo sono registrati e utilizzati in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Specifica se il motore di ricerca full-text deve caricare solo i file binari firmati.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>Monitoraggio dell'attività di ricerca full-text  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Monitoraggio dell'attività di ricerca full-text  
  Numerose funzioni e viste a gestione dinamica consentono di monitorare l'attività di ricerca full-text in un'istanza del server.  
   
  **Per visualizzare informazioni sui cataloghi full-text con un'attività di popolamento in corso**  
@@ -93,11 +93,11 @@ ms.locfileid: "66011165"
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **Per visualizzare i buffer di memoria in un pool di memoria utilizzato come parte di un intervallo di ricerca per indicizzazione o di ricerca per indicizzazione.**  
+ **Per visualizzare i buffer di memoria in un pool di memoria utilizzati come parte di una ricerca per indicizzazione o di un intervallo di ricerche per indicizzazione**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **Per visualizzare i pool di memoria condivisi disponibili per il componente gatherer full-text per una ricerca per indicizzazione full-text o un intervallo di ricerca per indicizzazione full-text**  
+ **Per visualizzare i pool di memoria condivisi disponibili per il componente gatherer full-text per una ricerca per indicizzazione o un intervallo di ricerche per indicizzazione**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

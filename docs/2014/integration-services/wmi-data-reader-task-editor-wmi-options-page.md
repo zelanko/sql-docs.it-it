@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054362"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor attività Lettore di dati WMI (pagina Opzioni WMI)
@@ -28,9 +28,9 @@ ms.locfileid: "66054362"
   
 ## <a name="static-options"></a>Opzioni statiche  
  **WMIConnectionName**  
- Selezionare una gestione connessione WMI nell'elenco o creare una nuova gestione connessione facendo clic su \<**Nuova connessione WMI**>.  
+ Selezionare una gestione connessione WMI nell'elenco oppure fare clic su \< **nuova connessione WMI...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione WMI](connection-manager/wmi-connection-manager.md), [Editor gestione connessione WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **Argomenti correlati** [Gestione connessione WMI](connection-manager/wmi-connection-manager.md), [Editor gestione connessione WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Consente di selezionare il tipo di origine della query WQL eseguita dall'attività. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
@@ -59,13 +59,13 @@ ms.locfileid: "66054362"
   
 ### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Input diretto  
  **WQLQuerySource**  
- Consente di specificare una query o di immettere una query nella finestra di dialogo **Query WQL** visualizzata facendo clic sul pulsante con i puntini di sospensione (...).  
+ Specificare una query oppure fare clic sui puntini di sospensione (...) e immettere una query utilizzando la finestra di dialogo **query WQL** .  
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Connessione file  
  **WQLQuerySource**  
  Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variabile  
  **WQLQuerySource**  
@@ -76,21 +76,21 @@ ms.locfileid: "66054362"
 ## <a name="destinationtype-dynamic-options"></a>Opzioni dinamiche di DestinationType  
   
 ### <a name="destinationtype--file-connection"></a>DestinationType = Connessione file  
- **Destinazione**  
+ **Destination**  
  Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = Variabile  
- **Destinazione**  
+ **Destination**  
  Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività lettore di dati WMI &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Attività Monitoraggio eventi WMI](control-flow/wmi-event-watcher-task.md)  
   
   

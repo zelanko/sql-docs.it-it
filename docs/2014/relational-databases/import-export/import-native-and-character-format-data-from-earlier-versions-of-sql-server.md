@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011921"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
@@ -55,14 +55,14 @@ ms.locfileid: "66011921"
  Quando si esegue l'esportazione bulk di dati tramite l'opzione **-V80** , `varbinary(max)` `text` `image` `nvarchar(max)` `varchar(max)`i dati di tipo,,, XML e UDT in modalità nativa vengono archiviati con un prefisso a 4 byte, `ntext` ad esempio i dati, e, anziché con un prefisso a 8 byte, che [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è l'impostazione predefinita per e versioni successive.  
   
 ## <a name="copying-date-values"></a>Copia dei valori di data  
- **bcp** utilizza l'API per la copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[*.f...*]).  
+ **bcp** consente di usare l'API della copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[ *.f...* ]).  
   
  Il comando **bcp** Esporta i file di dati in formato carattere usando il formato predefinito `datetime` ODBC `smalldatetime` per i valori e. Ad esempio, per una colonna `datetime` contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
 >  Quando si importano `smalldatetime` dati in un campo con **bcp**, assicurarsi che il valore per seconds sia 00,000; in caso contrario, l'operazione avrà esito negativo. Il tipo di dati `smalldatetime` contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
 -   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
@@ -80,7 +80,7 @@ ms.locfileid: "66011921"
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Compatibilità con le versioni precedenti di SQL Server motore di database](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Compatibilità con le versioni precedenti del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

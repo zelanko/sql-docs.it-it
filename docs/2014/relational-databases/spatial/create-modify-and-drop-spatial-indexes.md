@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014275"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
@@ -31,13 +31,13 @@ ms.locfileid: "66014275"
 > [!NOTE]  
 >  Per informazioni sulla relazione degli indici spaziali con la partizione e i filegroup, vedere la sezione "Osservazioni" in [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a>Creazione, modifica ed eliminazione di indici spaziali  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Creazione, modifica e rimozione di indici spaziali  
   
-###  <a name="create"></a>Per creare un indice spaziale  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Per creare un indice spaziale  
  **Per creare un indice spaziale tramite Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **Per creare un indice spaziale tramite la finestra di dialogo nuovo indice in Management Studio**  
+ **Per creare un indice spaziale tramite la finestra di dialogo Nuovo indice in Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Per creare un indice spaziale in Management Studio  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
@@ -76,7 +76,7 @@ ms.locfileid: "66014275"
 >  Per creare un altro indice spaziale nella stessa colonna spaziale o in una colonna diversa, ripetere i passaggi precedenti.  
   
   
- **Per creare un indice spaziale utilizzando Progettazione tabelle in Management Studio**  
+ **Per creare un indice spaziale tramite Progettazione tabelle in Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>Per creare un indice spaziale in Progettazione tabelle  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella per la quale si vuole creare un indice spaziale e scegliere **Progetta**.  
@@ -92,7 +92,7 @@ ms.locfileid: "66014275"
 5.  Selezionare il nuovo indice dall'elenco **Indice spaziale selezionato** e impostarne le proprietà nella griglia a destra. Per informazioni sulle proprietà, vedere [Finestra di dialogo Indici spaziali &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a>Per modificare un indice spaziale  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Per modificare un indice spaziale  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66014275"
 -   [Spostare un indice esistente in un filegroup diverso](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a>Per eliminare un indice spaziale  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Per eliminare un indice spaziale  
  **Per eliminare un indice spaziale tramite Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
  **Per eliminare un indice utilizzando Management Studio**  
  [Eliminare un indice](../indexes/delete-an-index.md)  
   
- **Per eliminare un indice spaziale utilizzando Progettazione tabelle in Management Studio**  
+ **Per eliminare un indice spaziale tramite Progettazione tabelle in Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Per eliminare un indice spaziale in Progettazione tabelle  
   
 1.  In Esplora oggetti, selezionare con il pulsante destro del mouse la tabella contenente l'indice spaziale da eliminare, quindi selezionare **Progetta**.  
@@ -124,10 +124,10 @@ ms.locfileid: "66014275"
   
 3.  Fare clic sull'indice da eliminare nella colonna **Indice spaziale selezionato** .  
   
-4.  Scegliere **Elimina**.  
+4.  Fare clic su **Elimina**.  
   
   
-##  <a name="restrictions"></a>Restrizioni relative agli indici spaziali  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Restrizioni relative agli indici spaziali  
  È possibile creare un indice spaziale solo in una colonna di tipo `geometry` o `geography`.  
   
 ### <a name="table-and-view-restrictions"></a>Restrizioni per viste e tabelle  

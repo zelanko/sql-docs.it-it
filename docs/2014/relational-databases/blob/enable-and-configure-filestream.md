@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010165"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
@@ -25,7 +25,7 @@ ms.locfileid: "66010165"
 > [!NOTE]  
 >  Non è possibile abilitare FILESTREAM in una versione a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguita in un sistema operativo a 64 bit.  
   
-##  <a name="enabling"></a> Abilitazione di FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Abilitazione di FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Per abilitare e modificare le impostazioni FILESTREAM  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66010165"
   
 8.  Se ai dati FILESTREAM archiviati in tale condivisione devono accedere client remoti, selezionare **Consenti ai client remoti l'accesso tramite flusso ai dati FILESTREAM**.  
   
-9. Fare clic su **Apply**.  
+9. Fare clic su **Applica**.  
   
 10. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fare clic su **Nuova query** per visualizzare l'editor di query.  
   
@@ -62,9 +62,9 @@ ms.locfileid: "66010165"
   
 
   
-##  <a name="best"></a>Procedure consigliate  
+##  <a name="best-practices"></a><a name="best"></a>Procedure consigliate  
   
-###  <a name="config"></a>Configurazione fisica e manutenzione  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configurazione fisica e manutenzione  
  Quando si configurano i volumi di archiviazione FILESTREAM, tenere presenti le linee guida seguenti:  
   
 -   Disabilitare i nomi di file brevi nei sistemi FILESTREAM. La creazione di nomi di file brevi richiede tempi sensibilmente più lunghi. Per disabilitare i nomi di file brevi, usare l'utilità **fsutil** di Windows.  
@@ -88,7 +88,7 @@ ms.locfileid: "66010165"
   
 
   
-###  <a name="database"></a>Progettazione fisica di database  
+###  <a name="physical-database-design"></a><a name="database"></a> Progettazione fisica di database  
  Quando si progetta un database FILESTREAM, tenere presenti le linee guida seguenti:  
   
 -   Le colonne FILESTREAM devono essere associate a una `uniqueidentifier`colonna ROWGUID corrispondente. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  

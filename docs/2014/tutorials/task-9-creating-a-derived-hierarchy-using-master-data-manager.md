@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489529"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Attività 9: Creazione di una gerarchia derivata mediante Gestione dati master
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Attività 9: Creazione di una gerarchia derivata tramite Gestione dati master
   In questa attività viene creata una gerarchia derivata mediante Gestione dati master. Questa gerarchia derivata è derivata dalle relazioni tra attributi basati su dominio tra le entità **Supplier** e **state** .  
   
 1.  Passare alla pagina principale di **Gestione dati master** facendo clic **SQL Server Master Data Services 2012** nella parte superiore della pagina.  
@@ -61,6 +61,6 @@ ms.locfileid: "65489529"
      ![Gerarchia derivata in Esplora](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "Gerarchia derivata in Esplora")  
   
 ## <a name="next-step"></a>passaggio successivo  
- [Lezione 5: Automatizzazione della pulizia e della corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [Lezione 5: Automazione della pulizia e della corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

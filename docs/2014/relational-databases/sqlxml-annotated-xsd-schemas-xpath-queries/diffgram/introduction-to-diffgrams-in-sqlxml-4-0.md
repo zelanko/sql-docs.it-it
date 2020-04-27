@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013023"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introduzione ai DiffGram in SQLXML 4.0
@@ -59,7 +59,7 @@ ms.locfileid: "66013023"
 ## <a name="diffgram-annotations"></a>Annotazioni DiffGram  
  Queste annotazioni sono definite nello spazio dei nomi DiffGram **"urn: schemas-microsoft-com: XML-DiffGram-01"**:  
   
- **ID**  
+ **id**  
  Questo attributo viene utilizzato per associare gli elementi in ** \<prima di>** e i ** \<blocchi di>DataInstance** .  
   
  **hasChanges**  
@@ -73,7 +73,7 @@ ms.locfileid: "66013023"
   
 |Operazione|Descrizione|  
 |---------------|-----------------|  
-|Inserimento|Un DiffGram indica un'operazione di inserimento quando un elemento viene visualizzato nel ** \<blocco>DataInstance** ma non nel blocco ** \<precedente>** corrispondente e l'attributo **diffgr: hasChanges** viene specificato (**diffgr: hasChanges = inserted**) nell'elemento. In questo caso, il DiffGram inserisce nel database l'istanza del record specificata nel ** \<blocco>DataInstance** .<br /><br /> Se l'attributo **diffgr: hasChanges** non è specificato, l'elemento viene ignorato dalla logica di elaborazione e non viene eseguita alcuna operazione di inserimento. Per esempi funzionanti, vedere [esempi di DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
+|Insert|Un DiffGram indica un'operazione di inserimento quando un elemento viene visualizzato nel ** \<blocco>DataInstance** ma non nel blocco ** \<precedente>** corrispondente e l'attributo **diffgr: hasChanges** viene specificato (**diffgr: hasChanges = inserted**) nell'elemento. In questo caso, il DiffGram inserisce nel database l'istanza del record specificata nel ** \<blocco>DataInstance** .<br /><br /> Se l'attributo **diffgr: hasChanges** non è specificato, l'elemento viene ignorato dalla logica di elaborazione e non viene eseguita alcuna operazione di inserimento. Per esempi funzionanti, vedere [esempi di DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
 |Aggiornamento|Il DiffGram indica un'operazione di aggiornamento quando è presente un elemento nel \<blocco before> per il quale è presente un elemento corrispondente nel ** \<blocco DataInstance>** (ovvero, entrambi gli elementi hanno un attributo **diffgr: ID** con lo stesso valore) e l'attributo **diffgr: hasChanges** viene specificato con il valore **modificato** nell'elemento nel blocco di ** \<>DataInstance** .<br /><br /> Se l'attributo **diffgr: hasChanges** non è specificato nell'elemento nel ** \<blocco>DataInstance** , viene restituito un errore dalla logica di elaborazione. Per esempi funzionanti, vedere [esempi di DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentID** viene specificato nel blocco ** \<before>** , viene utilizzata la relazione padre-figlio degli elementi specificati da **parentID** per determinare l'ordine in cui vengono aggiornati i record.|  
 |Delete|Un DiffGram indica un'operazione di eliminazione quando un elemento viene visualizzato nel blocco ** \<before>** ma non nel blocco ** \<>DataInstance** corrispondente. In questo caso, il DiffGram elimina l'istanza del record specificata nel blocco ** \<before>** dal database. Per esempi funzionanti, vedere [esempi di DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentID** viene specificato nel blocco ** \<before>** , viene utilizzata la relazione padre-figlio degli elementi specificati da **parentID** per determinare l'ordine in cui vengono eliminati i record.|  
   

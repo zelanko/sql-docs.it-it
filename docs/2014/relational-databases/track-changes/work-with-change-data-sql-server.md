@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63269887"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "63269887"
   
  Per stabilire i valori LSN appropriati da utilizzare per l'esecuzione di query su una funzione con valori di tabella, sono disponibili numerose funzioni. La funzione [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) restituisce il valore LSN meno elevato associato a un intervallo di validità di un'istanza di acquisizione, ovvero all'intervallo di tempo durante il quale i dati delle modifiche rimangono disponibili per le relative istanze di acquisizione. La funzione [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) restituisce il valore LSN più elevato nell'intervallo di validità. Le funzioni [sys.fn_cdc_map_time_to_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql) e [sys.fn_cdc_map_lsn_to_time](/sql/relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql) possono essere usate per includere i valori LSN in una cronologia convenzionale. Poiché in Change Data Capture vengono utilizzati intervalli di query chiusi, talvolta risulta necessario generare il valore LSN successivo in una sequenza per garantire che le modifiche non vengano duplicate in finestre di query consecutive. Le funzioni [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) e [sys.fn_cdc_decrement_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql) sono utili quando è necessario modificare in modo incrementale un valore LSN.  
   
-##  <a name="LSN"></a> Convalida dei limiti LSN  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> Convalida dei limiti LSN  
  È consigliabile convalidare i limiti LSN da utilizzare in una query con funzione con valori di tabella prima dell'utilizzo. Endpoint con valore Null oppure endpoint esterni all'intervallo di validità per un'istanza di acquisizione provocheranno la restituzione di un errore da parte di una funzione con valori di tabella relativa a Change Data Capture.  
   
  L'errore seguente viene ad esempio restituito per una query per tutte le modifiche quando un parametro utilizzato per definire l'intervallo di query non è valido, non è compreso nell'intervallo oppure l'opzione del filtro di riga non è valida.  
@@ -62,7 +62,7 @@ ms.locfileid: "63269887"
 > [!NOTE]  
 >  Per trovare i modelli di Change Data Capture in SQL Server Management Studio, scegliere **Esplora modelli** dal menu **Visualizza**, espandere **Modelli di SQL Server** , quindi espandere la cartella **Change Data Capture** .  
   
-##  <a name="Functions"></a> Funzioni di query  
+##  <a name="query-functions"></a><a name="Functions"></a> Funzioni di query  
  A seconda delle caratteristiche della tabella di origine per cui viene eseguito il rilevamento delle modifiche e del modo in cui la relativa istanza di acquisizione viene configurata, vengono generate una o due funzioni con valori di tabella per l'esecuzione di query sui dati delle modifiche.  
   
 -   La funzione [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) restituisce tutte le modifiche che si sono verificate per l'intervallo specificato. Questa funzione viene sempre generata. Le voci vengono restituite sempre in modo ordinato, prima in base al valore LSN del commit della transazione e successivamente in base a un valore che ordina in sequenza la modifica all'interno della transazione. A seconda dell'opzione del filtro di riga scelta, un aggiornamento può comportare la restituzione della riga finale (opzione del filtro di riga "all") o dei valori nuovi e precedenti (opzione del filtro di riga "all update old").  
@@ -76,7 +76,7 @@ ms.locfileid: "63269887"
   
  La maschera di aggiornamento restituita da una funzione della query è una rappresentazione compatta che identifica tutte le colonne modificate in una riga di dati delle modifiche. Generalmente, queste informazioni sono necessarie solo per un subset delle colonne acquisite di dimensioni ridotte. Le funzioni sono disponibili per consentire l'estrazione delle informazioni dalla maschera in una forma utilizzabile dalle applicazioni in modo più diretto. La funzione [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) restituisce la posizione ordinale di una colonna denominata per una determinata istanza di acquisizione, mentre la funzione [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) restituisce la parità del bit nella maschera fornita in base al numero ordinale passato nella chiamata alla funzione. Se utilizzate insieme, queste due funzioni consentono l'estrazione e la restituzione efficienti delle informazioni dalla maschera di aggiornamento con la richiesta dei dati delle modifiche. Vedere il modello Enumerate Net Changes Using All With Mask per una dimostrazione di come utilizzare queste funzioni.  
   
-##  <a name="Scenarios"></a> Scenari di funzioni di query  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> Scenari di funzioni di query  
  Nelle sezioni seguenti vengono descritti scenari comuni per l'esecuzione di query sui dati di Change Data Capture tramite le funzioni di query cdc.fn_cdc_get_all_changes_<capture_instance> e cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Esecuzione di query per tutte le modifiche comprese nell'intervallo di validità dell'istanza di acquisizione  

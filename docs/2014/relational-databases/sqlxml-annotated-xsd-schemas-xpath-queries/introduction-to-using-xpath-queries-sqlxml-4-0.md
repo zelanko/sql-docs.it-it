@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012706"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
@@ -61,7 +61,7 @@ ms.locfileid: "66012706"
   
      La specifica XPath del W3C non definisce condizioni di errore. Le query XPath che non consentono di selezionare nodi restituiscono un set di nodi vuoto. In SQLXML 4.0 una query può restituire diversi tipi di messaggio di errore.  
   
--   **Ordine dei documenti**  
+-   **Ordine del documento**  
   
      In SQLXML 4.0 l'ordine dei documenti non è sempre definito. Non vengono pertanto implementati gli assi e i predicati numerici che utilizzano un ordine dei documenti (ad esempio `following`).  
   
@@ -89,27 +89,27 @@ ms.locfileid: "66012706"
 ## <a name="supported-functionality"></a>Funzionalità supportata  
  Nella tabella seguente vengono mostrate le caratteristiche del linguaggio XPath implementate in SQLXML 4.0.  
   
-|Funzionalità|Elemento|Collegamento a query di esempio|  
+|Funzionalità|Item|Collegamento a query di esempio|  
 |-------------|----------|----------------------------|  
 |Assi|Assi `attribute`, `child`, `parent` e `self`|[Specifica di assi in query XPath &#40;SQLXML 4,0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Predicati con valori booleani, tra i quali sono inclusi predicati successivi e nidificati||[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Tutti gli operatori relazionali|=,! =, <, \<=, >, >=|[Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operatori aritmetici|+, -, *, div|[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Funzioni di conversione esplicita|`number()`, `string()`, `Boolean()`|[Specifica di funzioni di conversione esplicita nelle query XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|Operatori booleani|AND, OR|[Specifica di operatori booleani in query XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|operatori booleani|AND, OR|[Specifica di operatori booleani in query XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |funzioni booleane|`true()`, `false()`, `not()`|[Specifica di funzioni booleane in query XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variabili XPath||[Specifica di variabili XPath in query XPath &#40;SQLXML 4,0&#41;](samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Funzionalità non supportata  
  Nella tabella seguente vengono mostrate le caratteristiche del linguaggio XPath non implementate in SQLXML 4.0.  
   
-|Funzionalità|Elemento|  
+|Funzionalità|Item|  
 |-------------|----------|  
 |Assi|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |Predicati con valori numerici||  
 |Operatori aritmetici|mod|  
 |Funzioni nodo|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
-|Funzioni stringa|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
+|Funzioni per i valori stringa|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |funzioni booleane|`lang()`|  
 |Funzioni numeriche|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |Operatore Union|&#124;|  
@@ -118,7 +118,7 @@ ms.locfileid: "66012706"
   
 -   XPath può contenere caratteri quali < o & con significati speciali in XML (e il modello è un documento XML). È necessario utilizzare caratteri di escape per questi caratteri utilizzando la codifica XML & o specificare XPath nell'URL.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di query XPath in SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  
   
   

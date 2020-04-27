@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63285764"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
@@ -42,7 +42,7 @@ ms.locfileid: "63285764"
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`type`|Identifica la categoria del problema segnalato dall'elemento Issue:<br /><br /> **"Diagnosi"** Segnala un problema di configurazione rilevato quando si analizza [!INCLUDE[ssSB](../../includes/sssb-md.md)] una configurazione di.<br /><br /> **"Problema"** Segnala un problema che ha impedito a **ssbdiagnose** di completare l'analisi. Correggere il problema ed eseguire di nuovo **ssbdiagnose**.<br /><br /> **"Evento"** Segnala un [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] evento rilevato quando si esegue un controllo **-Runtime** . Gli eventi vengono segnalati solo se è specificata l'opzione **-SHOWEVENTS** .|  
+|`type`|Identifica la categoria del problema segnalato dall'elemento Issue:<br /><br /> **"Diagnosis"** segnala un problema di configurazione rilevato quando si analizza una configurazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problem"** segnala un problema che ha impedito a **ssbdiagnose** di completare l'analisi. Correggere il problema ed eseguire di nuovo **ssbdiagnose**.<br /><br /> **"Event"** segnala un evento di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rilevato quando si esegue un controllo **-RUNTIME** . Gli eventi vengono segnalati solo se è specificata l'opzione **-SHOWEVENTS** .|  
 |`code`|Identifica il numero di errore relativo al messaggio.|  
 |`server`|Identifica l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è stato rilevato il problema. Se il problema si è verificato in un'istanza predefinita, l'attributo server è costituito solo del nome del computer, mentre se il problema si è verificato in un'istanza denominata, il formato dell'attributo server è NomeComputer\NomeIstanza.|  
 |`database`|Identifica il nome dell'istanza del database in cui è stato rilevato il problema.|  
@@ -52,8 +52,7 @@ ms.locfileid: "63285764"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|
-  `string`, lunghezza illimitata.|  
+|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
 |**Valore**|Restituisce il testo del messaggio di errore.|  
 |**Occorrenza**|Una volta per ogni errore segnalato.|  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63285764"
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilità ssbdiagnose &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

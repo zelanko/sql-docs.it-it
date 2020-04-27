@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267475"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Applicazione di filtri a una tabella nidificata in un modello di data mining (Esercitazione intermedia sul data mining)
   Dopo avere creato ed esplorato il modello, si decide che si desidera concentrarsi su un subset dei dati sui clienti. Potrebbe ad esempio essere necessario analizzare solo gli acquisti relativi a uno specifico articolo o analizzare i dati demografici dei clienti che non hanno effettuato acquisti in un determinato periodo.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di filtrare i dati utilizzati in un modello di data mining. Questa funzionalità è utile perché non è necessario configurare una nuova vista origine dati per l'utilizzo di dati diversi. Nell'esercitazione di base sul data mining è stato descritto come filtrare i dati da una tabella flat applicando condizioni alla tabella del case. In questa attività verrà creato un filtro che si applica a una tabella nidificata.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di filtrare i dati utilizzati in un modello di data mining. Questa funzionalità è utile perché non è necessario configurare una nuova vista origine dati per l'utilizzo di dati diversi. Nell'esercitazione di base sul data mining è stato descritto come filtrare i dati da una tabella flat applicando condizioni alla tabella del case. In questa attività verrà creato un filtro che si applica a una tabella nidificata.  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>Filtri su tabelle nidificate o tabelle del case  
  Se la vista origine dati contiene una tabella del case e una tabella nidificata, come la vista origine dati utilizzata nel modello di associazione, è possibile applicare filtri in base ai valori nella tabella del case, alla presenza o assenza di un valore nella tabella nidificata o a una combinazione di entrambi.  
@@ -110,8 +109,8 @@ ms.locfileid: "63267475"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Stima delle associazioni &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sintassi del filtro del modello ed esempi &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

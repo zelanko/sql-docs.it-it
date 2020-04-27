@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014391"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introduzione al provider SQLXMLOLEDB (SQLXML 4.0)
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Proprietà specifiche del provider SQLXMLOLEDB  
  Il provider SQLXMLOLEDB espone le proprietà di connessione specifiche riportate di seguito.  
   
-|Connessione<br /><br /> proprietà|Predefinito<br /><br /> (se disponibile)|Descrizione|  
+|Connessione<br /><br /> proprietà|Impostazione predefinita<br /><br /> (se disponibile)|Descrizione|  
 |-----------------------------|----------------------------|-----------------|  
 |Provider di dati||Specifica il PROGID del provider OLE DB tramite il quale SQLXMLOLEDB esegue i comandi. A partire da SQLXML 4.0 e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], questo provider è contenuto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Il valore di questa proprietà è pertanto limitato a "SQLNCLI11". Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).|  
   
  Il provider SQLXMLOLEDB espone le proprietà dei comandi specifiche riportate di seguito.  
   
-|Comando<br /><br /> proprietà|Predefinito<br /><br /> (se disponibile)|Descrizione|  
+|Comando<br /><br /> proprietà|Impostazione predefinita<br /><br /> (se disponibile)|Descrizione|  
 |--------------------------|----------------------------|-----------------|  
 |Percorso di base|""|Specifica il percorso file di base. Tale percorso viene utilizzato per specificare la posizione dei file XSL (XML Stylesheet Language) o dei file dello schema di mapping. Il percorso del file di base viene utilizzato anche per risolvere i percorsi relativi dei file di schema XSL o di mapping specificati nelle proprietà dello schema XSL o mapping.<br /><br /> Per un esempio in cui viene usata questa proprietà, vedere [esecuzione di query XPath &#40;provider SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Impostare questa proprietà su False se si desidera che il processo di conversione del set di righe in XML venga eseguito sul client anziché sul server. Questa operazione si rivela utile quando si desidera spostare il carico delle prestazioni al livello intermedio.<br /><br /> Per un esempio in cui viene usata questa proprietà, vedere [esecuzione di query sql &#40;provider SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md) o [esecuzione di modelli che contengono query SQL &#40;&#41;del provider SQLXMLOLEDB ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

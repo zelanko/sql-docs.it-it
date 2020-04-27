@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480529"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importazione ed esportazione delle informazioni
@@ -34,7 +34,7 @@ ms.locfileid: "65480529"
 |Importare un'intera Knowledge Base in un file di dati DQS|[Importazione di una Knowledge Base da un file DQS](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Importare i valori da un file di Excel in un dominio|[Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Importare i domini da un file di Excel in una Knowledge Base|[Importare i domini da un file di Excel in Individuazione informazioni](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|Importare le informazioni raccolte durante la pulizia in una Knowledge Base|[Importare i valori di un progetto di pulizia in un dominio](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|Importare le informazioni raccolte durante la pulizia in una Knowledge Base|[Importazione dei valori di un progetto di pulizia in un dominio](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

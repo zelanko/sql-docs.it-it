@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092038"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -37,8 +37,7 @@ ms.locfileid: "65092038"
   
 -   È possibile ottenere migliori prestazioni con le query in base alle tipologie eseguite con maggiore frequenza e alla configurazione hardware in uso. Ad esempio, Query Optimizer è in grado di elaborare query di tipo equijoin tra due o più tabelle partizionate in modo più rapido quando le colonne di partizionamento nelle tabelle corrispondono, in quanto è possibile unire in join le partizioni stesse.  
   
-     Quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'ordinamento dei dati per le operazioni di I/O, i dati vengono innanzitutto ordinati in base alla partizione. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accede a un'unità per volta, il che può comportare una riduzione delle prestazioni. Per migliorare le prestazioni di ordinamento dei dati, eseguire lo striping dei file di dati delle partizioni tra più dischi configurando un sistema RAID. In questo modo, benché tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengano comunque ordinati in base alla partizione, è possibile accedere a tutte le unità di ogni partizione simultaneamente.  
+     Quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'ordinamento dei dati per le operazioni di I/O, i dati vengono innanzitutto ordinati in base alla partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accede a un'unità per volta, il che può comportare una riduzione delle prestazioni. Per migliorare le prestazioni di ordinamento dei dati, eseguire lo striping dei file di dati delle partizioni tra più dischi configurando un sistema RAID. In questo modo, benché tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengano comunque ordinati in base alla partizione, è possibile accedere a tutte le unità di ogni partizione simultaneamente.  
   
      È inoltre possibile migliorare le prestazioni abilitando l'escalation blocchi a livello di partizione invece che di intera tabella. Ciò consente di ridurre gli effetti di contesa dei blocchi per la tabella.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "65092038"
 ## <a name="related-content"></a>Contenuto correlato  
  I seguenti white paper sulle strategie e le implementazioni relative a tabelle e indici partizionati possono risultare particolarmente utili (le informazioni potrebbero essere in lingua inglese).  
   
--   [Strategie relative a tabelle e indici partizionati con SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Strategie relative a tabelle e indici partizionati in SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
 -   [Come implementare una finestra temporale scorrevole automatica](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
@@ -118,6 +117,6 @@ ms.locfileid: "65092038"
   
 -   [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [Le 10 principali procedure consigliate per la creazione di un data warehouse relazionale su larga scala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [Post di blog Prime 10 procedure consigliate per la creazione di un data warehouse relazionale di dimensioni elevate](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

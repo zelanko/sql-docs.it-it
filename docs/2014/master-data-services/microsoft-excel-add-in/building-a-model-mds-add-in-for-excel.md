@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3473ba16ad3a03a95065aea94888654db53187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479342"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilazione di un modello (componente aggiuntivo MDS per Excel)
@@ -33,26 +33,16 @@ ms.locfileid: "65479342"
   
 |Descrizione dell'attività|Strumento|Argomento|  
 |----------------------|----------|-----------|  
-|Creare modelli.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creazione di un modello &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
-|Creare un'entità.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un'entità &#40;Componente aggiuntivo MDS per Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
-|Creare un attributo basato su dominio.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un attributo basato su dominio &#40;Componente aggiuntivo MDS per Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
-|Creare gruppi di attributi.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creazione di un gruppo di attributi &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
-|Creare regole business.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
-|Creare viste sottoscrizioni.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una vista sottoscrizioni &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
-|Creare gerarchie.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
-|Creare raccolte.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una raccolta &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
-|Creare versioni dei dati.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Bloccare una versione &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
-|Distribuire modelli.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web, servizio Web o strumento MDSModelDeploy.|[Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|Creare modelli.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare un modello &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
+|Creare un'entità.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un'entità &#40;componente aggiuntivo MDS per Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
+|Creare un attributo basato su dominio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un attributo basato su dominio &#40;componente aggiuntivo MDS per Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
+|Creare gruppi di attributi.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare un gruppo di attributi &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
+|Creare regole business.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
+|Creare viste sottoscrizioni.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una vista sottoscrizioni &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
+|Creare gerarchie.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
+|Creare raccolte.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una raccolta &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
+|Creare versioni dei dati.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Bloccare una versione &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
+|Distribuire modelli.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web, servizio Web o strumento MDSModelDeploy.|[Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
@@ -66,7 +56,7 @@ ms.locfileid: "65479342"
   
 -   [Gruppi di attributi &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)  
   
--   [Regole business &#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
   
 -   [Esportazione dei dati &#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
   
@@ -76,7 +66,7 @@ ms.locfileid: "65479342"
   
 -   [Versioni &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
--   [&#40;di sicurezza Master Data Services&#41;](../security-master-data-services.md)  
+-   [Sicurezza &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
 -   [Distribuzione di modelli &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   

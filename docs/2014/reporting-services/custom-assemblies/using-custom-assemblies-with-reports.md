@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265659"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Utilizzo di assembly personalizzati con i report
@@ -43,10 +43,10 @@ ms.locfileid: "63265659"
  [Inizializzazione di oggetti assembly personalizzati](initializing-custom-assembly-objects.md)  
  Viene descritto come inizializzare i valori per gli oggetti degli assembly personalizzati chiamati da un report.  
   
- [Procedura: Debug di assembly personalizzati](how-to-debug-custom-assemblies.md)  
+ [Procedura: Eseguire il debug di assembly personalizzati](how-to-debug-custom-assemblies.md)  
  Viene descritto come eseguire il debug del codice dell'assembly personalizzato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)  
   
   

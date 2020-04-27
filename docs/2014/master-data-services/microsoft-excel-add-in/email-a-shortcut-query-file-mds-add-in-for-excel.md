@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478895"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] inviare tramite posta elettronica un file di query collegamento a un'altra persona per assicurarsi di usare gli stessi dati. È necessario condividere query anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario che sia installato Outlook 2010 o versioni successive.  
@@ -37,7 +37,7 @@ ms.locfileid: "65478895"
   
 -   Per aprire il file di query collegamento, nel computer del destinatario del messaggio di posta elettronica deve essere installato MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] . Il destinatario può fare doppio clic sul file per aprirlo.  
   
-## <a name="see-also"></a>Vedere anche  
- [File di query collegamento &#40;Componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Vedi anche  
+ [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

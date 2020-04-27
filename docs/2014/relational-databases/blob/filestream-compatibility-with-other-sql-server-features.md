@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010188"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "66010188"
   
 -   [Crittografia](#encryption)  
   
--   [snapshot del database](#DatabaseSnapshot)  
+-   [Snapshot del database](#DatabaseSnapshot)  
   
 -   [Replica](#Replication)  
   
@@ -45,19 +45,19 @@ ms.locfileid: "66010188"
   
 -   [Database indipendenti](#contained)  
   
-##  <a name="ssis"></a> SQL Server Integration Services (SSIS)  
+##  <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)  
  In SQL Server Integration Services (SSIS) i dati FILESTREAM vengono gestiti nel flusso di dati in modo analogo agli altri dati BLOB, utilizzando il tipo di dati SSIS DT_IMAGE.  
   
  È possibile utilizzare la trasformazione Importa colonna per caricare file dal file system e inserirli in una colonna FILESTREAM. È inoltre possibile utilizzare la trasformazione Esporta colonna per estrarre i file da una colonna FILESTREAM e inserirli in un'altra posizione nel file system.  
   
-##  <a name="distqueries"></a>Query distribuite e server collegati  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a>Query distribuite e server collegati  
  È possibile utilizzare i dati FILESTREAM tramite query distribuite e server collegati, considerandoli `varbinary(max)` come dati. Non è possibile utilizzare la funzione FILESTREAM **PathName()** in query distribuite in cui viene utilizzato un nome in quattro parti, anche quando il nome si riferisce al server locale. Tuttavia, è possibile utilizzare **PathName()** nella query interna di una query pass-through in cui viene utilizzato **OPENQUERY()**.  
   
-##  <a name="encryption"></a>Crittografia  
+##  <a name="encryption"></a><a name="encryption"></a>Crittografia  
  I dati FILESTREAM non vengono crittografati anche se è abilitata la crittografia dei dati trasparenti.  
   
-##  <a name="DatabaseSnapshot"></a>Snapshot del database  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non supporta gli [snapshot del database](../databases/database-snapshots-sql-server.md) per i filegroup FILESTREAM. Se un filegroup FILESTREAM è incluso in una clausola CREATE DATABASE ON, l'istruzione non verrà eseguita e verrà restituito un errore.  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a>Snapshot del database  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta [snapshot del database](../databases/database-snapshots-sql-server.md) per i filegroup FILESTREAM. Se un filegroup FILESTREAM è incluso in una clausola CREATE DATABASE ON, l'istruzione non verrà eseguita e verrà restituito un errore.  
   
  Se si sta utilizzando FILESTREAM, è possibile creare snapshot del database di filegroup standard (non FILESTREAM). I filegroup FILESTREAM sono contrassegnati come offline per questi snapshot del database.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66010188"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replica  
+##  <a name="replication"></a><a name="Replication"></a> Replica  
  Una colonna `varbinary(max)` che ha l'attributo FILESTREAM abilitato sul server di pubblicazione può essere replicata in un sottoscrittore con o senza l'attributo FILESTREAM. Per specificare la modalità di replica della colonna, usare la finestra di dialogo **Proprietà articolo - \<Articolo>** oppure il parametro @schema_option di [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). I dati replicati in una colonna `varbinary(max)` che non dispone dell'attributo FILESTREAM non devono superare il limite di 2 GB per quel tipo di dati; in caso contrario, viene generato un errore di runtime. Si consiglia di replicare l'attributo FILESTREAM, a meno che non si esegua la [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] replica dei dati nei Sottoscrittori, indipendentemente dall'opzione dello schema specificata.  
   
 > [!NOTE]  
@@ -97,30 +97,29 @@ ms.locfileid: "66010188"
   
 -   La replica di tipo merge può sincronizzare i dati FILESTREAM su una connessione HTTPS utilizzando [Sincronizzazione Web](../replication/merge/merge-replication.md). Questi dati non possono superare il limite di 50 MB per la sincronizzazione Web; in caso contrario, viene generato un errore di runtime.  
   
-##  <a name="LogShipping"></a>Log shipping  
- Il [log shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md) supporta FILESTREAM. Sia i server primari che secondari devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o una versione più recente e avere FILESTREAM abilitato.  
+##  <a name="log-shipping"></a><a name="LogShipping"></a> Log Shipping  
+ Il[log shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md) supporta FILESTREAM. Sia i server primari che secondari devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o una versione più recente e avere FILESTREAM abilitato.  
   
-##  <a name="DatabaseMirroring"></a>Mirroring del database  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Mirroring del database  
  Il mirroring del database non supporta FILESTREAM. Non è possibile creare un filegroup FILESTREAM nel server principale, né configurare il mirroring per un database in cui sono contenuti filegroup FILESTREAM.  
   
-##  <a name="FullText"></a>Indicizzazione full-text  
+##  <a name="full-text-indexing"></a><a name="FullText"></a>Indicizzazione full-text  
  L' [indicizzazione full-text](../indexes/indexes.md) funziona con una colonna FILESTREAM nello stesso modo in cui avviene per `varbinary(max)` una colonna. La tabella FILESTREAM deve avere una colonna che contiene l'estensione del nome file per ogni BLOB FILESTREAM. Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../search/query-with-full-text-search.md), [Configurazione e gestione di filtri per la ricerca](../search/configure-and-manage-filters-for-search.md) e [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Il motore full-text consente di indicizzare il contenuto dei BLOB FILESTREAM. L'indicizzazione di file di immagini, ad esempio, potrebbe non essere utile. Un BLOB FILESTREAM viene reindicizzato quando viene aggiornato.  
   
-##  <a name="FailoverClustering"></a>Clustering di failover  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a>Clustering di failover  
  Per il clustering di failover, i filegroup FILESTREAM devono essere inseriti su un disco condiviso. FILESTREAM deve essere abilitato su ogni nodo nel cluster che ospiterà l'istanza FILESTREAM. Per altre informazioni, vedere [Configurazione di FILESTREAM in un cluster di failover](set-up-filestream-on-a-failover-cluster.md).  
   
-##  <a name="SQLServerExpress"></a>SQL Server Express  
- 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] supporta FILESTREAM. Il limite delle dimensioni di 10 GB non include il contenitore dei dati FILESTREAM.  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a>SQL Server Express  
+ [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] supporta FILESTREAM. Il limite delle dimensioni di 10 GB non include il contenitore dei dati FILESTREAM.  
   
-##  <a name="contained"></a>Database indipendenti  
+##  <a name="contained-databases"></a><a name="contained"></a>Database indipendenti  
  La funzionalità FILESTREAM richiede alcuni interventi di configurazione all'esterno del database. Pertanto un database in cui si utilizza FILESTREAM o FileTable non è completamente indipendente.  
   
  È possibile impostare l'indipendenza del database su PARTIAL se si desidera utilizzare alcune funzionalità dei database indipendenti, ad esempio gli utenti indipendenti. In tal caso, tuttavia, è necessario tenere presente che alcune impostazioni del database non sono contenute nel database e non vengono spostate automaticamente quando viene spostato il database.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
   
   

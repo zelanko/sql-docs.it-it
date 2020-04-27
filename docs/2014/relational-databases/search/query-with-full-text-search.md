@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011106"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
   Per definire ricerche full-text, le query full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano i predicati full-text (CONTAINS e FREETEXT) e le funzioni full-text (CONTAINSTABLE e FREETEXTTABLE). Tali predicati e funzioni supportano la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] avanzata che a sua volta supporta vari formati di termini di query. Per scrivere query full-text, è necessario sapere come e quando utilizzare questi predicati e queste funzioni.  
   
-##  <a name="OV_ft_predicates"></a>Cenni preliminari sui predicati full-text (CONTAINs e FREETEXT)  
+##  <a name="overview-of-the-full-text-predicates-contains-and-freetext"></a><a name="OV_ft_predicates"></a>Cenni preliminari sui predicati full-text (CONTAINs e FREETEXT)  
  I predicati CONTAINS e FREETEXT restituiscono un valore TRUE o FALSE. Possono essere utilizzati solo per specificare i criteri di selezione per determinare se una determinata riga corrisponde alla query full-text. Le righe corrispondenti vengono restituite nel set di risultati. CONTAINS e FREETEXT vengono specificati nella clausola WHERE o HAVING di un'istruzione SELECT. Possono essere combinati con qualsiasi altro predicato [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio LIKE e BETWEEN.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Cenni preliminari sulle funzioni full-text (CONTAINSTABLE e FREETEXTTABLE)  
+##  <a name="overview-of-the-full-text-functions-containstable-and-freetexttable"></a><a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Cenni preliminari sulle funzioni full-text (CONTAINSTABLE e FREETEXTTABLE)  
  È possibile fare riferimento alle funzioni CONTAINSTABLE e FREETEXTTABLE come un normale nome di tabella nella clausola FROM di un'istruzione SELECT. Restituiscono una tabella di zero, una o più righe corrispondenti alla query full-text. La tabella restituita contiene solo righe della tabella di base che corrispondono ai criteri di selezione specificati nella condizione della ricerca full-text della funzione.  
   
 > [!NOTE]  
@@ -165,7 +165,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a>Uso degli operatori booleani-AND, OR e NOT-in CONTAINs e CONTAINSTABLE  
+##  <a name="using-boolean-operators---and-or-and-not---in-contains-and-containstable"></a><a name="Using_Boolean_Operators"></a>Uso degli operatori booleani-AND, OR e NOT-in CONTAINs e CONTAINSTABLE  
  Il predicato CONTAINS e la funzione CONTAINSTABLE utilizzano le stesse condizioni di ricerca. Entrambi supportano la combinazione di diversi termini di ricerca tramite gli operatori booleani-AND, OR e NOT-per eseguire operazioni logiche. È ad esempio possibile utilizzare AND per trovare righe che contengono sia "latte" sia New York-style bagel". È possibile utilizzare AND NOT, ad esempio, per trovare le righe che contengono "bagel", ma non "cream cheese".  
   
 > [!NOTE]  
@@ -189,7 +189,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a>Considerazioni aggiuntive per le query full-text  
+##  <a name="additional-considerations-for-full-text-queries"></a><a name="Additional_Considerations"></a>Considerazioni aggiuntive per le query full-text  
  Quando si scrivono query full-text, considerare anche gli elementi seguenti:  
   
 -   Opzione LANGUAGE  
@@ -204,13 +204,13 @@ GO
   
      Per impostazione predefinita, le query FREETEXT e FREETEXTTABLE utilizzano il thesaurus. CONTAINS e CONTAINSTABLE supportano un argomento THESAURUS facoltativo.  
   
--   Distinzione tra maiuscole e minuscole  
+-   Maiuscole/minuscole  
   
      Per le query di ricerca full-text non viene fatta distinzione tra maiuscole e minuscole. La lingua giapponese, tuttavia, prevede più forme fonetiche basate sul concetto di normalizzazione ortografica simile alla mancanza di distinzione tra maiuscole e minuscole, ad esempio kana = senza distinzione. Questo tipo di normalizzazione ortografica non è supportato.  
   
 
   
-##  <a name="varbinary"></a>Esecuzione di query su colonne di tipo varbinary (max) e XML  
+##  <a name="querying-varbinarymax-and-xml-columns"></a><a name="varbinary"></a>Esecuzione di query su colonne di tipo varbinary (max) e XML  
  Se una colonna `varbinary(max)`, `varbinary` o `xml` viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite utilizzando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna indicizzata full-text.  
   
 > [!IMPORTANT]  
@@ -236,7 +236,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  
   
-##  <a name="supported"></a>Forme supportate di termini di query  
+##  <a name="supported-forms-of-query-terms"></a><a name="supported"></a>Forme supportate di termini di query  
  Questa sezione contiene un riepilogo del supporto fornito per ciascuna forma di query dai predicati full-text e dalle funzioni con valori del set di righe.  
   
 > [!NOTE]  
@@ -244,16 +244,16 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |Forma del termine di query|Descrizione|Supportata da|  
 |----------------------|-----------------|------------------|  
-|Una o più parole o frasi specifiche (*termine semplice*)|Nella ricerca full-text una parola (o *token*) è una stringa i cui limiti vengono identificati da word breaker appropriati, in base alle regole linguistiche della lingua specificata. Una frase valida è costituita da più parole, separate o non separate da segni di punteggiatura.<br /><br /> Ad esempio, "croissant" è una parola e "CAF?? Au lait "è una frase. Le parole e le frasi di questo tipo vengono definite termini semplici.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi specifiche (termine semplice)](#Simple_Term)più avanti in questo argomento.|[Contains](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) cercano una corrispondenza esatta per la frase.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) suddividono la frase in parole separate.|  
-|Parola o frase in cui le parole iniziano con il testo specificato (*termine di prefisso*)|Un termine di prefisso fa riferimento a una stringa aggiunta davanti a una parola per produrre una parola derivata o una forma inflessa.<br /><br /> Per un singolo termine di prefisso, qualsiasi parola che inizia con il termine specificato farà parte del set di risultati. Ad esempio, il termine "auto*" corrisponde ad "automatico", "automobile" e così via.<br /><br /> Nel caso di una frase, ogni parola all'interno della frase viene considerata un termine di prefisso. Il termine "tras auto\*", ad esempio, corrisponde a "trasmissione automatica" e a "trasduttore automobile", ma non a "trasmissione motore automatica".<br /><br /> Per altre informazioni, vedere [Esecuzione di ricerche di prefissi (termine di prefisso)](#Prefix_Term)più avanti in questo argomento.|[Contains](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|Forme flessori di una parola specifica (*termine di generazione-flessione*)|Le forme flessive sono costituite dai diversi tempi e coniugazioni di un verbo oppure dalle forme singolare e plurale di un sostantivo. È possibile cercare, ad esempio, la forma flessiva della parola "guida". Se diverse righe della tabella contengono le parole "guida", "guide", "guidò", "guidando" e "guidato", tali parole vengono tutte incluse nel set di risultati, in quanto ognuna può essere generata in modo flessivo da "guida".<br /><br /> Per altre informazioni, vedere [Ricerca di forme flessive di una parola specifica (termine di generazione)](#Inflectional_Generation_Term)più avanti in questo argomento.|Per impostazione predefinita, [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) cercano i termini flessivi di tutte le parole specificate.<br /><br /> [Contains](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) supportano un argomento flesso facoltativo.|  
+|Una o più parole o frasi specifiche (*termine semplice*)|Nella ricerca full-text, una parola (o *token*) è una stringa i cui limiti vengono identificati da word breaker appropriati, in base alle regole linguistiche della lingua specificata. Una frase valida è costituita da più parole, separate o non separate da segni di punteggiatura.<br /><br /> Ad esempio, "croissant" è una parola e "CAF?? Au lait "è una frase. Le parole e le frasi di questo tipo vengono definite termini semplici.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi specifiche (termine semplice)](#Simple_Term)più avanti in questo argomento.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) consentono di cercare una corrispondenza esatta per la frase.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) consentono di suddividere la frase in parole separate.|  
+|Parola o frase in cui le parole iniziano con il testo specificato (*termine di prefisso*)|Un termine di prefisso fa riferimento a una stringa aggiunta davanti a una parola per produrre una parola derivata o una forma inflessa.<br /><br /> Per un singolo termine di prefisso, qualsiasi parola che inizia con il termine specificato farà parte del set di risultati. Ad esempio, il termine "auto*" corrisponde ad "automatico", "automobile" e così via.<br /><br /> Nel caso di una frase, ogni parola all'interno della frase viene considerata un termine di prefisso. Il termine "tras auto\*", ad esempio, corrisponde a "trasmissione automatica" e a "trasduttore automobile", ma non a "trasmissione motore automatica".<br /><br /> Per altre informazioni, vedere [Esecuzione di ricerche di prefissi (termine di prefisso)](#Prefix_Term)più avanti in questo argomento.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Forme flessori di una parola specifica (*termine di generazione-flessione*)|Le forme flessive sono costituite dai diversi tempi e coniugazioni di un verbo oppure dalle forme singolare e plurale di un sostantivo. È possibile cercare, ad esempio, la forma flessiva della parola "guida". Se diverse righe della tabella contengono le parole "guida", "guide", "guidò", "guidando" e "guidato", tali parole vengono tutte incluse nel set di risultati, in quanto ognuna può essere generata in modo flessivo da "guida".<br /><br /> Per altre informazioni, vedere [Ricerca di forme flessive di una parola specifica (termine di generazione)](#Inflectional_Generation_Term)più avanti in questo argomento.|Per impostazione predefinita, [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) cercano i termini flessivi di tutte le parole specificate.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) supportano un argomento INFLECTIONAL facoltativo.|  
 |Sinonimi di una parola specifica (*termine di generazione-thesaurus*)|Un thesaurus definisce i sinonimi specificati dall'utente per i termini. Se viene aggiunta, ad esempio, una voce quale "{macchina, automobile, camion, furgone}" a un thesaurus, è possibile cercare la forma del thesaurus della parola "macchina". Il set di risultati includerà tutte le righe della tabella in cui viene eseguita la query che contengono le parole "automobile", "camion", "furgone" o "macchina", in quanto ciascuna di queste parole appartiene al set di espansione dei sinonimi relativo alla parola "macchina".<br /><br /> Per informazioni sulla struttura dei file del thesaurus, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md).|Per impostazione predefinita, [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) utilizzano il thesaurus.<br /><br /> [Contains](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) supportano un argomento del thesaurus facoltativo.|  
-|Una parola o frase vicina a un'altra parola o frase (*termine di prossimità*)|Un termine di prossimità indica parole o frasi vicine le une alle altre. È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine della ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o nell'ordine in cui sono state specificate.<br /><br /> È possibile, ad esempio, trovare le righe in cui la parola "ghiaccio" è vicina alla parola "hockey" o in cui la frase "pattinaggio su ghiaccio" è vicina alla frase "hockey su ghiaccio".<br /><br /> Per altre informazioni, vedere [Cercare parole vicine a un'altra parola con NEAR](search-for-words-close-to-another-word-with-near.md).|[Contains](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Una parola o frase vicina a un'altra parola o frase (*termine di prossimità*)|Un termine di prossimità indica parole o frasi vicine le une alle altre. È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine della ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o nell'ordine in cui sono state specificate.<br /><br /> È possibile, ad esempio, trovare le righe in cui la parola "ghiaccio" è vicina alla parola "hockey" o in cui la frase "pattinaggio su ghiaccio" è vicina alla frase "hockey su ghiaccio".<br /><br /> Per altre informazioni, vedere [Cercare parole vicine a un'altra parola con NEAR](search-for-words-close-to-another-word-with-near.md).|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |Parole o frasi che usano valori ponderati (*termine ponderato*)|Valore ponderato che indica il grado di importanza di ogni parola e frase all'interno di un set di parole e frasi. Il valore 0,0 corrisponde al peso minimo, mentre 1.0 corrisponde al peso massimo.<br /><br /> Ad esempio, in una query in cui vengono cercati più termini, è possibile assegnare a ogni parola un valore ponderato che ne indica l'importanza in relazione alle altre parole della condizione di ricerca. I risultati di questo tipo di query presentano prima le righe più rilevanti, in base al peso relativo assegnato alle parole della ricerca. I set di risultati includono documenti o righe contenenti alcuni dei termini specificati (o contenuto tra di essi). Alcuni risultati, tuttavia, verranno considerati più pertinenti di altri a causa della variazione nei valori ponderati associati a termini cercati diversi.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi tramite valori ponderati (termine ponderato)](#Weighted_Term)più avanti in questo argomento.|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
-###  <a name="Simple_Term"></a>Ricerca di una parola o di una frase specifica (termine semplice)  
+###  <a name="searching-for-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>Ricerca di una parola o di una frase specifica (termine semplice)  
  È possibile usare [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) per cercare una frase specifica in una tabella. Se, ad esempio, si desidera eseguire una ricerca nella tabella `ProductReview` del database [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] per individuare tutti i commenti su un prodotto utilizzando la frase "learning curve", è possibile utilizzare il predicato CONTAINS nel modo seguente:  
   
 ```  
@@ -270,7 +270,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a>Esecuzione di ricerche di prefissi (termine di prefisso)  
+###  <a name="performing-prefix-searches-prefix-term"></a><a name="Prefix_Term"></a>Esecuzione di ricerche di prefissi (termine di prefisso)  
  È possibile usare [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) per cercare parole o frasi con un prefisso specificato. Vengono restituite tutte le voci nella colonna che contengono testo che inizia con il prefisso specificato. È possibile cercare, ad esempio, tutte le righe che contengono il prefisso `top`-, come in `top``ple`, `top``ping`e `top`. La query appare come la seguente:  
   
 ```  
@@ -289,7 +289,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a>Ricerca di forme flessori di una parola specifica (termine di generazione)  
+###  <a name="searching-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>Ricerca di forme flessori di una parola specifica (termine di generazione)  
  È possibile usare [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) per cercare tutti i diversi tempi e coniugazioni di un verbo o le forme sia singolare sia plurale di un sostantivo (ricerca di forme flessive) oppure i sinonimi di una parola specifica (ricerca thesaurus).  
   
  Nell'esempio seguente vengono cercate tutte le forme del termine "piede" ("piede", "piedi" e così via) presenti nella colonna `Comments` della tabella `ProductReview` nel database `AdventureWorks` .  
@@ -309,7 +309,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a>Ricerca di parole o frasi tramite valori ponderati (termine ponderato)  
+###  <a name="searching-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>Ricerca di parole o frasi tramite valori ponderati (termine ponderato)  
  È possibile usare [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) per cercare parole o frasi e specificare un valore ponderato. Il peso, espresso come numero compreso tra 0,0 e 1,0, indica l'importanza di ogni parola o frase all'interno di un set di parole o frasi. Il valore 0,0 corrisponde al peso minimo, mentre il valore 1,0 corrisponde al peso massimo.  
   
  Nell'esempio seguente viene illustrata una query per la ricerca di tutti gli indirizzi dei clienti, tramite valori di ponderazione, in cui il testo che inizia con la stringa "Bay" contiene anche la parola "Street" o "View". I risultati assegnano un livello di importanza superiore alle righe che contengono il numero maggiore di parole specificate.  
@@ -333,17 +333,17 @@ GO
   
 
   
-##  <a name="tokens"></a>Visualizzazione del risultato della suddivisione in token di una combinazione di Word breaker, thesaurus ed elementi non significativi  
+##  <a name="viewing-the-tokenization-result-of-a-word-breaker-thesaurus-and-stoplist-combination"></a><a name="tokens"></a>Visualizzazione del risultato della suddivisione in token di una combinazione di Word breaker, thesaurus ed elementi non significativi  
  Dopo aver applicato una determinata combinazione di word breaker, thesaurus ed elenco di parole non significative all'input di una stringa di query, è possibile visualizzare il risultato della tokenizzazione usando la DMV **sys.dm_fts_parser**. Per altre informazioni, vedere [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  
   
-## <a name="see-also"></a>Vedere anche  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [CONTIENE &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
- [Creazione di query di ricerca full-text &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
+ [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
  [Migliorare le prestazioni delle query full-text](improve-the-performance-of-full-text-queries.md)  
   
   

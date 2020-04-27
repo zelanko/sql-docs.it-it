@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013947"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coercizioni dei tipi di dati e annotazione sql:datatype (SQLXML 4.0)
@@ -34,15 +34,14 @@ ms.locfileid: "66013947"
  Oltre a specificare un tipo XSD in uno schema, è inoltre possibile specificare un tipo di dati di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'annotazione `sql:datatype`. Le annotazioni `xsd:type` e `sql:datatype` controllano il mapping tra i tipi di dati XSD e i tipi di dati di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="xsdtype-attribute"></a>Attributo xsd:type  
- È possibile utilizzare l'attributo `xsd:type` per specificare il tipo di dati XML di un attributo o di un elemento con mapping a una colonna. 
-  `xsd:type` influisce sul documento restituito dal server nonché sulla query XPath eseguita. Quando viene eseguita una query XPath su uno schema di mapping contenente `xsd:type`, XPath utilizza il tipo di dati specificato durante l'elaborazione della query. Per ulteriori informazioni sull'utilizzo `xsd:type`di XPath, vedere [mapping dei tipi di dati XSD ai tipi di dati xpath &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ È possibile utilizzare l'attributo `xsd:type` per specificare il tipo di dati XML di un attributo o di un elemento con mapping a una colonna. `xsd:type` influisce sul documento restituito dal server nonché sulla query XPath eseguita. Quando viene eseguita una query XPath su uno schema di mapping contenente `xsd:type`, XPath utilizza il tipo di dati specificato durante l'elaborazione della query. Per ulteriori informazioni sull'utilizzo `xsd:type`di XPath, vedere [mapping dei tipi di dati XSD ai tipi di dati xpath &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  In un documento restituito tutti i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in rappresentazioni di stringa. Alcuni tipi di dati richiedono conversioni aggiuntive. Nella tabella seguente sono elencate le conversioni utilizzate per i diversi valori di `xsd:type`.  
   
 |Tipo di dati XSD|Conversione SQL Server|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Data|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
@@ -98,7 +97,7 @@ ms.locfileid: "66013947"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>R. Definizione dell'attributo xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Definizione dell'attributo xsd:type  
  In questo esempio viene illustrato il modo in cui un tipo XSD `date` specificato tramite l'attributo `xsd:type` nello schema influisce sul documento XML risultante. Lo schema fornisce una vista XML della tabella Sales.SalesOrderHeader nel database AdventureWorks.  
   
 ```  

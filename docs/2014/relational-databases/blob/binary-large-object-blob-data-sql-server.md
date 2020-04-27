@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010334"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Dati BLOB (Binary Large Object) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce soluzioni per l'archiviazione di file e documenti nel database o su dispositivi di archiviazione remoti.  
   
-##  <a name="section"></a>Contenuto della sezione  
- [Confrontare le opzioni per archiviare i BLOB &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
+##  <a name="in-this-section"></a><a name="section"></a>Contenuto della sezione  
+ [Confrontare opzioni per l'archiviazione di BLOB &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
  Confrontare i vantaggi di FILESTREAM, FileTable e Archivio BLOB remoti.  
   
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

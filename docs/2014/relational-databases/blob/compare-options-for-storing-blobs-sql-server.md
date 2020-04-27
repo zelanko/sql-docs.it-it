@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010353"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
   Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Archiviazione di file nel database: vantaggi e comportamenti previsti  
+##  <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Archiviazione di file nel database: vantaggi e comportamenti previsti  
  Nella realtà un'ampia percentuale di dati aziendali non è strutturata e generalmente viene archiviata come file e documenti in file system. La maggior parte di questi dati viene prodotta, gestita e utilizzata da applicazioni che accedono ai file tramite API Windows. Solitamente le aziende mantengono questi dati nel file system, archiviando i metadati correlati per i file in un database relazionale.  
   
  L'integrazione dei dati non strutturati nel database relazionale offre vantaggi significativi. Tra i vantaggi offerti è incluso quanto segue:  
@@ -37,14 +37,13 @@ ms.locfileid: "66010353"
   
 -   Le applicazioni di Windows richiedono compatibilità con le API del file system per i dati di file e directory.  
   
-##  <a name="Filestream"></a> FILESTREAM  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone già della funzione FILESTREAM, che fornisce funzionalità di archiviazione, gestione e flusso dati efficienti per i dati non strutturati archiviati come file nel file system. Una soluzione FILESTREAM, tuttavia, richiede programmazione personalizzata e non soddisfa i requisiti per la piena compatibilità delle applicazioni Windows descritta sopra.  
+##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone già della funzione FILESTREAM, che fornisce funzionalità di archiviazione, gestione e flusso dati efficienti per i dati non strutturati archiviati come file nel file system. Una soluzione FILESTREAM, tuttavia, richiede programmazione personalizzata e non soddisfa i requisiti per la piena compatibilità delle applicazioni Windows descritta sopra.  
   
-##  <a name="FileTables"></a> FileTable  
+##  <a name="filetables"></a><a name="FileTables"></a>Tabelle FileTable  
  La caratteristica FileTable si basa sulle funzionalità FILESTREAM esistenti per consentire ai clienti aziendali di archiviare dati di file non strutturati e gerarchie di directory in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soddisfacendo i requisiti per l'accesso non transazionale e la compatibilità delle applicazioni Windows per i dati basati su file.  
   
-##  <a name="CompareFileTable"></a> Confronto tra FILESTREAM e tabelle FileTable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Confronto tra FILESTREAM e FileTable  
   
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
@@ -56,10 +55,10 @@ ms.locfileid: "66010353"
 |**Compatibilità delle applicazioni di Windows**|Sì|No|**Sì**|  
 |**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
   
-##  <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
+##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
  Per un confronto tra queste due caratteristiche, vedere il post di blog del team RBS: [Confronto tra le funzionalità Archivio BLOB remoti e FILESTREAM di SQL Server](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
-##  <a name="more"></a> Ulteriori informazioni  
+##  <a name="more-information"></a><a name="more"></a> Altre informazioni  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
  [Archivio Blob remoto &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
