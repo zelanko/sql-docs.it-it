@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629632"
 ---
 # <a name="best-practices-for-replication-administration"></a>Procedure consigliate per l'amministrazione della replica
@@ -58,12 +58,12 @@ ms.locfileid: "62629632"
   
 -   Database di sottoscrizione  
   
--   database **msdb** e database **Master** nel server di pubblicazione, nel server di distribuzione e in tutti i sottoscrittori  
+-   Database**msdb** e **master** nel server di pubblicazione, nel server di distribuzione e in tutti i Sottoscrittori  
   
  Il backup e il ripristino dei dati dei database replicati richiedono un'attenzione particolare. Per altre informazioni, vedere [Eseguire il backup e ripristino di database replicati](back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Creare lo script della topologia di replica  
- Gli script di tutti i componenti di replica inclusi in una topologia devono essere creati come parte di un piano di ripristino di emergenza. Gli script possono inoltre essere utilizzati per automatizzare attività ripetitive. Essi contengono le stored procedure di sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necessarie per implementare i componenti di replica inseriti in uno script, ad esempio una pubblicazione o una sottoscrizione, Gli script possono essere creati in una procedura guidata, ad esempio la creazione guidata nuova pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , o in dopo la creazione di un componente. È possibile visualizzare, modificare ed eseguire lo script utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Gli script possono essere memorizzati con file di backup da utilizzare nel caso in cui sia necessario riconfigurare una topologia di replica. Per altre informazioni, vedere [Scripting Replication](../scripting-replication.md).  
+ Gli script di tutti i componenti di replica inclusi in una topologia devono essere creati come parte di un piano di ripristino di emergenza. Gli script possono inoltre essere utilizzati per automatizzare attività ripetitive. Essi contengono le stored procedure di sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necessarie per implementare i componenti di replica inseriti in uno script, ad esempio una pubblicazione o una sottoscrizione, È possibile creare gli script tramite una procedura guidata, come la Creazione guidata nuova pubblicazione, o in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] dopo aver creato un componente. È possibile visualizzare, modificare ed eseguire lo script utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Gli script possono essere memorizzati con file di backup da utilizzare nel caso in cui sia necessario riconfigurare una topologia di replica. Per altre informazioni, vedere [Scripting Replication](../scripting-replication.md).  
   
  In caso di modifiche a una proprietà, è necessario riscrivere lo script di un componente. Se si utilizzano stored procedure personalizzate con la replica transazionale, è consigliabile archiviare una copia di ogni procedura con gli script, aggiornando la copia in caso di modifica della procedura. Le procedure vengono in genere aggiornate in seguito a modifiche dello schema o a nuove esigenze applicative. Per altre informazioni sulle procedure personalizzate, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62629632"
   
 -   Parametri degli agenti  
   
--   Manutenzione   
+-   Manutenzione  
   
  Dopo aver configurato la replica, è consigliabile sviluppare dati di riferimento per le prestazioni in modo da poter stabilire il comportamento della replica in presenza del carico di lavoro tipico delle applicazioni e della topologia in uso. Utilizzare Monitoraggio replica e Monitor di sistema per stabilire i valori tipici per le cinque dimensioni seguenti delle prestazioni della replica:  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62629632"
   
 -   Monitoraggio replica è lo strumento più importante per il monitoraggio di una replica in quanto consente di controllare lo stato generale di una topologia di replica. Per altre informazioni, vedere [Monitoring Replication](../monitoring-replication.md).  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] e gli oggetti RMO (Replication Management Objects) includono interfacce per il monitoraggio della replica. Per altre informazioni, vedere [Monitoring Replication](../monitoring-replication.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] e gli oggetti RMO (Replication Management Objects) includono interfacce per il monitoraggio della replica. Per altre informazioni, vedere [Monitoring Replication](../monitoring-replication.md).  
   
 -   Il monitoraggio delle prestazioni della replica può essere effettuato anche mediante Monitor di sistema. Per altre informazioni, vedere [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md).  
   
@@ -134,7 +133,7 @@ ms.locfileid: "62629632"
  Dopo la creazione di una pubblicazione, potrebbe essere necessario aggiungere o eliminare articoli oppure modificare le proprietà della pubblicazione e degli articoli. Dopo la creazione di una pubblicazione è consentita la maggiore parte delle modifiche. In alcuni casi, tuttavia, è necessario generare un nuovo snapshot per una pubblicazione e/o reinizializzare le relative sottoscrizioni. Per altre informazioni, vedere [Modificare le proprietà di pubblicazioni e articoli](../publish/change-publication-and-article-properties.md) e [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>Comprendere in che modo apportare modifiche allo schema se i requisiti dell'applicazione cambiano  
- In molti casi le modifiche apportate allo schema sono richieste quando un'applicazione viene messa in produzione. In una topologia di replica tali modifiche devono spesso essere propagate a tutti i Sottoscrittori. La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si esegue una delle modifiche dello schema seguenti nell'oggetto pubblicato appropriato in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server di pubblicazione, tale modifica viene propagata per impostazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] predefinita a tutti i sottoscrittori:  
+ In molti casi le modifiche apportate allo schema sono richieste quando un'applicazione viene messa in produzione. In una topologia di replica tali modifiche devono spesso essere propagate a tutti i Sottoscrittori. La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle seguenti modifiche dello schema nell'oggetto pubblicato appropriato nel server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tale modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   MODIFICA TABELLA  
   

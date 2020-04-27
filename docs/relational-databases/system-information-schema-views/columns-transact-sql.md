@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 021e9e66b281a8bbca6d5c9e21e78ffa4069c5c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950793"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67950793"
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **&#42;&#42; importanti &#42;&#42;** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della tabella.|  
-|**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome della colonna.|  
+|**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome colonna.|  
 |**ORDINAL_POSITION**|**int**|Numero di identificazione della colonna.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valore predefinito della colonna.|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|Impostazione relativa al supporto di valori Null nella colonna. Se nella colonna sono consentiti valori NULL, in questa colonna viene restituito YES. In caso contrario, viene restituito NO.|  
@@ -71,15 +71,15 @@ WHERE TABLE_NAME = 'Person';
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. syscharsets &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys. Configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [COLUMNS_UPDATED &#40;&#41;Transact-SQL](../../t-sql/functions/columns-updated-transact-sql.md)  
+ [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. Types &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907338"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67907338"
 |**max_distretention**|**int**|Periodo di memorizzazione massimo, espresso in ore, trascorso il quale le transazioni vengono eliminate.|  
 |**history_retention**|**int**|Numero di ore di memorizzazione della cronologia.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

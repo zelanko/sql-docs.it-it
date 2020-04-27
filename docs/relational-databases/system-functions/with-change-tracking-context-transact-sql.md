@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 90610b8b93d0d03a41c6dbbae6c2a9a4e9678aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950928"
 ---
 # <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
@@ -41,7 +41,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *contesto*  
+ *context*  
  Informazioni contestuali fornite dall'applicazione chiamante e memorizzate con le informazioni sul rilevamento delle modifiche per la modifica. *context* è di tipo **varbinary (128)**.  
   
  Il valore può essere una costante o una variabile, ma non può essere NULL.  
@@ -53,9 +53,9 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 WITH CHANGE_TRACKING_CONTEXT ( context )  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Funzioni Rilevamento modifiche &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [CHANGETABLE &#40;&#41;Transact-SQL](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

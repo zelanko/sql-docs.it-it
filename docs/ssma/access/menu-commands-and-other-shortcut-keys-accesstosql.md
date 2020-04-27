@@ -10,10 +10,10 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907137"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandi di menu e altri tasti di scelta rapida (AccessToSQL)
@@ -57,7 +57,7 @@ Per accedere al menu modifica, il tasto di scelta rapida utilizzato è ALT + E. 
 |Trova precedente.|ALT + E + F + P o CTRL + MAIUSC + F3|  
 |Trova successivo|ALT + E + F + N o CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Comandi del menu Visualizza  
+## <a name="view-menu-commands"></a>comandi del menu Visualizza  
 Per accedere al menu Visualizza, il tasto di scelta rapida utilizzato è ALT + V. Nella tabella seguente vengono descritti i tasti di scelta rapida usati per accedere alle voci di menu nel menu Visualizza.  
   
 |PER ESEGUIRE QUESTA OPERAZIONE|Premere|  
@@ -96,7 +96,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Esporta schema.|ALT + T + E|  
 |Elimina localmente.|ALT + T + D|  
   
-## <a name="help-menu-commands"></a>Comandi di menu della Guida  
+## <a name="help-menu-commands"></a>comandi del menu ?  
 Per accedere al menu?, il tasto di scelta rapida utilizzato è ALT + H. Nella tabella seguente vengono descritti i tasti di scelta rapida usati per accedere alle voci di menu nel menu Guida.  
   
 |PER ESEGUIRE QUESTA OPERAZIONE|Premere|  
@@ -188,6 +188,6 @@ Per accedere al menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Avviare informazioni rapide.|CTRL + MAIUSC + BARRA SPAZIATRICE|  
 |Vai a dichiarazione.|F12|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Tasti di scelta rapida &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

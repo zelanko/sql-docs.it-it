@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899502"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-SQL)
@@ -26,13 +26,13 @@ ms.locfileid: "67899502"
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|Query di cui fa parte questo ruolo di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Query di cui fa parte questo ruolo di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Passaggio della query di cui fa parte questo ruolo di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Vedere step_index in [sys. dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Eseguire un passaggio nel piano DMS in cui è in esecuzione il thread di lavoro.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.||  
 |pdw_node_id|**int**|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere node_id in [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribuzione in cui il thread di lavoro è in esecuzione, se disponibile.|Vedere distribution_id in [sys. pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|type|**nvarchar (32)**|Tipo di thread di lavoro DMS rappresentato da questa voce.|' DIRECT_CONVERTER ',' DIRECT_READER ',' FILE_READER ',' HASH_CONVERTER ',' HASH_READER ',' ROUNDROBIN_CONVERTER ',' EXPORT_READER ',' EXTERNAL_READER ',' EXTERNAL_WRITER ',' PARALLEL_COPY_READER ',' REJECT_WRITER ',' WRITER '|  
-|status|**nvarchar (32)**|Stato del ruolo di lavoro DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|tipo|**nvarchar(32)**|Tipo di thread di lavoro DMS rappresentato da questa voce.|' DIRECT_CONVERTER ',' DIRECT_READER ',' FILE_READER ',' HASH_CONVERTER ',' HASH_READER ',' ROUNDROBIN_CONVERTER ',' EXPORT_READER ',' EXTERNAL_READER ',' EXTERNAL_WRITER ',' PARALLEL_COPY_READER ',' REJECT_WRITER ',' WRITER '|  
+|status|**nvarchar(32)**|Stato del ruolo di lavoro DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Velocità effettiva di lettura o scrittura nell'ultimo secondo.|Maggiore o uguale a 0. NULL se la query è stata annullata o non riuscita prima dell'esecuzione del thread di lavoro.|  
 |bytes_processed|**bigint**|Byte totali elaborati da questo thread di lavoro.|Maggiore o uguale a 0. NULL se la query è stata annullata o non riuscita prima dell'esecuzione del thread di lavoro.|  
 |rows_processed|**bigint**|Numero di righe lette o scritte per questo ruolo di lavoro.|Maggiore o uguale a 0. NULL se la query è stata annullata o non riuscita prima dell'esecuzione del thread di lavoro.|  
@@ -50,7 +50,7 @@ ms.locfileid: "67899502"
   
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

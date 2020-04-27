@@ -18,10 +18,10 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68140553"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
@@ -44,8 +44,8 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
- **tavolo**  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+ **tabella**  
  Nome di una tabella per cui è abilitata l'indicizzazione full-text e semantica.  
   
  Questo nome può essere costituito da una a quattro parti, ma non è consentito un nome di server remoto.  
@@ -89,7 +89,7 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni SELECT per la tabella di base in cui sono stati creati gli indici full-text e semantico.  

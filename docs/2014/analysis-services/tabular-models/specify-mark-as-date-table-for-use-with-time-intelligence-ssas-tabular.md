@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284885"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali (SSAS tabulare)
@@ -36,11 +36,11 @@ ms.locfileid: "67284885"
   
 1.  In Progettazione modelli fare clic sulla tabella relativa alla data.  
   
-2.  Scegliere **Data**dal menu **tabella** , quindi fare clic su **Contrassegna come tabella data**  
+2.  Fare clic sul menu **Tabella** , selezionare **Data**, quindi scegliere **Contrassegna come tabella data**  
   
 3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Ad esempio:  
   
-    |Data|  
+    |Date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -50,7 +50,7 @@ ms.locfileid: "67284885"
   
 4.  Se necessario, creare tutte le relazioni tra le tabelle dei fatti e la tabella relativa alla data.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Calcoli &#40;SSAS tabulare&#41;](calculations-ssas-tabular.md)   
  [Funzioni di Business Intelligence per le attività temporali &#40;&#41;DAX](/dax/time-intelligence-functions-dax)  
   

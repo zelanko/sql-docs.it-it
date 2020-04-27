@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691477"
 ---
 # <a name="server-public-permissions"></a>Autorizzazioni server per il ruolo public
@@ -26,7 +26,7 @@ ms.locfileid: "62691477"
  Non concedere autorizzazioni server al ruolo del server public.  
   
 > [!IMPORTANT]  
->  Al termine dell'installazione, **** il ruolo public `CONNECT` dispone dell'autorizzazione per tutti gli endpoint ad eccezione della **connessione amministrativa dedicata**. Questa situazione è normale e, generalmente, non deve essere modificata (l'accesso viene controllato tramite l'autorizzazione `CONNECT SQL` che viene concessa automaticamente in caso di creazione di nuovi account di accesso).  
+>  Al termine dell'installazione, **PUBLIC** il ruolo public `CONNECT` dispone dell'autorizzazione per tutti gli endpoint ad eccezione della **connessione amministrativa dedicata**. Questa situazione è normale e, generalmente, non deve essere modificata (l'accesso viene controllato tramite l'autorizzazione `CONNECT SQL` che viene concessa automaticamente in caso di creazione di nuovi account di accesso).  
   
 ### <a name="for-more-information"></a>Per ulteriori informazioni  
  [Sicurezza di SQL Server](../security/securing-sql-server.md)  

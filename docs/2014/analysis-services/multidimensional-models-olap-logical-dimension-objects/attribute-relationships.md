@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728517"
 ---
 # <a name="attribute-relationships"></a>Relazioni tra attributi
@@ -56,7 +56,7 @@ ms.locfileid: "62728517"
   
 -   Sesso  
   
--   Email  
+-   Posta elettronica  
   
 -   city  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62728517"
 ## <a name="attribute-relationship-queries"></a>Query sulla relazione tra attributi  
  È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi in forma di proprietà del membro, tramite la parola chiave `PROPERTIES` dell'istruzione `SELECT` MDX. Per ulteriori informazioni sull'utilizzo di MDX per recuperare le proprietà dei membri, vedere [utilizzo delle proprietà dei membri &#40;&#41;MDX ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
  [Riferimento alle proprietà degli attributi delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Gerarchie utente](user-hierarchies.md)   

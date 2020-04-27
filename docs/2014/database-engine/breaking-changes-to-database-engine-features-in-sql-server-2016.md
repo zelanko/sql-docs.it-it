@@ -14,19 +14,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67419040"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Modifiche che possono causare problemi di funzionamento apportate alle funzionalità del Motore di database in SQL Server 2014.
   In questo argomento vengono descritte le modifiche [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] di rilievo apportate in e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
-##  <a name="SQL14"></a> Modifiche di rilievo in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="breaking-changes-in-sssql14"></a><a name="SQL14"></a> Modifiche di rilievo in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Nessun nuovo problema.  
   
-##  <a name="Denali"></a>Modifiche di rilievo in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="breaking-changes-in-sssql11"></a><a name="Denali"></a>Modifiche di rilievo in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67419040"
   
 ### <a name="dynamic-management-views"></a>DMV (Dynamic Management View)  
   
-|Visualizza|Descrizione|  
+|Visualizzazione|Descrizione|  
 |----------|-----------------|  
 |sys.dm_exec_requests|La colonna del comando viene modificata da `nvarchar(16)` a `nvarchar(32)`.|  
 |sys.dm_os_memory_cache_counters|Le colonne seguenti sono state rinominate:<br /><br /> single_pages_kb è ora: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           è ora: pages_in_use_kb|  
@@ -62,7 +62,7 @@ ms.locfileid: "67419040"
   
 ### <a name="catalog-views"></a>Viste del catalogo  
   
-|Visualizza|Descrizione|  
+|Visualizzazione|Descrizione|  
 |----------|-----------------|  
 |sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|Una colonna nuova, is_system, è stata aggiunta a sys.data_spaces e a sys.partition_functions. sys.partition_schemes e sys.filegroups ereditano le colonne di sys.data_spaces.<br /><br /> Un valore 1 in questa colonna indica che l'oggetto viene usato per i frammenti dell'indice full-text.<br /><br /> In sys.partition_functions, sys.partition_schemes e sys.filegroups, la nuova colonna non è l'ultima. Rivedere le query esistenti basate sull'ordine delle colonne restituito da queste viste del catalogo.|  
   
@@ -132,8 +132,7 @@ ms.locfileid: "67419040"
  Address Windowing Extensions (AWE) a 32 bit non è più supportato. Ciò potrebbe comportare un calo delle prestazioni nei sistemi operativi a 32 bit. Per installazioni che richiedono grandi quantità di memoria, eseguire la migrazione a un sistema operativo a 64 bit.  
   
 ### <a name="xquery-functions-are-surrogate-aware"></a>Le funzioni XQuery riconoscono i surrogati  
- L'indicazione W3C per gli operatori e le funzioni XQuery richiede il riconoscimento di una coppia di surrogati che rappresenti un carattere Unicode surrogato alto come un singolo glifo nella codifica UTF-16. Tuttavia, nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le funzioni stringa non riconoscono le coppie di surrogati come singolo carattere. Alcune operazioni di stringa, ad esempio i calcoli di lunghezza delle stringhe e le estrazioni di sottostringhe, restituiscono risultati non corretti. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta ora il formato UTF-16 e la gestione corretta di coppie di surrogati.  
+ L'indicazione W3C per gli operatori e le funzioni XQuery richiede il riconoscimento di una coppia di surrogati che rappresenti un carattere Unicode surrogato alto come un singolo glifo nella codifica UTF-16. Tuttavia, nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le funzioni stringa non riconoscono le coppie di surrogati come singolo carattere. Alcune operazioni di stringa, ad esempio i calcoli di lunghezza delle stringhe e le estrazioni di sottostringhe, restituiscono risultati non corretti. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta ora il formato UTF-16 e la gestione corretta di coppie di surrogati.  
   
  Il tipo di dati XML in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente unicamente coppie di surrogati con formati corretti. In alcune circostanze alcune funzioni possono tuttavia restituire ancora risultati non definiti o non previsti, poiché è possibile passare coppie di surrogati parziali o non valide alle funzioni XQuery come valori stringa. Si considerino i metodi seguenti per la generazione di valori stringa quando si usa XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -193,7 +192,7 @@ ms.locfileid: "67419040"
   
 -   **FN: substring**  
   
-##  <a name="KJKatmai"></a>Modifiche di rilievo in SQL Server 2008/SQL Server 2008R2  
+##  <a name="breaking-changes-in-sql-server-2008sql-server-2008r2"></a><a name="KJKatmai"></a>Modifiche di rilievo in SQL Server 2008/SQL Server 2008R2  
  In questa sezione si illustrano le modifiche di rilievo introdotte in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nessuna modifica è stata introdotta in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
 ### <a name="collations"></a>Regole di confronto  
@@ -212,7 +211,7 @@ ms.locfileid: "67419040"
   
 ### <a name="dynamic-management-views"></a>DMV (Dynamic Management View)  
   
-|Visualizza|Descrizione|  
+|Visualizzazione|Descrizione|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Sono state rimosse le colonne cpu_ticks_in_ms e sqlserver_start_time_cpu_ticks.|  
 |sys. dm_exec_query_resource_semaphoressys. dm_exec_query_memory_grants|La colonna resource_semaphore_id non è un ID univoco in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere [sys. dm_exec_query_resource_semaphores &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
@@ -253,7 +252,7 @@ ms.locfileid: "67419040"
 |Supporto di dati datetime|In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]i tipi `xs:time`di dati, `xs:date`e `xs:dateTime` non dispongono del supporto del fuso orario. Viene eseguito il mapping dei dati del fuso orario al fuso orario UTC. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] presenta un comportamento conforme agli standard che determina le modifiche seguenti:<br /><br /> Vengono convalidati i valori senza fuso orario.<br /><br /> Viene mantenuto il fuso orario fornito o viene preservata l'assenza di un fuso orario.<br /><br /> Viene modificata la rappresentazione di archiviazione interna.<br /><br /> Viene aumentata la risoluzione dei valori archiviati.<br /><br /> Non sono consentiti anni negativi.<br /><br /> <br /><br /> Nota: modificare le applicazioni e le espressioni XQuery per tenere conto dei nuovi valori di tipo.|  
 |Espressioni XQuery e Xpath|In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]i passaggi in un'espressione XQuery o XPath che iniziano con i due punti (':') sono consentiti. L'istruzione seguente, ad esempio, contiene un test di nome (`CTR02)` all'interno dell'espressione di percorso che inizia con due punti.<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] questo utilizzo non è consentito, in quanto non è conforme agli standard XML. Viene restituito l'errore 9341. Rimuovere i due punti iniziali o specificare un prefisso per il test del nome, ad esempio (n$/CTR02) o (n$/p1:CTR02).|  
   
-### <a name="connecting"></a>Connessione  
+### <a name="connecting"></a>Connecting  
   
 |Funzionalità|Descrizione|  
 |-------------|-----------------|  
@@ -261,15 +260,15 @@ ms.locfileid: "67419040"
 ||Aggiungere un alias in modo da eseguire il mapping di shortname al nome di dominio completo.<br /><br /> -Questa opzione funziona anche per le applicazioni che dispongono di stringhe di connessione hardcoded.<br /><br /> -Questa opzione non funziona per le applicazioni che utilizzano il mirroring del database perché i provider non cercano gli alias per i nomi dei partner di failover ricevuti.|  
 ||Ottenere un certificato emesso per shortname.<br /><br /> -Questa opzione funziona per tutte le applicazioni.|  
 
-## <a name="Yukon"></a>Modifiche di rilievo nella SQL Server 2005  
+## <a name="breaking-changes-in-sql-server-2005"></a><a name="Yukon"></a>Modifiche di rilievo nella SQL Server 2005  
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di motore di database deprecate SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
  [Modifiche del comportamento delle funzionalità di motore di database in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
  [Funzionalità di motore di database sospese in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
- [Compatibilità con le versioni precedenti di SQL Server motore di database](sql-server-database-engine-backward-compatibility.md)   
+ [Compatibilità con le versioni precedenti del motore di database di SQL Server](sql-server-database-engine-backward-compatibility.md)   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [Modifiche di rilievo nelle funzionalità degli strumenti di gestione in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  
   

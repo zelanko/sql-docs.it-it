@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711137"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Finestra di dialogo Join (Visual Database Tools)
-  Questa finestra di dialogo consente di specificare le opzioni per il join delle tabelle. Per accedere a tale finestra di dialogo, nel riquadro **Progettazione** selezionare una linea di join. Nella finestra **Proprietà** fare clic su **condizione e tipo di join**e quindi sui puntini di sospensione **(...)** visualizzati a destra della proprietà.  
+  Questa finestra di dialogo consente di specificare le opzioni per il join delle tabelle. Per accedere a tale finestra di dialogo, nel riquadro **Progettazione** selezionare una linea di join. Nella finestra **Proprietà** fare clic su **Tipo e condizione di join**e sui puntini di sospensione **(...)** a destra della proprietà.  
   
  Per impostazione predefinita, le tabelle correlate vengono unite utilizzando un inner join che crea un set di risultati basato su righe contenenti informazioni corrispondenti nelle colonne join. Impostando le opzioni nella finestra di dialogo **Join** , è possibile specificare sia un join basato su un diverso operatore che un outer join.  
   

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727275"
 ---
 # <a name="proactive-caching-partitions"></a>Memorizzazione nella cache attiva (partizioni)
@@ -42,8 +42,8 @@ ms.locfileid: "62727275"
 ### <a name="maximizing-performance"></a>Ottimizzazione delle prestazioni  
  Per ottimizzare le prestazioni riducendo al tempo stesso la latenza, è inoltre possibile utilizzare la memorizzazione nella cache senza eliminare gli oggetti MOLAP correnti. Le query in questo caso continuano a essere eseguite sugli oggetti MOLAP mentre i dati vengono letti ed elaborati in una nuova cache. Questa modalità di archiviazione consente di ottenere prestazioni migliori, ma è possibile che i dati restituiti dalle query non siano aggiornati durante la fase di compilazione della nuova cache.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Archiviazione dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Impostare l'archiviazione delle partizioni &#40;Analysis Services-&#41;multidimensionali](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [Impostare l'archiviazione delle partizioni &#40;Analysis Services - Multidimensionale&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

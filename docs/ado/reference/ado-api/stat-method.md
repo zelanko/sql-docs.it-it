@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916874"
 ---
 # <a name="stat-method"></a>Metodo Stat
@@ -57,13 +57,13 @@ Long stream.Stat(StatStg, StatFlag)
  Specifica la dimensione in byte del flusso o della matrice di byte.  
   
  *mtime*  
- Indica l'ora dell'Ultima modifica di questa archiviazione, flusso o matrice di byte.  
+ Indica l'ora dell'ultima modifica di questo archivio, flusso o matrice di byte.  
   
- *CTime*  
- Indica l'ora di creazione per questa archiviazione, flusso o matrice di byte.  
+ *ctime*  
+ Indica l'ora di creazione di questo archivio, flusso o matrice di byte.  
   
  *dell'atime*  
- Indica l'ora dell'ultimo accesso per questa archiviazione, flusso o matrice di byte.  
+ Indica l'ora dell'ultimo accesso di questo archivio, flusso o matrice di byte.  
   
  Se STATFLAG_NONAME viene specificato nel parametro StatFlag, il nome del flusso non viene restituito.  
   

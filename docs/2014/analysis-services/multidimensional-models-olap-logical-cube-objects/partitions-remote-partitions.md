@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727346"
 ---
 # <a name="remote-partitions"></a>Partizioni remote
@@ -43,7 +43,7 @@ ms.locfileid: "62727346"
   
 |||  
 |-|-|  
-|Tipo di archiviazione|data|  
+|Tipo di archiviazione|Data|  
 |MOLAP|Aggregazioni della partizione e una copia dei dati di origine della partizione|  
 |HOLAP|Aggregazioni delle partizioni|  
 |ROLAP|Nessun dato della partizione|  
@@ -56,8 +56,8 @@ ms.locfileid: "62727346"
 ## <a name="archiving-and-restoring-remote-partitions"></a>Archiviazione e ripristino di partizioni remote  
  È possibile archiviare o ripristinare i dati delle partizioni remote quando il database in cui è memorizzata la partizione remota viene archiviato o ripristinato. Se si ripristina un database senza ripristinare una partizione remota, è necessario elaborare la partizione remota per poter utilizzare i dati della partizione. Per ulteriori informazioni sull'archiviazione e il ripristino di database, vedere [backup e ripristino di database Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare e gestire una partizione remota &#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Elaborazione di oggetti Analysis Services](../multidimensional-models/processing-analysis-services-objects.md)  
+ [Elaborazione di oggetti di Analysis Services](../multidimensional-models/processing-analysis-services-objects.md)  
   
   

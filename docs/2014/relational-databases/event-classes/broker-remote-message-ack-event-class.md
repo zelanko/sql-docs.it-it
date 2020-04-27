@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62663912"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack - classe di evento
@@ -35,7 +35,7 @@ ms.locfileid: "62663912"
 |**DatabaseID**|**int**|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Message Ack** , corrisponde sempre a **149**.|27|No|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
-|**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento che offre maggiori informazioni su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Message With Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement al di fuori di un normale messaggio in sequenza.<br /><br /> **Message With Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement al di fuori di un messaggio in sequenza.|21|Sì|  
+|**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento che offre maggiori informazioni su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Messaggio con riconoscimento inviato**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Riconoscimento inviato**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement al di fuori di un normale messaggio in sequenza.<br /><br /> **Messaggio con riconoscimento ricevuto**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Conferma ricevuta**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement al di fuori di un messaggio in sequenza.|21|Sì|  
 |**GUID**|**uniqueidentifier**|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
 |**HonorBrokerPriority**|**Int**|Valore corrente dell'opzione di database HONOR_BROKER_PRIORITY: 0 = OFF, 1 = ON.|32|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  

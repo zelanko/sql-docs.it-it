@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62677031"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Visualizzare i facet della gestione basata su criteri in un oggetto di SQL Server
@@ -32,20 +32,20 @@ ms.locfileid: "62677031"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-all-of-the-facets-in-an-object"></a>Per visualizzare tutti i facet in un oggetto  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], su un oggetto istanza, su un database o su un oggetto di database, quindi scegliere **Facet**.  
   
-2.  Nella finestra di dialogo **Visualizza facet -** _nome_oggetto_ selezionare un facet nell'elenco **Facet** per visualizzarne le proprietà. Per ulteriori informazioni sulle opzioni disponibili in questa finestra di dialogo, vedere [View Facets Dialog Box](view-facets-dialog-box.md).  
+2.  Nella finestra di dialogo **Visualizza facet -**_nome_oggetto_ selezionare un facet nell'elenco **Facet** per visualizzarne le proprietà. Per ulteriori informazioni sulle opzioni disponibili in questa finestra di dialogo, vedere [View Facets Dialog Box](view-facets-dialog-box.md).  
   
 3.  Al termine, fare clic su **OK**.  
   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899384"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>sys. dm_pdw_hadoop_operations (Transact-SQL)
@@ -26,14 +26,14 @@ ms.locfileid: "67899384"
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|ID per questa operazione Hadoop esterna.|Uguale all'ID in [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|ID per questa operazione Hadoop esterna.|Uguale all'ID in [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Indice del passaggio della query che fa riferimento a questa operazione Hadoop.|Uguale a step_index in [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |operation_type|**nvarchar(255)**|Descrive il tipo di operazione esterna.|' Operazione Hadoop esterna '|  
 |operation_name|**nvarchar(4000)**|ID processo per un processo di riduzione della mappa. Questa operazione viene restituita da [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Hadoop dopo l'invio del processo.||  
 |map_progress|**float**|Percentuale di dati di input che sono stati usati finora dal processo di mapping.|Numero a virgola mobile compreso tra e, tra cui 0 e 100.|  
 |reduce_progress|**int**|Percentuale del processo di riduzione completato.|Numero a virgola mobile compreso tra e, tra cui 0 e 100.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

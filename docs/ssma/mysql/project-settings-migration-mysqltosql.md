@@ -10,10 +10,10 @@ ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908859"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Impostazioni del progetto (migrazione) (MySQLToSQL)
@@ -33,9 +33,9 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni p
 |--------|--------------|  
 |**Dimensioni batch**|Specifica la dimensione del batch utilizzata durante la migrazione dei dati.<br /><br />**Modalità predefinita**: 1000<br /><br />**Modalità ottimistica**: 1000<br /><br />**Modalità completa**: 1000|  
 |**Vincoli CHECK**|Specifica se SSMA deve verificare i vincoli quando inserisce i dati in tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
-|**Attiva trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
-|**Mantieni identità**|Specifica se SSMA conserva i valori Identity di MySQL quando aggiunge dati a SQL Server. Il valore false fa sì che i valori Identity vengano assegnati dalla destinazione.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
-|**Mantieni valori null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
+|**Attive trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
+|**Mantieni valori Identity**|Specifica se SSMA conserva i valori Identity di MySQL quando aggiunge dati a SQL Server. Il valore false fa sì che i valori Identity vengano assegnati dalla destinazione.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
+|**Mantieni valori Null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
 |**Blocco di tabella**|Specifica se SSMA blocca le tabelle quando aggiunge dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento in blocco per la durata dell'operazione di copia bulk. Se il valore è false, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
   
 ### <a name="data-modification"></a>Modifica dei dati  

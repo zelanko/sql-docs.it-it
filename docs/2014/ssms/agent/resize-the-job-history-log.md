@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650888"
 ---
 # <a name="resize-the-job-history-log"></a>Modificare le dimensioni del log di cronologia processi
@@ -31,20 +31,20 @@ ms.locfileid: "62650888"
   
      [Sicurezza](#Security)  
   
--   **Per impostare i limiti delle dimensioni per i log di cronologia processo utilizzando:**  
+-   **Per impostare le dimensioni massime dei log della cronologia dei processi utilizzando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>Per ridimensionare il log cronologia processi in base alle dimensioni dei dati non elaborati  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, quindi scegliere **Proprietà**.  
   

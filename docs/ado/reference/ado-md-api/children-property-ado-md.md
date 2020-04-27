@@ -17,10 +17,10 @@ ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911526"
 ---
 # <a name="children-property-ado-md"></a>Proprietà Children (ADO MD)
@@ -35,5 +35,5 @@ Restituisce una raccolta di [membri](../../../ado/reference/ado-md-api/members-c
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà ChildCount (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284805"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità di Analysis Services in SQL Server 2014
@@ -23,7 +23,7 @@ ms.locfileid: "67284805"
 > [!NOTE]  
 >  Al contrario, una modifica di rilievo impedisce l'esecuzione di un modello di dati o di un'applicazione integrata con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per altre informazioni, vedere [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
- Contenuto dell'argomento  
+ Contenuto dell'argomento:  
   
 -   [Modifiche del comportamento nella SQL Server 2014](#bkmk_sql2014)  
   
@@ -31,23 +31,23 @@ ms.locfileid: "67284805"
   
 -   [Modifiche di funzionamento apportate in SQL Server 2012](#bkmk_sql2012)  
   
-##  <a name="bkmk_sql2014"></a>Modifiche del comportamento in[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="behavior-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>Modifiche del comportamento in[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In questa versione non sono annunciate nuove modifiche del comportamento per le funzionalità tabulari, multidimensionali, di data mining o di [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] .  Tuttavia, considerata l'analogia di  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] con le versioni [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] , le modifiche del comportamento rispetto a entrambe le versioni precedenti sono elencate qui per praticità, nel caso si effettui l'aggiornamento da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-##  <a name="bkmk_sql2012sp1"></a>Modifiche del comportamento in[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
+##  <a name="behavior-changes-in-sssql11sp1"></a><a name="bkmk_sql2012sp1"></a>Modifiche del comportamento in[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
  Questa sezione illustra le modifiche del comportamento riportate per le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Le modifiche si applicano anche a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Problema|Descrizione|  
 |-----------|-----------------|  
-|Tramite le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non verranno aggiornati in modo automatico i modelli quando vengono utilizzati in SQL Server 2012 SP1 PowerPivot per SharePoint 2013. Pertanto, gli aggiornamenti dati pianificati non funzioneranno per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot.|Le cartelle di lavoro della versione 2008 R2 verranno aperte in [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], ma gli aggiornamenti pianificati non funzioneranno. Se si esamina la cronologia degli aggiornamenti, verrà visualizzato un messaggio di errore simile al seguente:<br /> "La cartella di lavoro contiene un modello PowerPivot non supportato. Il modello PowerPivot nella cartella di lavoro è nel formato di SQL Server 2008 R2 PowerPivot per Excel 2010. Sono supportati i modelli PowerPivot seguenti: <br />SQL Server 2012 PowerPivot per Excel 2010<br />SQL Server 2012 PowerPivot per Excel 2013 "<br /><br /> **Come aggiornare una cartella di lavoro:** Gli aggiornamenti pianificati non funzioneranno finché la cartella di lavoro non verrà aggiornata a una cartella di lavoro di 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2010 con il componente aggiuntivo SQL Server 2012 PowerPivot per Excel installato. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2013. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> <br /><br /> Per altre informazioni sull'aggiornamento delle cartelle di lavoro, vedere [aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|Tramite le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non verranno aggiornati in modo automatico i modelli quando vengono utilizzati in SQL Server 2012 SP1 PowerPivot per SharePoint 2013. Pertanto, gli aggiornamenti dati pianificati non funzioneranno per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot.|Le cartelle di lavoro della versione 2008 R2 verranno aperte in [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], ma gli aggiornamenti pianificati non funzioneranno. Se si esamina la cronologia degli aggiornamenti, verrà visualizzato un messaggio di errore simile al seguente:<br /> "La cartella di lavoro contiene un modello PowerPivot non supportato. Il modello PowerPivot nella cartella di lavoro è nel formato di SQL Server 2008 R2 PowerPivot per Excel 2010. Sono supportati i modelli PowerPivot seguenti: <br />SQL Server 2012 PowerPivot per Excel 2010<br />SQL Server 2012 PowerPivot per Excel 2013 "<br /><br /> **Modalità di aggiornamento di una cartella di lavoro:** gli aggiornamenti pianificati non funzioneranno finché la cartella di lavoro non viene aggiornata alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2010 con il componente aggiuntivo SQL Server 2012 PowerPivot per Excel installato. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2013. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> <br /><br /> Per altre informazioni sull'aggiornamento delle cartelle di lavoro, vedere [aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
 |Modifiche del comportamento nella [ALL Function](/dax/all-function-dax)di DAX.|Nelle versioni precedenti a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], se si specifica una colonna [Date] in Contrassegna come tabella data per l'utilizzo nelle funzionalità di Business Intelligence per le gerarchie temporali, e tale colonna [Date] viene passata come argomento alla funzione ALL, passata a sua volta come filtro di una funzione CALCULATE, tutti i filtri di tutte le colonne della tabella vengono ignorati, indipendentemente dalla presenza di eventuali filtri dei dati nella colonna data.<br /><br /> Ad esempio,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Nelle versioni precedenti a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], vengono ignorati tutti i filtri per tutte le colonne DateTable, indipendentemente dalla colonna [Date] passata come argomento alla funzione ALL.<br /><br /> In [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] e in PowerPivot in Excel 2013, il comportamento prevede che i filtri vengano ignorati solo per la colonna specifica passata come argomento alla funzione ALL.<br /><br /> Come alternativa al nuovo comportamento e ignorare tutte le colonne come filtro per l'intera tabella, è possibile escludere la colonna [Date] dall'argomento, ad esempio:<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Ciò produce lo stesso risultato del comportamento precedente a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
-##  <a name="bkmk_sql2012"></a>Modifiche del comportamento in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="behavior-changes-in-sssql11"></a><a name="bkmk_sql2012"></a>Modifiche del comportamento in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  In questa sezione sono illustrate le modifiche del comportamento riportate per le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Le modifiche si applicano anche a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, modalità multidimensionale  
   
-#### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>L'opzione NullProcessing impostata su Preserve non è più supportata per le misure Distinct Count  
+#### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>L'opzione NullProcessing impostata su Preserve non è più supportata per le misure totale valori distinti  
  Prima di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], era possibile impostare l' [elemento NullProcessing &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) su `Preserve` per le misure Distinct Count.  Purtroppo questa impostazione produce spesso risultati non validi e a volte causa addirittura l'arresto anomalo del processo di elaborazione. Di conseguenza, questa configurazione non è più valida in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Il tentativo di usarla causerà la visualizzazione dell'errore di convalida seguente: "Errori nella gestione metadati. Preserve non è un valore NullProcessing valido per \<measurename> misura Distinct Count ".  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Visualizzatore cubi in Management Studio e Progettazione cubi sono stati rimossi  
@@ -104,7 +104,7 @@ ms.locfileid: "67284805"
   
  Se il server è stato aggiornato dalla versione precedente, nell'applicazione del servizio PowerPivot viene mantenuta l'impostazione predefinita precedente (**Round robin**). Per utilizzare l'impostazione del metodo di allocazione **Basato sull'integrità** , è necessario modificare le impostazioni di configurazione. Per altre informazioni, vedere [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)   
  [Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   

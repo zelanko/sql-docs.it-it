@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726117"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services Personalization Extensions
@@ -41,8 +41,7 @@ ms.locfileid: "62726117"
  Quando si avvia il servizio [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , carica gli assembly necessari e determina le classi che <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> dispongono dell'attributo personalizzato.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce gli attributi personalizzati come un modo per descrivere il codice e influisce sul comportamento in fase di esecuzione. Per ulteriori informazioni, vedere l'argomento "[Cenni preliminari sugli attributi](https://go.microsoft.com/fwlink/?LinkId=82929)" nella [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] guida per gli sviluppatori su MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce gli attributi personalizzati come un modo per descrivere il codice e influisce sul comportamento in fase di esecuzione. Per ulteriori informazioni, vedere l'argomento "[Cenni preliminari sugli attributi](https://go.microsoft.com/fwlink/?LinkId=82929)" nella [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] guida per gli sviluppatori su MSDN.  
   
  Per tutte le classi con <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> l'attributo personalizzato [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , richiama i costruttori predefiniti. La richiamata di tutti i costruttori all'avvio fornisce un percorso comune, indipendente dalle attività dell'utente, dal quale è possibile compilare nuovi oggetti.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "62726117"
  Contesto di sessione  
  Per gli oggetti basati sulle estensioni della personalizzazione, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un ambiente di esecuzione durante la sessione client e compila dinamicamente la maggior parte degli oggetti dell'ambiente. Come qualsiasi altro assembly CLR, tale ambiente di esecuzione dispone anche dell'accesso ad altre funzioni e stored procedure. Al termine della sessione utente, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rimuove gli oggetti creati dinamicamente e chiude l'ambiente di esecuzione.  
   
- Eventi  
+ Events  
  La creazione degli oggetti viene attivata dagli eventi di sessione `On-Cube-OpenedCubeOpened` e `On-Cube-ClosingCubeClosing`.  
   
  La comunicazione tra client e server si verifica attraverso eventi specifici. Tali eventi informano il client delle situazioni che portano alla compilazione degli oggetti del client. L'ambiente del client viene creato dinamicamente utilizzando due set di eventi: eventi di sessione ed eventi del cubo.  
@@ -79,16 +78,13 @@ ms.locfileid: "62726117"
   
  **Proprietà**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, valore della stringa di sola lettura che rappresenta l'ID della sessione della connessione corrente.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, valore della stringa di sola lettura che rappresenta l'ID della sessione della connessione corrente.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, riferimento di sola lettura alle impostazioni internazionali del client associate alla sessione corrente.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, riferimento di sola lettura alle impostazioni internazionali del client associate alla sessione corrente.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, riferimento di sola lettura all'interfaccia di identità che rappresenta l'utente corrente.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, riferimento di sola lettura all'interfaccia di identità che rappresenta l'utente corrente.  
   
- **Eventi**  
+ **Events**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened>  
   
@@ -97,24 +93,20 @@ ms.locfileid: "62726117"
 #### <a name="new-properties-in-the-context-class"></a>Nuove proprietà nella classe del contesto  
  La classe <xref:Microsoft.AnalysisServices.AdomdServer.Context> ha due nuove proprietà:  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, riferimento di sola lettura al nuovo oggetto server.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, riferimento di sola lettura al nuovo oggetto server.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, riferimento di sola lettura al nuovo oggetto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, riferimento di sola lettura al nuovo oggetto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
   
 #### <a name="new-server-class"></a>Nuova classe server  
  La classe <xref:Microsoft.AnalysisServices.AdomdServer.Server> è nuova ed espone molte estensioni della personalizzazione tramite proprietà ed eventi della classe.  
   
  **Proprietà**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, valore della stringa di sola lettura che rappresenta il nome del server.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, valore della stringa di sola lettura che rappresenta il nome del server.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, riferimento di sola lettura alla lingua globale associata al server.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, riferimento di sola lettura alla lingua globale associata al server.  
   
- **Eventi**  
+ **Events**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>  
   

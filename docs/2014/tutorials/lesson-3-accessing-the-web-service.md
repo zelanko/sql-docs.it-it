@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653784"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Lezione 3: Accesso al servizio Web
@@ -122,7 +122,7 @@ ms.locfileid: "62653784"
   
  Per ulteriori informazioni sulla creazione e l'utilizzo di una classe proxy per il servizio Web ReportServer, vedere [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Lezione 4: esecuzione dell'applicazione &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

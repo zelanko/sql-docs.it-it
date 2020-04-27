@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915137"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (database SQL di Azure)
@@ -45,10 +45,10 @@ ms.locfileid: "67915137"
   
 ||||  
 |-|-|-|  
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |sys. database_event_session_events. event_session_id|sys. database_event_sessions. event_session_id|Molti-a-uno|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

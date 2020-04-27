@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046662"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Rimuovere un'installazione di SQL Server 2014
@@ -46,7 +46,7 @@ ms.locfileid: "67046662"
   
 -   Per ripristinare un nodo del cluster di failover dopo un'operazione di preparazione non riuscita, usare **Rimuovi nodo**, quindi eseguire nuovamente la procedura di preparazione. Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>Per ripristinare un'installazione non riuscita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal Centro installazione  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>Per ripristinare un'installazione non riuscita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal Centro installazione  
   
 1.  Avviare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (file setup.exe) dai supporti di installazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67046662"
   
 8.  Nella pagina Stato del ripristino viene mostrato lo stato dell'operazione di ripristino. Nella pagina Operazione completata è indicato che l'operazione è stata completata.  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>Per ripristinare un'installazione non riuscita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il prompt dei comandi  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>Per ripristinare un'installazione non riuscita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il prompt dei comandi  
   
 1.  Al prompt dei comandi eseguire il comando seguente:  
   

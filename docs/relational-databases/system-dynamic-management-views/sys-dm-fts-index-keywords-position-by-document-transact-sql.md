@@ -19,10 +19,10 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900959"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
@@ -51,7 +51,7 @@ OBJECT_ID('table_name')
   
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|parola chiave|**varbinary (128)**|Stringa binaria che rappresenta la parola chiave.|  
+|parola chiave|**varbinary(128)**|Stringa binaria che rappresenta la parola chiave.|  
 |display_term|**nvarchar(4000)**|Formato leggibile della parola chiave derivato dal formato interno archiviato nell'indice full-text.|  
 |column_id|**int**|ID della colonna utilizzata per eseguire l'indicizzazione full-text della parola chiave corrente.|  
 |document_id|**bigint**|ID della riga o del documento utilizzato per eseguire l'indicizzazione full-text del termine corrente. L'ID corrisponde al valore della chiave full-text della riga o del documento specificato.|  
@@ -89,7 +89,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 WHERE document_id = 7 AND display_term = 'performance';  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
  [Migliorare le prestazioni degli indici full-text](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [Funzioni di ricerca full-text e di ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   

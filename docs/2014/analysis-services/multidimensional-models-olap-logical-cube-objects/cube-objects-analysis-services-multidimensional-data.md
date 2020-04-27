@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702639"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Oggetti cubo (Analysis Services - Dati multidimensionali)
@@ -33,7 +33,7 @@ ms.locfileid: "62702639"
 |||  
 |-|-|  
 |Argomento||  
-|[Azioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)||  
 |[Calcoli](calculations.md)||  
 |[Celle del cubo &#40;Analysis Services Dati multidimensionali&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -41,9 +41,9 @@ ms.locfileid: "62702639"
 |[Archiviazione di cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Traduzioni di cubi](cube-translations.md)||  
 |[Relazioni tra dimensioni](dimension-relationships.md)||  
-|[Indicatori di prestazioni chiave &#40;&#41; KPI nei modelli multidimensionali](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[Indicatori KPI nei modelli multidimensionali](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[Misure e gruppi di misure](../multidimensional-models/measures-and-measure-groups.md)||  
-|[Partizioni &#40;Analysis Services Dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[prospettive](perspectives.md)||  
   
   

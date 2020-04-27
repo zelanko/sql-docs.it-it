@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906003"
 ---
 # <a name="head-mdx"></a>Head (MDX)
@@ -31,7 +31,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Conteggio*  
+ *Numero*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -54,11 +54,11 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tail &#40;MDX&#41;](../mdx/tail-mdx.md)   
  [Elemento &#40;tupla&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Elemento &#40;membro&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [Rango &#40;MDX&#41;](../mdx/rank-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

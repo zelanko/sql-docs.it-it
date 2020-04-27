@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689073"
 ---
 # <a name="bcp_done"></a>bcp_done
@@ -49,7 +49,7 @@ hdbc
 ## <a name="remarks"></a>Osservazioni  
  Chiamare **bcp_done** dopo l'ultima chiamata a [bcp_sendrow](bcp-sendrow.md) o [bcp_moretext](bcp-moretext.md). La mancata chiamata di **bcp_done** dopo la copia di tutti i dati genera errori.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

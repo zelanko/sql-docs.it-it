@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4a69cb8f0817c086537381a87b96dfb237b8d59c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643192"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyValType (classe ServerNetworkProtocolProperty)
@@ -38,14 +38,14 @@ object
   
 ## <a name="parts"></a>Parti  
  *oggetto*  
- A [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Oggetto della [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che specifica il tipo di dati del valore della proprietà. Viene restituito 0 per un valore string e 1 per un tipo numerico.  
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

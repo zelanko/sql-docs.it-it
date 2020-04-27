@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915116"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (database SQL di Azure)
@@ -32,7 +32,7 @@ ms.locfileid: "67915116"
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |object_id|**int**|ID dell'oggetto a cui è associato il campo. Non ammette i valori Null.|  
 |name|**sysname**|Nome del campo. Non ammette i valori Null.|  
-|Valore|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
+|value|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
@@ -42,12 +42,12 @@ ms.locfileid: "67915116"
   
 ||||  
 |-|-|-|  
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |sys. database_event_session_actions. event_session_id|sys. database_event_sessions. event_session_id|Molti-a-uno|  
 |sys. database_event_session_actions. event_id<br /><br /> sys. database_event_session_actions. object_id<br /><br /> sys. database_event_session_actions. event_session_id|sys. database_event_session_events. event_session_id<br /><br /> sys. database_event_session_events. event_id|Molti-a-uno|  
 |sys. database_event_session_actions. event_session_id<br /><br /> sys. database_event_session_actions. object_id|sys. database_event_session_targets. event_session_id<br /><br /> sys. database_event_session_targets. target_id|Molti-a-uno|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524387"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
@@ -42,17 +42,17 @@ ms.locfileid: "62524387"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Quando si rimuove un operatore, vengono rimosse tutte le notifiche associate.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  I membri del ruolo predefinito del server **sysadmin** possono eliminare gli operatori.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-delete-an-operator"></a>Per eliminare un operatore  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62524387"
   
 5.  Nella finestra di dialogo **Elimina oggetto** verificare che venga selezionato l'operatore corretto, quindi fare clic su **OK**. Per fare in modo che gli avvisi e i processi inviati all'operatore eliminato vengano ricevuti da un altro operatore, selezionare l'opzione **Riassegna a** e scegliere un operatore nell'elenco.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-an-operator"></a>Per eliminare un operatore  
   

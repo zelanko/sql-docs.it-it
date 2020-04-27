@@ -15,10 +15,10 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918247"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Esempio della proprietà MarshalOptions (VB)
@@ -131,6 +131,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

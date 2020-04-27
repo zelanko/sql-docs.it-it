@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664086"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message - classe di evento
@@ -50,9 +50,9 @@ ms.locfileid: "62664086"
 |**Gravità**|**int**|Gravità dell'errore che ha determinato l'eliminazione del messaggio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|29|No|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Stato**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  
+|**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  
 |**TextData**|**ntext**|Descrizione del danneggiamento rilevato.|1|Sì|  
-|**ID transazione**|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
+|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
   
  La colonna **TextData** dell'evento contiene un messaggio che descrive il problema correlato al messaggio.  
   

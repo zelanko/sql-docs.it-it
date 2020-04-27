@@ -15,10 +15,10 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917580"
 ---
 # <a name="prepared-property-example-vc"></a>Esempio della proprietà Prepared (VC++)
@@ -143,6 +143,6 @@ void PrintComError(_com_error &e) {
  **Risultati delle prestazioni:**  
 **Non preparato: 0,016 secondi**  
 **Preparati: 0,016 secondi**   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

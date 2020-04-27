@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189137"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
@@ -37,15 +37,15 @@ ms.locfileid: "68189137"
   
      [Sicurezza](#Security)  
   
--   **Per creare un server master tramite:**  
+-   **Per configurare un server master tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  I processi distribuiti con passaggi associati a un proxy vengono eseguiti nel contesto dell'account proxy nel server di destinazione. Verificare che siano soddisfatte le condizioni seguenti, per assicurare che i passaggi di processo associati a un proxy vengano scaricati dal server master a quello di destinazione:  
   
 -   La sottochiave del registro di sistema del server master **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) è impostata su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
@@ -62,17 +62,16 @@ ms.locfileid: "68189137"
   
      Per risolvere il problema, verificare che nel server di destinazione sia disponibile un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio di processo.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server `sysadmin`.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-make-a-master-server"></a>Per configurare un server master  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e quindi fare clic su **Imposta come server master**. 
-  **Configurazione guidata server master** consente di eseguire in modo semplificato i passaggi necessari per configurare un server master e aggiungere server di destinazione.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e quindi fare clic su **Imposta come server master**. **Configurazione guidata server master** consente di eseguire in modo semplificato i passaggi necessari per configurare un server master e aggiungere server di destinazione.  
   
 3.  Nella pagina **Operatore server master** configurare un operatore per il server master. Per l'invio di notifiche agli operatori via posta elettronica o cercapersone, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia configurato per l'invio di posta elettronica. Per inviare notifiche agli operatori con **net send**, il servizio Messenger deve essere in esecuzione nel server in cui si trova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "68189137"
      **Indirizzo cercapersone**  
      Imposta l'indirizzo di posta elettronica del cercapersone dell'operatore.  
   
-     **Indirizzo net send**  
+     **Indirizzo Net Send**  
      Imposta l'indirizzo **net send** dell'operatore.  
   
 4.  Nella pagina **Server di destinazione** selezionare i server di destinazione per il server master.  
@@ -113,10 +112,10 @@ ms.locfileid: "68189137"
   
 5.  Nella pagina **Credenziali account di accesso al server master** specificare se si desidera creare un nuovo account di accesso per il server di destinazione, se necessario, e assegnare a tale account di accesso i diritti per il server di destinazione.  
   
-     **Creare un nuovo account di accesso se necessario e assegnargli i diritti per il server MSX**  
+     **Crea un nuovo account di accesso se necessario e assegna i diritti per il server MSX**  
      Tramite questa opzione è possibile creare un nuovo account di accesso nel server di destinazione se l'account di accesso specificato non esiste già.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-make-a-master-server"></a>Per configurare un server master  
   
@@ -137,7 +136,7 @@ GO;
   
  Per ulteriori informazioni, vedere [sp_msx_enlist &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un ambiente multiserver](create-a-multiserver-environment.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   

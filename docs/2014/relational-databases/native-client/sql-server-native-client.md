@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638848"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Novità di SQL Server Native Client&#39;
@@ -34,7 +34,7 @@ ms.locfileid: "62638848"
   
 -   [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Accesso alle informazioni di diagnostica nel log degli eventi estesi](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+-   [Accesso alle informazioni di diagnostica nel registro eventi estesi](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
  ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ora supporta tre funzionalità aggiunte a ODBC standard in Windows 7 SDK:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62638848"
   
 -   [Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](features/sql-server-native-client-features.md)  
   
   

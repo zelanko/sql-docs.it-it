@@ -18,10 +18,10 @@ ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9da7517ece0961e5139df4be44ddf575c41c9abe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918118"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VBScript)
@@ -183,6 +183,6 @@ Questo esempio usa i metodi [MoveFirst](../../../ado/reference/ado-api/movefirst
 <!-- EndMoveFirstVBS -->  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

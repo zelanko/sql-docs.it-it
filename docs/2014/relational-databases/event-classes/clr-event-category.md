@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62663646"
 ---
 # <a name="clr-event-category"></a>Categoria di eventi CLR
@@ -33,7 +33,7 @@ ms.locfileid: "62663646"
 |[Classe di evento Assembly Load](../../database-engine/assembly-load-event-class.md)|Indica l'esecuzione di una richiesta di caricamento di un assembly.|  
 |[Classe di evento Assembly Load](../../database-engine/assembly-load-event-class.md)|Viene generato al momento dell'esecuzione di una richiesta di caricamento di un assembly.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](../extended-events/extended-events.md)  
   
   

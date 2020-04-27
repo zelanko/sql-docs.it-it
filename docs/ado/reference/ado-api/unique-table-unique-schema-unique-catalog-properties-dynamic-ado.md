@@ -16,10 +16,10 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911669"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, schema univoco, proprietà del catalogo univoco-Dynamic (ADO)
@@ -50,5 +50,5 @@ Consente di controllare in modo accurato le modifiche apportate a una determinat
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

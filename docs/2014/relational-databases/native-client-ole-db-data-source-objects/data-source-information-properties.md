@@ -1,5 +1,5 @@
 ---
-title: Proprietà informazioni origine dati | Microsoft Docs
+title: Proprietà delle informazioni sulle origini dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679789"
 ---
 # <a name="data-source-information-properties"></a>Proprietà delle informazioni sulle origini dati
@@ -38,7 +38,7 @@ ms.locfileid: "62679789"
 |-----------------|-----------------|  
 |SSPROP_STREAM_XMLROOT|Tipo: VT_BSTR L/S: Lettura/Scrittura<br /><br /> Descrizione: il risultato di una query FOR XML potrebbe non essere un documento corretto. Quando questa proprietà viene specificata, viene eseguito il wrapping del risultato di una query 'select ... for XML' nel tag radice fornito dalla proprietà per restituire un documento XML corretto. Se la query viene eseguita nel browser, è possibile che nel browser stesso vengano visualizzati errori del parser durante il caricamento del risultato. Per evitare l'errore, SQL ISAPI supporta la parola chiave ROOT che viene mappata alla proprietà SSPROP_STREAM_XMLROOT.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetti origine dati &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Oggetti di origine dati &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637870"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintassi di base della clausola FOR XML
@@ -29,7 +29,7 @@ ms.locfileid: "62637870"
 > [!IMPORTANT]  
 >  La direttiva XMLDATA all'opzione FOR XML è deprecata. Utilizzare la generazione XSD in caso di modalità RAW e AUTO. Non sono disponibili sostituzioni per la direttiva XMLDATA in modalità EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Di seguito è riportata la sintassi di base descritta nella [clausola for (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
+ Di seguito viene indicata la sintassi di base descritta nell'argomento [Clausola FOR (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -88,10 +88,10 @@ XML
  TYPE  
  Specifica che la query restituisce i risultati come dati di tipo **xml** . Per altre informazioni, vedere [Direttiva TYPE nelle query FOR XML](type-directive-in-for-xml-queries.md).  
   
- RADICE [('*rootName*')]  
+ ROOT [('*RootName*')]  
  Specifica l'aggiunta di un singolo elemento principale alla struttura XML risultante. È possibile specificare facoltativamente il nome dell'elemento radice da generare. Il valore predefinito è "root".  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)   
  [Usare la modalità AUTO con FOR XML](use-auto-mode-with-for-xml.md)   
  [Usare la modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)   

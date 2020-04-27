@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735754"
 ---
 # <a name="featureset-element-dta"></a>Elemento FeatureSet (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62735754"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|
-  `string`, lunghezza illimitata.|  
+|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
 |**Valori consentiti**|**IDX_IV**<br /> Indici e viste indicizzate.<br /><br /> **IDX**<br /> Solo indici.<br /><br /> **IV**<br /> Solo viste indicizzate.<br /><br /> **NCL_IDX**<br /> Solo indici non cluster.<br /><br /> Con questo elemento utilizzare solo uno di questi valori.|  
 |**Valore predefinito**|**IDX**|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento `TuningOptions`, a meno che non venga utilizzato l'elemento `DropOnlyMode`. Se viene utilizzato `DropOnlyMode`, non sarà possibile utilizzare `FeatureSet`. Questi elementi si escludono a vicenda.|  

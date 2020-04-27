@@ -16,14 +16,14 @@ ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e813759c6500d8982145d12bac57f75448a9574d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919461"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (Visual C++ indice della sintassi con #import)
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
   
 ```  
 HRESULT InfoMessage( struct Error * pError, enum  

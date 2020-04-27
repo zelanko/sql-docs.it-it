@@ -16,10 +16,10 @@ ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917838"
 ---
 # <a name="originalvalue-property-ado"></a>Proprietà OriginalValue (ADO)
@@ -41,7 +41,7 @@ Indica il valore di un [campo](../../../ado/reference/ado-api/field-object.md) e
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà OriginalValue e UnderlyingValue (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [Esempio di proprietà OriginalValue e UnderlyingValue (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

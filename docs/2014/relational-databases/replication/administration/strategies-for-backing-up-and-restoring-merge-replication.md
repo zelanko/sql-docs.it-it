@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688910"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
@@ -56,7 +56,7 @@ ms.locfileid: "62688910"
 > [!IMPORTANT]  
 >  Il ripristino delle tabelle pubblicate in seguito alla sincronizzazione di un database di pubblicazione con un database di sottoscrizione può avvenire in un momento più recente rispetto ad altre tabelle non pubblicate di cui è stato ripristinato il backup.  
   
- Se si esegue la sincronizzazione con un Sottoscrittore che esegue una versione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la sottoscrizione non può essere anonima. Deve essere una sottoscrizione client o una sottoscrizione server (dette anche sottoscrizioni locali e sottoscrizioni globali nelle versioni precedenti).  
+ Se si esegue la sincronizzazione con un Sottoscrittore che esegue [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una versione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]di precedente a, la sottoscrizione non può essere anonima. deve essere una sottoscrizione client o una sottoscrizione server (denominata sottoscrizioni locali e sottoscrizioni globali nelle versioni precedenti).  
   
  Per sincronizzare una sottoscrizione, vedere [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -88,8 +88,8 @@ ms.locfileid: "62688910"
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Backup e ripristino di un database di ripubblicazione  
  Un database che sottoscrive i dati di un server di pubblicazione e a sua volta li pubblica in altri database di sottoscrizione viene definito database di ripubblicazione. Per ripristinare un database di ripubblicazione, seguire le indicazioni disponibili nelle sezioni "Backup e ripristino del database di pubblicazione" e "Backup e ripristino di un database di sottoscrizione" in questo argomento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Backup e ripristino di database SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Eseguire il backup e ripristino di database replicati](back-up-and-restore-replicated-databases.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Backup e ripristino di database di SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e ripristino di database replicati](back-up-and-restore-replicated-databases.md)  
   
   

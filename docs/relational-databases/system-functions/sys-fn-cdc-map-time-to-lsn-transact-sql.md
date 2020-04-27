@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046335"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
@@ -58,7 +58,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  Valore datetime da confrontare. *tracking_time* è **DateTime**.  
   
 ## <a name="return-type"></a>Tipo restituito  
- **binario (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Osservazioni  
  Per comprendere il modo in cui è possibile utilizzare **sys. fn_cdc_map_time_lsn** per eseguire il mapping di intervalli DateTime a intervalli LSN, considerare lo scenario seguente. Si supponga che un utente desideri estrarre su base giornaliera i dati delle modifiche. Ovvero, l'utente desidera solo le modifiche relative a un giorno specifico fino alla mezzanotte (inclusa). Il limite inferiore dell'intervallo di tempo raggiunge, ma non include, la mezzanotte del giorno precedente. Il limite superiore raggiunge e include la mezzanotte del giorno specificato. Nell'esempio seguente viene illustrato come è possibile utilizzare la funzione **sys. fn_cdc_map_time_to_lsn** per eseguire sistematicamente il mapping di questo intervallo basato sul tempo nell'intervallo basato su LSN richiesto dalle funzioni di enumerazione Change Data Capture per restituire tutte le modifiche all'interno di tale intervallo.  
@@ -93,10 +93,10 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CDC. lsn_time_mapping &#40;&#41;Transact-SQL](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys. fn_cdc_map_lsn_to_time &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624404"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
@@ -69,9 +69,9 @@ ms.locfileid: "67624404"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro  
  Ovviamente, è consigliabile non trovarsi in una situazione di memoria insufficiente. Una buona pianificazione e un buon monitoraggio consentono di evitare le situazioni di memoria insufficiente. Tuttavia, nonostante l'accurata pianificazione non sempre è possibile prevedere le effettive esigenze e potrebbero verificarsi situazioni di memoria insufficiente. Sono disponibili due passaggi per risolvere una situazione di memoria insufficiente:  
   
-1.  [Aprire un'applicazione livello dati (connessione amministrativa dedicata)](#open-a-dac-dedicated-administrator-connection) 
+1.  [Aprire una connessione amministrativa dedicata (DAC)](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Eseguire un'azione correttiva](#take-corrective-action) 
+2.  [Intraprendere un'azione correttiva](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>Aprire una connessione amministrativa dedicata (DAC)  
  Microsoft SQL Server fornisce una connessione amministrativa dedicata (DAC). La connessione DAC consente a un amministratore di accedere a un'istanza in esecuzione del motore di database di SQL Server per risolvere i problemi presenti nel server, anche quando il server non risponde ad altre connessioni client. La connessione DAC è disponibile tramite l'utilità `sqlcmd` e SQL Server Management Studio (SSMS).  
@@ -128,7 +128,7 @@ GO
  Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Installare memoria aggiuntiva  
- Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In questo caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere l'argomento [Modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non necessitare di ulteriore memoria, consentendo di rendere disponibile la maggior parte se non tutta la memoria appena installata per il pool di risorse.  
+ Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In tal caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere la pagina [relativa alla modifica di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] probabilmente non sarà necessaria una maggiore quantità di memoria, consentendo di rendere la maggior parte se non tutta la memoria appena installata disponibile per il pool di risorse.  
   
 > [!IMPORTANT]  
 >  Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT sullo stesso valore.   
@@ -141,10 +141,10 @@ GO
   
  Per informazioni sui limiti e sulle restrizioni e per istruzioni sull'abilitazione di Resource Governor usando Esplora oggetti, proprietà di Resource Governor o Transact-SQL, vedere [Abilitare Resource Governor](https://technet.microsoft.com/library/bb895149.aspx) .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione della memoria per OLTP in memoria](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [Monitorare e risolvere i problemi di utilizzo della memoria](monitor-and-troubleshoot-memory-usage.md)   
- [a un pool di risorse, vedere l'argomento](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Associare un database con tabelle ottimizzate per la memoria a un pool di risorse](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Procedure consigliate: uso di OLTP in memoria in un ambiente di macchina virtuale](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

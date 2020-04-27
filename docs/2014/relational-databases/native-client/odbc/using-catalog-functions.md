@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667379"
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
@@ -29,8 +29,7 @@ ms.locfileid: "62667379"
   
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client consente a un'applicazione di determinare la struttura del database tramite chiamate alle funzioni di catalogo ODBC. Le funzioni di catalogo restituiscono informazioni nei set di risultati e vengono implementate utilizzando stored procedure di catalogo per eseguire query sulle tabelle di sistema nel catalogo. Un'applicazione potrebbe ad esempio richiedere un set di risultati contenente informazioni su tutte le tabelle del sistema o tutte le colonne di una particolare tabella. Le funzioni di catalogo ODBC standard vengono utilizzate per ottenere informazioni di catalogo dal computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al quale è connessa l'applicazione.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta query distribuite grazie alle quali è possibile accedere con un'unica query ai dati provenienti da più origini dati OLE DB eterogenee. Uno dei metodi di accesso a un'origine dati OLE DB remota consiste nel definire l'origine dati come server collegato. A tale scopo, è possibile utilizzare [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). Dopo che è stato definito il server collegato, è possibile fare riferimento agli a oggetti del server nelle istruzioni Transact-SQL utilizzando un nome costituito da quattro parti:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta query distribuite grazie alle quali è possibile accedere con un'unica query ai dati provenienti da più origini dati OLE DB eterogenee. Uno dei metodi di accesso a un'origine dati OLE DB remota consiste nel definire l'origine dati come server collegato. A tale scopo, è possibile utilizzare [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). Dopo che è stato definito il server collegato, è possibile fare riferimento agli a oggetti del server nelle istruzioni Transact-SQL utilizzando un nome costituito da quattro parti:  
   
  *linked_server_name. Catalog. Schema. object_name*.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62667379"
   
 -   **SQLTables**  
   
- Linked_server_name in due parti __**.** il _Catalogo_ è supportato anche per *FKCatalogName* e *PKCatalogName* in [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Linked_server_name in due parti _linked_server_name_**.** il _Catalogo_ è supportato anche per *FKCatalogName* e *PKCatalogName* in [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62667379"
   
      Deve essere presente in fase di esecuzione. sqlncli11.dll è distribuito con il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)   

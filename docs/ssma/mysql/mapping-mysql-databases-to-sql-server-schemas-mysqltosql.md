@@ -13,10 +13,10 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908984"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra database MySQL e schemi di SQL Server (MySQLToSQL)
@@ -25,7 +25,7 @@ Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli o
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Schemi MySQL e SQL Server o SQL Azure  
 Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. SSMA fa riferimento alla combinazione SQL Server di database e schema come schema.  
   
-Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. Ad esempio, MySQL potrebbe avere uno schema denominato **HR**. Un'istanza di SQL Server potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, viene eseguito **** il mapping di MySQL schema HR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
+Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. Ad esempio, MySQL potrebbe avere uno schema denominato **HR**. Un'istanza di SQL Server potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, viene eseguito **HR** il mapping di MySQL schema HR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
 È possibile modificare il mapping tra gli schemi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL e o Azure.  
   
@@ -68,7 +68,7 @@ Se si Personalizza il mapping tra uno schema di MySQL e uno schema di SQL Server
 ## <a name="next-steps"></a>Passaggi successivi  
 Se si vuole analizzare la conversione degli oggetti MySQL in oggetti SQL Server o SQL Azure, è possibile [creare un report di conversione](assessing-mysql-databases-for-conversion-mysqltosql.md) in caso contrario, è possibile [convertire le definizioni degli oggetti di database mysql](converting-mysql-databases-mysqltosql.md) in schemi SQL Server o SQL Azure  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Impostazioni progetto &#40;conversione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [Connessione al database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

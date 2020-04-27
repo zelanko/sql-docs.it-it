@@ -18,10 +18,10 @@ ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918708"
 ---
 # <a name="fields-collection-ado"></a>Raccolta Fields (ADO)
@@ -45,5 +45,5 @@ Contiene tutti gli oggetti [campo](../../../ado/reference/ado-api/field-object.m
   
 -   [Proprietà, metodi ed eventi della raccolta Fields](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)

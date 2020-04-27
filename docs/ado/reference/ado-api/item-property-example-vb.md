@@ -15,10 +15,10 @@ ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918347"
 ---
 # <a name="item-property-example-vb"></a>Esempio della proprietà Item (VB)
@@ -134,7 +134,7 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

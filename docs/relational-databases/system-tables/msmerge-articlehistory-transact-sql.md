@@ -18,10 +18,10 @@ ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907249"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67907249"
 |**phase_id**|**int**|Fase della sessione di sincronizzazione, i cui valori possono essere:<br /><br /> **1** = caricamento.<br /><br /> **2** = download.<br /><br /> **4** = pulizia.<br /><br /> **5** = arresto.<br /><br /> **6** = modifiche dello schema.<br /><br /> **7** = bcp.|  
 |**article_name**|**sysname**|Nome dell'articolo al quale sono state apportate le modifiche.|  
 |**start_time**|**datetime**|Ora di inizio dell'elaborazione dell'articolo.|  
-|**durata**|**int**|Durata dell'elaborazione di un articolo, in secondi.|  
+|**duration**|**int**|Durata dell'elaborazione di un articolo, in secondi.|  
 |**inserti**|**int**|Numero di inserimenti applicati a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
 |**aggiornamenti**|**int**|Numero di aggiornamenti applicati a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
 |**Elimina**|**int**|Numero di eliminazioni applicate a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67907249"
 |**estimated_changes**|**int**|Stima del numero di modifiche di riga che devono essere applicate all'articolo.|  
 |**relative_cost**|**decimal**|Tempo impiegato per l'applicazione delle modifiche per questo articolo in rapporto al tempo totale per l'intera sessione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

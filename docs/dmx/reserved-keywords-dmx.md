@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928451"
 ---
 # <a name="reserved-keywords-dmx"></a>Parole chiave riservate (DMX)
@@ -34,7 +34,7 @@ ms.locfileid: "67928451"
   
  Se il database contiene nomi che corrispondono a parole chiave riservate, sarà necessario utilizzare identificatori delimitati per fare riferimento a tali oggetti. Per ulteriori informazioni, vedere [identificatori &#40;&#41;DMX ](../dmx/identifiers-dmx.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;le convenzioni della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

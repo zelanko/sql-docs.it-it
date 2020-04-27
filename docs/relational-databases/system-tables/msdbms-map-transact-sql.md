@@ -18,10 +18,10 @@ ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907496"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67907496"
 |**src_nullable**|**bit**|Specifica se la colonna di destinazione nel mapping ammette valori NULL. Il valore NULL indica che questa definizione non è necessaria.|  
 |**default_datatype_mapping_id**|**int**|Identifica il mapping del tipo di dati predefinito specificandone il **map_id** nella tabella [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Specificare i mapping dei tipi di dati per un server di pubblicazione Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

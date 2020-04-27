@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666744"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Proprietà - Analysis Server (scheda Servizio)
-  Questo servizio è [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questo servizio deve essere eseguito affinché [!INCLUDE[ssAS](../../includes/ssas-md.md)] funzioni in modo corretto. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
+  Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questo servizio deve essere eseguito affinché [!INCLUDE[ssAS](../../includes/ssas-md.md)] funzioni in modo corretto. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  
@@ -30,17 +30,17 @@ ms.locfileid: "62666744"
  **Codice di uscita**  
  Quando si verifica un errore, il numero dell'errore viene visualizzato in questa casella. Questo numero può risultare utile per la risoluzione dei problemi. È possibile cercarlo nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base oppure comunicarlo al personale del supporto tecnico.  
   
- **Nome host**  
+ **Host Name**  
  Visualizza il nome del computer o del cluster che esegue [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
  **Nome**  
  Indica il nome visualizzato del servizio.  
   
- **ID di processo**  
+ **ID processo**  
  Visualizza il numero usato da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per tenere traccia dei processi di questo programma.  
   
- **Tipo di servizio SQL**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
+ **Tipo di servizio SQL Server**  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
@@ -51,7 +51,7 @@ ms.locfileid: "62666744"
   
 -   Disabilitato: il servizio non può essere avviato.  
   
- **Stato**  
+ **State**  
  Indica se il servizio è in esecuzione, arrestato o disabilitato.  
   
   

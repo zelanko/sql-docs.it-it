@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667597"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Supporto di query distribuite nei set di righe dello schema
@@ -45,7 +45,7 @@ ms.locfileid: "62667597"
   
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce il set di righe dello schema LinkedServers, restituendo un elenco di OLE DB origini dati registrate come server collegati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [&#40;OLE DB di supporto per set di righe dello schema&#41;](schema-rowset-support-ole-db.md)   
  [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917030"
 ---
 # <a name="savetofile-method"></a>Metodo SaveToFile
@@ -53,6 +53,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

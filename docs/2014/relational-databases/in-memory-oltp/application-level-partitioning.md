@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468337"
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
@@ -219,7 +219,7 @@ SELECT * FROM [dbo].[SalesOrders_cold] ORDER BY so_date DESC
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Esempi di codice di OLTP in memoria](in-memory-oltp-code-samples.md)  
   

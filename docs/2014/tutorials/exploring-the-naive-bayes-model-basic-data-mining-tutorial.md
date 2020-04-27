@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472885"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Esplorazione del modello Naive Bayes (Esercitazione di base sul data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "62472885"
   
  
   
-##  <a name="DependencyNetwork"></a>Rete di dipendenze  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>Rete di dipendenze  
  La scheda **rete di dipendenze** funziona in modo analogo alla scheda **rete di dipendenze** per il [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizzatore albero. Ogni nodo nel visualizzatore rappresenta un attributo e le righe tra i nodi rappresentano le relazioni. Nel visualizzatore è possibile osservare tutti gli attributi che influiscono sullo stato dell'attributo stimabile, ovvero Bike Buyer.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Per esplorare il modello nella scheda Rete di dipendenze  
@@ -42,7 +42,7 @@ ms.locfileid: "62472885"
      Spostando verso il basso il dispositivo di scorrimento rimangono visibili solo gli attributi che incidono maggiormente sulla colonna [Bike Buyer]. Se si sposta il dispositivo di scorrimento è possibile individuare che alcuni degli attributi più influenti sono il numero di automobili possedute, la distanza dal luogo di lavoro e il numero complessivo di figli.  
  
   
-##  <a name="AttributeProfiles"></a>Profili attributo  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a> Profili attributo  
  Nella scheda **Profili attributo** viene descritto il modo in cui diversi stati degli attributi di input influiscono sul risultato dell'attributo stimabile.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Per esplorare il modello nella scheda Profili attributo  
@@ -64,7 +64,7 @@ ms.locfileid: "62472885"
      In **Legenda data mining** viene visualizzata una visualizzazione più dettagliata.  
   
   
-##  <a name="AttributeCharacteristics"></a>Caratteristiche degli attributi  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a>Caratteristiche degli attributi  
  Con la scheda **Caratteristiche attributo** è possibile selezionare un attributo e un valore per vedere la frequenza con cui vengono visualizzati i valori per gli altri attributi nei case del valore selezionato.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Per esplorare il modello nella scheda Caratteristiche attributo  
@@ -76,7 +76,7 @@ ms.locfileid: "62472885"
      Nel visualizzatore si osserverà che è più probabile che una bicicletta venga acquistata dai clienti senza figli, che abitano a breve distanza dal luogo di lavoro e che vivono nell'area dell'America del nord.  
   
   
-##  <a name="AttributeDiscrimination"></a>Discriminazione degli attributi  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a>Discriminazione degli attributi  
  Con la scheda analisi **discriminante attributi** è possibile analizzare la relazione tra due valori discreti di acquisto di biciclette e altri valori di attributo. Poiché il `TM_NaiveBayes` modello dispone solo di due Stati, 1 e 0, non è necessario apportare alcuna modifica al visualizzatore.  
   
  Nel visualizzatore è possibile osservare che le persone che non possiedono un'automobile tendenzialmente acquistano biciclette, mentre le persone che possiedono due automobili in genere non ne acquistano.  
@@ -94,7 +94,7 @@ ms.locfileid: "62472885"
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
  [Esplorazione del modello di clustering &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)   
  [Scheda Analisi discriminante attributi &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/attribute-discrimination-tab-mining-model-viewer.md)   
  [Scheda Profili attributo &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/attribute-profiles-tab-mining-model-viewer.md)   

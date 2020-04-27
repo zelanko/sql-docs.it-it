@@ -17,10 +17,10 @@ ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918921"
 ---
 # <a name="eos-property"></a>Proprietà EOS
@@ -34,6 +34,6 @@ Indica se la posizione corrente è alla fine del [flusso](../../../ado/reference
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà EOS e LineSeparator e metodo SkipLine (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

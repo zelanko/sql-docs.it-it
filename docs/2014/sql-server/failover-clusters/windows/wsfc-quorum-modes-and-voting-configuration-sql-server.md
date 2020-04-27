@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711436"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
   Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sia le istanze del cluster di failover AlwaysOn utilizzano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata AlwaysOn, nonché per risolverne i problemi.  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Rilevamento dell'integrità del cluster per quorum](#ClusterHealthDetectionbyQuorum)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62711436"
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a>Rilevamento dell'integrità del cluster per quorum  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Rilevamento dell'integrità del cluster in base al quorum  
  Ogni nodo in un cluster WSFC partecipa alla comunicazione heartbeat periodica per condividere il proprio stato di integrità con gli altri nodi. I nodi che non rispondono sono considerati in stato di errore.  
   
  Un set di nodi *quorum* rappresenta una maggioranza dei nodi votanti e degli elementi di controllo nel cluster WSFC. L'integrità e lo stato complessivi di un cluster WSFC sono determinati da un *voto quorum*periodico.  La presenza di un quorum indica che il cluster è integro e in grado di fornire tolleranza di errore a livello di nodo.  
@@ -48,9 +48,9 @@ ms.locfileid: "62711436"
 > [!IMPORTANT]  
 >  Se un cluster WSFC viene impostato offline a causa di un errore del quorum, è necessario l'intervento manuale per reimpostare online il cluster.  
 >   
->  Per altre informazioni, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)periodico.  
+>  Per ulteriori informazioni, vedere la pagina relativa al [ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
-##  <a name="QuorumModes"></a>Modalità quorum  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a>Modalità quorum  
  Viene impostata una *modalità quorum* al livello del cluster WSFC che specifica la metodologia utilizzata per i voti quorum.  L'utilità Gestione cluster di failover specifica una modalità quorum consigliata basata sul numero di nodi nel cluster.  
   
  È possibile utilizzare le modalità quorum seguenti per determinare gli elementi che costituiscono un quorum di voti:  
@@ -68,7 +68,7 @@ ms.locfileid: "62711436"
 > [!TIP]  
 >  Quando si utilizza una configurazione di archiviazione asimmetrica per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], è in genere consigliabile utilizzare la modalità quorum Maggioranza dei nodi se è presente un numero dispari di nodi votanti oppure la modalità Maggioranza dei nodi e delle condivisioni file quando è presente un numero pari di nodi votanti.  
   
-##  <a name="VotingandNonVotingNodes"></a>Nodi votanti e non votanti  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> Nodi votanti e non votanti  
  Per impostazione predefinita, ogni nodo nel cluster WSFC è incluso come un membro del quorum del cluster. Ogni nodo dispone di un singolo voto per determinare l'integrità complessiva del cluster e ogni nodo tenterà continuamente di stabilire un quorum.  La discussione del quorum a questo punto ha qualificato attentamente il set di nodi del cluster WSFC che votano sull'integrità del cluster come *nodi votanti*.  
   
  Nessun singolo nodo in un cluster WSFC può determinare in modo definitivo che il cluster è integro o non integro complessivamente.  In qualsiasi momento specificato, dal punto di vista di ciascun nodo, alcuni degli altri nodi possono apparire come offline, con un failover in corso oppure possono non rispondere a causa di un errore di comunicazione di rete.  Una funzione principale del voto quorum consiste nel determinare se lo stato apparente di ogni nodo nel cluster WSFC è davvero l'effettivo stato di tali nodi.  
@@ -82,23 +82,23 @@ ms.locfileid: "62711436"
 > [!NOTE]  
 >  Lo scenario split brain è possibile solo quando un amministratore di sistema esegue manualmente un'operazione di quorum forzata o, in casi molto rari, un failover forzato, suddividendo in modo esplicito il set di nodi quorum.  
   
- Per semplificare la configurazione del quorum e aumentare i tempi di attività, può essere necessario modificare l'impostazione *NodeWeight* di ogni nodo in modo che il voto del nodo non venga conteggiato a fini del quorum.  
+ Per semplificare la configurazione del quorum e aumentare i tempi di esecuzione, è possibile modificare l'impostazione *NodeWeight* di ogni nodo in modo che il voto del nodo non venga conteggiato per il quorum.  
   
 > [!IMPORTANT]  
 >  Per utilizzare le impostazioni NodeWeight, è necessario applicare l'aggiornamento rapido seguente a tutti i server del cluster WSFC:  
 >   
 >  [KB2494036](https://support.microsoft.com/kb/2494036): è disponibile un hotfix che consente di configurare un nodo del cluster che non dispone di voti quorum [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] in e in[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a>Rettifiche consigliate per il voto del quorum  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> Modifiche ai voti quorum consigliate  
  Per abilitare o disabilitare il voto di un nodo WSFC specifico, attenersi alle linee guida seguenti:  
   
 -   **Nessun voto per impostazione predefinita.** Supporre che ogni nodo sia escluso dal voto in assenza di una giustificazione esplicita.  
   
--   **Includere tutte le repliche primarie.** Ogni nodo WSFC che ospita una replica primaria del gruppo disponibilità o rappresenta il proprietario preferito di un'istanza del cluster di failover deve disporre di un voto.  
+-   **Includere tutti le repliche primarie.** Ogni nodo WSFC che ospita una replica primaria del gruppo disponibilità o rappresenta il proprietario preferito di un'istanza del cluster di failover deve disporre di un voto.  
   
 -   **Includere i possibili proprietari del failover automatico.** Ogni nodo che può ospitare una replica primaria in seguito a un failover automatico del gruppo di disponibilità o al failover dell'istanza del cluster di failover deve disporre di un voto. Se è presente un solo gruppo di disponibilità nel cluster WSFC e le repliche di disponibilità sono ospitate solo da istanze autonome, questa regola include solo la replica secondaria che rappresenta la destinazione del failover automatico.  
   
--   **Escludere i nodi del sito secondario.** In generale, non assegnare voti a nodi WSFC che si trovano in un sito di ripristino di emergenza secondario.  Non è consigliabile fare in modo che i nodi nel sito secondario contribuiscano a una decisione che comporti l'impostazione offline del cluster quando non vi sono problemi con il sito primario.  
+-   **Escludere nodi del sito secondari.** In generale, non assegnare voti a nodi WSFC che si trovano in un sito di ripristino di emergenza secondario.  Non è consigliabile fare in modo che i nodi nel sito secondario contribuiscano a una decisione che comporti l'impostazione offline del cluster quando non vi sono problemi con il sito primario.  
   
 -   **Numero dispari di voti.** Se necessario, aggiungere una condivisione file di controllo, un nodo di controllo o un disco di controllo al cluster e modificare la modalità quorum per impedire possibili valori equivalenti nel voto quorum.  
   
@@ -112,18 +112,17 @@ ms.locfileid: "62711436"
 > -   [KB2494036](https://support.microsoft.com/kb/2494036) non è installato in tutti i nodi del cluster che ospitano repliche di disponibilità. Questa patch è necessaria per aggiungere o rimuovere voti per i nodi del cluster in distribuzioni multisito. Tuttavia, in distribuzioni a singolo sito, non è in genere necessaria e l'avviso può essere ignorato senza rischi.  
 > 
 > [!TIP]
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espone diverse DMW (viste a gestione dinamica) di sistema che semplificano la gestione delle impostazioni correlate alla configurazione del cluster WSFC e dei voti quorum dei nodi.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espone diverse DMW (viste a gestione dinamica) di sistema che semplificano la gestione delle impostazioni correlate alla configurazione del cluster WSFC e dei voti quorum dei nodi.  
 > 
 >  Per altre informazioni, vedere  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), [sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql), [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Visualizzare le impostazioni NodeWeight per il quorum del cluster](view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Configurare le impostazioni NodeWeight per il quorum del cluster](configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62711436"
   
 -   [Guida dettagliata al cluster di failover: configurazione del quorum in un cluster di failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

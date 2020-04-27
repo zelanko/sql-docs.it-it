@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473148"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
-  L'automazione dell'amministrazione in più istanze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
+  L'automazione dell'amministrazione in più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
   
 -   Gestione di due o più server.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62473148"
  [Gestire i processi in un'azienda](manage-jobs-across-an-enterprise.md)  
  Contiene informazioni su verifica dello stato dei processi, modifica dei server di destinazione per i processi, sincronizzazione dei clock dei server e polling dei server master per determinare lo stato attuale dei processi.  
   
- [Risolvere i problemi relativi a processi multiserver che utilizzano proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [Risolvere i problemi relativi a processi multiserver che usano proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
  Contiene informazioni sulla risoluzione dei problemi relativi a processi multiserver che utilizzano proxy con esito negativo.  
   
  [Polling dei server](poll-servers.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "62473148"
  Sono incluse informazioni sull'utilizzo ottimale delle caratteristiche di ottimizzazione automatica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]durante l'amministrazione automatizzata in un ambiente multiserver.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compatibilità con le versioni precedenti di SQL Server motore di database](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Compatibilità con le versioni precedenti del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Registra server](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   

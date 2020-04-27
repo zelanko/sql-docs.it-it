@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511376"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Recupero di dati BLOB tramite Using IRow::GetColumns e ISequentialStream
@@ -84,7 +84,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Recupero di dati BLOB tramite IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
   
   

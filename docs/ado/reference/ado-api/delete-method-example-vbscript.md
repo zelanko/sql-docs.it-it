@@ -15,16 +15,16 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919110"
 ---
 # <a name="delete-method-example-vbscript"></a>Esempio del metodo Delete (VBScript)
 In questo esempio viene usato il metodo [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) per rimuovere un record specificato da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Per visualizzare questo esempio completamente funzionante, è necessario che l'origine dati AdvWorks. mdb (installata con l'SDK) si trovi in C:\Programmi\Microsoft platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o modificare il percorso nel codice di esempio per riflettere percorso effettivo del file. Si tratta di un file di database di Microsoft Access.  
+ Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Per visualizzare questo esempio completamente funzionante, è necessario che l'origine dati AdvWorks. mdb (installata con l'SDK) si trovi in C:\Programmi\Microsoft platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o modificare il percorso nel codice di esempio in modo da riflettere il percorso effettivo del file. Si tratta di un file di database di Microsoft Access.  
   
  Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **DeleteVBS. asp**. È possibile visualizzare i risultati in qualsiasi browser client.  
   
@@ -169,6 +169,6 @@ End Sub
 <!-- EndDeleteVBS -->  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Delete (recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -18,10 +18,10 @@ ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68042738"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
@@ -61,7 +61,7 @@ fn_syscollector_get_execution_stats ( log_id )
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede SELECT per **dc_operator**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [syscollector_execution_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   

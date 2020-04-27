@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702294"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Creazione e modifica di oggetti (XMLA)
@@ -67,7 +67,7 @@ ms.locfileid: "62702294"
  Gli oggetti di sessione sono oggetti temporanei disponibili solo nella sessione esplicita o implicita utilizzata da un'applicazione client che vengono eliminati quando la sessione è terminata. È possibile creare oggetti sessione impostando l' `Scope` attributo del `Create` comando su *sessione*.  
   
 > [!NOTE]  
->  Quando si utilizza ** l'impostazione della sessione `ObjectDefinition` , l'elemento può contenere solo elementi ASSL di [dimensione](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
+>  Quando si utilizza *Session* l'impostazione della sessione `ObjectDefinition` , l'elemento può contenere solo elementi ASSL di [dimensione](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
   
 ## <a name="altering-objects"></a>Modifica di oggetti  
  Quando si modificano gli oggetti `Alter` usando il metodo, è necessario innanzitutto identificare l'oggetto da modificare fornendo un riferimento a un oggetto nella proprietà [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Alter` comando. Ogni riferimento all'oggetto contiene gli identificatori dell'oggetto necessari per identificare in modo univoco l'oggetto per il comando `Alter`. Per ulteriori informazioni sui riferimenti a oggetti, vedere [definizione e identificazione di oggetti &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
@@ -87,7 +87,7 @@ ms.locfileid: "62702294"
  Per modificare gli oggetti sessione creati dal `Create` comando, impostare l' `Scope` attributo del `Alter` comando su *sessione*.  
   
 > [!NOTE]  
->  Quando si utilizza ** l'impostazione della sessione `ObjectDefinition` , l'elemento può contenere solo elementi ASSL di [dimensione](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
+>  Quando si utilizza *Session* l'impostazione della sessione `ObjectDefinition` , l'elemento può contenere solo elementi ASSL di [dimensione](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Creazione o modifica di oggetti subordinati  
  Sebbene un comando `Create` o `Alter` crei o modifichi solo un oggetto principale di livello superiore, l'oggetto principale creato o modificato può includere nella proprietà `ObjectDefinition` che lo contiene definizioni per altri oggetti principali e secondari subordinati. Se si definisce un cubo, ad esempio, si specifica innanzitutto il database padre in `ParentObject`, quindi nella definizione del cubo in `ObjectDefinition` è possibile definire gruppi di misure per il cubo e nei gruppi di misure è possibile definire partizioni per ogni gruppo. Un oggetto secondario può essere definito solo sotto l'oggetto principale che lo contiene. Per ulteriori informazioni sugli oggetti principali e secondari, vedere [oggetti di Database &#40;Analysis Services-&#41;di dati multidimensionali ](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
@@ -145,7 +145,7 @@ ms.locfileid: "62702294"
 ### <a name="comments"></a>Commenti  
  L' `ObjectExpansion` attributo del `Alter` comando è stato impostato su *ObjectProperties*. Questa impostazione consente di escludere l'elemento [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) , un oggetto secondario, dall'origine dati definita in `ObjectDefinition`. Le impostazioni di rappresentazione per tale origine dati rimangono pertanto configurate sull'account del servizio, come specificato nel primo esempio.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
  [Sviluppo con Analysis Services linguaggio di scripting &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  

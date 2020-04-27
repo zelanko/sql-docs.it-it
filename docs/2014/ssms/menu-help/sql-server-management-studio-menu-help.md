@@ -14,30 +14,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510346"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Guida dei menu di SQL Server Management Studio
-  Questa sezione contiene la Guida sensibile al contesto per le finestre di dialogo e le pagine disponibili [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]dalla barra dei menu di.  
+  Questa sezione contiene gli argomenti della Guida sensibile al contesto per le finestre di dialogo e le pagine disponibili dalla barra dei menu di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  [Informazioni su SQL Server Management Studio](about-sql-server-management-studio.md)  
   
  [Opzioni di salvataggio avanzate](advanced-save-options.md)  
   
- [Finestra di dialogo Scegli cartelle di ricerca &#40;Visual Studio&#41;](choose-search-folders-dialog-box-visual-studio.md)  
+ [Finestra di dialogo Seleziona cartelle di ricerca &#40;Visual Studio&#41;](choose-search-folders-dialog-box-visual-studio.md)  
   
- [Scegli elementi della casella degli strumenti &#40;pagina attività di manutenzione&#41;](choose-toolbox-items-maintenance-tasks-page.md)  
+ [Scegli elementi della Casella degli strumenti &#40;pagina Attività di manutenzione&#41;](choose-toolbox-items-maintenance-tasks-page.md)  
   
- [Pagina Personalizza &#40;comandi&#41;](customize-commands-page.md)  
+ [Personalizza &#40;pagina Comandi&#41;](customize-commands-page.md)  
   
- [Pagina Personalizza &#40;barre degli strumenti&#41;](customize-toolbars-page.md)  
+ [Personalizza &#40;pagina Barre degli strumenti&#41;](customize-toolbars-page.md)  
   
  [Strumenti esterni](external-tools.md)  
   
- [Apri con &#40;nuovo file&#41;](open-with-new-file.md)  
+ [Apri con &#40;Nuovo file&#41;](open-with-new-file.md)  
   
  [Guida sensibile al contesto delle finestre di dialogo Opzioni](options-dialog-boxes-f1-help.md)  
   

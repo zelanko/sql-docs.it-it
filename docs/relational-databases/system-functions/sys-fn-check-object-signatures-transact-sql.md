@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046315"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*classe* è di **tipo sysname**.  
+ \@*class* è **sysname**.  
   
  { \@ *identificazione digitale* }  
  Hash SHA-1 del certificato con il quale è crittografata la chiave, o GUID della chiave asimmetrica con il quale è crittografata la chiave. \@*identificazione personale* è di tipo **varbinary (20)**.  
@@ -62,7 +62,7 @@ fn_ check_object_signatures (
   
 |Colonna|Type|Descrizione|  
 |------------|----------|-----------------|  
-|type|**nvarchar (120)**|Restituisce la descrizione del tipo o l'assembly.|  
+|type|**nvarchar(120)**|Restituisce la descrizione del tipo o l'assembly.|  
 |entity_id|**int**|Restituisce l'identificatore dell'oggetto valutato.|  
 |is_signed|**int**|Restituisce 0 quando l'oggetto non viene firmato con l'identificazione digitale fornita. Restituisce 1 quando l'oggetto viene firmato con l'identificazione digitale fornita.|  
 |is_signature_valid|**int**|Quando il valore is_signed è 1, restituisce 0 se la firma non è valida e 1 se è valida.<br /><br /> Quando il valore is_signed è 0, restituisce sempre 0.|  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [IS_OBJECTSIGNED &#40;&#41;Transact-SQL](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>Vedi anche  
+ [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

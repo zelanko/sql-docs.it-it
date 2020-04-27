@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727747"
 ---
 # <a name="debugging-stored-procedures"></a>Debug di stored procedure
@@ -45,13 +45,13 @@ ms.locfileid: "62727747"
   
     4.  Nella casella **di testo Connetti a** verificare che sia selezionato il tipo di programma appropriato. Per una DLL CLR, fare clic su **Seleziona**, quindi su **Esegui il debug di questi tipi di codice**, quindi su **gestito**e infine su **OK**. Per una DLL COM, fare clic su **Seleziona**, quindi su **Esegui il debug di questi tipi di codice**, quindi su **nativo**e infine su **OK**.  
   
-    5.  Fare clic su **Connetti**.  
+    5.  Scegliere **Connetti**.  
   
 7.  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] richiamare il programma o lo script MDX che chiama la stored procedure. Il debugger interrompe l'esecuzione quando raggiunge una riga contenente un punto di interruzione. È possibile valutare variabili nella finestra Espressione di controllo, visualizzare variabili locali ed eseguire il codice un'istruzione alla volta.  
   
  In caso di problemi durante il debug di una libreria, verificare che il file del database di programma (PDB) corrispondente sia stato copiato nel percorso di distribuzione nel server. Se questo file non è stato copiato durante la registrazione o la distribuzione, è necessario copiarlo manualmente nello stesso percorso della DLL. Per il codice nativo (DLL COM), il file PDB si trova nella sottodirectory \debug. Per il codice gestito (DLL CLR), si trova nella sottodirectory \WINDEBUG.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definizione delle stored procedure](defining-stored-procedures.md)  
   

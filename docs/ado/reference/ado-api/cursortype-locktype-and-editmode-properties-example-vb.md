@@ -17,10 +17,10 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919276"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Esempio di proprietà CursorType, LockType e EditMode (VB)
@@ -122,7 +122,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)   

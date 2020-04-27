@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67131796"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
@@ -63,7 +63,7 @@ ms.locfileid: "67131796"
 ### <a name="watching-live-data"></a>Controllo dei dati dinamici  
  È possibile controllare i dati dinamici mentre vengono acquisiti.  
   
--   In Esplora oggetti espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
+-   In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
 
 -   Fare clic con il pulsante destro del mouse sul nome della sessione, quindi scegliere **Controlla i dati dinamici** per avviare la visualizzazione dei dati di traccia.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "67131796"
 ### <a name="aggregate-results"></a>Aggregare i risultati  
  È possibile visualizzare i risultati della traccia, quindi analizzare ulteriormente i dati evento aggregando colonne nei risultati. Eventi estesi supporta cinque funzioni di aggregazione:  
   
--   sum  
+-   Sum  
   
 -   Min  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131796"
   
  Per visualizzare l'evento Deadlock Graph:  
   
--   In Esplora oggetti espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
+-   In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
   
 -   Fare clic con il pulsante destro del mouse sulla sessione in cui è contenuto l'evento deadlock configurato che si desidera visualizzare e scegliere **Controlla i dati dinamici**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131796"
   
  Per visualizzare i grafici del piano di query:  
   
-1.  In Esplora oggetti espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
+1.  In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla sessione in cui è contenuto il grafico del piano di query che si desidera visualizzare, ad esempio query_post_compilation_showplan, quindi scegliere **Controlla i dati dinamici**.  
   

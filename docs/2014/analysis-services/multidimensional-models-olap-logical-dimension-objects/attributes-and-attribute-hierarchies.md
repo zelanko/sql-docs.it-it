@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727395"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attributi e gerarchie di attributi
@@ -46,7 +46,7 @@ ms.locfileid: "62727395"
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relazioni tra attributi, schemi star e schemi snowflake  
  Per impostazione predefinita, in uno schema star tutti gli attributi sono direttamente correlati all'attributo chiave, che consente agli utenti di esplorare i fatti nel cubo in base a qualsiasi gerarchia di attributo nella dimensione. In uno schema snowflake, un attributo è direttamente collegato all'attributo chiave se la relativa tabella sottostante è direttamente collegata alla tabella dei fatti oppure è indirettamente collegato tramite l'attributo associato alla chiave nella tabella sottostante che collega la tabella con schema snowflake alla tabella collegata direttamente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md)   
  [Definire relazioni tra attributi](../multidimensional-models/attribute-relationships-define.md)   
  [Riferimento alle proprietà degli attributo delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)  

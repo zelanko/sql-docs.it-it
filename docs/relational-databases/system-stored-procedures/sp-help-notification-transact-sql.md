@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906101"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
@@ -135,7 +135,7 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_add_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_update_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

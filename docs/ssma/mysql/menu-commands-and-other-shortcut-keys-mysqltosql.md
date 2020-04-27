@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908805"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandi di menu e altri tasti di scelta rapida (MySQLToSQL)
@@ -87,7 +87,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Visualizzare la finestra di dialogo Impostazioni progetto.|ALT + T + P|  
 |Visualizza la finestra di dialogo Impostazioni progetto predefinite.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Comandi di menu della Guida  
+## <a name="help-menu-commands"></a>comandi del menu ?  
 Per accedere al menu?, il tasto di scelta rapida utilizzato è ALT + H. Nella tabella seguente vengono descritti i tasti di scelta rapida usati per accedere alle voci di menu nel menu Guida.  
   
 |PER ESEGUIRE QUESTA OPERAZIONE|Premere|  
@@ -179,6 +179,6 @@ Per accedere al menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Avviare informazioni rapide.|CTRL + MAIUSC + BARRA SPAZIATRICE|  
 |Vai a dichiarazione.|F12|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Tasti di scelta rapida &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705136"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Finestra di dialogo Valuta criteri, pagina Risultati valutazione
@@ -26,7 +26,7 @@ ms.locfileid: "62705136"
  **Risultati: Criteri**  
  Nome dei criteri da valutare. Il contenuto di questa casella è di sola lettura.  
   
- **Risultati: Messaggio**  
+ **Risultati: messaggio**  
  Collegamento a informazioni se si verifica un errore.  
   
  **Dettagli destinazione: Server**  
@@ -41,8 +41,8 @@ ms.locfileid: "62705136"
  **Dettagli destinazione: Messaggio**  
  Collegamento a informazioni se si verifica un errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Amministrare i server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)   
  [Finestra di dialogo Valuta criteri, pagina Selezione criteri](evaluate-policies-dialog-box-policy-selection-page.md)   
  [Finestra di dialogo Visualizzazione dettagliata risultati](results-detailed-view-dialog-box.md)  
   

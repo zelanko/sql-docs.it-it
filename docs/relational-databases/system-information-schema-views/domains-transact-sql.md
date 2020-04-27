@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cb602bf26b20ea916a46655cf813f4c1a6ab4f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950731"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67950731"
 |**DATETIME_PRECISION**|**smallint**|Codice del sottotipo per il tipo di dati **DateTime** e ISO **Interval** . Per gli altri tipi di dati in questa colonna viene restituito NULL.|  
 |**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Testo effettivo dell'istruzione di definizione [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. syscharsets &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   

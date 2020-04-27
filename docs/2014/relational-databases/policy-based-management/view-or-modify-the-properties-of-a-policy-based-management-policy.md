@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676940"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Visualizzare o modificare le proprietà dei criteri della gestione basata su criteri
@@ -35,18 +35,18 @@ ms.locfileid: "62676940"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>Per visualizzare le proprietà di tutti i criteri in un oggetto  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, un oggetto server, un database o un oggetto di database, scegliere **Criteri** , quindi fare clic su **Visualizza**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Visualizza criteri -** _nome_oggetto_, vedere [Finestra di dialogo Visualizza criteri](view-policies-dialog-box.md).  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, un oggetto server, un database o un oggetto di database, scegliere **Criteri** , quindi fare clic su **Visualizza**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Visualizza criteri -**_nome_oggetto_, vedere [Finestra di dialogo Visualizza criteri](view-policies-dialog-box.md).  
   
 2.  Al termine, fare clic su **Chiudi**.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62676940"
   
 4.  Fare clic sul segno più per espandere la cartella **Criteri** .  
   
-5.  Fare clic con il pulsante destro del mouse sui criteri da visualizzare o modificare e selezionare **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Apri criteri -** _nome_criteri_, vedere [Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md) e [Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Fare clic con il pulsante destro del mouse sui criteri da visualizzare o modificare e selezionare **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Apri criteri -**_nome_criteri_, vedere [Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md) e [Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-a-policys-properties"></a>Per visualizzare le proprietà dei criteri  
   

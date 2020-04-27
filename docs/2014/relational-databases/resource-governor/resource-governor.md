@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704864"
 ---
 # <a name="resource-governor"></a>Resource Governor
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Resource Governor è una funzionalità che è possibile usare per gestire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il carico di lavoro e l'utilizzo delle risorse di sistema. Resource Governor consente di specificare i limiti sulla quantità di CPU, I/O fisici e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La funzionalità Resource Governor consente di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare i limiti sulla quantità di CPU, I/O fisici e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
   
 ## <a name="benefits-of-resource-governor"></a>Vantaggi di Resource Governor  
  Resource Governor consente di gestire i carichi di lavoro e le risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificando limiti relativi all'utilizzo delle risorse da parte delle richieste in entrata. Nel contesto di Resource Governor il carico di lavoro è un set di richieste o query con dimensioni simili che può o deve essere considerato come singola entità. Sebbene non si tratti di un requisito obbligatorio, utilizzando in modo uniforme le risorse di un carico di lavoro è possibile sfruttare al massimo i vantaggi offerti da Resource Governor. I limiti delle risorse possono essere riconfigurati in tempo reale con un minimo impatto sui carichi di lavoro in esecuzione.  
@@ -87,7 +87,7 @@ ms.locfileid: "62704864"
 |Viene descritto come creare, modificare, spostare ed eliminare un gruppo di carico di lavoro.|[Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)|  
 |Viene descritto come creare e verificare una funzione di classificazione definita dall'utente.|[Funzione di classificazione di Resource Governor](resource-governor-classifier-function.md)|  
 |Viene descritto come configurare Resource Governor utilizzando un modello.|[Configurare Resource Governor usando un modello](configure-resource-governor-using-a-template.md)|  
-|Viene illustrata la procedura per visualizzare le proprietà di Resource Governor.|[View Resource Governor Properties](view-resource-governor-properties.md)|  
+|Viene illustrata la procedura per visualizzare le proprietà di Resource Governor.|[Visualizzare proprietà di Resource Governor](view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istanze del motore di database &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  

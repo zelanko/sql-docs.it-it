@@ -17,10 +17,10 @@ ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74cebabb5fad4dc7e7f6719224324b243b40d206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67913881"
 ---
 # <a name="value-property-ado-md"></a>Proprietà Value (ADO MD)
@@ -32,5 +32,5 @@ Indica il valore della [cella](../../../ado/reference/ado-md-api/cell-object-ado
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà FormattedValue (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)

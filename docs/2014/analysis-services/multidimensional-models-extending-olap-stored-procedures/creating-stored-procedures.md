@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62703083"
 ---
 # <a name="creating-stored-procedures"></a>Creazione di stored procedure
@@ -84,7 +84,7 @@ ms.locfileid: "62703083"
   
 1.  Espandere l'istanza del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in Esplora oggetti, fare clic con il pulsante destro del mouse sulla cartella **assembly** e quindi scegliere **nuovo riferimento ad assembly**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento** . Nella scheda **.NET** della finestra di dialogo **Aggiungi riferimento** sono elencati gli assembly .NET (CLR) esistenti, mentre nella scheda **progetti** sono elencati i progetti.  
   
-2.  È possibile fare clic su un componente o un progetto esistente **** e quindi fare clic su Aggiungi [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per aggiungerlo al progetto. Per aggiungere un riferimento a una DLL COM, fare clic sulla scheda **Sfoglia** per individuare il file. Nell'elenco **progetti e componenti selezionati** vengono visualizzati il nome, il tipo, la versione e il percorso di ogni componente aggiunto al progetto.  
+2.  È possibile fare clic su un componente o un progetto esistente **Add** e quindi fare clic su Aggiungi [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per aggiungerlo al progetto. Per aggiungere un riferimento a una DLL COM, fare clic sulla scheda **Sfoglia** per individuare il file. Nell'elenco **progetti e componenti selezionati** vengono visualizzati il nome, il tipo, la versione e il percorso di ogni componente aggiunto al progetto.  
   
 3.  Al termine della selezione dei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] componenti da aggiungere, fare clic su **OK** per aggiungerli al progetto.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62703083"
 </Create>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definizione delle stored procedure](defining-stored-procedures.md)  
   

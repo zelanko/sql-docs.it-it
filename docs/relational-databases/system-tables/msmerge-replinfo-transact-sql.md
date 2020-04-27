@@ -18,10 +18,10 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909064"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "67909064"
 |**validation_level**|**int**|Tipo di convalida da eseguire sulla sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = nessuna convalida.<br /><br /> **1** = convalida con solo conteggio delle righe.<br /><br /> **2** = convalida tramite conteggio delle righe e checksum.<br /><br /> **3** = convalida tramite conteggio delle righe e checksum binario.|  
 |**resync_gen**|**bigint**|Numero di generazione utilizzato per la risincronizzazione della sottoscrizione. Il valore **-1** indica che la sottoscrizione non è contrassegnata per la risincronizzazione.|  
 |**login_name**|**sysname**|Nome dell'utente che ha creato la sottoscrizione.|  
-|**nome host**|**sysname**|Valore utilizzato dal filtro di riga con parametri durante la generazione della partizione per la sottoscrizione.|  
-|**merge_jobid**|**binario (16)**|ID del processo di merge della sottoscrizione.|  
+|**hostname**|**sysname**|Valore utilizzato dal filtro di riga con parametri durante la generazione della partizione per la sottoscrizione.|  
+|**merge_jobid**|**binary(16)**|ID del processo di merge della sottoscrizione.|  
 |**sync_info**|**int**|Solo per uso interno.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

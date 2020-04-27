@@ -16,10 +16,10 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918660"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
@@ -42,7 +42,7 @@ Specifica lo [stato](../../../ado/reference/ado-api/status-property-ado-field.md
 |**adFieldIntegrityViolation**|10|Indica che il campo non può essere modificato perché è un'entità calcolata o derivata.|  
 |**adFieldInvalidURL**|17|Indica che l'URL dell'origine dati contiene caratteri non validi.|  
 |**adFieldIsNull**|3|Indica che il provider ha restituito un valore VARIANT di tipo VT_NULL e che il campo non è vuoto.|  
-|**adFieldOK**|0|Default. Indica che il campo è stato aggiunto o eliminato correttamente.|  
+|**adFieldOK**|0|Valore predefinito. Indica che il campo è stato aggiunto o eliminato correttamente.|  
 |**adFieldOutOfSpace**|22|Indica che il provider non è in grado di ottenere spazio di archiviazione sufficiente per completare un'operazione di spostamento o copia.|  
 |**adFieldPendingChange**|0x40000|Indica che il campo è stato eliminato e quindi aggiunto nuovamente, ad esempio con un tipo di dati diverso o che è stato modificato il valore del campo che in precedenza aveva lo stato **adFieldOK** . Il formato finale del campo modificherà la raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) dopo la chiamata del metodo [Update](../../../ado/reference/ado-api/update-method.md) .|  
 |**adFieldPendingDelete**|0x20000|Indica che l'operazione di **eliminazione** ha causato l'impostazione dello stato. Il campo è stato contrassegnato per l'eliminazione dalla raccolta **Fields** dopo la chiamata del metodo **Update** .|  
@@ -64,4 +64,4 @@ Specifica lo [stato](../../../ado/reference/ado-api/status-property-ado-field.md
  Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà Status (Field - ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Proprietà Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

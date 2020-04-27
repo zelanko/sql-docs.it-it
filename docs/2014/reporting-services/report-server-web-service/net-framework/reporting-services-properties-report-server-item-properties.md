@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519141"
 ---
 # <a name="report-server-item-properties"></a>Proprietà degli elementi del server di report
@@ -35,14 +35,14 @@ ms.locfileid: "62519141"
 |**CreatedBy**|Nome dell'utente che ha originariamente aggiunto l'elemento al database del server di report.|  
 |**CreationDate**|Data e ora di aggiunta dell'elemento al database del server di report.|  
 |**Descrizione**|Descrizione dell'elemento.|  
-|**Hidden**|Valore che indica se l'elemento è visibile e disponibile per gli utenti.|  
+|**Nascosto**|Valore che indica se l'elemento è visibile e disponibile per gli utenti.|  
 |**ID**|ID di un elemento nel database del server di report.|  
 |**ModifiedBy**|Nome dell'utente che ha apportato l'ultima modifica all'elemento nel database del server di report.|  
 |**ModifiedDate**|Data e ora dell'ultima modifica dell'elemento.|  
 |**Nome**|Nome di un elemento nel database del server di report.|  
 |**Percorso**|Percorso completo dell'elemento. Il percorso di un elemento nel database del server di report può essere composto da un massimo di 260 caratteri.|  
 |**Dimensione**|Dimensione, in byte, di un elemento nel database del server di report.|  
-|**Tipo**|Tipo di un elemento nel database del server di report.|  
+|**Type**|Tipo di un elemento nel database del server di report.|  
 |**VirtualPath**|Percorso virtuale di un elemento nel database del server di report. Il valore della proprietà <xref:ReportService2010.CatalogItem.VirtualPath%2A> indica il percorso in cui un utente può trovare l'elemento. Il percorso virtuale di un report denominato report1 che si trova nella cartella Report personali dell'utente è ad esempio /Report personali. Il percorso effettivo dell'elemento è /Utenti/nomeutente/Report personali.|  
   
 ## <a name="folder-properties"></a>Proprietà delle cartelle  
@@ -50,7 +50,7 @@ ms.locfileid: "62519141"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**Reserved**|Valore restituito dal metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per le cartelle riservate dal server di report. Le cartelle riservate includono Utenti, Report personali e /. Le cartelle riservate non possono essere modificate o rimosse.|  
+|**Riservato**|Valore restituito dal metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per le cartelle riservate dal server di report. Le cartelle riservate includono Utenti, Report personali e /. Le cartelle riservate non possono essere modificate o rimosse.|  
   
 ## <a name="report-properties"></a>Proprietà dei report  
  Oltre alle proprietà degli elementi elencate in precedenza, le proprietà seguenti si applicano ai report nel database del server di report.  

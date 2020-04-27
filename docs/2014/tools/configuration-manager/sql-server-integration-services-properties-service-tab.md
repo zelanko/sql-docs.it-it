@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186709"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Proprietà - SQL Server Integration Services (scheda Servizio)
-  Usare la scheda **Servizio**nella finestra di dialogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Proprietà** per visualizzare o specificare le opzioni seguenti.  
+  Usare la scheda **Servizio** nella finestra di dialogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Proprietà**di** per visualizzare o specificare le opzioni seguenti.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  
@@ -30,17 +30,17 @@ ms.locfileid: "68186709"
  **Codice di uscita**  
  Codice di errore di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che definisce eventuali problemi verificatisi durante l'avvio o l'arresto del servizio. Questa proprietà viene impostata su **ERROR_SERVICE_SPECIFIC_ERROR** (1066) quando l'errore è univoco per il servizio rappresentato da questa classe. Le informazioni relative all'errore sono disponibili nella proprietà **ServiceSpecificExitCode** . Il servizio imposta questo valore su NO_ERROR (0) in fase di esecuzione e di nuovo al termine.  
   
- **Nome host**  
+ **Host Name**  
  Visualizza il nome del computer o del cluster che esegue il servizio [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Nome**  
  Indica il nome visualizzato del servizio.  
   
- **ID di processo**  
+ **ID processo**  
  Visualizza l'ID di processo di Windows.  
   
- **Tipo di servizio SQL**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
+ **Tipo di servizio SQL Server**  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
@@ -51,7 +51,7 @@ ms.locfileid: "68186709"
   
 -   Disabilitato: il servizio non può essere avviato.  
   
- **Stato**  
- Indica se il servizio è in esecuzione, arrestato o disabilitato. "**...**" indica una modifica di stato in sospeso.  
+ **State**  
+ Indica se il servizio è in esecuzione, arrestato o disabilitato. " **...** " indica una modifica di stato in sospeso.  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659933"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lezione 2: Creazione e gestione di dati in una tabella gerarchica
@@ -32,12 +32,12 @@ ms.locfileid: "62659933"
   
 -   [Riordinamento di dati in una tabella gerarchica utilizzando metodi gerarchici](lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Riepilogo: Gestione di dati in una tabella gerarchica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+-   [Riepilogo: Gestione dei dati in una tabella gerarchica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di una tabella utilizzando il tipo di dati hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Lezione 1: Conversione di una tabella in una struttura gerarchica](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

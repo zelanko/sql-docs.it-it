@@ -21,10 +21,10 @@ ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059285"
 ---
 # <a name="sysfn_trace_geteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
@@ -52,7 +52,7 @@ fn_trace_geteventinfo ( trace_id )
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**EventID**|**int**|ID dell'evento tracciato|  
+|**eventid**|**int**|ID dell'evento tracciato|  
 |**columnid**|**int**|ID di tutte le colonne raccolte da ogni evento|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -70,14 +70,14 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
- [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [sp_trace_setevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [Creare una traccia &#40;&#41;Transact-SQL](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [sp_trace_create &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sp_trace_setstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sys. fn_trace_getinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sys. fn_trace_gettable &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  
   

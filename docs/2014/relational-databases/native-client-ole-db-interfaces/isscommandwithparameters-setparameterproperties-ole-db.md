@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638775"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -70,7 +70,7 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- I miglioramenti apportati al motore [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di database a partire da consentono a ISSCommandWithParameters:: SetParameterProperties di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da ISSCommandWithParameters:: SetParameterProperties nelle versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
+ I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a ISSCommandWithParameters::SetParameterProperties di ottenere descrizioni più accurate dei risultati previsti. È possibile che questi risultati più accurati differiscano dai valori restituiti da ISSCommandWithParameters::SetParameterProperties nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
@@ -78,7 +78,7 @@ SSPARAMPROPS rgParamProperties[]);
 |*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
   
   

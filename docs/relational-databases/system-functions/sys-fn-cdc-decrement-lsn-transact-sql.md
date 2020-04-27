@@ -21,10 +21,10 @@ ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046510"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  Valore LSN. *lsn_value* è **binario (10)**.  
   
 ## <a name="return-type"></a>Tipo restituito  
- **binario (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore LSN restituito dalla funzione è sempre inferiore al valore specificato e non può esistere alcun valore LSN tra i due valori.  
@@ -67,7 +67,7 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. fn_cdc_increment_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
  [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   

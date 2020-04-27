@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727697"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
@@ -47,7 +47,7 @@ ms.locfileid: "62727697"
   
  Le aggregazioni vengono progettate utilizzando le procedure guidate, ma non vengono calcolate fino alla fase di elaborazione della partizione per cui sono state configurate. Dopo la creazione dell'aggregazione, in caso di modifica della struttura di un cubo oppure di aggiunta o modifica dei dati nelle tabelle di origine di un cubo, in genere è necessario esaminare le aggregazioni del cubo e rielaborare il cubo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione e modalità di archiviazione delle partizioni](partitions-partition-storage-modes-and-processing.md)  
   
   

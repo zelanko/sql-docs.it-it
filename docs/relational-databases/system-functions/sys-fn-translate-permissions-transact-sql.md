@@ -22,10 +22,10 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68055369"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
@@ -50,7 +50,7 @@ sys.fn_translate_permissions ( level , perms )
  Maschera di bit restituita nella colonna delle autorizzazioni. *perms* è di tipo **varbinary (16)**.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- **tavolo**  
+ **tabella**  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore restituito nella colonna **autorizzazioni** di una traccia SQL è una rappresentazione Integer di una maschera di maschera utilizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **sys. fn_translate_permissions** converte questa maschera di maschera in una tabella di nomi di autorizzazioni.  
@@ -68,7 +68,7 @@ SELECT '0010' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0010)
 SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [sys. server_permissions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185751"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lezione 1: Valutazione delle procedure consigliate su richiesta
@@ -31,7 +31,7 @@ ms.locfileid: "68185751"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esecuzione di una valutazione su richiesta utilizzando Esplora oggetti](../ssms/object/object-explorer.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione prestabilita](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

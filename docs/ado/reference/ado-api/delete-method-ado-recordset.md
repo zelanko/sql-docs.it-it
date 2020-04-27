@@ -17,10 +17,10 @@ ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919126"
 ---
 # <a name="delete-method-ado-recordset"></a>Metodo Delete (Recordset - ADO)
@@ -56,7 +56,7 @@ recordset.Delete AffectRecords
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di metodo Delete (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Esempio di metodo Delete (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Esempio di metodo Delete (VC + +)](../../../ado/reference/ado-api/delete-method-example-vc.md)   

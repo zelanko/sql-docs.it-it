@@ -13,29 +13,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66265154"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
   Quando si esegue l'importazione bulk in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei dati da una tabella, è possibile utilizzare un file di formato per un sistema flessibile per la scrittura di file di dati che non richiede alcuna modifica o richiede modifiche minime per la conformità con altri formati di dati o la lettura di file di dati da un altro programma software.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato, ovvero non XML e XML. Il formato non XML è il formato originale supportato dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato, ovvero non XML e XML. Il formato non XML è il formato originale supportato dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML.  
   
 > [!NOTE]  
->  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** non può leggere un file di formato versione 11.0 generato dall'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
+>  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** può leggere un file di formato versione 10,0, generato da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, ma [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** non è in grado di leggere un file di formato versione 11,0, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]generato da **bcp**.  
   
- Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata (**-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
+ Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Creazione di un file di formato non XML  
  Per usare un comando **bcp** per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati. L'opzione **format** richiede anche l'opzione **-f** , come nell'esempio seguente:  
   
- **** __ **formato** table_or_view bcp NUL **-f**_format_file_name_  
+ **bcp** _tabella_o_vista_ **format** nul **-f**_nome_file_formato_  
   
 > [!NOTE]  
 >  Per distinguere un file di formato non XML, è consigliabile utilizzare l'estensione fmt, ad esempio MyTable.fmt.  
@@ -45,7 +44,7 @@ ms.locfileid: "66265154"
 ### <a name="examples"></a>Esempi  
  Questa sezione contiene gli esempi seguenti che illustrano come usare i comandi **bcp** per creare un file di formato non XML:  
   
--   R. Creazione di un file di formato non XML per dati nativi  
+-   A. Creazione di un file di formato non XML per dati nativi  
   
 -   B. Creazione di un file di formato non XML per dati di tipo carattere  
   
@@ -55,14 +54,14 @@ ms.locfileid: "66265154"
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
-#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>R. Creazione di un file di formato non XML per dati nativi  
+#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. Creazione di un file di formato non XML per dati nativi  
  Nell'esempio seguente viene creato un file di formato XML, `Department-n.xml`, per la tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Nel file di formato vengono utilizzati tipi di dati nativi. Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Specifica il file di formato non XML.|  
+|**formatnul-f** _file_formato_|Specifica il file di formato non XML.|  
 |**-n**|Specifica i tipi di dati nativi.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
@@ -92,7 +91,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Specifica un file di formato non XML.|  
+|**formatnul-f** _file_formato_|Specifica un file di formato non XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
@@ -136,7 +135,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>Creazione di un file di formato XML  
  Per usare un comando **bcp** per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati. L'opzione **format** richiede sempre l'opzione **-f** e per creare un file di formato XML è necessario anche specificare l'opzione **-x** , come nell'esempio seguente:  
   
- formato di table_or_view **bcp** __ **NUL-f** _format_file_name_ **-x**  
+ **bcp** _tabella_o_vista_ **format nul-f** _nome_file_formato_ **-x**  
   
 > [!NOTE]  
 >  Per distinguere un file di formato XML, è consigliabile utilizzare l'estensione xml, ad esempio MyTable.xml.  
@@ -162,9 +161,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Specifica il file di formato XML.|  
+|**formatnul-f** _file_formato_ **-x**|Specifica il file di formato XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
-|**-t**`,`|Specifica una virgola (**,**) come carattere di terminazione del campo.<br /><br /> Nota: se il file di dati usa il carattere di terminazione del campo predefinito (`\t`), l'opzione **-t** non è necessaria.|  
+|**-t** `,`|Specifica la virgola ( **,** ) come carattere di terminazione del campo.<br /><br /> Nota: se il file di dati usa il carattere di terminazione del campo predefinito (`\t`), l'opzione **-t** non è necessaria.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
@@ -202,7 +201,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Specifica il file di formato XML.|  
+|**formatnul-f** _file_formato_ **-x**|Specifica il file di formato XML.|  
 |**-n**|Specifica i tipi di dati nativi.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
@@ -246,9 +245,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 ## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
- [Usare un file di formato per ignorare una colonna di tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
- [File di formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

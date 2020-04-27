@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626152"
 ---
 # <a name="sql-server-replication"></a>Replica SQL Server
@@ -38,28 +38,28 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
  ## <a name="replication-security"></a>Sicurezza della replica
   
 -   [Visualizzare e modificare le impostazioni di sicurezza della replica](security/view-and-modify-replication-security-settings.md)  
--   [Gestione degli account nell'elenco di accesso alla pubblicazione](security/manage-logins-in-the-publication-access-list.md)  
+-   [Gestire gli account nell'elenco di accesso alla pubblicazione](security/manage-logins-in-the-publication-access-list.md)  
   
 ## <a name="publishing-and-distribution"></a>Pubblicazione e distribuzione  
   
--   [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md)   
+-   [Configurazione della pubblicazione e della distribuzione](configure-publishing-and-distribution.md)   
 -   [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
--   [Disabilitare la pubblicazione e la distribuzione](disable-publishing-and-distribution.md)  
+-   [Disabilitazione della pubblicazione e della distribuzione](disable-publishing-and-distribution.md)  
   
 ## <a name="publications-and-articles"></a>Pubblicazioni e articoli 
   
--   [Creare una pubblicazione](publish/create-a-publication.md)    
+-   [Creazione di una pubblicazione](publish/create-a-publication.md)    
 -   [Definire un articolo](publish/define-an-article.md)   
 -   [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
--   [Visualizzare e modificare le proprietà degli articoli](publish/view-and-modify-article-properties.md)    
+-   [Visualizzazione e modifica delle proprietà degli articoli](publish/view-and-modify-article-properties.md)    
 -   [Eliminare una pubblicazione](publish/delete-a-publication.md)   
 -   [Eliminare un articolo](publish/delete-an-article.md)    
--   [Creare una pubblicazione da un Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
--   [Impostazione del periodo di scadenza per le sottoscrizioni](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [Creare una pubblicazione da un database Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Impostare il periodo di scadenza per le sottoscrizioni](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Specificare le opzioni dello schema](publish/specify-schema-options.md)  
 -   [Replica modifiche dello schema](publish/replicate-schema-changes.md)    
 -   [Gestisci colonne Identity](publish/manage-identity-columns.md)   
--   [Impostazione del livello di compatibilità per le pubblicazioni di tipo merge](publish/set-the-compatibility-level-for-merge-publications.md)  
+-   [Impostare il livello di compatibilità per le pubblicazioni di tipo merge](publish/set-the-compatibility-level-for-merge-publications.md)  
   
 ### <a name="snapshot-options"></a>Opzioni per gli snapshot  
   
@@ -68,16 +68,16 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 ### <a name="filter-data"></a>Filtrare i dati  
   
--   [Definizione e modifica di un filtro colonne](publish/define-and-modify-a-column-filter.md)    
+-   [Definire e modificare un filtro colonne](publish/define-and-modify-a-column-filter.md)    
 -   [Definire e modificare un filtro di riga statico](publish/define-and-modify-a-static-row-filter.md)    
--   [Definire e modificare un filtro di riga con parametri per un articolo di merge](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Ottimizzare i filtri di riga con parametri](publish/optimize-parameterized-row-filters.md)    
 -   [Definizione e modifica di un filtro di join tra articoli di merge](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
 ### <a name="transactional-replication-options"></a>Opzioni per la replica transazionale  
   
--   [Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [Abilitazione delle sottoscrizioni aggiornabili per le pubblicazioni transazionali](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [Impostare il metodo di propagazione per le modifiche ai dati negli articoli transazionali](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
+-   [Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>Opzioni per la replica di tipo merge  
   
@@ -90,22 +90,22 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 -   [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)    
 -   [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md)    
--   [Eliminare una sottoscrizione pull](delete-a-pull-subscription.md)    
--   [Creare una sottoscrizione push](create-a-push-subscription.md)   
--   [Visualizzare e modificare le proprietà delle sottoscrizioni push](view-and-modify-push-subscription-properties.md)   
+-   [Eliminazione di una sottoscrizione pull](delete-a-pull-subscription.md)    
+-   [Creazione di una sottoscrizione push](create-a-push-subscription.md)   
+-   [Visualizzazione e modifica delle proprietà delle sottoscrizioni push](view-and-modify-push-subscription-properties.md)   
 -   [Eliminazione di una sottoscrizione push](delete-a-push-subscription.md)   
 -   [Impostazione di pianificazioni della sincronizzazione](specify-synchronization-schedules.md)    
--   [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Creazione di una sottoscrizione per un Sottoscrittore non SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
 ## <a name="synchronize-subscriptions"></a>Sincronizzare le sottoscrizioni  
   
--   [Creare e applicare lo snapshot iniziale](create-and-apply-the-initial-snapshot.md)   
--   [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Creazione e applicazione dello snapshot iniziale](create-and-apply-the-initial-snapshot.md)   
+-   [Creare uno snapshot per una pubblicazione di tipo merge con filtri con parametri](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Inizializzare una sottoscrizione transazionale da un backup](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [Inizializzare manualmente una sottoscrizione](initialize-a-subscription-manually.md)    
 -   [Sincronizzare una sottoscrizione pull](synchronize-a-pull-subscription.md)    
--   [Sincronizzare una sottoscrizione push](synchronize-a-push-subscription.md)   
+-   [Sincronizzazione di una sottoscrizione push](synchronize-a-push-subscription.md)   
 -   [Reinizializza una sottoscrizione](reinitialize-a-subscription.md)    
 -   [Eseguire script durante la sincronizzazione](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [Implementazione di un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md)  
@@ -115,9 +115,9 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 ## <a name="administeration"></a>Amministrazione di 
   
--   [Utilizzo dei profili agenti di replica](agents/work-with-replication-agent-profiles.md)   
--   [Convalidare i dati nel Sottoscrittore](validate-data-at-the-subscriber.md)    
--   [Gestire le partizioni per una pubblicazione di tipo merge con filtri con parametri](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Usare i profili agenti di replica](agents/work-with-replication-agent-profiles.md)   
+-   [Convalida dei dati nel Sottoscrittore](validate-data-at-the-subscriber.md)    
+-   [Gestire le partizioni di una pubblicazione di tipo merge con filtri con parametri](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Caricamento bulk dei dati nelle tabelle in una pubblicazione di tipo merge](bulk-load-data-into-tables-in-a-merge-publication.md)    
 -   [Pulire i metadati di merge](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
 -   [Eseguire un aggiornamento fittizio per un articolo di merge](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
@@ -130,8 +130,8 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 ## <a name="monitor"></a>Monitorare
   
--   [Autorizzazione di utenti non amministratori all'utilizzo di Monitoraggio replica](monitor/allow-non-administrators-to-use-replication-monitor.md)    
--   [Monitorare la replica a livello di programmazione](monitor/programmatically-monitor-replication.md)    
+-   [Consentire a utenti non amministratori di usare Monitoraggio replica](monitor/allow-non-administrators-to-use-replication-monitor.md)    
+-   [Monitorare la replica a livello di codice](monitor/programmatically-monitor-replication.md)    
 -   [Visualizzare comandi replicati e altre informazioni nel database di distribuzione](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge](view-conflict-information-for-merge-publications.md) 
 -   [Misurare la latenza e convalidare le connessioni per la replica transazionale](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  

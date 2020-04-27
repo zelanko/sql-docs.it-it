@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721653"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
@@ -101,8 +101,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
  Se si utilizza un server di pubblicazione per la prima volta, è necessario configurare un server di distribuzione e una condivisione snapshot. L'agente di merge in ogni sottoscrittore deve disporre delle autorizzazioni di lettura per la condivisione snapshot. Per altre informazioni, vedere [Configurare la distribuzione](configure-distribution.md) e [Proteggere la cartella snapshot](security/secure-the-snapshot-folder.md).  
   
- 
-  `gen` è una parola riservata nei file XML websync. Non tentare di pubblicare tabelle contenenti colonne denominate `gen`.  
+ `gen` è una parola riservata nei file XML websync. Non tentare di pubblicare tabelle contenenti colonne denominate `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configurazione della sottoscrizione  
  Dopo avere abilitato una pubblicazione e configurato IIS, creare una sottoscrizione pull e specificare che deve essere sincronizzata utilizzando IIS. La sincronizzazione Web è supportata solo per le sottoscrizioni pull.  

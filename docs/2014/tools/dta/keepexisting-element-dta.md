@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735633"
 ---
 # <a name="keepexisting-element-dta"></a>Elemento KeepExisting (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62735633"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|
-  `string`, limite della lunghezza imposto dal server.|  
+|**Tipo di dati e lunghezza**|`string`, limite della lunghezza imposto dal server.|  
 |**Valori consentiti**|**NONE**<br /> Nessuna struttura esistente.<br /><br /> **ALL**<br /> Tutte le strutture esistenti.<br /><br /> **ALIGNED**<br /> Tutte le strutture con partizionamento allineato.<br /><br /> **CL_IDX**<br /> Tutti gli indici cluster nelle tabelle.<br /><br /> **IDX**<br /> Tutti gli indici cluster e non cluster nelle tabelle.<br /><br /> Utilizzare solo uno dei valori seguenti con questo elemento.|  
 |**Valore predefinito**|No.|  
 |**Occorrenza**|Facoltativa. Può essere utilizzato una sola volta per ogni elemento `TuningOptions`.|  

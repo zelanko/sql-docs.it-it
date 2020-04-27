@@ -17,10 +17,10 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918947"
 ---
 # <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
@@ -52,6 +52,6 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
  Questo gestore eventi viene chiamato quando viene effettuato un tentativo di spostarsi oltre la fine dell'oggetto **Recordset** , probabilmente in seguito alla chiamata a **MoveNext**. Tuttavia, in questo caso, è possibile recuperare più record da un database e aggiungerli alla fine del **Recordset**. In tal caso, impostare *fMoreData* su VARIANT_TRUE e restituire da **EndOfRecordset**. Chiamare quindi di nuovo **MoveNext** per accedere ai record appena recuperati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727218"
 ---
 # <a name="managing-transactions-xmla"></a>Gestione di transazioni (XMLA)
@@ -34,19 +34,15 @@ ms.locfileid: "62727218"
  Una transazione può essere implicita o esplicita, come descritto di seguito.  
   
  **Transazione implicita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Crea una transazione *implicita* per un comando XMLA se `BeginTransaction` il comando non specifica l'inizio di una transazione. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue sempre il commit di una transazione implicita se il comando riesce e ne esegue il rollback se il comando non riesce.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Crea una transazione *implicita* per un comando XMLA se `BeginTransaction` il comando non specifica l'inizio di una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue sempre il commit di una transazione implicita se il comando riesce e ne esegue il rollback se il comando non riesce.  
   
  **Transazione esplicita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Crea una transazione *esplicita* se `BeginTransaction` il comando avvia una transazione. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tuttavia esegue il commit di una transazione esplicita solo se viene inviato un comando `CommitTransaction` e ne esegue il rollback se viene inviato un comando `RollbackTransaction`.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Crea una transazione *esplicita* se `BeginTransaction` il comando avvia una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tuttavia esegue il commit di una transazione esplicita solo se viene inviato un comando `CommitTransaction` e ne esegue il rollback se viene inviato un comando `RollbackTransaction`.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inoltre esegue il rollback sia di transazioni implicite che di transazioni esplicite se la sessione corrente termina prima del completamento della transazione attiva.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inoltre esegue il rollback sia di transazioni implicite che di transazioni esplicite se la sessione corrente termina prima del completamento della transazione attiva.  
   
 ## <a name="transactions-and-reference-counts"></a>Transazioni e conteggi dei riferimenti  
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene gestito un conteggio dei riferimenti alla transazione per ogni sessione. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non supporta tuttavia transazioni nidificate poiché per ogni sessione viene gestita una sola transazione attiva. Se nella sessione corrente non è presente una transazione attiva, il conteggio dei riferimenti alla transazione è impostato su zero.  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene gestito un conteggio dei riferimenti alla transazione per ogni sessione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non supporta tuttavia transazioni nidificate poiché per ogni sessione viene gestita una sola transazione attiva. Se nella sessione corrente non è presente una transazione attiva, il conteggio dei riferimenti alla transazione è impostato su zero.  
   
  In altri termini, ogni comando `BeginTransaction` incrementa il conteggio dei riferimenti di uno, mentre ogni comando `CommitTransaction` decrementa il conteggio dei riferimenti sempre di uno. Se un comando `CommitTransaction` imposta il conteggio relativo alla transazione su zero, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue il commit della transazione.  
   
@@ -61,7 +57,7 @@ ms.locfileid: "62727218"
 ## <a name="rolling-back-a-transaction"></a>Esecuzione del rollback di una transazione  
  Il comando `RollbackTransaction` esegue il rollback dei risultati di comandi eseguiti dopo che il comando `BeginTransaction` è stato eseguito nella sessione corrente. Il comando `RollbackTransaction` esegue il rollback della transazione attiva indipendentemente dal valore corrente del conteggio dei riferimenti alla transazione e imposta tale conteggio su zero. Se non è presente alcuna transazione attiva, ovvero se il conteggio dei riferimenti alla transazione per la sessione corrente è già impostato su zero, un comando `RollbackTransaction` restituisce un errore.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

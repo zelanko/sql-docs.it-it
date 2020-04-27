@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906119"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
@@ -80,8 +80,8 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Supporto delle regole di confronto del database per Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

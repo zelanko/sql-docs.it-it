@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629391"
 ---
 # <a name="subscribers"></a>Sottoscrittori
@@ -26,7 +26,7 @@ ms.locfileid: "62629391"
   
 ## <a name="options"></a>Opzioni  
  **Sottoscrittori**  
- Selezionare la casella di controllo nella griglia per abilitare l'origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati o non corrispondente come sottoscrittore della pubblicazione scelta nella pagina **pubblicazione** . Se il Sottoscrittore non è incluso nell'elenco, fare clic su **Aggiungi Sottoscrittore** o su **Aggiungi Sottoscrittore SQL Server**.  
+ Selezionare la casella di controllo nella griglia per abilitare l'origine dei dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente come Sottoscrittore della pubblicazione scelta nella pagina **Pubblicazione** . Se il Sottoscrittore non è incluso nell'elenco, fare clic su **Aggiungi Sottoscrittore** o su **Aggiungi Sottoscrittore SQL Server**.  
   
  **Database di sottoscrizione**  
  Le informazioni visualizzate e le azioni disponibili in questa colonna dipendono dal tipo di Sottoscrittore visualizzato nella colonna **Sottoscrittori** :  
@@ -48,7 +48,7 @@ ms.locfileid: "62629391"
   
 -   La sottoscrizione è una sottoscrizione push.  
   
--   Il server di pubblicazione della pubblicazione selezionata [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è o versione successiva.  
+-   Il server della pubblicazione selezionata è [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
  Facendo clic su **Aggiungi Sottoscrittore** viene visualizzato un menu con due opzioni: **Aggiungi Sottoscrittore SQL Server** e **Aggiungi Sottoscrittore non SQL Server**. Scegliere **Aggiungi Sottoscrittore non SQL Server** per aggiungere un Sottoscrittore Oracle o IBM DB2.  
   

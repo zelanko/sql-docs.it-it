@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659584"
 ---
 # <a name="recommendation-element-dta"></a>Elemento Recommendation (DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "62659584"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Table per Schema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Elementi figlio**|[Elemento Create &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop`elemento. Per ulteriori informazioni, vedere l' [XML Schema di Ottimizzazione guidata motore di database](https://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Elementi figlio**|[Elemento Create &#40;DTA&#41;](create-element-dta.md)<br /><br /> Elemento `Drop`. Per ulteriori informazioni, vedere l' [XML Schema di Ottimizzazione guidata motore di database](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questo elemento appartiene al nome **RecommendationTypecomplexType** nell'XML Schema dell'Ottimizzazione guidata motore di database. Viene utilizzato per specificare indici per una configurazione ipotetica. Questo elemento `Recommendation` non deve essere confuso con altri tipi che è possibile utilizzare per specificare il partizionamento (`RecommendationPType`) o le viste (`RecommendationViewType`). Per informazioni su questi altri `Recommendation` tipi di elemento, vedere l' [XML Schema di ottimizzazione guidata motore di database](https://go.microsoft.com/fwlink/?linkid=43100).  

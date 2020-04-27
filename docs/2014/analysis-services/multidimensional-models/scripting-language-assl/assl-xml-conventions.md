@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736394"
 ---
 # <a name="assl-xml-conventions"></a>Convenzioni XML di ASSL
@@ -150,14 +150,13 @@ ms.locfileid: "62736394"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (stringa vuota)|  
-|`Integer`o`Long`|0 (zero)|  
+|`Integer` o `Long`|0 (zero)|  
 |`Timestamp`|12:00:00 AM, 1/1/0001 (corrispondente a .NET Framework `System.DateTime` con 0 cicli)|  
   
  Un elemento presente, ma vuoto, viene interpretato come se il relativo valore fosse una stringa Null e non quello predefinito.  
   
 ### <a name="inherited-defaults"></a>Valori predefiniti ereditati  
- Alcune proprietà specificate per un oggetto forniscono i valori predefiniti per la stessa proprietà in oggetti figlio o discendenti. 
-  `Cube.StorageMode` fornisce ad esempio il valore predefinito per `Partition.StorageMode`. Le regole che Analysis Services applica ai valori predefiniti ereditati sono i seguenti:  
+ Alcune proprietà specificate per un oggetto forniscono i valori predefiniti per la stessa proprietà in oggetti figlio o discendenti. `Cube.StorageMode` fornisce ad esempio il valore predefinito per `Partition.StorageMode`. Le regole che Analysis Services applica ai valori predefiniti ereditati sono i seguenti:  
   
 -   Quando in XML la proprietà per l'oggetto figlio è Null, per impostazione predefinita viene utilizzato il valore ereditato. Se tuttavia si esegue una query relativa al valore nel server, viene restituito il valore Null dell'elemento XML.  
   

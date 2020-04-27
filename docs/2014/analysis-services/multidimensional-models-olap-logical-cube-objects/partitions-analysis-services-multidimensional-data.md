@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702622"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partizioni (Analysis Services - Dati multidimensionali)
@@ -64,7 +64,7 @@ ms.locfileid: "62702622"
 ## <a name="incremental-updates"></a>Aggiornamenti incrementali  
  Quando si creano e gestiscono partizioni in gruppi di misure con più partizioni, è necessario adottare alcune particolari precauzioni per garantire l'accuratezza dei dati del cubo. Sebbene tali precauzioni non siano in genere applicabili ai gruppi di misure con un'unica partizione, in caso di aggiornamento incrementale delle partizioni sono valide anche per questo tipo di gruppo. In caso di aggiornamento incrementale di una partizione, viene creata una nuova partizione temporanea con la stessa struttura della partizione di origine. La partizione temporanea viene elaborata e quindi unita alla partizione di origine. È pertanto necessario verificare che la query di elaborazione con cui viene popolata la partizione temporanea non determini la duplicazione di dati già presenti in una partizione esistente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configura proprietà misura](../multidimensional-models/configure-measure-properties.md)   
  [Cubi nei modelli multidimensionali](../multidimensional-models/cubes-in-multidimensional-models.md)  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186761"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Guida di Gestione configurazione SQL Server
@@ -67,10 +67,10 @@ ms.locfileid: "68186761"
   
 -   Dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server** (versione), **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Servizi di SQL Server](../../../2014/tools/configuration-manager/sql-server-services.md)   
  [Configurazione di rete SQL Server](sql-server-network-configuration.md)   
- [Configurazione SQL Native Client 11.0](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
+ [Configurazione di SQL Native Client 11,0](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

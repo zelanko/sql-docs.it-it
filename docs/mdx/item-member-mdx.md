@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905916"
 ---
 # <a name="item-member-mdx"></a>Item (Member) (MDX)
@@ -48,7 +48,7 @@ Tuple_Expression.Item( Index )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

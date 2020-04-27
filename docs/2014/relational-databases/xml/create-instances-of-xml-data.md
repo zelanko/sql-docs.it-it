@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637609"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
@@ -67,8 +67,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Per impostazione predefinita, il parser XML elimina gli spazi vuoti durante la conversione di dati di tipo stringa nel formato XML in uno dei casi seguenti:  
   
--   
-  `The xml:space` l'attributo non viene definito per un elemento o i relativi predecessori.  
+-   `The xml:space` l'attributo non viene definito per un elemento o i relativi predecessori.  
   
 -   Viene assegnato il valore predefinito all'attributo `xml:space` attivo per un elemento o i relativi predecessori.  
   
@@ -181,8 +180,7 @@ go
  Per altre informazioni su FOR XML, vedere [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
   
 ## <a name="using-constant-assignments"></a>Utilizzo di assegnazioni di costanti  
  È possibile utilizzare una costante stringa in cui è prevista un' `xml` istanza del tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio:  

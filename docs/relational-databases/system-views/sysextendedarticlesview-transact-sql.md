@@ -18,10 +18,10 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910109"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "67910109"
 |**filtro**|**int**|Identificatore di oggetto della stored procedure utilizzata per il partizionamento orizzontale.|  
 |**filter_clause**|**ntext**|Clausola WHERE dell'articolo, utilizzata per il filtro orizzontale.|  
 |**ins_cmd**|**nvarchar(255)**|Comando da eseguire a seguito di un'istruzione INSERT.|  
-|**nome**|**nvarchar(128)**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
-|**ObjID**|**int**|ID dell'oggetto di tabella pubblicato.|  
+|**name**|**nvarchar(128)**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
+|**objid**|**int**|ID dell'oggetto di tabella pubblicato.|  
 |**pubid**|**int**|ID della pubblicazione a cui appartiene l'articolo.|  
 |**pre_creation_cmd**|**tinyint**|Comando preliminare per l'istruzione DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = nessuna.<br /><br /> **1** = Elimina.<br /><br /> **2** = Delete.<br /><br /> **3** = troncamento.|  
-|**stato**|**int**|Maschera di bit delle opzioni e dello stato dell'articolo, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **1** = l'articolo è attivo.<br /><br /> **8** = include il nome della colonna nelle istruzioni INSERT.<br /><br /> **16** = usa istruzioni con parametri.<br /><br /> **24** = include il nome della colonna nelle istruzioni INSERT e usa istruzioni con parametri.<br /><br /> Ad esempio, un articolo attivo che utilizza istruzioni con parametri includerà il valore 17 in questa colonna. Il valore 0 indica che l'articolo è inattivo e che non sono state definite proprietà aggiuntive.|  
+|**Stato**|**int**|Maschera di bit delle opzioni e dello stato dell'articolo, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **1** = l'articolo è attivo.<br /><br /> **8** = include il nome della colonna nelle istruzioni INSERT.<br /><br /> **16** = usa istruzioni con parametri.<br /><br /> **24** = include il nome della colonna nelle istruzioni INSERT e usa istruzioni con parametri.<br /><br /> Ad esempio, un articolo attivo che utilizza istruzioni con parametri includerà il valore 17 in questa colonna. Il valore 0 indica che l'articolo è inattivo e che non sono state definite proprietà aggiuntive.|  
 |**sync_objid**|**int**|ID della tabella o della vista che rappresenta la definizione dell'articolo.|  
-|**tipo**|**tinyint**|Tipo di articolo:<br /><br /> **1** = articolo basato su log.<br /><br /> **3** = articolo basato su log con filtro manuale.<br /><br /> **5** = articolo basato su log con vista manuale.<br /><br /> **7** = articolo basato su log con filtro manuale e vista manuale.|  
+|**type**|**tinyint**|Tipo di articolo:<br /><br /> **1** = articolo basato su log.<br /><br /> **3** = articolo basato su log con filtro manuale.<br /><br /> **5** = articolo basato su log con vista manuale.<br /><br /> **7** = articolo basato su log con filtro manuale e vista manuale.|  
 |**upd_cmd**|**nvarchar(255)**|Comando da eseguire a seguito di un'istruzione UPDATE; in caso contrario il comando viene ricostruito dal log.|  
-|**schema_option**|**BINARY**|Indica le proprietà dell'oggetto pubblicato da inserire nello script dello snapshot. Per un elenco delle opzioni dello schema supportate, vedere [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary**|Indica le proprietà dell'oggetto pubblicato da inserire nello script dello snapshot. Per un elenco delle opzioni dello schema supportate, vedere [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Proprietario della tabella nel database di destinazione.|  
 |**ins_scripting_proc**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti quando un'istruzione INSERT viene replicata.|  
 |**del_scripting_proc**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti quando un'istruzione DELETE viene replicata.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67910109"
 |**custom_script**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti al completamento di un trigger DDL.|  
 |**fire_triggers_on_snapshot**|**int**|Indica se i trigger replicati vengono eseguiti o meno quando lo snapshot viene applicato. I possibili valori sono i seguenti.<br /><br /> **0** = i trigger non vengono eseguiti.<br /><br /> **1** = i trigger vengono eseguiti.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

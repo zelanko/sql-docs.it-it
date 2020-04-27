@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285051"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installare side-by-side Reporting Services e Internet Information Services (modalità nativa SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "67285051"
   
  Un'indicazione di un conflitto di porte è la visualizzazione del messaggio di errore seguente: "System.IO.FileLoadException: Il processo non può accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020)".  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Prenotazioni URL per IIS 6.0, 7.0, 8.0, 8.5 con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>Prenotazioni URL per IIS 6.0, 7.0, 8.0, 8.5 con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Stabilite le regole di precedenza descritte nella sezione precedente, è possibile iniziare a comprendere in che modo le prenotazioni URL definite per Reporting Services e IIS agevolino l'interoperabilità. Reporting Services riceve le richieste che specificano in modo esplicito i nomi delle directory virtuali per le proprie applicazioni, mentre IIS riceve tutte le richieste rimanenti che possono pertanto essere dirette ad applicazioni eseguite all'interno del modello di processo di IIS.  
   
 |Applicazione|Prenotazione URL|Descrizione|Ricezione richiesta|  
@@ -60,7 +60,7 @@ ms.locfileid: "67285051"
 |Gestione report|http://+:80/Reports|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. Gestione report riceve tutte le richieste a\<http://nomecomputer>/Reports.|  
 |IIS|http://*:80/|Carattere jolly vulnerabile sulla porta 80.|Riceve sulla porta 80 tutte le richieste rimanenti che non vengono ricevute da un'altra applicazione.|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Distribuzioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e SQL Server 2005 Reporting Services in IIS 6.0, 7.0, 8.0, 8.5  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Distribuzioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e SQL Server 2005 Reporting Services in IIS 6.0, 7.0, 8.0, 8.5  
  I problemi di interoperabilità tra IIS e Reporting Services si verificano quando i nomi delle directory virtuali dei siti Web di IIS sono identici a quelli utilizzati da Reporting Services. Si supponga ad esempio di disporre della configurazione seguente:  
   
 -   Un sito Web in IIS assegnato alla porta 80 e una directory virtuale denominata "Reports".  
@@ -79,7 +79,7 @@ ms.locfileid: "67285051"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Installare un server di report in modalità nativa di Reporting Services](install-reporting-services-native-mode-report-server.md)  
+ [Configurare un URL &#40;Configuration Manager SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Installare Reporting Services server di report in modalità nativa](install-reporting-services-native-mode-report-server.md)  
   
   

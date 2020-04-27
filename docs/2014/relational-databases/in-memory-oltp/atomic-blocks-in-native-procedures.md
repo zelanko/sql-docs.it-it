@@ -11,16 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467281"
 ---
 # <a name="atomic-blocks"></a>Blocchi atomici
-  
-  `BEGIN ATOMIC` fa parte dello standard SQL ANSI. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici solo al livello superiore delle stored procedure compilate in modo nativo.  
+  `BEGIN ATOMIC` fa parte dello standard SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici solo al livello superiore delle stored procedure compilate in modo nativo.  
   
 -   Ogni stored procedure compilata in modo nativo contiene un blocco di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si tratta di un blocco ATOMIC.  
   
@@ -33,7 +31,7 @@ ms.locfileid: "62467281"
   
  Se non è presente alcuna transazione attiva in una sessione, `BEGIN ATOMIC` avvia una nuova transazione. Se non viene generata alcuna eccezione all'esterno dell'ambito del blocco, verrà eseguito il commit della transazione alla fine del blocco. Se il blocco genera un'eccezione (l'eccezione non viene rilevata e gestita nel blocco), verrà eseguito il rollback della transazione. Per le transazioni che interessano un singolo blocco atomico (una singola stored procedure compilata in modo nativo), non è necessario scrivere istruzioni `BEGIN TRANSACTION` e `COMMIT` o `ROLLBACK` esplicite.  
   
- Le stored procedure compilate in modo nativo supportano i costrutti `TRY`, `CATCH` e `THROW` per la gestione degli errori. `RAISERROR`non è supportato.  
+ Le stored procedure compilate in modo nativo supportano i costrutti `TRY`, `CATCH` e `THROW` per la gestione degli errori. `RAISERROR` non è supportata.  
   
  Nell'esempio seguente viene illustrato il comportamento della gestione degli errori con blocchi atomici e stored procedure compilate in modo nativo:  
   
@@ -149,21 +147,21 @@ GO
   
 |Opzione SET|Impostazione predefinita di sistema per i blocchi atomici|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ATTIVA|  
-|ANSI_PADDING|ATTIVA|  
-|ANSI_WARNING|ATTIVA|  
+|ANSI_NULLS|ON|  
+|ANSI_PADDING|ON|  
+|ANSI_WARNING|ON|  
 |ARITHABORT|ATTIVA|  
 |ARITHIGNORE|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ATTIVA|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ATTIVA|  
+|NOCOUNT|ON|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ATTIVA|  
+|QUOTED_IDENTIFIER|ON|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Le eccezioni non rilevate causano il rollback dei blocchi atomici, ma non l'interruzione della transazione, a meno che l'errore non comporti la fine della transazione.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Vedi anche  
+ [stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
   
   

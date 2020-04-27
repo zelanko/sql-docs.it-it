@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68190962"
 ---
 # <a name="instance-configuration"></a>Configurazione istanza
@@ -32,10 +32,9 @@ ms.locfileid: "68190962"
  **Avviso!** Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep è possibile specificare il nome dell'istanza quando si completa un'istanza predisposta nella pagina **Configurazione dell'istanza**. È possibile scegliere di configurare l'istanza predisposta che si sta completando come istanza predefinita se non è presente alcuna istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul computer.  
   
 ## <a name="multiple-instances"></a>Più istanze  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un singolo server o processore, ma solo un'istanza può costituire l'istanza predefinita, mentre tutte le altre istanze devono essere istanze denominate. Un computer può eseguire più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultaneamente e ciascuna di esse viene eseguita in modo indipendente dalle altre.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un singolo server o processore, ma solo un'istanza può costituire l'istanza predefinita, mentre tutte le altre istanze devono essere istanze denominate. Un computer può eseguire più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultaneamente e ciascuna di esse viene eseguita in modo indipendente dalle altre.  
   
- Per ulteriori informazioni, vedere la pagina relativa alle [specifiche di capacità massima per SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Per ulteriori informazioni, vedere [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Opzioni  
  Solo istanze del cluster di failover: specificare il nome di rete del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo nome identifica l'istanza del cluster di failover nella rete.  
@@ -74,10 +73,10 @@ ms.locfileid: "68190962"
   
 -   **Solo i caratteri validi nella tabella codici di Windows corrente possono essere utilizzati nei nomi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di istanza. Se viene utilizzato un carattere Unicode non supportato, si verificherà un errore di installazione.**  
   
- **Istanze e funzionalità rilevate**  
+ **Istanze e caratteristiche rilevate**  
  È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **ID istanza** : per impostazione predefinita, il nome dell'istanza viene usato come ID istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per utilizzare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
+ **ID istanza** : per impostazione predefinita, il nome dell'istanza viene usato come ID istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
   
 > [!IMPORTANT]  
 >  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, l'ID istanza visualizzato in questa pagina è quello specificato durante il passaggio relativo alla preparazione dell'immagine del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep. Non sarà possibile specificare un ID istanza diverso durante il passaggio relativo al completamento dell'immagine.  
@@ -85,7 +84,7 @@ ms.locfileid: "68190962"
 > [!NOTE]  
 >  Gli ID delle istanze che iniziano con un carattere di sottolineatura (_) o che contengono il simbolo del cancelletto (#) o del dollaro ($) non sono supportati.  
   
- Per ulteriori informazioni su directory, percorsi di file e nomi di ID istanza, vedere [percorsi dei file per le istanze predefinite e denominate di SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
+ Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
  Tutti i componenti di un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono gestiti come unità. Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -95,13 +94,12 @@ ms.locfileid: "68190962"
   
 -   **Stessa edizione**  
   
--   **Impostazioni della stessa lingua**  
+-   **Stesse impostazioni della lingua**  
   
--   **Stesso stato cluster**  
+-   **Stesso stato del cluster**  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non riesce a interagire con i cluster.  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non riesce a interagire con i cluster.  
   
 -   **Stesso sistema operativo**  
   

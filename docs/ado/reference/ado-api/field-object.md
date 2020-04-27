@@ -16,10 +16,10 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918679"
 ---
 # <a name="field-object"></a>Oggetto Field
@@ -52,7 +52,7 @@ Rappresenta una colonna di dati con un tipo di dati comune.
   
 -   [Proprietà, metodi ed eventi dell'oggetto Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

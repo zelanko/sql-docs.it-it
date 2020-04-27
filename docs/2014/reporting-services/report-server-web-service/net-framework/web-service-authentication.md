@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaccc593ea7e4baece132b759ca920018cdbe4b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518726"
 ---
 # <a name="web-service-authentication"></a>Autenticazione del servizio Web
@@ -57,8 +57,7 @@ service.Credentials = new System.Net.NetworkCredential("username", "password", "
  Le credenziali devono essere impostate prima di chiamare i metodi del servizio Web ReportServer. Se non si impostano le credenziali, viene visualizzato il codice di errore Errore HTTP 401: Accesso negato. È necessario autenticare il servizio prima di utilizzarlo, ma dopo avere impostato le credenziali non è necessario impostarle di nuovo fino a quando si continua a utilizzare la stessa variabile del servizio (ad esempio *rs*).  
   
 ## <a name="custom-authentication"></a>Autenticazione personalizzata  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include un'API di programmazione che consente agli sviluppatori di progettare e sviluppare estensioni di autenticazione personalizzate, note come estensioni di sicurezza. Per ulteriori informazioni, vedere [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md).  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include un'API di programmazione che consente agli sviluppatori di progettare e sviluppare estensioni di autenticazione personalizzate, note come estensioni di sicurezza. Per ulteriori informazioni, vedere [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

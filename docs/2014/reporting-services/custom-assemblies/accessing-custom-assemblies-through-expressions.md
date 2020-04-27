@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792807"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accesso agli assembly personalizzati tramite espressioni
@@ -53,7 +53,7 @@ ms.locfileid: "67792807"
     =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Utilizzo di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)  
   
   

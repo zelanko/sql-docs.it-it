@@ -16,17 +16,17 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919225"
 ---
 # <a name="datamember-property"></a>Proprietà DataMember
 Indica il nome del membro dati che verrà recuperato dal [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a cui fa riferimento la proprietà [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta o restituisce un valore **stringa** . Il nome non distingue tra maiuscole e minuscole.  
+ Imposta o restituisce un valore **stringa** . Per il nome non è prevista distinzione tra maiuscole e minuscole.  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa proprietà viene utilizzata per creare controlli con associazione a dati con l'ambiente di dati. L'ambiente dati mantiene raccolte di dati (origini dati) che contengono oggetti denominati (membri dati) che verranno rappresentati come un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -46,5 +46,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà DataSource (ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)

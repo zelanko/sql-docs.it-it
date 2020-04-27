@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284897"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Creare e gestire ruoli (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "67284897"
 ## <a name="tasks"></a>Attività  
  Per creare, modificare, copiare ed eliminare ruoli, usare la finestra di dialogo **Gestione ruoli** . Per visualizzare la finestra di dialogo **Gestione ruoli** di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], fare clic sul menu **Modello** e quindi su **Gestione ruoli**.  
   
-###  <a name="bkmk_new_role"></a>Per creare un nuovo ruolo  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a>Per creare un nuovo ruolo  
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]fare clic sul menu **Modello** e quindi su **Gestione ruoli**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67284897"
     |**Nessuno**|I membri non possono apportare alcuna modifica allo schema del modello, né eseguire query sui dati.|  
     |**Lettura**|I membri possono eseguire query sui dati in base ai filtri di riga, ma non possono apportare alcuna modifica allo schema del modello.|  
     |**Lettura ed elaborazione**|I membri possono eseguire query sui dati in base ai filtri a livello di riga ed effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono apportare alcuna modifica allo schema del modello.|  
-    |**Processo**|I membri possono eseguire operazioni Elabora ed Elabora tutto. Non possono modificare lo schema del modello ed eseguire query sui dati.|  
+    |**Processo**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né eseguire query sui dati.|  
     |**Amministratore**|I membri possono apportare modifiche allo schema del modello ed eseguire query su tutti i dati.|  
   
 5.  Per immettere una descrizione per il ruolo, fare clic sul campo **Descrizione** e quindi digitare una descrizione.  
@@ -63,7 +63,7 @@ ms.locfileid: "67284897"
   
 9. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Analizza in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)   

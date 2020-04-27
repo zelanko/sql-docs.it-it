@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505991"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificare gli account dei servizi controller e client
@@ -24,17 +24,17 @@ ms.locfileid: "62505991"
   
 1.  Nel computer in cui sono installati i servizi Riesecuzione distribuita digitare `dcomcnfg` al prompt dei comandi.  
   
-2.  Fare doppio clic su **Servizi**, scorrere verso il basso e fare clic con il pulsante destro del mouse su **nome servizio>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Riesecuzione distribuita di \<** e quindi fare clic su **Avvia** o **Arresta**.  
+2.  Fare doppio clic su **Servizi**, scorrere verso il basso e fare clic con il pulsante destro del mouse su **nome servizio>\< Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e quindi fare clic su **Avvia** o **Arresta**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Per modificare il servizio controller di Riesecuzione distribuita  
   
 1.  Nel computer controller arrestare il servizio controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  In **Servizi** fare clic con il pulsante destro del mouse su **Controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, quindi scegliere **Proprietà**.  
+2.  In **Servizi** fare clic con il pulsante destro del mouse su **Controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , quindi scegliere **Proprietà**.  
   
-3.  Nella scheda **accesso** della finestra ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proprietà del controller di riesecuzione distribuita** Selezionare **questo account**, digitare o fare clic su **Sfoglia** per immettere il nuovo account di accesso, quindi fare clic su **OK**.  
+3.  Nella scheda **Accesso** della finestra **Proprietà di Controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** selezionare **Account seguente**, digitare il nuovo account di accesso o fare clic su **Sfoglia** per selezionarlo, quindi fare clic su **OK**.  
   
-     **Importante**: quando si configura riesecuzione distribuita controller, è possibile specificare uno o più account utente che verranno usati per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client di Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62505991"
   
 2.  Arrestare il servizio client Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Nella finestra ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proprietà client di riesecuzione distribuita** , nella scheda **accesso** , selezionare **questo account**, digitare o fare clic su **Sfoglia** per immettere il nuovo account di accesso, quindi fare clic su **OK**.  
+3.  Nella scheda **Accesso** della finestra **Proprietà di Client Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** scegliere **Account seguente**, digitare il nuovo account di accesso o fare clic su **Sfoglia** per selezionarlo e quindi fare clic su **OK**.  
   
 4.  Avviare il servizio client Riesecuzione distribuita.  
   

@@ -19,10 +19,10 @@ ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900262"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
@@ -64,7 +64,7 @@ FROM sys.dm_os_cluster_nodes;
 |node2|0|up|0|  
 |Nodo3|1|sistema|0|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. dm_os_cluster_properties &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
  [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [sys. fn_virtualservernodes &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   

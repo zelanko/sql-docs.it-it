@@ -21,10 +21,10 @@ ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90673f82643ae24d242879fb19b748d5d1e3cc43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919047"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)
@@ -74,7 +74,7 @@ End Sub
 'EndDescriptionVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Description (proprietà)](../../../ado/reference/ado-api/description-property.md)   
  [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)   
  [HelpContext, proprietà di filelima](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   

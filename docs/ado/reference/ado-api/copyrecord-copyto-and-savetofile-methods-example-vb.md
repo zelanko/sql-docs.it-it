@@ -17,10 +17,10 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919361"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Esempio di metodi CopyRecord, CopyTo e SaveToFile (VB)
@@ -124,7 +124,7 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [Metodo CopyTo (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [Metodo LoadFromFile (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   

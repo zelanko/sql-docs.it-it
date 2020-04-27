@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664267"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report - classe di evento
-  La classe di evento **blocked process report** indica che un'attività è stata bloccata per un periodo di tempo superiore a quello specificato. Questa classe di evento non include attività di sistema o attività in attesa di risorse per le quali non sono rilevabili i deadlock.  
+  La classe di evento **Blocked Process Report** indica che un'attività è stata bloccata per un periodo di tempo più lungo di quello specificato. Questa classe di evento non include attività di sistema o attività in attesa di risorse per le quali non sono rilevabili i deadlock.  
   
  Per configurare la soglia e la frequenza relative alla generazione di report, utilizzare il comando **sp_configure** per impostare l'opzione **blocked process threshold** . Per eseguire questa operazione occorrono pochi secondi. Per impostazione predefinita, non vengono generati report relativi ai processi bloccati. Per altre informazioni sull'opzione **blocked process threshold** , vedere [Opzione di configurazione del server blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
@@ -32,20 +32,20 @@ ms.locfileid: "62664267"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**int**|ID del database in cui è stato acquisito il blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]consente di visualizzare il nome del database se la colonna di dati **ServerName** viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|**DatabaseID**|**int**|ID del database in cui è stato acquisito il blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**Duration**|**bigint**|Durata in millisecondi del blocco relativo al processo.|13|Sì|  
-|**EndTime**|**datetime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi di evento di avvio, ad esempio **SQL: BatchStarting** o **SP: Starting**.|15|Sì|  
+|**EndTime**|**datetime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, come **SQL:BatchStarting** o **SP:Starting**.|15|Sì|  
 |**EventClass**|**int**|Tipo di evento = 137.|27|No|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**IndexID**|**int**|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|24|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|**LoginSid**|**immagine**|ID di sicurezza (SID) dell'utente connesso. Questo evento viene segnalato sempre dal thread di sistema. IsSystem = 1; SID = sa.|41|Sì|  
-|**Mode**|**int**|Stato ricevuto o richiesto dall'evento.<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sì|  
+|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Questo evento viene segnalato sempre dal thread di sistema. IsSystem = 1; SID = sa.|41|Sì|  
+|**Modalità**|**int**|Stato ricevuto o richiesto dall'evento.<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sì|  
 |**ObjectID**|**int**|ID assegnato dal sistema all'oggetto sul quale è stato acquisito il blocco, se disponibile e applicabile.|22|Sì|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tracciata.|26||  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a SQL Server con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**TextData**|**ntext**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
-|**ID transazione**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
+|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

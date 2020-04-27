@@ -15,10 +15,10 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919339"
 ---
 # <a name="count-property-example-vc"></a>Esempio della proprietà Count (VC++)
@@ -130,5 +130,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

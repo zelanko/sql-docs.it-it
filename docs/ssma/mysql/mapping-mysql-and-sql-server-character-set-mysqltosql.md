@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909026"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping dei set di caratteri MySQL e SQL Server (MySQLToSQL)
@@ -53,7 +53,7 @@ Il mapping del set di caratteri varia a seconda dei livelli di nodo, ovvero:
 > [!NOTE]  
 > La scheda selezionata per modificare il mapping del set di caratteri contiene tre pulsanti, indipendentemente dal mapping dei diversi livelli di nodo.  
 >   
-> Sono:  
+> ovvero:  
 >   
 > 1.  **Applica:** Applica le modifiche apportate dall'utente, abilitato solo quando il mapping del set di caratteri è stato modificato e non è ancora stato salvato.  
 > 2.  **Annulla:** Annulla le modifiche apportate dall'utente. Il pulsante viene abilitato quando il mapping del set di caratteri viene modificato ma non salvato.  
@@ -100,7 +100,7 @@ Il mapping del set di caratteri varia a seconda dei livelli di nodo, ovvero:
     |GBK|GBK cinese semplificato|NCHAR/NVARCHAR (impostazione predefinita)|  
     |latin5|ISO 8859-9 Turco|CHAR/VARCHAR (impostazione predefinita)|  
     |armscii8|ARMSCII-8 armeno|CHAR/VARCHAR (impostazione predefinita)|  
-    |UTF8|UTF-8 Unicode|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (impostazione predefinita)|  
     |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (impostazione predefinita)|  
     |CP866|DOS russo|CHAR/VARCHAR (impostazione predefinita)|  
     |keybcs2|DOS Kamenicky ceco-slovacco|CHAR/VARCHAR (impostazione predefinita)|  

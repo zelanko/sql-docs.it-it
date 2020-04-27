@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPExec (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPExec (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1d7e00f3412967a8257b27fa2c8637905e657cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519315"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
@@ -67,7 +67,7 @@ DBROWCOUNT *pRowsCopied);
  DB_S_ERRORSOCCURRED  
  Si sono verificati errori durante l'operazione di copia bulk ed è possibile che alcune righe non siano state copiate. Il numero di errori è ancora al di sotto del numero massimo di errori consentiti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

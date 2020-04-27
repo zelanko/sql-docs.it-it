@@ -16,10 +16,10 @@ ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a37568f6bf4435d762d62c0475abb7d0fb8065a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917987"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Esempio dei metodi Open e Close (VB)
@@ -101,7 +101,7 @@ End Sub
 'EndOpenVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Metodo Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

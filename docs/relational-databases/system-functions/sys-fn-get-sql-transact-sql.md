@@ -24,10 +24,10 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120255"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
@@ -58,10 +58,10 @@ sys.fn_get_sql ( SqlHandle )
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|ID del database. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.|  
-|objectId|**int**|ID dell'oggetto di database. Per istruzioni SQL ad hoc viene restituito NULL.|  
+|objectid|**int**|ID dell'oggetto di database. Per istruzioni SQL ad hoc viene restituito NULL.|  
 |d'acquisto|**smallint**|Specifica il numero del gruppo, se le procedure sono raggruppate.<br /><br /> 0 = Le voci immesse non sono procedure.<br /><br /> NULL = Istruzioni SQL ad hoc.|  
 |encrypted|**bit**|Specifica se l'oggetto è crittografato.<br /><br /> 0 = Non crittografato<br /><br /> 1 = Crittografato|  
-|text|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
+|testo|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
   
 ## <a name="remarks"></a>Osservazioni  
  È possibile ottenere un handle SQL valido dalla colonna sql_handle della vista a gestione dinamica [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
@@ -93,7 +93,7 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
  [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  

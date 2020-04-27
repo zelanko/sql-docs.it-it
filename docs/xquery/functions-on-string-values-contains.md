@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899024"
 ---
 # <a name="functions-on-string-values---contains"></a>Funzioni su valori stringa - contains
@@ -58,7 +58,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo XML nel database AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>R. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
  La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il ProductID e l'elemento `Summary` <> per tali prodotti.  
   
 ```  
@@ -108,7 +108,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185805"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Distribuzione di criteri pianificati in istanze multiple
@@ -28,7 +28,7 @@ ms.locfileid: "68185805"
   
  Tali attività verranno eseguite nel computer utilizzato per completare le attività precedenti di questa lezione.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Di seguito vengono indicati i prerequisiti di questa attività:  
   
 -   È necessario avere completato le attività precedenti di questa lezione.  
@@ -89,7 +89,7 @@ ms.locfileid: "68185805"
     > [!NOTE]  
     >  Per visualizzare i risultati di valutazione dopo l'esecuzione di criteri pianificati, aprire il log Cronologia criteri nell'istanza di destinazione. Per aprire il log, fare clic con il pulsante destro del mouse su **Gestione criteri**, quindi scegliere **Visualizza cronologia**.  
   
-## <a name="summary"></a>Summary  
+## <a name="summary"></a>Riepilogo  
  In questa esercitazione è stato illustrato come eseguire valutazioni su richiesta e pianificate dei criteri per procedure consigliate per una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Avanti  
@@ -97,7 +97,7 @@ ms.locfileid: "68185805"
   
  Per visualizzare un elenco delle [!INCLUDE[ssDE](../includes/ssde-md.md)] esercitazioni, fare clic su [motore di database esercitazioni](../relational-databases/database-engine-tutorials.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione di server tramite la gestione basata su criteri](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

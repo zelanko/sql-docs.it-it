@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413111"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Aggiungere uno snapshot alla cronologia del report (Gestione report)
@@ -71,7 +71,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 5. Fare clic su **Apply**.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Aprire e chiudere un report &#40;Gestione report&#41;](../reports/open-and-close-a-report-report-manager.md)

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638208"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Associazioni e conversioni (OLE DB)
@@ -28,15 +28,15 @@ ms.locfileid: "62638208"
   
 -   Formato delle stringhe `datetime` e `datetimeoffset`:  
   
-     *aaaa*-** mm-*GG*[ *HH*:*mm*:*SS*[.* 9999999*] [?? *HH*:*mm*]]  
+     *aaaa*-*mm*mm-*GG*[ *HH*:*mm*:*SS*[.* 9999999*] [?? *HH*:*mm*]]  
   
 -   Formato delle stringhe `time`:  
   
-     *HH*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   Formato delle stringhe `date`:  
   
-     *aaaa*-** mm-*GG*  
+     *aaaa*-*mm*-*gg*  
   
 > [!NOTE]  
 >  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Di conseguenza, alcune conversioni eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versioni successive differiscono dalla specifica OLE DB.  
@@ -68,7 +68,7 @@ ms.locfileid: "62638208"
  [Conversioni eseguite da server a client](conversions-performed-from-server-to-client.md)  
  Vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vedere anche  
- [Miglioramenti di data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

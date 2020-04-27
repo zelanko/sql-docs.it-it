@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688838"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -65,7 +65,7 @@ pData
   
  Se si utilizza **bcp_moretext** per inviare una colonna con tipo di dati supportato in una riga, è necessario utilizzarla anche per inviare tutte le altre colonne con tipo di dati supportato nella riga. Non è possibile ignorare alcuna colonna. I tipi di dati supportati sono SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT e SQLXML. Anche SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY e SQLVARBINARY rientrano in questa categoria se la colonna è di tipo varchar(max), nvarchar(max) o varbinary(max), rispettivamente.  
   
- La chiamata di **bcp_bind** o [bcp_collen](bcp-collen.md) imposta la lunghezza totale di tutte le parti di dati da copiare nella colonna SQL Server. Un tentativo di invio SQL Server un numero di byte maggiore di quello specificato **** nella chiamata `bcp_collen` a bcp_bind o genera un errore. Questo errore si verifica, ad esempio, in un'applicazione che ha `bcp_collen` utilizzato per impostare la lunghezza dei dati disponibili per una `text` colonna SQL Server su 4500, quindi chiamata **bcp_moretext** cinque volte, indicando a ogni chiamata che la lunghezza del buffer di dati era 1000 byte.  
+ La chiamata di **bcp_bind** o [bcp_collen](bcp-collen.md) imposta la lunghezza totale di tutte le parti di dati da copiare nella colonna SQL Server. Un tentativo di invio SQL Server un numero di byte maggiore di quello specificato **bcp_bind** nella chiamata `bcp_collen` a bcp_bind o genera un errore. Questo errore si verifica, ad esempio, in un'applicazione che ha `bcp_collen` utilizzato per impostare la lunghezza dei dati disponibili per una `text` colonna SQL Server su 4500, quindi chiamata **bcp_moretext** cinque volte, indicando a ogni chiamata che la lunghezza del buffer di dati era 1000 byte.  
   
  Se una riga copiata contiene più di una colonna Long a lunghezza variabile, **bcp_moretext** invia prima i dati alla colonna con la numerazione ordinale più bassa, seguita dalla successiva colonna con numerazione ordinale più bassa e così via. Una corretta impostazione della lunghezza totale dei dati previsti è importante. Non è possibile segnalare, al di fuori dell'impostazione della lunghezza, che tutti i dati per una colonna sono stati ricevuti dalla copia bulk.  
   
@@ -170,7 +170,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

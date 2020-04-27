@@ -16,10 +16,10 @@ ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911949"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
@@ -52,7 +52,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del database **db_owner** nel database di distribuzione possono eseguire **sp_dropanonymousagent**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

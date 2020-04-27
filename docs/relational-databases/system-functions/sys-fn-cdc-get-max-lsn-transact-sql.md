@@ -21,10 +21,10 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046454"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
@@ -42,7 +42,7 @@ sys.fn_cdc_get_max_lsn ()
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **binario (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa funzione restituisce il numero LSN massimo nella colonna start_lsn della tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Pertanto, è l'ultimo valore LSN elaborato dal processo di acquisizione quando le modifiche vengono propagate alle tabelle delle modifiche del database. Viene utilizzato come endpoint superiore per tutte le cronologie associate alle istanze di acquisizione definite per il database.  
@@ -76,7 +76,7 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee(@from_lsn, @to_
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

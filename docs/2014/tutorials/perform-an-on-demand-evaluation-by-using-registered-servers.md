@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822377"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Esecuzione di una valutazione su richiesta utilizzando Server registrati
@@ -24,7 +24,7 @@ ms.locfileid: "66822377"
 > [!NOTE]  
 >  È possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate in membri del gruppo di server che eseguono [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tuttavia, è possibile ricevere un errore di eccezione se i criteri fanno riferimento a proprietà non supportate in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa attività è necessario aver configurato una o più registrazioni di server in Server registrati. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66822377"
   
 4.  Nella finestra di dialogo **Valuta criteri** , accanto alla casella **origine** , fare clic sul pulsante con i puntini di sospensione (**...**).  
   
-5.  Nella finestra di dialogo **Seleziona origine** è possibile selezionare i **file** o il **server** come origine dei file di criteri da valutare. Se si fa clic su **Server**, è possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate importati in precedenza nella gestione basata su criteri in un server locale o remoto. In questa esercitazione si fa clic su **file**, quindi si selezionano i singoli file dei criteri che si desidera valutare. A questo scopo, seguire questa procedura:  
+5.  Nella finestra di dialogo **Seleziona origine** è possibile selezionare i **file** o il **server** come origine dei file di criteri da valutare. Se si fa clic su **Server**, è possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate importati in precedenza nella gestione basata su criteri in un server locale o remoto. In questa esercitazione si fa clic su **file**, quindi si selezionano i singoli file dei criteri che si desidera valutare. A tale scopo, effettuare le operazioni seguenti:  
   
     1.  Fare clic su **file**.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "66822377"
 8.  Per visualizzare i risultati dettagliati per un criterio, fare clic sul criterio nella tabella **dei risultati** . La tabella **Dettagli destinazione** Mostra i dettagli per ogni istanza.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione prestabilita](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   
  [Amministrare più server tramite server di gestione centrale](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   

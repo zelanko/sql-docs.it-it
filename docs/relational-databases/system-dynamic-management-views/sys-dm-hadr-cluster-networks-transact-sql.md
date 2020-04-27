@@ -21,10 +21,10 @@ ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900643"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
@@ -47,14 +47,14 @@ ms.locfileid: "67900643"
 |**is_public**|**bit**|Se la rete è privata o pubblica sul cluster WSFC, uno di:<br /><br /> 0 = Privato<br /><br /> 1 = Pubblico|  
 |**is_ipv4**|**bit**|Tipo di subnet, uno di:<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="see-also"></a>Vedere anche  
- [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Clustering di failover e gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [Monitorare i gruppi di disponibilità &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys. dm_os_cluster_nodes &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

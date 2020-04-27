@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910710"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
@@ -40,10 +40,10 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche. *object_id* è di **tipo int**.  
+ ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche. *object_id* è di tipo **int**.  
   
  *stats_id*  
- ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di **tipo int**.  
+ ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di tipo **int**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -59,7 +59,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Tabelle con ottimizzazione per la memoria [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] partire da e in questa colonna è contenuto il numero totale di modifiche per la tabella dall'ultimo aggiornamento delle statistiche oppure il database è stato riavviato.|  
 |persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## Osservazioni su <a name="Remarks"></a>  
+## <a name="remarks"></a>Osservazioni su <a name="Remarks"></a>  
  **sys. dm_db_stats_properties** restituisce un set di righe vuoto in una delle condizioni seguenti:  
   
 -   **object_id** o **stats_id** è null.    
@@ -104,12 +104,12 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [DBCC SHOW_STATISTICS &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys. stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funzioni e viste a gestione dinamica relative agli oggetti &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
- [sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 

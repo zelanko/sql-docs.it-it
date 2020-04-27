@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899167"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
@@ -116,7 +116,7 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   

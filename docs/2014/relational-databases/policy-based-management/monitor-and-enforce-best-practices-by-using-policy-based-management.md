@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626048"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
@@ -47,9 +47,9 @@ ms.locfileid: "62626048"
 |Lightweight Pooling SQL Server|[Disabilitazione di lightweight pooling](disable-lightweight-pooling.md)|  
 |Modalità di accesso SQL Server|[Scegliere una modalità di autenticazione](../security/choose-an-authentication-mode.md)|  
 |Massimo grado parallelismo SQL Server|[Impostazione dell'opzione relativa al massimo grado di parallelismo per ottenere prestazioni ottimali](set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
-|Numero massimo thread di lavoro di SQL Server per SQL Server 2000 a 32 bit|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](verify-max-worker-threads-setting.md)|  
-|Numero massimo thread di lavoro SQL Server per SQL Server 2000 a 64 bit|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](verify-max-worker-threads-setting.md)|  
-|Numero massimo thread di lavoro SQL Server per SQL Server 2005 e versioni successive|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](verify-max-worker-threads-setting.md)|  
+|Numero massimo thread di lavoro di SQL Server per SQL Server 2000 a 32 bit|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](verify-max-worker-threads-setting.md)|  
+|Numero massimo thread di lavoro SQL Server per SQL Server 2000 a 64 bit|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](verify-max-worker-threads-setting.md)|  
+|Numero massimo thread di lavoro SQL Server per SQL Server 2005 e versioni successive|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](verify-max-worker-threads-setting.md)|  
 |Dimensioni pacchetto di rete SQL Server|[Valore massimo per le dimensioni del pacchetto di rete impostato su 8060 byte](network-packet-size-should-not-exceed-8060-bytes.md)|  
 |Scadenza password SQL Server|[Scadenza della password di accesso di SQL server](sql-server-login-password-expiration.md)|  
 |Criteri password SQL Server|[Livello di complessità delle password di accesso di SQL Server](sql-server-login-password-strength.md)|  
@@ -67,7 +67,7 @@ ms.locfileid: "62626048"
 |Errore registro eventi di Windows - Timeout I/O sistema di archiviazione|[Timeout di input o output del sistema di archiviazione](storage-system-input-output-time-out.md)|  
 |Errore di sistema in registro eventi di Windows|[Errori di sistema imprevisti](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo della copia di facet della gestione basata su criteri](working-with-policy-based-management-facets.md)  
   
   

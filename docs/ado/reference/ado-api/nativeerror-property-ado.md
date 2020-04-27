@@ -18,10 +18,10 @@ ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918022"
 ---
 # <a name="nativeerror-property-ado"></a>Proprietà NativeError (ADO)
@@ -34,8 +34,8 @@ Indica il codice di errore specifico del provider per un determinato oggetto [Er
  Utilizzare la proprietà **NativeError** per recuperare le informazioni sull'errore specifiche del database per un determinato oggetto **Error** . Ad esempio, quando si utilizza il provider ODBC Microsoft per OLE DB con un database Microsoft SQL Server, i codici di errore nativi che provengono da SQL Server passano attraverso ODBC e il provider ODBC alla proprietà ADO **NativeError** .  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Error](../../../ado/reference/ado-api/error-object.md)  
+ [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   

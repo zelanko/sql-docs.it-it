@@ -10,10 +10,10 @@ ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896375"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Impostazioni di migrazione dei dati (MySQLToSQL)
@@ -51,6 +51,6 @@ Sono presenti due pulsanti, vale a dire:
   
 -   **Annulla:** Fare clic su **Annulla** per ripristinare le impostazioni presenti prima che siano state apportate le modifiche.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione di dati MySQL a SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

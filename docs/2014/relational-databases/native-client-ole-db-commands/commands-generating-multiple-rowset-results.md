@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657681"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
@@ -48,7 +48,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Comandi](commands.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Comandi:](commands.md)  
   
   

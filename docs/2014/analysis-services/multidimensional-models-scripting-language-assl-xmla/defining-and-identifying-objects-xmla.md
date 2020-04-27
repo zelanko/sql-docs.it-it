@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727553"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definizione e identificazione di oggetti (XMLA)
@@ -37,7 +37,7 @@ ms.locfileid: "62727553"
 ## <a name="object-definitions"></a>Definizioni di oggetti  
  I comandi [create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) e [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) in XMLA creano o modificano rispettivamente oggetti in un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di. Le definizioni per tali oggetti sono rappresentate da un elemento [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) che contiene elementi di ASSL. Gli identificatori di oggetto possono essere specificati in modo esplicito per tutti i principali e molti oggetti secondari utilizzando l'elemento [ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) . Se l'elemento `ID` non viene utilizzato, l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specifica un identificatore univoco, con una convenzione di denominazione che dipende dall'oggetto da identificare. Per ulteriori informazioni su come utilizzare i `Create` comandi e `Alter` per definire gli oggetti, vedere [creazione e modifica di oggetti &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elemento oggetto &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   
  [Elemento ParentObject &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   
  [Elemento Source &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)   

@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0936e74b3c48a2fe3298215107ae48d0c3b63cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950781"
 ---
 # <a name="constraint_column_usage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
@@ -38,17 +38,17 @@ ms.locfileid: "67950781"
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene il proprietario della tabella.<br /><br /> **&#42;&#42; importanti &#42;&#42;** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della tabella.|  
-|**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome della colonna.|  
+|**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome colonna.|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificatore del vincolo.|  
 |**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene il vincolo.<br /><br /> **&#42;&#42; importanti &#42;&#42;** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**CONSTRAINT_NAME**|**nvarchar (** 128 **)**|Nome del vincolo.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. Types &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
  [sys. check_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys. key_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. foreign_keys &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  

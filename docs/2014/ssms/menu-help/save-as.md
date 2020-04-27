@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510320"
 ---
 # <a name="save-as"></a>Save As
@@ -34,7 +34,7 @@ ms.locfileid: "62510320"
 > [!TIP]
 >  Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "<http://mywebsite>" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
   
- **Salva come tipo**  
+ **Salva come**  
  Utilizzare questa opzione per selezionare un nuovo tipo di file per l'elemento selezionato. I tipi di file visualizzati comprendono tutti i tipi di file disponibili in cui è possibile convertire l'elemento selezionato.  
   
  **Opzioni di salvataggio avanzate**  
@@ -52,6 +52,6 @@ ms.locfileid: "62510320"
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni di salvataggio avanzate](advanced-save-options.md)   
- [Gestione di file con codifica](../solution/manage-files-with-encoding.md)  
+ [Gestire file con codifica](../solution/manage-files-with-encoding.md)  
   
   

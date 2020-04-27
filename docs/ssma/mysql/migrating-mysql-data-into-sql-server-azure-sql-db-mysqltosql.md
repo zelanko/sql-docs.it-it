@@ -13,10 +13,10 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908828"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Migrazione dei dati MySQL in SQL Server-database SQL di Azure (MySQLToSQL)
@@ -63,7 +63,7 @@ Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output
   
 **Per eseguire la migrazione dei dati**  
   
-1.  Verificare quanto segue:  
+1.  Verificare gli elementi seguenti:  
   
     -   I provider MySQL sono installati nel computer che esegue SSMA.  
   
@@ -107,6 +107,6 @@ Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output
 > [!NOTE]  
 > Quando si usa SQL Express Edition come database di destinazione, è consentita solo la migrazione dei dati lato client e la migrazione dei dati sul lato server non è supportata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

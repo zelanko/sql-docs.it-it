@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688834"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
@@ -57,7 +57,7 @@ hdbc
   
  Per informazioni sulle modifiche di rilievo apportate alla copia bulk [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a partire da, vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

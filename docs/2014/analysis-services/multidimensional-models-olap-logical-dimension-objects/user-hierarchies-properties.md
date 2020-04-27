@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727316"
 ---
 # <a name="user-hierarchy-properties"></a>Proprietà delle gerarchie definite dall'utente
@@ -34,7 +34,7 @@ ms.locfileid: "62727316"
 |MemberNamesUnique|Determina se i nomi dei membri nella gerarchia devono essere univoci. I valori sono True e False. Il valore predefinito è False.|  
 |Nome|Contiene il nome della gerarchia.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gerarchie utente](user-hierarchies.md)   
  [Proprietà di livello](user-hierarchies-level-properties.md)  
   

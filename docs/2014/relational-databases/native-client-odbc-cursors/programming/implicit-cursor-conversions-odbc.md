@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711569"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Conversioni implicite dei cursori (ODBC)
@@ -31,7 +31,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"
   
  L'applicazione può determinare il tipo di cursore usato chiamando **SQLGetStmtOption** impostato su SQL_CURSOR_TYPE. La conversione del tipo di cursore viene applicata a una sola istruzione. Il successivo **SQLExecDirect** o **SQLExecute** verrà eseguito utilizzando le impostazioni originali del cursore dell'istruzione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dettagli sulla programmazione dei cursori &#40;&#41;ODBC](cursor-programming-details-odbc.md)  
   
   

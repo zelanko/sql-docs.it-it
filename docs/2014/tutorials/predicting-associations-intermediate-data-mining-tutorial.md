@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472846"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Stima delle associazioni (Esercitazione intermedia sul data mining)
@@ -207,7 +207,7 @@ ms.locfileid: "62472846"
   
  È possibile provare a creare una query di stima simile in più modelli, per vedere se l'applicazione di filtri modifica i risultati della stima. Per ulteriori informazioni sulla creazione di stime e altri tipi di query, vedere [esempi di query sul modello di associazione](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining per i modelli di associazione &#40;Analysis Services-Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [Creare una query di stima utilizzando Generatore query di stima](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

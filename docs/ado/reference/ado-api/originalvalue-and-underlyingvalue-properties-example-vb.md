@@ -16,10 +16,10 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917806"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Esempio di proprietà OriginalValue e UnderlyingValue (VB)
@@ -119,7 +119,7 @@ End Sub
 'EndOriginalValueVB  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

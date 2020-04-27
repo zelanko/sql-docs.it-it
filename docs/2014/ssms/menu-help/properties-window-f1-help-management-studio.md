@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62661758"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Guida sensibile al contesto della finestra Proprietà (Management Studio)
@@ -52,6 +52,6 @@ ms.locfileid: "62661758"
  Questo riquadro è disponibile nella parte inferiore della finestra **Proprietà** e include l'indicazione del tipo e una breve descrizione della proprietà. È possibile disabilitare la visualizzazione della descrizione della proprietà scegliendo **Descrizione** dal menu di scelta rapida.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare la finestra Proprietà in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
+ [Utilizzo della finestra Proprietà in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

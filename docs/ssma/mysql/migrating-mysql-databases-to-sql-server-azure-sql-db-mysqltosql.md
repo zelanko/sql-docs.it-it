@@ -10,10 +10,10 @@ ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908794"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migrazione di database MySQL a SQL Server-database SQL di Azure (MySQLToSql)
@@ -38,7 +38,7 @@ Per eseguire correttamente la migrazione di oggetti e dati da database MySQL a S
   
 7.  [Conversione dei database MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronization](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+8.  [Sincronizzazione](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. Questa operazione può essere eseguita in uno dei modi seguenti:  
   
@@ -53,7 +53,7 @@ Per eseguire correttamente la migrazione di oggetti e dati da database MySQL a S
 > [!NOTE]  
 > Non è possibile eseguire la migrazione di schemi Information_schema e MySQL.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Installazione di SSMA per MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [Introduzione con SSMA per MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

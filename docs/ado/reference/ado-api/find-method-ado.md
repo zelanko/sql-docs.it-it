@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918623"
 ---
 # <a name="find-method-ado"></a>Metodo Find (ADO)
@@ -38,13 +38,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Valore **stringa** che contiene un'istruzione che specifica il nome della colonna, l'operatore di confronto e il valore da utilizzare nella ricerca.  
   
  *SkipRows*  
- Facoltativa. Un valore **Long** , il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o dal segnalibro *Start* per iniziare la ricerca. Per impostazione predefinita, la ricerca viene avviata sulla riga corrente.  
+ Facoltativo. Un valore **Long** , il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o dal segnalibro *Start* per iniziare la ricerca. Per impostazione predefinita, la ricerca viene avviata sulla riga corrente.  
   
  *SearchDirection*  
- Facoltativa. Valore [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) che specifica se la ricerca deve iniziare sulla riga corrente o sulla riga successiva disponibile nella direzione della ricerca. Una ricerca non riuscita si interrompe alla fine del **Recordset** se il valore è **adSearchForward**. Una ricerca non riuscita viene arrestata all'inizio del **Recordset** se il valore è **adSearchBackward**.  
+ Facoltativo. Valore [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) che specifica se la ricerca deve iniziare sulla riga corrente o sulla riga successiva disponibile nella direzione della ricerca. Una ricerca non riuscita si interrompe alla fine del **Recordset** se il valore è **adSearchForward**. Una ricerca non riuscita viene arrestata all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
  *Inizia*  
- Facoltativa. Segnalibro **Variant** che funge da posizione iniziale per la ricerca.  
+ Facoltativo. Segnalibro **Variant** che funge da posizione iniziale per la ricerca.  
   
 ## <a name="remarks"></a>Osservazioni  
  Nei *criteri*è possibile specificare solo un nome di colonna singola. Questo metodo non supporta le ricerche su più colonne.  
@@ -66,8 +66,8 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di metodo Find (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Proprietà index](../../../ado/reference/ado-api/index-property.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Metodo Seek](../../../ado/reference/ado-api/seek-method.md)
+ [Seek (metodo)](../../../ado/reference/ado-api/seek-method.md)

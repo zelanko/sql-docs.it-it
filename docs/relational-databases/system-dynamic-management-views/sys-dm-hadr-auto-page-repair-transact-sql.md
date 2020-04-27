@@ -21,10 +21,10 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900692"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
@@ -39,17 +39,17 @@ ms.locfileid: "67900692"
 |**database_id**|**int**|ID del database al quale corrisponde questa riga.|  
 |**file_id**|**int**|ID del file in cui si trova la pagina.|  
 |**page_id**|**bigint**|ID della pagina nel file.|  
-|**error_type**|**int**|Tipo di errore. I valori possibili sono:<br /><br /> **-** 1 = tutti gli errori hardware 823<br /><br /> 1 = Errori 824 diversi da un errore del checksum o da una pagina incompleta, ad esempio l'ID di una pagina danneggiata<br /><br /> 2 = Errore nel checksum<br /><br /> 3 = Pagina incompleta|  
+|**error_type**|**int**|Tipo di errore. I valori possibili sono i seguenti.<br /><br /> **-** 1 = tutti gli errori hardware 823<br /><br /> 1 = Errori 824 diversi da un errore del checksum o da una pagina incompleta, ad esempio l'ID di una pagina danneggiata<br /><br /> 2 = Errore nel checksum<br /><br /> 3 = Pagina incompleta|  
 |**page_status**|**int**|La stato del tentativo di ripristino della pagina:<br /><br /> 2 = in coda per la richiesta dal partner.<br /><br /> 3 = richiesta inviata al partner.<br /><br /> 4 = la pagina è stata corretta.<br /><br /> 5 = la pagina non è stata ripristinata durante l'ultimo tentativo/correzione automatica della pagina tenterà di ripristinare nuovamente la pagina.|  
 |**modification_time**|**datetime**|Ora dell'ultima modifica dello stato della pagina.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="see-also"></a>Vedere anche  
- [Correzione automatica della pagina &#40;Gruppi di disponibilità/Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Correzione automatica della pagina &#40;gruppi di disponibilità: mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;&#41;Transact-SQL](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

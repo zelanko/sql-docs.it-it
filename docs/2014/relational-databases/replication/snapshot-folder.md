@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676517"
 ---
 # <a name="snapshot-folder"></a>Cartella snapshot
@@ -29,14 +29,13 @@ ms.locfileid: "62676517"
  Consente di immettere il percorso della cartella in cui archiviare i file di snapshot.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare una condivisione di rete come percorso della cartella snapshot. I percorsi locali, ovvero quelli che iniziano con una lettera di unità, ad esempio C:\\, non sono accessibili agli agenti in altri computer.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare una condivisione di rete come percorso della cartella snapshot. I percorsi locali, ovvero quelli che iniziano con una lettera di unità, ad esempio C:\\, non sono accessibili agli agenti in altri computer.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Percorsi alternativi cartella snapshot](alternate-snapshot-folder-locations.md)   
- [Configura distribuzione](configure-distribution.md)   
+ [Configurare la distribuzione](configure-distribution.md)   
  [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md)   
- [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
+ [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](view-and-modify-distributor-and-publisher-properties.md)   
  [Inizializzazione di una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)  
   
   

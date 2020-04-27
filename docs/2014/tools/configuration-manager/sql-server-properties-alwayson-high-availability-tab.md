@@ -11,16 +11,16 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678463"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Proprietà SQL Server (scheda Disponibilità elevata AlwaysOn)
   Utilizzare la scheda **Disponibilità elevata AlwaysOn** della finestra di dialogo **Proprietà SQL Server** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare o disabilitare la caratteristica dei gruppi di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'abilitazione dei gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza.  
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Per poter essere abilitato per i gruppi di disponibilità AlwaysOn, un'istanza di server deve soddisfare i prerequisiti seguenti:  
   
 -   L'istanza del server deve trovarsi in un nodo WSFC (Windows Server Failover Clustering).  
@@ -38,7 +38,7 @@ ms.locfileid: "62678463"
  **Nome cluster di failover Windows**  
  Consente di visualizzare il nome del cluster WSFC in cui il computer locale è un nodo.  
   
- **Abilita Gruppi di disponibilità AlwaysOn**  
+ **Abilitare Gruppi di disponibilità AlwaysOn**  
  Utilizzare questa casella di controllo per abilitare o disabilitare i gruppi di disponibilità AlwaysOn in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nel modo seguente:  
   
 -   Se la casella è deselezionata, i gruppi di disponibilità AlwaysOn sono attualmente disabilitati. Per abilitarli, selezionare la casella di controllo, fare clic su **OK**e riavviare manualmente il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

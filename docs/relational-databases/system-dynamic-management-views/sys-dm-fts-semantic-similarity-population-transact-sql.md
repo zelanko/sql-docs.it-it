@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900878"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
@@ -34,17 +34,17 @@ ms.locfileid: "67900878"
     
 ||||  
 |-|-|-|  
-|**Nome colonna**|**Tipo**|**Descrizione**|  
+|**Nome colonna**|**Type**|**Descrizione**|  
 |**database_id**|**int**|ID del database contenente l'indice full-text in fase di popolamento.|  
 |**catalog_id**|**int**|ID del catalogo full-text contenente l'indice full-text.|  
 |**table_id**|**int**|ID della tabella per la quale l'indice full-text è in fase di popolamento.|  
 |**document_count**|**int**|Numero dei documenti totali nel popolamento.|  
 |**document_processed_count**|**int**|Numero di documenti elaborati dall'inizio del ciclo di popolamento.|  
 |**completion_type**|**int**|Stato della modalità di completamento del popolamento.|  
-|**completion_type_description**|**nvarchar (120)**|Descrizione del tipo di completamento.|  
+|**completion_type_description**|**nvarchar(120)**|Descrizione del tipo di completamento.|  
 |**worker_count**|**int**|Numero di thread di lavoro associati all'estrazione della somiglianza.|  
-|**stato**|**int**|Stato del popolamento. Nota: alcuni stati sono temporanei. Uno dei seguenti:<br /><br /> 3 = avvio in corso<br /><br /> 5 = elaborazione normale in corso<br /><br /> 7 = elaborazione arrestata<br /><br /> 11 = popolamento interrotto|  
-|**status_description**|**nvarchar (120)**|Descrizione dello stato del popolamento.|  
+|**Stato**|**int**|Stato del popolamento. Nota: alcuni stati sono temporanei. I tipi validi sono:<br /><br /> 3 = avvio in corso<br /><br /> 5 = elaborazione normale in corso<br /><br /> 7 = elaborazione arrestata<br /><br /> 11 = popolamento interrotto|  
+|**status_description**|**nvarchar(120)**|Descrizione dello stato del popolamento.|  
 |**start_time**|**datetime**|Ora di inizio del popolamento.|  
 |**incremental_timestamp**|**timestamp**|Rappresenta il timestamp iniziale per il popolamento completo. Per tutti gli altri tipi di popolamento questo valore corrisponde all'ultimo checkpoint di cui è stato eseguito il commit che rappresenta lo stato dei popolamenti.|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67900878"
 ## <a name="metadata"></a>Metadati  
  Per ulteriori informazioni sullo stato dell'indicizzazione semantica, eseguire una query su [sys. dm_fts_index_population &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
@@ -67,7 +67,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestire e monitorare la ricerca semantica](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

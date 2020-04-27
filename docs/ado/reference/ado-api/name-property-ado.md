@@ -17,10 +17,10 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918029"
 ---
 # <a name="name-property-ado"></a>Proprietà Name (ADO)
@@ -47,6 +47,6 @@ Indica il nome di un oggetto.
 |[Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|  
 |[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Esempio di proprietà Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

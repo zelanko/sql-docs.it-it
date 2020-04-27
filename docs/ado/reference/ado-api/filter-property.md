@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918633"
 ---
 # <a name="filter-property"></a>Proprietà Filter
@@ -45,7 +45,7 @@ La stringa di criteri è costituita da clausole nel formato *FieldName-operator-
   
 -   L'operatore deve essere uno dei seguenti: \<, >, \<=, >=,  <>, = o **like**.  
   
--   Value è il valore con cui si confronteranno i valori dei campi (ad esempio,' Smith ', #8/24/95 #, 12,345 o $50,00). Usare le virgolette singole con stringhe e segni di cancelletto (#) con date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se l'operatore è **simile a**, il valore può usare caratteri jolly. Solo l'asterisco (*) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il valore non può essere null.  
+-   Value è il valore con cui si confronteranno i valori dei campi (ad esempio,' Smith ', #8/24/95 #, 12,345 o $50,00). Usare le virgolette singole con stringhe e segni di cancelletto (#) con date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se l'operatore è **simile a**, il valore può usare caratteri jolly. Solo l'asterisco (*) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il valore non può essere Null.  
   
 > [!NOTE]
 >  Per includere virgolette singole (') nel valore del filtro, usare due virgolette singole per rappresentarne una. Ad esempio, per filtrare in modo da essere impostata su Malley, `"col1 = 'O''Malley'"`la stringa di criteri deve essere. Per includere virgolette singole sia all'inizio che alla fine del valore del filtro, racchiudere la stringa con i segni di cancelletto (#). Ad esempio, per applicare un filtro su "1", la stringa di `"col1 = #'1'#"`criteri deve essere.  
@@ -56,7 +56,7 @@ La stringa di criteri è costituita da clausole nel formato *FieldName-operator-
 -   Al contrario, è necessario creare questo filtro come  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. Ad esempio, è possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio: `LastName Like 'Smit*'`.  
+-   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. È ad esempio possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio: `LastName Like 'Smit*'`.  
   
  Le costanti di filtro semplificano la risoluzione dei singoli conflitti di record durante la modalità di aggiornamento batch consentendo di visualizzare, ad esempio, solo i record interessati durante l'ultima chiamata al metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
@@ -66,7 +66,7 @@ L'impostazione della proprietà **Filter** su una stringa di lunghezza zero ("")
   
 Ogni volta che la proprietà **Filter** è impostata, la posizione corrente del record viene spostata sul primo record del subset filtrato di record nel **Recordset**. Analogamente, quando la proprietà **Filter** viene deselezionata, la posizione corrente del record viene spostata sul primo record del **Recordset**.
 
-Si supponga che un **Recordset** venga filtrato in base a un campo di un tipo Variant, ad esempio il tipo sql_variant. Si verifica un errore (DISP_E_TYPEMISMATCH o 80020005) quando i sottotipi del campo e i valori di filtro utilizzati nella stringa dei criteri non corrispondono. Si supponga, ad esempio, che:
+Si supponga che un **Recordset** venga filtrato in base a un campo di un tipo Variant, ad esempio il tipo sql_variant. Si verifica un errore (DISP_E_TYPEMISMATCH o 80020005) quando i sottotipi del campo e i valori di filtro utilizzati nella stringa dei criteri non corrispondono. Si supponga ad esempio che:
 
 - Un oggetto **Recordset** (RS) contiene una colonna (C) del tipo di sql_variant.
 - A un campo di questa colonna è stato assegnato il valore 1 del tipo i4. La stringa dei criteri è impostata `rs.Filter = "C='A'"` su nel campo.
@@ -101,7 +101,7 @@ Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords*
 
 [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Proprietà Filter e RecordCount esempio (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
 [Filter e proprietà RecordCount esempio (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)

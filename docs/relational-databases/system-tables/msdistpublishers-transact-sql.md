@@ -18,10 +18,10 @@ ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907419"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
@@ -38,12 +38,12 @@ ms.locfileid: "67907419"
 |**password**|**nvarchar (524)**|Password (crittografata) per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Active**|**bit**|Indica se il server di distribuzione locale viene utilizzato dal server di pubblicazione remoto.|  
 |**trusted**|**bit**|Indica se il server di pubblicazione remoto utilizza la stessa password del server di distribuzione locale:<br /><br /> **0** = per la connessione al server di distribuzione è necessaria una password nel server di pubblicazione remoto.<br /><br /> **1** = non è necessaria alcuna password.|  
-|**third_party**|**bit**|Indica se il server di pubblicazione è un computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione. **1** = origine dati eterogenea.|  
-|**publisher_type**|**sysname**|Tipo di server di pubblicazione:<br /><br /> **** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server di pubblicazione MSSQLSERVER.<br /><br /> **Oracle** = server di pubblicazione Oracle standard.<br /><br /> **Oracle Gateway** = server di pubblicazione Oracle Gateway.|  
+|**third_party**|**bit**|Indica se il server di pubblicazione è un computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione. **1** = origine dati eterogenea.|  
+|**publisher_type**|**sysname**|Tipo di server di pubblicazione:<br /><br /> **MSSQLSERVER** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server di pubblicazione MSSQLSERVER.<br /><br /> **Oracle** = server di pubblicazione Oracle standard.<br /><br /> **Oracle Gateway** = server di pubblicazione Oracle Gateway.|  
 |**storage_connection_string**|**nvarchar (779)**|Valore della stringa di connessione di archiviazione del database SQL di Azure.|  
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

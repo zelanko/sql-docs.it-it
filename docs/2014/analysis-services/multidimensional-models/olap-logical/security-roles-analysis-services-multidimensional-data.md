@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725255"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Ruoli di sicurezza (Analysis Services - Dati multidimensionali)
@@ -41,7 +41,7 @@ ms.locfileid: "62725255"
   
  Un oggetto <xref:Microsoft.AnalysisServices.Role> è composto dai parametri Name, ID e Members. Members rappresenta una raccolta di stringhe. Ciascun membro contiene il nome utente nel formato "dominio\nome utente". Name è una stringa che contiene il nome del ruolo. ID è una stringa che contiene l'identificatore univoco del ruolo.  
   
-### <a name="server-role"></a>Ruolo del server  
+### <a name="server-role"></a>Ruolo server  
  Il ruolo del server di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] definisce l'accesso amministrativo di utenti e gruppi di Windows a un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. I membri di questo ruolo hanno accesso a tutti i database e gli oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e possono eseguire le seguenti attività:  
   
 -   Eseguire funzioni amministrative a livello di server utilizzando SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], incluse la creazione di database e l'impostazione di proprietà a livello di server.  
@@ -77,17 +77,13 @@ ms.locfileid: "62725255"
   
 |Azione|Valori|Spiegazione|  
 |------------|------------|-----------------|  
-|Processo|{`true`, `false`}<br /><br /> Valore predefinito = `false`|Se `true`, i membri possono elaborare l'oggetto e qualsiasi altro oggetto in esso contenuto.<br /><br /> Le autorizzazioni di elaborazione non si applicano ai modelli di data mining. Le autorizzazioni <xref:Microsoft.AnalysisServices.MiningModel> sono ereditate sempre da <xref:Microsoft.AnalysisServices.MiningStructure>.|  
-|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Valore predefinito = `None`|Specifica se i membri possono leggere la definizione dei dati (ASSL) associata all'oggetto.<br /><br /> Se `Allowed`, i membri possono leggere la definizione ASSL associata all'oggetto.<br /><br /> I valori `Basic` e `Allowed` sono ereditati dagli oggetti contenuti nell'oggetto. 
-  `Allowed` sovrascrive `Basic` e `None`.<br /><br /> 
-  `Allowed` è richiesto per DISCOVER_XML_METADATA su un oggetto. 
-  `Basic` è necessario per creare oggetti collegati e cubi locali.|  
+|Process|{`true`, `false`}<br /><br /> Valore predefinito = `false`|Se `true`, i membri possono elaborare l'oggetto e qualsiasi altro oggetto in esso contenuto.<br /><br /> Le autorizzazioni di elaborazione non si applicano ai modelli di data mining. Le autorizzazioni <xref:Microsoft.AnalysisServices.MiningModel> sono ereditate sempre da <xref:Microsoft.AnalysisServices.MiningStructure>.|  
+|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Valore predefinito = `None`|Specifica se i membri possono leggere la definizione dei dati (ASSL) associata all'oggetto.<br /><br /> Se `Allowed`, i membri possono leggere la definizione ASSL associata all'oggetto.<br /><br /> I valori `Basic` e `Allowed` sono ereditati dagli oggetti contenuti nell'oggetto. `Allowed` sovrascrive `Basic` e `None`.<br /><br /> `Allowed` è richiesto per DISCOVER_XML_METADATA su un oggetto. `Basic` è necessario per creare oggetti collegati e cubi locali.|  
 |Lettura|{`None`, `Allowed`}<br /><br /> Valore predefinito = `None` (tranne per DimensionPermission, il cui valore predefinito = `Allowed`)|Specifica se i membri dispongono dell'accesso in lettura al set di righe dello schema e al contenuto dei dati.<br /><br /> `Allowed`consente l'accesso in lettura a un database, che consente di individuare un database.<br /><br /> Il valore `Allowed` per un cubo fornisce l'accesso in lettura nei set di righe dello schema e l'accesso al contenuto del cubo, a meno che non siano applicati i vincoli <xref:Microsoft.AnalysisServices.CellPermission> e <xref:Microsoft.AnalysisServices.CubeDimensionPermission>.<br /><br /> Il valore `Allowed` per una dimensione concede l'autorizzazione di lettura per tutti gli attributi nella dimensione, a meno che non sia applicato il vincolo <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. L'autorizzazione alla lettura è utilizzata solamente per l'ereditarietà statica a <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. Il valore `None` per una dimensione nasconde la dimensione e fornisce al membro predefinito solo l'accesso agli attributi aggregabili. Se la dimensione contiene un attributo non aggregabile, viene generato un errore.<br /><br /> Il valore `Allowed` per <xref:Microsoft.AnalysisServices.MiningModelPermission> concede le autorizzazioni per la visualizzazione degli oggetti nei set di righe dello schema e per l'esecuzione di PREDICTION JOIN.<br /><br /> **NoteAllowed** è necessario per la lettura o la scrittura in qualsiasi oggetto nel database.|  
 |Scrittura|{`None`, `Allowed`}<br /><br /> Valore predefinito = `None`|Specifica se i membri dispongono dell'accesso in scrittura ai dati dell'oggetto padre.<br /><br /> L'accesso si applica alle sottoclassi <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> e <xref:Microsoft.AnalysisServices.MiningModel>, ma non alle sottoclassi <xref:Microsoft.AnalysisServices.MiningStructure> del database. In questo caso, viene generato un errore di convalida.<br /><br /> Il valore `Allowed` per <xref:Microsoft.AnalysisServices.Dimension> concede l'autorizzazione di scrittura per tutti gli attributi nella dimensione.<br /><br /> Il valore `Allowed` per <xref:Microsoft.AnalysisServices.Cube> concede l'autorizzazione di scrittura per le celle del cubo delle partizioni definite come Type=writeback.<br /><br /> Il valore `Allowed` per <xref:Microsoft.AnalysisServices.MiningModel> concede l'autorizzazione per la modifica del contenuto del modello.<br /><br /> Il valore `Allowed` per <xref:Microsoft.AnalysisServices.MiningStructure> non ha alcun significato specifico in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Nota:**  Write non può essere impostato `Allowed` su a meno che Read sia impostato anche su`Allowed`|  
-|Gestione **Nota:** solo nelle autorizzazioni del database|{`true`, `false`}<br /><br /> Valore predefinito = `false`|Specifica se i membri possono amministrare un database.<br /><br /> 
-  `true` concede ai membri l'accesso a tutti gli oggetti in un database.<br /><br /> Un membro può disporre delle autorizzazioni Administer per un database specifico, ma non per altri database.|  
+|Gestione **Nota:** solo nelle autorizzazioni del database|{`true`, `false`}<br /><br /> Valore predefinito = `false`|Specifica se i membri possono amministrare un database.<br /><br /> `true` concede ai membri l'accesso a tutti gli oggetti in un database.<br /><br /> Un membro può disporre delle autorizzazioni Administer per un database specifico, ma non per altri database.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

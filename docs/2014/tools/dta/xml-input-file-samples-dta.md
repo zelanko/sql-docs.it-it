@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186524"
 ---
 # <a name="xml-input-file-samples-dta"></a>Esempi di file di input XML (DTA)
-  In questa sezione sono contenuti file di input XML di esempio che è possibile utilizzare con lo strumento da riga di comando **DTA** . Questo strumento è una delle interfacce utente di Ottimizzazione guidata motore di database, un ulteriore strumento che consente di ottimizzare le prestazioni delle query. Ottimizzazione guidata motore di database analizza gli effetti di un carico di lavoro su uno o più database. Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Dopo aver analizzato gli effetti del carico di lavoro, Ottimizzazione guidata motore di database genera un'indicazione per l'aggiunta di indici, viste indicizzate o strategie di partizionamento che consentono di migliorare le prestazioni delle query sui database.  
+  Questa sezione contiene esempi di file di input XML che possono essere usati con lo strumento della riga di comando **dta** . Questo strumento è una delle interfacce utente di Ottimizzazione guidata motore di database, un ulteriore strumento che consente di ottimizzare le prestazioni delle query. Ottimizzazione guidata motore di database analizza gli effetti di un carico di lavoro su uno o più database. Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Dopo aver analizzato gli effetti del carico di lavoro, Ottimizzazione guidata motore di database genera un'indicazione per l'aggiunta di indici, viste indicizzate o strategie di partizionamento che consentono di migliorare le prestazioni delle query sui database.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

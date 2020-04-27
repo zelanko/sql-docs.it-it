@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189826"
 ---
 # <a name="alert-properties-history-page"></a>Proprietà avviso (pagina Cronologia)
@@ -32,10 +32,10 @@ ms.locfileid: "68189826"
  **Numero di occorrenze**  
  Numero totale delle occorrenze dell'evento a partire dalla creazione dell'avviso o dall'ultima reimpostazione del conteggio.  
   
- **Reimposta conteggio**  
+ **Reimposta contatore**  
  Consente di reimpostare le informazioni contenute in questa pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avvisi](alerts.md)  
   
   

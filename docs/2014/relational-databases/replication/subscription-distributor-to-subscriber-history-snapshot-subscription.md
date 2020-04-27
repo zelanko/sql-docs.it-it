@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62628776"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (sottoscrizione snapshot)
@@ -28,7 +28,7 @@ ms.locfileid: "62628776"
  **Visualizza**  
  Consente di selezionare le sessioni dell'agente di distribuzione da visualizzare.  
   
- **Status**  
+ **Stato**  
  Stato dell'agente di distribuzione. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -39,13 +39,13 @@ ms.locfileid: "62628776"
   
 -   In esecuzione  
   
- **Start Time**  
+ **Ora di inizio**  
  Ora di inizio della sessione.  
   
- **Ora fine**  
+ **Ora di fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Duration**  
+ **Durata**  
  Periodo di tempo durante il quale l'agente di distribuzione è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  
@@ -60,9 +60,9 @@ ms.locfileid: "62628776"
  **Messaggio o dettagli errore della sessione selezionata**  
  Area visualizzata solo se per la sessione selezionata è visualizzato il valore **Errore** nella colonna **Stato** . In questa area di testo vengono visualizzate informazioni dettagliate sull'errore e viene indicato il comando di cui è stata tentata l'esecuzione quando si è verificato l'errore. Sono inoltre disponibili collegamenti a contenuto aggiuntivo correlato all'errore.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzazione delle informazioni ed esecuzione di attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)   
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)  
   

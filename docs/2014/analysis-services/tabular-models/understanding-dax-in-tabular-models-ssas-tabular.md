@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284925"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Informazioni su DAX nei modelli tabulari (SSAS tabulare)
@@ -42,13 +42,13 @@ ms.locfileid: "67284925"
   
 -   [Utilizzo di tabelle e colonne](#bkmk_tables)  
   
--   [Aggiornamento dei risultati delle formule (processo)](#bkmk_RefreshRecalc)  
+-   [Aggiornamento dei risultati delle formule (elaborazione)](#bkmk_RefreshRecalc)  
   
 -   [Risoluzione degli errori nelle formule](#bkmk_troubleshoot)  
   
 -   [Risorse aggiuntive](#bkmk_addional_resources)  
   
-##  <a name="bkmk_DAXintm"></a>DAX nei modelli tabulari  
+##  <a name="dax-in-tabular-models"></a><a name="bkmk_DAXintm"></a>DAX nei modelli tabulari  
  Sia in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] che nei modelli tabulari non esiste alcuna differenza funzionale nella modalità di calcolo dei valori dei rispettivi set di dati applicata nelle formule DAX. È tuttavia diversa la posizione in cui le formule DAX vengono create negli strumenti di creazione di cartelle di lavoro e modelli, così come è diversa la posizione in cui viene valutato il contesto in determinate misure.  
   
  In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]le formule di calcolo vengono in genere create dall'utente della cartella di lavoro per l'analisi di Business Intelligence in modalità self-service. Le colonne calcolate vengono create per una tabella nella finestra di PowerPivot e le misure vengono create nelle tabelle pivot o nell'area calcoli. Diversamente dai progetti di modelli tabulari, le cartelle di lavoro di PowerPivot non forniscono la sicurezza basata sui ruoli con cui è possibile utilizzare formule DAX per proteggere i dati.  
@@ -57,7 +57,7 @@ ms.locfileid: "67284925"
   
  Se si importa una cartella di lavoro di PowerPivot in un nuovo progetto di modello tabulare tramite il modello di progetto Importa da PowerPivot, le formule DAX per le colonne calcolate verranno create automaticamente nel nuovo modello tabulare. Le formule DAX per le misure implicite ed esplicite nella cartella di lavoro verranno create automaticamente nel nuovo modello tabulare come misure esplicite. Poiché le funzionalità relative a ruolo e filtro di riga protetto non sono già presenti nelle cartelle di lavoro di PowerPivot, sarà necessario creare almeno un ruolo nel nuovo modello tabulare per consentire ai membri del ruolo di accedere ai dati del modello. Le formule DAX nei filtri di riga sono necessarie solo se si desidera proteggere i dati della tabella a livello di riga.  
   
-##  <a name="bkmk_DAX"></a>Formule DAX in colonne calcolate, misure e filtri di riga  
+##  <a name="dax-formulas-in-calculated-columns-measures-and-row-filters"></a><a name="bkmk_DAX"></a>Formule DAX in colonne calcolate, misure e filtri di riga  
  Per i modelli tabulari creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]le formule DAX vengono utilizzate in colonne calcolate, misure e filtri di riga.  
   
 ### <a name="calculated-columns"></a>Colonne calcolate  
@@ -86,13 +86,13 @@ ms.locfileid: "67284925"
   
  In un filtro di riga una formula DAX, da cui deve essere restituita una condizione booleana TRUE o FALSE, consente di definire le righe che possono essere restituite dai risultati di una query dei membri di tale particolare ruolo. Non è possibile restituire righe non incluse nella formula DAX. Ad esempio, se nella tabella Customers è presente la seguente formula DAX, `=Customers[Country] = "USA"`, i membri del ruolo relativo alle vendite potranno visualizzare solo i dati relativi ai clienti negli Stati Uniti e le aggregazioni, ad esempio SUM, verranno restituite solo ai clienti negli Stati Uniti.  
   
- Quando si definisce un filtro di riga tramite una formula DAX, si crea un set di righe consentito. Questo non significa che l'accesso alle altre righe viene negato, ma semplicemente che tali righe non vengono restituite come parte del set di righe consentito. Altri ruoli possono consentire l'accesso alle righe escluse dalla formula DAX. Se un utente è membro di un altro ruolo e i filtri di riga di quel ruolo consentono l'accesso a quel particolare set di righe, l'utente può visualizzare i dati per tale riga.  
+ Quando si definisce un filtro di riga tramite una formula DAX, si crea un set di righe consentito. Questo non significa che l'accesso alle altre righe viene negato, ma semplicemente che tali righe non vengono restituite come parte del set di righe consentito. Altri ruoli possono consentire l'accesso alle righe escluse dalla formula DAX. Se un utente è membro di un altro ruolo e i filtri di riga di tale ruolo consentono l'accesso a quel particolare set di righe, l'utente può visualizzare i dati per la riga.  
   
- I filtri di riga vengono applicati alle righe specificate e a quelle correlate. Quando una tabella contiene più relazioni, i filtri applicano la sicurezza per la relazione che è attiva. I filtri di riga saranno intersecati con altri relativi filtri definiti per le tabelle correlate.  
+ I filtri di riga vengono applicati alle righe specificate e a quelle correlate. Quando una tabella dispone di più relazioni, tramite i filtri viene applicata la sicurezza alla relazione che è attiva. I filtri di riga saranno intersecati con altri relativi filtri definiti per le tabelle correlate.  
   
  Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_DAX_datatypes"></a>Tipi di dati DAX  
+##  <a name="dax-data-types"></a><a name="bkmk_DAX_datatypes"></a>Tipi di dati DAX  
  In un modello è possibile importare dati provenienti da numerose origini dati diverse in grado di supportare tipi di dati differenti. Quando si importano dati in un modello, i dati vengono convertiti in uno dei tipi di dati dei modelli tabulari. Quando i dati del modello vengono usati in un calcolo, i dati vengono quindi convertiti in un tipo di dati DAX per la durata e l'output del calcolo. Quando si crea una formula di DAX, i termini utilizzati nella formula determinano automaticamente il tipo di dati del valore restituito.  
   
  I modelli tabulari e DAX supportano i tipi di dati seguenti:  
@@ -102,8 +102,8 @@ ms.locfileid: "67284925"
 |Numero intero|Valore intero a 64 bit (otto byte) <sup>1, 2</sup>|Numeri senza cifre decimali. I numeri interi possono essere positivi o negativi ma devono essere numeri interi compresi tra -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Numero decimale|Numero reale a 64 bit (otto byte) <sup>1, 2</sup>|I numeri reali sono numeri che possono avere cifre decimali e coprono un ampio intervallo di valori:<br /><br /> Valori negativi compresi tra -1,79E +308 e -2,23E -308<br /><br /> Zero<br /><br /> Valori positivi compresi tra 2,23E -308 e 1,79E + 308<br /><br /> Tuttavia, il numero di cifre significative è limitato a 17 cifre decimali.|  
 |Boolean|Boolean|Valore True o False.|  
-|Text|string|Stringa di dati di tipo carattere Unicode. Può trattarsi di stringhe, numeri o date rappresentati in un formato di testo.|  
-|Data|Data/ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
+|Testo|string|Stringa di dati di tipo carattere Unicode. Può trattarsi di stringhe, numeri o date rappresentati in un formato di testo.|  
+|Date|Data/ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
 |Valuta|Valuta|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "67284925"
   
  Per informazioni dettagliate sui tipi di dati nei modelli tabulari e sulle conversioni esplicite e implicite di tipi di dati in DAX, vedere [Tipi di dati supportati &#40;SSAS tabulare&#41;](data-types-supported-ssas-tabular.md).  
   
-##  <a name="bkmk_DAX_opertors"></a>Operatori DAX  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> Operatori DAX  
  Nel linguaggio DAX vengono utilizzati quattro tipi diversi di operatori di calcolo nelle formule:  
   
 -   Operatori di confronto per confrontare valori e restituire un valore logico TRUE\FALSE.  
@@ -126,10 +126,10 @@ ms.locfileid: "67284925"
   
  Per informazioni dettagliate sugli operatori usati nelle formule DAX, vedere Guida di riferimento agli operatori [DAX per PowerPivot](/dax/dax-operator-reference).  
   
-##  <a name="bkmk_DAX_Formulas"></a>Formule DAX  
+##  <a name="dax-formulas"></a><a name="bkmk_DAX_Formulas"></a>Formule DAX  
  Le formule DAX sono essenziali per la creazione di calcoli nelle colonne calcolate e nelle misure e per proteggere i dati tramite filtri a livello di riga. Per creare formule per colonne calcolate e misure, utilizzare la barra della formula presente nella parte superiore della finestra di Progettazione modelli. Per creare formule per i filtri di riga, utilizzare la finestra di dialogo Gestione ruoli. Lo scopo delle informazioni fornite in questa sezione è quello di facilitare la comprensione delle nozioni fondamentali relative alle formule DAX.  
   
-###  <a name="basics"></a>Nozioni fondamentali sulle formule  
+###  <a name="formula-basics"></a><a name="basics"></a>Nozioni fondamentali sulle formule  
  DAX consente agli autori di modelli tabulari di definire calcoli personalizzati in entrambe le tabelle del modello, come parte di colonne calcolate e come misure associate a tabelle, ma in cui non vengono visualizzati direttamente. DAX consente inoltre agli autori di modelli di proteggere i dati mediante la creazione di calcoli che restituiscono un valore booleano, in base al quale viene definito su quali righe in una tabella particolare o correlata può essere eseguita una query da utenti membri del ruolo associato.  
   
  Le formule DAX possono essere molto semplici o piuttosto complesse. Nella tabella seguente sono riportati alcuni esempi di formule semplici che potrebbero essere utilizzate in una colonna calcolata.  
@@ -204,7 +204,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 > [!NOTE]  
 >  Vengono applicati alcuni limiti alla nidificazione di funzioni all'interno delle misure, per assicurare che le prestazioni non vengano compromesse dai numerosi calcoli richiesti dalle dipendenze tra colonne.  
   
-##  <a name="bkmk_DAX_functions"></a>Funzioni DAX  
+##  <a name="dax-functions"></a><a name="bkmk_DAX_functions"></a>Funzioni DAX  
  In questa sezione viene fornita una panoramica dei *tipi* di funzioni supportati nel linguaggio DAX. Per altre informazioni dettagliate, vedere [Riferimento alle funzioni DAX](/dax/dax-function-reference).  
   
  In DAX è disponibile una varietà di funzioni che è possibile utilizzare per eseguire calcoli basati su date e ore, creare valori condizionali, utilizzare stringhe, eseguire ricerche basate sulle relazioni, nonché la possibilità di eseguire l'iterazione di una tabella per l'esecuzione di calcoli ricorsivi. Se si ha dimestichezza con le formule di Excel, molte di queste funzioni appariranno molto simili, tuttavia, le formule DAX sono diverse nelle seguenti modalità importanti:  
@@ -241,17 +241,17 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ### <a name="time-intelligence-functions"></a>Funzioni di Business Intelligence per le gerarchie temporali  
  Le funzioni di Business Intelligence per le gerarchie temporali disponibili in DAX consentono di creare calcoli in cui vengono utilizzate informazioni predefinite su calendari e date. Tramite gli intervalli di ore e date in combinazione con aggregazioni o calcoli è possibile compilare confronti significativi tra periodi di tempo paragonabili relativamente a vendite, scorte e così via. Per ulteriori informazioni, vedere [funzioni di Business Intelligence per le attività temporali &#40;&#41;DAX ](/dax/time-intelligence-functions-dax).  
   
-###  <a name="bkmk_TableFunc"></a>Funzioni con valori di tabella  
+###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>Funzioni con valori di tabella  
  Sono disponibili funzioni DAX che consentono di eseguire l'output di tabelle, che utilizzano le tabelle come input o che svolgono entrambe le funzioni. Dal momento che una tabella può disporre di una sola colonna, le funzioni con valori di tabella utilizzano anche le singole colonne come input. Saper utilizzare tali funzioni con valori di tabella è importante per un utilizzo ottimale delle formule DAX. DAX include i seguenti tipi di funzioni con valori di tabella:  
   
- **Funzioni di filtro** Restituisce una colonna, una tabella o i valori correlati alla riga corrente.  
+ **Funzioni di filtro** Restituiscono una colonna, una tabella o i valori correlati alla riga corrente.  
   
- **Funzioni di aggregazione** Aggregare qualsiasi espressione sulle righe di una tabella.  
+ **Funzioni di aggregazione** Aggregano qualsiasi espressione nelle righe di una tabella.  
   
- **Funzioni di business intelligence** per l'ora Restituire una tabella di date oppure utilizzare una tabella di date per calcolare un'aggregazione.  
+ **Funzioni di Business Intelligence per le gerarchie temporali** Restituiscono una tabella di date o utilizzano una tabella di date per calcolare un'aggregazione.  
   
-##  <a name="bkmk_context"></a>Contesto nelle formule DAX  
- Il *contesto* è un concetto importante da comprendere quando si creano formule tramite DAX. Rappresenta l'elemento che consente di eseguire analisi dinamiche, dal momento che i risultati di una formula vengono modificati per riflettere la riga o la selezione della cella corrente, nonché anche eventuali dati correlati. La comprensione del contesto e l'utilizzo efficace di quest'ultimo sono fondamentali per la realizzazioni di analisi dinamiche ad elevate prestazioni e per la risoluzione dei problemi riscontrati nelle formule.  
+##  <a name="context-in-dax-formulas"></a><a name="bkmk_context"></a>Contesto nelle formule DAX  
+ Il*contesto* è un concetto importante da comprendere in caso di creazione di formule tramite DAX. Rappresenta l'elemento che consente di eseguire analisi dinamiche, dal momento che i risultati di una formula vengono modificati per riflettere la riga o la selezione della cella corrente, nonché anche eventuali dati correlati. La comprensione del contesto e l'utilizzo efficace di quest'ultimo sono fondamentali per la realizzazioni di analisi dinamiche ad elevate prestazioni e per la risoluzione dei problemi riscontrati nelle formule.  
   
  Le formule nei modelli tabulari possono essere valutate in un contesto diverso, in base ad altri elementi di progettazione quali:  
   
@@ -263,7 +263,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Esistono diversi tipi di contesto: *contesto di riga*, *contesto di query*e *contesto di filtro*.  
   
-###  <a name="bkmk_row_context"></a>Contesto di riga  
+###  <a name="row-context"></a><a name="bkmk_row_context"></a>Contesto di riga  
  Il *contesto di riga* può essere considerato come la "riga corrente". Se si crea una formula in una colonna calcolata, nel contesto di riga per tale formula sono inclusi i valori di tutte le colonne presenti nella riga corrente. Se la tabella è correlata a un'altra tabella, il contenuto include anche tutti i valori dell'altra tabella che sono correlati alla riga corrente.  
   
  Si supponga ad esempio di creare una colonna calcolata, `=[Freight] + [Tax]`, in cui vengono sommati i valori di due colonne, Freight e Tax, della stessa tabella. Tramite questa formula si ottengono automaticamente solo i valori dalla riga corrente delle colonne specificate.  
@@ -293,8 +293,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Per riepilogare, la funzione EARLIER consente di archiviare il contesto di riga dall'operazione che ha preceduto l'operazione corrente. La funzione archivia sempre in memoria due set di contesto: uno rappresenta la riga corrente del ciclo interno della formula e l'altro rappresenta la riga corrente del ciclo esterno della formula. DAX utilizza automaticamente i valori tra due cicli in modo che sia possibile creare aggregazioni complesse.  
   
-####  <a name="bkmk_query_context"></a>Contesto di query  
- Il *contesto di query* fa riferimento al subset di dati recuperato in modo implicito per una formula. Quando un utente inserisce una misura o un altro campo valori in una tabella pivot o in un report basato su un modello tabulare, tramite il motore vengono esaminate le intestazioni di riga e di colonna, i filtri dei dati e i filtri dei report per determinare il contesto. Le query necessarie vengono quindi eseguite sull'origine dati per ottenere il subset corretto di dati, effettuare i calcoli definiti dalla formula e popolare ogni cella nella tabella pivot o nel report. Il set di dati recuperato è il contesto di query per ogni cella.  
+####  <a name="query-context"></a><a name="bkmk_query_context"></a>Contesto di query  
+ Il*contesto di query* fa riferimento al subset di dati recuperato in modo implicito per una formula. Quando un utente inserisce una misura o un altro campo valori in una tabella pivot o in un report basato su un modello tabulare, tramite il motore vengono esaminate le intestazioni di riga e di colonna, i filtri dei dati e i filtri dei report per determinare il contesto. Le query necessarie vengono quindi eseguite sull'origine dati per ottenere il subset corretto di dati, effettuare i calcoli definiti dalla formula e popolare ogni cella nella tabella pivot o nel report. Il set di dati recuperato è il contesto di query per ogni cella.  
   
 > [!WARNING]  
 >  Per un modello in modalità DirectQuery, viene valutato il contesto e, successivamente, le operazioni di impostazione per recuperare il subset corretto di dati e calcolare i risultati vengono convertite in istruzioni SQL. Tali istruzioni vengono quindi eseguite direttamente sull'archivio dati relazionale. Pertanto, anche se il metodo di acquisizione dei dati e di calcolo dei risultati è diverso, il contesto stesso non viene modificato.  
@@ -307,8 +307,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  In una tabella pivot è possibile modificare il contesto aggiungendo o rimuovendo intestazioni di colonna e di riga, nonché aggiungendo o rimuovendo filtri dei dati. Ogni qualvolta si aggiungono intestazioni di riga o di colonna alla tabella pivot, si modifica il contesto di query nel quale viene valutata la misura. Anche le operazioni di applicazione di filtri influiscono sul contesto. Pertanto, la stessa formula utilizzata in una misura viene valutata in un *contesto di query* diverso per ogni cella.  
   
-####  <a name="bkmk_filter_context"></a>Contesto di filtro  
- Il *contesto di filtro* è il set di valori consentito in ogni colonna o nei valori recuperati da una tabella correlata. I filtri possono essere applicati alla colonna nella finestra di progettazione o nel livello di presentazione (report e tabelle pivot). Possono essere definiti inoltre in modo esplicito dalle espressioni di filtro all'interno della formula.  
+####  <a name="filter-context"></a><a name="bkmk_filter_context"></a>Contesto di filtro  
+ Il*contesto di filtro* è il set di valori consentito in ogni colonna o nei valori recuperati da una tabella correlata. I filtri possono essere applicati alla colonna nella finestra di progettazione o nel livello di presentazione (report e tabelle pivot). Possono essere definiti inoltre in modo esplicito dalle espressioni di filtro all'interno della formula.  
   
  Il contesto di filtro viene aggiunto quando si specificano vincoli del filtro sul set di valori consentito in una colonna o una tabella utilizzando gli argomenti di una formula. Tale contesto viene applicato su altri contesti, ad esempio il contesto di riga o il contesto di query.  
   
@@ -320,7 +320,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Per esempi su come deselezionare e applicare in modo selettivo i filtri all'interno delle formule, vedere la [funzione ALLEXCEPT](/dax/allexcept-function-dax).  
   
-####  <a name="bkmk_determine_context"></a>Determinazione del contesto nelle formule  
+####  <a name="determining-context-in-formulas"></a><a name="bkmk_determine_context"></a> Determinazione del contesto nelle formule  
  Una volta creata una formula DAX, viene innanzitutto testata la validità della relativa sintassi e viene quindi verificato che i nomi delle colonne e delle tabelle incluse nella formula siano presenti nel contesto corrente. Se non è possibile trovare una colonna o una tabella specificata dalla formula, viene restituito un errore.  
   
  Il contesto durante la convalida, e le operazioni di ricalcolo, viene determinato come descritto nelle sezioni precedenti utilizzando le tabelle disponibili nel modello, eventuali relazioni tra le tabelle ed eventuali filtri applicati.  
@@ -341,7 +341,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 5.  La [funzione precedente](/dax/earlier-function-dax) e le funzioni di [funzione](/dax/earliest-function-dax) meno recenti consentono di scorrere le tabelle eseguendo calcoli, facendo riferimento a un valore da un ciclo interno. Se si ha familiarità con il concetto di ricorsione e con i cicli interni ed esterni, sarà più facile apprezzare l'efficacia offerta dalle funzioni EARLIER ed EARLIEST. Se non si ha familiarità con tali concetti, è opportuno seguire con attenzione i passaggi nell'esempio per informazioni sulle modalità di utilizzo dei contesti interni ed esterni nell'esecuzione di calcoli.  
   
-##  <a name="bkmk_RelModel"></a>Formule e modello tabulare  
+##  <a name="formulas-and-the-tabular-model"></a><a name="bkmk_RelModel"></a>Formule e modello tabulare  
  Progettazione modelli, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è un'area in cui è possibile utilizzare più tabelle di dati e connettere le tabelle in un modello tabulare. All'interno di questo modello le tabelle sono unite da relazioni in colonne con valori (chiavi) comuni. Il modello tabulare consente di collegare valori a colonne di altre tabelle e creare calcoli più interessanti. Analogamente a un database relazionale, è possibile collegare molti livelli di tabelle correlate e utilizzare colonne di qualsiasi tabella nei risultati.  
   
  È possibile collegare ad esempio una tabella delle vendite, una tabella dei prodotti e una tabella delle categorie di prodotto e utilizzare le varie combinazioni delle colonne delle tabelle pivot e dei report. I campi correlati possono essere utilizzati per filtrare tabelle connesse o per creare calcoli in subset. Se non si ha familiarità con i database relazionali e con l'uso di tabelle e join, vedere [Relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md).)  
@@ -354,7 +354,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   Quando si collegano tabelle nel modello tramite relazioni, viene ampliato l'ambito o *contesto*nel quale vengono valutate le formule. Le modifiche al contesto che derivano dall'aggiunta di nuove tabelle, di nuove relazioni o da cambiamenti della relazione attiva possono causare modiche ai risultati difficili da prevedere. Per altre informazioni, vedere [Contesto nelle formule DAX](#bkmk_context) più avanti in questo argomento.  
   
-##  <a name="bkmk_tables"></a>Utilizzo di tabelle e colonne  
+##  <a name="working-with-tables-and-columns"></a><a name="bkmk_tables"></a>Utilizzo di tabelle e colonne  
  Le tabelle nei modelli tabulari sono simili a quelle di Excel, ma differiscono nell'utilizzo dei dati e delle formule:  
   
 -   Nelle formule vengono utilizzate solo tabelle e colonne, non celle singole, riferimenti a intervalli o matrici.  
@@ -379,12 +379,12 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Molte funzioni DAX richiedono l'esistenza di una relazione tra le tabelle, o tra più tabelle, per consentire l'individuazione delle colonne cui è stato fatto riferimento e restituire risultati appropriati. Tramite altre funzioni verrà tentata l'identificazione della relazione, tuttavia per ottenere i migliori risultati è consigliabile creare sempre una relazione dove possibile. Per altre informazioni, vedere [Formule e modello tabulare](#bkmk_RelModel) più indietro in questo argomento.  
   
-##  <a name="bkmk_RefreshRecalc"></a>Aggiornamento dei risultati delle formule (processo)  
- L'elaborazione e il *ricalcolo* *dei dati* sono due operazioni distinte ma correlate. È necessario comprendere in modo approfondito questi concetti ai fini della progettazione di un modello contenente formule complesse, grandi quantità di dati o dati ottenuti da origini dati esterne.  
+##  <a name="updating-the-results-of-formulas-process"></a><a name="bkmk_RefreshRecalc"></a>Aggiornamento dei risultati delle formule (processo)  
+ L'*elaborazione dei dati* e il *ricalcolo* sono due operazioni distinte ma correlate. È necessario comprendere in modo approfondito questi concetti ai fini della progettazione di un modello contenente formule complesse, grandi quantità di dati o dati ottenuti da origini dati esterne.  
   
- L' *elaborazione dei dati* è il processo di aggiornamento dei dati in un modello con nuovi dati provenienti da un'origine dati esterna.  
+ L'*aggiornamento dei dati* è il processo di aggiornamento dei dati in un modello con nuovi dati provenienti da un'origine dati esterna.  
   
- Il *ricalcolo* è il processo di aggiornamento dei risultati delle formule in modo da riflettere le modifiche apportate alle formule stesse e riflettere le modifiche apportate ai dati sottostanti. Il ricalcolo può avere effetto sulle prestazioni nei modi seguenti:  
+ Il*ricalcolo* è il processo di aggiornamento dei risultati delle formule in modo che riflettano qualsiasi modifica alle formule stesse e le modifiche nei dati sottostanti. Il ricalcolo può avere effetto sulle prestazioni nei modi seguenti:  
   
 -   I valori in una colonna calcolata vengono calcolati e archiviati nel modello. Per aggiornare i valori nella colonna calcolata, è necessario elaborare il modello utilizzando uno dei tre comandi di elaborazione, ovvero elaborazione completa, elaborazione dati o Elabora ricalcolo. È necessario sempre ricalcolare il risultato della formula per la colonna intera, ogni volta che la formula viene modificata.  
   
@@ -394,7 +394,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Per altre informazioni, vedere [Elaborare dati &#40;SSAS tabulare&#41;](../process-data-ssas-tabular.md).  
   
-##  <a name="bkmk_troubleshoot"></a>Risoluzione degli errori nelle formule  
+##  <a name="troubleshooting-errors-in-formulas"></a><a name="bkmk_troubleshoot"></a>Risoluzione degli errori nelle formule  
  Se si ottiene un errore quando si definisce una formula, è possibile che la formula contenga un *errore sintattico*, un *errore semantico*o un *errore di calcolo*.  
   
  Gli errori sintattici sono i più facili da risolvere. In genere sono dovuti a una parentesi o una virgola mancante. Per informazioni sulla sintassi delle singole funzioni, vedere [Riferimento alle funzioni DAX](/dax/dax-function-reference).  
@@ -413,14 +413,14 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Nei primi quattro casi, tramite DAX viene contrassegnata l'intera colonna in cui è contenuta la formula non valida. Nell'ultimo caso, tramite DAX la colonna che si trova in uno stato non elaborato viene visualizzata in grigio.  
   
-##  <a name="bkmk_addional_resources"></a>Risorse aggiuntive  
+##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> Risorse aggiuntive  
  In [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../tabular-modeling-adventure-works-tutorial.md) vengono fornite istruzioni dettagliate sulla creazione di un modello tabulare che include molti calcoli in colonne calcolate, misure e filtri di riga. Per la maggior parte delle formule viene fornita una descrizione dello scopo della formula.  
   
  Il [Blog del team di Analysis Services e PowerPivot](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornisce informazioni, suggerimenti, notizie e annunci [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] su e PowerPivot.  
   
  In [Centro risorse di DAX](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) vengono fornite informazioni interne ed esterne su DAX, incluse numerose soluzioni DAX inviate da noti professionisti di Business Intelligence.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Informazioni di riferimento sulle espressioni di analisi dei dati &#40;&#41; DAX](/dax/data-analysis-expressions-dax-reference)   
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
  [Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)   

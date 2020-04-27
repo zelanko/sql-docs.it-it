@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900170"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
@@ -43,7 +43,7 @@ Restituisce una riga in cui sono visualizzate le informazioni sulla versione del
 ## <a name="remarks"></a>Osservazioni  
 Questa visualizzazione è simile a [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), aggiungendo colonne per distinguere Windows e Linux.
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
 Per `SELECT` impostazione predefinita `sys.dm_os_host_info` , l'autorizzazione per `public` è concessa al ruolo. Se revocato, `VIEW SERVER STATE` richiede l'autorizzazione per il server.   
@@ -65,17 +65,17 @@ Ecco un set di risultati di esempio per Windows:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1040 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Ecco un set di risultati di esempio in Linux:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Linux |Ubuntu |16.04  |   |NULL   |1040 |  
+ |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>Vedere anche  
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [sys. dm_os_sys_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

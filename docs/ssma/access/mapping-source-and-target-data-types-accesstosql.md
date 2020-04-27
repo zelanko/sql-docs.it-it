@@ -16,10 +16,10 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907164"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapping dei tipi di dati di origine e di destinazione (AccessToSQL)
@@ -90,6 +90,6 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
 ## <a name="next-steps"></a>Passaggi successivi  
 Il passaggio successivo del processo di migrazione consiste nel [convertire gli oggetti di database di Access in oggetti SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

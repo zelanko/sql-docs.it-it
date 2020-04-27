@@ -22,10 +22,10 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905169"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
@@ -71,8 +71,8 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|Nome dell'istanza di acquisizione.|  
 |object_id|**int**|ID della tabella delle modifiche associata alla tabella di origine.|  
 |source_object_id|**int**|ID della tabella di origine.|  
-|start_lsn|**binario (10)**|Numero di sequenza del file di log (LSN) che rappresenta l'endpoint inferiore per l'esecuzione di query sulla tabella delle modifiche.<br /><br /> NULL = l'endpoint inferiore non è stato stabilito.|  
-|end_lsn|**binario (10)**|Il numero LSN rappresenta l'endpoint superiore per l'esecuzione di query sulla tabella delle modifiche. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questa colonna è sempre a NULL.|  
+|start_lsn|**binary(10)**|Numero di sequenza del file di log (LSN) che rappresenta l'endpoint inferiore per l'esecuzione di query sulla tabella delle modifiche.<br /><br /> NULL = l'endpoint inferiore non è stato stabilito.|  
+|end_lsn|**binary(10)**|Il numero LSN rappresenta l'endpoint superiore per l'esecuzione di query sulla tabella delle modifiche. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questa colonna è sempre a NULL.|  
 |supports_net_changes|**bit**|Il supporto delle modifiche totali è abilitato.|  
 |has_drop_pending|**bit**|Non utilizzato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |role_name|**sysname**|Nome del ruolo del database utilizzato per controllare l'accesso ai dati delle modifiche.<br /><br /> NULL = non è utilizzato un ruolo.|  

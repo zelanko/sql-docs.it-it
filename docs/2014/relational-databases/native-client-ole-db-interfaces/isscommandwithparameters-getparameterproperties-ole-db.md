@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638083"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -36,7 +36,7 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *pcParams*[out] [in]  
+ *pcParams*[out][in]  
  Puntatore alla memoria contenente il numero di strutture SSPARAMPROPS restituite in *prgParamProperties*.  
   
  *prgParamProperties*[out]  
@@ -66,7 +66,7 @@ SSPARAMPROPS **prgParamProperties);
 |*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
   
   

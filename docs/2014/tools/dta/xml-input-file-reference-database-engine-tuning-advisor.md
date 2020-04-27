@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62509983"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Guida di riferimento ai file di input XML (Ottimizzazione guidata motore di database)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]Ottimizzazione guidata può utilizzare un file di input XML per ottimizzare un database. In questo file XML sono specificati i database, le tabelle, i file o le tabelle del carico di lavoro e le opzioni di ottimizzazione da utilizzare per la sessione di ottimizzazione. È inoltre possibile utilizzare questo file per definire una configurazione specificata dall'utente per eseguire un'analisi di simulazione.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata può usare un file di input XML per ottimizzare un database. In questo file XML sono specificati i database, le tabelle, i file o le tabelle del carico di lavoro e le opzioni di ottimizzazione da utilizzare per la sessione di ottimizzazione. È inoltre possibile utilizzare questo file per definire una configurazione specificata dall'utente per eseguire un'analisi di simulazione.  
   
  Un file di input XML di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] contiene una gerarchia di elementi XML, ognuno dei quali include testo o altri elementi che specificano le impostazioni della sessione di ottimizzazione. È necessario che il file di input XML di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] sia conforme agli standard di correttezza del formato XML. Per tutti i nomi degli elementi viene pertanto fatta distinzione tra maiuscole e minuscole. Gli elementi vengono specificati mediante l'uso della distinzione tra maiuscole e minuscole Pascal, in base alla quale il primo carattere e la prima lettera della parola successiva concatenata sono in maiuscolo.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62509983"
   
 -   [Elemento Server &#40;DTA&#41;](server-element-dta.md)  
   
--   [Elemento workload &#40;DTA&#41;](workload-element-dta.md)  
+-   [Elemento Workload &#40;DTA&#41;](workload-element-dta.md)  
   
 -   [Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)  
   
@@ -54,15 +54,15 @@ ms.locfileid: "62509983"
   
 ## <a name="server-elements"></a>Elementi server  
   
--   [Elemento Name per server &#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [Elemento Name per Server &#40;DTA&#41;](name-element-for-server-dta.md)  
   
--   [Elemento database per server &#40;DTA&#41;](database-element-for-server-dta.md)  
+-   [Elemento Database per Server &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Elementi del carico di lavoro  
   
--   [Elemento file &#40;DTA&#41;](file-element-dta.md)  
+-   [Elemento File &#40;DTA&#41;](file-element-dta.md)  
   
--   [Elemento database per il carico di lavoro &#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [Elemento Database per Workload &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
 -   [Elemento EventString &#40;DTA&#41;](eventstring-element-dta.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62509983"
   
 -   [Elemento TestServer &#40;DTA&#41;](testserver-element-dta.md)  
   
--   [Elemento Featuret &#40;DTA&#41;](featureset-element-dta.md)  
+-   [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)  
   
 -   [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)  
   
@@ -88,23 +88,23 @@ ms.locfileid: "62509983"
   
 ## <a name="configuration-elements"></a>Elementi di configurazione  
   
--   [Elemento server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)  
+-   [Elemento Server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [Elemento database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [Elemento Database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
 -   [Elemento Recommendation &#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [Crea elemento &#40;DTA&#41;](create-element-dta.md)  
+-   [Elemento Create &#40;DTA&#41;](create-element-dta.md)  
   
--   [Elemento index &#40;DTA&#41;](index-element-dta.md)  
+-   [Elemento Index &#40;DTA&#41;](index-element-dta.md)  
   
--   [Elemento Name per index &#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [Elemento Name per Index &#40;DTA&#41;](name-element-for-index-dta.md)  
   
--   [Elemento Column per index &#40;DTA&#41;](column-element-for-index-dta.md)  
+-   [Elemento Column per Index &#40;DTA&#41;](column-element-for-index-dta.md)  
   
 -   [Elemento Name per Column &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [Elemento filegroup per index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [Elemento Filegroup per Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Elementi di database  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62509983"
   
 -   [Elemento Schema per Database &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [Elemento Name per schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [Elemento Name per Schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [Elemento Table per schema &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [Elemento Table per Schema &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
 -   [Elemento Name per Table &#40;DTA&#41;](name-element-for-table-dta.md)  
   

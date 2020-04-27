@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473202"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
@@ -30,14 +30,14 @@ ms.locfileid: "62473202"
  Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È possibile assegnare processi a categorie predefinite, oppure creare una categoria definita dall'utente e usarla per l'assegnazione dei processi.  
   
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
   
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62473202"
 6.  Fare clic su **OK**.  
   
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62473202"
   
   
   
-##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per assegnare un processo a una categoria di processi**  
   
  Usare la classe `JobCategory` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653863"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lezione 3: Elaborazione della struttura di data mining Market Basket
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     Nell'istruzione, `Products` si riferisce alla tabella Products definita dall'istruzione SHAPE. 
-  `SKIP` viene utilizzato per ignorare la colonna Model che esiste nei dati di origine come chiave ma non viene utilizzata dalla struttura di data mining.  
+     Nell'istruzione, `Products` si riferisce alla tabella Products definita dall'istruzione SHAPE. `SKIP` viene utilizzato per ignorare la colonna Model che esiste nei dati di origine come chiave ma non viene utilizzata dalla struttura di data mining.  
   
 5.  Sostituire quanto segue:  
   

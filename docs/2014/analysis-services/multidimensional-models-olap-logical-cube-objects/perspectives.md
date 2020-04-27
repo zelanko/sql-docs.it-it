@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702630"
 ---
 # <a name="perspectives"></a>prospettive
@@ -58,7 +58,7 @@ ms.locfileid: "62702630"
   
  Una prospettiva è una vista di sola lettura del cubo. Non è infatti possibile rinominare o modificare gli oggetti di un cubo utilizzando una prospettiva. Analogamente, il comportamento o le caratteristiche di un cubo, ad esempio l'utilizzo dei totali visualizzati, non possono essere modificati utilizzando una prospettiva.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Le prospettive non sono pensate per essere utilizzate come meccanismo di sicurezza, ma piuttosto come strumento per migliorare le prestazioni delle applicazioni di Business Intelligence. Tutte le impostazioni di sicurezza di una determinata prospettiva vengono ereditate dal cubo sottostante. Ad esempio, le prospettive non possono accedere agli oggetti di un cubo se l'utente non dispone già del relativo diritto di accesso. È quindi necessario risolvere la sicurezza del cubo prima di poter fornire l'accesso agli oggetti del cubo tramite una prospettiva.  
   
   

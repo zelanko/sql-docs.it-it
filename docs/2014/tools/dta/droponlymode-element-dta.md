@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659579"
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
@@ -38,16 +38,16 @@ ms.locfileid: "62659579"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|No.|  
-|**Valore predefinito**|No.|  
-|**Occorrenza**|Facoltativa. Può essere utilizzato una sola volta per ogni elemento `TuningOptions`. Non è possibile utilizzarlo se nell'elemento `TuningOptions` sono specificati gli elementi seguenti:<br /><br /> [Elemento Featuret &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Elemento KeepExisting &#40;&#41;DTA](keepexisting-element-dta.md) è impostato su **All**|  
+|**Tipo di dati e lunghezza**|Nessuno.|  
+|**Valore predefinito**|Nessuno.|  
+|**Occorrenza**|Facoltativo. Può essere utilizzato una sola volta per ogni elemento `TuningOptions`. Non è possibile utilizzarlo se nell'elemento `TuningOptions` sono specificati gli elementi seguenti:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) impostato su **ALL**|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementi figlio**|No.|  
+|**Elementi figlio**|Nessuno.|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata la sezione `TuningOptions` di un file di input XML di Ottimizzazione guidata motore di database in cui è specificata la modalità `DropOnlyMode`. In questo esempio, il tempo di ottimizzazione è limitato a 24 ore (1440 minuti) e tutti gli indici esistenti cluster e non cluster verranno presi in considerazione per l'eliminazione:  
@@ -60,7 +60,7 @@ ms.locfileid: "62659579"
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

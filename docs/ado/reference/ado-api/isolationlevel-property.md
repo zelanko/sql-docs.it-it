@@ -16,10 +16,10 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918444"
 ---
 # <a name="isolationlevel-property"></a>Proprietà IsolationLevel
@@ -39,6 +39,6 @@ Indica il livello di isolamento per un oggetto [Connection](../../../ado/referen
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà IsolationLevel e Mode (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [Esempio di proprietà IsolationLevel e Mode (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

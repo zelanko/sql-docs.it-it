@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510427"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Aggiunta di un report personalizzato a Management Studio
@@ -67,7 +67,7 @@ ms.locfileid: "62510427"
   
     2.  Modificare il numero in **Display files in recently used list**(Visualizza file nell'elenco degli ultimi file usati).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
  [Usare i report personalizzati con le proprietà del nodo Esplora oggetti](use-custom-reports-with-object-explorer-node-properties.md)   
  [Annulla l'esecuzione degli avvisi del report personalizzato](unsuppress-run-custom-report-warnings.md)   

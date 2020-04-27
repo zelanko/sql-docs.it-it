@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059200"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
@@ -44,7 +44,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>Argomenti  
  *database_id* | NULL  
- ID del database. *database_id* è di **tipo int**e non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ ID del database. *database_id* è di tipo **int** e non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *file_id* | NULL  
  ID del file. *file_id* è di **tipo int**e non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i file del database.  
@@ -101,10 +101,10 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [DB_ID &#40;&#41;Transact-SQL](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [FILE_IDEX &#40;&#41;Transact-SQL](../../t-sql/functions/file-idex-transact-sql.md)   
+ [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

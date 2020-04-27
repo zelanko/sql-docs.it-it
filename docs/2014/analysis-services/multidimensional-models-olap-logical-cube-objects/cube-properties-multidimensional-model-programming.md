@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727647"
 ---
 # <a name="cube-properties"></a>Proprietà dei cubi
@@ -58,9 +58,9 @@ ms.locfileid: "62727647"
 |`Language`|Specifica l'identificatore della lingua predefinita del cubo.|  
 |`Name`|Specifica il nome descrittivo del cubo.|  
 |`ProactiveCaching`|Definisce le impostazioni di memorizzazione nella cache attiva per il cubo.|  
-|`ProcessingMode`|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni **** sono regular `lazy`o.|  
+|`ProcessingMode`|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni **regular** sono regular `lazy`o.|  
 |`ProcessingPriority`|Determina la priorità di elaborazione del cubo durante operazioni in background, ad esempio indicizzazione e aggregazioni lente Il valore predefinito è **0**.|  
-|`ScriptCacheProcessingMode`|Indica se la cache script deve essere compilata durante o dopo l'elaborazione. Le opzioni **** sono regular `lazy`e.|  
+|`ScriptCacheProcessingMode`|Indica se la cache script deve essere compilata durante o dopo l'elaborazione. Le opzioni **regular** sono regular `lazy`e.|  
 |`ScriptErrorHandlingMode`|Determina la gestione degli errori. Le opzioni disponibili sono `IgnoreNone` o `IgnoreAll`.|  
 |`Source`|Visualizza la vista origine dati utilizzata per il cubo.|  
 |`StorageLocation`|Specifica il percorso di archiviazione nel file system per il cubo. Se non viene specificato alcun valore, il percorso viene ereditato dal database contenente l'oggetto del cubo.|  
@@ -70,7 +70,7 @@ ms.locfileid: "62727647"
 > [!NOTE]  
 >  Per ulteriori informazioni sull'impostazione dei valori per la proprietà ErrorConfiguration quando si utilizzano valori null e altri problemi di integrità dei dati, vedere [gestione dei problemi di integrità dei dati in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Caching attivo &#40;partizioni&#41;](partitions-proactive-caching.md)  
   
   

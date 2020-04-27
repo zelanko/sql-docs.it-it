@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666602"
 ---
 # <a name="delete-operator"></a>Elimina operatore
@@ -32,7 +32,7 @@ ms.locfileid: "62666602"
  **Proprietà**  
  Consente di visualizzare le proprietà dell'operatore al quale riassegnare le notifiche.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Operatori](operators.md)  
   
   

@@ -22,16 +22,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727597"
 ---
 # <a name="processing-objects-xmla"></a>Elaborazione di oggetti (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]l'elaborazione è il passaggio o la serie di passaggi che trasformano i dati in informazioni per l'analisi aziendale. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
   
- Per elaborare un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto, è possibile usare il comando [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) . In un'istanza di `Process` il comando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può elaborare gli oggetti seguenti:  
+ Per elaborare un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto, è possibile usare il comando [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) . In un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il comando `Process` può elaborare gli oggetti seguenti:  
   
 -   Cubi  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62727597"
 ## <a name="specifying-objects-to-be-processed"></a>Specifica degli oggetti da elaborare  
  La proprietà [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Process` comando contiene l'identificatore di oggetto dell'oggetto da elaborare. In un comando `Process` è possibile specificare solo un oggetto, ma l'elaborazione di un oggetto determina anche l'elaborazione di qualsiasi oggetto figlio. L'elaborazione di un gruppo di misure in un cubo, ad esempio, determina l'elaborazione di tutte le partizioni di tale gruppo, mentre l'elaborazione di un database determina l'elaborazione di tutti gli oggetti, quali cubi, dimensioni e strutture di data mining, contenuti nel database.  
   
- Se si imposta l'attributo `ProcessAffectedObjects` del comando `Process` su true, viene elaborato qualsiasi oggetto correlato interessato dall'elaborazione di quello specificato. Se, ad esempio, una dimensione viene aggiornata in modo incrementale ** tramite l'opzione di elaborazione `Process` ProcessUpdate nel comando, qualsiasi partizione le cui aggregazioni vengono invalidate a causa dei membri aggiunti o eliminati viene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elaborata anche da se `ProcessAffectedObjects` è impostato su true. In questo caso, un unico comando `Process` può elaborare più oggetti in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ma in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono determinati gli ulteriori oggetti da elaborare oltre all'oggetto specificato nel comando `Process`.  
+ Se si imposta l'attributo `ProcessAffectedObjects` del comando `Process` su true, viene elaborato qualsiasi oggetto correlato interessato dall'elaborazione di quello specificato. Se, ad esempio, una dimensione viene aggiornata in modo incrementale *ProcessUpdate* tramite l'opzione di elaborazione `Process` ProcessUpdate nel comando, qualsiasi partizione le cui aggregazioni vengono invalidate a causa dei membri aggiunti o eliminati viene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elaborata anche da se `ProcessAffectedObjects` è impostato su true. In questo caso, un unico comando `Process` può elaborare più oggetti in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ma in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono determinati gli ulteriori oggetti da elaborare oltre all'oggetto specificato nel comando `Process`.  
   
  È possibile tuttavia elaborare più oggetti contemporaneamente, ad esempio dimensioni, tramite più comandi `Process` in un comando `Batch`. Le operazioni batch consentono di controllare a livello più dettagliato l'elaborazione in serie o parallela di oggetti in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rispetto all'utilizzo dell'attributo `ProcessAffectedObjects` e consentono di ottimizzare l'approccio all'elaborazione per i database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di dimensioni maggiori. Per ulteriori informazioni sull'esecuzione di operazioni batch, vedere [esecuzione di operazioni batch &#40;&#41;XMLA ](performing-batch-operations-xmla.md).  
   

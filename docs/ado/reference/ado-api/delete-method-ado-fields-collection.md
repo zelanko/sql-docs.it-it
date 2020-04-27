@@ -17,10 +17,10 @@ ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919130"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Metodo Delete (raccolta Fields ADO)
@@ -43,7 +43,7 @@ Fields.Delete Field
 ## <a name="applies-to"></a>Si applica a  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Delete (raccolta Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Metodo Delete (recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Metodo DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

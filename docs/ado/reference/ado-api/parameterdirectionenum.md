@@ -16,10 +16,10 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917744"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
@@ -27,7 +27,7 @@ Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) 
   
 |Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|Default. Indica che il parametro rappresenta un parametro di input.|  
+|**adParamInput**|1|Valore predefinito. Indica che il parametro rappresenta un parametro di input.|  
 |**adParamInputOutput**|3|Indica che il parametro rappresenta un parametro di input e di output.|  
 |**adParamOutput**|2|Indica che il parametro rappresenta un parametro di output.|  
 |**adParamReturnValue**|4|Indica che il parametro rappresenta un valore restituito.|  

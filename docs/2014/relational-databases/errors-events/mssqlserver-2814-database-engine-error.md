@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046778"
 ---
 # <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
@@ -75,7 +75,7 @@ ms.locfileid: "67046778"
   
 3.  Se il problema persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe di evento SQL:StmtRecompile](../event-classes/sql-stmtrecompile-event-class.md)  
+## <a name="see-also"></a>Vedi anche  
+ [SQL:StmtRecompile - classe di evento](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

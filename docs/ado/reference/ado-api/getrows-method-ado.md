@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918457"
 ---
 # <a name="getrows-method-ado"></a>Metodo GetRows (ADO)
@@ -37,14 +37,14 @@ array = recordset.GetRows(Rows, Start, Fields )
  Restituisce una **variante** il cui valore è una matrice bidimensionale.  
   
 #### <a name="parameters"></a>Parametri  
- *prime righe*  
- Facoltativa. Valore [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
+ *righe*  
+ Facoltativo. Valore [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
   
  *Inizia*  
- Facoltativa. Valore **stringa** o **variante** che restituisce il segnalibro per il record da cui deve iniziare l'operazione **GetRows** . È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
+ Facoltativo. Valore **stringa** o **variante** che restituisce il segnalibro per il record da cui deve iniziare l'operazione **GetRows** . È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
  *Fields*  
- Facoltativa. **Variant** che rappresenta un nome di campo singolo o una posizione ordinale o una matrice di nomi di campo o numeri di posizione ordinale. ADO restituisce solo i dati in questi campi.  
+ Facoltativo. **Variant** che rappresenta un nome di campo singolo o una posizione ordinale o una matrice di nomi di campo o numeri di posizione ordinale. ADO restituisce solo i dati in questi campi.  
   
 ## <a name="remarks"></a>Osservazioni  
  Usare il metodo **GetRows** per copiare record da un **Recordset** in una matrice bidimensionale. Il primo indice identifica il campo e il secondo identifica il numero di record. La variabile di *matrice* viene dimensionata automaticamente con le dimensioni corrette quando il metodo **GetRows** restituisce i dati.  
@@ -60,6 +60,6 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di metodo GetRows (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [Esempio del metodo GetRows (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

@@ -21,10 +21,10 @@ ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122545"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
@@ -74,9 +74,9 @@ SELECT * FROM fn_servershareddrives();
   
  n  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. dm_io_cluster_valid_path_names &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
  [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys. fn_virtualservernodes &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
+ [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
   
   

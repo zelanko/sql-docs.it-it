@@ -19,10 +19,10 @@ ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68088485"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
@@ -89,8 +89,8 @@ EXEC dbo.sp_add_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [CREAZIONE di credenziali &#40;&#41;Transact-SQL](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

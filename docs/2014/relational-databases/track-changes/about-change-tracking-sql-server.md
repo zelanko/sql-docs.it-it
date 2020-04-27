@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670925"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informazioni sul rilevamento delle modifiche (SQL Server)
@@ -67,10 +67,10 @@ ms.locfileid: "62670925"
   
  È inoltre possibile utilizzare il rilevamento delle modifiche per ottenere informazioni sulla modifica apportata a ogni riga, ad esempio il tipo di operazione DML che ha provocato la modifica (inserimento, aggiornamento o eliminazione) o le colonne modificate come parte di un'operazione di aggiornamento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Abilitare e disabilitare Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Usare Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Gestire Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

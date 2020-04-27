@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66462695"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestione connessioni di Azure Data Lake Store
@@ -49,7 +49,7 @@ ms.locfileid: "66462695"
     
         4. Fare clic su **Test connessione** per testare la connessione.  
   
-4.  Scegliere **OK** per chiudere la finestra di dialogo.  
+4.  Fare clic su **OK** per chiudere la finestra di dialogo.  
   
     È possibile visualizzare le proprietà del componente Gestione connessione create nella finestra **Proprietà** .  
   

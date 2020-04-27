@@ -22,10 +22,10 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918475"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
@@ -35,17 +35,17 @@ Indica il file della guida e l'argomento associato a un oggetto [Error](../../..
   
 -   **HelpContextID** Restituisce un ID di contesto, come valore **Long** , per un argomento in un file della guida.  
   
--   **** Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
+-   **HelpFile** Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se nella proprietà FileGuida viene specificato un **file della Guida** , la proprietà **HelpContext** viene utilizzata per visualizzare automaticamente l'argomento della Guida identificato. Se non è disponibile alcun argomento della Guida pertinente, la proprietà **HelpContext** restituisce zero **e la proprietà** fileguida restituisce una stringa di lunghezza zero ("").  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Error](../../../ado/reference/ado-api/error-object.md)  
+ [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description (proprietà)](../../../ado/reference/ado-api/description-property.md)   
  [Proprietà Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Proprietà Source (Error - ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)

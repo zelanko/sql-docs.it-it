@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727465"
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
@@ -60,7 +60,7 @@ ms.locfileid: "62727465"
 ## <a name="canceling-associated-sessions-and-connections"></a>Annullamento di sessioni e connessioni associate  
  È possibile impostare la proprietà [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) su true per annullare le connessioni, le sessioni e i comandi associati alla connessione, alla sessione o allo SPID specificati nel `Cancel` comando.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Discover &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

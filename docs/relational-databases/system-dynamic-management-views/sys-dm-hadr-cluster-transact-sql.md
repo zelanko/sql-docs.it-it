@@ -21,10 +21,10 @@ ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900655"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
@@ -38,17 +38,17 @@ ms.locfileid: "67900655"
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|Nome del cluster WSFC che ospita le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
 |**quorum_type**|**tinyint**|Tipo di quorum utilizzato da questo cluster WSFC, uno di:<br /><br /> 0 = Maggioranza dei nodi. Questa configurazione del quorum può sostenere errori della metà dei nodi (arrotondata) meno uno. Su un cluster a sette nodi, ad esempio, questa configurazione del quorum può sostenere tre errori di nodo.<br /><br /> 1 = Maggioranza dei nodi e dei dischi. Se il disco di controllo rimane online, questa configurazione del quorum può sostenere errori della metà dei nodi (arrotondamento per eccesso). Ad esempio, un cluster a sei nodi in cui il disco di controllo è online potrebbe sostenere tre errori di nodo. Se il disco di controllo viene portato offline o su di esso si verifica un errore, questa configurazione del quorum può sostenere errori della metà dei nodi (arrotondamento per eccesso) meno uno. Ad esempio, un cluster a sei nodi con un disco di controllo su cui si è verificato un errore potrebbe sostenere due (3-1=2) errori di nodo.<br /><br /> 2 = Maggioranza dei nodi e delle condivisioni file. Questa configurazione del quorum funziona in modo simile alla Maggioranza dei nodi e del disco, ma utilizza un server di controllo della condivisione file anziché un disco di controllo.<br /><br /> 3 = Nessuna maggioranza: solo disco. Se il disco del quorum è online, questa configurazione del quorum può sostenere errori di tutti i nodi tranne uno.<br /><br /> 4 = quorum sconosciuto. Quorum sconosciuto per il cluster.<br /><br /> 5 = cloud Witness. Il cluster USA Microsoft Azure per l'arbitraggio quorum. Se il server di controllo del cloud è disponibile, il cluster può sostenere l'errore della metà dei nodi (arrotondamento per eccesso).|  
-|**quorum_type_desc**|**varchar (50)**|Descrizione di **quorum_type**, uno di:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
+|**quorum_type_desc**|**varchar(50)**|Descrizione di **quorum_type**, uno di:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|Stato del quorum WSFC, uno di:<br /><br /> 0 = Stato del quorum sconosciuto<br /><br /> 1 = Quorum normale<br /><br /> 2 = Quorum forzato|  
-|**quorum_state_desc**|**varchar (50)**|Descrizione di **quorum_state**, uno di:<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
+|**quorum_state_desc**|**varchar(50)**|Descrizione di **quorum_state**, uno di:<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni e DMV di Gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [sys. dm_hadr_cluster_members &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Funzioni e viste a gestione dinamica dei gruppi di disponibilità Always On &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On viste del catalogo di gruppi di disponibilità &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Monitorare i gruppi di disponibilità &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898406"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -59,8 +59,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome account**|**sysname**|Nome completo dell'account di Windows.|  
-|**tipo**|**carattere (8)**|Tipo di account di Windows. I valori validi sono **utente** o **gruppo**.|  
-|**privilegio**|**char (9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **User**o **null**.|  
+|**type**|**carattere (8)**|Tipo di account di Windows. I valori validi sono **utente** o **gruppo**.|  
+|**privilegio**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **User**o **null**.|  
 |**mapped login name**|**sysname**|Per gli account utente con privilegi utente, il nome dell'account di **accesso mappato** Mostra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il nome dell'account di accesso con mapping che tenta di usare quando si accede con questo account usando le regole mappate con il nome di dominio aggiunto prima.|  
 |**permission path**|**sysname**|Appartenenza al gruppo che ha permesso all'account di ottenere l'accesso.|  
   
@@ -85,11 +85,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_denylogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918787"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
@@ -57,6 +57,6 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
 ## <a name="remarks"></a>Osservazioni  
  Un evento **ExecuteComplete** può verificarsi a causa della **connessione.** [Eseguire](../../../ado/reference/ado-api/execute-method-ado-connection.md)il **comando.** [Eseguire](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.** [Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.** [Eseguire una query](../../../ado/reference/ado-api/requery-method.md)o un **Recordset.** Metodi [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)

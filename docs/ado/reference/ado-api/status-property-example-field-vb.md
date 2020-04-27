@@ -15,10 +15,10 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916824"
 ---
 # <a name="status-property-example-field-vb"></a>Esempio della proprietà Status (Field) (VB)
@@ -91,7 +91,7 @@ Attribute VB_Name = "StatusField"
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Proprietà Status (Field - ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Proprietà Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

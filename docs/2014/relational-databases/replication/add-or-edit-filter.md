@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676886"
 ---
 # <a name="add-or-edit-filter"></a>Aggiungi filtro o Modifica filtro
-  Le finestre di dialogo **Aggiungi filtro** e **Modifica filtro** consentono di aggiungere e modificare filtri di riga statici e filtri di riga con parametri.  
+  Le finestre di dialogo **Aggiungi filtro** e **Modifica filtro** consentono di aggiungere e modificare i filtri di riga statica o di riga con parametri.  
   
 > [!NOTE]  
 >  Per modificare un filtro in una pubblicazione esistente, è necessario un nuovo snapshot per la pubblicazione. Se la pubblicazione dispone di sottoscrizioni, queste ultime devono essere reinizializzate. Per altre informazioni sulle modifiche delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](publish/change-publication-and-article-properties.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "62676886"
   
     3.  Nella finestra di dialogo **Modifica filtro** modificare un filtro esistente.  
   
-2.  **Completare l'istruzione di filtro per identificare le righe della tabella che i sottoscrittori riceveranno**  
+2.  **Completare l'istruzione per il filtro per identificare le righe della tabella che verranno ricevute dai Sottoscrittori**  
   
      Consente di definire una nuova istruzione per il filtro o di modificarne una esistente. Nella casella di riepilogo **Colonne** vengono elencate tutte le colonne in fase di pubblicazione appartenenti alla tabella selezionata in **Selezionare la tabella da filtrare**. L'area di testo **Istruzione per il filtro** contiene il testo predefinito, nel formato seguente:  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62676886"
     > [!IMPORTANT]  
     >  Per motivi di prestazioni, è consigliabile non applicare funzioni ai nomi di colonna, ad esempio `LEFT([MyColumn]) = SUSER_SNAME()`, nelle clausole di filtro di riga con parametri per pubblicazioni di tipo merge. Se si usano HOST_NAME in una clausola di filtro e si sostituisce il valore HOST_NAME, può essere necessario convertire i tipi di dati tramite l'istruzione CONVERT. Per altre informazioni sulle procedure consigliate in questo caso, vedere la sezione relativa alla sostituzione del valore HOST_NAME() nell'argomento [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
-3.  **Consente di specificare il numero di sottoscrizioni che riceveranno i dati da questa tabella**  
+3.  **Specificare se i dati di questa tabella dovranno essere inviati a una o più sottoscrizioni**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] solo e versioni successive; solo replica di tipo merge. La replica di tipo merge consente di specificare il tipo di partizioni più adatte ai dati e all'applicazione. Se si seleziona **Una riga di questa tabella verrà inviata a una sola sottoscrizione**, viene impostata l'opzione relativa alle partizioni non sovrapposte della replica di tipo merge. Le partizioni non sovrapposte vengono utilizzate insieme alle partizioni pre-calcolate per migliorare le prestazioni per ridurre il costo di caricamento associato alle partizioni pre-calcolate. Il vantaggio a livello di prestazioni delle partizioni non sovrapposte è più evidente quando i filtri con parametri e i filtri join utilizzati sono più complessi. Se si seleziona questa opzione è necessario, tuttavia, verificare che i dati vengano partizionati in modo che una riga non possa essere replicata in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Filtri di riga con parametri](merge/parameterized-filters-parameterized-row-filters.md).  
+     Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive e solo replica di tipo merge. La replica di tipo merge consente di specificare il tipo di partizioni più adatte ai dati e all'applicazione. Se si seleziona **Una riga di questa tabella verrà inviata a una sola sottoscrizione**, viene impostata l'opzione relativa alle partizioni non sovrapposte della replica di tipo merge. Le partizioni non sovrapposte vengono utilizzate insieme alle partizioni pre-calcolate per migliorare le prestazioni per ridurre il costo di caricamento associato alle partizioni pre-calcolate. Il vantaggio a livello di prestazioni delle partizioni non sovrapposte è più evidente quando i filtri con parametri e i filtri join utilizzati sono più complessi. Se si seleziona questa opzione è necessario, tuttavia, verificare che i dati vengano partizionati in modo che una riga non possa essere replicata in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Filtri di riga con parametri](merge/parameterized-filters-parameterized-row-filters.md).  
   
  Dopo aver aggiunto o modificato un filtro, fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo. Il filtro specificato viene analizzato ed eseguito sulla tabella nella clausola SELECT. Se nell'istruzione di filtro sono presenti errori di sintassi o di altro tipo, verrà visualizzato un apposito messaggio di notifica e sarà possibile modificare l'istruzione.  
   

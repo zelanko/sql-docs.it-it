@@ -18,10 +18,10 @@ ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c268c356e41c957349f452d2f83fc4b807042d9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67990505"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
@@ -65,7 +65,7 @@ EXEC dbo.sp_add_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_apply_job_to_targets &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_help_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   

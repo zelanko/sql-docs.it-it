@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725495"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Specifiche di capacità massima (Analysis Services)
@@ -31,10 +31,10 @@ ms.locfileid: "62725495"
   
  [Tabulare (DeploymentMode=2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Multidimensionale e data mining (DeploymentMode = 0)  
+##  <a name="multidimensional-and-data-mining-deploymentmode0"></a><a name="bkmk_OLAP"></a>Multidimensionale e data mining (DeploymentMode = 0)  
  La modalità di archiviazione MOLAP, che prevede l'archiviazione sia di dati che di metadati, prevede limiti fisici aggiuntivi relativi alle dimensioni dei file. Per impostazione predefinita, la dimensione massima dei file di archivio delle stringhe è di 4 GB. Se sono necessari file più grandi per gli archivi di stringhe, è possibile specificare un'architettura di archiviazione di stringhe diversa. Per altre informazioni, vedere [configurare l'archiviazione di stringhe per dimensioni e partizioni](../configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Oggetto|Dimensioni/numeri massimi|  
+|Oggetto|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2.147.483.647|  
 |Dimensioni in un database|2^31-1 = 2.147.483.647|  
@@ -52,7 +52,7 @@ ms.locfileid: "62725495"
 |Traduzioni in un cubo|2^31-1 = 2.147.483.647|  
 |Aggregazioni in una partizione|2^31-1 = 2.147.483.647|  
 |Celle restituite da una query|2^31-1 = 2.147.483.647|  
-|Dimensioni dei record della query di origine|64 K|  
+|Dimensioni dei record della query di origine|64 KB|  
 |Lunghezza dei nomi degli oggetti|100 caratteri|  
 |Numero massimo di stati distinti in una colonna attributo del modello di data mining|2^31-1 = 2.147.483.647|  
 |Numero massimo di attributi considerati (caratteristica di selezione degli attributi)|2^31-1 = 2.147.483.647|  
@@ -61,9 +61,9 @@ ms.locfileid: "62725495"
   
  Per ulteriori informazioni sulle limitazioni delle origini dati per Online Analytical Processing (OLAP) e data mining, vedere [origini dati supportate &#40;&#41;multidimensionali di SSAS ](../supported-data-sources-ssas-multidimensional.md), [origini dati supportate &#40;ssas multidimensionale&#41;](../supported-data-sources-ssas-multidimensional.md)e [oggetti ASSL e caratteristiche degli](../scripting-language-assl/assl-objects-and-object-characteristics.md)oggetti.  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="sharepoint-deploymentmode1"></a><a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Oggetto|Dimensioni/numeri massimi|  
+|Oggetto|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2.147.483.647|  
 |Tabelle in un database|2^31-1 = 2.147.483.647|  
@@ -76,12 +76,12 @@ ms.locfileid: "62725495"
 |Misure in una tabella|2 ^ 31-1 = 2.147.483.647 **Avviso:** il numero totale di misure in una tabella dipende dal numero totale di colonne e colonne calcolate associate alla stessa tabella. Il numero massimo di "colonne + misure + colonne calcolate" per una tabella è di 2^31-1 = 2.147.483.647|  
 |Colonne calcolate in una tabella|2 ^ 31-1 = 2.147.483.647 **Avviso:** il numero totale di colonne calcolate in una tabella dipende dal numero totale di colonne e misure associate alla stessa tabella. Il numero massimo di "colonne + misure + colonne calcolate" per una tabella è di 2^31-1 = 2.147.483.647|  
 |Celle restituite da una query|2^31-1 = 2.147.483.647|  
-|Dimensioni dei record della query di origine|64 K|  
+|Dimensioni dei record della query di origine|64 KB|  
 |Lunghezza dei nomi degli oggetti|100 caratteri|  
   
-##  <a name="bkmk_vertipaq"></a>Tabulare (DeploymentMode = 2)  
+##  <a name="tabular-deploymentmode2"></a><a name="bkmk_vertipaq"></a>Tabulare (DeploymentMode = 2)  
   
-|Oggetto|Dimensioni/numeri massimi|  
+|Oggetto|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2.147.483.647|  
 |Tabelle in un database|2^31-1 = 2.147.483.647|  
@@ -94,10 +94,10 @@ ms.locfileid: "62725495"
 |Misure in una tabella|2 ^ 31-1 = 2.147.483.647 **Avviso:** il numero totale di misure in una tabella dipende dal numero totale di colonne e colonne calcolate associate alla stessa tabella. Il numero massimo di "colonne + misure + colonne calcolate" per una tabella è di 2^31-1 = 2.147.483.647|  
 |Colonne calcolate in una tabella|2 ^ 31-1 = 2.147.483.647 **Avviso:** il numero totale di colonne calcolate in una tabella dipende dal numero totale di colonne e misure associate alla stessa tabella. Il numero massimo di "colonne + misure + colonne calcolate" per una tabella è di 2^31-1 = 2.147.483.647|  
 |Celle restituite da una query|2^31-1 = 2.147.483.647|  
-|Dimensioni dei record della query di origine|64 K|  
+|Dimensioni dei record della query di origine|64 KB|  
 |Lunghezza dei nomi degli oggetti|100 caratteri|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Determinare la modalità server di un'istanza di Analysis Services](../../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Proprietà generali](../../server-properties/general-properties.md)  
   

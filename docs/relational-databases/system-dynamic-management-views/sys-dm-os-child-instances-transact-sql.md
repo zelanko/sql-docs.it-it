@@ -21,10 +21,10 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900239"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67900239"
 
   Restituisce una riga per ogni istanza utente creata dall'istanza del server padre.  
   
-> **IMPORTANTE!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> **IMPORTANTE** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  Le informazioni restituite da **sys. dm_os_child_instances** possono essere utilizzate per determinare lo stato di ogni istanza utente (heart_beat) e per ottenere il nome della pipe (instance_pipe_name) che può essere utilizzato per creare una connessione all'istanza utente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilizzando o sqlcmd. È possibile connettersi a un'istanza utente solo dopo che è stata avviata da un processo esterno, ad esempio un'applicazione client. Gli strumenti di gestione di SQL non possono avviare un'istanza utente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67900239"
 ## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sulla vista a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Istanze utente per non amministratori](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
   
   

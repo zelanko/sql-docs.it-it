@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce5bf2a376712d603be3099f7ccefa0e6b799219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728489"
 ---
 # <a name="dimension-storage"></a>Archiviazione di dimensioni
@@ -44,7 +44,7 @@ ms.locfileid: "62728489"
 > [!IMPORTANT]  
 >  Se una dimensione utilizza la modalità di archiviazione ROLAP ed è inclusa in un cubo che utilizza l'archiviazione MOLAP, qualsiasi modifica dello schema nella tabella di origine deve essere seguita dall'immediata elaborazione della dimensione. In caso contrario, i risultati delle query eseguite sui cubi potrebbero essere inconsistenti. **Argomento correlato:**[automatizzare Analysis Services attività amministrative con SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione e modalità di archiviazione delle partizioni](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

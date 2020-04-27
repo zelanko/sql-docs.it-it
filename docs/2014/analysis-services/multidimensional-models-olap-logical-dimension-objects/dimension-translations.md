@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728527"
 ---
 # <a name="dimension-translations"></a>Traduzioni delle dimensioni
@@ -35,9 +35,9 @@ ms.locfileid: "62728527"
   
  Le informazioni sulle regole di confronto e sulla lingua per il computer client sono archiviate in forma di identificatore delle impostazioni locali (LCID). Al momento della connessione, il client passa l'identificatore delle impostazioni locali all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. che utilizza tale valore per determinare il set di traduzioni in cui restituire i metadati relativi agli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se un oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non contiene la traduzione specificata, per restituire il contenuto al client viene utilizzata la lingua predefinita.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

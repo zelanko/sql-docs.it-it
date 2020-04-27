@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629723"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Amministrazione di una topologia peer-to-peer (programmazione Transact-SQL della replica)
@@ -61,9 +61,9 @@ ms.locfileid: "62629723"
   
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Domande frequenti sull'amministrazione della replica](frequently-asked-questions-for-replication-administrators.md)   
- [Backup e ripristino di database SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
+ [Backup e ripristino di database di SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Replica transazionale peer-to-peer](../transactional/peer-to-peer-transactional-replication.md)  
   
   

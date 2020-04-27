@@ -13,10 +13,10 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917336"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto recordset
@@ -67,11 +67,11 @@ ms.locfileid: "67917336"
   
  [Proprietà Sort](../../../ado/reference/ado-api/sort-property.md)  
   
- [Proprietà Source (Recordset - ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Proprietà Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
  [Proprietà State](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Proprietà Status (Recordset - ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Proprietà Status (Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [Proprietà StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "67917336"
   
  [Metodo Delete (Recordset - ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Find (metodo)](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Metodo Find](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [Metodo GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "67917336"
   
  [Metodo NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Metodo Open (Recordset - ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
  [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67917336"
   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)  
   
- [Metodo Seek](../../../ado/reference/ado-api/seek-method.md)  
+ [Seek (metodo)](../../../ado/reference/ado-api/seek-method.md)  
   
  [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67917336"
   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  [Evento EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [Evento FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
@@ -135,5 +135,5 @@ ms.locfileid: "67917336"
   
  [Eventi WillMove e MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

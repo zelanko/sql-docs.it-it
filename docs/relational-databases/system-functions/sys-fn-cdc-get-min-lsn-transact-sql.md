@@ -21,10 +21,10 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046397"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
  Nome dell'istanza di acquisizione. *capture_instance_name* è di **tipo sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **binario (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Osservazioni  
  Restituisce 0x00000000000000000000 quando l'istanza di acquisizione non esiste o quando il chiamante non è autorizzato ad accedere ai dati delle modifiche associati all'istanza di acquisizione.  
@@ -94,7 +94,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

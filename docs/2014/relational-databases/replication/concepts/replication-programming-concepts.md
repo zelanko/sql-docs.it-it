@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721809"
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
@@ -54,7 +54,7 @@ ms.locfileid: "62721809"
   
 -   Topologie di replica e come queste si allineano con i tipi di replica.  
   
- Se non si ha familiarità con la replica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Tipi di replica](../types-of-replication.md).  
+ Se non si ha familiarità con la replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Tipi di replica](../types-of-replication.md).  
   
 ## <a name="defining-application-functionality"></a>Definizione delle funzionalità dell'applicazione  
  Dopo aver definito la topologia di replica, è necessario decidere quali funzionalità verranno offerte dall'applicazione. Queste funzionalità possono variare da uno script che sincronizza una sottoscrizione a un'applicazione con un'interfaccia utente che consente di configurare la replica. La replica supporta le attività di programmazione generali seguenti:  

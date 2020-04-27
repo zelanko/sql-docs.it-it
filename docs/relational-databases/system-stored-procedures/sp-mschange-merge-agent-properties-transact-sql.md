@@ -16,10 +16,10 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84c517fe891052ff6e12ee6e92a2d16d912a140b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905189"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
@@ -67,11 +67,11 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 |**publisher_login**||Account di accesso da utilizzare durante la connessione a un server di pubblicazione per sincronizzare la sottoscrizione.|  
 |**publisher_password**||Password del server di pubblicazione.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**publisher_security_mode**|**1**|Autenticazione di Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Autenticazione.|  
+||**0**|Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_login**||Account di accesso da utilizzare durante la connessione a un Sottoscrittore per sincronizzare la sottoscrizione.|  
 |**subscriber_password**||Password del Sottoscrittore.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**subscriber_security_mode**|**1**|Autenticazione di Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Autenticazione.|  
+||**0**|Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
@@ -87,7 +87,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** nel server di distribuzione possono eseguire **sp_MSchange_merge_agent_properties**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_addmergepushsubscription_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
  [sp_addmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   

@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705130"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Finestra di dialogo Valuta criteri, pagina Selezione criteri
   Utilizzare questa finestra di dialogo per valutare criteri della gestione basata su criteri. Selezionando la pagina **Risultati valutazione** , è possibile applicare criteri agli elementi non conformi ai criteri inclusi in un set di destinazioni.  
   
 ## <a name="options"></a>Opzioni  
- **Origine**  
+ **origine**  
  Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine** .  
   
  **File**  
@@ -32,21 +32,21 @@ ms.locfileid: "62705130"
  **Server**  
  Selezionare questa opzione per eseguire una connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che contiene i criteri desiderati.  
   
- **Criteri: criteri**  
+ **Criteri: Criteri**  
  Fare clic su questa opzione per aprire la finestra di dialogo relativa ai criteri specificati.  
   
  **Criteri: Categoria**  
  Categoria dei criteri. Il contenuto di questa casella è di sola lettura.  
   
- **Criteri: facet**  
+ **Criteri: Facet**  
  Facet implementato dai criteri. Il contenuto di questa casella è di sola lettura.  
   
- **Valutare**  
+ **Valutazione**  
  Esegue i criteri in modalità di valutazione. Verrà generato un report sulla conformità per il set di destinazioni, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riconfigurato, né verrà applicata la conformità successiva.  
   
 ## <a name="possible-errors"></a>Possibili errori  
   
--   **Non sono state trovate destinazioni**  
+-   **Impossibile trovare destinazioni**  
   
      È possibile che il set di destinazioni sia vuoto a causa di uno dei motivi seguenti:  
   
@@ -60,8 +60,8 @@ ms.locfileid: "62705130"
   
     -   Il tipo di server di destinazione è diverso dal tipo di server in cui vengono valutati i criteri. Se, ad esempio, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]si tenta di valutare i criteri creati per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si riceverà un set di destinazioni vuoto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Amministrare i server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)   
  [Finestra di dialogo Valuta criteri, pagina Risultati valutazione](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

@@ -19,16 +19,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520563"
 ---
 # <a name="report-server-web-service"></a>servizio Web ReportServer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di accedere alle funzionalità complete del server di report tramite il servizio Web ReportServer. Il servizio Web ReportServer è un servizio Web XML con un'API SOAP. Il servizio usano SOAP su HTTP e funge da interfaccia di comunicazione tra i programmi client e il server di report. Il servizio Web fornisce due endpoint, uno per l'esecuzione dei report e uno per la gestione dei report, con metodi che espongono le funzionalità del server di report e consentono di creare strumenti personalizzati per qualsiasi parte del ciclo di vita del report.  
   
- Sono disponibili tre modi per sviluppare applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basate sul servizio Web. È possibile:  
+ Sono disponibili tre modi per sviluppare applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basate sul servizio Web. È possibile scegliere:  
   
 -   Sviluppare applicazioni usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK. Per altre informazioni sull'uso di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per la compilazione di applicazioni del servizio Web, vedere [Compilazione di applicazioni tramite servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
@@ -50,7 +50,7 @@ Opzioni di sviluppo dei servizi Web disponibili in Reporting Services
  [Accesso all'API SOAP](../report-server-web-service/accessing-the-soap-api.md)  
  Viene descritto il linguaggio WSDL (Web Service Description Language) e vengono forniti gli URL per l'accesso a un file WSDL di Reporting Services.  
   
- [Creazione di applicazioni mediante il servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Compilazione di applicazioni tramite servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
  Sono incluse informazioni sullo sviluppo di applicazioni e servizi Web che chiamano l'API SOAP di Reporting Services.  
   
  [Eseguire lo script con l'utilità rs.exe e il servizio Web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
@@ -62,18 +62,17 @@ Opzioni di sviluppo dei servizi Web disponibili in Reporting Services
 ## <a name="user-requirements-for-web-service-development"></a>Requisiti utente per lo sviluppo del servizio Web  
  Per sviluppare applicazioni usando il servizio Web ReportServer, è necessario quanto segue:  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 o versione successiva installato in un computer con una connessione Internet e accesso al server di report.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 o versione successiva installato in un computer con una connessione Internet e accesso al server di report.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] o SDK installato in un computer se si desidera sviluppare e distribuire applicazioni utilizzando [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   Conoscenza approfondita delle caratteristiche e delle funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Conoscenza approfondita delle caratteristiche e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] delle funzionalità di.  
   
 -   Buona conoscenza di SOAP e [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)].  
   
 -   Esperienza di sviluppo in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]un linguaggio compatibile con, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ad [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]esempio o, se si prevede di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usare come piattaforma di sviluppo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Servizio Web ReportServer](../report-server-web-service/report-server-web-service.md)  
   
   

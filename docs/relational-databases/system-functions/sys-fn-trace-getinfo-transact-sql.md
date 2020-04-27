@@ -21,10 +21,10 @@ ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059227"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68059227"
 
   Restituisce informazioni sulla traccia specificata o sulle tracce esistenti.  
   
-> **IMPORTANTE!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare Eventi estesi.    
+> **IMPORTANTE** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare Eventi estesi.    
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |-----------------|---------------|-----------------|  
 |traceId|**int**|ID della traccia.|  
 |proprietà|**int**|Proprietà della traccia:<br /><br /> 1= Opzioni della traccia. Per ulteriori informazioni, vedere @options in [Sp_trace_create &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome del file<br /><br /> 3 = Dimensioni massime<br /><br /> 4 = Ora di arresto<br /><br /> 5 = Stato corrente della traccia. 0 = arrestato. 1 = in esecuzione.|  
-|Valore|**sql_variant**|Informazioni sulla proprietà della traccia specificata.|  
+|value|**sql_variant**|Informazioni sulla proprietà della traccia specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se viene passato l'ID di una traccia specifica, fn_trace_getinfo restituisce le informazioni su tale traccia. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto.  
@@ -73,15 +73,15 @@ SELECT * FROM sys.fn_trace_getinfo(0) ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
- [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Creare una traccia &#40;&#41;Transact-SQL](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [sp_trace_create &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sp_trace_setevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sys. fn_trace_getfilterinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_gettable &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys.fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

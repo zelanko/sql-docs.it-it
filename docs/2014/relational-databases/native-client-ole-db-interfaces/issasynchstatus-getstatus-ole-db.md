@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511451"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -121,7 +121,7 @@ HRESULT GetStatus(
   
  Se si chiama **ISSAsynchStatus::GetStatus** su un oggetto origine dati inizializzato o su un set di righe popolato oppure si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK con *pulProgress* e *pulProgressMax* impostati sullo stesso valore. Se **ISSAsynchStatus:: GetStatus** viene chiamato su un oggetto creato a partire dall'esecuzione di un comando che aggiorna, Elimina o inserisce righe, sia *pulProgress* che *pulProgressMax* indicano il numero totale di righe interessate dal comando.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di operazioni asincrone](../native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
   

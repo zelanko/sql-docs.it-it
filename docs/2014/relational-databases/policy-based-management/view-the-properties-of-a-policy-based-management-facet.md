@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676869"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Visualizzare le proprietà di un facet della gestione basata su criteri
@@ -32,14 +32,14 @@ ms.locfileid: "62676869"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-facet"></a>Per visualizzare le proprietà di un facet  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62676869"
   
 4.  Fare clic sul segno più per espandere la cartella **Facet** .  
   
-5.  Fare clic con il pulsante destro del mouse sul facet di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Proprietà facet -** _nome_facet_, vedere [Finestra di dialogo Proprietà facet, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Finestra di dialogo Proprietà facet, pagina Criteri dipendenti](facet-properties-dialog-box-dependent-policies-page.md) e [Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Fare clic con il pulsante destro del mouse sul facet di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Proprietà facet -**_nome_facet_, vedere [Finestra di dialogo Proprietà facet, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Finestra di dialogo Proprietà facet, pagina Criteri dipendenti](facet-properties-dialog-box-dependent-policies-page.md) e [Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Al termine, fare clic su **Chiudi**.  
   

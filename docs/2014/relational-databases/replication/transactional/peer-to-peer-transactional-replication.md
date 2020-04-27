@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793922"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
@@ -61,7 +61,7 @@ ms.locfileid: "67793922"
   
 -   A sinistra, gli aggiornamenti vengono partizionati tra due server. Ad esempio, se nel database fosse disponibile un catalogo dei prodotti, un'applicazione personalizzata potrebbe dirigere gli aggiornamenti al nodo **A** per i prodotti con nomi che iniziano per A-M e al nodo **B** per i prodotti con nomi che iniziano per N-Z. Gli aggiornamenti verrebbero quindi replicati all'altro nodo.  
   
--   A destra tutti gli aggiornamenti vengono indirizzati al nodo **B**. Da questa posizione, gli aggiornamenti vengono replicati nel nodo **a**. Se **B** è offline, ad esempio per manutenzione, il server applicazioni può indirizzare tutte le attività a **un**. Quando **B** è di nuovo online, gli aggiornamenti possono passare a esso e il server applicazioni può spostare tutti gli aggiornamenti a **b** o continuare a indirizzarli a **un**.  
+-   A destra tutti gli aggiornamenti vengono diretti al nodo **B** e da questo nodo vengono quindi replicati al nodo **A**. Se **B** è offline, ad esempio per manutenzione, il server applicazioni può dirigere tutte le attività al nodo **A**. Quando **B** sarà nuovamente online, potrà essere raggiunto dagli aggiornamenti e il server applicazioni potrà spostare tutti gli aggiornamenti a **B** o continuare a dirigerli ad **A**.  
   
  La replica peer-to-peer può supportare entrambi gli approcci, ma l'esempio di aggiornamento centrale illustrato a destra viene spesso utilizzato nella replica transazionale standard.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793922"
   
     -   I nomi degli oggetti, lo schema degli oggetti e i nomi delle pubblicazioni devono essere identici.  
   
-    -   Le pubblicazioni devono consentire la replica delle modifiche dello schema. Si tratta di un'impostazione di **1** per la proprietà di pubblicazione **replicate_ddl**, che corrisponde all'impostazione predefinita. Per ulteriori informazioni, vedere [apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
+    -   Le pubblicazioni devono consentire la replica delle modifiche dello schema. Il valore è **1** per la proprietà della pubblicazione **replicate_ddl**, che corrisponde all'impostazione predefinita. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   Non è supportata l'applicazioni di filtri alle righe e alle colonne.  
   
@@ -168,8 +168,8 @@ ms.locfileid: "67793922"
   
 -   Non è possibile reinizializzare le sottoscrizioni in una topologia peer-to-peer. Per garantire che un nodo disponga di una nuova copia dei dati, ripristinare un backup nel nodo stesso.  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Amministrare una topologia peer-to-peer &#40;la programmazione Transact-SQL della replica&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategie per il backup e il ripristino della replica snapshot e della replica transazionale](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Tipi di pubblicazioni per la replica transazionale](transactional-replication.md)  
   

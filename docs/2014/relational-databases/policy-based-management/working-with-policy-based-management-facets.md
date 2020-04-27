@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676908"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Utilizzo della copia di facet della gestione basata su criteri
@@ -29,7 +29,7 @@ ms.locfileid: "62676908"
   
  In questo argomento viene descritto come copiare lo stato di un facet in un file XML.  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorizzazioni  
  Le procedure descritte in questo argomento richiedono l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Visualizzazione e copia di stati di un facet  

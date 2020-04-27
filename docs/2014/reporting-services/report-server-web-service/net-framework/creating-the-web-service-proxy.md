@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520379"
 ---
 # <a name="creating-the-web-service-proxy"></a>Creazione del proxy del servizio Web
@@ -29,10 +29,9 @@ ms.locfileid: "62520379"
  Esistono due modi per aggiungere una classe proxy al progetto di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]sviluppo utilizzando: con lo strumento WSDL in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]e aggiungendo un riferimento Web in. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Nelle sezioni seguenti questo argomento viene illustrato in modo più dettagliato.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Aggiunta del proxy utilizzando lo strumento WSDL  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK include lo strumento WSDL (Web Services Description Language) (Wsdl.exe) che consente di generare un proxy del servizio Web per l'utilizzo nell'ambiente di sviluppo di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Il modo più comune per creare un proxy client in linguaggi che supportano i servizi Web (attualmente C# [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]e) consiste nell'usare lo strumento WSDL.  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK include lo strumento WSDL (Web Services Description Language) (Wsdl.exe) che consente di generare un proxy del servizio Web per l'utilizzo nell'ambiente di sviluppo di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Il modo più comune per creare un proxy client in linguaggi che supportano i servizi Web (attualmente C# [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]e) consiste nell'usare lo strumento WSDL.  
   
- **Per aggiungere una classe proxy al progetto utilizzando WSDL. exe**  
+ **Per aggiungere una classe proxy al progetto usando Wsdl.exe**  
   
 1.  Dal prompt dei comandi utilizzare Wsdl.exe per creare una classe proxy, specificando almeno l'URL del servizio Web ReportServer.  
   
@@ -67,8 +66,7 @@ ReportingService2010 service = new ReportingService2010();
  Per ulteriori informazioni sullo strumento Wsdl.exe, inclusa la sintassi completa, vedere l'argomento relativo allo strumento WSDL nella documentazione di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Per una spiegazione completa relativa ai proxy del servizio Web, vedere l'argomento relativo alla creazione di un proxy del servizio Web XML nella documentazione di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Aggiunta del proxy utilizzando un riferimento Web in Visual Studio  
- Un riferimento Web consente l'utilizzo di uno o più servizi Web in un progetto. 
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] consente agli utenti di aggiungere ai progetti riferimenti al servizio Web tramite alcuni semplici passaggi.  
+ Un riferimento Web consente l'utilizzo di uno o più servizi Web in un progetto. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] consente agli utenti di aggiungere ai progetti riferimenti al servizio Web tramite alcuni semplici passaggi.  
   
  **Per aggiungere un riferimento Web a un progetto**  
   
@@ -130,7 +128,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Servizio Web ReportServer](../report-server-web-service.md)   
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../technical-reference-ssrs.md)  

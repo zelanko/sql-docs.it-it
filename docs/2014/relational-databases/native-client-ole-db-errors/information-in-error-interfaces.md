@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60b6b0387aea5475d74c314a10e4fa437fadc005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657661"
 ---
 # <a name="information-in-error-interfaces"></a>Informazioni nelle interfacce di errore
@@ -54,7 +54,7 @@ ms.locfileid: "62657661"
 |*pbstrSQLState*|Restituisce un valore SQLSTATE per l'errore. I valori SQLSTATE vengono definiti nelle specifiche API, SQL-92, ODBC e ISO SQL. Né [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] né Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client OLE DB provider definiscono valori SQLSTATE specifici dell'implementazione.|  
 |*plNativeError*|Restituisce il numero di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **master.dbo.sysmessages**, quando disponibile. Gli errori nativi sono disponibili dopo un tentativo riuscito di inizializzare un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati del provider OLE DB di Native Client. Prima del tentativo, il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di OLE DB di Native Client restituisce sempre zero.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Errors](errors.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905016"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration (Transact-SQL)
@@ -53,7 +53,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="remarks"></a>Osservazioni    
  Ottenere il valore corrente eseguendo [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>Vedere anche    
+## <a name="see-also"></a>Vedi anche    
  [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [Ripristinare i database abilitati per Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    

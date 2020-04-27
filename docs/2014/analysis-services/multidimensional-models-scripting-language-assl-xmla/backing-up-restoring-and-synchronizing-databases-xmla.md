@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702274"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Backup, ripristino e sincronizzazione di database (XMLA)
@@ -32,7 +32,7 @@ ms.locfileid: "62702274"
   
 -   Il comando [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) sincronizza un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database con i dati e i metadati di un altro database, come descritto nella sezione sincronizzazione dei [database](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Esecuzione del backup dei database  
+##  <a name="backing-up-databases"></a><a name="backing_up_databases"></a>Esecuzione del backup dei database  
  Come indicato in precedenza, il comando `Backup` consente di eseguire il backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificato in un file di backup. Al comando `Backup` sono associate varie proprietà che consentono di specificare il database di cui eseguire il backup, il file di backup da utilizzare, le modalità di esecuzione del backup delle definizioni di sicurezza e le partizioni remote di cui eseguire il backup.  
   
 > [!IMPORTANT]  
@@ -70,7 +70,7 @@ ms.locfileid: "62702274"
   
  Per ogni origine dati remota di cui eseguire il `Backup` backup, è possibile specificare il file di backup corrispondente includendo un elemento [location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) nella proprietà [locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) del comando. L' `Location` elemento deve avere la `File` proprietà impostata sul percorso UNC e il nome file del file di backup remoto e la relativa proprietà [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) è impostata sull'identificatore dell'origine dati remota definita nel database.  
   
-##  <a name="restoring_databases"></a>Ripristino dei database  
+##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Ripristino dei database  
  Il comando `Restore` consente di ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificato da un file di backup. Al comando `Restore` sono associate varie proprietà che consentono di specificare il database da ripristinare, il file di backup da utilizzare, le modalità di ripristino delle definizioni di sicurezza, le partizioni remote da archiviare e la rilocazione di oggetti OLAP relazionali (ROLAP).  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "62702274"
   
  Per rilocare oggetti ROLAP, è possibile utilizzare l'elemento `Location` in un comando `Restore`. Per ogni `Location` elemento utilizzato per spostare un'origine dati, la `DataSourceType` proprietà deve essere impostata in modo esplicito su *local*. È inoltre necessario impostare la proprietà `ConnectionString` dell'elemento `Location` sulla stringa di connessione del nuovo percorso. Durante il ripristino, il comando `Restore` sostituirà la stringa di connessione per l'origine dati identificata dalla proprietà `DataSourceID` dell'elemento `Location` con il valore della proprietà `ConnectionString` dell'elemento `Location`.  
   
-##  <a name="synchronizing_databases"></a>Sincronizzazione dei database  
+##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Sincronizzazione dei database  
  Il comando `Synchronize` consente di sincronizzare i dati e i metadati di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificato con un altro database. Al comando `Synchronize` sono associate varie proprietà che consentono di specificare il database di origine, le modalità di sincronizzazione delle definizioni di sicurezza, le partizioni remote da sincronizzare e la sincronizzazione degli oggetti ROLAP.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ ms.locfileid: "62702274"
   
  Per sincronizzare oggetti ROLAP, è possibile utilizzare l'elemento `Location` in un comando Synchronize. Per ogni `Location` elemento utilizzato per spostare un'origine dati, la `DataSourceType` proprietà deve essere impostata in modo esplicito su *local*. . È inoltre necessario impostare la proprietà `ConnectionString` dell'elemento `Location` sulla stringa di connessione del nuovo percorso. Durante la sincronizzazione, il comando `Synchronize` sostituirà la stringa di connessione per l'origine dati identificata dalla proprietà `DataSourceID` dell'elemento `Location` con il valore della proprietà `ConnectionString` dell'elemento `Location`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elemento backup &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Elemento Restore &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [Elemento Synchronize &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   

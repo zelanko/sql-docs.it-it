@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679799"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
@@ -28,7 +28,7 @@ ms.locfileid: "62679799"
   
  Per altre informazioni sugli indici XML selettivi, vedere [Indici XML selettivi &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
-##  <a name="untyped"></a> Informazioni sui tipi XQuery e SQL Server in dati XML non tipizzati  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> Informazioni sui tipi XQuery e SQL Server in dati XML non tipizzati  
  Negli indici XML selettivi sono supportati due sistemi di tipi: tipi XQuery e tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il percorso indicizzato può essere utilizzato per la corrispondenza di un'espressione XQuery o del tipo restituito del metodo value() del tipo di dati XML.  
   
 -   Se un percorso da indicizzare non viene annotato oppure viene annotato con la parola chiave XQUERY, il percorso corrisponde a un'espressione XQuery. Esistono due varianti per i percorsi dei nodi con annotazioni XQuery:  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 
   
-##  <a name="typed"></a> Informazioni sul supporto degli indici XML selettivi per dati XML tipizzati  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> Informazioni sul supporto degli indici XML selettivi per dati XML tipizzati  
  I dati XML tipizzati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresentano uno schema associato a uno specifico documento XML. Lo schema definisce la struttura generica del documento e i tipi di nodi. Se esiste uno schema, l'indice XML selettivo applica la sua struttura quando l'utente promuove i percorsi, pertanto non è necessario specificare i tipi XQUERY per i percorsi.  
   
  Nell'indice XML selettivo vengono supportati i tipi XSD seguenti:  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Per altre informazioni sugli hint di ottimizzazione, vedere [Specifica di hint di ottimizzazione](#hints).  
   
-##  <a name="paths"></a> Specifica di percorsi  
+##  <a name="specifying-paths"></a><a name="paths"></a> Specifica di percorsi  
  Un indice XML selettivo consente di indicizzare solo un subset di nodi dai dati XML archiviati rilevanti per le query che si intende eseguire. Se il subset dei nodi correlati è nettamente inferiore al numero totale di nodi nel documento XML, nell'indice XML selettivo vengono archiviati solo i nodi rilevanti. Per trarre vantaggio da un indice XML selettivo, identificare il corretto subset di nodi da indicizzare.  
   
 ### <a name="choosing-the-nodes-to-index"></a>Scelta dei nodi da indicizzare  
@@ -346,7 +346,7 @@ WHERE T.xmldata.exist('
   
 
   
-##  <a name="hints"></a> Specifica di hint di ottimizzazione  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> Specifica di hint di ottimizzazione  
  È possibile utilizzare hint di ottimizzazione facoltativi per specificare ulteriori dettagli sul mapping per un nodo indicizzato da un indice XML selettivo. È ad esempio possibile specificare il tipo di dati e la cardinalità del nodo, nonché determinate informazioni sulla struttura dei dati. Queste informazioni aggiuntive garantiscono un mapping più efficiente, oltre a determinare miglioramenti nelle prestazioni o risparmi in termini di archiviazione, se non entrambi i casi.  
   
  L'utilizzo di hint di ottimizzazione è facoltativo. È sempre possibile accettare i mapping predefiniti, affidabili ma non necessariamente in grado di garantire livelli ottimali di prestazioni e archiviazione.  
@@ -418,7 +418,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-##  <a name="sample"></a> Documento XML di esempio  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> Documento XML di esempio  
  Negli esempi in questo argomento viene fatto riferimento al documento XML di esempio indicato di seguito:  
   
 ```xml  

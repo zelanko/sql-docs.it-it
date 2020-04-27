@@ -10,10 +10,10 @@ ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908848"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nuovo progetto (SSMA) (MySQLToSQL)
@@ -24,7 +24,7 @@ Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progett
   
 Immettere il nome del progetto. SSMA aggiungerà l'estensione di file.  
   
-**Location**  
+**Posizione**  
   
 Immettere o selezionare la cartella o il percorso di rete per salvare il progetto.  
   
@@ -32,11 +32,11 @@ Immettere o selezionare la cartella o il percorso di rete per salvare il progett
   
 Selezionare una delle versioni del database di destinazione dall'elenco seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   

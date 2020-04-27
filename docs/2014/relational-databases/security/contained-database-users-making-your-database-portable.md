@@ -14,18 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655473"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
   Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a livello di database. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Questo argomento illustra le differenze e i vantaggi correlati all'uso del modello di database indipendente rispetto al modello tradizionale basato su account di accesso/utente e alle regole firewall a livello di server o Windows. L'uso del modello tradizionale basato su account di accesso/utente e delle regole firewall a livello di server può essere ancora necessario in scenari specifici, per la gestibilità o per la logica di business dell'applicazione.  
   
 > [!NOTE]  
->  Quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] evolverà il servizio [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e offrirà a contratti di servizi maggiormente garantiti, potrebbe essere necessario passare al modello basato sull'utente di database indipendente e a regole del firewall con ambito database per usufruire di contratti di servizio con maggiore disponibilità e di un numero superiore di account di accesso consentiti per un determinato database. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] invita quindi ad adottare questo approccio già a partire da oggi.  
+>  Quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] evolverà il servizio [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e offrirà a contratti di servizi maggiormente garantiti, potrebbe essere necessario passare al modello basato sull'utente di database indipendente e a regole del firewall con ambito database per usufruire di contratti di servizio con maggiore disponibilità e di un numero superiore di account di accesso consentiti per un determinato database. [!INCLUDE[msCoName](../../includes/msconame-md.md)] invita quindi ad adottare questo approccio già a partire da oggi.  
   
 ## <a name="traditional-login-and-user-model"></a>Modello tradizionale basato su account di accesso e utente  
  Nel modello di connessione tradizionale gli utenti di Windows o i membri di gruppi di Windows si connettono al [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornendo le credenziali utente o di gruppo autenticate da Windows. In alternativa, la connessione fornisce un nome e la password e si connette usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (che è l'unica opzione durante la connessione al [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). In entrambi i casi, il database master deve disporre di un account di accesso corrispondente alle credenziali di connessione. Dopo che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha verificato le credenziali di autenticazione di Windows o ha autenticato le credenziali di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la connessione in genere tenta di connettersi a un database utente. Per connettersi a un database utente, l'account di accesso deve poter essere sottoposto a mapping (ovvero associato) a un utente del database nel database utente. La stringa di connessione può inoltre specificare la connessione a un database specifico. Questo è facoltativo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma obbligatorio nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -45,19 +44,18 @@ ms.locfileid: "62655473"
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le regole di Windows Firewall si applicano a tutte le connessioni e producono gli stessi effetti sugli account di accesso (connessioni con modello tradizionale) e sugli utenti di database indipendente. Per altre informazioni su Windows Firewall, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Firewall  
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] consente regole del firewall separate per connessioni a livello di server (account di accesso) e per connessioni a livello di database (utenti di database indipendente). Durante la connessione a un database utente vengono verificate per prime le regole del firewall a livello di database. Se non esistono regole che consentono l'accesso al database, vengono verificate le regole del firewall a livello di server, operazione che richiede l'accesso al database master del server logico. L'uso combinato di regole del firewall a livello di database e utenti di database indipendente consente di non dover accedere al database master del server durante la connessione e implica di conseguenza un miglioramento della scalabilità della connessione.  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewall  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] consente regole del firewall separate per connessioni a livello di server (account di accesso) e per connessioni a livello di database (utenti di database indipendente). Durante la connessione a un database utente vengono verificate per prime le regole del firewall a livello di database. Se non esistono regole che consentono l'accesso al database, vengono verificate le regole del firewall a livello di server, operazione che richiede l'accesso al database master del server logico. L'uso combinato di regole del firewall a livello di database e utenti di database indipendente consente di non dover accedere al database master del server durante la connessione e implica di conseguenza un miglioramento della scalabilità della connessione.  
   
  Per altre informazioni sulle regole del firewall del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vedere gli argomenti seguenti:  
   
 -   [Firewall del database SQL di Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Procedura: configurare le impostazioni del firewall (database SQL di Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
--   [sp_set_firewall_rule &#40;database SQL di Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
+-   [sp_set_firewall_rule &#40;Database di SQL Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
--   [sp_set_database_firewall_rule &#40;database SQL di Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
+-   [sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
 ## <a name="syntax-differences"></a>Differenze di sintassi  
   
@@ -85,7 +83,7 @@ ms.locfileid: "62655473"
   
 -   Usare le stesse password complesse usate in genere per gli account di accesso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Database indipendenti](../databases/contained-databases.md)   
  [Procedure di sicurezza consigliate con i database indipendenti](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  

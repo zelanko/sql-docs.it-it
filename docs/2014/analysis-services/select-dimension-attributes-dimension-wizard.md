@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624347"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selezione attributi dimensione (Creazione guidata dimensione)
@@ -54,12 +54,12 @@ ms.locfileid: "67624347"
 |----------|--------------|  
 |Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la proprietà `AttributeHierarchyEnabled` impostata su `True` e imposta l'attributo `AttributeHierarchyVisible` su `False` per l'attributo chiave.|  
 |Una tabella in una dimensione contiene una chiave esterna a una tabella che non è nella dimensione|La procedura guidata seleziona la chiave esterna come un attributo da includere, ma non selezionerà **Consenti esplorazione**. Se si mantengono queste impostazioni, la proprietà `AttributeHiearchyEnabled` dell’attributo sarà impostata su `True` e la proprietà `AttributeHierarchyVisible` sarà impostata su `False`.|  
-|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> e<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHierarchyVisible` impostata su `False`.|  
+|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> -e-<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHierarchyVisible` impostata su `False`.|  
   
  **Tipo di attributo**  
  (Facoltativo) Impostare il tipo per l'attributo. Il valore predefinito è **Regolare**. Il tipo di attributo fornisce l’istruzione alle applicazioni client riguardo le informazioni che l'attributo potrebbe contenere.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

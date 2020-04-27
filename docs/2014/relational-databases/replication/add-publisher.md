@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676914"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>Replica di SQL Server finestra di dialogo ' Aggiungi server di pubblicazione ' 
-  La finestra di dialogo **Aggiungi server di pubblicazione** consente di aggiungere uno o più server di pubblicazione al riquadro sinistro di monitoraggio replica. Dopo l'aggiunta di un server di pubblicazione, selezionare il server nel riquadro sinistro per visualizzare le informazioni relative nel riquadro destro.  
+  La finestra di dialogo **Aggiungi server di pubblicazione** consente di aggiungere uno o più server di pubblicazione al riquadro sinistro di Monitoraggio replica. Dopo l'aggiunta di un server di pubblicazione, selezionare il server nel riquadro sinistro per visualizzare le informazioni relative nel riquadro destro.  
   
 ## <a name="options"></a>Opzioni  
  **Aggiungere**  
@@ -34,7 +34,7 @@ ms.locfileid: "62676914"
   
 -   **Aggiungi server di pubblicazione Oracle...**  
   
-     Consente di connettersi al server di distribuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associato al server di pubblicazione Oracle utilizzando la finestra di dialogo **Connetti al server** .  
+     Consente di connettersi al server di distribuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associato al server di pubblicazione Oracle usando la finestra di dialogo **Connetti al server**.  
   
 -   **Specificare un server di distribuzione e aggiungere i relativi server di pubblicazione...**  
   

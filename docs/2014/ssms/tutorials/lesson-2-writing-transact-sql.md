@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470028"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lezione 2: Scrittura di codice Transact-SQL
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è un Integrated Development Environment per la [!INCLUDE[tsql](../../includes/tsql-md.md)]scrittura di query, MDX, DMX e XML e di comandi sqlcmd. Nell'esercitazione viene illustrato l'utilizzo dell'editor di query del motore di database per scrivere uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente di sviluppo integrato per la scrittura di query [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML e di comandi SQLCMD. Nell'esercitazione viene illustrato l'utilizzo dell'editor di query del motore di database per scrivere uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!NOTE]  
 >  In questa lezione vengono illustrate le funzionalità dello strumento. Per un'esercitazione sulla scrittura di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "62470028"
   
 -   Creazione di script per una tabella  
   
--   Summary  
+-   Riepilogo  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Connessione all'editor di query](lesson-2-1-connecting-with-query-editor.md)  

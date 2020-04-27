@@ -10,10 +10,10 @@ ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908877"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Impostazioni del progetto (conversione) (MySQLToSQL)
@@ -110,6 +110,6 @@ Il riquadro conversione è disponibile nelle finestre di dialogo **Impostazioni 
 |**Valori letterali numerici con precisione superiore a 38**|Specifica la modalità di conversione dei valori letterali numerici con precisione superiore a 38.<br /><br />**Modalità predefinita**: Arrotonda se possibile<br /><br />**Modalità ottimistica**: arrotondare se possibile<br /><br />**Modalità completa**: arrotondare se possibile|  
 |**Zero-date in colonne NOT NULL**|Specifica come gestire l'assegnazione a colonne NOT NULL con valori di data/ora zero, data zero o non validi.<br /><br />**Modalità predefinita**: GETDATE ()<br /><br />**Modalità ottimistica**: GETDATE ()<br /><br />**Modalità completa**: GETDATE ()|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Informazioni di riferimento sull'interfaccia utente &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

@@ -21,19 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520346"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Compilazione di applicazioni tramite servizio Web e .NET Framework
-  Con, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]è possibile utilizzare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente per lavorare con i servizi Web. 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
+  Con, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]è possibile utilizzare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente per lavorare con i servizi Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
   
  Un client del servizio Web ReportServer è qualsiasi componente o applicazione che comunica con un server di report utilizzando messaggi SOAP (Simple Object Access Protocol).  
   
- **Per creare un client del servizio Web ReportServer utilizzando la .NET Framework, attenersi alla seguente procedura di base:**  
+ **Per creare un client del servizio Web ReportServer utilizzando .NET Framework, effettuare i passaggi di base seguenti:**  
   
 1.  Creare una classe proxy per il servizio Web.  
   
@@ -60,10 +59,10 @@ ms.locfileid: "62520346"
 |[Utilizzo di metodi del servizio Web protetti](using-secure-web-service-methods.md)|Viene descritta l'impostazione **SecureConnectionLevel** e in che modo influisce sull'uso dell'API SOAP di Reporting Services.|  
 |[Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](passing-device-information-settings-to-rendering-extensions.md)|Vengono descritte le impostazioni relative alle informazioni sul dispositivo utilizzate per eseguire il rendering dei report in formati diversi.|  
 |[Impostazioni delle estensioni per il recapito di Reporting Services](reporting-services-delivery-extension-settings.md)|Vengono descritte le impostazioni utilizzate per recapitare i report utilizzando il servizio di posta elettronica del server di report.|  
-|[Uso di intestazioni SOAP di Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Viene illustrato l'utilizzo delle intestazioni SOAP in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Utilizzo di intestazioni SOAP di Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Viene illustrato l'utilizzo delle intestazioni SOAP in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Introduzione alla gestione delle eccezioni in Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Vengono fornite informazioni sulla modalità di gestione degli errori in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Servizio Web ReportServer](../report-server-web-service.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   

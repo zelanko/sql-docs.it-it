@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727175"
 ---
 # <a name="write-enabled-partitions"></a>Partizioni abilitate per la scrittura
@@ -50,10 +50,10 @@ ms.locfileid: "62727175"
   
 -   Ignorata in modo da ripristinare lo stato originale della partizione. La partizione verrà impostata automaticamente come di sola lettura.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Un utente aziendale è autorizzato a registrare modifiche nella tabella writeback di un cubo solo se appartiene a un ruolo con autorizzazione in lettura/scrittura per le celle del cubo. È possibile determinare le singole celle del cubo aggiornabili per ogni ruolo. Per ulteriori informazioni, vedere [Grant Cube or Model permissions &#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Aggregazioni e progettazioni delle aggregazioni](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

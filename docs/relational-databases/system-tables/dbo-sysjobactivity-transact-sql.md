@@ -20,10 +20,10 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902214"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
@@ -61,7 +61,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [dbo. sysjobhistory &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

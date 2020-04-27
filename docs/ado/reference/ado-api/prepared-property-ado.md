@@ -16,10 +16,10 @@ ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917592"
 ---
 # <a name="prepared-property-ado"></a>Proprietà Prepared (ADO)
@@ -38,6 +38,6 @@ Indica se salvare una versione compilata di un [comando](../../../ado/reference/
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà preparata (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Esempio della proprietà Prepared (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

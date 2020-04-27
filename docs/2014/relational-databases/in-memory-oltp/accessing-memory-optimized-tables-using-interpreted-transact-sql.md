@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468608"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato
@@ -42,7 +42,7 @@ ms.locfileid: "62468608"
 |Tra database|Query tra database<br /><br /> Transazioni tra database<br /><br /> Server collegati|  
   
 ## <a name="table-hints"></a>Hint di tabella  
- Per ulteriori informazioni sugli hint di tabella, vedere [Hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). L'isolamento SNAPSHOT è stato aggiunto per supportare [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Per ulteriori informazioni sugli hint di tabella, vedere Gli [hint di tabella &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). L'isolamento SNAPSHOT è stato aggiunto per supportare [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
  Gli hint di tabella seguenti non sono supportati quando si accede a una tabella ottimizzata per la memoria utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62468608"
 > [!NOTE]  
 >  Un hint del livello di isolamento non è necessario per le tabelle ottimizzate per la memoria accessibili dalle query in esecuzione in modalità autocommit.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Supporto di Transact-SQL per OLTP in memoria](transact-sql-support-for-in-memory-oltp.md)   
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   

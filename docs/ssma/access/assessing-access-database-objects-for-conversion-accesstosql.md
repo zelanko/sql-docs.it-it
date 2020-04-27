@@ -19,10 +19,10 @@ ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910694"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Valutazione degli oggetti di database di Access per la conversione (AccessToSQL)
@@ -59,6 +59,6 @@ La finestra report di valutazione contiene tre riquadri: un visualizzatore, un r
 ## <a name="next-step"></a>passaggio successivo  
 [Conversione di oggetti di database di Access](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

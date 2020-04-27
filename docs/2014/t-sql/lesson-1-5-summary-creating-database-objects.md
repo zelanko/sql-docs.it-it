@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704489"
 ---
 # <a name="summary-creating-database-objects"></a>Riepilogo: Creazione di oggetti di database
@@ -25,7 +25,7 @@ ms.locfileid: "62704489"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database](lesson-2-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

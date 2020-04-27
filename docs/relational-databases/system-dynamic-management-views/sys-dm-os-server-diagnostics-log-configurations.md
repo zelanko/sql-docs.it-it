@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a26ba08f6ddd7767dbd56371857c4d382b5ec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899777"
 ---
 # <a name="sysdm_os_server_diagnostics_log_configurations"></a>sys.dm_os_server_diagnostics_log_configurations
@@ -57,7 +57,7 @@ FROM sys.dm_os_server_diagnostics_log_configurations;
 |-----------------|----------|---------------|----------------|  
 |1|\<C:\Programmi\Microsoft SQL Server\MSSQL13\MSSQL\Log>|10|10|  
   
-## <a name="see-also"></a>Vedere anche  
- [Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
   
   

@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728557"
 ---
 # <a name="dimension-types"></a>Tipi di dimensioni
@@ -44,14 +44,14 @@ ms.locfileid: "62728557"
   
 |Tipo dimensione|Descrizione|  
 |--------------------|-----------------|  
-|Regolare |Dimensione il cui tipo non è stato impostato in base a un valore speciale.|  
+|Normale|Dimensione il cui tipo non è stato impostato in base a un valore speciale.|  
 |Tempo|Dimensione i cui attributi rappresentano periodi di tempo, ad esempio anni, semestri, trimestri, mesi e giorni.|  
-|Organizzazione|Dimensione i cui attributi rappresentano informazioni sull'organizzazione, ad esempio dipendenti o filiali.|  
+|Organization|Dimensione i cui attributi rappresentano informazioni sull'organizzazione, ad esempio dipendenti o filiali.|  
 |Area geografica|Dimensione i cui attributi rappresentano informazioni geografiche, ad esempio città o CAP.|  
 |BillOfMaterials|Dimensione i cui attributi rappresentano informazioni relative alle scorte o alla produzione, ad esempio elenchi di parti di prodotti.|  
 |Account|Dimensione i cui attributi rappresentano un grafico dei conti per la generazione di report finanziari.|  
 |Clienti|Dimensione i cui attributi rappresentano informazioni sui clienti o sui contatti.|  
-|Prodotti|Dimensione i cui attributi rappresentano informazioni sui prodotti.|  
+|Products|Dimensione i cui attributi rappresentano informazioni sui prodotti.|  
 |Scenario|Dimensione i cui attributi rappresentano informazioni di pianificazione o di analisi strategica.|  
 |Quantitative|Dimensione i cui attributi rappresentano informazioni sulle quantità.|  
 |Utilità|Dimensione i cui attributi rappresentano informazioni di vario tipo.|  
@@ -60,8 +60,8 @@ ms.locfileid: "62728557"
 |Canale|Dimensione i cui attributi rappresentano informazioni sul canale.|  
 |Promotion|Dimensione i cui attributi rappresentano informazioni sulle promozioni marketing.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una dimensione utilizzando una tabella esistente](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

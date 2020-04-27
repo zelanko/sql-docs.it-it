@@ -1,5 +1,5 @@
 ---
-title: 'Dissabot:: Abort (OLE DB) | Microsoft Docs'
+title: ISSAbort::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ad1310112b3cd6ac536a55a82757ae99433372d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511515"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
@@ -42,7 +42,7 @@ HRESULT Abort(void);
 >  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se lo stato XACT_ABORT del server è ON, l'esecuzione di **ISSAbort::Abort** terminerà qualsiasi transazione implicita o esplicita e ne eseguirà il rollback durante la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la transazione corrente non viene interrotta.  
   
 ## <a name="arguments"></a>Argomenti  
- No.  
+ Nessuno.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
@@ -63,7 +63,7 @@ HRESULT Abort(void);
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [&#40;OLE DB&#41;](../../database-engine/dev-guide/issabort-ole-db.md)  
   
   

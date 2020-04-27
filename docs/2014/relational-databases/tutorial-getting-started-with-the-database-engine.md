@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524333"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al motore di database
@@ -42,7 +42,7 @@ ms.locfileid: "62524333"
   
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]può essere installato eseguendo il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] programma di installazione di oppure scaricando e installando dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere installato eseguendo il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o scaricandolo e installandolo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

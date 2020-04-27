@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62523884"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Definire le opzioni del passaggio di processo Transact-SQL
@@ -30,18 +30,18 @@ ms.locfileid: "62523884"
   
      [Sicurezza](#Security)  
   
--   **Per definire le opzioni del passaggio di processo Transact-SQL utilizzando:** ,  
+-   **Per definire le opzioni del passaggio di processo Transact-SQL con** ,  
   
      [SQL Server Management Studio](#SSMS)  
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-define-transact-sql-job-step-options"></a>Per definire le opzioni del passaggio di processo Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62523884"
   
     -   Selezionare **Includi output passaggio nella cronologia** se si desidera includere l'output nella cronologia dei passaggi. L'output verrà visualizzato solo se non si sono verificati errori. È inoltre possibile che l'output sia troncato.  
   
-9. Se si è un membro del ruolo predefinito del server **sysadmin** e si desidera eseguire il passaggio di processo con un account di accesso SQL diverso, selezionare l'account nell'elenco **Esegui come utente** .  
+9. Se l'utente è membro del ruolo predefinito del server **sysadmin** e intende eseguire questo passaggio di processo con un diverso account di accesso SQL, selezionare l'account di accesso SQL dall'elenco **Esegui come utente** .  
   
-##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per definire le opzioni del passaggio di processo Transact-SQL**  
   
  Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  

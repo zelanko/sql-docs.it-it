@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727665"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Archiviazione di cubi (Analysis Services - Dati multidimensionali)
@@ -35,7 +35,7 @@ ms.locfileid: "62727665"
   
  Le impostazioni di archiviazione vengono definite per ogni singola partizione e per ogni gruppo di misure in un cubo esiste almeno una partizione. Per ulteriori informazioni, vedere [partizioni &#40;Analysis Services-Dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md), [modalità di archiviazione delle partizioni e elaborazione](partitions-partition-storage-modes-and-processing.md), [misure e gruppi](../multidimensional-models/measures-and-measure-groups.md)di misure, nonché [creare misure e gruppi di misure nei modelli multidimensionali](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-## <a name="partition-storage"></a>Archiviazione di partizioni  
+## <a name="partition-storage"></a>Partition Storage  
  L'archiviazione di un gruppo di misure può prevedere la suddivisione in più partizioni. Le partizioni consentono di distribuire un gruppo di misure mediante la suddivisione in segmenti discreti in un solo server o in più server e di ottimizzare le prestazioni del processo di archiviazione e delle query. Ogni partizione di un gruppo di misure può essere basata su un'origine dei dati diversa e può prevedere impostazioni di archiviazione diverse.  
   
  L'origine dei dati di una partizione viene specificata quando si crea la partizione. È inoltre possibile modificare l'origine dei dati di una partizione esistente. Un gruppo di misure può essere suddiviso in partizioni verticali o orizzontali. In un gruppo di misure suddiviso in partizioni verticali ogni partizione si basa su una vista filtrata di una singola tabella di origine. Se ad esempio un gruppo di misure si basa su una singola tabella che contiene i dati relativi a più anni, è possibile creare una partizione separata per i dati di ogni anno. Al contrario, in un gruppo di misure suddiviso in partizioni orizzontali ogni partizione si basa su una tabella distinta. Utilizzare le partizioni orizzontali se nell'origine dei dati i dati di ogni anno vengono archiviati in una tabella separata.  
@@ -47,7 +47,7 @@ ms.locfileid: "62727665"
 ## <a name="linked-measure-groups"></a>Gruppi di misure collegati  
  Sebbene l'archiviazione di più copie di un cubo in più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]possa richiedere uno spazio su disco notevole, tale operazione consente di ridurre considerevolmente lo spazio necessario sostituendo le copie del gruppo di misure con i gruppi di misure collegati. Un gruppo di misure collegato si basa su un gruppo di misure di un cubo in un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nella stessa istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure in un'istanza diversa. I gruppi di misure collegati possono essere utilizzati anche con le dimensioni collegate dello stesso cubo di origine. Le dimensioni e i gruppi di misure collegati utilizzano le aggregazioni del cubo di origine e non prevedono quindi requisiti di archiviazione dei dati propri. Pertanto, se si archiviano i gruppi di misure e le dimensioni di un'origine in un database e si creano cubi e dimensioni collegati in cubi di altri database, lo spazio su disco necessario per l'archiviazione sarà decisamente inferiore. Per ulteriori informazioni, vedere [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)  
   
   

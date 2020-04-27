@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727577"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Elaborazione e modalità di archiviazione delle partizioni
@@ -50,8 +50,7 @@ ms.locfileid: "62727577"
  La modalità di archiviazione ROLAP determina l'archiviazione delle aggregazioni della partizione in viste indicizzate del database relazionale specificato nell'origine dei dati della partizione. A differenza della modalità di archiviazione MOLAP, la modalità ROLAP non prevede l'archiviazione di una copia dei dati di origine nelle cartelle dei dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Quando non è possibile derivare risultati dalla cache delle query, per rispondere alle query viene invece eseguito l'accesso alle viste indicizzate dell'origine dei dati. I tempi di risposta alle query sono in genere più lenti con la modalità di archiviazione ROLAP rispetto alle modalità di archiviazione MOLAP e HOLAP, così come sono in genere più lenti i tempi di elaborazione con ROLAP. La modalità ROLAP consente inoltre agli utenti di visualizzare i dati in tempo reale e di risparmiare spazio di archiviazione quando si utilizzano set di dati di grandi dimensioni su cui vengono raramente eseguite query, ad esempio dati esclusivamente cronologici.  
   
 > [!NOTE]  
->  Quando si utilizza ROLAP, in caso di combinazione di join con una clausola GROUP BY è possibile che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisca informazioni non corrette relativamente al membro sconosciuto. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina errori di integrità relazionali anziché restituire il valore del membro sconosciuto.  
+>  Quando si utilizza ROLAP, in caso di combinazione di join con una clausola GROUP BY è possibile che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisca informazioni non corrette relativamente al membro sconosciuto. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina errori di integrità relazionali anziché restituire il valore del membro sconosciuto.  
   
  Se una partizione utilizza la modalità di archiviazione ROLAP e i dati di origine sono archiviati in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cerca di creare viste indicizzate per contenere le aggregazioni della partizione. Se [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è in grado di creare viste indicizzate, non vengono create tabelle di aggregazione. Sebbene i requisiti della sessione per la creazione di viste indicizzate in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengano gestiti da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], è necessario che la partizione ROLAP e le tabelle nel relativo schema soddisfino le condizioni seguenti in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sia in grado di creare viste indicizzate per le aggregazioni:  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62727577"
 -   Nella sessione con cui viene creata la vista indicizzata l'opzione NUMERIC_ROUNDABORT deve essere impostata su OFF. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
- La modalità di archiviazione HOLAP combina attributi sia di MOLAP che di ROLAP. Analogamente a MOLAP, HOLAP fa sì che le aggregazioni della partizione vengano archiviate in una struttura multidimensionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza di. HOLAP non prevede l'archiviazione di una copia dei dati di origine. Per le query che accedono esclusivamente ai dati di riepilogo nelle aggregazioni di una partizione, la modalità HOLAP equivale a MOLAP. Query che accedono ai dati di origine. ad esempio, se si desidera eseguire il drill-down in una cella del cubo atomica per la quale non sono presenti dati di aggregazione, è necessario recuperare i dati dal database relazionale e non sarà così veloce come sarebbero se i dati di origine fossero archiviati nella struttura MOLAP e. Con la modalità di archiviazione HOLAP, gli utenti riscontrano in genere differenze significative nei tempi di esecuzione delle query a seconda che la query possa essere risolta dalla cache o dalle aggregazioni oppure dai dati di origine.  
+ La modalità di archiviazione HOLAP combina attributi sia di MOLAP che di ROLAP. Analogamente a MOLAP, HOLAP fa sì che le aggregazioni della partizione vengano archiviate in una struttura multidimensionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza di. HOLAP non prevede l'archiviazione di una copia dei dati di origine. Per le query che accedono esclusivamente ai dati di riepilogo nelle aggregazioni di una partizione, la modalità HOLAP equivale a MOLAP. Query che accedono ai dati di origine. ad esempio, se si desidera eseguire il drill-down in una cella del cubo atomica per la quale non sono presenti dati di aggregazione, è necessario recuperare i dati dal database relazionale e non sarà così veloce come sarebbero se i dati di origine fossero archiviati nella struttura MOLAP. Con la modalità di archiviazione HOLAP, gli utenti riscontrano in genere differenze significative nei tempi di esecuzione delle query a seconda che la query possa essere risolta dalla cache o dalle aggregazioni oppure dai dati di origine.  
   
  Le partizioni archiviate come HOLAP presentano dimensioni inferiori rispetto alle partizioni MOLAP equivalenti, poiché non contengono i dati di origine, e garantiscono tempi di risposta più rapidi rispetto alle partizioni ROLAP per le query in cui sono coinvolti dati di riepilogo. La modalità di archiviazione HOLAP è in genere appropriata per partizioni di cubi che necessitano di tempi di risposta alle query rapidi per riepiloghi basati su un'ingente quantità di dati di origine. Nei casi in cui gli utenti generano query che devono accedere ai dati a livello foglia, ad esempio per il calcolo di mediane, è in genere preferibile la modalità MOLAP.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Caching attivo &#40;partizioni&#41;](partitions-proactive-caching.md)   
  [Sincronizzare Analysis Services database](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3626f91018714fa4d67304c92ce464d82fb5c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917219"
 ---
 # <a name="requery-method"></a>Metodo Requery
@@ -35,7 +35,7 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>Parametri  
  *Opzioni*  
- Facoltativa. Maschera di maschera che contiene i valori [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) che interessano questa operazione.  
+ Facoltativo. Maschera di maschera che contiene i valori [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) che interessano questa operazione.  
   
 > [!NOTE]
 >  Se *options* è impostato su **adAsyncExecute**, questa operazione viene eseguita in modo asincrono e viene emesso un evento [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) alla conclusione. I valori **ExecuteOpenEnum** di **adExecuteNoRecords** o **adExecuteStream** non devono essere utilizzati con la **riesecuzione della query**.  
@@ -48,7 +48,7 @@ recordset.Requery Options
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di metodi Execute, Requery e Clear (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [Esempio di metodi Execute, Requery e Clear (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Esempio di metodi Execute, Requery e Clear (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

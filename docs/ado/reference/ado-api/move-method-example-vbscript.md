@@ -15,16 +15,16 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918160"
 ---
 # <a name="move-method-example-vbscript"></a>Esempio del metodo Move (VBScript)
 Questo esempio usa il metodo [Move](../../../ado/reference/ado-api/move-method-ado.md) per posizionare il puntatore del record in base all'input dell'utente.  
   
- Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Per visualizzare questo esempio completamente funzionante, è necessario che l'origine dati AdvWorks. mdb (installata con l'SDK) si trovi in C:\Programmi\Microsoft platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o modificare il percorso nel codice di esempio per riflettere percorso effettivo del file. Si tratta di un file di database di Microsoft Access.  
+ Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Per visualizzare questo esempio completamente funzionante, è necessario che l'origine dati AdvWorks. mdb (installata con l'SDK) si trovi in C:\Programmi\Microsoft platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o modificare il percorso nel codice di esempio in modo da riflettere il percorso effettivo del file. Si tratta di un file di database di Microsoft Access.  
   
  Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **MoveVBS. asp**. È possibile visualizzare i risultati in qualsiasi browser.  
   
@@ -182,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

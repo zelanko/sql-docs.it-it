@@ -14,14 +14,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67140816"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interoperabilità e coesistenza (Integration Services)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) può coesistere in modalità affiancata con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services.  
   
 ## <a name="features-and-differences"></a>Funzionalità e differenze  
@@ -29,10 +28,10 @@ ms.locfileid: "67140816"
   
 |Funzionalità|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|Ambiente di sviluppo|[Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools per Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence per Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|Ambiente di sviluppo|[Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools per Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Business Intelligence per Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |Ambiente di gestione|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |Tabella di sistema principale in msdb per l'archivio di pacchetti|sysssispackages|sysssispackages|sysssispackages|  
-|Utilità del prompt dei comandi principale per i pacchetti in esecuzione|**dtexec** (dtexec. exe), versione 2014|**dtexec** (dtexec. exe), versione 2012|**dtexec** (dtexec. exe), versione 2008|  
+|Utilità del prompt dei comandi principale per i pacchetti in esecuzione|**dtexec** (dtexec.exe), versione 2014|**dtexec** (dtexec.exe), versione 2012|**dtexec** (dtexec.exe), versione 2008|  
 |Cartella radice del file system predefinita|C:\Programmi\Microsoft SQL Server\120\DTS|C:\Programmi\Microsoft SQL Server\110\DTS|C:\Programmi\Microsoft SQL Server\100\DTS|  
 |Chiave del Registro di sistema radice predefinita|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS|  
   

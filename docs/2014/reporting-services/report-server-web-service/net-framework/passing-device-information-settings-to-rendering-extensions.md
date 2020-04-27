@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518651"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering
@@ -53,9 +53,9 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
  Per altre informazioni, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../../specify-device-information-settings-in-a-url.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Creazione di applicazioni mediante il servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer. config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Compilazione di applicazioni tramite servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

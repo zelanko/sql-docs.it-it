@@ -16,10 +16,10 @@ ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2284f499dce30462b468dc385944ba19f0dbb88e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986061"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Query XQuery di esempio aggiuntive per il tipo di dati xml
@@ -39,7 +39,7 @@ ms.locfileid: "67986061"
   
 -   [Gestione degli spazi dei nomi in XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Operatori di XQuery per il tipo di dati xml](../xquery/xquery-operators-against-the-xml-data-type.md)  
   

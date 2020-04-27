@@ -20,10 +20,10 @@ ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910194"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "67910194"
 ## <a name="remarks"></a>Osservazioni  
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di backup e ripristino &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [restorefilegroup &#40;&#41;Transact-SQL](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
  [restorehistory &#40;&#41;Transact-SQL](../../relational-databases/system-tables/restorehistory-transact-sql.md)   
- [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

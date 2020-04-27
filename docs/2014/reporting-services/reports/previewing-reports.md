@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412977"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Anteprima dei report in SQL Server Reporting Services (SSRS)
@@ -41,9 +41,9 @@ ms.locfileid: "67412977"
  Se si utilizza una configurazione del progetto che compila il report senza distribuirlo, il report specificato nella proprietà `StartItem` della configurazione corrente viene aperto in una finestra di anteprima separata. La visualizzazione e la funzionalità del report nella finestra di anteprima sono uguali a quelle della modalità di anteprima.  
   
 > [!NOTE]  
-> Prima di eseguire il debug di un report è necessario impostare un elemento iniziale. Per impostare un elemento iniziale, in Esplora soluzioni fare clic con il pulsante destro del mouse sul **** progetto report, scegliere proprietà `StartItem`, quindi in selezionare il nome del report da visualizzare.  
+> Prima di eseguire il debug di un report è necessario impostare un elemento iniziale. Per impostare un elemento iniziale, in Esplora soluzioni fare clic con il pulsante destro del mouse sul **Properties**progetto report, scegliere proprietà `StartItem`, quindi in selezionare il nome del report da visualizzare.  
   
- Se si desidera visualizzare in anteprima un report che non è l'elemento iniziale del progetto, selezionare una configurazione che compili il report senza distribuirlo, ad esempio la configurazione DebugLocal. Fare clic con il pulsante destro del mouse sul report, quindi fare clic su **Esegui**. È necessario scegliere una configurazione che non preveda la distribuzione del report. In caso contrario, il report verrà pubblicato nel server di report anziché venire visualizzato in locale in una finestra di anteprima.  
+ Se si desidera visualizzare in anteprima un report che non è l'elemento iniziale del progetto, selezionare una configurazione che compili il report senza distribuirlo, ad esempio la configurazione DebugLocal. Fare clic con il pulsante destro del mouse sul report e quindi scegliere **Esegui**. È necessario scegliere una configurazione che non preveda la distribuzione del report. In caso contrario, il report verrà pubblicato nel server di report anziché venire visualizzato in locale in una finestra di anteprima.  
   
 ## <a name="print-preview"></a>Anteprima di stampa
 
@@ -60,4 +60,4 @@ ms.locfileid: "67412977"
  - [Stampa di report &#40;Generatore report e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
  - [Stampare un report &#40;Generatore report e SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)
  - [Pubblicazione di report](../publish-reports.md)
- - [Uso di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)
+ - [Utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)

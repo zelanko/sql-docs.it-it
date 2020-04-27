@@ -17,10 +17,10 @@ ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918190"
 ---
 # <a name="move-method-ado"></a>Metodo Move (ADO)
@@ -38,7 +38,7 @@ recordset.Move NumRecords, Start
  Espressione **Long** con segno che specifica il numero di record spostati dalla posizione corrente del record.  
   
  *Inizia*  
- Facoltativa. Valore **stringa** o **variante** che restituisce un segnalibro. È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
+ Facoltativo. Valore **stringa** o **variante** che restituisce un segnalibro. È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
 ## <a name="remarks"></a>Osservazioni  
  Il metodo **Move** è supportato in tutti gli oggetti **Recordset** .  
@@ -63,7 +63,7 @@ recordset.Move NumRecords, Start
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di metodo Move (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Esempio di metodo Move (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Esempio di metodo Move (VC + +)](../../../ado/reference/ado-api/move-method-example-vc.md)   

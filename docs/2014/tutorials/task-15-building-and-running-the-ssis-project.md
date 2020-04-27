@@ -10,10 +10,10 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822989"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>Attività 15: Compilazione ed esecuzione del progetto SSIS

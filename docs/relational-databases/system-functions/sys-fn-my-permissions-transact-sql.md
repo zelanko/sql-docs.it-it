@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122629"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -43,7 +43,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>Argomenti  
  *a protezione diretta*  
- Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. l' *entità a protezione diretta* è un'espressione scalare di tipo **sysname**. l' *entità a protezione diretta* può essere un nome in più parti.  
+ Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. l' *entità a protezione diretta* può essere un nome in più parti.  
   
  '*securable_class*'  
  Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è di **tipo sysname**. *securable_class* deve essere uno dei seguenti: Role, assembly, Key asimmetrica, certificate, Contract, database, endpoint, FULLTEXT CATALOG, login, Message Type, Object, Remote Service binding, Role, Route, schema, server, Service, Symmetric Key, Type, User, XML Schema Collection.  
@@ -159,12 +159,12 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni di sicurezza &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Oggetti proteggibili](../../relational-databases/security/securables.md)   
- [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys. fn_builtin_permissions &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   

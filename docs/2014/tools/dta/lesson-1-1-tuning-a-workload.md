@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110191"
 ---
 # <a name="tuning-a-workload"></a>Ottimizzazione di un carico di lavoro
@@ -34,7 +34,7 @@ ms.locfileid: "66110191"
   
 4.  Selezionare **File** per **Carico di lavoro**e fare clic sul pulsante **Consente di cercare un file di carico di lavoro** per trovare il file **MyScript.sql** salvato nel passaggio 1.  
   
-5.  Selezionare [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nell'elenco **Database per l'analisi del carico di lavoro** , selezionare [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nella griglia **Selezionare i database e le tabelle da ottimizzare** e lasciare selezionata l'opzione **Salva log di ottimizzazione** . **Database per l'analisi del carico di lavoro** specifica il primo database a cui ottimizzazione guidata motore di database si connette durante l'ottimizzazione di un carico di lavoro. Dopo l'inizio dell'ottimizzazione, Ottimizzazione guidata motore di database si connette ai database specificati dalle istruzioni `USE DATABASE` contenute nel carico di lavoro.  
+5.  Selezionare [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nell'elenco **Database per l'analisi del carico di lavoro** , selezionare [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nella griglia **Selezionare i database e le tabelle da ottimizzare** e lasciare selezionata l'opzione **Salva log di ottimizzazione** . **Database per l'analisi del carico di lavoro** specifica il primo database al quale Ottimizzazione guidata motore di database si connette durante l'ottimizzazione di un carico di lavoro. Dopo l'inizio dell'ottimizzazione, Ottimizzazione guidata motore di database si connette ai database specificati dalle istruzioni `USE DATABASE` contenute nel carico di lavoro.  
   
 6.  Fare clic sulla scheda **Opzioni di ottimizzazione** . Non verranno impostate opzioni di ottimizzazione per questa procedura, ma occorrerà un po' di tempo per rivedere le opzioni di ottimizzazione predefinite. Premere F1 per visualizzare la Guida relativa a questa pagina a schede. Fare clic su **Opzioni avanzate** per visualizzare le opzioni di ottimizzazione aggiuntive. Fare clic su **?** nella finestra di dialogo **Opzioni di ottimizzazione avanzate** per ottenere informazioni sulle opzioni di ottimizzazione visualizzate. Fare clic su **Annulla** per chiudere la finestra di dialogo **Opzioni di ottimizzazione avanzate** lasciando selezionate le opzioni predefinite.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66110191"
   
 8.  Dopo aver completato l'analisi, salvare le indicazioni come script [!INCLUDE[tsql](../../includes/tsql-md.md)] scegliendo **Salva indicazioni** dal menu **Azioni** . Nella finestra di dialogo **Salva con nome** trovare la directory in cui si vuole salvare lo script delle indicazioni e digitare il nome file **MyRecommendations**.  
   
-## <a name="summary"></a>Summary  
+## <a name="summary"></a>Riepilogo  
  In questo modo è stata completata l'ottimizzazione di un carico di lavoro di un'istruzione SELECT semplice sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Ottimizzazione guidata motore di database accetta inoltre file di traccia e tabelle [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] come carichi di lavoro da ottimizzare. Nell'attività successiva verranno illustrate le procedure per visualizzare e interpretare le indicazioni scaturite dall'esercitazione sull'ottimizzazione.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  

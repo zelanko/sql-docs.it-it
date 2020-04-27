@@ -16,10 +16,10 @@ ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918986"
 ---
 # <a name="editmode-property"></a>Proprietà EditMode
@@ -41,7 +41,7 @@ Indica lo stato di modifica del record corrente.
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà CursorType, LockType e EditMode (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [Esempio di proprietà CursorType, LockType e EditMode (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

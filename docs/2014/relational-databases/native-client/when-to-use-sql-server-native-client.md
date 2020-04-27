@@ -15,14 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cc9a06601ed0819457b9348bb10cb33b4b92d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637914"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Utilizzo di SQL Server Native Client
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è una tecnologia che è possibile utilizzare per accedere ai dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Per una discussione sulle diverse tecnologie di accesso ai dati, vedere [Panoramica delle tecnologie di accesso ai dati](https://go.microsoft.com/fwlink/?LinkID=179186)  
   
  Quando si decide se utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client come tecnologia di accesso ai dati dell'applicazione, è necessario considerare diversi fattori.  
@@ -37,9 +36,9 @@ ms.locfileid: "62637914"
   
  Per informazioni sulle differenze tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client e MDAC, vedere [aggiornamento di un'applicazione a SQL Server Native Client da MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Programmazione SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Procedure per ODBC](../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Procedure per l'utilizzo di OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure per OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67913740"
 ---
 # <a name="and-dmx"></a>AND (DMX)
@@ -47,7 +47,7 @@ Expression1 AND Expression2
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operatori logici &#40;&#41;DMX](../dmx/operators-logical.md)   
  [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  

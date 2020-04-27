@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110171"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Popolamento di una tabella con dati gerarchici esistenti
-  Questa attività crea una nuova tabella e la popola con i dati nella tabella **EmployeeDemo** . Questa attività prevede i passaggi seguenti:  
+   Questa attività consente di creare una nuova tabella e popolarla con i dati della tabella **EmployeeDemo**. Questa attività prevede i passaggi seguenti:  
   
 -   Creare una tabella nuova contenente una colonna `hierarchyid`. Questa colonna può sostituire le colonne **EmployeeID** e **ManagerID** esistenti. Tuttavia, tali colonne verranno mantenute. Questo avviene perché le applicazioni esistenti potrebbero riferirsi a tali colonne e potrebbero aiutare a capire i dati dopo il trasferimento. La definizione della tabella specifica che **OrgNode** è la chiave primaria che richiede alla colonna di contenere i valori univoci. L'indice cluster della colonna **OrgNode** archivierà la data nella sequenza **OrgNode** .  
   

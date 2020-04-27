@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68190071"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novità relative all'installazione di SQL Server
@@ -32,7 +32,7 @@ ms.locfileid: "68190071"
   
  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la capacità del motore di database nell'edizione Standard è di 128 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]il motore di database nell'edizione standard ha una capacità di memoria di 64 GB.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Novità di SQL Server 2014](../what-s-new-in-sql-server-2016.md)   
  [Specifiche del prodotto per SQL Server 2014](../../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Pianificazione di un'installazione di SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   

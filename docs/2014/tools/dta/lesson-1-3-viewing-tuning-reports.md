@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110147"
 ---
 # <a name="viewing-tuning-reports"></a>Visualizzazione dei report di ottimizzazione
@@ -42,7 +42,7 @@ ms.locfileid: "66110147"
   
 7.  Fare clic sugli altri report disponibili nell'elenco **Selezionare report** in modo da acquisire maggiore familiarità.  
   
-## <a name="summary"></a>Summary  
+## <a name="summary"></a>Riepilogo  
  A questo punto è stata esaminata la scheda **Report** dell'interfaccia utente grafica di Ottimizzazione guidata motore di database per la sessione di ottimizzazione di MySession. È possibile eseguire gli stessi passaggi per esplorare i report creati per la sessione di ottimizzazione di EvaluateMySession. Nel riquadro **Monitoraggio sessione** fare doppio clic su **EvaluateMySession** per iniziare.  
   
 ## <a name="next-lesson"></a>Lezione successiva  

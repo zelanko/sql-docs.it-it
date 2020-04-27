@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524061"
 ---
 # <a name="create-clr-functions"></a>Creare funzioni CLR
-  È possibile creare un oggetto di database all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza di programmata in un assembly creato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] nel Common Language Runtime (CLR). Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
+  È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
   
  La creazione di una funzione CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede i seguenti passaggi:  
   
@@ -56,8 +56,8 @@ ms.locfileid: "62524061"
  Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](https://go.microsoft.com/fwlink/?LinkID=181929) . In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare funzioni definite dall'utente &#40;motore di database&#41;](create-user-defined-functions-database-engine.md)   
- [Creare funzioni di aggregazione definite dall'utente](create-user-defined-aggregates.md)   
+ [Creare funzioni definite dall'utente &#40;Motore di database&#41;](create-user-defined-functions-database-engine.md)   
+ [Creazione di funzioni di aggregazione definite dall'utente](create-user-defined-aggregates.md)   
  [Eseguire funzioni definite dall'utente](execute-user-defined-functions.md)   
  [Visualizzare le funzioni definite dall'utente](view-user-defined-functions.md)   
  [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

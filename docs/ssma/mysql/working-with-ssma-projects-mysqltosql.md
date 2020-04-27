@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904899"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilizzo dei progetti SSMA (MySQLToSQL)
@@ -67,7 +67,7 @@ Per eseguire la migrazione dei dati da database MySQL a SQL Server o SQL Azure, 
   
 ##### <a name="to-create-a-new-project"></a>Per creare un nuovo progetto  
   
-1.  Scegliere **nuovo progetto** dal menu **file** . Viene visualizzata la finestra di dialogo **Nuovo progetto**. Scegliere **Nuovo progetto** dal menu **File**. Viene visualizzata la finestra di dialogo **Nuovo progetto**.  
+1.  Scegliere **nuovo progetto** dal menu **file** . Verrà visualizzata la finestra di dialogo **Nuovo progetto** . Scegliere **Nuovo progetto** dal menu **File**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
 2.  Nella casella **nome** immettere un nome per il progetto.  
   
@@ -75,11 +75,11 @@ Per eseguire la migrazione dei dati da database MySQL a SQL Server o SQL Azure, 
   
 4.  Nell'elenco **a discesa migrazione per** selezionare la versione di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per la migrazione. Le opzioni disponibili sono:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -105,7 +105,7 @@ Se i database all'interno del progetto sono stati modificati o non sono stati co
   
 1.  Per ogni database che mostra lo stato dei **metadati mancanti**, selezionare la casella di controllo accanto al nome del database. Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare i metadati in questa fase, non selezionare alcuna casella di controllo.  
   
-2.  Fare clic su **Salva**.  
+2.  Fare clic su **Save**.  
   
 SSMA analizzerà gli schemi MySQL e salverà i metadati nel file di progetto.  
   
@@ -131,7 +131,7 @@ Quando si apre un progetto, questo viene disconnesso da MySQL e da SQL Server o 
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione è la [connessione a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Connessione a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Connessione a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

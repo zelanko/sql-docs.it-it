@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899713"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
@@ -38,9 +38,9 @@ ms.locfileid: "67899713"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  *database_id*  
- ID del database. *database_id* è di **tipo int**e non prevede alcun valore predefinito. Non può essere NULL.  
+ ID del database. *database_id* è di tipo **int** e non prevede alcun valore predefinito. Non può essere NULL.  
   
  *file_id*  
  ID del file. *file_id* è di **tipo int**e non prevede alcun valore predefinito. Non può essere NULL.  
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|Indica se il volume è attualmente contrassegnato come di sola lettura. Non può essere null.|  
 |**is_compressed**|**bit**|Indica se il volume è attualmente compresso. Non può essere null.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE`.  
@@ -89,7 +89,7 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. master_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

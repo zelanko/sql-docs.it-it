@@ -13,10 +13,10 @@ ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccee0a1b6f31bf9cb54272387e2d7363d2324530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911544"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Cellset
@@ -40,7 +40,7 @@ ms.locfileid: "67911544"
   
  [Metodo Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

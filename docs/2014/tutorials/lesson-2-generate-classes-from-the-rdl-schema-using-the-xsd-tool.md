@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653751"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lezione 2: Generazione delle classi dallo schema RDL mediante lo strumento xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lezione 2: Generare classi dallo schema RDL con lo strumento xsd
   Dopo aver creato il progetto di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], è necessario recuperare una copia locale dello schema di definizione del report ed eseguire lo strumento per la definizione di XML Schema (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Per generare le classi RDL  
@@ -54,7 +54,7 @@ ms.locfileid: "62653751"
 ## <a name="next-lesson"></a>Lezione successiva  
  Nella lezione successiva verrà scritto codice per caricare la definizione di un report da un server di report utilizzando le classi generate dallo schema RDL. Vedere [lezione 3: caricare una definizione del report dal server di report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
