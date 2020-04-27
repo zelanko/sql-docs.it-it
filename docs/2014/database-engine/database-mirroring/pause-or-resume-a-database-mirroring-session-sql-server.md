@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754589"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Sospendere o riprendere una sessione di mirroring del database (SQL Server)
@@ -32,26 +32,26 @@ ms.locfileid: "62754589"
   
      [Sicurezza](#Security)  
   
--   **Per ReplaceThisText, utilizzando:**  
+-   **Per eseguire ReplaceThisText utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento: dopo la**  [sospensione o la ripresa del mirroring del database](#FollowUp)  
+-   **Completamento:**  [Dopo la sospensione o ripresa del mirroring del database](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  È possibile sospendere una sessione di mirroring del database in qualsiasi momento. Questa operazione potrebbe migliorare le prestazioni in caso di colli di bottiglia. Inoltre, la sessione può essere ripresa in qualsiasi momento.  
   
 > [!CAUTION]  
 >  Dopo un servizio forzato, quando il server principale originale esegue nuovamente la connessione, il mirroring viene sospeso. Se si riprende il mirroring in questa situazione, è possibile che si verifichi una perdita di dati nel server principale originale. Per informazioni sulla gestione della potenziale perdita di dati, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per sospendere o riprendere una sessione di mirroring del database, utilizzare la pagina **Proprietà database - Mirroring** .  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>Per sospendere o riprendere il mirroring del database  
@@ -60,7 +60,7 @@ ms.locfileid: "62754589"
   
 2.  Espandere **Database**e selezionare il database.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Verrà visualizzata la pagina **mirroring** della finestra di dialogo **Proprietà database** .  
   
 4.  Per sospendere la sessione, scegliere **Sospendi**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754589"
   
 5.  Per riprendere la sessione fare clic su **Riprendi**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>Per sospendere il mirroring del database  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62754589"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>Completamento: dopo la sospensione o la ripresa del mirroring del database  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a>Completamento: dopo la sospensione o la ripresa del mirroring del database  
   
 -   **Dopo la sospensione del mirroring del database**  
   
@@ -118,11 +118,11 @@ ms.locfileid: "62754589"
   
      Quando si riprende una sessione di mirroring del database, il database con mirroring viene posto in stato SYNCHRONIZING. Se il livello di sicurezza corrisponde a FULL, il database mirror viene aggiornato in base al database principale e lo stato del database mirror diventa SYNCHRONIZED. A questo punto è possibile che si verifichi un failover. Se il server di controllo del mirroring è presente e in stato ON, è possibile che si verifichi un failover automatico. Se invece tale server non è presente, è possibile che si verifichi un failover manuale.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

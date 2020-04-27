@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755224"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Connetti al server (pagina Proprietà connessione) - Analysis Services
-  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o alla registrazione di [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Server registrati**. **Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo quando ci si connette. **Test** e **Salva** vengono visualizzati solo in questa finestra di dialogo durante [!INCLUDE[ssAS](../includes/ssas-md.md)]la registrazione.  
+  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o alla registrazione di [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Opzioni  
  **Connettersi al database**  
@@ -32,7 +32,7 @@ ms.locfileid: "62755224"
  **Timeout esecuzione**  
  Immettere il numero massimo di secondi di attesa del completamento dell'esecuzione di un'attività nel server. Il valore predefinito è zero secondi, che indica l'assenza di un timeout.  
   
- **Crittografia connessione**  
+ **Crittografa connessione**  
  Consente di forzare la crittografia della connessione.  
   
  **Reimposta tutto**  
@@ -47,7 +47,7 @@ ms.locfileid: "62755224"
  **Test**  
  Durante la registrazione del [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Server registrati**, scegliere questa opzione per verificare la connessione.  
   
- **Salvare**  
+ **Salva**  
  Consente di salvare le impostazioni in **Server registrati**.  
   
   

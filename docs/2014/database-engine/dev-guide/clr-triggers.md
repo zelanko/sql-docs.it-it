@@ -26,18 +26,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755249"
 ---
 # <a name="clr-triggers"></a>Trigger CLR
   Grazie all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile utilizzare qualsiasi linguaggio [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per creare trigger CLR. In questa sezione vengono fornite informazioni specifiche relative ai trigger implementati utilizzando l'integrazione con CLR. Per una descrizione completa dei trigger, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Definizione dei trigger  
- Un trigger è un tipo speciale di stored procedure che viene eseguita automaticamente quando viene eseguito un evento del linguaggio. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include due tipi generali di trigger: Data Manipulation Language (DML) e Data Definition Language (DDL). I trigger DML possono essere utilizzati quando l'istruzione `INSERT`, `UPDATE` o `DELETE` modifica i dati in una tabella o in una vista specificata. I trigger DDL attivano stored procedure in risposta a diverse istruzioni DDL, che corrispondono principalmente a istruzioni che iniziano con `CREATE`, `ALTER` e `DROP`. Possono essere utilizzati per attività di amministrazione quali il controllo e la regolazione delle operazioni sul database.  
+ Un trigger è un tipo speciale di stored procedure che viene eseguita automaticamente quando viene eseguito un evento del linguaggio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include due tipi generali di trigger: Data Manipulation Language (DML) e Data Definition Language (DDL). I trigger DML possono essere utilizzati quando l'istruzione `INSERT`, `UPDATE` o `DELETE` modifica i dati in una tabella o in una vista specificata. I trigger DDL attivano stored procedure in risposta a diverse istruzioni DDL, che corrispondono principalmente a istruzioni che iniziano con `CREATE`, `ALTER` e `DROP`. Possono essere utilizzati per attività di amministrazione quali il controllo e la regolazione delle operazioni sul database.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Funzionalità univoche dei trigger CLR  
  I trigger scritti in [!INCLUDE[tsql](../../includes/tsql-md.md)] consentono di determinare quali colonne della tabella o della vista di attivazione sono state aggiornate mediante le funzioni `UPDATE(column)` e `COLUMNS_UPDATED()`.  
@@ -73,8 +72,7 @@ ms.locfileid: "62755249"
 -   Per i trigger DDL, l'elenco dei valori TriggerAction possibili è molto più lungo. Per ulteriori informazioni, vedere "Enumerazione TriggerAction" in .NET Framework SDK.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle Inserted e Deleted  
- Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali, ovvero la tabella **inserted** e la tabella **Deleted** . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
+ Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali, ovvero la tabella **inserted** e la tabella **Deleted** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
   
  I trigger CLR possono accedere alle tabelle **inserted** e **Deleted** tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Ad esempio:  
   
@@ -661,7 +659,7 @@ DROP TABLE Table1;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Trigger DML](../../relational-databases/triggers/dml-triggers.md)   
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [PROVA... CATCH &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/try-catch-transact-sql)   
  [Compilazione di oggetti di database con Common Language Runtime &#40;integrazione&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

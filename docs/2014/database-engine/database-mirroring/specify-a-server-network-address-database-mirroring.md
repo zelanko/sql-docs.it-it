@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755064"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
@@ -29,33 +29,33 @@ ms.locfileid: "62755064"
   
   
   
-##  <a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
  La sintassi per un indirizzo di rete del server presenta la struttura seguente:  
   
  TCP<strong>://</strong>*\<System-Address>* <strong>:<strong>*\<porta>* 
   
- dove  
+ where  
   
--   *\<indirizzo-sistema>* è una stringa che identifica in modo univoco il computer di destinazione. In genere, l'indirizzo del server è un nome di sistema, se i sistemi si trovano nello stesso dominio, un nome di dominio completo o un indirizzo IP.  
+-   System-Address>è una stringa che identifica in modo univoco il computer di destinazione. * \<* In genere, l'indirizzo del server è un nome di sistema, se i sistemi si trovano nello stesso dominio, un nome di dominio completo o un indirizzo IP.  
   
     -   Se i sistemi si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[** _<indirizzo_IPv6>_ **]** .  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio: **[** _<IPv6_address>_ **]**.  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
     -   Il funzionamento del nome di dominio completo è garantito. Il nome di dominio completo è costituito da una stringa di indirizzo definita a livello locale con forme diverse a seconda della sua posizione. Spesso ma non sempre, un nome di dominio completo è un nome composto che include un nome computer e una serie di segmenti di dominio separati da virgole, ad esempio:  
   
-         _nome_computer_ **.** _segmento_dominio_[... **.** _segmento_dominio_]  
+         _nome_computer_ **.** _domain_segment_[... **.** _domain_segment_]  
   
-         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[... **.** _segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *computer_name*è il nome di rete del computer che esegue l'istanza del server e *domain_segment*[... **.** _domain_segment_] informazioni sul dominio rimanente del server. ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Se non si conosce il nome di dominio completo del server, consultare l'amministratore di sistema.  
   
         > [!NOTE]  
         >  Per informazioni sull'individuazione di un nome di dominio completo, vedere "Individuazione del nome di dominio completo" di seguito in questo argomento.  
   
--   *\<port>* è il numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner. Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   >porta è il numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner. * \<* Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel computer. Ogni numero di porta su un sistema di computer deve essere associato a un solo endpoint e ogni endpoint a una singola istanza del server. In questo modo, istanze del server diverse sullo stesso server restano in attesa su endpoint diversi con porte diverse. Pertanto, la parte specificata nell'indirizzo di rete del server quando si imposta una sessione di mirroring del database dirigerà la sessione sempre all'istanza del server il cui endpoint è associato a tale porta.  
   
@@ -120,7 +120,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Esempi  
+##  <a name="examples"></a><a name="Examples"></a> Esempi  
  Nell'esempio seguente viene illustrato l'indirizzo di rete del server per un'istanza del server in un computer denominato `REMOTESYSTEM3` in un altro dominio. Il nome di dominio è `NORTHWEST.ADVENTURE-WORKS.COM`e la porta dell'endpoint del mirroring del database è `7025`. Considerati questi componenti di esempio, l'indirizzo di rete del server è:  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -129,12 +129,12 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

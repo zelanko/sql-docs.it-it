@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755514"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (Transact-SQL)
@@ -209,17 +209,17 @@ ms.locfileid: "62755514"
 > [!NOTE]  
 >  Per un esempio completo che illustri le impostazioni relative alla sicurezza e ai partner, nonché l'aggiunta di un server di controllo del mirroring, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Consentire l'accesso alla rete a un endpoint del mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [Creazione di un endpoint del mirroring del database per l'autenticazione di Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [&#40;SQL Server di mirroring e log shipping del database&#41;](database-mirroring-and-log-shipping-sql-server.md)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Mirroring e replica del database &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
+ [&#40;SQL Server di mirroring e replica del database&#41;](database-mirroring-and-replication-sql-server.md)   
  [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Specificare un indirizzo di rete del server &#40;il mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767903"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62767903"
  **Azione**  
  Consente di visualizzare ogni azione che fa parte dell'operazione.  
   
- **Status**  
+ **Stato**  
  Consente di visualizzare l'esito positivo o negativo di ogni azione.  
   
  **Messaggio**  
@@ -39,7 +39,7 @@ ms.locfileid: "62767903"
  **Filter**  
  Consente di scegliere se si desidera visualizzare solo gli errori, gli avvisi o le azioni riuscite. Per ripristinare la visualizzazione predefinita scegliere **Mostra tutte le azioni**.  
   
- **Stop**  
+ **Arresta**  
  Consente di interrompere l'operazione, se necessario, utilizzando il pulsante **Arresta** .  
   
  **Report**  

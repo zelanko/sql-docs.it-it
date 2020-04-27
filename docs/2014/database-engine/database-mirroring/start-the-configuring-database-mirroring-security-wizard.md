@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754441"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Avvio della Configurazione guidata sicurezza mirroring del database (SQL Server Management Studio)
@@ -29,13 +29,13 @@ ms.locfileid: "62754441"
   
 2.  Espandere **Database**e selezionare il database per il mirroring.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Verrà visualizzata la [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina [Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database** .  
   
 4.  Fare clic su **Configura sicurezza**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+## <a name="see-also"></a>Vedi anche  
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
+ [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
   

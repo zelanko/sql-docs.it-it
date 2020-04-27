@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755243"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Integration Services - Connetti al server (pagina Proprietà connessione)
-  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o alla registrazione di [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Server registrati**. **Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo quando ci si connette. **Test** e **Salva** vengono visualizzati solo in questa finestra di dialogo durante [!INCLUDE[ssIS](../includes/ssis-md.md)]la registrazione.  
+  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o alla registrazione di [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Numero di porta**  
+ **Numero della porta**  
  Immettere il numero di porta utilizzata da [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
  **Timeout della connessione**  
@@ -45,7 +45,7 @@ ms.locfileid: "62755243"
  **Test**  
  Durante la registrazione del [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Server registrati**, scegliere questa opzione per verificare la connessione.  
   
- **Salvare**  
+ **Salva**  
  Consente di salvare le impostazioni in **Server registrati**.  
   
   

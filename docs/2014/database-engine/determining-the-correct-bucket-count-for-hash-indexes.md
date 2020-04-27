@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754243"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
@@ -87,7 +87,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Se *empty_bucket_percent* è minore del 10%, il numero di bucket è probabilmente troppo basso. In teoria, il valore *empty_bucket_percent* dovrebbe essere pari al 33% o superiore. Se il numero di bucket corrisponde al numero di valori di chiave di indice, circa 1/3 dei bucket è vuoto, a causa della distribuzione hash.  
   
  *avg_chain_length*  
- *avg_chain_length* indica la lunghezza media delle catene di righe nei bucket di hash.  
+ *avg_chain_length* indica la lunghezza media delle catene di righe nel bucket di hash.  
   
  Se *avg_chain_length* è maggiore di 10 e *empty_bucket_percent* è maggiore del 10%, probabilmente sono presenti molti valori di chiave di indice duplicati ed è più adatto un indice non cluster. La lunghezza media ideale della catena è pari a 1.  
   
@@ -185,7 +185,7 @@ GO
   
 -   Per ottimizzare le prestazioni per le ricerche di punti, è consigliabile un numero di bucket superiore di due o persino tre volte al numero di valori di indice univoci. Un numero di bucket più alto comporterebbe un aumento dell'utilizzo della memoria e del tempo richiesto per un'analisi completa dell'indice.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Indici in tabelle con ottimizzazione per la memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62757199"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Visualizzazione o configurare le opzioni di connessione al server remoto (SQL Server)
@@ -38,26 +38,26 @@ ms.locfileid: "62757199"
   
 -   **Completamento:**  [dopo la configurazione delle opzioni di connessione al server remoto](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'esecuzione di **sp_serveroption** richiede l'autorizzazione ALTER ANY LINKED SERVER nel server.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>Per visualizzare o configurare le opzioni di connessione al server remoto  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, quindi scegliere **Proprietà**.  
   
-2.  Nella finestra di dialogo **Proprietà SQL Server - \<***server_name***>** fare clic su **Connessioni**.  
+2.  Nella finestra di dialogo **proprietà \<SQL Server- ***server_name*** > ** fare clic su **connessioni**.  
   
 3.  Nella pagina **Connessioni** esaminare le impostazioni relative a **Connessioni remote** e, se necessario, modificarle.  
   
 4.  Ripetere i passaggi da 1 a 3 nell'altro server della coppia di server remoti.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-remote-server-connection-options"></a>Per visualizzare le opzioni di connessione al server remoto  
   
@@ -86,7 +86,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: dopo la configurazione delle opzioni di connessione al server remoto  
+##  <a name="follow-up-after-you-configure-remote-server-connection-options"></a><a name="FollowUp"></a> Completamento: dopo la configurazione delle opzioni di connessione al server remoto  
  Per poter rendere effettiva l'impostazione, è necessario arrestare e riavviare il server remoto.  
   
 ## <a name="see-also"></a>Vedere anche  

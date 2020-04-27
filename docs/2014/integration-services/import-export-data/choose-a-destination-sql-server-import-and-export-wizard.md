@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768026"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Scelta destinazione (Importazione/Esportazione guidata SQL Server)
@@ -60,7 +60,7 @@ ms.locfileid: "62768026"
  **Aggiorna**  
  Consente di ripristinare l'elenco dei database disponibili facendo clic su **Aggiorna**.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare un nuovo database di destinazione utilizzando la finestra di dialogo **Crea database** .  
   
 ### <a name="destination--flat-file-destination"></a>Destinazione = Destinazione file flat  
@@ -70,7 +70,7 @@ ms.locfileid: "62768026"
  **Sfoglia**  
  Consente di individuare un file tramite la finestra di dialogo **Apri**.  
   
- **Impostazioni locali**  
+ **Locale**  
  Consente di specificare l'ID delle impostazioni locali (LCID) che definisce il tipo di ordinamento dei caratteri e i formati di data e ora.  
   
  **Unicode**  
@@ -91,7 +91,7 @@ ms.locfileid: "62768026"
  **Qualificatore di testo**  
  Consente di impostare il qualificatore di testo da utilizzare. È possibile, ad esempio, specificare che ogni colonna di testo sia racchiusa tra virgolette.  
   
- **Nomi di colonna nella prima riga di dati**  
+ **Nomi di colonne nella prima riga di dati**  
  Consente di indicare se si desidera visualizzare i nomi delle colonne nella prima riga di dati.  
   
 ### <a name="destination--microsoft-excel"></a>Destinazione = Microsoft Excel  
@@ -128,7 +128,7 @@ ms.locfileid: "62768026"
  **Password**  
  Consente di specificare la password dell'utente per la connessione al database quando un file di informazioni sul gruppo di lavoro corrente è associato al database. Se tuttavia il database è protetto con un'unica password valida per tutti gli utenti, è necessario specificare tale valore nella finestra di dialogo **Proprietà di Data Link** a cui è possibile accedere facendo clic sul pulsante **Avanzate** .  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Consente di specificare le opzioni avanzate, ad esempio la password del database o un file di informazioni sul gruppo di lavoro diverso da quello predefinito, mediante la finestra di dialogo **Proprietà di Data Link**. Per ulteriori informazioni sulle proprietà del provider OLE DB, vedere la sezione relativa all'accesso ai dati di MSDN Library all'indirizzo [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

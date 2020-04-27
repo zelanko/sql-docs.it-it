@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754097"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
@@ -40,17 +40,17 @@ ms.locfileid: "62754097"
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)** (Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)**(Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni applicazione del livello dati.  
   
 -   Nome - Nome dell'applicazione del livello dati.  
   
--   CPU applicazione - Consente di visualizzare lo stato di integrità di utilizzo del processore per questa applicazione del livello dati. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'applicazione del livello dati e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU applicazione - Consente di visualizzare lo stato di integrità di utilizzo del processore per questa applicazione del livello dati. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'applicazione del livello dati e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa applicazione livello dati o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
--   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa applicazione livello dati o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
@@ -165,10 +165,10 @@ ms.locfileid: "62754097"
   
 -   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
- [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Istanza gestita dettagli &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Monitorare le istanze di SQL Server nel Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

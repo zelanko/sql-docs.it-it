@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f588b8a4305f44eceb8a8f6ab351bc940fbfef5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754934"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>Aggiunta server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
@@ -35,9 +35,9 @@ ms.locfileid: "62754934"
  **No**  
  Fare clic su questo pulsante per impostare la configurazione di sicurezza senza un server di controllo del mirroring.  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)  
   
   

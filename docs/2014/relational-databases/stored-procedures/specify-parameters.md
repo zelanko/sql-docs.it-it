@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736364"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
@@ -63,10 +63,10 @@ GO
  La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **\@first**, **\@second** e **\@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Se un valore di parametro viene specificato nel formato ** \@parametro =**_valore_, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato ** \@Parameter =**_value_, i valori devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione create procedure.  
+>  Se un valore del parametro viene specificato nel formato **\@parametro =** _valore_, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parametro =** _valore_, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
 > 
 > [!WARNING]
->  Qualsiasi parametro passato nel formato ** \@Parameter =**_value_ con il parametro errato, causerà la generazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un errore e impedirà l'esecuzione della procedura.  
+>  Qualsiasi parametro passato nel formato **\@parametro =** _valore_ contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
   
 ## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri  
  I parametri devono essere definiti con un tipo di dati quando vengono dichiarati in un'istruzione CREATE PROCEDURE. Il tipo di dati di un parametro consente di determinare il tipo e l'intervallo di valori accettati per il parametro quando viene chiamata la procedura. Se, ad esempio, si definisce un parametro con un tipo di dati `tinyint`, verranno accettati soltanto i valori numerici nell'intervallo compreso tra 0 e 255 quando passati in tale parametro. Se una procedura viene eseguita con un valore incompatibile con il tipo di dati, verrà restituito un errore.  
@@ -167,7 +167,7 @@ GO
  Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri ** \@** di output cost e ** \@ComparePrices** vengono utilizzati con il linguaggio per il controllo di flusso per restituire un messaggio nella finestra **messaggi** .  
   
 > [!NOTE]  
->  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non __ ** \@venga utilizzato ListPrice =** variable.  
+>  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non _variable_ ** \@venga utilizzato ListPrice =** variable.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -202,7 +202,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

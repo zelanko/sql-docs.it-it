@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754406"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)
-  Quando viene impostato un server di controllo del mirroring per una sessione di mirroring del database, è necessario il *quorum* . Il quorum è una relazione esistente quando due o più istanze del server in una sessione di mirroring del database sono connesse l'una all'altra. In genere, un quorum coinvolge tre istanze del server interconnesse. Quando è impostato un server di controllo del mirroring, il quorum è necessario per rendere disponibile il database. Progettato per la modalità a protezione elevata con failover automatico, il quorum garantisce che un database sia di proprietà di un singolo partner alla volta.  
+   Ogni volta che viene impostato un server di controllo del mirroring per una sessione di mirroring del database, è necessario che esista il *quorum*. Il quorum è una relazione esistente quando due o più istanze del server in una sessione di mirroring del database sono connesse l'una all'altra. In genere, un quorum coinvolge tre istanze del server interconnesse. Quando è impostato un server di controllo del mirroring, il quorum è necessario per rendere disponibile il database. Progettato per la modalità a protezione elevata con failover automatico, il quorum garantisce che un database sia di proprietà di un singolo partner alla volta.  
   
  Se un'istanza del server specifica viene disconnessa da una sessione di mirroring, perde il quorum. In assenza di istanze del server connesse, la sessione perde il quorum e il database non è più disponibile. Sono possibili tre tipi di quorum:  
   
@@ -97,13 +97,12 @@ ms.locfileid: "62754406"
   
  ![Collaborazione tra il server di controllo del mirroring e i partner](../media/dbm-quorum-scenarios.gif "Collaborazione tra il server di controllo del mirroring e i partner")  
   
- Lo scenario 1 viene illustra come, dopo un errore del server principale originale (**Partner_A**), il server di controllo del mirroring e il server mirror stabiliscono che il server principale **Partner_A**non è più disponibile e formano il quorum. Il server mirror **Partner_B** assume quindi il ruolo di server principale. Viene eseguito il failover automatico e **Partner_B**attiva la modalità online per la propria copia del database. 
-  **Partner_B** diventa quindi inattivo e il database risulta offline. Il server principale precedente, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Comunicando con il server di controllo del mirroring, **Partner_A** rileva tuttavia che non potrà attivare la modalità online per la propria copia del database perché **Partner_B** è l'attuale proprietario del ruolo di server principale. Quando **Partner_B** parteciperà di nuovo alla sessione, riattiverà la modalità online per il database.  
+ Lo scenario 1 viene illustra come, dopo un errore del server principale originale (**Partner_A**), il server di controllo del mirroring e il server mirror stabiliscono che il server principale **Partner_A**non è più disponibile e formano il quorum. Il server mirror **Partner_B** assume quindi il ruolo di server principale. Viene eseguito il failover automatico e **Partner_B**attiva la modalità online per la propria copia del database. **Partner_B** diventa quindi inattivo e il database risulta offline. Il server principale precedente, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Comunicando con il server di controllo del mirroring, **Partner_A** rileva tuttavia che non potrà attivare la modalità online per la propria copia del database perché **Partner_B** è l'attuale proprietario del ruolo di server principale. Quando **Partner_B** parteciperà di nuovo alla sessione, riattiverà la modalità online per il database.  
   
  Nello scenario 2 il server di controllo del mirroring perde il quorum, mentre i partner **Partner_A** e **Partner_B**mantengono il quorum l'uno nei confronti dell'altro e il database rimane online. Il quorum viene quindi perso anche dai partner e il database risulta offline. Il server principale, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Il server di controllo del mirroring conferma che il ruolo di server principale appartiene ancora a **Partner_A** e **Partner_A** riattiva la modalità online per il database.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Modalità operative per il mirroring del database](database-mirroring-operating-modes.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   
  [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md)   

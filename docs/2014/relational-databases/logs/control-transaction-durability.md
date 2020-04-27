@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743167"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
@@ -60,13 +60,13 @@ ms.locfileid: "62743167"
   
  Alcuni dei casi in cui è possibile trarre vantaggio dall'utilizzo delle transazioni con durabilità ritardata sono:  
   
- **Possibilità di tollerare un'eventuale perdita di dati.**   
+ **Possibilità di tollerare un'eventuale perdita di dati.**  
  Se è possibile tollerare un'eventuale perdita di dati, ad esempio la perdita di singoli record non cruciali, purché si disponga della maggior parte dei dati, potrebbe essere opportuno considerare la durabilità ritardata. Se non è possibile tollerare un'eventuale perdita di dati, non utilizzare le transazioni con durabilità ritardata.  
   
- **Collo di bottiglia nella scrittura del log delle transazioni.**   
+ **Collo di bottiglia nella scrittura del log delle transazioni.**  
  Se i problemi di prestazioni sono dovuti alla latenza nella scrittura del log delle transazioni, l'applicazione probabilmente trarrà vantaggio dall'utilizzo delle transazioni con durabilità ritardata.  
   
- **Carichi di lavoro con una frequenza elevata di contesa.**   
+ **Carichi di lavoro con una frequenza elevata di contesa.**  
  Se nel sistema sono presenti carichi di lavoro con un livello elevato di contesa, si perde molto tempo nell'attesa del rilascio dei blocchi. Le transazioni con durabilità ritardata riducono il tempo di commit rilasciando i blocchi più velocemente con una velocità effettiva più elevata.  
   
  **Garanzie delle transazioni con durabilità ritardata**  
@@ -103,7 +103,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  `FORCED`  
  Con questa impostazione, ogni transazione di cui viene eseguito il commit nel database è con durabilità ritardata. Indipendentemente dal fatto che venga specificata una transazione completamente durevole (DELAYED_DURABILITY = OFF) o non venga specificata alcuna impostazione, la transazione è con durabilità ritardata. Tale impostazione risulta utile quando è necessario specificare le transazioni con durabilità ritardata per un database e non si desidera modificare il codice dell'applicazione.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Controllo a livello di blocco atomico: stored procedure compilate in modo nativo  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Controllo a livello di blocco atomico-stored procedure compilate in modo nativo  
  Il codice seguente va inserito nel blocco atomico.  
   
 ```sql  
@@ -157,14 +157,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |Impostazione di COMMIT/Impostazione di database|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|
-  `DELAYED_DURABILITY = OFF` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|  
-|
-  `DELAYED_DURABILITY = ON` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|La transazione è con durabilità ritardata.|  
-|
-  `DELAYED_DURABILITY = OFF` Transazione distribuita o tra database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
-|
-  `DELAYED_DURABILITY = ON` Transazione distribuita o tra database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
+|`DELAYED_DURABILITY = OFF` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|  
+|`DELAYED_DURABILITY = ON` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|La transazione è con durabilità ritardata.|  
+|`DELAYED_DURABILITY = OFF` Transazione distribuita o tra database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
+|`DELAYED_DURABILITY = ON` Transazione distribuita o tra database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Come forzare lo scaricamento di un log delle transazioni  
  Sono disponibili due metodi per forzare lo scaricamento del log delle transazioni su disco.  
@@ -177,7 +173,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Rilevamento delle modifiche e Change Data Capture**  
  Tutte le transazioni con rilevamento delle modifiche sono completamente durevoli. Una transazione dispone della proprietà di rilevamento delle modifiche se esegue operazioni di scrittura in tabelle abilitate per il rilevamento delle modifiche. L'uso di durabilità posticipata non è supportato per i database che usano Change Data Capture (CDC).   
   
- **Recupero a seguito dell'arresto anomalo del sistema**  
+ **Ripristino arresto anomalo**  
  La coerenza è garantita, ma alcune modifiche delle transazioni con durabilità ritardata di cui è stato eseguito il commit possono andare perse.  
   
  **Transazione distribuita o tra database**  
@@ -207,7 +203,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="sql-server-shutdown-and-restart"></a>Arresto e riavvio SQL Server  
  Per la durabilità ritardata non esiste alcuna differenza tra un arresto imprevisto e un arresto/riavvio previsto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Analogamente agli eventi irreversibili, occorre prevedere la possibilità di una perdita di dati. In un arresto/riavvio pianificato alcune transazioni che non sono state scritte su dico possono essere prima salvate su disco ma non è una condizione che è possibile pianificare. Considerare un arresto/riavvio, indipendentemente che sia pianificato o meno, allo stesso modo di un evento irreversibile in cui può verificarsi una perdita di dati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Livelli di isolamento delle transazioni](../../database-engine/transaction-isolation-levels.md)   
  [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../in-memory-oltp/memory-optimized-tables.md)  
   

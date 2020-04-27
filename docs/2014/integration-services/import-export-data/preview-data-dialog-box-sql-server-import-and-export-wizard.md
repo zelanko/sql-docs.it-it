@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767983"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Anteprima dati (Importazione/Esportazione guidata SQL Server)
@@ -31,10 +31,10 @@ ms.locfileid: "62767983"
 -   Nella pagina **Selezione tabelle e viste di origine** dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata, fare clic su **Anteprima**.  
   
 ## <a name="options"></a>Opzioni  
- **Origine**  
+ **origine**  
  Viene visualizzata la query che verrà inviata all'origine dati dalla procedura guidata.  
   
- **Griglia dati di esempio**  
+ **Griglia Dati di esempio**  
  Vengono visualizzate fino a 200 righe di dati di esempio restituite dalla query.  
   
   

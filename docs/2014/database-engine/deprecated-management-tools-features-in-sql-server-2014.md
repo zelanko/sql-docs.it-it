@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753953"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Funzionalità degli strumenti di gestione deprecate in SQL Server 2014
@@ -35,7 +35,7 @@ ms.locfileid: "62753953"
 |Notifiche con cercapersone ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Annuncio|  
 |Sottosistema ActiveX ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Annuncio|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

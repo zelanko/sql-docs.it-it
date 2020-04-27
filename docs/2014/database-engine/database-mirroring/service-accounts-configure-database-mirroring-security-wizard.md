@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754391"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Account di servizio (Configurazione guidata sicurezza mirroring del database)
@@ -37,22 +37,22 @@ ms.locfileid: "62754391"
  **Principale**  
  Consente di specificare l'account di servizio dell'istanza del server principale. Immettere il nome di dominio in lettere maiuscole:  
   
- ** Nome utente NomeDominio** \\  
+ *DOMAINNAME*Nome utente NomeDominio*username* \\  
   
  **Mirror**  
  Consente di specificare l'account di servizio dell'istanza del server mirror. Immettere il nome di dominio in lettere maiuscole:  
   
- ** Nome utente NomeDominio** \\  
+ *DOMAINNAME*Nome utente NomeDominio*username* \\  
   
  **Controllo**  
  Consente di specificare l'account di servizio dell'istanza del server di controllo del mirroring. Immettere il nome di dominio in lettere maiuscole:  
   
- ** Nome utente NomeDominio** \\  
+ *DOMAINNAME*Nome utente NomeDominio*username* \\  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Configurare gli account di accesso per il mirroring del database o Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
   

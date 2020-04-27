@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753633"
 ---
 # <a name="installing-smo"></a>Installazione di SMO (SQL Server Management Objects)
@@ -26,7 +26,7 @@ ms.locfileid: "62753633"
   
  Per impostazione predefinita, gli assembly SMO vengono installati nella directory [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida introduttiva all'installazione di SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

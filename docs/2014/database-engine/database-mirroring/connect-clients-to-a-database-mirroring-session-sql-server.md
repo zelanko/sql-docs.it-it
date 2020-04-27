@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755327"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
   
- ##  <a name="InitialConnection"></a>Creazione della connessione iniziale a una sessione di mirroring del database  
+ ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Creazione della connessione iniziale a una sessione di mirroring del database  
  Per la connessione iniziale a un database con mirroring, è necessario che un client renda disponibile una stringa di connessione che includa, come minimo, il nome di un'istanza del server. Tale nome del server obbligatorio identifica l'istanza del server principale corrente ed è noto come *nome partner iniziale*.  
   
  Facoltativamente, la stringa di connessione può indicare inoltre il nome di un'altra istanza del server, che identifichi l'istanza del server mirror corrente, da utilizzare se il partner iniziale non sia disponibile durante il primo tentativo di connessione. Il secondo nome viene definito *nome partner di failover*.  
@@ -41,8 +41,7 @@ ms.locfileid: "62755327"
 > [!NOTE]  
 >  Se la sessione di mirroring viene sospesa, il client in genere si connette al server principale e quindi scarica il nome partner. Il database non è tuttavia disponibile per il client fino alla ripresa del mirroring.  
   
- Se il tentativo ha esito negativo, il provider di accesso ai dati tenta di stabilire la connessione utilizzando il nome partner di failover, se disponibile. Se uno dei nomi partner disponibili consente di identificare correttamente il server principale corrente, il tentativo di stabilire la connessione iniziale da parte del provider di accesso ai dati in genere ha esito positivo. Al completamento della connessione, il provider di accesso ai dati scarica il nome dell'istanza del server mirror corrente. Questo nome viene memorizzato nella cache come nome partner di failover, sovrascrivendo l'eventuale nome partner di failover indicato dal client. Di conseguenza, il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non aggiorna il nome partner di failover. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client aggiorna invece la cache ogni volta che una connessione successiva o il ripristino di una connessione restituisce un diverso nome partner.  
+ Se il tentativo ha esito negativo, il provider di accesso ai dati tenta di stabilire la connessione utilizzando il nome partner di failover, se disponibile. Se uno dei nomi partner disponibili consente di identificare correttamente il server principale corrente, il tentativo di stabilire la connessione iniziale da parte del provider di accesso ai dati in genere ha esito positivo. Al completamento della connessione, il provider di accesso ai dati scarica il nome dell'istanza del server mirror corrente. Questo nome viene memorizzato nella cache come nome partner di failover, sovrascrivendo l'eventuale nome partner di failover indicato dal client. Di conseguenza, il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non aggiorna il nome partner di failover. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client aggiorna invece la cache ogni volta che una connessione successiva o il ripristino di una connessione restituisce un diverso nome partner.  
   
  Nella figura seguente viene illustrata una connessione client al partner iniziale, **Partner_A**, per un database con mirroring denominato **Db_1**. Nella figura viene illustrato un caso in cui il nome partner iniziale specificato dal client identifica correttamente il server principale corrente, **Partner_A**. Il tentativo di connessione iniziale riesce e il provider di accesso ai dati archivia il nome del server mirror, attualmente **Partner_B**, come nome partner di failover nella cache locale. Il client si connette infine alla copia principale del database **Db_1** .  
   
@@ -90,7 +89,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- o  
+ oppure  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -153,7 +152,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a>Algoritmo di riesecuzione dei tentativi di connessione (per connessioni TCP/IP)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algoritmo di riesecuzione dei tentativi di connessione (per connessioni TCP/IP)  
  Per una connessione TCP/IP, quando entrambi i nomi partner si trovano nella cache, il provider di accesso ai dati applica un algoritmo di riesecuzione dei tentativi di connessione. Questa operazione viene eseguita sia per eseguire la connessione iniziale alla sessione sia per eseguire la riconnessione dopo aver perso la connessione stabilita. Dopo avere aperto una connessione, è necessario ulteriore tempo per il completamento dei passaggi di pre-accesso e di accesso.  
   
 > [!NOTE]  
@@ -173,7 +172,7 @@ Server=123.34.45.56,4724;
   
  Ad esempio, se per l'accesso si usa il periodo di timeout predefinito di 15 secondi, *TimeoutAccesso* *= 15*. In questo caso, i tempi di riesecuzione dei tentativi stabiliti nei primi tre cicli sono i seguenti:  
   
-|Round|Calcolo *RetryTime*|Tempo di riesecuzione per tentativo|  
+|Round|Calcolo*RetryTime*|Tempo di riesecuzione per tentativo|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondi|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondi|  
@@ -202,14 +201,13 @@ Server=123.34.45.56,4724;
   
  ![Algoritmo di ritardo dei tentativi di riesecuzione](../media/dbm-retry-delay-algorithm.gif "Algoritmo di ritardo dei tentativi di riesecuzione")  
   
-##  <a name="Reconnecting"></a>Riconnessione a una sessione di mirroring del database  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Riconnessione a una sessione di mirroring del database  
  Se una connessione stabilita a una sessione di mirroring del database ha esito negativo per qualsiasi motivo, ad esempio a causa di un failover di mirroring del database, e l'applicazione tenta di riconnettersi al server iniziale, il provider di accesso ai dati può tentare di ristabilire la connessione utilizzando il nome del partner di failover memorizzato nella cache del client. La riconnessione non è tuttavia automatica. È necessario che l'applicazione riconosca l'errore, chiuda la connessione non riuscita e ne apra una nuova utilizzando gli stessi attributi della stringa di connessione. A questo punto, il provider di accesso ai dati reindirizzerà la connessione al partner di failover. Se l'istanza del server identificata da questo nome è attualmente il server principale, il tentativo di connessione ha in genere esito positivo. Se non è chiaro se è stato eseguito il commit o il rollback di una transazione, l'applicazione dovrà verificare lo stato della transazione, come durante la riconnessione a un'istanza del server autonoma.  
   
  La riconnessione è analoga a una connessione iniziale per la quale la stringa di connessione specifica un nome partner di failover. Se il primo tentativo di connessione ha esito negativo, si alternano tentativi di connessione tra il nome partner iniziale e il nome partner di failover finché il client non si connette al server principale oppure fino al timeout del provider di accesso ai dati.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verifica che venga eseguita la connessione a un'istanza del server principale, ma non controlla se questa istanza sia partner dell'istanza del server specificata nel nome partner iniziale della stringa di connessione.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verifica che venga eseguita la connessione a un'istanza del server principale, ma non controlla se questa istanza sia partner dell'istanza del server specificata nel nome partner iniziale della stringa di connessione.  
   
  Se per le connessioni viene utilizzato TCP/IP, l'algoritmo di riesecuzione dei tentativi di connessione determina la quantità di tempo stabilita per i tentativi di connessione in ogni ciclo.  
   
@@ -222,7 +220,7 @@ Server=123.34.45.56,4724;
   
  Dopo essere stato reindirizzato al partner di failover, un client può riscontrare risultati imprevisti durante l'utilizzo di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] USE per utilizzare un database diverso. Questa situazione può verificarsi se l'istanza del server principale corrente (il partner di failover) presenta un set diverso di database rispetto al server principale originale (il partner iniziale).  
   
-##  <a name="StalePartnerName"></a>L'effetto di un nome partner di failover non aggiornato  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> Impatto di un nome partner di failover non aggiornato  
  L'amministratore del database può modificare il partner di failover in qualunque momento. Pertanto, un nome partner di failover specificato dal client potrebbe essere scaduto o *non aggiornato*. Ad esempio, considerare un partner di failover denominato Partner_B che viene sostituito da un'altra istanza del server, Partner_C. Ora, se un client fornisce Partner_B come nome del partner di failover, tale nome è non aggiornato. Se il nome partner di failover specificato dal client non è aggiornato, il provider di accesso ai dati si comporta come se il client non avesse fornito alcun nome partner di failover.  
   
  Si consideri ad esempio la situazione in cui un client utilizza una stringa di connessione per una serie di quattro tentativi di connessione. Nella stringa di connessione il nome partner iniziale è Partner_A e il nome partner di failover è Partner_B:  
@@ -243,8 +241,8 @@ Server=123.34.45.56,4724;
 |L'amministratore del database arresta il mirroring, disconnettendo i client, sostituisce Partner_A con Partner_C e riavvia il mirroring.|Partner_B|Partner_C|Il client tenta di connettersi senza successo a Partner_A. Il client tenta quindi di connettersi a Partner_B, ovvero il server principale corrente, e la connessione ha esito positivo. Il provider di accesso ai dati scarica il nome del server mirror corrente, Partner_C, e lo memorizza nella cache come nome partner di failover corrente.|  
 |Viene eseguito il failover manuale del servizio su Partner_C, disconnettendo i client.|Partner_C|Partner_B|Il client tenta di connettersi inizialmente a Partner_A, quindi a Partner_B. Entrambi i nomi generano errori e infine si verifica il timeout della richiesta di connessione, la quale avrà esito negativo.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md)  
   
   

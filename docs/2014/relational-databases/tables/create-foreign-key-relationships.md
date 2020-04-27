@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761618"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
@@ -36,9 +36,9 @@ ms.locfileid: "62761618"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Un vincolo di chiave esterna può anche non essere collegato esclusivamente al vincolo di chiave primaria di un'altra tabella. Può infatti essere definito in modo da fare riferimento alle colonne di un vincolo UNIQUE in un'altra tabella.  
   
@@ -60,14 +60,14 @@ ms.locfileid: "62761618"
   
 -   Una colonna di tipo `varchar(max)` può far parte di un vincolo FOREIGN KEY solo se anche la chiave primaria a cui fa riferimento è definita come tipo `varchar(max)`.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per la creazione di una nuova tabella con una chiave esterna è richiesta l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.  
   
  Per la creazione di una chiave esterna in una tabella esistente è richiesta l'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Per creare una relazione di chiave esterna in Progettazione tabelle  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62761618"
   
 3.  Nella finestra di dialogo **Relazioni chiavi esterne** fare clic su **Aggiungi**.  
   
-     La relazione verrà visualizzata nell' **elenco relazione selezionata** con un nome fornito dal sistema nel formato FK_\<*TableName*>_\<*TableName*>, dove *TableName* è il nome della tabella della chiave esterna.  
+     La relazione verrà visualizzata nell'elenco **Relazione selezionata** con un nome specificato dal sistema nel formato FK_\<*nometabella*>_\<*nometabella*>, dove *nometabella* è il nome della tabella di chiave esterna.  
   
 4.  Fare clic sulla relazione nell'elenco **Relazione selezionata** .  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62761618"
   
 7.  Nella griglia sottostante selezionare le colonne che contribuiranno alla chiave primaria della tabella. Nella cella adiacente alla sinistra di ciascuna colonna selezionare la corrispondente colonna chiave esterna della tabella di chiave esterna.  
   
-     **Progettazione tabelle** suggerisce un nome per la relazione. Per specificare un nome diverso, modificare il contenuto della casella di testo **Nome relazione** .  
+     **Progettazione tabelle** suggerisce automaticamente un nome da assegnare alla relazione. Per specificare un nome diverso, modificare il contenuto della casella di testo **Nome relazione** .  
   
 8.  Scegliere **OK** per creare la relazione.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Per creare una chiave esterna in una nuova tabella  
   

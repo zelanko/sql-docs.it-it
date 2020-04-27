@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755591"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mirroring del database e istanze del cluster di failover di SQL Server)
   Per cluster di failover si intende una combinazione di uno o più dischi fisici inclusi in un gruppo cluster di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Services (MSCS), noto come gruppo di risorse, che partecipano ai nodi del cluster. Il gruppo di risorse viene configurato come istanza cluster di failover che ospita un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un'istanza cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzata nella rete come singolo computer, ma include funzionalità che consentono il failover tra nodi nel caso in cui un nodo non sia più disponibile. Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- I cluster di failover offrono un supporto a disponibilità elevata per un'intera istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre il mirroring del database offre un supporto a disponibilità elevata per un database singolo. Il mirroring del database viene utilizzato tra cluster di failover, nonché tra un cluster di failover e un host non cluster.  
+ I cluster di failover offrono un supporto a disponibilità elevata per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'intera istanza, a differenza del mirroring del database, che fornisce il supporto a disponibilità elevata per un singolo database. Il mirroring del database viene utilizzato tra cluster di failover, nonché tra un cluster di failover e un host non cluster.  
   
 > [!NOTE]  
 >  Per un'introduzione al mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -63,9 +63,9 @@ ms.locfileid: "62755591"
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)   
+## <a name="see-also"></a>Vedi anche  
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
+ [Modalità operative per il mirroring del database](database-mirroring-operating-modes.md)   
  [Istanze del cluster di failover AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

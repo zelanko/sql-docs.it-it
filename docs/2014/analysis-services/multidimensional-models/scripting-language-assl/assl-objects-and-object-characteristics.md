@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736616"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Oggetti ASSL e relative caratteristiche
@@ -63,8 +63,7 @@ ms.locfileid: "62736616"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (dove appropriato)  
+-   `LastProcessed` (dove appropriato)  
   
 > [!NOTE]  
 >  La classificazione di un oggetto come oggetto principale influisce sul modo in cui un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] considera l'oggetto e sul modo in cui l'oggetto viene gestito nel linguaggio di definizione dell'oggetto. Tale classificazione non garantisce tuttavia che gli strumenti di gestione e di sviluppo di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consentiranno la creazione, modifica o l'eliminazione indipendente di questi oggetti.  
@@ -82,7 +81,7 @@ ms.locfileid: "62736616"
   
 -   Comandi associati a un cubo  
   
--   Aggregazioni  
+-   Aggregations  
   
 ## <a name="object-expansion"></a>Espansione di oggetti  
  La restrizione `ObjectExpansion` può essere utilizzata per controllare il grado di espansione dell'oggetto XML ASSL restituito dal server. Per questa restrizione sono disponibili le opzioni elencate nella tabella seguente.  
@@ -97,10 +96,8 @@ ms.locfileid: "62736616"
  Questa sezione di riferimento ASSL descrive la rappresentazione *ExpandFull* . Tutti gli altri livelli di `ObjectExpansion` derivano da tale livello.  
   
 ## <a name="object-processing"></a>Elaborazione di oggetti  
- In ASSL sono disponibili elementi o proprietà di sola lettura (ad esempio `LastProcessed`) che possono essere letti dall'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ma che vengono omessi quando gli script del comando vengono inviati all'istanza. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora senza preavviso valori modificati per gli elementi di sola lettura o errore.  
+ In ASSL sono disponibili elementi o proprietà di sola lettura (ad esempio `LastProcessed`) che possono essere letti dall'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ma che vengono omessi quando gli script del comando vengono inviati all'istanza. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora senza preavviso valori modificati per gli elementi di sola lettura o errore.  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora inoltre le proprietà non appropriate o non rilevanti senza generare errori di convalida. L'elemento X deve essere presente ad esempio solo quando all'elemento Y è associato valore specifico. L'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora l'elemento X anziché convalidarlo rispetto al valore dell'elemento Y.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora inoltre le proprietà non appropriate o non rilevanti senza generare errori di convalida. L'elemento X deve essere presente ad esempio solo quando all'elemento Y è associato valore specifico. L'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora l'elemento X anziché convalidarlo rispetto al valore dell'elemento Y.  
   
   

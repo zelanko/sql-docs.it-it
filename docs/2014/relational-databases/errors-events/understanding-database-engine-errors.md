@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761672"
 ---
 # <a name="understanding-database-engine-errors"></a>Informazioni sugli errori del Motore di database
-  Gli errori generati da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presentano gli attributi descritti nella tabella seguente.  
+  La tabella seguente descrive gli attributi degli errori generati da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "62761672"
   
  Tutti i messaggi di errore di sistema e definiti dall'utente in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] sono contenuti nella vista del catalogo **sys.messages** . È possibile utilizzare l'istruzione RAISERROR per restituire errori definiti dall'utente a un'applicazione.  
   
- Tutte le API di database, ad esempio lo spazio dei nomi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** , ADO (ActiveX Data Objects), OLE DB e ODBC (Open Database Connectivity) forniscono gli attributi di base dell'errore. Queste informazioni includono il numero di errore e la stringa di messaggio. Non tutte le API forniscono tuttavia anche tutti gli altri attributi dell'errore.  
+ Tutte le API di database, ad esempio lo spazio dei nomi **SQLClient** di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ADO (ActiveX Data Objects), OLE DB e ODBC (Open Database Connectivity) forniscono gli attributi di base dell'errore. Queste informazioni includono il numero di errore e la stringa di messaggio. Non tutte le API forniscono tuttavia anche tutti gli altri attributi dell'errore.  
   
  Le informazioni relative a un errore che si verifica nell'ambito del blocco TRY di un costrutto TRY...CATCH possono essere ottenute nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] con funzioni quali ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY ed ERROR_STATE nell'ambito del blocco CATCH associato. Per altre informazioni, vedere [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   

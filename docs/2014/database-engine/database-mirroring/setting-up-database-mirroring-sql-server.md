@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754451"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Impostazione del mirroring del database (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754451"
   
  
   
-##  <a name="PrepareInstances"></a> Preparazione di un'istanza del server a ospitare un server mirror  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Preparazione di un'istanza del server a ospitare un server mirror  
  Per ogni sessione di mirroring del database:  
   
 1.  È necessario che il server principale, il server mirror e il server di controllo, se presente, siano ospitati in istanze di server distinte, situate in sistemi host distinti. Per ogni istanza del server è necessario un endpoint del mirroring del database. Se è necessario creare un endpoint del mirroring di database, assicurarsi che sia accessibile alle altre istanze del server.  
@@ -48,7 +48,7 @@ ms.locfileid: "62754451"
   
 3.  Sull'istanza del server che ospiterà il database mirror, configurare il resto dell'ambiente richiesto per il database con mirroring. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Cenni preliminari: apertura di una sessione di mirroring del database  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Cenni preliminari: apertura di una sessione di mirroring del database  
  I passaggi di base per stabilire una sessione di mirroring sono i seguenti:  
   
 1.  Creare il database mirror ripristinando i backup seguenti, utilizzando RESTORE WITH NORECOVERY per ogni operazione di ripristino:  
@@ -99,7 +99,7 @@ ms.locfileid: "62754451"
   
  
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Include un riepilogo della procedura di creazione di un database mirror o di preparazione di un database mirror prima di riprendere una sessione sospesa. Include inoltre collegamenti ad altre procedure.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754451"
  [Configurare gli account di accesso per il mirroring del database o Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Descrive la creazione di un account di accesso per un'istanza del server remota che utilizza un account diverso dall'istanza del server locale.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **SQL Server Management Studio**  
   
 -   [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754280"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server
@@ -35,7 +35,7 @@ ms.locfileid: "62754280"
   
     -   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   Eseguire [il failover manuale di una sessione di mirroring del Database &#40;&#41;Transact-SQL ](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
     > [!NOTE]  
     >  Per informazioni sul funzionamento del failover manuale, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "62754280"
   
      L'obiettivo di questo passaggio è consentire a un'altra istanza del server di diventare il server mirror in tutte le sessione di mirroring in cui è un server partner.  
   
-     **Restrizioni dopo il failover in un'istanza del server aggiornata.**  
+     **Restrizioni dopo l'esecuzione del failover in un'istanza server aggiornata.**  
   
      Dopo il failover da un'istanza del server precedente a un'istanza del server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , la sessione del database viene sospesa. Non può essere ripristinata finché l'altro server partner non sarà stato aggiornato. Tuttavia, il server principale continua ad accettare connessioni e a consentire l'accesso ai dati e le modifiche sul database principale.  
   
@@ -134,21 +134,21 @@ ms.locfileid: "62754280"
   
 1.  Facoltativamente, nella modalità a protezione elevata, ristabilire il server di controllo del mirroring su ciascuna sessione di mirroring.  
   
-     **Per restituire un server di controllo del mirroring**  
+     **Per integrare un server di controllo del mirroring**  
   
     -   [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Aggiungere un server di controllo del mirroring del database utilizzando l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Mirroring del database di ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+## <a name="see-also"></a>Vedi anche  
+ [Mirroring del database ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Visualizzazione dello stato di un database con mirroring &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Forzare il servizio in una sessione di mirroring del database &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)  
   
   

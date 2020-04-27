@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753673"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>Configurazione delle procedure del driver ODBC di SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "62753673"
   
 -   [Eliminare un'origine dati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure per l'utilizzo di ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

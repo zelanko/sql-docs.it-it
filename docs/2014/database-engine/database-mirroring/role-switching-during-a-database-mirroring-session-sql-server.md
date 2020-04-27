@@ -20,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754488"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
-  All'interno del contesto di una sessione di mirroring del database, i ruoli principale e mirror sono in genere intercambiabili in un processo noto come *cambio di ruolo*. Nel cambio di ruolo, il server mirror funge da *partner di failover* per il server principale, assumendo il ruolo principale e recuperando la propria copia del database e portandola online come nuovo database principale. Il server principale precedente, quando disponibile, assume il ruolo di mirror, e il suo database diventa il nuovo database mirror. Potenzialmente, i ruoli possono essere scambiati nei due sensi in seguito a più errori o per scopi amministrativi.  
+  Nel contesto di una sessione di mirroring del database, in genere i ruoli principale e mirror sono intercambiabili tramite un processo denominato *cambio di ruolo*. Nel cambio di ruolo, il server mirror funge da *partner di failover* per il server principale, assumendo il ruolo principale e recuperando la propria copia del database e portandola online come nuovo database principale. Il server principale precedente, quando disponibile, assume il ruolo di mirror, e il suo database diventa il nuovo database mirror. Potenzialmente, i ruoli possono essere scambiati nei due sensi in seguito a più errori o per scopi amministrativi.  
   
 > [!NOTE]  
 >  In questo argomento si parte dal presupposto che l'utente conosca le modalità operative per il mirroring del database. Per altre informazioni, vedere [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "62754488"
   
 ||Prestazioni elevate|Modalità a sicurezza elevata senza un server di controllo del mirroring|Modalità a sicurezza elevata con un server di controllo del mirroring|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|failover automatico|No|No|Sì|  
+|Failover automatico|No|No|Sì|  
 |Failover manuale|No|Sì|Sì|  
 |Servizio forzato|Sì|Sì|No|  
   
@@ -75,11 +75,11 @@ ms.locfileid: "62754488"
   
  Durante un cambio di ruolo, il periodo di tempo durante il quale il mirroring del database non sarà disponibile dipende dal tipo e dalla causa del cambio di ruolo. Per altre informazioni, vedere [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
-##  <a name="ManualFailover"></a>Failover manuale  
+##  <a name="manual-failover"></a><a name="ManualFailover"></a>Failover manuale  
  Il failover manuale disconnette i client dal database e inverte i ruoli dei partner. Solo la modalità a sicurezza elevata supporta il failover manuale.  
   
   
-###  <a name="AvailabilityDuringUpgrades"></a>Gestione della disponibilità durante gli aggiornamenti  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="AvailabilityDuringUpgrades"></a> Mantenimento della disponibilità durante gli aggiornamenti  
  L'amministratore del database può utilizzare il failover manuale per aggiornare l'hardware o il software senza ridurre la disponibilità. Per eseguire aggiornamenti del software mediante il mirroring del database, è necessario che il server mirror e/o il sistema ricevano precedentemente gli aggiornamenti.  
   
 > [!NOTE]  
@@ -89,10 +89,10 @@ ms.locfileid: "62754488"
   
  ![Failover manuale pianificato](../media/dbm-failovmanuplanned.gif "Failover manuale pianificato")  
   
-###  <a name="ConditionsForManualFo"></a>Condizioni necessarie per un failover manuale  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ConditionsForManualFo"></a> Condizioni necessarie per un failover manuale  
  Per il failover manuale, è necessario che il livello di protezione delle transazioni sia impostato su FULL (ovvero in modalità a protezione elevata). Se i partner sono connessi e il database è già sincronizzato, è supportato il failover manuale.  
   
-###  <a name="HowManualFoWorks"></a>Funzionamento del failover manuale  
+###  <a name="how-manual-failover-works"></a><a name="HowManualFoWorks"></a>Funzionamento del failover manuale  
  Il failover manuale inizia la sequenza di azioni seguente:  
   
 1.  Il server principale disconnette i client dal database principale, invia la parte finale del log al server mirror e, in vista del passaggio al ruolo di server mirror, imposta lo stato di mirroring su SYNCHRONIZING.  
@@ -118,13 +118,13 @@ ms.locfileid: "62754488"
   
  Dopo il failover, i client devono riconnettersi al database principale corrente. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
- **Per avviare il failover manuale**  
+ **Per iniziare il failover manuale**  
   
 -   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
--   Eseguire [il failover manuale di una sessione di mirroring del Database &#40;&#41;Transact-SQL ](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+-   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a>Failover automatico  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a>Failover automatico  
  Il failover automatico è supportato esclusivamente nelle sessioni di mirroring del database in esecuzione con un server di controllo del mirroring in modalità a protezione elevata (*modalità a protezione elevata con failover automatico*). In modalità a protezione elevata con failover automatico, dopo la sincronizzazione del database, se il database principale risulta non disponibile, si verifica un failover automatico. In seguito a questo processo, il server mirror assume il ruolo di server principale e attiva la modalità online per la propria copia del database come database principale. La sincronizzazione del database impedisce la perdita di dati durante il failover, poiché per ogni transazione di cui è stato eseguito il commit nel database principale viene eseguito il commit anche nel database mirror.  
   
 > [!IMPORTANT]  
@@ -132,7 +132,7 @@ ms.locfileid: "62754488"
   
   
   
-###  <a name="ConditionsForAutoFo"></a>Condizioni necessarie per un failover automatico  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="ConditionsForAutoFo"></a> Condizioni necessarie per un failover automatico  
  Per l'esecuzione del failover automatico è necessario che si verifichino le condizioni seguenti:  
   
 -   La sessione di mirroring del database deve essere in esecuzione in modalità a protezione elevata e deve disporre di un server di controllo del mirroring. Per altre informazioni, vedere [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
@@ -148,7 +148,7 @@ ms.locfileid: "62754488"
   
      La modalità in base a cui il server mirror rileva un errore del server principale varia a seconda che si tratti di un errore hardware o software. Per altre informazioni, vedere [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md).  
   
-###  <a name="HowAutoFoWorks"></a>Funzionamento del failover automatico  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> Funzionamento del failover automatico  
  Se le condizioni riportate sopra sono soddisfatte, il failover automatico avvia la sequenza di azioni seguente:  
   
 1.  Se il server principale è ancora in esecuzione, lo stato del database principale cambia in DISCONNECTED e tutti i client vengono disconnessi dal database principale.  
@@ -166,16 +166,16 @@ ms.locfileid: "62754488"
   
  Nella figura seguente viene illustrata una singola istanza di failover automatico.  
   
- ![Failover automatico](../media/dbm-failovauto1round.gif "failover automatico")  
+ ![Failover automatico](../media/dbm-failovauto1round.gif "Failover automatico")  
   
- La sessione ha inizialmente un quorum completo, ovvero tutti e tre i server sono connessi. **Partner_A** è il server principale e **Partner_B** è il server mirror. **Partner_A** , o il database principale in **Partner_A**, diventa non disponibile. Sia il server di controllo del mirroring che **Partner_B** rilevano che il server principale non è più disponibile e la sessione mantiene il quorum. **Partner_B** diventa il server principale e rende disponibile la propria copia del database come nuovo database principale. Quando si riconnette alla sessione, **Partner_A** individua che **Partner_B** detiene ora il ruolo di server principale. **Partner_A** quindi assume il ruolo di mirror.  
+ La sessione ha inizialmente un quorum completo, ovvero tutti e tre i server sono connessi. **Partner_A** è il server principale e **Partner_B** il server mirror. **Partner_A** , o il database principale del **Partner_A**, diventa non disponibile. Sia il server di controllo del mirroring che **Partner_B** rilevano che il server principale non è più disponibile e la sessione mantiene il quorum. **Partner_B** diviene il server principale e rende disponibile la propria copia del database come nuovo database principale. Quando si riconnette alla sessione, **Partner_A** individua che **Partner_B** detiene ora il ruolo di server principale. **Partner_A** assume quindi il ruolo di server mirror.  
   
  Dopo il failover, i client devono riconnettersi al database principale corrente. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
 >  Le transazioni che sono state preparate utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator, ma di cui non è stato ancora eseguito il commit nel momento in cui si verifica un failover, vengono considerate interrotte dopo il failover del database.  
   
-###  <a name="DisableAutoSSMS"></a>Per disabilitare il failover automatico (SQL Server Management Studio)  
+###  <a name="to-disable-automatic-failover-sql-server-management-studio"></a><a name="DisableAutoSSMS"></a>Per disabilitare il failover automatico (SQL Server Management Studio)  
  Aprire la pagina **Proprietà database - Mirroring** e cambiare la modalità operativa selezionando una delle opzioni seguenti:  
   
 -   **Protezione elevata senza failover automatico (sincrona)**  
@@ -189,14 +189,14 @@ ms.locfileid: "62754488"
 ### <a name="to-disable-automatic-failover-using-transact-sql"></a>Per disabilitare il failover automatico (Transact-SQL)  
  In un punto qualsiasi di una sessione di mirroring del database, il proprietario del database può disabilitare il failover automatico disabilitando il server di controllo del mirroring.  
   
- **Per disattivare il server di controllo del mirroring**  
+ **Per disabilitare il server di controllo del mirroring**  
   
 -   [Rimuovere il server di controllo del mirroring da una sessione di mirroring del database &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
     > [!NOTE]  
     >  Se si disabilita il server di controllo del mirroring mentre resta attiva la protezione completa delle transazioni, la sessione passa in modalità a protezione elevata senza failover automatico.  
   
-##  <a name="ForcedService"></a>Servizio forzato (con possibile perdita di dati)  
+##  <a name="forced-service-with-possible-data-loss"></a><a name="ForcedService"></a>Servizio forzato (con possibile perdita di dati)  
  Il mirroring del database include l'utilizzo forzato del servizio (con possibile perdita di dati) come metodo di ripristino di emergenza per consentire l'utilizzo di un server mirror come server warm standby. Il servizio forzato è possibile solo se il server principale è disconnesso dal server mirror in una sessione di mirroring. Dato che l'utilizzo forzato del servizio determina il rischio di possibili perdite di dati, è consigliabile utilizzarlo con cautela e quando strettamente necessario.  
   
  Il supporto per l'utilizzo forzato del servizio dipende dalla modalità operativa e dallo stato della sessione, come segue:  
@@ -214,19 +214,19 @@ ms.locfileid: "62754488"
   
   
   
-###  <a name="TypicalCaseFS"></a>Caso tipico di un servizio forzato  
+###  <a name="typical-case-of-forced-service"></a><a name="TypicalCaseFS"></a>Caso tipico di un servizio forzato  
  Nella figura seguente viene illustrato un caso tipico di utilizzo forzato del servizio (con possibile perdita di dati).  
   
  ![Forzatura del servizio con possibile perdita di dati](../media/dbm-forced-service.gif "Forzatura del servizio con possibile perdita di dati")  
   
  Come illustrato nella figura, il server principale originale, **Partner_A**, diventa non disponibile per il server mirror, **Partner_B**, causando la disconnessione del database mirror. Dopo aver verificato che **Partner_A** non è disponibile ai client, l'amministratore del database forza il servizio, con possibilità di perdita di dati, su **Partner_B**. **Partner_B** diventa il server principale e viene eseguito con il database *esposto* , ovvero senza mirroring. A questo punto, i client possono riconnettersi a **Partner_B**.  
   
- Quando **Partner_A** diventa disponibile, riconnette il nuovo server principale, si riconnette alla sessione e assume il ruolo di mirror. La sessione di mirroring viene sospesa immediatamente, senza sincronizzazione del nuovo database mirror. La sospensione della sessione consente all'amministratore del database di decidere se riprendere la sessione o, in casi estremi, rimuovere il mirroring e tentare di salvare i dati dal database principale precedente. In questo caso, l'amministratore del database sceglie di riprendere il mirroring. A questo punto, **Partner_A** assume il ruolo di server mirror ed esegue il rollback del database principale originale dal momento dell'ultima transazione sincronizzata eseguita correttamente. Eventuali transazioni con commit che non siano state scritte sul disco del server mirror prima dell'utilizzo forzato del servizio vengono perdute. **Partner_A** esegue quindi il rollforward del nuovo database mirror applicando eventuali modifiche apportate al nuovo database principale, poiché il server mirror precedente è diventato il nuovo server principale.  
+ Quando **Partner_A** diventa disponibile, riconnette il nuovo server principale, si riconnette alla sessione e assume il ruolo di mirror. La sessione di mirroring viene sospesa immediatamente, senza sincronizzazione del nuovo database mirror. La sospensione della sessione consente all'amministratore del database di decidere se riprendere la sessione o, in casi estremi, rimuovere il mirroring e tentare di salvare i dati dal database principale precedente. In questo caso, l'amministratore del database sceglie di riprendere il mirroring. A questo punto, **Partner_A** assume il ruolo di server mirror ed esegue il rollback del database principale originale dal momento dell'ultima transazione sincronizzata eseguita correttamente. Eventuali transazioni con commit che non siano state scritte sul disco del server mirror prima dell'utilizzo forzato del servizio vengono perdute. **Partner_A** esegue quindi il rollforward del nuovo database mirror applicando eventuali modifiche apportate al nuovo database principale dal momento in cui il server mirror precedente è diventato il nuovo server principale.  
   
 > [!NOTE]  
 >  Sebbene la modalità a prestazioni elevate non ne richieda la presenza, se un server di controllo del mirroring è configurato, è possibile forzare il servizio solo se il server di controllo del mirroring è attualmente connesso al server mirror.  
   
-###  <a name="FSrisks"></a>Rischi correlati all'utilizzo forzato del servizio  
+###  <a name="risks-of-forcing-service"></a><a name="FSrisks"></a>Rischi correlati all'utilizzo forzato del servizio  
  È fondamentale comprendere che l'utilizzo forzato del servizio può causare la perdita di dati. La perdita di dati è possibile in quanto il server mirror non è in grado di comunicare con il server principale e pertanto non può garantire che i due database siano sincronizzati. L'utilizzo forzato del servizio comporta l'avvio di un nuovo fork di recupero. Poiché il database principale originale e il database mirror si trovano su fork di recupero diversi, ogni database includerà i dati che l'altro database non include. Il database principale originale include tutte le modifiche non inviate al database mirror precedente dalla sua coda di invio (il log non inviato). Il database mirror precedente include tutte le modifiche apportate dopo che il servizio è stato forzato.  
   
  Se il servizio viene forzato a causa di un errore del server principale, la potenziale perdita di dati dipende dal fatto che uno o più log delle transazioni non siano stati inviati al server mirror prima dell'errore. In modalità a protezione elevata, questo è possibile solo finché il database mirror viene sincronizzato. In modalità a prestazioni elevate, è sempre possibile la presenza di log non inviato accumulato.  
@@ -239,7 +239,7 @@ ms.locfileid: "62754488"
   
  Per altre informazioni, vedere [Gestione della potenziale perdita di dati](#ManageDataLoss)più avanti in questo argomento.  
   
-###  <a name="ManageDataLoss"></a>Gestione della potenziale perdita di dati  
+###  <a name="managing-the-potential-data-loss"></a><a name="ManageDataLoss"></a>Gestione della potenziale perdita di dati  
  Dopo l'utilizzo forzato del servizio, quando il server principale precedente è disponibile e supponendo che il relativo database non sia danneggiato, è possibile tentare di gestire la potenziale perdita di dati. La tecnica disponibile per la gestione della potenziale perdita di dati dipende dal fatto che il server principale originale sia stato riconnesso al relativo partner e si sia ricollegato alla sessione di mirroring. Supponendo che il server principale originale possa accedere alla nuova istanza principale, la riconnessione avviene in modo automatico e trasparente.  
   
 #### <a name="the-original-principal-server-has-reconnected"></a>Il server principale originale si è riconnesso  
@@ -268,7 +268,7 @@ ms.locfileid: "62754488"
   
      Per riattivare il mirroring utilizzando il database aggiornato quale database principale iniziale, utilizzare questo backup (e almeno un backup del log successivo) per creare un nuovo database mirror. È necessario applicare qualsiasi backup del log eseguito dopo la rimozione del mirroring. È pertanto consigliabile rimandare ulteriori backup del log del database principale fino all'avvio della nuova sessione di mirroring.  
   
-###  <a name="RelatedTasksForFS"></a>Attività correlate per la gestione di un failover forzato  
+###  <a name="related-tasks-for-managing-a-forced-failover"></a><a name="RelatedTasksForFS"></a>Attività correlate per la gestione di un failover forzato  
  **Per forzare il servizio**  
   
 -   [Forzare il servizio in una sessione di mirroring del Database &#40;&#41;Transact-SQL ](force-service-in-a-database-mirroring-session-transact-sql.md).  
@@ -287,13 +287,13 @@ ms.locfileid: "62754488"
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;il mirroring del database&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md)   
  [Connettere i client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   
- [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
- [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)   
+ [Ripristini di database completi &#40;modello di recupero con versione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [Modalità operative per il mirroring del database](database-mirroring-operating-modes.md)   
  [Stati di mirroring &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768003"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Istruzione SQL CREATE TABLE (Importazione/Esportazione guidata SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62768003"
 > [!NOTE]  
 >  Se si desidera includere un ritorno a capo nell'istruzione SQL, premere CTRL+INVIO. Premere solo INVIO per chiudere la finestra di dialogo.  
   
- **Genera automaticamente**  
+ **AutoGenerate**  
  Il pulsante **Genera automaticamente** consente di ripristinare l'istruzione SQL predefinita, qualora fosse stata modificata.  
   
   

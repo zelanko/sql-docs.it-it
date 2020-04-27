@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754702"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitoraggio mirroring del database (pagina Stato)
   Questa pagina di sola lettura mostra lo stato di mirroring più recente per le istanze del server principale e mirror del database attualmente selezionato nell'albero di navigazione. Se le informazioni relative a un'istanza non sono attualmente disponibili, alcune delle celle nella griglia **Stato** corrispondenti all'istanza sono disattivate e visualizzano la dicitura **Sconosciuto**.  
   
- **Per utilizzare SQL Server Management Studio per monitorare il mirroring del database**  
+ **Per utilizzare SQL Server Management Studio per il monitoraggio del mirroring del database**  
   
 -   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -40,8 +40,8 @@ ms.locfileid: "62754702"
 |-----------------|-----------------|  
 |**Istanza del server**|Nome dell'istanza del server il cui stato è visualizzato nella riga **Stato** .|  
 |**Ruolo corrente**|Ruolo corrente dell'istanza del server, **Principale** o **Mirror**.|  
-|**Stato di mirroring**|Lo stato del mirroring segnalato dall'istanza del server e un'icona che ne indica la gravità. Gli stati possibili e le relative icone sono indicati di seguito:<br /><br /> -: Stato **sconosciuto**. Il monitoraggio non è connesso ad alcun partner. Le uniche informazioni disponibili sono relative agli elementi memorizzati nella cache dal monitoraggio.<br /><br /> Icona di avviso: <br />                            **Sincronizzazione**dello stato.<br />                          Il contenuto del database mirror è in ritardo rispetto a quello del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward. All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.<br /><br /> Cilindro del database standard: stato<br />                            **Sincronizzazione**completata.<br />                          Quando il server mirror è sufficientemente aggiornato rispetto al server principale, lo stato del database diventa **Sincronizzato**. Il database resta in questo stato fino a quando il server principale invia modifiche al server mirror e quest'ultimo le applica al database mirror. Per la modalità a protezione elevata, il failover automatico e quello manuale sono entrambi possibili, senza perdita di dati. In modalità a prestazioni elevate è possibile che si verifichi la perdita di dati anche nello stato **Sincronizzato** .<br /><br /> Icona di avviso: stato<br />                            **Sospeso**.<br />                            Il database principale è disponibile, ma non viene inviato alcun log al server mirror.<br /><br /> Icona di errore: stato <br />                            **Disconnesso**.<br />                          L'istanza del server non può connettersi al proprio partner.|  
-|**Connessione server di controllo**|Stato della connessione del server di controllo del mirroring, preceduto da un'icona di stato: **Sconosciuto**, **Connesso**o **Disconnesso**.|  
+|**Stato mirroring**|Lo stato del mirroring segnalato dall'istanza del server e un'icona che ne indica la gravità. Gli stati possibili e le relative icone sono indicati di seguito:<br /><br /> -: Stato **sconosciuto**. Il monitoraggio non è connesso ad alcun partner. Le uniche informazioni disponibili sono relative agli elementi memorizzati nella cache dal monitoraggio.<br /><br /> Icona di avviso: <br />                            **Sincronizzazione**dello stato.<br />                          Il contenuto del database mirror è in ritardo rispetto a quello del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward. All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.<br /><br /> Cilindro del database standard: stato<br />                            **Sincronizzato**.<br />                          Quando il server mirror è sufficientemente aggiornato rispetto al server principale, lo stato del database diventa **Sincronizzato**. Il database resta in questo stato fino a quando il server principale invia modifiche al server mirror e quest'ultimo le applica al database mirror. Per la modalità a protezione elevata, il failover automatico e quello manuale sono entrambi possibili, senza perdita di dati. In modalità a prestazioni elevate è possibile che si verifichi la perdita di dati anche nello stato **Sincronizzato** .<br /><br /> Icona di avviso: stato<br />                            **Sospeso**.<br />                            Il database principale è disponibile, ma non viene inviato alcun log al server mirror.<br /><br /> Icona di errore: stato <br />                            **Disconnesso**.<br />                          L'istanza del server non può connettersi al proprio partner.|  
+|**Connessione server di controllo del mirroring del database**|Stato della connessione del server di controllo del mirroring, preceduto da un'icona di stato: **Sconosciuto**, **Connesso**o **Disconnesso**.|  
 |**History**|Fare clic per visualizzare la cronologia del mirroring sull'istanza del server. Viene aperta la finestra di dialogo **Cronologia mirroring del database** , in cui sono visualizzate la cronologia dello stato del mirroring e le statistiche per un database con mirroring per un'istanza del server determinata.<br /><br /> Il pulsante **Cronologia** è visualizzato in grigio se il monitoraggio non è connesso all'istanza del server.|  
   
  **Log principale (** * \<tempo>* **)**  
@@ -93,11 +93,11 @@ ms.locfileid: "62754702"
 -   **Protezione elevata con failover automatico (sincrona)**  
   
 ## <a name="remarks"></a>Osservazioni  
- I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Dipendono dal **processo di Monitoraggio mirroring del database**per aggiornare la tabella dello stato a intervalli regolari. Per conoscere la durata dello stato visualizzato l'utente può consultare i tempi nelle etichette **Log principale (***\<ora>***)** e **Log mirror (***\<ora>***)**.  
+ I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Dipendono dal **processo di Monitoraggio mirroring del database**per aggiornare la tabella dello stato a intervalli regolari. Per conoscere la durata dello stato visualizzato, un utente può esaminare i tempi nelle etichette **log principale (***\<ora>***)** e **Log mirror (***\<ora>***)** .  
   
  Se questo processo non esiste o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato diventa sempre più obsoleto ed è possibile che non rifletta più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

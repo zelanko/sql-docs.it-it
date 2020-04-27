@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736354"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copia di colonne da una tabella a un'altra (Motore di database)
@@ -31,23 +31,23 @@ ms.locfileid: "62736354"
   
      [Sicurezza](#Security)  
   
--   **Per eseguire l'intimidazione delle colonne, utilizzando:**  
+-   **Per copiare le colonne tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Quando si copia una colonna contenente un tipo di dati alias da un database a un altro, il tipo di dati alias potrebbe non essere disponibile nel database di destinazione. In questo caso, alla colonna verrà assegnato il tipo di dati di base più simile tra quelli disponibili nel database.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736354"
      Se si sta effettuando la copia di righe all'interno di una stessa tabella, sarà possibile aggiungere la tabella di origine come tabella di destinazione.  
   
     > [!NOTE]  
-    >  **Progettazione query** non è in grado di determinare in anticipo quali tabelle e viste è possibile aggiornare. Pertanto, nell'elenco delle tabelle nella finestra di dialogo **Scegliere la tabella di destinazione per Accodamento** sono visualizzate tutte le tabelle e le viste disponibili nella connessione dati su cui si esegue la query, anche quelle che potrebbero non essere valide come tabelle o viste di destinazione.  
+    >  In**Progettazione query** non è possibile stabilire in anticipo le tabelle e le viste da aggiornare. Pertanto, nell'elenco delle tabelle nella finestra di dialogo **Scegliere la tabella di destinazione per Accodamento** sono visualizzate tutte le tabelle e le viste disponibili nella connessione dati su cui si esegue la query, anche quelle che potrebbero non essere valide come tabelle o viste di destinazione.  
   
 5.  Fare clic con il pulsante destro del mouse nel corpo del riquadro Diagramma, quindi scegliere **Aggiungi tabella a diagramma**dal menu di scelta rapida.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62736354"
   
      Quando si esegue una query di Accodamento, non viene restituito alcun risultato nel [riquadro risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Viene invece visualizzato un messaggio che indica il numero di righe copiate.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   

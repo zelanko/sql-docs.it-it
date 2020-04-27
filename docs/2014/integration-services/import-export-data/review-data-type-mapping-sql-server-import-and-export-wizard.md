@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767943"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
@@ -35,9 +35,9 @@ ms.locfileid: "62767943"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |Icona di origine dati|Indica la probabilità di esito positivo per le conversioni dei tipi di dati:<br /><br /> Un'icona raffigurante un segno di spunta verde indica che la procedura guidata prevede l'esito positivo per tutte le conversioni dei tipi di dati per la tabella.<br /><br /> Un'icona di avviso gialla indica che è consigliabile verificare le singole conversioni eseguite dalla procedura guidata. Per verificare tali conversioni, selezionare la tabella, quindi controllare le conversioni per singole colonne nell'elenco **Mapping dei tipi di dati** .<br /><br /> Un'icona di errore rossa indica che la procedura guidata non è in grado di eseguire in modo affidabile alcune delle conversioni per la tabella.|  
-|**Origine**|Visualizza il nome della tabella di origine.|  
+|**origine**|Visualizza il nome della tabella di origine.|  
 |Icona di destinazione|Indica se la destinazione è già presente o se verrà creata dalla procedura guidata:<br /><br /> Un'icona di tabella indica che la destinazione è costituita da una tabella esistente.<br /><br /> Un'icona di tabella con un riflesso di luce indica che la destinazione è costituita da una nuova tabella che verrà creata dalla procedura guidata.|  
-|**Destinazione**|Visualizza il nome della tabella di destinazione.|  
+|**Destination**|Visualizza il nome della tabella di destinazione.|  
   
  Per visualizzare le informazioni di conversione relative a una singola tabella, selezionare una tabella in questa griglia della **tabella** . Le informazioni sulla conversione per la tabella selezionata verranno visualizzate nelle colonne della griglia **Mapping dei tipi di dati** nella parte inferiore della pagina.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "62767943"
 |**Tipo di destinazione**|Visualizza il tipo di dati della colonna di destinazione.|  
 |**Convertire**|Consente di specificare se la conversione pianificata deve continuare:<br /><br /> Selezionare la casella di controllo per fare in modo che la procedura guidata prosegua con la conversione pianificata.<br /><br /> Deselezionare la casella di controllo per annullare la conversione del tipo di dati.|  
 |**In errore**|Consente di specificare la modalità di gestione degli errori utilizzata dalla procedura guidata:<br /><br /> Utilizzare l'impostazione **in errore (globale)** .<br /><br /> Generare un errore e arrestare il processo di importazione o esportazione.<br /><br /> Ignorare l'errore.|  
-|**In un troncamento**|Consente di specificare la modalità di gestione del troncamento utilizzata dalla procedura guidata:<br /><br /> Utilizzare l'impostazione **in troncamento (globale)** .<br /><br /> Generare un errore e arrestare il processo di importazione o esportazione.<br /><br /> Ignorare il troncamento.|  
+|**In caso di troncamento**|Consente di specificare la modalità di gestione del troncamento utilizzata dalla procedura guidata:<br /><br /> Utilizzare l'impostazione **in troncamento (globale)** .<br /><br /> Generare un errore e arrestare il processo di importazione o esportazione.<br /><br /> Ignorare il troncamento.|  
   
  Per visualizzare informazioni dettagliate sulla conversione di una determinata colonna di dati, fare doppio clic su qualsiasi riga nell'elenco. Verrà visualizzata la finestra di dialogo **Dettagli conversione colonna** , che contiene informazioni più dettagliate sulla conversione per la colonna.  
   
 ### <a name="error-handling-options"></a>Opzioni di gestione degli errori  
- **In errore (globale)**  
+ **In caso di errore (globale)**  
  Consente di specificare la modalità di gestione degli errori utilizzata dalla procedura guidata:  
   
 -   Generare un errore e arrestare il processo di importazione o esportazione.  
@@ -67,7 +67,7 @@ ms.locfileid: "62767943"
   
  Questa impostazione si applica a tutte le conversioni per cui nella colonna **In caso di errore** dell'elenco **Mapping dei tipi di dati** è selezionata l'opzione **Usa valore globale** .  
   
- **In un troncamento (globale)**  
+ **In caso di troncamento (globale)**  
  Consente di specificare la modalità di gestione del troncamento utilizzata dalla procedura guidata:  
   
 -   Generare un errore e arrestare il processo di importazione o esportazione.  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761630"
 ---
 # <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
@@ -40,7 +40,7 @@ ms.locfileid: "62761630"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione SQL Server](../sql-server-configuration-manager.md)   
- [Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [Impostare l'account del servizio per l'utilità di avvio del daemon filtri full-text](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Ricerca full-text](../search/full-text-search.md)  
   
   
