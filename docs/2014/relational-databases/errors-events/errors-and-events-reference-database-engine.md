@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870903"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
@@ -38,7 +38,7 @@ Questa sezione contiene i messaggi di errore motore di database che richiedono u
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Community di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Questo sito contiene collegamenti a newsgroup e forum monitorati dalla community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elenca inoltre le fonti di informazione della community, quali Blog e siti Web. La community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto utile per ottenere la risposta a eventuali domande. Non è tuttavia garantita una risposta.|  
-|[Community di SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Guida e supporto tecnico Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|È possibile utilizzare questo sito Web per richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|[Community del centro per sviluppatori di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Supporto Tecnico Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|È possibile utilizzare questo sito Web per richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

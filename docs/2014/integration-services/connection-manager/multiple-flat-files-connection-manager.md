@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833702"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
@@ -47,7 +47,7 @@ ms.locfileid: "62833702"
   
  Quando la gestione connessione per più file flat fa riferimento a più file, i percorsi dei file sono separati da una barra verticale. La proprietà `ConnectionString` della gestione connessione ha il formato seguente:  
   
- \<**>|\<*percorso* percorso>  
+ \<*percorso*>|\<*percorso*>  
   
  Per specificare più file è inoltre possibile utilizzare caratteri jolly. Ad esempio, per fare riferimento a tutti i file di testo sull'unità C, il valore `ConnectionString` della proprietà può essere impostato su C\\: *. txt.  
   
@@ -62,17 +62,17 @@ ms.locfileid: "62833702"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor gestione connessione per più file flat &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor gestione connessione per più file flat &#40;pagina colonne&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Colonne&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor gestione connessione per più file flat &#40;pagina avanzate&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Avanzate&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor gestione connessione per più file flat &#40;pagina anteprima&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Anteprima&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Origine file flat](../data-flow/flat-file-source.md)   
  [Destinazione file flat](../data-flow/flat-file-destination.md)   
  [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  

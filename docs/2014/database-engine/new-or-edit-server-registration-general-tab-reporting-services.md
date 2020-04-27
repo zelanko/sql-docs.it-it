@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844274"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Creazione o modifica della registrazione del server (scheda Generale) (Reporting Services)
@@ -64,7 +64,7 @@ ms.locfileid: "62844274"
  **Test**  
  Consente di testare la connessione al server selezionato in **Nome server**.  
   
- **Salvare**  
+ **Salva**  
  Fare clic su questo pulsante per salvare le impostazioni del server registrato.  
   
   

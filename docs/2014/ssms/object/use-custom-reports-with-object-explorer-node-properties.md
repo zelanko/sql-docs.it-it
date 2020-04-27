@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823698"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
@@ -43,7 +43,7 @@ ms.locfileid: "62823698"
   
 2.  Copiare il file di report in una cartella creata nel server di database per i report personalizzati.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un nodo Esplora oggetti, scegliere **Report**e quindi fare clic su Report personalizzati. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file di report e quindi fare clic su **Apri**.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un nodo in Esplora oggetti, scegliere **report**, quindi fare clic su report personalizzati. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file di report e quindi fare clic su **Apri**.  
   
      Alla prima apertura di un nuovo report personalizzato da un nodo Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
   
@@ -998,9 +998,9 @@ ms.locfileid: "62823698"
   
  `</Report>`  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
  [Aggiungere un report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
- [Visualizzare gli avvisi relativi all'esecuzione di report personalizzati](unsuppress-run-custom-report-warnings.md)  
+ [Visualizzazione di avvisi relativi all'esecuzione di report personalizzati](unsuppress-run-custom-report-warnings.md)  
   
   

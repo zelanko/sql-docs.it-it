@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827559"
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
@@ -37,7 +37,7 @@ ms.locfileid: "62827559"
 |`<ir-start>`|Si tratta di un numero LSN di una modifica appena prima dell'avvio del caricamento iniziale.|  
 |`<ir-end>`|Si tratta di un numero LSN di una modifica appena dopo il completamento del caricamento iniziale.|  
 |`TS`|Viene contrassegnato il timestamp per l'ultimo aggiornamento dello stato CDC.|  
-|**\<timestamp>**|Si tratta di una rappresentazione decimale della proprietà System.DateTime.UtcNow a 64 bit.|  
+|**\<>timestamp**|Si tratta di una rappresentazione decimale della proprietà System.DateTime.UtcNow a 64 bit.|  
 |`ER`|Viene visualizzato quando si verifica un errore durante l'esecuzione dell'ultima operazione ed è inclusa una breve descrizione della causa dell'errore. Se il componente è presente, viene sempre visualizzato per ultimo.|  
 |`<short-error-text>`|Si tratta della breve descrizione dell'errore.|  
   
@@ -84,8 +84,8 @@ ms.locfileid: "62827559"
   
  Se non si utilizza l'attività di controllo CDC con Automatic State Persistence, è necessario caricare il valore della variabile dall'archivio permanente in cui sono stati salvati i relativi valori all'ultima esecuzione del pacchetto e riscriverlo nell'archivio permanente in cui è stata completata l'elaborazione dell'intervallo di elaborazione corrente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività di controllo CDC](../control-flow/cdc-control-task.md)   
- [Editor dell'attività di controllo CDC](../cdc-control-task-editor.md)  
+ [Editor attività Controllo CDC](../cdc-control-task-editor.md)  
   
   

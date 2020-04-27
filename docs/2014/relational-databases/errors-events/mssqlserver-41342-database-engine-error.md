@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57ce65cb8fed85eed9eacc176a371dec52145e1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62867915"
 ---
 # <a name="mssqlserver_41342"></a>MSSQLSERVER_41342
@@ -38,7 +38,7 @@ ms.locfileid: "62867915"
 ## <a name="user-action"></a>Azione dell'utente  
  Aggiornare il processore. Se il processore supporta l'istruzione e si sta eseguendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale, modificare la configurazione per supportare l'istruzione CMPXCHG16B.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

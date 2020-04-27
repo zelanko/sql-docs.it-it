@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830127"
 ---
 # <a name="transfer-error-messages-task"></a>Attività Trasferisci messaggi di errore
@@ -65,7 +65,7 @@ ms.locfileid: "62830127"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci messaggi di errore &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci messaggi di errore &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Trasferisci messaggi di errore &#40;pagina Messaggi&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
@@ -80,8 +80,8 @@ ms.locfileid: "62830127"
   
 -   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Attività di Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   
   

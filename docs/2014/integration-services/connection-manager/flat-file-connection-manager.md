@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833816"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
@@ -71,13 +71,13 @@ ms.locfileid: "62833816"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor gestione connessione file flat &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor gestione connessione file flat &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor gestione connessione file flat &#40;pagina colonne&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [Editor gestione connessione file flat &#40;pagina Colonne&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Editor gestione connessione file flat &#40;pagina anteprima&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   

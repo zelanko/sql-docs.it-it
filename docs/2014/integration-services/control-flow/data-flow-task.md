@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832455"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
@@ -44,9 +44,7 @@ ms.locfileid: "62832455"
  ![Flussi di dati](../media/mw-dts-09.gif "Flussi di dati")  
   
 ## <a name="log-entries"></a>Voci di log  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
@@ -90,7 +88,7 @@ ms.locfileid: "62832455"
   
  Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
-|Colonna|Descrizione|valore|  
+|Colonna|Descrizione|Valore|  
 |------------|-----------------|-----------|  
 |**PathID**|Valore della proprietà `ID` del percorso tra l'origine OLE DB e la trasformazione Ordinamento.|1185|  
 |**PathName**|Valore della proprietà `Name` del percorso.|Output origine OLE DB|  

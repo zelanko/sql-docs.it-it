@@ -1,5 +1,5 @@
 ---
-title: Preparazione di comandi | Microsoft Docs
+title: Preparazione dei comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62865021"
 ---
 # <a name="preparing-commands"></a>Preparazione dei comandi
@@ -51,7 +51,7 @@ ms.locfileid: "62865021"
   
  Un oggetto comando include al massimo una stored procedure temporanea in **tempdb**. Le stored procedure temporanee esistenti rappresentano il testo del comando corrente di un oggetto comando specifico.  
   
-## <a name="see-also"></a>Vedere anche  
- [Comandi](commands.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Comandi:](commands.md)  
   
   

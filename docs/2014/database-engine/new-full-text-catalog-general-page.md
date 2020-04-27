@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844099"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuovo catalogo full-text (pagina Generale)
@@ -24,7 +24,7 @@ ms.locfileid: "62844099"
   
  **Per utilizzare SQL Server Management Studio per creare un catalogo full-text**  
   
--   [Creazione e gestione dei cataloghi full-text](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
+-   [Creare e gestire cataloghi full-text](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Nome catalogo full-text**  
@@ -37,10 +37,10 @@ ms.locfileid: "62844099"
  **Imposta come catalogo predefinito**  
  Selezionare questa opzione per impostare il catalogo come predefinito per i nuovi cataloghi full-text.  
   
- **Distinzione tra caratteri accentati**  
+ **Distinzione caratteri accentati/non accentati**  
  Indica se il catalogo è sensibile o non sensibile ai segni diacritici, ad esempio una tilde (**~**), un contrassegno acuto acuto (**́**) o una diereszione (**̈**). Se si seleziona **insensitive**, i segni diacritici vengono ignorati negli indici full-text associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere segni [diacritici](https://www.merriam-webster.com/dictionary/diacritic) nel sito Web Merriam-Webster.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

@@ -15,26 +15,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856497"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Visualizzare le dipendenze di una stored procedure
     
-##  
-  <a name="Top"></a> Questo argomento illustra come visualizzare le dipendenze di una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="this-topic-describes-how-to-view-stored-procedure-dependencies-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> Questo argomento illustra come visualizzare le dipendenze di una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Prima di iniziare:**  [sicurezza](#Security)  
+-   **Prima di iniziare**  [Sicurezza](#Security)  
   
 -   **Per visualizzare le dipendenze di una procedura usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Funzione di sistema: `sys.dm_sql_referencing_entities`  
  Richiede l'autorizzazione CONTROL per l'entità a cui si fa riferimento e l'autorizzazione SELECT per sys.dm_sql_referencing_entities. Quando l'entità a cui si fa riferimento è una funzione di partizione, è necessaria l'autorizzazione CONTROL per il database. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public.  
   
@@ -44,14 +43,14 @@ ms.locfileid: "62856497"
  Vista del catalogo dell'oggetto: `sys.sql_expression_dependencies`  
  Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su sys.sql_expression_dependencies per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database di db_owner. Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
   
-##  <a name="Procedures"></a>Come visualizzare le dipendenze di una stored procedure  
+##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a>Come visualizzare le dipendenze di una stored procedure  
  È possibile usare uno dei seguenti elementi:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare le dipendenze di una stored procedure in Esplora oggetti**  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
@@ -66,7 +65,7 @@ ms.locfileid: "62856497"
   
 6.  Fare clic su **OK**.  
   
-###  <a name="TsqlProcedure"></a> Con Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per visualizzare le dipendenze di una stored procedure nell'editor di query**  
   
  Funzione di sistema: `sys.dm_sql_referencing_entities`  
@@ -182,10 +181,10 @@ ms.locfileid: "62856497"
     GO  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Rinominare una stored procedure](rename-a-stored-procedure.md)   
- [sys. dm_sql_referencing_entities &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys. dm_sql_referenced_entities &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

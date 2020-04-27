@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830395"
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
@@ -69,9 +69,9 @@ ms.locfileid: "62830395"
   
  Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Invia messaggi &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Invia messaggi &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Invia messaggi &#40;pagina di posta elettronica&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor attività Invia messaggi &#40;pagina Messaggio&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -86,8 +86,8 @@ ms.locfileid: "62830395"
   
 -   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](https://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
   
-## <a name="see-also"></a>Vedere anche  
- [Attività di Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   
   

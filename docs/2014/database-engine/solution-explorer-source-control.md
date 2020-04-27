@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843113"
 ---
 # <a name="solution-explorer-source-control"></a>Controllo del codice sorgente di Esplora soluzioni
@@ -33,8 +33,7 @@ ms.locfileid: "62843113"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] può essere integrato con un servizio di controllo del codice sorgente. Ciò significa che è possibile utilizzare lo strumento come client per il provider di controllo del codice sorgente. Senza uscire dall'ambiente, è possibile gestire facilmente sia i progetti individuali che quelli di team. Il provider del controllo del codice sorgente non è incluso in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] può essere integrato con un servizio di controllo del codice sorgente. Ciò significa che è possibile utilizzare lo strumento come client per il provider di controllo del codice sorgente. Senza uscire dall'ambiente, è possibile gestire facilmente sia i progetti individuali che quelli di team. Il provider del controllo del codice sorgente non è incluso in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-select-a-source-control-provider"></a>Per selezionare un provider del controllo del codice sorgente  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62843113"
 |[Impostazione e recupero delle informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)|Viene spiegato come recuperare la cronologia di un progetto o di un elemento, una copia locale di un elemento o come confrontare due versioni di un elemento.|  
 |||  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplora soluzioni](../ssms/solution/solution-explorer.md)   
  [Soluzioni &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
  [Progetti &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   

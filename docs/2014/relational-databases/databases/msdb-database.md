@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871712"
 ---
 # <a name="msdb-database"></a>Database msdb
-  Il database **msdb** viene utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per la pianificazione di avvisi e processi e da altre funzionalità [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad [!INCLUDE[ssSB](../../includes/sssb-md.md)] esempio, e posta elettronica database.  
+  Il database **msdb** viene usato dall'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la pianificazione di avvisi e processi e da altre funzionalità, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] e Posta elettronica database.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, l'intera cronologia di backup e ripristino online viene gestita in modo automatico nelle tabelle del database **msdb**. Queste informazioni includono il nome della parte che ha eseguito il backup, l'ora del backup e i dispositivi o i file in cui viene archiviato il backup. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa queste informazioni per proporre un piano per il ripristino di un database e l'applicazione di qualsiasi backup di log delle transazioni. Vengono inoltre registrati gli eventi di backup di tutti i database che sono stati creati con applicazioni personalizzate o strumenti di terze parti. Se, ad esempio, si usa un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] che chiama oggetti SMO (SQL Server Management Objects) per l'esecuzione di operazioni di backup, l'evento viene registrato nelle tabelle di sistema **msdb** , nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per facilitare la protezione delle informazioni archiviate in **msdb**, è consigliabile considerare l'inserimento del log delle transazioni di **msdb** in uno spazio di archiviazione a tolleranza d'errore.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, l'intera cronologia di backup e ripristino online viene gestita in modo automatico nelle tabelle del database **msdb**. Queste informazioni includono il nome della parte che ha eseguito il backup, l'ora del backup e i dispositivi o i file in cui viene archiviato il backup. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa queste informazioni per proporre un piano per il ripristino di un database e l'applicazione di qualsiasi backup di log delle transazioni. Vengono inoltre registrati gli eventi di backup di tutti i database che sono stati creati con applicazioni personalizzate o strumenti di terze parti. Se, ad esempio, si usa un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] che chiama oggetti SMO (SQL Server Management Objects) per l'esecuzione di operazioni di backup, l'evento viene registrato nelle tabelle di sistema **msdb**, nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per facilitare la protezione delle informazioni archiviate in **msdb**, è consigliabile considerare l'inserimento del log delle transazioni di **msdb** in uno spazio di archiviazione a tolleranza d'errore.  
   
  Per impostazione predefinita, **msdb** usa il modello di recupero con registrazione minima. Se si usano le tabelle di [cronologia di backup e ripristino](../backup-restore/backup-history-and-header-information-sql-server.md) , è consigliabile usare il modello di recupero per **msdb**. Per altre informazioni, vedere [Modelli di recupero &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md). Si noti che durante l'installazione o l'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni volta che si usa il file Setup.exe per ricompilare i database di sistema, il modello di recupero di **msdb** viene impostato automaticamente su SIMPLE.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62871712"
 |RECOVERY|SEMPLICE|Sì|  
 |RECURSIVE_TRIGGERS|OFF|Sì|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
-|TRUSTWORTHY|ATTIVA|Sì|  
+|TRUSTWORTHY|ON|Sì|  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
@@ -101,7 +100,7 @@ ms.locfileid: "62871712"
 -   Impostazione del filegroup primario su READ_ONLY.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Database di sistema.](system-databases.md)  
+ [Database di sistema](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

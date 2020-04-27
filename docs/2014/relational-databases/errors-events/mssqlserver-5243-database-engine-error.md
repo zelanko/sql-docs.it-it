@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6e8fd1c3ee57b1e85411eb9a546e8330ce53054
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62867855"
 ---
 # <a name="mssqlserver_5243"></a>MSSQLSERVER_5243
@@ -35,7 +35,7 @@ ms.locfileid: "62867855"
 ## <a name="explanation"></a>Spiegazione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato un'inconsistenza strutturale in una struttura del motore di archiviazione in memoria.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [Filegroup e file di database](../databases/database-files-and-filegroups.md)  
   

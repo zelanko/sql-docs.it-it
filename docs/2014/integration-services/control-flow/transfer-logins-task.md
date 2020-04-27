@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830012"
 ---
 # <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso
@@ -68,7 +68,7 @@ ms.locfileid: "62830012"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci account di accesso &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci account di accesso &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Trasferisci account di accesso &#40;pagina Account di accesso&#41;](../transfer-logins-task-editor-logins-page.md)  
   

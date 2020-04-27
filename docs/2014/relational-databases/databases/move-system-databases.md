@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871538"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
@@ -50,21 +50,21 @@ ms.locfileid: "62871538"
 > [!IMPORTANT]  
 >  Se si sposta un database di sistema e successivamente si ricompila il database master, è necessario spostare nuovamente il database di sistema, in quanto l'operazione di ricompilazione ha come conseguenza l'installazione di tutti i database di sistema nei rispettivi percorsi predefiniti.  
   
-##  <a name="Intro"></a>Contenuto **dell'argomento**  
+##  <a name="in-this-topic"></a><a name="Intro"></a> **Contenuto dell'articolo**  
   
 -   [Procedura di rilocazione pianificata e manutenzione pianificata del disco](#Planned)  
   
--   [Procedura di ripristino non riuscita](#Failure)  
+-   [Procedura di recupero da errore](#Failure)  
   
--   [Trasferimento del database master](#master)  
+-   [Spostamento del database master](#master)  
   
--   [Trasferimento del database delle risorse](#Resource)  
+-   [Spostamento del database delle risorse](#Resource)  
   
--   [Completamento: dopo aver spostato tutti i database di sistema](#Follow)  
+-   [Completamento: Dopo lo spostamento di tutti i database di sistema](#Follow)  
   
--   [esempi](#Examples)  
+-   [Esempi](#Examples)  
   
-##  <a name="Planned"></a> Procedura di rilocazione pianificata e manutenzione pianificata del disco  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>Procedura di rilocazione pianificata e manutenzione pianificata del disco  
  Per spostare un file di dati o di log del database di sistema nell'ambito di un'operazione di rilocazione pianificata o di manutenzione pianificata, attenersi alla procedura seguente. Questa procedura è valida per tutti i database di sistema ad eccezione dei database master e Resource.  
   
 1.  Per ogni file che si desidera spostare, eseguire l'istruzione seguente.  
@@ -101,7 +101,7 @@ ms.locfileid: "62871538"
   
 2.  Verificare il funzionamento di Posta elettronica database inviando un messaggio di prova.  
   
-##  <a name="Failure"></a> Procedura di recupero da errore  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a>Procedura di ripristino non riuscita  
  Se è necessario spostare un file a causa di un errore hardware, eseguire la procedura seguente per rilocare il file in una nuova posizione. Questa procedura è valida per tutti i database di sistema ad eccezione dei database master e Resource.  
   
 > [!IMPORTANT]  
@@ -149,20 +149,20 @@ ms.locfileid: "62871538"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Spostamento del database master  
+##  <a name="moving-the-master-database"></a><a name="master"></a>Trasferimento del database master  
  Per spostare il database master, effettuare le operazioni seguenti.  
   
 1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.  
   
 2.  Nel nodo **Servizi di SQL Server** fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio **SQL Server (MSSQLSERVER)** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà ( ***nome_istanza ***) di SQL Server** fare clic sulla scheda **Parametri di avvio** .  
+3.  Nella finestra di dialogo **Proprietà (***nome_istanza***) di SQL Server** fare clic sulla scheda **Parametri di avvio** .  
   
-4.  Nella casella **Parametri esistenti** selezionare il parametro -d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+4.  Nella casella **parametri esistenti** selezionare il parametro-d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   
      Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
   
-5.  Nella casella **Parametri esistenti** selezionare il parametro -l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+5.  Nella casella **parametri esistenti** selezionare il parametro-l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   
      Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871538"
     GO  
     ```  
   
-##  <a name="Resource"></a> Spostamento del database delle risorse  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Trasferimento del database delle risorse  
  Il percorso del database delle risorse è \<*unità*>: \Programmi\Microsoft SQL Server\MSSQL\<versione>.\<*nome_istanza*>\MSSQL\Binn\\. Il database non può essere spostato.  
   
-##  <a name="Follow"></a> Completamento: Dopo lo spostamento di tutti i database di sistema  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Completamento: dopo aver spostato tutti i database di sistema  
  Se tutti i database di sistema sono stati spostati in un nuovo volume o unità oppure in un altro server con una lettera di unità diversa, effettuare gli aggiornamenti riportati di seguito.  
   
 -   Modificare il percorso del log di SQL Server Agent Se non si aggiorna questo percorso, non sarà possibile avviare SQL Server Agent.  
@@ -221,7 +221,7 @@ ms.locfileid: "62871538"
   
 4.  Per completare la modifica, avviare e arrestare il servizio SQL Server.  
   
-##  <a name="Examples"></a> Esempi  
+##  <a name="examples"></a><a name="Examples"></a> Esempi  
   
 ### <a name="a-moving-the-tempdb-database"></a>R. Spostamento del database tempdb  
  Nell'esempio seguente i file dei dati e di log del database `tempdb` vengono spostati in un nuovo percorso nell'ambito di una rilocazione pianificata.  
@@ -263,15 +263,15 @@ ms.locfileid: "62871538"
   
 5.  Eliminare i file `tempdb.mdf` e `templog.ldf` dal percorso originale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Database Resource](resource-database.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Database delle risorse](resource-database.md)   
  [Database tempdb](tempdb-database.md)   
  [Database master](master-database.md)   
  [Database msdb](msdb-database.md)   
- [Database model](model-database.md)   
- [Spostare database utente](move-user-databases.md)   
- [Spostare file del database](move-database-files.md)   
- [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Database modello](model-database.md)   
+ [Spostare i database utente](move-user-databases.md)   
+ [Spostare i file di database](move-database-files.md)   
+ [Avviare, arrestare, sospendere, riprendere, riavviare il servizio motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Ricompilare database di sistema](system-databases.md)  
   

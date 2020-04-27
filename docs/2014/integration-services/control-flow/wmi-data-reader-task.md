@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829494"
 ---
 # <a name="wmi-data-reader-task"></a>Attività Lettore di dati WMI
@@ -80,11 +80,11 @@ Select * FROM Win32_QuickFixEngineering
 |`WMIDataReaderOperation`|Specifica la query WQL eseguita dall'attività.|  
   
 ## <a name="configuration-of-the-wmi-data-reader-task"></a>Configurazione dell'attività Lettore di dati WMI  
- È possibile impostare le proprietà a livello di codice oppure tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor attività Lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -97,8 +97,8 @@ Select * FROM Win32_QuickFixEngineering
   
 -   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Attività di Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   
   

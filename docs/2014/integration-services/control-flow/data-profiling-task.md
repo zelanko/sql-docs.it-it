@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831885"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
@@ -40,7 +40,7 @@ ms.locfileid: "62831885"
  Dopo avere utilizzato l'attività per calcolare i profili dei dati e salvare tali profili in un file, è possibile utilizzare il Visualizzatore profilo dati autonomo per esaminare l'output del profilo. Il Visualizzatore profilo dati supporta anche la funzione drill-down che consente di analizzare i problemi di qualità dei dati identificati nell'output del profilo. Per altre informazioni, vedere [Visualizzatore profilo dati](data-profile-viewer.md).  
   
 > [!IMPORTANT]  
->  Il file di output potrebbe contenere dati sensibili relativi al database e i dati inclusi nel database. Per suggerimenti su come migliorare la protezione di questo file, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
+>  Il file di output potrebbe contenere dati sensibili relativi al database e i dati inclusi nel database. Per suggerimenti su come migliorare la sicurezza di questo file, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
 >   
 >  La funzionalità di drill-down, disponibile nel Visualizzatore profilo dati, consente di inviare query in tempo reale all'origine dati originale.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62831885"
 ## <a name="features-of-the-data-profiling-task"></a>Caratteristiche dell'attività Profiling dati  
  L'attività Profiling dati presenta le seguenti opzioni di configurazione di facile utilizzo:  
   
--   **Colonne con caratteri jolly** Quando si configura una richiesta di profilo, l'attività accetta il carattere jolly **(\*)** al posto di un nome di colonna. In questo modo viene semplificata la configurazione e diventa più facile individuare le caratteristiche dei dati non noti. Quando viene eseguita l'attività, è possibile analizzare ciascuna colonna che presenta un tipo di dati adatto.  
+-   **Colonne jolly** Quando si configura una richiesta di profilo, l'attività accetta il carattere jolly **(\*)** al posto del nome di colonna. In questo modo viene semplificata la configurazione e diventa più facile individuare le caratteristiche dei dati non noti. Quando viene eseguita l'attività, è possibile analizzare ciascuna colonna che presenta un tipo di dati adatto.  
   
--   **Profilo rapido** È possibile selezionare profilo rapido per configurare rapidamente l'attività. Un profilo rapido analizza una tabella o una vista utilizzando tutti i profili e le impostazioni predefiniti.  
+-   **Profilo rapido** You can select Profilo rapido to configure the task quickly. Un profilo rapido analizza una tabella o una vista utilizzando tutti i profili e le impostazioni predefiniti.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Profiling dati  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Profiling dati. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
@@ -116,7 +116,7 @@ ms.locfileid: "62831885"
 |**DataProfilingTaskTrace**|Fornisce informazioni descrittive sullo stato dell'attività. I messaggi includono le informazioni seguenti:<br /><br /> Avvio elaborazione richieste<br /><br /> Inizio query<br /><br /> Fine query<br /><br /> Fine calcolo richiesta|  
   
 ## <a name="output-and-its-schema"></a>Output e relativo schema  
- L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all' [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)indirizzo. Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
+ L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
   
  Questo schema per informazioni sulla qualità dei dati può essere utile per:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62831885"
   
 -   Compilazione di strumenti personalizzati da utilizzare con le informazioni sulla qualità dei dati.  
   
- Lo spazio dei nomi di destinazione è identificato nello [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)schema come.  
+ Lo spazio dei nomi di destinazione viene identificato nello schema come [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Output nel flusso di lavoro condizionale di un pacchetto  
  I componenti di profiling dei dati non includono la funzionalità predefinita per implementare la logica condizionale nel flusso di lavoro del pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basata sull'output dell'attività Profiling dati. È tuttavia facile aggiungere questa logica con una programmazione minima in un'attività Script. Con questo codice verrebbe eseguita una query XPath sull'output XML e quindi il risultato verrebbe salvato in una variabile del pacchetto. I vincoli di precedenza che collegano l'attività Script alle attività successive possono utilizzare un'espressione per determinare il flusso di lavoro. Ad esempio, l'attività Script rileva che la percentuale di valori Null in una colonna supera una determinata soglia. Quando questa condizione è vera, potrebbe essere necessario interrompere il pacchetto e risolvere il problema prima di continuare.  
@@ -135,23 +135,23 @@ ms.locfileid: "62831885"
  [Pagina Generale](../general-page-of-integration-services-designers-options.md)  
  Nella pagina **Generale** viene specificato il file di output o la variabile. È inoltre possibile selezionare **Profilo rapido** per configurare rapidamente l'attività per il calcolo dei profili utilizzando le impostazioni predefinite. Per altre informazioni, vedere [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](data-profiling-task.md).  
   
- [Pagina Richieste profilo](data-profiling-task-editor-profile-requests-page.md)  
+ [Pagina Richieste del profilo](data-profiling-task-editor-profile-requests-page.md)  
  Nella pagina **Richieste profilo** specificare l'origine dati e quindi selezionare e configurare i profili dei dati che si vogliono calcolare. Per ulteriori informazioni sui diversi profili che è possibile configurare, vedere gli argomenti seguenti:  
   
--   [Opzioni di richiesta profilo chiave candidata &#40;attività Profiling dati&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Chiave candidata &#40;Attività Profiling dati&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo Distribuzione lunghezze di colonna &#40;attività Profiling dati&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Distribuzione lunghezze di colonna &#40;Attività Profiling dati&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo rapporto di valori null nella colonna &#40;attività Profiling dati&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Rapporto di valori Null nella colonna &#40;Attività Profiling dati&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo Criteri di ricerca colonna &#40;attività Profiling dati&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Criteri di ricerca colonna &#40;Attività Profiling dati&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo Statistiche di colonna &#40;attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Statistiche di colonna &#40;Attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo Distribuzione valori di colonna &#40;attività Profiling dati&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Distribuzione valori di colonna &#40;Attività Profiling dati&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo dipendenza funzionale &#40;attività Profiling dati&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Dipendenza funzionale &#40;Attività Profiling dati&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo Inclusione valore &#40;attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Inclusione valore &#40;Attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

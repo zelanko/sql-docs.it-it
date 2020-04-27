@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62834643"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introduzione a CDC Designer Console
@@ -30,7 +30,7 @@ ms.locfileid: "62834643"
   
 -   Windows 7 a 32 bit (x86) e a 64 bit (x64)  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008 a 32 bit (x86) e a 64 bit (x64) con Service Pack 2  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62834643"
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con supporto per SQL Server CDC  
   
 ## <a name="software-prerequisites"></a>Prerequisiti software  
- È richiesto il software seguente:  
+ Di seguito è elencato il software necessario:  
   
 -   Client Oracle 10. x  
   

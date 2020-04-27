@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831478"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  L'attività Message Queue consente di utilizzare Accodamento messaggi (noto anche come MSMQ) per inviare e ricevere messaggi tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti oppure per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
+  L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
   
  Tramite l'attività Message Queue è possibile coordinare operazioni nell'intera azienda. Se la destinazione è occupata o non disponibile, i messaggi possono essere messi in coda e recapitati in un secondo tempo. L'attività può ad esempio mettere in coda i messaggi destinati ai computer portatili offline dei rappresentanti, che li riceveranno quando si connetteranno alla rete. È possibile utilizzare l'attività Message Queue per gli scopi seguenti:  
   
@@ -88,11 +88,11 @@ ms.locfileid: "62831478"
 ## <a name="configuration-of-the-message-queue-task"></a>Configurazione dell'attività Message Queue  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice. Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Message Queue &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Message Queue &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Message Queue &#40;pagina ricezione&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor attività Message Queue &#40;pagina Ricezione&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor attività Message Queue &#40;Invia pagina&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor attività Message Queue &#40;pagina Invio&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -101,8 +101,8 @@ ms.locfileid: "62831478"
 ## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Attività di Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   
   

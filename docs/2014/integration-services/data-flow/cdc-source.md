@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828123"
 ---
 # <a name="cdc-source"></a>Origine CDC
@@ -75,24 +75,20 @@ use <cdc-enabled-database-name>
   
  dove:  
   
--   
-  \<cdc-enabled-database-name> è il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente le tabelle delle modifiche.  
+-   \<cdc-enabled-database-name> è il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente le tabelle delle modifiche.  
   
--   
-  \<value-from-state-cs> è il valore visualizzato nella variabile di stato CDC come CS/\<value-from-state-cs>/ (CS indica l'inizio dell'intervallo di elaborazione corrente).  
+-   \<value-from-state-cs> è il valore visualizzato nella variabile di stato CDC come CS/\<value-from-state-cs>/ (CS indica l'inizio dell'intervallo di elaborazione corrente).  
   
--   
-  \<value-from-state-ce> è il valore visualizzato nella variabile di stato CDC come CE/\<value-from-state-cs>/ (CE indica la fine dell'intervallo di elaborazione corrente).  
+-   \<value-from-state-ce> è il valore visualizzato nella variabile di stato CDC come CE/\<value-from-state-cs>/ (CE indica la fine dell'intervallo di elaborazione corrente).  
   
--   
-  \<mode> corrisponde alle modalità di elaborazione CDC. Le modalità di elaborazione hanno uno dei seguenti valori: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
+-   \<mode> corrisponde alle modalità di elaborazione CDC. Le modalità di elaborazione hanno uno dei seguenti valori: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
  Questo script consente di isolare i problemi riproducendoli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in cui è possibile riprodurre e identificare facilmente gli errori.  
   
 #### <a name="sql-server-error-message"></a>Messaggio di errore di SQL Server  
  È possibile che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]venga restituito il messaggio di errore seguente:  
   
- **È stato specificato un numero insufficiente di argomenti per la procedura o la funzione\<cdc. fn_cdc_get_net_changes_.. >.**  
+ **Numero di argomenti insufficiente per la routine o funzione cdc.fn_cdc_get_net_changes_\<.>.**  
   
  Questo errore non indica che un argomento è mancante. Indica invece che i valori LSN iniziale o finale nella variabile di stato CDC non sono validi.  
   

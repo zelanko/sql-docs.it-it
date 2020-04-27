@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869178"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869178"
 |Testo del messaggio|Impossibile eseguire una query nel server reindirizzato '%s' per il server di pubblicazione originale '%s' e il server di pubblicazione '%s' per determinare il nome del server remoto; errore %d, messaggio di errore '%s.'|  
   
 ## <a name="explanation"></a>Spiegazione  
- 
-  `sp_validate_redirected_publisher` utilizza un server collegato temporaneo creato per connettersi al server di pubblicazione reindirizzato per individuare il nome del server remoto. L'errore 21879 viene restituito in caso di errore della query del server collegato. La chiamata per richiedere il nome del server remoto è in genere il primo utilizzo del server collegato temporaneo, pertanto, se ci sono problemi di connettività, è probabile che si presentino prima con questa chiamata. Questa chiamata remota esegue semplicemente select `@@servername` sul server remoto.  
+ `sp_validate_redirected_publisher` utilizza un server collegato temporaneo creato per connettersi al server di pubblicazione reindirizzato per individuare il nome del server remoto. L'errore 21879 viene restituito in caso di errore della query del server collegato. La chiamata per richiedere il nome del server remoto è in genere il primo utilizzo del server collegato temporaneo, pertanto, se ci sono problemi di connettività, è probabile che si presentino prima con questa chiamata. Questa chiamata remota esegue semplicemente select `@@servername` sul server remoto.  
   
  Il server collegato utilizzato per eseguire la query sul server di pubblicazione reindirizzato utilizza la modalità di sicurezza, l'account di accesso e la password forniti quando viene richiamato `sp_adddistpublisher` per il server di pubblicazione originale.  
   

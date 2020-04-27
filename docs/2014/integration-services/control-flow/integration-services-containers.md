@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831295"
 ---
 # <a name="integration-services-containers"></a>Contenitori in Integration Services
-  I contenitori sono oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di che forniscono la struttura ai pacchetti e ai servizi per le attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
+  I contenitori sono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che forniscono la struttura ai pacchetti e i servizi alle attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
   
  Nei pacchetti i contenitori vengono utilizzati per gli scopi seguenti:  
   
@@ -35,15 +35,14 @@ ms.locfileid: "62831295"
 -   Creare gruppi di attività e contenitori che devono avere esito positivo o negativo come singola unità. Un pacchetto può ad esempio raggruppare attività che eliminano e aggiungono righe in una tabella di database e quindi eseguire il commit o il rollback di tutte le attività quando una di queste non riesce.  
   
 ## <a name="container-types"></a>Tipi di contenitori  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre quattro tipi di contenitori per la compilazione dei pacchetti, elencati nella tabella seguente.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre quattro tipi di contenitori per la compilazione dei pacchetti, elencati nella tabella seguente.  
   
 |Contenitore|Descrizione|  
 |---------------|-----------------|  
 |[Contenitore Ciclo Foreach](foreach-loop-container.md)|Esegue ripetutamente un determinato flusso di controllo utilizzando un enumeratore.|  
 |[Contenitore Ciclo For](for-loop-container.md)|Esegue ripetutamente un determinato flusso di controllo verificando una condizione.|  
-|[Sequenza - contenitore](sequence-container.md)|Raggruppa attività e contenitori in flussi di controllo che costituiscono subset del flusso di controllo del pacchetto.|  
-|[Host delle attività - contenitore](task-host-container.md)|Fornisce servizi a una singola attività.|  
+|[Contenitore Sequenza](sequence-container.md)|Raggruppa attività e contenitori in flussi di controllo che costituiscono subset del flusso di controllo del pacchetto.|  
+|[Contenitore Host delle attività](task-host-container.md)|Fornisce servizi a una singola attività.|  
   
  Anche i gestori dell'evento e i pacchetti sono tipi di contenitori. Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md) e [Gestori eventi di Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "62831295"
 ## <a name="break-points"></a>Punti di interruzione  
  Quando si imposta un punto di interruzione in un contenitore e la condizione di interruzione è **Interrompi quando il contenitore riceve l'evento OnVariableValueChanged**, definire la variabile nell'ambito del contenitore.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Flusso di controllo](control-flow.md)  
   
   

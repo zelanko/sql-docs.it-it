@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856168"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Targeted Mailing (Esercitazione di base sul data mining)
@@ -84,7 +84,7 @@ ms.locfileid: "62856168"
   
     -   **NumberChildrenAtHome**  
   
-    -   **Region**  
+    -   **Area**  
   
     -   **TotalChildren**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62856168"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Impostazione del tipo di dati e del tipo di contenuto &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
  [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

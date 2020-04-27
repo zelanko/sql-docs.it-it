@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4233bc1ddd98d6fe678d9d37f1acd7a4b66b687e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874363"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>Tipi e membri non consentiti in System.Data.dll
@@ -37,7 +37,7 @@ ms.locfileid: "62874363"
 |System.Data.TypedDataSetGenerator|SharedState, Synchronization|  
 |System.Xml.XmlDataDocument|Synchronization|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attributi di protezione host e programmazione dell'integrazione con CLR](host-protection-attributes-and-clr-integration-programming.md)   
  [Tipi e membri non consentiti in Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
  [Tipi e membri non consentiti in mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   

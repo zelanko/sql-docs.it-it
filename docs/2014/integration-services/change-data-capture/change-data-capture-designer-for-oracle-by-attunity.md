@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835947"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Progettazione Change Data Capture per Oracle di Attunity
@@ -48,7 +48,7 @@ ms.locfileid: "62835947"
   
 -   [Advanced Connection Properties](advanced-connection-properties.md)  
   
--   [Credenziali Oracle per l'esecuzione di script](oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
 -   [Script di registrazione supplementare Oracle](oracle-supplemental-logging-script.md)  
   

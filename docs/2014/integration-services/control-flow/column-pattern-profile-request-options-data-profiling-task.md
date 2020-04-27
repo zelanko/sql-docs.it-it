@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832608"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
@@ -45,10 +45,10 @@ ms.locfileid: "62832608"
   
 |Tag|Termine|  
 |---------|----------|  
-|Direzione|East|  
-|Direzione|West|  
-|Direzione|North|  
-|Direzione|South|  
+|Direction|East|  
+|Direction|West|  
+|Direction|North|  
+|Direction|South|  
   
  È possibile utilizzare un altro tag per raggruppare le parole diverse che esprimono la nozione di strada negli indirizzi stradali:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62832608"
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
  Nel riquadro **Proprietà richiesta**per **Richiesta profilo Criteri di ricerca colonna** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati**, che includono le opzioni **TableOrView** e **Column**  
+-   **Dati**che include le opzioni **TableOrView** e **Column**  
   
 -   **Generale**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62832608"
  **Schema**  
  Specifica lo schema a cui appartiene la tabella selezionata. Questa opzione è di sola lettura.  
   
- **Tabella**  
+ **tavolo**  
  Visualizza il nome della tabella selezionata. Questa opzione è di sola lettura.  
   
 #### <a name="column-options"></a>Opzioni relative alle colonne  
@@ -122,12 +122,12 @@ ms.locfileid: "62832608"
  **CaseSensitive**  
  Indica se i criteri di ricerca devono applicare la distinzione tra maiuscole e minuscole. Il valore predefinito di questa opzione è **False**.  
   
- **Delimitatori**  
+ **Delimiters**  
  Elenco dei caratteri che devono essere considerati spazi tra parole quando il testo viene suddiviso in token. Per impostazione predefinita, l'elenco **Delimiters** contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
- **Simboli**  
+ **Symbols**  
  Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^%'.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
@@ -142,8 +142,8 @@ ms.locfileid: "62832608"
   
  Per ulteriori informazioni, tornare alla sezione "Utilizzo della tabella dei tag" di questo argomento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor attività Profiling dati &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)   
- [Modulo Profilo rapido singola tabella &#40;attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

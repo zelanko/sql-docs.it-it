@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 694e85a56686379d089f3c2fc11721e4dd6f8642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827548"
 ---
 # <a name="datareader-destination"></a>DataReader - destinazione
-  La destinazione DataReader espone i dati in un flusso di dati utilizzando l'interfaccia `DataReader` di ADO.NET. I dati possono essere quindi utilizzati da altre applicazioni. È ad [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esempio possibile configurare l'origine dati di un report in modo che utilizzi il risultato dell'esecuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di un pacchetto. A tale scopo è necessario creare un flusso di dati che implementa la destinazione DataReader.  
+  La destinazione DataReader espone i dati in un flusso di dati utilizzando l'interfaccia `DataReader` di ADO.NET. I dati possono essere quindi utilizzati da altre applicazioni. È ad esempio possibile configurare l'origine dati di un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo da usare i risultati dell'esecuzione di un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tale scopo è necessario creare un flusso di dati che implementa la destinazione DataReader.  
   
  Per informazioni sull'accesso e la lettura di valori nella destinazione DataReader a livello di programmazione, vedere [Caricamento dell'output di un pacchetto locale](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md).  
   

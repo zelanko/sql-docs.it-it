@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871946"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
@@ -47,13 +47,13 @@ ms.locfileid: "62871946"
   
  L'indirizzo di rete del server segue la sintassi di base illustrata di seguito:  
   
- TCP **://**_fully_qualified_domain_name_**:**_porta_  
+ TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- dove  
+ where  
   
--   *fully_qualified_domain_name* è il server in cui è presente l'istanza del server.  
+-   *fully_qualified_domain_name* è il server sul quale si trova l'istanza del server.  
   
--   *Port* è la porta assegnata all'endpoint del mirroring del database dell'istanza del server.  
+-   *port* è la porta assegnata all'endpoint di mirroring del database dell'istanza del server.  
   
      Per la partecipazione di un server al mirroring del database è necessario un endpoint di mirroring del database. Quando si utilizza la Configurazione guidata sicurezza mirroring del database per stabilire la prima sessione di mirroring per un'istanza del server, la procedura guidata crea automaticamente l'endpoint e lo configura per utilizzare l'autenticazione di Windows. Per altre informazioni sull'uso della procedura guidata con l'autenticazione basata su certificati, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
@@ -128,13 +128,13 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Per altre informazioni, vedere [Modalità di funzionamento del mirroring del database](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- **Status**  
+ **Stato**  
  Dopo l'inizio del mirroring, il pannello **Stato** visualizza lo stato della sessione di mirroring del database al momento della selezione della pagina **Mirroring** . Per aggiornare il pannello **Stato** fare clic sul pulsante **Aggiorna** . Gli stati possibili sono indicati di seguito:  
   
 |Stati|Spiegazione|  
 |------------|-----------------|  
 |**Il database non è stato configurato per il mirroring**|Non esiste alcuna sessione di mirroring del database e non ci sono attività da segnalare nella pagina **Mirroring** .|  
-|**Paused**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
+|**In pausa**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
 |**Nessuna connessione**|L'istanza del server principale non può connettersi al proprio partner.|  
 |**Sincronizzazione in corso**|Il contenuto del database mirror è in ritardo rispetto a quello del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
 |**Failover**|Sull'istanza del server principale, è stato avviato un failover manuale (cambio di ruolo) e il server è attualmente in fase di transizione al ruolo mirror. In questo stato, le connessioni utente al database principale vengono terminate rapidamente e il database assume il ruolo di mirror subito dopo.|  
@@ -153,7 +153,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Dopo aver configurato un nuovo server di controllo del mirroring, è necessario fare clic su **OK** per aggiungerlo alla sessione di mirroring.  
   
- **Per aggiungere un server di controllo del mirroring con l'autenticazione di Windows**  
+ **Per aggiungere un server di controllo del mirroring utilizzando autenticazione di Windows**  
   
  [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
@@ -173,7 +173,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Per altre informazioni, vedere [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -181,11 +181,11 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [&#40;SQL Server di mirroring del database&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Sospensione e ripresa del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)  

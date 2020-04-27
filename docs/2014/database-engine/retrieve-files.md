@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843667"
 ---
 # <a name="retrieve-files"></a>Recupero di file
@@ -50,7 +50,7 @@ ms.locfileid: "62843667"
   
 3.  Nella finestra di dialogo **Ottieni** fare clic su **OK**. In alternativa, se in Esplora soluzioni è stato selezionato un progetto o una soluzione, deselezionare le caselle di controllo accanto agli elementi che non si desidera recuperare.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Get &#40;controllo del codice sorgente&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   

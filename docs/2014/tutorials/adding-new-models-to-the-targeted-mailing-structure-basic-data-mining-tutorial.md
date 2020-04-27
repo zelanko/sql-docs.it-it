@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822638"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Aggiunta di nuovi modelli alla struttura Targeted Mailing (Esercitazione di base sul data mining)
@@ -53,7 +53,7 @@ ms.locfileid: "62822638"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Elaborazione di modelli nella struttura di mailing diretto &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiunta di modelli di data mining a una struttura &#40;Analysis Services-Data mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)   
  [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Spostamento di oggetti di data mining](../../2014/analysis-services/data-mining/moving-data-mining-objects.md)  

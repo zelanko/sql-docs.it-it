@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829407"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
@@ -64,11 +64,11 @@ ms.locfileid: "62829407"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività servizio Web &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Servizio Web &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività servizio Web &#40;pagina di input&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor attività Servizio Web &#40;pagina Input&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor attività servizio Web &#40;pagina output&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor attività Servizio Web &#40;pagina Output&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   

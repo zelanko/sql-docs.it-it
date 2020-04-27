@@ -15,31 +15,31 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833754"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services
-  Utilizzare la finestra di dialogo **Aggiungi gestione connessione Analysis Services** per creare una connessione a un server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o per modificare le proprietà della connessione.  
+  Usare la finestra di dialogo **Aggiungi gestione connessione Analysis Services** per creare una connessione a un server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o per modificare le proprietà della connessione.  
   
  Per ulteriori informazioni sulla gestione connessione Analysis Services, vedere [Analysis Services Connection Manager](analysis-services-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
- **Creare una connessione a un computer che esegue Analysis Services**  
+ **Crea una connessione a un computer in cui è in esecuzione Analysis Services**  
  Consente di usare la connessione predefinita a un server che esegue un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure di creare una nuova connessione facendo clic su **Modifica**.  
   
  **Modifica**  
  Consente di usare la finestra di dialogo **Gestione connessione** per creare una connessione a un server che esegue un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e per modificare le proprietà della connessione.  
   
- **Crea una connessione a un progetto Analysis Services in questa soluzione**  
+ **Crea una connessione a un progetto di Analysis Services in questa soluzione**  
  Consente di specificare che la connessione userà un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nella soluzione aperta.  
   
 > [!NOTE]  
 >  I progetti di modello tabulare di Analysis Services non sono supportati per questo scenario.  
   
- **Progetto Analysis Services**  
+ **Progetto di Analysis Services**  
  Consente di selezionare un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  

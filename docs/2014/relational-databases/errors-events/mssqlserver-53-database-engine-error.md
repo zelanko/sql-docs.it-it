@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1607d1b6122c4a703ee93cd17705807626e2f0db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62867753"
 ---
 # <a name="mssqlserver_53"></a>MSSQLSERVER_53
@@ -42,7 +42,7 @@ ms.locfileid: "62867753"
   
 ## <a name="see-also"></a>Vedere anche  
  [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configurazione della rete client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

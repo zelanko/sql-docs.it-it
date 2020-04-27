@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873409"
 ---
 # <a name="system-data-collection-set-reports"></a>Report per i set di raccolta dati di sistema
@@ -38,7 +38,7 @@ ms.locfileid: "62873409"
   
  È possibile utilizzare questi report per ottenere informazioni per il monitoraggio della capacità del sistema e la risoluzione dei problemi relativi alle prestazioni.  
   
-##  <a name="Disk"></a> Report Riepilogo utilizzo disco  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> Report Riepilogo utilizzo disco  
  Il report Riepilogo utilizzo disco contiene dati sull'utilizzo dello spazio su disco per tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I dati forniti nei report vengono ottenuti usando il set di raccolta Utilizzo disco, che usa il tipo di agente di raccolta Query T-SQL generico.  
   
  È possibile accedere al report Riepilogo utilizzo disco da Esplora oggetti. Per visualizzare il report, espandere la cartella **Gestione** , fare clic con il pulsante destro del mouse su **Raccolta dati**, scegliere **Report**, **Data warehouse di gestione**, quindi fare clic su **Riepilogo utilizzo disco**. Per altre informazioni, vedere [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "62873409"
   
  Viene riportato lo spazio su disco utilizzato da ogni file di dati nel database. Lo spazio riportato come Spazio riservato è la quantità di spazio utilizzato più lo spazio allocato al file ma non ancora utilizzato. Lo spazio indicato da Spazio utilizzato corrisponde allo spazio effettivo utilizzato dal file, ad esclusione dello spazio allocato.  
   
-##  <a name="Query"></a> Report Cronologia statistiche query  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> Report Cronologia statistiche query  
  Il report Cronologia statistiche query contiene le statistiche di esecuzione della query. I dati utilizzati in questo report vengono ottenuti tramite il set di raccolta Statistiche query, che utilizza il tipo di agente di raccolta Attività query.  
   
  È possibile accedere al report Cronologia statistiche query da Esplora oggetti. Per visualizzare il report, espandere la cartella **Gestione** , fare clic con il pulsante destro del mouse su **Raccolta dati**, scegliere **Report**, **Data warehouse di gestione**, quindi fare clic su **Cronologia statistiche query**. Per altre informazioni, vedere [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "62873409"
   
  Utilizzare il pulsante calendario per specificare la data e l'ora di inizio nonché la durata dei dati per cui si desidera creare il report.  
   
-###  <a name="Server"></a> Report Cronologia attività server  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> Report Cronologia attività server  
  Nel report Cronologia attività server viene illustrata la vista iniziale dell'attività del server per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per il sistema operativo host.  
   
  Nella tabella seguente vengono descritti i grafici che tracciano l'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e del sistema nel report e i sottoreport dettagliati a cui è possibile accedere tramite i grafici.  
@@ -132,7 +132,7 @@ ms.locfileid: "62873409"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attese|Nel grafico Attese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono visualizzate le attese rilevate dai thread eseguiti per categoria di attesa. È possibile accedere a un report dettagliato facendo clic su qualsiasi segmento del grafico. Oltre a fornire statistiche di attesa per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in formato grafico in un intervallo di tempo più ridotto, questo report include informazioni sulle categorie di attesa in formato tabella. Per ogni categoria, ad esempio la CPU e le relative sottocategorie, la tabella include il numero di attese, il tempo di attesa e la percentuale di tempo di attesa totale.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attività|È possibile accedere ai diversi aspetti dell'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal grafico Attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di seguito vengono indicati i report che è possibile ottenere facendo clic su un punto della linea del grafico Compilazioni SQL/sec:<br /><br /> Connessioni e sessioni<br /><br /> Requests<br /><br /> Percentuale riscontri cache piano<br /><br /> Caratteristiche TempDb|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Raccolta dati](data-collection.md)   
  [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

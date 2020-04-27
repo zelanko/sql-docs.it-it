@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828556"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
@@ -30,7 +30,7 @@ ms.locfileid: "62828556"
   
  [Attività di controllo CDC](../control-flow/cdc-control-task.md)  
   
- **Componenti flusso di dati CDC**:  
+ **Componenti del flusso di dati CDC**:  
   
  [Origine CDC](cdc-source.md)  
   
@@ -87,11 +87,11 @@ ms.locfileid: "62828556"
   
  Nella figura seguente viene visualizzato il flusso di dati **Process Changes** , che mostra concettualmente come vengono elaborate le modifiche.  
   
- ![Elaborazione modifiche del flusso di dati](../media/processchangesdataflow.gif "Elaborazione modifiche del flusso di dati")  
+ ![Flusso di dati di elaborazione delle modifiche](../media/processchangesdataflow.gif "Flusso di dati di elaborazione delle modifiche")  
   
  Nella figura sono illustrati i passaggi seguenti:  
   
--   **Changes for Table x** è un'origine CDC che legge le modifiche apportate alla tabella x che sono state effettuate nell'intervallo di elaborazione CDC determinato nel flusso di controllo padre.  
+-   **Changes for Table X** è un'origine CDC che legge le modifiche apportate alla tabella X effettuate nell'intervallo di elaborazione CDC determinato nel flusso di controllo padre.  
   
 -   **CDC Splitter X** viene usato per suddividere le modifiche in inserimenti, eliminazioni e aggiornamenti. In questo scenario si presume che l'origine CDC sia configurata per produrre modifiche Net in modo da poter elaborare tipi di modifica diversi in parallelo.  
   
@@ -123,11 +123,11 @@ ms.locfileid: "62828556"
   
  Nella figura seguente viene mostrato un pacchetto SSIS in grado di gestire i primi due scenari:  
   
- ![Pacchetto SSIS per la gestione dei primi due scenari](../media/scenarioonetwo.gif "Pacchetto SSIS per la gestione dei primi due scenari")  
+ ![Pacchetto di SSIS per la gestione dei primi due scenari](../media/scenarioonetwo.gif "Pacchetto di SSIS per la gestione dei primi due scenari")  
   
  Nella figura seguente viene mostrato un pacchetto SSIS in grado di gestire il terzo scenario:  
   
- ![Pacchetto SSIS per la gestione del terzo scenario](../media/scenario3.gif "Pacchetto SSIS per la gestione del terzo scenario")  
+ ![Pacchetto di SSIS per la gestione del terzo scenario](../media/scenario3.gif "Pacchetto di SSIS per la gestione del terzo scenario")  
   
  Seguendo il pacchetto di caricamento iniziale, un pacchetto di aggiornamento Trickle-Feed viene eseguito ripetutamente in base a una pianificazione per elaborare modifiche quando queste diventano disponibili per l'utilizzo.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "62828556"
 |0-(INITIAL)|Lo stato esistente prima dell'esecuzione di qualsiasi pacchetto nel gruppo CDC corrente. È anche lo stato quando lo stato CDC è vuoto.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Si tratta dello stato esistente quando il pacchetto di caricamento iniziale viene avviato. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **MarkInitialLoadStart** .<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
 |2- ILEND (Initial-Load-Ended)|Si tratta dello stato esistente quando il pacchetto di caricamento iniziale termina correttamente. Si verifica dopo la chiamata di operazione MarkInitialLoadEnd all'attività di controllo CDC.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Initial Load Update)|Si tratta dello stato esistente dopo la prima esecuzione del pacchetto di aggiornamento in seguito al caricamento iniziale mentre l'elaborazione dell'intervallo di elaborazione iniziale è ancora in corso. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Se si utilizza la colonna **_ $ reprocessing** , viene impostato su 1 per indicare che è possibile che il pacchetto stia rielaborando le righe già presenti nella destinazione.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Initial Load Update)|Si tratta dello stato esistente dopo la prima esecuzione del pacchetto di aggiornamento in seguito al caricamento iniziale mentre l'elaborazione dell'intervallo di elaborazione iniziale è ancora in corso. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Se si usa la colonna **_$reprocessing** , viene impostato su 1 per indicare che le righe potrebbero essere già in corso di rielaborazione nella destinazione.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Si tratta dello stato previsto per le esecuzioni CDC normali. Indica che l'esecuzione precedente è stata completata e che è possibile avviare una nuova esecuzione con un nuovo intervallo di elaborazione.|  
 |5-TFSTART (Trickle-Feed-Update-Started)|Si tratta dello stato esistente in esecuzioni successive del pacchetto di aggiornamento dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Indica che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata o non è ancora, terminata (**MarkProcessedRange**).<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Si tratta dello stato di **GetProcessingRange** che si verifica dopo TFSTART. Indica che l'esecuzione precedente non è stata completata correttamente.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
@@ -216,7 +216,7 @@ ms.locfileid: "62828556"
   
 -   Video [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)(CDC per database Oracle tramite SQL Server Integration Services 2012) nel sito Web technet.microsoft.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività di controllo CDC](../control-flow/cdc-control-task.md)  
   
   

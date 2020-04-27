@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b77e1d920f97891d173bfdcdcb23ceb6c0acf0c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870709"
 ---
 # <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
@@ -44,7 +44,7 @@ ms.locfileid: "62870709"
  [Gestire i servizi di motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configurazione della rete client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

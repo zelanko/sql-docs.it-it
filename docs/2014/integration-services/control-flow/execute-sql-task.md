@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831769"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
@@ -45,8 +45,8 @@ ms.locfileid: "62831769"
 |Tipo di connessione|Gestione connessione|  
 |---------------------|------------------------|  
 |EXCEL|[Gestione connessione Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[gestione connessione OLE DB](../connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[gestione connessione ODBC](../connection-manager/odbc-connection-manager.md)|  
+|OLE DB|[Gestione connessione OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|ODBC|[Gestione connessione ODBC](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gestione connessione ADO](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gestione connessione ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Gestione connessione SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -54,7 +54,7 @@ ms.locfileid: "62831769"
 ## <a name="creating-sql-statements"></a>Creazione di istruzioni SQL  
  L'origine delle istruzioni SQL utilizzate da questa attività può essere una proprietà dell'attività che contiene un'istruzione, una connessione a un file che contiene una o più istruzioni oppure il nome di una variabile che contiene un'istruzione. Le istruzioni SQL devono essere scritte nel sottolinguaggio del sistema di gestione di database (DBMS) di origine. Per altre informazioni, vedere [Query di Integration Services &#40;SSIS&#41;](../integration-services-ssis-queries.md).  
   
- Se le istruzioni SQL sono memorizzate in un file, per connettersi al file l'attività utilizzerà una gestione connessione file. Per ulteriori informazioni, vedere [gestione connessione file](../connection-manager/file-connection-manager.md).  
+ Se le istruzioni SQL sono memorizzate in un file, per connettersi al file l'attività utilizzerà una gestione connessione file. Per altre informazioni, vedere [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
  In Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] per creare query SQL è possibile digitare le istruzioni nella finestra di dialogo **Editor attività Esegui SQL** o utilizzare l'interfaccia utente grafica **Generatore di query**. Per altre informazioni, vedere [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) e [Generatore di query](../query-builder.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62831769"
   
 -   Se si utilizza il tipo di connessione ADO, è necessario indicare se l'istruzione SQL è una stored procedure. Per altri tipi di connessione questa proprietà è di sola lettura e ha sempre valore `false`.  
   
- È possibile impostare le proprietà a livello di codice oppure tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   

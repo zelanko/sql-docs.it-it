@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830150"
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
@@ -71,9 +71,9 @@ ms.locfileid: "62830150"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci database &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci database &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Trasferisci database &#40;pagina database&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor attività Trasferisci database &#40;pagina Database&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   

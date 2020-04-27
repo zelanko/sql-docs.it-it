@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843735"
 ---
 # <a name="set-source-control-options"></a>Impostare le opzioni di controllo del codice sorgente
@@ -62,15 +62,14 @@ ms.locfileid: "62843735"
      **ID di accesso**  
      Consente di specificare il nome utente da utilizzare per l'accesso al provider del controllo del codice sorgente. Se supportato dal provider del controllo del codice sorgente, questo nome verrà compilato automaticamente nella finestra di dialogo di **accesso** per raggiungere il server del controllo del codice sorgente. Per rendere attiva questa opzione, disabilitare gli accessi utente automatici utilizzando il programma di amministrazione del provider del controllo del codice sorgente e quindi riavviare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-     **Funzionalità avanzate**  
+     **Avanzate**  
      Consente di visualizzare le opzioni aggiuntive per l'aggiunta di elementi al controllo del codice sorgente. Queste opzioni variano a seconda del provider del controllo del codice sorgente utilizzato. Per ulteriori informazioni su questi opzioni, fare riferimento al programma del controllo del codice sorgente.  
   
 4.  Selezionare la pagina **ambiente** .  
   
 5.  Nella casella **impostazioni di ambiente controllo del codice sorgente** selezionare il ruolo per il quale si desidera impostare le opzioni di controllo del codice sorgente.  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] seleziona automaticamente le opzioni di controllo del codice sorgente predefinite per il ruolo selezionato. Se si deseleziona una delle opzioni predefinite, nella casella **impostazioni di ambiente controllo del codice sorgente** viene visualizzata l'opzione **personalizzata** per indicare che è stato personalizzato il ruolo selezionato originariamente.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] seleziona automaticamente le opzioni di controllo del codice sorgente predefinite per il ruolo selezionato. Se si deseleziona una delle opzioni predefinite, nella casella **impostazioni di ambiente controllo del codice sorgente** viene visualizzata l'opzione **personalizzata** per indicare che è stato personalizzato il ruolo selezionato originariamente.  
   
      **Impostazioni di ambiente controllo del codice sorgente**  
      Specifica il ruolo che si desidera utilizzare. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono definiti i ruoli seguenti.  
@@ -109,10 +108,10 @@ ms.locfileid: "62843735"
      **Consenti modifica degli elementi archiviati**  
      Specifica che gli elementi archiviati possono essere modificati nella memoria. Se si seleziona questa casella di controllo, viene visualizzato un pulsante **modifica** nella finestra di dialogo **Estrai** quando si tenta di modificare un elemento archiviato. Dopo avere fatto clic su questo pulsante è possibile modificare l'elemento. Se si desidera salvare l'elemento, è necessario estrarlo o salvarlo in un percorso diverso.  
   
-     **Reimpostazione**  
+     **Reimposta**  
      Reimposta le impostazioni predefinite delle finestre di dialogo di conferma del controllo del codice sorgente. Ad esempio, se è stata selezionata la casella di controllo **non visualizzare più questa finestra** di dialogo in una finestra di dialogo del controllo del codice sorgente, se si seleziona l'opzione **Reimposta** l'azione verrà annullata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)   
  [Modificare le connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)   
  [Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)  

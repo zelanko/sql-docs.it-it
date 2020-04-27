@@ -1,5 +1,5 @@
 ---
-title: Miglioramenti di data e ora (OLE DB) | Microsoft Docs
+title: Miglioramenti relativi a data e ora (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62866838"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Miglioramenti relativi a data e ora (OLE DB)
-  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono esposti come estensioni in Native Client. Per una panoramica del supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native Client per i nuovi tipi di dati di data e ora, vedere [miglioramenti di data e ora](../native-client/features/date-and-time-improvements.md). Per un esempio, vedere [usare le funzionalità avanzate di data e ora &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono esposti come estensioni in Native Client. Per una panoramica del supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native Client per i nuovi tipi di dati di data e ora, vedere [miglioramenti di data e ora](../native-client/features/date-and-time-improvements.md). Per un esempio, vedere [Usare le funzionalità avanzate di data e ora &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Per informazioni più generali sui tipi di dati di data e ora, vedere [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
+ Per altre informazioni generali sui tipi di dati di data e ora, vedere [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  

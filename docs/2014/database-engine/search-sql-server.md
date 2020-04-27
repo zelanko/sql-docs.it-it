@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843717"
 ---
 # <a name="search-sql-server"></a>Cerca (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62843717"
  [Ricerca semantica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)  
  Consente di identificare le frasi chiave in testo o documenti, individuare documenti simili o correlati e fornire informazioni esplicative sulle similitudini o le correlazioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

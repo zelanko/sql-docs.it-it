@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6db88a8bb5e44090e5201220fee36a432b69767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869876"
 ---
 # <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
@@ -68,7 +68,7 @@ ms.locfileid: "62869876"
   
 ## <a name="see-also"></a>Vedere anche  
  [log_shipping_monitor_secondary &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql)   
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_help_log_shipping_monitor_secondary &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)   
  [sp_refresh_log_shipping_monitor &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874106"
 ---
 # <a name="altering-an-assembly"></a>Modifica di un assembly
@@ -51,7 +51,7 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione degli assembly di integrazione CLR](managing-clr-integration-assemblies.md)   
  [Creazione di un assembly](creating-an-assembly.md)   
  [Eliminazione di un assembly](dropping-an-assembly.md)   

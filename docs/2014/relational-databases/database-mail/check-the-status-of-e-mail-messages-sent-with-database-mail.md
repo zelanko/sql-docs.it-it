@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872329"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database
@@ -29,10 +29,10 @@ ms.locfileid: "62872329"
   
 -   **Per visualizzare lo stato del messaggio di posta elettronica inviato usando Posta elettronica database:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Posta elettronica database conserva copie dei messaggi di posta elettronica in uscita e le visualizza nelle viste **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**e **sysmail_faileditems** del database **msdb** . Il programma esterno Posta elettronica database registra l'attività e visualizza il log tramite il registro eventi applicazioni di Windows e la vista **sysmail_event_log** nel database **msdb** . Per controllare lo stato di un messaggio di posta elettronica, è necessario eseguire una query su questa tabella. I messaggi di posta elettronica possono avere uno dei quattro stati seguenti: **inviato**, **non inviato**, **nuovo tentativo in corso**e **non riuscito**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per visualizzare lo stato della posta elettronica inviata utilizzando Posta elettronica**  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "62872329"
   
      Per impostazione predefinita, il programma esterno non registra le informazioni relative ai messaggi inviati correttamente. Per registrare tutti i messaggi, impostare il livello di registrazione su dettagliato utilizzando la pagina **Configurazione parametri di sistema** di **Configurazione guidata Posta elettronica database**.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente sono elencate le informazioni relative a eventuali messaggi di posta elettronica inviati a `danw` che il programma esterno non è stato in grado di inviare correttamente. L'istruzione elenca oggetto, data e ora del mancato invio del messaggio da parte del programma esterno e il messaggio di errore dal log di Posta elettronica database.  
   
 ```  
@@ -71,7 +71,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Controlli e registrazione di Posta elettronica database](database-mail-log-and-audits.md)  
   
   

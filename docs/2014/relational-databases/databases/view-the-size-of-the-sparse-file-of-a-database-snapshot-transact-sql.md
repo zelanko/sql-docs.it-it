@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870880"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Visualizzare le dimensioni del file sparse di uno snapshot del database (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62870880"
 > [!NOTE]  
 >  Le dimensioni dei file sparse aumentano con incrementi di 64 kilobyte (KB) e corrispondono quindi sempre a un multiplo di 64 KB.  
   
- Per visualizzare il numero di byte usati nel disco da ogni file sparse di uno snapshot, eseguire una query nella colonna **size_on_disk_bytes** della DMV [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ di ](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql).  
+ Per visualizzare il numero di byte usati nel disco da ogni file sparse di uno snapshot, eseguire una query nella colonna **size_on_disk_bytes** della DMV [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per visualizzare lo spazio su disco usato da un file sparse, fare clic con il pulsante destro del mouse sul file in Microsoft Windows, scegliere **Proprietà**e quindi verificare il valore in **Dimensioni su disco** .  
   
@@ -65,10 +65,10 @@ ms.locfileid: "62870880"
   
      ( *numero_di_pagine* * 8192)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [sys. fn_virtualfilestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys. database_files &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
   

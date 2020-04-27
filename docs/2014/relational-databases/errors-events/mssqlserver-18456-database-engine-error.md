@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869596"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -75,7 +75,7 @@ ms.locfileid: "62869596"
   
  Esistono altri stati di errore che indicano un errore di elaborazione interno non previsto.  
   
- **Un'altra possibile cause insolita**  
+ **Possibile causa insolita aggiuntiva**  
   
  Il motivo dell'errore **un tentativo di accesso con l'autenticazione SQL non è riuscito. Il server è configurato solo per l'autenticazione di Windows.** può essere restituito nelle situazioni seguenti.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62869596"
 ## <a name="examples"></a>Esempi  
  In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la password non è corretta.  
   
-|Data|Source (Sorgente)|Message|  
+|Date|Source (Sorgente)|Message|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Accesso|Errore: 18456, gravità: 14, stato: 8.|  
 |2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: \<indirizzo IP>]|  
