@@ -23,14 +23,13 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772278"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Invio di commenti e suggerimenti su SQL Server 2014
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ringrazia gli utenti per il tempo dedicato e per il contributo che consente di migliorare i prodotti e la documentazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile fornire suggerimenti e report sui bug relativi alle funzionalità del prodotto e all'interfaccia utente, inviare commenti e suggerimenti sulla documentazione e scegliere di inviare automaticamente segnalazioni di errori e dati sull'utilizzo a [!INCLUDE[msCoName](../includes/msconame-md.md)] per l'analisi. Ognuna di queste tre opzioni relative ai commenti e ai suggerimenti viene descritta di seguito.  
   
 ## <a name="submitting-feedback-about-the-product"></a>Invio di commenti sul prodotto  
@@ -38,7 +37,7 @@ ms.locfileid: "62772278"
   
  È possibile trovare la pagina per i commenti e i suggerimenti su [!INCLUDE[msCoName](../includes/msconame-md.md)] nel sito [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect in numerosi modi.  
   
--   Accedere alla [!INCLUDE[msCoName](../includes/msconame-md.md)]pagina Web[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per i commenti e i suggerimenti su [ nel sito ](https://go.microsoft.com/fwlink/?linkid=34178) Connect.  
+-   Accedere alla [pagina Web](https://go.microsoft.com/fwlink/?linkid=34178) per i commenti e i suggerimenti su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel sito [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
   
 -   Nella barra degli strumenti della Guida di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fare clic sul pulsante **Commenti e suggerimenti** oppure scegliere il comando **Community/Commenti e suggerimenti**.  
   

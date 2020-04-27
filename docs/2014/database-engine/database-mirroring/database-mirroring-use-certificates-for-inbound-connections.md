@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807559"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata (Transact-SQL)
@@ -162,11 +162,11 @@ GO
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [CONCEDERE le autorizzazioni per l'endpoint &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Configurare un database mirror crittografato](set-up-an-encrypted-mirror-database.md)   
- [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [&#40;SQL Server dell'endpoint del mirroring del database&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

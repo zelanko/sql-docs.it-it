@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dbb63c958b50d3fac51cd8686b8580c93dacdb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778961"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
   Questa sezione contiene argomenti relativi agli indici per le tabelle ottimizzate per la memoria:  
   
--   [Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+-   [Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
 -   [Indici hash](hash-indexes.md)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "62778961"
   
 -   [Risoluzione dei problemi comuni di prestazioni con gli indici hash con ottimizzazione per la memoria](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

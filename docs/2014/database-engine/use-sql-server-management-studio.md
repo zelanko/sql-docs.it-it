@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773896"
 ---
 # <a name="use-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
@@ -77,7 +77,7 @@ ms.locfileid: "62773896"
  [Strumenti di progettazione di Visual Database Tools](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Vengono descritti gli strumenti di Visual Database Tools che consentono di creare query, progettare o modificare la struttura di un database o aggiornare dati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

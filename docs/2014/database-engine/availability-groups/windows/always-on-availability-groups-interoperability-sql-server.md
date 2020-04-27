@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815747"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Gruppi di disponibilità AlwaysOn: interoperabilità (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62815747"
   
 
   
-##  <a name="Interop"></a>Funzionalità che interagiscono con Gruppi di disponibilità AlwaysOn  
+##  <a name="features-that-interoperate-with-alwayson-availability-groups"></a><a name="Interop"></a>Funzionalità che interagiscono con Gruppi di disponibilità AlwaysOn  
  Nella tabella seguente vengono elencate le funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di interoperabilità con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un collegamento nella colonna **Ulteriori informazioni** indica che per una determinata funzionalità esistono le considerazioni di interoperabilità.  
   
 |Funzionalità|Altre informazioni|  
@@ -45,9 +45,8 @@ ms.locfileid: "62815747"
 |Broker di servizio|[Service Broker con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server Agent||  
   
-##  <a name="NoInterop"></a>Funzionalità che non interagiscono con Gruppi di disponibilità AlwaysOn  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è in grado di interagire con le funzionalità:  
+##  <a name="features-that-do-not-interoperate-with-alwayson-availability-groups"></a><a name="NoInterop"></a>Funzionalità che non interagiscono con Gruppi di disponibilità AlwaysOn  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è in grado di interagire con le funzionalità:  
   
 -   Transazioni tra database e transazioni distribuite  
   
@@ -55,11 +54,11 @@ ms.locfileid: "62815747"
   
 -   Mirroring del database  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   
-     [Guida alla migrazione: migrazione a SQL Server 2012 clustering di failover e gruppi di disponibilità dalle distribuzioni precedenti di clustering e mirroring](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [Pagina relativa alla guida alla migrazione in cui viene illustrata la migrazione al clustering di failover e ai gruppi di disponibilità di SQL Server 2012 dal clustering e dalle distribuzioni del mirroring precedenti](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   

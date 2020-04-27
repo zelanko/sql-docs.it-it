@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f2a3a0515674e5a6a5a9e4cb4788ddcf4a37da8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786950"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote login timeout
@@ -41,18 +41,18 @@ ms.locfileid: "62786950"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione remote login timeout](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   L'opzione **remote login timeout** influisce sulle connessioni ai provider OLE DB stabilite per l'esecuzione di query eterogenee.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-login-timeout-option"></a>Per configurare l'opzione remote login timeout  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62786950"
   
      Utilizzare l'opzione **remote login timeout** per specificare il numero di secondi che devono trascorrere prima di considerare non riuscito il tentativo di accesso remoto.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-remote-login-timeout-option"></a>Per configurare l'opzione remote login timeout  
   
@@ -86,7 +86,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione remote login timeout  
+##  <a name="follow-up-after-you-configure-the-remote-login-timeout-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione remote login timeout  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

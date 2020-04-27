@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814067"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità AlwaysOn)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Riepilogo** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare la griglia di questa pagina per rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una o più modifiche, fare clic su **Indietro** per tornare alla pagina o alle pagine pertinenti. Al termine, fare clic su **Avanti** per tornare alla pagina **Riepilogo** . Dopo avere effettuato le scelte desiderate, fare clic su **Fine**.  
   
-##  <a name="PageOptions"></a>Opzioni della pagina Riepilogo  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opzioni della pagina Riepilogo  
  **Script**  
  Fare clic per generare uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)] per le azioni elencate nella griglia di riepilogo. Sarà richiesto di specificare una destinazione per lo script.  
   
- **Precedente**  
+ **Indietro**  
  Fare clic per tornare alla pagina immediatamente precedente quella corrente. È possibile utilizzare il pulsante **Indietro** per tornare indietro ad alcune delle pagine precedenti e, facoltativamente, modificare alcuni dei valori specificati.  
   
  **Fine**  
@@ -40,7 +40,7 @@ ms.locfileid: "62814067"
   
 
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62814067"
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

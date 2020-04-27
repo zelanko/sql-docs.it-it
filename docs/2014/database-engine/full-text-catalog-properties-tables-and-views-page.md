@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779192"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Proprietà catalogo full-text (pagina Tabelle e viste)
@@ -56,8 +56,8 @@ ms.locfileid: "62779192"
 |**Manuale**|Le modifiche, le aggiunte o le eliminazioni dei dati indicizzati vengono rilevate da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando il rilevamento delle modifiche è impostato su **Manuale** , le modifiche all'indice non vengono aggiornate automaticamente. Un amministratore può invece applicare manualmente le modifiche utilizzando un' [istruzione ALTER FULLTEXT index... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) (istruzione).|  
 |**Non rilevare modifiche**|Quando è impostata questa opzione, le modifiche apportate ai dati indicizzati nel catalogo non vengono registrate. Un amministratore deve compilare l'indice utilizzando ALTER FULLTEXT INDEX con FULL POPULATION o INCREMENTAL POPULATION.|  
   
-## <a name="see-also"></a>Vedere anche  
- [CREAZIONE di un catalogo full-text &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Popolamento degli indici full-text](../relational-databases/indexes/indexes.md)  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774253"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Visualizzare il report di log shipping (SQL Server Management Studio)
@@ -47,7 +47,7 @@ ms.locfileid: "62774253"
   
 3.  Fare clic su **Stato log shipping delle transazioni**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitorare il log shipping &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
   

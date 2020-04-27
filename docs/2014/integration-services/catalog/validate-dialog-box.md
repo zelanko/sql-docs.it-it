@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771652"
 ---
 # <a name="validate-dialog-box"></a>Finestra di dialogo Convalida
@@ -31,7 +31,7 @@ ms.locfileid: "62771652"
   
 -   [Impostare le opzioni nella pagina Generale](#general)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Convalida  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Convalida  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62771652"
   
 5.  Fare clic con il pulsante destro del mouse sul pacchetto o sul progetto, quindi selezionare **Convalida**.  
   
-##  <a name="general"></a> Impostare le opzioni nella pagina Generale  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Impostare le opzioni nella pagina Generale  
  **Environment**  
  Selezionare l'ambiente da utilizzare per convalidare il progetto o pacchetto.  
   

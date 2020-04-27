@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780350"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Funzionalità degli strumenti di gestione non più supportate in SQL Server 2014
-  In questo argomento vengono descritte le funzionalità degli strumenti di gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  In questo argomento vengono descritte le funzionalità degli strumenti di gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Funzionalità rimosse in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-sscurrent"></a>Funzionalità rimosse in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  nessuno  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Funzionalità rimosse in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-sssql11"></a>Funzionalità rimosse in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  L'editor del codice di SQL Server Compact Edition è stato rimosso da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Il supporto per SQL Server Compact Edition è stato rimosso da Esplora oggetti, Esplora soluzioni ed Esplora modelli. Utilizzare invece gli editor Transact-SQL in Microsoft Visual Studio 2010 Service Pack 1 o Webmatrix.  
@@ -44,7 +44,7 @@ ms.locfileid: "62780350"
   
  L'API di DACfx 3.0 e gli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportano la lettura dei file DACPAC e BACPAC creati utilizzando gli strumenti e le versioni DACfx di versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pertanto è possibile estrarre database nei file DACPAC da queste versioni e distribuirli nelle versioni supportate di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

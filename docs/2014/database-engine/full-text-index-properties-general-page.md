@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778942"
 ---
 # <a name="full-text-index-properties-general-page"></a>Proprietà indice full-text (pagina Generale)
@@ -31,7 +31,7 @@ ms.locfileid: "62778942"
  **Database**  
  Visualizza il nome del database in cui risiede l'indice full-text.  
   
- **Tabella**  
+ **tavolo**  
  Visualizza il nome della tabella utilizzata per la definizione dell'indice full-text.  
   
  **Chiave indice full-text**  
@@ -119,7 +119,7 @@ ms.locfileid: "62778942"
   
 |||  
 |-|-|  
-|**True**|Attivato|  
+|**True**|Enabled|  
 |**False**|Disabled|  
   
  **Rilevamento delle modifiche**  
@@ -129,7 +129,7 @@ ms.locfileid: "62778942"
   
 |||  
 |-|-|  
-|**Off**|L'indice full-text non viene aggiornato con le modifiche apportate ai dati sottostanti.|  
+|**Disattivato**|L'indice full-text non viene aggiornato con le modifiche apportate ai dati sottostanti.|  
 |**Manuale**|L'indice full-text non viene aggiornato automaticamente con le modifiche apportate ai dati sottostanti. Tuttavia, le modifiche apportate ai dati sottostanti vengono mantenute ed è possibile propagarle all'indice full-text in base a una pianificazione utilizzando SQL Server Agent o manualmente.|  
 |**Automatico**|L'indice full-text viene aggiornato automaticamente con le modifiche apportate ai dati sottostanti nella tabella di base.|  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62778942"
 |**Incrementale**|Il popolamento incrementale aggiorna l'indice full-text relativamente alle righe aggiunte, eliminate o modificate dopo l'ultimo popolamento o durante la sua esecuzione. Per eseguire un popolamento incrementale, è necessario che la tabella di base contenga una colonna del tipo di dati `timestamp`.|  
 |**Aggiornamento**|L'indice full-text viene aggiornato ogni qual volta i dati della tabella di base vengono modificati.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Introduzione alla ricerca full-text](../relational-databases/search/get-started-with-full-text-search.md)  
   
   

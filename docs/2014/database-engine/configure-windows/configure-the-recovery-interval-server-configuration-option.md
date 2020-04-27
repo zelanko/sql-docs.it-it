@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787123"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurare l'opzione di configurazione del server recovery interval
@@ -49,13 +49,13 @@ ms.locfileid: "62787123"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione recovery interval](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   L'intervallo di recupero influisce solo sui database in cui viene utilizzato il tempo di recupero di riferimento predefinito (0). Per ignorare l'intervallo di recupero del server in un database, configurare un tempo di recupero di riferimento non predefinito nel database. Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62787123"
   
 -   Se si usa **sp_configure** per impostare il valore dell'opzione **recovery interval** su un valore maggiore di 60 (minuti), specificare RECONFIGURE WITH OVERRIDE. Con WITH OVERRIDE è possibile disabilitare la verifica del valore di configurazione, in particolare per valori non validi o non consigliati.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per impostare l'intervallo di recupero**  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sull'istanza del server e selezionare **Proprietà**.  
@@ -77,7 +77,7 @@ ms.locfileid: "62787123"
   
 3.  In **Recupero**, nella casella **Intervallo di recupero (minuti)** , digitare o selezionare un valore compreso tra 0 e 32767 per impostare il numero massimo di minuti impiegato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il recupero di ogni database all'avvio. L'impostazione predefinita è 0, che rappresenta la configurazione automatica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò equivale a un tempo di recupero inferiore a un minuto e all'impostazione di checkpoint a intervalli di circa un minuto per i database attivi.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-set-the-recovery-interval"></a>Per impostare l'intervallo di recupero  
   
@@ -103,7 +103,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione recovery interval  
+##  <a name="follow-up-after-you-configure-the-recovery-internal-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione recovery interval  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

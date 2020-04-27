@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792011"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Pagina Connetti a repliche secondarie esistenti (procedure guidate Aggiungi replica e Aggiungi database)
-  Questo argomento della Guida descrive le opzioni della pagina **Connetti a repliche secondarie esistenti** . Questo argomento viene utilizzato nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e nella [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   Questo argomento della Guida descrive le opzioni della pagina **Connetti a repliche secondarie esistenti**. Questo argomento viene utilizzato nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e nella [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  **Colonne della griglia:**  
  **Istanza del server**  
@@ -41,7 +41,7 @@ ms.locfileid: "62792011"
   
 
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62792011"
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

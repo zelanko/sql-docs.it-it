@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779136"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
@@ -30,7 +30,7 @@ ms.locfileid: "62779136"
   
  Per ulteriori informazioni sull'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tramite Sysprep, vedere [Install SQL Server 2014 using Sysprep](install-sql-server-using-sysprep.md).  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Utilizzi comuni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>Utilizzi comuni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  La funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep può essere utilizzata nei modi seguenti:  
   
 -   Utilizzando il passaggio di preparazione dell'immagine, è possibile preparare una o più istanze non configurate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer. È possibile configurare queste istanze predisposte utilizzando il passaggio di completamento dell'immagine sullo stesso computer.  
@@ -56,7 +56,7 @@ ms.locfileid: "62779136"
   
     -   Non è possibile specificare gli ID del prodotto per un'istanza predisposta delle edizioni Express di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>Installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate  
+## <a name="supported-ssnoversion-installations"></a>Installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate  
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , SysPrep supporta tutte le funzionalità, inclusi gli strumenti, di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  È possibile preparare più istanze per installazioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o versioni precedenti. Le funzionalità di queste istanze devono supportare SysPrep.  
@@ -71,10 +71,10 @@ ms.locfileid: "62779136"
   
  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep supporta le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla riga di comando.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Il ripristino di un'istanza predisposta non è supportato. Se l'installazione non viene completata durante la preparazione o il completamento dell'immagine, è necessario eseguire la disinstallazione.  
   
-##  <a name="BKMK_PrepareImage"></a> Preparare l'immagine  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> Preparare l'immagine  
  Tramite il passaggio relativo alla preparazione dell'immagine vengono installati il prodotto e le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma non viene configurata l'installazione.  
   
  Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da installare e il percorso di installazione per i file di installazione del prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere specificati durante questo passaggio. È possibile preparare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite **Preparazione immagine di un'istanza autonoma di SQL Server** nella pagina **Avanzate** di **Centro installazione** o dal prompt dei comandi.  
@@ -85,7 +85,7 @@ ms.locfileid: "62779136"
   
  Al termine della preparazione dell'istanza, nel menu **Start** viene reso disponibile un collegamento per completare la configurazione dell'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BKMK_CompleteImage"></a> Completare l'immagine  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> Completare l'immagine  
  È possibile completare le istanze predisposte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite uno dei metodi seguenti:  
   
 -   Utilizzare il collegamento nel menu Start.  

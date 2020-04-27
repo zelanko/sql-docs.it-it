@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789843"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informazioni sull'accesso alla connessione client per le repliche di disponibilità (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62789843"
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="ConnectAccessForSecondary"></a> Tipi di accesso alla connessione supportati dal ruolo secondario  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> Tipi di accesso alla connessione supportati dal ruolo secondario  
  Il ruolo secondario supporta tre alternative per le connessioni client, indicate di seguito:  
   
  Nessuna connessione  
@@ -60,9 +60,9 @@ ms.locfileid: "62789843"
  Consentire qualsiasi connessione di sola lettura  
  I database secondari sono tutti disponibili per le connessioni con accesso in lettura. Questa opzione consente la connessione di client di versioni precedenti.  
   
- Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Per altre informazioni, vedere [configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="ConnectAccessForPrimary"></a> Tipi di accesso alla connessione supportati dal ruolo primario  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> Tipi di accesso alla connessione supportati dal ruolo primario  
  Il ruolo primario supporta due alternative per le connessioni client, indicate di seguito:  
   
  Tutte le connessioni sono consentite  
@@ -73,9 +73,9 @@ ms.locfileid: "62789843"
   
  Per informazioni su questa proprietà di connessione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Per altre informazioni, vedere [configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> Effetti della configurazione dell'accesso alla connessione sulla connettività client  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> Effetti della configurazione dell'accesso alla connessione sulla connettività client  
  Le impostazioni dell'accesso alla connessione di una replica determinano l'esito positivo o negativo di un tentativo di connessione. Nella tabella seguente viene riepilogato l'esito positivo o negativo di un tentativo di connessione per ciascuna impostazione di accesso alla connessione.  
   
 |Ruolo della replica|Accesso alla connessione supportato sulla replica|Finalità di connessione|Risultato tentativo di connessione|  
@@ -104,7 +104,7 @@ ms.locfileid: "62789843"
   
  In genere, in questo scenario di esempio, i failover si verificano solo tra le repliche con commit sincrono e immediatamente dopo il failover, le applicazioni con finalità di lettura sono in grado di riconnettersi a una delle repliche secondarie con commit asincrono. Tuttavia, in caso di emergenza nel centro di elaborazione principale vengono perse entrambe le repliche con commit sincrono. L'amministratore del database del sito satellite esegue un failover manuale forzato a una replica secondaria con commit asincrono. I database secondari nella replica secondaria rimanente vengono sospesi dal failover forzato e diventano pertanto non disponibili per i carichi di lavoro di sola lettura. La nuova replica primaria, configurata per le connessioni in lettura/scrittura, evita che il carico di lavoro con finalità di lettura entri in competizione con il carico di lavoro di lettura/scrittura. Ciò significa che finché l'amministratore del database non riprende i database secondari nella replica del secondaria rimanente con commit asincrono, i client con finalità di lettura non saranno in grado di connettersi ad alcuna replica di disponibilità.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -112,17 +112,17 @@ ms.locfileid: "62789843"
   
 -   [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
--   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+-   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog del team di SQL Server AlwaysOn: Blog del team ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  

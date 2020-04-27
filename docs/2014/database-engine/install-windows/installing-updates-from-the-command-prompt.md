@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774982"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installazione degli aggiornamenti dal prompt dei comandi
@@ -59,7 +59,7 @@ ms.locfileid: "62774982"
   
  <sup>1</sup> non è possibile specificare questo parametro per applicare un aggiornamento a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare il parametro /instanceID.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica sull'installazione dei servizi SQL Server](../../sql-server/install/overview-of-sql-server-servicing-installation.md)  
   
   

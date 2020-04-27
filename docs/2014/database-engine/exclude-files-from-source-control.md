@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779901"
 ---
 # <a name="exclude-files-from-source-control"></a>Esclusione di file dal controllo del codice sorgente
@@ -31,7 +31,7 @@ ms.locfileid: "62779901"
   
 2.  Scegliere **controllo del codice sorgente**dal menu **file** , quindi fare clic su **Escludi** * \<nome file>* **dal controllo del codice sorgente**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)   
  [Impostare le opzioni di controllo del codice sorgente](../../2014/database-engine/set-source-control-options.md)   
  [Modifica delle connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)  

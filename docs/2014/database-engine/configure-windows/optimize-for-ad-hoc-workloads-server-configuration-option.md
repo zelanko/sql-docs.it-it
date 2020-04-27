@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7edf279b49374823c9083005be9b8d047b003f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781437"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>ottimizzare per l'opzione di configurazione del server dei carichi di lavoro a hoc
@@ -28,13 +28,13 @@ ms.locfileid: "62781437"
   
  Lo stub del piano compilato è uno dei cacheobjtype visualizzato nella vista del catalogo sys.dm_exec_cached_plans. Dispone di handle SQL e del piano univoci. Lo stub del piano compilato non ha un piano di esecuzione associato e l'esecuzione di query per l'handle del piano non restituisce uno showplan XML.  
   
- Con il flag di traccia 8032 è possibile ripristinare i parametri dei limiti di cache all'impostazione RTM di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che consente, in generale, di aumentare le dimensioni delle cache. Usare questa impostazione quando le voci della cache riutilizzate di frequente non rientrano nella cache e quando l' *opzione di configurazione del server ottimizza per carichi di lavoro ad hoc* non riesce a risolvere il problema della cache dei piani.  
+ Con il flag di traccia 8032 è possibile ripristinare i parametri dei limiti di cache all'impostazione RTM di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che consente, in generale, di aumentare le dimensioni delle cache. Usare questa impostazione quando le voci della cache riutilizzate di frequente non rientrano nella cache e quando non è possibile *ottimizzare per l'opzione di configurazione del server dei carichi di lavoro a hoc* per risolvere il problema della cache dei piani.  
   
 > [!WARNING]  
 >  Il flag di traccia 8032 può provocare prestazioni ridotte se cache di grandi dimensioni rendono disponibile meno memoria per altri consumer di memoria, ad esempio il pool di buffer.  
   
-## <a name="see-also"></a>Vedere anche  
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [sys. dm_exec_cached_plans &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773367"
 ---
 # <a name="view-file-status"></a>Visualizzazione dello stato dei file
@@ -42,7 +42,7 @@ ms.locfileid: "62773367"
   
 2.  Scegliere **controllo del codice sorgente**dal menu **file** e fare clic su **proprietà di SourceSafe**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   

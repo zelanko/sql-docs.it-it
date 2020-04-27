@@ -42,14 +42,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770734"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
-  Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] a oggetti, molti oggetti flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
+  Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
  In questo argomento vengono elencate e descritte le proprietà personalizzate delle diverse trasformazioni del flusso di dati. Per informazioni sulle proprietà comuni alla maggior parte degli oggetti del flusso di dati, vedere [Proprietà comuni](../../common-properties.md).  
   
@@ -59,20 +59,20 @@ ms.locfileid: "62770734"
   
 ||||  
 |-|-|-|  
-|[Aggregazione](#aggregate)|[Esportazione colonna](#extract)|[Conteggio righe](#rowcount)|  
+|[Aggregata](#aggregate)|[Esportazione colonna](#extract)|[Conteggio righe](#rowcount)|  
 |[Controllo](#audit)|[Raggruppamento fuzzy](#fgroup)|[Campionamento righe](#rowsamp)|  
-|[trasformazione Cache](#cachetransform)|[Ricerca fuzzy](#flookup)|[Componente script](#script)|  
+|[Trasformazione Cache](#cachetransform)|[Ricerca fuzzy](#flookup)|[Componente script](#script)|  
 |[Mappa caratteri](#charmap)|[Importa colonna](#insert)|[Dimensione a modifica lenta](#scd)|  
-|[Suddivisione condizionale](#condsplit)|[Ricerca](#lookup)|[Ordina](#sort)|  
-|[Copia colonna](#copymap)|[Merge join](#mjoin)|[Estrazione termini](#textract)|  
+|[Suddivisione condizionale](#condsplit)|[Ricerca](#lookup)|[Sort](#sort)|  
+|[Copia colonna](#copymap)|[Merge Join](#mjoin)|[Estrazione termini](#textract)|  
 |[Conversione dati](#dataconv)|[Comando OLE DB](#oledbcmd)|[Ricerca termini](#tlookup)|  
 |[Query di data mining](#dmquery)|[Campionamento percentuale](#percent)|[UnPivot](#unpivot)|  
 |[Colonna derivata](#derived)|[Pivot](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Trasformazioni senza proprietà personalizzate  
- Le trasformazioni seguenti non includono proprietà personalizzate a livello di componente, input o output: [Trasformazione Unione](merge-transformation.md), [Trasformazione Multicast](multicast-transformation.md), e [Trasformazione Unione input multipli](union-all-transformation.md). Tali trasformazioni utilizzano solo le proprietà comuni a tutti i componenti del flusso di dati.  
+ Le trasformazioni seguenti non includono proprietà personalizzate a livello di componente, di input o di output: [Trasformazione Unione](merge-transformation.md), [Trasformazione Multicast](multicast-transformation.md) e [Trasformazione Unione input multipli](union-all-transformation.md). Tali trasformazioni utilizzano solo le proprietà comuni a tutti i componenti del flusso di dati.  
   
-##  <a name="aggregate"></a>Proprietà personalizzate della trasformazione aggregazione  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> Proprietà personalizzate della trasformazione Aggregazione  
  La trasformazione Aggregazione include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Aggregazione. Tutte le proprietà sono di lettura/scrittura.  
@@ -81,34 +81,33 @@ ms.locfileid: "62770734"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|Valore compreso tra 1 e 100 che specifica la possibile percentuale di estensione della memoria durante l'aggregazione. Il valore predefinito di questa proprietà è **25**.|  
 |CountDistinctKeys|Integer|Valore che specifica il numero esatto di misure Distinct Count che possono essere scritte dall'aggregazione. Se viene specificato un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza.|  
-|CountDistinctScale|Integer (enumerazione)|Valore che descrive il numero approssimativo di valori distinct in una colonna che possono essere conteggiati dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave<br /><br /> **Media** (2): indica fino a 5 milioni valori di chiave<br /><br /> **High** (3): indica più di 25 milioni valori di chiave.<br /><br /> Non **specificato** (0): indica che non viene usato alcun valore CountDistinctScale. L'uso dell'opzione **Non specificata** (0) può influire sulle prestazioni nei set di dati di grandi dimensioni.|  
+|CountDistinctScale|Integer (enumerazione)|Valore che descrive il numero approssimativo di valori distinct in una colonna che possono essere conteggiati dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave.<br /><br /> **Media** (2): indica fino a 5 milioni di valori di chiave.<br /><br /> **Alta** (3): indica più di 25 milioni di valori di chiave.<br /><br /> **Non specificata** (0): indica che non viene usato alcun valore CountDistinctScale. L'uso dell'opzione **Non specificata** (0) può influire sulle prestazioni nei set di dati di grandi dimensioni.|  
 |Chiavi|Integer|Valore che specifica il numero esatto di chiavi Group By scritte dall'aggregazione. Se si specifica un valore KeyScale, il valore in Keys ha la precedenza.|  
-|KeyScale|Integer (enumerazione)|Valore che descrive approssimativamente il numero di valori di chiave Group By che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Low** (1): indica fino a 500.000 valori di chiave.<br /><br /> **Media** (2): indica fino a 5 milioni valori di chiave.<br /><br /> **High** (3): indica più di 25 milioni valori di chiave.<br /><br /> Non **specificato** (0): indica che non viene usato alcun valore di scalabilità.|  
+|KeyScale|Integer (enumerazione)|Valore che descrive approssimativamente il numero di valori di chiave Group By che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave.<br /><br /> **Media** (2): indica fino a 5 milioni di valori di chiave.<br /><br /> **Alta** (3): indica più di 25 milioni di valori di chiave.<br /><br /> **Non specificata** (0): indica che non viene usato alcun valore KeyScale.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate dell'output della trasformazione Aggregazione. Tutte le proprietà sono di lettura/scrittura.  
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |Chiavi|Integer|Valore che specifica il numero esatto di chiavi Group By che possono essere scritte dall'aggregazione. Se si specifica un valore KeyScale, il valore in Keys ha la precedenza.|  
-|KeyScale|Integer (enumerazione)|Valore che descrive approssimativamente il numero di valori di chiave Group By che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave,<br /><br /> **Media** (2): indica fino a 5 milioni valori di chiave,<br /><br /> **High** (3): indica più di 25 milioni valori di chiave.<br /><br /> Non **specificato** (0): indica che non viene usato alcun valore di scalabilità.|  
+|KeyScale|Integer (enumerazione)|Valore che descrive approssimativamente il numero di valori di chiave Group By che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave.<br /><br /> **Media** (2): indica fino a 5 milioni di valori di chiave.<br /><br /> **Alta** (3): indica più di 25 milioni di valori di chiave.<br /><br /> **Non specificata** (0): indica che non viene usato alcun valore KeyScale.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Aggregazione. Tutte le proprietà sono di lettura/scrittura.  
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|AggregationColumnId|Integer|
-  `LineageID` di una colonna inclusa in una clausola GROUP BY o in funzioni di aggregazione.|  
+|AggregationColumnId|Integer|`LineageID` di una colonna inclusa in una clausola GROUP BY o in funzioni di aggregazione.|  
 |AggregationComparisonFlags|Integer|Valore che specifica il modo in cui la trasformazione Aggregazione confronta i dati di tipo stringa in una colonna. Per altre informazioni, vedere [Comparing String Data](../comparing-string-data.md).|  
-|AggregationType|Integer (enumerazione)|Valore che specifica l'operazione di aggregazione da eseguire sulla colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Conteggio** (1)<br /><br /> **Conteggio tutti** (2)<br /><br /> **CountDistinct** (3)<br /><br /> **Somma** (4)<br /><br /> **Media** (5)<br /><br /> **Massimo** (7)<br /><br /> **Minimo** (6)<br /><br /> **Group by** (0)|  
+|AggregationType|Integer (enumerazione)|Valore che specifica l'operazione di aggregazione da eseguire sulla colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|Integer|Quando il tipo di aggregazione è **Count Distinct**, valore che specifica il numero esatto di chiavi che possono essere scritte dall'aggregazione. Se viene specificato un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza.|  
-|CountDistinctScale|Integer (enumerazione)|Quando il tipo di aggregazione è **Count Distinct**, valore che descrive approssimativamente il numero di valori di chiave che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave,<br /><br /> **Media** (2): indica fino a 5 milioni valori di chiave,<br /><br /> **High** (3): indica più di 25 milioni valori di chiave.<br /><br /> Non **specificato** (0): indica che non viene usato alcun valore CountDistinctScale.|  
+|CountDistinctScale|Integer (enumerazione)|Quando il tipo di aggregazione è **Count Distinct**, valore che descrive approssimativamente il numero di valori di chiave che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave.<br /><br /> **Media** (2): indica fino a 5 milioni di valori di chiave.<br /><br /> **Alta** (3): indica più di 25 milioni di valori di chiave.<br /><br /> **Non specificata** (0): indica che non viene usato alcun valore CountDistinctScale.|  
 |IsBig|Boolean|Valore che indica se la colonna contiene un valore maggiore di 4 miliardi o un valore con una precisione maggiore di un valore a virgola mobile a precisione doppia. Il valore può essere 0 o 1. 0 indica che IsBig è `False` e la colonna non contiene un valore di grandi dimensioni o un valore preciso. Il valore predefinito di questa proprietà è 1.|  
   
  L'input e le colonne di input della trasformazione Aggregazione non includono proprietà personalizzate.  
   
  Per altre informazioni, vedere [Trasformazione Aggregazione](aggregate-transformation.md).  
   
-##  <a name="audit"></a>Proprietà personalizzate della trasformazione controllo  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> Proprietà personalizzate della trasformazione Controllo  
  La trasformazione Aggregazione include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Controllo. Tutte le proprietà sono di lettura/scrittura.  
@@ -121,7 +120,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Controllo](audit-transformation.md).  
   
-##  <a name="cachetransform"></a>Proprietà personalizzate della trasformazione trasformazione cache  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> Proprietà personalizzate della trasformazione Trasformazione cache  
  La trasformazione Trasformazione cache include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà della trasformazione Trasformazione cache. Tutte le proprietà sono di lettura/scrittura.  
@@ -134,7 +133,7 @@ ms.locfileid: "62770734"
 |InputColumns|string|Elenco delle colonne di input selezionate.|  
 |CacheColumnName|string|Specifica il nome della colonna a cui viene eseguito il mapping a una colonna di input selezionata.<br /><br /> Il nome della colonna nella proprietà CacheColumnName deve corrispondere al nome della colonna corrispondente indicato nella pagina **Colonne** di **Editor gestione connessione della cache**.<br /><br /> Per altre informazioni, vedere [Editor gestione connessione cache](../../cache-connection-manager-editor.md)|  
   
-##  <a name="charmap"></a>Proprietà personalizzate della trasformazione Mappa caratteri  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Proprietà personalizzate della trasformazione Mappa caratteri  
  La trasformazione Mappa caratteri include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Mappa caratteri. Tutte le proprietà sono di lettura/scrittura.  
@@ -142,13 +141,13 @@ ms.locfileid: "62770734"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Valore che specifica la proprietà `LineageID` della colonna di input che costituisce l'origine della colonna di output.|  
-|MapFlags|Integer (enumerazione)|Valore che specifica le operazioni di stringa eseguite dalla trasformazione Mappa caratteri nella colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Inversione byte** (2)<br /><br /> **Larghezza intera** (6)<br /><br /> **Metà larghezza** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Involucro linguistico** (7)<br /><br /> **Minuscolo** (0)<br /><br /> **Cinese semplificato** (8)<br /><br /> **Cinese tradizionale**(9)<br /><br /> **Maiuscole** (1)|  
+|MapFlags|Integer (enumerazione)|Valore che specifica le operazioni di stringa eseguite dalla trasformazione Mappa caratteri nella colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Inversione byte** (2)<br /><br /> **Larghezza intera** (6)<br /><br /> **Metà larghezza** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Conversione da maiuscole a minuscole (e viceversa) basata sulla lingua** (7)<br /><br /> **Minuscolo** (0)<br /><br /> **Cinese semplificato** (8)<br /><br /> **Cinese tradizionale**(9)<br /><br /> **Maiuscolo** (1)|  
   
  L'input, le colonne di input e l'output della trasformazione Mappa caratteri non includono proprietà personalizzate.  
   
  Per altre informazioni, vedere [Trasformazione Mappa caratteri](character-map-transformation.md).  
   
-##  <a name="condsplit"></a>Proprietà personalizzate della trasformazione Suddivisione condizionale  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> Proprietà personalizzate della trasformazione Suddivisione condizionale  
  La trasformazione Suddivisione condizionale include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate dell'output della trasformazione Suddivisione condizionale. Tutte le proprietà sono di lettura/scrittura.  
@@ -164,36 +163,34 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Suddivisione condizionale](conditional-split-transformation.md).  
   
-##  <a name="copymap"></a>Proprietà personalizzate della trasformazione Copia colonna  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> Proprietà personalizzate della trasformazione Copia colonna  
  La trasformazione Copia colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Copia colonna. Tutte le proprietà sono di lettura/scrittura.  
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|copyColumnId|Integer|
-  `LineageID` della colonna di input da cui viene copiata la colonna di output.|  
+|copyColumnId|Integer|`LineageID` della colonna di input da cui viene copiata la colonna di output.|  
   
  L'input, le colonne di input e l'output della trasformazione Copia colonna non includono proprietà personalizzate.  
   
  Per altre informazioni, vedere [Trasformazione Copia colonna](copy-column-transformation.md).  
   
-##  <a name="dataconv"></a>Proprietà personalizzate della trasformazione Conversione dati  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> Proprietà personalizzate della trasformazione Conversione dati  
  La trasformazione Conversione dati include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Conversione dati. Tutte le proprietà sono di lettura/scrittura.  
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valore che indica se la colonna utilizza le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oppure le routine di analisi standard dipendenti dalle impostazioni locali. Il valore predefinito di questa proprietà è `False`. Per altre informazioni, vedere [Analisi veloce](../../fast-parse.md) e [Analisi standard](../../standard-parse.md). .<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Conversione dati**, ma può essere impostata in **Editor avanzato**.|  
-|SourceInputColumnLineageId|Integer|
-  `LineageID` della colonna di input che costituisce l'origine della colonna di output.|  
+|FastParse|Boolean|Valore che indica se la colonna utilizza le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oppure le routine di analisi standard dipendenti dalle impostazioni locali. Il valore predefinito di questa proprietà è `False`. Per altre informazioni, vedere [Analisi veloce](../../fast-parse.md) e [Analisi standard](../../standard-parse.md). .<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Conversione dati**, ma può essere impostata in **Editor avanzato**.|  
+|SourceInputColumnLineageId|Integer|`LineageID` della colonna di input che costituisce l'origine della colonna di output.|  
   
  L'input, le colonne di input e l'output della trasformazione Conversione dati non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [trasformazione Conversione dati](data-conversion-transformation.md).  
+ Per altre informazioni, vedere [Trasformazione Conversione dati](data-conversion-transformation.md).  
   
-##  <a name="dmquery"></a>Proprietà personalizzate della trasformazione query di data mining  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> Proprietà personalizzate della trasformazione Query di data mining  
  La trasformazione Query di data mining include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Query di data mining. Tutte le proprietà sono di lettura/scrittura.  
@@ -212,7 +209,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Query di data mining](data-mining-query-transformation.md).  
   
-##  <a name="derived"></a>Proprietà personalizzate della trasformazione colonna derivata  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> Proprietà personalizzate della trasformazione Colonna derivata  
  La trasformazione Colonna derivata include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input e delle colonne di output della trasformazione Colonna derivata. Quando si sceglie di aggiungere la colonna derivata come nuova colonna, le proprietà personalizzate seguenti vengono applicate alla nuova colonna di output. Quando si sceglie di sostituire il contenuto di una colonna di input esistente con i risultati derivati, le proprietà personalizzate vengono applicate alla colonna di input esistente. Tutte le proprietà sono di lettura/scrittura.  
@@ -226,7 +223,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Colonna derivata](derived-column-transformation.md).  
   
-##  <a name="extract"></a>Proprietà personalizzate della trasformazione Esporta colonna  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> Proprietà personalizzate della trasformazione Esporta colonna  
  La trasformazione Esporta colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione Esporta colonna. Tutte le proprietà sono di lettura/scrittura.  
@@ -242,7 +239,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Esporta colonna](export-column-transformation.md).  
   
-##  <a name="insert"></a>Proprietà personalizzate della trasformazione Importa colonna  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> Proprietà personalizzate della trasformazione Importa colonna  
  La trasformazione Importa colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione Importa colonna. Tutte le proprietà sono di lettura/scrittura.  
@@ -256,7 +253,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Importa colonna](import-column-transformation.md).  
   
-##  <a name="fgroup"></a>Proprietà personalizzate della trasformazione Raggruppamento fuzzy  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> Proprietà personalizzate della trasformazione Raggruppamento fuzzy  
  La trasformazione Raggruppamento fuzzy include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Raggruppamento fuzzy. Tutte le proprietà sono di lettura/scrittura.  
@@ -264,9 +261,9 @@ ms.locfileid: "62770734"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |Delimitatori|string|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
-|Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore `True` è destinato per lo più al debug. Il valore predefinito di questa proprietà è `False`.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
-|MaxMemoryUsage|Integer|Quantità di memoria massima che può essere utilizzata dalla trasformazione. Il valore predefinito di questa proprietà è **0**, che consente l'uso della memoria dinamica.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
-|MinSimilarity|DOUBLE|Soglia di somiglianza utilizzata dalla trasformazione per identificare duplicati, espressa come valore compreso tra 0 e 1.  Il valore predefinito di questa proprietà è 0.8.|  
+|Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore `True` è destinato per lo più al debug. Il valore predefinito di questa proprietà è `False`.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
+|MaxMemoryUsage|Integer|Quantità di memoria massima che può essere utilizzata dalla trasformazione. Il valore predefinito di questa proprietà è **0**, che consente l'uso della memoria dinamica.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
+|MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione per identificare duplicati, espressa come valore compreso tra 0 e 1.  Il valore predefinito di questa proprietà è 0.8.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione Raggruppamento fuzzy. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -275,22 +272,21 @@ ms.locfileid: "62770734"
 |ExactFuzzy|Integer (enumerazione)|Valore che specifica se la trasformazione esegue una corrispondenza fuzzy o una corrispondenza esatta. I valori validi sono **Exact** e **Fuzzy**. Il valore predefinito di questa proprietà è **Fuzzy**.|  
 |FuzzyComparisonFlags|Integer (enumerazione)|Valore che specifica il modo in cui la trasformazione confronta i dati di tipo stringa in una colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Per altre informazioni, vedere [Comparing String Data](../comparing-string-data.md).|  
 |LeadingTrailingNumeralsSignificant|Integer (enumerazione)|Valore che specifica l'importanza dei numerali. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **LeadingNumeralsSignificant** (1): usare se sono significativi i numerali iniziali.<br /><br /> **TrailingNumeralsSignificant** (2): usare se sono significativi i numerali finali.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3): usare se sono significativi sia i numerali iniziali che finali.<br /><br /> **NumeralsNotSpecial** (0): usare se i numerali non sono significativi.|  
-|MinSimilarity|DOUBLE|Soglia di somiglianza utilizzata per il join sulla colonna, specificata come valore compreso tra 0 e 1. Solo le righe che superano tale soglia vengono considerate corrispondenze.|  
+|MinSimilarity|Double|Soglia di somiglianza utilizzata per il join sulla colonna, specificata come valore compreso tra 0 e 1. Solo le righe che superano tale soglia vengono considerate corrispondenze.|  
 |ToBeCleaned|Boolean|Valore che specifica se la colonna viene utilizzata per identificare duplicati, ovvero se si tratta di una colonna su cui si esegue il raggruppamento. Il valore predefinito di questa proprietà è `False`.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Raggruppamento fuzzy. Tutte le proprietà sono di lettura/scrittura.  
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|ColumnType|Integer (enumerazione)|Valore che identifica il tipo di colonna di output. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Keyin** (1)<br /><br /> **Keyout** (2)<br /><br /> **Somiglianza** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)<br /><br /> Non **definito** (0)|  
-|InputID|Integer|
-  `LineageID` della colonna di input corrispondente.|  
+|ColumnType|Integer (enumerazione)|Valore che identifica il tipo di colonna di output. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Somiglianza** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)<br /><br /> **Non definito** (0)|  
+|InputID|Integer|`LineageID` della colonna di input corrispondente.|  
   
  L'input e l'output della trasformazione Raggruppamento fuzzy non includono proprietà personalizzate.  
   
  Per altre informazioni, vedere [Trasformazione Raggruppamento fuzzy](fuzzy-grouping-transformation.md).  
   
-##  <a name="flookup"></a>Proprietà personalizzate della trasformazione Ricerca fuzzy  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> Proprietà personalizzate della trasformazione Ricerca fuzzy  
  La trasformazione Ricerca fuzzy include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca fuzzy. Tutte le proprietà, ad eccezione di `ReferenceMetadataXML`, sono di lettura/scrittura.  
@@ -300,11 +296,11 @@ ms.locfileid: "62770734"
 |CopyReferenceTable|Boolean|Specifica se è necessario creare una copia della tabella di riferimento per la creazione dell'indice di ricerca fuzzy e le ricerche successive. Il valore predefinito di questa proprietà è `True`.|  
 |Delimitatori|string|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |DropExistingMatchIndex|Boolean|Un valore che specifica se l'indice delle corrispondenze specificato in MatchIndexName viene eliminato quando MatchIndexOptions non è impostata su ReuseExistingIndex. Il valore predefinito di questa proprietà è `True`.|  
-|Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore `True` è destinato per lo più al debug. Il valore predefinito di questa proprietà è `False`.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
+|Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore `True` è destinato per lo più al debug. Il valore predefinito di questa proprietà è `False`.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MatchIndexName|string|Nome dell'indice delle corrispondenze. L'indice delle corrispondenze è la tabella in cui la trasformazione crea e salva l'indice utilizzato. Se viene riusato l'indice delle corrispondenze, MatchIndexName specifica l'indice da riusare. MatchIndexName deve essere un nome di identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido. Se il nome contiene spazi, ad esempio, deve essere racchiuso tra parentesi.|  
-|MatchIndexOptions|Integer (enumerazione)|Valore che specifica il modo in cui l'indice delle corrispondenze viene gestito dalla trasformazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> `ReuseExistingIndex`0<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|Dimensione massima della cache per la tabella di ricerca. Il valore predefinito di questa proprietà è **0**, che indica l'assenza di limiti per le dimensioni della cache.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
-|MaxOutputMatchesPerInput|Integer|Numero massimo di corrispondenze restituite dalla trasformazione per ogni riga di input. Il valore predefinito di questa proprietà è **1**.<br /><br /> Nota: è possibile specificare valori maggiori di 100 solo in **Editor avanzato**.|  
+|MatchIndexOptions|Integer (enumerazione)|Valore che specifica il modo in cui l'indice delle corrispondenze viene gestito dalla trasformazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
+|MaxMemoryUsage|Integer|Dimensione massima della cache per la tabella di ricerca. Il valore predefinito di questa proprietà è **0**, che indica l'assenza di limiti per le dimensioni della cache.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
+|MaxOutputMatchesPerInput|Integer|Numero massimo di corrispondenze restituite dalla trasformazione per ogni riga di input. Il valore predefinito di questa proprietà è **1**.<br /><br /> Nota: È possibile specificare valori maggiori di 100 solo in **Editor avanzato**.|  
 |MinSimilarity|Integer|Soglia di somiglianza utilizzata dalla trasformazione a livello di componente, specificata come valore compreso tra 0 e 1. Solo le righe che superano tale soglia vengono considerate corrispondenze.|  
 |ReferenceMetadataXML|string|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|string|Nome della tabella di ricerca. Il nome deve essere un nome di identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido. Se il nome contiene spazi, ad esempio, deve essere racchiuso tra parentesi.|  
@@ -315,10 +311,10 @@ ms.locfileid: "62770734"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Integer|Valore che specifica il modo in cui la trasformazione confronta i dati di tipo stringa in una colonna. Per altre informazioni, vedere [Comparing String Data](../comparing-string-data.md).|  
-|FuzzyComparisonFlagsEx|Integer (enumerazione)|Valore che specifica i flag di confronto estesi utilizzati dalla trasformazione. I valori possono includere **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**e **NoMapping**. Non è possibile usare **NoMapping** con altri flag.|  
+|FuzzyComparisonFlagsEx|Integer (enumerazione)|Valore che specifica i flag di confronto estesi utilizzati dalla trasformazione. I valori possono includere **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**e **NoMapping**. Non è possibile usare il flag**NoMapping** con altri flag.|  
 |JoinToReferenceColumn|string|Valore che specifica il nome della colonna della tabella di riferimento a cui è unita in join la colonna.|  
 |JoinType|Integer|Valore che specifica se la trasformazione esegue una corrispondenza fuzzy o una corrispondenza esatta. Il valore predefinito di questa proprietà è **Fuzzy**. L'integer per il tipo di join esatto è **1** , quello per il tipo di join fuzzy è **2**.|  
-|MinSimilarity|DOUBLE|Soglia di somiglianza utilizzata dalla trasformazione a livello di colonna, specificata come valore compreso tra 0 e 1. Solo le righe che superano tale soglia vengono considerate corrispondenze.|  
+|MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione a livello di colonna, specificata come valore compreso tra 0 e 1. Solo le righe che superano tale soglia vengono considerate corrispondenze.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Ricerca fuzzy. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -327,7 +323,7 @@ ms.locfileid: "62770734"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer (enumerazione)|Valore che identifica il tipo di colonna di output per le colonne aggiunte all'output dalla trasformazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Somiglianza** (1)<br /><br /> **Confidenza** (2)<br /><br /> **ColumnSimilarity** (3)<br /><br /> Non **definito** (0)|  
+|ColumnType|Integer (enumerazione)|Valore che identifica il tipo di colonna di output per le colonne aggiunte all'output dalla trasformazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Somiglianza** (1)<br /><br /> **Confidenza** (2)<br /><br /> **ColumnSimilarity** (3)<br /><br /> **Non definito** (0)|  
 |CopyFromReferenceColumn|string|Valore che specifica il nome della colonna nella tabella di riferimento che fornisce il valore in una colonna di output.|  
 |SourceInputColumnLineageId|Integer|Valore che identifica la colonna di input che fornisce valori a questa colonna di output.|  
   
@@ -335,7 +331,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Ricerca fuzzy](lookup-transformation.md).  
   
-##  <a name="lookup"></a>Proprietà personalizzate della trasformazione Ricerca  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> Proprietà personalizzate della trasformazione Ricerca  
  La trasformazione Ricerca include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca. Tutte le proprietà, ad eccezione di `ReferenceMetadataXML`, sono di lettura/scrittura.  
@@ -346,7 +342,7 @@ ms.locfileid: "62770734"
 |DefaultCodePage|Integer|Tabella codici predefinita da utilizzare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati.|  
 |MaxMemoryUsage|Integer|Dimensione massima della cache per la tabella di ricerca. Il valore predefinito di questa proprietà è **25**, che indica l'assenza di limiti per la dimensione della cache.|  
 |MaxMemoryUsage64|Integer|Dimensioni massime della cache per la tabella di ricerca in un computer a 64 bit.|  
-|NoMatchBehavior|Integer (enumerazione)|Valore che specifica se le righe prive di voci corrispondenti nel set di dati di riferimento devono essere considerate errori.<br /><br /> Quando la proprietà è impostata su `Treat rows with no matching entries as errors` (0), le righe prive di voci corrispondenti vengono considerate errori. È possibile specificare l'azione necessaria quando viene restituito questo tipo di errore usando la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Quando la proprietà è impostata su `Send rows with no matching entries to the no match output` (1), le righe non vengono considerate errori.<br /><br /> Il valore predefinito è `Treat rows with no matching entries as errors` (0).|  
+|NoMatchBehavior|Integer (enumerazione)|Valore che specifica se le righe prive di voci corrispondenti nel set di dati di riferimento devono essere considerate errori.<br /><br /> Quando la proprietà è impostata su `Treat rows with no matching entries as errors` (0), le righe prive di voci corrispondenti vengono considerate errori. È possibile specificare l'azione necessaria quando viene restituito questo tipo di errore usando la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Ricerca** . Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Quando la proprietà è impostata su `Send rows with no matching entries to the no match output` (1), le righe non vengono considerate errori.<br /><br /> Il valore predefinito è `Treat rows with no matching entries as errors` (0).|  
 |ParameterMap|string|Elenco con valori delimitati da punti e virgola di ID di derivazione con mapping ai parametri utilizzati nell'istruzione `SqlCommand`.|  
 |ReferenceMetadataXML|string|Metadati per le colonne nella tabella di ricerca copiati nell'output dalla trasformazione.|  
 |SqlCommand|string|Istruzione SELECT che popola la tabella di ricerca.|  
@@ -367,9 +363,9 @@ ms.locfileid: "62770734"
   
  L'input e l'output della trasformazione Ricerca non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [trasformazione Ricerca](lookup-transformation.md).  
+ Per altre informazioni, vedere [Trasformazione Ricerca](lookup-transformation.md).  
   
-##  <a name="mjoin"></a>Proprietà personalizzate della trasformazione Merge join  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> Proprietà personalizzate della trasformazione Merge Join  
  La trasformazione Merge Join include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Merge Join.  
@@ -385,21 +381,20 @@ ms.locfileid: "62770734"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|Integer|
-  `LineageID` della colonna di input da cui vengono copiati dati in questa colonna di output.|  
+|InputColumnID|Integer|`LineageID` della colonna di input da cui vengono copiati dati in questa colonna di output.|  
   
  L'input, le colonne di input e l'output della trasformazione Merge Join non includono proprietà personalizzate.  
   
  Per altre informazioni, vedere [Trasformazione Merge join](merge-join-transformation.md).  
   
-##  <a name="oledbcmd"></a>Proprietà personalizzate della trasformazione comando OLE DB  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> Proprietà personalizzate della trasformazione Comando OLE DB  
  La trasformazione Comando OLE DB include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Comando OLE DB.  
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|Integer|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** indica un tempo infinito. Il valore predefinito di questa proprietà è **0**.|  
+|CommandTimeout|Integer|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
 |DefaultCodePage|Integer|Tabella codici da utilizzare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati.|  
 |SqlCommand|string|Istruzione Transact-SQL eseguita dalla trasformazione per ogni riga nel flusso di dati.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
   
@@ -413,7 +408,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Comando OLE DB](ole-db-command-transformation.md).  
   
-##  <a name="percent"></a>Proprietà personalizzate della trasformazione Campionamento percentuale  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> Proprietà personalizzate della trasformazione Campionamento percentuale  
  La trasformazione Campionamento percentuale include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Campionamento percentuale.  
@@ -433,7 +428,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Campionamento percentuale](percentage-sampling-transformation.md).  
   
-##  <a name="pivot"></a>Proprietà personalizzate della trasformazione pivot  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> Proprietà personalizzate della trasformazione tramite Pivot  
  Nella tabella seguente si descrivono le proprietà di componenti personalizzati della trasformazione Pivot.  
   
 |Proprietà|Tipo di dati|Descrizione|  
@@ -451,12 +446,11 @@ ms.locfileid: "62770734"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|string|Uno dei possibili valori della colonna contrassegnata come chiave pivot dal valore della relativa proprietà PivotUsage.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
-|SourceColumn ID|Integer|
-  `LineageID` di una colonna di input che contiene un valore trasformato tramite Pivot oppure -1. Il valore -1 indica che la colonna non viene utilizzata in un'operazione pivot.|  
+|SourceColumn ID|Integer|`LineageID` di una colonna di input che contiene un valore trasformato tramite Pivot oppure -1. Il valore -1 indica che la colonna non viene utilizzata in un'operazione pivot.|  
   
  Per altre informazioni, vedere [Trasformazione pivot](pivot-transformation.md).  
   
-##  <a name="rowcount"></a>Proprietà personalizzate della trasformazione Conteggio righe  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> Proprietà personalizzate della trasformazione Conteggio righe  
  La trasformazione Conteggio righe include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Conteggio righe. Tutte le proprietà sono di lettura/scrittura.  
@@ -469,7 +463,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Conteggio righe](row-count-transformation.md).  
   
-##  <a name="rowsamp"></a>Proprietà personalizzate della trasformazione Campionamento righe  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> Proprietà personalizzate della trasformazione Campionamento righe  
  La trasformazione Campionamento righe include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Campionamento righe. Tutte le proprietà sono di lettura/scrittura.  
@@ -495,7 +489,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Campionamento righe](row-sampling-transformation.md).  
   
-##  <a name="script"></a>Proprietà personalizzate del componente script  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> Proprietà personalizzate della trasformazione Componente script  
  La trasformazione Componente script include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati. Le stesse proprietà personalizzate sono disponibili se la trasformazione Componente script funziona come origine, trasformazione o destinazione.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Componente script. Tutte le proprietà sono di lettura/scrittura.  
@@ -509,7 +503,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Componente script](script-component.md).  
   
-##  <a name="scd"></a>Proprietà personalizzate della trasformazione Dimensione a modifica lenta  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> Proprietà personalizzate della trasformazione Dimensione a modifica lenta  
  La trasformazione Dimensione a modifica lenta include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Dimensione a modifica lenta. Tutte le proprietà sono di lettura/scrittura.  
@@ -535,7 +529,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Dimensione a modifica lenta](slowly-changing-dimension-transformation.md).  
   
-##  <a name="sort"></a>Proprietà personalizzate della trasformazione ordinamento  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> Proprietà personalizzate della trasformazione Ordinamento  
  La trasformazione Ordinamento include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ordinamento. Tutte le proprietà sono di lettura/scrittura.  
@@ -556,14 +550,13 @@ ms.locfileid: "62770734"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|SortColumnID|Integer|
-  `LineageID` di una colonna di ordinamento.|  
+|SortColumnID|Integer|`LineageID` di una colonna di ordinamento.|  
   
  L'input e l'output della trasformazione Ordinamento non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [Trasformazione Ordinamento](sort-transformation.md).  
+ Per altre informazioni, vedere [Trasformazione ordinamento](sort-transformation.md).  
   
-##  <a name="textract"></a>Proprietà personalizzate della trasformazione Estrazione termini  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> Proprietà personalizzate della trasformazione Estrazione termini  
  La trasformazione Estrazione termini include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Estrazione termini. Tutte le proprietà sono di lettura/scrittura.  
@@ -583,7 +576,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione Estrazione termini](term-extraction-transformation.md).  
   
-##  <a name="tlookup"></a>Proprietà personalizzate della trasformazione Ricerca termini  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> Proprietà personalizzate della trasformazione Ricerca termini  
  La trasformazione Ricerca termini include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca termini. Tutte le proprietà sono di lettura/scrittura.  
@@ -604,14 +597,13 @@ ms.locfileid: "62770734"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Integer|
-  `LineageID` della colonna di input corrispondente se l'oggetto `InputColumnType` di tale colonna è 0 o 2.|  
+|CustomLineageID|Integer|`LineageID` della colonna di input corrispondente se l'oggetto `InputColumnType` di tale colonna è 0 o 2.|  
   
  L'input e l'output della trasformazione Ricerca termini non includono proprietà personalizzate.  
   
  Per altre informazioni, vedere [Trasformazione Ricerca termini](term-lookup-transformation.md).  
   
-##  <a name="unpivot"></a>Proprietà personalizzate della trasformazione UnPivot  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> Proprietà personalizzate delle trasformazioni tramite UnPivot  
  La trasformazione tramite UnPivot include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
 > [!NOTE]  
@@ -621,8 +613,7 @@ ms.locfileid: "62770734"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|DestinationColumn|Integer|
-  `LineageID` della colonna di output a cui viene eseguito il mapping della colonna di input. Il valore -1 indica che il mapping tra la colonna di input e una colonna di output non viene eseguito.|  
+|DestinationColumn|Integer|`LineageID` della colonna di output a cui viene eseguito il mapping della colonna di input. Il valore -1 indica che il mapping tra la colonna di input e una colonna di output non viene eseguito.|  
 |PivotKeyValue|string|Valore copiato in una colonna di output della trasformazione.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nello scenario UnPivot descritto in [Trasformazione UnPivot](unpivot-transformation.md)i valori pivot sono i valori di testo Ham, Coke, Milk, Beer e Chips. Tali valori verranno visualizzati come valori di testo nella nuova colonna Product definita dall'opzione **Nome colonna valore chiave pivot** .|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione tramite UnPivot. Tutte le proprietà sono di lettura/scrittura.  
@@ -635,8 +626,8 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione UnPivot](unpivot-transformation.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni di Integration Services](integration-services-transformations.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Trasformazioni Integration Services](integration-services-transformations.md)   
  [Proprietà comuni](../../common-properties.md)   
  [Proprietà percorso](../../path-properties.md)   
  [Proprietà del flusso di dati che è possibile impostare tramite espressioni](../../data-flow-properties-that-can-be-set-by-using-expressions.md)  

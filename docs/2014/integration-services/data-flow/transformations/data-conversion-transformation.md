@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770437"
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
@@ -50,7 +50,7 @@ ms.locfileid: "62770437"
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Analisi veloce](../../fast-parse.md)   
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  

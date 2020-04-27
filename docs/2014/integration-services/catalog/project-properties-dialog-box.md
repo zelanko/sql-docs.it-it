@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771654"
 ---
 # <a name="project-properties-dialog-box"></a>Finestra di dialogo Proprietà progetto
@@ -33,7 +33,7 @@ ms.locfileid: "62771654"
   
 -   [Impostare le opzioni nella pagina Autorizzazioni](#permissions)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Proprietà progetto  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Proprietà progetto  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62771654"
   
 5.  Fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Proprietà**.  
   
-##  <a name="general"></a> Impostare le opzioni nella pagina Generale  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Impostare le opzioni nella pagina Generale  
  Utilizzare la pagina Generale per visualizzare le proprietà del progetto.  
   
  **Nome**  
@@ -65,7 +65,7 @@ ms.locfileid: "62771654"
  **Data di distribuzione**  
  Vengono elencate la data e l'ora di distribuzione o ridistribuzione del progetto.  
   
-##  <a name="permissions"></a> Impostare le opzioni nella pagina Autorizzazioni  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Impostare le opzioni nella pagina Autorizzazioni  
  Utilizzare la pagina **Autorizzazioni** per visualizzare e impostare le autorizzazioni esplicite per il progetto.  
   
  Sfoglia  

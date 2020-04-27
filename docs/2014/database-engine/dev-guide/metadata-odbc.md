@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781231"
 ---
 # <a name="metadata-odbc"></a>Metadati (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "62781231"
  [Metadati del catalogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  Vengono descritti i metadati delle colonne restituiti da `SQLColumns` e `SQLProcedureColumns` e i metadati dei tipi di dati restituiti da `SQLGetTypeInfo`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

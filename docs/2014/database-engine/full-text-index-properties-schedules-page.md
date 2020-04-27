@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779031"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Proprietà indice full-text (pagina Pianificazioni)
@@ -36,16 +36,16 @@ ms.locfileid: "62779031"
  **Tipo popolamento**  
  Visualizza il tipo di ogni popolamento pianificato.  
   
- **Enabled**  
+ **Attivata**  
  Indica se il popolamento pianificato è attualmente abilitato o disabilitato.  
   
  **Descrizione**  
  Visualizza la descrizione specificata quando è creata la pianificazione.  
   
- **Nuovo**  
+ **Nuova**  
  Fare clic per creare una nuova pianificazione per il popolamento dell'indice full-text.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzare l'indicizzazione guidata full-text](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [Popolamento degli indici full-text](../relational-databases/search/populate-full-text-indexes.md)  
   

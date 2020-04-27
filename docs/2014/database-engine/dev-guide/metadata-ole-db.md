@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780895"
 ---
 # <a name="metadata-ole-db"></a>Metadati (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "62780895"
  [Data e ora e set di righe dello schema](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  Sono contenute informazioni sugli aggiornamenti ai set di righe dello schema OLE DB.  
   
-## <a name="see-also"></a>Vedere anche  
- [Miglioramenti di data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

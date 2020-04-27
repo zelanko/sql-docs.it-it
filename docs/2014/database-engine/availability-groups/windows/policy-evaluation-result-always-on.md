@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789081"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Risultato della valutazione dei criteri (AlwaysOn)
@@ -25,7 +25,7 @@ ms.locfileid: "62789081"
   
 
   
-##  <a name="Options"></a> Opzioni della finestra di dialogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a>Opzioni della finestra di dialogo  
  **Problema rilevato**  
  Visualizza una riga per ogni problema rilevato. L'icona associata a un problema agisce da indicatore visivo per indicare la gravità del problema, come segue:  
   
@@ -40,15 +40,15 @@ ms.locfileid: "62789081"
  **Altre informazioni**  
  Fare clic su questo collegamento per aprire l'argomento della Guida per il problema selezionato.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
--   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica dei criteri di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn per problemi operativi con](always-on-policies-for-operational-issues-always-on-availability.md) gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; 
   
   

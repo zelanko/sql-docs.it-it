@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768997"
 ---
 # <a name="upgrade-integration-services-packages"></a>Aggiornare pacchetti di Integration Services
@@ -83,10 +83,10 @@ ms.locfileid: "62768997"
   
  Per utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per progettare pacchetti che includono [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componenti personalizzati, è necessario modificare il file devenv. exe. config che si trova in * \<unità>*: \Programmi\Microsoft Visual Studio 10.0 \ Common7\IDE.  
   
- Per utilizzare questi pacchetti con le applicazioni dei clienti che vengono compilate con il runtime per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], includere le regole di reindirizzamento nella sezione di configurazione del file *.exe.config per il file eseguibile. Tramite le regole gli assembly di runtime vengono reindirizzati alla versione 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Per altre informazioni sul reindirizzamento della versione dell'assembly, vedere [Elemento \<assemblyBinding> per \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Per utilizzare questi pacchetti con le applicazioni dei clienti che vengono compilate con il runtime per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], includere le regole di reindirizzamento nella sezione di configurazione del file *.exe.config per il file eseguibile. Tramite le regole gli assembly di runtime vengono reindirizzati alla versione 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Per ulteriori informazioni sul reindirizzamento della versione dell'assembly, vedere [ \<elemento> di assembly per \<>Runtime ](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Individuazione degli assembly  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>* :\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. Esiste un global assembly cache separato per .NET 4, disponibile in * \<unità>*: \Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
   
  Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i file [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dll di estendibilità principali si trovano anche nell' * \<unità>*: \Programmi\Microsoft SQL Server\100\SDK\Assemblies.  
   

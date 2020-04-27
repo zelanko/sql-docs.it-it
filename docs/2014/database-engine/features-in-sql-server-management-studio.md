@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779789"
 ---
 # <a name="features-in-sql-server-management-studio"></a>Caratteristiche in SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] comprende le caratteristiche generali seguenti:  
   
 -   Supporta la maggior parte delle attività amministrative per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -65,8 +64,7 @@ ms.locfileid: "62779789"
   
 -   Controllo del codice sorgente integrato per i progetti script e di soluzione, con supporto dell'archiviazione e gestione di copie degli script man mano che si evolvono.  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Supporto IntelliSense per istruzioni MDX.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Supporto IntelliSense per istruzioni MDX.  
   
 ## <a name="object-explorer-features"></a>Caratteristiche di Esplora oggetti  
  Il componente Esplora oggetti di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è uno strumento integrato che consente di visualizzare e gestire gli oggetti in qualsiasi tipo di server. Comprende le caratteristiche seguenti:  
@@ -79,15 +77,14 @@ ms.locfileid: "62779789"
   
  Per altre informazioni, vedere [Esplora oggetti](../ssms/object/object-explorer.md).  
   
-## <a name="extensibility"></a>Estensibilità  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è basato sulla shell isolata di Visual Studio che supporta implicitamente l'estendibilità (componenti aggiuntivi/plug-in). È possibile attingere ai servizi di estendibilità di Visual Studio per rendere disponibili funzionalità personalizzate in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]; tale estendibilità non è tuttavia supportata.  
+## <a name="extensibility"></a>Estendibilità  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è basato sulla shell isolata di Visual Studio che supporta implicitamente l'estendibilità (componenti aggiuntivi/plug-in). È possibile attingere ai servizi di estendibilità di Visual Studio per rendere disponibili funzionalità personalizzate in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]; tale estendibilità non è tuttavia supportata.  
   
  Ci sono utenti e terze parti che hanno sviluppato estensioni per [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Anche se questa pratica non viene sconsigliata, tenere comunque presente che tale estendibilità non è supportata, per cui potrebbero sorgere dei problemi di compatibilità con le versioni precedenti e successive. Microsoft non pubblica documentazione per l'estensione [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Tuttavia, esistono blog di comunità e codici di esempio online che potrebbero risultare molto utili a questo proposito.  
   
  Microsoft non supporta le installazioni di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] con estensioni a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , pertanto se sono state installate estensioni a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , è necessario rimuoverle prima di chiamare il Supporto tecnico relativamente a un problema [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

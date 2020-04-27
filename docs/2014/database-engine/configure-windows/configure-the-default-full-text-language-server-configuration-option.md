@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787067"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Configurare l'opzione di configurazione del server default full-text language
@@ -41,24 +41,24 @@ ms.locfileid: "62787067"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione default full-text language](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Il valore dell' `default full-text language` opzione viene utilizzato in un indice full-text quando per una colonna non viene specificata alcuna lingua tramite l'opzione Language **LANGUAGE_TERM** nell'istruzione CREATE FULLTEXT INDEX o ALTER FULLTEXT index. Se l'opzione default full-text language non è supportata o il pacchetto di analisi linguistica non è disponibile, l'operazione CREATE o ALTER non verrà eseguita e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà restituito un messaggio di errore in cui viene indicato che la lingua specificata non è valida.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   L' `default full-text language` opzione richiede un valore LCID. Per un elenco di LCID supportati e delle lingue corrispondenti, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Potrebbero essere disponibili altre lingue, ad esempio da fornitori di software indipendenti. Se non viene rilevato alcun sottolinguaggio specifico, il motore di ricerca full-text passerà automaticamente alla lingua principale.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>Per configurare l'opzione default full-text language  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62787067"
   
 3.  In Varie usare l'opzione **Lingua predefinita full-text** per specificare il valore relativo alla lingua predefinita per le colonne con indicizzazione full-text.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>Per configurare l'opzione default full-text language  
   
@@ -94,7 +94,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione default full-text language  
+##  <a name="follow-up-after-you-configure-the-default-full-text-language-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione default full-text language  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

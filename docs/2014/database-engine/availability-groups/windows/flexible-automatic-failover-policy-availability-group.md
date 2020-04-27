@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789893"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Criteri di failover flessibili per failover automatico di un gruppo di disponibilità (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62789893"
   
   
   
-##  <a name="HCtimeout"></a>Soglia di timeout controllo integrità  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> Soglia di Timeout controllo integrità  
  La DLL risorse di WSFC del gruppo di disponibilità esegue un *controllo di integrità* della replica primaria chiamando la stored procedure [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) sull'istanza di SQL Server che ospita la replica primaria. **sp_server_diagnostics** restituisce i risultati in un intervallo uguale a 1/3 della soglia di timeout controllo integrità per il gruppo di disponibilità. La soglia di timeout controllo integrità predefinita è 30 secondi, in base alla quale i risultati di **sp_server_diagnostics** vengono restituiti a intervalli di 10 secondi. Se la stored procedure **sp_server_diagnostics** risulta lenta o non restituisce informazioni, la DLL risorse attenderà per l'intero intervallo della soglia di timeout controllo integrità prima di determinare che la replica primaria non risponde. Se la replica primaria non risponde, viene avviato un failover automatico, se è attualmente supportato.  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** non esegue controlli di integrità a livello di database.  
   
-##  <a name="FClevel"></a>Livello condizione di errore  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> Livello delle condizioni di errore  
  La possibilità che i dati di diagnostica e le informazioni sull'integrità restituiti da **sp_server_diagnostics** assicurino un failover automatico dipende dal livello di condizione di errore del gruppo di disponibilità. Il *livello di condizione di errore* specifica quale condizione di errore attiverà un failover automatico. I livelli delle condizioni di errore sono 5 e vanno dal livello meno restrittivo (livello 1), al livello più restrittivo (livello 5). Un dato livello di condizione include tutti i livelli meno restrittivi. Il livello più restrittivo, il livello 5, include le quattro condizioni meno restrittive e così via.  
   
 > [!IMPORTANT]  
@@ -46,7 +46,7 @@ ms.locfileid: "62789893"
   
  Nella tabella seguente vengono descritte le condizioni di errore corrispondenti a ciascun livello.  
   
-|Level|Condizione di errore|[!INCLUDE[tsql](../../../includes/tsql-md.md)]Valore|Valore PowerShell|  
+|Level|Condizione di errore|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valore|Valore PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
 |Uno|In caso di server inaccessibile. Si tratta del livello meno restrittivo. Specifica che viene avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> Il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun acknowledgement dall'istanza del server. Per altre informazioni, vedere [Funzionamento: timeout lease di SQL Server AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
 |Due|In caso di mancata risposta del server. Specifica che viene avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non si connette al cluster e viene superata la soglia Timeout controllo integrità specificata dall'utente per il gruppo di disponibilità.<br /><br /> La replica di disponibilità si trova in uno stato di errore.|2|`OnServerUnresponsive`|  
@@ -57,25 +57,25 @@ ms.locfileid: "62789893"
 > [!NOTE]  
 >  La mancata risposta da parte di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alle richieste client non è rilevante per gruppi di disponibilità.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare il failover automatico**  
   
--   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md) (failover automatico richiede la modalità di disponibilità con commit sincrono)  
+-   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md). Il failover automatico richiede la modalità di disponibilità con commit sincrono.  
   
 -   [Modificare la modalità di failover di una replica di disponibilità &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
 -   [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico (Gruppi di disponibilità AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Funzionamento: timeout lease di SQL Server AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità di disponibilità (Gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modalità di failover &#40;Gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server failover clustering &#40;&#41; WSFC con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Criteri di failover per le istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
   
   

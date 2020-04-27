@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789458"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità AlwaysOn (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62789458"
   
  In questo argomento vengono presentati i cmdlet per i seguenti set di attività:  
   
--   [Configurazione di un'istanza del server per i gruppi di disponibilità AlwaysOn](#ConfiguringServerInstance)  
+-   [Configurazione di un'istanza del server per Gruppi di disponibilità AlwaysOn](#ConfiguringServerInstance)  
   
 -   [Backup e ripristino dei database e dei log delle transazioni](#BnRcmdlets)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62789458"
 > [!NOTE]  
 >  Per un elenco degli argomenti nella [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] documentazione online di che descrivono come usare i cmdlet di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per eseguire attività, vedere la sezione "attività correlate" di [panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a>Configurazione di un'istanza del server per Gruppi di disponibilità AlwaysOn  
+##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>Configurazione di un'istanza del server per Gruppi di disponibilità AlwaysOn  
   
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "62789458"
 |`New-SqlHadrEndPoint`|Crea un nuovo endpoint del mirroring del database in un'istanza del server. Questo endpoint è richiesto per lo spostamento di dati tra il database primario e quelli secondari.|Qualsiasi istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Modifica le proprietà di un endpoint del mirroring del database esistente, ad esempio il nome, lo stato o le proprietà di autenticazione.|Istanza del server che supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e in cui non è presente un endpoint del mirroring del database|  
   
-##  <a name="BnRcmdlets"></a> Backup e ripristino dei database e log delle transazioni  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> Backup e ripristino dei database e log delle transazioni  
   
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "62789458"
   
  Per informazioni sull'uso di questi cmdlet per preparare un database secondario, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creazione e gestione di un gruppo di disponibilità  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a>Creazione e gestione di un gruppo di disponibilità  
   
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "62789458"
 |`Set-SqlAvailabilityGroup`|Imposta le proprietà di un gruppo di disponibilità; porta un gruppo di disponibilità online/offline|Istanza del server che ospita la replica primaria|  
 |`Switch-SqlAvailabilityGroup`|Inizia una delle seguenti modalità di failover:<br /><br /> Failover forzato di un gruppo di disponibilità (con possibile perdita di dati).<br /><br /> Failover manuale di un gruppo di disponibilità.|Istanza del server che ospita la replica secondaria di destinazione|  
   
-##  <a name="AGlisteners"></a> Creazione e gestione di un listener del gruppo di disponibilità  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creazione e gestione di un listener del gruppo di disponibilità  
   
 |Cmdlet|Descrizione|Supportati in|  
 |------------|-----------------|------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "62789458"
 |`Set-SqlAvailabilityGroupListener`|Modifica l'impostazione della porta su un listener del gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|Aggiunge un indirizzo IP statico a una configurazione del listener del gruppo di disponibilità esistente. L'indirizzo IP può essere un indirizzo IPv4 con subnet o un indirizzo IPv6.|Istanza del server che ospita la replica primaria|  
   
-##  <a name="DeployManageARs"></a> Creazione e gestione di una Replica di disponibilità  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Creazione e gestione di una Replica di disponibilità  
   
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "62789458"
 |**Remove-SqlAvailabilityReplica**|Elimina una replica di disponibilità.|Istanza del server che ospita la replica primaria|  
 |`Set-SqlAvailabilityReplica`|Imposta le proprietà di una replica di disponibilità.|Istanza del server che ospita la replica primaria|  
   
-##  <a name="DeployManageDbs"></a> Aggiunta e gestione di un Database di disponibilità  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Aggiunta e gestione di un Database di disponibilità  
   
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "62789458"
 |`Resume-SqlAvailabilityDatabase`|Riprende lo spostamento dati per un database di disponibilità sospeso.|L'istanza del server in cui si trova il database è stata sospesa.|  
 |`Suspend-SqlAvailabilityDatabase`|Sospende lo spostamento dati per un database di disponibilità.|Qualsiasi istanza del server che ospita una replica di disponibilità.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoraggio integrità gruppo di disponibilità  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a> Monitoraggio integrità gruppo di disponibilità  
  Con i cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguenti è possibile monitorare lo stato di un gruppo di disponibilità, nonché delle repliche e dei database relativi.  
   
 > [!IMPORTANT]  
@@ -111,12 +111,12 @@ ms.locfileid: "62789458"
 |`Test-SqlAvailabilityReplica`|Valuta l'integrità delle repliche di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  
 |`Test-SqlDatabaseReplicaState`|Valuta l'integrità di un database di disponibilità su tutte le repliche di disponibilità aggiunte valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  
   
- \* Per visualizzare informazioni su tutte le repliche di disponibilità in un gruppo di disponibilità, usare l'istanza del server che ospita la replica primaria.  
+ * Per visualizzare informazioni su tutte le repliche di disponibilità in un gruppo di disponibilità, usare l'istanza del server che ospita la replica primaria.  
   
  Per ulteriori informazioni, vedere [utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Visualizzare la Guida di SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
   

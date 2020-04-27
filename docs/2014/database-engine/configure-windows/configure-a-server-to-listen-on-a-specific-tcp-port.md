@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813587"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurazione di un server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)
@@ -37,11 +37,11 @@ ms.locfileid: "62813587"
   
  **Contenuto dell'articolo**  
   
--   **Per configurare un server per l'ascolto su una porta TCP specifica utilizzando:**  
+-   **Per configurare un server per l'attesa su una porta TCP specifica utilizzando:**  
   
      [Gestione configurazione SQL Server](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Per assegnare un numero di porta TCP/IP al motore di database di SQL Server  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62813587"
   
 3.  Se nella finestra di dialogo **Porte dinamiche TCP** è incluso il valore **0**, che indica che [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa su porte dinamiche, eliminare tale valore.  
   
-4.  Nella casella dell'area **Proprietà**_n_ **IP** immettere nella casella **Porta TCP** box, type the port number you want this Proprietà address to listen on, and then click **OK**.  
+4.  Nella casella **porta TCP** della casella dell'area **proprietà** **IP**_n_ digitare il numero di porta su cui si desidera che l'indirizzo IP sia in ascolto, quindi fare clic su **OK**.  
   
 5.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62813587"
   
 -   Programmare il client affinché si connetta utilizzando una stringa di connessione personalizzata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Creare o eliminare un alias server per l'uso da un client &#40;Gestione configurazione SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Creare o eliminare un alias server per l'uso da parte di un client &#40;Gestione configurazione SQL Server Manager&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

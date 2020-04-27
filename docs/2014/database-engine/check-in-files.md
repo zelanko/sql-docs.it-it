@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812585"
 ---
 # <a name="check-in-files"></a>Archiviazione di file
@@ -32,7 +32,7 @@ ms.locfileid: "62812585"
   
 2.  Se viene visualizzata la finestra **di dialogo Archivia** , selezionare le opzioni appropriate e quindi fare clic su **OK**.  
   
-     **Archivia**  
+     **Archiviare**  
      Consente di archiviare tutti gli elementi selezionati.  
   
      **Colonne**  
@@ -61,7 +61,7 @@ ms.locfileid: "62812585"
   
  Se il file archiviato non fa parte di un'estrazione condivisa, nell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ne viene immediatamente eseguita l'archiviazione. In caso contrario, può venire chiesto di unire la versione utilizzata a quelle create da altri utenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare un elenco di file modificati](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)  
   

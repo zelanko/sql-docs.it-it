@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770192"
 ---
 # <a name="unpivot-transformation"></a>UnPivot - trasformazione
@@ -52,7 +52,7 @@ ms.locfileid: "62770192"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   

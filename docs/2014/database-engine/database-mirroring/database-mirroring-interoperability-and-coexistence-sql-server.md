@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807307"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mirroring del database: Interoperabilità e coesistenza (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "62807307"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

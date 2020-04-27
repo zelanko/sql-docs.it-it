@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774825"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Rimuovere un database secondario da una configurazione per il log shipping (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "62774825"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-remove-a-log-shipping-secondary-database"></a>Per rimuovere un database secondario per il log shipping  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62774825"
   
 6.  Fare clic su **OK** per aggiornare la configurazione.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-remove-a-secondary-database"></a>Per rimuovere un database secondario  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62774825"
   
 3.  Nel server secondario disabilitare i processi di copia e ripristino. Per altre informazioni, vedere [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiornare il log shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -90,10 +90,10 @@ ms.locfileid: "62774825"
   
 -   [Monitorare il log shipping &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
--   [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Eseguire il failover in un database secondario per il log shipping &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tabelle e stored procedure relative al log shipping](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

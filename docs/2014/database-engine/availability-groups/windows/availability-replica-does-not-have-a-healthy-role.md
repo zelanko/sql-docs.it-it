@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815598"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La replica di disponibilità non dispone di un ruolo integro
@@ -27,7 +27,7 @@ ms.locfileid: "62815598"
   
 |||  
 |-|-|  
-|**Nome criteri**|Stato del ruolo della replica di disponibilità|  
+|**Nome criterio**|Stato del ruolo della replica di disponibilità|  
 |**Problema**|La replica di disponibilità non presenta un ruolo integro.|  
 |**Categoria**|**Critico**|  
 |**Facet**|replica di disponibilità|  
@@ -43,8 +43,8 @@ ms.locfileid: "62815598"
   
 ## <a name="possible-solution-information_still_to_come"></a>Possibile soluzione: Information_still_to_come  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

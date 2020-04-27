@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774343"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
@@ -38,11 +38,11 @@ ms.locfileid: "62774343"
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   CPU istanza - Consente di visualizzare lo stato di integrità di utilizzo del processore allocato a questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU istanza - Consente di visualizzare lo stato di integrità di utilizzo del processore allocato a questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
--   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
@@ -175,11 +175,11 @@ ms.locfileid: "62774343"
   
 -   Language:  
   
-## <a name="see-also"></a>Vedere anche  
- [Dettagli di applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Dettagli dell'applicazione livello dati distribuita &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Attività e funzionalità di Utilità SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
+ [Monitorare le istanze di SQL Server nel Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Funzionalità e attività di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Risoluzione dei problemi relativi a Utilità SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

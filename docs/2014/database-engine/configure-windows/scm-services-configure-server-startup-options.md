@@ -17,32 +17,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810369"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurazione delle opzioni di avvio del server (Gestione configurazione SQL Server)
   Questo argomento illustra come configurare le opzioni di avvio da usare ogni volta che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Per un elenco delle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md).  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i parametri di avvio vengono scritti nel Registro di sistema e vengono applicati al successivo avvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  In un cluster le modifiche devono essere eseguite sul server attivo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è online e verranno applicate al riavvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'aggiornamento delle opzioni di avvio nel Registro di sistema per l'altro nodo verrà eseguito al successivo failover.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  La configurazione delle opzioni di avvio del server è limitata a utenti che possono modificare le voci correlate nel Registro di sistema. Sono inclusi gli utenti indicati di seguito.  
   
 -   Membri del gruppo Administrators locale.  
   
 -   Account di dominio utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per essere in esecuzione in un account di dominio.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-configure-startup-options"></a>Per configurare le opzioni di avvio  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62810369"
     > -   **Windows 8**:  
     >          Per aprire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, nell'accesso alla **ricerca** in **app**digitare **SQLServerManager\<Version>. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
   
-2.  Nel riquadro destro fare clic con il pulsante destro del mouse su **SQL Server (***<instance_name>***)**, quindi scegliere **proprietà**.  
+2.  Nel riquadro destro fare clic con il pulsante destro del mouse su **SQL Server(***<nome_istanza>***)** e quindi scegliere **Proprietà**.  
   
 3.  Nella scheda **Parametri di avvio** della casella **Specificare un parametro di avvio** digitare il parametro e quindi fare clic su **Aggiungi**.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "62810369"
     > [!WARNING]  
     >  Al termine dell'utilizzo della modalità utente singolo, nella casella parametri di avvio selezionare il `-m` parametro nella casella **parametri esistenti** , quindi fare clic su **Rimuovi**. Riavviare [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ripristinare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella modalità tipica multiutente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Avvio di SQL Server in modalità utente singolo](start-sql-server-in-single-user-mode.md)   
- [Connettersi a SQL Server se gli amministratori di sistema sono bloccati](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
- [Avvio, arresto o sospensione del servizio SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Avviare SQL Server in modalità utente singolo](start-sql-server-in-single-user-mode.md)   
+ [Connetti a SQL Server quando gli amministratori di sistema sono bloccati](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

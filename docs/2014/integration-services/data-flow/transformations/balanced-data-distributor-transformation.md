@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770604"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Trasformazione del server di distribuzione di dati bilanciati
@@ -37,6 +37,6 @@ ms.locfileid: "62770604"
  Si noti che se il collo di bottiglia in un pacchetto SSIS è dovuto alla velocità con cui i dati possono essere letti dall'origine, tramite il componente BDD non è possibile migliorare le prestazioni. Se il collo di bottiglia in un pacchetto SSIS si verifica perché la destinazione non supporta il parallelismo, non è possibile avvalersi del supporto di BDD. Tuttavia, è possibile eseguire tutte le trasformazioni in parallelo e utilizzare la trasformazione Unione input multipli per combinare i dati di output che provengano da percorsi di output differenti della trasformazione BDD prima di inviare i dati alla destinazione.  
   
 > [!IMPORTANT]  
->  Per una presentazione con una demo sull'utilizzo della trasformazione, vedere il [video relativo al server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278) nella libreria TechNet.  
+>   Per una presentazione con una demo sull'utilizzo della trasformazione, vedere il [video relativo al server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278) nella libreria TechNet.  
   
   

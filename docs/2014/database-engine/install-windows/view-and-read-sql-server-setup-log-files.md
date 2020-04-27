@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774323"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
@@ -48,7 +48,7 @@ ms.locfileid: "62774323"
   
  Nelle sezioni seguenti vengono illustrati i file di log del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="summary-text"></a>Testo del riepilogo  
+## <a name="summary-text"></a>Testo di riepilogo  
   
 ### <a name="overview"></a>Panoramica  
  Nel file sono indicati i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rilevati durante l'installazione, l'ambiente del sistema operativo, i valori dei parametri della riga di comando eventualmente specificati e lo stato globale di ogni MSI/MSP eseguito.  
@@ -59,8 +59,7 @@ ms.locfileid: "62774323"
   
 -   Proprietà e configurazione del computer in cui è stato eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità del prodotto installate in precedenza nel computer  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità del prodotto installate in precedenza nel computer  
   
 -   Descrizione delle proprietà relative alla versione dell'installazione e al pacchetto di installazione.  
   
@@ -142,14 +141,11 @@ ms.locfileid: "62774323"
   
  Tipi di file di log MSI:  
   
--   
-  \<Funzionalità>_\<Architettura>\_\<Interazione>.log  
+-   \<Funzionalità>_\<Architettura>\_\<Interazione>.log  
   
--   
-  \<Funzionalità>_\<Architettura>\_\<Linguaggio>\_\<Interazione>.log  
+-   \<Funzionalità>_\<Architettura>\_\<Linguaggio>\_\<Interazione>.log  
   
--   
-  \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro>.log  
+-   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro>.log  
   
 ### <a name="location"></a>Location  
  I file di registro MSI si trovano nel percorso%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ProgramFiles%\\ \120\Setup Bootstrap\LOG<\\ YYYYMMDD_HHMM>\><Name. log.  
@@ -172,7 +168,7 @@ ms.locfileid: "62774323"
 ### <a name="location"></a>Location  
  Si trova nel percorso% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure per l'installazione](../../sql-server/install/installation-how-to-topics.md)   
  [Installare SQL Server 2014](install-sql-server.md)  
   

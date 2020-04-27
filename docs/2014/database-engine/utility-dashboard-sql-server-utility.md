@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773813"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
@@ -102,8 +102,8 @@ ms.locfileid: "62773813"
  Utilizzo di spazio di archiviazione utilità  
  Nella parte inferiore destra del dashboard, il grafico a torta relativo all'utilizzo dello spazio di archiviazione restituisce la percentuale di spazio utilizzato rispetto allo spazio disponibile nei volumi che si trovano in computer contenenti istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I dati contenuti in questa visualizzazione vengono aggiornati ogni 15 minuti.  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di Esplora utilità per gestire Utilità SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Utilizzare Esplora utilità per gestire la Utilità SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificare una definizione dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   

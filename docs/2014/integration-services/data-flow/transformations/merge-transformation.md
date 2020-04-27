@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770419"
 ---
 # <a name="merge-transformation"></a>Unione - trasformazione
@@ -62,17 +62,17 @@ ms.locfileid: "62770419"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione delle proprietà, vedere i seguenti argomenti:  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinare i dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazione Merge join](merge-join-transformation.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Merge join-trasformazione](merge-join-transformation.md)   
  [Trasformazione Unione input multipli](union-all-transformation.md)   
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812595"
 ---
 # <a name="compare-files"></a>Confronto di file
@@ -34,7 +34,7 @@ ms.locfileid: "62812595"
   
 3.  Nella finestra di dialogo **Opzioni differenze** selezionare le opzioni appropriate e quindi fare clic su **report**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia file](../../2014/database-engine/view-file-history.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   

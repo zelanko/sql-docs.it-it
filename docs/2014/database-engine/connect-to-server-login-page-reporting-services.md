@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808723"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Reporting Services - Connetti al server (pagina Account di accesso)
@@ -36,8 +36,7 @@ ms.locfileid: "62808723"
  Per un server di report in esecuzione in modalità integrata SharePoint, è necessario specificare un sito di SharePoint. È possibile specificare qualsiasi sito di una raccolta siti integrata con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. L'URL specificato deve includere il prefisso HTTP o HTTPS. Per connettersi al sito in Management Studio, è necessario disporre delle autorizzazioni necessarie per accedere al sito di SharePoint. Il livello di autorizzazione assegnato determinerà gli elementi che è possibile visualizzare e gestire. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
  **autenticazione**  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può essere configurato per accettare richieste di autenticazione di Windows o richieste di autenticazione basata su form gestite da un'estensione di autenticazione personalizzata definita. Selezionare una delle modalità di autenticazione disponibili seguenti per la connessione a Reporting Services:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può essere configurato per accettare richieste di autenticazione di Windows o richieste di autenticazione basata su form gestite da un'estensione di autenticazione personalizzata definita. Selezionare una delle modalità di autenticazione disponibili seguenti per la connessione a Reporting Services:  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
  Consente di connettersi a un'istanza del server di report tramite le credenziali di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
@@ -63,9 +62,9 @@ ms.locfileid: "62808723"
  **Opzioni**  
  Consente di visualizzare ulteriori opzioni per la connessione al server, ad esempio le opzioni per la memorizzazione della password.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Eseguire la connessione a un server di report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Connettersi a un server di report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticazione con il server di report](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807425"
 ---
 # <a name="cross-container-transactions"></a>Transazioni tra contenitori
@@ -24,7 +24,7 @@ ms.locfileid: "62807425"
   
  Qualsiasi query interpretata che faccia riferimento a tabelle ottimizzate per la memoria viene considerata parte di una transazione tra contenitori, sia che venga eseguita da una transazione esplicita o implicita sia in modalità autocommit.  
   
-##  <a name="isolation"></a>Isolamento di singole operazioni  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>Isolamento di singole operazioni  
  A ogni transazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di isolamento. Il livello di isolamento predefinito è READ COMMITTED. Per usare un livello di isolamento diverso, è possibile impostare il livello di isolamento usando [set Transaction isolation level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  È spesso necessario effettuare operazioni in tabelle ottimizzate per la memoria in un livello di isolamento diverso dalle operazioni in tabelle basate su disco. In una transazione è possibile impostare un livello di isolamento diverso per una raccolta di istruzioni o per una singola operazione di lettura.  
@@ -99,7 +99,7 @@ commit
  Vengono garantiti il commit e la stabilità dei dati letti fino all'ora di fine logica della transazione.  
   
  SERIALIZABLE  
- Tutte le garanzie di REPEATable READ e la coerenza delle transazioni fantasma rispetto a tutte le operazioni di lettura serializzabili eseguite da T. l'elusione fantasma significa che l'operazione di analisi può restituire solo righe aggiuntive scritte da T, ma no righe scritte da altre transazioni.  
+ Tutte le garanzie di REPEATable READ e la coerenza delle transazioni e della coerenza transazionale rispetto a tutte le operazioni di lettura serializzabili eseguite da T. Phantom avoid significa che l'operazione di analisi può restituire solo righe aggiuntive scritte da T, ma nessuna riga scritta da altre transazioni.  
   
  Si consideri la transazione seguente:  
   
@@ -172,7 +172,7 @@ commit
   
  Le tabelle con ottimizzazione per la memoria supportano i livelli di isolamento SNAPSHOT, REPEATABLE READ e SERIALIZABLE. Per le transazioni in modalità autocommit, nelle tabelle ottimizzate per la memoria è supportato il livello di isolamento READ COMMITTED.  
   
- Sono supportati gli scenari seguenti:  
+ Sono supportati gli scenari indicati di seguito:  
   
 -   Le transazioni tra contenitori READ UNCOMMITTED, READ COMMITTED e READ_COMMITTED_SNAPSHOT possono accedere alle tabelle ottimizzate per la memoria con livello di isolamento SNAPSHOT, REPEATABLE READ e SERIALIZABLE. Viene rispettata la garanzia READ COMMITTED per la transazione; per tutte le righe lette dalla transazione è stato eseguito il commit nel database.  
   
@@ -185,7 +185,7 @@ commit
   
  Le transazioni tra contenitori di sola lettura implicite o esplicite eseguono la convalida in fase di commit se la transazione accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE. Per informazioni dettagliate sulla convalida, vedere la sezione relativa ai controlli di rilevamento dei conflitti, convalida e dipendenza di commit nelle [transazioni nelle tabelle ottimizzate](../relational-databases/in-memory-oltp/memory-optimized-tables.md)per la memoria.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

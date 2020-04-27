@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 300b539e132b9bda9bc6540c0aadcac6ab9f11a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810026"
 ---
 # <a name="set-an-instance-of-sql-server-to-start-automatically-sql-server-configuration-manager"></a>Impostare un'istanza di SQL Server per l'avvio automatico (Gestione configurazione SQL Server)
   In questo argomento viene illustrato come impostare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'avvio automatico in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. Durante l'installazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene normalmente configurato per l'avvio automatico. In caso contrario, è possibile modificare questa impostazione in qualsiasi momento.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-set-an-instance-of-sql-server-to-start-automatically"></a>Per impostare un'istanza di SQL Server per l'avvio automatico  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62810026"
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse sul nome dell'istanza per la quale impostare l'avvio automatico, quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server \<***nomeistanza***> Proprietà** impostare **Modalità di avvio** su **Automatica**.  
+4.  Nella finestra di dialogo **Proprietà SQL Server \< ***NomeIstanza***>** impostare **modalità di avvio** su **automatico**.  
   
 5.  Fare clic su **OK**e chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

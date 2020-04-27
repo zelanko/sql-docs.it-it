@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787977"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
@@ -47,12 +47,12 @@ ms.locfileid: "62787977"
   
      [Pagina risultati &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Prima del primo failover manuale pianificato, vedere la sezione "Prima di iniziare" in [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
  Prima del primo failover forzato, vedere le sezioni "Prima di iniziare" e "Completamento: Attività essenziali dopo un failover forzato" in [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Un comando del failover viene restituito non appena la replica secondaria di destinazione ha accettato il comando. Tuttavia, il recupero del database si verifica in modo asincrono dopo che il gruppo di disponibilità ha completato il failover.  
   
@@ -61,17 +61,17 @@ ms.locfileid: "62787977"
     > [!NOTE]  
     >  Le transazioni tra database e quelle distribuite non sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a>Prerequisiti per l'utilizzo della creazione guidata gruppo di disponibilità di failover  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a>Prerequisiti per l'utilizzo della creazione guidata gruppo di disponibilità di failover  
   
 -   È necessario essere connessi all'istanza del server che ospita una replica di disponibilità attualmente disponibile.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
- **Per utilizzare la creazione guidata gruppo di disponibilità di failover**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+ **Per utilizzare la Creazione guidata Gruppo di disponibilità di failover**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata una replica secondaria del gruppo di disponibilità di cui è necessario eseguire il failover ed espandere l'albero di server.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62787977"
   
 4.  Le informazioni presentate nella pagina **Introduzione** variano a seconda che una replica secondaria sia idonea per un failover pianificato. Se in questa pagina è indicato "**Eseguire un failover pianificato per il gruppo di disponibilità**", è possibile eseguire failover del gruppo di disponibilità senza perdita di dati.  
   
-5.  Nella pagina **Seleziona nuova replica primaria** è possibile visualizzare lo stato della replica primaria corrente e del quorum WSFC, prima di scegliere la replica secondaria che diventerà la nuova replica primaria (la *destinazione di failover*). Per un failover manuale pianificato assicurarsi di selezionare una replica secondaria il cui valore **Conformità failover** sia "**Senza perdita di dati**". Per un failover forzato e per tutte le possibili destinazioni di failover, questo valore sarà "**Perdita di dati, Avvisi(***#***)**", dove *#* indica il numero di avvisi presenti per una replica secondaria specificata. Per visualizzare gli avvisi per una destinazione del failover specificata, fare clic sul valore "Conformità failover".  
+5.  Nella pagina **Seleziona nuova replica primaria** è possibile visualizzare lo stato della replica primaria corrente e del quorum WSFC, prima di scegliere la replica secondaria che diventerà la nuova replica primaria (la *destinazione di failover*). Per un failover manuale pianificato assicurarsi di selezionare una replica secondaria il cui valore **Conformità failover** sia "**Senza perdita di dati**". Per un failover forzato, per tutte le possibili destinazioni di failover, questo valore sarà "**perdita di dati,***#*** avvisi ()**" *#* , dove indica il numero di avvisi presenti per una replica secondaria specificata. Per visualizzare gli avvisi per una destinazione del failover specificata, fare clic sul valore "Conformità failover".  
   
      Per ulteriori informazioni, vedere [Pagina Seleziona nuova replica primaria](#SelectNewPrimaryReplica)più avanti in questo argomento.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62787977"
   
 8.  Nella pagina **Riepilogo** rivedere le implicazioni del failover sulla replica secondaria selezionata.  
   
-     Se si è soddisfatti delle selezioni, è possibile fare clic su **Script** per creare uno script dei passaggi eseguiti nel corso della procedura guidata. Per eseguire quindi il failover del gruppo di disponibilità sulla replica secondaria selezionata, fare clic su **Fine**.  
+     Se si è soddisfatti delle selezioni, è possibile fare clic su **script** per creare uno script dei passaggi che verranno eseguiti dalla procedura guidata. Per eseguire quindi il failover del gruppo di disponibilità sulla replica secondaria selezionata, fare clic su **Fine**.  
   
 9. Nella pagina **Stato** viene visualizzato lo stato di avanzamento del failover sul gruppo di disponibilità.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62787977"
   
  Le altre pagine di questa procedura guidata condividono la Guida con una o più procedure guidate relative ai gruppi di disponibilità AlwaysOn e sono documentate in argomenti della Guida sensibile al contesto distinti.  
   
-###  <a name="SelectNewPrimaryReplica"></a>Pagina Seleziona nuova replica primaria  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a>Pagina Seleziona nuova replica primaria  
  In questa sezione vengono descritte le opzioni della pagina **Seleziona nuova replica primaria** . Utilizzare questa pagina per selezionare la replica secondaria (destinazione del failover) sulla quale verrà eseguito il failover del gruppo di disponibilità. La replica diventerà la nuova replica primaria.  
   
 #### <a name="page-options"></a>Opzioni della pagina  
@@ -125,7 +125,7 @@ ms.locfileid: "62787977"
 |-----------|-----------------|  
 |**Quorum normale**|Il cluster è stato avvito con un quorum normale.|  
 |**Quorum forzato**|Il cluster è stato avvito con un quorum forzato.|  
-|**Quorum sconosciuto**|Lo stato del quorum del cluster non è disponibile.|  
+|**Stato quorum sconosciuto**|Lo stato del quorum del cluster non è disponibile.|  
 |**Non applicabile**|Il nodo che ospita la replica di disponibilità non dispone di quorum.|  
   
  Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
@@ -170,7 +170,7 @@ ms.locfileid: "62787977"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Nella pagina **Seleziona nuova replica primaria** l'annullamento della procedura guidata ne provoca la chiusura senza eseguire alcuna azione.  
   
-###  <a name="ConfirmPotentialDataLoss"></a>Pagina Conferma potenziale perdita di dati  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a>Pagina Conferma potenziale perdita di dati  
  In questa sezione vengono descritte le opzioni della pagina **Conferma potenziale perdita di dati** visualizzata solo se si esegue un failover forzato. Questo argomento viene utilizzato solo nella [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Utilizzare questa pagina per indicare se si è disposti per a rischiare una possibile perdita di dati per forzare il failover del gruppo di disponibilità.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Opzioni di Conferma potenziale perdita di dati  
@@ -182,7 +182,7 @@ ms.locfileid: "62787977"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Nella pagina **Conferma potenziale perdita di dati** l'annullamento della procedura guidata ne provoca la chiusura senza eseguire alcuna azione.  
   
-###  <a name="ConnectToReplica"></a>Pagina Connetti alla replica  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a>Pagina Connetti alla replica  
  In questa sezione vengono descritte le opzioni della pagina **Connetti alla replica** della [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Questa pagina viene visualizzata solo se non si è connessi alla replica secondaria di destinazione. Utilizzare questa pagina per connettersi alla replica secondaria selezionata come nuova replica primaria.  
   
 #### <a name="page-options"></a>Opzioni della pagina  
@@ -199,7 +199,7 @@ ms.locfileid: "62787977"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Nella pagina **Connetti alla replica** l'annullamento della procedura guidata ne provoca la chiusura senza eseguire alcuna azione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità di disponibilità (Gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modalità di failover &#40;Gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   

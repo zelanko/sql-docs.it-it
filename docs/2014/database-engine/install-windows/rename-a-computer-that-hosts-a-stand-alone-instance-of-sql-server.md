@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775008"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Rinominare un computer che ospita un'istanza autonoma di SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "62775008"
   
  È possibile connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il nuovo nome del computer in seguito al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per garantire che @@SERVERNAME restituisca il nome aggiornato dell'istanza del server locale, è consigliabile eseguire manualmente la procedura descritta di seguito valida per il proprio scenario. La procedura varia a seconda che si aggiorni un computer che ospita un'istanza predefinita o un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Per rinominare un computer che ospita un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>Per rinominare un computer che ospita un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Per un computer rinominato che ospita un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire le procedure riportate di seguito:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62775008"
     SELECT @@SERVERNAME AS 'Server Name';  
     ```  
   
-## <a name="additional-considerations"></a>Considerazione aggiuntive  
+## <a name="additional-considerations"></a>Ulteriori considerazioni  
  **Account di accesso remoto** : se il computer dispone di account di accesso remoto, l'esecuzione di **sp_dropserver** può generare un errore simile al seguente:  
   
  `Server: Msg 15190, Level 16, State 1, Procedure sp_dropserver, Line 44 There are still remote logins for the server 'SERVER1'.`  
@@ -109,7 +109,7 @@ ms.locfileid: "62775008"
   
  **Nomi alias per i client**: gli alias per i client che usano named pipe verranno interessati dall'operazione di ridenominazione del computer. Se ad esempio è stato creato un alias "PROD_SRVR" per puntare a SRVR1 e viene utilizzato il protocollo Named Pipes, il nome pipe sarà simile al seguente: `\\SRVR1\pipe\sql\query`. Dopo la ridenominazione del computer, il percorso di named pipe non sarà più valido. Per altre informazioni sulle named pipe, vedere l'argomento [Creazione di una stringa di connessione valida tramite named pipe](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installare SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

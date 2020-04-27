@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775321"
 ---
 # <a name="upgrade-replicated-databases"></a>Aggiornare database replicati
@@ -63,11 +63,11 @@ ms.locfileid: "62775321"
   
  Eseguire gli agenti da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], da Monitoraggio replica o dalla riga di comando. Per ulteriori informazioni sull'esecuzione dell'agente snapshot, vedere gli argomenti seguenti:  
   
--   [Creare e applicare lo snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Creazione e applicazione dello snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   [Creare e applicare lo snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Creazione e applicazione dello snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62775321"
   
 -   [Sincronizzare una sottoscrizione pull](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
   
--   [Sincronizzare una sottoscrizione push](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
+-   [Sincronizzazione di una sottoscrizione push](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
   
  Al termine dell'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una topologia in cui viene utilizzata una replica di tipo merge, modificare il livello di compatibilità di tutte le pubblicazioni se si desidera utilizzare le nuove funzionalità.  
   
@@ -88,10 +88,10 @@ ms.locfileid: "62775321"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Ripristino di un database replicato da una versione precedente  
  Per verificare che in seguito al ripristino del backup di un database replicato vengano mantenute le impostazioni di replica di una versione precedente, eseguire il ripristino in un server e un database con gli stessi nomi del server e del database utilizzati per la creazione della copia di backup.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Domande frequenti sull'amministrazione della replica](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilità con le versioni precedenti della replica](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
+ [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   
   

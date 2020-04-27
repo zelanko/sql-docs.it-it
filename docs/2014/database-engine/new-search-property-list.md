@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774502"
 ---
 # <a name="new-search-property-list"></a>Nuovo elenco di proprietà di ricerca
@@ -50,8 +50,8 @@ ms.locfileid: "62774502"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Per utilizzare SQL Server Management Studio per gestire gli elenchi di proprietà di ricerca  
  Per informazioni sulla creazione, la visualizzazione, la modifica o l'eliminazione di un elenco di proprietà di ricerca e sulla configurazione di un indice full-text per la ricerca di proprietà, vedere eseguire ricerche nelle proprietà dei [documenti con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [Crea elenco di proprietà di ricerca &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   

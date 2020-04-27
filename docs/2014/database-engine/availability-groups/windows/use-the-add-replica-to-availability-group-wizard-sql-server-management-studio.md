@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813378"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio)
@@ -30,14 +30,14 @@ ms.locfileid: "62813378"
   
 
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "istanze del server" e "repliche e gruppi di disponibilità" in [prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
--   Prima di aggiungere una replica secondaria, verificare che l'istanza ospite di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si trovi nello stesso cluster Windows Server Failover Clustering (WSFC) delle repliche esistenti, ma risieda in un nodo del cluster diverso. Inoltre, verificare che questa istanza del server soddisfi tutti gli altri prerequisiti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per ulteriori informazioni, vedere [prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Prima di aggiungere una replica secondaria, verificare che l'istanza ospite di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si trovi nello stesso cluster Windows Server Failover Clustering (WSFC) delle repliche esistenti, ma risieda in un nodo del cluster diverso. Inoltre, verificare che questa istanza del server soddisfi tutti gli altri prerequisiti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Se un'istanza del server selezionata come host per una replica di disponibilità è in esecuzione in un account utente di dominio e non dispone ancora di un endpoint del mirroring del database, tramite la procedura guidata è possibile creare l'endpoint e concedere l'autorizzazione CONNECT all'account del servizio dell'istanza del server. Se, tuttavia, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario usare certificati per l'autenticazione dell'endpoint e non sarà possibile creare un endpoint del mirroring del database nell'istanza del server tramite la procedura guidata. In tal caso, è consigliabile creare manualmente gli endpoint del mirroring del database prima di avviare la Procedura guidata Aggiungi replica a gruppo di disponibilità.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62813378"
   
      [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
-     [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+     [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   **Prerequisiti per l'utilizzo della sincronizzazione dati iniziale completa**  
   
@@ -57,16 +57,16 @@ ms.locfileid: "62813378"
   
      Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
  È inoltre necessaria l'autorizzazione CONTROL ON ENDPOINT se si desidera gestire l'endpoint del mirroring del database tramite la Procedura guidata Aggiungi replica a gruppo di disponibilità.  
   
 
   
-##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio)  
+##  <a name="using-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio)  
  **Per utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria del gruppo di disponibilità ed espandere l'albero del server.  
@@ -102,17 +102,17 @@ ms.locfileid: "62813378"
   
          Se sono stati preparati manualmente database secondari sulle istanze del server che ospiteranno le nuove repliche secondarie, è possibile selezionare questa opzione. Per i nuovi database secondari esistenti verranno creati join al gruppo di disponibilità tramite la procedura guidata.  
   
-    -   **Ignora sincronizzazione dati iniziale**  
+    -   **Ignora sincronizzazione dei dati iniziale**  
   
          Selezionare questa opzione se si desidera usare i backup dei database e del log dei database primari. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-7.  Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della procedura guidata Aggiungi replica a Gruppo di disponibilità. Per apportare una modifica, fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida**, quindi fare clic su **Ripeti convalida**.  
+7.  Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della procedura guidata Aggiungi replica a Gruppo di disponibilità. Per apportare una modifica, fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida** , quindi fare clic su **Ripeti convalida**.  
   
 8.  Nella pagina **Riepilogo** rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una modifica, fare clic su **Indietro** per tornare alla pagina pertinente. Dopo avere apportato la modifica, fare clic su **Avanti** per tornare alla pagina **Riepilogo** .  
   
      Se si è soddisfatti delle selezioni, è possibile fare clic su Script per creare uno script dei passaggi eseguiti dalla procedura guidata. Per creare e configurare il nuovo gruppo di disponibilità, fare quindi clic su **Fine**.  
   
-9. La pagina **Stato** visualizza lo stato di avanzamento dei passaggi per la creazione del gruppo di disponibilità, ovvero configurazione di endpoint, creazione del gruppo di disponibilità e creazione di un join della replica secondaria al gruppo.  
+9. Nella pagina **Stato** viene visualizzato lo stato di avanzamento dei passaggi per la creazione del gruppo di disponibilità, ovvero configurazione di endpoint, creazione del gruppo di disponibilità e creazione di un join della replica secondaria al gruppo.  
   
 10. Al termine di questi passaggi, nella pagina **Risultati** vengono visualizzati i relativi risultati. Se tutti questi passaggi sono stati eseguiti correttamente, il nuovo gruppo di disponibilità è completamente configurato. Se si verifica un errore durante uno dei passaggi, potrebbe essere necessario completare manualmente la configurazione. Per informazioni sulla causa di un determinato errore, fare clic sul collegamento "Errore" nella colonna **Risultato** .  
   
@@ -123,13 +123,13 @@ ms.locfileid: "62813378"
   
 
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  

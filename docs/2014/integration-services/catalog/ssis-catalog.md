@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771577"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
@@ -41,12 +41,11 @@ ms.locfileid: "62771577"
 >  Se si verifica un failover delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del failover di un cluster, i pacchetti in esecuzione non vengono riavviati. È possibile usare i checkpoint per riavviare i pacchetti. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificatori dell'oggetto catalogo  
- Quando si crea un nuovo oggetto nel catalogo, assegnare un nome all'oggetto. Il nome di un oggetto costituisce l'identificatore. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce le regole per i caratteri che possono essere usati in un identificatore. I nomi degli oggetti seguenti devono rispettare le regole per gli identificatori.  
+ Quando si crea un nuovo oggetto nel catalogo, assegnare un nome all'oggetto. Il nome di un oggetto costituisce l'identificatore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce le regole per i caratteri che possono essere usati in un identificatore. I nomi degli oggetti seguenti devono rispettare le regole per gli identificatori.  
   
 -   Cartella  
   
--   Project  
+-   Progetto  
   
 -   Environment  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62771577"
  **Pulisci log periodicamente**  
  Il passaggio del processo per la pulizia delle operazioni viene eseguito quando questa proprietà è impostata su `True`.  
   
- **Periodo di conservazione (giorni)**  
+ **Periodo di memorizzazione (giorni)**  
  Definisce la validità massima di dati di operazioni consentiti (in giorni). I dati più obsoleti vengono rimossi.  
   
  Il valore minimo è 1 giorno. Il valore massimo è limitato solo dal valore massimo dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` dati. Per informazioni su questo tipo di dati, vedere [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
@@ -132,7 +131,7 @@ ms.locfileid: "62771577"
   
  La modifica dell'algoritmo di crittografia è un'operazione che richiede molto tempo. Innanzitutto, nel server deve essere usato l'algoritmo specificato in precedenza per decrittografare tutti i valori di configurazione. Successivamente, deve essere usato il nuovo algoritmo per crittografare nuovamente i valori. Durante questa fase, nel server non è possibile eseguire altre operazioni usando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pertanto, per consentire il funzionamento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza interruzioni, l'algoritmo di crittografia è un valore di sola lettura nella finestra di dialogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Per modificare l'impostazione della proprietà **algoritmo di crittografia** , `SSISDB` impostare il database sulla modalità utente singolo, quindi chiamare catalog. configure_catalog stored procedure. Usare ENCRYPTION_ALGORITHM per l'argomento *property_name*. Per i valori di proprietà supportati, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Per altre informazioni sulla stored procedure, vedere [catalog.configure_catalog &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Per modificare l'impostazione della proprietà **algoritmo di crittografia** , `SSISDB` impostare il database sulla modalità utente singolo, quindi chiamare catalog. configure_catalog stored procedure. Usare ENCRYPTION_ALGORITHM per l'argomento *property_name* . Per i valori di proprietà supportati, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Per altre informazioni sulla stored procedure, vedere [catalog.configure_catalog &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Per altre informazioni sulla modalità utente singolo, vedere [Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Per informazioni sulla crittografia e sui relativi algoritmi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere gli argomenti della sezione [Crittografia di SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -169,7 +168,7 @@ ms.locfileid: "62771577"
   
 -   Per un progetto, usare la pagina **Autorizzazioni** in [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Per gestire le autorizzazioni utilizzando Transact-SQL, chiamare [Catalog. grant_permission &#40;database ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. DENY_PERMISSION &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) e [Catalog. revoke_permission &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Per visualizzare le autorizzazioni valide per l'entità corrente per tutti gli oggetti, eseguire una query su [catalog.effective_object_permissions &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). In questo argomento vengono fornite le descrizioni dei diversi tipi di autorizzazioni. Per visualizzare le autorizzazioni assegnate in modo esplicito all'utente, eseguire una query su [catalog.explicit_object_permissions &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
+ Per gestire le autorizzazioni usando Transact-SQL, chiamare [catalog.grant_permission &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) e [catalog.revoke_permission &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Per visualizzare le autorizzazioni valide per l'entità corrente per tutti gli oggetti, eseguire una query su [catalog.effective_object_permissions &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). In questo argomento vengono fornite le descrizioni dei diversi tipi di autorizzazioni. Per visualizzare le autorizzazioni assegnate in modo esplicito all'utente, eseguire una query su [catalog.explicit_object_permissions &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## <a name="folders"></a>Cartelle  
  Una cartella contiene uno o più progetti e ambienti nel `SSISDB` catalogo di. È possibile usare la vista [catalog.folders &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) per accedere alle informazioni sulle cartelle del catalogo. È possibile usare le stored procedure seguenti per gestire cartelle.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771027"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
@@ -26,7 +26,7 @@ ms.locfileid: "62771027"
   
  La destinazione ODBC include un output regolare e un output degli errori.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
  La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](../odbc-source-editor-connection-manager-page.md). Le due modalità sono:  
   
 -   **Batch**: in questa modalità il componente tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  

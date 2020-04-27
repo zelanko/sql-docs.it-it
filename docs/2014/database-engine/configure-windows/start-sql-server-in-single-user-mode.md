@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809055"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Avvio di SQL Server in modalità utente singolo
@@ -59,11 +59,11 @@ ms.locfileid: "62809055"
   
 6.  Dopo aver completato l'operazione, chiudere il prompt dei comandi e riportare online SQL e le altre risorse tramite Amministrazione cluster.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avviare, arrestare o sospendere il servizio SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Connessione di diagnostica per gli amministratori di database](diagnostic-connection-for-database-administrators.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
- [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
+ [CHECKPOINT &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md)  
   

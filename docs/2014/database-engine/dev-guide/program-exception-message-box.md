@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780697"
 ---
 # <a name="program-exception-message-box"></a>Programmare la finestra di messaggio eccezione
@@ -61,8 +61,7 @@ ms.locfileid: "62780697"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>Enumerazione che specifica i pulsanti da visualizzare nella finestra di messaggio eccezione.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A>: didascalia della finestra di dialogo della finestra di messaggio eccezione.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A>: didascalia della finestra di dialogo della finestra di messaggio eccezione.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>Enumerazione che specifica il pulsante predefinito per la finestra di dialogo della finestra di messaggio eccezione.  
   
@@ -90,8 +89,7 @@ ms.locfileid: "62780697"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>-Visualizza i pulsanti **Interrompi**, **Riprova**e **Ignora** .  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom>: visualizza pulsanti personalizzati.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom>: visualizza pulsanti personalizzati.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>-Visualizza il pulsante **OK** .  
   

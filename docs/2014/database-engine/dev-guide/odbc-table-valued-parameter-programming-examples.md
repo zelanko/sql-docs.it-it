@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780852"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Esempi di programmazione di parametri con valori di tabella ODBC
@@ -28,7 +28,7 @@ ms.locfileid: "62780852"
   
 -   [Invio di dati come parametro con valori di tabella utilizzando data-at-execution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Parametri con valori di tabella &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774357"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Aggiungere un database secondario a una configurazione per il log shipping (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62774357"
   
      [Sicurezza](#Security)  
   
--   **Per aggiungere un log shipping database secondario tramite:**  
+-   **Per aggiungere un database secondario per il log shipping utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -39,14 +39,14 @@ ms.locfileid: "62774357"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Per aggiungere un database secondario per il log shipping  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62774357"
   
 4.  Fare clic su **Connetti** e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si intende utilizzare come server secondario.  
   
-5.  Nella casella **Database secondario** scegliere un database dall'elenco oppure digitare il nome del database che si desidera creare.  
+5.  Nella casella **database secondario** scegliere un database dall'elenco o digitare il nome del database che si desidera creare.  
   
 6.  Nella scheda **Inizializza database secondario** scegliere l'opzione che si intende utilizzare per inizializzare il database secondario.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62774357"
   
 15. Fare clic su **OK** nella finestra di dialogo Proprietà database per avviare il processo di configurazione.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Per aggiungere un database secondario per il log shipping  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62774357"
   
 5.  Nel server secondario abilitare i processi di copia e ripristino. Per altre informazioni, vedere [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiornare il log shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -108,10 +108,10 @@ ms.locfileid: "62774357"
   
 -   [Monitorare il log shipping &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
--   [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Eseguire il failover in un database secondario per il log shipping &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tabelle e stored procedure relative al log shipping](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

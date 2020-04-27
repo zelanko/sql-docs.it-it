@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773397"
 ---
 # <a name="undo-checkouts"></a>Annullare estrazioni
@@ -57,7 +57,7 @@ ms.locfileid: "62773397"
      **Annulla estrazione**  
      Consente di annullare l'estrazione, eliminando le eventuali modifiche apportate al file estratto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Estrai file](../../2014/database-engine/check-out-files.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   

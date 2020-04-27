@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812748"
 ---
 # <a name="change-source-control"></a>Modificare il controllo del codice sorgente
@@ -31,7 +31,7 @@ ms.locfileid: "62812748"
 >  Per accedere a questa finestra di dialogo, è inoltre possibile fare clic con il pulsante destro del mouse sull'elemento in Esplora soluzioni.  
   
 ## <a name="options"></a>Opzioni  
- **Associazione**  
+ **Associare**  
  Consente di associare gli elementi selezionati a un determinato percorso del server del controllo del codice sorgente. È ad esempio possibile utilizzare questo pulsante per eseguire l'associazione all'ultima cartella e all'ultimo database noti del server del controllo del codice sorgente. Se non è possibile individuare una cartella o un database recente del server, verrà chiesto di specificarne un altro.  
   
  **Sfoglia**  
@@ -61,7 +61,7 @@ ms.locfileid: "62812748"
  **Associazione server**  
  Indica l'associazione dell'elemento a un server del controllo del codice sorgente.  
   
- **Nome server**  
+ **Nome del server**  
  Consente di visualizzare il nome del server del controllo del codice sorgente a cui è associato il progetto o la soluzione corrispondente.  
   
  **Soluzione/Progetto**  
@@ -70,20 +70,20 @@ ms.locfileid: "62812748"
  **Ordina**  
  Consente di eseguire l'ordinamento delle colonne visualizzate.  
   
- **Status**  
+ **Stato**  
  Consente di identificare lo stato di associazione e di connessione di un elemento. Le opzioni possibili sono:  
   
 |**Opzione**|**Descrizione**|  
 |----------------|---------------------|  
 |Valido|L'elemento è correttamente associato e connesso alla cartella del server di appartenenza.|  
 |Non valido|L'elemento è associato in modo non corretto o è disconnesso dalla cartella di appartenenza. Usare il comando **Aggiungi al controllo del codice sorgente** anziché **associa** per questo elemento.|  
-|Unknown|Lo stato dell'elemento incluso nel controllo del codice sorgente non è ancora stato determinato.|  
+|Sconosciuto|Lo stato dell'elemento incluso nel controllo del codice sorgente non è ancora stato determinato.|  
 |Non incluso nel controllo del codice sorgente|L'elemento non è inserito nel controllo del codice sorgente.|  
   
- **Disassociazione**  
+ **Disassociare**  
  Consente di visualizzare la finestra di dialogo **controllo del codice sorgente** che consente di rimuovere gli elementi selezionati dal controllo del codice sorgente e di annullare in modo definitivo gli elementi delle cartelle presenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Controllo del codice sorgente di Esplora soluzioni](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

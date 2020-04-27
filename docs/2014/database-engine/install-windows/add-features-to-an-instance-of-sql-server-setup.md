@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779372"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server 2014 (programma di installazione)
@@ -37,7 +37,7 @@ ms.locfileid: "62779372"
   
 ## <a name="procedures"></a>Procedure  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>Per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic sul file setup.exe. Per eseguire l'installazione da una condivisione di rete, accedere alla cartella radice nella condivisione, quindi fare doppio clic sul file setup.exe. Se viene visualizzata la finestra di dialogo del programma di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , [!INCLUDE[clickOK](../../includes/clickok-md.md)] per installare i prerequisiti, quindi su **Annulla** per uscire dall'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
@@ -149,6 +149,6 @@ ms.locfileid: "62779372"
  [Convalidare un'installazione di SQL Server](validate-a-sql-server-installation.md)   
  [Eliminare un'installazione di SQL Server 2014](repair-a-failed-sql-server-installation.md)   
  [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata &#40;&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+ [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
   

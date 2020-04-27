@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779225"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria
@@ -172,7 +172,7 @@ create table t (
 go  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Indici nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Determinazione del numero di bucket corretto per gli indici hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [Indici hash](hash-indexes.md)  

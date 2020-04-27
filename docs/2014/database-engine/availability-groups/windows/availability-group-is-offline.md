@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815424"
 ---
 # <a name="availability-group-is-offline"></a>Il gruppo di disponibilità è offline
@@ -27,7 +27,7 @@ ms.locfileid: "62815424"
   
 |||  
 |-|-|  
-|**Nome criteri**|Stato online del gruppo di disponibilità|  
+|**Nome criterio**|Stato online del gruppo di disponibilità|  
 |**Problema**|Il gruppo di disponibilità è offline.|  
 |**Categoria**|**Critico**|  
 |**Facet**|gruppo di disponibilità|  
@@ -38,7 +38,7 @@ ms.locfileid: "62815424"
  I criteri si trovano in uno stato integro quando la risorsa cluster del gruppo di disponibilità è online e nel gruppo di disponibilità è disponibile una replica primaria.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]le informazioni sulle possibili cause e le possibili soluzioni sono disponibili nella pagina [Availability group is offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) (Il gruppo di disponibilità è offline) in TechNet Wiki.  
+>   Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [gruppo di disponibilità è offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) su Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Questo problema può essere causato da un errore nell'istanza del server in cui è ospitata la replica primaria o dal passaggio alla modalità offline della risorsa del gruppo di disponibilità WSCF (Windows Server Failover Clustering). Di seguito sono riportate le possibili cause del passaggio alla modalità offline del gruppo di disponibilità:  
@@ -72,8 +72,8 @@ ms.locfileid: "62815424"
   
 -   Se è in corso un failover, attenderne il completamento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

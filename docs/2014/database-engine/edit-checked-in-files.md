@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779605"
 ---
 # <a name="edit-checked-in-files"></a>Modificare i file archiviati
@@ -33,7 +33,7 @@ ms.locfileid: "62779605"
   
 3.  Fare clic su **Consenti modifica elementi archiviati**, quindi fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   

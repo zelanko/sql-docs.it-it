@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780293"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>Provider SQLXMLOLEDB (SQLXML 4.0)
@@ -33,7 +33,7 @@ ms.locfileid: "62780293"
  [Uso del provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Vengono forniti esempi di varie attività con il provider SQLXMLOLEDB.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Classi gestite SQLXML](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Programmazione in SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   

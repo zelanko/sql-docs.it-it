@@ -20,30 +20,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789111"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Pagina Stato installazione (procedure guidate gruppi di disponibilità AlwaysOn)
   Utilizzare questa finestra di dialogo per visualizzare lo stato di avanzamento di una procedura guidata [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eseguita in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. L'indicatore di stato segnala lo stato di avanzamento relativo dei passaggi eseguiti dalla procedura guidata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Altri dettagli**  
+ **Ulteriori dettagli**  
  Fare clic sulla freccia GIÙ per visualizzare una griglia dello stato di avanzamento in cui sono elencati i passaggi completati, seguiti dall'attuale operazione in corso. La griglia include le colonne seguenti:  
   
  **Nome**  
  Visualizza una frase che descrive un passaggio specifico.  
   
- **Status**  
+ **Stato**  
  Indica il risultato dei passaggi completati e la percentuale di completamento del passaggio corrente, come segue:  
   
 |Risultato|Descrizione|  
 |------------|-----------------|  
 |**Error (Errore) (Error (Errore)e)**|Indica che si è verificato un errore nell'operazione relativa a questo passaggio. Fare clic sul collegamento per visualizzare una finestra di dialogo del messaggio in cui viene descritto l'errore.|  
-|**In corso (** *percentuale-completato* **)**|Indica che l'operazione è in corso e stima la percentuale di completamento di questo passaggio.|  
-|**Success**|Indica che l'operazione per questo passaggio è stata completata.|  
+|**In corso (** *percentuale di completamento* **)**|Indica che l'operazione è in corso e stima la percentuale di completamento di questo passaggio.|  
+|**Operazione completata**|Indica che l'operazione per questo passaggio è stata completata.|  
   
  **Meno dettagli**  
  Fare clic per nascondere la griglia dello stato di avanzamento.  
@@ -51,7 +51,7 @@ ms.locfileid: "62789111"
  **Annulla**  
  Fare clic per ignorare eventuali operazioni rimanenti e uscire dalla procedura guidata.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62789111"
   
 -   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

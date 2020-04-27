@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774416"
 ---
 # <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  Nell'esempio viene illustrato che la sintassi dei tipi di tabella ottimizzata per la memoria è simile ai tipi di tabella basati su disco, con le seguenti eccezioni:  
   
--   
-  `MEMORY_OPTIMIZED=ON` indica se il tipo di tabella è ottimizzato per la memoria.  
+-   `MEMORY_OPTIMIZED=ON` indica se il tipo di tabella è ottimizzato per la memoria.  
   
 -   Il tipo deve contenere almeno un indice. Analogamente alle tabelle ottimizzate per la memoria, è possibile utilizzare indici hash e non cluster.  
   
@@ -187,7 +186,7 @@ GO
   
  La memoria viene rappresentata come parte di un singolo consumer di memoria di PGPOOL del database.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Supporto di Transact-SQL per OLTP in memoria](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

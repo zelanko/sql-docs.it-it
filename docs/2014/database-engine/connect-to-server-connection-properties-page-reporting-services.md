@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808662"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Connetti al server (pagina Proprietà connessione) Reporting Services
-  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o alla registrazione di [!INCLUDE[ssRS](../includes/ssrs.md)] in **Server registrati**. **Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo quando ci si connette. **Test** e **Salva** vengono visualizzati solo in questa finestra di dialogo durante [!INCLUDE[ssRS](../includes/ssrs.md)]la registrazione.  
+  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o alla registrazione di [!INCLUDE[ssRS](../includes/ssrs.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Timeout connessione (in MS)**  
+ **Timeout connessione (in ms)**  
  Immettere il numero di millisecondi di attesa dell'attivazione di una connessione prima del timeout.  
   
  **Usa sempre SSL**  
@@ -38,12 +38,12 @@ ms.locfileid: "62808662"
  **Test**  
  Durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs.md)] in **Server registrati**, scegliere questa opzione per verificare la connessione.  
   
- **Salvare**  
+ **Salva**  
  Consente di salvare le impostazioni in **Server registrati**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Eseguire la connessione a un server di report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Connettersi a un server di report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticazione con il server di report](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

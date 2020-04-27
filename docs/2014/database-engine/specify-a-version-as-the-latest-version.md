@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773477"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Specifica di una versione come ultima versione
@@ -60,7 +60,7 @@ ms.locfileid: "62773477"
   
 6.  Fare clic su **Sì** per eseguire il rollback alla versione selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Archiviazione di file](../../2014/database-engine/check-in-files.md)  
   

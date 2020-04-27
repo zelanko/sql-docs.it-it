@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789554"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62789554"
   
  **Contenuto dell'argomento:**  
   
--   [Prerequisiti del gruppo di disponibilità](#AGPrereqsRealAddress)  
+-   [Prerequisiti dei gruppi di disponibilità](#AGPrereqsRealAddress)  
   
 -   [Prerequisiti per il log shipping](#LogShipPrereqs)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62789554"
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a>Prerequisiti del gruppo di disponibilità  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>Prerequisiti del gruppo di disponibilità  
  Per consentire l'esecuzione dei processi di backup sulla replica primaria del gruppo di disponibilità, utilizzare le seguenti impostazioni per i gruppi di disponibilità AlwaysOn:  
   
 |Proprietà|Impostazione|  
@@ -44,13 +44,13 @@ ms.locfileid: "62789554"
 |Preferenza di backup automatico del gruppo di disponibilità.|Solo nella replica primaria|  
 |Priorità di backup della replica primaria.|>0|  
   
- **Per altre informazioni:**  
+ **Per ulteriori informazioni:**  
   
- [Visualizzazione delle Proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
+ [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
  [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a>Prerequisiti per il log shipping  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> Prerequisiti per il log shipping  
   
 -   È necessario che il database primario per il log shipping risieda nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica primaria iniziale/corrente del gruppo di disponibilità.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62789554"
   
  Dopo avere creato tutti i database secondari per il gruppo di disponibilità, se si desidera eseguire backup sulle repliche secondarie, è necessario configurare nuovamente la preferenza di backup automatico del gruppo di disponibilità.  
   
- **Per altre informazioni:**  
+ **Per ulteriori informazioni:**  
   
- [Conversione di una configurazione di log shipping in un gruppo di disponibilità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Blog SQL Server)  
+ [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Conversione di una configurazione per il log shipping in un gruppo di disponibilità) (blog su SQL Server)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Log shipping**  
   
 -   [Aggiornare il log shipping a SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -83,19 +83,19 @@ ms.locfileid: "62789554"
   
 -   [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
--   [Creare un gruppo di disponibilità &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Creare un gruppo di disponibilità &#40;PowerShell SQL Server&#41;](../../../powershell/sql-server-powershell.md)  
   
 -   [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   
-     [Conversione di una configurazione log shipping in un gruppo di disponibilità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Conversione di una configurazione per il log shipping in un gruppo di disponibilità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Aggiungere un database primario di log shipping e i database secondari a un gruppo di disponibilità esistente](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Pagina relativa all'aggiunta di un database primario e di database secondari per il log shipping in un gruppo di disponibilità esistente](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
      [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62789554"
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   

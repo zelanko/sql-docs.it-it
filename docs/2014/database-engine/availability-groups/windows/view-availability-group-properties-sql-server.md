@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813252"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Visualizzazione delle Proprietà dei gruppi di disponibilità (SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "62813252"
   
 
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare e modificare le proprietà di un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -39,7 +39,7 @@ ms.locfileid: "62813252"
   
 
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per visualizzare le proprietà e lo stato di un gruppo di disponibilità**  
   
  Per eseguire una query sulle proprietà e sugli stati dei gruppi di disponibilità per cui l'istanza del server ospita una replica di disponibilità, utilizzare le viste seguenti:  
@@ -61,16 +61,16 @@ ms.locfileid: "62813252"
   
 
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per visualizzare le informazioni sui gruppi di disponibilità**  
   
--   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+-   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
 -   [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62813252"
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [monitorare i gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md) [criteri AlwaysOn per problemi operativi con](always-on-policies-for-operational-issues-always-on-availability.md) gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; 
   
   

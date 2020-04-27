@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787212"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurare l'opzione di configurazione del server locks
@@ -41,9 +41,9 @@ ms.locfileid: "62787212"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione locks](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -55,12 +55,12 @@ ms.locfileid: "62787212"
   
 -   L'opzione **locks** influisce inoltre sul momento in cui si verifica l'escalation dei blocchi. Se l'opzione **locks** è impostata su 0, l'escalation dei blocchi si verifica quando la memoria utilizzata dalle strutture di blocco correnti raggiunge il 40% del pool di memoria del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Se l'opzione **locks** è impostata su un valore diverso da 0, l'escalation dei blocchi si verifica quando il numero dei blocchi raggiunge il 40% del valore specificato per l'opzione **locks**.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-locks-option"></a>Per configurare l'opzione locks  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62787212"
   
      L'opzione **locks** consente di impostare il numero massimo di blocchi disponibili e pertanto limitare la quantità di memoria utilizzata per i blocchi stessi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-locks-option"></a>Per configurare l'opzione locks  
   
@@ -97,7 +97,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione locks  
+##  <a name="follow-up-after-you-configure-the-locks-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione locks  
  Per poter rendere effettiva l'impostazione, è necessario riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

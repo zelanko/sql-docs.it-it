@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774780"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Apertura di soluzioni e progetti dal controllo del codice sorgente
@@ -32,7 +32,7 @@ ms.locfileid: "62774780"
 |[Aprire Soluzioni dal controllo del codice sorgente](../../2014/database-engine/open-solutions-from-source-control.md)|Spiega come utilizzare l'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per aprire soluzioni direttamente dal controllo del codice sorgente.|  
 |[Apertura di progetti dal controllo del codice sorgente](../../2014/database-engine/open-projects-from-source-control.md)|Spiega come aprire un progetto dal controllo del codice sorgente per estrarre e modificare i file del progetto.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere soluzioni e progetti al controllo del codice sorgente](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

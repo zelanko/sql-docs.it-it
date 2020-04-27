@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811325"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
@@ -47,7 +47,7 @@ ms.locfileid: "62811325"
 9. Fare clic su **Applica**quindi due volte su **OK** per uscire.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i servizi di motore di database](manage-the-database-engine-services.md)   
+ [Gestire il servizio Motore di database](manage-the-database-engine-services.md)   
  [Spostare i database di sistema](../../relational-databases/databases/system-databases.md)   
  [Spostare database utente](../../relational-databases/databases/move-user-databases.md)  
   

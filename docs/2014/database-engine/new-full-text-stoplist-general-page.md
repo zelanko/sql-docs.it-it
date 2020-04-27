@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774213"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nuovo elenco di parole non significative full-text (pagina Generale)
@@ -55,11 +55,11 @@ ms.locfileid: "62774213"
   
  Se qualsiasi lingua specificata nelle parole non significative dell'elenco di parole non significative di origine non è registrata nel database corrente, CREATE FULLTEXT STOPLIST ha esito positivo, ma vengono restituiti avvisi e le parole non significative corrispondenti non vengono aggiunte.  
   
-## <a name="see-also"></a>Vedere anche  
- [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   
- [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md)   
+## <a name="see-also"></a>Vedi anche  
+ [ALTER FULLTEXT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
+ [CREAZIONE di un &#40;di parole non significative full-text&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [DROP FULLTEXT elenco di parole non significative &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   
+ [Configurare e gestire parole non significative e elenchi per la ricerca full-text](../relational-databases/search/full-text-search.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786746"
 ---
 # <a name="check-out-files"></a>Estrazione di file
@@ -69,7 +69,7 @@ ms.locfileid: "62786746"
      **Visualizzazione albero**  
      Consente di visualizzare la gerarchia di file e cartelle relativa all'elemento che si desidera estrarre.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modifica file archiviati](../../2014/database-engine/edit-checked-in-files.md)   
  [Estrai automaticamente i file al momento della modifica](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
  [Annulla estrazioni](../../2014/database-engine/undo-checkouts.md)   

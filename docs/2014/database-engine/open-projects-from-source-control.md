@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774955"
 ---
 # <a name="open-projects-from-source-control"></a>Apertura di progetti dal controllo del codice sorgente
@@ -42,7 +42,7 @@ ms.locfileid: "62774955"
   
 6.  Nella finestra di dialogo **Apri soluzione** selezionare il progetto che si desidera aprire e fare clic su **Apri**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Apri soluzioni e progetti dal controllo del codice sorgente](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
  [Aprire Soluzioni dal controllo del codice sorgente](../../2014/database-engine/open-solutions-from-source-control.md)  
   

@@ -15,24 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789147"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)
   Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori push della replica transazionale, l'agente di distribuzione continuerà a replicare automaticamente dopo un failover se la sottoscrizione è stata creata usando il nome del listener del gruppo di disponibilità. Per i sottoscrittori pull della replica transazionale, l'agente di distribuzione continuerà a replicare automaticamente dopo un failover se la sottoscrizione è stata creata usando il nome del listener del gruppo di disponibilità e il server sottoscrizione originale è attivo e in esecuzione. Questo avviene perché i processi dell'agente di distribuzione vengono creati solo nel sottoscrittore originale (replica primaria del gruppo di disponibilità). Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  
   
 ## <a name="what-is-supported"></a>Operazioni supportate  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione, il failover automatico dei sottoscrittori transazionali e il failover manuale dei sottoscrittore di merge. Il failover di un server di distribuzione in un database di disponibilità non è supportato. AlwaysOn non possono essere combinati con sincronizzazione Web e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact scenari.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione, il failover automatico dei sottoscrittori transazionali e il failover manuale dei sottoscrittore di merge. Il failover di un server di distribuzione in un database di disponibilità non è supportato. AlwaysOn non possono essere combinati con sincronizzazione Web e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact scenari.  
   
- **Failover di una sottoscrizione pull di tipo merge**  
+ **Failover di una sottoscrizione pull di merge**  
   
  Durante il failover del gruppo di disponibilità si verifica un errore nella sottoscrizione pull poiché l'agente pull non riesce a trovare i processi archiviati nel database **msdb** dell'istanza del server in cui è ospitata la replica primaria, che non è disponibile a causa dell'errore che si è verificato nell'istanza del server.  
   
- **Failover di una sottoscrizione push di tipo merge**  
+ **Failover di una sottoscrizione push di merge**  
   
  Durante il failover del gruppo di disponibilità si verifica un errore nella sottoscrizione push poiché l'agente push non può più connettersi al database di sottoscrizione originale nel sottoscrittore originale.  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805855"
 ---
 # <a name="error-messages"></a>messaggi di errore
@@ -40,7 +40,7 @@ ms.locfileid: "62805855"
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
  Questi errori vengono generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il resto del messaggio di errore corrisponde al testo del messaggio di errore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il codice *pfNative* restituito con questi errori è il numero di errore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per ulteriori informazioni su un elenco di messaggi di errore (e sui relativi numeri) che possono essere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]restituiti da, vedere la descrizione e le colonne di errore della tabella di sistema **sysmessages** nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database **Master** in.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di errori e messaggi](handling-errors-and-messages.md)  
   
   

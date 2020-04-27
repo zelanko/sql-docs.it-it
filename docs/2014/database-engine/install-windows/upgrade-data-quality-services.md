@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775631"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
@@ -25,13 +25,13 @@ ms.locfileid: "62775631"
 > -   È possibile connettersi alla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Data Quality Server usando la versione corrente o una precedente del client Data Quality o [Trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services per eseguire le attività relative alla qualità dei dati.  
 > -   È possibile continuare a utilizzare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Data Quality Services e di Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel da [qui](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario aver eseguito l'accesso come membro del gruppo di amministratori nel computer di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
 -   È necessario che l'account utente di Windows sia membro del ruolo predefinito del server sysadmin nell'istanza di SQL Server in cui è installato [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
-##  <a name="Upgrade"></a> Aggiornamento di DQS  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> Aggiornamento di DQS  
  Per aggiornare DQS:  
   
 1.  Eseguire il backup dei database DQS prima di avviare il processo di aggiornamento. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -69,8 +69,8 @@ ms.locfileid: "62775631"
   
     5.  Se l'aggiornamento dello schema dei database DQS viene terminato correttamente, viene visualizzato un messaggio di completamento.  
   
-##  <a name="Verify"></a> Verifica dell'aggiornamento dello schema dei database DQS  
- Per verificare che lo schema dei database DQS sia stato aggiornato correttamente, è possibile controllare la versione corrente nei database DQS_MAIN e DQS_PROJECTS eseguendo una query sulla tabella A_DB_VERSION in ogni database. A tale scopo, procedere come indicato di seguito:  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> Verifica dell'aggiornamento dello schema dei database DQS  
+ Per verificare che lo schema dei database DQS sia stato aggiornato correttamente, è possibile controllare la versione corrente nei database DQS_MAIN e DQS_PROJECTS eseguendo una query sulla tabella A_DB_VERSION in ogni database. A tale scopo:  
   
 1.  Avviare SQL Server Management Studio e connettersi all'istanza di SQL Server contenente lo schema dei database DQS aggiornato.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "62775631"
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\NomeUtente>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\NomeUtente>|2||  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Rimuovere oggetti server Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
+ [Rimuovere gli oggetti del server Data Quality](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   
   

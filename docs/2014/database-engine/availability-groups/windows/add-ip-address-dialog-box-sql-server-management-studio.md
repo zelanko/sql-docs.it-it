@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791915"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Finestra di dialogo Aggiungi indirizzo IP (SQL Server Management Studio)
-  In questo argomento della Guida sensibile al contesto vengono descritte le opzioni della finestra di dialogo **Aggiungi indirizzo IP** . Questa finestra di dialogo a cui si accede dalla finestra di dialogo **Nuovo listener gruppo di disponibilità** e dalla scheda **Listener** della pagina **Specifica repliche** della [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] o della [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   Questo argomento della Guida sensibile al contesto descrive le opzioni della finestra di dialogo **Aggiungi indirizzo IP**. Questa finestra di dialogo a cui si accede dalla finestra di dialogo **Nuovo listener gruppo di disponibilità** e dalla scheda **Listener** della pagina **Specifica repliche** della [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] o della [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Prima di iniziare ad aggiungere subnet a un listener del gruppo di disponibilità, assicurarsi di conoscere l'indirizzo IP per ogni subnet e, per un indirizzo IPv4, la subnet mask.  
   
-##  <a name="PageOptions"></a>Aggiungi opzioni indirizzi IP  
+##  <a name="add-ip-address-options"></a><a name="PageOptions"></a> Opzioni di aggiunta dell'indirizzo IP  
  **Subnet**  
  Utilizzare l'elenco a discesa per selezionare un indirizzo per la subnet da aggiungere al listener del gruppo di disponibilità. Per impostazione predefinita, una subnet ha sia un indirizzo IPv4 sia un indirizzo IPv6. Al primo utilizzo della finestra di dialogo **Aggiungi indirizzo IP** , nell'elenco a discesa **Subnet** sono visualizzati entrambi gli indirizzi per ogni subnet che ospita una replica per il gruppo di disponibilità. Per aggiungere una determinata subnet al listener, selezionare uno dei relativi indirizzi subnet.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62791915"
  Fare clic per annullare le selezioni e tornare alla finestra di dialogo **Nuovo listener gruppo di disponibilità** o alla scheda **Listener** senza aggiungere un indirizzo IP statico per qualsiasi subnet.  
   
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62791915"
 -   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Connettività client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)  

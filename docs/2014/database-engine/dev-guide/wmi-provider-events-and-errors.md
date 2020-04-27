@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780267"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Eventi ed errori del provider WMI
@@ -28,7 +28,7 @@ ms.locfileid: "62780267"
  0x8007052f  
  Errore durante l'accesso: restrizione sull'account utente. Le possibili cause potrebbero essere: campo della password vuoto non consentito, restrizioni sugli orari di accesso o applicazione di restrizioni di criteri.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi ed errori di Motore di database](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

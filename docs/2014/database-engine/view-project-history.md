@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773497"
 ---
 # <a name="view-project-history"></a>Visualizzare cronologia progetti
@@ -50,7 +50,7 @@ ms.locfileid: "62773497"
   
     -   Esportare il report della cronologia su una stampante, su un file o negli Appunti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza stato file](../../2014/database-engine/view-file-status.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   

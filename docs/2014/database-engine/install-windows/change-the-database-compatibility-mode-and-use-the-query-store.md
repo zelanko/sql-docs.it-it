@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779113"
 ---
 # <a name="migrate-query-plans"></a>Migrare piani di query
@@ -91,7 +91,7 @@ GO
 ### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Passaggio 3: Verifica dell'applicazione della guida di piano alla query  
  Eseguire nuovamente la query ed esaminare il piano di query prodotto. Verificare che il piano corrisponda a quello di cui specificato nella guida.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_create_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Hint per la query &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
  [Guide di piano](../../relational-databases/performance/plan-guides.md)  

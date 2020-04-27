@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774283"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestione di account di accesso e processi per i database di un gruppo di disponibilità (SQL Server)
@@ -43,21 +43,21 @@ ms.locfileid: "62774283"
   
 -   **Metadati aggiuntivi**  
   
-     Gli account di accesso e i processi non sono le uniche informazioni che è necessario ricreare in ogni istanza del server in cui è ospitata una replica secondaria per uno specifico gruppo di disponibilità. Potrebbe ad esempio essere necessario ricreare le impostazioni di configurazione del server, credenziali, dati crittografati, autorizzazioni, impostazioni di replica, applicazioni di Service Broker, trigger (a livello di server) e così via. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Gli account di accesso e i processi non sono le uniche informazioni che è necessario ricreare in ogni istanza del server in cui è ospitata una replica secondaria per uno specifico gruppo di disponibilità. Potrebbe ad esempio essere necessario ricreare le impostazioni di configurazione del server, credenziali, dati crittografati, autorizzazioni, impostazioni di replica, applicazioni di Service Broker, trigger (a livello di server) e così via. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a>Account di accesso di applicazioni che utilizzano l'autenticazione SQL Server o un account di accesso di Windows locale  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Account di accesso di applicazioni in cui viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale  
  Se in un'applicazione viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale, i SID non corrispondenti possono impedire la risoluzione in un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]da parte dell'account di accesso dell'applicazione. In caso di SID non corrispondenti, l'account di accesso diventa un utente orfano nell'istanza del server remoto. Questo problema si può verificare quando tramite un'applicazione si effettua la connessione a un database di log shipping o con mirroring dopo un failover o a un database Sottoscrittore di replica inizializzato da un backup.  
   
- Per evitare questo problema, è consigliabile intraprendere misure preventive quando si configura un'applicazione di questo tipo per utilizzare un database ospitato da un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La prevenzione comporta il trasferimento degli account di accesso e delle password dall'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni su come evitare questo problema, vedere l'articolo della Knowledge 918992-[come trasferire gli account di accesso e le password tra le istanze di SQL Server](https://support.microsoft.com/kb/918992/)).  
+ Per evitare questo problema, è consigliabile intraprendere misure preventive quando si configura un'applicazione di questo tipo per utilizzare un database ospitato da un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La prevenzione comporta il trasferimento degli account di accesso e delle password dall'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni su come evitare questo problema, vedere l'articolo della Knowledge Base 918992 relativo alla [modalità di trasferimento degli account di accesso e delle password tra le istanze di SQL Server](https://support.microsoft.com/kb/918992/).  
   
 > [!NOTE]  
 >  Questo problema influisce sugli account di Windows locali in computer diversi. Tuttavia, non si verifica in caso di account di dominio, dal momento che il SID è identico in ogni computer.  
   
  Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog del motore di database).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
--   [Creare un account di accesso](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Creazione di un account di accesso](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Creare un utente del database](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62774283"
   
 -   [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Database indipendenti](../relational-databases/databases/contained-databases.md)   
- [Crea processi](../ssms/agent/create-jobs.md)  
+ [Creazione di processi](../ssms/agent/create-jobs.md)  
   
   

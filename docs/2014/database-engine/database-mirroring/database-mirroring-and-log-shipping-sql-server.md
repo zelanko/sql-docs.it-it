@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807471"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "62807471"
  Quando si utilizza un server di monitoraggio log shipping locale, non è necessaria alcuna considerazione specifica ai fini di questo scenario. Per informazioni sull'utilizzo di un'istanza di monitoraggio remota con questo scenario, vedere "Impatto del mirroring del database su un'istanza di monitoraggio remota" più avanti in questo argomento.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover dal database principale al database mirror  
- Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. **Server_B** è il server mirror e viene anche configurato come server primario, che è attualmente inattivo. **Server_C** e **Server_D** sono log shipping server secondari. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
+ Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. Il**Server_B** rappresenta il server mirror ed è inoltre configurato come server primario, attualmente non attivo. I**Server_C** e **Server_D** rappresentano i server secondari per il log shipping. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
   
  ![Log shipping e mirroring del database](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping e mirroring del database")  
   

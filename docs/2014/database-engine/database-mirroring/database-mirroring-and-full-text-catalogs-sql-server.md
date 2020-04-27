@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807295"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Mirroring di database e cataloghi full-text (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62807295"
   
 -   Se è disabilitato il rilevamento delle modifiche su un indice full-text, è necessario avviare una ricerca per indicizzazione completa utilizzando l'istruzione seguente:  
   
-     ALTER FULLTEXT INDEX ON *nome_tabella* START FULL POPULATION  
+     ALTER FULLTEXT INDEX ON *table_name* avviare il popolamento completo  
   
 -   Se un indice full-text è configurato per il rilevamento automatico delle modifiche, l'indice viene sincronizzato automaticamente. La sincronizzazione, tuttavia, determina un rallentamento delle prestazioni full-text. In caso di rallentamento eccessivo delle prestazioni, è possibile eseguire una ricerca per indicizzazione completa disattivando il rilevamento delle modifiche e quindi reimpostando il rilevamento automatico:  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62807295"
 ## <a name="after-forcing-service"></a>Dopo la forzatura del servizio  
  Dopo la forzatura del servizio nel server mirror, con possibile perdita di dati, avviare una ricerca per indicizzazione completa. Il metodo da utilizzare per l'avvio di una ricerca per indicizzazione completa dipende dall'attivazione o disattivazione del rilevamento delle modifiche nell'indice full-text. Per ulteriori informazioni, vedere "Indici full-text dopo il failover" più indietro in questo argomento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/indexes/indexes.md)  
   
   

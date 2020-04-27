@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788324"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Utilizzare Dettagli Esplora oggetti per monitorare Gruppi di disponibilità (SQL Server Management Studio)
@@ -29,9 +29,9 @@ ms.locfileid: "62788324"
 > [!NOTE]  
 >  Per informazioni sull'uso del riquadro Dettagli Esplora oggetti, vedere [Riquadro Dettagli di Esplora oggetti](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Prima di iniziare:**  [prerequisiti](#Prerequisites)  
+-   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
--   **Per monitorare un gruppo di disponibilità usando:**  [SQL Server Management Studio](#SSMSProcedure)  
+-   **Per monitorare un gruppo di disponibilità tramite:**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **Esplora oggetti Dettagli:**  
   
@@ -41,12 +41,12 @@ ms.locfileid: "62788324"
   
      [Dettagli database di disponibilità](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanza del server) che ospita la replica primaria o una replica secondaria.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per monitorare i gruppi di disponibilità, le repliche di disponibilità e i database di disponibilità**  
   
 1.  Scegliere **Dettagli Esplora oggetti**dal menu Visualizza o premere **F7** .  
@@ -67,13 +67,13 @@ ms.locfileid: "62788324"
   
          Per eseguire operazioni su più database di disponibilità, selezionarli e fare clic con il pulsante destro del mouse su di essi per aprire un menu di scelta rapida in cui sono elencati i comandi disponibili.  
   
-##  <a name="AvGroupsDetails"></a>Dettagli dei gruppi di disponibilità  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a>Dettagli dei gruppi di disponibilità  
  Nella schermata dei dettagli **Gruppi di disponibilità** vengono visualizzate le colonne seguenti:  
   
  **Nome**  
  Elenca le cartelle **Repliche di disponibilità**, **Database di disponibilità**e **Listener gruppo disponibilità** del gruppo di disponibilità selezionato.  
   
-##  <a name="AvReplicaDetails"></a>Dettagli replica di disponibilità  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
  Nella schermata dei dettagli **Replica di disponibilità** vengono visualizzate le colonne seguenti:  
   
  **Istanza del server**  
@@ -114,7 +114,7 @@ ms.locfileid: "62788324"
 > [!NOTE]  
 >  Per informazioni sui contatori delle prestazioni per le repliche di disponibilità, vedere [SQL Server, replica di disponibilità](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a>Dettagli database di disponibilità  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> Dettagli database di disponibilità  
  Nella schermata dei dettagli **Database di disponibilità** vengono visualizzare le seguenti proprietà dei database di disponibilità di un determinato gruppo di disponibilità:  
   
  **Nome**  
@@ -135,17 +135,17 @@ ms.locfileid: "62788324"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Sospeso**|Questo stato indica che il database è stato sospeso in locale e che deve essere ripreso manualmente.<br /><br /> Sulla replica primaria, il valore non è attendibile per un database secondario. Per determinare in modo affidabile se un database secondario è sospeso, eseguire una query sulla replica secondaria che ospita il database.|  
-|**Non Unito in join**|Indica che il database secondario non è stato aggiunto al gruppo di disponibilità o stato rimosso dal gruppo.|  
+|**Non unito in join**|Indica che il database secondario non è stato aggiunto al gruppo di disponibilità o stato rimosso dal gruppo.|  
 |**Online**|Indica che il database non è sospeso sulla replica di disponibilità locale e che il database è connesso.|  
 |**Non connesso**|Indica che la replica secondaria non è attualmente in grado di connettersi alla replica primaria.|  
   
 > [!NOTE]  
 >  Per informazioni sui contatori delle prestazioni per i database di disponibilità, vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. dm_os_performance_counters &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Visualizzare le proprietà del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
- [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+ [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
   

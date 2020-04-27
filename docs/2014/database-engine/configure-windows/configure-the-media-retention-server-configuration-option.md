@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811345"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurare l'opzione di configurazione del server media retention
@@ -42,24 +42,24 @@ ms.locfileid: "62811345"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione media retention](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Se il supporto di backup viene utilizzato prima che sia trascorso il numero di giorni impostato, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un messaggio di avviso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene visualizzato alcun messaggio di avviso a meno che non venga modificata l'impostazione predefinita.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   È possibile eseguire l'override dell'opzione **media retention** tramite la clausola RETAINDAYS dell'istruzione [BACKUP](/sql/t-sql/statements/backup-transact-sql) .  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-media-retention-option"></a>Per configurare l'opzione media retention  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62811345"
   
 3.  In **Backup/Ripristino**nella casella **Periodo di memorizzazione predefinito supporti di backup** digitare o selezionare un valore compreso tra 0 e 365 per impostare il numero di giorni per cui il supporto di backup verrà mantenuto dopo l'esecuzione di un backup del database o del log delle transazioni.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-media-retention-option"></a>Per configurare l'opzione media retention  
   
@@ -95,7 +95,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione media retention  
+##  <a name="follow-up-after-you-configure-the-media-retention-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione media retention  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

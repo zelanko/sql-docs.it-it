@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812790"
 ---
 # <a name="change-source-control-connections"></a>Modifica delle connessioni del controllo del codice sorgente
@@ -33,7 +33,7 @@ ms.locfileid: "62812790"
   
 1.  Scegliere **controllo del codice sorgente**dal menu **file** e quindi fare clic su **avvia Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)   
  [Impostare le opzioni di controllo del codice sorgente](../../2014/database-engine/set-source-control-options.md)   
  [Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)  

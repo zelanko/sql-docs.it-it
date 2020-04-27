@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775334"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB
@@ -81,19 +81,15 @@ ms.locfileid: "62775334"
   
      Per ulteriori informazioni sull'utilizzo di diverse opzioni dei parametri della riga di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]comando in, vedere [Install SQL Server 2014 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerazioni relative al sistema operativo (protocollo SMB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>Considerazioni relative al sistema operativo (protocollo SMB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Sistemi operativi Windows diversi dispongono di versioni diverse del protocollo SMB e la versione del protocollo SMB è trasparente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile individuare i vantaggi delle varie versioni del protocollo SMB in relazione a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operativo|Versione del protocollo SMB2|Vantaggi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Prestazioni migliorate rispetto a versioni precedenti di SMB.<br /><br /> Durabilità, che consente il recupero da problemi di rete temporanei.|  
-|
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluso Server Core|2.1|Supporto per MTU di grandi dimensioni che consente il trasferimento di grandi quantità di dati, ad esempio per le operazioni di backup e di ripristino di SQL. Questa funzionalità deve essere abilitata dall'utente. Per ulteriori informazioni su come abilitare questa funzionalità, vedere Novità [di SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Significativi miglioramenti nelle prestazioni, in particolare per i carichi di lavoro di tipo OLTP di SQL. Questi miglioramenti delle prestazioni richiedono l'applicazione di un hotfix. Per ulteriori informazioni sull'hotfix [, vedere la](https://go.microsoft.com/fwlink/?LinkId=237320) pagina relativahttps://go.microsoft.com/fwlink/?LinkId=237320)a.|  
-|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluso Server Core|3.0|Supporto per il failover trasparente delle condivisioni file che garantisce tempi di inattività ridotti a zero senza interventi dell'amministratore del DBA SQL o del file server nelle configurazioni di cluster di file server.<br /><br /> Supporto per IO che utilizzano più interfacce di rete simultaneamente e tolleranza agli errori dell'interfaccia di rete.<br /><br /> Supporto per interfacce di rete con funzionalità RDMA.<br /><br /> Per ulteriori informazioni su queste funzionalità e su Server Message Block, vedere [Panoramica di Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Supporto per File server di scalabilità orizzontale (SoFS) con disponibilità continua.|  
-|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluso Server Core|3.2|Supporto per il failover trasparente delle condivisioni file che garantisce tempi di inattività ridotti a zero senza interventi dell'amministratore del DBA SQL o del file server nelle configurazioni di cluster di file server.<br /><br /> Supporto per IO che utilizzano più interfacce di rete simultaneamente e tolleranza agli errori dell'interfaccia di rete tramite SMB multicanale.<br /><br /> Supporto per interfacce di rete con funzionalità RDMA tramite SMB diretto.<br /><br /> Per ulteriori informazioni su queste funzionalità e su Server Message Block, vedere [Panoramica di Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Supporto per File server di scalabilità orizzontale (SoFS) con disponibilità continua.<br /><br /> Ottimizzato per piccole operazioni I/O di lettura/scrittura casuali comuni per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> L'unità massima di trasmissione (MTU) è abilitata per impostazione predefinita per migliorare significativamente le prestazioni nei trasferimenti sequenziali di grandi dimensioni come il ripristino o il backup del database e il data warehouse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Prestazioni migliorate rispetto a versioni precedenti di SMB.<br /><br /> Durabilità, che consente il recupero da problemi di rete temporanei.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluso Server Core|2.1|Supporto per MTU di grandi dimensioni che consente il trasferimento di grandi quantità di dati, ad esempio per le operazioni di backup e di ripristino di SQL. Questa funzionalità deve essere abilitata dall'utente. Per ulteriori informazioni su come abilitare questa funzionalità, vedere Novità [di SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Significativi miglioramenti nelle prestazioni, in particolare per i carichi di lavoro di tipo OLTP di SQL. Questi miglioramenti delle prestazioni richiedono l'applicazione di un hotfix. Per ulteriori informazioni sull'hotfix [, vedere la](https://go.microsoft.com/fwlink/?LinkId=237320) pagina relativahttps://go.microsoft.com/fwlink/?LinkId=237320)a.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluso Server Core|3.0|Supporto per il failover trasparente delle condivisioni file che garantisce tempi di inattività ridotti a zero senza interventi dell'amministratore del DBA SQL o del file server nelle configurazioni di cluster di file server.<br /><br /> Supporto per IO che utilizzano più interfacce di rete simultaneamente e tolleranza agli errori dell'interfaccia di rete.<br /><br /> Supporto per interfacce di rete con funzionalità RDMA.<br /><br /> Per ulteriori informazioni su queste funzionalità e su Server Message Block, vedere [Panoramica di Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Supporto per File server di scalabilità orizzontale (SoFS) con disponibilità continua.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluso Server Core|3.2|Supporto per il failover trasparente delle condivisioni file che garantisce tempi di inattività ridotti a zero senza interventi dell'amministratore del DBA SQL o del file server nelle configurazioni di cluster di file server.<br /><br /> Supporto per IO che utilizzano più interfacce di rete simultaneamente e tolleranza agli errori dell'interfaccia di rete tramite SMB multicanale.<br /><br /> Supporto per interfacce di rete con funzionalità RDMA tramite SMB diretto.<br /><br /> Per ulteriori informazioni su queste funzionalità e su Server Message Block, vedere [Panoramica di Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Supporto per File server di scalabilità orizzontale (SoFS) con disponibilità continua.<br /><br /> Ottimizzato per piccole operazioni I/O di lettura/scrittura casuali comuni per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> L'unità massima di trasmissione (MTU) è abilitata per impostazione predefinita per migliorare significativamente le prestazioni nei trasferimenti sequenziali di grandi dimensioni come il ripristino o il backup del database e il data warehouse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
   
@@ -133,7 +129,7 @@ ms.locfileid: "62775334"
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pianificazione di un'installazione di SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Procedure per l'installazione](../../../2014/sql-server/install/installation-how-to-topics.md)   
  [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md)  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779664"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Proprietà catalogo full-text (pagina Generale)
@@ -32,13 +32,13 @@ ms.locfileid: "62779664"
  Indica se il catalogo è quello predefinito per il database.  
   
  **Stato popolamento**  
- Indica lo stato del catalogo. Valori possibili:  
+ Indica lo stato del catalogo. I valori possibili sono:  
   
 -   **Idle**  
   
 -   **Ricerca per indicizzazione in corso**  
   
--   **Paused**  
+-   **In pausa**  
   
 -   **Sospensione causata dal servizio Microsoft FullText**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62779664"
   
 -   **Il disco è completamente sospeso**  
   
--   **Change tracking**  
+-   **Rilevamento modifiche**  
   
  **Item Count**  
  Consente di visualizzare il numero di elementi full-text presenti nel catalogo.  
@@ -90,7 +90,7 @@ ms.locfileid: "62779664"
 |**Ricompila catalogo**|Consente di eliminare e ricompilare il catalogo full-text. È necessario eseguire questa operazione quando viene modificata una proprietà fondamentale del catalogo, ad esempio l'impostazione relativa alla distinzione dei caratteri accentati e non accentati.<br /><br /> Affinché l'operazione di ricompilazione abbia esito positivo, il filegroup in cui risiede il catalogo full-text deve essere online oppure di lettura e scrittura. Al termine della ricompilazione, l'indice full-text verrà ripopolato.<br /><br /> Questa azione esegue ALTER FULLTEXT CATALOG *catalog_name* Rebuild.|  
 |**Ripopola catalogo**|Consente di aggiornare il catalogo con le modifiche più recenti apportate ai dati. Questa opzione implica tempi di inattività del catalogo.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Popolamento degli indici full-text](../relational-databases/indexes/indexes.md)  
   
   

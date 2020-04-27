@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807265"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Mirroring e snapshot del database (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62807265"
   
      A questo punto è possibile indirizzare a livello di programmazione le nuove connessioni client allo snapshot più recente.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

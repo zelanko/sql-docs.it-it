@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779156"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria
@@ -129,7 +129,7 @@ COMMIT
   
  Gli hint di blocco non sono supportati. In alternativa, è possibile dichiarare le garanzie necessarie tramite i livelli di isolamento delle transazioni. NOLOCK è supportato poiché [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non accetta blocchi sulle tabelle ottimizzate per la memoria. Si noti che, diversamente dalle tabelle basate su disco, NOLOCK non implica il comportamento READ UNCOMMITTED per le tabelle ottimizzate per la memoria.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Linee guida per la logica di ripetizione tentativi per le transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md)  

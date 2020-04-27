@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780986"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Procedure per la gestione di colonne di tipo text e image (ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "62780986"
   
 -   [Utilizzare le colonne data-at-execution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure per l'utilizzo di ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815703"
 ---
 # <a name="add-solutions-to-source-control"></a>Aggiungere soluzioni al controllo del codice sorgente
@@ -37,7 +37,7 @@ ms.locfileid: "62815703"
   
 5.  Nell'elenco **cartelle** aprire la cartella in cui si vuole inserire il progetto. In alternativa, è possibile fare clic su **Crea** per creare una cartella con il nome visualizzato nella casella **progetto** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere soluzioni e progetti al controllo del codice sorgente](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)   
  [Aggiungere progetti al controllo del codice sorgente](../../2014/database-engine/add-projects-to-source-control.md)  
   

@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779595"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installare un Service Pack in un sistema con tempi di inattività minimi per database con mirroring
@@ -72,7 +72,7 @@ ms.locfileid: "62779595"
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>Per modificare la modalità di una sessione dalla modalità a elevate prestazioni alla modalità a protezione elevata  
   
-1.  Se una sessione di mirroring viene eseguita in modalità a elevate prestazioni, prima di eseguire un aggiornamento in sequenza impostare la modalità operativa su protezione elevata senza failover automatico. Utilizzare uno dei seguenti metodi:  
+1.  Se una sessione di mirroring viene eseguita in modalità a elevate prestazioni, prima di eseguire un aggiornamento in sequenza impostare la modalità operativa su protezione elevata senza failover automatico. Utilizzare una delle seguenti modalità:  
   
     -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Protezione elevata senza failover automatico (sincrona)** usando la [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database**. Per informazioni su come accedere a questa pagina, vedere [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62779595"
   
     -   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   Eseguire [il failover manuale di una sessione di mirroring del Database &#40;&#41;Transact-SQL ](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
      Per informazioni sul funzionamento del failover manuale, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
@@ -135,13 +135,13 @@ ms.locfileid: "62779595"
   
     -   [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Aggiungere un server di controllo del mirroring del database utilizzando l'autenticazione di Windows &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Mirroring del database di ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+## <a name="see-also"></a>Vedi anche  
+ [Mirroring del database ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Modalità di funzionamento del mirroring del database](database-mirroring/database-mirroring-operating-modes.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Modalità operative per il mirroring del database](database-mirroring/database-mirroring-operating-modes.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Visualizzazione dello stato di un database con mirroring &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  

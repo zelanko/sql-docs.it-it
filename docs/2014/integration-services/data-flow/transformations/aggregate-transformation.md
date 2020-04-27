@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770637"
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
@@ -112,15 +112,15 @@ ms.locfileid: "62770637"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Aggregazione** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione aggregazione &#40;scheda Aggregazioni&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor trasformazione Aggregazione &#40;scheda Aggregazioni&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor trasformazione aggregazione &#40;scheda Avanzate&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor trasformazione Aggregazione &#40;scheda Avanzate&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
@@ -128,12 +128,12 @@ ms.locfileid: "62770637"
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinare i dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

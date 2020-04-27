@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779261"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilità con le versioni precedenti della ricerca full-text
@@ -31,7 +31,7 @@ ms.locfileid: "62779261"
 |[Modifiche di rilievo alla ricerca full-text](breaking-changes-to-full-text-search.md)|Modifiche apportate alla ricerca full-text per cui potrebbe essere necessario modificare le applicazioni.|  
 |[Differenze di comportamento nella ricerca full-text](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Altre modifiche nel comportamento della ricerca full-text di questa versione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compatibilità con le versioni precedenti del motore di database di SQL Server](sql-server-database-engine-backward-compatibility.md)  
   
   

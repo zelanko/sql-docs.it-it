@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770217"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: utilizzo dell'origine OData [SSIS]
@@ -46,7 +46,7 @@ ms.locfileid: "62770217"
   
 6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Verificare che sia selezionato **Autenticazione di Windows** come **autenticazione** da utilizzare per accedere al servizio OData. Per impostazione predefinita, è selezionata **l'autenticazione di Windows** . Per utilizzare l'autenticazione di base, selezionare **Usa il nome utente e la password seguenti**.  
+7.  Verificare che sia selezionato **Autenticazione di Windows** come **autenticazione** da utilizzare per accedere al servizio OData. **Autenticazione di Windows** è selezionato per impostazione predefinita. Per utilizzare l'autenticazione di base, selezionare **Usa il nome utente e la password seguenti**.  
   
 8.  Fare clic su **Test connessione** per la connessione e fare clic su **OK** per creare un'istanza della gestione connessione OData.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770217"
   
 10. Selezionare **Dipendenti** nell'elenco a discesa **Raccolta**.  
   
-11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Esempio: $orderby=CompanyName&$top=100. Ai fini di questa esercitazione immettere **$top=5**.  
+11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Ad esempio, $orderby=CompanyName&$top=100. Ai fini di questa esercitazione immettere **$top=5**.  
   
 12. Fare clic su **Anteprima** per visualizzare un'anteprima dei dati.  
   

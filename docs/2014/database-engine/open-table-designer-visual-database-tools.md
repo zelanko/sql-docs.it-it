@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774186"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Apertura di Progettazione tabelle (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "62774186"
   
      Il menu **Progettazione tabelle** viene aggiunto al menu principale e la tabella viene aperta nei riquadri di progettazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettare tabelle &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Tabelle](../relational-databases/tables/tables.md)  
   

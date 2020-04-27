@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806996"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Attività Ricompila indice (Piano di manutenzione)
@@ -31,7 +31,7 @@ ms.locfileid: "62806996"
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
@@ -49,14 +49,14 @@ ms.locfileid: "62806996"
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Questi database specifici**  
+-   **Database specifici**  
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
     > [!NOTE]  
     >  I piani di manutenzione vengono eseguiti solo nei database per i quali è impostato un livello di compatibilità 80 o superiore. I database per cui è impostato un livello di compatibilità 70 o inferiore non vengono visualizzati.  
   
- **Object**  
+ **Oggetto**  
  Consente di limitare la griglia **Selezione** per visualizzare tabelle, viste o entrambe.  
   
  **Selezione**  
@@ -77,7 +77,7 @@ ms.locfileid: "62806996"
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- **Visualizza T-SQL**  
+ **Visualizza codice T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "62806996"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere un nome di server**  
+ **Selezionare o immettere il nome di un server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -96,7 +96,7 @@ ms.locfileid: "62806996"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows**  
+ **Usa la sicurezza integrata di Windows NT**  
  Consente di connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzando l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
@@ -108,7 +108,7 @@ ms.locfileid: "62806996"
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

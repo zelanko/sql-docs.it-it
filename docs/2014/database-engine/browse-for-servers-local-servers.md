@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787868"
 ---
 # <a name="browse-for-servers-local-servers"></a>Cerca server (Server locali)
   Se si esegue la connessione a un componente di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza conoscere il nome esatto del server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nella casella **Nome server** fare clic su **Cerca**per aprire la finestra di dialogo **Cerca server** .  
   
 ## <a name="options"></a>Opzioni  
- **Selezionare il server a cui connettersi**  
+ **Selezionare il server con cui stabilire la connessione**  
  Indicare il server a cui si desidera connettersi facendo clic sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] visualizzata nell'albero. È possibile mostrare o nascondere parti della visualizzazione albero facendo clic sui nodi contrassegnati con un **+** simbolo o. **-**  
   
   

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781129"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Rappresentazione e sicurezza per l'integrazione con CLR
@@ -39,9 +39,9 @@ ms.locfileid: "62781129"
   
  Quando il codice è in esecuzione in un contesto rappresentato diverso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non può eseguire le chiamate di accesso ai dati in-process. Prima di effettuare chiamate di accesso ai dati in-process, è necessario annullare il contesto di rappresentazione. Quando l'accesso ai dati in-process viene effettuato da codice gestito, per l'autorizzazione viene utilizzato sempre il contesto di esecuzione originale del punto di ingresso [!INCLUDE[tsql](../../includes/tsql-md.md)] nel codice gestito.  
   
- Gli assembly `EXTERNAL_ACCESS` e `UNSAFE` accedono alle risorse del sistema operativo con l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a meno che non rappresentino volontariamente il contesto di sicurezza corrente come descritto in precedenza. Per questo motivo, gli autori degli assembly `EXTERNAL_ACCESS` richiedono un livello di attendibilità superiore rispetto a quello degli assembly `SAFE`, specificato dall'autorizzazione a livello di accesso `EXTERNAL ACCESS`. L'autorizzazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dovrebbe, pertanto, essere concessa solo agli accessi attendibili per l'esecuzione del codice nell'account del servizio `EXTERNAL ACCESS`.  
+ Gli assembly `EXTERNAL_ACCESS` e `UNSAFE` accedono alle risorse del sistema operativo con l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a meno che non rappresentino volontariamente il contesto di sicurezza corrente come descritto in precedenza. Per questo motivo, gli autori degli assembly `EXTERNAL_ACCESS` richiedono un livello di attendibilità superiore rispetto a quello degli assembly `SAFE`, specificato dall'autorizzazione a livello di accesso `EXTERNAL ACCESS`. L'autorizzazione `EXTERNAL ACCESS` dovrebbe, pertanto, essere concessa solo agli accessi attendibili per l'esecuzione del codice nell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Rappresentazione e credenziali per le connessioni](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   

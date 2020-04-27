@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781070"
 ---
 # <a name="links-in-clr-integration-security"></a>Collegamenti nella sicurezza per l'integrazione con CLR
@@ -49,7 +49,7 @@ ms.locfileid: "62781070"
   
 4.  Viene effettuato il controllo dell'autorizzazione per il contesto di esecuzione corrente. È possibile creare procedure e funzioni con un contesto di esecuzione diverso da quello del chiamante. Gli assembly vengono sempre creati con il contesto di esecuzione della procedura, della funzione o del trigger definito per essi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781106"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Panoramica degli attributi personalizzati dell'integrazione con CLR
@@ -88,7 +88,7 @@ End Class
   
  Gli attributi personalizzati necessari per routine CLR, tipi definiti dall'utente e aggregazioni vengono definiti nello spazio dei nomi `Microsoft.SqlServer.Server`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attributi personalizzati per routine CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

@@ -22,17 +22,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782114"
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
-  È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando uno degli strumenti di amministrazione grafica o da un prompt dei comandi.  
+  È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
   
- Se si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno strumento di amministrazione a interfaccia grafica, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene richiesto di specificare il nome del server, un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password, se necessario. Se si accede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows non è necessario specificare un account di accesso di SQL Server ogni volta che si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza infatti l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente per eseguire automaticamente l'accesso. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in modalità mista (modalità di autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows) e si sceglie di eseguire l'accesso usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password. Se possibile, usare l'autenticazione di Windows.  
+ Se si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno strumento di amministrazione a interfaccia grafica, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene richiesto di specificare il nome del server, un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password, se necessario. Se si accede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows non è necessario specificare un account di accesso di SQL Server ogni volta che si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza infatti l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente per eseguire automaticamente l'accesso. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in modalità mista (modalità di autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows) e si sceglie di eseguire l'accesso usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password. Se possibile, usare l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Se al momento dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è stata selezionata una regola di confronto con distinzione tra maiuscole e minuscole, anche l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporterà la distinzione tra maiuscole e minuscole.  
@@ -64,10 +63,8 @@ ms.locfileid: "62782114"
 |Connessione a un'istanza denominata specificando sia l'indirizzo IP che la porta TCP utilizzata, in questo caso 2828.|192.168.17.28,2828|  
 |Connessione a un'stanza predefinita per nome, forzando una connessione TCP.|tcp:APPHOST|  
 |Connessione a un'stanza denominata per nome, forzando una connessione TCP.|tcp:APPHOST\SQLEXPRESS|  
-|Connessione a un'istanza predefinita specificando un nome di named pipe.|
-  \\\APPHOST\pipe\unit\app|  
-|Connessione a un'istanza denominata specificando un nome di named pipe.|
-  \\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
+|Connessione a un'istanza predefinita specificando un nome di named pipe.|\\\APPHOST\pipe\unit\app|  
+|Connessione a un'istanza denominata specificando un nome di named pipe.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Connessione a un'stanza predefinita per nome, forzando una connessione di named pipe.|np:APPHOST|  
 |Connessione a un'stanza denominata per nome, forzando una connessione di named pipe.|np:APPHOST\SQLEXPRESS|  
   
@@ -81,11 +78,11 @@ WHERE session_id = @@SPID;
 ```  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Accedere a un'istanza di SQL Server prompt dei comandi &#40;&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
+ [Accedere a un'istanza di SQL Server &#40;prompt dei comandi&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Le risorse seguenti possono contribuire alla risoluzione di un problema di connessione.  
   
--   [Come risolvere i problemi di connessione al SQL Server motore di database](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [Risoluzione dei problemi relativi alla connessione al motore di database di SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
 -   [Passaggi per risolvere i problemi di connettività di SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   

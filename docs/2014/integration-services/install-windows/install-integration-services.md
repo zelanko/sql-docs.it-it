@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768206"
 ---
 # <a name="install-integration-services"></a>Installazione di Integration Services
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce un unico programma di installazione per installare uno o tutti i relativi componenti, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]tra cui. Tramite il programma di installazione è possibile installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con o senza gli altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un singolo computer.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di un singolo programma di installazione che consente di installare uno o tutti i componenti, incluso [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Tramite il programma di installazione è possibile installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con o senza gli altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un singolo computer.  
   
  In questo argomento sono incluse importanti considerazioni di cui tenere conto prima di installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le informazioni incluse in questo argomento consentono di valutare le opzioni di installazione per effettuare le selezioni appropriate ai fini di una corretta installazione.  
   
@@ -62,30 +62,30 @@ ms.locfileid: "62768206"
   
  Se per installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]si utilizza l'Installazione guidata, verrà visualizzata una serie di pagine per specificare le opzioni e i componenti desiderati. Di seguito sono riportate le pagine dell'installazione guidata in cui le opzioni selezionate influiscono [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sull'installazione di con le raccomandazioni di selezione:  
   
--   **Selezione caratteristiche**  
+-   **Selezione delle funzioni**  
   
      Selezionare **Integration Services** per installare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ed eseguire i pacchetti all'esterno dell'ambiente di progettazione.  
   
      Per l'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]con gli strumenti e la documentazione per lo sviluppo e la gestione dei pacchetti, selezionare **Integration Services** e le seguenti **Funzionalità condivise**:  
   
-    -   **SQL Server Data Tools** installare gli strumenti per la progettazione dei pacchetti.  
+    -   **SQL Server Data Tools** per installare gli strumenti per la progettazione dei pacchetti.  
   
-    -   **Strumenti di gestione-completa** per [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installare per la gestione dei pacchetti.  
+    -   **Strumenti di gestione - Completa** per installare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per la gestione dei pacchetti.  
   
-    -   **SDK di strumenti client** per installare assembly gestiti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la programmazione.  
+    -   **SDK di strumenti client** per installare assembly gestiti per la programmazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
      Molte soluzioni di data warehousing richiedono anche l'installazione di componenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiuntivi, ad esempio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
     > [!NOTE]  
     >  Alcuni componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile selezionare per l'installazione nella pagina **Selezione funzionalità** dell'Installazione guidata consentono di installare solo un subset parziale dei componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Tali componenti si rivelano utili per attività specifiche, ma le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] risulteranno limitate. L'opzione **Servizi Motore di database** , ad esempio, consente di installare i componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessari per l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'opzione **SQL Server Data Tools** consente di installare i componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessari per la progettazione di un pacchetto, ma il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene installato e non è possibile eseguire pacchetti all'esterno di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Per garantire l'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario selezionare **Integration Services** nella pagina **Selezione funzionalità** .  
   
-     **Installazione in un computer a 64 bit** In un computer a 64 bit la selezione di **Integration Services** installa solo gli strumenti e il runtime a 64 bit. Se è necessario eseguire pacchetti nella modalità a 32 bit, è necessario selezionare un'opzione aggiuntiva per installare gli strumenti e il runtime a 32 bit:  
+     **Installazione in un computer a 64 bit** In un computer a 64 bit la selezione di **Integration Services** durante l'installazione comporta l'installazione solo degli strumenti e del runtime a 64 bit. Se è necessario eseguire pacchetti nella modalità a 32 bit, è necessario selezionare un'opzione aggiuntiva per installare gli strumenti e il runtime a 32 bit:  
   
     -   Se il computer a 64 bit esegue il sistema operativo x86, selezionare **SQL Server Data Tools** o **strumenti di gestione-completa**.  
   
     -   Se nel computer a 64 bit è in esecuzione [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] il sistema operativo, selezionare **strumenti di gestione-completa**.  
   
-     **Installazione in un server dedicato per ETL** Per utilizzare un server dedicato per i processi di estrazione, trasformazione e caricamento (ETL), è consigliabile installare un'istanza locale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] quando si installa. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i pacchetti vengono in genere archiviati in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e la pianificazione di tali pacchetti si basa su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Se nel server ETL non è presente un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], sarà necessario pianificare o eseguire i pacchetti da un server che dispone di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ciò significa che i pacchetti non verranno eseguiti nel server ETL, bensì nel server dal quale sono stati avviati. Di conseguenza, le risorse del server ETL dedicato non vengono utilizzate come previsto. Inoltre, le risorse di altri server possono essere violate dai processi ETL in esecuzione.  
+     **Installazione in un server dedicato per ETL** Per utilizzare un server dedicato per i processi di estrazione, trasformazione e caricamento (ETL), si consiglia di installare un'istanza locale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] quando si installa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i pacchetti vengono in genere archiviati in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e la pianificazione di tali pacchetti si basa su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Se nel server ETL non è presente un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], sarà necessario pianificare o eseguire i pacchetti da un server che dispone di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ciò significa che i pacchetti non verranno eseguiti nel server ETL, bensì nel server dal quale sono stati avviati. Di conseguenza, le risorse del server ETL dedicato non vengono utilizzate come previsto. Inoltre, le risorse di altri server possono essere violate dai processi ETL in esecuzione.  
   
 -   **Configurazione istanza**  
   
@@ -104,10 +104,9 @@ ms.locfileid: "62768206"
  Per impostazione predefinita, in una nuova installazione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da non registrare gli eventi correlati all'esecuzione dei pacchetti nel registro eventi delle applicazioni. Questa impostazione impedisce la creazione di un numero eccessivo di voci nel registro eventi quando si utilizza la funzionalità di raccolta dati di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Gli eventi non registrati includono EventID 12288, che indica che il pacchetto è stato avviato ed EventID 12289 che indica che il pacchetto è stato completato. Per inserire questi due eventi nel registro eventi dell'applicazione, aprire il Registro di sistema per la modifica. Nel Registro di sistema individuare il nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS e modificare il valore DWORD dell'impostazione LogPackageExecutionToEventLog da 0 a 1.  
   
 ## <a name="understanding-the-integration-services-service"></a>Informazioni sul servizio Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato quando si seleziona l'opzione **Integration Services** nella pagina **Selezione funzionalità** . Quando si accettano le impostazioni predefinite nella pagina **Configurazione server**, il servizio[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene abilitato e **Tipo di avvio** viene impostato su **Automatico**.  
+ Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato quando si seleziona l'opzione **Integration Services** nella pagina **Selezione funzionalità** . Quando si accettano le impostazioni predefinite nella pagina **Configurazione server[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], il servizio** viene abilitato e **Tipo di avvio** viene impostato su **Automatico**.  
   
  È possibile installare solo una singola istanza del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un computer. Il servizio non è specifico di una particolare istanza del Motore di database. È possibile connettersi al servizio usando il nome del computer in cui è in esecuzione il servizio stesso.  
   
@@ -125,7 +124,6 @@ ms.locfileid: "62768206"
  Le funzionalità a 64 bit vengono installate nella directory **Programmi** , mentre le funzionalità a 32 bit vengono installate separatamente nella directory **Programmi (x86)** . Non si tratta di un comportamento specifico di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , non è supportato nel sistema operativo [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] a 64 bit e non viene installato nei server [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] .  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , non è supportato nel sistema operativo [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] a 64 bit e non viene installato nei server [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] .  
   
   

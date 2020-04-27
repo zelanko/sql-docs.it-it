@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805887"
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
@@ -33,7 +33,7 @@ ms.locfileid: "62805887"
   
 -   Colonne di indice utilizzate in filtri di riga e filtri join.  
   
-     Se si applica un filtro di riga a un articolo pubblicato, è necessario creare un indice per ogni colonna specificata nella clausola WHERE del filtro. Senza un indice, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve leggere ogni riga della tabella per determinare se la riga deve essere inclusa nella partizione. In presenza dell'indice, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in grado di individuare rapidamente le righe da includere. L'elaborazione più rapida si ottiene quando tramite la replica è possibile risolvere completamente la clausola WHERE del filtro solo in base all'indice.  
+     Se si applica un filtro di riga a un articolo pubblicato, è necessario creare un indice per ogni colonna specificata nella clausola WHERE del filtro. In assenza di un indice, ogni riga della tabella deve essere letta da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per determinare se debba essere inclusa o meno nella partizione. In presenza dell'indice, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in grado di individuare rapidamente le righe da includere. L'elaborazione più rapida si ottiene quando tramite la replica è possibile risolvere completamente la clausola WHERE del filtro solo in base all'indice.  
   
      È inoltre importante indicizzare tutte le colonne utilizzate nei filtri join. A ogni esecuzione dell'agente di merge viene eseguita la ricerca della tabella di base per determinare quali righe della tabella padre e delle tabelle correlate sono incluse in una partizione. La creazione di un indice delle colonne unite in join consente di evitare la lettura di ogni riga della tabella da parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a ogni esecuzione dell'agente di merge.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62805887"
   
      [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]è stato introdotto un nuovo agente di merge parametro: **-ParallelUploadDownload**. L'impostazione di questo parametro consente di elaborare in parallelo le modifiche caricate nel server di pubblicazione e le modifiche scaricate nel Sottoscrittore. Ciò è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
-    -   [Utilizzo dei profili agenti di replica](../agents/replication-agent-profiles.md)  
+    -   [Usare i profili agenti di replica](../agents/replication-agent-profiles.md)  
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -144,6 +144,6 @@ ms.locfileid: "62805887"
   
 -   Monitorare le prestazioni della sincronizzazione utilizzando la scheda **Cronologia sincronizzazione** in Monitoraggio replica.  
   
-     Per la replica di tipo merge in Monitoraggio replica nella scheda **Cronologia sincronizzazione** vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per ulteriori informazioni sulla visualizzazione di statistiche dettagliate, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Per la replica di tipo merge in Monitoraggio replica nella scheda **Cronologia sincronizzazione** vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per altre informazioni sulla visualizzazione di statistiche dettagliate, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

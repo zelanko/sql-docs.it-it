@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770997"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
@@ -62,7 +62,7 @@ ms.locfileid: "62770997"
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>Indicazione dei parametri tramite la posizione ordinale  
  Se non viene restituito alcun nome di parametro, gli indicatori di parametro a cui viene eseguito il mapping dei parametri in fase di esecuzione sono determinati dall'ordine in cui compaiono i parametri nell'elenco **Parametri** della finestra di dialogo **Imposta parametri query** . Viene eseguito il mapping del primo parametro dell'elenco al primo ? nell'istruzione SQL, il secondo al secondo? e così via.  
   
- L'istruzione SQL seguente seleziona righe dalla tabella **Product** del database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. Sul primo parametro nell'elenco **Mapping** viene eseguito il mapping al primo parametro nella colonna **Color** , mentre sul secondo parametro viene eseguito il mapping alla colonna **Size** .  
+ L'istruzione SQL seguente seleziona righe dalla tabella **Product[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] del database **. Sul primo parametro nell'elenco **Mapping** viene eseguito il mapping al primo parametro nella colonna **Color** , mentre sul secondo parametro viene eseguito il mapping alla colonna **Size** .  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -86,15 +86,15 @@ ms.locfileid: "62770997"
  È possibile registrare le chiamate eseguite dall'origine OLE DB a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi al caricamento di dati da origini esterne da parte dell'origine OLE DB. Per registrare le chiamate eseguite dall'origine OLE DB a provider di dati esterni, attivare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="configuring-the-ole-db-source"></a>Configurazione dell'origine OLE DB  
- È possibile impostare le proprietà a livello di codice oppure tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine OLE DB**, fare clic su uno degli argomenti seguenti:  
   
 -   [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor origine OLE DB &#40;pagina colonne&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor origine OLE DB &#40;pagina Colonne&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Editor origine OLE DB &#40;pagina output degli errori&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Editor origine OLE DB &#40;pagina Output degli errori&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -110,14 +110,14 @@ ms.locfileid: "62770997"
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinare i dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo del wiki, [SSIS con connettori Oracle](https://go.microsoft.com/fwlink/?LinkId=220670), su social.technet.Microsoft.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Destinazione OLE DB](ole-db-destination.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;variabili&#41; SSIS](../integration-services-ssis-variables.md)   
  [Flusso di dati](data-flow.md)  
   
   

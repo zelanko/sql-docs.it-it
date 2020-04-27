@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775284"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installare SQL Server 2014 tramite un file di configurazione
@@ -63,17 +63,17 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  L'infrastruttura del programma di installazione scrive tutti i parametri appropriati per le azioni eseguite, ad eccezione delle informazioni riservate come le password. Anche il parametro /IAcceptSQLServerLicenseTerms non viene scritto nel file di configurazione, di conseguenza è necessario apportare una modifica al file oppure fornire un valore al prompt dei comandi. Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md). Viene inoltre incluso un valore per i parametri booleani per cui non viene in genere fornito alcun valore attraverso il prompt dei comandi.  
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Utilizzo del file di configurazione per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Utilizzo del file di configurazione per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Il file di configurazione può essere utilizzato solo nelle installazioni da riga di comando.  
   
 > [!NOTE]  
 >  Se è necessario apportare modifiche al file di configurazione, è consigliabile crearne una copia e utilizzare quest'ultima.  
   
-#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Modalità di utilizzo di un file di configurazione per installare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Modalità di utilizzo di un file di configurazione per installare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Eseguire l'installazione tramite il prompt dei comandi e specificare il file ConfigurationFile.ini utilizzando il parametro *ConfigurationFile* .  
+-   Eseguire l'installazione tramite il prompt dei comandi e specificare ConfigurationFile. ini utilizzando il parametro *ConfigurationFile* .  
   
-#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Modalità di utilizzo di un file di configurazione per preparare e completare un'immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Modalità di utilizzo di un file di configurazione per preparare e completare un'immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
   
 1.  Per preparare una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e configurarle nello stesso computer.  
   
@@ -91,7 +91,7 @@ FEATURES=SQL,Tools
   
     -   Il file di configurazione del completamento immagine può essere archiviato con l'immagine Windows per rendere automatica la configurazione delle istanze predisposte.  
   
-#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Modalità di installazione di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il file di configurazione  
+#### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Modalità di installazione di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il file di configurazione  
   
 1.  Opzione di installazione integrata (creazione di un cluster di failover a nodo singolo in un nodo e utilizzo di AddNode per i nodi aggiuntivi):  
   
@@ -113,11 +113,11 @@ FEATURES=SQL,Tools
   
     -   A questo punto è possibile specificare il file ConfigurationFile.ini per completare il cluster di failover.  
   
-#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Modalità di aggiunta o rimozione di un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il file di configurazione  
+#### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Modalità di aggiunta o rimozione di un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il file di configurazione  
   
 -   Se si dispone di un file di configurazione utilizzato in precedenza per aggiungere un nodo a un cluster di failover o rimuoverlo, è possibile riutilizzarlo per aggiungere o rimuovere altri nodi.  
   
-#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Modalità di aggiornamento di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il file di configurazione  
+#### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Modalità di aggiornamento di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il file di configurazione  
   
 1.  Eseguire l'aggiornamento nel nodo passivo e acquisire il file ConfigurationFile.ini. A questo scopo è possibile eseguire l'aggiornamento effettivo oppure uscire senza avere effettuato questa operazione.  
   
@@ -138,7 +138,7 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
  [Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Aggiornare un cluster di failover di SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  

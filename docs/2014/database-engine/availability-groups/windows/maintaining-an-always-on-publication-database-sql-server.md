@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791989"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Gestione di un database di pubblicazione AlwaysOn (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791989"
   
  
   
-##  <a name="MaintainPublDb"></a> Gestione di un database di pubblicazione in un gruppo di disponibilità  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>Gestione di un database pubblicato in un gruppo di disponibilità  
  La gestione di un database di pubblicazione AlwaysOn è sostanzialmente analoga a quella di un database di pubblicazione standard, con le considerazioni seguenti:  
   
 -   L'amministrazione deve avvenire nell'host della replica primaria. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]le pubblicazioni vengono visualizzate nella cartella **Pubblicazioni locali** per l'host della replica primaria e per le repliche secondarie leggibili. Dopo il failover potrebbe essere necessario aggiornare manualmente [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] per riflettere la modifica se la replica secondaria promossa a primaria non era leggibile.  
@@ -39,7 +39,7 @@ ms.locfileid: "62791989"
   
 -   Per sincronizzare una sottoscrizione in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] dopo un failover, sincronizzare le sottoscrizioni pull dal Sottoscrittore e le sottoscrizioni push dal server di pubblicazione attivo.  
   
-##  <a name="RemovePublDb"></a> Rimozione di un database di pubblicazione da un gruppo di disponibilità  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Rimozione di un database di pubblicazione da un gruppo di disponibilità  
  Considerare i problemi seguenti se un database pubblicato viene rimosso da un gruppo di disponibilità o se un gruppo di disponibilità che dispone di un database del membro pubblicato viene eliminato.  
   
 -   Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da una replica primaria del gruppo di disponibilità `sp_redirect_publisher` , è necessario eseguire senza specificare *@redirected_publisher* un valore per il parametro per rimuovere il reindirizzamento per la coppia server di pubblicazione/database.  
@@ -100,7 +100,7 @@ ms.locfileid: "62791989"
   
      A questo punto la copia del database pubblicato può essere mantenuta o eliminata.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62791989"
   
 -   [Sottoscrittori della replica e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Gruppi di disponibilità AlwaysOn: interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+ [Replica SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771437"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
@@ -209,9 +209,9 @@ go
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn** .|  
-|**_ _ $ seqval**|`binary(10)`|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|**_ _ $ operation**|`int`|Operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
-|**_ _ $ update_mask**|`varbinary(128)`|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
+|**__$seqval**|`binary(10)`|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
+|**_ _ $ operation**|`int`|Operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
+|**__$update_mask**|`varbinary(128)`|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
 |**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
   
  Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>passaggio successivo  
  Dopo avere creato la funzione con valori di tabella per l'esecuzione di query per i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
- **Argomento successivo:** [recuperare e comprendere i dati delle modifiche](retrieve-and-understand-the-change-data.md)  
+ **Argomento successivo:** [Recuperare e comprendere i dati delle modifiche](retrieve-and-understand-the-change-data.md)  
   
   

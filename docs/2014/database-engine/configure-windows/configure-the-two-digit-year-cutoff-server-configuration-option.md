@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787039"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Configurare l'opzione di configurazione del server two-digit year cutoff
@@ -39,20 +39,20 @@ ms.locfileid: "62787039"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione two digit year cutoff](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Negli oggetti di automazione OLE viene utilizzato 2030 come anno di cambio data a due cifre. È possibile utilizzare l'opzione **two digit year cutoff** per fornire coerenza nei valori delle date tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni client. Per evitare ambiguità nell'utilizzo delle date è consigliabile utilizzare anni a quattro cifre nei dati.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>Per configurare l'opzione two digit year cutoff  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62787039"
   
 3.  Nella casella **Interpreta l'immissione di un anno a due cifre come un anno tra**in **Supporto anni a due cifre** **digitare o selezionare il valore desiderato per l'anno** che deve concludere il periodo di tempo desiderato.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>Per configurare l'opzione two digit year cutoff  
   
@@ -88,7 +88,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione two digit year cutoff  
+##  <a name="follow-up-after-you-configure-the-two-digit-year-cutoff-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione two digit year cutoff  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

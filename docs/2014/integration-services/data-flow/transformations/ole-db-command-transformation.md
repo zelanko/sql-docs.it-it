@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770390"
 ---
 # <a name="ole-db-command-transformation"></a>Comando OLE DB - trasformazione
@@ -49,7 +49,7 @@ ms.locfileid: "62770390"
 ## <a name="related-tasks"></a>Attività correlate  
  È possibile configurare la trasformazione utilizzando Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o il modello a oggetti. Per informazioni dettagliate sulla configurazione della trasformazione usando Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vedere  [Configurazione della trasformazione Comando OLE DB](../../configure-the-ole-db-command-transformation.md). Vedere la Guida per gli sviluppatori per informazioni dettagliate sulla configurazione a livello di codice di questa trasformazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815404"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Modificare il contesto del cluster HADR dell'istanza del server (SQL Server)
@@ -27,12 +27,12 @@ ms.locfileid: "62815404"
   
 
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
 > [!CAUTION]  
 >  Cambiare il contesto del cluster HADR solo durante la migrazione tra cluster di distribuzioni [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   È possibile cambiare il contesto del cluster HADR solo dal cluster WSFC locale a un cluster remoto e quindi nuovamente dal cluster remoto al cluster locale. Non è possibile cambiare il contesto del cluster HADR da un cluster remoto a un altro cluster remoto.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62815404"
   
 -   Il contesto di un cluster HADR remoto può essere nuovamente cambiato nel cluster locale in qualsiasi momento, a meno che l'istanza del server non ospiti una replica di disponibilità.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   L'istanza del server in cui si cambia il contesto del cluster HADR deve eseguire [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] o versioni successive (Enterprise Edition o versioni successive).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62815404"
   
 -   Prima di poter passare da un cluster remoto al cluster locale, tutte le repliche con commit sincrono devono essere di tipo SYNCHRONIZED.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   È consigliabile specificare il nome di dominio completo. Ciò è dovuto al fatto che, per individuare l'indirizzo IP di destinazione di un nome breve, ALTER SERVER CONFIGURATION utilizza la risoluzione DNS. In alcuni casi, a seconda dell'ordine di ricerca DNS, l'utilizzo di un nome breve potrebbe creare confusione. Si consideri, ad esempio, il comando indicato di seguito, eseguito in un nodo nel dominio `abc` (`node1.abc.com`). Il cluster di destinazione desiderato è il cluster `CLUS01` nel dominio `xyz` (`clus01.xyz.com`). Tuttavia, gli host di dominio locali ospitano anche un cluster denominato `CLUS01` (`clus01.abc.com`).  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62815404"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
 -   **Accesso SQL Server**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62815404"
   
  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per modificare il contesto del cluster WSFC di una replica di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria o una replica secondaria del gruppo di disponibilità.  
@@ -97,7 +97,7 @@ ms.locfileid: "62815404"
      dove  
   
      *windows_cluster*  
-     Nome dell'oggetto cluster (CON) di un cluster WSFC. È possibile specificare il nome breve o il nome di dominio completo. È consigliabile specificare il nome di dominio completo. Per ulteriori informazioni, vedere [Indicazioni](#Recommendations), in precedenza in questo argomento.  
+     Nome dell'oggetto cluster (CON) di un cluster WSFC. È possibile specificare il nome breve o il nome di dominio completo. È consigliabile specificare il nome di dominio completo. Per ulteriori informazioni, vedere [raccomandazioni](#Recommendations), più indietro in questo argomento.  
   
      LOCAL  
      Cluster WSFC locale.  
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a>Completamento: dopo aver cambiato il contesto del cluster di una replica di disponibilità  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> Completamento: dopo aver cambiato il contesto del cluster di una replica di disponibilità  
  Il nuovo contesto del cluster HADR diviene effettivo immediatamente e non richiede il riavvio dell'istanza del server. L'impostazione del contesto del cluster HADR è di tipo persistente a livello di istanza e rimane invariata in caso di riavvio dell'istanza del server.  
   
  Confermare il nuovo contesto del cluster HADR eseguendo una query sulla vista a gestione dinamica (DMV) [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) , come segue:  
@@ -136,7 +136,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Rimuovere un listener del gruppo di disponibilità &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
@@ -152,7 +152,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
@@ -160,7 +160,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gruppi di disponibilità AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   

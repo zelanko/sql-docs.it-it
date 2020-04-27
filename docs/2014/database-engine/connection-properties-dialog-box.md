@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808399"
 ---
 # <a name="connection-properties-dialog-box"></a>Proprietà connessione - finestra di dialogo
@@ -52,13 +52,13 @@ ms.locfileid: "62808399"
  **Dimensioni del pacchetto di rete**  
  Dimensioni di pacchetto utilizzate per la comunicazione con il server. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
- **Connection Timeout**  
+ **Timeout connessione**  
  Tempo di attesa in secondi per la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prima che si verifichi il timeout o venga restituito un errore di connessione all'utente. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
  **Timeout esecuzione**  
  Tempo di attesa in secondi prima del completamento dell'esecuzione di un'attività nel server. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
- **Crittografato**  
+ **Crittografati**  
  Consente di indicare se la connessione corrente è crittografata. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
 ## <a name="product-category"></a>Categoria di prodotto  
@@ -70,7 +70,7 @@ ms.locfileid: "62808399"
  **Versione prodotto**  
  La versione del prodotto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nome server**  
+ **Nome del server**  
  Il nome del computer su cui è in esecuzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Nome istanza**  
@@ -88,7 +88,7 @@ ms.locfileid: "62808399"
  **Nome computer**  
  Nome del computer server che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Piattaforma**  
+ **Platform**  
  Nome del sistema operativo, nome del produttore e famiglia di CPU del server.  
   
  **Sistema operativo**  
@@ -97,11 +97,11 @@ ms.locfileid: "62808399"
  **Processori**  
  Numero di processori presenti nel server.  
   
- **Memoria del sistema operativo**  
+ **Memoria sistema operativo**  
  Quantità totale di memoria fisica disponibile nel server espressa in megabyte (MB).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pagine delle proprietà in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Connetti al server &#40;pagina di accesso&#41; motore di database](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Connetti al server &#40;Pagina di accesso&#41; Motore di database](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

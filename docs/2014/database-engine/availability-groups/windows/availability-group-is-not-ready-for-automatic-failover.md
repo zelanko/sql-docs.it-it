@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791865"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Il gruppo di disponibilità non è pronto per il failover automatico
@@ -27,7 +27,7 @@ ms.locfileid: "62791865"
   
 |||  
 |-|-|  
-|**Nome criteri**|Conformità del gruppo di disponibilità al failover automatico|  
+|**Nome criterio**|Conformità del gruppo di disponibilità al failover automatico|  
 |**Problema**|Il gruppo di disponibilità non è pronto per il failover automatico.|  
 |**Categoria**|**Critico**|  
 |**Facet**|gruppo di disponibilità|  
@@ -50,8 +50,8 @@ ms.locfileid: "62791865"
   
 -   Utilizzare i criteri per verificare che i dati siano in uno stato di sincronizzazione e che la destinazione del failover automatico sia SINCRONIZZATO, quindi risolvere il problema della replica di disponibilità.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

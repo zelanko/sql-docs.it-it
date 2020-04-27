@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774932"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrazione di vincoli CHECK e di chiave esterna
@@ -240,7 +240,7 @@ END CATCH
 END  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Migrazione a OLTP in memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775441"
 ---
 # <a name="install-sql-server-powershell"></a>Installare SQL Server PowerShell
   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato se viene rilevato che sono state selezionate funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che includono componenti di PowerShell, ma che Windows PowerShell 2.0 non è installato. È necessario installare PowerShell tramite Windows Management Framework, quindi rieseguire l'installazione.  
   
-## <a name="installing-includessnoversionincludesssnoversion-mdmd-powershell-support"></a>Installazione del supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell  
+## <a name="installing-ssnoversion-powershell-support"></a>Installazione del supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell  
  Per installare il software che fornisce il supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows PowerShell utilizzare l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si seleziona qualsiasi funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che richiede il supporto di PowerShell, l'installazione controlla che sia stato installato Windows PowerShell 2.0. Se PowerShell 2.0 è presente, vengono installati i seguenti componenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di PowerShell:  
   
--   Gli snap-in di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli snap-in sono file DLL che implementano due tipi di supporto di Windows PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-in di PowerShell. Gli snap-in sono file dll che implementano due tipi di supporto di Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell per:  
   
     -   Set di cmdlet di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I cmdlet sono comandi che implementano un'azione specifica, ad esempio **Invoke-Sqlcmd** esegue uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] o XQuery che può essere eseguito anche con l'utilità **sqlcmd** , mentre **Invoke-PolicyEvaluation** segnala se gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono conformi ai criteri di gestione basata su criteri.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62775441"
   
  Se Windows PowerShell viene disinstallato al termine dell'installazione, non sarà possibile utilizzare le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows PowerShell. Windows PowerShell può essere disinstallato dagli utenti di Windows. La disinstallazione di Windows PowerShell potrebbe inoltre essere necessaria per eseguire alcuni aggiornamenti del sistema operativo Windows. Per utilizzare le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell è necessario reinstallare PowerShell 2.0 tramite Windows Management Framework.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

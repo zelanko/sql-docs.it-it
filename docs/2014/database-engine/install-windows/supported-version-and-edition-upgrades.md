@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775222"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Aggiornamenti di versione ed edizione supportati
@@ -49,7 +49,7 @@ ms.locfileid: "62775222"
   
 -   L'aggiornamento da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportato.  
   
-## <a name="upgrades-from-earlier-versions-to-includesssql14includessssql14-mdmd"></a>Aggiornamenti da versioni precedenti a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssql14"></a>Aggiornamenti da versioni precedenti a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 > [!NOTE]  
 >  Il supporto per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] verrà descritto più dettagliatamente nella sezione successiva, "Supporto di[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]".  
@@ -59,88 +59,50 @@ ms.locfileid: "62775222"
 -   Le versioni a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere aggiornate solo a un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a 64 bit.  
   
 > [!NOTE]  
->  Quando si esegue l'aggiornamento a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze, nonché per il numero massimo di core supportati. Per altre informazioni, vedere [limiti di capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando si esegue l'aggiornamento a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze, nonché per il numero massimo di core supportati. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  La versione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supporta l'aggiornamento dalle versioni seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 o versioni successive  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 o versioni successive  
   
--   
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 o versioni successive  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 o versioni successive  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 o versioni successive  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 o versioni successive  
   
--   
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 o versioni successive  
+-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 o versioni successive  
   
  Nella tabella seguente sono elencati gli scenari di aggiornamento supportati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 |Aggiornamento da|Percorso di aggiornamento supportato|  
 |------------------|----------------------------|  
-|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
-|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Sviluppatore|  
-|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express,<br /><br /> 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Tools e<br /><br /> 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Sviluppatore|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Small Business|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express,<br /><br /> 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Tools e<br /><br /> 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Datacenter|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Sviluppatore|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Small Business|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express,<br /><br /> 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express with Tools e<br /><br /> 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Sviluppatore|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools e<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio e<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express,<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Tools e<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Small Business|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express,<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Tools e<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Datacenter|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Small Business|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express,<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express with Tools e<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools e<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio e<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
-### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>Supporto di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+### <a name="sssql14-support-for-ssversion2005"></a>Supporto di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  In questa sezione viene illustrato il supporto di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]è possibile effettuare le operazioni seguenti:  
   
 -   Aggiornare un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] del motore di database a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo l'installazione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] utilizzando l'installazione guidata o dal prompt dei comandi.  
@@ -183,35 +145,27 @@ ms.locfileid: "62775222"
   
 -   Supporto per componenti personalizzati di terze parti di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Integration Services, ad esempio esecuzione e aggiornamento.  
   
-## <a name="includesssql14includessssql14-mdmd-edition-upgrade"></a>
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Aggiornamento delle edizioni  
+## <a name="sssql14-edition-upgrade"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Aggiornamento delle edizioni  
  Nella tabella seguente sono elencati gli scenari di aggiornamento delle edizioni supportati in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Per istruzioni dettagliate su come eseguire un aggiornamento dell'edizione, vedere eseguire l' [aggiornamento a un'edizione diversa di SQL Server 2014 &#40;&#41;di installazione ](upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Aggiornamento da|Aggiornamento a|  
 |------------------|----------------|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (Server + CAL e Core) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence|
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Valutazione Enterprise <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Sviluppatore<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web<br /><br /> L'aggiornamento da Evaluation Enterprise (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster.|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer <sup>2</sup>|
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web|
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express <sup>1</sup>|
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Sviluppatore<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Web|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (Server + CAL e Core) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Valutazione Enterprise <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> L'aggiornamento da Evaluation Enterprise (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster.|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
   
  È inoltre possibile inoltre eseguire un aggiornamento dell'edizione tra [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Server+licenza CAL) e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core):  
   
 |Aggiornamento dell'edizione da|Aggiornamento delle edizioni a|  
 |--------------------------|------------------------|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (server + licenza CAL) <sup>2</sup>|
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core)|  
-|
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (server + licenza CAL)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (server + licenza CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL)|  
   
  <sup>1</sup> si applica anche [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a Express with Tools [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ed Express with Advanced Services.  
   
@@ -225,10 +179,10 @@ ms.locfileid: "62775222"
   
 -   Da SQL Server 2014 Enterprise Evaluation a SQL Server 2014 Standard.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   
- [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+ [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
   

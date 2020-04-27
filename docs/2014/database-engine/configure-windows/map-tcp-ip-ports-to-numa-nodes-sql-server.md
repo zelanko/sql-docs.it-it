@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781745"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Eseguire il mapping delle porte TCP/IP ai nodi NUMA (SQL Server)
@@ -44,11 +44,11 @@ ms.locfileid: "62781745"
 > [!NOTE]  
 >  Per abilitare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'ascolto su più porte TCP per ogni indirizzo IP, vedere [Configurazione del Motore di database per l'attesa su più porte TCP](configure-the-database-engine-to-listen-on-multiple-tcp-ports.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>Per eseguire il mapping di una porta TCP/IP a un nodo NUMA  
   
-1.  In Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espandere **Configurazione di rete SQL Server**, quindi scegliere **Protocolli per** *\<nome istanza>*.  
+1.  In Gestione configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espandere **Configurazione di rete SQL Server** e quindi scegliere **Protocolli per** *\<nome istanza>* .  
   
 2.  Nel riquadro dei dettagli fare doppio clic su **TCP/IP**.  
   

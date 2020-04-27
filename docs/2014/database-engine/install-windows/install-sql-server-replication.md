@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775294"
 ---
 # <a name="install-sql-server-replication"></a>Installare la replica di SQL Server
@@ -41,7 +41,7 @@ ms.locfileid: "62775294"
   
 -   Vedere [Install SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installare SQL Server 2014](install-sql-server.md)   
  [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

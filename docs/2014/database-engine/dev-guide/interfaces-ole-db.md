@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781316"
 ---
 # <a name="interfaces-ole-db"></a>Interfacce (OLE DB)
@@ -46,7 +46,7 @@ ms.locfileid: "62781316"
   
 -   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774575"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione)
@@ -31,7 +31,7 @@ ms.locfileid: "62774575"
 > [!NOTE]  
 >  **in un ambiente cluster: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** È sufficiente eseguire l'aggiornamento dell'edizione in uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei nodi del cluster. Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura per tale condivisione.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "62774575"
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>Per eseguire l'aggiornamento a un'edizione diversa di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>Per eseguire l'aggiornamento a un'edizione diversa di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic su setup.exe o avviare Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da Strumenti di configurazione. Per eseguire l'installazione da una condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62774575"
   
 -   I database modello rimarranno nel computer dopo l'aggiornamento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilità con le versioni precedenti](../../getting-started/backward-compatibility.md)  
   

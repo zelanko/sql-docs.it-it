@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807458"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "62807458"
   
 2.  Espandere **Database**e selezionare il database principale della sessione in cui si intende aggiungere o sostituire un server di controllo del mirroring.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Verrà visualizzata la pagina **mirroring** della finestra di dialogo **Proprietà database** .  
   
 4.  Fare clic su **Configura sicurezza**.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "62807458"
   
      Per abilitare il server di controllo del mirroring e impostare la sessione sulla modalità di protezione elevata con failover automatico, fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   
- [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
+ [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Stabilire una sessione di mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)  
   

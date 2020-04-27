@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770317"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
@@ -78,8 +78,7 @@ ms.locfileid: "62770317"
   
  Le colonne di output della trasformazione la cui proprietà InputColumnType è impostata su 0 o 2 includono la proprietà CustomLineageID, che contiene l'identificatore di derivazione assegnato alla colonna da un componente a monte nel flusso di dati.  
   
- La trasformazione Ricerca termini aggiunge all'output della trasformazione due colonne, che per impostazione predefinita sono denominate `Term` e `Frequency`. 
-  `Term` contiene un termine della tabella di ricerca, mentre la colonna `Frequency` contiene il numero di occorrenze di tale termine rilevato nel set di dati di input. Tali colonne non includono la proprietà CustomLineageID.  
+ La trasformazione Ricerca termini aggiunge all'output della trasformazione due colonne, che per impostazione predefinita sono denominate `Term` e `Frequency`. `Term` contiene un termine della tabella di ricerca, mentre la colonna `Frequency` contiene il numero di occorrenze di tale termine rilevato nel set di dati di input. Tali colonne non includono la proprietà CustomLineageID.  
   
  La tabella di ricerca deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Access. Se l'output della trasformazione Estrazione termini viene salvato in una tabella, quest'ultima potrà essere utilizzata come tabella di riferimento, ma è possibile utilizzare anche altre tabelle. Il testo presente in file flat, cartelle di lavoro di Excel o altre origini deve essere importato in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Access, prima di usare la trasformazione Ricerca termini.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62770317"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca termini**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Ricerca termini &#40;scheda tabella di riferimento&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor trasformazione Ricerca fuzzy &#40;scheda Tabella di riferimento&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor trasformazione Ricerca termini &#40;scheda Ricerca termini&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62770317"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   

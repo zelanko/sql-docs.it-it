@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774191"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover su un database secondario per il log shipping (SQL Server)
@@ -46,21 +46,21 @@ ms.locfileid: "62774191"
 4.  Dopo la sincronizzazione dei server secondari, è possibile eseguire il failover su qualsiasi server recuperando il relativo database secondario e reindirizzando i client a quell'istanza del server. L'operazione di recupero consente di rendere consistente il database e di portarlo online.  
   
     > [!NOTE]  
-    >  Quando si rende disponibile un database secondario, è necessario assicurarsi che i relativi metadati siano coerenti con quelli del database primario originale. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  Quando si rende disponibile un database secondario, è necessario assicurarsi che i relativi metadati siano coerenti con quelli del database primario originale. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  Dopo il recupero di un database secondario, è possibile riconfigurarlo affinché funga da database primario per altri database secondari.  
   
      Se non è disponibile un altro database secondario, vedere [Configurare il log shipping &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Modificare i ruoli tra i server primario e secondario per il log shipping &#40;SQL Server&#41;](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Tabelle e stored procedure relative al log shipping](log-shipping-tables-and-stored-procedures.md)   
- [Informazioni sul log shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Tabelle e stored procedure per il log shipping](log-shipping-tables-and-stored-procedures.md)   
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

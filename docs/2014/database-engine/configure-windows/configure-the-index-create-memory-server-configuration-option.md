@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786943"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Configurare l'opzione di configurazione del server index create memory
@@ -40,29 +40,28 @@ ms.locfileid: "62786943"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione index create memory](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   L'impostazione dell'opzione **min memory per query** ha la precedenza sull'opzione **index create memory**. Se si modificano entrambe le opzioni e **index create memory** è minore di **min memory per query**, verrà visualizzato un messaggio di avviso, ma il valore risulterà impostato. Durante l'esecuzione della query verrà visualizzato un avviso analogo.  
+-   L'impostazione dell'opzione **min memory per query** ha la precedenza sull'opzione **index create memory** . Se si modificano entrambe le opzioni e **index create memory** è minore di **min memory per query**, verrà visualizzato un messaggio di avviso, ma il valore risulterà impostato. Durante l'esecuzione della query verrà visualizzato un avviso analogo.  
   
 -   Quando si usano tabelle e indici partizionati, è possibile che i requisiti minimi di memoria aumentino in modo significativo in caso di indici partizionati non allineati e di un grado elevato di parallelismo. Con questa opzione è possibile controllare la quantità totale iniziale di memoria allocata per tutte le partizioni dell'indice in un'unica operazione di creazione dell'indice. Se la quantità impostata tramite questa opzione è inferiore rispetto al valore minimo necessario per l'esecuzione, la query verrà terminata e verrà visualizzato un messaggio di errore.  
   
 -   Il valore di esecuzione per questa opzione non supererà la quantità di memoria effettiva che può essere usata per il sistema operativo e la piattaforma hardware in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nei sistemi operativi a 32 bit questo valore sarà minore di 3 gigabyte (GB).  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   
-  **Index Create Memory** è un'opzione a configurazione automatica e solitamente non richiede alcuna modifica. Se tuttavia si riscontrano difficoltà nella creazione di indici, valutare l'opportunità di aumentare il valore dell'opzione.  
+-   **Index Create Memory** è un'opzione a configurazione automatica e solitamente non richiede alcuna modifica. Se tuttavia si riscontrano difficoltà nella creazione di indici, valutare l'opportunità di aumentare il valore dell'opzione.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>Per configurare l'opzione index create memory  
   
@@ -72,10 +71,9 @@ ms.locfileid: "62786943"
   
 3.  In **Memoria per la creazione degli indici**digitare o selezionare il valore desiderato per l'opzione index create memory.  
   
-     L'opzione **index create memory** consente di gestire la quantità di memoria usata dagli ordinamenti per la creazione di indici. 
-  **index create memory** è un'opzione a configurazione automatica e nella maggior parte può essere usata senza apportare alcuna modifica. Se tuttavia si riscontrano difficoltà nella creazione di indici, valutare l'opportunità di aumentare il valore dell'opzione. Gli ordinamenti per le query sono gestiti tramite l'opzione **min memory per query** .  
+     L'opzione **index create memory** consente di gestire la quantità di memoria usata dagli ordinamenti per la creazione di indici. **index create memory** è un'opzione a configurazione automatica e nella maggior parte può essere usata senza apportare alcuna modifica. Se tuttavia si riscontrano difficoltà nella creazione di indici, valutare l'opportunità di aumentare il valore dell'opzione. Gli ordinamenti per le query sono gestiti tramite l'opzione **min memory per query** .  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>Per configurare l'opzione index create memory  
   
@@ -99,13 +97,13 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a>Completamento: dopo la configurazione dell'opzione index create memory  
+##  <a name="follow-up-after-you-configure-the-index-create-memory-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione index create memory  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. Configurations &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [Opzioni di configurazione del server Server Memory](server-memory-server-configuration-options.md)   
+ [Opzioni di configurazione del server di memoria server](server-memory-server-configuration-options.md)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

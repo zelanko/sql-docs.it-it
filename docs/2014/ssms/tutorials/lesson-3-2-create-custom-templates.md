@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805563"
 ---
 # <a name="create-custom-templates"></a>Creare modelli personalizzati
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]include modelli per molte attività comuni, ma la vera potenza dei modelli risiede nella possibilità di creare un modello personalizzato per uno script complesso che è necessario creare frequentemente. In questa esercitazione verranno illustrate le procedure per la creazione di uno script semplice con un numero limitato di parametri, ma i modelli risultano utili anche per script complessi e ripetitivi.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli da usare per molte attività comuni. L'effettivo vantaggio dei modelli, tuttavia, consiste nella possibilità di creare un modello personalizzato per uno script complesso che è necessario creare frequentemente. In questa esercitazione verranno illustrate le procedure per la creazione di uno script semplice con un numero limitato di parametri, ma i modelli risultano utili anche per script complessi e ripetitivi.  
   
 ## <a name="using-custom-templates"></a>Utilizzo di modelli personalizzati  
   

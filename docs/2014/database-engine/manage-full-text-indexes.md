@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775043"
 ---
 # <a name="manage-full-text-indexes"></a>Gestione di indici full-text.
      
-##  <a name="view"></a>Visualizzazione e modifica delle proprietà di un indice full-text  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>Visualizzazione e modifica delle proprietà di un indice full-text  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>Per visualizzare o modificare le proprietà di un indice full-text in Management Studio  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62775043"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] per salvare le modifiche e uscire dalla finestra di dialogo **Proprietà indice full-text**.  
   
-##  <a name="props"></a>Visualizzazione delle proprietà di tabelle e colonne indicizzate  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>Visualizzazione delle proprietà di tabelle e colonne indicizzate  
  Per ottenere il valore di diverse proprietà di indicizzazione full-text, è possibile utilizzare varie funzioni [!INCLUDE[tsql](../includes/tsql-md.md)] come OBJECTPROPERTYEX. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente sono elencate le proprietà full-text relative a tabelle e colonne indicizzate e le funzioni [!INCLUDE[tsql](../includes/tsql-md.md)] correlate.  
@@ -63,7 +63,7 @@ ms.locfileid: "62775043"
 |`TableFulltextPopulateStatus`|Stato popolamento di una tabella full-text.|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|Indica se una tabella include un indice full-text attivo.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>Recupero di informazioni sulla colonna chiave full-text  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>Recupero di informazioni sulla colonna chiave full-text  
  In genere, il risultato della funzione con valori del set di righe CONTAINSTABLE o FREETEXTTABLE deve essere unito in join alla tabella di base. In questi casi, è necessario conoscere il nome della colonna chiave univoca. È possibile verificare se un determinato indice univoco viene utilizzato come chiave full-text e ottenere l'identificatore della colonna chiave full-text.  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Per verificare se un determinato indice univoco viene utilizzato come colonna chiave full-text  
@@ -125,7 +125,7 @@ GO
   
  Nell'esempio viene restituita una colonna del set di risultati denominata `Unique Key Column`in cui viene visualizzata una sola riga contenente il nome della colonna chiave univoca della tabella Document, DocumentID. Si noti che se questa query contenesse un nome di indice non valido, il nome di indice non corrispondesse alla tabella, la tabella non esistesse e così via, il risultato restituito sarebbe NULL.  
   
-##  <a name="disable"></a>Disabilitazione o riabilitazione di una tabella per l'indicizzazione full-text  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>Disabilitazione o riabilitazione di una tabella per l'indicizzazione full-text  
  Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tutti i database creati dall'utente sono abilitati per la funzionalità full-text. Una tabella viene inoltre abilitata automaticamente per l'indicizzazione full-text dopo la creazione di un indice full-text nella tabella e l'aggiunta di una colonna all'indice. L'indicizzazione full-text viene disabilitata automaticamente nella tabella quando l'ultima colonna viene eliminata dall'indice full-text.  
   
  In una tabella che dispone di un indice full-text è possibile disabilitare o riabilitare manualmente una tabella per indicizzazione full-text utilizzando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -138,7 +138,7 @@ GO
   
 3.  Scegliere **Indice full-text**, quindi fare clic su **Disabilita indicizzazione full-text** o **Abilita indicizzazione full-text**.  
   
-##  <a name="remove"></a>Rimozione di un indice full-text da una tabella  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>Rimozione di un indice full-text da una tabella  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>Per rimuovere un indice full-text da una tabella  
   

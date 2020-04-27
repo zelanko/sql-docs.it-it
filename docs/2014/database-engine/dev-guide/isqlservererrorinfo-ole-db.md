@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d15b7ca5ed84f2cc828696c6a7fe8b8771e8a374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781047"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "62781047"
 |------------|-----------------|  
 |[ISQLServerErrorInfo:: GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|Restituisce un puntatore a una struttura SSERRORINFO del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client contenente i dettagli sull'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Interfacce &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
  [Dettagli relativi agli errori SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   

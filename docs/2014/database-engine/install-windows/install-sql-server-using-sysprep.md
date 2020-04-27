@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775304"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installare SQL Server 2014 tramite SysPrep
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e** Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni per l'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
  È possibile inoltre preparare e completare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il prompt dei comandi o un file di configurazione. Per altre informazioni, vedere:  
   
--   [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+-   [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
 -   [Installare SQL Server 2014 tramite un file di configurazione](install-sql-server-using-a-configuration-file.md)  
   
@@ -38,13 +38,13 @@ ms.locfileid: "62775304"
   
  In questa sezione sono incluse le procedure seguenti:  
   
--   [Supporto del cluster SysyPrep SQL Server](#sysprep)  
+-   [Supporto di SysyPrep Cluster di SQL Server](#sysprep)  
   
--   [Preparare un'istanza autonoma di SQL Server](#prepare)  
+-   [Preparazione di un'istanza autonoma di SQL Server](#prepare)  
   
--   [Completa un'istanza predisposta di SQL Server](#complete)  
+-   [Completamento di un'istanza predisposta di SQL Server](#complete)  
   
--   [Aggiungere funzionalità a un'istanza predisposta di SQL Server](#AddFeatures)  
+-   [Aggiunta di funzionalità a un'istanza predisposta di SQL Server](#AddFeatures)  
   
 -   [Rimuovere funzionalità da un'istanza predisposta di SQL Server](#RemoveFeatures)  
   
@@ -52,10 +52,10 @@ ms.locfileid: "62775304"
   
 -   [Modifica o disinstallazione di un'istanza completata di SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
-##  <a name="sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Supporto cluster Sysprep  
+##  <a name="ssnoversion-sysprep-cluster-support"></a> Supporto dei cluster di SysPrep in <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supporta le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster nelle installazioni dalla riga di comando. Per altre informazioni, vedere [Che cos'è SysPrep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
-#### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Per preparare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
+#### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>Per preparare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
   
 1.  Preparare l'immagine come descritto in [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md)e acquisire l'immagine Windows tramite SysPrep Generalization. Nell'esempio seguente viene preparata l'immagine:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62775304"
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-#### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Completare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
+#### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>Completare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
   
 1.  Eseguire setup.exe con `/ACTION=CompleteFailoverCluster` sul nodo a cui appartiene il gruppo di archiviazione disponibile:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62775304"
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-#### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Aggiunta di un nodo a un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
+#### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>Aggiunta di un nodo a un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
   
 1.  Distribuire l'immagine eseguendo Windows SysPrep Specialize.  
   
@@ -95,43 +95,41 @@ ms.locfileid: "62775304"
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> Preparare l'immagine  
+##  <a name="prepare-image"></a><a name="prepare"></a>Preparare l'immagine  
   
-#### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Preparare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+#### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>Preparare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-2.  L'Installazione guidata esegue il Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per preparare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fare clic su **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nella pagina **Avanzate**.  
+2.  L'Installazione guidata esegue Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per preparare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fare clic su **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nella pagina **Avanzate**.  
   
-3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 4.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si vogliono includere gli aggiornamenti, deselezionare la casella di controllo **Includi aggiornamenti prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
   
 5.  Nella pagina Installa i file di installazione viene mostrato lo stato di avanzamento del download, dell'estrazione e dell'installazione dei file di installazione. Se viene individuato un aggiornamento per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ne viene specificata l'inclusione, verrà installato anche questo aggiornamento.  
   
-6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 7.  Nella pagina **Prepara tipo di immagine** selezionare **Prepara una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
      La pagina **Prepara tipo di immagine** viene visualizzata solo quando si ha un'istanza predisposta non configurata esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer. È possibile scegliere di preparare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di aggiungere funzionalità supportate da SysPrep a un'istanza predisposta esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer. Per altre informazioni su come aggiungere funzionalità a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Aggiungere funzionalità a un'istanza predisposta](#AddFeatures).  
   
-8.  Nella pagina **condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettare i termini e le condizioni di licenza. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+8.  Nella pagina **Condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 9. Nella pagina **Selezione funzionalità** selezionare i componenti per l'installazione:  
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replica<br /><br /> Funzionalità full-text<br /><br /> Data Quality Services<br /><br /> 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Funzionalità ridistribuibili<br /><br /> Funzionalità condivise|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replica<br /><br /> Funzionalità full-text<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Funzionalità ridistribuibili<br /><br /> Funzionalità condivise|  
   
      Quando si evidenzia il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
+     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
-10. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di verificare lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+10. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di verificare lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-11. Nella pagina Configurazione dell'istanza specificare l'ID istanza per l'istanza. Fare clic su **Avanti** per continuare.  
+11. Nella pagina Configurazione dell'istanza specificare l'ID istanza per l'istanza. Scegliere **Avanti** per continuare.  
   
      **ID istanza** : ID istanza utilizzato per identificare le directory di installazione e le chiavi del registro di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per l'istanza di. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato.  
   
@@ -141,47 +139,46 @@ ms.locfileid: "62775304"
   
      **Istanze installate** : nella griglia vengono visualizzate le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanze di presenti nel computer in cui è in esecuzione il programma di installazione.  
   
-12. Nella pagina **requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
+12. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
-13. Controllo configurazione sistema eseguirà regole di preparazione immagine per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+13. Controllo configurazione sistema eseguirà regole di preparazione immagine per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-14. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. In questa pagina, tramite il programma di installazione vengono indicati l'eventuale abilitazione o disabilitazione della funzionalità di aggiornamento del prodotto e la versione dell'aggiornamento finale. Per continuare fare clic su **Prepara**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
+14. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. In questa pagina, tramite il programma di installazione vengono indicati l'eventuale abilitazione o disabilitazione della funzionalità di aggiornamento del prodotto e la versione dell'aggiornamento finale. Per continuare fare clic su **Prepara**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
   
 15. Durante l'installazione, nella pagina **Avanzamento preparazione immagine** è possibile monitorare lo stato di avanzamento del processo.  
   
 16. Al termine dell'installazione, nella pagina **operazione completata** viene visualizzato un collegamento al file di log di riepilogo per l'installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**.  
   
-17. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per ulteriori informazioni, vedere [visualizzare e leggere SQL Server file di log del programma di installazione](view-and-read-sql-server-setup-log-files.md).  
+17. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
 18. A questo punto, la procedura di preparazione è stata completata. È possibile completare l'immagine o distribuire l'immagine preparata come descritto in [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
-##  <a name="complete"></a> Completare l'immagine  
+##  <a name="complete-image"></a><a name="complete"></a> Completare l'immagine  
   
-#### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Completare un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="complete-a-prepared-instance-of-ssnoversion"></a>Completare un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Se si dispone di un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nell'immagine del computer, verrà visualizzato un collegamento nel menu Start. È anche possibile avviare Centro installazione e fare clic su **Completamento immagine di un'istanza autonoma predisposta** nella pagina **Avanzate** .  
   
-2.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+2.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 3.  Nella pagina **file di supporto** per l'installazione fare clic su **Installa** per installare i file di supporto per l'installazione.  
   
-4.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+4.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 5.  Nella pagina **Product Key** selezionare un pulsante di opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versione di produzione del prodotto con una chiave PID. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). Se si installa Evaluation Edition il periodo di prova di 180 giorni inizia al termine di questo passaggio.  
   
-6.  Nella pagina **condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettare i termini e le condizioni di licenza. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+6.  Nella pagina **Condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 7.  Nella pagina **Seleziona istanza predisposta** selezionare l'istanza predisposta che si vuole completare dalla casella di riepilogo a discesa. Selezionare l'istanza non configurata nell'elenco **ID istanza** .  
   
-     **Istanze installate:** In questa griglia vengono visualizzate tutte le istanze di che includono qualsiasi istanza predisposta nel computer.  
+     **Istanze installate** : in questa griglia vengono visualizzate tutte le istanze, comprese quelle predisposte nel computer.  
   
 8.  Nella pagina **Esame funzionalità** verranno visualizzate le funzionalità selezionate e i componenti inclusi nell'istallazione durante il passaggio relativo alla preparazione. Se si vogliono aggiungere più funzionalità all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza includerle nell'istanza predisposta, è prima necessario completare questo passaggio per completare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi aggiungere le funzionalità da **Aggiungi funzionalità** in **Centro installazione**.  
   
     > [!NOTE]  
     >  È possibile aggiungere funzionalità disponibili per la versione del prodotto che si sta installando. Per ulteriori informazioni, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
-9. Nella pagina Configurazione dell'istanza specificare il nome dell'istanza per l'istanza predisposta. Questo nome corrisponde a quello dell'istanza una volta che è stata completata la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Fare clic su **Avanti** per continuare.  
+9. Nella pagina Configurazione dell'istanza specificare il nome dell'istanza per l'istanza predisposta. Questo nome corrisponde a quello dell'istanza una volta che è stata completata la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scegliere **Avanti** per continuare.  
   
      **ID istanza** : ID istanza utilizzato per identificare le directory di installazione e le chiavi del registro di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per l'istanza di. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione.  
   
@@ -189,18 +186,17 @@ ms.locfileid: "62775304"
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Istanze installate** : nella griglia vengono visualizzate le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanze di presenti nel computer in cui è in esecuzione il programma di installazione.  
+     **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione.  
   
 10. Il flusso di lavoro relativo alla restante parte di questo argomento dipende dalle funzionalità selezionate durante il passaggio relativo alla preparazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
-11. Nella pagina **Configurazione server** - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
+11. Nella pagina **Configurazione server** -account di servizio specificare gli account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i servizi. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
-     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
-     **Nota sulla sicurezza**[!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Nota sulla sicurezza** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Avanti**.  
   
@@ -212,25 +208,24 @@ ms.locfileid: "62775304"
   
          Quando viene stabilita la connessione tra un dispositivo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il meccanismo di sicurezza è lo stesso sia in modalità mista che di autenticazione di Windows. Per ulteriori informazioni, vedere [motore di database configurazione-provisioning dell'account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Amministratori: è necessario specificare almeno un amministratore di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [motore di database configurazione-provisioning dell'account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Amministratori: è necessario specificare almeno un amministratore di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [motore di database configurazione-provisioning dell'account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      Dopo aver modificato l'elenco, fare clic su **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, fare clic su **Avanti**.  
   
-14. Utilizzare la pagina Configurazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, scegliere **Avanti**.  
+14. Utilizzare la pagina Configurazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, fare clic su **Avanti**.  
   
     > [!IMPORTANT]  
     >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Per altre informazioni, vedere [Configurazione del motore di database - Directory dati](../../sql-server/install/database-engine-configuration-data-directories.md).  
   
-15. Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del motore di database - Filestream](../../sql-server/install/database-engine-configuration-filestream.md).  
+15. Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del Motore di database - Filestream](../../sql-server/install/database-engine-configuration-filestream.md).  
   
 16. Utilizzare la pagina Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per specificare il tipo di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da creare. Per altre informazioni sulle modalità di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Opzioni di configurazione di Reporting Services &#40;SSRS&#41;](../../sql-server/install/reporting-services-configuration-options-ssrs.md).  
   
 17. Nella pagina **segnalazione errori** specificare le informazioni che si desidera inviare a per contribuire a [!INCLUDE[msCoName](../../includes/msconame-md.md)] migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'opzione per la segnalazione di errori è abilitata.  
   
-18. Nella pagina **Regole di completamento immagine** Controllo configurazione sistema consente di eseguire le regole di completamento immagine per convalidare la configurazione del computer con le configurazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+18. Nella pagina **Regole di completamento immagine** Controllo configurazione sistema consente di eseguire le regole di completamento immagine per convalidare la configurazione del computer con le configurazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 19. Nella pagina **Inizio completamento immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**.  
   
@@ -238,47 +233,45 @@ ms.locfileid: "62775304"
   
 21. Al termine dell'installazione, nella pagina **operazione completata** viene visualizzato un collegamento al file di log di riepilogo per l'installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**.  
   
-22. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per ulteriori informazioni, vedere [visualizzare e leggere SQL Server file di log del programma di installazione](view-and-read-sql-server-setup-log-files.md).  
+22. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
 23. Questo passaggio consente di completare la configurazione dell'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di completare l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="AddFeatures"></a>Aggiungere funzionalità a un'istanza predisposta  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a> Add Features to a Prepared Instance  
   
-#### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Aggiungere funzionalità a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>Aggiungere funzionalità a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-2.  L'Installazione guidata esegue il Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere funzionalità a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fare clic su **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nella pagina **Avanzate**.  
+2.  L'Installazione guidata esegue Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere funzionalità a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fare clic su **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nella pagina **Avanzate**.  
   
-3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-4.  Nella pagina File di supporto per l'installazione fare clic su **Installa** per installare i file specifici.  
+4.  Nella pagina file di supporto per l'installazione fare clic su **Installa** per installare i file di supporto per l'installazione.  
   
 5.  Nella pagina **Prepara tipo di immagine** selezionare l'opzione **Aggiungi funzionalità a un'istanza predisposta esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Selezionare l'istanza predisposta specifica a cui si desidera aggiungere funzionalità dall'elenco a discesa delle istanze predisposte disponibili.  
   
 6.  Nella pagina **Selezione funzionalità** specificare le funzionalità che si vogliono aggiungere all'istanza predisposta specificata.  
   
-     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
+     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
-7.  Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di verificare lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+7.  Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di verificare lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 8.  Nella pagina Requisiti di spazio su disco viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
-9. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di eseguire le regole di preparazione immagine per convalidare la configurazione del computer rispetto alle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+9. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di eseguire le regole di preparazione immagine per convalidare la configurazione del computer rispetto alle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-10. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
+10. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
   
 11. Durante l'installazione, nella pagina **Avanzamento preparazione immagine** è possibile monitorare lo stato di avanzamento del processo.  
   
 12. Al termine dell'installazione, nella pagina **operazione completata** viene visualizzato un collegamento al file di log di riepilogo per l'installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**.  
   
-13. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per ulteriori informazioni, vedere [visualizzare e leggere SQL Server file di log del programma di installazione](view-and-read-sql-server-setup-log-files.md).  
+13. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="RemoveFeatures"></a>Rimuovere funzionalità da un'istanza di preparazione  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a> Rimuovere funzionalità da un'istanza predisposta  
   
-#### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Rimozione di funzionalità da un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>Rimozione di funzionalità da un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Per avviare il processo di disinstallazione, dal menu **Start** scegliere **Pannello di controllo** e fare doppio clic su **Programmi e funzionalità**.  
   
@@ -288,7 +281,7 @@ ms.locfileid: "62775304"
   
 4.  Nella pagina **Seleziona istanza** selezionare l'istanza predisposta che si vuole modificare. Il nome dell'istanza predisposta verrà visualizzato come "PreparedInstanceID non configurata" dove PreparedInstanceID è l'istanza selezionata.  
   
-5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Fare clic su **Avanti** per continuare.  
+5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Scegliere **Avanti** per continuare.  
   
 6.  Verranno eseguite le regole di rimozione per verificare la corretta esecuzione dell'operazione.  
   
@@ -298,9 +291,9 @@ ms.locfileid: "62775304"
   
 9. Nella pagina **Operazione completata** è possibile esaminare lo stato di completamento dell'operazione. Per uscire dall'installazione guidata, fare clic su **Chiudi** .  
   
-##  <a name="Uninstall"></a>Disinstallazione di un'istanza predisposta  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a>Disinstallazione di un'istanza predisposta  
   
-#### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Disinstallare un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>Disinstallare un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Per avviare il processo di disinstallazione, dal menu **Start** scegliere **Pannello di controllo** e fare doppio clic su **Programmi e funzionalità**.  
   
@@ -310,7 +303,7 @@ ms.locfileid: "62775304"
   
 4.  Nella pagina **Seleziona istanza** selezionare l'istanza predisposta che si vuole modificare. Il nome dell'istanza predisposta verrà visualizzato come "PreparedInstanceID non configurata" dove PreparedInstanceID è l'istanza selezionata.  
   
-5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Fare clic su **Avanti** per continuare.  
+5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Scegliere **Avanti** per continuare.  
   
 6.  Nella pagina **Regole di rimozione** verranno eseguite le regole per verificare la corretta esecuzione dell'operazione.  
   
@@ -322,13 +315,13 @@ ms.locfileid: "62775304"
   
 10. Ripetere i passaggi da 1 a 9 fino a rimuovere tutti i componenti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-##  <a name="bk_Modifying_Uninstalling"></a>Modifica o disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> Modifica o disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Il processo per l'aggiunta o la rimozione di funzionalità o per la disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile al processo per un'istanza installata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;di installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
--   [Disinstallare un'istanza esistente di SQL Server &#40;Programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
+-   [Disinstallare un'istanza esistente di SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Informazioni su Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
- [Come funziona SysPrep di Windows](https://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Funzionamento di Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770711"
 ---
 # <a name="sql-server-destination"></a>SQL Server - destinazione
@@ -61,7 +61,7 @@ ms.locfileid: "62770711"
   
  Per altre informazioni sulle opzioni di caricamento bulk, vedere [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
-#### <a name="performance-improvements"></a>Miglioramenti delle prestazioni  
+#### <a name="performance-improvements"></a>Miglioramenti alle prestazioni  
  Per migliorare le prestazioni dell'inserimento bulk e dell'accesso ai dati delle tabelle durante un'operazione di inserimento bulk, modificare le opzioni predefinite nel modo seguente:  
   
 -   Non verificare i vincoli sulla tabella o vista di destinazione durante l'operazione di importazione bulk.  
@@ -93,9 +93,9 @@ ms.locfileid: "62770711"
   
 -   [Editor destinazione SQL &#40;pagina Gestione connessione&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione SQL &#40;pagina mapping&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Editor destinazione SQL &#40;pagina Mapping&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Editor destinazione SQL &#40;pagina avanzate&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Editor destinazione SQL &#40;pagina Avanzate&#41;](../sql-destination-editor-advanced-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -117,13 +117,13 @@ ms.locfileid: "62770711"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482)(Possibile visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo account utente abilitato) nel sito support.microsoft.com.  
+-   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](https://go.microsoft.com/fwlink/?LinkId=199482)sul sito support.microsoft.com.  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
   
 -   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](https://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Flusso di dati](data-flow.md)  
   
   

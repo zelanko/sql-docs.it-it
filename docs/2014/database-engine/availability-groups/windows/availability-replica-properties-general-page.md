@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791905"
 ---
 # <a name="availability-replica-properties-general-page"></a>Proprietà replica di disponibilità (Pagina Generale)
@@ -25,9 +25,9 @@ ms.locfileid: "62791905"
 ## <a name="task-list"></a>Elenco attività  
  **Per visualizzare le proprietà della replica di disponibilità**  
   
--   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+-   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Nome gruppo di disponibilità**  
@@ -37,7 +37,7 @@ ms.locfileid: "62791905"
  Nome del server dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica corrente e, per un'istanza non predefinita, il nome dell'istanza.  
   
  **Ruolo**  
- **Server/istanza primaria**  
+ **Primario**  
  Attualmente la replica primaria.  
   
  **Secondari**  
@@ -73,7 +73,7 @@ ms.locfileid: "62791905"
  Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
   
  **Consenti connessioni in lettura/scrittura**  
- Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **ReadOnly** . Se la proprietà finalità dell'applicazione è impostata su **ReadWrite** o se la proprietà di connessione finalità dell'applicazione non è impostata, la connessione è consentita.  
+ Le connessioni in cui la proprietà di connessione finalità dell'applicazione è impostata su **ReadOnly** non sono consentite. Se la proprietà finalità dell'applicazione è impostata su **ReadWrite** o se la proprietà di connessione finalità dell'applicazione non è impostata, la connessione è consentita.  
   
  **Secondario leggibile**  
  Specifica se una replica di disponibilità che esegue il ruolo secondario, ovvero una replica secondaria, può accettare connessioni dai client. I valori possibili sono:  
@@ -81,7 +81,7 @@ ms.locfileid: "62791905"
  **No**  
  Non sono consentite connessioni dirette ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Si tratta dell'impostazione predefinita.  
   
- **Solo con finalità di lettura**  
+ **Solo finalità di lettura**  
  Sono consentite solo connessioni dirette di sola lettura ai database secondari di questa replica. Il database o i database secondari sono tutti disponibili per l'accesso in lettura.  
   
  **Sì**  
@@ -98,7 +98,7 @@ ms.locfileid: "62791905"
  **URL endpoint**  
  Rappresentazione di stringa dell'endpoint del mirroring di database specificato dall'utente usato dalle connessioni tra repliche primarie e secondarie per la sincronizzazione dei dati. Per informazioni sulla sintassi degli URL dell'endpoint, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

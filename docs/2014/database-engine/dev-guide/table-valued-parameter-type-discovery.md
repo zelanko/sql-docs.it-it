@@ -1,5 +1,5 @@
 ---
-title: Individuazione del tipo di parametro con valori di tabella | Microsoft Docs
+title: Individuazione dei tipi di parametri con valori di tabella
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780320"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Individuazione del tipo di parametro con valori di tabella
   Il consumer, ovvero l'applicazione client che utilizza il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, può individuare il tipo di ogni parametro del comando se il testo del comando è stato assegnato al provider di OLE DB. Una volta noto il tipo di un parametro con valori di tabella, il consumer può individuare le informazioni sui metadati per ogni singola colonna del parametro con valori di tabella.  
   
- Le informazioni sul tipo dei parametri della procedura sono supportate da ICommandWithParameters:: GetParameterInfo per la maggior parte dei tipi di parametro. A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da, con l'introduzione di tipi definiti dall'utente e `xml` del tipo di dati, il metodo GetParameterInfo non è sufficiente a questo scopo perché non è stato possibile fornire informazioni sui tipi definiti dall'utente (nome, schema e catalogo) tramite ICommandWithParameters. È stata definita una nuova interfaccia, ISSCommandWithParameters, per fornire informazioni sul tipo estese.  
+ Per la maggior parte dei tipi di parametri le informazioni sul tipo dei parametri di procedura sono supportate da ICommandWithParameters::GetParameterInfo. A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da, con l'introduzione di tipi definiti dall'utente e `xml` del tipo di dati, il metodo GetParameterInfo non è sufficiente a questo scopo perché non è stato possibile fornire informazioni sui tipi definiti dall'utente (nome, schema e catalogo) tramite ICommandWithParameters. Per fornire informazioni estese sul tipo è stata definita la nuova interfaccia ISSCommandWithParameters.  
   
- Per i parametri con valori di tabella, è inoltre possibile utilizzare l'interfaccia ISSCommandWithParameters per individuare informazioni dettagliate. Il client chiama ISSCommandWithParameters:: GetParameterInfo dopo aver preparato l'oggetto Command. Per i parametri con valori di tabella il membro *wType* della struttura DBPARAMINFO viene impostato su DBTYPE_TABLE dal provider. Il valore del campo *ulParamSize* della struttura DBPARAMINFO è ~0.  
+ Per i parametri con valori di tabella, l'interfaccia ISSCommandWithParameters viene usata anche per individuare informazioni dettagliate. Il client chiama ISSCommandWithParameters::GetParameterInfo dopo aver preparato l'oggetto commando. Per i parametri con valori di tabella il membro *wType* della struttura DBPARAMINFO viene impostato su DBTYPE_TABLE dal provider. Il valore del campo *ulParamSize* della struttura DBPARAMINFO è ~0.  
   
  Il consumer può quindi richiedere proprietà aggiuntive (nome del catalogo del tipo di parametro con valori di tabella, nome dello schema del tipo di parametro con valori di tabella, nome del tipo di parametro con valori di tabella, ordinamento colonne e colonne predefinite) mediante ISSCommandWithParameters::GetParameterProperties.  
   
  Una volta noto il nome del tipo, per recuperare informazioni sulle singole colonne il consumer deve chiamare IOpenRowset::OpenRowset oppure ottenere il set di righe DBSCHEMA_TABLE_TYPE_COLUMNS specificando il nome del tipo di parametro con valori di tabella come nome della tabella.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

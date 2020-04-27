@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774161"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Creazione o modifica della registrazione del server (scheda Generale) (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774161"
   
 ## <a name="options"></a>Opzioni  
  **Tipo di server**  
- Quando si registra un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato in Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**o **Integration Services** sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
+ Quando si registra un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato in Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** o **Integration Services** sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
   
  **Nome server**  
  Consente di selezionare il server a cui connettersi. Viene visualizzato per impostazione predefinita l'ultimo server a cui ci si è connessi.  
@@ -52,7 +52,7 @@ ms.locfileid: "62774161"
  **Test**  
  Consente di testare la connessione al server selezionato in **Nome server**.  
   
- **Salvare**  
+ **Salva**  
  Fare clic su questo pulsante per salvare le impostazioni relative ai server registrati.  
   
   

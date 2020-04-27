@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788027"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Visualizzare le proprietà del listener del gruppo di disponibilità (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62788027"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare le proprietà del listener**  
   
 1.  In Esplora oggetti connettersi a un'istanza del server che ospita una replica di disponibilità del gruppo di disponibilità di cui si desidera visualizzare il listener. Fare clic sul nome del server per espandere il relativo albero.  
@@ -43,7 +43,7 @@ ms.locfileid: "62788027"
   
 5.  Verrà aperta la finestra di dialogo **Proprietà listener gruppo di disponibilità** . Per altre informazioni, vedere [Proprietà listener gruppo di disponibilità (finestra di dialogo)](#AgListenerPropertiesDialog), più avanti in questo argomento.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Proprietà listener gruppo di disponibilità (finestra di dialogo)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a>Proprietà listener gruppo di disponibilità (finestra di dialogo)  
  **Nome DNS del listener**  
  Nome di rete del listener del gruppo di disponibilità.  
   
@@ -59,12 +59,12 @@ ms.locfileid: "62788027"
  **DHCP**  
  Il listener utilizza un indirizzo IP dinamico assegnato da un server in cui viene eseguito il protocollo DHCP (Dynamic Host Configuration Protocol).  
   
- **Indirizzo IP statico**  
+ **IP statico**  
  Il listener utilizza uno o più indirizzi IP statici. Per accedere ad altre subnet, è necessario che un listener del gruppo di disponibilità utilizzi indirizzi IP statici.  
   
  Nella griglia vengono visualizzate le subnet in cui il listener è in attesa e l'indirizzo IP associato a ciascuna subnet.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per visualizzare le proprietà del listener**  
   
  Per monitorare i listener del gruppo di disponibilità, utilizzare le viste seguenti:  
@@ -87,13 +87,13 @@ ms.locfileid: "62788027"
 > [!NOTE]  
 >  Per altre informazioni sull'uso di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per monitorare l'ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Rimuovere un listener del gruppo di disponibilità &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781755"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Procedure per l'esecuzione di stored procedure (ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "62781755"
   
 -   [Elaborare i codici restituiti e i parametri di output &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure per l'utilizzo di ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

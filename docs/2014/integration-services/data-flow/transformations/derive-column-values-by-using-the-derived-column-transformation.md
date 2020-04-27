@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770688"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivazione di valori di colonna tramite la trasformazione Colonna derivata
@@ -52,7 +52,7 @@ ms.locfileid: "62770688"
   
 9. Facoltativamente, modificare i valori nella colonna **Nome colonna derivata** .  
   
-10. Per configurare l'output degli errori, fare clic su **Configura output errori**. Per altre informazioni, vedere [Configurare un output degli errori in un componente del flusso di dati](../../configure-an-error-output-in-a-data-flow-component.md).  
+10. Per configurare l'output degli errori, fare clic su **Configura output errori**. Per altre informazioni, vedere [Configurazione di un output degli errori in un componente del flusso di dati](../../configure-an-error-output-in-a-data-flow-component.md).  
   
 11. Fare clic su **OK**.  
   

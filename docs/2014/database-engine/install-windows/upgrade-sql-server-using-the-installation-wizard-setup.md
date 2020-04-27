@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775407"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Eseguire l'aggiornamento a SQL Server 2014 utilizzando l'Installazione guidata (programma di installazione)
@@ -27,23 +27,23 @@ ms.locfileid: "62775407"
   
 -   [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md)  
   
--   [Utilizzare più versioni e istanze di SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+-   [Usare più versioni e istanze di SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
 -   [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
--   [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+-   [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
 -   [Utilizzo di Copia guidata database](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
 >  In un computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 non è supportato l'aggiornamento di una versione precedente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Per ulteriori informazioni sulle installazioni dei componenti di base del server, vedere [Install SQL Server 2014 on Server Core](install-sql-server-on-server-core.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio che disponga di autorizzazioni di lettura ed esecuzione per questa condivisione remota e che a eseguire l'operazione sia un amministratore locale.  
   
  Prima di aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere gli argomenti seguenti:  
   
--   [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
+-   [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   
 -   [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62775407"
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-upgrade-to-includesscurrentincludessscurrent-mdmd"></a>Per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-sscurrent"></a>Per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, passare alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
@@ -82,8 +82,7 @@ ms.locfileid: "62775407"
   
 11. Nella pagina Seleziona funzionalità le funzionalità da aggiornare saranno preselezionate. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti.  
   
-     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
+     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
     > [!NOTE]  
     >  Se si è scelto di aggiornare le funzionalità condivise selezionando ** \<aggiorna solo le funzionalità condivise>** nella pagina **Seleziona istanza** , tutte le funzionalità condivise sono preselezionate nella pagina Selezione funzionalità. Tutti i componenti condivisi vengono aggiornati contemporaneamente.  
@@ -94,18 +93,17 @@ ms.locfileid: "62775407"
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Istanze installate** : nella griglia vengono visualizzate le istanze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di presenti nel computer in cui è in esecuzione il programma di installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Istanze installate**: la griglia visualizzerà le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguita l'installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 13. Il flusso di lavoro relativo alla parte rimanente di questo argomento dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
 14. Nella pagina Configurazione server - Account di servizio vengono visualizzati gli account del servizio predefiniti per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità sottoposte ad aggiornamento.  
   
-     Le informazioni relative all'autenticazione e all'accesso verranno trasferite dall'istanza precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare singolarmente gli account del servizio in modo da garantire ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Le informazioni relative all'autenticazione e all'accesso verranno trasferite dall'istanza precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare singolarmente gli account del servizio in modo da garantire ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
-     **Nota sulla sicurezza**[!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Nota sulla sicurezza** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Avanti**.  
   
@@ -113,8 +111,7 @@ ms.locfileid: "62775407"
   
 16. Se tutte le regole vengono soddisfatte si procede automaticamente dalla finestra Regole funzionalità.  
   
-17. Nella pagina Inizio aggiornamento è presente una visualizzazione albero delle opzioni specificate durante l'installazione. Per continuare, fare clic su **Installa**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
+17. Nella pagina Inizio aggiornamento è presente una visualizzazione albero delle opzioni specificate durante l'installazione. Per continuare, fare clic su **Installa**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
   
 18. Durante l'installazione, nella pagina relativa allo stato è possibile monitorare lo stato di avanzamento dell'installazione.  
   
@@ -131,7 +128,7 @@ ms.locfileid: "62775407"
   
 -   **Configurare la nuova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione** : per ridurre la superficie di attacco di un sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni sulla configurazione della superficie di attacco, vedere il file Leggimi per questa versione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilità con le versioni precedenti](../../getting-started/backward-compatibility.md)  
   

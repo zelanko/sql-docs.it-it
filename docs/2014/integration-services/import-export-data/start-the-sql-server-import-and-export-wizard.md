@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768033"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Esecuzione dell'Importazione/Esportazione guidata SQL Server
@@ -126,7 +126,7 @@ ms.locfileid: "62768033"
     > [!NOTE]  
     >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Importazione/esportazione guidata SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Creare pacchetti in SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
   

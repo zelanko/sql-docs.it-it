@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774585"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "62774585"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   Il database primario deve utilizzare il modello di recupero con registrazione completa o registrazione minima delle operazioni bulk. Il passaggio al modello di recupero con registrazione minima comporterà l'arresto del log shipping.  
   
 -   Prima di configurare il log shipping, è necessario creare una condivisione per rendere disponibili i backup dei log delle transazioni al server secondario. Si tratta di una condivisione della directory in cui verranno generati i backup dei log delle transazioni. Se, ad esempio, si esegue il backup dei log delle transazioni nella directory c:\data\tlogs\\, è possibile creare la condivisione \\\\*serverprimario*\tlogs per tale directory.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62774585"
   
 28. Nella finestra di dialogo **Proprietà database** fare clic su **OK** per iniziare il processo di configurazione.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62774585"
   
 10. Nel server secondario abilitare i processi di copia e ripristino. Per altre informazioni, vedere [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiornare il log shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -162,10 +162,10 @@ ms.locfileid: "62774585"
   
 -   [Monitorare il log shipping &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
--   [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Eseguire il failover in un database secondario per il log shipping &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tabelle e stored procedure relative al log shipping](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

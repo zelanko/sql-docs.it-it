@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787040"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurare l'opzione di configurazione del server min memory per query
@@ -41,26 +41,26 @@ ms.locfileid: "62787040"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [dopo la configurazione dell'opzione min memory per query](#FollowUp)  
+-   **Completamento:**  [Dopo la configurazione dell'opzione min memory per query](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   La quantità di memoria minima per query ha la precedenza sull' [opzione index create memory](configure-the-index-create-memory-server-configuration-option.md). Se si modificano entrambe le opzioni e index create memory è minore di min memory per query, verrà visualizzato un messaggio di avviso, ma il valore risulterà impostato. Durante l'esecuzione delle query verrà visualizzato un altro avviso simile.  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a tecnici dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Con Query Processor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta di determinare la quantità ottimale di memoria da allocare per una query. L'opzione min memory per query consente all'amministratore di specificare la quantità di memoria minima assegnata a ogni query. In genere la quantità di memoria aumenta se le query comportano operazioni di hashing o di ordinamento per quantità di dati elevate. L'aumento del valore dell'opzione min memory per query può migliorare le prestazioni per alcune query di dimensioni ridotte o medie, ma può provocare una maggiore contesa per le risorse di memoria. L'opzione min memory per query include la memoria allocata per l'ordinamento.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Per configurare l'opzione min memory per query  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62787040"
   
 3.  Nella casella **Memoria minima per le query** immettere la quantità minima di memoria, in kilobyte, che verrà allocata per l'esecuzione di una query.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Per configurare l'opzione min memory per query  
   
@@ -94,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a>Completamento: dopo la configurazione dell'opzione min memory per query  
+##  <a name="follow-up-after-you-configure-the-min-memory-per-query-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione min memory per query  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

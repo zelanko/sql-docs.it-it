@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771543"
 ---
 # <a name="project-versions-dialog-box"></a>Finestra di dialogo Versioni progetto
@@ -30,7 +30,7 @@ ms.locfileid: "62771543"
   
 -   [Ripristinare una versione Progetto](#restore)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Versioni di progetto  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Versioni di progetto  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771543"
   
  Nella tabella **Versioni** della finestra di dialogo **Versioni progetto** viene visualizzato l'elenco di versioni del progetto che sono state distribuite nel server, con la data e l'ora di distribuzione della versione, la data e l'ora di ripristino della versione (se questa operazione è stata effettuata), la descrizione della versione e un identificatore di versione. La versione attualmente attiva viene indicata con un segno di spunta nella colonna **Corrente** della tabella.  
   
-##  <a name="restore"></a> Ripristinare una versione Progetto  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> Ripristinare una versione Progetto  
  Per ripristinare una versione precedente di un progetto, selezionare la versione nella tabella **Versioni** , quindi fare clic su **Ripristina versione selezionata**. Il progetto viene ripristinato alla versione selezionata e quella versione viene indicata con un segno di spunta nella colonna **Corrente** della tabella **Versioni** .  
   
   

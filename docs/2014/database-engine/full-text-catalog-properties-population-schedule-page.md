@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778823"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Proprietà catalogo full-text (pagina Pianificazione popolamento)
@@ -31,13 +31,13 @@ ms.locfileid: "62778823"
  **Tipo popolamento**  
  Consente di visualizzare o modificare l'operazione di popolamento, ovvero operazione completa, incrementale o di ottimizzazione.  
   
- **Enabled**  
+ **Attivata**  
  Selezionare o deselezionare questa casella di controllo per abilitare o disabilitare l'operazione pianificata.  
   
  **Descrizione**  
  Descrizione dell'operazione pianificata.  
   
- **Nuovo**  
+ **Nuova**  
  Fare clic su questo pulsante per creare una nuova pianificazione di indicizzazione. Questo pulsante Visualizza la finestra di dialogo **nuova pianificazione Catalogo indicizzazione full-text** .  
   
  **Modifica**  
@@ -46,7 +46,7 @@ ms.locfileid: "62778823"
  **Elimina**  
  Fare clic su questo pulsante per rimuovere la pianificazione di popolamento selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810436"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>Modifica della password degli account utilizzati da SQL Server (Gestione configurazione SQL Server)
@@ -31,15 +31,15 @@ ms.locfileid: "62810436"
   
  Per modificare le password di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Password scaduta](../password-expired.md).  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è lo strumento progettato e autorizzato per la modifica delle impostazioni dei servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modifica di un servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'applicazione Gestione controllo servizi di Windows (**services.msc**) non sempre determina la modifica di tutte le impostazioni necessarie e potrebbe impedire il corretto funzionamento del servizio. Tuttavia, in un ambiente cluster, dopo aver modificato la password nel nodo attivo tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario modificare la password del nodo passivo utilizzando Gestione controllo servizi.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario essere l'amministratore del computer per modificare la password utilizzata da un servizio.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-change-the-password-used-by-the-sql-server-database-engine-service"></a>Per modificare la password utilizzata dal servizio SQL Server (Motore di database)  
   

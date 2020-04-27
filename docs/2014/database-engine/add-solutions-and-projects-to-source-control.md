@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792091"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Aggiungere soluzioni e progetti al controllo del codice sorgente
@@ -34,7 +34,7 @@ ms.locfileid: "62792091"
 |[Aggiungere soluzioni al controllo del codice sorgente](../../2014/database-engine/add-solutions-to-source-control.md)|Vengono descritti i tipi di progetto che è possibile aggiungere e vengono date istruzioni per l'aggiunta di una soluzione al controllo del codice sorgente.|  
 |[Aggiungere progetti al controllo del codice sorgente](../../2014/database-engine/add-projects-to-source-control.md)|Vengono date istruzioni per aggiungere un progetto a una soluzione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Apertura di soluzioni e progetti dal controllo del codice sorgente](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

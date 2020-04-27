@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809533"
 ---
 # <a name="server-properties-database-settings-page"></a>Proprietà server (pagina Impostazioni database)
@@ -59,7 +59,7 @@ ms.locfileid: "62809533"
  **Intervallo di recupero (minuti)**  
  Imposta per ogni database il numero massimo di minuti per il recupero dei database. L'impostazione predefinita è 0, che rappresenta la configurazione automatica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò equivale a un tempo di recupero inferiore a un minuto e all'impostazione di checkpoint a intervalli di circa un minuto per i database attivi. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](configure-the-recovery-interval-server-configuration-option.md).  
   
- **data**  
+ **Dati**  
  Specifica il percorso predefinito dei file di dati. Fare clic sul pulsante Sfoglia per passare a un nuovo percorso predefinito. Le modifiche verranno applicate solo dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **File di log**  

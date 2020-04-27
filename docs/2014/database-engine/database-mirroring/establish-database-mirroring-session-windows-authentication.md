@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806918"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (SQL Server Management Studio)
@@ -43,7 +43,7 @@ ms.locfileid: "62806918"
   
 2.  Espandere **Database**e selezionare il database per il mirroring.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Verrà visualizzata la pagina **mirroring** della finestra di dialogo **Proprietà database** .  
   
 4.  Per iniziare la configurazione del mirroring, fare clic su **Configura sicurezza** . Verrà avviata la Configurazione guidata sicurezza mirroring del database.  
   
@@ -71,21 +71,21 @@ ms.locfileid: "62806918"
   
     -   Gli indirizzi TCP completi delle istanze del server principale e del server mirror sono specificati nella sezione **Indirizzi di rete del server** .  
   
-    -   Se la modalità operativa è impostata su **Protezione elevata con failover automatico (sincrona)** , viene anche specificato l'indirizzo TCP completo dell'istanza del server di controllo del mirroring.  
+    -   Se la modalità operativa è impostata su **Protezione elevata con failover automatico (sincrona)**, viene anche specificato l'indirizzo TCP completo dell'istanza del server di controllo del mirroring.  
   
 8.  Dopo l'avvio del mirroring, è possibile cambiare la modalità operativa e salvare la modifica scegliendo **OK**. Si noti che è possibile passare alla modalità a protezione elevata con failover automatico solo se prima si è specificato un indirizzo per il server di controllo del mirroring.  
   
     > [!NOTE]  
     >  Per rimuovere il server di controllo del mirroring, eliminare l'indirizzo di rete del server dal campo **Server di controllo del mirroring** . Se si passa dalla modalità a protezione elevata con failover automatico alla modalità a prestazioni elevate, il contenuto del campo **Server di controllo del mirroring** viene automaticamente cancellato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Sospendere o riprendere una sessione di mirroring del database &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
- [Impostazione di un database mirror per l'utilizzo della proprietà Trustworthy &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
- [Rimuovere il mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
+ [Configurare un database mirror per l'utilizzo della proprietà Trustworthy &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [Rimuovi &#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
+ [Gestione di account di accesso e processi dopo il cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Impostazione del mirroring del database &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  

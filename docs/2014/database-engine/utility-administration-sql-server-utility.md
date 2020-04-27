@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773753"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Amministrazione utilità (Utilità SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62773753"
 -   Il valore minimo predefinito per l'utilizzo dello spazio del volume del computer è 0%.  
   
  Riduzione dei disturbi di violazione dei criteri da risorse estremamente volatili. Per espandere i controlli per questa caratteristica, fare clic sulla freccia in giù sul lato destro della visualizzazione.  
- Per altre informazioni, vedere [Riduzione delle segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
+ Per ulteriori informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  Scheda Sicurezza - Consente di visualizzare i nomi degli account di accesso con le autorizzazioni necessarie per amministrare o leggere dal punto di controllo dell'utilità.  
@@ -101,10 +101,10 @@ ms.locfileid: "62773753"
  Ritorna ai valori predefiniti  
  Per ripristinare i valori predefiniti delle impostazioni in questa scheda, fare clic sul pulsante **Ripristina impostazioni predefinite** , quindi fare clic su **Applica**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Dettagli di applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Dettagli dell'applicazione livello dati distribuita &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [Istanza gestita dettagli &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

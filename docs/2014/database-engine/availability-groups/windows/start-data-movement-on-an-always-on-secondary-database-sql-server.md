@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813556"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Avviare lo spostamento dati su un database secondario AlwaysOn (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62813556"
   
     -   Ripristinare manualmente un backup recente del database primario utilizzando RESTORE WITH NORECOVERY, quindi ripristinare ogni successivo backup del log utilizzando RESTORE WITH NORECOVERY. Eseguire questa sequenza di ripristino in ogni istanza del server che ospita una replica secondaria per il gruppo di disponibilità.  
   
-         **Per altre informazioni:**  
+         **Per ulteriori informazioni:**  
   
          [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62813556"
         > [!NOTE]  
         >  Dopo aver creato tutti i database secondari per il gruppo di disponibilità, se si desidera eseguire backup nelle repliche secondarie, sarà necessario configurare nuovamente le preferenze di backup automatico del gruppo di disponibilità.  
   
-         **Per altre informazioni:**  
+         **Per ulteriori informazioni:**  
   
          [Prerequisiti per la migrazione dal log shipping a Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62813556"
   
 2.  Creare al più presto un join di ogni database secondario appena preparato al gruppo di disponibilità.  
   
-     **Per altre informazioni:**  
+     **Per ulteriori informazioni:**  
   
      [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Attività correlate  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62813556"
   
 -   [Usare la procedura guidata Aggiungi database a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774744"
 ---
 # <a name="password-expired"></a>Password scaduta
@@ -31,13 +31,13 @@ ms.locfileid: "62774744"
  **Nuova password**  
  Consente di immettere la nuova password per l'account di accesso.  
   
- **Conferma password**  
+ **Confirm Password**  
  Consente di digitare nuovamente la nuova password per confermarla.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Password complesse](../relational-databases/security/strong-passwords.md)   
  [Scegliere una modalità di autenticazione](../relational-databases/security/choose-an-authentication-mode.md)   
  [Modificare la modalità di autenticazione del server](configure-windows/change-server-authentication-mode.md)   
- [Modificare la password degli account utilizzati da SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [Modificare la password degli account usati da SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   
