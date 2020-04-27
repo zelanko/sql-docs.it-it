@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211686"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
@@ -37,20 +37,20 @@ ms.locfileid: "68211686"
   
      [Sicurezza](#Security)  
   
--   **Per ottenere informazioni su una funzione tramite:**  
+-   **Per acquisire informazioni su una funzione tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'uso di **sys.sql_expression_dependencies** per trovare tutte le dipendenze da una funzione richiede l'autorizzazione VIEW DEFINITION per il database e l'autorizzazione SELECT per **sys.sql_expression_dependencies** per il database. Le definizioni dell'oggetto di sistema, come quelle restituite in OBJECT_DEFINITION sono visibili pubblicamente.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Per mostrare le proprietà di una funzione definita dall'utente  
   
@@ -94,22 +94,22 @@ ms.locfileid: "68211686"
      **Oggetto di sistema**  
      Indica se la funzione è un oggetto di sistema. I valori sono True e False.  
   
-     **NULL ANSI**  
+     **ANSI NULLs**  
      Indica se l'oggetto è stato creato con l'opzione ANSI NULLs.  
   
-     **Crittografato**  
+     **Crittografata**  
      Indica se la funzione è crittografata. I valori sono True e False.  
   
      **Tipo di funzione**  
      Tipo della funzione definita dall'utente.  
   
-     **Identificatore tra virgolette**  
+     **Identificatore delimitato**  
      Indica se l'oggetto è stato creato con l'opzione quoted identifier.  
   
-     **Associato a schema**  
+     **Associata a schema**  
      Indica se la funzione è associata allo schema. I valori sono True e False. Per informazioni sulle funzioni associate a schema, vedere la sezione relativa a SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Per acquisire la definizione e le proprietà di una funzione  
   

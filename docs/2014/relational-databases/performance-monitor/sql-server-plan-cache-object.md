@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210811"
 ---
 # <a name="sql-server-plan-cache-object"></a>Oggetto Plan Cache di SQL Server
@@ -43,9 +43,9 @@ ms.locfileid: "68210811"
 |**Stored procedure estese**|Informazioni di catalogo relative alle stored procedure estese.|  
 |**Tabelle temporanee e variabili tabella**|Informazioni della cache relative a tabelle temporanee e variabili tabella.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [Oggetto di Gestione buffer di SQL Server](sql-server-buffer-manager-object.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Opzioni di configurazione del server di memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [SQL Server, oggetto Gestione buffer](sql-server-buffer-manager-object.md)   
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

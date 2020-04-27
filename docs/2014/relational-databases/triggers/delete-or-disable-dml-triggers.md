@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196523"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Eliminare o disabilitare trigger DML
@@ -41,9 +41,9 @@ ms.locfileid: "68196523"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Un trigger eliminato viene rimosso dal database corrente, ma la tabella e i dati su cui si basa il trigger non subiscono alcun impatto. L'eliminazione di una tabella comporta automaticamente l'eliminazione di tutti i trigger della tabella.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "68196523"
   
 -   La disabilitazione di un trigger non ne comporta l'eliminazione. Il trigger continua a esistere come oggetto nel database corrente Il trigger, tuttavia, non viene attivato quando viene eseguita qualsiasi istruzione INSERT, UPDATE o DELETE in cui è stato programmato. I trigger disabilitati possono essere riabilitati. L'abilitazione di un trigger non comporta la sua creazione ex-novo. Il trigger viene attivato allo stesso modo in cui è stato creato in origine.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per l'eliminazione di un trigger DML è richiesta l'autorizzazione ALTER per la tabella o la vista in cui è definito il trigger.  
   
  Per disabilitare o abilitare un trigger DML, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista per cui il trigger è stato creato.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>Per eliminare un trigger DML  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68196523"
   
 4.  Per abilitare il trigger, fare clic su **Abilita**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>Per eliminare un trigger DML  
   

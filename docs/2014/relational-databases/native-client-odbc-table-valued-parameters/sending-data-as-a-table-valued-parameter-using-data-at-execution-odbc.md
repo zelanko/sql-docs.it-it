@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205458"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
@@ -577,7 +577,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di programmazione di parametri con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

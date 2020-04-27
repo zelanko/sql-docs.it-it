@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198925"
 ---
 # <a name="create-a-workload-group"></a>Creare un gruppo di carico di lavoro
@@ -27,19 +27,19 @@ ms.locfileid: "68198925"
   
 -   **Per creare un gruppo di carico di lavoro usando:**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  La quantità di memoria utilizzata per la creazione dell'indice in una tabella partizionata non allineata è proporzionale al numero di partizioni interessate. Se la memoria totale necessaria supera il limite per query (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto dall'impostazione del gruppo di carico di lavoro, la creazione dell'indice potrebbe non essere completata. Poiché il gruppo di carico di lavoro predefinito consente a una query di superare il limite per query con la memoria minima necessaria per la compatibilità con SQL Server 2005, l'utente potrebbe essere in grado di eseguire la stessa creazione dell'indice nel gruppo di carico di lavoro predefinito, se nel pool di risorse predefinito è configurata una quantità di memoria totale sufficiente per eseguire una query.  
   
  Per la creazione dell'indice è possibile utilizzare un'area di lavoro per la memoria maggiore rispetto a quanto inizialmente garantito per le prestazioni. Questa speciale gestione è supportata da Resource Governor, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="CreWGProp"></a> Creare un gruppo di carico di lavoro utilizzando SQL Server Management Studio  
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreWGProp"></a> Creare un gruppo di carico di lavoro utilizzando SQL Server Management Studio  
  **Per creare un gruppo di carico di lavoro utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  In Esplora oggetti espandere in modo ricorsivo il nodo **Gestione** fino al pool di risorse incluso in cui è contenuto il gruppo di carico di lavoro da modificare.  
@@ -56,7 +56,7 @@ ms.locfileid: "68198925"
   
 7.  Per salvare le modifiche, fare clic su **OK**.  
   
-##  <a name="CreWGTSQL"></a> Creare un gruppo di carico di lavoro utilizzando Transact-SQL  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreWGTSQL"></a> Creare un gruppo di carico di lavoro utilizzando Transact-SQL  
  **Per creare un gruppo di carico di lavoro utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Eseguire l'istruzione CREATE WORKLOAD GROUP specificando i valori delle proprietà da impostare.  

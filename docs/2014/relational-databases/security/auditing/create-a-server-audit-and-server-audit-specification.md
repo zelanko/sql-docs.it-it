@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198407"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
@@ -41,17 +41,17 @@ ms.locfileid: "68198407"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   È necessario che un controllo esista prima che sia possibile creare la specifica del controllo del server. Quando viene creata una specifica del controllo del server, il relativo stato è disabilitato.  
   
 -   L'istruzione CREATE SERVER AUDIT è nell'ambito di una transazione. L'esecuzione del rollback della transazione comporta il rollback anche per l'istruzione.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
 -   Per creare, modificare o eliminare un controllo del server, le entità devono disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68198407"
   
 -   Dopo essere stata creata, la specifica del controllo del server può essere visualizzata dalle entità con autorizzazione CONTROL SERVER o ALTER ANY SERVER AUDIT, dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
@@ -154,7 +154,7 @@ ms.locfileid: "68198407"
   
 3.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   

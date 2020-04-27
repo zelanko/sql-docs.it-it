@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918069"
 ---
 # <a name="moverecord-method-ado"></a>Metodo MoveRecord (ADO)
@@ -34,23 +34,23 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Origine*  
- Facoltativa. Valore **stringa** che contiene un URL che identifica il **record** da spostare. Se *source* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **record** viene spostato. Se, ad esempio, il **record** rappresenta un file, il contenuto del file viene spostato nel percorso specificato da *destinazione*.  
+ *origine*  
+ Facoltativo. Valore **stringa** che contiene un URL che identifica il **record** da spostare. Se *source* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **record** viene spostato. Se, ad esempio, il **record** rappresenta un file, il contenuto del file viene spostato nel percorso specificato da *destinazione*.  
   
- *Destinazione*  
- Facoltativa. Valore **stringa** che contiene un URL che specifica la posizione in cui verrà spostato l'oggetto di *origine* .  
+ *Destination*  
+ Facoltativo. Valore **stringa** che contiene un URL che specifica la posizione in cui verrà spostato l'oggetto di *origine* .  
   
  *Nome utente*  
- Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
+ Facoltativo. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
   
  *Password*  
- Facoltativa. **Stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
+ Facoltativo. **Stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
   
  *Opzioni*  
- Facoltativa. Valore [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
+ Facoltativo. Valore [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Async*  
- Facoltativa. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
+ Facoltativo. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **String**. In genere, viene restituito il valore di *Destination* . Tuttavia, il valore esatto restituito è dipendente dal provider.  
@@ -73,7 +73,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Desktop remoto)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

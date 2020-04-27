@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211490"
 ---
 # <a name="planning-a-sql-server-installation"></a>Pianificazione di un'installazione di SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "68211490"
  [Protocolli e librerie di rete](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
  In questo argomento viene fornita la descrizione della configurazione predefinita dei protocolli di rete disponibili questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione disponibili.  
   
- [Utilizzare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [Usare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
  In questo argomento sono contenute le considerazioni relative alle installazioni di più versioni e istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Versioni in lingua locale di SQL Server](../../../2014/sql-server/install/local-language-versions-in-sql-server.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "68211490"
  [Installare le funzionalità di business intelligence di SQL Server 2014](install-sql-server-business-intelligence-features.md)  
  In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene illustrata la modalità di installazione delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che fanno parte della piattaforma di Business Intelligence di Microsoft.  
   
- [Eseguire l'aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
  Nella sezione vengono forniti cenni preliminari sull'aggiornamento delle istanze delle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Disinstallare SQL Server 2014](uninstall-sql-server.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "68211490"
  [Installazione del cluster di failover di SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono descritte le modalità di installazione e configurazione del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida introduttiva all'installazione di SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [Installare SQL Server 2014 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   

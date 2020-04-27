@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195828"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>Utilizzo di WQL e di linguaggi di scripting con il provider WMI per la gestione della configurazione
@@ -36,8 +36,8 @@ ms.locfileid: "68195828"
   
  È possibile accedere al provider WMI per la gestione della configurazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Per ulteriori informazioni sull'accesso al provider WMI da un'interfaccia utente, vedere procedure [per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Accedere al provider WMI per la gestione della configurazione tramite WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
- [Modificare le proprietà avanzate del servizio SQL Server utilizzando VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
+ [Modificare le proprietà avanzate del servizio SQL Server usando VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

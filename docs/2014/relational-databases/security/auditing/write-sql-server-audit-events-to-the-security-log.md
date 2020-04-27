@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211973"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza
@@ -47,7 +47,7 @@ ms.locfileid: "68211973"
   
      [Sicurezza](#Security)  
   
--   **Per scrivere SQL Server eventi di controllo nel registro di sicurezza:**  
+-   **Per registrare eventi di controllo di SQL Server nel registro di sicurezza:**  
   
      [Configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol](#auditpolAccess)  
   
@@ -55,17 +55,17 @@ ms.locfileid: "68211973"
   
      [Concedere l'autorizzazione di generazione dei controlli di sicurezza a un account mediante secpol](#secpolPermission)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
- Gli amministratori del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono comprendere che le impostazioni locali relative al registro di sicurezza possono essere sovrascritte da criteri del dominio. In questo caso i criteri del dominio potrebbero sovrascrivere l'impostazione della sottocategoria (**auditpol/get/subcategory:"application generated"** ). Questa condizione può influire sulla possibilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di registrare eventi senza disporre di alcuna modalità per rilevare che gli eventi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sta tentando di controllare non verranno registrati.  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
+ Gli amministratori del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono comprendere che le impostazioni locali relative al registro di sicurezza possono essere sovrascritte da criteri del dominio. In questo caso i criteri del dominio potrebbero sovrascrivere l'impostazione della sottocategoria (**auditpol/get/subcategory:"application generated"**). Questa condizione può influire sulla possibilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di registrare eventi senza disporre di alcuna modalità per rilevare che gli eventi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sta tentando di controllare non verranno registrati.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario essere amministratore di Windows per configurare queste impostazioni.  
   
-##  <a name="auditpolAccess"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a>Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol  
   
 1.  Aprire un prompt dei comandi con autorizzazioni amministrative.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211973"
   
 3.  Chiudere la finestra del prompt dei comandi.  
   
-##  <a name="secpolAccess"></a> Per concedere l'autorizzazione di generazione dei controlli di sicurezza a un account mediante secpol  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> Per concedere l'autorizzazione di generazione dei controlli di sicurezza a un account mediante secpol  
   
 1.  Per qualsiasi sistema operativo Windows, scegliere **Esegui** dal menu **Start**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68211973"
   
 9. Riavviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per abilitare questa impostazione.  
   
-##  <a name="secpolPermission"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante secpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante secpol  
   
 1.  Se si utilizza un sistema operativo precedente a [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, scegliere **Esegui** dal menu **Start**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68211973"
   
 7.  Chiudere lo strumento Criteri di sicurezza.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)  
   
   

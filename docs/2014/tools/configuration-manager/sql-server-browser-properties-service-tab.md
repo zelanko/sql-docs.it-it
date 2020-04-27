@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211155"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Proprietà - SQL Server Browser (scheda Servizio)
-  Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser viene eseguito come servizio nel server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser rimane in attesa delle richieste in ingresso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le risorse e fornisce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sulle istanze di installate nel computer.  
+  Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser viene eseguito come servizio nel server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa delle richieste in entrata di risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornisce informazioni sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer.  
   
  Utilizzare la scheda **Servizio** della finestra delle proprietà di **SQL Server Browser** per visualizzare le opzioni seguenti. Tutte le proprietà sono in sola lettura, fatta eccezione per **Modalità di avvio** .  
   
@@ -32,17 +32,17 @@ ms.locfileid: "68211155"
  **Codice di uscita**  
  Quando si verifica un errore, il numero dell'errore viene visualizzato in questa casella. Questo numero può risultare utile per la risoluzione dei problemi. È possibile cercarlo nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base oppure comunicarlo al personale del supporto tecnico.  
   
- **Nome host**  
+ **Host Name**  
  Visualizza il nome del computer o del cluster che esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser.  
   
  **Nome**  
  Indica il nome visualizzato del servizio.  
   
- **ID di processo**  
+ **ID processo**  
  Visualizza l'ID di processo di Windows.  
   
  **Tipo di servizio**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installa diversi servizi.  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
@@ -53,8 +53,8 @@ ms.locfileid: "68211155"
   
 -   Disabilitato: il servizio non può essere avviato.  
   
- **Stato**  
- Indica se il servizio è in esecuzione, arrestato o disabilitato. "**...**" indica una modifica di stato in sospeso.  
+ **State**  
+ Indica se il servizio è in esecuzione, arrestato o disabilitato. " **...** " indica una modifica di stato in sospeso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196665"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
@@ -104,9 +104,9 @@ ms.locfileid: "68196665"
 |Tipo di dati|Byte non di tipo sparse|Byte di tipo sparse|Percentuale valori Null|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Varia in base al tipo di dati sottostante|||  
-|`varchar`o`char`|2*|4*|60%|  
-|`nvarchar`o`nchar`|2*|4*+|60%|  
-|`varbinary`o`binary`|2*|4*|60%|  
+|`varchar` o `char`|2*|4*|60%|  
+|`nvarchar` o `nchar`|2*|4*+|60%|  
+|`varbinary` o `binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
@@ -231,7 +231,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Usare set di colonne](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

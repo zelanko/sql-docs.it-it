@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196718"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
@@ -35,15 +35,15 @@ ms.locfileid: "68196718"
   
      [Sicurezza](#Security)  
   
--   **Per specificare un valore predefinito utilizzando:**  
+-   **Per specificare un valore predefinito personalizzato:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Se la voce nel campo **Valore predefinito** sostituisce un valore predefinito associato (visualizzato senza parentesi), verrà chiesto se separare il valore predefinito e sostituirlo con il nuovo valore.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68196718"
   
 -   Per specificare un oggetto o una funzione, immetterne il nome senza racchiuderlo tra virgolette.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Per specificare un valore predefinito per una colonna  
   
@@ -71,9 +71,9 @@ ms.locfileid: "68196718"
     > [!NOTE]  
     >  Per specificare un valore predefinito numerico, immettere il numero desiderato. Per specificare un oggetto o una funzione, immetterne il nome. Per specificare un valore predefinito alfanumerico, immettere il valore racchiudendolo tra virgolette singole.  
   
-4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+4.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Per specificare un valore predefinito per una colonna  
   
@@ -95,6 +95,6 @@ ms.locfileid: "68196718"
   
     ```  
   
- Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+ Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

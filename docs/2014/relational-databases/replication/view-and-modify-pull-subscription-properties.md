@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198981"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Visualizzazione e modifica delle proprietà delle sottoscrizioni pull
@@ -38,7 +38,7 @@ ms.locfileid: "68198981"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Visualizzare le proprietà delle sottoscrizioni pull dal server di pubblicazione o dal Sottoscrittore nella finestra di dialogo **Proprietà sottoscrizione - \<ServerPubblicazione>: \<DatabasePubblicazione>** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nel Sottoscrittore è disponibile un numero maggiore di proprietà ed è inoltre possibile modificare le proprietà. Le proprietà possono inoltre essere visualizzate sul server di pubblicazione nella scheda **Tutte le sottoscrizioni** , disponibile in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Per visualizzare le proprietà delle sottoscrizioni pull dal server di pubblicazione in Management Studio  
@@ -71,7 +71,7 @@ ms.locfileid: "68198981"
   
 4.  Visualizzare le proprietà e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile modificare le sottoscrizioni pull e accedere alle relative proprietà a livello di programmazione utilizzando stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una sottoscrizione pull di una pubblicazione snapshot o transazionale  
@@ -119,7 +119,7 @@ ms.locfileid: "68198981"
   
 1.  Nel Sottoscrittore eseguire [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Specificare **@publication**, **@publisher**, **@publisher_db**, la proprietà della sottoscrizione da modificare **@property**come e il nuovo valore come **@value**.  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  Le classi RMO utilizzate per la visualizzazione o la modifica delle proprietà di una sottoscrizione pull dipendono dal tipo di pubblicazione per cui viene creata la sottoscrizione pull.  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare o modificare le proprietà di una sottoscrizione pull di una pubblicazione snapshot o transazionale  
@@ -159,7 +159,7 @@ ms.locfileid: "68198981"
 8.  Chiudere tutte le connessioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzazione delle informazioni ed esecuzione di attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  
   

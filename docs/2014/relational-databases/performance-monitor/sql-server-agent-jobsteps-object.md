@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206557"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>Oggetto JobSteps di SQL Server Agent
-  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto prestazione **JobSteps** di Agent contiene contatori delle prestazioni che segnalano informazioni sui passaggi del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
+  L'oggetto prestazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **di** Agent contiene contatori delle prestazioni che forniscono informazioni relative ai passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
  Nella tabella seguente sono inclusi i contatori **SQLAgent:Passaggi processi** .  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68206557"
 |----------|-----------------|  
 |**Passaggi attivi**|In questo contatore viene visualizzato il numero di passaggi del processo attualmente in esecuzione.|  
 |**Passaggi in coda**|In questo contatore viene visualizzato il numero di passaggi del processo pronti per l'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ma la cui esecuzione non è ancora stata avviata.|  
-|**Totale tentativi passaggio**|Questo contatore indica il numero totale di tentativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di esecuzione di un passaggio di processo dopo l'ultimo riavvio del server.|  
+|**Totale tentativi passaggio**|In questo contatore viene visualizzato il numero totale di tentativi di esecuzione di un passaggio del processo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'ultimo riavvio del server.|  
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
@@ -41,16 +41,16 @@ ms.locfileid: "68206557"
 |**ANALYSISQUERY**|Informazioni per i passaggi del processo che utilizzano il sottosistema ANALYSISQUERY.|  
 |**CmdExec**|Informazioni per i passaggi del processo che utilizzano il sottosistema **CmdExec** .|  
 |**Distribuzione**|Informazioni per i passaggi del processo che utilizzano il sottosistema **Distribution** .|  
-|**DTS**|Informazioni per i passaggi del processo che utilizzano il sottosistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-|**Lettura log**|Informazioni per i passaggi del processo che utilizzano il sottosistema **LogReader** .|  
+|**Dts**|Informazioni per i passaggi del processo che utilizzano il sottosistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
+|**LogReader**|Informazioni per i passaggi del processo che utilizzano il sottosistema **LogReader** .|  
 |**Merge**|Informazioni per i passaggi del processo che utilizzano il sottosistema **Merge** .|  
 |**PowerShell**|Informazioni per i passaggi del processo che utilizzano il sottosistema **PowerShell** .|  
-|**Processo QueueReader**|Informazioni per i passaggi del processo che utilizzano il sottosistema **QueueReader** .|  
+|**QueueReader**|Informazioni per i passaggi del processo che utilizzano il sottosistema **QueueReader** .|  
 |**Snapshot**|Informazioni per i passaggi del processo che utilizzano il sottosistema **Snapshot** .|  
 |**TSQL**|Informazioni per i passaggi del processo che comportano l'esecuzione di [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i passaggi del processo](../../ssms/agent/manage-job-steps.md)   
+ [Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)   
  [Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)   
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   

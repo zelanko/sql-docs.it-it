@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199443"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
@@ -146,8 +146,7 @@ ms.locfileid: "68199443"
         |`hierarchyid`|Modifica consentita|Modifica bloccata|Modifica bloccata|  
         |`geography` e `geometry`|Modifica consentita|Consenti modifica<sup>1</sup>|Modifica bloccata|  
         |`filestream`|Modifica consentita|Modifica bloccata|Modifica bloccata|  
-        |
-  `date`, `time`, `datetime2` e `datetimeoffset`|Modifica consentita|Consenti modifica<sup>1</sup>|Modifica bloccata|  
+        |`date`, `time`, `datetime2` e `datetimeoffset`|Modifica consentita|Consenti modifica<sup>1</sup>|Modifica bloccata|  
   
          <sup>1</sup> SQL Server Compact i sottoscrittori convertono questi tipi di dati nel Sottoscrittore.  
   

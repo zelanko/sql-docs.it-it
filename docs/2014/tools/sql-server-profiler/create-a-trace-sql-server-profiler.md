@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211084"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Creare una traccia (SQL Server Profiler)
@@ -54,7 +54,7 @@ ms.locfileid: "68211084"
   
 7.  Fare clic su **Esegui** per avviare la traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)   

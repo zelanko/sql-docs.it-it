@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205455"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
@@ -102,8 +102,7 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Popolare i buffer del parametro. 
-  `cbTVP` è impostato sul numero di righe da inviare al server.  
+4.  Popolare i buffer del parametro. `cbTVP` è impostato sul numero di righe da inviare al server.  
   
     ```  
     // Populate parameters.  
@@ -126,7 +125,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di programmazione di parametri con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

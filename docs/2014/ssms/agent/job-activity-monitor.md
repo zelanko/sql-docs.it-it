@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211376"
 ---
 # <a name="job-activity-monitor"></a>Monitoraggio attività processi
@@ -27,7 +27,7 @@ ms.locfileid: "68211376"
  **Nome**  
  Nome del processo.  
   
- **Enabled**  
+ **Attivata**  
  Indica se il processo è abilitato (**sì**) o non abilitato (**no**).  
   
  **Stato** <sup>1</sup>  
@@ -46,10 +46,10 @@ ms.locfileid: "68211376"
  Categoria assegnata al processo.  
   
  **Eseguibile**  
- **Sì** se il processo può essere eseguito; **No** se il processo non può essere eseguito. Un processo non può essere eseguito se non è associato a passaggi o a un server di destinazione.  
+ **Sì** se il processo può essere eseguito, **No** se il processo non può essere eseguito. Un processo non può essere eseguito se non è associato a passaggi o a un server di destinazione.  
   
- **Pianificata**  
- **Sì** se il processo è assegnato a una pianificazione del processo. **No** se il processo non ha alcuna pianificazione.  
+ **Pianificate**  
+ **Sì** se il processo è assegnato a una programmazione processi, **No** se il processo non ha alcuna programmazione.  
   
  <sup>1</sup> Solo i membri del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del server sysadmin e del gruppo Administrators del server possono visualizzare i valori in questa colonna. Membri del ruolo SQLAgentOperatorRole non possono vedere i valori in questa colonna.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68211376"
   
 -   In **Esplora oggetti**espandere il server, espandere **SQL Server Agent**, fare clic con il pulsante destro del mouse su **Monitoraggio attività processi**e scegliere **Visualizza attività processi**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitoraggio delle attività del processo](monitor-job-activity.md)  
   
   

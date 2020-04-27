@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206757"
 ---
 # <a name="effects-of-iso-options"></a>Effetti delle opzioni ISO
@@ -40,7 +40,7 @@ ms.locfileid: "68206757"
   
  Per consentire al driver di conoscere lo stato corrente delle opzioni SET, le applicazioni ODBC non devono utilizzare l'istruzione SET [!INCLUDE[tsql](../../../includes/tsql-md.md)] per impostarle. Per eseguire questa operazione, infatti, devono utilizzare solo le opzioni dell'origine dati o della connessione. Se l'applicazione genera istruzioni SET, il driver può generare istruzioni SQL errate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di istruzioni &#40;ODBC&#41;](executing-statements-odbc.md)   
  [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)   
  [SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206048"
 ---
 # <a name="create-a-maintenance-plan"></a>Creare un piano di manutenzione
@@ -36,17 +36,17 @@ ms.locfileid: "68206048"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Per creare un piano di manutenzione multiserver, è necessario configurare un ambiente multiserver composto da un server master e uno o più server di destinazione. I piani di manutenzione multiserver devono essere creati e gestiti nel server master. Questi piani possono essere visualizzati, ma non gestiti, nei server di destinazione.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
- Per creare o gestire piani di manutenzione, è necessario essere un membro del ruolo predefinito del server **sysadmin** .  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
+ Per creare o gestire piani di manutenzione, è necessario essere membri del ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>Per creare un piano di manutenzione utilizzando la Creazione guidata piano di manutenzione  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68206048"
   
 4.  Creare un piano di manutenzione seguendo i passaggi illustrati in [Creare un piano di manutenzione &#40;area di progettazione del piano di manutenzione&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>Per creare un piano di manutenzione  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68206048"
   
     ```  
   
- Per altre informazioni, vedere:  
+ Per altre informazioni, vedi:  
   
--   [sp_add_job &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

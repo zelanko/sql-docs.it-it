@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205694"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Elaborazione di istruzioni che generano messaggi
@@ -49,8 +49,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
               Table Scan"  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 ha sostituito l'opzione SHOWPLAN con SHOWPLAN_ALL e SHOWPLAN_TEXT. Entrambe restituiscono l'output come set di risultati, non come set di messaggi.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 ha sostituito l'opzione SHOWPLAN con SHOWPLAN_ALL e SHOWPLAN_TEXT. Entrambe restituiscono l'output come set di risultati, non come set di messaggi.  
   
  Ogni riga di dati STATISTICS TIME viene restituita nel formato:  
   
@@ -146,7 +145,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  Se l'istruzione PRINT o RAISERROR viene restituita dopo un'istruzione SQL, ad esempio un'istruzione SELECT, le informazioni di stampa o RAISERROR vengono restituite quando si [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)posizioni del set di risultati contenente l'errore. **SQLMoreResults** restituisce SQL_SUCCESS_WITH_INFO o SQL_ERROR a seconda della gravità del messaggio. I messaggi vengono recuperati chiamando **SQLGetDiagRec** fino a quando non viene restituito SQL_NO_DATA.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di errori e messaggi](handling-errors-and-messages.md)  
   
   
