@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280426"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Esplorazione del modello di clustering (Esercitazione di base sul data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "63280426"
   
 
   
-##  <a name="ClusterDiagramTab"></a>Scheda Diagramma cluster  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>Scheda Diagramma cluster  
  Nella scheda Diagramma dei cluster vengono visualizzati tutti i cluster di un modello di data mining. Le linee tra i cluster rappresentano la prossimità e appaiono ombreggiate in base al grado di analogia dei cluster. Il colore effettivo dei cluster rappresenta la frequenza della variabile e lo stato nel cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>Per esplorare il modello nella scheda Diagramma dei cluster  
@@ -57,7 +57,7 @@ ms.locfileid: "63280426"
   
 
   
-##  <a name="ClusterProfilesTab"></a>Scheda Profili cluster  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>Scheda Profili cluster  
  La scheda **Profili cluster** fornisce una visualizzazione complessiva del `TM_Clustering` modello. La scheda **Profili cluster** contiene una colonna per ogni cluster nel modello. Nella prima colonna sono elencati gli attributi associati ad almeno un cluster. La parte rimanente del visualizzatore contiene la distribuzione degli stati di un attributo per ogni cluster. La distribuzione di una variabile discreta viene visualizzata come una barra colorata con il numero massimo di barre visualizzate nell'elenco **Barre istogramma** . Gli attributi continui sono visualizzati sotto forma di un grafico a rombi che rappresenta la deviazione media e standard in ogni cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>Per esplorare il modello nella scheda Profili cluster  
@@ -84,7 +84,7 @@ ms.locfileid: "63280426"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>Scheda Caratteristiche cluster  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>Scheda Caratteristiche cluster  
  Con la scheda **Caratteristiche cluster** è possibile esaminare più in dettaglio le caratteristiche che costituiscono un cluster. Anziché confrontare le caratteristiche di tutti i cluster (come nella scheda Profili cluster), è possibile esplorare un cluster alla volta. Ad esempio, se si seleziona **Bike Buyers High** dall'elenco **cluster** , è possibile visualizzare le caratteristiche dei clienti in questo cluster. Sebbene la visualizzazione sia diversa dalla scheda Profili cluster, i risultati sono gli stessi.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "63280426"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>Scheda Analisi discriminante tra cluster  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>Scheda Analisi discriminante tra cluster  
  Con la scheda analisi **discriminante tra cluster** è possibile esplorare le caratteristiche che distinguono un cluster da un altro. Dopo aver selezionato due cluster, uno dall'elenco **cluster 1** e uno dall'elenco **cluster 2** , il Visualizzatore calcola le differenze tra i cluster e visualizza un elenco degli attributi che distinguono maggiormente i cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>Per esplorare il modello nella scheda Analisi discriminante tra cluster  
@@ -118,7 +118,7 @@ ms.locfileid: "63280426"
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
  [Esplorazione del modello Decision Trees &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)   
  [Scheda Analisi discriminante tra cluster &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/cluster-discrimination-tab-mining-model-viewer.md)   
  [Scheda Profili cluster &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/cluster-profiles-tab-mining-model-viewer.md)   

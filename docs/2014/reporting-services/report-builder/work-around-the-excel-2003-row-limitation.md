@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107544"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Soluzione alternativa per il limite di righe in Excel
@@ -44,15 +44,15 @@ ms.locfileid: "66107544"
   
 5.  Fare clic con il pulsante destro del mouse su **Gruppo 1** nella sezione **Gruppi di righe** , quindi scegliere **Proprietà gruppo**.  
   
-     ![Visualizza proprietà di gruppo](../media/groupproperties-updated.png "Visualizza proprietà di gruppo")  
+     ![Visualizzare le proprietà del gruppo](../media/groupproperties-updated.png "Visualizzare le proprietà del gruppo")  
   
 6.  Nella pagina **Ordinamento** della finestra di dialogo **Proprietà gruppo** selezionare l'opzione di ordinamento predefinita e fare clic su **Elimina**.  
   
-     ![Elimina ordinamento predefinito](../media/groupproperties-sorting-updated.png "Elimina ordinamento predefinito")  
+     ![Eliminare l'ordinamento predefinito](../media/groupproperties-sorting-updated.png "Eliminare l'ordinamento predefinito")  
   
 7.  Nella pagina **Interruzioni di pagina** fare clic su **Tra ogni istanza di un gruppo** , quindi scegliere **OK**.  
   
-     ![Imposta interruzioni di pagina](../media/groupproperties-pagebreaks-updated.png "Imposta interruzioni di pagina")  
+     ![Impostare le interruzioni di pagina](../media/groupproperties-pagebreaks-updated.png "Impostare le interruzioni di pagina")  
   
 8.  Salvare il report. Quando lo si esporta in Excel, viene esportato in più fogli di lavoro, ognuno con un massimo di 65000 righe.  
   

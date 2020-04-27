@@ -1,5 +1,5 @@
 ---
-title: Creazione di una vista sottoscrizioni (Master Data Services) Documenti Microsoft
+title: Creare una vista sottoscrizioni (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479942"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Creare una vista sottoscrizioni (Master Data Services)
-  Creare una vista sottoscrizioni quando si vuole creare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] una vista dei dati nel database per l'utilizzo da parte dei sistemi di sottoscrizione.  
+  Creare una vista sottoscrizioni quando si desidera creare una vista dei dati nel database per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] l'utilizzo da parte dei sistemi di sottoscrizione.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione** .  
   
--   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [Amministratori &#40;&#41;Master Data Services ](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-subscription-view"></a>Per creare una vista sottoscrizioni  
   
@@ -36,28 +36,28 @@ ms.locfileid: "65479942"
   
 2.  Dalla barra dei menu scegliere **Crea viste**.  
   
-3.  Nella pagina **Visualizzazioni sottoscrizioni** fare clic su **Aggiungi visualizzazione sottoscrizioni.**  
+3.  Nella pagina **viste sottoscrizioni** fare clic su **Aggiungi vista sottoscrizioni**.  
   
-4.  Nella casella **Nome visualizzazione** sottoscrizioni del riquadro Crea **vista sottoscrizioni** digitare un nome per la visualizzazione.  
+4.  Nella casella **nome vista** sottoscrizioni del riquadro **Crea vista sottoscrizioni** Digitare un nome per la visualizzazione.  
   
 5.  Selezionare un modello dall'elenco **Modello** .  
   
-6.  Selezionare l'opzione **Version** o **Version Flag,** quindi selezionare dall'elenco corrispondente.  
+6.  Selezionare l'opzione **versione** o **flag versione** , quindi selezionare una voce dall'elenco corrispondente.  
   
     > [!TIP]  
     >  Creare una vista sottoscrizioni basata su un flag di versione. Quando si blocca una versione, è possibile riassegnare il flag a una versione aperta senza aggiornare la vista sottoscrizioni.  
   
-7.  Selezionare l'opzione **Entità** o **Gerarchia derivata** e quindi selezionare dall'elenco corrispondente.  
+7.  Selezionare l'opzione **entità** o **gerarchia derivata** , quindi selezionare una voce dall'elenco corrispondente.  
   
 8.  Selezionare un formato di vista sottoscrizioni dall'elenco **Formato** .  
   
 9. Se si sceglie **Livelli espliciti** o **Livelli derivati** dall'elenco **Formato** , digitare il numero di livelli della gerarchia da includere nella vista.  
   
-10. Fare clic su **Salva**.  
+10. Fare clic su **Save**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esportazione di dati &#40;&#41;di Master Data ServicesExporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
- [Eliminare una visualizzazione sottoscrizioni &#40;&#41;Master Data ServicesDelete a Subscription View &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Esportazione dei dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+ [Eliminare una vista sottoscrizioni &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [Creare un flag di versione &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   
   

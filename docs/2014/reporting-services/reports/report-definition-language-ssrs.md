@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102501"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
@@ -37,27 +37,26 @@ ms.locfileid: "66102501"
   
 -   Uno schema estensibile e aperto che supporta spazi dei nomi aggiuntivi ed elementi personalizzati.  
   
-##  <a name="bkmk_RDL_Specifications"></a>Specifiche RDL  
+##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a>Specifiche RDL  
  Per scaricare le specifiche per versioni dello schema specifiche, vedere [Specifica del linguaggio RDL](https://go.microsoft.com/fwlink/?linkid=116865).  
   
-##  <a name="bkmk_RDL_XML_Schema_Definition"></a>Definizione di XML schema RDL  
+##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a>Definizione di XML schema RDL  
  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] file di report Definition Language (RDL) viene convalidato tramite un file XSD (XML Schema Definition). Lo schema definisce le regole relative alla posizione degli elementi RDL in un file rdl. Un elemento include il tipo di dati e la cardinalità, ovvero il numero di occorrenze consentite. Un elemento può essere semplice o complesso. Un elemento semplice non dispone di attributi o elementi figlio. Un elemento complesso dispone di elementi figlio e, facoltativamente, di attributi.  
   
  Ad esempio, lo schema seguente include l'elemento RDL `ReportParameters` che è il tipo complesso `ReportParametersType`. Per convenzione, un tipo complesso per un elemento è il nome dell'elemento seguito dalla parola `Type`. Un elemento `ReportParameters` può essere contenuto dall'elemento `Report` (un tipo complesso) e contenere elementi `ReportParameter`. Un `ReportParameterType` è un tipo semplice che può essere solo uno dei seguenti valori: `Boolean`, `DateTime`, `Integer`, `Float` o `String`. Per altre informazioni sui tipi di dati dell'elemento XML Schema, vedere [XML Schema Parte 2: Tipi di dati Seconda edizione](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  L'XSD RDL è disponibile nel file ReportDefinition.xsd, contenuto nella cartella Extras nel CD-ROM del prodotto. È anche disponibile nel server di report tramite l'URL seguente: http://servername/reportserver/reportdefinition.xsd.  
   
-##  <a name="bkmk_Creating_RDL"></a>Creazione di RDL  
+##  <a name="creating-rdl"></a><a name="bkmk_Creating_RDL"></a>Creazione di RDL  
  La natura aperta ed estensibile di RDL consente di compilare una varietà di strumenti e applicazioni per la generazione di codice RDL in base al relativo XML Schema.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce più strumenti per compilare i file RDL. Per altre informazioni, vedere [Strumenti di Reporting Services](../tools/reporting-services-tools.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce più strumenti per compilare i file RDL. Per altre informazioni, vedere [Strumenti di Reporting Services](../tools/reporting-services-tools.md).  
   
- Uno dei modi più semplici per generare RDL da un'applicazione consiste nell'usare le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classi dello <xref:System.Xml> spazio dei nomi <xref:System.Linq> e dello spazio dei nomi. In particolare, la classe **XmlTextWriter** può essere usata per scrivere codice RDL. Con **XmlTextWriter**è possibile generare una definizione di report completa in qualsiasi applicazione [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Gli sviluppatori possono inoltre estendere il linguaggio RDL aggiungendo elementi del report personalizzati con proprietà personalizzate. Per altre informazioni sulla classe **XmlTextWriter** e sullo spazio dei nomi <xref:System.Xml> , vedere la Guida per gli sviluppatori di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per ulteriori informazioni su LINQ (Language-Integrated Query), cercare "LINQ to XML" in MSDN.  
+ Uno dei modi più semplici per generare RDL da un'applicazione consiste nell'usare le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classi dello <xref:System.Xml> spazio dei nomi <xref:System.Linq> e dello spazio dei nomi. In particolare, la classe **XmlTextWriter** può essere usata per scrivere codice RDL. Con **XmlTextWriter**è possibile generare una definizione di report completa in qualsiasi applicazione [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Gli sviluppatori possono inoltre estendere il linguaggio RDL aggiungendo elementi del report personalizzati con proprietà personalizzate. Per altre informazioni sulla classe **XmlTextWriter** e sullo spazio dei nomi <xref:System.Xml>, vedere la Guida per gli sviluppatori di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per ulteriori informazioni su LINQ (Language-Integrated Query), cercare "LINQ to XML" in MSDN.  
   
  L'estensione di file standard per i file di definizione dei report è rdl. È inoltre possibile sviluppare file di definizione dei report del client la cui estensione è rdlc. Il tipo MIME per entrambe le estensioni è text/xml. Per altre informazioni sui report, vedere [Report di Reporting Services &#40;SSRS&#41;](reporting-services-reports-ssrs.md).  
   
-##  <a name="bkmk_RDL_Types"></a>Tipi RDL  
+##  <a name="rdl-types"></a><a name="bkmk_RDL_Types"></a>Tipi RDL  
  Nella tabella seguente vengono elencati i tipi utilizzati negli elementi e negli attributi RDL.  
   
 |Type|Descrizione|  
@@ -76,7 +75,7 @@ ms.locfileid: "66102501"
 |`UnsignedInt`|Proprietà con un valore intero (uint32) senza segno.|  
 |`Variant`|Proprietà con qualsiasi tipo XML semplice.|  
   
-##  <a name="bkmk_RDL_Data_Types"></a>Tipi di dati RDL  
+##  <a name="rdl-data-types"></a><a name="bkmk_RDL_Data_Types"></a>Tipi di dati RDL  
  L'enumerazione DataType definisce il tipo di dati di un attributo, di un'espressione o di un parametro in RDL. Nella tabella seguente viene illustrato come i tipi di dati Common Language Runtime (CLR) corrispondono ai tipi di dati RDL.  
   
 |**Tipi CLR**|**Tipo di dati corrispondente**|  
@@ -87,7 +86,7 @@ ms.locfileid: "66102501"
 |Single, Double|Float|  
 |String, Char, GUID, Timespan|string|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
  [Utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Elementi dei report personalizzati](../custom-report-items/custom-report-items.md)  

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101931"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornisce funzionalità di sicurezza incorporate che è possibile utilizzare per concedere l'accesso agli elementi del server di report a cui si accede da siti e raccolte di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] offre caratteristiche di sicurezza predefinite che è possibile usare per concedere l'accesso agli elementi del server di report dai siti e dalle raccolte di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  
   
  Se non sono state assegnate autorizzazioni oppure non si ha familiarità con le caratteristiche di sicurezza di [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], attenersi alle linee guida seguenti:  
   
@@ -42,13 +42,11 @@ ms.locfileid: "66101931"
   
 -   Gli oggetti a sicurezza diretta includono siti, elenchi, raccolte, cartelle e documenti.  
   
--   Le autorizzazioni vengono concesse per consentire l'esecuzione di un'attività specifica. 
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili 33 autorizzazioni predefinite che è possibile combinare in un livello di autorizzazione.  
+-   Le autorizzazioni vengono concesse per consentire l'esecuzione di un'attività specifica. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili 33 autorizzazioni predefinite che è possibile combinare in un livello di autorizzazione.  
   
 -   I livelli di autorizzazione sono costituiti da un set di autorizzazioni che può essere concesso agli utenti o ai gruppi di SharePoint per un oggetto a sicurezza diretta, ad esempio un sito, una raccolta, un elenco, una cartella, un elemento o un documento. È equivalente a una definizione di ruolo in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sono disponibili cinque livelli di autorizzazione predefiniti. Se necessario, è possibile personalizzarli o crearne di nuovi.  
   
--   Un gruppo di SharePoint è costituito da un gruppo di utenti che è possibile creare in un sito di SharePoint per gestire le autorizzazioni del sito stesso e offrire un elenco di distribuzione tramite posta elettronica per i suoi membri. I gruppi di SharePoint sono costituiti da account utente e di gruppo di Windows oppure da account di accesso utente se si utilizza l'autenticazione basata su form. 
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili tre gruppi. Se necessario, è possibile personalizzarli o crearne di nuovi.  
+-   Un gruppo di SharePoint è costituito da un gruppo di utenti che è possibile creare in un sito di SharePoint per gestire le autorizzazioni del sito stesso e offrire un elenco di distribuzione tramite posta elettronica per i suoi membri. I gruppi di SharePoint sono costituiti da account utente e di gruppo di Windows oppure da account di accesso utente se si utilizza l'autenticazione basata su form. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili tre gruppi. Se necessario, è possibile personalizzarli o crearne di nuovi.  
   
 -   L'ereditarietà delle autorizzazioni consente di applicare le impostazioni di sicurezza del sito padre a siti, elenchi ed elementi secondari. È possibile utilizzare le autorizzazioni ereditate per accedere agli elementi del server di report archiviati in una raccolta di SharePoint. L'utilizzo dell'ereditarietà delle autorizzazioni e dei gruppi predefiniti di SharePoint consente di semplificare la distribuzione e offre accesso immediato alla maggior parte delle operazioni del server di report.  
   
@@ -60,7 +58,7 @@ ms.locfileid: "66101931"
  Gli amministratori del server o di una raccolta siti possono impostare le opzioni che determinano se altri proprietari del sito possono impostare le autorizzazioni. A seconda del livello di autorizzazione di cui si dispone, potrebbe non essere possibile creare o personalizzare i livelli di autorizzazione o i gruppi di SharePoint.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Utilizzo dei livelli di autorizzazione e dei gruppi di SharePoint predefiniti  
- Nelle indicazioni incluse nella documentazione relativa al prodotto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] viene consigliato di usare i gruppi di SharePoint standard, ovvero *Proprietari* **nome sito**, *Proprietari* **nome sito**e *Proprietari* **nome sito**, e di assegnare le autorizzazioni a livello di sito. La maggio parte degli utenti a cui vengono assegnate autoizzazioni devono essere membri dei gruppi *Visitatoi* **nome sito** o *Visitatoi* **nome sito** . Le autorizzazioni nel sito padre vengono ereditate in tutta la gerarchia dei siti. È possibile disattivare l'ereditarietà delle autorizzazioni su determinati elementi per i quali è necessario impostare limitazioni.  
+ Nelle indicazioni incluse nella documentazione relativa al prodotto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] viene consigliato di usare i gruppi di SharePoint standard, ovvero *Proprietari* **nome sito**, *Membri* **nome sito** e *Visitatori* **nome sito**, e di assegnare le autorizzazioni a livello di sito. La maggior parte degli utenti a cui vengono assegnate autorizzazioni devono essere membri dei gruppi *Visitatori* **nome sito** o *Membri* **nome sito**. Le autorizzazioni nel sito padre vengono ereditate in tutta la gerarchia dei siti. È possibile disattivare l'ereditarietà delle autorizzazioni su determinati elementi per i quali è necessario impostare limitazioni.  
   
  Di seguito vengono illustrati i livelli di autorizzazione predefiniti per i gruppi di SharePoint:  
   

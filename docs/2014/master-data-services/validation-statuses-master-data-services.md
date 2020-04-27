@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4ad97a783781596fccbbc2c159140d819586b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478539"
 ---
 # <a name="validation-statuses-master-data-services"></a>Stati di convalida ([Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65478539"
 |Convalida non riuscita|Membri che non hanno superato la convalida delle regole business.|  
 |In attesa di riconvalida del membro dipendente|Membri consolidati aggiornati in attesa di essere convalidati insieme ai membri figlio.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Convalidare una versione rispetto alle regole business &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
  [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   

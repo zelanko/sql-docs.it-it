@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483157"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
@@ -35,13 +35,13 @@ ms.locfileid: "65483157"
   
 -   [Eliminazione di versioni](#Versions)  
   
--   [Applicazione immediata di autorizzazioni membri gerarchia](#Hierarchy)  
+-   [Applicazione immediata di autorizzazioni per membri della gerarchia](#Hierarchy)  
   
 -   [Modifica dell'account amministratore di sistema](#SysAdmin)  
   
--   [Configurazione delle impostazioni di sistema](#SysSettings)  
+-   [Configurazione di impostazioni di sistema](#SysSettings)  
   
-##  <a name="Staging"></a>Gestione temporanea dei dati  
+##  <a name="staging-data"></a><a name="Staging"></a> Dati di gestione temporanea  
  Nella tabella seguente, in ogni entità a protezione diretta la parola "name" fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per ulteriori informazioni, vedere [importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
@@ -56,7 +56,7 @@ ms.locfileid: "65483157"
   
  Per altre informazioni, vedere [Importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a>Convalida dei dati rispetto a regole business  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Convalida dei dati rispetto a regole business  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|---------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "65483157"
   
  Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a>Eliminazione di versioni  
+##  <a name="deleting-versions"></a><a name="Versions"></a>Eliminazione di versioni  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "65483157"
   
  Per altre informazioni, vedere [Eliminare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a>Applicazione immediata di autorizzazioni membri gerarchia  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Applicazione immediata di autorizzazioni membri gerarchia  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "65483157"
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysAdmin"></a>Modifica dell'account amministratore di sistema  
+##  <a name="changing-the-system-administrator-account"></a><a name="SysAdmin"></a>Modifica dell'account amministratore di sistema  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -90,10 +90,10 @@ ms.locfileid: "65483157"
   
  Per ulteriori informazioni, vedere [modificare l'account amministratore di sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
-##  <a name="SysSettings"></a>Configurazione delle impostazioni di sistema  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Configurazione delle impostazioni di sistema  
  È possibile configurare alcune impostazioni di sistema per controllare il comportamento in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Queste impostazioni possono essere modificate in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oppure, se si dispone dell'autorizzazione di accesso UPDATE, direttamente nella tabella di database mdm.tblSystemSetting. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [&#40;di sicurezza Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Sicurezza &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

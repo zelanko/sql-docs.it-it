@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260744"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Impostazioni delle estensioni per il recapito di Reporting Services
@@ -40,15 +40,15 @@ ms.locfileid: "63260744"
   
 |Impostazione|valore|  
 |-------------|-----------|  
-|**TO**|Indirizzo di posta elettronica visualizzato nella riga `To` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Obbligatorio.|  
-|**CC**|Indirizzo di posta elettronica visualizzato nella riga `Cc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativa.|  
-|**BCC**|Indirizzo di posta elettronica visualizzato nella riga `Bcc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativa.|  
-|**ReplyTo**|Indirizzo di posta elettronica visualizzato nell'intestazione `Reply-To` del messaggio. Il valore deve essere un singolo indirizzo di posta elettronica. Facoltativa.|  
+|**A**|Indirizzo di posta elettronica visualizzato nella riga `To` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Obbligatorio.|  
+|**CC**|Indirizzo di posta elettronica visualizzato nella riga `Cc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
+|**BCC**|Indirizzo di posta elettronica visualizzato nella riga `Bcc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
+|**ReplyTo**|Indirizzo di posta elettronica visualizzato nell'intestazione `Reply-To` del messaggio. Il valore deve essere un singolo indirizzo di posta elettronica. Facoltativo.|  
 |`IncludeReport`|Valore che indica se includere il report nel recapito tramite posta elettronica. Un valore `true` indica che il report viene recapitato nel corpo del messaggio di posta elettronica.|  
 |**RenderFormat**|Nome dell'estensione per il rendering da utilizzare per generare il report visualizzabile. Il nome deve corrispondere a una delle estensioni per il rendering visibili installate nel server di report. Questo valore è obbligatorio se l'impostazione di `IncludeReport` è `true`.|  
-|**Priorità**|Priorità per l'invio del messaggio di posta elettronica. I valori validi sono `LOW`, `NORMAL` e `HIGH`. Il valore predefinito è `NORMAL`.|  
+|**Priority**|Priorità per l'invio del messaggio di posta elettronica. I valori validi sono `LOW`, `NORMAL` e `HIGH`. Il valore predefinito è `NORMAL`.|  
 |**Oggetto**|Testo nella riga dell'oggetto del messaggio di posta elettronica.|  
-|**Comment**|Testo incluso nel corpo del messaggio di posta elettronica.|  
+|**Commento**|Testo incluso nel corpo del messaggio di posta elettronica.|  
 |**IncludeLink**|Valore che indica se includere un collegamento al report nel corpo del messaggio di posta elettronica.|  
   
 ## <a name="file-share-delivery-settings"></a>Impostazioni di recapito tramite condivisione file  
@@ -64,8 +64,8 @@ ms.locfileid: "63260744"
 |**PASSWORD**|Password necessaria per accedere al disco o alla risorsa di rete.|  
 |**WRITEMODE**|Modalità di scrittura da utilizzare per accedere al disco. I valori validi sono `None`, `Overwrite` e `AutoIncrement`.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento tecnico &#40;SSRS&#41;](../../technical-reference-ssrs.md)   
- [Creazione di applicazioni mediante il servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Compilazione di applicazioni tramite servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

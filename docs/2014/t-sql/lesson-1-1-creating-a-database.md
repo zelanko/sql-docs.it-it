@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211214"
 ---
 # <a name="creating-a-database-tutorial"></a>Esercitazione per la creazione di un database
@@ -41,9 +41,9 @@ ms.locfileid: "68211214"
 >  La parola chiave GO separa le istruzioni inviate in un singolo batch. GO è un elemento facoltativo se il batch contiene un'unica istruzione.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di una tabella &#40;esercitazione&#41;](lesson-1-2-creating-a-table.md)  
+ [Esercitazione per la creazione di una tabella](lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

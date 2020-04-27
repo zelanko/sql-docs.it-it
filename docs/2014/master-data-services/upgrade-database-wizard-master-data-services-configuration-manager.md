@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478488"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65478488"
 ## <a name="progress-and-finish"></a>Continua e termina  
  Consente di visualizzare il processo di aggiornamento. Al termine dell'aggiornamento del database, fare clic sul collegamento al file di log per visualizzare informazioni dettagliate sull'aggiornamento o fare clic su **Fine** per chiudere la procedura guidata del database e tornare alla pagina **Database** . Il database aggiornato risulterà selezionato e sarà possibile visualizzare e modificare le impostazioni di sistema corrispondenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pagina di configurazione del database &#40;Gestione configurazione Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Configurare il database e il sito Web per Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
  [Aggiornare Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

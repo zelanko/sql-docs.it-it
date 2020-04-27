@@ -19,36 +19,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480920"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurare livelli di gravità per i file di log DQS
   In questo argomento viene descritto come configurare i livelli di gravità per le varie attività e i vari moduli di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) tramite il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. I livelli di gravità definiscono l'intensità degli eventi che si verificano in DQS. Gli eventi DQS dispongono dei livelli di gravità seguenti, in ordine di gravità decrescente:  
   
--   **Fatale**: errori di runtime critici che potrebbero provocare risultati gravi/imprevisti.  
+-   **Errore irreversibile**: errori di run-time critici che potrebbero provocare risultati gravi/imprevisti.  
   
--   **Errore**: altri errori di Runtime.  
+-   **Errore**: altri errori di run-time.  
   
--   **Avviso: avvisi**sugli eventi che potrebbero generare un errore.  
+-   **Avviso**: avviso sugli eventi che potrebbero generare un errore.  
   
--   **Info**: informazioni sugli eventi generali che non sono errori o avvisi. Ad esempio, un processo DQS avviato.  
+-   **Informazioni**: informazioni sugli eventi generali che non sono errori o avvisi. Ad esempio, un processo DQS avviato.  
   
 -   **Debug**: informazioni dettagliate sull'evento.  
   
  Quando si configurano i livelli di gravità per varie attività e i vari moduli DQS, si filtrano le informazioni che si desidera registrare e scrivere nel file di log DQS per la rispettiva attività o modulo DQS. Se ad esempio si imposta il livello di gravità di un'attività DQS su **Avviso**, verranno registrati solo i messaggi di avviso e quelli con livello di gravità maggiore (Errore ed Errore irreversibile) associati all'attività DQS.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per configurare le impostazioni di gravità del log, è necessario disporre del ruolo dqs_administrator per il database DQS_MAIN.  
   
-##  <a name="ConfigureActivity"></a>Configurare i livelli di gravità a livello di attività  
- In DQS è possibile configurare le impostazioni di gravità del log per le attività seguenti: gestione del dominio, individuazione delle informazioni, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e servizi dati di riferimento. A tale scopo, procedere come indicato di seguito:  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurare i livelli di gravità a livello di attività  
+ In DQS è possibile configurare le impostazioni di gravità del log per le attività seguenti: gestione del dominio, individuazione delle informazioni, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e servizi dati di riferimento. A tale scopo:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -61,9 +61,9 @@ ms.locfileid: "65480920"
     > [!NOTE]  
     >  Per impostazione predefinita, è selezionato **Errore** per ognuna delle attività. Ciò significa che i messaggi di errore ed errore irreversibile verranno scritti nei file di log DQS per ogni attività per impostazione predefinita.  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
-##  <a name="ConfigureModule"></a>Configurare i livelli di gravità a livello di modulo (avanzate)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurare i livelli di gravità a livello di modulo (avanzate)  
  La sezione **Avanzate** della scheda **Impostazioni log** consente di configurare le impostazioni di gravità del log a livello di modulo. I moduli sono assembly di sistema DQS che implementano varie funzionalità all'interno di una funzionalità in DQS. Ad esempio, l'attività di gestione del dominio contiene varie funzionalità quali la definizione di regole di dominio, la definizione di condizioni della regola, la definizione di regole tra domini per i domini compositi e così via.  
   
  Talvolta, il livello di granularità a livello di attività non è sufficiente. Può essere necessario esaminare un problema che si è verificato in un particolare modulo all'interno di un'attività. È possibile pertanto configurare i livelli di gravità del log a livello di modulo per isolare e tenere traccia del problema con maggiore precisione.  
@@ -86,9 +86,9 @@ ms.locfileid: "65480920"
   
 4.  Ripetere i passaggi 2 e 3 per altri moduli, se necessario. È inoltre possibile aggiungere o eliminare righe nella griglia facendo clic sulle icone **Aggiungi modulo** e **Rimuovi modulo** .  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare le impostazioni avanzate per i file di log DQS](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

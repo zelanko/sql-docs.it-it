@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312107"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Lezione 4: Esecuzione delle stime relative a Market Basket
@@ -226,7 +226,7 @@ SELECT <select list> FROM [<mining model>]
   
  Per informazioni su come usare DMX in un altro scenario predittivo, vedere [esercitazione DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di query sul modello di associazione](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Interfacce di query di data mining](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480805"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profiling di dati e notifiche in DQS
@@ -30,7 +30,7 @@ ms.locfileid: "65480805"
   
  Il profiling consente di utilizzare Data Quality Services non solo per l'individuazione delle informazioni, la pulizia e l'individuazione delle corrispondenze, ma anche come strumento di analisi. È consigliabile creare una Knowledge Base per l'analisi, quindi eseguire l'individuazione delle informazioni utilizzandola per determinare, mediante le statistiche di profiling, se soddisfa le esigenze di individuazione, di pulizia e di corrispondenza.  
   
-##  <a name="How"></a>Funzionamento della profilatura  
+##  <a name="how-profiling-works"></a><a name="How"></a> Funzionamento del profiling  
  Il profiling non consente di misurare la qualità della Knowledge Base, ma viene utilizzato per la misurazione della qualità dei dati di origine. Il profiling fornisce statistiche che indicano l'effetto dell'operazione specifica che si esegue nell'ambito della gestione delle informazioni o di un progetto Data Quality sui dati di origine. Il profiling ha sempre luogo nel contesto dell'attività specifica che si sta eseguendo. È possibile fare clic sulla scheda relativa al profiling in una schermata per visualizzare i dati di profiling senza uscire dalla fase dell'attività che si sta eseguendo. La tabella relativa al profiling viene popolata in tempo reale durante l'esecuzione del processo, consentendo la valutazione delle attività relative alla qualità dei dati nel corso della loro esecuzione. Dopo la pulizia o deduplicazione, è possibile determinare se la qualità dei dati di origine è migliorata e in quale misura.  
   
  Tutti i numeri di profiling si riferiscono al numero di occorrenze di un valore, e in molti casi alla percentuale del totale, fatta eccezione per la metrica relativa all'univocità. La metrica di unicità si riferisce al numero assoluto di valori, indipendentemente dal numero di occorrenze di tali valori.  
@@ -47,7 +47,7 @@ ms.locfileid: "65480805"
   
  DQS non fornisce statistiche di profiling per l'attività di gestione del dominio.  
   
-##  <a name="Activity"></a>Profiling dei dati in base all'attività  
+##  <a name="profiling-data-by-activity"></a><a name="Activity"></a> Profiling dei dati in base all'attività  
  Per il profiling DQS vengono utilizzate dimensioni standard per rappresentare la qualità dei dati: completezza (l'entità della presenza dei dati), accuratezza (la misura entro cui i dati possono essere utilizzati per gli scopi previsti) e univocità (la misura entro cui valori diversi rappresentano entità diverse). Per impostazione predefinita, i valori NULL e vuoti sono considerati mancanti, o abbassano la percentuale di completezza. È tuttavia possibile definire altri valori come equivalenti a NULL, in qual caso verranno anch'essi considerati come mancanti.  
   
  Il profiling fornisce le statistiche necessarie per valutare i processi, ma è necessario interpretare tali statistiche. È possibile decifrare i suggerimenti del profiling analizzando le statistiche colonna per colonna.  
@@ -66,16 +66,16 @@ ms.locfileid: "65480805"
   
 -   [Esecuzione dell'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Pulire i dati mediante DQS &#40;informazioni interne sulla&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Creazione di criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md)  
   
 -   [Eseguire un progetto corrispondente](../../2014/data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a>Profiling dei dati nel monitoraggio delle attività  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Profiling dei dati nel monitoraggio delle attività  
  Il profiling delle informazioni per le attività Individuazione informazioni, Criteri di corrispondenza, Corrispondenza e Pulizia sono disponibili non solo nelle pagine delle attività del client Data Quality, ma anche nel monitoraggio delle attività. Il monitoraggio delle attività fornisce una panoramica sulle attività correnti e precedenti. Oltre alle proprietà e ai processi di calcolo correlati delle attività, è possibile visualizzare le informazioni di profiling generate per ogni attività in una data posizione. Selezionare un'attività nella tabella delle attività per visualizzare i risultati del profiling in una tabella sottostante. È inoltre possibile esportare i risultati del profiling. Per altre informazioni, vedere [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
-##  <a name="Notifications"></a>Notifiche  
+##  <a name="notifications"></a><a name="Notifications"></a>Notifiche  
  Oltre ad effettuare la raccolta e la visualizzazione di importanti statistiche e metriche tramite il profiling, DQS genererà notifiche (se abilitate) per indicare quando potrebbe essere necessario intraprendere azioni in base alle statistiche di profiling visualizzate. DQS utilizza le notifiche per evidenziare informazioni importanti sull'origine dati e mostrare l'efficacia dell'attività corrente in relazione allo scopo per il quale è stata eseguita. Le notifiche forniscono suggerimenti e raccomandazioni che indicano una condizione e forniscono consigli su come migliorare un'attività di individuazione di informazioni, di pulizia dei dati o di individuazione di corrispondenze.  
   
  Le notifiche di DQS vengono utilizzate per generare avvisi che potrebbero interessare l'operatore o indicare la soluzione a un potenziale problema. Se è o meno necessario intraprendere azioni in seguito alla notifica dipenderà dalla rilevanza di tale azione per gli scopi previsti. Si supponga ad esempio che DQS generi una notifica quando la pulizia dei dati non produce valori corretti o suggeriti, mentre la completezza e l'accuratezza sono entrambe del 100%. Questa notifica indicherebbe che potrebbe non essere necessario eseguire l'attività. L'esecuzione o meno dell'attività rimane tuttavia una decisione che prenderà l'utente.  
@@ -88,7 +88,7 @@ ms.locfileid: "65480805"
   
 -   [Esecuzione dell'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Pulire i dati mediante DQS &#40;informazioni interne sulla&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Creazione di criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md)  
   

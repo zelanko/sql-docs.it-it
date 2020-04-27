@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484308"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
@@ -30,17 +30,17 @@ ms.locfileid: "65484308"
   
 -   Importare i valori in un dominio popolato esistente. In questo caso, vengono importati solo i nuovi valori. I valori già presenti non verranno importati.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Per importare i domini da un file di Excel, è necessario che Excel sia installato nel computer in cui è installata l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] in modo da potere importare i valori di dominio o un dominio completo. È necessario avere creato un file di Excel con i valori di dominio (vedere [How the import works](#How)). Infine, è necessario avere creato e aperto una Knowledge Base in cui importarvi il dominio.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per importare i valori di dominio da un file di Excel.  
   
-##  <a name="Import"></a>Importare i valori da un file di Excel in un dominio  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Importare i valori da un file di Excel in un dominio  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,10 +70,10 @@ ms.locfileid: "65484308"
   
 14. Fare clic su **Fine** per aggiungere i valori alla Knowledge Base.  
   
-##  <a name="FollowUp"></a>Completamento: dopo l'importazione di valori da un file di Excel in un dominio  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>Completamento: dopo l'importazione di valori da un file di Excel in un dominio  
  Dopo avere importato i valori in un dominio, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Synonyms"></a>Importazione di sinonimi  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a>Importazione di sinonimi  
  I sinonimi vengono importati come segue:  
   
 -   In primo luogo vengono importati tutti i valori, quindi viene stabilita la connessione ai sinonimi.  
@@ -88,7 +88,7 @@ ms.locfileid: "65484308"
   
 -   Se per qualsiasi motivo i valori non possono essere connessi manualmente nell'applicazione, l'operazione non potrà essere eseguita tramite l'operazione di importazione.  
   
-##  <a name="How"></a>Funzionamento dell'importazione  
+##  <a name="how-the-import-works"></a><a name="How"></a>Funzionamento dell'importazione  
  Con questa operazione vengono importati i valori seguenti:  
   
  In DQS l'operazione di importazione da un file di Excel viene effettuata come segue:  

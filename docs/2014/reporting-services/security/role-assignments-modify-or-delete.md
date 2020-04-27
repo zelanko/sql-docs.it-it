@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101954"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificare o eliminare un'assegnazione di ruolo (Gestione report)
@@ -40,7 +40,7 @@ ms.locfileid: "66101954"
   
 2.  Fare clic su **Impostazioni sito**.  
   
-3.  Fare clic su **Security**. Tutte le assegnazioni di ruolo a livello di sistema definite attualmente per il server o la distribuzione con scalabilità orizzontale vengono elencate in base al nome dell'account.  
+3.  Fare clic su **Sicurezza**. Tutte le assegnazioni di ruolo a livello di sistema definite attualmente per il server o la distribuzione con scalabilità orizzontale vengono elencate in base al nome dell'account.  
   
 4.  Individuare l'assegnazione di ruolo da modificare o eliminare.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "66101954"
   
 6.  Per eliminare un'assegnazione di ruolo, fare clic sulla casella di controllo accanto al nome dell'utente o del gruppo, quindi fare clic su **Elimina**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  (create-and-manage-role-assignments.md)   
  [Assegnazioni di ruolo](role-assignments.md)   
  [Pagina Impostazioni sito &#40;Gestione report&#41;](../site-settings-page-report-manager.md)   
- [Nuove assegnazioni di ruolo a sistema: pagina Modifica assegnazioni ruolo a sistema &#40;Gestione report&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema &#40;Gestione report&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

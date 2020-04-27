@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488948"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati
@@ -34,7 +34,7 @@ ms.locfileid: "65488948"
   
 6.  Fare clic su **Test connessione** per testare la connessione al server DQS.  
   
-7.  Scegliere **OK** per chiudere la finestra di dialogo.  
+7.  Fare clic su **OK** per chiudere la finestra di dialogo.  
   
 8.  Selezionare **Suppliers** per **Data Quality Knowledge base**.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65488948"
 12. Fare clic su **OK** per chiudere la finestra di dialogo **Editor trasformazione di pulizia DQS** .  
   
 ## <a name="next-step"></a>passaggio successivo  
- [Attività 8: Aggiunta della trasformazione Suddivisione condizionale aggiunta dell'output di pulizia della suddivisione](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Attività 8: Aggiunta della trasformazione Suddivisione condizionale all'output di pulizia della suddivisione](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

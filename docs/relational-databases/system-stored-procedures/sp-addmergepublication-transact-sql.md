@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278358"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**native** (impostazione predefinita)|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle.|  
-|**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. Obbligatorio per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.|  
+|**carattere**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. Obbligatorio per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.|  
   
 `[ @allow_push = ] 'allow_push'`Specifica se è possibile creare sottoscrizioni push per la pubblicazione specificata. *allow_push* è di **tipo nvarchar (5)** e il valore predefinito è true, che consente le sottoscrizioni push nella pubblicazione.  
   
@@ -218,10 +218,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**publisher**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
-|**subscriber**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori.|  
-|**both**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
-|NULL (predefinito)|La replica imposta ** automaticamente conflict_logging **sia** quando il valore *backward_comp_level* è **90RTM** che nel **server di pubblicazione** in tutti gli altri casi.|  
+|**pubblicazione**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
+|**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori.|  
+|**sia**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
+|NULL (predefinito)|La replica imposta *conflict_logging* automaticamente conflict_logging **sia** quando il valore *backward_comp_level* è **90RTM** che nel **server di pubblicazione** in tutti gli altri casi.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

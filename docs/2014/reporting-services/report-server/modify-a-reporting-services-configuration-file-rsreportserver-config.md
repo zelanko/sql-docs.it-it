@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103757"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103757"
   
 -   [Per modificare un file di configurazione di Reporting Services](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lettura e utilizzo di valori di configurazione  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lettura e utilizzo di valori di configurazione  
  In un server di report i file di configurazione vengono letti all'avvio del servizio e tutte le volte in cui il file di configurazione viene salvato. I valori nuovi e quelli modificati diventano effettivi in un nuovo dominio applicazione dopo che quello precedente è scaduto. Tutte le volte in cui è possibile, le richieste attualmente in corso nel dominio applicazione corrente vengono completate. Per alcune impostazioni è necessario tuttavia che venga eseguita immediatamente un'operazione di riciclo del dominio applicazione. In questo caso tutte le richieste attualmente in corso vengono riavviate in un nuovo dominio applicazione.  
   
  Se il server di report rileva un valore non valido, nel registro applicazioni di Windows viene inserito un errore a seconda del quale il server di report non si avvia o utilizza un valore predefinito:  
@@ -46,13 +46,13 @@ ms.locfileid: "66103757"
   
  Tutte le modifiche apportate al file di configurazione, incluse quelle con esito positivo, vengono registrate nel file di log di traccia del server di report. Nel registro eventi applicazioni vengono inseriti solo gli errori.  
   
-##  <a name="bkmk_default_values"></a> Informazioni sui valori predefiniti  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Informazioni sui valori predefiniti  
  La maggior parte delle impostazioni di configurazione dispone di valori predefiniti specificati internamente nel server di report che li utilizzerà se un valore definito dall'utente non è valido o non è stato specificato. Se è necessario utilizzare un valore predefinito a causa di un'impostazione non valida, nel file di log di traccia verrà registrato un errore.  
   
-##  <a name="bkmk_delete_config_settings"></a> Eliminazione delle impostazioni di configurazione  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Eliminazione delle impostazioni di configurazione  
  Per impostazioni di configurazione cui sono associati valori predefiniti, la rimozione dell'impostazione dal file di configurazione non ha alcun effetto. La maggior parte delle impostazioni di configurazione viene effettivamente definita e configurata internamente. Se si elimina un elemento dal file di configurazione, la copia interna è ancora disponibile e utilizza il valore predefinito specificato.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Per modificare un file di configurazione di Reporting Services  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Per modificare un file di configurazione di Reporting Services  
   
 1.  Individuare il file di configurazione da modificare:  
   
@@ -90,10 +90,10 @@ ms.locfileid: "66103757"
   
 6.  Esaminare i file di log di traccia per controllare che non si siano verificati errori. Se sono presenti condizioni di errore, un'impostazione o il relativo valore è stato specificato in modo non corretto. Rivedere il [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) per i valori validi per qualsiasi impostazione che provoca un errore. Per altre informazioni su come visualizzare i log di traccia, vedere [Log di traccia del servizio del server di report](report-server-service-trace-log.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
  [File di configurazione ReportingServicesService](reportingservicesservice-configuration-file.md)   
- [RSReportDesigner - file di configurazione](rsreportdesigner-configuration-file.md)   
+ [File di configurazione RSReportDesigner](rsreportdesigner-configuration-file.md)   
  [Distribuzione di un'estensione per l'elaborazione dati](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Distribuzione di un'estensione per il recapito](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Distribuzione di un'estensione per il rendering](../extensions/rendering-extension/deploying-a-rendering-extension.md)   

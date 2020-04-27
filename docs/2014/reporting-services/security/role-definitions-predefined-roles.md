@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101784"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
   
 ## <a name="how-to-use-predefined-roles"></a>Come utilizzare i ruoli predefiniti  
@@ -33,24 +32,24 @@ ms.locfileid: "66101784"
   
 3.  Quando si è pronti ad assegnare account utente e di gruppo a specifici ruoli, utilizzare Gestione report. Per ulteriori informazioni, vedere [concedere l'accesso utente a un server di Report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
   
-##  <a name="bkmk_rolelist"></a>Definizioni di ruolo predefinite  
+##  <a name="predefined-role-definitions"></a><a name="bkmk_rolelist"></a>Definizioni di ruolo predefinite  
  I ruoli predefiniti sono determinati dalle attività che supportano. È possibile modificare questi ruoli o sostituirli con altri ruoli personalizzati.  
   
- L' *ambito* definisce i limiti entro i quali vengono utilizzati i ruoli. I ruoli a livello di elemento forniscono vari livelli di accesso agli elementi del server di report e alle operazioni che influiscono su questi elementi. I ruoli a livello di elemento sono definiti sul nodo radice (Home) e su tutti gli elementi nell'intera gerarchia di cartelle del server di report. I ruoli a livello di sistema autorizzano l'accesso al livello del sito. I ruoli a livello di elemento e di sistema si escludono reciprocamente, ma vengono utilizzati insieme per fornire autorizzazioni complete per il contenuto e le operazioni del server di report.  
+ L'*ambito* definisce i limiti entro i quali vengono utilizzati i ruoli. I ruoli a livello di elemento forniscono vari livelli di accesso agli elementi del server di report e alle operazioni che influiscono su questi elementi. I ruoli a livello di elemento sono definiti sul nodo radice (Home) e su tutti gli elementi nell'intera gerarchia di cartelle del server di report. I ruoli a livello di sistema autorizzano l'accesso al livello del sito. I ruoli a livello di elemento e di sistema si escludono reciprocamente, ma vengono utilizzati insieme per fornire autorizzazioni complete per il contenuto e le operazioni del server di report.  
   
  Nella tabella seguente sono descritti i ruoli predefiniti, l'ambito e la modalità di utilizzo.  
   
 |Ruolo predefinito|Scope|Descrizione|  
 |---------------------|-----------|-----------------|  
-|[Ruolo Gestione contenuto](#bkmk_content)|Elemento|Include tutte le attività a livello di elemento. Gli utenti assegnati a questo ruolo dispongono dell'autorizzazione completa per gestire il contenuto del server di report, inclusa la possibilità di concedere autorizzazioni ad altri utenti e di definire la struttura della cartella per l'archiviazione di altri elementi.|  
-|[Ruolo server di pubblicazione](#bkmk_publisher)|Elemento|Gli utenti assegnati a questo ruolo possono aggiungere elementi a un server di report, con la possibilità di creare e gestire le cartelle che contengono questi elementi.|  
-|[Ruolo browser](#bkmk_browser)|Elemento|Gli utenti assegnati a questo ruolo possono eseguire report, sottoscrivere report e spostarsi nella struttura di cartelle.|  
-|[Ruolo Generatore report](#bkmk_reportbuilder)|Elemento|Gli utenti assegnati a questo ruolo possono creare e modificare report in Generatore report.|  
-|[Ruolo Report personali](#bkmk_myreports)|Elemento|Gli utenti assegnati a questo ruolo possono gestire un'area di lavoro personale per l'archiviazione e l'utilizzo di report e altri elementi.|  
-|[Ruolo amministratore sistema](#bkmk_systemadministrator)|Sistema|Gli utenti assegnati a questo ruolo possono abilitare funzionalità e impostare valori predefiniti, impostare la sicurezza al livello del sito, creare definizioni di ruolo in Management Studio e gestire processi.|  
+|[Ruolo Gestione contenuto](#bkmk_content)|Item|Include tutte le attività a livello di elemento. Gli utenti assegnati a questo ruolo dispongono dell'autorizzazione completa per gestire il contenuto del server di report, inclusa la possibilità di concedere autorizzazioni ad altri utenti e di definire la struttura della cartella per l'archiviazione di altri elementi.|  
+|[Ruolo Server di pubblicazione](#bkmk_publisher)|Item|Gli utenti assegnati a questo ruolo possono aggiungere elementi a un server di report, con la possibilità di creare e gestire le cartelle che contengono questi elementi.|  
+|[Ruolo Visualizzazione](#bkmk_browser)|Item|Gli utenti assegnati a questo ruolo possono eseguire report, sottoscrivere report e spostarsi nella struttura di cartelle.|  
+|[Ruolo Generatore report](#bkmk_reportbuilder)|Item|Gli utenti assegnati a questo ruolo possono creare e modificare report in Generatore report.|  
+|[Ruolo Report personali](#bkmk_myreports)|Item|Gli utenti assegnati a questo ruolo possono gestire un'area di lavoro personale per l'archiviazione e l'utilizzo di report e altri elementi.|  
+|[Ruolo Amministratore sistema](#bkmk_systemadministrator)|Sistema|Gli utenti assegnati a questo ruolo possono abilitare funzionalità e impostare valori predefiniti, impostare la sicurezza al livello del sito, creare definizioni di ruolo in Management Studio e gestire processi.|  
 |[Ruolo utente sistema](#bkmk_systemuser)|Sistema|Gli utenti assegnati a questo ruolo possono visualizzare informazioni di base sul server di report, ad esempio informazioni sulla pianificazione in una pianificazione condivisa.|  
   
-##  <a name="bkmk_content"></a>Ruolo Gestione contenuto  
+##  <a name="content-manager-role"></a><a name="bkmk_content"></a>Ruolo Gestione contenuto  
  Il ruolo **Gestione contenuto** è un ruolo predefinito che include attività utili per gli utenti che gestiscono report e contenuto Web ma che non devono necessariamente progettare report oppure gestire un'istanza di un server Web o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un utente con questo ruolo distribuisce i report, gestisce i modelli di report e le connessioni alle origini dei dati e decide le modalità di utilizzo dei report. Per la definizione del ruolo **Gestione contenuto** tutte le attività a livello di elemento sono selezionate per impostazione predefinita.  
   
  Il ruolo **Gestione contenuto** viene spesso utilizzato in combinazione con il ruolo **Amministratore sistema** . Insieme, in queste due definizioni del ruolo è incluso un set completo di attività per gli utenti che devono disporre di accesso completo a tutti gli elementi in un server di report. Sebbene il ruolo **Gestione contenuto** consenta l'accesso completo a report, modelli di report, cartelle e altri elementi nella gerarchia delle cartelle, questo ruolo non consente l'accesso a operazioni o elementi a livello di sito. Attività come la creazione e gestione di pianificazioni condivise, l'impostazione delle proprietà del server e la gestione delle definizioni di ruolo sono operazioni a livello di sistema incluse nel ruolo **Amministratore sistema** . È pertanto consigliabile creare a livello di sito un'altra assegnazione di ruolo che consenta l'accesso alle pianificazioni condivise.  
@@ -82,7 +81,7 @@ ms.locfileid: "66101784"
   
  Il ruolo **Gestione contenuto** è utilizzato nella sicurezza predefinita. Per altre informazioni, vedere [Using Default Security](role-definitions-predefined-roles.md).  
   
-##  <a name="bkmk_publisher"></a>Ruolo server di pubblicazione  
+##  <a name="publisher-role"></a><a name="bkmk_publisher"></a>Ruolo server di pubblicazione  
  Il ruolo **Server di pubblicazione** è una definizione di ruolo predefinita che include attività che consentono agli utenti di aggiungere contenuti a un server di report. Questo ruolo è predefinito e non richiede ulteriori operazioni di configurazione. Questo ruolo non viene utilizzato fino a quando non si creano assegnazioni di ruolo che lo includono ed è destinato agli utenti che progettano report o modelli in Progettazione report o Progettazione modelli e quindi li pubblicano in un server di report.  
   
 > [!CAUTION]  
@@ -109,7 +108,7 @@ ms.locfileid: "66101784"
   
  Per gli utenti che devono pubblicare report da Progettazione report è necessaria almeno l'attività "Gestione di report" che consente di aggiungere un report al server di report. Se gli utenti devono pubblicare report che utilizzano origini dei dati condivise o file esterni, sono necessarie anche le attività "Gestione di origini dei dati" e "Gestione di risorse". Se gli utenti devono creare una cartella come parte del processo di pubblicazione, è necessario includere anche l'attività "Gestione di cartelle".  
   
-##  <a name="bkmk_browser"></a>Ruolo browser  
+##  <a name="browser-role"></a><a name="bkmk_browser"></a>Ruolo browser  
  Il ruolo **Visualizzazione** è un ruolo predefinito in cui sono incluse attività utili per gli utenti che visualizzano report ma che non devono necessariamente crearli o gestirli. Questo ruolo consente di disporre di funzionalità di base per l'utilizzo convenzionale di un server di report. Senza queste attività, potrebbe risultare difficile per un utente utilizzare un server di report.  
   
  È consigliabile utilizzare il ruolo **Visualizzazione** in combinazione con il ruolo **Utente sistema** . Insieme, queste due definizioni di ruolo includono un set completo di attività per gli utenti che devono interagire con gli elementi disponibili in un server di report. Sebbene il ruolo **Visualizzazione** consenta l'accesso completo a report, modelli di report, cartelle e altri elementi nella gerarchia delle cartelle, questo ruolo non consente l'accesso a elementi a livello di sito come le pianificazioni condivise, utili per la creazione di sottoscrizioni. È pertanto consigliabile creare a livello di sito un'altra assegnazione di ruolo che consenta l'accesso alle pianificazioni condivise.  
@@ -130,9 +129,8 @@ ms.locfileid: "66101784"
   
  Per questo ruolo devono essere selezionate almeno le attività "Visualizzazione di report" e "Visualizzazione di cartelle", in modo che siano supportate la visualizzazione e la navigazione all'interno delle cartelle. Non è consigliabile rimuovere l'attività "Visualizzazione di cartelle", a meno che non si desideri impedire la navigazione all'interno delle cartelle. In modo analogo, non è consigliabile rimuovere l'attività "Visualizzazione di report", a meno che non si desideri impedire agli utenti la visualizzazione dei report. Per apportare questo tipo di modifiche, è consigliabile creare una definizione di ruolo personalizzata che possa essere applicata in modo selettivo a gruppi di utenti specifici.  
   
-##  <a name="bkmk_reportbuilder"></a>Ruolo Generatore report  
- 
-  **Generatore report** è un ruolo predefinito in cui sono incluse attività per caricare i report in Generatore report, visualizzare la gerarchia di cartelle e spostarsi al suo interno. Per creare e modificare report in Generatore report, è necessario disporre di un'assegnazione di ruolo a livello di sistema che includa l'attività "Esecuzione delle definizioni dei report", richiesta per elaborare i report a livello locale in Generatore report.  
+##  <a name="report-builder-role"></a><a name="bkmk_reportbuilder"></a>Ruolo Generatore report  
+ **Generatore report** è un ruolo predefinito in cui sono incluse attività per caricare i report in Generatore report, visualizzare la gerarchia di cartelle e spostarsi al suo interno. Per creare e modificare report in Generatore report, è necessario disporre di un'assegnazione di ruolo a livello di sistema che includa l'attività "Esecuzione delle definizioni dei report", richiesta per elaborare i report a livello locale in Generatore report.  
   
 ### <a name="report-builder-tasks"></a>Attività incluse nel ruolo Generatore report  
  Nella tabella seguente vengono elencate le attività incluse nella definizione di ruolo **Generatore report** .  
@@ -151,7 +149,7 @@ ms.locfileid: "66101784"
   
  L'attività più importante in questa definizione di ruolo è "Utilizzo di report", che consente a un utente di caricare una definizione di report dal server di report in un'istanza locale di Generatore report. Se non si desidera supportare questa attività, è possibile eliminare questa definizione del ruolo e utilizzare il ruolo **Visualizzazione** per supportare l'accesso generale a un server di report.  
   
-##  <a name="bkmk_myreports"></a>Ruolo Report personali  
+##  <a name="my-reports-role"></a><a name="bkmk_myreports"></a>Ruolo Report personali  
  Il ruolo **Report personali** è un ruolo predefinito in cui è incluso un set di attività destinate agli utenti della funzionalità Report personali. Questa definizione di ruolo include attività che garantiscono agli utenti autorizzazioni amministrative per la cartella Report personali di cui sono proprietari.  
   
  Sebbene sia possibile scegliere un altro ruolo da utilizzare con la funzionalità Report personali, è comunque consigliabile sceglierne uno che venga utilizzato esclusivamente per la sicurezza di questa funzionalità. Per altre informazioni, vedere [Proteggere i report personali](secure-my-reports.md).  
@@ -177,7 +175,7 @@ ms.locfileid: "66101784"
   
  Sebbene l'attività "Impostazione dei criteri di sicurezza per gli elementi" non sia inclusa nella definizione predefinita del ruolo **Report personali** , è possibile aggiungerla al ruolo per consentire agli utenti di personalizzare le impostazioni di sicurezza per sottocartelle e report.  
   
-##  <a name="bkmk_systemadministrator"></a>Ruolo amministratore sistema  
+##  <a name="system-administrator-role"></a><a name="bkmk_systemadministrator"></a>Ruolo amministratore sistema  
  Il ruolo **Amministratore sistema** è un ruolo predefinito in cui sono incluse attività utili per un amministratore di server di report che ha la completa responsabilità di un server di report, ma non necessariamente del contenuto di questo server.  
   
  Per creare un'assegnazione di ruolo che includa questo ruolo, utilizzare la pagina Impostazioni sito in Gestione report oppure i comandi che vengono visualizzati facendo clic con il pulsante destro del mouse sul nodo del server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -190,7 +188,7 @@ ms.locfileid: "66101784"
 |Attività|Descrizione|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Avviare l'esecuzione della definizione del report senza pubblicarlo in un server di report.|  
-|Gestire i processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [gestire un processo in esecuzione](../subscriptions/manage-a-running-process.md).|  
+|Gestire i processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [Gestire un processo in esecuzione](../subscriptions/manage-a-running-process.md).|  
 |Gestione delle proprietà del server di report|Visualizzare e modificare proprietà relative al server di report e agli elementi gestiti dal server di report.<br /><br /> Questa attività supporta la ridenominazione di Gestione report, l'attivazione della funzionalità Report personali e la definizione delle impostazioni predefinite della cronologia dei report.|  
 |Gestire i ruoli|Creare, visualizzare, modificare ed eliminare definizioni di ruolo.<br /><br /> I membri del ruolo **Amministratore sistema** possono utilizzare la pagina Impostazioni sito per gestire i ruoli.|  
 |Gestione di pianificazioni condivise|Creare, visualizzare, modificare ed eliminare pianificazioni condivise che vengono utilizzate per eseguire o aggiornare i report.|  
@@ -198,8 +196,8 @@ ms.locfileid: "66101784"
   
  Il ruolo **Amministratore sistema** è utilizzato nella sicurezza predefinita. Per altre informazioni, vedere [Using Default Security](role-definitions-predefined-roles.md).  
   
-##  <a name="bkmk_systemuser"></a>Ruolo utente sistema  
- Il ruolo **Utente sistema** è un ruolo predefinito in cui sono incluse attività che consentono agli utenti di visualizzare informazioni di base sul server di report. Include inoltre il supporto per caricare un report in Generatore report. Generatore report è un'applicazione client in grado di elaborare un report indipendentemente da un server di report. L'attività "Esecuzione delle definizioni dei report" è stata progettata per essere utilizzata con Generatore report. Se non si utilizza Generatore report, è possibile rimuovere questa attività dal ruolo **Utente sistema** . Nella tabella seguente sono elencate le attività incluse nella definizione del ruolo **utente di sistema** .  
+##  <a name="system-user-role"></a><a name="bkmk_systemuser"></a>Ruolo utente sistema  
+ Il ruolo **Utente sistema** è un ruolo predefinito in cui sono incluse attività che consentono agli utenti di visualizzare informazioni di base sul server di report. Include inoltre il supporto per caricare un report in Generatore report. Generatore report è un'applicazione client in grado di elaborare un report indipendentemente da un server di report. L'attività "Esecuzione delle definizioni dei report" è stata progettata per essere utilizzata con Generatore report. Se non si utilizza Generatore report, è possibile rimuovere questa attività dal ruolo **Utente sistema** . Nella tabella seguente vengono elencate le attività incluse nella definizione del ruolo **Utente sistema** .  
   
 ### <a name="system-user-tasks"></a>Attività del ruolo Utente sistema  
   
@@ -211,7 +209,7 @@ ms.locfileid: "66101784"
   
  Il ruolo **Utente sistema** può essere utilizzato per integrare la sicurezza predefinita. È possibile includerlo in nuove assegnazioni di ruolo per estendere le autorizzazioni di accesso al server di report agli utenti dei report. Per altre informazioni, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)   
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   

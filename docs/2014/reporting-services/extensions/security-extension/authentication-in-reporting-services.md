@@ -16,18 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282159"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticazione in Reporting Services
   L'autenticazione è il processo di determinazione del diritto di un utente a un'identità. Per autenticare un utente sono disponibili numerose tecniche. La più comune consiste nell'utilizzo di password. Quando si implementa l'autenticazione basata su form, ad esempio, si sceglie un'implementazione che richiede le credenziali agli utenti (generalmente tramite un'interfaccia in cui vengono richiesti un nome di accesso e una password), quindi si convalidano gli utenti in base a un archivio dati, ad esempio una tabella di database o un file di configurazione. Se non è possibile convalidare le credenziali, il processo di autenticazione non riesce e all'utente viene assegnata un'identità anonima.  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Autenticazione personalizzata in Reporting Services  
- In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] l'autenticazione degli utenti viene gestita dal sistema operativo Windows tramite la sicurezza integrata o tramite operazioni esplicite di ricezione e convalida delle credenziali utente. L'autenticazione personalizzata può essere sviluppata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per supportare schemi di autenticazione aggiuntivi. Ciò è possibile tramite l'interfaccia dell'estensione di sicurezza <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Tutte le estensioni ereditano dall'interfaccia di base <xref:Microsoft.ReportingServices.Interfaces.IExtension> per qualsiasi estensione distribuita e utilizzata dal server di report. 
-  <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> sono membri dello spazio dei nomi <xref:Microsoft.ReportingServices.Interfaces>.  
+ In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] l'autenticazione degli utenti viene gestita dal sistema operativo Windows tramite la sicurezza integrata o tramite operazioni esplicite di ricezione e convalida delle credenziali utente. L'autenticazione personalizzata può essere sviluppata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per supportare schemi di autenticazione aggiuntivi. Ciò è possibile tramite l'interfaccia dell'estensione di sicurezza <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Tutte le estensioni ereditano dall'interfaccia di base <xref:Microsoft.ReportingServices.Interfaces.IExtension> per qualsiasi estensione distribuita e utilizzata dal server di report. <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> sono membri dello spazio dei nomi <xref:Microsoft.ReportingServices.Interfaces>.  
   
  La principale modalità di autenticazione in un server di report in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è costituita dal metodo <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Questo membro del servizio Web Reporting Services può essere utilizzato per passare le credenziali utente a un server di report per la convalida. L'estensione di sicurezza sottostante implementa **IAuthenticationExtension. LogonUser** che contiene il codice di autenticazione personalizzato. Nell'esempio di autenticazione basata su form, **LogonUser**, che esegue un controllo di autenticazione in base alle credenziali fornite e a un archivio utente personalizzato in un database. Un esempio di implementazione di **LogonUser** è simile al seguente:  
   
@@ -145,9 +144,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   L'autenticazione di [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] deve essere impostata su Forms. È possibile configurare l'autenticazione di [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] nel file Web.config per il server di report.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente di autenticare e autorizzare gli utenti con l'autenticazione di Windows o con l'autenticazione personalizzata, ma non con entrambe. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non supporta l'utilizzo simultaneo di più estensioni di sicurezza.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente di autenticare e autorizzare gli utenti con l'autenticazione di Windows o con l'autenticazione personalizzata, ma non con entrambe. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non supporta l'utilizzo simultaneo di più estensioni di sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione di sicurezza](../security-extension/implementing-a-security-extension.md)  

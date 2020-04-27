@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481233"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Attività 10: Configurazione del dominio composito per usare il servizio dati di riferimento
   In questa attività viene configurato il dominio composito **Address Validation** per usare il servizio **Melissa Data-Address Check** . In fase di esecuzione, durante l'attività di pulizia, tramite DQS i valori del dominio Address Validation vengono passati al servizio per la pulizia. Per altri dettagli, vedere [eseguire il mapping di dominio/dominio composito ai dati di riferimento](https://msdn.microsoft.com/library/hh213030.aspx) .  
   
 1.  Nella pagina principale del **client DQS**fare clic su **suppliers (Domain Management)** in **Knowledge Base recenti** per avviare la pagina di **gestione del dominio** .  
@@ -46,7 +46,7 @@ ms.locfileid: "65481233"
   
      ![Esecuzione del mapping delle voci Schema servizio dati di riferimento a domini](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "Esecuzione del mapping delle voci Schema servizio dati di riferimento a domini")  
   
-9. Scegliere **OK** per chiudere la finestra di dialogo.  
+9. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
 ## <a name="next-step"></a>passaggio successivo  
  [Attività 11: Pubblicazione della Knowledge Base](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  

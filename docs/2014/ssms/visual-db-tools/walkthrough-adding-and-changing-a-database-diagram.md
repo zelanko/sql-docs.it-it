@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273739"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
@@ -78,8 +78,8 @@ ms.locfileid: "63273739"
   
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|selezionata|  
-    |`T1col2`|`varchar(50)`|selezionata|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|selezionata|  
   
 4.  Fare clic con il pulsante destro del mouse su `T1col1` e selezionare **Imposta chiave primaria**.  
@@ -111,10 +111,9 @@ ms.locfileid: "63273739"
   
 4.  Digitare `T1col3 > 5` e fare clic su **OK**.  
   
-     
-  `Table1` include ora un vincolo in base al quale tutti i valori immessi in `T1col3` devono essere maggiori di 5.  
+     `Table1` include ora un vincolo in base al quale tutti i valori immessi in `T1col3` devono essere maggiori di 5.  
   
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
 #### <a name="to-create-relationships-between-tables"></a>Per creare relazioni tra le tabelle  
   
@@ -123,8 +122,8 @@ ms.locfileid: "63273739"
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|non selezionata|  
-    |`T2col2`|`varchar(50)`|selezionata|  
-    |`T2col3`|`xml`|selezionata|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  Le colonne della chiave primaria di una relazione di chiave esterna devono far parte di un vincolo UNIQUE o PRIMARY KEY.  
@@ -178,7 +177,7 @@ ms.locfileid: "63273739"
   
      Un indice XML con valori predefiniti verrà aggiunto all'elenco **Selected XML Index** (Indice XML selezionato).  
   
-4.  Fare clic su **Close**.  
+4.  Fare clic su **Chiudi**.  
   
     > [!NOTE]  
     >  Gli indici XML vengono creati per colonna. Il primo indice XML è primario, eventuali indici aggiuntivi sono secondari.  
@@ -207,7 +206,7 @@ ms.locfileid: "63273739"
   
 -   Copia del diagramma in una bitmap  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Personalizzare la quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   

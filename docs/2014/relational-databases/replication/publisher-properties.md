@@ -16,23 +16,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261980"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Proprietà del server di replica di SQL Server
   In questa sezione vengono fornite informazioni sulle proprietà del server di pubblicazione disponibili nel server di distribuzione e nel server di pubblicazione. 
 
 ## <a name="general"></a>Generale  
-  La pagina **Generale** della finestra di dialogo **Proprietà server di pubblicazione** visualizza informazioni di sola lettura sul server di distribuzione e sul database di distribuzione utilizzati dal server di pubblicazione. Per modificare il server di distribuzione o il database di distribuzione per un server di pubblicazione, eseguire le operazioni seguenti:  
+   La pagina **Generale** della finestra di dialogo **Proprietà server di pubblicazione** visualizza informazioni di sola lettura sul server di distribuzione e sul database di distribuzione usati dal server di pubblicazione. Per modificare il server di distribuzione o il database di distribuzione per un server di pubblicazione, eseguire le operazioni seguenti:  
   
 1.  Disabilitare la pubblicazione nel server di pubblicazione. Per altre informazioni, vedere [Disabilitare la pubblicazione e la distribuzione](disable-publishing-and-distribution.md).    
 2.  Riconfigurare la pubblicazione e la distribuzione. Per altre informazioni, vedere [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
 
 ## <a name="distributor"></a>Database di distribuzione
-  La finestra di dialogo **Proprietà server di pubblicazione** consente di visualizzare e modificare le proprietà associate alla relazione tra il server di pubblicazione e il relativo server di distribuzione.  
+   La finestra di dialogo **Proprietà server di pubblicazione** consente di visualizzare e modificare le proprietà associate alla relazione tra il server di pubblicazione e il relativo server di distribuzione.  
   
 ### <a name="options"></a>Opzioni  
  **Connessione agente al server di pubblicazione**  
@@ -70,12 +70,12 @@ ms.locfileid: "63261980"
   
 ### <a name="options"></a>Opzioni  
  **Sottoscrittori**  
- La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un Sottoscrittore.  
+ La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà (**...**) accanto a un Sottoscrittore.  
   
  **Aggiungere**  
  Fare clic su **Aggiungi** per aggiungere un Sottoscrittore e quindi fare clic su **Aggiungi Sottoscrittore SQL Server** o su **Aggiungi Sottoscrittore non SQL Server**.  
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
 
   

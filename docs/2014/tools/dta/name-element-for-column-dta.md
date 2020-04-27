@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63297516"
 ---
 # <a name="name-element-for-column-dta"></a>Elemento Name per Column (DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "63297516"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|
-  `string`, lunghezza illimitata.|  
+|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
 |**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento `Column`.|  
   

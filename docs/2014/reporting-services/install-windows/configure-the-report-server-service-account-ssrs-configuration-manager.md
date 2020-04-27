@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261083"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene implementato come singolo servizio contenente un servizio Web ReportServer, Gestione report e un'applicazione di elaborazione in background utilizzata per l'elaborazione pianificata di report e il recapito di sottoscrizioni. In questo argomento vengono illustrate la configurazione iniziale dell'account del servizio e la modifica dell'account o della password tramite lo strumento di configurazione di Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configurazione iniziale
@@ -34,7 +33,7 @@ ms.locfileid: "63261083"
   
 - Aggiunta automatica del nuovo account al gruppo di server di report creato nel computer locale. Questo gruppo è specificato negli elenchi di controllo di accesso (ACL) utilizzati per la protezione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Aggiorna automaticamente le autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] di accesso nell'istanza di utilizzata per ospitare il database del server di report. Il nuovo account verrà aggiunto a **RSExecRole**.  
+- Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il database del server di report. Il nuovo account verrà aggiunto a **RSExecRole**.  
   
      L'account di accesso al database per l'account precedente non verrà rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per altre informazioni, vedere [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md) nella documentazione online di SQL Server.  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63261083"
   
 - [Account del servizio &#40;&#41;in modalità nativa SSRS ](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in documentazione online di SQL Server.  
+- [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) nella documentazione online di SQL Server.  
   
-- [Guida alla pianificazione della sicurezza dei servizi e degli account del servizio](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Guida alla pianificazione della sicurezza dei servizi e degli account dei servizi](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Aggiornamento di una password scaduta
 
@@ -113,7 +112,7 @@ ms.locfileid: "63261083"
   
 9. Attendere l'arresto del servizio.  
   
-10. Fare clic su **Start**.  
+10. Fare clic su **Avvia**.  
   
 > [!NOTE]  
 > I prodotti e le tecnologie SharePoint richiedono l'utilizzo di account di dominio per la configurazione di servizi, ad esempio Reporting Services con modalità SharePoint.  

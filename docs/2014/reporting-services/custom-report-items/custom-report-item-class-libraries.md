@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264885"
 ---
 # <a name="custom-report-item-class-libraries"></a>Librerie di classi dell'elemento del report personalizzato
@@ -46,8 +46,7 @@ ms.locfileid: "63264885"
 |`AltReportItem`|Oggetto elemento del report alternativo, da utilizzare se il controllo di runtime di un elemento del report personalizzato non è supportato.|  
 |`Style`|Proprietà di stile per l'elemento del report personalizzato.|  
 |`Adornment`|Finestra dell'area di controllo utilizzata per la modifica interattiva del controllo.|  
-|`Site`|
-  `ISite` del componente.|  
+|`Site`|`ISite` del componente.|  
 |`DesignerVerbCollection`|Matrice di verbi personalizzati per il menu di scelta rapida del controllo.|  
   
 #### <a name="public-methods"></a>Metodi pubblici  
@@ -131,7 +130,7 @@ ms.locfileid: "63264885"
 |`DataSetName`|Nome del set di dati contenente i campi da eliminare.|  
 |`Fields`|Raccolta di campi (`Microsoft.ReportDesigner.Field`) da eliminare.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Creazione di un componente runtime dell'elemento del report personalizzato](creating-a-custom-report-item-run-time-component.md)   
  [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](creating-a-custom-report-item-design-time-component.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106695"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106695"
   
     2.  Un parametro della query per ogni parametro di propagazione. Un parametro della query limita i dati recuperati dall'origine dati specificando determinati valori da includere o escludere dalla query. In genere, i parametri della query si trovano in una clausola di restrizione nella query. In un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, i parametri della query si trovano nella clausola WHERE. Per altre informazioni, vedere "Filtraggio delle righe usando WHERE e HAVING" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=120955)  
   
-6.  Fare clic su **Esegui** ( **!** ). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
+6.  Fare clic su **Esegui** (**!**). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
   
     > [!NOTE]  
     >  L'ordine in cui si presentano i parametri della query quando si esegue per la prima volta una query determina anche l'ordine in cui vengono creati nel report. Per modificare l'ordine, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
@@ -72,7 +72,7 @@ ms.locfileid: "66106695"
   
      Il comando SELECT DISTINCT rimuove i valori duplicati dal set di risultati in modo che sia possibile ottenere tutti i valori univoci dalla colonna specificata nella tabella indicata.  
   
-     Fare clic su **Esegui** ( **!** ). Nel set di risultati sono riportati i valori disponibili per il primo parametro.  
+     Fare clic su **Esegui** (**!**). Nel set di risultati sono riportati i valori disponibili per il primo parametro.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -151,14 +151,14 @@ ms.locfileid: "66106695"
   
      In seguito alla selezione dell'ultimo parametro il report non viene eseguito automaticamente in modo da consentire all'utente di modificare la scelta effettuata.  
   
-4.  Fare clic su **Visualizza report**. La visualizzazione del report verrà aggiornata in base ai parametri scelti.  
+4.  Fare clic su **Visualizza rapporto**. La visualizzazione del report verrà aggiornata in base ai parametri scelti.  
   
-## <a name="see-also"></a>Vedere anche  
- [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Aggiunta, modifica o eliminazione di un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Parametri del report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Esercitazione: aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md)   
- [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Aggiungere filtri del set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

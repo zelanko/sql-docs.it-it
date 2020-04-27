@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270217"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
   Le applicazioni che utilizzano il rilevamento delle modifiche devono essere in grado di ottenere le modifiche registrate, di applicare tali modifiche a un altro archivio dati e di aggiornare il database di origine. In questo argomento viene descritto come eseguire queste attività e viene illustrato il ruolo svolto dal rilevamento delle modifiche quando si verifica un failover ed è necessario ripristinare un database da un backup.  
   
-##  <a name="Obtain"></a> Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
  Viene descritto come utilizzare le funzioni di rilevamento delle modifiche per ottenere le modifiche apportate al database e le informazioni relative.  
   
 ### <a name="about-the-change-tracking-functions"></a>Informazioni sulle funzioni di rilevamento delle modifiche  
@@ -285,7 +285,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Poiché la scelta dell'approccio più efficiente per l'applicazione quando si utilizza il rilevamento delle modifiche o qualsiasi meccanismo di rilevamento personalizzato richiede l'esecuzione di un'analisi approfondita, l'utilizzo dell'isolamento dello snapshot è notevolmente più semplice.  
   
-##  <a name="Handles"></a> Gestione delle modifiche in un database da parte del rilevamento delle modifiche  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>Gestione delle modifiche apportate a un database in Rilevamento modifiche  
  Alcune applicazioni che utilizzano il rilevamento delle modifiche eseguono la sincronizzazione bidirezionale con un altro archivio dati. Questo significa che le modifiche apportate al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornate nell'altro archivio dati, mentre le modifiche apportate all'archivio vengono aggiornate nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando aggiorna il database locale in base alle modifiche di un altro archivio dati, un'applicazione deve effettuare le operazioni seguenti:  
@@ -404,7 +404,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  È possibile che la riga in fase di aggiornamento all'interno della transazione snapshot sia stata aggiornata in un'altra transazione dopo l'avvio della transazione stessa. In questo caso, si verifica un conflitto nell'aggiornamento dell'isolamento dello snapshot e la transazione verrà terminata. Se si verifica questa situazione, riprovare a eseguire l'aggiornamento. In questo modo verrà individuato un conflitto nel rilevamento delle modifiche e nessuna riga verrà modificata.  
   
-##  <a name="DataRestore"></a> Rilevamento delle modifiche e ripristino dei dati  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>Rilevamento modifiche e ripristino dei dati  
  Le applicazioni che richiedono la sincronizzazione è necessario considerare il caso in cui un database con il rilevamento delle modifiche abilitato viene ripristinato a una versione precedente dei dati. Questa situazione può verificarsi dopo il ripristino di un database da un backup, quando si verifica un failover a un database mirror asincrono o quando si verifica un errore durante l'utilizzo del log shipping. Nel seguente scenario viene illustrato il problema:  
   
 1.  Nella tabella T1 è attivato il rilevamento delle modifiche e la versione minima valida della tabella è 50.  
@@ -431,14 +431,14 @@ COMMIT TRAN
   
 -   Quando un client esegue una query per le modifiche, registrare il numero dell'ultima versione sincronizzata per ciascun client nel server. Se si verifica un problema con i dati, i numeri delle ultime versioni sincronizzate non corrispondono. Ciò indica che è necessario eseguire la reinizializzazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
- [Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
+ [Informazioni su Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [Gestire Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Abilitare e disabilitare Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [CHANGETABLE &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/changetable-transact-sql)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102255"
 ---
 # <a name="search-page-report-manager"></a>Pagina Cerca (Gestione report)
@@ -46,14 +46,14 @@ ms.locfileid: "66102255"
 > [!NOTE]  
 >  Questo pulsante è disponibile solo in **Visualizzazione Dettagli**. Tuttavia, è possibile passare il puntatore del mouse su un elemento e utilizzare il menu per accedere alla funzionalità di spostamento in **Visualizzazione Dettagli** o in **Visualizzazione Elenco**.  
   
- Casella di ricerca  
+ Casella Cerca  
  Digitare tutto o parte del nome di un elemento che si desidera individuare, quindi fare clic su **Vai** per avviare la ricerca. La stringa di ricerca può essere composta al massimo da 128 caratteri.  
   
  Nei risultati di ricerca verranno inclusi i nomi o le descrizioni degli elementi che contengono l'intera stringa di ricerca in qualsiasi posizione nel valore di testo.  
   
  Gli operatori booleani, ad esempio il segno più (+), non sono supportati.  
   
- **Elimina**  
+ **Visualizzazione dettagli**  
  Fare clic per visualizzare la pagina Risultati ricerca in un elenco che contiene informazioni aggiuntive sugli elementi, quale il tipo di elemento, il nome, la descrizione, la cartella che contiene l'elemento e la data dell'ultima esecuzione. In **Visualizzazione Dettagli**, è possibile utilizzare i pulsanti **Elimina** e **Sposta** per rimuovere e spostare gli elementi nella cartella.  
   
  Passare con il puntatore del mouse su un elemento e fare clic sulla freccia a discesa per aprire il menu a discesa dal quale è possibile accedere alle proprietà dell'elemento selezionato ed eseguirne la configurazione.  
@@ -63,7 +63,7 @@ ms.locfileid: "66102255"
   
  Passare con il puntatore del mouse su un elemento e fare clic sulla freccia a discesa per aprire il menu a discesa dal quale è possibile accedere alle proprietà dell'elemento selezionato ed eseguirne la configurazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

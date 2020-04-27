@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482569"
 ---
 # <a name="reserved-words-master-data-services"></a>Parole riservate (Master Data Services)
@@ -28,24 +28,24 @@ ms.locfileid: "65482569"
   
 -   [Modelli](#models)  
   
--   [Entità](#entities)  
+-   [Entities](#entities)  
   
 -   [Gerarchie esplicite](#exhierarchies)  
   
--   [Attributes](#attributes)  
+-   [Attributi](#attributes)  
   
 -   [Members](#members)  
   
-##  <a name="models"></a>Modelli  
+##  <a name="models"></a><a name="models"></a>Modelli  
  Se si crea un modello con il nome impostato su **nome**, non selezionare **Crea entità con lo stesso nome del modello** perché non è possibile utilizzare il **nome** per il nome di un'entità.  
   
-##  <a name="entities"></a>Entità  
+##  <a name="entities"></a><a name="entities"></a>Entità  
  Per i nomi dell'entità, non è possibile utilizzare **Name** o **Code**.  
   
-##  <a name="exhierarchies"></a>Gerarchie esplicite  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Gerarchie esplicite  
  Per i nomi della gerarchia espliciti, non è possibile utilizzare **Name** o **Code**.  
   
-##  <a name="attributes"></a>Attributi  
+##  <a name="attributes"></a><a name="attributes"></a>Attributi  
   
 -   **ID**  
   
@@ -69,10 +69,10 @@ ms.locfileid: "65482569"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>Membri  
+##  <a name="members"></a><a name="members"></a>Membri  
  Per i membri, non è possibile usare **MDMMemberStatus** o **root** per il valore dell'attributo **Code** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica di Master Data Services](master-data-services-overview-mds.md)  
   
   

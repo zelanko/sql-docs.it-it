@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267426"
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvare tracce e modelli di traccia
@@ -47,12 +47,10 @@ ms.locfileid: "63267426"
 >  Gli utenti che dispongono dell'autorizzazione SHOWPLAN, ALTER TRACE o VIEW SERVER STATE possono visualizzare le query acquisite nell'output di Showplan. Poiché tali query possono contenere informazioni riservate, ad esempio password, è consigliabile concedere tali autorizzazioni solo agli utenti che possono visualizzare le informazioni riservate, ad esempio ai membri del ruolo predefinito del database **db_owner** oppure ai membri del ruolo predefinito del server **sysadmin** . È inoltre consigliabile salvare file Showplan o file di traccia che contengono eventi correlati a Showplan solo in una posizione che utilizza il file system NTFS e limitare l'accesso agli utenti autorizzati a visualizzare le informazioni riservate.  
   
 ## <a name="saving-templates"></a>Salvataggio dei modelli  
- Nella definizione del modello di una traccia sono incluse le classi di evento, le colonne di dati, i filtri e tutte le altre proprietà, eccetto i dati degli eventi acquisiti, utilizzati per creare una traccia. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fornisce modelli di sistema predefiniti per attività di traccia comuni e per attività specifiche, ad esempio la creazione di un carico di lavoro che Ottimizzazione guidata motore di database può usare per ottimizzare la progettazione fisica del database. È inoltre possibile creare e salvare modelli definiti dall'utente.  
+ Nella definizione del modello di una traccia sono incluse le classi di evento, le colonne di dati, i filtri e tutte le altre proprietà, eccetto i dati degli eventi acquisiti, utilizzati per creare una traccia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fornisce modelli di sistema predefiniti per attività di traccia comuni e per attività specifiche, ad esempio la creazione di un carico di lavoro che Ottimizzazione guidata motore di database può usare per ottimizzare la progettazione fisica del database. È inoltre possibile creare e salvare modelli definiti dall'utente.  
   
 ### <a name="importing-and-exporting-templates"></a>Importazione ed esportazione di modelli  
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di importare ed esportare modelli da un server a un altro. L'esportazione di un modello comporta lo spostamento di una copia di un modello esistente in una directory specificata. L'importazione crea una copia del modello specificato. Visualizzando questi modelli in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]è possibile distinguerli dai modelli di sistema per il termine "(utente)" che segue il nome del modello. Non è possibile sovrascrivere o modificare direttamente un modello di sistema predefinito.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di importare ed esportare modelli da un server a un altro. L'esportazione di un modello comporta lo spostamento di una copia di un modello esistente in una directory specificata. L'importazione crea una copia del modello specificato. Visualizzando questi modelli in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]è possibile distinguerli dai modelli di sistema per il termine "(utente)" che segue il nome del modello. Non è possibile sovrascrivere o modificare direttamente un modello di sistema predefinito.  
   
 ### <a name="analyzing-performance-with-templates"></a>Analisi delle prestazioni con i modelli  
  Se si esegue spesso il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare i modelli per l'analisi delle prestazioni. I modelli consentono di acquisire sempre gli stessi dati di evento e utilizzano la stessa definizione di traccia per il monitoraggio degli stessi eventi. In questo modo non è necessario definire le classi di evento e le colonne di dati ogni volta che si crea una traccia. È inoltre possibile distribuire il modello ad altri utenti per il monitoraggio di eventi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ad esempio, il supporto tecnico potrebbe fornire un modello a un cliente in modo che il cliente lo possa utilizzare per acquisire i dati di evento necessari, che potranno poi essere inviati al supporto tecnico per essere analizzati.  
@@ -69,6 +67,6 @@ ms.locfileid: "63267426"
  [Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivare un modello da un file di traccia o da una tabella di traccia &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
- [Importare un modello di traccia &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
+ [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
   
   

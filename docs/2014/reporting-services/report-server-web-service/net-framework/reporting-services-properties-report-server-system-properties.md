@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260831"
 ---
 # <a name="report-server-system-properties"></a>Proprietà di sistema del server di report
@@ -36,13 +36,9 @@ ms.locfileid: "63260831"
 |MyReportsRole|Nome del ruolo utilizzato durante la creazione dei criteri di sicurezza nelle cartelle Report personali dell'utente. Il valore predefinito è `My Reports Role`.|  
 |EnableExecutionLogging|Indica se la registrazione per l'esecuzione di report è attivata. Il valore predefinito è `true`.|  
 |ExecutionLogDaysKept|Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono i valori compresi tra `0` e `2`.`147`.`483`.`647`. Se il valore è `0` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.|  
-|SnapshotCompression|Definisce come vengono compressi gli snapshot. Il valore predefinito è `SQL`. I valori validi sono i seguenti:<br /><br /> 
-  `SQL` = gli snapshot vengono compressi quando vengono archiviati nel database del server di report. Questa impostazione corrisponde al comportamento corrente.<br /><br /> **None** = gli snapshot non vengono compressi.<br /><br /> 
-  `All` = gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.|  
+|SnapshotCompression|Definisce come vengono compressi gli snapshot. Il valore predefinito è `SQL`. I valori validi sono i seguenti:<br /><br /> `SQL` = gli snapshot vengono compressi quando vengono archiviati nel database del server di report. Questa impostazione corrisponde al comportamento corrente.<br /><br /> **None** = gli snapshot non vengono compressi.<br /><br /> `All` = gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.|  
 |EnableClientPrinting|Determina se il controllo ActiveX RSClientPrint è disponibile per il download dal server di report. I valori validi sono `true` e `false`. Il valore predefinito è `true`. Per altre informazioni sulle impostazioni aggiuntive necessarie per questo controllo, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
-|EnableIntegratedSecurity|Determina se la sicurezza integrata è supportata per le connessioni alle origini dati dei report. Il valore predefinito è `True`. I valori validi sono i seguenti:<br /><br /> 
-  `True` = la sicurezza integrata è abilitata.<br /><br /> 
-  `False` = la sicurezza integrata non è abilitata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata non verranno eseguite.|  
+|EnableIntegratedSecurity|Determina se la sicurezza integrata è supportata per le connessioni alle origini dati dei report. Il valore predefinito è `True`. I valori validi sono i seguenti:<br /><br /> `True` = la sicurezza integrata è abilitata.<br /><br /> `False` = la sicurezza integrata non è abilitata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata non verranno eseguite.|  
 |EnableRemoteErrors|Include informazioni esterne sugli errori, ad esempio, informazioni sull'errore relative alle origini dati del report, nei messaggi di errore restituiti agli utenti che richiedono i report dai computer remoti. I valori validi sono `true` e `false`. Il valore predefinito è `false`. Per altre informazioni, vedere [Abilita errori remoti &#40;Reporting Services&#41;](../../report-server/enable-remote-errors-reporting-services.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

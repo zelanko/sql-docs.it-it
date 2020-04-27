@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482807"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Caricamento dei dati (componente aggiuntivo MDS per Excel)
@@ -27,7 +27,7 @@ ms.locfileid: "65482807"
 > [!WARNING]  
 >  Una cartella di lavoro abilitata per MDS deve essere aperta e aggiornata solo in Excel con il componente aggiuntivo MDS per Excel. L'apertura di una cartella di lavoro abilitata per MDS in Excel su un computer nel quale non è installato il componente aggiuntivo Excel di MDS non è supportata e potrebbe provocare danni al file della cartella di lavoro. Se si desidera condividere dati con altri utenti, inviare tramite posta elettronica un file di query di collegamento a questi ultimi, anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica. Per altre informazioni sulla query, vedere [Inviare tramite posta elettronica un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
-## <a name="filtering-data"></a>Filtro dei dati  
+## <a name="filtering-data"></a>Filtraggio dei dati  
  È possibile filtrare i dati prima del caricamento per limitare la quantità di dati che si intende scaricare. Ciò presuppone la scelta degli attributi (colonne) da caricare, l'ordine con cui si desidera visualizzare gli attributi e i membri (righe di dati) che si desidera utilizzare. Per altre informazioni, vedere [filtrare i dati prima di caricare &#40;Componente aggiuntivo MDS per Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Connettersi automaticamente e caricare i dati utilizzati frequentemente  
@@ -42,16 +42,16 @@ ms.locfileid: "65482807"
 |----------------------|-----------|  
 |Filtrare i dati MDS prima di caricarli in Excel.|[Filtrare i dati prima di caricare &#40;Componente aggiuntivo MDS per Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Caricare dati MDS in Excel.|[Caricare i dati da MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
-|Modificare l'ordine delle colonne prima di scaricare i dati.|[Riordina le colonne &#40;Componente aggiuntivo MDS per Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|Modificare l'ordine delle colonne prima di scaricare i dati.|[Riordinare le colonne &#40;componente aggiuntivo MDS per Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Connessioni &#40;Componente aggiuntivo MDS per Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Connessioni &#40;componente aggiuntivo MDS per Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [File di query collegamento &#40;Componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Componente aggiuntivo Master Data Services per Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [&#40;di sicurezza Master Data Services&#41;](../security-master-data-services.md)  
+-   [Sicurezza &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

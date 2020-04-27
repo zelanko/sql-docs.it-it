@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316072"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Procedure per la progettazione di query e viste (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63316072"
  [Aprire Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Viene descritta la procedura per aprire una query o una vista nuova o esistente in Progettazione query e Progettazione viste.  
   
- [Spostarsi in Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [Navigare all’interno di Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  Viene fornito un elenco delle combinazioni di tasti e delle operazioni tramite mouse che possono essere utilizzate in Progettazione query e Progettazione viste.  
   
  [Strumenti di progettazione di query e viste &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

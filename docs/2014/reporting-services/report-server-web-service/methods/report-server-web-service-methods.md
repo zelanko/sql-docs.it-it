@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37d0031ebfb4ec6d31da6aad9a8842c0623cb75b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283475"
 ---
 # <a name="report-server-web-service-methods"></a>Metodi del servizio Web ReportServer
@@ -44,7 +44,7 @@ ms.locfileid: "63283475"
 |[Metodi di sottoscrizione e recapito](subscription-and-delivery-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire sottoscrizioni e recapito dei report.|  
 |[Metodi dei report collegati](linked-reports-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire i report collegati.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Accesso all'API SOAP](../accessing-the-soap-api.md)   
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servizio Web ReportServer](../report-server-web-service.md)   

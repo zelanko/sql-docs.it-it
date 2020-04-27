@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479371"
 ---
 # <a name="import-statuses-master-data-services"></a>Stati di importazione ([Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65479371"
 |In coda per la cancellazione|L'elaborazione del batch è terminata e il batch verrà cancellato.|4|  
 |Cancellato|Il batch è stato cancellato.|5|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Caricare o aggiornare membri in Master Data Services tramite il processo di gestione temporanea](add-update-and-delete-data-master-data-services.md)   
  [Importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   

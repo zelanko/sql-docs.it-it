@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264725"
 ---
 # <a name="deploying-a-custom-assembly"></a>Distribuzione di un assembly personalizzato
@@ -61,8 +61,8 @@ ms.locfileid: "63264725"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)   
- [Utilizzo degli assembly e della Global assembly cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Utilizzo di assembly e della Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

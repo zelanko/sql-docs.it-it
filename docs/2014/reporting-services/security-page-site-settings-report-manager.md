@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102175"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Pagina sicurezza (Impostazioni sito. Gestione report)
@@ -39,7 +39,7 @@ ms.locfileid: "66102175"
  **Elimina**  
  Fare clic per eliminare un'assegnazione di ruolo esistente. Prima di fare clic su **Elimina**, selezionare la casella di controllo accanto al nome del gruppo o dell'utente che si desidera rimuovere. Non è possibile eliminare un'assegnazione di ruolo se è l'unica rimanente. L'eliminazione di un'assegnazione di ruolo non comporta l'eliminazione di account utente, account di gruppo o definizioni di ruolo.  
   
- **Nuova assegnazione di ruolo**  
+ **Nuova assegnazione ruolo**  
  Fare clic per visualizzare la pagina Nuova assegnazione ruolo a livello di sistema, nella quale è possibile creare assegnazioni di ruolo di sistema aggiuntive per il sito del server di report. Per ulteriori informazioni, vedere la [pagina nuova assegnazione ruolo a sistema: modifica assegnazioni ruolo a sistema &#40;Gestione report&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Modifica**  
@@ -51,7 +51,7 @@ ms.locfileid: "66102175"
  **Ruoli**  
  Visualizza un elenco di una o più definizioni di ruolo che fanno parte di un'assegnazione di ruolo esistente. Se a un account utente o di gruppo vengono assegnati più ruoli, tale gruppo o utente potrà eseguire tutte le attività incluse in tutti i ruoli. Per visualizzare il set di attività supportate da ogni ruolo, utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Non è possibile visualizzare, creare, modificare o eliminare ruoli in Gestione report. Per istruzioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](security/granting-permissions-on-a-native-mode-report-server.md)  
   

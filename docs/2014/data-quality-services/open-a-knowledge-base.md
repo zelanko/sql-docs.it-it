@@ -13,26 +13,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481294"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
   In questo argomento viene descritto come aprire una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Per aprire una Knowledge Base, è necessario che questa sia già stata creata e pubblicata (se creata da un altro utente) o chiusa (se creata dallo stesso utente).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per aprire una Knowledge Base è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Open"></a>Aprire una Knowledge base  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Aprire una Knowledge base  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -68,24 +68,24 @@ ms.locfileid: "65481294"
   
 -   Per aprire una Knowledge Base presente nell'elenco delle Knowledge Base recenti ma che è stata bloccata da un altro utente, contattare l'utente per richiederne lo sblocco.  
   
-##  <a name="FollowUp"></a>Completamento: dopo l'apertura di una Knowledge base  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Completamento: dopo l'apertura di una Knowledge base  
  Dopo avere aperto una Knowledge Base, questa viene collocata nello stato indicato nella colonna Stato della relativa tabella. Per le attività di individuazione delle informazioni e quelle relative ai criteri di corrispondenza, la Knowledge Base verrà aperta in una pagina di procedura guidata specifica. Per l'attività di gestione del dominio, la Knowledge Base verrà aperta nella pagina di gestione del dominio. Per altre informazioni sugli stati, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Locked"></a>Se la Knowledge base è bloccata  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Se la Knowledge base è bloccata  
  L'icona di blocco nella prima colonna indica se la Knowledge Base è bloccata. Il nome di una Knowledge Base bloccata verrà visualizzato in colore rosso. Una Knowledge Base in corso di modifica da parte di un utente specifico tramite un'attività di Knowledge Base, viene contrassegnata come Bloccata. Una Knowledge Base bloccata non può essere modificata da un secondo utente. L'utente che sta lavorando alla Knowledge Base può sbloccarla facendo clic su di essa con il pulsante destro del mouse nella tabella presente nella pagina Apri Knowledge Base, quindi scegliendo **Sblocca**, oppure può sbloccarla effettuandone la pubblicazione. Quando si posiziona il cursore su una Knowledge Base bloccata, viene visualizzato un suggerimento in DQS che indica chi ha bloccato la Knowledge Base e quando.  
   
-##  <a name="State"></a>Stato di una Knowledge base  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Stato di una Knowledge base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
 -   >vuota: il campo stato è vuoto per una Knowledge base se la Knowledge base è stata pubblicata facendo clic su **pubblica** nell'attività Gestione dominio e quindi su **Sì-pubblica la Knowledge base e Chiudi**. ** \< **  
   
 -   **In lavorazione**: il lavoro sulla Knowledge base è stato salvato facendo clic su **pubblica** nell'attività Gestione dominio e quindi su **No-Salva il lavoro sulla Knowledge base e Chiudi**.  
   
--   **Gestione dominio**: sono stati immessi dati per un dominio nella Knowledge base, ma la Knowledge base non è stata pubblicata e il lavoro rimane nell'attività di gestione del dominio. L'attività Individuazione informazioni non è disponibile. Ciò si verifica quando si fa clic su **Chiudi** nella schermata **Gestione dominio** .  
+-   **Gestione dominio**: sono stati immessi dati per un dominio nella Knowledge Base, ma la Knowledge Base non è stata pubblicata e il lavoro rimane nell'attività Gestione dominio. L'attività Individuazione informazioni non è disponibile. Ciò si verifica quando si fa clic su **Chiudi** nella schermata **Gestione dominio** .  
   
--   **Individuazione-mapping**: la Knowledge base è stata chiusa nella pagina **Gestione Knowledge Base: mapping** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle corrispondenze non sono disponibili.  
+-   **Individuazione - Mapping**: l'attività della Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Mapping** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle corrispondenze non sono disponibili.  
   
--   **Individuazione-** individuazione: la Knowledge base è stata chiusa nella pagina **Gestione Knowledge Base: analizza** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
+-   **Individuazione - Individuazione**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Analizza** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   
 -   **Gestione dei valori di individuazione**: la Knowledge base è stata chiusa nella pagina **Gestione Knowledge Base: Gestisci termini di dominio** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   

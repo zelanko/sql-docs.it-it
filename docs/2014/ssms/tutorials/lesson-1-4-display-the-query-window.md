@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63281988"
 ---
 # <a name="display-the-query-window"></a>Visualizzare la finestra Query
@@ -31,6 +31,6 @@ ms.locfileid: "63281988"
      Si noti la modalità con cui le finestre vengono visualizzate come finestre a schede a destra di Esplora oggetti.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Visualizzare la pagina Dettagli Esplora oggetti](lesson-1-5-show-the-object-explorer-details-page.md)  
+ [Mostra la pagina dei Dettagli Esplora oggetti](lesson-1-5-show-the-object-explorer-details-page.md)  
   
   

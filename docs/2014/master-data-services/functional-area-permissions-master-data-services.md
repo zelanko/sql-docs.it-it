@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479417"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorizzazioni per aree funzionali (Master Data Services)
@@ -26,21 +26,21 @@ ms.locfileid: "65479417"
   
 -   **Explorer**  
   
--   **Gestione delle versioni**  
+-   **Gestione versioni**  
   
 -   **Gestione integrazione**  
   
--   **Amministrazione sistema**  
+-   **Amministrazione del sistema**  
   
 -   **Autorizzazioni utenti e gruppi**  
   
  Quando si assegnano autorizzazioni a un'area funzionale, si rende visibile un'area dell'interfaccia utente all'utente o al gruppo.  
   
- All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
  Per accedere a **, è necessario che un utente o un gruppo disponga almeno delle autorizzazioni per un'area funzionale e un modello nella scheda** Modelli [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   

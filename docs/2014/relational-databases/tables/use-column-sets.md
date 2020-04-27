@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298627"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
@@ -125,7 +125,7 @@ GO
   
  ** Non applicabile = Non viene restituito alcun valore per questi attributi durante un'operazione di selezione sul set di colonne. Quando per questo attributo viene specificato un valore dal chiamante nella rappresentazione XML fornita per un set di colonne in un'operazione di inserimento o di aggiornamento, viene generato un errore.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Il funzionamento del modello di sicurezza per un set di colonne è analogo a quello del modello di sicurezza che esiste tra una tabella e le relative colonne. I set di colonne possono essere visualizzati come una tabella di dimensioni ridotte e un'operazione di selezione è analoga a un'operazione SELECT * eseguita su tale tabella. La relazione tra il set di colonne e le colonne di tipo sparse, tuttavia, rappresenta un raggruppamento anziché rappresentare esclusivamente un contenitore. Il modello controlla la sicurezza sulla colonna del set di colonne e applica le operazioni DENY sulle colonne di tipo sparse sottostanti. Di seguito sono riportate le caratteristiche aggiuntive del modello di sicurezza.  
   
 -   È possibile concedere e revocare le autorizzazioni di sicurezza alla colonna del set di colonne, analogamente a qualsiasi altra colonna della tabella.  
@@ -139,7 +139,7 @@ GO
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti una tabella in cui sono contenuti i documenti è presente il set di colonne comune `DocID` e `Title`. Il gruppo Production richiede una colonna `ProductionSpecification` e una colonna `ProductionLocation` per tutti i documenti relativi alla produzione, mentre il gruppo Marketing richiede una colonna `MarketingSurveyGroup` per i documenti relativi al marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>R. Creazione di una tabella in cui è presente un set di colonne  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Creazione di una tabella in cui è presente un set di colonne  
  Nell'esempio seguente viene creata la tabella che utilizza colonne di tipo sparse e include il set di colonne `SpecialPurposeColumns`. Vengono inserite due righe nella tabella, quindi vengono selezionati dati dalla tabella.  
   
 > [!NOTE]  
@@ -255,7 +255,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Usare le colonne di tipo sparse](use-sparse-columns.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Utilizzo di colonne di tipo sparse](use-sparse-columns.md)  
   
   

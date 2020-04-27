@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103184"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Abilitare o disabilitare le funzionalità di Reporting Services
@@ -35,7 +35,7 @@ ms.locfileid: "66103184"
   
 -   [Sicurezza integrata di Windows per le origini dati dei report](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a>Servizio Web ReportServer  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a>Servizio Web ReportServer  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Per abilitare o disabilitare il servizio Web ReportServer mediante la modifica della configurazione  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66103184"
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si desidera configurare.  
   
-2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul nodo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , scegliere **Criteri**, quindi fare clic su **Facet**.  
+2.  In Esplora oggetti fare clic con il pulsante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] destro del mouse sul nodo, scegliere **criteri**e fare clic su **facet**.  
   
 3.  Nell'elenco **Facet** selezionare **Configurazione superficie di attacco per Reporting Services**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66103184"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a>Eventi pianificati e recapito  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Recapito ed eventi pianificati  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Per abilitare o disabilitare il recapito e gli eventi pianificati mediante la modifica della configurazione  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66103184"
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si desidera configurare.  
   
-2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul nodo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , scegliere **Criteri**, quindi fare clic su **Facet**.  
+2.  In Esplora oggetti fare clic con il pulsante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] destro del mouse sul nodo, scegliere **criteri**e fare clic su **facet**.  
   
 3.  Nell'elenco **Facet** selezionare **Configurazione superficie di attacco per Reporting Services**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66103184"
 > [!NOTE]  
 >  Non è possibile disabilitare completamente l'elaborazione in background, in quanto fornisce funzionalità di manutenzione dei database necessarie per le operazioni del server.  
   
-##  <a name="ReportManager"></a>Gestione report  
+##  <a name="report-manager"></a><a name="ReportManager"></a>Gestione report  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>Per abilitare o disabilitare Gestione report mediante la modifica della configurazione  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66103184"
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si desidera configurare.  
   
-2.  In **Esplora oggetti**fare clic con il pulsante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] destro del mouse sul nodo, scegliere **criteri**e fare clic su **facet**.  
+2.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sul nodo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , scegliere **Criteri**, quindi fare clic su **Facet**.  
   
 3.  Nell'elenco **Facet** selezionare **Configurazione superficie di attacco per Reporting Services**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66103184"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a>Generatore report  
+##  <a name="report-builder"></a>Generatore report <a name="ReportBuilder"></a>  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Per abilitare o disabilitare Generatore report mediante l'utilizzo di SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103184"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a>Sicurezza integrata di Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Sicurezza integrata di Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Per abilitare o disabilitare la sicurezza integrata di Windows mediante l'utilizzo di SQL Server Management Studio  
   
@@ -179,13 +179,13 @@ ms.locfileid: "66103184"
   
 3.  In **Selezione pagina** nella finestra di dialogo **Proprietà server**fare clic su **Sicurezza**.  
   
-    -   Per attivare la sicurezza integrata di Windows, selezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
+    -   Per abilitare la sicurezza integrata di Windows, selezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
   
-    -   Per disattivare la sicurezza integrata di Windows, deselezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
+    -   Per disabilitare la sicurezza integrata di Windows, deselezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

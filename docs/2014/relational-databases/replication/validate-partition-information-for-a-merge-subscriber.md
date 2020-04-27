@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255304"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Convalida delle informazioni sulle partizioni per un Sottoscrittore di tipo merge
   Quando si definisce un filtro di riga con parametri per una pubblicazione di tipo merge, si utilizza una funzione che fa riferimento a informazioni sul Sottoscrittore, ad esempio il nome di accesso del Sottoscrittore. Per impostazione predefinita, le informazioni sul Sottoscrittore vengono convalidate dalla replica in base a tale funzione prima di ogni sincronizzazione e ogni volta che uno snapshot viene applicato al Sottoscrittore. Il processo di convalida garantisce il partizionamento corretto dei dati per ogni Sottoscrittore. Il comportamento di convalida è controllato dalla proprietà di pubblicazione **validate_subscriber_info**, che può essere modificata mediante [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) oppure nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione**. Per ulteriori informazioni sulla modifica delle proprietà di pubblicazione, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 ## <a name="how-partition-validation-works"></a>Funzionamento della convalida delle partizioni  
- Quando una pubblicazione viene filtrata, ad esempio mediante la funzione **SUSER_SNAME()** , l'agente di merge applica lo snapshot iniziale a ogni Sottoscrittore in base ai dati validi per l'espressione **SUSER_SNAME()** .  
+ Quando una pubblicazione viene filtrata, ad esempio mediante la funzione **SUSER_SNAME()**, l'agente di merge applica lo snapshot iniziale a ogni Sottoscrittore in base ai dati validi per l'espressione **SUSER_SNAME()** .  
   
  Se la convalida è abilitata, quando il Sottoscrittore si riconnette al server di pubblicazione per la successiva sincronizzazione, l'agente di merge convalida le informazioni nel Sottoscrittore e garantisce che la partizione di ogni Sottoscrittore corrisponda a quella ricevuta nello snapshot iniziale. Per ogni successiva applicazione di snapshot o merge, l'agente di merge convalida la partizione di ogni Sottoscrittore.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "63255304"
   
  Quando l'agente di merge convalida una partizione, oltre a convalidare la partizione rispetto ai valori restituiti dalle funzioni utilizzate nelle espressioni di filtro, controlla se lo snapshot è stato generato prima di modifiche che ne compromettono la validità, come operazioni di pulizia dei metadati o modifiche dello schema. Se uno snapshot partizionato è obsoleto, l'agente di merge restituirà un errore e sarà necessario rigenerare uno snapshot partizionato per il Sottoscrittore in base a uno snapshot regolare corrente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Domande frequenti sull'amministrazione della replica](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [Reinizializzare le sottoscrizioni](reinitialize-subscriptions.md)   
- [Convalidare i dati replicati](validate-data-at-the-subscriber.md)  
+ [Procedure consigliate per l'amministrazione della replica](administration/best-practices-for-replication-administration.md)   
+ [Reinizializza sottoscrizioni](reinitialize-subscriptions.md)   
+ [Convalida dei dati replicati](validate-data-at-the-subscriber.md)  
   
   
