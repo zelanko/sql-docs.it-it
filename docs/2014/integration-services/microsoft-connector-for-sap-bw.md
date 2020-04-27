@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890596"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
@@ -29,11 +29,11 @@ ms.locfileid: "62890596"
 ## <a name="components"></a>Componenti  
  Il [!INCLUDE[msCoName](../includes/msconame-md.md)] connettore 1,1 per SAP BW include i componenti seguenti:  
   
--   **Origine SAP BW**: l'origine SAP BW è un componente di origine del flusso di dati che consente di estrarre dati da un sistema SAP Netweaver BW versione 7.  
+-   **Origine SAP BW**: l'origine SAP BW è un componente di origine del flusso di dati che consente di estrarre dati da un sistema SAP NetWeaver BW versione 7.  
   
--   **Destinazione SAP BW**: la destinazione SAP BW è un componente di destinazione del flusso di dati che consente di caricare dati in un sistema SAP Netweaver BW versione 7.  
+-   **Destinazione SAP BW**-la destinazione SAP BW è un componente di destinazione del flusso di dati che consente di caricare i dati in un sistema SAP NetWeaver BW versione 7.  
   
--   **Gestione connessione SAP BW**: la gestione connessione SAP BW connette un'origine SAP BW o una destinazione SAP BW a un sistema SAP Netweaver BW versione 7.  
+-   **Gestione connessione SAP BW**: la gestione connessione SAP BW connette un'origine SAP BW o una destinazione SAP BW a un sistema SAP NetWeaver BW versione 7.  
   
  Per una procedura dettagliata che illustra come configurare e usare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897)(Utilizzo dei servizi di integrazione SQL Server con SAP BI 7.0). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   

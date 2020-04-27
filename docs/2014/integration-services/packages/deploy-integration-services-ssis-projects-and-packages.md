@@ -11,17 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890254"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Distribuzione di progetti e pacchetti
-  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, il modello di distribuzione del progetto e il modello di distribuzione del pacchetto. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Per altre informazioni sulla distribuzione di progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md).  
+ Per altre informazioni sulla distribuzione di progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md).  
   
  Per ulteriori informazioni sul modello di distribuzione del pacchetto, vedere [distribuzione di pacchetti &#40;&#41;SSIS ](legacy-package-deployment-ssis.md).  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62890254"
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog sulle [opinioni relative alle strategie di diramazione per i progetti SSIS](https://go.microsoft.com/fwlink/?LinkId=245739)sul sito Web mattmasson.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilità dtexec](dtexec-utility.md)  
   
   

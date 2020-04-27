@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901069"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
-  L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP NetWeaver BW versione 7 e li rende disponibili per il flusso di dati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un pacchetto.  
+  L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Questa origine include un output e un output degli errori.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62901069"
   
 -   [Configurare l'origine SAP BW](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a>Preparazione degli oggetti SAP NetWeaver BW richiesti dall'origine  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> Preparazione degli oggetti SAP Netweaver BW richiesti dall'origine  
  L'origine SAP BW richiede la presenza di determinati oggetti nel sistema SAP Netweaver BW per funzionare. Se questi oggetti non esistono ancora, è necessario eseguire questi passaggi per crearli e configurarli nel sistema SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -56,15 +56,15 @@ ms.locfileid: "62901069"
   
     1.  Passare alla workbench dell'amministratore (codice di transazione RSA1) e, nel riquadro sinistro, selezionare **Open Hub Destination**(Destinazione hub aperto).  
   
-    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"**(Crea destinazione di hub aperto).  
+    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"** (Crea destinazione di hub aperto).  
   
-    3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"**, quindi immettere la destinazione RFC creata in precedenza.  
+    3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"** , quindi immettere la destinazione RFC creata in precedenza.  
   
     4.  Salvare e attivare la nuova destinazione di hub aperto.  
   
 3.  Creare un processo di trasferimento dati (DTP):  
   
-    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"**(Crea processo di trasferimento dati).  
+    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"** (Crea processo di trasferimento dati).  
   
     2.  Configurare, salvare e attivare il DTP.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "62901069"
   
      L'origine SAP BW può chiamare la catena di processi per attivare il processo di trasferimento dati.  
   
-##  <a name="bkmk_Connect_Database"></a> Connessione al sistema SAP Netweaver BW  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Connessione al sistema SAP Netweaver BW  
  Per connettersi al sistema SAP Netweaver BW versione 7, l'origine SAP BW utilizza la gestione connessione SAP BW che fa parte di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. La gestione connessione SAP BW è l'unica gestione connessione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che può essere utilizzata dall'origine SAP BW.  
   
  Per ulteriori informazioni sulla gestione connessione SAP BW, vedere [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a>Configurazione dell'origine SAP BW  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> Configurazione dell'origine SAP BW  
  Per configurare l'origine SAP BW, procedere nei modi seguenti:  
   
 -   Cercare e selezionare la destinazione OHS (Open Hub Service) da utilizzare per estrarre i dati.  

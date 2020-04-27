@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889840"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
@@ -78,7 +78,7 @@ ms.locfileid: "62889840"
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come visualizzare le voci di log in tempo reale, vedere [Visualizzare le voci di log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi registrati dal servizio Integration Services](../service/events-logged-by-the-integration-services-service.md)  
   
   

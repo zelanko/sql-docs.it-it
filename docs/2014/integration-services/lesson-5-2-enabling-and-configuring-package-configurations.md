@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891057"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
@@ -26,7 +26,7 @@ ms.locfileid: "62891057"
   
 2.  Scegliere [!INCLUDE[ssIS](../includes/ssis-md.md)] Variabili **dal menu**.  
   
-3.  Nella finestra **Variabili** fare clic sull'icona Aggiungi variabile .  
+3.  Nella finestra **Variabili** fare clic sull'icona Aggiungi variabile.  
   
 4.  Nella casella **Nome** digitare **varFolderName**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62891057"
   
 ### <a name="to-enable-package-configurations"></a>Per abilitare le configurazioni dei pacchetti  
   
-1.  Scegliere **Converti nel modello di distribuzione del pacchetto**dal **menu progetto**.  
+1.  Scegliere **Converti nel modello di distribuzione del pacchetto**dal menu **Progetto**.  
   
 2.  Fare clic su **OK** nella richiesta di avviso e, una volta completata la conversione, scegliere **OK** nella finestra di dialogo **Converti nel modello di distribuzione del pacchetto** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62891057"
   
 10. Nella finestra di dialogo **Selezionare il percorso del file di configurazione** digitare **SSISTutorial** nel campo **Nome file**e quindi fare clic su **Salva**.  
   
-11. Nella pagina **Selezione tipo di configurazione** fare clic su **Avanti.**  
+11. Nella pagina **Selezione tipo di configurazione** fare clic su **Avanti**.  
   
 12. Nel riquadro **oggetti** della pagina **Selezione proprietà da esportare** espandere **variabili**, espandere **VarFolderName**, espandere **Proprietà**, quindi selezionare **valore**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62891057"
   
 15. Fare clic su **Fine**.  
   
-16. Fare clic su **Close**.  
+16. Fare clic su **Chiudi**.  
   
 17. La procedura guidata crea un file di configurazione denominato SSISTutorial. dtsConfig che contiene le impostazioni `value` di configurazione per della variabile che a sua volta imposta `Directory` la proprietà dell'enumeratore.  
   

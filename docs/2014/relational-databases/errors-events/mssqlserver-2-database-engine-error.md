@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d1e10db6b9bb123bf82c0790cbc8be10388dddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915218"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
@@ -44,7 +44,7 @@ ms.locfileid: "62915218"
  [Gestire i servizi di motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configurazione della rete client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

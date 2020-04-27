@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890212"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
@@ -41,13 +41,13 @@ ms.locfileid: "62890212"
   
 -   [Sintassi](#syntax)  
   
--   [Parameters](#parameter)  
+-   [Parametri](#parameter)  
   
--   [Osservazioni:](#remark)  
+-   [Note](#remark)  
   
--   [esempi](#example)  
+-   [Esempi](#example)  
   
-##  <a name="server"></a> Server Integration Services e file di progetto  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a>Server Integration Services e file di progetto  
  Quando si utilizza `dtexec` per eseguire i pacchetti sul [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, `dtexec` chiama il [catalogo. create_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [Catalog. set_execution_parameter_value &#40;database ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) e [Catalog. start_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) stored procedure per creare un'esecuzione, impostare i valori dei parametri e avviare l'esecuzione. Tutti i log di esecuzione possono essere visualizzati dal server nelle viste correlate o tramite report standard disponibili in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sui report, vedere [Report per il server Integration Services](../reports-for-the-integration-services-server.md).  
   
  Di seguito è riportato un esempio relativo all'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -60,31 +60,31 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  È possibile utilizzare `dtexec` con gli strumenti di pianificazione di terze parti per pianificare i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti distribuiti nel server.  
   
-##  <a name="bit"></a> Considerazioni sull'installazione in computer a 64 bit  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Considerazioni sull'installazione in computer a 64 bit  
  In un computer a 64 bit con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installata una versione a 64 bit dell'utilità `dtexec` (dtexec.exe). Se è necessario eseguire alcuni pacchetti nella modalità 32 bit, è necessario installare la versione a 32 bit dell'utilità `dtexec`. Per installare la versione a 32 bit dell'utilità `dtexec`, è necessario selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
   
- Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è *\<unità>* :\Programmi (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso della directory a 64 bit è *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn.  
+ Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è * \<unità>*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso della directory a 64 bit è * \<unità>*: \Programmi\Microsoft SQL Server\110\DTS\Binn.)  
   
 > [!NOTE]  
 >  Se si utilizza SQL Server Agent per eseguire l'utilità, verrà automaticamente utilizzata la versione a 64 bit dell'utilità. Per trovare l'eseguibile corretto per l'utilità, SQL Server Agent utilizza il Registro di sistema, non la variabile di ambiente PATH.  
   
  Per assicurarsi di eseguire la versione a 64 bit dell'utilità al prompt dei comandi, è possibile eseguire una delle azioni seguenti:  
   
--   Aprire una finestra del prompt dei comandi, accedere alla directory che contiene la versione a 64 bit dell'utilità, *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn, quindi eseguire l'utilità da quel percorso.  
+-   Aprire una finestra del prompt dei comandi, passare alla directory che contiene la versione a 64 bit dell'utilità (*\<unità>*: \Programmi\Microsoft SQL Server\110\DTS\Binn), quindi eseguire l'utilità da quel percorso.  
   
--   Al prompt dei comandi eseguire l'utilità immettendo il percorso completo ( *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) della versione a 64 bit dell'utilità.  
+-   Al prompt dei comandi, eseguire l'utilità immettendo il percorso completo (*\<unità>*: \Programmi\Microsoft SQL Server\110\DTS\Binn) della versione a 64 bit dell'utilità.  
   
--   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso della versione a 64 bit ( *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) prima del percorso della versione a 32 bit ( *\<unità>* :\Programmi(x86)\Microsoft SQL Server\110\DTS\Binn).  
+-   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente Path inserendo il percorso 64 bit (*\<unità>*: \Programmi\Microsoft SQL Server\110\DTS\Binn) prima del percorso di 32 bit (*\<unità>*: \ Programmi (x86) \Microsoft SQL Server\110\DTS\Binn) nella variabile.  
   
-##  <a name="side"></a> Considerazioni sui computer con installazioni side-by-side  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Considerazioni sui computer con installazioni side-by-side  
  Se [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] è installato in un computer con [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], vengono installate più versioni dell'utilità `dtexec`.  
   
- Per assicurarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguirla immettendo il percorso completo ( *\<unità>* :\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn).  
+ Per assicurarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguire l'utilità immettendo il percorso completo (*\<unità>*: \Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn).  
   
-##  <a name="phases"></a> Fasi di esecuzione  
+##  <a name="phases-of-execution"></a><a name="phases"></a>Fasi di esecuzione  
  L'esecuzione di questa utilità si articola nelle quattro fasi descritte di seguito.  
   
-1.  Determinazione dell'origine del comando: il prompt dei comandi esegue la lettura dell'elenco delle opzioni e degli argomenti specificati. Tutte le fasi successive vengono ignorate se viene rilevata un'opzione **/?** o **/HELP** .  
+1.  Determinazione dell'origine del comando: il prompt dei comandi legge l'elenco delle opzioni e degli argomenti specificati. Tutte le fasi successive vengono ignorate se viene rilevata un'opzione **/?** o **/HELP** .  
   
 2.  Fase di caricamento del pacchetto: viene caricato il `/SQL`pacchetto specificato dall'opzione `/DTS` , **/file**o.  
   
@@ -96,9 +96,9 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
     -   Opzioni che configurano il comportamento dell'utilità in fase di esecuzione, ad esempio la creazione di report.  
   
-4.  Convalida ed esecuzione: il pacchetto viene eseguito o convalidato senza essere eseguito se è stata specificata l'opzione **/VALIDATE**.  
+4.  Convalida ed esecuzione: il pacchetto viene eseguito oppure convalidato ma non eseguito se è stata specificata l'opzione **/VALIDATE** .  
   
-##  <a name="exit"></a> Codici di uscita restituiti  
+##  <a name="exit-codes-returned"></a><a name="exit"></a>Codici di uscita restituiti  
  **Codici di uscita restituiti dall'utilità dtexec**  
   
  Durante l'esecuzione di un pacchetto è possibile che `dtexec` restituisca un codice di uscita. Il codice di uscita viene utilizzato per popolare la variabile ERRORLEVEL, il cui valore può essere testato nelle istruzioni condizionali o nella logica di diramazione in un file batch. Nella tabella seguente vengono elencati i valori che l'utilità `dtexec` può impostare all'uscita.  
@@ -112,7 +112,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|L'utilità non è stata in grado di caricare il pacchetto richiesto. Risulta impossibile caricare il pacchetto.|  
 |6|L'utilità ha rilevato un errore interno oppure un errore sintattico o semantico nella riga di comando.|  
   
-##  <a name="syntaxRules"></a> Regole della sintassi  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a>Regole di sintassi  
  **Regole di sintassi dell'utilità**  
   
  Tutte le opzioni devono essere precedute da una barra (/) o un segno meno (-). Le opzioni riportate di seguito sono precedute da una barra (/), che può tuttavia essere sostituita dal segno meno (-).  
@@ -123,7 +123,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Le opzioni e gli argomenti, escluse le password, non fanno distinzione tra maiuscole e minuscole.  
   
-##  <a name="cmdshell"></a> Utilizzo di dtexec da xp_cmdshell  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a>Uso di dtexec dalla xp_cmdshell  
  **Utilizzo di dtexec da xp_cmdshell**  
   
  È possibile eseguire dtexec dal prompt di **xp_cmdshell** . Nell'esempio seguente viene illustrato come eseguire un pacchetto denominato UpsertData.dtsx e ignorare il codice restituito:  
@@ -142,40 +142,40 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 > [!IMPORTANT]  
 >  Nelle nuove installazioni, in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'opzione **xp_cmdshell** risulta disabilitata per impostazione predefinita. L'opzione può essere abilitata eseguendo la stored procedure di sistema **sp_configure** . Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-##  <a name="syntax"></a> Sintassi  
+##  <a name="syntax"></a><a name="syntax"></a>Sintassi  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> Parametri  
+##  <a name="parameters"></a><a name="parameter"></a> Parametri  
   
 -   **/?** [*option_name*]: facoltativo. Consente di visualizzare le opzioni del prompt dei comandi o le informazioni della Guida relative all'opzione *option_name* specificata e quindi di chiudere l'utilità.  
   
-     Se si specifica un ** argomento di option_name `dtexec` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata la documentazione online di e viene visualizzato l'argomento relativo all'utilità dtexec.  
+     Se si specifica un *option_name* argomento di option_name `dtexec` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata la documentazione online di e viene visualizzato l'argomento relativo all'utilità dtexec.  
   
 -   **/Nome CA [llerInfo]**:   
-                  Facoltativa. Specifica informazioni aggiuntive per l'esecuzione di un pacchetto. Quando si esegue un pacchetto utilizzando SQL Server Agent, tramite l'agente è possibile impostare questo argomento per specificare che l'esecuzione del pacchetto venga richiamata da SQL Server Agent. Questo parametro viene ignorato quando l'utilità `dtexec` viene eseguita dalla riga di comando.  
+                  Facoltativo. Specifica informazioni aggiuntive per l'esecuzione di un pacchetto. Quando si esegue un pacchetto utilizzando SQL Server Agent, tramite l'agente è possibile impostare questo argomento per specificare che l'esecuzione del pacchetto venga richiamata da SQL Server Agent. Questo parametro viene ignorato quando l'utilità `dtexec` viene eseguita dalla riga di comando.  
   
--   **/CheckF [ile]** _filespec_:   
-                  Facoltativa. Imposta la `CheckpointFileName` proprietà del pacchetto sul percorso e sul file specificati in *filespec*. Questo file viene utilizzato quando il pacchetto viene riavviato. Se si specifica questa opzione ma si omette il valore del nome file, la proprietà `CheckpointFileName` del pacchetto viene impostata su una stringa vuota. Se si omette questa opzione, i valori nel pacchetto vengono conservati.  
+-   **/CheckF[ile]** _filespec_:   
+                  Facoltativo. Imposta la `CheckpointFileName` proprietà del pacchetto sul percorso e sul file specificati in *filespec*. Questo file viene utilizzato quando il pacchetto viene riavviato. Se si specifica questa opzione ma si omette il valore del nome file, la proprietà `CheckpointFileName` del pacchetto viene impostata su una stringa vuota. Se si omette questa opzione, i valori nel pacchetto vengono conservati.  
   
 -   **/CheckP [ointing]** _{ON\OFF}_:   
-                  Facoltativa. Consente di impostare un valore che determina se il pacchetto utilizzerà i checkpoint durante l'esecuzione. Il valore **on** indica che un pacchetto la cui esecuzione ha avuto esito negativo deve essere rieseguito. In questo caso, il motore di run-time utilizza il file del checkpoint per riavviare il pacchetto dal punto in cui si è verificato l'errore.  
+                  Facoltativo. Consente di impostare un valore che determina se il pacchetto utilizzerà i checkpoint durante l'esecuzione. Il valore **on** indica che un pacchetto la cui esecuzione ha avuto esito negativo deve essere rieseguito. In questo caso, il motore di run-time utilizza il file del checkpoint per riavviare il pacchetto dal punto in cui si è verificato l'errore.  
   
      Il valore predefinito è on se l'opzione viene dichiarata senza un valore. L'esecuzione del pacchetto avrà esito negativo se il valore viene impostato su on, ma non risulta possibile trovare il file del checkpoint. Se si omette questa opzione, il valore impostato nel pacchetto viene conservato. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md).  
   
      L'opzione **/CheckPointing on on** di dtexec equivale a impostare la `SaveCheckpoints` proprietà del pacchetto su true e la `CheckpointUsage` proprietà su Always.  
   
--   **/Com [mandFile]** _filespec_:   
+-   **/Com[mandFile]** _filespec_:   
                   (Facoltativo). Specifica le opzioni di comando eseguite con `dtexec`. Il file specificato in *filespec* viene aperto e le relative opzioni vengono lette finché non viene rilevata la fine del file. *filespec* è un file di testo. L'argomento *filespec* consente di specificare il nome e il percorso del file di comando da associare all'esecuzione del pacchetto.  
   
 -   **/Conf [igFile]** _filespec_: facoltativo. Consente di specificare un file di configurazione da cui estrarre valori. Se si utilizza questa opzione, è possibile impostare una configurazione della fase di esecuzione diversa rispetto alla configurazione specificata in fase di progettazione per il pacchetto. È possibile archiviare impostazioni di configurazione diverse in un file di configurazione XML e quindi caricare tali impostazioni tramite l'opzione **/ConfigFile** prima dell'esecuzione del pacchetto.  
   
      È possibile usare l'opzione **/ConfigFile** per caricare in fase di esecuzione configurazioni aggiuntive non specificate in fase di progettazione. Non è tuttavia possibile usare l'opzione **/ConfigFile** per sostituire valori configurati specificati anche in fase di progettazione. Per informazioni sull'applicazione delle configurazioni dei pacchetti, vedere [Package Configurations](../package-configurations.md).  
   
--   **/Conn [ection]** _id_or_name; CONNECTION_STRING [[; id_or_name; CONNECTION_STRING]...]_:   
-                  Facoltativa. Consente di specificare che la gestione connessione con il nome o il GUID indicato si trova nel pacchetto e che è stata specificata una stringa di connessione.  
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_:   
+                  Facoltativo. Consente di specificare che la gestione connessione con il nome o il GUID indicato si trova nel pacchetto e che è stata specificata una stringa di connessione.  
   
      Questa opzione richiede che vengano specificati entrambi i parametri: il nome o il GUID della gestione connessione deve essere specificato nell'argomento *id_or_name* , mentre nell'argomento *connection_string* deve essere specificata una stringa di connessione valida. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md).  
   
@@ -222,8 +222,8 @@ dtexec /option [value] [/option [value]]...
   
      Per esempi relativi all'opzione **/ConsoleLog** , vedere la sezione **osservazioni** .  
   
--   **/D [TS]** _package_path_:   
-                  Facoltativa. Carica un pacchetto dall'archivio pacchetti SSIS. I pacchetti archiviati nell'archivio pacchetti SSIS vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, utilizzare l'opzione `/ISServer`. Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+-   **/D[ts]** _package_path_:   
+                  Facoltativo. Carica un pacchetto dall'archivio pacchetti SSIS. I pacchetti archiviati nell'archivio pacchetti SSIS vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, utilizzare l'opzione `/ISServer`. Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [distribuzione di progetti e pacchetti](deploy-integration-services-ssis-projects-and-packages.md).  
   
      L'argomento *package_path* consente di specificare il percorso relativo del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] a partire dalla radice dell'archivio pacchetti SSIS e include il nome del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
@@ -231,8 +231,8 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De [crypt]**  _password_: facoltativa. Consente di impostare la password di decrittografia utilizzata per caricare un pacchetto con password crittografata.  
   
--   **** _Codice errore_/dump:  
-                  Facoltativo consente di creare i file di dump del debug, con estensione MDMP e tmp, quando si verificano uno o più eventi specificati durante l'esecuzione del pacchetto. L'argomento *error code* specifica il tipo di codice evento (errore, avviso o informazione) che genera la creazione di file di dump del debug. Per specificare più codici evento, separare ciascun argomento *error code* con un punto e virgola (;). Non includere virgolette con l'argomento *error code* .  
+-   **/Dump** _error code_:  
+                  Facoltativo consente di creare i file di dump del debug, con estensione MDMP e tmp, quando si verificano uno o più eventi specificati durante l'esecuzione del pacchetto. L'argomento del *codice di errore* specifica il tipo di codice evento, ovvero errore, avviso o informazioni, che attiverà il sistema per creare i file di dump del debug. Per specificare più codici evento, separare ciascun argomento *error code* con un punto e virgola (;). Non includere virgolette con l'argomento *error code* .  
   
      Nell'esempio seguente vengono generati i file di dump del debug se si verifica l'errore DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER.  
   
@@ -249,10 +249,10 @@ dtexec /option [value] [/option [value]]...
   
      Se si aggiunge un valore **DumpOnCodes** alla chiave del registro di sistema e si usa l'opzione **/Dump** , il sistema crea file di dump del debug basati su entrambe le impostazioni.  
   
-     Per ulteriori informazioni sui file di dump del debug, vedere [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md).  
+     Per ulteriori informazioni sui file di dump del debug, vedere [generazione di file di dump per l'esecuzione del pacchetto](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
 -   **/DumpOnError**:   
-                  Facoltativa. Consente di creare i file di dump del debug, con estensione MDMP e tmp, quando si verifica un errore durante l'esecuzione del pacchetto.  
+                  Facoltativo. Consente di creare i file di dump del debug, con estensione MDMP e tmp, quando si verifica un errore durante l'esecuzione del pacchetto.  
   
      Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
@@ -261,21 +261,21 @@ dtexec /option [value] [/option [value]]...
   
      Per applicare questa opzione a tutti i pacchetti eseguiti `dtexec` dall'utilità, aggiungere un valore REG_DWORD **DumpOnError** alla chiave del registro di sistema HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS\Setup\DtsPath.. Il valore del valore del REG_DWORD **DumpOnError** determina se l'opzione **/DumpOnError** deve essere utilizzata con l' `dtexec` utilità:  
   
-    -   Un valore di dati diverso da zero indica che il sistema creerà file di dump del debug quando si verifica un errore, indipendentemente dal fatto **** che si usi l' `dtexec` opzione/DumpOnError con l'utilità.  
+    -   Un valore di dati diverso da zero indica che il sistema creerà file di dump del debug quando si verifica un errore, indipendentemente dal fatto **/DumpOnError** che si usi l' `dtexec` opzione/DumpOnError con l'utilità.  
   
-    -   Un valore di dati pari a zero indica che il sistema non creerà i file di dump del debug a **** meno che non si `dtexec` usi l'opzione/DumpOnError con l'utilità.  
+    -   Un valore di dati pari a zero indica che il sistema non creerà i file di dump del debug a **/DumpOnError** meno che non si `dtexec` usi l'opzione/DumpOnError con l'utilità.  
   
      Per ulteriori informazioni sui file di dump del debug, vedere [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
 -   `/Env[Reference]`*ID riferimento dell'ambiente*:   
-                  Facoltativa. Specifica il riferimento all'ambiente (ID) utilizzato dall'esecuzione del pacchetto, per un pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Nei parametri configurati per l'associazione alle variabili verranno utilizzati i valori delle variabili contenuti nell'ambiente.  
+                  Facoltativo. Specifica il riferimento all'ambiente (ID) utilizzato dall'esecuzione del pacchetto, per un pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Nei parametri configurati per l'associazione alle variabili verranno utilizzati i valori delle variabili contenuti nell'ambiente.  
   
      È possibile utilizzare l'opzione `/Env[Reference]` in combinazione con le opzioni `/ISServer` e `/Server`.  
   
      Questo parametro viene utilizzato da SQL Server Agent.  
   
--   **/F [ile]** _filespec_:   
-                  Facoltativa. Carica un pacchetto salvato nel file system. I pacchetti salvati nel file system vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, utilizzare l'opzione `/ISServer`. Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+-   **/F[ile]** _filespec_:   
+                  Facoltativo. Carica un pacchetto salvato nel file system. I pacchetti salvati nel file system vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, utilizzare l'opzione `/ISServer`. Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
   
      L'argomento *filespec* specifica il percorso e il nome file del pacchetto. È possibile specificare il percorso in formato UNC (Universal Naming Convention) o come percorso locale. Se nel percorso o nel nome file specificato nell'argomento *filespec* è contenuto uno spazio, è necessario racchiudere l'argomento *filespec* tra virgolette.  
   
@@ -283,10 +283,10 @@ dtexec /option [value] [/option [value]]...
   
 -   **/H [ELP]** [*Option_name*]: facoltativo. Consente di visualizzare le informazioni della Guida relative alle opzioni o all'opzione specificata dall'argomento *option_name* e quindi di chiudere l'utilità.  
   
-     Se si specifica un ** argomento di option_name `dtexec` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata la documentazione online di e viene visualizzato l'argomento relativo all'utilità dtexec.  
+     Se si specifica un *option_name* argomento di option_name `dtexec` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata la documentazione online di e viene visualizzato l'argomento relativo all'utilità dtexec.  
   
 -   `/ISServer`*PackagePath*:  
-                  Facoltativa. Esegue un pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'argomento *PackagePath* vengono specificati il percorso completo e il nome file del pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se nel percorso o nel nome file specificato nell'argomento *PackagePath* è contenuto uno spazio, è necessario racchiudere l'argomento *PackagePath* tra virgolette.  
+                  Facoltativo. Esegue un pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'argomento *PackagePath* vengono specificati il percorso completo e il nome file del pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se il percorso o il nome file specificato nell'argomento *PackagePath* contiene uno spazio, è necessario racchiudere l'argomento *PackagePath* tra virgolette.  
   
      Il formato del pacchetto è il seguente:  
   
@@ -300,8 +300,8 @@ dtexec /option [value] [/option [value]]...
   
      Questo parametro viene utilizzato da SQL Server Agent.  
   
--   **/L [ogger]** _classid_orprogid; ConfigString_:  
-                  Facoltativa. Associa uno o più provider di log all'esecuzione di un pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Il parametro *classid_orprogid* specifica il provider di log e può essere specificato come un GUID di classe. L'argomento *configstring* è la stringa utilizzata per configurare il provider di log.  
+-   **/L[ogger]** _classid_orprogid;configstring_:  
+                  Facoltativo. Associa uno o più provider di log all'esecuzione di un pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Il parametro *classid_orprogid* specifica il provider di log e può essere specificato come un GUID di classe. L'argomento *configstring* è la stringa utilizzata per configurare il provider di log.  
   
      Di seguito sono elencati i provider di log disponibili:  
   
@@ -335,14 +335,14 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M [axConcurrent]** _concurrent_executables_:  
-                  Facoltativa. Consente di specificare il numero di file eseguibili che il pacchetto è in grado di eseguire contemporaneamente. Il valore specificato deve essere un valore intero non negativo oppure -1. Il valore -1 indica che [!INCLUDE[ssIS](../../includes/ssis-md.md)] supporta un numero massimo di file eseguibili in esecuzione simultanea uguale al numero totale di processori nel computer in cui è eseguito il pacchetto, più due.  
+-   **/M[axConcurrent]** _concurrent_executables_:  
+                  Facoltativo. Consente di specificare il numero di file eseguibili che il pacchetto è in grado di eseguire contemporaneamente. Il valore specificato deve essere un valore intero non negativo oppure -1. Il valore -1 indica che [!INCLUDE[ssIS](../../includes/ssis-md.md)] supporta un numero massimo di file eseguibili in esecuzione simultanea uguale al numero totale di processori nel computer in cui è eseguito il pacchetto, più due.  
   
--   **/Pack [Age]** _PackageName_:  
-                  Facoltativa. Specifica il pacchetto che viene eseguito. Questo parametro viene utilizzato principalmente quando si esegue il pacchetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   **/Pack[age]** _PackageName_:  
+                  Facoltativo. Specifica il pacchetto che viene eseguito. Questo parametro viene utilizzato principalmente quando si esegue il pacchetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 -   **/P [assword]** _password_:  
-                  Facoltativa. Consente il recupero di un pacchetto protetto tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione viene usata in combinazione con l'opzione **/User** . Se si omette l'opzione **/Password** e viene usata l'opzione **/User** , verrà usata una password vuota. Il valore di *password* può essere racchiuso tra virgolette.  
+                  Facoltativo. Consente il recupero di un pacchetto protetto tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione viene usata in combinazione con l'opzione **/User** . Se si omette l'opzione **/Password** e viene usata l'opzione **/User** , verrà usata una password vuota. Il valore di *password* può essere racchiuso tra virgolette.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -371,11 +371,11 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/Proj [ect]** _ProjectFile_:  
-                  Facoltativa. Specifica il progetto da cui recuperare il pacchetto che viene eseguito. Con l'argomento *ProjectFile* viene specificato il nome file con estensione ispac. Questo parametro viene utilizzato principalmente quando si esegue il pacchetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   **/Proj[ect]** _ProjectFile_:  
+                  Facoltativo. Specifica il progetto da cui recuperare il pacchetto che viene eseguito. Con l'argomento *ProjectFile* viene specificato il nome file con estensione ispac. Questo parametro viene utilizzato principalmente quando si esegue il pacchetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
--   **** _Commento_/REM:  
-                  Facoltativa. Include i commenti nel prompt dei comandi o nei file di comando. L'argomento è facoltativo. Il valore di *comment* è una stringa che deve essere racchiusa tra virgolette o non deve contenere spazi. Se non si specifica alcun argomento, viene inserita una riga vuota. Durante la fase di determinazione dell'origine del comando, i valori*comment* vengono eliminati.  
+-   **/Rem** _comment_:  
+                  Facoltativo. Include i commenti nel prompt dei comandi o nei file di comando. L'argomento è facoltativo. Il valore di *comment* è una stringa che deve essere racchiusa tra virgolette o non deve contenere spazi. Se non si specifica alcun argomento, viene inserita una riga vuota. Durante la fase di determinazione dell'origine del comando, i valori*comment* vengono eliminati.  
   
 -   **/Rep [orting]** _level_ [*; event_guid_or_name*[*; event_guid_or_name*[...]]: facoltativo. Specifica i tipi di messaggi da segnalare. Le opzioni relative alle opzioni per *level* sono elencate di seguito:  
   
@@ -430,12 +430,12 @@ dtexec /option [value] [/option [value]]...
      È possibile usare l'opzione **/Set** per modificare il percorso da cui vengono caricate le configurazioni di pacchetto. Non è tuttavia possibile usare l'opzione **/Set** per ignorare un valore specificato da una configurazione in fase di progettazione. Per comprendere il modo in cui vengono applicate le configurazioni dei pacchetti, vedere [configurazioni di pacchetto](../package-configurations.md) e [modifiche del comportamento per le funzionalità Integration Services di SQL Server 2014](../behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 -   `/Ser[ver]`*Server*:  
-                  Facoltativa. Se si specifica l'opzione `/SQL` o `/DTS`, questa opzione specifica il nome del server dal quale recuperare il pacchetto. Se si omette l'opzione `/Server` e si specifica l'opzione `/SQL` o `/DTS`, verrà tentata l'esecuzione del pacchetto nel server locale. Il valore *server_instance* può essere racchiuso fra virgolette.  
+                  Facoltativo. Se si specifica l'opzione `/SQL` o `/DTS`, questa opzione specifica il nome del server dal quale recuperare il pacchetto. Se si omette l'opzione `/Server` e si specifica l'opzione `/SQL` o `/DTS`, verrà tentata l'esecuzione del pacchetto nel server locale. Il valore *server_instance* può essere racchiuso fra virgolette.  
   
      L'opzione `/Ser[ver]` è obbligatoria se è specificata l'opzione `/ISServer`.  
   
--   **/Sq [L]** _package_path_:  
-                  Carica un pacchetto archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database `msdb`. I pacchetti archiviati nel database `msdb` vengono distribuiti tramite il modello di distribuzione del pacchetto. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, utilizzare l'opzione `/ISServer`. Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+-   **/SQ[L]** _package_path_:  
+                  Carica un pacchetto archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database `msdb`. I pacchetti archiviati nel database `msdb` vengono distribuiti tramite il modello di distribuzione del pacchetto. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, utilizzare l'opzione `/ISServer`. Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [distribuzione di progetti e pacchetti](deploy-integration-services-ssis-projects-and-packages.md).  
   
      Con l'argomento *package_path* viene specificato il nome del pacchetto da recuperare. Se nel percorso vengono incluse cartelle, queste sono seguite da una barra rovesciata ("\\"). Il valore *package_path* può essere racchiuso fra virgolette. Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
@@ -455,13 +455,13 @@ dtexec /option [value] [/option [value]]...
 -   **/Su [m]**: facoltativo. Consente di visualizzare un contatore incrementale con il numero di righe che verranno ricevute dal componente successivo.  
   
 -   **/U [ser]** _user_name_:  
-                  Facoltativa. Consente il recupero di un pacchetto protetto tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione viene utilizzata solo se si specifica l'opzione `/SQL`. Il valore *user_name* può essere racchiuso tra virgolette.  
+                  Facoltativo. Consente il recupero di un pacchetto protetto tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione viene utilizzata solo se si specifica l'opzione `/SQL`. Il valore *user_name* può essere racchiuso tra virgolette.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va [lidate]**:  
-                  Facoltativa. Consente di arrestare l'esecuzione del pacchetto dopo la fase di convalida, quindi il pacchetto non viene eseguito. Durante la convalida, l'uso **** dell'opzione/warnaserror `dtexec` fa in modo che consideri un avviso come errore; Pertanto, il pacchetto ha esito negativo se viene generato un avviso durante la convalida.  
+                  Facoltativo. Consente di arrestare l'esecuzione del pacchetto dopo la fase di convalida, quindi il pacchetto non viene eseguito. Durante la convalida, l'uso **/WarnAsError** dell'opzione/warnaserror `dtexec` fa in modo che consideri un avviso come errore; Pertanto, il pacchetto ha esito negativo se viene generato un avviso durante la convalida.  
   
 -   **/VerifyB [uild]** _Major_[*; minor*[*; Build*]]: facoltativo. Consente di verificare il numero di build di un pacchetto rispetto ai numeri di build specificati durante la fase di verifica negli argomenti *major*, *minor*e *build* . Se i numeri non corrispondono, il pacchetto non verrà eseguito.  
   
@@ -473,11 +473,11 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/VerifyP [ackageID]** _PackageID_:  
-                  Facoltativa. Consente di verificare il GUID del pacchetto da eseguire in base al valore specificato nell'argomento *package_id* .  
+-   **/VerifyP[ackageID]** _packageID_:  
+                  Facoltativo. Consente di verificare il GUID del pacchetto da eseguire in base al valore specificato nell'argomento *package_id* .  
   
--   **/VerifyS [igned]**:  
-                  Facoltativa. Comporta il controllo della firma digitale del pacchetto da parte di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se il pacchetto non è firmato o se la firma non è valida, il pacchetto ha esito negativo. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](../security/identify-the-source-of-packages-with-digital-signatures.md).  
+-   **/VerifyS[igned]**:  
+                  Facoltativo. Comporta il controllo della firma digitale del pacchetto da parte di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se il pacchetto non è firmato o se la firma non è valida, il pacchetto ha esito negativo. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](../security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > [!IMPORTANT]  
     >  Se [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è configurato per la verifica della firma del pacchetto, gli unici controlli che vengono eseguiti sono quelli relativi alla presenza e alla validità della firma digitale, nonché all'attendibilità dell'origine. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non controlla se il pacchetto è stato modificato.  
@@ -492,7 +492,7 @@ dtexec /option [value] [/option [value]]...
      Se non si include il parametro *Filespec* , non sarà possibile abilitare un provider di log per i file di testo. Gli eventi del log verranno scritti solo nei provider di log abilitati durante la progettazione del pacchetto.  
   
 -   **/W [arnAsError]**:  
-                  Facoltativa. Poiché un avviso viene interpretato come un errore, il pacchetto non viene eseguito se durante la convalida viene generato un avviso. Se non viene generato alcun avviso durante la convalida e si omette l'opzione **/Validate** , il pacchetto viene eseguito.  
+                  Facoltativo. Poiché un avviso viene interpretato come un errore, il pacchetto non viene eseguito se durante la convalida viene generato un avviso. Se non viene generato alcun avviso durante la convalida e si omette l'opzione **/Validate** , il pacchetto viene eseguito.  
   
 -   **/X86**: facoltativo. Determina l'esecuzione del pacchetto in modalità a 32 bit in un computer a 64 bit da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa opzione viene impostata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando sono soddisfatte le condizioni seguenti:  
   
@@ -504,7 +504,7 @@ dtexec /option [value] [/option [value]]...
   
      Questa opzione è utilizzata solo da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa opzione viene ignorata se si esegue l'utilità `dtexec` dal prompt dei comandi.  
   
-##  <a name="remark"></a> Osservazioni  
+##  <a name="remarks"></a>Osservazioni su <a name="remark"></a>  
  L'ordine in cui vengono specificate le opzioni del comando può influire sulla modalità di esecuzione del pacchetto:  
   
 -   Le opzioni vengono elaborate nell'ordine che occupano nella riga di comando. I file di comando vengono letti in base all'ordine con cui vengono rilevati nella riga di comando, in modo analogo ai comandi nel file di comando.  
@@ -513,10 +513,10 @@ dtexec /option [value] [/option [value]]...
   
 -   Le opzioni **/Set** e **/ConfigFile** vengono elaborate nell'ordine in cui vengono rilevate.  
   
-##  <a name="example"></a> Esempi  
+##  <a name="examples"></a><a name="example"></a> Esempi  
  Gli esempi seguenti illustrano come usare l' `dtexec` utilità del prompt dei comandi per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ed eseguire i pacchetti.  
   
- **Pacchetti in esecuzione**  
+ **Esecuzione di pacchetti**  
   
  Per eseguire un pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)] salvato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows, utilizzare il codice seguente:  
   

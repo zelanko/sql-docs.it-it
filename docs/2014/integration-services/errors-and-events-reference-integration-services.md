@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899449"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guida di riferimento a errori ed eventi (Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899449"
 |DTS_E_CONNECTIONNOTFOUND|Indica che il pacchetto non può essere eseguito perché non è possibile trovare la gestione connessione specificata.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indica che per recuperare metadati nuovi o aggiornati per un'origine o una destinazione, è necessaria una connessione tra Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e un'origine dati, ma questa connessione non può essere eseguita correttamente.|  
 |DTS_E_MULTIPLECACHEWRITES|Indica che non è possibile eseguire il pacchetto perché una trasformazione cache sta tentando di scrivere dati nella cache in memoria. È tuttavia possibile che con un'altra trasformazione cache sia già stata effettuata una scrittura nella cache in memoria.|  
-|DTS_E_PRODUCTLEVELTOLOW|Indica che non è possibile eseguire il pacchetto perché non è [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installata la versione appropriata di.|  
+|DTS_E_PRODUCTLEVELTOLOW|Indica che non è possibile eseguire il pacchetto perché non è installata la versione corretta di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
 |DTS_E_READNOTFILLEDCACHE|Indica che una trasformazione Ricerca sta tentando di leggere dati dalla cache in memoria contemporaneamente al tentativo di scrittura dei dati nella cache da parte di una trasformazione cache.|  
 |DTS_E_UNPROTECTXMLFAILED|Indica che il sistema non ha decrittografato un nodo XML protetto.|  
 |DTS_E_WRITEWHILECACHEINUSE|Indica che una trasformazione cache sta tentando di scrivere dati nella cache in memoria contemporaneamente al tentativo di lettura dei dati da tale cache da parte di una trasformazione Ricerca.|  

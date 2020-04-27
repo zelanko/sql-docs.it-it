@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874477"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>Requisiti per le aggregazioni CLR definite dall'utente
@@ -52,7 +52,7 @@ ms.locfileid: "62874477"
 |---------------------|  
 |Aggiornamento della descrizione del metodo `Accumulate`, che ora accetta più di un parametro.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi CLR definiti dall'utente](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Chiamata di funzioni di aggregazione CLR definite dall'utente](clr-user-defined-aggregate-invoking-functions.md)  
   

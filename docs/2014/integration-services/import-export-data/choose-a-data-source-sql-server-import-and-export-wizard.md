@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893596"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
@@ -111,18 +111,18 @@ ms.locfileid: "62893596"
  **Password**  
  Consente di specificare la password dell'utente per la connessione al database quando un file di informazioni sul gruppo di lavoro corrente è associato al database. Tuttavia, se il database è protetto con un'unica password per tutti gli utenti, è necessario specificare questo valore nella finestra di dialogo **proprietà di data link** , a cui è possibile accedere facendo clic su **Avanzate**.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Si consiglia di specificare opzioni avanzate, ad esempio la password del database o un file di informazioni sul gruppo di lavoro non predefinito, utilizzando la finestra di dialogo **proprietà di data link** . Per ulteriori informazioni sulle proprietà del provider OLE DB, eseguire una ricerca nella sezione relativa all'accesso ai dati di [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Origine dati = Origine file flat  
  Per informazioni sulle opzioni per un'origine dei dati flat file, vedere gli argomenti seguenti.  
   
- [Editor gestione connessione file flat &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Editor gestione connessione file flat &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Editor gestione connessione file flat &#40;pagina colonne&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Editor gestione connessione file flat &#40;pagina Colonne&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Editor gestione connessione file flat &#40;pagina anteprima&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

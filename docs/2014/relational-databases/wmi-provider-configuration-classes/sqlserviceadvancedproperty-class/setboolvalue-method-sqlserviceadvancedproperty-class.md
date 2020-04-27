@@ -15,20 +15,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911403"
 ---
 # <a name="set-breakpoints"></a>Imposta punti di interruzione
   Utilizzare la finestra di dialogo **Imposta punti di interruzione** per specificare gli eventi su cui abilitare i punti di interruzione e per controllarne il funzionamento.  
   
 ## <a name="options"></a>Opzioni  
- **Enabled**  
+ **Attivata**  
  Consente di abilitare un punto di interruzione su un evento.  
   
- **Condizione di interruzioni**  
+ **Break Condition**  
  Consente di visualizzare un elenco di eventi disponibili sui quali è possibile impostare i punti di interruzione.  
   
  **Tipo di passaggi**  
@@ -38,13 +38,13 @@ ms.locfileid: "62911403"
 |-----------|-----------------|  
 |**Sempre**|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |**Numero di passaggi uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  
-|**Hit maggiore o uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte maggiore o uguale al numero di passaggi specificato.|  
+|**Numero di passaggi maggiore o uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte maggiore o uguale al numero di passaggi specificato.|  
 |**Numero di passaggi multiplo di**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte multiplo del numero di passaggi specificato. Se ad esempio questa opzione è impostata su 5, l'esecuzione verrà sospesa ogni cinque volte.|  
   
- **Numero di passaggi**  
+ **Passaggi**  
  Consente di specificare il numero di passaggi al raggiungimento del quale attivare un'interruzione. Questa opzione non è disponibile se il punto di interruzione è sempre attivo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Debug del flusso di controllo](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

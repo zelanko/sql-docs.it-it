@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917087"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
@@ -48,20 +48,20 @@ ms.locfileid: "62917087"
  **Creazione automatica statistiche**  
  Indica se il database crea automaticamente le statistiche di ottimizzazione mancanti. I valori possibili sono `True` e `False`. Se `True`, le statistiche mancanti necessarie per l'ottimizzazione di una query vengono compilate automaticamente durante la fase di ottimizzazione. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
- **compattazione automatica**  
+ **Compattazione automatica**  
  Indica se i file di database sono disponibili per la compattazione periodica. I valori possibili sono `True` e `False`. Per altre informazioni, vedere [Shrink a Database](shrink-a-database.md).  
   
  **Aggiornamento automatico statistiche**  
  Indica se il database aggiorna automaticamente le statistiche di ottimizzazione non aggiornate. I valori possibili sono `True` e `False`. Se `True`, tutte le statistiche non aggiornate necessarie per l'ottimizzazione di una query vengono compilate automaticamente durante la fase di ottimizzazione. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
- **Aggiornamento automatico delle statistiche in modo asincrono**  
+ **Aggiornamento automatico asincrono statistiche**  
  Se `True`, le query che avviano un aggiornamento automatico delle statistiche non aggiornate non attenderanno l'aggiornamento delle statistiche prima della compilazione. Le query successive utilizzeranno le statistiche aggiornate, non appena disponibili.  
   
  Se `False`, le query che avviano un aggiornamento automatico delle statistiche non aggiornate, restano in attesa fino a quando non è possibile utilizzare le statistiche aggiornate nel piano di ottimizzazione delle query.  
   
  L'impostazione di questa `True` opzione su non ha alcun effetto a meno che anche l'opzione `True` **aggiornamento automatico statistiche** non sia impostata su.  
   
-## <a name="containment"></a>Contenimento  
+## <a name="containment"></a>Containment  
  Nei database indipendenti alcune impostazioni che in genere sono configurate a livello di server possono essere configurate a livello di database.  
   
  **LCID lingua full-text predefinita**  
@@ -76,26 +76,26 @@ ms.locfileid: "62917087"
  **Trasforma parole non significative**  
  Evita la visualizzazione di un messaggio di errore qualora, a causa di parole non significative, un'operazione booleana su una query full-text restituisca zero righe. Per altre informazioni, vedere [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).  
   
- **Cambio anno a due cifre**  
+ **Cambio data per anno a due cifre**  
  Indica il numero più alto che può essere immesso come anno a due cifre. L'anno indicato e i 99 anni precedenti possono essere immessi con due cifre. Tutti gli altri anni devono essere immessi con quattro cifre.  
   
  Ad esempio, l'impostazione predefinita 2049 indica che la data '14/03/49' verrà interpretata come 14 marzo 2049, mentre la data '14/03/50' verrà interpretata come 14 marzo 1950. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server two-digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursore  
- **Chiusura cursore al commit abilitata**  
+ **Chiusura cursori dopo commit abilitata**  
  Specifica se i cursori vengono chiusi dopo l'esecuzione del commit della transazione di apertura del cursore. I valori possibili sono `True` e `False`. Se `True`, tutti i cursori che risultano aperti quando viene eseguito il commit o il rollback di un transazione vengono chiusi. Se `False`, quando viene eseguito il commit della transazione tali cursori rimangono aperti. Se `False`, il rollback di una transazione comporta la chiusura di tutti i cursori, a eccezione di quelli definiti come INSENSITIVE o STATIC. Per altre informazioni, vedere [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Cursore predefinito**  
  Indica il comportamento del cursore predefinito. Se `True`, le dichiarazioni dei cursori sono LOCAL per impostazione predefinita. Se `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostazione predefinita i cursori sono globali.  
   
 ## <a name="filestream"></a>FILESTREAM  
- **Nome directory FILESTREAM**  
+ **Nome di directory FILESTREAM**  
  Specifica il nome di directory per i dati FILESTREAM associati al database selezionato.  
   
  **Accesso FILESTREAM non in transazioni**  
  È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY**o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
-## <a name="miscellaneous"></a>Miscellaneous  
+## <a name="miscellaneous"></a>Varie  
  **NULL ANSI predefinito**  
  Consente l'uso di valori Null per ogni colonna o tipo di dati definito dall'utente non indicato in modo esplicito come `NOT NULL`, lo stato predefinito, durante un'istruzione `CREATE TABLE` o `ALTER TABLE`. Per altre informazioni, vedere [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) e [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
@@ -108,10 +108,10 @@ ms.locfileid: "62917087"
  **Avvisi ANSI abilitati**  
  Indica il comportamento dello standard ISO per diverse condizioni di errore. Quando `True`viene generato un messaggio di avviso se sono presenti valori null nelle funzioni di aggregazione, ad esempio Sum, AVG, Max, min, STDEV, STDEVP, var, VARP o count. Se `False`, non viene emesso alcun avviso. Per altre informazioni, vedere [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
- **Interruzione aritmetica abilitata**  
+ **Interruzione per errori aritmetici abilitata**  
  Indica se l'opzione del database relativa all'interruzione aritmetica è abilitata o disabilitata. I valori possibili sono `True` e `False`. Se `True`, un errore di overflow o di divisione per zero comporta l'interruzione della query o del batch. Se l'errore si verifica in una transazione, viene eseguito il rollback della transazione. Se `False`, viene visualizzato un avviso, ma l'esecuzione della query, del batch o della transazione prosegue come se non si fosse verificato alcun errore. Per altre informazioni, vedere [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
- **La concatenazione di valori null restituisce valori null**  
+ **Risultato Null per concatenazione di valori Null**  
  Indica il comportamento in caso di valori Null concatenati. Quando il valore della proprietà `True`è `string` , + null restituisce null. Se `False`, il risultato è `string`. Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Concatenamento della proprietà tra database abilitato**  
@@ -122,7 +122,7 @@ ms.locfileid: "62917087"
   
  Se `False`, le statistiche sulla correlazione non vengono mantenute.  
   
- **Interruzione del ciclo numerico**  
+ **Interruzione per perdita di precisione numerica**  
  Indica la modalità di gestione degli errori di arrotondamento utilizzata dal database. I valori possibili sono `True` e `False`. Se `True`, viene generato un errore se si verifica una perdita di precisione in un'espressione. Se `False`, le perdite di precisione non generano messaggi di errore e il risultato viene arrotondato alla precisione della colonna o della variabile che archivia il risultato. Per altre informazioni, vedere [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrizzazione**  
@@ -149,7 +149,7 @@ ms.locfileid: "62917087"
   
  Per impostare questa proprietà, utilizzare l'istruzione ALTER DATABASE.  
   
- **Formato di archiviazione VarDecimal abilitato**  
+ **Formato di archiviazione vardecimal abilitato**  
  Questa opzione è di sola lettura a partire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da e versioni successive, tutti i database sono abilitati per il formato di archiviazione vardecimal. Questa opzione usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Ripristino  
@@ -163,28 +163,28 @@ ms.locfileid: "62917087"
  **Database di sola lettura**  
  Indica se il database è di sola lettura. I valori possibili sono `True` e `False`. Se `True`, gli utenti possono solo leggere i dati nel database. Gli utenti non sono in grado di modificare i dati o gli oggetti di database. È tuttavia possibile eliminare il database utilizzando l'istruzione DROP DATABASE. Il database non può essere in uso quando si specifica un nuovo valore per l'opzione **Database di sola lettura** . L'unica eccezione riguarda il database master e prevede che solo l'amministratore di sistema possa utilizzare il database master durante l'impostazione di questa opzione.  
   
- **Stato del database**  
+ **Stato database**  
  Indica lo stato corrente del database. Non è modificabile. Per ulteriori informazioni su **Stato database**, vedere [Database States](database-states.md).  
   
  **Limitazione dell'accesso**  
- Indica gli utenti autorizzati ad accedere al database. Valori possibili:  
+ Indica gli utenti autorizzati ad accedere al database. I valori possibili sono:  
   
--   **Multipli**  
+-   **Più di uno**  
   
      Rappresenta lo stato normale per un database di produzione e consente l'accesso simultaneo di più utenti al database.  
   
--   **Singolo**  
+-   **Single**  
   
      Questa impostazione viene utilizzata per operazioni di manutenzione e consente l'accesso al database di un solo utente alla volta.  
   
--   **Restricted (Restrizioni)**  
+-   **Restricted**  
   
      Solo i membri del ruolo db_owner, dbcreator o sysadmin possono utilizzare il database.  
   
  **Crittografia abilitata**  
  Se `True`, il database è abilitato per la crittografia del database. Per la crittografia è necessaria una chiave di crittografia del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

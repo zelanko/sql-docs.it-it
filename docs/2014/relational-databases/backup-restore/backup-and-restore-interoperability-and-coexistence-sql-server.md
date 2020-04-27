@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922436"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922436"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> Ripristino dei file e avvio del database  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> Ripristino dei file e avvio del database  
  Le informazioni contenute in questa sezione sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che includono più filegroup.  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922436"
   
  Se l'avvio ha esito positivo, tutti i filegroup che includono un file offline rimangono in modalità offline.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> Ripristino online e indici disabilitati  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> Ripristino online e indici disabilitati  
  Le informazioni contenute in questa sezione sono rilevanti solo per i database che includono più filegroup e, in base al modello di recupero con registrazione minima, almeno un filegroup di sola lettura.  
   
  In questi casi, se un database è online, è possibile creare, eliminare, abilitare o disabilitare l'indice solo se tutti i filegroup che contengono una parte qualsiasi dell'indice sono online.  
   
  Per informazioni sul ripristino di filegroup offline, vedere [Ripristino in linea&#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DbMandBnR"></a> Mirroring del database e procedure di backup e ripristino  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> Mirroring del database e procedure di backup e ripristino  
  Le informazioni contenute in questa sezione sono rilevanti solo per i database basati sul modello di recupero con registrazione completa che includono più filegroup.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922436"
   
 -   Il ripristino del database principale non è consentito.  
   
-##  <a name="PiecemealAndFTIndexes"></a> Ripristino a fasi e indici full-text  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> Ripristino a fasi e indici full-text  
  Le informazioni contenute in questa sezione sono rilevanti solo per i database che includono più filegroup e, in base al modello di recupero con registrazione minima, solo per i filegroup in sola lettura.  
   
  Gli indici full-text vengono archiviati nei filegroup del database e possono essere influenzati dall'esecuzione di un ripristino a fasi. Se l'indice full-text si trova nello stesso filegroup di uno o più dati della tabella associati, il ripristino a fasi verrà eseguito nel modo previsto.  
@@ -111,7 +111,7 @@ ms.locfileid: "62922436"
   
  Non appena il filegroup della tabella di base e il filegroup dell'indice full-text sono online, qualsiasi popolamento full-text sospeso viene ripreso.  
   
-##  <a name="FileBnRandCompression"></a> Backup e ripristino di file e compressione  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> Backup e ripristino di file e compressione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la compressione dei dati con il file system NTFS per i filegroup e i database in sola lettura.  
   
  Il ripristino dei file in un filegroup di sola lettura è supportato per i file NTFS compressi. Il backup e il ripristino di questi filegroup vengono eseguiti sostanzialmente come per qualsiasi filegroup di sola lettura, con le eccezioni seguenti:  
@@ -123,7 +123,7 @@ ms.locfileid: "62922436"
 > [!NOTE]  
 >  È consigliabile non memorizzare i file di log di database di lettura/scrittura in file system compressi.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

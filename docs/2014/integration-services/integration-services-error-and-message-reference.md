@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892659"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
@@ -43,7 +43,7 @@ ms.locfileid: "62892659"
   
 -   [Messaggi di errore relativi al componente del flusso di dati (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> messaggi di errore  
+##  <a name="error-messages"></a><a name="msgError"></a> messaggi di errore  
  I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con `DTS_E_`.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "62892659"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|Il valore %1!d! specificato per il parametro della scala della funzione NULL con tipo di dati %2 non è compreso nell'intervallo valido. La scala deve essere compresa nell'intervallo da %3!d! a %4!d!. Il valore della scala non deve essere superiore a quello della precisione e non può essere negativo.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|Il valore %1!d! specificato per il parametro della lunghezza della funzione "NULL" con tipo di dati %2 è negativo e non è valido. La lunghezza deve essere un valore positivo.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Impossibile assegnare un valore negativo a %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossibile impostare la proprietà personalizzata "%1" per "%2" su true.  Il tipo di dati di colonna deve essere uno dei seguenti:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 o DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossibile impostare la proprietà personalizzata "%1" per "%2" su true.  Il tipo di dati di colonna deve essere uno dei seguenti: DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2, o DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Impossibile ricollegare "%1". Eliminare il percorso, aggiungerne uno nuovo e quindi collegarlo.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|La funzione "%1" richiede %2!d! parametri e non %3!d! parametri. Il nome della funzione è stato riconosciuto ma il numero di parametri non è valido.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|La funzione "%1" richiede %2!d! parametro e non %3!d! parametri. Il nome della funzione è stato riconosciuto ma il numero di parametri non è valido.|  
@@ -1992,7 +1992,7 @@ ms.locfileid: "62892659"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La proprietà personalizzata "%1" di %2 può essere utilizzata solo con file ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La proprietà personalizzata "%1" di %2 può essere utilizzata solo con DT_BYTES.|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Il provider OLE DB %2 necessario non è registrato. Codice errore: 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Il provider OLE DB %2 necessario non è registrato. È possibile che non siano disponibili provider a 64 bit.  Codice errore: 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Il provider OLE DB %2 necessario non è registrato. È possibile che non siano disponibili provider a 64 bit.  Codice di errore: 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|È stato eseguito il mapping della colonna della cache "%1" a più colonne. Rimuovere i mapping duplicati della colonna.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|Non è stato eseguito il mapping di %1 a una colonna della cache valida.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Impossibile eseguire il mapping della colonna di input "%1" e della colonna della cache "%2" perché i tipi di dati non corrispondono.|  
@@ -2017,7 +2017,7 @@ ms.locfileid: "62892659"
 |||DTS_E_GETCATMANAGERFAILED|Impossibile creare il responsabile delle categorie componenti COM a causa dell'errore 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Impossibile inizializzare il componente %1!s! a causa dell'errore 0x%2!8.8X! "%3!s!".|  
   
-##  <a name="msgWarning"></a> Messaggi di avviso  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> Messaggi di avviso  
  I nomi simbolici dei messaggi di avviso di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con `DTS_W_`.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
@@ -2163,7 +2163,7 @@ ms.locfileid: "62892659"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|Non è stato eseguito il mapping di nessuna colonna di input a %1.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La tabella "%1" è stata modificata. È possibile che siano state aggiunte nuove colonne.|  
   
-##  <a name="msgInfo"></a> Messaggi informativi  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> Messaggi informativi  
  I nomi simbolici dei messaggi informativi di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con `DTS_I_`.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
@@ -2262,7 +2262,7 @@ ms.locfileid: "62892659"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 ha scritto la cache nel file "%2".|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La proprietà Dimensioni massime commit inserimento della destinazione OLE DB "%1" è impostata su 0. Questa configurazione potrebbe causare l'arresto del pacchetto di esecuzione. Per ulteriori informazioni, vedere l'argomento della Guida sensibile al contesto Editor destinazione OLE DB (pagina Gestione connessione).|  
   
-##  <a name="msgGeneral"></a> Messaggi generali e messaggi di evento  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> Messaggi generali e messaggi di evento  
  I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con `DTS_MSG_`.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
@@ -2301,7 +2301,7 @@ ms.locfileid: "62892659"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nome evento: %1<br /><br /> Messaggio: %9<br /><br /> Operatore: %2<br /><br /> Nome origine: %3<br /><br /> ID origine: %4<br /><br /> ID esecuzione: %5<br /><br /> Ora inizio: %6<br /><br /> Ora fine: %7<br /><br /> Codice dati: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nome evento: %1<br /><br /> Messaggio: %9<br /><br /> Operatore: %2<br /><br /> Nome origine: %3<br /><br /> ID origine: %4<br /><br /> ID esecuzione: %5<br /><br /> Ora inizio: %6<br /><br /> Ora fine: %7<br /><br /> Codice dati: %8|  
   
-##  <a name="msgSuccess"></a> Messaggi di operazione riuscita  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Messaggi di operazione riuscita  
  I nomi simbolici dei messaggi di operazione riuscita di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con `DTS_S_`.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
@@ -2310,7 +2310,7 @@ ms.locfileid: "62892659"
 |0x40005|262149|DTS_S_TRUNCATED|Il valore stringa è stato troncato. Il buffer ha ricevuto una stringa troppo lunga per la colonna e la stringa è stata troncata dal buffer.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Troncamento durante la valutazione dell'espressione. Il troncamento ha avuto luogo durante la valutazione e ciò potrebbe significare in qualsiasi punto in un passaggio intermedio.|  
   
-##  <a name="msgPipeline"></a> Messaggi di errore relativi al componente flusso di dati  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> Messaggi di errore relativi al componente flusso di dati  
  I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con `DTSBC_E_`, dove "BC" si riferisce alla classe di base nativa da cui quale deriva la maggior parte dei componenti flusso di dati Microsoft.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  

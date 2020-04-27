@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893032"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
@@ -35,9 +35,9 @@ ms.locfileid: "62893032"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**CR Se**|La riga è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**CR**|La riga è delimitata da un ritorno a capo.|  
-|**Se**|La riga è delimitata da un avanzamento riga.|  
+|**{CR}{LF}**|La riga è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**{CR}**|La riga è delimitata da un ritorno a capo.|  
+|**{LF}**|La riga è delimitata da un avanzamento riga.|  
 |**Punto e virgola {;}**|La riga è delimitata da un punto e virgola.|  
 |**Due punti {:}**|La riga è delimitata da due punti.|  
 |**Virgole{,}**|La riga è delimitata da una virgola.|  
@@ -49,9 +49,9 @@ ms.locfileid: "62893032"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**CR Se**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**CR**|Le colonne sono delimitate da un ritorno a capo.|  
-|**Se**|Le colonne sono delimitate da un avanzamento riga.|  
+|**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
+|**{LF}**|Le colonne sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le colonne sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le colonne sono delimitate da due punti.|  
 |**Virgole{,}**|Le colonne sono delimitate da una virgola.|  

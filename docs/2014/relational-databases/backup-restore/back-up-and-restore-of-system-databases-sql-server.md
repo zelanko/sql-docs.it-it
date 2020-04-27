@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877268"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Backup e ripristino di Database di sistema (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62877268"
   
 -   In alcune circostanze, per i problemi relativi al recupero del database modello può essere necessario ricompilare i database di sistema o sostituire i file mdf e ldf del database modello. Per altre informazioni, vedere [Ricompilare database di sistema](../databases/system-databases.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   

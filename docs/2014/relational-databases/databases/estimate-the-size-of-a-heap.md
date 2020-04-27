@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916745"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
@@ -63,7 +63,7 @@ ms.locfileid: "62916745"
   
 5.  Calcolare le dimensioni totali della riga:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      Il valore 4 nel formula è l'overhead dell'intestazione di riga della riga di dati.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916745"
   
 7.  Calcolare il numero di pagine necessario per archiviare tutte le righe:  
   
-     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
   
      Il numero di pagine stimato deve essere arrotondato alla pagina intera più vicina.  
   

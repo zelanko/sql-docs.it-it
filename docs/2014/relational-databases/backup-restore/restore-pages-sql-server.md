@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921020"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
@@ -47,14 +47,14 @@ ms.locfileid: "62921020"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="WhenUseful"></a> Casi in cui è utile il ripristino della pagina  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> Casi in cui è utile il ripristino della pagina  
  Il ripristino di una pagina è destinato alla correzione di pagine danneggiate isolate. Il ripristino e il recupero di poche pagine singole possono essere eseguiti in modo più rapido rispetto al ripristino di un file, riducendo la quantità di dati offline durante l'operazione di ripristino. Tuttavia, se è necessario ripristinare un certo numero di pagine in un file, in genere è più efficiente ripristinare l'intero file. Se, ad esempio, numerose pagine in un dispositivo indicano la possibilità di un guasto imminente del dispositivo, prendere in considerazione il ripristino del file, se possibile in un percorso diverso, e la riparazione del dispositivo.  
   
  Non tutti gli errori di pagina richiedono inoltre un ripristino. Nei dati della cache, ad esempio in un indice secondario, può verificarsi un problema risolvibile ricalcolando i dati. Se, ad esempio, l'amministratore del database elimina un indice secondario e lo ricompila, i dati danneggiati, sebbene corretti, non sono indicati come tali nella tabella [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) .  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Il ripristino delle pagine si applica ai database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Il ripristino della pagina è supportato solo per i filegroup di lettura/scrittura.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62921020"
   
          Una procedura consigliata per l'esecuzione del ripristino della pagina consiste nell'impostare il database sul modello di recupero con registrazione completa e tentare un backup del log. Se il backup del log funziona, è possibile procedere con il ripristino della pagina. Se l'esecuzione del backup del log ha invece esito negativo, le modifiche eseguite dopo il backup del log precedente verranno perse oppure sarà necessario tentare di eseguire DBCC con l'opzione REPAIR_ALLOW_DATA_LOSS.  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Scenari di ripristino della pagina:  
   
@@ -97,14 +97,14 @@ ms.locfileid: "62921020"
   
      Quando si ripristinano i backup del log successivi, questi vengono applicati solo ai file di database che contengono almeno una pagina recuperata. È inoltre necessario che una catena non interrotta di backup del log venga applicata all'ultimo ripristino completo o differenziale per aggiornare il filegroup che include la pagina rispetto al file di log attuale. Analogamente al ripristino del file, il set di rollforward viene avanzato con un unico passaggio di rollforward del log. Affinché il ripristino delle pagine avvenga correttamente, è necessario che le pagine ripristinate vengano recuperate fino a uno stato consistente con il database.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  A partire da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supporta il ripristino della pagina.  
   
 #### <a name="to-restore-pages"></a>Per ripristinare le pagine  
@@ -163,7 +163,7 @@ ms.locfileid: "62921020"
   
 7.  Per ripristinare le pagine elencate nella griglia, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  Per specificare una pagina in un'istruzione RESTORE DATABASE, sono necessari l'ID del file contenente la pagina e l'ID della pagina. La sintassi necessaria è la seguente:  
   
  `RESTORE DATABASE <database_name>`  
@@ -201,7 +201,7 @@ ms.locfileid: "62921020"
     > [!NOTE]  
     >  Questa sequenza è analoga a una sequenza di ripristino del file. In effetti, il ripristino della pagina e i ripristini dei file possono essere eseguiti entrambi come parte della stessa sequenza.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente vengono ripristinate quattro pagine danneggiate del file `B` con `NORECOVERY`. Successivamente, vengono applicati due backup del log con `NORECOVERY`, seguiti dal backup della parte finale del log, ripristinato con `RECOVERY`. Nell'esempio seguente viene eseguito un ripristino in linea. Nell'esempio l'ID del file `B` è `1`e gli ID delle pagine danneggiate sono `57`, `202`, `916`e `1016`.  
   
 ```sql  

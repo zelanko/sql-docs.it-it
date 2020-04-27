@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890757"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Passaggio 1: Copia del pacchetto della lezione 5
@@ -48,7 +48,7 @@ ms.locfileid: "62890757"
   
 3.  Nella finestra di dialogo Aggiungi copia del pacchetto esistente, in Posizione pacchetto, selezionare File system.  
   
-4.  Fare clic sul pulsante Sfoglia (...), passare a Lesson 5.dtsx nel computer e quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante Sfoglia (...), Lesson 5. dtsx nel computer e quindi fare clic su **Apri**.  
   
      Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   

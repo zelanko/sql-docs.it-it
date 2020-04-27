@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893042"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
@@ -30,10 +30,10 @@ ms.locfileid: "62893042"
  Lo scopo di Importazione/Esportazione guidata SQL Server è la copia di dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opzioni  
- **Origine**  
+ **origine**  
  Identifica la tabella, la visualizzazione o la query di origine selezionata.  
   
- **Destinazione**  
+ **Destination**  
  Identifica la tabella, la visualizzazione o la query di destinazione selezionata.  
   
  **Crea tabella di destinazione/file**  
@@ -42,16 +42,16 @@ ms.locfileid: "62893042"
  **Elimina righe nella tabella di destinazione/file**  
  Consente di specificare se cancellare i dati da una tabella esistente prima di caricare nuovi dati.  
   
- **Accoda righe alla tabella/file di destinazione**  
+ **Aggiungi righe alla tabella di destinazione/file**  
  Consente di specificare se aggiungere nuovi dati a quelli già presenti in una tabella esistente.  
   
- **Modifica SQL**  
+ **Modifica codice SQL**  
  Utilizzare l'istruzione predefinita nella finestra di dialogo **istruzione SQL CREATE TABLE** o modificarla per i propri scopi. Se si modifica questa istruzione, è necessario inoltre eseguire modifiche collegate al mapping della tabella.  
   
  **Elimina e ricrea tabella di destinazione**  
  Selezionare questa opzione per sovrascrivere la tabella di destinazione. Questa opzione è disponibile solo quando si utilizza la procedura guidata per creare la tabella di destinazione. La tabella di destinazione viene eliminata e ricreata solo se si salva il pacchetto creato dalla procedura guidata e quindi lo si esegue nuovamente.  
   
- **Abilita inserimento identità**  
+ **Consenti IDENTITY_INSERT**  
  Selezionare questa opzione per consentire l'inserimento dei valori di identità esistenti nei dati di origine all'interno di una colonna Identity della tabella di destinazione. Per impostazione predefinita, non è possibile applicare questa opzione alla colonna Identity di destinazione.  
   
  **Mapping**  
@@ -59,25 +59,25 @@ ms.locfileid: "62893042"
   
  L'elenco contiene le colonne seguenti:  
   
- **Origine**  
+ **origine**  
  Consente di visualizzare ogni colonna di origine da cui è possibile impostare parametri di trasformazione.  
   
- **Destinazione**  
+ **Destination**  
  Consente di specificare se ignorare una colonna durante l'operazione di copia. È possibile copiare solo un subset di colonne selezionando ** \<ignora>** in questa colonna per le colonne che si desidera ignorare. Prima di eseguire il mapping delle colonne, è necessario ignorare tutte le colonne di cui non verrà eseguito il mapping.  
   
- **Tipo**  
+ **Type**  
  Consente di selezionare un tipo di dati per la colonna.  
   
- **Nullable**  
+ **Ammette i valori Null**  
  Consente di specificare se una colonna può supportare un valore Null.  
   
  **Dimensione**  
  Consente di specificare il numero di caratteri nella colonna.  
   
- **Precision**  
+ **Precisione**  
  Consente di specificare la precisione dei dati visualizzati, indicando il numero di cifre.  
   
- **Scalabilità**  
+ **Ridimensionare**  
  Consente di specificare la scala dei dati visualizzati, indicando il numero di posizioni decimali.  
   
   

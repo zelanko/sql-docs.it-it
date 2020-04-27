@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890943"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nell'esercitazione della lezione 5
@@ -35,11 +35,11 @@ ms.locfileid: "62890943"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Per testare il pacchetto creato nella lezione 5 dell'esercitazione  
   
-1.  Scegliere **Avvia debug** dal menu **Debug**.  
+1.  Scegliere **Avvia debug**dal menu **debug** .  
   
 2.  Al termine dell'esecuzione del pacchetto, scegliere **Interrompi debug**dal menu **debug** .  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lezione 6: Uso di parametri con il modello di distribuzione del progetto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

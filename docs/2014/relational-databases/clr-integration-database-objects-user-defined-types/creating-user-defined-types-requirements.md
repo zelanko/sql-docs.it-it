@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919664"
 ---
 # <a name="user-defined-type-requirements"></a>Requisiti per i tipi definiti dall'utente
@@ -35,8 +35,7 @@ ms.locfileid: "62919664"
   
  Il tipo definito dall'utente deve specificare `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`. L'utilizzo di `System.SerializableAttribute` è facoltativo ma consigliato.  
   
--   Il tipo definito dall'utente deve implementare l'interfaccia `System.Data.SqlTypes.INullable` nella classe o nella struttura creando un metodo `static` (`Shared` in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null` pubblico. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore null per impostazione predefinita. Questa condizione è necessaria affinché il codice in esecuzione nel tipo definito dall'utente sia in grado di riconoscere un valore Null.  
+-   Il tipo definito dall'utente deve implementare l'interfaccia `System.Data.SqlTypes.INullable` nella classe o nella struttura creando un metodo `static` (`Shared` in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null` pubblico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore null per impostazione predefinita. Questa condizione è necessaria affinché il codice in esecuzione nel tipo definito dall'utente sia in grado di riconoscere un valore Null.  
   
 -   Nel tipo definito dall'utente deve essere incluso un metodo `static``Shared` (o `Parse`) che supporti l'analisi e un metodo `ToString` pubblico per la conversione in una rappresentazione di stringa dell'oggetto.  
   
@@ -80,9 +79,7 @@ ms.locfileid: "62919664"
   
 -   Tutti i campi devono essere serializzabili.  
   
--   
-  `System.Runtime.InteropServices.StructLayoutAttribute` deve essere specificato come `StructLayout.LayoutKindSequential` se il tipo definito dall'utente è specificato in una classe e non in una struttura. Questo attributo controlla il layout fisico dei campi dati e viene utilizzato per forzare la disposizione dei membri in base all'ordine in cui vengono visualizzati. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza questo attributo per determinare l'ordine dei campi per i tipi definiti dall'utente con più valori.  
+-   `System.Runtime.InteropServices.StructLayoutAttribute` deve essere specificato come `StructLayout.LayoutKindSequential` se il tipo definito dall'utente è specificato in una classe e non in una struttura. Questo attributo controlla il layout fisico dei campi dati e viene utilizzato per forzare la disposizione dei membri in base all'ordine in cui vengono visualizzati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza questo attributo per determinare l'ordine dei campi per i tipi definiti dall'utente con più valori.  
   
  Per un esempio di un tipo definito dall' `Native` utente definito con la serializzazione, vedere il tipo definito dall'utente Point in [codifica dei tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
@@ -103,8 +100,7 @@ ms.locfileid: "62919664"
 ## <a name="serialization-attributes"></a>Attributi di serializzazione  
  Gli attributi consentono di determinare la modalità di utilizzo della serializzazione per costruire la rappresentazione di archiviazione dei tipi definiti dall'utente e per trasmettere tali tipi al client in base al valore. Quando si crea il tipo definito dall'utente, viene richiesto di specificare `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`. L'attributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` indica che la classe è un tipo definito dall'utente e specifica l'archiviazione per il tipo definito dall'utente. È eventualmente possibile specificare l'attributo `Serializable`, anche se non è necessario in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` include le proprietà indicate di seguito.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` include le proprietà indicate di seguito.  
   
  `Format`  
  Specifica il formato di serializzazione, che può essere `Native` o `UserDefined` a seconda dei tipi di dati del tipo definito dall'utente.  
@@ -146,7 +142,7 @@ ms.locfileid: "62919664"
   
 -   Maggiore o uguale a (>=)  
   
--   Minore o uguale a (<=)  
+-   Minore o uguale a (&lt;=)  
   
 ### <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
  Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Benché i tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportino i valori Null, perché un tipo definito dall'utente possa riconoscere un valore Null è necessario che la classe implementi l'interfaccia `INullable`. Per ulteriori informazioni e un esempio di come implementare il supporto di valori null in un tipo definito dall'utente, vedere [codifica di tipi definiti dall'utente](creating-user-defined-types-coding.md).  
@@ -169,7 +165,7 @@ ms.locfileid: "62919664"
   
  I tipi definiti dall'utente non vengono serializzati nelle query FOR XML. Per eseguire una query FOR XML che visualizza la serializzazione XML dei tipi definiti dall'utente, convertire in modo esplicito ogni colonna del tipo definito dall'utente nel tipo di dati `xml` nell'istruzione SELECT. È inoltre possibile convertire esplicitamente le colonne in `varbinary`, `varchar` o `nvarchar`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un tipo definito dall'utente](creating-user-defined-types.md)  
   
   

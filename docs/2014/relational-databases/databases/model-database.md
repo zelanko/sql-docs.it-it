@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916947"
 ---
 # <a name="model-database"></a>Database model
@@ -56,9 +56,9 @@ ms.locfileid: "62916947"
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|Sì|  
-|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_CREATE_STATISTICS|ON|Sì|  
 |AUTO_SHRINK|OFF|Sì|  
-|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
@@ -89,7 +89,7 @@ ms.locfileid: "62916947"
   
 -   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
   
--   Modifica del proprietario del database. il **modello** è di proprietà di **sa**.  
+-   Modifica del proprietario del database. **model** è di proprietà di **sa**.  
   
 -   Eliminazione del database.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62916947"
 -   Creazione di procedure, viste o trigger utilizzando l'opzione WITH ENCRYPTION. La chiave di crittografia è correlata al database in cui viene creato l'oggetto. Gli oggetti crittografati creati nel database **model** possono essere usati solo in **model**.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Database di sistema.](system-databases.md)  
+ [Database di sistema](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

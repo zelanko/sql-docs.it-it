@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919690"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestione degli assembly dell'integrazione con CLR
@@ -45,7 +45,7 @@ ms.locfileid: "62919690"
  [Eliminazione di un assembly](dropping-an-assembly.md)  
  Viene descritta l'eliminazione di assembly CLR da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza dell'integrazione con CLR](../security/clr-integration-security.md)   
  [Sicurezza da accesso di codice dell'integrazione con CLR](../security/clr-integration-code-access-security.md)  
   

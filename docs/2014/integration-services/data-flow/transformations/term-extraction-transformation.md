@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899934"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
@@ -175,7 +175,7 @@ ms.locfileid: "62899934"
   
 -   [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor trasformazione Estrazione termini &#40;scheda esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
 -   [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62899934"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   

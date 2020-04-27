@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902449"
 ---
 # <a name="flat-file-source"></a>origine file flat
@@ -57,9 +57,9 @@ ms.locfileid: "62902449"
   
 -   [Editor origine file flat &#40;pagina Gestione connessione&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor origine file flat &#40;pagina colonne&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Editor origine file flat &#40;pagina Colonne&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor origine file flat &#40;pagina output degli errori&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor origine file flat &#40;pagina Output degli errori&#41;](../flat-file-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62902449"
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Destinazione file flat](flat-file-destination.md)   
  [Flusso di dati](data-flow.md)  
   

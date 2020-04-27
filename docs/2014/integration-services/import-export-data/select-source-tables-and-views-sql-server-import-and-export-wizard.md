@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892669"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
@@ -32,10 +32,10 @@ ms.locfileid: "62892669"
 ## <a name="options"></a>Opzioni  
   
 ### <a name="tables-and-views-list"></a>Elenco Tabelle e viste  
- **Origine**  
+ **origine**  
  Mediante le caselle di controllo, selezionare dall'elenco di tabelle e viste disponibili quelle da copiare nella destinazione. Se si seleziona una tabella o una vista di origine e non si eseguono altre azioni, lo schema e i dati dell'origine verranno copiati senza essere modificati.  
   
- **Destinazione**  
+ **Destination**  
  Consente di selezionare una tabella di destinazione dall'elenco per ogni tabella di origine.  
   
 > [!NOTE]  

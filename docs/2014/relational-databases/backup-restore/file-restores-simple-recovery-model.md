@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921823"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
@@ -50,7 +50,7 @@ ms.locfileid: "62921823"
   
 
   
-##  <a name="Overview"></a>Panoramica del ripristino di file e filegroup nel modello di recupero con registrazione minima  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Panoramica del ripristino di file e filegroup nel modello di recupero con registrazione minima  
  Uno scenario di ripristino di file consiste in un'unica sequenza di ripristino che consente di eseguire la copia, il rollforward e il recupero dei dati appropriati come descritto di seguito:  
   
 1.  Ripristinare ogni file danneggiato dal backup di file più recente.  
@@ -58,17 +58,17 @@ ms.locfileid: "62921823"
 2.  Ripristinare il backup differenziale di file più recente per ogni file ripristinato e recuperare il database.  
   
 ### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>Passaggi di Transact-SQL per la sequenza di ripristino di file (modello di recupero con registrazione minima)  
- Questa sezione descrive le opzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)]RESTORE[ essenziali di ](/sql/t-sql/statements/restore-statements-transact-sql) per una semplice sequenza di ripristino di file. La sintassi e i dettagli non rilevanti sono stati omessi.  
+ Questa sezione descrive le opzioni [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) essenziali di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per una semplice sequenza di ripristino di file. La sintassi e i dettagli non rilevanti sono stati omessi.  
   
  La sequenza di ripristino contiene solo due istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La prima istruzione esegue il ripristino di un file secondario, il file `A`, che viene ripristinato utilizzando WITH NORECOVERY. La seconda operazione ripristina altri due file, i file `B` e `C` , che vengono ripristinati utilizzando WITH RECOVERY da un diverso dispositivo di backup:  
   
-1.  Ripristinare il ** file **=** di database del database _name_of_file_A_  
+1.  RESTORE DATABASE *database* FILE **=**_nome_file_A_  
   
      FROM *backup_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  **=** Restore *database database* _name_of_file_B_**,**_name_of_file_C_  
+2.  RESTORE DATABASE *database* FILE **=**_nome_file_B_**,**_nome_file_C_  
   
      FROM *backup_dei_file_B_e_C*  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62921823"
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Esempio: ripristino offline di un filegroup primario e di un altro filegroup &#40;modello di recupero con connessione completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare file e filegroup**  
   
 -   [Ripristinare file e filegroup sovrascrivendo file esistenti &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
@@ -95,7 +95,7 @@ ms.locfileid: "62921823"
   
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Backup e ripristino: interoperabilità e coesistenza &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Backup completi dei file &#40;SQL Server&#41;](full-file-backups-sql-server.md)   

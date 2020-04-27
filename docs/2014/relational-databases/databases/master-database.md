@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917044"
 ---
 # <a name="master-database"></a>Database master
@@ -38,16 +38,16 @@ ms.locfileid: "62917044"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ATTIVA|No|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
 |ANSI_NULL_DEFAULT|OFF|Sì|  
 |ANSI_NULLS|OFF|Sì|  
 |ANSI_PADDING|OFF|Sì|  
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|No|  
-|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_CREATE_STATISTICS|ON|Sì|  
 |AUTO_SHRINK|OFF|No|  
-|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
@@ -55,7 +55,7 @@ ms.locfileid: "62917044"
 |CURSOR_DEFAULT|GLOBAL|Sì|  
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ATTIVA|No|  
+|DB_CHAINING|ON|No|  
 |ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
 |PAGE_VERIFY|CHECKSUM|Sì|  
@@ -76,7 +76,7 @@ ms.locfileid: "62917044"
   
 -   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
   
--   Modifica del proprietario del database. **Master** è di proprietà di **sa**.  
+-   Modifica del proprietario del database. **master** è di proprietà di **sa**.  
   
 -   Creazione di un catalogo o di un indice full-text.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62917044"
 ## <a name="related-content"></a>Contenuto correlato  
  [Ricompilare database di sistema](rebuild-system-databases.md)  
   
- [Database di sistema.](system-databases.md)  
+ [Database di sistema](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

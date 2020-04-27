@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889364"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS
   Utilizzare l'aggiornamento guidato pacchetti SSIS per aggiornare [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] i pacchetti [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] e i pacchetti al formato del pacchetto per la versione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]corrente di.  
   
- **Per eseguire l'aggiornamento guidato pacchetti SSIS**  
+ **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
   
 -   [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62889364"
   
 -   [Aggiornamento di pacchetti &#40;aggiornamento guidato pacchetti SSIS&#41;](../../2014/integration-services/upgrading-the-packages-ssis-package-upgrade-wizard.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

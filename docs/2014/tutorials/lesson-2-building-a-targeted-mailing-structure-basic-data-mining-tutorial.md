@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931500"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lezione 2: Compilazione di una struttura di mailing diretto (Esercitazione di base sul data mining)
@@ -37,7 +37,7 @@ ms.locfileid: "62931500"
 ## <a name="next--lesson"></a>Lezione successiva  
  [Lezione 3: Aggiunta ed elaborazione di modelli](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione della struttura di data mining &#40;creazione guidata modello di data mining&#41;](../../2014/analysis-services/create-the-data-mining-structure-data-mining-wizard.md)   
  [Creare una struttura di data mining relazionale](../../2014/analysis-services/data-mining/create-a-relational-mining-structure.md)  
   

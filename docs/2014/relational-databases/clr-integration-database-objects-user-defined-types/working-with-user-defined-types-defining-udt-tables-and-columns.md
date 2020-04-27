@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874453"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Definizione di tabelle e colonne con tipi definiti dall'utente
@@ -49,7 +49,7 @@ CREATE TABLE dbo.Points
   
  Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente](clr-user-defined-types.md) e [CREATE INDEX &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-index-transact-sql).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo dei tipi definiti dall'utente in SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

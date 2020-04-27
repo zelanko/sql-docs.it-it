@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892246"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parametri di Integration Services (SSIS)
-  I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* a livello di progetto e *parametri di pacchetto* a livello di pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
+  I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
   
  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è possibile creare, modificare o eliminare i parametri di progetto utilizzando la finestra **Project.params** . Per creare, modificare ed eliminare i parametri di pacchetto, utilizzare la scheda **Parametri** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per associare un parametro nuovo o esistente a una proprietà di un'attività, utilizzare la finestra di dialogo **Imposta parametri** . Per altre informazioni sull'utilizzo della finestra **Project.params** e della scheda **Parametri** , vedere [Create Parameters](create-parameters.md). Per altre informazioni sulla finestra di dialogo **Imposta parametri** , vedere [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62892246"
   
 -   [Finestra di dialogo Configura](catalog/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)  
+-   [Finestra di dialogo Esecuzione pacchetto](../../2014/integration-services/execute-package-dialog-box.md)  
   
 ### <a name="parameter-values"></a>Valori di parametri  
  È possibile assegnare fino a tre tipi diversi di valori a un parametro. Quando viene avviata l'esecuzione di un pacchetto, viene utilizzato un solo valore per il parametro e il parametro viene risolto nel relativo valore letterale finale.  
@@ -51,7 +51,7 @@ ms.locfileid: "62892246"
   
  È possibile utilizzare un solo parametro per assegnare un valore a più proprietà del pacchetto. A una singola proprietà del pacchetto è possibile assegnare un valore solo da un singolo parametro.  
   
-###  <a name="executions"></a>Esecuzioni e valori dei parametri  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> Esecuzioni e valori dei parametri  
  L' *esecuzione* è un oggetto che rappresenta una singola istanza di esecuzione del pacchetto. Quando si crea un'esecuzione, è possibile specificare tutti i dettagli necessari per l'esecuzione di un pacchetto, ad esempio i valori dei parametri di esecuzione. Inoltre, è possibile modificare i valori dei parametri per le esecuzioni esistenti.  
   
  Quando si imposta in modo esplicito un valore del parametro di esecuzione, tale valore è applicabile unicamente a quell'istanza particolare di esecuzione. Anziché un valore del server o un valore di progettazione viene utilizzato un valore di esecuzione. Se non si imposta in modo esplicito un valore di esecuzione ed è stato specificato un valore del server, viene utilizzato quest'ultimo.  
@@ -68,19 +68,19 @@ ms.locfileid: "62892246"
 #### <a name="determining-execution-parameter-values"></a>Determinazione dei valori dei parametri di esecuzione  
  Le stored procedure e le viste Transact-SQL seguenti possono essere utilizzate per visualizzare e impostare i valori di parametri.  
   
- [Catalog. execution_parameter_values &#40;&#41;database SSISDB ](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(vista)  
+ [catalog.execution_parameter_values &#40;database SSISDB&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(vista)  
  Consente di visualizzare i valori di parametri effettivi che verranno utilizzati da un'esecuzione specifica  
   
- [Catalog. get_parameter_values &#40;&#41;database SSISDB](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (stored procedure)  
+ [catalog.get_parameter_values &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (stored procedure)  
  Consente di risolvere e visualizzare i valori effettivi per il riferimento all'ambiente e al pacchetto specificato  
   
- [Catalog. object_parameters &#40;&#41;database SSISDB](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (vista)  
+ [catalog.object_parameters &#40;database SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (vista)  
  Consente di visualizzare i parametri e le proprietà per tutti i pacchetti e i progetti nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusi i valori predefiniti del server e i valori predefiniti di progettazione.  
   
  [catalog.set_execution_parameter_value &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  Imposta il valore di un parametro per un'istanza di esecuzione nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- È inoltre possibile utilizzare la finestra di dialogo **Esegui pacchetto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare il valore di un parametro. Per ulteriori informazioni, vedere finestra di [dialogo Esegui pacchetto](../../2014/integration-services/execute-package-dialog-box.md).  
+ È inoltre possibile utilizzare la finestra di dialogo **Esegui pacchetto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare il valore di un parametro. Per altre informazioni, vedere [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
  È inoltre possibile utilizzare l'opzione dtexec `/Parameter` per modificare il valore di un parametro. Per altre informazioni, vedere [dtexec Utility](packages/dtexec-utility.md).  
   

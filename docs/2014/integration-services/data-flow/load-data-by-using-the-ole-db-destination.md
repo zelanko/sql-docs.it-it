@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902433"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Caricamento dei dati tramite la destinazione OLE DB
@@ -55,7 +55,7 @@ ms.locfileid: "62902433"
     > [!NOTE]  
     >  La destinazione OLE DB esegue automaticamente il mapping delle colonne con lo stesso nome.  
   
-9. Per configurare l'output degli errori, fare clic su **Output errori**. Per altre informazioni, vedere [Configurare un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Per configurare l'output degli errori, fare clic su **Output errori**. Per altre informazioni, vedere [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md).  
   
 10. Fare clic su **OK**.  
   

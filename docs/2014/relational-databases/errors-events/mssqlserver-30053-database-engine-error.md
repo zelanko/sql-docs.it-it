@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914358"
 ---
 # <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
@@ -57,7 +57,7 @@ ms.locfileid: "62914358"
 |Nell'istanza del server è in esecuzione un carico di lavoro molto elevato di query.|Provare a eseguire nuovamente la query in un carico ridotto.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [Impostare l'account del servizio per l'utilità di avvio del daemon filtri full-text](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Ricerca full-text](../search/full-text-search.md)   
  [sp_help_fulltext_system_components &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [Configurare e gestire Word breaker e stemmer per la ricerca](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

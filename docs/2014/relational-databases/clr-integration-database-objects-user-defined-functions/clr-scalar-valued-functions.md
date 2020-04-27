@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919594"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funzioni a valori scalari CLR
@@ -82,9 +82,7 @@ End Class
   
  La prima riga di codice fa riferimento a `Microsoft.SqlServer.Server` per accedere ad attributi e a `System.Data.SqlClient` per accedere allo spazio dei nomi ADO.NET. Questo spazio dei nomi contiene `SqlClient`, il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Dopodiché, la funzione riceve l'attributo personalizzato `SqlFunction`, presente nello spazio dei nomi `Microsoft.SqlServer.Server`. L'attributo personalizzato indica se la funzione definita dall'utente utilizza il provider in-process per leggere dati nel server. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente alle Funzioni definite dall'utente di aggiornare, inserire o eliminare dati. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono ottimizzare l'esecuzione di una UDF che non utilizza il provider in-process. Questa possibilità viene indicata impostando `DataAccessKind` su `DataAccessKind.None`. Sulla riga successiva il metodo di destinazione è un metodo statico pubblico (condiviso in Visual Basic .NET).  
+ Dopodiché, la funzione riceve l'attributo personalizzato `SqlFunction`, presente nello spazio dei nomi `Microsoft.SqlServer.Server`. L'attributo personalizzato indica se la funzione definita dall'utente utilizza il provider in-process per leggere dati nel server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente alle Funzioni definite dall'utente di aggiornare, inserire o eliminare dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono ottimizzare l'esecuzione di una UDF che non utilizza il provider in-process. Questa possibilità viene indicata impostando `DataAccessKind` su `DataAccessKind.None`. Sulla riga successiva il metodo di destinazione è un metodo statico pubblico (condiviso in Visual Basic .NET).  
   
  La classe `SqlContext`, che si trova nello spazio dei nomi `Microsoft.SqlServer.Server`, può quindi accedere a un oggetto `SqlCommand` con una connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] già configurata. Sebbene non venga utilizzato qui, il contesto della transazione corrente è disponibile anche tramite l'API (Application Programming Interface) di `System.Transactions`.  
   
@@ -130,8 +128,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` indica che è necessario generare una libreria anziché un file eseguibile. I file eseguibili non possono essere registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  `/t:library` indica che è necessario generare una libreria anziché un file eseguibile. I file eseguibili non possono essere registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  L'esecuzione degli oggetti di database Visual C++ compilati con `/clr:pure` non è più supportata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di oggetti di database include, ad esempio, funzioni a valori scalari.  
@@ -153,7 +150,7 @@ GO
   
  Si noti che il nome della funzione esposto in [!INCLUDE[tsql](../../includes/tsql-md.md)] non dovere corrispondere al nome del metodo statico pubblico di destinazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Panoramica degli attributi personalizzati dell'integrazione con CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Funzioni definite dall'utente](../user-defined-functions/user-defined-functions.md)   

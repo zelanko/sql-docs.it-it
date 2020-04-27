@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919650"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Tipi e membri non consentiti in Microsoft.VisualBasic.dll
@@ -78,7 +78,7 @@ ms.locfileid: "62919650"
 |Microsoft.VisualBasic.MyServices.RegistryProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy|ExternalProcessMgmt|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attributi di protezione host e programmazione dell'integrazione con CLR](host-protection-attributes-and-clr-integration-programming.md)   
  [Tipi e membri non consentiti in mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
  [Tipi e membri non consentiti in System. dll](disallowed-types-and-members-in-system-dll.md)   

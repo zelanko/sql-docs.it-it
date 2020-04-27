@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927230"
 ---
 # <a name="system-variables"></a>Variabili di sistema
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce un set di variabili di sistema che archiviano le informazioni sul pacchetto in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
   
  È possibile usare tutte le variabili, di sistema e definite dall'utente, nelle associazioni di parametro usate dall'attività Esegui SQL per il mapping delle variabili ai parametri.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62927230"
   
 |Variabile di sistema|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
-|**AnnullaEvento**|Int32|Handle di un oggetto Eventi di Windows che l'attività può segnalare per indicare che l'attività deve essere arrestata.|  
+|**CancelEvent**|Int32|Handle di un oggetto Eventi di Windows che l'attività può segnalare per indicare che l'attività deve essere arrestata.|  
 |`ContainerStartTime`|Datetime|Ora di inizio del contenitore.|  
 |**CreationDate**|Datetime|Data di creazione del pacchetto.|  
 |`CreatorComputerName`|string|Computer in cui è stato creato il pacchetto.|  

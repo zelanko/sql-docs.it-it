@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919956"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Utilizzo dei tipi definiti dall'utente in SQL Server
@@ -33,7 +33,7 @@ ms.locfileid: "62919956"
  [Manipolazione dei dati UDT](working-with-user-defined-types-manipulating-udt-data.md)  
  Viene illustrato come utilizzare i dati dei tipi definiti dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)] attraverso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi CLR definiti dall'utente](clr-user-defined-types.md)  
   
   

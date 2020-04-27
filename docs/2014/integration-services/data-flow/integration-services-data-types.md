@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902444"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
   
- Alcuni componenti del flusso di dati convertono i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tipi di dati tra i tipi di dati e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]i tipi di dati gestiti di. Per altre informazioni sul mapping tra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Alcuni componenti del flusso di dati consentono di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i tipi di dati gestiti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per altre informazioni sul mapping tra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  La tabella seguente elenca i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Alcuni dei tipi di dati nella tabella dispongono di informazioni sulla precisione e sulla scala. Per altre informazioni su precisione e scala, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
@@ -67,8 +67,7 @@ ms.locfileid: "62902444"
 ## <a name="conversion-of-data-types"></a>Conversione di tipi di dati  
  Se i dati in una colonna non richiedono l'intera larghezza allocata dal tipo di dati di origine, sarà possibile modificare il tipo di dati della colonna. Riducendo il più possibile la larghezza delle singole righe di dati è possibile ottimizzare le prestazioni delle operazioni di trasferimento dei dati, perché minore è la larghezza della riga, più rapido sarà lo spostamento dei dati dall'origine alla destinazione.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set completo di tipi di dati numerici ed è pertanto possibile scegliere quello più appropriato alle dimensioni dei dati. Se ad esempio i valori di una colonna con tipo di dati DT_UI8 sono sempre numeri interi da 0 a 3000, sarà possibile modificare il tipo di dati in DT_UI2. Analogamente, se una colonna con tipo di dati DT_CY può soddisfare i requisiti di dati del pacchetto anche utilizzando un tipo di dati Integer, sarà possibile modificare il tipo di dati in DT_I4.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set completo di tipi di dati numerici ed è pertanto possibile scegliere quello più appropriato alle dimensioni dei dati. Se ad esempio i valori di una colonna con tipo di dati DT_UI8 sono sempre numeri interi da 0 a 3000, sarà possibile modificare il tipo di dati in DT_UI2. Analogamente, se una colonna con tipo di dati DT_CY può soddisfare i requisiti di dati del pacchetto anche utilizzando un tipo di dati Integer, sarà possibile modificare il tipo di dati in DT_I4.  
   
  Per modificare il tipo di dati di una colonna, procedere nel modo seguente:  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62902444"
   
 -   Utilizzare l'operatore cast per convertire i tipi di dati. Per altre informazioni, vedere [Cast &#40;espressione SSIS&#41;](../expressions/cast-ssis-expression.md).  
   
--   Utilizzare la trasformazione Conversione dati per eseguire il cast del tipo di dati di una colonna a un tipo di dati diverso. Per altre informazioni, vedere [trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
+-   Utilizzare la trasformazione Conversione dati per eseguire il cast del tipo di dati di una colonna a un tipo di dati diverso. Per altre informazioni, vedere [Trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
   
 -   Utilizzare la trasformazione Colonna derivata per creare una copia di una colonna con un tipo di dati diverso rispetto alla colonna originale. Per altre informazioni, vedere [Trasformazione Colonna derivata](transformations/derived-column-transformation.md).  
   
@@ -227,22 +226,22 @@ ms.locfileid: "62902444"
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||Data|Data|Data|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[tempo &#40;&#41;Transact-SQL ](/sql/t-sql/data-types/time-transact-sql)(p)|[tempo &#40;&#41;Transact-SQL](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[&#41;Transact-SQL datetimeoffset &#40;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[&#41;Transact-SQL datetimeoffset &#40;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Breve||SMALLINT|SMALLINT|  
+|DT_I2|SMALLINT|SMALLINT|Short||SMALLINT|SMALLINT|  
 |DT_I4|INT|INT|long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|real|real|Single||real|real|  
-|DT_R8|float|float|DOUBLE|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

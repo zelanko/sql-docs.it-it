@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873614"
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
@@ -144,7 +144,7 @@ ms.locfileid: "62873614"
 ### <a name="mdw_reader-role"></a>Ruolo mdw_reader  
  I membri del ruolo **mdw_reader** hanno accesso in lettura al data warehouse di gestione. Poiché lo scopo di questo ruolo è supportare la risoluzione dei problemi fornendo accesso ai dati della cronologia, i membri di questo ruolo non possono visualizzare gli altri elementi dello schema del data warehouse di gestione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

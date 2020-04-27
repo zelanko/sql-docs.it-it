@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918967"
 ---
 # <a name="set-or-change-the-column-collation"></a>Impostare o modificare le regole di confronto delle colonne
@@ -109,8 +109,8 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostazione o modifica di regole di confronto del server](set-or-change-the-server-collation.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostare o modificare le regole di confronto del server](set-or-change-the-server-collation.md)   
  [Impostare o modificare le regole di confronto del database](set-or-change-the-database-collation.md)   
  [Regole di confronto e supporto Unicode](collation-and-unicode-support.md)  
   

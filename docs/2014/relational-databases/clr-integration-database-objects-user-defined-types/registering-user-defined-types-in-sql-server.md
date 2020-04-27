@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919943"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrazione dei tipi definiti dall'utente in SQL Server
@@ -64,8 +64,7 @@ ms.locfileid: "62919943"
 ### <a name="using-create-assembly"></a>Utilizzo di CREATE ASSEMBLY  
  La sintassi CREATE ASSEMBLY registra l'assembly nel database in cui si desidera utilizzare il tipo definito dall'utente (UDT). Dopo avere registrato l'assembly, non saranno presenti dipendenze.  
   
- Non è possibile creare più versioni dello stesso assembly in uno specifico database. È tuttavia possibile creare più versioni dello stesso assembly basate sulle impostazioni cultura in un database specificato. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distingue più versioni dell'impostazione cultura di un assembly dai nomi diversi come registrate nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere la sezione relativa alla creazione e all'utilizzo di assembly con nome sicuro in .NET Framework SDK.  
+ Non è possibile creare più versioni dello stesso assembly in uno specifico database. È tuttavia possibile creare più versioni dello stesso assembly basate sulle impostazioni cultura in un database specificato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distingue più versioni dell'impostazione cultura di un assembly dai nomi diversi come registrate nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere la sezione relativa alla creazione e all'utilizzo di assembly con nome sicuro in .NET Framework SDK.  
   
  Quando CREATE ASSEMBLY viene eseguito con il set di autorizzazioni SAFE o EXTERNAL_ACCESS, l'assembly viene controllato per garantire che sia verificabile e indipendente dai tipi. Se non si specifica un set di autorizzazioni, viene utilizzato SAFE. Il codice con il set di autorizzazioni UNSAFE non viene controllato. Per altre informazioni sui set di autorizzazioni per gli assembly, vedere [Progettazione di assembly](../../relational-databases/clr-integration/assemblies-designing.md).  
   
@@ -172,13 +171,13 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **assembly_id**  
  Identificatore definito per l'assembly. Questo numero viene assegnato a tutti gli oggetti relativi allo stesso assembly.  
   
- **nome**  
+ **name**  
  Nome dell'oggetto .  
   
  **file_id**  
  Numero che identifica ogni oggetto, con il primo oggetto associato a un dato **assembly_id** a cui viene assegnato il valore 1. Se sono presenti più oggetti associati alla stessa **assembly_id**, ogni valore **file_id** successivo viene incrementato di 1.  
   
- **contenuto**  
+ **content**  
  Rappresentazione esadecimale dell'assembly o del file.  
   
  È possibile utilizzare la funzione CAST o CONVERT per convertire il contenuto della colonna **contenuto** in testo leggibile. Nella query seguente il contenuto del file Point.cs viene convertito in testo leggibile, utilizzando il nome nella clausola WHERE per limitare il set di risultati a una singola riga.  
@@ -216,7 +215,7 @@ SELECT CAST(content AS varchar(8000))
   
  Si noti che non è necessario eseguire alcuna azione per l'utilizzo dei tipi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] definiti dall'utente durante la creazione di tabelle di lavoro nel database di sistema **tempdb** . Sono incluse la gestione di cursori, variabili di tabella e funzioni con valori di tabella definite dall'utente che includono tipi definiti dall'utente e che utilizzano in modo trasparente **tempdb**. Tuttavia, se si crea in modo esplicito una tabella temporanea in **tempdb** che definisce una colonna con tipo definito dall'utente, il tipo definito dall'utente deve essere registrato in **tempdb** allo stesso modo di un database utente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi CLR definiti dall'utente](clr-user-defined-types.md)  
   
   

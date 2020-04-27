@@ -21,15 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921016"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
-  Per recuperare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in seguito a un errore, il relativo amministratore deve ripristinare un set di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una sequenza di ripristino significativa e logicamente corretta. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano il ripristino di dati da backup di un intero database, di un file di dati o di una pagina di dati nelle modalità descritte di seguito:  
+  Per recuperare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in seguito a un errore, il relativo amministratore deve ripristinare un set di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una sequenza di ripristino significativa e logicamente corretta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano il ripristino di dati da backup di un intero database, di un file di dati o di una pagina di dati nelle modalità descritte di seguito:  
   
 -   Database ( *ripristino di database completo*)  
   
@@ -51,15 +50,15 @@ ms.locfileid: "62921016"
   
 -   [Modelli di recupero e operazioni di ripristino supportate](#RMsAndSupportedRestoreOps)  
   
--   [Restrizioni di ripristino nel modello di recupero con registrazione minima](#RMsimpleScenarios)  
+-   [Restrizioni relative al ripristino in base al modello di recupero con registrazione minima](#RMsimpleScenarios)  
   
--   [Ripristino in base al modello di recupero con registrazione minima delle operazioni bulk](#RMblogRestore)  
+-   [Ripristino nel modello di recupero con registrazione minima delle operazioni bulk](#RMblogRestore)  
   
 -   [Advisor per ripristino database (SQL Server Management Studio)](#DRA)  
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="RestoreScenariosOv"></a>Panoramica degli scenari di ripristino  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>Panoramica degli scenari di ripristino  
  Uno *scenario di ripristino* in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è il processo di ripristino dei dati da uno o più backup, seguito dal recupero del database. Gli scenari di ripristino supportati dipendono dal modello di recupero del database e dall'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Nella tabella seguente vengono descritti i possibili scenari di ripristino supportati per modelli di recupero diversi.  
@@ -82,7 +81,7 @@ ms.locfileid: "62921016"
   
 -   Se in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue un'operazione di ripristino del file o della pagina, è possibile mantenere online altri dati del database durante l'operazione di ripristino.  
   
-##  <a name="RMsAndSupportedRestoreOps"></a>Modelli di recupero e operazioni di ripristino supportate  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a>Modelli di recupero e operazioni di ripristino supportate  
  Le operazioni di ripristino disponibili per un database variano in base al relativo modello di recupero. Nella tabella seguente vengono riepilogati i casi e la misura in cui ognuno dei modelli di recupero supporta uno scenario di ripristino specifico.  
   
 |Operazione di ripristino|Modello di recupero con registrazione completa|Modello di recupero con registrazione minima delle operazioni bulk|Modello di recupero con registrazione minima|  
@@ -90,7 +89,7 @@ ms.locfileid: "62921016"
 |Recupero dati|Recupero completo (se il log è disponibile).|Rischio parziale di perdita di dati.|Tutti i dati successivi all'ultimo backup completo o differenziale vanno perduti.|  
 |Ripristino temporizzato|Qualsiasi periodo di tempo coperto dai backup del log.|Non consentito se il backup del log contiene modifiche con registrazione minima delle operazioni bulk.|Non supportato.|  
 |Ripristino di file**\***|Supporto completo.|Talvolta.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
-|Ripristino della pagina**\***|Supporto completo.|Talvolta.**\*\***|No.|  
+|Ripristino della pagina**\***|Supporto completo.|Talvolta.**\*\***|Nessuno.|  
 |Ripristino a fasi (a livello di filegroup)**\***|Supporto completo.|Talvolta.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
   
  **\*** Disponibile solo nell'edizione Enterprise di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
@@ -100,7 +99,7 @@ ms.locfileid: "62921016"
 > [!IMPORTANT]  
 >  Indipendentemente dal modello di recupero di un database, un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere ripristinato da una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a quella tramite cui è stato creato il backup.  
   
-##  <a name="RMsimpleScenarios"></a>Scenari di ripristino nel modello di recupero con registrazione minima  
+##  <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a>Scenari di ripristino nel modello di recupero con registrazione minima  
  Il modello di recupero con registrazione minima impone le restrizioni seguenti sulle operazioni di ripristino:  
   
 -   Il ripristino del file e il ripristino a fasi sono disponibili solo per gruppi di file secondari in modalità di sola lettura. Per informazioni su questi scenari di ripristino, vedere [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](file-restores-simple-recovery-model.md) e [Ripristini a fasi &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
@@ -114,7 +113,7 @@ ms.locfileid: "62921016"
 > [!IMPORTANT]  
 >  Indipendentemente dal modello di recupero di un database, un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere ripristinato da una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a quella tramite cui è stato creato il backup.  
   
-##  <a name="RMblogRestore"></a>Ripristino in base al modello di recupero con registrazione minima delle operazioni bulk  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>Ripristino in base al modello di recupero con registrazione minima delle operazioni bulk  
  In questa sezione vengono fornite informazioni sul ripristino proprie del modello di recupero con registrazione minima delle operazioni bulk da intendersi esclusivamente come integrazione del modello di recupero con registrazione completa.  
   
 > [!NOTE]  
@@ -141,20 +140,20 @@ ms.locfileid: "62921016"
   
  Per informazioni su come eseguire un ripristino online, vedere [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DRA"></a>Advisor per ripristino database (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
  Tramite Database Recovery Advisor viene semplificata la costruzione di piani di ripristino mediante i quali vengono implementate ottime sequenze di ripristino corrette. Molti problemi noti di ripristino del database sono stati risolti e sono stati apportati molti miglioramenti richiesti dai clienti. Di seguito sono riportati i miglioramenti principali introdotti da Database Recovery Advisor:  
   
--   **Algoritmo Restore-Plan:**  L'algoritmo utilizzato per costruire piani di ripristino è stato migliorato in modo significativo, in particolare per scenari di ripristino complessi. Molti casi limite, inclusi gli scenari di fork nei ripristini temporizzati, vengono gestititi in modo più efficiente rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algoritmo del piano di ripristino:**  l'algoritmo utilizzato per costruire i piani di ripristino è stato migliorato in modo significativo, in particolare per gli scenari di ripristino complessi. Molti casi limite, inclusi gli scenari di fork nei ripristini temporizzati, vengono gestititi in modo più efficiente rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Ripristini temporizzati:**  Tramite Database Recovery Advisor viene notevolmente semplificato il ripristino di un database in un determinato momento. Tramite una cronologia di backup visiva viene migliorato in modo significativo il supporto per i ripristini temporizzati. Tramite questa cronologia visiva è possibile identificare un momento appropriato come punto di recupero di destinazione per il ripristino di un database. Tramite la cronologia viene semplificato l'attraversamento di un percorso di recupero con fork, cioè un percorso che si estende su più fork di recupero. In un piano di ripristino temporizzato specificato sono inclusi automaticamente i backup rilevanti per il ripristino al punto nel tempo previsto (data e ora). Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Ripristini temporizzati:**  tramite Database Recovery Advisor viene notevolmente semplificato il ripristino di un database in un determinato momento. Tramite una cronologia di backup visiva viene migliorato in modo significativo il supporto per i ripristini temporizzati. Tramite questa cronologia visiva è possibile identificare un momento appropriato come punto di recupero di destinazione per il ripristino di un database. Tramite la cronologia viene semplificato l'attraversamento di un percorso di recupero con fork, cioè un percorso che si estende su più fork di recupero. In un piano di ripristino temporizzato specificato sono inclusi automaticamente i backup rilevanti per il ripristino al punto nel tempo previsto (data e ora). Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Per ulteriori informazioni su Database Recovery Advisor, vedere i seguenti blog relativi alla facilità di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Recovery Advisor: introduzione](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Pagina relativa all'introduzione a Recovery Advisor](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Ripristino di emergenza: utilizzo di SSMS per la creazione e il ripristino di backup suddivisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Pagina relativa a Recovery Advisor in cui viene illustrato l'utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

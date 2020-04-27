@@ -24,14 +24,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890207"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Riferimento all'interfaccia utente dell'utilità di esecuzione pacchetti (DtExecUI)
-  Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'utilità esegue i pacchetti archiviati in una delle tre posizioni seguenti: [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, archivio [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti e file System. Questa interfaccia utente, che può essere aperta da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o digitando `dtexecui` al prompt dei comandi, rappresenta un'alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **dtexec** .  
+  Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'utilità esegue i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere aperta da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o digitando `dtexecui` al prompt dei comandi, rappresenta un'alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **dtexec** .  
   
  I pacchetti vengono eseguiti nello stesso processo dell'utilità **dtexecui.exe** . Questa utilità è uno strumento a 32 bit, quindi i pacchetti eseguiti usando **dtexecui.exe** in un ambiente a 64 bit vengono eseguiti in Windows on Win32 (WOW). Quando si sviluppano e si verificano i comandi usando l'utilità dtexecui.exe in un computer a 64 bit, è consigliabile eseguire la verifica in modalità a 64 bit usando la versione a 64 bit di **dtexec.exe** prima della distribuzione o della pianificazione dei comandi su un server di produzione.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "62890207"
 |||  
 |-|-|  
 |valore|Descrizione|  
-|**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** _nomeutente_ e **/PASSWORD** _password_ options to the comme prompt.|  
-|**File System**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
+|**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** _nomeutente_ e **/PASSWORD** _password_ al prompt dei comandi.|  
+|**File system**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
 |**Archivio pacchetti SSIS**|Selezionare questa opzione se il pacchetto si trova nell'Archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Ad ognuna di queste impostazioni è associato il set di opzioni seguente.  
@@ -91,7 +91,7 @@ ms.locfileid: "62890207"
  **Usa autenticazione di Windows**  
  Selezionare questa opzione per usare l'autenticazione di Windows e accedere mediante un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Usa autenticazione SQL Server**  
+ **Usa autenticazione di SQL Server**  
  Selezionare questa opzione per usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando un utente si connette con un nome di account di accesso e una password da una connessione non trusted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'autenticazione controllando se è stato impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se la password specificata corrisponde a quella registrata in precedenza. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riesce a trovare un account di accesso, l'autenticazione ha esito negativo e viene visualizzato un messaggio di errore.  
   
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ ms.locfileid: "62890207"
  **Usa autenticazione di Windows**  
  Selezionare questa opzione per utilizzare l'autenticazione di Windows e accedere mediante un account utente di Microsoft Windows.  
   
- **Usa autenticazione SQL Server**  
+ **Usa autenticazione di SQL Server**  
  Questa opzione non è disponibile se si esegue un pacchetto incluso nell' **Archivio pacchetti SSIS**.  
   
  **Pacchetto**  
@@ -190,7 +190,7 @@ ms.locfileid: "62890207"
  Usare la pagina **Opzioni di esecuzione** della finestra di dialogo **Utilità di esecuzione pacchetti** per specificare le opzioni di runtime per il pacchetto.  
   
 ### <a name="options"></a>Opzioni  
- **Interrompi pacchetto per avvisi di convalida**  
+ **Interrompi il pacchetto in caso di avvisi di convalida**  
  Indica se il pacchetto deve essere interrotto quando vengono generati avvisi di convalida.  
   
  **Convalida pacchetto senza esecuzione**  
@@ -199,7 +199,7 @@ ms.locfileid: "62890207"
  **Numero massimo di file eseguibili simultanei**  
  Se si desidera, specificare il numero massimo di file eseguibili che possono essere eseguiti simultaneamente nel pacchetto. Dopo avere selezionato questa casella di controllo, utilizzare la casella di selezione per specificare il numero massimo di file eseguibili.  
   
- **Abilita Checkpoint pacchetto**  
+ **Abilita checkpoint pacchetto**  
  Indica se abilitare i checkpoint del pacchetto.  
   
  **File del checkpoint**  
@@ -230,7 +230,7 @@ ms.locfileid: "62890207"
  **Nessuno**  
  Selezionare questa opzione per non generare report.  
   
- **Errors**  
+ **Errori**  
  Selezionare questa opzione per segnalare i messaggi di errore.  
   
  **Avvisi**  
@@ -248,7 +248,7 @@ ms.locfileid: "62890207"
  **Dettagliato**  
  Selezionare questa opzione per utilizzare i report dettagliati.  
   
- **Registrazione della console**  
+ **Registrazione console**  
  Consente di specificare le informazioni che si desidera scrivere nel registro al verificarsi dell'evento selezionato.  
   
  **Nome**  
@@ -272,7 +272,7 @@ ms.locfileid: "62890207"
  **Messaggio**  
  Selezionare questa opzione per segnalare i messaggi.  
   
- **Ora di inizio e ora di fine**  
+ **Ora di inizio e fine**  
  Selezionare questa opzione per segnalare l'ora di inizio e fine dell'esecuzione del pacchetto.  
   
  **Eseguire**  
@@ -326,7 +326,7 @@ ms.locfileid: "62890207"
  **Esegui solo pacchetti firmati**  
  Selezionare questa opzione per eseguire solo i pacchetti firmati.  
   
- **Verificare la compilazione del pacchetto**  
+ **Verifica build pacchetto**  
  Selezionare questa opzione per verificare la build del pacchetto.  
   
  Compilare  
@@ -354,10 +354,10 @@ ms.locfileid: "62890207"
  Utilizzare il nodo **Riga di comando** della finestra di dialogo **Utilità di esecuzione pacchetti** per modificare la riga di comando generata dalle opzioni create dalle varie finestre di dialogo.  
   
 ### <a name="options"></a>Opzioni  
- **Ripristinare le opzioni originali**  
+ **Ripristina opzioni originali**  
  Fare clic su questo pulsante per ripristinare lo stato originale della riga di comando. Usare questa opzione se sono state apportate modifiche tramite l'opzione **Modifica riga di comando manualmente** e si vogliono ripristinare le opzioni delle riga di comando originali.  
   
- **Modificare la riga di comando manualmente**  
+ **Modifica riga di comando manualmente**  
  Fare clic per modificare la riga di comando nella casella di testo **Riga di comando** .  
   
  **Riga di comando**  

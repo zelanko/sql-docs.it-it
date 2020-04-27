@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918339"
 ---
 # <a name="management-data-warehouse"></a>data warehouse di gestione
@@ -125,9 +125,9 @@ ms.locfileid: "62918339"
 |Aggiunta della tabella core.performance_counter_report_group_items alla sezione "Schema core".|  
 |Aggiornamento dell'elenco di tabelle nella sezione "Schema snapshot". Aggiunta di snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory e snapshots.io_virtual_file_stats. Rimozione di snapshots.os_process_memory e snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Stored procedure del data warehouse di gestione &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [Stored procedure di gestione data warehouse &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Raccolta dati](data-collection.md)   
  [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

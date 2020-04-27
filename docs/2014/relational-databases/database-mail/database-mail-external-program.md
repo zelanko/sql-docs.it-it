@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917642"
 ---
 # <a name="database-mail-external-program"></a>Programma esterno di Posta elettronica database
@@ -30,14 +30,14 @@ ms.locfileid: "62917642"
   
 -   [Attività correlate alla configurazione del Programma esterno di Posta elettronica database](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Concetti relativi al Programma esterno di Posta elettronica database  
+##  <a name="database-mail-external-program-concepts"></a><a name="ComponentsAndConcepts"></a> Concetti relativi al Programma esterno di Posta elettronica database  
  All'avvio del programma esterno, il programma viene connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows e viene avviata l'elaborazione dei messaggi di posta elettronica. In assenza di messaggi da inviare per il periodo di timeout specificato, il programma viene chiuso. È possibile configurare il tempo di attesa da parte del programma prima della chiusura utilizzando Configurazione guidata posta elettronica database oppure le stored procedure di Posta elettronica database. Per altre informazioni, vedere [sysmail_configure_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql).  
   
  Il programma esterno archivia le informazioni in tabelle di sistema nel database **msdb** . Se il programma esterno non è in grado di comunicare con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registra gli errori nel registro eventi applicazioni di Microsoft Windows. La registrazione aggiuntiva dei messaggi è disponibile quando il livello di registrazione è impostato su **Dettagliati** nella finestra di dialogo **Configurazione parametri di sistema** della **Configurazione guidata posta elettronica database**.  
   
  Si noti che, per motivi di efficienza, il programma esterno memorizza nella cache le informazioni relative a profili e account. Pertanto, le modifiche alla configurazione di profili e account potrebbero non venire trasmesse al programma esterno per alcuni minuti.  
   
-##  <a name="RelatedTasks"></a> Attività correlate alla configurazione del Programma esterno di Posta elettronica database  
+##  <a name="tasks-related-to-configuring-database-mail-external-program"></a><a name="RelatedTasks"></a> Attività correlate alla configurazione del Programma esterno di Posta elettronica database  
   
 |Attività di configurazione|Collegamento all'argomento|  
 |------------------------|----------------|  

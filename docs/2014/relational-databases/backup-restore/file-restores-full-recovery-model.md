@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921942"
 ---
 # <a name="file-restores-full-recovery-model"></a>Ripristini di file (modello di recupero con registrazione completa)
@@ -47,14 +47,14 @@ ms.locfileid: "62921942"
   
      In un *ripristino di file offline*, se il database è online al momento del ripristino, rimarrà online durante il ripristino del file. Tuttavia, durante l'operazione di ripristino, ogni filegroup nel quale viene ripristinato un file rimane offline. Al termine del recupero di tutti i file del filegroup offline, viene attivata automaticamente la modalità online per il filegroup.  
   
-     Per informazioni sul supporto per il ripristino di pagine e file online, vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Per ulteriori informazioni sui ripristini online, [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md).  
+     Per informazioni sul supporto per il ripristino di pagine e file online, vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Per altre informazioni sui ripristini online, vedere [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
     >  Se si desidera attivare la modalità offline per il database al fine di eseguire un ripristino di file, attivare la modalità offline per il database prima di avviare la sequenza di ripristino eseguendo la seguente istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *nome_database* SET OFFLINE.  
   
   
   
-##  <a name="Overview"></a> Ripristino di file danneggiati da backup di file  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Ripristino di file danneggiati da backup di file  
   
 1.  Prima di ripristinare uno o più file danneggiati, tentare di creare un [backup della parte finale del log](tail-log-backups-sql-server.md).  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare file e filegroup**  
   
 -   [Ripristino dei file in una nuova posizione &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

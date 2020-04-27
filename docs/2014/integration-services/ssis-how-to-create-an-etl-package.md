@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62878283"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Esercitazione SSIS: Creazione di un pacchetto ETL semplice
@@ -70,7 +70,7 @@ ms.locfileid: "62878283"
  [Lezione 5: Aggiunta di configurazioni del pacchetto per il modello di distribuzione del pacchetto](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  In questa lezione si espanderà il pacchetto creato nella lezione 4 per utilizzare le nuove opzioni di configurazione del pacchetto.  
   
- [Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lezione 6: Uso di parametri con il modello di distribuzione del progetto](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
  In questa lezione si espanderà il pacchetto creato nella lezione 5 per utilizzare i nuovi parametri con il modello di distribuzione del progetto.  
   
   

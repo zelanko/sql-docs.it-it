@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891290"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Passaggio 5: Test del pacchetto creato nella lezione 4 dell'esercitazione
@@ -38,7 +38,7 @@ ms.locfileid: "62891290"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 4 dell'esercitazione  
   
-1.  Scegliere **Avvia debug** dal menu **Debug**.  
+1.  Scegliere **Avvia debug**dal menu **debug** .  
   
 2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
   

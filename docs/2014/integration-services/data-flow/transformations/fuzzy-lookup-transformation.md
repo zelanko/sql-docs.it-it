@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900317"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
@@ -74,9 +74,9 @@ ms.locfileid: "62900317"
   
  Le colonne di output della trasformazione corrispondono alle colonne di input contrassegnate come colonne pass-through, alle colonne selezionate nella tabelle di ricerca e alle colonne seguenti:  
   
--   **_Similarity**, colonna che descrive la somiglianza tra i valori nelle colonne di input e di riferimento.  
+-   **_Similarity**, colonna che descrive la somiglianza tra i valori delle colonne di input e di riferimento.  
   
--   **_Confidence**, colonna che descrive la qualità della corrispondenza.  
+-   **_Confidence**, colonna che descrive la probabilità della corrispondenza.  
   
  Sfruttando la connessione al database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la trasformazione crea le tabelle temporanee utilizzate dall'algoritmo per individuare le corrispondenze fuzzy.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62900317"
  Il comando SQL TRUNCATE TABLE non richiama trigger DELETE. Se si esegue il comando TRUNCATE TABLE sulla tabella di riferimento, la tabella e l'indice delle corrispondenze non saranno più sincronizzati e la trasformazione Ricerca fuzzy avrà esito negativo. Mentre i trigger per la manutenzione della tabella dell'indice delle corrispondenze sono installati nella tabella di riferimento, è necessario eseguire il comando SQL DELETE anziché TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione di Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione con Common Language Runtime (CLR) presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Considerato che l'opzione **Manutenzione indice archiviato** richiede l'integrazione con CLR, questa funzionalità può essere usata solo se si seleziona una tabella di riferimento in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è abilitata l'integrazione con CLR.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62900317"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca fuzzy** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Ricerca fuzzy &#40;scheda tabella di riferimento&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor trasformazione Ricerca fuzzy &#40;scheda Tabella di riferimento&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
@@ -136,14 +136,14 @@ ms.locfileid: "62900317"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Trasformazione Ricerca](lookup-transformation.md)   
- [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
+ [Trasformazione Raggruppamento fuzzy](fuzzy-grouping-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   
   

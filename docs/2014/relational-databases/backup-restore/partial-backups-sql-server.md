@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921930"
 ---
 # <a name="partial-backups-sql-server"></a>Backup parziali (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62921930"
   
  Un backup parziale può essere utilizzato come *base differenziale* per backup parziali differenziali. Per altre informazioni, vedere [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 > [!NOTE]  
 >  I backup parziali non sono supportati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] né nella Creazione guidata piano di manutenzione.  

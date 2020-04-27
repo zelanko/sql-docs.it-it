@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917094"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostamento di un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917094"
     > [!NOTE]  
     >  Se si tenta di collegare il database senza specificare il file di log, verrà eseguita una ricerca di tale file nella relativa posizione originale. Se nella posizione originale esiste ancora una copia del log, verrà collegata tale copia. Per evitare di utilizzare il file di log originale, specificare il percorso del nuovo file di log oppure rimuovere la copia originale del file di log dopo averlo copiato nella nuova posizione.  
   
-3.  Collegare i file copiati. Per altre informazioni, vedere [Collegare un database](attach-a-database.md).  
+3.  Collegare i file copiati. Per altre informazioni, vedere [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creata una copia delle [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni che vengono eseguite in una finestra dell'editor di query connessa all'istanza del server a cui è collegato.  

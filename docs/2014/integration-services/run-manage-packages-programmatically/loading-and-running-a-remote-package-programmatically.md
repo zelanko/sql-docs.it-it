@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889634"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione
@@ -29,7 +29,7 @@ ms.locfileid: "62889634"
   
  In alternativa, è possibile eseguire un pacchetto remoto da un computer locale in cui è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Caricamento ed esecuzione di un pacchetto locale a livello di programmazione](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
-##  <a name="top"></a> Esecuzione di un pacchetto remoto nel computer remoto  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> Esecuzione di un pacchetto remoto nel computer remoto  
  Come accennato in precedenza, è possibile eseguire un pacchetto remoto in un server remoto in vari modi:  
   
 -   [Usare SQL Server Agent per eseguire il pacchetto remoto a livello di programmazione](#agent)  
@@ -38,7 +38,7 @@ ms.locfileid: "62889634"
   
  Quasi tutti i metodi utilizzati in questo argomento per caricare e salvare pacchetti richiedono un riferimento all'assembly `Microsoft.SqlServer.ManagedDTS`. L'eccezione è l'approccio ADO.NET illustrato in questo argomento per l'esecuzione della **sp_start_job** stored procedure, che richiede solo un riferimento a `System.Data`. Dopo aver aggiunto il riferimento all'assembly `Microsoft.SqlServer.ManagedDTS` in un nuovo progetto, importare lo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> con un'istruzione `using` o `Imports`.  
   
-###  <a name="agent"></a> Uso di SQL Server Agent per eseguire un pacchetto remoto a livello di programmazione nel server  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Uso di SQL Server Agent per eseguire un pacchetto remoto a livello di programmazione nel server  
  Nell'esempio di codice seguente è illustrato come utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a livello di programmazione per eseguire un pacchetto remoto nel server. Il codice di esempio chiama la stored procedure di sistema **sp_start_job**, che avvia un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il processo avviato dalla stored procedure è denominato `RunSSISPackage` e si trova nel computer remoto. Il processo `RunSSISPackage` esegue quindi il pacchetto nel computer remoto.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
   
  
   
-###  <a name="service"></a> Uso di un servizio Web o un componente remoto per eseguire un pacchetto remoto a livello di programmazione  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Uso di un servizio Web o un componente remoto per eseguire un pacchetto remoto a livello di programmazione  
  La soluzione precedente per l'esecuzione dei pacchetti a livello di programmazione nel server non richiede codice personalizzato nel server. Tuttavia, può essere preferibile una soluzione che non si basa su SQL Server Agent per l'esecuzione dei pacchetti. Nell'esempio seguente sono illustrati un servizio Web che è possibile creare nel server per avviare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in locale e un'applicazione di test che è possibile utilizzare per chiamare il servizio Web da un computer client. Se si preferisce creare un componente remoto anziché un servizio Web, è possibile usare lo stesso codice con poche modifiche in un computer remoto. Tuttavia, un componente remoto può richiedere una configurazione più estesa rispetto a un servizio Web.  
   
 > [!IMPORTANT]  
@@ -422,11 +422,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   Video relativo alla [procedura sull'automazione dell'esecuzione di un pacchetto SSIS usando SQL Server Agent (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) nel sito technet.microsoft.com  
   
-![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedere anche  
- [Differenze tra l'esecuzione locale e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Caricamento ed esecuzione di un pacchetto locale a livello di programmazione](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Informazioni sulle differenze tra l'esecuzione locale e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Caricamento ed esecuzione di un pacchetto locale a livello di codice](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Caricamento dell'output di un pacchetto locale](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   

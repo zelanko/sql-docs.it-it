@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917967"
 ---
 # <a name="database-mail"></a>Posta elettronica database
@@ -26,14 +26,14 @@ ms.locfileid: "62917967"
   
  
   
-##  <a name="Benefits"></a>Vantaggi dell'utilizzo di Posta elettronica database  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Vantaggi dell'uso di Posta elettronica database  
  Posta elettronica database è caratterizzata da affidabilità, scalabilità, sicurezza e facilità di supporto.  
   
 ### <a name="reliability"></a>Affidabilità  
   
 -   Posta elettronica database utilizza il protocollo SMTP (Simple Mail Transfer Protocol) standard per l'invio della posta. È possibile utilizzare Posta elettronica database senza installare un client MAPI estesa nel computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Isolamento dei processi. Per ridurre al minimo l'impatto su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il componente che fornisce la posta elettronica viene eseguito esternamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in un processo separato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]continuerà a accodare i messaggi di posta elettronica anche se il processo esterno si arresta o non riesce. I messaggi accodati verranno inviati nel momento in cui il processo esterno o il server SMTP torna online.  
+-   Isolamento dei processi. Per ridurre al minimo l'impatto su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il componente che fornisce la posta elettronica viene eseguito esternamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in un processo separato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continuerà a mettere in coda i messaggi di posta elettronica anche se il processo esterno si arresta o non riesce. I messaggi accodati verranno inviati nel momento in cui il processo esterno o il server SMTP torna online.  
   
 -   Account di failover. Un profilo di Posta elettronica database consente di specificare più di un server SMTP. Nel caso in cui un server SMTP non sia disponibile, sarà comunque possibile recapitare la posta a un altro server SMTP.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62917967"
   
 -   Compatibilità con installazione a 64 bit: Posta elettronica database è pienamente supportato nelle installazioni a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
   
 -   Disabilitazione per impostazione predefinita: per ridurre la superficie di attacco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le stored procedure di Posta elettronica database sono disabilitate per impostazione predefinita.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62917967"
   
 -   Posta elettronica database è in esecuzione nell'account di servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. Per allegare un file da una cartella a un'e-mail, l'account del motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre delle autorizzazioni necessarie per accedere alla cartella in cui è contenuto il file.  
   
-### <a name="supportability"></a>Supporto  
+### <a name="supportability"></a>Supportabilità  
   
 -   Configurazione integrata: Posta elettronica database mantiene le informazioni relative agli account di posta elettronica in [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
   
@@ -75,14 +75,14 @@ ms.locfileid: "62917967"
   
 
   
-##  <a name="VisualElement"></a>Architettura Posta elettronica database  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a> Architettura di Posta elettronica database  
  Posta elettronica database è basato su un'architettura a code che impiega tecnologie service broker. Quando gli utenti eseguono **sp_send_dbmail**, la stored procedure inserisce un elemento nella coda della posta elettronica e crea un record contenente il messaggio di posta elettronica. L'inserimento della nuova voce nella coda della posta elettronica avvia il processo esterno di Posta elettronica database (DatabaseMail.exe). Il processo esterno legge le informazioni relative alla posta elettronica e invia il messaggio al server o ai server di posta elettronica appropriati. Il processo esterno inserisce un elemento nella coda di stato per il risultato dell'operazione di invio. L'inserimento della nuova voce nella coda di stato avvia una stored procedure interna che aggiorna lo stato del messaggio di posta elettronica. Oltre ad archiviare il messaggio di posta elettronica inviato o non inviato, Posta elettronica database registra eventuali allegati di posta elettronica nelle tabelle di sistema. Le viste di Posta elettronica database specificano lo stato dei messaggi per la risoluzione dei problemi, mentre le stored procedure consentono l'amministrazione della coda di Posta elettronica database.  
   
  ![Il database msdb invia messaggi a un server di posta elettronica SMTP](../../database-engine/media/databasemail.gif "Il database msdb invia messaggi a un server di posta elettronica SMTP")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>Introduzione ai componenti di Posta elettronica database  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a> Introduzione ai componenti di Posta elettronica database  
  Il programma Posta elettronica database è costituito dai componenti principali seguenti:  
   
 -   Componenti di configurazione e di sicurezza  
@@ -101,7 +101,7 @@ ms.locfileid: "62917967"
   
      Posta elettronica database registra le informazioni di registrazione nel database **msdb** e nel log eventi dell'applicazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Configurazione di Agent per l'utilizzo di Posta elettronica database**  
+ **Configurazione di SQL Server Agent per l'uso di Posta elettronica database:**  
   
  SQL Server Agent può essere configurato per l'utilizzo di Posta elettronica database. Ciò è necessario per le notifiche degli avvisi e per la notifica automatica del completamento di un processo.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62917967"
   
  
   
-##  <a name="RelatedContent"></a>Argomenti del componente Posta elettronica database  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a> Argomenti del componente Posta elettronica database  
   
 -   [Oggetti di configurazione di Posta elettronica database](database-mail-configuration-objects.md)  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62917967"
   
 -   [Controlli e registrazione di Posta elettronica database](database-mail-log-and-audits.md)  
   
--   [Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database](configure-sql-server-agent-mail-to-use-database-mail.md)  
+-   [Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database](configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 
   

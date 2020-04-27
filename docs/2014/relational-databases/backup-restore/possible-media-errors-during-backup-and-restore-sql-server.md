@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876114"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876114"
   
   
   
-##  <a name="BckChecksums"></a> Checksum di backup  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Checksum di backup  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati tre tipi di checksum: della pagine, dei blocchi dei log e del backup. Durante la generazione di un checksum del backup, l'istruzione BACKUP verifica che i dati letti dal database siano consistenti con l'eventuale indicazione di checksum o di pagina incompleta presente nel database.  
   
  L'istruzione BACKUP consente di eseguire il calcolo facoltativo di un checksum del backup nel flusso del backup stesso. Se in una pagina specifica sono presenti informazioni relative al checksum della pagina o a una pagina incompleta, durante il backup della pagina verrà inoltre verificato lo stato del checksum e della pagina incompleta, nonché l'ID della pagina. Non verranno aggiunti checksum alle pagine durante la creazione di un checksum del backup. Il backup delle pagine viene eseguito solo se queste esistono nel database e non implica la modifica delle pagine stesse.  
@@ -75,7 +75,7 @@ ms.locfileid: "62876114"
   
 4.  Visualizza un messaggio per indicare che il backup è stato generato correttamente, ma contiene errori di pagina.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per abilitare o disabilitare i checksum per i backup**  
   
 -   [Abilitare o disabilitare il checksum di backup durante il backup o il ripristino &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

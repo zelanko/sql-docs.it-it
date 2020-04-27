@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916883"
 ---
 # <a name="tempdb-database"></a>Database tempdb
-  Il database di sistema **tempdb** è una risorsa globale disponibile per tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene utilizzata per conservare gli elementi seguenti:  
+  Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
   
 -   Oggetti utente temporanei creati in modo esplicito, ad esempio tabelle temporanee globali o locali, stored procedure temporanee, variabili di tabella o cursori.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "62916883"
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|No|  
-|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_CREATE_STATISTICS|ON|Sì|  
 |AUTO_SHRINK|OFF|No|  
-|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
@@ -81,7 +81,7 @@ ms.locfileid: "62916883"
 |CURSOR_DEFAULT|GLOBAL|Sì|  
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ATTIVA|No|  
+|DB_CHAINING|ON|No|  
 |ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
 |PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sì|  
@@ -134,7 +134,7 @@ ms.locfileid: "62916883"
 ## <a name="related-content"></a>Contenuto correlato  
  [Opzione SORT_IN_TEMPDB per gli indici](../indexes/indexes.md)  
   
- [Database di sistema.](system-databases.md)  
+ [Database di sistema](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62916883"
   
  [Spostare file del database](move-database-files.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873550"
 ---
 # <a name="data-compression"></a>Compressione dei dati
@@ -251,7 +251,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   L'abilitazione della compressione può provocare la modifica dei piani di query, in quanto i dati vengono archiviati tramite un numero diverso di pagine e un numero diverso di righe per pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Implementazione della compressione di riga](row-compression-implementation.md)   
  [Implementazione della compressione di pagina](page-compression-implementation.md)   
  [Implementazione della compressione Unicode](unicode-compression-implementation.md)   

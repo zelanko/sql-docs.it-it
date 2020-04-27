@@ -11,18 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922585"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]supporta Windows PowerShell, ovvero una potente shell di scripting che consente agli amministratori e agli sviluppatori di automatizzare l'amministrazione del server e la distribuzione di applicazioni. Il linguaggio di Windows PowerShell supporta una logica più complessa rispetto agli script [!INCLUDE[tsql](../includes/tsql-md.md)] , consentendo agli amministratori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di compilare script di amministrazione affidabili. Gli script di Windows PowerShell possono anche essere utilizzati per amministrare altri prodotti server di [!INCLUDE[msCoName](../includes/msconame-md.md)] , Ciò fornisce agli amministratori un linguaggio di scripting comune in tutti i server.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supporta Windows PowerShell, ovvero una potente shell di scripting che consente agli amministratori e agli sviluppatori di automatizzare l'amministrazione del server e la distribuzione delle applicazioni. Il linguaggio di Windows PowerShell supporta una logica più complessa rispetto agli script [!INCLUDE[tsql](../includes/tsql-md.md)] , consentendo agli amministratori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di compilare script di amministrazione affidabili. Gli script di Windows PowerShell possono anche essere utilizzati per amministrare altri prodotti server di [!INCLUDE[msCoName](../includes/msconame-md.md)] , Ciò fornisce agli amministratori un linguaggio di scripting comune in tutti i server.  
   
 ## <a name="sql-server-powershell-components"></a>Componenti di PowerShell di SQL Server  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un modulo di Windows PowerShell denominato `sqlps` e utilizzato per importare i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un ambiente o script di Windows PowerShell 2.0. Il modulo `sqlps` carica due snap-in di Windows PowerShell che implementano:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un modulo di Windows PowerShell denominato `sqlps` e utilizzato per importare i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un ambiente o script di Windows PowerShell 2.0. Il modulo `sqlps` carica due snap-in di Windows PowerShell che implementano:  
   
 -   Un provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , che abilita un semplice meccanismo di navigazione simile ai percorsi del file system. È possibile compilare percorsi simili a quelli del file system, in cui l'unità è associata a un modello a oggetti di gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e i nodi sono basati sulle classi del modello a oggetti. È quindi possibile usare comandi comuni come **cd** e **dir** per un'esplorazione dei percorsi simile all'esplorazione delle cartelle in una finestra del prompt dei comandi. È possibile usare altri comandi, ad esempio **ren** o **del**, per eseguire azioni sui nodi nel percorso.  
   
@@ -44,8 +43,8 @@ ms.locfileid: "62922585"
 |Descrive la modalità di utilizzo del provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per spostarsi nella gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Provider PowerShell per SQL Server](sql-server-powershell-provider.md)|  
 |Descrive come utilizzare i cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che specificano le azioni [!INCLUDE[ssDE](../includes/ssde-md.md)] come ad esempio l'esecuzione di uno script [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Utilizzo di cmdlet del motore di database](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Descrive come specificare identificatori delimitati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che contengono caratteri non supportati da Windows PowerShell.|[Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md)|  
-|Descrive come effettuare connessioni di autenticazione di SQL Server. Per impostazione predefinita, i componenti PowerShell di SQL Server utilizzano connessioni di autenticazione di Windows mediante le credenziali di Windows del processo che esegue Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
-|Descrive come utilizzare variabili implementate dal provider PowerShell di SQL Server per controllare quanti oggetti vengono elencati oggetti nel caso di utilizzo del completamento della scheda di Windows PowerShell. Questo è particolarmente utile lavorando su database che contengono grandi numeri di oggetti.|[Gestire il completamento tramite TAB &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
-|Descrive come utilizzare Get-Help per ottenere informazioni sui componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'ambiente di Windows PowerShell.|[Visualizzare la Guida di SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
+|Descrive come effettuare connessioni di autenticazione di SQL Server. Per impostazione predefinita, i componenti PowerShell di SQL Server utilizzano connessioni di autenticazione di Windows mediante le credenziali di Windows del processo che esegue Windows PowerShell.|[Gestire l'autenticazione in motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Descrive come utilizzare variabili implementate dal provider PowerShell di SQL Server per controllare quanti oggetti vengono elencati oggetti nel caso di utilizzo del completamento della scheda di Windows PowerShell. Questo è particolarmente utile lavorando su database che contengono grandi numeri di oggetti.|[Gestire il completamento alla pressione del tasto TAB &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
+|Descrive come utilizzare Get-Help per ottenere informazioni sui componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'ambiente di Windows PowerShell.|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
   
   

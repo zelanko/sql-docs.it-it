@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900242"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
@@ -59,7 +59,7 @@ ms.locfileid: "62900242"
   
 -   Se nella tabella di riferimento sono presenti più corrispondenze, la trasformazione Ricerca restituisce solo la prima corrispondenza restituita dalla query di ricerca. Se vengono rilevate più corrispondenze, viene generato un errore o un avviso nella trasformazione Ricerca solo se questa è stata configurata in modo da caricare l'intero set di dati di riferimento nella cache. In questo caso, viene generato un avviso quando vengono individuate più corrispondenze durante il riempimento della cache.  
   
- È possibile utilizzare anche join composti, ovvero unire in join più colonne nell'input della trasformazione alle colonne nel set di dati di riferimento. La trasformazione supporta colonne di join con qualsiasi tipo di dati, ad eccezione di DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Per altre informazioni, vedere [Tipi di dati di Integration Services](../integration-services-data-types.md).  
+ È possibile utilizzare anche join composti, ovvero unire in join più colonne nell'input della trasformazione alle colonne nel set di dati di riferimento. La trasformazione supporta colonne di join con qualsiasi tipo di dati, ad eccezione di DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Per ulteriori informazioni, vedere [Integration Services tipi di dati](../integration-services-data-types.md).  
   
  I valori ottenuti dal set di dati di riferimento vengono in genere aggiunti all'output della trasformazione. La trasformazione Ricerca può ad esempio estrarre il nome di un prodotto da una tabella utilizzando un valore letto da una colonna di input e quindi aggiungere il nome del prodotto all'output della trasformazione. I valori ottenuti dalla tabella di riferimento possono sostituire i valori delle colonne o essere aggiunti a nuove colonne.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62900242"
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per ulteriori informazioni, vedere***  [implementare una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62900242"
   
      Tale opzione di memorizzazione nella cache è compatibile con l'opzione di non memorizzazione nella cache disponibile per la trasformazione Ricerca in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si comportano in modo diverso ai fini del confronto tra le stringhe. Se la trasformazione Ricerca è configurata per caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca, in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] viene eseguito il confronto della ricerca nella cache. In caso contrario, l'operazione di ricerca usa un'istruzione SQL con parametri e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito il confronto della ricerca. Ciò significa che la trasformazione Ricerca potrebbe restituire un diverso numero di corrispondenze dalla stessa tabella di ricerca in base al tipo di cache.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si comportano in modo diverso ai fini del confronto tra le stringhe. Se la trasformazione Ricerca è configurata per caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca, in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] viene eseguito il confronto della ricerca nella cache. In caso contrario, l'operazione di ricerca usa un'istruzione SQL con parametri e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito il confronto della ricerca. Ciò significa che la trasformazione Ricerca potrebbe restituire un diverso numero di corrispondenze dalla stessa tabella di ricerca in base al tipo di cache.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni dettagliate, vedere gli argomenti seguenti.  
@@ -140,7 +139,7 @@ ms.locfileid: "62900242"
   
      Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Trasformazione Ricerca fuzzy](fuzzy-lookup-transformation.md)   
  [Trasformazione Ricerca termini](term-lookup-transformation.md)   
  [Flusso di dati](../data-flow.md)   

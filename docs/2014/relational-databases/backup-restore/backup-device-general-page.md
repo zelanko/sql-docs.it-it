@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922142"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo di backup (pagina Generale)
-  Utilizzare la pagina **generale** per specificare o visualizzare le proprietà generali di un dispositivo di backup logico.  
+  Utilizzare la pagina **Generale** per specificare o visualizzare le proprietà generali di un dispositivo di backup logica.  
   
  **Per utilizzare SQL Server Management Studio per visualizzare il contenuto di un dispositivo di backup**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62922142"
  Consente di visualizzare il nome di un dispositivo di backup logico esistente o di specificare il nome di un nuovo dispositivo di backup logico.  
   
  **Nastro**  
- Consente di visualizzare o selezionare il dispositivo nastro di destinazione nell'elenco **Nastro** . Questa opzione è disponibile solo se un'unità nastro è collegata al computer in cui è in esecuzione l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Consente di visualizzare o selezionare il dispositivo nastro di destinazione nell'elenco **Nastro** . L'opzione è disponibile solo se un'unità nastro è collegata al computer su cui è in esecuzione l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  I dispositivi di backup su nastro collegati a computer remoti non rappresentano destinazioni di backup valide.  
@@ -57,7 +57,7 @@ ms.locfileid: "62922142"
   
  Il dispositivo di backup fisico corrisponde a un dispositivo di backup logico che viene inizializzata quando il primo backup nel set di supporti viene scritto sul dispositivo di backup logico. Se il dispositivo di backup fisico è un file non ancora esistente, viene creato in quel momento.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -67,11 +67,11 @@ ms.locfileid: "62922142"
   
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Impostare la data di scadenza di un &#40;di backup SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Impostazione della data di scadenza di un backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Visualizzare i file di dati e di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Visualizzare i file di dati e i file di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

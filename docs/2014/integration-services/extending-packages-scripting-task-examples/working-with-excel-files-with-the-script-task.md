@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894785"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
@@ -28,11 +28,11 @@ ms.locfileid: "62894785"
   
  [Configurazione di un pacchetto per testare gli esempi](#configuring)  
   
- [Example1: verificare se esiste un file di Excel](#example1)  
+ [Esempio 1: verificare l'esistenza di un file di Excel](#example1)  
   
  [Esempio 2: verificare l'esistenza di una tabella di Excel](#example2)  
   
- [Esempio 3: ottenere un elenco di file di Excel in una cartella](#example3)  
+ [Esempio 3: ottenere un elenco dei file di Excel in una cartella](#example3)  
   
  [Esempio 4: ottenere un elenco di tabelle in un file di Excel](#example4)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62894785"
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="configuring"></a>Configurazione di un pacchetto per testare gli esempi  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> Configurazione di un pacchetto per testare gli esempi  
  È possibile configurare un singolo pacchetto per testare tutti gli esempi riportati in questo argomento. Negli esempi vengono utilizzate molte variabili del pacchetto e classi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 #### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Per configurare un pacchetto per l'utilizzo con gli esempi di questo argomento  
@@ -50,40 +50,31 @@ ms.locfileid: "62894785"
   
 2.  **Variabili**. Aprire la finestra **Variabili** e definire le variabili seguenti:  
   
-    -   
-  `ExcelFile`, di tipo `String`. Immettere il percorso completo e il nome del file di una cartella di lavoro di Excel esistente.  
+    -   `ExcelFile`, di tipo `String`. Immettere il percorso completo e il nome del file di una cartella di lavoro di Excel esistente.  
   
-    -   
-  `ExcelTable`, di tipo `String`. Immettere il nome di un foglio di lavoro o di un intervallo denominato esistente nella cartella di lavoro specificata nel valore della variabile `ExcelFile`. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
+    -   `ExcelTable`, di tipo `String`. Immettere il nome di un foglio di lavoro o di un intervallo denominato esistente nella cartella di lavoro specificata nel valore della variabile `ExcelFile`. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
   
-    -   
-  `ExcelFileExists`, di tipo `Boolean`.  
+    -   `ExcelFileExists`, di tipo `Boolean`.  
   
-    -   
-  `ExcelTableExists`, di tipo `Boolean`.  
+    -   `ExcelTableExists`, di tipo `Boolean`.  
   
-    -   
-  `ExcelFolder`, di tipo `String`. Immettere il percorso completo di una cartella che contiene almeno una cartella di lavoro di Excel.  
+    -   `ExcelFolder`, di tipo `String`. Immettere il percorso completo di una cartella che contiene almeno una cartella di lavoro di Excel.  
   
-    -   
-  `ExcelFiles`, di tipo `Object`.  
+    -   `ExcelFiles`, di tipo `Object`.  
   
-    -   
-  `ExcelTables`, di tipo `Object`.  
+    -   `ExcelTables`, di tipo `Object`.  
   
 3.  **Istruzioni Imports**. Per la maggior parte degli esempi di codice, è necessario importare uno o entrambi i seguenti spazi dei nomi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] all'inizio del file script:  
   
-    -   
-  `System.IO`, per le operazioni del file system.  
+    -   `System.IO`, per le operazioni del file system.  
   
-    -   
-  `System.Data.OleDb`, per aprire i file di Excel come origini dati.  
+    -   `System.Data.OleDb`, per aprire i file di Excel come origini dati.  
   
 4.  **Riferimenti**. Gli esempi di codice che leggono informazioni sullo schema da file di Excel richiedono un riferimento aggiuntivo allo spazio dei nomi `System.Xml` nel progetto di script.  
   
 5.  Impostare il linguaggio di scripting predefinito per il componente Script usando l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni**. Per ulteriori informazioni, vedere [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a>Descrizione dell'esempio 1: verificare se esiste un file di Excel  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> Descrizione dell'esempio 1: verificare l'esistenza di un file di Excel  
  In questo esempio viene determinato se il file della cartella di lavoro di Excel specificato nella variabile `ExcelFile` esiste, quindi il valore booleano della variabile `ExcelFileExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -153,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a>Descrizione dell'esempio 2: verificare se esiste una tabella di Excel  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> Descrizione dell'esempio 2: verificare l'esistenza di una tabella di Excel  
  In questo esempio viene determinato se il foglio di lavoro o l'intervallo denominato di Excel specificato nella variabile `ExcelTable` esiste nel file della cartella di lavoro di Excel specificato nella variabile `ExcelFile`, quindi il valore booleano della variabile `ExcelTableExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -260,7 +251,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a>Descrizione dell'esempio 3: ottenere un elenco di file di Excel in una cartella  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> Descrizione dell'esempio 3: ottenere un elenco dei file di Excel in una cartella  
  In questo esempio l'elenco dei file di Excel trovati nella cartella specificata nel valore della variabile `ExcelFolder` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelFiles`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere i file nella matrice.  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -273,7 +264,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelFolder nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelFolder nella finestra di dialogo **Seleziona variabili** .  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -281,7 +272,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelFiles nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelFiles nella finestra di dialogo **Seleziona variabili** .  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -332,7 +323,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Soluzione alternativa  
  Anziché utilizzare un'attività Script per raccogliere un elenco di file di Excel in una matrice, è anche possibile utilizzare l'enumeratore ForEach File per scorrere tutti i file di Excel presenti in una cartella. Per altre informazioni, vedere [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md).  
   
-##  <a name="example4"></a>Descrizione dell'esempio 4: ottenere un elenco di tabelle in un file di Excel  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> Descrizione dell'esempio 4: ottenere un elenco di tabelle in un file di Excel  
  In questo esempio l'elenco dei fogli di lavoro e degli intervalli denominati trovati nel file della cartella di lavoro di Excel specificata dal valore della variabile `ExcelFile` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelTables`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere le tabelle nella matrice.  
   
 > [!NOTE]  
@@ -348,7 +339,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelFile nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelFile nella finestra di dialogo **Seleziona variabili** .  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -356,7 +347,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile ExcelTables nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare ExcelTablesvariable nella finestra di dialogo **Seleziona variabili** .  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -444,7 +435,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Soluzione alternativa  
  Anziché utilizzare un'attività Script per raccogliere un elenco delle tabelle di Excel in una matrice, è anche possibile utilizzare ForEach ADO.NET Schema Rowset Enumerator per scorrere tutte le tabelle, ovvero fogli di lavoro e intervalli denominati, nel file di una cartella di lavoro di Excel. Per altre informazioni, vedere [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md).  
   
-##  <a name="testing"></a>Visualizzazione dei risultati degli esempi  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a>Visualizzazione dei risultati degli esempi  
  Se tutti gli esempi di questo argomento sono stati configurati nello stesso pacchetto, è possibile connettere tutte le attività Script a un'attività Script aggiuntiva che visualizza l'output di tutti gli esempi.  
   
 #### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Per configurare un'attività Script per visualizzare l'output degli esempi di questo argomento  
@@ -461,7 +452,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e nella finestra di dialogo **Seleziona variabili** Selezionare le variabili.  
   
 5.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -550,9 +541,9 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione connessione Excel](../connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
   

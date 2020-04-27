@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889792"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di codice
   Quando si utilizzano i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a livello di codice, può essere necessario determinare se esiste un singolo pacchetto o cartella o enumerare i pacchetti salvati disponibili per il caricamento e l'esecuzione. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> dello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> fornisce un'ampia varietà di metodi e classi per soddisfare questi requisiti.  
   
-##  <a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella  
  Per determinare a livello di codice se un pacchetto salvato esiste, chiamare uno dei metodi seguenti prima di tentare di caricarlo ed eseguirlo:  
   
 |Posizione di archiviazione|Metodo da chiamare|  
@@ -41,7 +41,7 @@ ms.locfileid: "62889792"
   
  [Torna all'inizio](#top)  
   
-##  <a name="listing"></a> Enumerazione dei pacchetti disponibili  
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Enumerazione dei pacchetti disponibili  
  Per ottenere a livello di codice un elenco dei pacchetti salvati, chiamare uno dei metodi seguenti:  
   
 |Posizione di archiviazione|Metodo da chiamare|  
@@ -51,7 +51,7 @@ ms.locfileid: "62889792"
   
  Gli esempi seguenti sono applicazioni console che dimostrano l'utilizzo di questi metodi.  
   
-###  <a name="listing_store"></a> Esempio (archivio pacchetti SSIS)  
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Esempio (archivio pacchetti SSIS)  
  Utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> per elencare i pacchetti archiviati nell'archivio pacchetti SSIS. I percorsi di archiviazione predefiniti gestiti dall'archivio pacchetti SSIS sono File system e MSDB. In questi percorsi è possibile creare altre cartelle logiche.  
   
 ```vb  
@@ -157,7 +157,7 @@ namespace EnumeratePackagesSSIS_CS
   
  [Torna all'inizio](#top)  
   
-###  <a name="listing_sql"></a> Esempio (SQL Server)  
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Esempio (SQL Server)  
  Utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> per elencare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archiviati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```vb  
@@ -238,9 +238,9 @@ namespace EnumeratePackagesSql_CS
   
  [Torna all'inizio](#top)  
   
-![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione dei pacchetti &#40;servizio SSIS&#41;](../service/package-management-ssis-service.md)  
   
   

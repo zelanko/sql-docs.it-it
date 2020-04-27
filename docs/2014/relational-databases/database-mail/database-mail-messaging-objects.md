@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917704"
 ---
 # <a name="database-mail-messaging-objects"></a>Oggetti di messaggistica di Posta elettronica database
   Il database **msdb** funge da host della posta elettronica. Questo database include le stored procedure e gli oggetti di messaggistica per Posta elettronica database. In Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è disponibile la Configurazione guidata posta elettronica database che consente di abilitare questo componente, creare e gestire profili e account e configurare le opzioni di Posta elettronica database.  
   
-##  <a name="ComponentsAndConcepts"></a> Oggetti in un database **msdb**  
+##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a> Oggetti in un database **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere abilitato nel database **msdb** . Posta elettronica database, tuttavia, non utilizza le funzionalità di rete di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Non è quindi necessario che gli utenti creino un endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per l'utilizzo di Posta elettronica database. Il processo esterno di Posta elettronica database utilizza una connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] standard per comunicare con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando abilitato, Posta elettronica database espone gli oggetti seguenti nel database **msdb** quando viene abilitata.  
@@ -49,7 +49,7 @@ ms.locfileid: "62917704"
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Posta elettronica database](database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

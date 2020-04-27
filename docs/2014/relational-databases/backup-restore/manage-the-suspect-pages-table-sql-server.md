@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921957"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62921957"
   
  Una pagina è considerata "sospetta" quando nel [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] si verifica uno dei seguenti errori quando viene tentata la lettura di una pagina di dati:  
   
--   [Errore 823](../errors-events/mssqlserver-823-database-engine-error.md) causato da un controllo di ridondanza ciclico (CRC) emesso dal sistema operativo, ad esempio un errore del disco (alcuni errori hardware)  
+-   Un [errore 823](../errors-events/mssqlserver-823-database-engine-error.md) causato da un controllo di ridondanza ciclico (CRC) generato dal sistema operativo, ad esempio un errore del disco (alcuni errori hardware)  
   
--   [Errore 824](../errors-events/mssqlserver-824-database-engine-error.md), ad esempio una pagina incompleta (qualsiasi errore logico)  
+-   Un [errore 824](../errors-events/mssqlserver-824-database-engine-error.md), ad esempio una pagina incompleta (qualsiasi errore logico)  
   
  L'ID di ogni pagina sospetta viene registrato nella tabella **suspect_pages** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le pagine sospette rilevate durante la normale elaborazione, ad esempio nei casi seguenti:  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62921957"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   **Errori registrati nella tabella suspect_pages**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921957"
   
      L'amministratore del database può inoltre inserire o aggiornare i record. Ad esempio, l'aggiornamento di una riga potrebbe essere utile se l'amministratore del database è certo che una determinata pagina sospetta è in realtà rimasta invariata, ma desidera mantenere temporaneamente il record.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921957"
   
 4.  Nella finestra Query, modificare, aggiornare o eliminare le righe desiderate.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   

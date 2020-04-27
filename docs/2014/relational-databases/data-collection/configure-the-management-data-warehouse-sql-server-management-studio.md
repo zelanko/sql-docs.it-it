@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918811"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurazione del data warehouse di gestione (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "62918811"
 > [!NOTE]  
 >  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è configurato per essere eseguito utilizzando uno degli account di servizio del sistema (Sistema locale, Servizio di rete o Servizio locale) e il data warehouse di gestione viene creato in un'istanza diversa da quella dell'agente di raccolta dati, è necessario configurare i set di raccolta in modo che venga utilizzato un proxy per il caricamento di dati nel data warehouse di gestione.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurare il data warehouse di gestione su una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurare il data warehouse di gestione su una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia in esecuzione.  
   
@@ -59,15 +59,15 @@ ms.locfileid: "62918811"
   
 6.  Ripetere il passaggio 5 fino a quando tutte le istanze del database che utilizzano l'agente di raccolta dati sono configurate per caricare dati sul data warehouse di gestione condiviso.  
   
-####  <a name="Wizard"></a>Configurare la procedura guidata data warehouse gestione  
- **Pagina iniziale**  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Configurazione guidata data warehouse di gestione  
+ **Pagina introduttiva**  
   
  La pagina iniziale corrisponde alla pagina di avvio di Configurazione guidata raccolta dati e la sua visualizzazione è facoltativa.  
   
  **Non visualizzare più questa pagina iniziale.**  
  Selezionare questa opzione per evitare la visualizzazione di questa pagina al prossimo avvio di Configurazione guidata raccolta dati.  
   
- **Pagina Configura archiviazione data warehouse di gestione**  
+ **Configurazione archiviazione del data warehouse di gestione**  
   
  Utilizzare questa pagina per selezionare un server di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un data warehouse di gestione. Il data warehouse di gestione è un database relazionale in cui vengono archiviati i dati raccolti.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918811"
   
  L'opzione **Nuovo** è disponibile solo in caso di configurazione di un set di raccolta dati.  
   
- **Pagina mapping account di accesso e utenti**  
+ **Pagina Mapping account di accesso e utenti**  
   
  Utilizzare questa pagina per eseguire il mapping degli account di accesso ai ruoli utente del database per il data warehouse di gestione.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918811"
   
  Specificare un account di accesso selezionando la casella di controllo **Mapping** .  
   
- **Appartenenza a ruoli del database per:**  *\<data warehouse nome>*  
+ **Appartenenza a ruoli del database per:** *\<nome data warehouse>*  
  Selezionare il ruolo del data warehouse di gestione cui viene eseguito il mapping dell'account di accesso facendo clic nella casella di controllo di una o più delle opzioni seguenti:  
   
 -   **mdw_admin**  
@@ -109,7 +109,7 @@ ms.locfileid: "62918811"
   
  Utilizzare questa pagina per verificare e completare la configurazione della raccolta di dati. L'albero nella finestra di visualizzazione mostra le configurazioni applicate e le azioni eseguite dopo la selezione di **Fine**.  
   
- **Pagina Stato configurazione guidata raccolta dati**  
+ **Pagina Stato Configurazione guidata raccolta dati**  
   
  Utilizzare questa pagina per visualizzare i risultati di ciascun passaggio di configurazione.  
   
@@ -134,8 +134,8 @@ ms.locfileid: "62918811"
  Consente di chiudere la procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_syscollector_enable_collector &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Raccolta dati](data-collection.md)   
  [Gestire raccolta dati](manage-data-collection.md)  
   

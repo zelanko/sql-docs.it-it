@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920794"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62920794"
 > [!IMPORTANT]  
 >  In uno scenario di Resource Governor specifico la classificazione della sessione potrebbe essere basata su un nome utente, un nome di applicazione o qualsiasi altro elemento in grado di differenziare una connessione. Per ulteriori informazioni, vedere [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) e [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> In questo argomento è contenuto il set seguente di scenari, che vengono presentati in sequenza:  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> In questo argomento è contenuto il set seguente di scenari, che vengono presentati in sequenza:  
   
 1.  [Impostazione di un account di accesso e di un utente per operazioni con priorità bassa](#setup_login_and_user)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62920794"
   
 4.  [Compressione di backup utilizzando una sessione con utilizzo della CPU limitato](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> Impostazione di un account di accesso e di un utente per operazioni con priorità bassa  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> Impostazione di un account di accesso e di un utente per operazioni con priorità bassa  
  Per lo scenario presentato in questo argomento sono necessari un account di accesso e un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con priorità bassa. Il nome utente verrà utilizzato per classificare sessioni in esecuzione con l'account di accesso e per indirizzarle a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU.  
   
  Nella procedura seguente vengono descritte le operazioni necessarie per impostare un account di accesso e un utente. Viene quindi illustrato l'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] "Esempio A: Impostazione di un account di accesso e di un utente (Transact-SQL)".  
@@ -100,7 +100,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#Top)  
   
-##  <a name="configure_RG"></a> Configurazione di Resource Governor per limitare l'utilizzo di CPU  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> Configurazione di Resource Governor per limitare l'utilizzo di CPU  
   
 > [!NOTE]  
 >  Verificare che Resource Governor sia abilitato. Per altre informazioni, vedere [Abilitare Resource Governor](../resource-governor/enable-resource-governor.md).  
@@ -238,7 +238,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#Top)  
   
-##  <a name="verifying"></a> Verifica della classificazione della sessione corrente (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> Verifica della classificazione della sessione corrente (Transact-SQL)  
  Facoltativamente, accedere come l'utente specificato nella funzione di classificazione e verificare la classificazione della sessione eseguendo l'istruzione [SELECT](/sql/t-sql/queries/select-transact-sql) seguente in Esplora oggetti:  
   
 ```sql  
@@ -258,7 +258,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> Compressione di backup utilizzando una sessione con utilizzo della CPU limitato  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Compressione di backup utilizzando una sessione con utilizzo della CPU limitato  
  Per creare un backup compresso in una sessione con un utilizzo massimo della CPU limitato, accedere come l'utente specificato nella funzione di classificazione. Nel comando di backup specificare WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o selezionare **Comprimi backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Per creare un backup compresso del database, vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C: Creazione di un backup compresso (Transact-SQL)  

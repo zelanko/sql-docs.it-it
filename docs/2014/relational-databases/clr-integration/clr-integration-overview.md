@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874976"
 ---
 # <a name="overview-of-clr-integration"></a>Panoramica dell'integrazione con CLR
@@ -30,13 +30,10 @@ ms.locfileid: "62874976"
   
  Grazie all'integrazione di CLR in Microsoft SQL Server, è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Poiché il codice gestito viene compilato nel codice nativo prima dell'esecuzione, è possibile ottenere notevoli miglioramenti delle prestazioni in alcuni scenari.  
   
- Nel codice gestito viene utilizzata la sicurezza dall'accesso di codice (CAS) per gli assembly eseguano determinate operazioni. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza CAS per aiutare a proteggere il codice gestito e impedire che il sistema operativo o il server di database vengano compromessi.  
+ Nel codice gestito viene utilizzata la sicurezza dall'accesso di codice (CAS) per gli assembly eseguano determinate operazioni. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza CAS per aiutare a proteggere il codice gestito e impedire che il sistema operativo o il server di database vengano compromessi.  
   
 ## <a name="advantages-of-clr-integration"></a>Vantaggi dell'integrazione con CLR  
- 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] è progettato in maniera specifica per consentire di accedere ai dati e modificarli direttamente nel database. Sebbene [!INCLUDE[tsql](../../../includes/tsql-md.md)] risulti particolarmente vantaggioso per l'accesso ai dati e la loro gestione, non è un linguaggio di programmazione completo. 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] non supporta, ad esempio, matrici, raccolte, cicli Foreach, scorrimento bit o classi. Il codice gestito dispone di supporto integrato per questi costrutti, sebbene sia possibile simularne alcuni in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A seconda dello scenario, l'implementazione di determinate caratteristiche del database nel codice gestito può risultare particolarmente vantaggiosa.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] è progettato in maniera specifica per consentire di accedere ai dati e modificarli direttamente nel database. Sebbene [!INCLUDE[tsql](../../../includes/tsql-md.md)] risulti particolarmente vantaggioso per l'accesso ai dati e la loro gestione, non è un linguaggio di programmazione completo. [!INCLUDE[tsql](../../../includes/tsql-md.md)] non supporta, ad esempio, matrici, raccolte, cicli Foreach, scorrimento bit o classi. Il codice gestito dispone di supporto integrato per questi costrutti, sebbene sia possibile simularne alcuni in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A seconda dello scenario, l'implementazione di determinate caratteristiche del database nel codice gestito può risultare particolarmente vantaggiosa.  
   
  Microsoft Visual Basic .NET e Microsoft Visual C# offrono funzionalità orientate a oggetti quali incapsulamento, ereditarietà e polimorfismo. Il codice correlato può ora essere organizzato facilmente in classi e spazi dei nomi. In questo modo è possibile organizzare e gestire il codice più facilmente quando si utilizzano grandi quantità di codice server.  
   
@@ -58,7 +55,7 @@ ms.locfileid: "62874976"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Scelta tra stored procedure estese e codice gestito  
  Le stored procedure estese consentono di ottenere funzionalità altrimenti non disponibili con le stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Diversamente dal codice gestito indipendente dai tipi, tuttavia, le stored procedure estese possono compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La gestione della memoria, la pianificazione di thread e fiber e i servizi di sincronizzazione sono, inoltre, notevolmente più integrati tra il codice gestito di CLR e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Grazie all'integrazione con CLR, è possibile scrivere le stored procedure necessarie per eseguire attività non consentite in [!INCLUDE[tsql](../../../includes/tsql-md.md)] in modo più sicuro rispetto alle stored procedure estese. Per ulteriori informazioni sull'integrazione con CLR e sulle stored procedure estese, vedere [prestazioni dell'integrazione CLR](clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architettura dell'integrazione con CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Accesso ai dati da oggetti di database CLR](data-access/data-access-from-clr-database-objects.md)   
