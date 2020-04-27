@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109622"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Pagine Creazione di una sottoscrizione guidata dai dati (Gestione report)
@@ -36,7 +36,7 @@ ms.locfileid: "66109622"
   
 2.  Passare con il puntatore del mouse sul report, quindi fare clic sulla freccia a discesa.  
   
-3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **Generale** per il report.  
+3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **generale** per il report.  
   
 4.  Selezionare la scheda **Sottoscrizioni** , quindi fare clic su **Nuova sottoscrizione guidata dai dati**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66109622"
   
  Se l'origine dati utilizza l'autenticazione di Windows, selezionare **Usa come credenziali di Windows** quando si specifica la connessione.  
   
- Se si utilizza un'origine dati che non prevede l'autenticazione delle connessioni utente, ad esempio se l'origine dati è un file XML, selezionare Credenziali non richieste. Per questa opzione è necessario che sia stato configurato l'account di esecuzione automatica. Per ulteriori informazioni, vedere [configurare l'account di esecuzione automatica &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Se si utilizza un'origine dati che non prevede l'autenticazione delle connessioni utente, ad esempio se l'origine dati è un file XML, selezionare Credenziali non richieste. Per questa opzione è necessario che sia stato configurato l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="specify-a-query-page-3"></a>Impostazione della query (pagina 3)  
  Utilizzare questa pagina per immettere la query che consente di recuperare i dati del Sottoscrittore. Per ottenere risultati migliori, eseguire la query in SQL Server Management Studio prima di utilizzarla nella sottoscrizione guidata dai dati. È quindi possibile analizzare i risultati per verificare che contengano le informazioni necessarie. Gli aspetti importanti da tenere presenti nei risultati della query sono i seguenti:  
@@ -150,13 +150,13 @@ ms.locfileid: "66109622"
  **Oraria**  
  Consente di impostare una pianificazione eseguita a intervalli di ore.  
   
- **Ogni giorno**  
+ **Giornaliera**  
  Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni * \<giorno>*, ogni giorno feriale e ogni * \<numero>* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
- **Ogni settimana**  
+ **Settimanale**  
  Consente di impostare una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure i giorni della settimana.  
   
- **Mensile**  
+ **Ogni mese**  
  Consente di impostare una pianificazione eseguita su base mensile. Per una pianificazione mensile è possibile scegliere un giorno in base a uno schema (ad esempio l'ultima domenica di ogni mese) oppure date specifiche (ad esempio 1 e 15 per indicare il primo e il quindicesimo giorno di ogni mese). Per specificare più giorni e intervalli è possibile utilizzare virgole e trattini, ad esempio, 1, 5, 7-12, 21.  
   
  **Una volta**  
@@ -168,11 +168,11 @@ ms.locfileid: "66109622"
 ## <a name="saving-the-subscription"></a>Salvataggio della sottoscrizione  
  Il pulsante **Fine** viene abilitato quando sono disponibili informazioni sufficienti per la sottoscrizione. Fare clic su **Fine** per completare l'impostazione della sottoscrizione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

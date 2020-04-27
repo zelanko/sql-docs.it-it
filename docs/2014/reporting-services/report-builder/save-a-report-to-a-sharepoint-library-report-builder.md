@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab4f9b06758d29ff1f988f37b95ce92206f34d39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107682"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>Salvataggio di un report in una raccolta di SharePoint (Generatore report)
@@ -24,7 +24,7 @@ ms.locfileid: "66107682"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>Per salvare un report in un sito di SharePoint  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Viene visualizzata la finestra di dialogo **Salva con nome** _\<Elemento del report>_ .  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Verrà visualizzata la finestra **di dialogo Salva come**_\<elemento del report>_ .  
   
     > [!NOTE]  
     >  Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Usare l'opzione **Salva con nome** per modificare il percorso.  
@@ -36,7 +36,7 @@ ms.locfileid: "66107682"
     > [!NOTE]  
     >  Se si lascia un report modificato per più di 10 ore senza salvarlo, questo viene disconnesso dal server senza essere salvato. In questo caso, nella barra di stato in basso a destra fare clic su **Disconnetti**, quindi su **Connetti**. Il server più recente si troverà nell'elenco di server disponibili. Selezionarlo e il report verrà riconnesso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

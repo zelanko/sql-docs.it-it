@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108153"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nuova pianificazione: pagina Modifica pianificazione (Gestione report)
@@ -78,20 +78,20 @@ ms.locfileid: "66108153"
   
 -   **Ora** definisce una pianificazione eseguita a intervalli di ore. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione.  
   
--   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica e al minuto. È possibile specificare i giorni nei modi seguenti: ogni \< *giorno*>, ogni giorno feriale e \<ogni *numero*> giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+-   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni \< *giorno*>, ogni giorno feriale e \<ogni *numero*> giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
--   **Settimana** definisce una pianificazione eseguita a intervalli settimanali a un'ora e un minuto specifici. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure di alcuni giorni della settimana.  
+-   **Settimana** definisce una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure di alcuni giorni della settimana.  
   
--   **Month** definisce una pianificazione eseguita su base mensile. Per una pianificazione mensile è possibile scegliere un giorno in base a uno schema (ad esempio l'ultima domenica di ogni mese) oppure date specifiche (ad esempio 1 e 15 per indicare il primo e il quindicesimo giorno di ogni mese). Per specificare più giorni e intervalli è possibile utilizzare virgole e trattini, ad esempio, 1, 5, 7-12, 21.  
+-   **Mese** definisce una pianificazione eseguita su base mensile. Per una pianificazione mensile è possibile scegliere un giorno in base a uno schema (ad esempio l'ultima domenica di ogni mese) oppure date specifiche (ad esempio 1 e 15 per indicare il primo e il quindicesimo giorno di ogni mese). Per specificare più giorni e intervalli è possibile utilizzare virgole e trattini, ad esempio, 1, 5, 7-12, 21.  
   
--   **Una volta** definita una pianificazione eseguita una sola volta. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione. La pianificazione scade subito dopo l'elaborazione.  
+-   **Singola occorrenza** definisce una pianificazione eseguita una sola volta. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione. La pianificazione scade subito dopo l'elaborazione.  
   
  **Date di inizio e fine**  
  Consente di specificare le date di inizio e fine, ovvero la data di attivazione e la data di scadenza della pianificazione.  
   
  La scadenza delle pianificazioni non viene notificata. Dopo la data di scadenza, le pianificazioni non vengono più eseguite. Le pianificazioni scadute non vengono comunque eliminate. È possibile eliminare le pianificazioni solo manualmente in modo che sia possibile estendere la data di fine nel caso si scelga di mantenere attiva la pianificazione dopo la scadenza iniziale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107622"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Finestra di dialogo Opzioni Generatore report, Impostazioni (Generatore report)
@@ -45,7 +45,7 @@ ms.locfileid: "66107622"
  **Cancella tutti gli elenchi di elementi recenti**  
  Cancellare tutti gli elenchi correnti di siti e server, connessioni ai set di dati condivisi e alle origini dati nonché documenti recenti.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

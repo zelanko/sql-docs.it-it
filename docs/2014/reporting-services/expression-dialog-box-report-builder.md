@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109152"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Finestra di dialogo Espressione (Generatore report)
@@ -40,7 +40,7 @@ ms.locfileid: "66109152"
  **Campi predefiniti**  
  Consente di visualizzare un elenco degli elementi della raccolta globale che possono essere utilizzati in un'espressione. Alcune raccolte sono supportate solo dopo la pubblicazione del report nel server. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Parameters**  
+ **Parametri**  
  Consente di visualizzare un elenco di parametri del report.  
   
  **Campi (** _ \<set di dati selezionato>_ **)**  
@@ -49,7 +49,7 @@ ms.locfileid: "66109152"
  **Set di dati**  
  Consente di visualizzare un elenco di set di dati disponibili e i relativi campi membri.  
   
- **Variabili**  
+ **variables**  
  Consente di visualizzare un elenco di variabili del report. Per altre informazioni, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  **Operatori**  
@@ -73,7 +73,7 @@ ms.locfileid: "66109152"
  **Categoria**  
  Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Per un'espressione per un valore di casella di testo, ad esempio, espandere funzioni comuni e selezionare funzioni di `Avg`aggregazione per visualizzare, `Count`e altre funzioni nel riquadro **elemento** .  
   
- **Elemento**  
+ **Item**  
  Consente di visualizzare l'elenco di valori validi per la categoria selezionata. Fare doppio clic su un elemento per aggiungere il testo dell'espressione per l'elemento specifico in corrispondenza del punto di inserimento nella finestra del codice.  
   
  **Valori**  
@@ -83,7 +83,7 @@ ms.locfileid: "66109152"
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Riferimenti alla raccolta Parameters &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   

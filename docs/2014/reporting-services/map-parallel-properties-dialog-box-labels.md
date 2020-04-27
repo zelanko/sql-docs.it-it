@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108251"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Finestra di dialogo Proprietà paralleli mappa, Etichette
@@ -25,7 +25,7 @@ ms.locfileid: "66108251"
   
 -   **Planare.** La coordinata X.  
   
--   **Geografica.** La latitudine della proiezione corrente.  
+-   **Geografico.** La latitudine della proiezione corrente.  
   
  Fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che imposta il valore per l'opzione.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "66108251"
  **Posizione**  
  Selezionare una posizione per visualizzare le etichette relativamente alla posizione superiore, centrale e inferiore del viewport. La posizione predefinita è **Vicino**.  
   
--   **Vicino a** Visualizzare le etichette nella parte superiore.  
+-   **Vicino** Le etichette vengono visualizzate nella parte superiore.  
   
--   **Un trimestre** Visualizzare le etichette a metà tra la parte superiore e quella centrale.  
+-   **Un quarto** Le etichette vengono visualizzate a metà altezza tra la parte superiore e quella centrale.  
   
--   Al **centro** Visualizzare le etichette al centro.  
+-   **Al centro** Le etichette vengono visualizzate al centro.  
   
--   **Tre trimestri** Visualizza le etichette a metà tra il centro e il basso.  
+-   **Tre quarti** Le etichette vengono visualizzate a metà altezza tra la parte centrale e quella inferiore.  
   
--   A **lungo** Visualizzare le etichette nella parte inferiore.  
+-   **Lontano** Le etichette vengono visualizzate nella parte inferiore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

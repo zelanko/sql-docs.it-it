@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106171"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106171"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Mappe documento ed estensioni per il rendering  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Mappe documento ed estensioni per il rendering  
  La mappa documento è destinata all'uso nell'estensione per il rendering HTML, ad esempio in Anteprima e nel Visualizzatore report. Altre estensioni per il rendering usano modalità diverse per organizzare una mappa documento:  
   
 -   Con l'estensione per il rendering PDF, una mappa documento viene visualizzata come riquadro Segnalibri.  
@@ -118,7 +118,7 @@ ms.locfileid: "66106171"
   
  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

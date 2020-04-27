@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107294"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107294"
 |&#124; (barra verticale)|Separa gli elementi della sintassi. Indica che è possibile scegliere un solo elemento.|  
 |`[ ] (brackets)`|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |**{ }** (parentesi graffe)|Delimitano i parametri degli elementi della sintassi.|  
-|[ **,** ...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le occorrenze sono separate da virgole.|  
+|[**,**... *n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le occorrenze sono separate da virgole.|  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,18 +76,15 @@ XMLLocalName :: =
 |----------|----------------|  
 |Element path|Definisce la sequenza di nodi da attraversare nel documento XML per recuperare i dati del campo di un set di dati con un'origine dei dati XML.|  
 |`ElementNode`|Nodo XML nel documento XML. I nodi sono designati da tag e sono correlati agli altri nodi in base a una relazione gerarchica. Customers>\<, ad esempio, è il nodo elemento radice. Customer>\< è un sottoelemento di Customers>\<.|  
-|`XMLName`|Il nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. 
-  `XMLName` può essere preceduto da un identificatore dello spazio dei nomi, per assegnare a ogni nodo un nome univoco.|  
+|`XMLName`|Il nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. `XMLName` può essere preceduto da un identificatore dello spazio dei nomi, per assegnare a ogni nodo un nome univoco.|  
 |`Encoding`|Indica che il valore `Value` dell'elemento è un valore XML con codifica e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
-|`FieldList`|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto ( **{}** ), non verrà usato alcun campo di questo nodo.<br /><br /> Un elemento `FieldList` potrebbe non contenere sia `Value` che `Element` o `ElementNode`.|  
+|`FieldList`|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato un elenco di campi vuoto**{}**(), non viene utilizzato alcun campo di questo nodo.<br /><br /> Un elemento `FieldList` potrebbe non contenere sia `Value` che `Element` o `ElementNode`.|  
 |`Field`|Specifica i dati recuperati come campo del set di dati.|  
 |`Attribute`|Coppia nome-valore contenuta in `ElementNode`. \<Ad esempio, nel nodo elemento Customer ID = "1" >, `ID` è un attributo e `@ID(Integer)` restituisce "1" come tipo integer nel campo `ID`dati corrispondente.|  
-|`Value`|Valore dell'elemento. 
-  `Value` può essere utilizzato solo nell'ultimo `ElementNode` del percorso di elemento. Poiché \<, ad esempio, return> è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore `Return {@}` di `Chair`è.|  
+|`Value`|Valore dell'elemento. `Value` può essere utilizzato solo nell'ultimo `ElementNode` del percorso di elemento. Poiché \<, ad esempio, return> è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore `Return {@}` di `Chair`è.|  
 |`Element`|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
 |`Type`|Tipo di dati facoltativo da utilizzare per il campo creato da questo elemento.|  
-|`NamespacePrefix`|
-  `NamespacePrefix` è definito nell'elemento Query XML. Se non è presente alcun elemento Query XML, gli spazi dei nomi del nodo `ElementPath` XML vengono ignorati. Se è presente un elemento Query XML, il nodo `ElementPath` XML include un attributo `IgnoreNamespaces` facoltativo. Se IgnoreNamespaces è `true`, gli spazi dei nomi nel `ElementPath` file XML e il documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` è definito nell'elemento Query XML. Se non è presente alcun elemento Query XML, gli spazi dei nomi del nodo `ElementPath` XML vengono ignorati. Se è presente un elemento Query XML, il nodo `ElementPath` XML include un attributo `IgnoreNamespaces` facoltativo. Se IgnoreNamespaces è `true`, gli spazi dei nomi nel `ElementPath` file XML e il documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Esempio - Nessuno spazio dei nomi  
  Negli esempi seguenti viene utilizzato il documento XML Customers.xml. In questa tabella sono illustrati esempi di sintassi del percorso di elemento e i risultati dell'utilizzo del percorso di elemento in una query per la definizione di un set di dati, basata sul documento XML come origine dati.  
@@ -205,9 +202,9 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipo di connessione XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
- [Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [Reporting Services esercitazioni &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

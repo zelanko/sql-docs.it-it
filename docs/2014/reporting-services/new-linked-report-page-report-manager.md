@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108173"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Pagina Nuovo report collegato (Gestione report)
@@ -50,13 +50,13 @@ ms.locfileid: "66108173"
  **Descrizione**  
  Consente di digitare una descrizione del contenuto del report. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al report.  
   
- **Location**  
+ **Posizione**  
  Specificare il percorso della cartella in cui è disponibile il report. Per impostazione predefinita, i report collegati vengono creati nella stessa cartella del report di base. Fare clic su **Cambia percorso** per inserire il report collegato in una cartella diversa.  
   
  **OK**  
  Fare clic su **OK** per salvare le modifiche e tornare alla pagina delle proprietà generale del report di base.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un report collegato](reports/create-a-linked-report.md)   
  [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

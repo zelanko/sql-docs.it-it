@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b450470ea945f42cfdb625f7ff92444c046b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105957"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Punti dati vuoti e Null nei grafici (Generatore report e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66105957"
   
 -   Nei tipi di grafico con forme i valori Null vengono omessi.  
   
- Un esempio di grafico con punti dati vuoti è disponibile come report di esempio. Per ulteriori informazioni sul download di questo report di esempio e di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]altri, vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un esempio di grafico con punti dati vuoti è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,10 +41,10 @@ ms.locfileid: "66105957"
   
  Questo comportamento è diverso dal caso in cui il set di dati restituito non contiene alcuna riga di dati, che può verificarsi quando il report include parametri e il valore selezionato restituisce un set di risultati vuoto. Se la query del set di dati non restituisce alcuna riga di dati, in fase di esecuzione verrà visualizzato un messaggio indicante che non è possibile visualizzare dati. È possibile personalizzare questo messaggio modificando la didascalia NoDataMessage per il report nel riquadro **Proprietà** . Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Risolvere i problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

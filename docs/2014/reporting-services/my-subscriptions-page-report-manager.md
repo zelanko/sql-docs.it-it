@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108184"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Pagina Sottoscrizioni personali (Gestione report)
@@ -59,7 +59,7 @@ ms.locfileid: "66108184"
  **Ultima esecuzione**  
  Mostra la data e ora dell'ultima elaborazione della sottoscrizione.  
   
- **Status**  
+ **Stato**  
  Mostra lo stato della sottoscrizione. In genere lo stato indica una nuova sottoscrizione o la data e l'ora dell'ultima esecuzione della sottoscrizione.  
   
  Il valore "Dati non validi" indica che la sottoscrizione include un puntatore a valori crittografati non più validi per le credenziali archiviate utilizzate per eseguire il report. I valori crittografati esistenti diventano inutilizzabili quando le chiavi simmetriche utilizzate per crittografare e decrittografare i dati vengono ricreate sul server di report.  

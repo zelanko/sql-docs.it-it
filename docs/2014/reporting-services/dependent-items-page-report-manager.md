@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109331"
 ---
 # <a name="dependent-items-page-report-manager"></a>Pagina Elementi dipendenti (Gestione report)
@@ -49,7 +49,7 @@ ms.locfileid: "66109331"
  **Modifica**  
  Fare clic sull'icona delle proprietà per accedere alle pagine delle proprietà di un report o di un modello.  
   
- **Tipo**  
+ **Type**  
  Mostra l'icona del tipo di elemento.  
   
  **Data ultima modifica**  
@@ -61,7 +61,7 @@ ms.locfileid: "66109331"
  **Data ultima esecuzione**  
  Per i report eseguiti come snapshot dell'esecuzione del report, visualizza la data e l'ora dell'ultimo aggiornamento del report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   

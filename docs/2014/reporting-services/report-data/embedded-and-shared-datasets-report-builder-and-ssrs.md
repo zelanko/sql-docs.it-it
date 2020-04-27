@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01f37190ac96486235cbdd4477a0eed0e9974389
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107281"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati (Generatore report e SSRS)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Il set di dati dipende dalla connessione dati contenente le informazioni sull'origine dati esterna. I dati stessi non sono inclusi nella definizione del report. Nel set di dati sono contenuti un comando di query, una raccolta campi, parametri, filtri e opzioni dei dati in cui sono incluse la distinzione tra maiuscole e minuscole e le regole di confronto. Esistono due tipi di set di dati:  
   
--   **DataSet condivisi.** Un set di dati condiviso viene pubblicato in un server di report e può essere utilizzato da più report. Un set di dati condiviso deve essere basato su un'origine dati condivisa. Può essere memorizzato nella cache ed essere pianificato creando un piano di aggiornamento della cache.  
+-   **Set di dati condivisi.** Un set di dati condiviso viene pubblicato in un server di report e può essere utilizzato da più report. Un set di dati condiviso deve essere basato su un'origine dati condivisa. Può essere memorizzato nella cache ed essere pianificato creando un piano di aggiornamento della cache.  
   
--   **DataSet incorporati.** I set di dati incorporati vengono definiti e utilizzati in un singolo report.  
+-   **Set di dati incorporati.** I set di dati incorporati vengono definiti e utilizzati in un singolo report.  
   
  La differenza tra i due tipi dipende dalle diverse modalità di creazione, archiviazione e gestione.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66107281"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="shared-datasets"></a>Set di dati condivisi  
- Usare un set di dati condiviso per fornire una query che può essere usata da più report. I set di dati condivisi vengono archiviati nel server di report e possono essere gestiti separatamente dai report o dalle origini dati condivise. Ad esempio, un amministratore del server di report potrebbe aggiornare la query per sfruttare l'indicizzazione avanzata o un'altra ottimizzazione delle prestazioni di esecuzione delle query.  
+ Utilizzare un set di dati condiviso per fornire una query che può essere utilizzata da più report. I set di dati condivisi vengono archiviati nel server di report e possono essere gestiti separatamente dai report o dalle origini dati condivise. Ad esempio, un amministratore del server di report potrebbe aggiornare la query per sfruttare l'indicizzazione avanzata o un'altra ottimizzazione delle prestazioni di esecuzione delle query.  
   
  Si consiglia di utilizzare sempre i set di dati condivisi quando possibile. È possibile ottimizzare una query o memorizzare nella cache i risultati della query per sfruttare le prestazioni del report. I set di dati condivisi rendono l'accesso ai dati più facile da gestire e offrono una maggiore protezione dei report e dei set di dati a cui hanno accesso, garantendo così migliori prestazioni.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66107281"
     |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
   
 ## <a name="embedded-datasets"></a>Set di dati incorporati  
- Usare un set di dati incorporato quando si desidera ottenere dati da un'origine dati esterna da usare solo in un unico report. I set di dati incorporati risultano utili quando si desidera creare una query senza altre dipendenze che non sia necessario usare per più report.  
+ Utilizzare un set di dati incorporato quando si desidera ottenere dati da un'origine dati esterna da utilizzare solo in un unico report. I set di dati incorporati risultano utili quando si desidera creare una query senza altre dipendenze che non sia necessario utilizzare per più report.  
   
  Per creare o modificare un set di dati incorporato, utilizzare il riquadro dei dati del report. Dopo aver creato un set di dati, è possibile configurare le proprietà nella finestra di dialogo **Proprietà set di dati** .  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109070"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Pagina delle proprietà Generale, Set di dati condivisi (Gestione report)
@@ -57,19 +57,19 @@ ms.locfileid: "66109070"
  **Spostamento**  
  Consente di spostare un set di dati condiviso nella gerarchia di cartelle del server di report. Verrà visualizzata la pagina di spostamento degli elementi nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso. Per ulteriori informazioni, vedere la [pagina di spostamento degli elementi &#40;Gestione report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Scaricare**  
+ **Scarica**  
  Consente di estrarre una copia della definizione del set di dati condiviso. A seconda delle associazioni di file definite nel computer, il file verrà aperto in Visual Studio o in un'altra applicazione. Nella maggior parte dei casi, il set di dati condiviso viene aperto come file XML.  
   
  **Sostituire**  
  Consente di sostituire la definizione del set di dati condiviso con una definizione diversa contenuta in un file con estensione rsd presente nel file system.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opzioni di aggiornamento della cache &#40;Gestione report&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Pagina memorizzazione nella cache, set di impostazioni &#40;Gestione report&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Gestire set di dati condivisi](report-data/manage-shared-datasets.md)   
+ [Gestisci DataSet condivisi](report-data/manage-shared-datasets.md)   
  [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

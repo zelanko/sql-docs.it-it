@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5d243ef273badd182066fcc42484fa95fa13461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107491"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report (Generatore report e SSRS)
@@ -94,6 +94,6 @@ ms.locfileid: "66107491"
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Strumenti di progettazione query in Reporting Services](../reporting-services-query-designers.md)   
- [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
+ [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
   
   

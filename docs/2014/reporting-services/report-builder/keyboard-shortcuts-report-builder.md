@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107774"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tasti di scelta rapida (Generatore report)
@@ -91,7 +91,7 @@ ms.locfileid: "66107774"
 |Eseguire lo zoom indietro nell'area di visualizzazione della mappa quando è selezionato un viewport mappa.|CTRL+SEGNO DI SOTTRAZIONE (-)|  
 |Modalità del tasto di scelta rapida per panoramica e zoom in un'area di visualizzazione della mappa quando è selezionato un viewport mappa.|CTRL+clic con il pulsante sinistro|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Generatore report SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-design-view-report-builder.md)   
  [Glossario &#40;Generatore report&#41;](glossary-report-builder.md)  

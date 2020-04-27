@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108743"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Inizializzare un server di report (Gestione configurazione SSRS)
@@ -71,6 +71,6 @@ ms.locfileid: "66108743"
  Per confermare l'inizializzazione di un server di report, eseguire il ping del servizio Web ReportServer digitando **http://\<nomeserver>/reportserver** nella finestra di comando. Se si verifica l'errore `RSReportServerNotActivated`, l'inizializzazione non è riuscita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

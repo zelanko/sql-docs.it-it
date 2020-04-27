@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107323"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Finestra di dialogo Immetti credenziali origine dei dati (Generatore report)
-  La finestra di dialogo **Immetti credenziali origine dei dati** consente di specificare le credenziali necessarie per il recupero di dati dall'origine dati.  
+  Utilizzare la finestra di dialogo **Immetti credenziali origine dati** per specificare le credenziali in modo che sia possibile recuperare i dati dall'origine dati.  
   
 ## <a name="options"></a>Opzioni  
  **Nome utente**  
@@ -29,10 +29,10 @@ ms.locfileid: "66107323"
  **Password**  
  Consente di digitare la password da utilizzare per l'accesso all'origine dati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Finestra di dialogo Proprietà origine dati, generale &#40;Generatore report&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [Specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md)   
- [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

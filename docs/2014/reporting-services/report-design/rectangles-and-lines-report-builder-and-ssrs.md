@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105390"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rettangoli e linee (Generatore report e SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66105390"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RectanglesLinesReportParts"></a> Rettangoli e linee come parti del report  
+##  <a name="rectangles-and-lines-as-report-parts"></a><a name="RectanglesLinesReportParts"></a> Rettangoli e linee come parti del report  
  È possibile pubblicare rettangoli con gli elementi in essi contenuti separatamente dal report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  Non è possibile pubblicare come parti del report gli elementi del report all'interno del rettangolo. Quando gli utenti aggiungono il rettangolo a un report, ottengono il rettangolo e gli elementi in esso contenuti.  
   
 
   
-##  <a name="RectangleAsContainer"></a> Utilizzo di un rettangolo come contenitore  
+##  <a name="using-a-rectangle-as-a-container"></a><a name="RectangleAsContainer"></a>Uso di un rettangolo come contenitore  
  È possibile utilizzare un rettangolo come contenitore per altri elementi. Quando si sposta il rettangolo, vengono spostati anche gli elementi contenuti all'interno del rettangolo. Un elemento all'interno del rettangolo consente di visualizzare il nome del rettangolo nella proprietà **Parent** . Per altre informazioni sull'uso di un rettangolo come contenitore, vedere [Aggiungere un rettangolo o un contenitore &#40;Generatore report e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md) e [Visualizzare dati identici in una matrice e in un grafico &#40;Generatore report&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
   
 > [!NOTE]  
@@ -40,19 +40,19 @@ ms.locfileid: "66105390"
   
 
   
-##  <a name="ReportBorder"></a> Aggiunta di un bordo al report  
+##  <a name="adding-a-report-border"></a><a name="ReportBorder"></a> Aggiunta di un bordo al report  
  È possibile aggiungere un bordo a un report aggiungendo bordi alle intestazioni, ai piè di pagina e al corpo del report, senza inserire righe o rettangoli. Per altre informazioni, vedere [Aggiungere un bordo a un report &#40;Generatore report e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure  
  [Aggiungere un bordo a un report &#40;Generatore report e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
  [Aggiungere un rettangolo o un contenitore &#40;Generatore report e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
  [Aggiungere e modificare una linea &#40;Generatore report e SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere un rettangolo o un contenitore &#40;Generatore report e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

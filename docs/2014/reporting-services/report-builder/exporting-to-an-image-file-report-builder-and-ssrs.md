@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd3a6e7126775479ae7ca0c6b6d138a0625476af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107885"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Esportazione in un file di immagine (Generatore report e SSRS)
@@ -25,10 +25,10 @@ ms.locfileid: "66107885"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> Formati di immagine supportati  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> Formati di immagine supportati  
  Nella tabella seguente sono illustrati l'estensione di file e il tipo MIME per ogni formato del renderer di immagini.  
   
-|**Tipo**|**Estensione**|**MIMEType**|  
+|**Type**|**Estensione**|**MIMEType**|  
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
@@ -39,11 +39,11 @@ ms.locfileid: "66107885"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> Rendering di più pagine  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> Rendering di più pagine  
  L'unico formato che supporta documenti a più pagine in un unico file è TIFF. Altri formati, ad esempio JPG o PNG, generano una pagina alla volta e richiedono una chiamata distinta all'estensione per il rendering per ogni pagina.  
   
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  L'interattività non è supportata in alcun formato di immagine generato da questo renderer. Non viene eseguito il rendering dei seguenti elementi interattivi:  
   
 -   Collegamenti ipertestuali  
@@ -61,14 +61,14 @@ ms.locfileid: "66107885"
 -   Segnalibri  
   
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per ulteriori informazioni, vedere [Image Device Information Settings](../image-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Comportamenti di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report diverse &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

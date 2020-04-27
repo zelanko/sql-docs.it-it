@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106407"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta dei parametri (Generatore report e SSRS)
@@ -27,31 +27,31 @@ ms.locfileid: "66106407"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a>Utilizzo di un parametro a valore singolo in un'espressione  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> Utilizzo di un parametro a valore singolo in un'espressione  
  Nella tabella seguente sono riportati esempi della sintassi da utilizzare quando si include in un'espressione un riferimento a un parametro a valore singolo di un tipo di dati qualsiasi.  
   
 |Esempio|Descrizione|  
 |-------------|-----------------|  
-|`=Parameters!`* \<ParameterName>*`.IsMultiValue`|Restituisce il valore `False`.<br /><br /> Verifica se un parametro è multivalore. Se è `True`, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è `False`, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
-|`=Parameters!`* \<ParameterName>*`.Count`|Restituisce il valore intero 1. Per un parametro a valore singolo, il conteggio è sempre 1.|  
-|`=Parameters!`* \<ParameterName>*`.Label`|Restituisce l'etichetta del parametro, utilizzata di frequente come nome visualizzato in un elenco a discesa di valori disponibili.|  
-|`=Parameters!`* \<ParameterName>*`.Value`|Restituisce il valore del parametro. Se la proprietà Etichetta non è stata impostata, questo valore verrà visualizzato nell'elenco a discesa dei valori disponibili.|  
-|`=CStr(Parameters!`  * \<ParameterName>*`.Value)`|Restituisce il valore del parametro sotto forma di stringa.|  
-|`=Fields(Parameters!`* \<ParameterName>*`.Value).Value`|Restituisce il valore del campo il cui nome è uguale a quello del parametro.|  
+|`=Parameters!` *\<NomeParametro>* `.IsMultiValue`|Restituisce `False`.<br /><br /> Verifica se un parametro è multivalore. Se è `True`, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è `False`, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
+|`=Parameters!` *\<NomeParametro>* `.Count`|Restituisce il valore intero 1. Per un parametro a valore singolo, il conteggio è sempre 1.|  
+|`=Parameters!` *\<NomeParametro>* `.Label`|Restituisce l'etichetta del parametro, utilizzata di frequente come nome visualizzato in un elenco a discesa di valori disponibili.|  
+|`=Parameters!` *\<NomeParametro>* `.Value`|Restituisce il valore del parametro. Se la proprietà Etichetta non è stata impostata, questo valore verrà visualizzato nell'elenco a discesa dei valori disponibili.|  
+|`=CStr(Parameters!`  *\<NomeParametro>* `.Value)`|Restituisce il valore del parametro sotto forma di stringa.|  
+|`=Fields(Parameters!` *\<NomeParametro>* `.Value).Value`|Restituisce il valore del campo il cui nome è uguale a quello del parametro.|  
   
  Per altre informazioni sull'uso dei parametri in un filtro, vedere [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
-##  <a name="Multi"></a>Utilizzo di un parametro multivalore in un'espressione  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> Utilizzo di un parametro multivalore in un'espressione  
  Nella tabella seguente sono riportati esempi della sintassi da utilizzare quando si include in un'espressione un riferimento a un parametro multivalore di un tipo di dati qualsiasi.  
   
 |Esempio|Descrizione|  
 |-------------|-----------------|  
-|`=Parameters!`* \<>nomeparametromultivalore*`.IsMultiValue`|Restituisce `True` o `False`.<br /><br /> Verifica se un parametro è multivalore. Se è `True`, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è `False`, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
-|`=Parameters!`* \<>nomeparametromultivalore*`.Count`|Restituisce un valore intero.<br /><br /> Fa riferimento al numero di valori. Per un parametro a valore singolo, il conteggio è sempre 1. Per un parametro multivalore, il conteggio è 0 o maggiore di zero.|  
-|`=Parameters!`* \<>nomeparametromultivalore*`.Value(0)`|Restituisce il primo valore di un parametro multivalore.|  
-|`=Parameters!``.Value(Parameters!` * \<Nomeparametromultivalore* *>\<nomeparametromultivalore>*`.Count-1)`|Restituisce l'ultimo valore di un parametro multivalore.|  
+|`=Parameters!` *\<NomeParametroMultivalore>* `.IsMultiValue`|Restituisce `True` o `False`.<br /><br /> Verifica se un parametro è multivalore. Se è `True`, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è `False`, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
+|`=Parameters!` *\<NomeParametroMultivalore>* `.Count`|Restituisce un valore intero.<br /><br /> Fa riferimento al numero di valori. Per un parametro a valore singolo, il conteggio è sempre 1. Per un parametro multivalore, il conteggio è 0 o maggiore di zero.|  
+|`=Parameters!` *\<NomeParametroMultivalore>* `.Value(0)`|Restituisce il primo valore di un parametro multivalore.|  
+|`=Parameters!` *\<NomeParametroMultivalore>* `.Value(Parameters!` *\<NomeParametroMultivalore>* `.Count-1)`|Restituisce l'ultimo valore di un parametro multivalore.|  
 |`=Split("Value1,Value2,Value3",",")`|Restituisce una matrice di valori.<br /><br /> Creare una matrice di valori per un parametro multivalore di tipo `String`. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per dividere. È possibile utilizzare questa espressione per impostare i valori predefiniti di un parametro multivalore oppure creare un parametro multivalore da inviare a un sottoreport o a un report drill-through.|  
-|`=Join(Parameters!`* \<>nomeparametromultivalore*`.Value,", ")`|Restituisce un oggetto `String` costituito da un elenco di valori delimitati da virgole in un parametro multivalore. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per unire.|  
+|`=Join(Parameters!` *\<NomeParametroMultivalore>* `.Value,", ")`|Restituisce un oggetto `String` costituito da un elenco di valori delimitati da virgole in un parametro multivalore. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per unire.|  
   
  Per altre informazioni sull'uso dei parametri in un filtro, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md).  
   

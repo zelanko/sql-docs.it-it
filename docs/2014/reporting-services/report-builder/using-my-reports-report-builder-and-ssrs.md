@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107583"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Utilizzo della cartella Report personali (Generatore report e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107583"
 ## <a name="searching-my-reports"></a>Ricerche nella cartella Report personali  
  Quando un utente esegue una ricerca in un database del server di report, tra i contenuti in cui viene eseguita la ricerca vengono inclusi quelli della cartella Report personali dell'utente mentre sono esclusi quelli delle cartelle Report personali degli altri utenti. Nell'elenco dei risultati della ricerca vengono inclusi solo i report a cui l'utente che ha eseguito la ricerca è autorizzato ad accedere.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

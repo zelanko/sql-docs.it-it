@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105291"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Funzione Count (Generatore report e SSRS)
@@ -38,8 +38,7 @@ Count(expression, scope, recursive)
  (`String`) Nome di un set di dati, gruppo o area dati contenente gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. 
-  `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore `Integer`.  

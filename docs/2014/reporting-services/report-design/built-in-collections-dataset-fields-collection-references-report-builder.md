@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106445"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta di campi del set di dati (Generatore report e SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "66106445"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Rilevamento di campi mancanti per query dinamiche in fase di esecuzione  
- Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>*, in cui la definizione della tabella è stata modificata.  
+ Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>* , in cui la definizione della tabella è stata modificata.  
   
 > [!NOTE]  
 >  IsMissing consente di rilevare le modifiche nello schema del set di dati tra la fase di progettazione e quella di runtime per qualsiasi tipo di origine dati. Non è possibile utilizzare l'oggetto per rilevare i membri vuoti in un cubo multidimensionale e non è correlato ai concetti del linguaggio di query `EMPTY` MDX `NON EMPTY`di e di.  

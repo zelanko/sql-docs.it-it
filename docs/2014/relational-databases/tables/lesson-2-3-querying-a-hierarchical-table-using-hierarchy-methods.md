@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110053"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Esecuzione di query su una tabella gerarchica utilizzando metodi gerarchici
@@ -40,8 +40,7 @@ ms.locfileid: "66110053"
   
      I risultati indicano sia Sariya sia Wanida. Sariya viene indicata perché rappresenta l'elemento discendente al livello 0. Wanida rappresenta l'elemento discendente al livello 1.  
   
-2.  È anche possibile eseguire una query per ottenere tali informazioni usando il metodo [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) . 
-  `GetAncestor` accetta un argomento per il livello che si tenta di restituire. Poiché Wanida è un livello sotto Sariya, utilizzare `GetAncestor(1)` come dimostrato nel codice seguente:  
+2.  È anche possibile eseguire una query per ottenere tali informazioni usando il metodo [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) . `GetAncestor` accetta un argomento per il livello che si tenta di restituire. Poiché Wanida è un livello sotto Sariya, utilizzare `GetAncestor(1)` come dimostrato nel codice seguente:  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

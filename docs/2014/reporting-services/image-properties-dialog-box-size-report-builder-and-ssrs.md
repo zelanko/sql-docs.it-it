@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108986"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Dimensioni (Generatore report e SSRS)
@@ -45,13 +45,13 @@ ms.locfileid: "66108986"
  **In alto**  
  Specificare la spaziatura o la quantità di spazio tra il bordo destro di una cella o di una casella di testo e il valore che questa contiene.  
   
- **In basso**  
+ **Parte inferiore**  
  Specificare la spaziatura o la quantità di spazio tra il bordo destro di una cella o di una casella di testo e il valore che questa contiene.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Proprietà immagine, generale &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

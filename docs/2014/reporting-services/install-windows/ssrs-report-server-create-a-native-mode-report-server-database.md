@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108680"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66108680"
   
  Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato nella configurazione predefinita per la modalità nativa, il database del server di report è stato creato e configurato automaticamente durante l'installazione dell'istanza del server di report. È possibile utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per visualizzare o modificare le impostazioni configurate dal programma di installazione.  
   
-##  <a name="rsdbrequirements"></a>Prima di iniziare  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Prima di iniziare  
  La creazione o la configurazione di un database del server di report è un processo che comprende diversi passaggi. Prima di creare il database del server di report, determinare il modo in cui effettuare le operazioni seguenti:  
   
  Selezionare un server di database  
@@ -79,7 +79,7 @@ ms.locfileid: "66108680"
   
 2.  Nella pagina Database fare clic su **Cambia database**.  
   
-3.  Fare clic su **Crea un nuovo database del server di report**, quindi fare clic su **Avanti**.  
+3.  Fare clic su **Crea un nuovo database del server di report**, quindi scegliere **Avanti**.  
   
 4.  Connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che verrà utilizzata per creare e ospitare il database del server di report.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66108680"
   
 8.  Verificare la connessione facendo clic su un URL nella pagina URL server di report o URL Gestione report. Perché il test abbia esito positivo, è necessario che gli URL siano stati definiti. Se la connessione al database del server di report è valida, in una finestra del browser verrà visualizzata la gerarchia di cartelle del server di report o Gestione report. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](verify-a-reporting-services-installation.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Database &#40;modalità nativa SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
  [Gestire un server di report Reporting Services in modalità nativa](../report-server/manage-a-reporting-services-native-mode-report-server.md)   

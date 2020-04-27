@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105488"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Grafici a torta (Generatore report e SSRS)
@@ -35,9 +35,9 @@ ms.locfileid: "66105488"
   
 -   **Anello esploso**. Grafico ad anello in cui tutte le sezioni vengono allontanate dal centro dell'anello.  
   
--   **torta 3D**. Grafico a torta con uno stile 3D applicato.  
+-   **Torta 3D**. Grafico a torta con uno stile 3D applicato.  
   
--   **torta esplosa 3D**. Grafico a torta esplosa con uno stile 3D applicato.  
+-   **Torta esplosa 3D**. Grafico a torta esplosa con uno stile 3D applicato.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Considerazioni sui dati per la visualizzazione in un grafico a torta  
   
@@ -86,10 +86,10 @@ ms.locfileid: "66105488"
 -   Raccolta di sezioni piccole in un grafico a torta supplementare. Il secondo grafico a torta non viene visualizzato nella finestra di progettazione. Al contrario, durante l'elaborazione del report, l'opportunità di visualizzarlo viene valutata dal grafico, in base ai valori dei punti dati. In caso affermativo, i valori vengono aggiunti in un altro grafico a torta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare le etichette dei punti dati all'esterno di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Raccogliere piccole sezioni in un grafico a torta &#40;Generatore report e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Esercitazione: aggiungere un grafico a torta al report &#40;Generatore report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

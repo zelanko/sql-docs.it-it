@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109125"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Pagina delle proprietà Generale, Cartelle (Gestione report)
@@ -52,7 +52,7 @@ ms.locfileid: "66109125"
  **Spostamento**  
  Fare clic per spostare un report o una cartella all'interno dello spazio dei nomi del server di report. Verrà visualizzata la pagina di spostamento degli elementi, che consente di esplorare le cartelle per selezionare un nuovo percorso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

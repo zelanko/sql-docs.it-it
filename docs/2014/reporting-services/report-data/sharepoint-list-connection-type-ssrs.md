@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107075"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
@@ -22,19 +22,19 @@ ms.locfileid: "66107075"
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a>Stringa di connessione  
+##  <a name="connection-string"></a><a name="Connection"></a>Stringa di connessione  
  La stringa di connessione a un elenco SharePoint è l'URL al sito principale o secondario di SharePoint, ad esempio `http://MySharePointWeb/MySharePointSite` o `http://MySharePointWeb/MySharePointSite/Subsite`.  
   
  In Progettazione query vengono visualizzati automaticamente gli elenchi SharePoint a cui è possibile accedere perché si dispone delle autorizzazioni sufficienti.  
   
  Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
-##  <a name="Credentials"></a>Credenziali  
+##  <a name="credentials"></a><a name="Credentials"></a>Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report. Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide. I tipi di credenziali che è possibile usare con questa estensione per i dati dipendono dalla configurazione della tecnologia SharePoint per l'elenco SharePoint usato come origine dati.  
   
  Nelle tabelle seguenti viene illustrato il comportamento di recupero delle credenziali per l'estensione dell'elenco SharePoint, quando ci si connette a un elenco SharePoint di una farm locale e a un elenco SharePoint remoto.  
   
- La **tabella 1** è destinata ai report distribuiti in un sito Windows SharePoint Legacy. Un sito Windows legacy supporta solo Kerberos, NTLM e l'autenticazione basata su moduli (FBA, Forms Based Authentication). La **tabella 2** è destinata ai report distribuiti in un sito di SharePoint basato su attestazioni.  
+ La**Tabella 1** è indicata per i report distribuiti in un sito Windows SharePoint legacy. Un sito Windows legacy supporta solo Kerberos, NTLM e l'autenticazione basata su moduli (FBA, Forms Based Authentication). La**tabella 2** è indicata per i report distribuiti in un sito di SharePoint basato sulle attestazioni.  
   
  **Tabella 1**  
   
@@ -67,45 +67,45 @@ ms.locfileid: "66107075"
   
  Per una tecnologia SharePoint configurata per essere usata senza un server di report (modalità locale), questa opzione non è supportata. Per ulteriori informazioni sulla modalità locale, vedere [report in modalità locale e con connessione nel Visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
- **Credenziali non richieste (non usare credenziali):**  
- Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per ulteriori informazioni, vedere [configurare l'account di esecuzione automatica &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ **Credenziali non richieste (Non usare credenziali):**  
+ Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Per ulteriori informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md)e [origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-##  <a name="Query"></a>Query  
+##  <a name="queries"></a><a name="Query"></a>Query  
  Per progettare una query, creare un nuovo set di dati basato sull'origine dati, quindi aprire la finestra Progettazione query associata. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Nella finestra Progettazione query con interfaccia grafica dell'elenco SharePoint vengono visualizzati quattro riquadri:  
   
- **Elenchi SharePoint**  Visualizza un elenco di tutti gli elenchi SharePoint nel sito per questa origine dati. Selezionare un elenco, quindi selezionare i campi desiderati per la query. I nomi di campi in questo riquadro sono i nomi descrittivi di SharePoint, noti anche come nomi visualizzati. Posizionarsi su un elemento per visualizzare le proprietà seguenti nella descrizione comando:  
+ **Elenchi SharePoint**  Viene visualizzato un elenco di tutti gli elenchi SharePoint nel sito per questa origine dati. Selezionare un elenco, quindi selezionare i campi desiderati per la query. I nomi di campi in questo riquadro sono i nomi descrittivi di SharePoint, noti anche come nomi visualizzati. Posizionarsi su un elemento per visualizzare le proprietà seguenti nella descrizione comando:  
   
--   **Nome** Nome univoco del campo.  
+-   **Nome** Il nome univoco del campo.  
   
--   **Identificatore** di Identificatore univoco del campo.  
+-   **Identificatore** L'identificatore univoco del campo.  
   
--   **Tipo di campo** Tipo di dati del campo.  
+-   **Tipo campo** Il tipo di dati del campo.  
   
--   **Nascosto** Indica se il campo viene visualizzato nella visualizzazione elenco SharePoint.  
+-   **Nascosto** Se il campo viene visualizzato nella visualizzazione elenco SharePoint.  
   
  La selezione di campi da più elenchi non è supportata. È possibile creare un set di dati per ogni elenco e selezionare campi da ogni set di dati. Se gli elenchi includono un campo comune, sarà possibile usare la funzione Lookup in un'area di dati tablix associata a un set di dati per recuperare un valore dall'altro set di dati non associato all'area di dati. Per altre informazioni, vedere [Funzione Lookup &#40;Generatore report e SSRS&#41;](../report-design/report-builder-functions-lookup-function.md).  
   
--   **Campi selezionati**  Consente di visualizzare i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md).  
+-   **Campi selezionati**  Vengono visualizzati i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md).  
   
--   **Filtri applicati**  Limita i dati restituiti dall'elenco SharePoint, prima che i dati vengano restituiti al report. Selezionare il nome campo, l'operatore e il valore da usare per limitare i dati recuperati nell'elenco. Gli operatori variano a seconda del tipo di dati del valore selezionato.  
-  
-     Non è possibile modificare il tipo di ordinamento o specificare gruppi nella finestra Progettazione query con interfaccia grafica. Per eseguire tale operazione, impostare le espressioni di ordinamento nel set di dati del report e le espressioni di raggruppamento nelle aree dati del report. I parametri di query non sono supportati. Per filtrare i dati nel report, usare i filtri del report o i parametri del report creati. Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
-  
--   **Risultati query**  Visualizza le righe di esempio restituite durante l'esecuzione della query. Se i valori dell'elenco SharePoint vengono frequentemente modificati sul sito di SharePoint, i valori visualizzati nel riquadro dei risultati della query potrebbero differire da quelli visualizzati nel report.  
-  
--   **Campi selezionati**  Consente di visualizzare i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md).  
-  
--   **Filtri applicati**  Limita i dati restituiti dall'elenco SharePoint, prima che i dati vengano restituiti al report. Selezionare il nome campo, l'operatore e il valore da usare per limitare i dati recuperati nell'elenco. Gli operatori variano a seconda del tipo di dati del valore selezionato.  
+-   **Filtri applicati**  Consente di limitare i dati restituiti dall'elenco SharePoint, prima di essere restituiti al report. Selezionare il nome campo, l'operatore e il valore da usare per limitare i dati recuperati nell'elenco. Gli operatori variano a seconda del tipo di dati del valore selezionato.  
   
      Non è possibile modificare il tipo di ordinamento o specificare gruppi nella finestra Progettazione query con interfaccia grafica. Per eseguire tale operazione, impostare le espressioni di ordinamento nel set di dati del report e le espressioni di raggruppamento nelle aree dati del report. I parametri di query non sono supportati. Per filtrare i dati nel report, usare i filtri del report o i parametri del report creati. Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
--   **Risultati query**  Visualizza le righe di esempio restituite durante l'esecuzione della query. Se i valori dell'elenco SharePoint vengono frequentemente modificati sul sito di SharePoint, i valori visualizzati nel riquadro dei risultati della query potrebbero differire da quelli visualizzati nel report.  
+-   **Risultati query**  Vengono visualizzate le righe di esempio restituite quando viene eseguita la query. Se i valori dell'elenco SharePoint vengono frequentemente modificati sul sito di SharePoint, i valori visualizzati nel riquadro dei risultati della query potrebbero differire da quelli visualizzati nel report.  
+  
+-   **Campi selezionati**  Vengono visualizzati i campi selezionati. I nomi di campi in questo riquadro sono i nomi descrittivi specificati da un utente di SharePoint. Quando si chiude Progettazione query, questi nomi vengono visualizzati nella raccolta campi del set di dati nel riquadro Dati report. La relazione tra nomi univoci e nomi descrittivi è disponibile nella pagina [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md).  
+  
+-   **Filtri applicati**  Consente di limitare i dati restituiti dall'elenco SharePoint, prima di essere restituiti al report. Selezionare il nome campo, l'operatore e il valore da usare per limitare i dati recuperati nell'elenco. Gli operatori variano a seconda del tipo di dati del valore selezionato.  
+  
+     Non è possibile modificare il tipo di ordinamento o specificare gruppi nella finestra Progettazione query con interfaccia grafica. Per eseguire tale operazione, impostare le espressioni di ordinamento nel set di dati del report e le espressioni di raggruppamento nelle aree dati del report. I parametri di query non sono supportati. Per filtrare i dati nel report, usare i filtri del report o i parametri del report creati. Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+  
+-   **Risultati query**  Vengono visualizzate le righe di esempio restituite quando viene eseguita la query. Se i valori dell'elenco SharePoint vengono frequentemente modificati sul sito di SharePoint, i valori visualizzati nel riquadro dei risultati della query potrebbero differire da quelli visualizzati nel report.  
   
  Per altre informazioni, vedere [Progettazione query di elenco di SharePoint &#40;Generatore report&#41;](sharepoint-list-query-designer-report-builder.md).  
   
@@ -152,11 +152,11 @@ ms.locfileid: "66107075"
   
  Tutti i campi per l'elenco Attività vengono restituiti nei risultati della query.  
   
-##  <a name="Parameters"></a> Parametri  
+##  <a name="parameters"></a><a name="Parameters"></a> Parametri  
  I parametri non sono supportati da questa estensione per i dati.  
   
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -166,7 +166,7 @@ ms.locfileid: "66107075"
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a>Sezioni correlate  
+##  <a name="related-sections"></a><a name="Related"></a>Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)  
@@ -181,13 +181,13 @@ ms.locfileid: "66107075"
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- Le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella documentazione [online](https://go.microsoft.com/fwlink/?linkid=121312)di.  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di .  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   
-## <a name="see-also"></a>Vedere anche  
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Parametri del report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

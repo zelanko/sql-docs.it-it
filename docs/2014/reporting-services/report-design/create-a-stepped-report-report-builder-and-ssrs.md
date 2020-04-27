@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106125"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creazione di un report con rientri (Generatore report e SSRS)
@@ -103,13 +103,13 @@ ms.locfileid: "66106125"
   
 3.  Modificare il riempimento per la cella in cui vengono visualizzati i dati del gruppo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Elenchi &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Elenca &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

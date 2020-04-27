@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105394"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Grafici a intervalli (Generatore report e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66105394"
   
  Nell'illustrazione seguente viene illustrato un grafico con intervalli semplice con tre serie.  
   
- ![Grafico con intervalli](../media/rs-rangechart.gif "Grafico con intervalli")  
+ ![Grafico a intervalli](../media/rs-rangechart.gif "Grafico a intervalli")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "66105394"
   
 -   **Intervallo smussato**. In un grafico con intervalli smussati le linee vengono visualizzate curve anziché dritte.  
   
--   **Intervallo di colonne**. In un grafico con intervalli a colonne vengono utilizzate colonne anziché aree per visualizzare gli intervalli.  
+-   **Intervallo a colonne**. In un grafico con intervalli a colonne vengono utilizzate colonne anziché aree per visualizzare gli intervalli.  
   
 -   **Intervallo a barre**. In un grafico con intervalli a barre vengono utilizzate barre anziché aree per visualizzare gli intervalli.  
   

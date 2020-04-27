@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d9f5c70e0457009f71c3b9087ecf9f1354a8835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106930"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106930"
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a>Stringa di connessione  
+##  <a name="connection-string"></a><a name="Connection"></a> Stringa di connessione  
  La stringa di connessione deve essere un URL che punta al servizio Web, all'applicazione Web o al documento XML disponibile tramite HTTP. I documenti XML devono avere estensione xml. È inoltre possibile utilizzare una stringa di connessione vuota per i dati XML incorporati nella query del set di dati.  
   
  Nell'esempio seguente viene illustrata la sintassi della stringa di connessione, rispettivamente per un servizio Web e per un documento XML. Il protocollo `file://` non è supportato.  
@@ -37,7 +37,7 @@ ms.locfileid: "66106930"
   
  Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
-##  <a name="Credentials"></a>Credenziali  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
@@ -46,13 +46,13 @@ ms.locfileid: "66106930"
   
 -   Utente di Windows corrente (nota anche come sicurezza integrata).  
   
--   Non sono necessarie credenziali. Se non si specificano credenziali, viene utilizzato l'accesso anonimo. Verificare di aver definito l'account di esecuzione automatica per il server di report per eseguire la connessione a un'origine dei dati esterna. L'estensione per l'elaborazione di dati XML non passa credenziali all'URL di destinazione o al servizio Web, pertanto la connessione ha esito positivo solo se è stato definito l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Documentazione online[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ di ](https://go.microsoft.com/fwlink/?linkid=121312) su msdn.microsoft.com.  
+-   Non sono necessarie credenziali. Se non si specificano credenziali, viene utilizzato l'accesso anonimo. Verificare di aver definito l'account di esecuzione automatica per il server di report per eseguire la connessione a un'origine dei dati esterna. L'estensione per l'elaborazione di dati XML non passa credenziali all'URL di destinazione o al servizio Web, pertanto la connessione ha esito positivo solo se è stato definito l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di  su msdn.microsoft.com.  
   
  Credenziali archiviate e credenziali fornite dall'utente non sono supportate. Se la sicurezza integrata di Windows è disabilitata, non è possibile utilizzarla per recuperare dati. Se si specificano credenziali archiviate o fornite dall'utente, si verificherà un errore in fase di esecuzione.  
   
  Per ulteriori informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
   
-##  <a name="Query"></a>Query  
+##  <a name="queries"></a><a name="Query"></a> Query  
  Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. In un report viene elaborato solo il primo set di risultati recuperato da una query.  
   
  Per creare la query, è necessario utilizzare la finestra Progettazione query basata su testo. La query deve restituire dati XML.  
@@ -75,38 +75,37 @@ ms.locfileid: "66106930"
   
          `-- or --`  
   
-         `<SoapAction>`*azione SOAP*`</SoapAction>`  
+         `<SoapAction>` *soap action* `</SoapAction>`  
   
          Elementi XML facoltativi:  
   
-         `<ElementPath>`  *percorso elemento*  `</ElementPath>`  
+         `<ElementPath>`  *element path*  `</ElementPath>`  
   
          `<Method Namespace=`*"Namespace"*  `Name="MethodName" />`  
   
          `-- or --`  
   
-         `<SoapAction>`*azione SOAP*`</SoapAction>`  
+         `<SoapAction>` *soap action* `</SoapAction>`  
   
     -   **Per un documento XML:**  
   
          Elementi XML facoltativi:  
   
-         `<ElementPath>`  *percorso elemento*  `</ElementPath>`  
+         `<ElementPath>`  *element path*  `</ElementPath>`  
   
     -   **Per un documento XML incorporato:**  
   
          Elementi XML obbligatori:  
   
-         
-  `<XmlData>` inner XML `</XmlData>`  
+         `<XmlData>` inner XML `</XmlData>`  
   
          Elementi XML facoltativi:  
   
-         `<ElementPath>`  *percorso elemento*  `</ElementPath>`  
+         `<ElementPath>`  *element path*  `</ElementPath>`  
   
          `-- or --`  
   
-         `<ElementPath IgnoreNamespaces="true">`  *percorso elemento*  `</ElementPath>`  
+         `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
  Per altre informazioni sulla sintassi di query, vedere [Sintassi di query XML per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) su msdn.microsoft.com.  
   
@@ -126,17 +125,17 @@ ms.locfileid: "66106930"
   
  Per altre informazioni sulla sintassi di query, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) su msdn.microsoft.com.  
   
-##  <a name="Parameters"></a> Parametri  
+##  <a name="parameters"></a><a name="Parameters"></a> Parametri  
  La query non viene analizzata per identificare parametri.  
   
  Per aggiungere i parametri, è necessario crearli manualmente usando la pagina **Parametri** nella finestra di dialogo [Proprietà set di dati](../dataset-properties-dialog-box-parameters-report-builder.md) .  
   
-##  Osservazioni su <a name="Remarks"></a>  
+##  <a name="remarks"></a>Osservazioni su <a name="Remarks"></a>  
  L'estensione per i dati XML supporta report di dati XML tabulari e non gerarchici. Per altre informazioni, vedere [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
  Non è disponibile alcun supporto predefinito per il recupero di documenti XML da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -145,7 +144,7 @@ ms.locfileid: "66106930"
   
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a>Sezioni correlate  
+##  <a name="related-sections"></a><a name="Related"></a>Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)  
@@ -160,12 +159,12 @@ ms.locfileid: "66106930"
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- Le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella documentazione [online](https://go.microsoft.com/fwlink/?linkid=121312)di.  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di .  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
-## <a name="see-also"></a>Vedere anche  
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Parametri del report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

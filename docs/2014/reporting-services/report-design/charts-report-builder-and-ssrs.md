@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106253"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66106253"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningChart"></a>Progettazione di un grafico  
+##  <a name="designing-a-chart"></a><a name="DesigningChart"></a> Progettazione di un grafico  
  Dopo avere aggiunto un'area dati del grafico all'area di progettazione, è possibile trascinare campi del set di dati del report relativi a dati numerici e non numerici nel riquadro Dati grafico del grafico. Quando si fa clic sul grafico nell'area di progettazione, viene visualizzato il riquadro Dati grafico con le tre aree Gruppi di categorie, Gruppi di serie e Valori. Se il report dispone di un set di dati condiviso o incorporato, i campi del set di dati vengono visualizzati nel riquadro dei dati del report. Trascinare i campi dal set di dati nell'area appropriata. Per impostazione predefinita, quando si aggiunge un campo a una delle aree del grafico, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo. È inoltre possibile usare il raggruppamento di serie per generare dinamicamente le serie. Il grafico è anche strettamente correlato alla matrice.  
   
  ![rs_chartwSeriesCategories](../media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
@@ -49,10 +49,10 @@ ms.locfileid: "66106253"
   
   
   
-##  <a name="SimilarMatrix"></a>Analogie con una matrice  
+##  <a name="similarities-to-a-matrix"></a><a name="SimilarMatrix"></a>Analogie con una matrice  
  Per comprendere l'utilizzo dei grafici è possibile confrontarli con le matrici.  
   
- ![Nuova matrice aggiunta dalla casella degli strumenti, selezionata](../media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
+ ![Nuova matrice aggiunta dalla casella degli strumenti e selezionata](../media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
   
  Dal punto di vista concettuale, l'organizzazione è identica:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106253"
   
  
   
-##  <a name="AddingData"></a>Aggiunta di dati al grafico  
+##  <a name="adding-data-to-the-chart"></a><a name="AddingData"></a> Aggiunta di dati al grafico  
  Si supponga di avere un report in cui sono riportate le vendite (Sales) per nome (Name). Il campo Full Name viene rilasciato nell'area Gruppi di categorie, mentre il campo Sales viene rilasciato nell'area Valori.  
   
  Quando si aggiunge il campo Sales all'area Valori, il testo del campo dati viene visualizzato nella legenda e i dati di questo campo numerico vengono aggregati in un unico valore. Per impostazione predefinita, il valore viene aggregato utilizzando la funzione predefinita Sum. L'area Dati grafico conterrà un'espressione semplice per il campo. Nell'esempio verrà visualizzato `[Sum(Sales)]` per l'espressione di campo `=Sum(Fields!Sales.Value)`. Se non vengono specificati gruppi, nel grafico verrà mostrato un solo punto dati. Per visualizzare più punti dati, è necessario raggruppare i dati aggiungendo un campo di raggruppamento. Quando si aggiunge il campo Name all'area Gruppi di categorie, al grafico viene automaticamente aggiunto un campo di raggruppamento con lo stesso nome del campo aggiunto. Quando si aggiungono campi che definiscono i valori sugli assi X e Y, le informazioni contenute nel grafico saranno sufficienti per tracciare correttamente i dati.  
@@ -75,7 +75,7 @@ ms.locfileid: "66106253"
   
   
   
-##  <a name="GroupsInChart"></a>Gruppi di categorie e di serie in un grafico  
+##  <a name="category-and-series-groups-in-a-chart"></a><a name="GroupsInChart"></a> Gruppi di categorie e di serie in un grafico  
  I grafici supportano gruppi di categorie e di serie nidificati e non visualizzano dati di dettaglio. Per aggiungere gruppi a un grafico, trascinare campi del set di dati nelle aree di rilascio di categoria e di serie per un grafico selezionato.  
   
  I grafici con forme, ad esempio i grafici a torta, supportano gruppi di categorie e gruppi di categorie nidificati. Altri tipi di grafico, ad esempio quelli a barre, supportano gruppi di categorie e di serie. È possibile nidificare i gruppi, ma è necessario verificare che i numeri di categorie o di serie non nascondano la presentazione delle informazioni nel grafico.  
@@ -85,14 +85,14 @@ ms.locfileid: "66106253"
   
   
   
-##  <a name="DatasetConsiderations"></a>Considerazioni sui set di dati prima della creazione di un grafico  
+##  <a name="dataset-considerations-before-creating-a-chart"></a><a name="DatasetConsiderations"></a> Considerazioni sul set di dati prima della creazione di un grafico  
  I grafici forniscono una visualizzazione di riepilogo dei dati. Tuttavia, nel caso di set di dati di grandi dimensioni, le informazioni di un grafico possono risultare nascoste o illeggibili. I punti dati mancanti o Null, i tipi di dati non appropriati per il tipo di grafico e applicazioni avanzate quale la combinazione di grafici con tabelle possono influire sulla leggibilità di un grafico. Prima di progettare un grafico, è opportuno preparare e identificare con attenzione i dati, in modo da procedere rapidamente e con maggiore efficienza.  
   
  È possibile includere nel report il numero di grafici desiderato. Un grafico, così come qualsiasi altra area dati, ad esempio una matrice o una tabella, è associato a un unico set di dati. Se si desidera visualizzare più set di dati nello stesso grafico, è possibile creare un set di dati aggiuntivo che usa un'istruzione JOIN o UNION nella query SQL prima di aggiungere dati al grafico. Per altre informazioni sull'istruzione JOIN e UNION, vedere la documentazione online o un altro riferimento SQL.  
   
  Pre-aggregare i dati nella query del set di dati se i dati di dettaglio non sono necessari o utili. Per visualizzare più chiaramente ogni punto dati, ridurre il numero di categorie nel set di dati. È possibile filtrare il set di dati o aggiungere una condizione alla query per ridurre il numero di righe restituite.  
   
-##  <a name="BestPractices"></a>Procedure consigliate per la visualizzazione dei dati in un grafico  
+##  <a name="best-practices-when-displaying-data-in-a-chart"></a><a name="BestPractices"></a> Procedure consigliate per la visualizzazione di dati in un grafico  
  I grafici risultano più efficaci quando il numero di elementi visualizzati presenta un'immagine chiara delle informazioni sottostanti. Alcuni grafici, ad esempio i grafici a dispersione, traggono vantaggio da numerosi punti dati, mentre altri, come i grafici a torta, sono più efficaci con meno punti dati. Scegliere con attenzione un tipo di grafico in base ai valori disponibili nel set di dati e al modo in cui si desidera visualizzare queste informazioni. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   
  È possibile consolidare i dati in un grafico in molti modi:  
@@ -107,7 +107,7 @@ ms.locfileid: "66106253"
   
   
   
-##  <a name="AggregateValues"></a>Aggregazione di valori da un campo dati nel grafico  
+##  <a name="aggregating-values-from-a-data-field-on-the-chart"></a><a name="AggregateValues"></a> Aggregazione dei valori di un campo dati nel grafico  
  Per impostazione predefinita, quando si aggiunge un campo all'area Valori del grafico, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo. Se si trascina un campo sul grafico senza rilasciarlo in un'area specifica, il grafico determinerà se questo campo appartiene all'asse delle categorie (x) o all'asse dei valori (y) in base al tipo di dati del campo. I campi numerici rilasciati nell'area Valori vengono aggregati tramite la funzione SUM. Se il tipo di dati del campo valore è String nell'area Valori, nel grafico non è possibile visualizzare un valore numerico, anche se nei campi sono contenuti numeri; viene pertanto visualizzata la funzione COUNT. Per evitare questo comportamento, assicurarsi che i campi usati includano tipi di dati numerici anziché stringhe con numeri formattati. È possibile specificare un'espressione di Visual Basic per convertire i valori String in un tipo di dati numerici usando la costante `CDbl` o costante `CInt`. Nell'espressione complessa seguente, ad esempio, viene convertito un campo denominato `MyField` che contiene valori numerici formattati come stringhe.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
@@ -116,7 +116,7 @@ ms.locfileid: "66106253"
   
   
   
-##  <a name="InThisSection"></a>Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>Contenuto della sezione  
  [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Vengono descritti i primi passaggi per l'aggiunta di un grafico al report.  
   
@@ -138,19 +138,19 @@ ms.locfileid: "66106253"
  [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Vengono fornite diverse visualizzazioni di dati dello stesso set di dati del report.  
   
- [Aggiunta o eliminazione di un gruppo in un grafico &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o eliminare un gruppo in un grafico &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  Viene illustrata l'aggiunta di gruppi e di gruppi nidificati a un grafico.  
   
  [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  Viene illustrato l'utilizzo della formula della Media mobile per calcolare la media dei dati nella serie.  
   
- [Risolvere i problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Vengono forniti suggerimenti per l'utilizzo dei grafici.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Aree dati nidificate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Esercitazione: aggiungere un istogramma al report &#40;Generatore report&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Esercitazione: aggiungere un grafico a torta al report &#40;Generatore report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Esercitazione: Aggiungere un grafico a barre al report &#40;Generatore report&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  

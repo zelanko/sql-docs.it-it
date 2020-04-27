@@ -18,20 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109134"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Pagina Filtri, finestre di dialogo relative ai grafici (Generatore report e SSRS)
   Fare clic su **filtri** nella:  
   
--   Finestra di dialogo **Proprietà gruppo categorie** per filtrare i punti dati in una serie raggruppata per categoria.  
+-   Finestra di dialogo**Proprietà gruppo categorie** per filtrare i punti dati in una serie raggruppata per categoria.  
   
--   Finestra di dialogo **Proprietà grafico** per definire le opzioni di filtro per il grafico.  
+-   Finestra di dialogo**Proprietà grafico** per definire le opzioni di filtro per il grafico.  
   
--   Finestra di dialogo **Proprietà gruppo serie** per limitare il numero di serie del gruppo selezionato.  
+-   Finestra di dialogo**Proprietà gruppo serie** per limitare il numero di serie nel gruppo selezionato.  
   
 ## <a name="options"></a>Opzioni  
  **Aggiungere**  
@@ -62,8 +62,8 @@ ms.locfileid: "66109134"
  **Valore**  
  Digitare l'espressione o il valore in base a cui valutare l'espressione nella colonna **Espressione**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Aggiungere filtri del set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

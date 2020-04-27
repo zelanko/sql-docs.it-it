@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107667"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Finestra di dialogo Sezione del report (Generatore report)
@@ -28,7 +28,7 @@ ms.locfileid: "66107667"
   
  Fare clic su **OK** per continuare.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108456"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
@@ -70,7 +70,7 @@ ms.locfileid: "66108456"
 ## <a name="next-task"></a>Attività successiva  
  In questo modo si è specificata una query che recupera i dati per il report. Il passaggio successivo consiste nella creazione del layout del report. Vedere [Lezione 4: Aggiunta di una tabella al report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di progettazione query in Progettazione report SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  

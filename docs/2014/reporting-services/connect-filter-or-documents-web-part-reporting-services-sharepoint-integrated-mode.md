@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109721"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Connettere una web part Filtro o Documenti (Reporting Services in modalità integrata SharePoint)
@@ -35,19 +35,19 @@ ms.locfileid: "66109721"
   
 2.  Scegliere **Modifica pagina** dal menu **Azioni sito**.  
   
-3.  Fare clic su **Aggiungi Web part**.  
+3.  Fare clic su **Aggiungi web part**.  
   
 4.  In **tutti i Web part**, nella categoria **varie** selezionare **SQL Server Reporting Services Visualizzatore report**.  
   
 5.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
-6.  In un'altra area dello stesso dashboard o pagina Web part fare clic su **Aggiungi Web part**.  
+6.  In un'altra area dello stesso dashboard o pagina web part fare clic su **Aggiungi web part**.  
   
-7.  Nella sezione **filtri** di **tutti i Web part**selezionare una Web part.  
+7.  Nella sezione **Filtri**di **Tutte le web part** selezionare una web part.  
   
 8.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
-9. Nell'area che contiene la Web part fare clic sul menu **modifica** della web part, scegliere **connessioni**, **Invia valori filtro a**, quindi selezionare*nome report* **Visualizzatore** - report.  
+9. Nell'area che contiene la web part fare clic sul menu **Modifica** della web part, scegliere **Connessioni**, **Send Filter Values To**(Invia valori filtro a), quindi **Visualizzatore report** - *nome report*.  
   
 10. Archiviare le modifiche e salvare la pagina.  
   
@@ -57,25 +57,25 @@ ms.locfileid: "66109721"
   
 2.  Scegliere **Modifica pagina** dal menu **Azioni sito**.  
   
-3.  Fare clic su **Aggiungi Web part**.  
+3.  Fare clic su **Aggiungi web part**.  
   
-4.  Nella sezione **elenchi e raccolte** di **tutti i Web part**selezionare **documenti.**  
+4.  Nella sezione **Elenchi e raccolte**di **Tutte le web part** selezionare **Documenti**.  
   
 5.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
 6.  Fare clic sul pulsante **Applica** , disponibile nella parte inferiore del riquadro Strumenti, e quindi scegliere **OK** per chiudere il riquadro.  
   
-7.  In un'altra area dello stesso dashboard o pagina Web part fare clic su **Aggiungi Web part**.  
+7.  In un'altra area dello stesso dashboard o pagina web part fare clic su **Aggiungi web part**.  
   
-8.  In **tutti i Web part**, nella categoria **varie** selezionare **SQL Server Reporting Services Visualizzatore report.**  
+8.  Nella categoria **Varie**di **Tutte le web part** selezionare **Visualizzatore report di SQL Server Reporting Services.**  
   
 9. Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
-10. Nell'area che contiene la Web part fare clic sul menu **modifica** della web part, scegliere **connessioni**, **ottenere le definizioni dei report da**, quindi selezionare **documenti**.  
+10. Nell'area che contiene la web part fare clic sul menu **Modifica** della web part, scegliere **Connessioni**, **Get report definitions from**(Recupera definizioni report da), quindi **Documenti**.  
   
 11. Archiviare le modifiche e salvare la pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [Web part Visualizzatore report in un sito di SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizzare la Web part Visualizzatore report](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  

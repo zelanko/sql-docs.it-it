@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 5: Formatting a Report (Reporting Services) (Lezione 5: Formattazione di un report (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 5: Formattazione di un report (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108427"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66108427"
   
 -   [Modifica dello stile del testo e della larghezza delle colonne](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>Formattare la data  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>Formattare la data  
  Nel campo Date vengono visualizzate la data e l'ora per impostazione predefinita. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
 #### <a name="to-format-a-date-field"></a>Per formattare un campo di tipo data  
@@ -37,7 +37,7 @@ ms.locfileid: "66108427"
   
 2.  Fare clic con il pulsante destro del mouse nella cella contenente l'espressione per il campo `[Date]` e scegliere **Proprietà casella di testo**.  
   
-3.  Fare clic su **numero**, quindi selezionare **** `Date`nel campo categoria.  
+3.  Fare clic su **numero**, quindi selezionare **Category** `Date`nel campo categoria.  
   
 4.  Nella casella **Tipo** selezionare **31 Gennaio 2000**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66108427"
   
 6.  Visualizzare un'anteprima del report per vedere la modifica al campo `[Date]` , quindi tornare alla visualizzazione della struttura.  
   
-##  <a name="bkmk_format_currency"></a>Formattare la valuta  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Formattare la valuta  
  Nel campo LineTotal viene visualizzato un numero generico. È possibile formattare tale numero come valuta.  
   
 #### <a name="to-format-a-currency-field"></a>Per formattare un campo di tipo valuta  
@@ -56,11 +56,11 @@ ms.locfileid: "66108427"
   
 3.  Se la lingua delle impostazioni locali è l'italiano, le impostazioni predefinite devono essere le seguenti:  
   
-    -   **Posizioni decimali: 2**  
+    -   **Cifre decimali: 2**  
   
-    -   **Numeri negativi: ($12345,00)**  
+    -   **Numeri negativi: (€12345,00)**  
   
-    -   **Simbolo: $ English (Stati Uniti)**  
+    -   **Simbolo: € italiano**  
   
 4.  Selezionare **Usa separatore delle migliaia (,)**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108427"
   
 6.  Visualizzare un'anteprima del report per vedere la modifica al campo `[LineTotal]` , quindi tornare alla visualizzazione della struttura.  
   
-##  <a name="bkmk_change_textstyle"></a>Modifica dello stile del testo e della larghezza delle colonne  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Modifica dello stile del testo e della larghezza delle colonne  
  È possibile modificare anche la formattazione della riga dell'intestazione per differenziarla dalle righe di dati nel report. Come ultima operazione, si potrà regolare la larghezza delle colonne.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Per formattare le righe di intestazione e le colonne di tabella  
@@ -94,7 +94,7 @@ ms.locfileid: "66108427"
 ## <a name="next-steps"></a>Passaggi successivi  
  Sono stati formattati le intestazioni di colonna e i valori di data e valuta. È possibile aggiungere gruppi e totali al report. Vedere [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

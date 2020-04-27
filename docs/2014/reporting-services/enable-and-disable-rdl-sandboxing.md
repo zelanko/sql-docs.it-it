@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109230"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Abilitare e disabilitare la funzionalità RDL Sandboxing
@@ -66,12 +66,12 @@ ms.locfileid: "66109230"
 |**MaxStringResultLength**|Numero massimo di caratteri consentiti in un valore restituito per un'espressione RDL.<br /><br /> Valore predefinito: 1000|  
 |**MaxArrayResultLength**|Numero massimo di elementi consentiti in un valore restituito della matrice per un'espressione RDL.<br /><br /> Valore predefinito: 100|  
 |**Tipi**|Elenco di membri da consentire nelle espressioni RDL.|  
-|**Consentire**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
-|**Spazio dei nomi**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
+|**Allow**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
+|**Namespace**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |`AllowNew`|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>**.<br /><br /> Nota: quando `RDLSandboxing` è abilitato, non è possibile creare nuove matrici nelle espressioni RDL, indipendentemente dall'impostazione di `AllowNew`.|  
 |**Valore**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |**Members**|Per l'elenco dei tipi inclusi nell'elemento ** \<types>** , l'elenco di nomi di membri che non sono consentiti nelle espressioni RDL.|  
-|**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Nota: quando per un membro è specificato **Deny** , non è consentito alcun membro con questo nome per nessun tipo.|  
+|**Negare**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Nota: quando per un membro è specificato **Deny** , non è consentito alcun membro con questo nome per nessun tipo.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilizzo delle espressioni con RDL Sandboxing abilitato  
  È possibile modificare la caratteristica RDL Sandboxing per facilitare la gestione delle risorse utilizzate da un'espressione nelle modalità seguenti:  
@@ -164,7 +164,7 @@ ms.locfileid: "66109230"
   
 -   Aggiungere la classe all'elenco consentiti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [File di configurazione RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)  
   

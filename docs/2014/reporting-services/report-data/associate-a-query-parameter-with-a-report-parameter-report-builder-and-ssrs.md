@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107472"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Associazione di un parametro di query a un parametro di report (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66107472"
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse sul set di dati, fare clic su **Proprietà set di dati**, quindi scegliere **Parametri**.  
   
     > [!NOTE]  
-    >  Se il riquadro Dati report non è visualizzato, scegliere **Dati report** dal menu **Visualizza** .  
+    >   Se il riquadro Dati report non è visualizzato, scegliere **Dati report** dal menu **Visualizza** .  
   
 2.  Nella colonna **Nome parametro**individuare il nome del parametro di query. I nomi dei parametri vengono popolati automaticamente in base alla query. Ogni volta che si modifica la query, vengono verificati i nuovi parametri della query. I parametri di query creati manualmente non vengono modificati quando la query cambia.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "66107472"
   
 3.  Ripetere il passaggio 2 per gli altri parametri di query.  
   
-## <a name="see-also"></a>Vedere anche  
- [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Set di set di impostazioni e set di impostazioni di set di report incorporati &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Concetto dei parametri di report &#40;Generatore report e SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

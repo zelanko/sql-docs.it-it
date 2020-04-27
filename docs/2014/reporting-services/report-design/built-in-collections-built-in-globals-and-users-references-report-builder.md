@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106434"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS)
@@ -57,15 +57,13 @@ ms.locfileid: "66106434"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Questa espressione restituisce il nome e l'ora di esecuzione del report. Per la formattazione dell'ora viene utilizzata la stringa di formattazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per la data breve:  
+-   Questa espressione restituisce il nome e l'ora di esecuzione del report. Il tempo viene formattato con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] la stringa di formattazione per la data breve:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
 -   Con questa espressione, inserita nella finestra di dialogo **Visibilità colonne** per una colonna selezionata, viene visualizzata la colonna solo quando il report viene esportato in Excel. In caso contrario, è nascosta.  
   
-     
-  `EXCELOPENXML` si riferisce al formato di Excel incluso in Office 2007. 
-  `EXCEL` si fa riferimento al formato di Excel incluso in Office 2003.  
+     `EXCELOPENXML` si riferisce al formato di Excel incluso in Office 2007. `EXCEL` si fa riferimento al formato di Excel incluso in Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -74,7 +72,7 @@ ms.locfileid: "66106434"
   
  Nella tabella seguente vengono descritti i membri della raccolta `User`.  
   
-|**Membro**|**Tipo**|**Descrizione**|  
+|**Membro**|**Type**|**Descrizione**|  
 |----------------|--------------|---------------------|  
 |`Language`|`String`|Lingua dell'utente che esegue il report. Ad esempio: `en-US`.|  
 |`UserID`|`String`|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  

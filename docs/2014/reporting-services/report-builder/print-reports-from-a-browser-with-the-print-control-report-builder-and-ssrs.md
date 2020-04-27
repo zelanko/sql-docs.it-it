@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107761"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66107761"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>Opzioni di stampa  
- Per configurare le proprietà di stampa del report, fare clic sul pulsante **Proprietà** nella finestra di dialogo **Stampa** . Il **formato della carta** è determinato dall'altezza e dalla larghezza predefinite delle dimensioni della pagina del report, come definito nella definizione del report. I valori disponibili dipendono dal tipo e dalle funzionalità della stampante. Per la larghezza e l'altezza vengono utilizzati i valori predefiniti determinati dai driver della stampante configurati nel computer. La modifica di questi valori provoca la stampa del report con le nuove dimensioni. La larghezza e l'altezza della pagina sono determinate dall'opzione **Orientamento**, impostata su **Verticale** o **Orizzontale**. L'orientamento predefinito dipende dalla larghezza e dall'altezza delle pagine del report.  
+ Per configurare le proprietà di stampa del report, fare clic sul pulsante **Proprietà** nella finestra di dialogo **Stampa** . Il**Formato carta** è determinato dall'altezza e dalla larghezza predefinite delle pagine del report specificate nella definizione del report. I valori disponibili dipendono dal tipo e dalle funzionalità della stampante. Per la larghezza e l'altezza vengono utilizzati i valori predefiniti determinati dai driver della stampante configurati nel computer. La modifica di questi valori provoca la stampa del report con le nuove dimensioni. La larghezza e l'altezza della pagina sono determinate dall'opzione **Orientamento**, impostata su **Verticale** o **Orizzontale**. L'orientamento predefinito dipende dalla larghezza e dall'altezza delle pagine del report.  
   
 > [!NOTE]  
 >  La finestra di dialogo **Stampa** e le impostazioni predefinite della stampante per la larghezza, l'altezza e l'orientamento della pagina sono determinate dalla definizione del report.  
@@ -37,10 +37,10 @@ ms.locfileid: "66107761"
  Per visualizzare un'anteprima di un report, fare clic sul pulsante **Anteprima** nella finestra di dialogo **Stampa** . Verrà aperta la prima pagina del report in una finestra di anteprima distinta. Se il rendering del report viene eseguito sul server di report, saranno disponibili alcune pagine aggiuntive. Il rendering dell'anteprima di un report viene eseguito in formato EMF. È possibile passare alla pagina precedente o successiva fino ad arrivare all'ultima pagina, in cui il pulsante **Successiva** risulta disabilitato.  
   
 ### <a name="adjusting-print-margins"></a>Impostazione dei margini di stampa  
- È possibile modificare i margini di stampa del report EMF visualizzato prima di avviare la stampa. Per eseguire questa operazione, fare clic sul pulsante **Anteprima** nella finestra di dialogo **Stampa** . Nella parte superiore della pagina di anteprima fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo Margini. Impostare i margini superiore, inferiore, destro e sinistro nel modo desiderato. [!INCLUDE[clickOK](../../includes/clickok-md.md)]La finestra di dialogo verrà chiusa e le impostazioni verranno archiviate per l'anteprima del rendering e la stampa.  
+ È possibile modificare i margini di stampa del report EMF visualizzato prima di avviare la stampa. Per eseguire questa operazione, fare clic sul pulsante **Anteprima** nella finestra di dialogo **Stampa** . Nella parte superiore della pagina di anteprima fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo Margini. Impostare i margini superiore, inferiore, destro e sinistro nel modo desiderato. [!INCLUDE[clickOK](../../includes/clickok-md.md)] La finestra di dialogo verrà chiusa e le impostazioni verranno archiviate per l'anteprima del rendering e la stampa.  
   
-## <a name="see-also"></a>Vedere anche  
- [Stampa di report &#40;Generatore report e SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Stampare report &#40;Generatore report e SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [Stampare un report &#40;Generatore report e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cde36fba94293e8f79660399cd4ee35158f671d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107352"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Finestra di dialogo Proprietà set di dati, Query (Generatore report)
@@ -24,13 +24,13 @@ ms.locfileid: "66107352"
   
  Nella finestra di dialogo **Proprietà set di dati** sono presenti le seguenti opzioni:  
   
--   [Finestra di dialogo Proprietà set di dati, parametri &#40;Generatore report&#41;](../dataset-properties-dialog-box-parameters-report-builder.md)  
+-   [Finestra di dialogo Proprietà set di dati, Parametri &#40;Generatore report&#41;](../dataset-properties-dialog-box-parameters-report-builder.md)  
   
--   [Finestra di dialogo Proprietà set di dati, campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md)  
+-   [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md)  
   
--   [Finestra di dialogo Proprietà set di dati, opzioni &#40;Generatore report&#41;](dataset-properties-dialog-box-options-report-builder.md)  
+-   [Finestra di dialogo Proprietà set di dati, Opzioni &#40;Generatore report&#41;](dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Finestra di dialogo Proprietà set di dati, filtri &#40;Generatore report&#41;](../dataset-properties-dialog-box-filters-report-builder.md)  
+-   [Finestra di dialogo Proprietà set di dati, Filtri &#40;Generatore report&#41;](../dataset-properties-dialog-box-filters-report-builder.md)  
   
  Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66107352"
  **Nome**  
  Consente di digitare un nome per il set di dati. Non è possibile specificare un nome uguale a quello di un'area dati o di un gruppo nel report.  
   
- **Usare un set di dati condiviso**  
+ **Usa un set di dati condiviso**  
  Selezionare questa opzione per utilizzare un set di dati predefinito dal server di report.  
   
  **Sfoglia**  
@@ -51,7 +51,7 @@ ms.locfileid: "66107352"
  Consente di selezionare l'origine dati su cui basare il set di dati. Per creare una nuova origine dati, fare clic su **Nuova**.  
   
  **Tipo di query**  
- Consente di selezionare il tipo di comando o query da utilizzare per il set di dati. Selezionare **Testo** per eseguire una query che consenta di recuperare dati dal database. Selezionare **Tabella** per usare la funzionalità **TableDirect** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e selezionare tutti i campi all'interno di una tabella. Selezionare **Stored procedure** per eseguire una stored procedure in base al nome. Il **testo** è selezionato per impostazione predefinita e viene utilizzato per la maggior parte delle query. Per modificare la query sull'origine dati selezionata, fare clic su **Progettazione query**.  
+ Consente di selezionare il tipo di comando o query da utilizzare per il set di dati. Selezionare **Testo** per eseguire una query che consenta di recuperare dati dal database. Selezionare **Tabella** per usare la funzionalità **TableDirect** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e selezionare tutti i campi all'interno di una tabella. Selezionare **Stored procedure** per eseguire una stored procedure in base al nome. **Testo** è selezionato per impostazione predefinita e viene usato per la maggior parte delle query. Per modificare la query sull'origine dati selezionata, fare clic su **Progettazione query**.  
   
 > [!NOTE]  
 >  Non tutti i tipi di query sono supportati da tutte le origini dati. Il tipo **Tabella** , ad esempio, è supportato solo dalle origini dati di tipo **OLE DB** e **ODBC**.  
@@ -65,7 +65,7 @@ ms.locfileid: "66107352"
  **Nome tabella**  
  Immettere il nome della tabella che si desidera utilizzare come set di dati. Questa opzione viene visualizzata quando si seleziona **Tabella**.  
   
- **Selezionare o immettere il nome del stored procedure**  
+ **Selezionare o immettere un nome di stored procedure**  
  Digitare o scegliere il nome della stored procedure che si desidera utilizzare. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione. Questa opzione viene visualizzata quando si sceglie l'opzione del tipo di comando Stored procedure.  
   
  **Timeout (in secondi)**  
@@ -74,9 +74,9 @@ ms.locfileid: "66107352"
  **Aggiorna campi**  
  Eseguire il comando di query per aggiornare l'elenco di campi nella pagina [Finestra di dialogo Proprietà set di dati, Campi](../dataset-properties-dialog-box-fields-report-builder.md) .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
+ [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
   
   

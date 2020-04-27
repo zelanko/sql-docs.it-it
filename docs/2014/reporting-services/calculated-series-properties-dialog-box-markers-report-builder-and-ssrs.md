@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109875"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà serie calcolata, Marcatori (Generatore report e SSRS)
@@ -39,13 +39,13 @@ ms.locfileid: "66109875"
  **Colore bordo marcatore**  
  Selezionare il colore del bordo dei marcatori da visualizzare sui punti dati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Definire i colori in un grafico utilizzando una tavolozza &#40;Generatore report e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a66c424bfe5bd4a2587140a0f5238f46833a061
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109024"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Generale (Generatore report e SSRS)
@@ -33,11 +33,11 @@ ms.locfileid: "66109024"
  **Selezionare l'origine dell'immagine**  
  Indicare il percorso di archiviazione dell'immagine in modo da specificare da dove il componente Elaborazione report recupererà l'immagine durante il rendering del report.  
   
--   **Esterno** Scegliere questa opzione se si desidera che l'immagine continui a esistere come file in un server di report o in un server Web.  
+-   **Esterna** Scegliere questa opzione se si desidera che l'immagine continui ad essere disponibile come file su un server di report o un server Web.  
   
--   Con **incorporamento** Scegliere questa opzione se si desidera incorporare l'immagine nel report.  
+-   **Incorporata** Scegliere questa opzione se si desidera incorporare l'immagine nel report.  
   
--   **Database** di Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini che si desidera includere nel report.  
+-   **Database** Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini da includere nel report.  
   
  **Utilizzare questa immagine**  
  Questa opzione viene visualizzata quando si seleziona l'opzione **Incorporata** o **Esterna** .  
@@ -55,9 +55,9 @@ ms.locfileid: "66109024"
  **Utilizzare questo tipo MIME**  
  Scegliere il formato appropriato delle immagini contenute nel database, ad esempio bmp, jpeg, gif, png e x-png.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

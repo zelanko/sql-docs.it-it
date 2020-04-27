@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107643"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
@@ -40,7 +40,7 @@ ms.locfileid: "66107643"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Per salvare un report con un altro nome  
   
-1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Verrà visualizzata la finestra **di dialogo Salva come**_\<elemento\> del report_ .  
+1.  Fare clic sul pulsante Generatore report , quindi su **Salva con nome**. Verrà visualizzata la finestra **di dialogo Salva come**_\<elemento\> del report_ .  
   
 2.  Passare al percorso del server di report o alla condivisione file in cui si desidera salvare il report.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66107643"
   
 4.  In **Elementi di tipo**selezionare il tipo di elemento del report da salvare. Il tipo per i report è Report (* .rdl).  
   
-## <a name="see-also"></a>Vedere anche  
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Salvataggio di report &#40;Generatore report&#41;](saving-reports-report-builder.md)   
+ [Salvataggio dei report &#40;Generatore report&#41;](saving-reports-report-builder.md)   
  [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

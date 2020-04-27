@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108227"
 ---
 # <a name="model-item-security-page-report-manager"></a>Pagina sicurezza elemento modello (Gestione report)
@@ -73,7 +73,7 @@ ms.locfileid: "66108227"
  **Assegna autorizzazione di lettura ai seguenti utenti e gruppi (separati da un punto e virgola)**  
  Selezionare questa opzione per impostare l'account utente o di gruppo per il quale viene stabilito l'accesso. Se si utilizza la sicurezza predefinita, gli account utente o di gruppo corrispondono agli account di dominio di Windows. Specificare gli account nel formato: * \<dominio>\\<account\>*.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto del server di report in Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   
   

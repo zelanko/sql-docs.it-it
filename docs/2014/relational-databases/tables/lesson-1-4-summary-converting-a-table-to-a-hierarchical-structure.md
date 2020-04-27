@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110124"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Riepilogo: Conversione di una tabella in una struttura gerarchica
@@ -27,7 +27,7 @@ ms.locfileid: "66110124"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Creazione e gestione di dati in una tabella gerarchica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)  
   
   

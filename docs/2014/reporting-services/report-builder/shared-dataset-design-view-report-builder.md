@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107591"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
@@ -24,7 +24,7 @@ ms.locfileid: "66107591"
   
  Per ulteriori informazioni sull'utilizzo dei dati in un report, vedere [aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a>Barra multifunzione  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>Barra multifunzione  
  La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei seguenti gruppi logici: Connessione, Set di dati e Progettazione query.  
   
 ### <a name="connection"></a>Connessione  
@@ -61,7 +61,7 @@ ms.locfileid: "66107591"
   
 
   
-##  <a name="DesignSurface"></a>Area di progettazione query  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> Area di progettazione query  
  La finestra Progettazione query consente di compilare una query utilizzando la sintassi richiesta dall'origine dati esterna.  
   
  Per alcuni tipi di origini dati è disponibile una finestra Progettazione query con interfaccia grafica che è possibile utilizzare per esplorare i metadati in un'origine dati esterna. È possibile trascinare nomi in modo interattivo dal riquadro di metadati all'area di progettazione query o selezionare in modo interattivo i nomi da utilizzare.  
@@ -72,7 +72,7 @@ ms.locfileid: "66107591"
   
 
   
-##  <a name="Results"></a>Visualizzazione dei risultati delle query  
+##  <a name="viewing-query-results"></a><a name="Results"></a> Visualizzazione dei risultati di query  
  Nella visualizzazione di progettazione del set di dati condiviso viene compilata una query che recupererà dati dalla connessione dati al momento dell'elaborazione del report.  
   
  Eseguire la query per visualizzare dati di esempio dalla connessione dati, in modo da verificare che la query restituisca il tipo di dati previsto. Le colonne nel set di risultati appartengono ai metadati relativi agli schemi di dati dalla connessione dati. I nomi delle colonne diventano la raccolta di campi del set di dati. I valori dei dati visualizzati nel set di risultati della query rappresentano i dati della fase di progettazione. Dopo aver salvato il set di dati condiviso come definizione del set di dati condiviso nel server di report, verrà salvato solo il testo della query. I dati nel set di risultati della query non verranno salvati.  
@@ -90,14 +90,14 @@ ms.locfileid: "66107591"
   
 
   
-##  <a name="Save"></a>Salvataggio del set di dati condiviso  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Salvataggio del set di dati condiviso  
  Per salvare la query generata, sul pulsante **Generatore report** fare clic su **Salva** o su **Salva con nome**. Passare alla cartella appropriata sul server di report e salvare la definizione del set di dati condiviso. Il set di dati condiviso non sarà disponibile ad altri utenti finché non verrà salvato nel server di report.  
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

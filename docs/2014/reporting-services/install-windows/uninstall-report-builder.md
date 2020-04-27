@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108655"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Disinstallare la versione autonoma di Generatore report (Generatore report)
@@ -30,7 +30,7 @@ ms.locfileid: "66108655"
   
 2.  Nel Pannello di controllo fare clic su **Programmi e caratteristiche**.  
   
-3.  Individuare Generatore report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nell'elenco **Nome** e fare clic sul nome del programma.  
+3.  Individuare Generatore report di  nell'elenco Nome e fare clic sul nome del programma.  
   
 4.  Fare clic su **Disinstalla**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66108655"
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>Per disinstallare Generatore report dalla riga di comando  
   
-1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
+1.  Fare clic sul pulsante **Start**, quindi scegliere **Esegui**.  
   
 2.  Nella casella di testo **Apri** Digitare`cmd.`  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66108655"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  Premere **Invio**.  
+1.  Premere **INVIO**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installazione, disinstallazione e Generatore report del supporto](../install-uninstall-and-report-builder-support.md)   
  [Installare la versione autonoma di Generatore report &#40;Generatore report&#41;](install-report-builder.md)  
   

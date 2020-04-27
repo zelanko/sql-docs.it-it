@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109626"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Creare e gestire origini dati condivise (Reporting Services in modalità integrata SharePoint)
@@ -46,15 +46,15 @@ ms.locfileid: "66109626"
   
 6.  In **Credenziali**specificare la modalità con cui il server di report ottiene le credenziali per l'accesso all'origine dati esterna. Le credenziali possono essere archiviate, richieste al momento dell'esecuzione, integrate o configurate per l'elaborazione automatica del report.  
   
-    -   Selezionare **Autenticazione di Windows (integrata)** se si desidera accedere ai dati usando le credenziali dell'utente che ha aperto il report. Non selezionare questa opzione se il sito o la farm di SharePoint utilizza l'autenticazione basata su form o si connette al server di report tramite un account attendibile. Non selezionare questa opzione se si desidera pianificare una sottoscrizione o l'elaborazione di dati per il report. È consigliabile utilizzare questa opzione quando per il dominio è abilitata l'autenticazione Kerberos oppure quando l'origine dei dati si trova nello stesso computer del server di report. Se l'autenticazione Kerberos non è attivata, le credenziali di Windows possono essere passate a un solo altro computer. Ciò significa che se l'origine dei dati esterna è in un altro computer, e richiede pertanto una connessione aggiuntiva, al posto dei previsti verrà restituito un errore.  
+    -   Selezionare **Autenticazione di Windows (integrata)** se si vuole accedere ai dati usando le credenziali dell'utente che ha aperto il report. Non selezionare questa opzione se il sito o la farm di SharePoint utilizza l'autenticazione basata su form o si connette al server di report tramite un account attendibile. Non selezionare questa opzione se si desidera pianificare una sottoscrizione o l'elaborazione di dati per il report. È consigliabile utilizzare questa opzione quando per il dominio è abilitata l'autenticazione Kerberos oppure quando l'origine dei dati si trova nello stesso computer del server di report. Se l'autenticazione Kerberos non è attivata, le credenziali di Windows possono essere passate a un solo altro computer. Ciò significa che se l'origine dei dati esterna è in un altro computer, e richiede pertanto una connessione aggiuntiva, al posto dei previsti verrà restituito un errore.  
   
     -   Selezionare **Richiedi credenziali** se si vuole che l'utente immetta le proprie credenziali ogni volta che esegue il report. Non selezionare questa opzione se si desidera pianificare una sottoscrizione o l'elaborazione di dati per il report.  
   
-    -   Selezionare **Credenziali archiviate** se si preferisce accedere ai dati usando un unico set di credenziali. Le credenziali vengono crittografate prima dell'archiviazione. È possibile selezionare opzioni che determinano la modalità di autenticazione delle credenziali archiviate. Selezionare Usa come credenziali di Windows se le credenziali archiviate appartengono all'account utente di Windows. Selezionare **Imposta contesto di esecuzione sull'account seguente** se si desidera impostare il contesto di esecuzione sul server di database. Nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER. Per altre informazioni, vedere [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql).  
+    -   Selezionare **Credenziali archiviate** se si preferisce accedere ai dati usando un unico set di credenziali. Le credenziali vengono crittografate prima dell'archiviazione. È possibile selezionare opzioni che determinano la modalità di autenticazione delle credenziali archiviate. Selezionare Usa come credenziali di Windows se le credenziali archiviate appartengono all'account utente di Windows. Selezionare **Imposta contesto di esecuzione sull'account seguente** se si vuole impostare il contesto di esecuzione sul server di database. Nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER. Per altre informazioni, vedere [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql).  
   
     -   Selezionare **Credenziali non necessarie** se si preferisce specificare le credenziali nella stringa di connessione o eseguire il report usando un account con privilegi minimi configurato nel server di report. Se questo account non è configurato nel server di report, verrà visualizzato un messaggio di richiesta delle credenziali ed eventuali operazioni pianificate definite per il report non verranno eseguite.  
   
-7.  Selezionare **Abilita questa origine dati** se si desidera che l'origine dati sia attiva. Se l'origine dati è configurata, ma non attiva, verrà visualizzato un messaggio di errore quando si tenta di utilizzare un report basato sull'origine dati.  
+7.  Selezionare **Abilita questa origine dati** se si vuole che l'origine dati sia attiva. Se l'origine dati è configurata, ma non attiva, verrà visualizzato un messaggio di errore quando si tenta di utilizzare un report basato sull'origine dati.  
   
 8.  Fare clic sul pulsante **Test connessione** per convalidare la configurazione dell'origine dati.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66109626"
   
  Quando si elimina un modello di report è necessario prestare molta attenzione. Se si elimina un modello, non sarà più possibile aprire e modificare in Generatore report alcun report basato su tale modello. Se si elimina accidentalmente un modello utilizzato da report esistenti, sarà necessario rigenerare il modello, ricreare e salvare tutti i report che utilizzano il modello, quindi specificare di nuovo le impostazioni di sicurezza di tutti gli elementi del modello che si desidera utilizzare. Non è possibile rigenerare semplicemente il modello e collegarlo a un report esistente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

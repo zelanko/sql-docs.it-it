@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109465"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Finestra di dialogo Proprietà origine dati, Generale (Generatore report)
@@ -51,11 +51,11 @@ ms.locfileid: "66109465"
  **Usa una connessione incorporata nel report.**  
  Selezionare questa opzione per creare un'origine dei dati da utilizzare solo per il report specifico.  
   
- **Tipo**  
+ **Type**  
  Selezionare un'estensione per l'elaborazione dei dati. Nell'elenco vengono visualizzate tutte le estensioni registrate.  
   
  **Stringa di connessione**  
- Immettere una stringa di connessione per l'origine dati. Fare clic su **Compila** per compilare la stringa di connessione utilizzando la finestra di dialogo **Proprietà connessione** . Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione.  
+ Immettere una stringa di connessione per l'origine dati. Fare clic su **Compila** per compilare la stringa di connessione utilizzando la finestra di dialogo **Proprietà connessione** . Fare clic sul pulsante **Espressioni** (*fx*) per modificare l'espressione.  
   
  **Usa transazione singola durante l'elaborazione delle query**  
  Selezionare questa opzione per indicare che i set di dati che utilizzano l'origine dei dati vengono eseguiti in un'unica transazione sul database. Per includere transazioni per sottoreport che utilizzano la stessa origine dati, selezionare il sottoreport quindi impostare **MergeTransactions** su **True**nel riquadro Proprietà.  
@@ -63,11 +63,11 @@ ms.locfileid: "66109465"
  **Test connessione**  
  Fare clic su questa opzione per verificare che la connessione all'origine dati funzioni correttamente tramite le credenziali specificate. Se non è possibile stabilire la connessione, è necessario verificare le credenziali e la disponibilità del server. È possibile testare connessioni a origini dati incorporate e condivise.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Finestra di dialogo Proprietà origine dati, credenziali &#40;Generatore report&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f97567188cc3c1f4e4082be1c4c1378ca97122f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108600"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
@@ -55,16 +55,14 @@ ms.locfileid: "66108600"
   
 -   [Finestra di dialogo per la conversione dell'elemento del report personalizzato](#bkmk_convertCRIdialog)  
   
-##  <a name="bkmk_versionsupported"></a>Versioni supportate dall'aggiornamento  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Versioni supportate per l'aggiornamento  
  I report creati in qualsiasi versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere aggiornati. Sono incluse le versioni seguenti:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 1  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 1  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 2  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 2  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
@@ -72,7 +70,7 @@ ms.locfileid: "66108600"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a>File di definizione del report (con estensione rdl) e Progettazione report  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> File di definizione del report (con estensione rdl) e Progettazione report  
  Un file di definizione del report include un riferimento allo spazio dei nomi RDL che specifica la versione dello schema di definizione del report utilizzata per convalidare il file con estensione rdl.  
   
  Quando si apre un file con estensione rdl in Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se il report è stato creato per uno spazio dei nomi precedente, viene creato automaticamente un file di backup e aggiornato il report allo spazio dei nomi corrente. Questo è l'unico modo in cui è possibile aggiornare un file di definizione del report.  
@@ -86,15 +84,15 @@ ms.locfileid: "66108600"
   
  Per identificare lo schema RDL corrente relativo a un report per un server di report o per Progettazione report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a>Report pubblicati e snapshot dei report  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Report pubblicati e snapshot dei report  
  Al primo utilizzo, il server di report tenta di aggiornare i report pubblicati e gli snapshot del report esistenti al nuovo schema di definizione del report, senza richiedere alcun intervento da parte dell'utente. Quando un report o uno snapshot del report viene visualizzato da un utente o quando il server di report elabora una sottoscrizione, viene eseguito il tentativo di aggiornamento. La definizione del report non viene sostituita, ma continua a essere archiviata nel server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con lo schema originale. Se non può essere aggiornato, il report viene eseguito in modalità di compatibilità con le versioni precedenti.  
   
-##  <a name="bkmk_backcompat"></a>Modalità di compatibilità con le versioni precedenti  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Modalità di compatibilità con le versioni precedenti  
  Un report aggiornato in modo corretto viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Un report che non può essere aggiornato viene elaborato dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elaboratore di report 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità di compatibilità con le versioni precedenti. Un report non può essere elaborato da entrambi i componenti di elaborazione. Al primo utilizzo, un report viene aggiornato correttamente o viene contrassegnato per la compatibilità con le versioni precedenti.  
   
  Solo il componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] supporta le nuove funzionalità. Se un report non può essere aggiornato, è comunque possibile visualizzarlo, ma le nuove funzionalità non sono disponibili. Per utilizzare le nuove funzionalità, è necessario che un report sia aggiornato correttamente.  
   
-##  <a name="bkmk_subreports"></a>Aggiornamento di un report con sottoreport  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Aggiornamento di un report con sottoreport  
  Se in un report sono contenuti sottoreport, durante l'aggiornamento può verificarsi una delle quattro situazioni seguenti:  
   
 -   Il report principale e tutti i sottoreport possono essere aggiornati correttamente e vengono quindi elaborati dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -109,7 +107,7 @@ ms.locfileid: "66108600"
   
  Ai report drill-through non viene applicata questa limitazione poiché vengono elaborati come report indipendenti.  
   
-##  <a name="bkmk_CRIs"></a>Aggiornamento di un report con elementi del report personalizzati  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Aggiornamento di un report con elementi del report personalizzati  
  Nei report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere contenuti elementi del report personalizzati resi disponibili da fornitori di software di terze parti e installati dall'amministratore di sistema nel computer di creazione del report e nel server di report. I report che contengono elementi del report personalizzati possono essere aggiornati nei modi seguenti:  
   
 -   Un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene aggiornato a un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . I report pubblicati nel server di report vengono aggiornati automaticamente al primo utilizzo.  
@@ -139,7 +137,7 @@ ms.locfileid: "66108600"
 |Elementi del report personalizzati di Dundas 2005 Chart con funzionalità non supportate|Aggiornamento non eseguito.<br /><br /> Elaborazione eseguita dal componente Elaborazione report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |Elementi del report personalizzati di Dundas 2005 Gauge con funzionalità non supportate|Aggiornamento non eseguito.<br /><br /> Elaborazione eseguita dal componente Elaborazione report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a>Apertura di un report con elementi del report personalizzati in Progettazione report  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Apertura di un report con elementi del report personalizzati in Progettazione report  
  Quando si apre un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 con gli elementi del report [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]personalizzati in Progettazione report in, il report verrà aggiornato al nuovo schema di definizione del report. In base agli elementi del report personalizzati contenuti nel report, verrà effettuata una delle azioni seguenti:  
   
 -   Vengono rilevati elementi del report personalizzati di terze parti. Se la versione di tali elementi installata nel computer di creazione del report non è compatibile con il nuovo schema RDL, nell'area di progettazione viene visualizzata una casella di testo con una lettera X rossa. È necessario contattare l'amministratore di sistema per installare nuove versioni degli elementi del report personalizzati di fornitori di terze parti compatibili con il nuovo schema RDL.  
@@ -187,15 +185,15 @@ ms.locfileid: "66108600"
   
 -   Immagini personalizzate.  
   
-###  <a name="bkmk_convertCRIdialog"></a>Finestra di dialogo Converti CRI  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a>Finestra di dialogo Converti CRI  
  In questo report sono contenuti elementi del report personalizzati con funzionalità non supportate. Gli elementi del report personalizzati sono estensioni del linguaggio RDL (Report Definition Language) che supportano gli oggetti personalizzati che consentono di visualizzare i dati in un report e contengono componenti della fase di progettazione e della fase di esecuzione resi disponibili dai fornitori di software di terze parti.  
   
 > [!NOTE]  
->  La scelta di supportare elementi del report personalizzati in un server di report è una decisione che spetta all'amministratore del sistema. Per visualizzare questi elementi, è necessario che i relativi componenti siano installati nel client di creazione dei report, in modo da poter visualizzare in anteprima un report, e nel server di report per visualizzare un report pubblicato o caricato. Per altre informazioni, vedere [Elementi dei report personalizzati](../custom-report-items/custom-report-items.md) e la documentazione del fornitore di software di terze parti.  
+>  La scelta di supportare elementi del report personalizzati in un server di report è una decisione che spetta all'amministratore del sistema. Per visualizzare questi elementi, è necessario che i relativi componenti siano installati nel client di creazione dei report, in modo da poter visualizzare in anteprima un report, e nel server di report per visualizzare un report pubblicato o caricato. Per ulteriori informazioni, vedere la documentazione e [gli elementi del report personalizzati](../custom-report-items/custom-report-items.md) del fornitore di software di terze parti.  
   
  Alcuni elementi del report personalizzati possono essere convertiti in elementi del report con il nuovo formato di definizione. Per l'elenco di elementi del report personalizzati che è possibile convertire, vedere [Upgrading Reports](upgrade-reports.md). Utilizzare l'elenco seguente per decidere se convertire gli elementi del report personalizzati in questo report:  
   
--   **Sì** Scegliere **Sì** per convertire tutti gli elementi del report personalizzati nel report, ove possibile. Le funzionalità non supportate negli elementi del report personalizzati non possono essere aggiornate e vengono rimosse dal file di definizione del report. Per l'elenco di funzionalità non supportate, vedere [Upgrading Reports](upgrade-reports.md). Durante la visualizzazione del report è possibile notare le differenze nella visualizzazione degli elementi del report personalizzati.  
+-   **Sì** Scegliere **Sì** per convertire tutti gli elementi del report personalizzati nel report, laddove possibile. Le funzionalità non supportate negli elementi del report personalizzati non possono essere aggiornate e vengono rimosse dal file di definizione del report. Per l'elenco di funzionalità non supportate, vedere [Upgrading Reports](upgrade-reports.md). Durante la visualizzazione del report è possibile notare le differenze nella visualizzazione degli elementi del report personalizzati.  
   
 -   **No** Scegliere **No** se non si desidera convertire gli elementi del report personalizzati nel report. Gli elementi non possono essere visualizzati da Elaborazione report nella versione corrente. Se l'amministratore del sistema prevede di installare una nuova versione dell'elemento del report personalizzato del fornitore di software di terze parti compatibile con il nuovo formato di definizione del report, è necessario scegliere **No**. Fino a quando non diventano disponibili nuove versioni, gli elementi del report personalizzati vengono visualizzati nel report come una casella di testo vuota con una X rossa.  
   
@@ -205,7 +203,7 @@ ms.locfileid: "66108600"
   
  Per i report che vengono caricati anziché pubblicati in un server di report, Elaborazione report determina se è possibile aggiornarli al primo utilizzo. I report non aggiornabili vengono elaborati in modalità di compatibilità con le versioni precedenti e continuano a essere visualizzati come nella versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornare ed eseguire la migrazione Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Modifiche di rilievo in SQL Server Reporting Services SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
  [Modifiche del comportamento a SQL Server Reporting Services in SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   

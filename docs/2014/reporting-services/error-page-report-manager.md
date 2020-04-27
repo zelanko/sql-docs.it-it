@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109216"
 ---
 # <a name="error-page-report-manager"></a>Pagina Errore (Gestione report)
@@ -30,7 +30,7 @@ ms.locfileid: "66109216"
   
 -   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se un messaggio di errore contiene il testo "per ulteriori informazioni su questo errore, passare al server di report nel computer server locale oppure abilitare gli errori remoti", vedere [Enable Remote errors &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare Gestione report &#40;modalità nativa&#41;](report-server/configure-web-portal.md)   
  [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

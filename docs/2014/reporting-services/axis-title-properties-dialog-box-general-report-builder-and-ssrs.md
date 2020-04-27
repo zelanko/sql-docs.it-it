@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109965"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà titolo asse, Generale (Generatore report e SSRS)
@@ -30,18 +30,18 @@ ms.locfileid: "66109965"
  **Allineamento titolo**  
  Selezionare un allineamento o digitare un'espressione che rappresenta l'allineamento del titolo dell'asse rispetto all'intersezione degli assi.  
   
--   **Vicino a** Consente di visualizzare il titolo dell'asse verso l'intersezione dei due assi.  
+-   **Vicino** Il titolo dell'asse viene visualizzato in prossimità dell'intersezione dei due assi.  
   
--   Al **centro** Visualizza il titolo dell'asse al centro dell'asse.  
+-   **Al centro** Il titolo dell'asse viene visualizzato al centro dell'asse.  
   
--   A **lungo** Visualizza il titolo dell'asse a partire dall'intersezione dei due assi.  
+-   **Lontano** Il titolo dell'asse viene visualizzato lontano dall'intersezione dei due assi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formattare le etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2fc1145354b4e14317c7588d75ea904f3fa094d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105640"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105640"
 -   **Collegamenti a report drill-through** Consentono di passare ad altri report nello stesso server di report. Per altre informazioni, vedere [Report drill-through &#40;Generatore report e SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]documentazione online[ di ](https://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+>  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
  È inoltre possibile consentire agli utenti di controllare la visualizzazione e il contenuto dei report progettando espressioni che includano riferimenti a parametri per l'ordinamento, i filtri e la visibilità. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md), [Filtro, raggruppamento e ordinamento di dati &40#;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md), e [Aggiungere filtri per set di dati, aree dati e gruppi &40#;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107915"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107915"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Incorporamento dei tipi di carattere  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> Incorporamento dei tipi di carattere  
  Se possibile, l'estensione per il rendering in PDF incorpora il subset di ogni tipo di carattere necessario per la visualizzazione del report nel file PDF. I tipi di carattere usati nel report devono essere installati nel server di report. Quando il server di report genera un report in formato PDF, vengono usate le informazioni archiviate nel tipo di carattere a cui fa riferimento il report per creare i mapping dei caratteri nel file PDF. Se il tipo di carattere a cui viene fatto riferimento non è installato nel server di report, il file PDF risultante potrebbe non contenere i mapping appropriati e non essere visualizzato correttamente.  
   
  I tipi di carattere vengono incorporati nel file PDF quando si verificano le condizioni seguenti:  
@@ -57,7 +57,7 @@ ms.locfileid: "66107915"
   
  I tipi di carattere incorporati nel file PDF sono inclusi come metadati nella proprietà Fonts salvata con il file.  
   
-##  <a name="Metadata"></a> Metadati  
+##  <a name="metadata"></a><a name="Metadata"></a>Metadati  
  Oltre al layout del report, l'estensione per il rendering in PDF scrive i metadati seguenti nel dizionario di informazioni del documento PDF.  
   
 |Proprietà PDF|Creata da|  
@@ -65,14 +65,13 @@ ms.locfileid: "66107915"
 |`Title`|Attributo `Name` dell'elemento RDL `Report`.|  
 |`Author`|Elemento RDL `Author`.|  
 |`Subject`|Elemento RDL `Description`.|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nome e versione dell'estensione per il rendering.|  
 |`CreationDate`|Data e ora di esecuzione del report nel formato PDF `datetime`.|  
   
   
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  In PDF sono supportati alcuni elementi interattivi. Di seguito è riportata una descrizione di comportamenti specifici.  
   
 ### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
@@ -94,7 +93,7 @@ ms.locfileid: "66107915"
   
   
   
-##  <a name="Compression"></a>Compressione  
+##  <a name="compression"></a><a name="Compression"></a>Compressione  
  La compressione dell'immagine è basata sul tipo di file originale dell'immagine. L'estensione per il rendering in PDF comprime i file PDF per impostazione predefinita.  
   
  Per mantenere la compressione per le immagini incluse nel file PDF, quando possibile, le immagini JPEG vengono archiviate in formato JPEG e tutti gli altri tipi di immagine in formato BMP.  
@@ -104,15 +103,15 @@ ms.locfileid: "66107915"
   
   
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per altre informazioni, vedere [PDF Device Information Settings](../pdf-device-information-settings.md).  
   
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Comportamenti di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report diverse &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

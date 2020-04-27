@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109096"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Pagina delle proprietà Generale, Parti di report (Gestione report)
@@ -58,7 +58,7 @@ ms.locfileid: "66109096"
  **Nascondi in visualizzazione Elenco**  
  Selezionare questa opzione per fare in modo che la parte di report non venga visualizzato per gli utenti che utilizzano la modalità di visualizzazione Elenco in Gestione report. La modalità di visualizzazione Elenco è il formato di visualizzazione predefinito utilizzato per l'esplorazione della gerarchia di cartelle del server di report. Gli elementi possono essere nascosti nella visualizzazione Elenco ma non nella visualizzazione Dettagli. Se si desidera limitare l'accesso a un elemento, è necessario creare un'assegnazione di ruolo.  
   
- **Tipo**  
+ **Type**  
  Tipo della parte di report. Di sola lettura.  
   
  **Applica**  
@@ -70,13 +70,13 @@ ms.locfileid: "66109096"
  **Spostamento**  
  Fare clic per aprire la pagina per lo spostamento di elementi per spostare una parte di report all'interno della gerarchia delle cartelle del server di report. Per ulteriori informazioni, vedere la [pagina di spostamento degli elementi &#40;Gestione report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Scaricare**  
+ **Scarica**  
  Consente di estrarre una copia della definizione della parte di report da salvare come file con estensione rsc. Il file con estensione rsc può essere caricato in una cartella del server di report oppure utilizzato per sostituire una parte di report esistente in una cartella del server di report.  
   
  **Sostituire**  
  Consente di sostituire la definizione della parte di report con una diversa da un file con estensione rsc.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di parti di report](report-design/managing-report-parts.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   

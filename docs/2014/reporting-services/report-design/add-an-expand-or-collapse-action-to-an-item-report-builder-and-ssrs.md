@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106748"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
@@ -69,7 +69,7 @@ ms.locfileid: "66106748"
   
 1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere, quindi fare clic su * \<elemento del report>* **proprietà**. Verrà * \<* visualizzata la finestra di dialogo **proprietà**>elemento del report per l'elemento del report.  
   
-2.  Fare clic su **visibilità**.  
+2.  Fare clic su **Visibilità**.  
   
 3.  In **Quando il report viene eseguito inizialmente**scegliere una delle opzioni seguenti per impostare la visibilità di questo elemento del report la prima volta che si esegue un report:  
   
@@ -95,8 +95,8 @@ ms.locfileid: "66106748"
   
      ![Esecuzione di report con tabella di espansione](../media/expandcollapse-runreport-reporttable.png "Esecuzione di report con tabella di espansione")  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Azione di drill-down &#40;Generatore report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
- [Nascondi un elemento &#40;Generatore report e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

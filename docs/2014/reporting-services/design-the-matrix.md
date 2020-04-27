@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109301"
 ---
 # <a name="design-the-matrix"></a>Progettazione matrice
@@ -29,19 +29,19 @@ ms.locfileid: "66109301"
  **Campi visualizzati**  
  Consente di visualizzare i campi assegnati alla pagina, al gruppo o ai dettagli. Per eliminare il campo dall'elenco, fare clic su **Rimuovi** .  
   
- **Page**  
+ **Pagina**  
  Consente di visualizzare l'elenco dei campi visualizzati a livello di pagina. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
  **Colonne**  
  Consente di visualizzare l'elenco dei campi visualizzati come colonne della matrice. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
- **prime righe**  
+ **righe**  
  Consente di visualizzare l'elenco dei campi visualizzati come righe della matrice. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
  **Dettagli**  
  Consente di visualizzare l'elenco dei campi visualizzati nella sezione dettagli della matrice. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Matrici &#40;Generatore report e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   

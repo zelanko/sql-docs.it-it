@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108125"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema (Gestione report)
@@ -64,9 +64,9 @@ ms.locfileid: "66108125"
 > [!NOTE]  
 >  Questo pulsante è disponibile solo nella pagina Modifica assegnazione ruolo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Assegnazioni di ruolo](security/role-assignments.md)   
- [Definizioni di ruolo](security/role-definitions.md)  
+ [Definizioni dei ruoli](security/role-definitions.md)  
   
   

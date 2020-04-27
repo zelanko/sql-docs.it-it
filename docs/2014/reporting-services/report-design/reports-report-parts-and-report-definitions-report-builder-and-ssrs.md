@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105049"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Report, parti del report e definizioni dei report (Generatore report e SSRS)
@@ -62,11 +62,11 @@ ms.locfileid: "66105049"
   
  Sottoscrivere un report, che viene recapitato a una cartella Posta in arrivo o a una condivisione file in un formato di output specificato dall'utente. Il formato di rendering predefinito per un report è HTML 4.0. Oltre al formato HTML, sono disponibili vari formati di output in cui è possibile eseguire il rendering dei report, inclusi i formati Excel, Word, XML, PDF, TIFF e CSV. Come per i report pubblicati, anche i report visualizzabili non possono essere modificati o salvati nuovamente su un server di report. Per ulteriori informazioni, vedere [esportazione di report &#40;Generatore report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generatore report SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Installazione, disinstallazione e Generatore report del supporto](../install-uninstall-and-report-builder-support.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportazione di report &#40;Generatore report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

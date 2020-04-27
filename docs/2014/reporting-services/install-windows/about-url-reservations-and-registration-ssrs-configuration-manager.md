@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b72d0a263010cc82abab38ea2d6149d3492ed7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108939"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66108939"
 > [!NOTE]  
 >  HTTP.SYS è un componente del sistema operativo che rimane in attesa delle richieste di rete e ne esegue quindi il routing a una coda di richieste. In questa versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]HTTP.SYS definisce e gestisce la coda di richieste per il servizio Web ReportServer e per Gestione report. Internet Information Services (IIS) non viene più utilizzato per ospitare le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o accedervi. Per ulteriori informazioni sulla funzionalità HTTP.SYS, vedere [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) nel sito Web MSDN.  
   
-##  <a name="ReportingServicesURLs"></a>URL in Reporting Services  
+##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a> URL in Reporting Services  
  In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile accedere agli strumenti, alle applicazioni e agli elementi seguenti tramite URL:  
   
 -   servizio Web ReportServer  
@@ -49,13 +49,12 @@ ms.locfileid: "66108939"
 > [!NOTE]  
 >  In questo argomento non viene descritto l'accesso tramite URL a Generatore report o a report specifici archiviati nel server di report. Per altre informazioni sull'accesso tramite URL a tali elementi, vedere [Accedere agli elementi del server di report usando l'accesso tramite URL](../access-report-server-items-using-url-access.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="URLreservation"></a>Prenotazione e registrazione URL  
- Una prenotazione URL definisce gli URL che possono essere utilizzati per accedere a un'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] riserverà uno o più URL per il servizio Web ReportServer e per Gestione report in HTTP.SYS e li registra quindi all'avvio del servizio. Gli URL di Generatore report e dei report sono basati sulla prenotazione URL del servizio Web ReportServer. Aggiungendo parametri all'URL, è possibile aprire Generatore report o i report tramite il servizio Web. Le prenotazioni e la registrazione vengono forniti da HTTP.SYS. Per ulteriori informazioni, vedere [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) nel sito Web MSDN.  
+##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a>Prenotazione e registrazione URL  
+ Una prenotazione URL definisce gli URL che possono essere utilizzati per accedere a un'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] riserverà uno o più URL per il servizio Web ReportServer e per Gestione report in HTTP.SYS e li registra quindi all'avvio del servizio. Gli URL di Generatore report e dei report sono basati sulla prenotazione URL del servizio Web ReportServer. Aggiungendo parametri all'URL, è possibile aprire Generatore report o i report tramite il servizio Web. Le prenotazioni e la registrazione vengono forniti da HTTP.SYS. Per ulteriori informazioni, vedere [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) nel sito Web MSDN.  
   
- La *prenotazione URL* è un processo mediante il quale un endpoint URL per un'applicazione Web viene creato e archiviato in http. SYS. HTTP.SYS è il repository comune di tutte le prenotazioni URL definite in un computer e determina un set di regole comuni che garantiscono l'univocità delle prenotazioni URL.  
+ Una*prenotazione URL* è un processo tramite cui un endpoint dell'URL a un'applicazione Web viene creato e archiviato in HTTP.SYS. HTTP.SYS è il repository comune di tutte le prenotazioni URL definite in un computer e determina un set di regole comuni che garantiscono l'univocità delle prenotazioni URL.  
   
- La *registrazione dell'URL* si verifica all'avvio del servizio. Viene creata la coda di richieste e HTTP.SYS inizia a eseguire il routing delle richieste alla coda. Prima che le richieste indirizzate all'endpoint URL vengano aggiunte alla coda, è necessario che l'endpoint sia registrato. All'avvio del servizio del server di report, verranno registrati tutti gli URL prenotati per tutte le applicazioni attivate. Di conseguenza, il servizio Web deve essere attivato affinché venga eseguita la registrazione. Se si imposta la proprietà **WebServiceAndHTTPAccessEnabled** su **False** nel facet Configurazione superficie di attacco per Reporting Services della gestione basata su criteri, l'URL per il servizio Web non verrà registrato all'avvio del servizio.  
+ La*registrazione URL* viene eseguita all'avvio del servizio. Viene creata la coda di richieste e HTTP.SYS inizia a eseguire il routing delle richieste alla coda. Prima che le richieste indirizzate all'endpoint URL vengano aggiunte alla coda, è necessario che l'endpoint sia registrato. All'avvio del servizio del server di report, verranno registrati tutti gli URL prenotati per tutte le applicazioni attivate. Di conseguenza, il servizio Web deve essere attivato affinché venga eseguita la registrazione. Se si imposta la proprietà **WebServiceAndHTTPAccessEnabled** su **False** nel facet Configurazione superficie di attacco per Reporting Services della gestione basata su criteri, l'URL per il servizio Web non verrà registrato all'avvio del servizio.  
   
  La registrazione degli URL viene annullata se si arresta il servizio o si ricicla il dominio applicazione di Gestione report o del servizio Web. Se si modifica una prenotazione URL mentre il servizio è in esecuzione, il server di report riciclerà immediatamente il dominio applicazione per consentire l'annullamento della registrazione dell'URL precedente e l'utilizzo del nuovo URL.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66108939"
 |http://+:80/reportserver|http://\<nomecomputer>/ReportServer<br /><br /> http://\<IPAddress>/ReportServer<br /><br /> http://localhost/reportserver|La prenotazione URL specifica un carattere jolly (+) sulla porta 80. In questo modo nella coda del server di report viene inserita qualsiasi richiesta in ingresso che specifica un host per la risoluzione nel computer server di report sulla porta 80. Si noti che con tale prenotazione URL è possibile utilizzare il numero desiderato di URL per accedere al server di report.<br /><br /> Si tratta della prenotazione URL predefinita per un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la maggior parte dei sistemi operativi.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Questa prenotazione URL specifica un indirizzo IP ed è molto più restrittiva della prenotazione URL con carattere jolly. Solo gli URL che includono l'indirizzo IP possono essere utilizzati per la connessione al server di report. Data questa prenotazione URL, una richiesta a un server di report in\<http://computername>/ReportServer http://localhost/reportserver o avrà esito negativo.|  
   
-##  <a name="DefaultURLs"></a>URL predefiniti  
+##  <a name="default-urls"></a><a name="DefaultURLs"></a>URL predefiniti  
  Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato utilizzando la configurazione predefinita, il programma di installazione prenoterà gli URL per il servizio Web ReportServer e per Gestione report. È possibile accettare questi valori predefiniti anche quando si definiscono prenotazioni URL nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli URL predefiniti includono il nome di un'istanza se si installa [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] o se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato come istanza denominata.  
   
 > [!IMPORTANT]  
@@ -93,23 +92,21 @@ ms.locfileid: "66108939"
 |SQL Server Express|servizio Web ReportServer|http://\<nomeserver>/reportserver_SQLExpress|http://\<nomeserver>:80/reportserver_SQLExpress|  
 |SQL Server Express|Gestione report|http://\<nomeserver>/reports_SQLExpress|http://\<nomeserver>:80/reports_SQLExpress|  
   
-##  <a name="URLPermissionsAccounts"></a>Autenticazione e identità del servizio per gli URL di Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificano l'account del servizio del server di report. L'account con cui viene eseguito il servizio viene utilizzato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza. L'identità del servizio dell'istanza del server di report viene archiviata nel file RSReportServer.config.  
+##  <a name="authentication-and-service-identity-for-reporting-services-urls"></a><a name="URLPermissionsAccounts"></a>Autenticazione e identità del servizio per gli URL di Reporting Services  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificano l'account del servizio del server di report. L'account con cui viene eseguito il servizio viene utilizzato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza. L'identità del servizio dell'istanza del server di report viene archiviata nel file RSReportServer.config.  
   
  L'account del servizio non prevede alcun valore predefinito. È tuttavia obbligatorio definire un account del servizio durante l'esecuzione del programma di installazione, specificandolo nella sezione `URLReservation` del file RSReportServer.config, anche se il server viene installato in modalità "solo file". I valori validi per l'account del servizio includono un account utente di dominio, `LocalSystem` o `NetworkService`.  
   
  L'accesso anonimo è disabilitato perché la sicurezza predefinita è `RSWindowsNegotiate`. Per l'accesso Intranet, gli URL del server di report utilizzano nomi di computer di rete. Se si desidera configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per le connessioni Internet, è necessario utilizzare impostazioni diverse. Per altre informazioni sull'autenticazione, vedere [Autenticazione con il server di report](../security/authentication-with-the-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="URLlocalAdmin"></a>URL per l'amministrazione locale  
+##  <a name="urls-for-local-administration"></a><a name="URLlocalAdmin"></a> URL per l'amministrazione locale  
  È possibile utilizzare http://localhost/reportserver o http://localhost/reports se è stato specificato un carattere jolly sicuro o vulnerabile per la prenotazione URL.  
   
  L'URL http://localhost viene interpretato come http://127.0.0.1. Se la prenotazione URL è stata associata a un nome di computer o a un singolo indirizzo IP, non è possibile utilizzare localhost se non si crea una prenotazione aggiuntiva per 127.0.0.1 nel computer locale. Analogamente, se localhost o 127.0.0.1 è disabilitato nel computer, non è possibile utilizzare l'URL.  
   
- 
-  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] includono nuove caratteristiche di sicurezza per ridurre al minimo il rischio di eseguire inavvertitamente programmi con privilegi elevati. Per attivare l'amministrazione locale su tali sistemi operativi, è necessario eseguire operazioni aggiuntive. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] includono nuove caratteristiche di sicurezza per ridurre al minimo il rischio di eseguire inavvertitamente programmi con privilegi elevati. Per attivare l'amministrazione locale su tali sistemi operativi, è necessario eseguire operazioni aggiuntive. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="URLSharePoint"></a>URL per il server di report in modalità integrata SharePoint  
+##  <a name="urls-for-report-server-in-sharepoint-integrated-mode"></a><a name="URLSharePoint"></a>URL per il server di report in modalità integrata SharePoint  
  Se un server di report autonomo è configurato per l'esecuzione nell'ambito di una distribuzione più ampia di un prodotto o una tecnologia SharePoint, la creazione degli URL e delle directory virtuali sarà interessata dalle considerazioni seguenti:  
   
 -   Gli URL per i report e gli altri elementi vengono identificati tramite l'URL dell'applicazione Web di SharePoint. Per l'accesso tramite URL a report specifici, utilizzare sempre un URL completo che includa il percorso del sito, la raccolta documenti, il nome dell'elemento e un'estensione di file, ad esempio rdl per un report. Quando si fa riferimento a origini dei dati condivise e a modelli nei report o si specifica il server e le cartelle di destinazione per le operazioni di pubblicazione in un server di report, è necessario specificare URL completi.  
@@ -124,8 +121,8 @@ ms.locfileid: "66108939"
   
  Se una distribuzione con scalabilità orizzontale di un server di report è stata integrata per l'esecuzione nell'ambito di una distribuzione più ampia di un prodotto o una tecnologia SharePoint, bilanciare il carico dei nodi del server di report e definire un URL di un singolo server virtuale per la distribuzione con scalabilità orizzontale. Le impostazioni di integrazione Server report consentono solo di specificare un URL di un singolo server di report. Nel caso di una distribuzione con scalabilità orizzontale, l'URL deve essere il punto di accesso per i nodi server nella distribuzione con scalabilità orizzontale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Configurare un URL &#40;Configuration Manager SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

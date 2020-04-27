@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104476"
 ---
 # <a name="report-history-page-report-manager"></a>Pagina Cronologia report (Gestione report)
@@ -54,7 +54,7 @@ Per generare la cronologia, è necessario che il report possa essere eseguito in
  **Dimensione**  
  Visualizza la dimensione della definizione e dei dati del report. Questo valore indica lo spazio occupato nel database del server di report dalla definizione e dai dati del report. Le dimensioni del report visualizzabile, che include elementi di formattazione, sono effettivamente più grandi. Le dimensioni totali, indicate tra parentesi, rappresentano la somma delle dimensioni di tutti gli snapshot presenti nella cronologia del report per il report corrente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione o eliminazione della cronologia del report &#40;Gestione report&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   

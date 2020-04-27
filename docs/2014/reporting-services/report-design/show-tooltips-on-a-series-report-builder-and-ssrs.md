@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6901123f4a28560c504bc9a83522cb108a6d7b12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104928"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Visualizzazione di descrizioni comandi in una serie (Generatore report e SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66104928"
   
 2.  Fare clic su **Dati serie** e digitare una stringa o un'espressione per la proprietà **Descrizione comando** . È possibile utilizzare qualsiasi parola chiave specifica del grafico per rappresentare un altro elemento sul grafico. Per altre informazioni, vedere [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
- [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Formattazione dei punti dati in un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Modificare il testo di un elemento della legenda &#40;Generatore report e SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
+ [Formattazione di colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Aggiungere un'azione drill-through a un report &#40;Generatore report e SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110075"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà azione (Generatore report e SSRS)
@@ -84,13 +84,13 @@ ms.locfileid: "66110075"
  Digitare o selezionare un valore da passare per il parametro denominato nel report drill-through. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione.  
   
  **Omettere**  
- Selezionare questa opzione per impedire l'esecuzione del parametro. Per impostazione predefinita, questa casella di controllo è deselezionata e non è attiva. Per selezionare la casella di controllo, fare clic sul pulsante **espressione** (*FX*) e digitare **true** o creare un'espressione. La casella di controllo è selezionata quando si fa clic su **OK** nella finestra di dialogo **espressione** .  
+ Selezionare questa opzione per impedire l'esecuzione del parametro. Per impostazione predefinita, questa casella di controllo è deselezionata e non è attiva. Per selezionare la casella di controllo, fare clic sul pulsante **Espressione** (*fx*) e digitare **True** o creare un'espressione. La casella di controllo viene selezionata quando si fa clic su **OK** nella finestra di dialogo **Espressione** .  
   
  **Vai al segnalibro**  
  Selezionare questa opzione per definire un collegamento a un segnalibro nel report corrente. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai al segnalibro**.  
   
  **Selezionare un segnalibro**  
- Digitare o selezionare l'ID del segnalibro del report a cui passare quando viene fatto clic sul collegamento. Fare clic sul pulsante espressione (**FX**) per modificare l'espressione. L'ID del segnalibro può essere un ID statico oppure un'espressione che restituisce l'ID di un segnalibro. L'espressione può includere un campo contenente un ID del segnalibro.  
+ Digitare o selezionare l'ID del segnalibro del report a cui passare quando viene fatto clic sul collegamento. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione. L'ID del segnalibro può essere un ID statico oppure un'espressione che restituisce l'ID di un segnalibro. L'espressione può includere un campo contenente un ID del segnalibro.  
   
  Per creare un collegamento a un segnalibro, è innanzitutto necessario impostare la proprietà Bookmark di un elemento del report. Per impostare la proprietà Bookmark, selezionare un elemento del report e nel riquadro Proprietà digitare un valore o un'espressione per l'ID del segnalibro, ad esempio SalesChart o 5TopSales.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "66110075"
  **Selezionare un URL**  
  Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://*\<ServerName>*/images/image1.jpg. Per un elemento pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http://*\<NomeSharePointServer>\</site>*/Documents/images/image1.jpg).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Parametri del report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Aggiunta di un sottoreport e di parametri &#40;Generatore report e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

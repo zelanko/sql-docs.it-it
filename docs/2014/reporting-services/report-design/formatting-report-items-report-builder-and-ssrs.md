@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105793"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66105793"
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Viene descritto come formattare il testo e come personalizzare le opzioni di formattazione per diversi blocchi di testo all'interno di una casella di testo.  
   
- [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importazione di codice HTML a un report &#40;Generatore report e SSRS &#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Viene descritto come inserire e utilizzare dati HTML in un report.  
   
  [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66105793"
  [Formattazione di linee, colori e immagini &#40;Generatore report e SSRS&#41;](images-report-builder-and-ssrs.md)  
  Viene descritto come formattare linee, griglie, colori e immagini all'interno di elementi del report e aree dati.  
   
- [Impostazione delle impostazioni locali per un report o una casella di testo &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Definizione delle impostazioni locali per un report o una casella di testo &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Viene descritto come modificare l'impostazione dei formati di visualizzazione dati che differiscono in base alla lingua e al paese, ad esempio i valori relativi alla data, alla valuta e quelli numerici.  
   
 ## <a name="see-also"></a>Vedere anche  

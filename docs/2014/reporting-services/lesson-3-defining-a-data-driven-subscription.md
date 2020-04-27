@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108513"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
@@ -41,7 +41,7 @@ ms.locfileid: "66108513"
   
 -   [Passaggio 6: Per pianificare una sottoscrizione](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>Avviare la creazione guidata sottoscrizione guidata dai dati  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Avviare la creazione guidata sottoscrizione guidata dai dati  
   
 1.  In Gestione report fare clic su **Home**e passare alla cartella contenente il report **Ordini vendita** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108513"
   
 3.  Fare clic su **nuova sottoscrizione guidata dai dati**. Se il pulsante non è visualizzato, non si dispone delle autorizzazioni di Gestione contenuto.  
   
-##  <a name="bkmk_definesubscription"></a>Passaggio 1: definire una descrizione  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>Passaggio 1: definire una descrizione  
   
 1.  Digitare **Recapito ordine di vendita** nella descrizione.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108513"
   
 3.  Selezionare **Specificare solo per questa sottoscrizione**, quindi fare clic su **Avanti**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>Passaggio 2: definire una connessione all'origine dati del Sottoscrittore  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>Passaggio 2: definire una connessione all'origine dati del Sottoscrittore  
   
 1.  Selezionare **Microsoft SQL Server** come tipo di origine dei dati.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108513"
   
 5.  Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**e quindi fare clic su **Avanti**.  
   
-##  <a name="bkmk_definequery"></a>Passaggio 3: definire una query per recuperare i dati del Sottoscrittore  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>Passaggio 3: definire una query per recuperare i dati del Sottoscrittore  
   
 1.  Nella casella della query digitare la query seguente:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108513"
   
 3.  Fare clic su **Convalida**e quindi su **Avanti**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a>Passaggio 4: impostare le opzioni di recapito  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>Passaggio 4: impostare le opzioni di recapito  
   
 1.  Per **Nome file**selezionare **Estrai il valore dal database**. Selezionare il campo **Ordine**.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66108513"
   
 7.  Per **Password**selezionare **Specificare un valore statico**. Digitare la password. Prestare attenzione quando si digita la password poiché non viene convalidata durante la procedura guidata.  
   
-8.  Fare clic su **Avanti**.  
+8.  Fare clic su **Avanti.**  
   
-##  <a name="bkmk_configure_parameter"></a>Passaggio 5: configurare un valore di parametro per l'output del report  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>Passaggio 5: configurare un valore di parametro per l'output del report  
   
-1.  Per **OrderNumber**selezionare **Estrai il valore dal database**. In Valore selezionare **Ordine**. Fare clic su **Avanti**.  
+1.  Per **OrderNumber**selezionare **Estrai il valore dal database**. In Valore selezionare **Ordine**. Fare clic su **Avanti.**  
   
-##  <a name="bkmk_schedule_subscription"></a>Passaggio 6: per pianificare una sottoscrizione  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>Passaggio 6: per pianificare una sottoscrizione  
   
 1.  Fare clic su **In base a una pianificazione creata per questa sottoscrizione**, quindi fare clic su **Avanti**.  
   
@@ -138,10 +138,10 @@ ms.locfileid: "66108513"
  Questo passaggio conclude l'esercitazione relativa alla definizione di una sottoscrizione guidata dai dati. Per ulteriori informazioni sulle altre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esercitazioni, vedere [Reporting Services esercitazioni &#40;&#41;SSRS ](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Creazione, modifica ed eliminazione di una sottoscrizione guidata dai dati](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Utilizzare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

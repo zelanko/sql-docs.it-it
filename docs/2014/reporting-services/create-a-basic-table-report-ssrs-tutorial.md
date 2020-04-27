@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109675"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "66109675"
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere pulsanti **Avanti** e **indietro** alla barra degli strumenti del Visualizzatore di documenti. Per altre informazioni, vedere  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

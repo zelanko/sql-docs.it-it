@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109730"
 ---
 # <a name="contents-page-report-manager"></a>Pagina Contenuto (Gestione report)
@@ -38,7 +38,7 @@ ms.locfileid: "66109730"
  **Carica file**  
  Fare clic per aprire la pagina Carica file, nella quale è possibile copiare un file dal file system a un server di report. È possibile caricare file per aggiungere report e risorse, ad esempio grafici, documenti o qualsiasi altro contenuto accessorio che si desidera utilizzare in un report. I file caricati vengono archiviati e gestiti in un database del server di report. Per caricare un report, selezionare un file con estensione rdl.  
   
- **Elimina**  
+ **Visualizzazione dettagli**  
  Fare clic per visualizzare la pagina Contenuto in un elenco che contiene informazioni aggiuntive sugli elementi. In **Visualizzazione Dettagli**, è possibile utilizzare i pulsanti **Elimina** e **Sposta** per rimuovere e spostare gli elementi nella cartella.  
   
  Passare con il puntatore del mouse su un elemento e fare clic sulla freccia a discesa per aprire il menu a discesa dal quale è possibile accedere alle proprietà dell'elemento selezionato ed eseguirne la configurazione.  
@@ -54,7 +54,7 @@ ms.locfileid: "66109730"
  **Spostamento**  
  Fare clic per spostare un elemento nella gerarchia di cartelle. Prima di fare clic su **Sposta**selezionare la casella di controllo accanto a ogni elemento che si desidera spostare. Verrà visualizzata la pagina di spostamento degli elementi, nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

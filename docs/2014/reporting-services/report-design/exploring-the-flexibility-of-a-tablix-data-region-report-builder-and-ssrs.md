@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105945"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
@@ -44,9 +44,9 @@ ms.locfileid: "66105945"
 ## <a name="adding-an-adjacent-details-group"></a>Aggiunta di un gruppo dettagli adiacente  
  Per impostazione predefinita, il gruppo dettagli è il gruppo figlio più interno in una gerarchia di gruppi. Non è possibile nidificare un gruppo al di sotto del gruppo dettagli. È ad esempio possibile creare ulteriori gruppi dettagli adiacenti per visualizzare i primi cinque prodotti e gli ultimi cinque 5 prodotti per vendita. Grazie alla possibilità di aggiungere espressioni di filtro e ordinamento su ogni gruppo, possono essere mostrate due viste di dati dettaglio dello stesso set di dati in un'unica area dati Tablix. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md), [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) e [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Elenca &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

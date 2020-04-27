@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27e4057ed11d2f7f0bab32faa3e4a19e9adb890b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106993"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Tipo di connessione SQL Server (SSRS)
-  Per includere dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database nel report, è necessario disporre di un set di dati basato su un'origine dati del report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo. Questo tipo di origine dati incorporato è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo tipo di origine dati può essere utilizzata per stabilire la connessione e recuperare dati dalla versione corrente e da versioni precedenti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Per includere dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un report, è necessario avere un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di origine dati può essere utilizzata per stabilire la connessione e recuperare dati dalla versione corrente e da versioni precedenti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Questa estensione per i dati supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.  
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a>Stringa di connessione  
+##  <a name="connection-string"></a><a name="Connection"></a> Stringa di connessione  
  Quando si effettua la connessione a un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ci si connette all'oggetto di database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server. Il database potrebbe disporre di più schemi aventi più tabelle, viste e stored procedure. L'oggetto di database viene specificato in Progettazione query. Se non si specifica un database nella stringa di connessione, la connessione viene eseguita al database predefinito assegnato dall'amministratore.  
   
  Contattare l'amministratore del database per ottenere le informazioni di connessione e le credenziali da utilizzare per connettersi all'origine dati. Nella stringa di connessione di esempio seguente viene specificato un database di esempio nel client locale:  
@@ -35,7 +35,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
  Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
-##  <a name="Credentials"></a>Credenziali  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
@@ -53,7 +53,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
  Per ulteriori informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
   
   
-##  <a name="Query"></a>Query  
+##  <a name="queries"></a><a name="Query"></a> Query  
  Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. In un report viene elaborato solo il primo set di risultati recuperato da una query.  
   
  Per impostazione predefinita, se si crea una nuova query o si apre una query esistente che può essere rappresentata nella finestra Progettazione query con interfaccia grafica, è disponibile la progettazione query relazionale. È possibile specificare una query nei modi seguenti:  
@@ -68,11 +68,11 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
  Sono supportate le modalità query seguenti:  
   
--   [Testo](#QueryText) Digitare i [!INCLUDE[tsql](../../includes/tsql-md.md)] comandi.  
+-   [Testo](#QueryText) Digitare nei comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [Stored procedure](#QueryStoredProcedure) Scegliere da un elenco di stored procedure.  
   
-###  <a name="QueryText"></a>Utilizzo del testo del tipo di query  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Utilizzo di query di tipo Text  
  Nella finestra Progettazione query basata su testo è possibile digitare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire i dati in un set di dati. La query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:  
   
 ```  
@@ -88,7 +88,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- Fare clic sul pulsante **Esegui** (**!**) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.  
+ Fare clic sul pulsante **Esegui** ( **!** ) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.  
   
  Per parametrizzare questa query, aggiungere un parametro di query. Modificare ad esempio la clausola WHERE nella stringa seguente:  
   
@@ -97,7 +97,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Quando si esegue la query, i parametri del report corrispondenti ai parametri di query verranno creati automaticamente. Per ulteriori informazioni, vedere [Parametri di query](#Parameters) di seguito in questo argomento.  
   
   
-###  <a name="QueryStoredProcedure"></a>Utilizzo del tipo di query StoredProcedure  
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Utilizzo di query di tipo StoredProcedure  
  È possibile specificare una stored procedure per una query del set di dati in uno dei seguenti modi:  
   
 -   Nella finestra di dialogo **Proprietà set di dati** , impostare l'opzione **Stored procedure** . Scegliere dall'elenco a discesa di stored procedure e funzioni con valori di tabella.  
@@ -115,7 +115,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Per altre informazioni, vedere "Stored procedure (Motore di database)" nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=98335) nel sito msdn.microsoft.com.  
   
   
-##  <a name="Parameters"></a> Parametri  
+##  <a name="parameters"></a><a name="Parameters"></a> Parametri  
  Quando il testo della query contiene variabili di query o stored procedure con parametri di input, vengono generati automaticamente i parametri di query corrispondenti per il set di dati e i parametri di report per il report. Il testo della query non deve includere l'istruzione DECLARE per ogni variabile della query.  
   
  La query SQL seguente, ad esempio, crea un parametro di report denominato `EmpID`:  
@@ -135,14 +135,14 @@ WHERE EmployeeID = (@EmpID)
  Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  Osservazioni su <a name="Remarks"></a>  
+##  <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
  È inoltre possibile recuperare dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un tipo di origine dati OLE DB o ODBC. Per altre informazioni, vedere [Tipo di connessione OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) o [Tipo di connessione ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Informazioni sulla piattaforma e sulla versione  
- Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella documentazione online[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ di ](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di .  
   
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -152,7 +152,7 @@ WHERE EmployeeID = (@EmpID)
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a>Sezioni correlate  
+##  <a name="related-sections"></a><a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le procedure per definire, personalizzare e utilizzare parti di un report correlate ai dati.  
   
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)  
@@ -167,7 +167,7 @@ WHERE EmployeeID = (@EmpID)
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- Le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella documentazione [online](https://go.microsoft.com/fwlink/?linkid=121312)di.  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di .  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   

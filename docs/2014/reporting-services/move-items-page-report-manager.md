@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108219"
 ---
 # <a name="move-items-page-report-manager"></a>Pagina Spostamento elementi (Gestione report)
@@ -37,7 +37,7 @@ ms.locfileid: "66108219"
 2.  Nella barra degli strumenti fare clic su **Visualizzazione Dettagli**.  
   
     > [!NOTE]  
-    >  Se viene visualizzata solo la **visualizzazione riquadri**, si è già in **visualizzazione dettagli**.  
+    >   Se viene visualizzato solo **Visualizzazione Affiancata**, ci si trova già in **Visualizzazione Dettagli**.  
   
 3.  Selezionare la casella accanto all'elemento, quindi fare clic su **Sposta** nella barra degli strumenti. È possibile selezionare più di una casella se si desidera spostare più elementi nello stesso percorso nuovo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108219"
 2.  Nella barra degli strumenti fare clic su **Visualizzazione Affiancata**.  
   
     > [!NOTE]  
-    >  Se viene visualizzata solo la **visualizzazione dettagli**, si è già in **visualizzazione affiancata**.  
+    >   Se viene visualizzato solo **Visualizzazione Dettagli**, ci si trova già in **Visualizzazione Affiancata**.  
   
 3.  Passare con il puntatore del mouse su un elemento, quindi fare clic sulla freccia a discesa.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66108219"
   
 4.  Sulla barra degli strumenti dell'elemento, fare clic su **Sposta**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Pagina delle proprietà generale, cartelle &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   

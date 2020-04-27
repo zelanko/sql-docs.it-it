@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110030"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione per Power View e server di report in SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66110030"
   
  In questo argomento  
   
--   [Per attivare il server di report e le funzionalità di raccolta siti di integrazione Power View:](#bkmk_features)  
+-   [Per attivare le funzionalità di raccolta siti di integrazione per Power View e server di report](#bkmk_features)  
   
--   [Per attivare o disattivare Reporting Services funzionalità raccolta siti di amministrazione centrale:](#bkmk_centraladmin)  
+-   [Per attivare o disattivare la funzionalità Raccolta siti di amministrazione centrale di Reporting Services:](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>Per attivare il server di report e le funzionalità di raccolta siti di integrazione Power View:  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>Per attivare il server di report e le funzionalità di raccolta siti di integrazione Power View:  
   
 1.  Aprire il browser al sito dove si desidera che le funzionalità [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] siano attive.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66110030"
   
  Per disattivare le funzionalità, è possibile utilizzare la stessa procedura facendo clic su **Disattiva** anziché su **Attiva**.  
   
-##  <a name="bkmk_centraladmin"></a>Per attivare o disattivare Reporting Services funzionalità raccolta siti di amministrazione centrale:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Per attivare o disattivare Reporting Services funzionalità raccolta siti di amministrazione centrale:  
   
 1.  Aprire il browser alla pagina Amministrazione centrale SharePoint.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66110030"
 ## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver attivato la funzionalità, è possibile continuare con l'integrazione del server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

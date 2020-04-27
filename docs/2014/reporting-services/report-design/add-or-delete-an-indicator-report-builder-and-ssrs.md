@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106564"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Aggiungere o eliminare un indicatore (Generatore report e SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "66106564"
   
  È possibile aggiornare i valori e gli stati di indicatori. Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [Modificare le icone degli indicatori e i set di indicatori &#40;Generatore report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modificare le icone degli indicatori e dei set di indicatori &#40;Generatore report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
 -   [Impostare e configurare le unità di misura &#40;Generatore report e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Impostazione dell'ambito di sincronizzazione &#40;Generatore report e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Impostare l'ambito di sincronizzazione &#40;Generatore report e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Poiché un indicatore viene posizionato nel pannello del misuratore, è necessario selezionare l'indicatore anziché il pannello quando si vuole configurare l'indicatore tramite la finestra di dialogo **Proprietà indicatori** o il riquadro **Proprietà** . Nell'immagine seguente viene mostrato un indicatore selezionato nel relativo pannello del misuratore.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66106564"
     > [!NOTE]  
     >  È probabile che un indicatore sia posizionato in un pannello del misuratore che contiene altri indicatori o misuratori. Se i pannelli del misuratore contengono più elementi, assicurarsi di fare clic sull'indicatore da eliminare e non sul pannello del misuratore. Se si fa clic e quindi si elimina il pannello del misuratore, verranno eliminati i pannelli del misuratore e tutti gli elementi in esso contenuti.  
   
-2.  Scegliere **Elimina**.  
+2.  Fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Indicatori &#40;Generatore report e SSRS&#41;](indicators-report-builder-and-ssrs.md)  

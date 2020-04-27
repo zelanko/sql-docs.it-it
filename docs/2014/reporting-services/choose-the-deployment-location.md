@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109833"
 ---
 # <a name="choose-the-deployment-location"></a>Scelta percorso distribuzione
@@ -29,7 +29,7 @@ ms.locfileid: "66109833"
  **Cartella di distribuzione**  
  Consente di digitare il nome della cartella di destinazione per la pubblicazione dei report contenuti nel progetto Server report. Il valore predefinito per la cartella è il nome del progetto. Se la cartella non esiste nel server di report, verrà creata durante la pubblicazione dei report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   
   

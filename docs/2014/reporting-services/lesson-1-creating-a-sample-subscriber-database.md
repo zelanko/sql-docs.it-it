@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108542"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
@@ -63,7 +63,7 @@ ms.locfileid: "66108542"
  In tal modo sono stati creati i dati di sottoscrizione per la distribuzione dei report e per la variazione dell'output del report per ogni sottoscrittore. Sarà quindi possibile modificare le proprietà dell'origine dei dati del report da distribuire ai sottoscrittori. La modifica delle proprietà dell'origine dei dati viene eseguita per preparare il report per il recapito delle sottoscrizioni guidate dai dati. Inoltre, verrà modificata la progettazione report per includere un parametro che verrà utilizzato dalla sottoscrizione con i dati del sottoscrittore. [Lezione 2: modifica delle proprietà dell'origine dati del report](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Creazione di un database](../relational-databases/databases/create-a-database.md)   
  [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

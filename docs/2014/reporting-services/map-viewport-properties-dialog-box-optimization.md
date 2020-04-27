@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108282"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Finestra di dialogo Proprietà viewport mappa, Ottimizzazione
@@ -31,7 +31,7 @@ ms.locfileid: "66108282"
  **Prestazioni**  
  Scorrere il puntatore più vicino a **Prestazioni** per semplificare la mappa e visualizzare un minor numero di dettagli.  
   
- **Qualità**  
+ **Quality**  
  Scorrere il puntatore più vicino a **Qualità** per tracciare la mappa con un maggior numero di dettagli.  
   
  **Risoluzione mappa**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108282"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

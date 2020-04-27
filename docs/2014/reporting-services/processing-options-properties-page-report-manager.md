@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108038"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Pagina delle proprietà Opzioni di elaborazione (Gestione report)
@@ -60,8 +60,8 @@ ms.locfileid: "66108038"
   
  Tale valore viene applicato all'elaborazione dei report in un server di report. L'impostazione non ha effetto sull'elaborazione dei dati nel server di database che fornisce i dati per il report. Il valore specificato deve tuttavia essere sufficiente per consentire il completamento dell'elaborazione sia dei dati che del report. Il conteggio dell'elaborazione del report inizia nel momento in cui viene selezionato il report e termina all'apertura del report.  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostare proprietà di elaborazione dei report](report-server/set-report-processing-properties.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostare le proprietà di elaborazione dei report](report-server/set-report-processing-properties.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

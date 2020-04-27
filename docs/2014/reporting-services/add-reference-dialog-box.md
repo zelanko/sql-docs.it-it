@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110017"
 ---
 # <a name="add-reference-dialog-box"></a>Finestra di dialogo Aggiungi riferimento
@@ -34,10 +34,10 @@ ms.locfileid: "66110017"
 > [!NOTE]  
 >  Quando si pubblica un report che include un riferimento a un assembly esterno, l'assembly deve essere installato nel server di report prima che il report possa essere elaborato correttamente.  
   
- **Recente**  
+ **Origini**  
  Utilizzare questa opzione per selezionare il nome di un assembly utilizzato di recente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di assembly personalizzati con i report](custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Aggiungere codice a un report &#40;SSRS&#41;](report-design/add-code-to-a-report-ssrs.md)  
   

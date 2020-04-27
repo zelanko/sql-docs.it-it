@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109803"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Pagina Report click-through (Gestione report)
@@ -42,7 +42,7 @@ ms.locfileid: "66109803"
   
 2.  Passare con il puntatore del mouse sul modello, quindi fare clic sulla freccia a discesa.  
   
-3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **generale** per il modello.  
+3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **Generale** per il modello.  
   
 4.  Selezionare la scheda **Click-through** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66109803"
  **Report a istanze multiple**  
  Consente di specificare il report personalizzato da utilizzare quando per la navigazione dell'utente è necessaria una visualizzazione di dati a istanza multipla. Fare clic sul pulsante Sfoglia per selezionare il report che si desidera utilizzare.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pubblicazione di report](../../2014/reporting-services/publish-reports.md)  
   
   

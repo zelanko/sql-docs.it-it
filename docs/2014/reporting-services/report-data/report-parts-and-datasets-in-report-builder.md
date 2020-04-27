@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107165"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
@@ -28,7 +28,7 @@ ms.locfileid: "66107165"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> Aggiunta di una parte di report con i set di dati dipendenti al report  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a>Aggiunta di una parte di report con set di impostazioni dipendenti al report  
  Quando si aggiunge una parte di report al report, anche i set di dati dipendenti contenuti nella parte di report vengono aggiunti al report. Poiché in una parte di report potrebbe essere incluso un rettangolo contenente molti altri elementi del report, è possibile aggiungere più set di dati dipendenti al report in uso. Ogni set di dati condiviso è un riferimento indipendente; l'origine dati condivisa dalla quale dipende non viene aggiunta al report. A ogni set di dati incorporato viene aggiunta anche l'origine dati incorporata o condivisa dalla quale dipende.  
   
  Le credenziali per un'origine dati incorporata non sono salvate come parte della parte del report. Se un'origine dati incorporata viene aggiunta al report, verranno richieste le credenziali quando si esegue il report. Per evitare questa richiesta, utilizzare le parti di report basate sulle origini dati condivise con le credenziali archiviate.  
@@ -36,7 +36,7 @@ ms.locfileid: "66107165"
  Una volta aggiunta una parte di report al report in uso, i set di dati aggiunti non presentano alcuna differenza con i set di dati incorporati o condivisi che sono stati creati. È possibile visualizzare i set di dati aggiuntivi nel riquadro dei dati del report. I set di dati incorporati vengono visualizzati nell'origine dati condivisa corrispondente mentre i set di dati condivisi nella cartella Set di dati condivisi.  
   
   
-##  <a name="Customizing"></a> Personalizzazione di set di dati dipendenti  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a>Personalizzazione di set di impostazioni dipendenti  
  Dopo avere aggiunto parti del report al report, è possibile visualizzarlo in anteprima e decidere di apportare alcune modifiche ai dati. Gli elementi modificabili dipendono dal tipo di set di dati che si sta utilizzando.  
   
  Per modificare i dati e le opzioni dati di un set di dati incorporato, è possibile modificare le proprietà del set di dati, inclusa la query, come se si creasse il set di dati personalmente.  
@@ -46,7 +46,7 @@ ms.locfileid: "66107165"
  Per altre informazioni sulla modifica della definizione di un set di dati condiviso o su come mostrare le ultime modifiche dei dati per un set di dati condiviso nel report, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
   
-##  <a name="Publishing"></a> Pubblicazione di set di dati dipendenti come set di dati condivisi  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a>Pubblicazione di DataSet dipendenti come set di impostazioni  
  Quando si pubblica un elemento del report che dispone di set di dati dipendenti, è possibile utilizzare l'opzione per pubblicare ogni set di dati come set di dati condiviso o come set di dati incorporato che rimane tale nell'elemento del report.  
   
  Quando si seleziona l'opzione del set di dati condiviso, il set di dati viene salvato nel server di report come definizione del set di dati condiviso. Nel report, ogni elemento del report in cui viene utilizzato il set di dati è aggiornato per puntare al set di dati condiviso che si trova ora sul server di report. Di conseguenza si verificano le seguenti due situazioni:  
@@ -59,9 +59,9 @@ ms.locfileid: "66107165"
 >  Per assicurarsi di poter utilizzare i dati di un set di dati condiviso, è necessario comprendere i principi che regolano la protezione degli elementi del report. Per ulteriori informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../security/secure-shared-dataset-items.md).  
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../report-builder/report-design-view-report-builder.md)   
- [Sicurezza &#40;Generatore report&#41;](../report-builder/security-report-builder.md)   
+ [&#40;di sicurezza Generatore report&#41;](../report-builder/security-report-builder.md)   
  [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109924"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2014
   In questo argomento vengono descritte le modifiche di rilievo introdotte in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I problemi potrebbero verificarsi durante un aggiornamento oppure in script o report personalizzati. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [SQL Server 2014 Reporting Services modifiche di rilievo](#bkmk_sql14)  
   
@@ -32,10 +32,10 @@ ms.locfileid: "66109924"
   
 -   [Modifiche di rilievo in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services modifiche di rilievo  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services modifiche di rilievo  
  Nessuna modifica di rilievo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services modifiche di rilievo  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services modifiche di rilievo  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Per i riferimenti server della modalità SharePoint è richiesto il sito di SharePoint  
  Non è possibile accedere o fare riferimento direttamente al server di report usando direttamente il nome virtuale nel percorso URL. Ad esempio:  
@@ -65,11 +65,10 @@ ms.locfileid: "66109924"
 -   SQL Server Management Studio: i clienti non possono fare riferimento a un server con una sintassi simile a <machine_name>/<instance_name>. A partire dalla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , il metodo consigliato consiste nell'usare l'URL del sito di SharePoint. Ad esempio, **http://<sharepoint_server>/<sharePoint_site>**. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l'URL del sito di SharePoint è l'unica sintassi supportata.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Progettazione modelli report non è disponibile in SQL Server Data Tools  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] non supporta più progetti di modello di report. Progettazione modelli report non è disponibile in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Non è possibile creare nuovi progetti modello di report, aprire progetti esistenti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e creare o aggiornare modelli di report. Per aggiornare i modelli di report, è possibile usare [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o strumenti precedenti. È possibile continuare a usare i modelli di report come origini dati nei report creati negli strumenti di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , quali Generatore report e Progettazione report. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è ancora disponibile Progettazione query, cioè lo strumento usato per creare query ed estrarre i dati del report dai relativi modelli.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] non supporta più progetti di modello di report. Progettazione modelli report non è disponibile in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Non è possibile creare nuovi progetti modello di report, aprire progetti esistenti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e creare o aggiornare modelli di report. Per aggiornare i modelli di report, è possibile usare [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o strumenti precedenti. È possibile continuare a usare i modelli di report come origini dati nei report creati negli strumenti di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , quali Generatore report e Progettazione report. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è ancora disponibile Progettazione query, cioè lo strumento usato per creare query ed estrarre i dati del report dai relativi modelli.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services modifiche di rilievo  
- Questa sezione descrive le modifiche di rilievo introdotte in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services modifiche di rilievo  
+ In questa sezione vengono descritte le [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]modifiche di rilievo in.  
   
 > [!NOTE]  
 >  Poiché SQL Server 2008 R2 è un aggiornamento secondario della versione di SQL Server 2008, è consigliabile rivedere anche il contenuto nella sezione relativa a SQL Server 2008.  
@@ -79,10 +78,10 @@ ms.locfileid: "66109924"
   
  Per altre informazioni, vedere [Esportazione in un file CSV &#40;Generatore report e SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modifiche del comportamento a SQL Server Reporting Services in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
  [Novità &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Funzionalità deprecate in SQL Server Reporting Services SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)   
- [Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [Funzionalità non più disponibili di SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

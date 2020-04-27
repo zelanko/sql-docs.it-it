@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107933"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107933"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Rendering CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Rendering CSV  
  Se il rendering viene eseguito usando le impostazioni predefinite, il report CSV avrà le caratteristiche seguenti:  
   
 -   Il delimitatore di campo predefinito è la virgola (,).  
@@ -65,7 +65,7 @@ ms.locfileid: "66107933"
   
  Nella seguente tabella è indicato l'aspetto degli elementi del report di cui è stato eseguito il rendering:  
   
-|Elemento|Tipo di rendering|  
+|Item|Tipo di rendering|  
 |----------|------------------------|  
 |Casella di testo|Viene eseguito il rendering del contenuto della casella di testo. Nella modalità predefinita gli elementi vengono formattati in base alle proprietà di formattazione dell'elemento. Nella modalità conforme la formattazione può essere modificata dalle impostazioni relative alle informazioni sui dispositivi. Per altre informazioni sulle modalità di rendering CSV, vedere di seguito.|  
 |Tabella|Il rendering viene eseguito mediante l'espansione della tabella e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni. I report drill-through non sono supportati.|  
@@ -96,7 +96,7 @@ ms.locfileid: "66107933"
   
  
   
-##  <a name="RenderingModes"></a> Modalità del renderer  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modalità del renderer  
  L'estensione per il rendering CSV può operare in due modalità: una è ottimizzata per Excel, mentre l'altra è ottimizzata per applicazioni di terze parti che richiedono una rigida conformità alla specifica CSV del documento RFC 4180. Le aree dati di pari livello vengono gestite in modo diverso a seconda della modalità usata.  
   
 ### <a name="default-mode"></a>Modalità predefinita  
@@ -120,7 +120,7 @@ ms.locfileid: "66107933"
 #### <a name="formatting"></a>Formattazione  
  I valori non vengono formattati.  
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  L'interattività non è supportata da nessuno dei formati CSV generati da questo renderer. Non viene eseguito il rendering dei seguenti elementi interattivi:  
   
 -   Collegamenti ipertestuali  
@@ -139,15 +139,15 @@ ms.locfileid: "66107933"
   
 
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Impostazioni relative alle informazioni sul dispositivo  
  È possibile cambiare alcune impostazioni predefinite per questo renderer, tra cui la modalità in cui eseguire il rendering, i caratteri da usare come delimitatori e i caratteri da usare come stringa predefinita del qualificatore di testo, modificando le impostazioni relative alle informazioni sui dispositivi. Per altre informazioni, vedere [CSV Device Information Settings](../csv-device-information-settings.md).  
   
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Comportamenti di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report diverse &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

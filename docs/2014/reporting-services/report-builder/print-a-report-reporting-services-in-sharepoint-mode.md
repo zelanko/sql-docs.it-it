@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107745"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Stampare un report (Reporting Services in modalità SharePoint)
@@ -46,9 +46,9 @@ ms.locfileid: "66107745"
   
      Per modificare le impostazioni predefinite, fare clic sul pulsante **Proprietà** . Le dimensioni della pagina sono determinate dall'altezza e dalla larghezza predefinite delle pagine specificate nella definizione del report. L'entità delle modifiche che è possibile apportare alle dimensioni delle pagine dipende dalle funzionalità della stampante utilizzata.  
   
-     Per visualizzare il report prima della stampa, fare clic sul pulsante **Anteprima** . Verrà aperta la prima pagina del report in una finestra di anteprima distinta. Se il rendering del report viene eseguito sul server di report, saranno disponibili alcune pagine aggiuntive. Il rendering dell'anteprima di un report viene eseguito in formato EMF. È possibile passare alla pagina precedente o successiva fino ad arrivare all'ultima pagina, in cui il pulsante **Successiva** risulta disabilitato. Per modificare i margini di stampa nella pagina di anteprima, fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo **Margini** . Configurare i margini superiore, inferiore, destro e sinistro e quindi fare clic su **OK**. La finestra di dialogo verrà chiusa e le impostazioni verranno archiviate per l'anteprima del rendering e la stampa.  
+     Per visualizzare il report prima della stampa, fare clic sul pulsante **Anteprima** . Verrà aperta la prima pagina del report in una finestra di anteprima distinta. Se il rendering del report viene eseguito sul server di report, saranno disponibili alcune pagine aggiuntive. Il rendering dell'anteprima di un report viene eseguito in formato EMF. È possibile passare alla pagina precedente o successiva fino ad arrivare all'ultima pagina, in cui il pulsante **Successiva** risulta disabilitato. Per modificare i margini di stampa nella pagina di anteprima, fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo **margini** . Configurare i margini superiore, inferiore, destro e sinistro e quindi fare clic su **OK**. La finestra di dialogo verrà chiusa e le impostazioni verranno archiviate per l'anteprima del rendering e la stampa.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

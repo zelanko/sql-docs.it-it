@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109163"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Riempimento (Generatore report e SSRS)
@@ -36,11 +36,11 @@ ms.locfileid: "66109163"
  **Selezionare l'origine dell'immagine**  
  Indicare il percorso di archiviazione dell'immagine in modo da consentire al processore del report di visualizzarla durante il rendering del report.  
   
--   **Esterno** Scegliere questa opzione se si desidera che l'immagine continui a esistere come file in un server di report o in un server Web.  
+-   **Esterna** Scegliere questa opzione se si desidera che l'immagine continui ad essere disponibile come file su un server di report o un server Web.  
   
--   Con **incorporamento** Scegliere questa opzione se si desidera incorporare l'immagine nel report.  
+-   **Incorporata** Scegliere questa opzione se si desidera incorporare l'immagine nel report.  
   
--   **Database** di Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini che si desidera includere nel report.  
+-   **Database** Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini da includere nel report.  
   
  **Utilizzare questa immagine**  
  Questa opzione viene visualizzata quando si seleziona l'opzione **Incorporata** o **Esterna** .  
@@ -58,7 +58,7 @@ ms.locfileid: "66109163"
  **Utilizzare questo tipo MIME**  
  Scegliere il formato appropriato delle immagini contenute nel database, ad esempio bmp, jpeg, gif, png o x-png.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107355"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Finestra di dialogo Proprietà set di dati, Opzioni (Generatore report)
@@ -50,8 +50,8 @@ ms.locfileid: "66107355"
 ## <a name="see-also"></a>Vedere anche  
  [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà set di dati, query &#40;Generatore report&#41;](dataset-properties-dialog-box-query-report-builder.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Set di set di impostazioni e set di impostazioni di set di report incorporati &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà set di dati, Query &#40;Generatore report&#41;](dataset-properties-dialog-box-query-report-builder.md)  
   
   

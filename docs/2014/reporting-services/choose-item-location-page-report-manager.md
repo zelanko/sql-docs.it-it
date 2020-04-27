@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109894"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
@@ -52,7 +52,7 @@ ms.locfileid: "66109894"
 4.  Nella scheda **Generale** , nella pagina delle proprietà, fare clic su **Cambia percorso** per aprire la pagina Scegli percorso elemento.  
   
 ## <a name="options"></a>Opzioni  
- **Location**  
+ **Posizione**  
  Consente di specificare il nome della cartella in cui inserire l'elemento creato. È possibile digitare il nome completo oppure selezionare la cartella nella visualizzazione albero.  
   
  **Visualizzazione albero**  
@@ -60,7 +60,7 @@ ms.locfileid: "66109894"
   
  Fare clic sulle icone Espandi (+) e Comprimi (-) nella visualizzazione albero per aprire e chiudere le cartelle senza aggiungere i nomi delle cartelle al campo **percorso** . Per aggiungere un nome di cartella al campo **Percorso** fare clic sul nome della cartella.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pagina nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Pagina nuovo modello &#40;Gestione report&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

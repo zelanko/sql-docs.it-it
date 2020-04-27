@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106821"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106821"
  Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]documentazione online[ di ](https://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+>  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>Per aggiungere un collegamento ipertestuale  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66106821"
   
 7.  Per verificare il collegamento,fare clic **Esegui** per visualizzare il report in anteprima, quindi fare clic sull'elemento di report su cui è stato impostato il collegamento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Creare una mappa documento &#40;Generatore report e SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
   

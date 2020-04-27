@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbb3fd9ec10c5e1ca11a7e150f0d8a4c0fec883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106522"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS)
@@ -42,13 +42,13 @@ ms.locfileid: "66106522"
   
      Viene visualizzato il riquadro **Dati grafico** .  
   
-6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
+6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
   
-7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
+7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
   
      In genere per i grafici sparkline e per le barre dei dati, non viene aggiunto un campo all'area **Gruppo serie** in quanto si desidera una sola serie per ogni riga.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Allineare i dati in un grafico di una tabella o matrice &#40;Generatore report e SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   

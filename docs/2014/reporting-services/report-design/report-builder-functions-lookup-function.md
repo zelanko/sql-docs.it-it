@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105219"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Funzione Lookup (Generatore report e SSRS)
@@ -49,7 +49,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare la funzione `Lookup` per recuperare il valore dal set di dati specificato per una coppia nome/valore in cui esiste una relazione uno-a-uno. Ad esempio per un campo ID in una tabella, è possibile utilizzare `Lookup` per recuperare il campo Nome corrispondente da un set di dati non associato all'area dati.  
   
- `Lookup`esegue le operazioni seguenti:  
+ Tramite la funzione `Lookup` vengono effettuate le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente.  
   

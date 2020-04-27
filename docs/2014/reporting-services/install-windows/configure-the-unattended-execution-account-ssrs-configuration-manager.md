@@ -19,14 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108884"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
   
 -   Inviare richieste di connessione in rete per i report che utilizzano l'autenticazione del database oppure connettersi a origini dati del report esterne che non richiedono né utilizzano l'autenticazione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md) nella documentazione online di SQL Server.  
@@ -50,17 +49,17 @@ ms.locfileid: "66108884"
 3.  Digitare account e password, digitare nuovamente la password e quindi fare clic su **Applica**.  
   
 ### <a name="using-rsconfig-utility"></a>Utilizzo dell'utilità RSCONFIG  
- Un altro modo per impostare l'account consiste nell'usare l'utilità **rsconfig** . Per specificare l'account, usare l'argomento **-e** di **rsconfig**. Se si specifica l'argomento **-e** per **rsconfig** , si indica all'utilità di scrivere le informazioni relative all'account nel file di configurazione. Non è necessario specificare un percorso per RSreportserver. config. Per configurare l'account, seguire questa procedura.  
+ Un altro modo per impostare l'account consiste nell'usare l'utilità **rsconfig** . Per specificare l'account, usare l'argomento **-e** di **rsconfig**. Se si specifica l'argomento **-e** per **rsconfig** , si indica all'utilità di scrivere le informazioni relative all'account nel file di configurazione. Non è necessario specificare un percorso per RSreportserver.config. Per configurare l'account, effettuare le seguenti operazioni:  
   
 1.  Creare o selezionare un account di dominio che abbia accesso ai computer e ai server che forniscono dati o servizi a un server di report. È consigliabile utilizzare un account che disponga di autorizzazioni limitate, ad esempio autorizzazioni di sola lettura.  
   
-2.  Aprire un prompt dei comandi: nel menu **Start** scegliere **Esegui**, digitare **cmd**e quindi fare clic su **OK**.  
+2.  Aprire il prompt dei comandi: nel menu **Start** scegliere **Esegui**, digitare **cmd** e quindi fare clic su **OK**.  
   
 3.  Digitare il comando seguente per configurare l'account su un'istanza del server di report locale:  
   
-     **rsconfig-e-u\<domain/username>-p\<password>**  
+     **rsconfig -e -u\<dominio/nome utente> -p\<password>**  
   
- **rsconfig-e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nella documentazione online di SQL Server.  
+ **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nella documentazione online di SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Modalità di archiviazione delle informazioni sull'account  
  Quando si imposta l'account, le impostazioni seguenti vengono specificate come valori crittografati nel file RSreportserver.config in un'istanza locale o remota del server di report:  
@@ -100,11 +99,11 @@ ms.locfileid: "66108884"
   
 2.  Nella pagina Account di esecuzione deselezionare **Specifica account di esecuzione**.  
   
-3.  Fare clic su **Apply**.  
+3.  Fare clic su **Applica**.  
   
  Le informazioni relative all'account vengono rimosse dal file RSReportServer.config.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Reporting Services Configuration Manager &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

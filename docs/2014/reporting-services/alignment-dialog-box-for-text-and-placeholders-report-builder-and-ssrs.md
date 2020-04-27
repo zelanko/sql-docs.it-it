@@ -16,28 +16,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110035"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Finestra di dialogo Allineamento per testo e segnaposto (Generatore report e SSRS)
   Selezionare la scheda **Allineamento** per definire la posizione dei valori all'interno della cella o dell'area dati selezionata. È possibile formattare solo l'allineamento orizzontale del testo singolo all'interno di una casella di testo. Se si desidera impostare valori del riempimento nella casella di testo o l'allineamento verticale del testo, utilizzare le proprietà della casella di testo corrispondenti. Per ulteriori informazioni, vedere finestra di [dialogo Proprietà casella di testo, allineamento &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
- **Ridimensionamento orizzontale**  
+ **Orizzontale**  
  Specificare un valore o digitare un'espressione che restituisce la posizione in cui viene inserito il testo orizzontalmente all'interno di un'area dati o di una cella selezionata. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione.  
   
--   **Informazioni generali** Consente di visualizzare il testo calcolato [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]da. Per altre informazioni su come viene calcolato l'allineamento del testo generale, vedere [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+-   **Generale** Consente di visualizzare il testo in base al calcolo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Per altre informazioni su come viene calcolato l'allineamento del testo generale, vedere [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
--   A **sinistra** Consente di visualizzare il testo allineato a sinistra.  
+-   **Sinistra** Consente di visualizzare il testo allineato a sinistra.  
   
--   Al **centro** Visualizzare il testo allineato al centro.  
+-   **Al centro** Consente di visualizzare il testo allineato al centro.  
   
--   A **destra** Consente di visualizzare il testo allineato a destra.  
+-   **Destra** Consente di visualizzare il testo allineato a destra.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Aggiungere codice HTML a un report &#40;Generatore report e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107610"
 ---
 # <a name="security-report-builder"></a>Sicurezza (Generatore report)
@@ -24,19 +24,19 @@ ms.locfileid: "66107610"
   
  Per creare, pubblicare e utilizzare report ed elementi correlati a un report, è necessario capire la correlazione tra le caratteristiche di sicurezza e le aree seguenti:  
   
--   **Il server di report o il sito di SharePoint in cui vengono pubblicati i report** Queste funzionalità sono gestite dall'amministratore del server di report o dall'amministratore del sito di SharePoint.  
+-   **Il server di report o il sito di SharePoint dove si pubblicano report** Queste caratteristiche sono gestite dall'amministratore del server di report o dall'amministratore del sito di SharePoint.  
   
--   **Report pubblicati ed elementi correlati al report** Gli elementi correlati al report includono origini dati incorporate e condivise e le relative credenziali, set di dati condivisi, parametri, parti del report e modelli di report. Le caratteristiche di sicurezza relative a questi elementi sono gestite dall'autore del report. Per pubblicare e condividere gli elementi, all'autore del report devono essere concesse le autorizzazioni sufficienti da parte dell'amministratore del server di report o dell'amministratore del sito di SharePoint.  
+-   **Report pubblicati ed elementi correlati al report** Tra gli elementi correlati al report ci sono le origini dati condivise e incorporate, le credenziali, i set di dati condivisi, i parametri, le parti del report e i modelli di report. Le caratteristiche di sicurezza relative a questi elementi sono gestite dall'autore del report. Per pubblicare e condividere gli elementi, all'autore del report devono essere concesse le autorizzazioni sufficienti da parte dell'amministratore del server di report o dell'amministratore del sito di SharePoint.  
   
--   **Origini dati esterne utilizzate da un report** Queste funzionalità sono gestite dal proprietario dell'origine dati esterna.  
+-   **Origini dati esterne utilizzate da un report** Queste caratteristiche sono gestite dal proprietario dell'origine dati esterna.  
   
--   **Modelli di report basati su origini dati esterne** Queste funzionalità sono gestite da Progettazione modelli.  
+-   **Modelli di report basati su origini dati esterne** Queste caratteristiche sono gestite dal progettista di modelli.  
   
--   **Funzionalità di report interattive, ad esempio parametri** Queste funzionalità sono gestite dall'autore del report.  
+-   **Caratteristiche del report interattive quali i parametri** Queste caratteristiche sono gestite dall'autore del report.  
   
  Rivedere le informazioni in questo argomento per capire meglio come utilizzare le caratteristiche di sicurezza per gestire e proteggere i report e gli elementi correlati al report.  
   
-##  <a name="ReportServers"></a>Informazioni sulla sicurezza per i server di report  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Informazioni sulla sicurezza per i server di report  
  La pubblicazione e la visualizzazione di report sono operazioni privilegiate. Un amministratore di server di report concede autorizzazioni per garantire che solo gli utenti autorizzati possano pubblicare e visualizzare report in uno dei tipi seguenti di server di report:  
   
 -   Server di report configurato in modalità nativa  
@@ -57,7 +57,7 @@ ms.locfileid: "66107610"
   
 =
   
-##  <a name="Reports"></a>Informazioni sulla sicurezza per i report pubblicati e gli elementi correlati ai report  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Informazioni sulla sicurezza per i report pubblicati e gli elementi correlati al report  
  La sicurezza per i report e gli elementi correlati al report è gestita dall'amministratore del server di report. Gli elementi correlati al report includono le origini dati condivise e incorporate che includono credenziali, set di dati condivisi, parametri, parti del report e modelli.  
   
  In un server di report o sito di SharePoint, i report, gli elementi correlati al report e le operazioni sono entità a protezione diretta. L'autorizzazione per l'accesso a elementi e operazioni viene concessa tramite criteri di sicurezza che consentono di eseguire il mapping di un account utente o di gruppo a un determinato livello di autorizzazione, relativamente a un elemento specifico. Per ridurre la complessità e l'overhead della gestione di un numero elevato di criteri, le autorizzazioni su un contenitore, quale una cartella, sono ereditate dagli elementi nel contenitore. Ad esempio, se un utente dispone dell'autorizzazione di visualizzazione dei report specifica su una cartella, dispone dell'autorizzazione di visualizzazione dei report sugli elementi nella cartella.  
@@ -85,7 +85,7 @@ ms.locfileid: "66107610"
   
 =  
   
-##  <a name="Data"></a>Informazioni sulla sicurezza per i dati dei report e le origini dati esterne  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Informazioni sulla sicurezza dei dati dei report e delle origini dati esterne  
  Per accedere a dati da ogni origine dati esterna in un report, occorre creare un'origine dati incorporata o aggiungere un riferimento a un'origine dati condivisa o un set di dati condiviso nel report.  
   
  Per ogni origine dati esterna, è necessario fornire delle credenziali che siano sufficienti per accedere all'origine e ai dati sottostanti. Il proprietario dell'origine dati specifica il tipo di credenziali di accesso.  
@@ -102,14 +102,14 @@ ms.locfileid: "66107610"
   
 =
   
-##  <a name="Models"></a>Informazioni sui modelli e sui filtri di sicurezza  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Informazioni sui modelli e sui filtri di sicurezza  
  Quando i dati vengono recuperati da un modello di report basato su dati esterni, è possibile applicare dei filtri di sicurezza nel modello. Si tratta di una valida soluzione per proteggere i dati in modo che ogni utente che esegue un report possa vedere solo i dati per i quali dispone delle autorizzazioni necessarie.  
   
  I parametri del report non vengono utilizzati per la sicurezza a livello di riga poiché non impediscono a utenti o a gruppi di utenti di visualizzare righe specifiche di dati. Per applicare la sicurezza ai dati visualizzati in un report è necessario utilizzare i filtri di sicurezza oppure la sicurezza degli elementi dei modelli.  
   
 =
   
-##  <a name="Interactive"></a>Informazioni sulla sicurezza per la creazione di report per le funzionalità interattive  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Informazioni sulla sicurezza per la creazione di report per le caratteristiche interattive  
  Nei report vengono spesso utilizzati parametri che consentono a un utente di personalizzare in modo interattivo la visualizzazione di un report. Utilizzare i suggerimenti seguenti per progettare report che seguano procedure consigliate:  
   
 -   Non utilizzare parametri basati su parametri di query e che sono di tipo **Text** a meno che si forniscano valori validi. Un elenco dei valori disponibili aiuta un utente a scegliere solo valori validi. Senza questo elenco non è possibile limitare i valori che possono essere immessi da un utente.  

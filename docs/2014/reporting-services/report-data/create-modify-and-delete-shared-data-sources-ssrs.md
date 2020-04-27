@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107395"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Creare, modificare ed eliminare origini dati condivise (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66107395"
 |Descrizione|Una descrizione che viene visualizzata con l'elemento in Gestione report quando si visualizza il contenuto della cartella.|  
 |Tipo di connessione|L'estensione per l'elaborazione dati utilizzata con l'origine dati. È possibile utilizzare solo estensioni per l'elaborazione dati distribuite sul server di report. Per altre informazioni sulle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).|  
 |Stringa di connessione|La stringa di connessione per il database. Per ulteriori informazioni e per visualizzare esempi di stringhe di connessione alle origini dati utilizzate di frequente, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
-|Tipo di credenziali|Specifica in che modo vengono ottenute le credenziali per la connessione e se devono essere utilizzate quando viene stabilita la connessione. Per ulteriori informazioni, vedere [specificare le credenziali e le informazioni di connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md).|  
+|Tipo di credenziali|Specifica in che modo vengono ottenute le credenziali per la connessione e se devono essere utilizzate quando viene stabilita la connessione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md).|  
   
  Le origini dei dati condivise non contengono informazioni sulla query utilizzata per recuperare i dati. La query viene sempre mantenuta all'interno della definizione del report.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "66107395"
   
  Non è prevista alcuna operazione di annullamento per l'eliminazione di un'origine dei dati condivisa. Se tuttavia si elimina accidentalmente un'origine dei dati condivisa, è possibile crearne una nuova utilizzando gli stessi valori di proprietà di quella eliminata. Sarà necessario aprire i singoli report, modelli e sottoscrizioni guidate dai dati per riassociare l'origine dei dati condivisa all'elemento in cui viene utilizzata, ma i report, i modelli e le sottoscrizioni continueranno a funzionare come in precedenza purché le proprietà dell'origine dati siano identiche a quelle precedenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Gestire origini dati dei report](manage-report-data-sources.md)   
+ [Gestione delle origini dati del report](manage-report-data-sources.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Pagina delle proprietà origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)   

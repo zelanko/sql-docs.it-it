@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109099"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Pagina delle proprietà Generale, Report (Gestione report)
@@ -55,7 +55,7 @@ ms.locfileid: "66109099"
  **Crea report collegato**  
  Fare clic per aprire la pagina Nuovo report collegato. Per ulteriori informazioni su questa pagina e sui report collegati, vedere la [pagina nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
- **Salvare**  
+ **Salva**  
  Fare clic per estrarre una copia di sola lettura della definizione del report. In base alle associazioni di file definite nel computer, il file verrà aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un'altra applicazione. Nella maggior parte dei casi, il report viene aperto come file XML.  
   
  La copia che viene aperta è identica alla definizione del report originale pubblicata inizialmente nel server di report. Le eventuali proprietà impostate nel report dopo la pubblicazione (ad esempio, parametri e proprietà dell'origine dei dati) non sono disponibili nel file della definizione aperto.  
@@ -68,7 +68,7 @@ ms.locfileid: "66109099"
  **Modifica collegamento**  
  Fare clic per selezionare una definizione del report diversa per il report collegato. Questa opzione viene visualizzata se si tratta di un report collegato. In questo caso, è possibile impostare questa proprietà per sostituire la definizione del report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

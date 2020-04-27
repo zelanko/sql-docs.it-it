@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107895"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Esportazione in XML (Generatore report e SSRS)
@@ -23,10 +23,10 @@ ms.locfileid: "66107895"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Elementi del report  
+##  <a name="report-items"></a><a name="ReportItems"></a> Elementi del report  
  Nella tabella seguente viene descritto il rendering degli elementi del report.  
   
-|Elemento|Tipo di rendering|  
+|Item|Tipo di rendering|  
 |----------|------------------------|  
 |Report|Come elemento di livello principale del documento XML.|  
 |Aree dati|Come elemento all'interno dell'elemento del relativo contenitore. Nelle aree dati sono inclusi tabelle, matrici ed elenchi in cui i dati vengono visualizzati sotto forma di testo e grafico, nonché barre dei dati, grafici sparkline, misuratori e indicatori in cui vengono visualizzati dati.|  
@@ -51,28 +51,24 @@ ms.locfileid: "66107895"
   
 -   Il rendering degli elementi nascosti che non possono essere resi visibili tramite attivazione della visualizzazione non viene eseguito. Viene eseguito il rendering degli elementi inizialmente visibili e degli elementi nascosti che possono essere visibili mediante un elemento Toggle.  
   
--   
-  `Images, lines, and custom report items` vengono ignorati.  
+-   `Images, lines, and custom report items` vengono ignorati.  
   
-##  <a name="DataTypes"></a> Tipi di dati  
+##  <a name="data-types"></a><a name="DataTypes"></a>Tipi di dati  
  All'attributo o all'elemento casella di testo viene assegnato un tipo di dati XSD in base ai valori visualizzati nella casella di testo.  
   
 |Se tutti i valori della casella di testo sono|Viene assegnato il tipo di dati|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (o `Decimal` e qualsiasi tipo di dati Integer o byte)|**xsd:decimal**|  
-|
-  `Float` (o `Decimal` e qualsiasi tipo di dati Integer o byte)|**xsd:float**|  
-|
-  `Double` (o `Decimal` e qualsiasi tipo di dati Integer o byte)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd: dateTime**|  
-|`Time`|**xsd: stringa**|  
-|`Boolean`|**xsd: Boolean**|  
-|`String`, `Char`|**xsd: stringa**|  
-|Altri|**xsd: stringa**|  
+|`Decimal` (o `Decimal` e qualsiasi tipo di dati Integer o byte)|**xsd:decimal**|  
+|`Float` (o `Decimal` e qualsiasi tipo di dati Integer o byte)|**xsd:float**|  
+|`Double` (o `Decimal` e qualsiasi tipo di dati Integer o byte)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|Altri|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>Regole di rendering specifiche di XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Regole di rendering specifiche di XML  
  Nelle sezioni seguenti viene descritta l'interpretazione degli elementi di un report da parte delle estensioni per il rendering XML.  
   
 ### <a name="report-body"></a>Corpo del report  
@@ -80,7 +76,7 @@ ms.locfileid: "66107895"
   
  L'elemento del report include anche le definizioni di spazi dei nomi XML e gli attributi di riferimento allo schema. Le variabili sono indicate in grassetto:  
   
- \<**Report** xmlns = "**SchemaName**" xmlns: xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;RC% 3aSchema = true" Name = "reportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  I valori delle variabili sono i seguenti:  
   
@@ -152,20 +148,20 @@ ms.locfileid: "66107895"
   
  Se il valore della proprietà DataElementOutput è uguale a Output, l'intestazione di un elemento ripetuto viene visualizzata come elemento figlio dell'elemento dettaglio.  
   
-##  <a name="CustomFormatsXSLTransformations"></a>Formati personalizzati e trasformazioni XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formati personalizzati e trasformazioni XSL  
  I file XML generati dall'estensione per il rendering XML possono essere trasformati in quasi tutti i formati utilizzando trasformazioni XSL (XSLT). Questa funzionalità consente di produrre dati in formati non supportati dalle estensioni per il rendering esistenti. È consigliabile provare a utilizzare l'estensione per il rendering XML e le trasformazioni XSL prima di creare estensioni per il rendering personalizzate.  
   
-##  <a name="DuplicateName"></a>Nomi duplicati  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nomi duplicati  
  Se sono presenti nomi di elementi dati duplicati all'interno dello stesso ambito, verrà visualizzato un messaggio di errore del renderer.  
   
-##  <a name="XSLTTransformations"></a>Trasformazioni XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>Trasformazioni XSLT  
  Il renderer XML può applicare una trasformazione XSLT lato server ai dati XML originali. Quando viene applicata una trasformazione XSLT, il renderer restituisce il contenuto trasformato anziché i dati XML originali. La trasformazione si verifica nel server, non nel client.  
   
  La trasformazione XSLT da applicare all'output viene definita nel file di definizione del report con la proprietà DataTransform del report o con il parametro XSLT *DeviceInfo* . Se viene impostato uno di questi valori, la trasformazione si verifica ogni volta che viene utilizzato il renderer XML. Quando si usano le sottoscrizioni, la trasformazione XSLT deve essere definita nella proprietà RDL DataTransform.  
   
  Se si specifica un file XSLT, tramite la proprietà di definizione DataTransform e l'impostazione delle informazioni sul dispositivo, la trasformazione XSLT specificata in DataTransform si verifica per prima, seguita dalla trasformazione XSLT specificata tramite le impostazioni delle informazioni sul dispositivo.  
   
-###  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo, incluse le seguenti:  
   
 -   Trasformazione (XSLT) da applicare al codice XML  
@@ -184,9 +180,9 @@ ms.locfileid: "66107895"
   
  Per altre informazioni, vedere [Impostazioni relative alle informazioni sul dispositivo XML](../xml-device-information-settings.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Comportamenti di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report diverse &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

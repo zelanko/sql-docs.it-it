@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109081"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Pagina delle proprietà Generale, Origini dati condivise (Gestione report)
@@ -98,7 +98,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Genera modello**  
  Fare clic per creare un nuovo modello basato sull'origine dati condivisa.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Pagina nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   

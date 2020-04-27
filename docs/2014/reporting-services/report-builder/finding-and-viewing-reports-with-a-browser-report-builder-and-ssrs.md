@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107863"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report con un browser (Generatore report e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66107863"
   
  Se non si conosce l'indirizzo Web di un report, è possibile utilizzare l'indirizzo Web del server di report e quindi esplorare la gerarchia delle cartelle del server di report per selezionare il report che si desidera visualizzare. Nella figura seguente viene illustrata una gerarchia di cartelle visualizzata in una finestra del browser.  
   
- ![Cartelle in un browser](../media/rs-browserfolder.GIF "Cartelle visualizzate in un browser")  
+ ![Cartelle visualizzate in un browser](../media/rs-browserfolder.GIF "Cartelle visualizzate in un browser")  
 Cartelle visualizzate in un browser  
   
 > [!NOTE]  
@@ -49,8 +49,7 @@ Cartelle visualizzate in un browser
 -   Un'estensione del nome file rappresenta una risorsa. L'estensione identifica il tipo MIME della risorsa. Ad esempio, l'estensione jpg indica un'immagine in formato JPEG.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>Digitazione dell'URL di un report  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportato l'accesso tramite URL a elementi specifici disponibili in un server di report. URL deve includere il percorso completo del report e i comandi per eseguire il rendering del report. Se il report include parametri, è inoltre necessario specificare eventuali valori richiesti per aprire il report. Se per un report si digita un URL che comprende spazi nel percorso, valori di parametro o un'estensione per il rendering, è necessario includere caratteri codificati nell'URL per ottenere il risultato desiderato. Nell'esempio riportato di seguito viene illustrato l'URL di un report che include la codifica per gli spazi nel nome del percorso, parametri e un'estensione per il rendering:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportato l'accesso tramite URL a elementi specifici disponibili in un server di report. URL deve includere il percorso completo del report e i comandi per eseguire il rendering del report. Se il report include parametri, è inoltre necessario specificare eventuali valori richiesti per aprire il report. Se per un report si digita un URL che comprende spazi nel percorso, valori di parametro o un'estensione per il rendering, è necessario includere caratteri codificati nell'URL per ottenere il risultato desiderato. Nell'esempio riportato di seguito viene illustrato l'URL di un report che include la codifica per gli spazi nel nome del percorso, parametri e un'estensione per il rendering:  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -58,7 +57,7 @@ Cartelle visualizzate in un browser
   
  Per ulteriori informazioni sull'accesso a un report tramite un URL, incluse le informazioni sulla sintassi dell'URL, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) all'interno della documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

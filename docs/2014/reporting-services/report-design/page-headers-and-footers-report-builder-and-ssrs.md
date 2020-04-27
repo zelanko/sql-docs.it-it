@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105524"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467584"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
@@ -35,12 +35,11 @@ ms.locfileid: "62467584"
   
 3.  Recuperare i dati delle colonne utilizzando `IRow::Open()` o `IRow::GetColumns()`.  
   
-    -   
-  `IRow::Open()` può essere utilizzato per aprire una `ISequentialStream` nella riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari (è quindi possibile utilizzare `IStream` o `ISequentialStream` per leggere i dati dalla colonna).  
+    -   `IRow::Open()` può essere utilizzato per aprire una `ISequentialStream` nella riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari (è quindi possibile utilizzare `IStream` o `ISequentialStream` per leggere i dati dalla colonna).  
   
     -   Se `IRow::GetColumns()` si utilizza, l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto flusso.  
   
-4.  Usare **ISequentialStream:: Read ()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
+4.  Usare ripetutamente **ISequentialStream::Read** per leggere il numero specificato di byte nel buffer del consumer.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare una singola riga mediante IRow. In questo esempio viene recuperata una colonna per volta dalla riga. In questo esempio viene illustrato l'utilizzo di IRow::Open() e di IRow::GetColumns(). Per leggere i dati della colonna, nell'esempio viene utilizzato un oggetto ISequentialStream::Read.  
@@ -670,7 +669,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedure per l'utilizzo di OLE DB](ole-db-how-to-topics.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Procedure per OLE DB](ole-db-how-to-topics.md)  
   
   

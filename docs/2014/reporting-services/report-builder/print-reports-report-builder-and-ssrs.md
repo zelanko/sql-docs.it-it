@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107701"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Stampa di report (Generatore report e SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66107701"
  [Stampare un report &#40;Generatore report e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
  Vengono fornite istruzioni dettagliate su come stampare un report, come controllare i margini di una pagina e come specificare il formato carta per i report di cui verrà eseguito il rendering da renderer di interruzioni di pagina manuali, ovvero PDF, immagine o stampa.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   

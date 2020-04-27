@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109609"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Creare, eliminare o modificare un'origine dei dati condivisa (Gestione report)
@@ -28,14 +28,14 @@ ms.locfileid: "66109609"
   
  L'icona seguente indica un'origine dei dati condivisa nella gerarchia di cartelle di Gestione report:  
   
- ![Icona dell'origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")  
+ ![Icona Origine dati condivisa](media/hlp-16datasource.png "Icona Origine dati condivisa")  
 Icona dell'origine dati condivisa  
   
 ### <a name="to-create-a-shared-data-source"></a>Per creare un'origine dati condivisa  
   
 1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
-2.  In Gestione report passare alla pagina **Contenuto** .  
+2.  In Gestione report passare alla pagina **contenuto** .  
   
 3.  Fare clic su **Nuova origine dati**. Verrà visualizzata la pagina **Nuova origine dati** .  
   
@@ -43,7 +43,7 @@ Icona dell'origine dati condivisa
   
 5.  È possibile digitare facoltativamente una descrizione per fornire agli utenti informazioni sulla connessione. La descrizione verrà visualizzata nella pagina **Contenuto** in Gestione report.  
   
-6.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
+6.  Nell'elenco **tipo di origine dati** specificare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dati.  
   
 7.  Per **Stringa di connessione**specificare la stringa usata dal server di report per la connessione all'origine dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
   
@@ -96,11 +96,11 @@ Icona dell'origine dati condivisa
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
+ [Gestione delle origini dati del report](report-data/manage-report-data-sources.md)   
  [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

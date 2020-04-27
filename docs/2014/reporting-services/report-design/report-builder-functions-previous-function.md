@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105195"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Funzione Previous (Generatore report e SSRS)
@@ -52,7 +52,7 @@ Previous(expression, scope)
   
  Se *Expression* contiene una funzione di aggregazione che usa un ambito `Previous` predefinito, aggrega i dati all'interno dell'istanza precedente dell'ambito specificato nella chiamata di funzione di aggregazione.  
   
- Se *Expression* contiene una funzione di aggregazione che specifica un ambito diverso da quello predefinito ** , il parametro scope `Previous` per la funzione deve essere un ambito contenitore per l'ambito specificato nella chiamata di funzione di aggregazione.  
+ Se *Expression* contiene una funzione di aggregazione che specifica un ambito diverso da quello predefinito *scope* , il parametro scope `Previous` per la funzione deve essere un ambito contenitore per l'ambito specificato nella chiamata di funzione di aggregazione.  
   
  Le funzioni `Level`, `InScope` `Aggregate` e `Previous` non possono essere usate nel parametro *Expression*. Non è possibile specificare il parametro *recursive* per una funzione di aggregazione.  
   

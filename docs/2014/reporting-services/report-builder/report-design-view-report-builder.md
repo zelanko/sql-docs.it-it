@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107693"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
@@ -33,7 +33,7 @@ ms.locfileid: "66107693"
   
  ![ReportDesignView](../media/reportdesignview.gif "ReportDesignView")  
   
-##  <a name="Ribbon"></a>Barra multifunzione  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>Barra multifunzione  
  La barra multifunzione è stata progettata per consentire la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati in gruppi logici, raccolti all'interno di schede. Ogni scheda è correlata a un tipo di attività, ad esempio l'inserimento di elementi del report o la formattazione del testo.  
   
  Nella visualizzazione di progettazione report la barra multifunzione è suddivisa nelle schede Home, Inserisci e Visualizza. Se non è possibile trovare un'attività sulla barra multifunzione, alcuni gruppi della barra multifunzione dispongono di una finestra di dialogo correlata che è possibile aprire facendo clic sulla freccia in basso a destra del gruppo. Non è possibile ridurre a icona o eliminare la barra multifunzione né sostituirla con barre degli strumenti e menu.  
@@ -61,7 +61,7 @@ ms.locfileid: "66107693"
  Per tornare alla visualizzazione di progettazione report, fare clic su **progettazione**nella scheda **Esegui** .  
   
   
-##  <a name="RptDesignSurface"></a>Il report Area di progettazione  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> Area di progettazione del report  
  L'area di progettazione del report di Generatore report è l'area di lavoro principale per la progettazione dei report. Per inserire nel report elementi quali aree dati, sottoreport, caselle di testo, immagini, rettangoli e righe, è necessario aggiungerli dalla barra multifunzione o dalla Raccolta parti del report all'area di progettazione dove è possibile aggiungere gruppi, espressioni, parametri, filtri, azioni, visibilità e formattazione agli elementi del report.  
   
  È inoltre possibile modificare gli elementi seguenti:  
@@ -86,7 +86,7 @@ ms.locfileid: "66107693"
 >  Per visualizzare il righello, nella scheda **Visualizza** selezionare la casella di controllo **Righello**.  
   
   
-##  <a name="ReptDataPane"></a>Riquadro dei dati del report  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a>Riquadro dei dati del report  
  Dal riquadro dei dati del report è possibile definire le risorse e i dati relativi ai report necessari per un report prima di progettare il layout del report. È ad esempio possibile aggiungere origini dati, set di dati, campi calcolati, parametri del report e immagini al riquadro dei dati del report.  
   
  Dopo avere aggiunto elementi al riquadro dei dati del report, trascinare i campi negli elementi del report dell'area di progettazione per verificare in che punto del report vengono visualizzati i dati.  
@@ -113,7 +113,7 @@ ms.locfileid: "66107693"
 -   [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a>Raccolta parti del report  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a>Raccolta parti del report  
  Il modo più semplice per creare un report consiste nell'individuare una parte del report esistente, ad esempio una tabella o un grafico, nel server di report o in un server di report integrato in un sito di SharePoint. È possibile cercare le parti del report da aggiungere al report nella relativa raccolta. Le parti del report possono essere filtrate in base al nome completo o parziale della relativa parte, all'autore di quest'ultima, all'utente che vi ha apportato l'ultima modifica, alla data dell'ultima modifica, alla posizione in cui è archiviata o in base al tipo di parte del report. Ad esempio, è possibile cercare tutti i grafici creati nell'ultima settimana da parte di uno dei colleghi.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "66107693"
  È possibile visualizzare i risultati della ricerca come anteprime o come elenco e ordinare i risultati della ricerca in base al nome, alle date di creazione e di modifica e all'autore. Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a>Riquadro proprietà (Generatore report)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> Riquadro Proprietà (Generatore report)  
  A ogni elemento di un report, inclusi il corpo del report stesso, le aree dati, le immagini e le caselle di testo, sono associate proprietà. La proprietà BorderColor di una casella di testo indica, ad esempio, il valore del colore del bordo della casella di testo, mentre la proprietà PageSize del report indica le dimensioni di pagina del report.  
   
  Queste proprietà vengono visualizzate nel riquadro Proprietà e variano a seconda dell'elemento del report selezionato.  
@@ -148,10 +148,10 @@ ms.locfileid: "66107693"
  Nella parte superiore del riquadro Proprietà sono disponibili tre pulsanti, ovvero Per categoria, Per nome e Pagine delle proprietà. Fare clic sui pulsanti Categoria e Ordine alfabetico per passare da una vista all'altra del riquadro Proprietà. Fare clic sul pulsante **Pagine delle proprietà** per aprire la finestra di dialogo delle proprietà per l'elemento del report selezionato.  
   
   
-##  <a name="GroupPane"></a>Riquadro di raggruppamento (Generatore report)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> Riquadro di raggruppamento (Generatore report)  
  I gruppi vengono utilizzati per organizzare i dati del report in una gerarchia visiva e per calcolare i totali. È possibile visualizzare i gruppi di righe e di colonne inclusi in un'area dati nell'area di progettazione e nel riquadro di raggruppamento. Il riquadro di raggruppamento dispone di due riquadri: Gruppi di righe e Gruppi di colonne. Quando si seleziona un'area dati, nel riquadro di raggruppamento vengono visualizzati tutti i gruppi inclusi in tale area dati sotto forma di elenco gerarchico: i gruppi figlio vengono visualizzati rientrati sotto i relativi gruppi padre.  
   
- ![Riquadro di raggruppamento per gruppi di righe e di colonne nidificati](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne nidificati")  
+ ![Riquadro di raggruppamento per gruppi di righe e di colonne annidati](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne annidati")  
   
  È possibile creare gruppi trascinando i campi dal riquadro dei dati del report e rilasciandoli sull'area di progettazione o nel riquadro di raggruppamento. Nel riquadro di raggruppamento è possibile aggiungere gruppi padre, adiacenti e figlio, modificare le proprietà di gruppo ed eliminare gruppi.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66107693"
  Per altre informazioni, vedere [Riquadro di raggruppamento &#40;Generatore report&#41;](../report-design/grouping-pane-report-builder.md) e [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a>Visualizzazione in anteprima del report in modalità di esecuzione  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> Anteprima del report in modalità di esecuzione  
  Nella visualizzazione di progettazione report non si utilizzano i dati effettivi ma una rappresentazione degli stessi indicati tramite il nome del campo o l'espressione. Per vedere i dati effettivi nel contesto del report progettato, è possibile eseguire il report per visualizzare l'anteprima dei dati recuperati dal database sottostante visualizzato nel layout del report. È possibile passare dalla modalità progettazione a quella di esecuzione e viceversa per modificare la progettazione del report e visualizzarne i risultati immediatamente. Per visualizzare l'anteprima del report, fare clic su **Esegui** nel gruppo **viste** sulla barra multifunzione.  
   
  Quando si fa clic su **Esegui**, Generatore report si connette alle origini dati del report, memorizza i dati nella cache del computer, combina i dati e il layout ed esegue il rendering del report nel visualizzatore HTML. In fase di progettazione è possibile eseguire il report in qualsiasi momento. Dopo aver completato la progettazione del report e aver ottenuto il risultato desiderato, è possibile salvare il report nel server di report da cui gli utenti che dispongono delle autorizzazioni adeguate potranno visualizzarlo.  
@@ -172,8 +172,8 @@ ms.locfileid: "66107693"
  Quando un report visualizzato in anteprima in modalità di esecuzione assomiglia a un report prodotto in HTML. L'anteprima non è in formato HTML, ma il layout e la paginazione del report sono simili a quelli dell'output HTML. Se si passa alla modalità anteprima di stampa, è possibile visualizzare la rappresentazione del report stampato. Fare clic sul pulsante **Anteprima di stampa** nella scheda **Esegui** . Il report verrà visualizzato come se si trovasse in una pagina fisica. Questa visualizzazione assomiglia all'output generato dalle estensioni per il rendering delle immagini e PDF. L'anteprima di stampa non è un'immagine, né un file PDF, ma l'impaginazione e il layout del report sono simili a quelli dell'output in questi formati.  
   
   
-## <a name="see-also"></a>Vedere anche  
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Generatore report in SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

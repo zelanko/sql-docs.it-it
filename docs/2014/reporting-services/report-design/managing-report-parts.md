@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105593"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
@@ -78,7 +78,7 @@ ms.locfileid: "66105593"
 |Azioni|Ruolo|  
 |-------------|----------|  
 |Aggiunta, eliminazione, modifica delle proprietà dell'elemento, gestione della sicurezza e download di parti del report|Controllo completo|  
-|Aggiunta, eliminazione, modifica delle proprietà dell'elemento e download di parti del report|Progettazione<br /><br /> Contribuire|  
+|Aggiunta, eliminazione, modifica delle proprietà dell'elemento e download di parti del report|Progettazione<br /><br /> Collaborazione|  
 |Esecuzione di ricerche e riutilizzo|Lettura<br /><br /> Solo visualizzazione|  
   
 ### <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
@@ -90,8 +90,8 @@ ms.locfileid: "66105593"
   
 -   Le parti di report usano gli stessi criteri di autorizzazione del tipo di elemento risorsa esistente. Dal punto di vista dell'ereditarietà della sicurezza, all'interno di una cartella non esiste alcuna differenza tra gli elementi risorsa tradizionali e le parti di report. La parte del report eredita gli stessi criteri di autorizzazione delle immagini presenti nella stessa cartella. Quando occorre fare distinzione, è possibile configurare la sicurezza a livello di elemento per le parti del report desiderate. In alternativa, le parti del report devono essere posizionate in cartelle separate con le autorizzazioni desiderate configurate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Parti del report e set di dati in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Parti del report e set di impostazioni in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Pagina delle proprietà generale, parti del report &#40;Gestione report&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Pagina Sposta elementi &#40;Gestione report&#41;](../move-items-page-report-manager.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

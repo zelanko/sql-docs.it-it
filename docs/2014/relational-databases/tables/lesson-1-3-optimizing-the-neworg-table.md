@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110069"
 ---
 # <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
@@ -95,7 +95,7 @@ ms.locfileid: "66110069"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     Indice **EmployeeID**-First: le righe vengono archiviate nella sequenza **EmployeeID** .  
+     **Indice EmployeeID**-first: le righe vengono archiviate nella sequenza di **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

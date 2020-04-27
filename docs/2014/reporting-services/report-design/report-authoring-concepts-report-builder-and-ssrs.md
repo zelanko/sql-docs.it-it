@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105306"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concetti relativi alla creazione di report (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105306"
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  Vengono descritti due approcci diversi per definire le connessioni alle origini dati utilizzate nei report, nei modelli di report e nelle sottoscrizioni guidate dai dati.  
   
- [Set di DataSet incorporati e condivisi &#40;Generatore report e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Vengono illustrate le differenze nella creazione, archiviazione e gestione di set di dati incorporati e condivisi.  
   
  [Aree dati e mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "66105306"
  [Concetto dei parametri di report &#40;Generatore report e SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
  Vengono descritte le modalità in cui definire e utilizzare i parametri del report e come questi vengono gestiti in modo indipendente dalla definizione del report nel server di report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Generatore report in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)  
   
   

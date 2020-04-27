@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109415"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Pagina delle proprietà Origini dati (Gestione report)
@@ -31,7 +31,7 @@ ms.locfileid: "66109415"
   
 2.  Passare con il puntatore del mouse sul report, quindi fare clic sulla freccia a discesa.  
   
-3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **Generale** per il report.  
+3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **generale** per il report.  
   
 4.  Selezionare la scheda **Origini dati** .  
   
@@ -93,9 +93,9 @@ ms.locfileid: "66109415"
  **Applica**  
  Fare clic per salvare le modifiche.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
- [Specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Gestione delle origini dati del report](report-data/manage-report-data-sources.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

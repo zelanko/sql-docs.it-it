@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 936dd10df3beb1f78e39abad2e075c5f6306bb30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108295"
 ---
 # <a name="map-f1-help"></a>Eseguire il mapping della Guida
   Negli argomenti di questa sezione vengono fornite informazioni sulle opzioni che è possibile impostare in un elemento di report mappa.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

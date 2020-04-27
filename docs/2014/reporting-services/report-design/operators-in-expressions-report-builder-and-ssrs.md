@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105496"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatori nelle espressioni (Generatore report e SSRS)
@@ -31,8 +31,7 @@ ms.locfileid: "66105496"
 |^|Eleva un numero alla potenza di un altro numero.|  
 |*|Moltiplica due numeri.|  
 |/|Divide due numeri e restituisce un risultato a virgola mobile.|  
-|
-  \|Divide due numeri e restituisce un risultato intero.|  
+|\|Divide due numeri e restituisce un risultato intero.|  
 |Mod|Restituisce il resto intero di una divisione, ad esempio 7 Mod 5 = 2 perché il resto di 7 diviso 5 è 2.|  
 |+|Somma due numeri.|  
 |-|Restituisce la differenza tra due numeri o indica il valore negativo di un termine numerico.|  
@@ -48,7 +47,7 @@ ms.locfileid: "66105496"
 |>=|Maggiore o uguale a.|  
 |=|Uguale a.|  
 |<>|Diverso da.|  
-|Come|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> Di seguito sono elencati i caratteri che è possibile utilizzare come caratteri jolly:<br /><br /> **%**: Qualsiasi stringa di zero o più caratteri.<br /><br /> **_**: Qualsiasi carattere singolo.<br /><br /> **[]**: Qualsiasi carattere singolo compreso nell'intervallo specificato (ad esempio, [a-f]) o set (ad esempio, [aeiou]).<br /><br /> **[^]**: Qualsiasi carattere singolo non compreso nell'intervallo specificato (ad esempio, [^ a-f]) o set (ad esempio, [^ aeiou]).|  
+|Simile a|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> Di seguito sono elencati i caratteri che è possibile utilizzare come caratteri jolly:<br /><br /> **%**: Qualsiasi stringa di zero o più caratteri.<br /><br /> **_**: Qualsiasi carattere singolo.<br /><br /> **[]**: Qualsiasi carattere singolo compreso nell'intervallo specificato (ad esempio, [a-f]) o set (ad esempio, [aeiou]).<br /><br /> **[^]**: Qualsiasi carattere singolo non compreso nell'intervallo specificato (ad esempio, [^ a-f]) o set (ad esempio, [^ aeiou]).|  
 |Is|Confronta due riferimenti a oggetti.|  
   
 ### <a name="string-concatenation"></a>Concatenazione di stringhe  
@@ -64,7 +63,7 @@ ms.locfileid: "66105496"
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|E|Esegue una congiunzione logica di due espressioni booleane oppure una congiunzione bit per bit di due espressioni numeriche.|  
+|e|Esegue una congiunzione logica di due espressioni booleane oppure una congiunzione bit per bit di due espressioni numeriche.|  
 |Not|Esegue una negazione logica di un'espressione booleana oppure una negazione bit per bit di un'espressione numerica.|  
 |Oppure|Esegue una disgiunzione logica di due espressioni booleane oppure una disgiunzione bit per bit di due valori numerici.|  
 |Xor|Esegue un'operazione di esclusione logica di due espressioni booleane oppure un'esclusione bit per bit di due espressioni numeriche.|  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109684"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
@@ -36,10 +36,10 @@ ms.locfileid: "66109684"
  [Lezione 1: Creazione di un database di esempio del Sottoscrittore](lesson-1-creating-a-sample-subscriber-database.md)  
  In questa lezione verranno descritte le procedure per la creazione di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale che contiene informazioni sui Sottoscrittori.  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lezione 2: Modifica delle proprietà dell'origine dati del report](lesson-2-modifying-the-report-data-source-properties.md)  
  In questa lezione verranno descritte le procedure per la modifica delle proprietà dell'origine dati del report in modo che il report possa essere eseguito automaticamente. Le credenziali archiviate sono necessarie per l'elaborazione automatica. Inoltre, verrà modificato il set di dati del report per includere un parametro fornito dai dati del sottoscrittore.  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lezione 3: Definizione di una sottoscrizione guidata dai dati](lesson-3-defining-a-data-driven-subscription.md)  
  In questa lezione verranno descritte le procedure per la definizione di una sottoscrizione guidata dai dati. In questa lezione viene introdotta la procedura guidata che consente di eseguire in modo semplificato i passaggi necessari per creare sottoscrizioni guidate dai dati.  
   
 ## <a name="requirements"></a>Requisiti  

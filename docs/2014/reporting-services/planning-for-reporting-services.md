@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3a4dc8e890f2b23319afcc02c628410d5264c6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108023"
 ---
 # <a name="planning"></a>Pianificazione
-  Usare questi argomenti per comprendere [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]meglio. Informazioni su come installare e configurare l'ambiente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nel modo più adatto per le proprie esigenze.  
+  In questi argomenti vengono fornite informazioni su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Informazioni su come installare e configurare l'ambiente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nel modo più adatto per le proprie esigenze.  
   
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **generale Reporting Services pianificazione e architettura delle funzionalità**  
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Pianificazione e architettura generale della funzionalità Reporting Services**  
  [Pianificazione del supporto per Reporting Services e Power View browser &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  [Pianificare la progettazione e la distribuzione dei report &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
@@ -29,8 +29,8 @@ ms.locfileid: "66108023"
   
  [Confrontare le funzionalità di Business Intelligence in diversi ambienti Microsoft](../../2014/reporting-services/compare-business-intelligence-capabilities-in-different-microsoft-environments.md)  
   
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Reporting Services installazione**  
- [Server di report di Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)  
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Configurazione di Reporting Services**  
+ [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
   
  [Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   

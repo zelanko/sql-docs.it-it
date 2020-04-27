@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105595"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Visualizzazione delle intestazioni durante lo scorrimento di un report (Generatore report e SSRS)
@@ -50,11 +50,11 @@ ms.locfileid: "66105595"
   
 1.  Nell'area di progettazione fare clic in un punto qualsiasi della tabella per visualizzare i membri statici e i gruppi, nel riquadro di raggruppamento.  
   
-     ![Riquadro di raggruppamento](../media/grouppane-updated.png "riquadro di raggruppamento")  
+     ![Riquadro di raggruppamento](../media/grouppane-updated.png "Riquadro di raggruppamento")  
   
      Nel riquadro Gruppi di righe vengono visualizzati i membri statici e dinamici gerarchici per la gerarchia di gruppi di righe, mentre nel riquadro Gruppi di colonne è riportata una visualizzazione simile per la gerarchia di gruppi di colonne.  
   
-2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso e quindi fare clic su **modalità avanzata**.  
+2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**.  
   
 3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   

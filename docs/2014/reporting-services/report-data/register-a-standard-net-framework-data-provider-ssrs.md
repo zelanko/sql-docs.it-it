@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107145"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
   Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  
   
- I provider di dati di terze parti possono non offrire tutte le funzionalità disponibili nelle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Per informazioni sull'estensione della funzionalità di un[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provider di dati, vedere [implementazione di un'estensione per l'elaborazione dati](../extensions/data-processing/implementing-a-data-processing-extension.md).  
+ I provider di dati di terze parti possono non offrire tutte le funzionalità disponibili nelle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Per informazioni sull'estensione della funzionalità di un[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provider di dati , vedere [Implementazione di un'estensione per l'elaborazione dati](../extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Per installare e registrare i provider di dati è necessario disporre di credenziali di amministratore.  
   
@@ -196,12 +196,11 @@ ms.locfileid: "66107145"
 ## <a name="platform-considerations"></a>Considerazioni relative alla piattaforma  
  In una piattaforma a 64 bit (x64) [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] viene eseguito in modalità WOW a 32 bit. Quando si creano report su una piattaforma x64, per visualizzarne l'anteprima è necessario che i provider di dati a 32 bit siano installati nel client per la creazione di report. Se si pubblica il report sul medesimo sistema, per poterlo visualizzare in Gestione report saranno necessari i provider di dati x64.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] non è supportato per le piattaforme con processore [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] non è supportato per le piattaforme con processore [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
  Le estensioni per l'elaborazione dati installate con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere compilate in modo nativo per ogni piattaforma e installate nei percorsi corretti. Se si registra un provider di dati personalizzato o un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, sarà necessario compilarlo in modo nativo per la piattaforma appropriata e installarlo nei percorsi adeguati. Se si esegue una piattaforma a 32 bit, il provider di dati deve essere compilato per tale tipo di piattaforma. Se si esegue una piattaforma a 64 bit, il provider di dati deve essere invece compilato di conseguenza per tale tipo di piattaforma. Non è possibile utilizzare un provider di dati a 32 bit di cui è stato eseguito il wrapping con interfacce a 64 bit su una piattaforma a 64 bit. Per informazioni relative al funzionamento del provider di dati sulla piattaforma installata, vedere la documentazione del software di terze parti. Per altre informazioni sui provider di dati e sulle piattaforme supportate, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Implementazione di un'estensione per l'elaborazione dati](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [File di configurazione di Reporting Services](../report-server/reporting-services-configuration-files.md)   

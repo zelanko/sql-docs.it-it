@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107595"
 ---
 # <a name="start-report-builder-report-builder"></a>Avviare Generatore report (Generatore report).
@@ -36,7 +36,7 @@ ms.locfileid: "66107595"
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Per avviare Generatore report ClickOnce da Gestione report  
   
-1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. L'URL predefinito è http://\<*nomeserver*>/reports. Verrà aperto Gestione report.  
+1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. Per impostazione predefinita, l'URL è\<http://*nomeserver*>/Reports. Verrà aperto Gestione report.  
   
 2.  Fare clic su **Generatore report**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66107595"
   
      Se il server di report non è visibile nell'elenco di server esistenti, chiudere la finestra di dialogo **Apri report** , quindi fare clic su **Connetti** nella parte inferiore di Generatore report per connettersi al server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Generatore report in SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

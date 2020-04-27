@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107870"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report in Gestione report (Generatore report e SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66107870"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navigazione della gerarchia delle cartelle in Gestione report  
- Per individuare i report che si desidera eseguire, è possibile utilizzare la Home page, visualizzata automaticamente quando si avvia Gestione report e quando si apre una qualsiasi cartella nella gerarchia delle cartelle. Nella Home page vengono visualizzati solo gli elementi per i quali si dispone delle autorizzazioni per la visualizzazione. Il percorso delle cartelle viene invece indicato come sequenza di collegamenti nella parte superiore della Home page. I nomi delle cartelle sono elencati in sequenza a partire dalla cartella radice (Home). Quando si apre un'altra cartella, il nome di tale cartella viene aggiunto al percorso indicato nella parte superiore della pagina. **(1)** nell'immagine seguente. Se si apre un report, anche il nome del report viene aggiunto al percorso della cartella.  
+ Per individuare i report che si desidera eseguire, è possibile utilizzare la Home page, visualizzata automaticamente quando si avvia Gestione report e quando si apre una qualsiasi cartella nella gerarchia delle cartelle. Nella Home page vengono visualizzati solo gli elementi per i quali si dispone delle autorizzazioni per la visualizzazione. Il percorso delle cartelle viene invece indicato come sequenza di collegamenti nella parte superiore della Home page. I nomi delle cartelle sono elencati in sequenza a partire dalla cartella radice (Home). Quando si apre un'altra cartella, il nome di tale cartella viene aggiunto al percorso indicato nella parte superiore della pagina. **(1)** nell'immagine illustrata di seguito. Se si apre un report, anche il nome del report viene aggiunto al percorso della cartella.  
   
  ![Barra multifunzione e navigazione in Gestione report](../media/rs-reportmanager-ribbon.gif "Barra multifunzione e navigazione in Gestione report")  
 Barra multifunzione di Gestione report  
@@ -54,7 +54,7 @@ Barra multifunzione di Gestione report
   
 -   Per cercare testo specifico all'interno di un report, utilizzare la barra degli strumenti nella parte superiore del report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

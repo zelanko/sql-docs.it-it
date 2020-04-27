@@ -13,18 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5b8cc62556749a310f8c11a5efcae32eafbd8ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108613"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
   In questo argomento vengono descritte le parti della stringa URL per il servizio Web ReportServer e per Gestione report. La stringa URL archiviata internamente ha una struttura diversa da un URL digitato nella barra degli indirizzi di una finestra del browser. La stringa della prenotazione URL viene visualizzata nella finestra Risultati dello strumento di configurazione di Reporting Services quando si configura un URL e nel file RSReportServer.config. Conoscere il modo in cui è definita la stringa URL può risultare utile ai fini della risoluzione dei problemi relativi alle prenotazioni URL o per eseguire una query su HTTP.SYS per visualizzare le prenotazioni URL interne definite nel server.  
   
 ## <a name="url-syntax"></a>Sintassi URL  
- L'URL di un server di report viene archiviato negli elementi `UrlString` e `VirtualDirectory`. 
-  `UrlString` e `VirtualDirectory` sono separati in elementi distinti per fornire più stringhe URL ma un solo nome della directory virtuale per ogni applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ L'URL di un server di report viene archiviato negli elementi `UrlString` e `VirtualDirectory`. `UrlString` e `VirtualDirectory` sono separati in elementi distinti per fornire più stringhe URL ma un solo nome della directory virtuale per ogni applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  In HTTP.SYS la prenotazione URL include sia `UrlString` che `VirtualDirectory`. La sintassi per una prenotazione URL include le parti seguenti:  
   

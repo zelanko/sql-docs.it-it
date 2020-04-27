@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108563"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà legenda, Generale (Generatore report e SSRS)
@@ -30,15 +30,15 @@ ms.locfileid: "66108563"
  **Layout**  
  Selezionare un'opzione per impostare il layout della legenda. Il layout predefinito della legenda è Tabella automatica.  
   
--   **Tabella alta** Visualizza il contenuto della legenda in una tabella. Le voci della legenda verranno aggiunte in modo da espandere la legenda in senso verticale.  
+-   **Tabella estesa in altezza** Il contenuto della legenda viene visualizzato in una tabella. Le voci della legenda verranno aggiunte in modo da espandere la legenda in senso verticale.  
   
--   **Colonna** di Visualizza il contenuto della legenda in un'unica colonna.  
+-   **Colonna** Il contenuto della legenda viene visualizzato in un'unica colonna.  
   
--   **Riga** di Visualizza il contenuto della legenda in un'unica riga.  
+-   **Riga** Il contenuto della legenda viene visualizzato in un'unica riga.  
   
--   **Tabella estesa** Visualizza il contenuto della legenda in una tabella. Le voci della legenda verranno aggiunte in modo da espandere la legenda in senso orizzontale.  
+-   **Tabella estesa in larghezza** Il contenuto della legenda viene visualizzato in una tabella. Le voci della legenda verranno aggiunte in modo da espandere la legenda in senso orizzontale.  
   
--   **Tabella automatica** Visualizza il contenuto della legenda in una tabella. Le voci della legenda verranno aggiunte in modo da espandere la legenda in senso orizzontale o verticale a seconda dello spazio disponibile nel grafico.  
+-   **Tabella automatica** Il contenuto della legenda viene visualizzato in una tabella. Le voci della legenda verranno aggiunte in modo da espandere la legenda in senso orizzontale o verticale a seconda dello spazio disponibile nel grafico.  
   
  **Ancora ad area grafico**  
  Selezionare questa opzione per associare la legenda a un'area del grafico.  
@@ -46,12 +46,12 @@ ms.locfileid: "66108563"
  **Mostra legenda al di fuori dell'area del grafico**  
  Selezionare questa opzione per visualizzare la legenda al di fuori dell'area del grafico. Questa opzione è applicabile solo quando la legenda è ancorata a un'area del grafico.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Definire i colori in un grafico utilizzando una tavolozza &#40;Generatore report e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

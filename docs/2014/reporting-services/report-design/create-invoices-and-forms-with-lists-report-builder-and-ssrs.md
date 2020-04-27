@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106145"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Elenchi (Generatore report e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106145"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a>Aggiunta di un elenco al report  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>Aggiunta di un elenco al report  
  Aggiungere un elenco all'area di progettazione dalla scheda Inserisci sulla barra multifunzione. Per impostazione predefinita, l'elenco contiene inizialmente una sola cella in una riga associata al gruppo di dettagli.  
   
  ![Elemento del report del nuovo elenco nell'area di progettazione](../media/rs-listtemplatenew.gif "Elemento del report del nuovo elenco nell'area di progettazione")  
@@ -43,7 +43,7 @@ ms.locfileid: "66106145"
   
 
   
-##  <a name="DisplayingLayout"></a>Visualizzazione di dati in un layout in formato libero  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> Visualizzazione dei dati in un layout in formato libero  
  Per organizzare i dati del report in un layout in formato libero anziché in una griglia, è possibile aggiungere un elenco all'area di progettazione. Trascinare i campi dal riquadro dei dati del report alla cella. Per impostazione predefinita, la cella contiene un rettangolo utilizzato come contenitore. Spostare ogni campo nel contenitore fino a ottenere la progettazione desiderata. Utilizzare le guide di allineamento che appaiono quando le caselle di testo vengono trascinate nel contenitore del rettangolo per consentire l'allineamento verticale e orizzontale dei bordi. Rimuovere lo spazio vuoto indesiderato modificando la dimensione della cella. Per altre informazioni, vedere [Modificare l'altezza di riga o la larghezza di colonna &#40;Generatore report e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  Nella figura seguente viene riportato un elenco che include informazioni su un ordine, oltre ai campi Date, Order, Qty, Product, LineTotal e a un'immagine.  
@@ -59,20 +59,20 @@ ms.locfileid: "66106145"
   
 
   
-##  <a name="DisplayingGrouping"></a>Visualizzazione di dati con un livello di raggruppamento  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> Visualizzazione dei dati con un livello di raggruppamento  
  Poiché fornisce automaticamente un contenitore, è possibile utilizzare un elenco per visualizzare dati raggruppati con più viste. Per modificare l'elenco predefinito per specificare un gruppo, modificare il gruppo di dettagli, quindi specificare un nuovo nome e un'espressione di raggruppamento.  
   
  È possibile, ad esempio, incorporare una tabella e un grafico che mostrano viste diverse dello stesso set di dati. Se si aggiunge un gruppo all'elenco, gli elementi del report nidificati si ripetono una volta per ogni valore del gruppo. Nella figura seguente viene mostrato un elenco raggruppato per categoria di prodotto. Non è presente alcuna riga di dettaglio. Due tabelle vengono nidificate l'una accanto all'altra nell'elenco. Nella prima sono visualizzate le sottocategorie con le vendite totali, nella seconda la categoria raggruppata per area geografica, con un grafico che mostra la distribuzione delle sottocategorie.  
   
- ![Elenco con 2 tabelle di cui una con grafico nidificato](../media/rs-basiclistgroupdesign.gif "Elenco con 2 tabelle di cui una con grafico nidificato")  
+ ![Elenco con 2 tabelle di cui una con grafico annidato](../media/rs-basiclistgroupdesign.gif "Elenco con 2 tabelle di cui una con grafico annidato")  
   
  In Anteprima la tabella riporta le vendite totali per tutte le sottocategorie di biciclette e la tabella accanto visualizza la suddivisione di vendite per area geografica. Attraverso un'espressione che consente di specificare il colore di sfondo per la tabella e una tavolozza personalizzata per il grafico, la prima tabella include anche la legenda dei colori del grafico.  
   
- ![Anteprima, 2 tabelle di cui una con grafico nidificato](../media/rs-basiclistgrouppreview.gif "Anteprima, 2 tabelle di cui una con grafico nidificato")  
+ ![Anteprima, 2 tabelle di cui una con grafico annidato](../media/rs-basiclistgrouppreview.gif "Anteprima, 2 tabelle di cui una con grafico annidato")  
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

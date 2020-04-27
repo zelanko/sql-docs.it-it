@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107043"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
@@ -126,10 +126,10 @@ ms.locfileid: "66107043"
   
  In queste situazioni il server di report si connette a un'origine dei dati remota tramite l'account di esecuzione automatica che è necessario definire a priori. Poiché il server di report non si connette a un server remoto tramite le relative credenziali del servizio, è necessario specificare un account che il server di report può utilizzare per eseguire la connessione. Per altre informazioni sulla creazione di questo account, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a>Configurazione origine dati e connessioni di rete  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configurazione dell'origine dei dati e connessioni di rete  
  Nella tabella seguente viene illustrato come vengono eseguite le connessioni per combinazioni specifiche di tipi di credenziali ed estensioni per l'elaborazione dati. Se si usa un'estensione per l'elaborazione dati personalizzata, vedere [Specificare le connessioni per le estensioni per l'elaborazione dati personalizzate](specify-connections-for-custom-data-processing-extensions.md).  
   
-|**Tipo**|**Contesto per la connessione di rete**|**Tipi di origini dati**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
+|**Type**|**Contesto per la connessione di rete**|**Tipi di origine dei dati**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |sicurezza integrata|Rappresenta l'utente corrente|Per tutti i tipi di origine dei dati, la connessione viene eseguita tramite l'account utente corrente.|  
 |Credenziali di Windows|Rappresenta l'utente specificato|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB la connessione viene eseguita tramite l'account utente rappresentato.|  
@@ -139,10 +139,10 @@ ms.locfileid: "66107043"
 ## <a name="setting-credentials-programmatically"></a>Impostazione di credenziali a livello di programmazione  
  È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [Origini dati e metodi di connessione](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Gestire origini dati dei report](../../integration-services/connection-manager/data-sources.md)   
+ [Gestione delle origini dati del report](../../integration-services/connection-manager/data-sources.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](configure-data-source-properties-for-a-report-report-manager.md)  

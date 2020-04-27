@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109174"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Esportare un report in un altro tipo di file (Generatore report e SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66109174"
   
 4.  Selezionare il formato che si desidera usare.  
   
-5.  Fare clic su **Esporta**.  
+5.  Fare clic su **esportare**.  
   
      Verrà visualizzato un messaggio in cui si chiede se si desidera aprire o salvare il file.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109174"
   
      Il report verrà visualizzato o salvato con l'applicazione associata al formato scelto. Se si fa clic su **Salva**, verrà richiesto di specificare un percorso in cui salvare il report.  
   
-     **Nota** Se il programma non è in grado di aprire il report nel formato scelto perché non è disponibile un programma associato a questo tipo di file, verrà richiesto di salvare il report esportato o di trovare un programma online per aprire il report.  
+     **Nota** Se non è possibile aprire il report nel formato selezionato perché non è stato associato alcun programma a questo tipo di file, verrà richiesto di salvare il report esportato o di individuare un programma online con cui aprirlo.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>Per esportare un report in un altro tipo di file in una raccolta di SharePoint.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "66109174"
   
      Se lo si desidera, modificare il nome del file del report esportato.  
   
-     **Nota** Se il programma non è in grado di aprire il report nel formato scelto perché non è disponibile un programma associato a questo tipo di file, verrà richiesto di salvare il report esportato o di trovare un programma online per aprire il report.  
+     **Nota** Se non è possibile aprire il report nel formato selezionato perché non è stato associato alcun programma a questo tipo di file, verrà richiesto di salvare il report esportato o di individuare un programma online con cui aprirlo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esportazione di report &#40;Generatore report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  

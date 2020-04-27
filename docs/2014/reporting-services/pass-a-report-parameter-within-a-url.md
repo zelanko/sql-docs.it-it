@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108105"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
@@ -26,7 +26,7 @@ ms.locfileid: "66108105"
 > [!IMPORTANT]  
 >  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
 >   
->  Se non si include la sintassi del proxy, è necessario anteporre al parametro il prefisso *rp:* .  
+>  Se non si include la sintassi del proxy, è necessario anteporre al parametro il prefisso *RP:*.  
   
  Tutti i parametri di query possono disporre di parametri di report corrispondenti. Passare un parametro di query a un report passando il parametro di report corrispondente. Per altre informazioni, vedere [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Se il report contiene un parametro del report con un valore predefinito e il valore della proprietà `Prompt` è `false` (ovvero la proprietà Richiesta all'utente non è selezionata in Gestione report), non è possibile passare un valore per tale parametro in un URL. In questo modo, gli amministratori possono impedire agli utenti finali di aggiungere o modificare i valori di determinati parametri dei report.  
   
-##  <a name="bkmk_examples"></a> Esempi aggiuntivi  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Esempi aggiuntivi  
  Nell'esempio di URL seguente sono inclusi spazi e più parametri  
   
 -   Nel nome della cartella "SQL Server User Education Team" sono inclusi spazi che vengono sostituiti dal carattere "+".  
@@ -99,13 +99,13 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- Nell'esempio di URL seguente viene passato un singolo parametro *SellStartDate* con un valore "7/1/2005", per un server di report in modalità nativa.  
+ Nell'esempio di URL seguente viene passato un singolo parametro di *SellStartDate* con il valore "7/1/2005", per un server di report in modalità nativa.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Accesso con URL &#40;SSRS&#41;](url-access-ssrs.md)   
  [Riferimento ai parametri di accesso con URL](url-access-parameter-reference.md)  
   

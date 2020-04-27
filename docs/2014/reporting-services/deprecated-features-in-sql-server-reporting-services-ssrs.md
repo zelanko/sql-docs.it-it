@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109347"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2014
@@ -27,18 +27,18 @@ ms.locfileid: "66109347"
   
  In questo argomento  
   
--   [SQL Server 2014 Reporting Services funzionalità deprecate](#bkmk_2014)  
+-   [Funzionalità deprecate in SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Funzionalità deprecate di SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services funzionalità deprecate](#bkmk_2012)  
+-   [Funzionalità deprecate in SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Funzionalità deprecate di SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services funzionalità deprecate  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services funzionalità deprecate  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Funzionalità non supportate nella prossima versione di SQL Server  
- Le funzionalità [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seguenti non saranno supportate nella **prossima** versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate.  
+ Le funzionalità riportate di seguito di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non saranno supportate nella **prossima** versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering HTML  
  Le seguenti impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering HTML sono deprecate.  
@@ -99,7 +99,7 @@ ms.locfileid: "66109347"
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono state deprecate funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services funzionalità deprecate  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services funzionalità deprecate  
  In questa sezione si descrivono le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deprecate in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Le funzionalità seguenti del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportate nella versione successiva di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ma in seguito verranno rimosse. La versione specifica di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non è stata determinata.  
   
 ### <a name="sharepoint-web-parts"></a>Web part di SharePoint  
@@ -107,7 +107,7 @@ ms.locfileid: "66109347"
   
  Per ulteriori informazioni sulle web part deprecate, vedere [Visualizzare ed esplorare i report in modalità nativa utilizzando le web part di SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services funzionalità deprecate  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services funzionalità deprecate  
  In questa sezione si descrivono le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deprecate in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering HTML  
@@ -159,7 +159,7 @@ ms.locfileid: "66109347"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funzionalità deprecate  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funzionalità deprecate  
   
 > [!NOTE]  
 >  Poiché SQL Server 2008 R2 è un aggiornamento secondario della versione di SQL Server 2008, è consigliabile rivedere anche il contenuto nella sezione relativa a SQL Server 2008.  
@@ -169,10 +169,10 @@ ms.locfileid: "66109347"
   
  Nel nuovo endpoint sono incluse tutte le funzionalità disponibili negli endpoint deprecati e le nuove funzionalità introdotte in SQL Server 2008 R2.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Novità &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Compatibilità con le versioni precedenti](../getting-started/backward-compatibility.md)   
  [Modifiche del comportamento a SQL Server Reporting Services in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [Funzionalità non più disponibili di SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

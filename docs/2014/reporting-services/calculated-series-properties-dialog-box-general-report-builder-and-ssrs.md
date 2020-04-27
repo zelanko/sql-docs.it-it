@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109866"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà serie calcolata, Generale (Generatore report e SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66109866"
  **Imposta parametri formula**  
  Specificare i parametri per la formula selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

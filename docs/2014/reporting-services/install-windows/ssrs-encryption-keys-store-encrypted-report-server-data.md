@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108685"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Archiviare i dati crittografati del server di report (Gestione configurazione SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] archivia i valori crittografati nel database del server di report e nei file di configurazione. La maggior parte dei valori crittografati è costituita da credenziali utilizzate per l'accesso a origini dei dati esterne dalle quali vengono recuperati i dati dei report. In questo argomento vengono descritti i valori crittografati, la funzionalità per la crittografia utilizzata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e altri tipi di dati riservati archiviati di cui è importante essere a conoscenza.  
   
 ## <a name="encrypted-values"></a>Valori crittografati  
@@ -33,7 +32,7 @@ ms.locfileid: "66108685"
   
 -   Informazioni per la connessione e credenziali utilizzate da un server di report per la connessione a un database del server di report in cui sono archiviati dati interni del server.  
   
-     Questi valori vengono specificati e crittografati nel corso dell'installazione o della configurazione del server di report. È possibile aggiornare le informazioni sulla connessione in qualsiasi momento usando lo strumento Configurazione di Reporting Services o l'utilità **rsconfig** . La crittografia delle impostazioni di configurazione viene eseguita utilizzando una chiave a livello di computer locale, che è disponibile per tutti gli utenti. Le informazioni per la connessione crittografate del server di report vengono archiviate nel file rsreportserver.config (nessun altro file di configurazione contiene impostazioni crittografate). Per ulteriori informazioni, vedere [configurare una connessione del database del server di Report &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+     Questi valori vengono specificati e crittografati nel corso dell'installazione o della configurazione del server di report. È possibile aggiornare le informazioni sulla connessione in qualsiasi momento usando lo strumento Configurazione di Reporting Services o l'utilità **rsconfig** . La crittografia delle impostazioni di configurazione viene eseguita utilizzando una chiave a livello di computer locale, che è disponibile per tutti gli utenti. Le informazioni per la connessione crittografate del server di report vengono archiviate nel file rsreportserver.config (nessun altro file di configurazione contiene impostazioni crittografate). Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Credenziali archiviate utilizzate da un server di report per la connessione a origini dei dati esterne da cui vengono recuperati i dati di un report.  
   
@@ -50,8 +49,7 @@ ms.locfileid: "66108685"
      Questo valore viene creato durante l'installazione o la configurazione del server, quindi viene archiviato come valore crittografato nel database del server di report. Il servizio Windows ReportServer utilizza questa chiave per crittografare e decrittografare i dati che sono archiviati nel database del server di report.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Funzionalità per la crittografia in Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funzioni di crittografia disponibili nel sistema operativo Windows. Sono supportate sia la crittografia simmetrica sia la crittografia asimmetrica.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funzioni di crittografia disponibili nel sistema operativo Windows. Sono supportate sia la crittografia simmetrica sia la crittografia asimmetrica.  
   
  I dati nel database del server di report vengono crittografati con una chiave simmetrica. È disponibile una sola chiave simmetrica per ogni database del server di report. La chiave simmetrica viene a sua volta crittografata utilizzando la chiave pubblica di una coppia di chiavi asimmetriche generata da Windows. La chiave privata viene mantenuta dall'account del servizio Windows ReportServer.  
   
@@ -64,10 +62,9 @@ ms.locfileid: "66108685"
  In un server di report sono archiviati altri dati non crittografati, che tuttavia possono contenere informazioni riservate che si desidera proteggere. In particolare, gli snapshot delle cronologie dei report e gli snapshot delle esecuzioni dei report contengono risultati di query che possono includere dati destinati solo a utenti autorizzati. Se si utilizzano snapshot per report che contengono dati riservati, è importante tenere presente che gli utenti in grado di aprire le tabelle di un database del server di report potrebbero visualizzare parti di report archiviati esaminando il contenuto della tabella.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta la memorizzazione nella cache o la cronologia del report per i report che usano parametri basati sull'ID di sicurezza dell'utente.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta la memorizzazione nella cache o la cronologia del report per i report che usano parametri basati sull'ID di sicurezza dell'utente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

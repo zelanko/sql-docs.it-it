@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107842"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66107842"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a>Report come feed di dati  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a>Report come feed di dati  
  È possibile esportare un report di produzione come un feed di dati oppure creare un report il cui scopo principale è quello di fornire dati alle applicazioni, sotto forma di feed di dati. L'utilizzo dei report come feed di dati rappresenta un ulteriore modo per fornire dati alle applicazioni quando i dati non sono facilmente accessibili tramite i provider di dati client o quando si preferisce nascondere la complessità dell'origine dati e rendere più semplice l'utilizzo dei dati. Se si usano i dati del report come feed di dati è inoltre possibile avvalersi delle caratteristiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , ad esempio Gestione report, sicurezza, pianificazione e snapshot del report per gestire i report che forniscono i feed di dati.  
   
  Per ottenere il massimo dall'estensione per il rendering Atom, è necessario capire il modo in cui viene eseguito il rendering del report in feed di dati. Se si usano report esistenti, risulta utile essere in grado di stimare i feed di dati che saranno generati dai report, mentre se i report vengono scritti per essere specificatamente usati come feed di dati, la possibilità di includere i dati e ottimizzare il layout del report per aumentare l'utilità dei feed di dati risulta vantaggiosa.  
@@ -41,7 +41,7 @@ ms.locfileid: "66107842"
   
 
   
-##  <a name="AtomServiceDocument"></a>Documento di servizio Atom (file con estensione atomsvc)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a>Documento di servizio Atom (file con estensione atomsvc)  
  Un documento di servizio Atom specifica una connessione a uno o più feed di dati. La connessione è almeno un semplice URL del servizio dati che produce il feed.  
   
  Quando si esegue il rendering dei dati del report tramite l'estensione per il rendering Atom, il documento di servizio Atom elenca i feed di dati disponibili per un report. Nel documento è elencato almeno un feed di dati per ogni area dati nel report. Tabelle e misuratori generano solo un feed di dati ognuno, mentre matrici, elenchi e grafici potrebbero generarne di più a seconda dei dati che visualizzano.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107842"
   
 
   
-##  <a name="DataFeeds"></a>Feed di dati  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> Feed di dati  
  Il feed di dati è un file XML che dispone di un formato tabulare coerente che non cambia nel tempo e di dati variabili che possono essere diversi ogni volta che viene eseguito il report. Il formato dei feed di dati generati da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è uguale a quello dei dati generati da ADO.NET Data Services.  
   
  Un feed di dati contiene due sezioni: intestazione e dati. La specifica Atom definisce gli elementi di ogni sezione. L'intestazione include informazioni quali lo schema di codifica dei caratteri da usare con i feed di dati.  
@@ -126,7 +126,7 @@ ms.locfileid: "66107842"
   
 
   
-##  <a name="FlatteningReportData"></a>Flating dei dati del report  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a>Flating dei dati del report  
  Il renderer Atom fornisce dati del report come i set di righe bidimensionali in un formato XML. Le regole per rendere bidimensionali le tabelle di dati sono uguali a quelle del renderer CSV con alcune eccezioni:  
   
 -   Gli elementi dell'ambito sono resi bidimensionali a livello di dettaglio. A differenza del renderer CSV, le caselle di testo del livello principale vengono visualizzate in ogni voce scritta nel feed di dati.  
@@ -149,7 +149,7 @@ ms.locfileid: "66107842"
   
 
   
-##  <a name="AtomRendering"></a>Regole di rendering Atom  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a>Regole di rendering Atom  
  L'estensione per il rendering Atom ignora le informazioni seguenti quando si esegue il rendering di un feed di dati:  
   
 -   Formattazione e layout  
@@ -172,7 +172,7 @@ ms.locfileid: "66107842"
   
  Nella seguente tabella è indicato l'aspetto degli elementi del report di cui è stato eseguito il rendering:  
   
-|Elemento|Tipo di rendering|  
+|Item|Tipo di rendering|  
 |----------|------------------------|  
 |Tabella|Il rendering viene eseguito mediante l'espansione della tabella e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni. I report drill-through non sono supportati.|  
 |Matrice|Il rendering viene eseguito mediante l'espansione della matrice e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni.|  
@@ -187,12 +187,12 @@ ms.locfileid: "66107842"
   
 
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer, incluso lo schema di codifica da usare. Per altre informazioni, vedere [ATOM Device Information Settings](../atom-device-information-settings.md).  
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esportazione in un file CSV &#40;Generatore report e SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
  [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   

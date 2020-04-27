@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108310"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gestire gli avvisi dati in Gestione avvisi dati
@@ -56,7 +56,7 @@ ms.locfileid: "66108310"
   
 ### <a name="to-delete-an-alert-definition"></a>Per eliminare una definizione di avviso  
   
--   Fare clic con il pulsante destro del mouse sull'avviso dati da eliminare e quindi fare clic su **Elimina**.  
+-   Fare clic con il pulsante destro del mouse sull'avviso dati che si desidera eliminare, quindi scegliere **Elimina**.  
   
      Dopo avere eliminato l'avviso, non verranno inviati ulteriori messaggi di avviso.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "66108310"
   
      L'istanza di avviso viene creata e il messaggio di avviso dati viene inviato immediatamente, indipendentemente dalle opzioni di pianificazione specificate nella finestra di progettazione Avviso dati. Un avviso configurato per essere inviato ogni settimana e solo se i risultati cambiano viene ad esempio inviato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Avvisi dati di Reporting Services](../ssms/agent/alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

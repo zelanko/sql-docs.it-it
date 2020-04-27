@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109585"
 ---
 # <a name="csv-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo CSV
@@ -37,10 +37,10 @@ ms.locfileid: "66109585"
 |**SuppressLineBreaks**|Indica se le interruzioni di riga vengono rimosse dai dati inclusi nell'output. Il valore predefinito è `false`. Se il valore è `true`, le impostazioni `FieldDelimiter`, `RecordDelimiter` e `Qualifier` non possono essere costituite da uno spazio.|  
 |`UseFormattedValues`|Indica se le stringhe formattate vengono inserite nell'output CSV. Il valore predefinito è `true` quando `ExcelMode` è `true`; in caso contrario `false`.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passaggio delle impostazioni delle informazioni sul dispositivo alle estensioni per il rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

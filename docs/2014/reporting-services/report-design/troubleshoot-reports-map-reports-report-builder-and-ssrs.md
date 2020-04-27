@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104641"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe di un report quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a>Problemi relativi alle dimensioni della definizione del report  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a>Problemi relativi alle dimensioni della definizione del report  
  Usare questa sezione per risolvere i problemi relativi alle dimensioni della definizione del report.  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>Informazioni sulla riduzione delle dimensioni della definizione del report.  
@@ -49,7 +49,7 @@ ms.locfileid: "66104641"
   
   
   
-##  <a name="Spatial"></a>Problemi relativi ai dati spaziali  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a>Problemi relativi ai dati spaziali  
  Usare questa sezione per risolvere i problemi relativi ai dati spaziali.  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Nell'area di progettazione, vengono visualizzati dati spaziali di esempio  
@@ -102,7 +102,7 @@ ms.locfileid: "66104641"
   
   
   
-##  <a name="Viewport"></a>Problemi di visualizzazione e centro del viewport  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>Problemi di visualizzazione e centro del viewport  
  Usare questa sezione per risolvere i problemi relativi alle opzioni del viewport.  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Impossibile impostare le opzioni di allineamento al centro e di visualizzazione per un elemento della mappa incorporato.  
@@ -126,7 +126,7 @@ ms.locfileid: "66104641"
   
   
   
-##  <a name="Layers"></a>Problemi relativi ai livelli  
+##  <a name="layer-issues"></a><a name="Layers"></a>Problemi relativi ai livelli  
  Usare questa sezione per risolvere i problemi relativi alle opzioni dei livelli.  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Uno o più livelli della mappa non vengono visualizzati.  
@@ -136,7 +136,7 @@ ms.locfileid: "66104641"
   
 -   **Valori dei campi delle corrispondenze.** I valori dei campi specificati per correlare i dati analitici e quelli spaziali devono identificare in modo univoco ogni elemento della mappa. I campi devono avere dati dello stesso tipo. I valori dei campi devono essere identici. Per altre informazioni, vedere [Problemi relativi alla legenda, alla scala dei colori e alla scala distanza](#Legend).  
   
--   **Ordine del livello.** L'ordine dei livelli nel riquadro Mappa è l'ordine in base al quale i livelli vengono disegnati nel renderer del report. I dati spaziali per i livelli disegnati per primi potrebbero essere sostituiti dai dati spaziali per i livelli disegnati in un secondo momento. I livelli visualizzati all'inizio dell'elenco sono disegnati per primi. La modifica dell'ordine dei livelli nell'elenco comporta il cambiamento dell'ordine di disegno dei livelli.  
+-   **Ordine dei livelli.** L'ordine dei livelli nel riquadro Mappa è l'ordine in base al quale i livelli vengono disegnati nel renderer del report. I dati spaziali per i livelli disegnati per primi potrebbero essere sostituiti dai dati spaziali per i livelli disegnati in un secondo momento. I livelli visualizzati all'inizio dell'elenco sono disegnati per primi. La modifica dell'ordine dei livelli nell'elenco comporta il cambiamento dell'ordine di disegno dei livelli.  
   
 -   **Trasparenza.** La trasparenza può essere specificata in modo indipendente per ogni livello mappa. I valori predefiniti per la trasparenza sono diversi in base alla modalità di aggiunta di un livello. Una trasparenza pari allo 0% significa che il livello è opaco e che nessun altro dato del livello sarà visibile attraverso di esso. Affinché gli altri dati siano visibili attraverso un livello esistente, regolare il valore su una percentuale superiore che consente di ottenere l'effetto desiderato.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66104641"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Nonostante l'impostazione di un filtro sul livello mappa, non si riscontra alcun effetto.  
  Per filtrare i dati per un livello, è necessario specificare il tipo di dati nell'espressione di filtro. Verificare che sia stato specificato il tipo di dati sottostanti corretto in modo che l'equazione di filtro valuti correttamente la condizione specificata. Per altre informazioni, vedere [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a>Problemi relativi alla legenda, alla scala dei colori e alle regole  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> Problemi relativi alla legenda, alla scala dei colori e alle regole  
  Usare questa sezione per risolvere i problemi relativi alle opzioni delle regole, della legenda e della scala dei colori.  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>Informazioni sul controllo dei valori nella legenda della mappa.  
@@ -172,8 +172,7 @@ ms.locfileid: "66104641"
 -   Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>Informazioni sul valore NaN della scala dei colori.  
- 
-  `NaN` è l'acronimo di Not a Number (diverso da un numero). Si presuppone che i valori delle scale dei colori siano numerici. Verificare le impostazioni di distribuzione e il valore del testo della legenda per le regole associate alla scala dei colori. Se sono stati creati intervalli di distribuzione personalizzati, verificare di aver specificato il limite inferiore per il primo intervallo e il limite superiore per l'ultimo intervallo.  
+ `NaN` è l'acronimo di Not a Number (diverso da un numero). Si presuppone che i valori delle scale dei colori siano numerici. Verificare le impostazioni di distribuzione e il valore del testo della legenda per le regole associate alla scala dei colori. Se sono stati creati intervalli di distribuzione personalizzati, verificare di aver specificato il limite inferiore per il primo intervallo e il limite superiore per l'ultimo intervallo.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Quando si esegue il report, la scala dei colori non viene visualizzata.  
  La scala dei colori visualizza informazioni all'utente quando un livello mappa specifica le regole colore per poligoni, linee o punti per tutto il livello o per gli elementi incorporati della mappa. Se nessun elemento della mappa specifica una regola colore o se le regole colore forniscono un'indicazione tramite una legenda anziché la mappa colori, quest'ultima non viene mostrata nel report visualizzabile.  
@@ -182,7 +181,7 @@ ms.locfileid: "66104641"
   
   
   
-##  <a name="Tile"></a>Problemi relativi ai riquadri  
+##  <a name="tile-issues"></a><a name="Tile"></a> Problemi relativi alle sezioni  
  Usare questa sezione per risolvere i problemi relativi alle opzioni dello sfondo a sezioni.  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>Lo sfondo a tessere mappa di Bing non viene visualizzato.  
@@ -205,7 +204,7 @@ ms.locfileid: "66104641"
   
   
   
-##  <a name="Tooltip"></a>Descrizione comando e problemi relativi alle etichette  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a>Descrizione comando e problemi relativi alle etichette  
  Usare questa sezione per risolvere i problemi relativi alle opzioni delle etichette e delle descrizioni comandi.  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Quando si imposta un'etichetta o una descrizione comando su un'espressione, viene restituito un errore di espressione relativo all'ambito del set di dati.  

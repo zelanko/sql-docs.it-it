@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107419"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurare le proprietà delle origini dati per un report (Gestione report)
@@ -28,7 +28,7 @@ ms.locfileid: "66107419"
   
 1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
-2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera configurare un'origine dei dati specifica del report e aprirlo.  
+2.  In Gestione report passare alla pagina **contenuto** . quindi passare al report per il quale si desidera configurare un'origine dei dati specifica del report e aprirlo.  
   
 3.  Fare clic sulla scheda **Proprietà** . Verrà visualizzata la pagina delle proprietà **generale** .  
   
@@ -58,12 +58,12 @@ ms.locfileid: "66107419"
   
  Per altre informazioni sulla configurazione delle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Pagina nuova origine dati &#40;Gestione report&#41;](../new-data-source-page-report-manager.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Gestire origini dati dei report](manage-report-data-sources.md)   
+ [Gestione delle origini dati del report](manage-report-data-sources.md)   
  [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Pagina delle proprietà origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)  
+ [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)  
   
   

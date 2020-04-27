@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 6: Adding Grouping and Totals (Reporting Services) (Lezione 6: Aggiunta di gruppi e totali (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 6: Aggiunta di gruppi e totali (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108409"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
   È possibile aggiungere gruppi e totali al report per organizzare e riepilogare i dati.  
   
  Per informazioni sull'aggiunta dei totali in esecuzione ai report, vedere: [aggiunta di totali ai report di Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Per raggruppare i dati in un report](#bkmk_groupdata)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66108409"
   
 -   [Per pubblicare il report nel server di report (facoltativo)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>Per raggruppare i dati in un report  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>Per raggruppare i dati in un report  
   
 1.  Fare clic sulla scheda **Progettazione** .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108409"
   
      ![Tabella raggruppata per data e quindi per numero di ordine](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Tabella raggruppata per data e quindi per numero di ordine")  
   
-##  <a name="bkmk_addtotals"></a>Per aggiungere totali a un report  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>Per aggiungere totali a un report  
   
 1.  Passare alla Visualizzazione della struttura.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108409"
   
      ![Visualizzazione Progettazione: tabella di base con totale degli ordini](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Visualizzazione Progettazione: tabella di base con totale degli ordini")  
   
-##  <a name="bkmk_adddailytotal"></a>Per aggiungere un totale giornaliero a un report  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>Per aggiungere un totale giornaliero a un report  
   
 1.  Fare clic con il pulsante destro del mouse sulla cella Order , scegliere **Aggiungi totale**e quindi fare clic su **Dopo**.  
   
      Viene aggiunta una nuova riga contenente le somme della quantità e del dollaro per ogni giorno e l'etichetta "**Total**" nella colonna Order.  
   
-2.  Digitare la parola **Daily** prima della parola **Total** nella stessa cella, in modo che legga il **totale giornaliero**.  
+2.  Digitare la parola **Daily** prima della parola **Total** nella stessa cella in modo da definire la frase **Daily Total**.  
   
 3.  Selezionare la cella **Daily Total** , le due celle **Sum** e la cella vuota compresa tra di esse.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66108409"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>Per aggiungere un totale complessivo a un report  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>Per aggiungere un totale complessivo a un report  
   
 1.  Fare clic con il pulsante destro del mouse sulla cella Date, scegliere **Aggiungi totale**e quindi fare clic su **Dopo**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66108409"
   
      ![Anteprima: tabella di base con totale complessivo](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella di base con totale complessivo")  
   
-##  <a name="bkmk_publishreport"></a>Per pubblicare il report nel server di report (facoltativo)  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>Per pubblicare il report nel server di report (facoltativo)  
   
 1.  Un passaggio facoltativo consiste nel pubblicare il report completato nel server di report in modalità nativa in modo che sia possibile visualizzare il report da Gestione report.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66108409"
 ## <a name="next-steps"></a>Passaggi successivi  
  Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

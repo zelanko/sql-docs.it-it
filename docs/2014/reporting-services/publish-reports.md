@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108024"
 ---
 # <a name="publish-reports"></a>Pubblicazione di report
@@ -27,7 +27,7 @@ ms.locfileid: "66108024"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Per pubblicare tutti i report di un progetto  
   
--   Nel menu **Compilazione** fare clic su **Distribuisci \<nome progetto report>** . In alternativa, in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report e scegliere **Distribuisci**. È possibile visualizzare lo stato del processo di pubblicazione nella finestra Output.  
+-   Nel menu **Compilazione** fare clic su **Distribuisci \<nome progetto report>**. In alternativa, in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report e scegliere **Distribuisci**. È possibile visualizzare lo stato del processo di pubblicazione nella finestra Output.  
   
     > [!NOTE]  
     >  Quando si distribuisce un progetto server di report, vengono distribuite anche le origini dati condivise nel progetto report.  
@@ -39,11 +39,11 @@ ms.locfileid: "66108024"
     > [!NOTE]  
     >  Quando si pubblica un report, è necessario distribuire anche le origini dati condivise utilizzate dal report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pubblicazione di origini dati e report](reports/publishing-data-sources-and-reports.md)   
  [Visualizzazione in anteprima di report](reports/previewing-reports.md)   
- [Pubblicazione dei report in un server di report](reports/publishing-reports-to-a-report-server.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Pubblicazione di report in un server di report](reports/publishing-reports-to-a-report-server.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportazione di report &#40;Generatore report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

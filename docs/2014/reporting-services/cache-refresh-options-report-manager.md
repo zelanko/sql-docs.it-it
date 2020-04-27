@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109915"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opzioni di aggiornamento Cache (Gestione report)
@@ -80,7 +80,7 @@ ms.locfileid: "66109915"
  **Usa valore predefinito**  
  Selezionare questa opzione per utilizzare il valore predefinito per questo parametro.  
   
-##  <a name="Parameters"></a>Specifica di parametri  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>Specifica di parametri  
  Per creare un piano di aggiornamento della cache, a ogni parametro del report o del set di dati condiviso deve essere associato un valore. Se nella definizione dell'elemento del report o del set di dati condiviso non è specificato alcun valore predefinito, è necessario specificarne uno. Se un valore predefinito esiste, non è necessario specificarne alcuno. Se si specifica un valore, quest'ultimo esegue l'override del valore predefinito.  
   
  Per specificare più combinazioni di valori dei parametri, è necessario creare un piano di aggiornamento della cache separato per ogni combinazione.  
@@ -90,15 +90,15 @@ ms.locfileid: "66109915"
 ### <a name="shared-dataset-parameters"></a>Parametri dei set di dati condivisi  
  Per un set di dati condiviso, le informazioni seguenti derivano dalla definizione del set di dati condiviso:  
   
--   **Nome** Specifica il nome del parametro di query.  
+-   **Nome** Specifica il nome del parametro della query.  
   
--   **Tipo** di Specifica il tipo di dati del parametro di query. Poiché questo tipo di dati è sconosciuto fino a quando il provider di dati non elabora la query del set di dati, la convalida del tipo di dati non può essere eseguita fino a quando il set di dati condiviso non è stato elaborato.  
+-   **Tipo** Specifica il tipo di dati di un parametro della query. Poiché questo tipo di dati è sconosciuto fino a quando il provider di dati non elabora la query del set di dati, la convalida del tipo di dati non può essere eseguita fino a quando il set di dati condiviso non è stato elaborato.  
   
--   **Nullable** Specifica se NULL è un valore valido.  
+-   **Valori Null ammessi** Specifica se NULL è un valore valido.  
   
--   **ReadOnly** Specifica se questo parametro è contrassegnato come di sola lettura nella definizione del set di dati condiviso. I parametri di sola lettura non vengono visualizzati nell'elenco di parametri per le opzioni di aggiornamento della cache e devono disporre di un'impostazione predefinita specificata come parte della definizione del set di dati condiviso.  
+-   **Di sola lettura** Specifica se questo parametro è contrassegnato come parametro di sola lettura nella definizione del set di dati condiviso. I parametri di sola lettura non vengono visualizzati nell'elenco di parametri per le opzioni di aggiornamento della cache e devono disporre di un'impostazione predefinita specificata come parte della definizione del set di dati condiviso.  
   
--   **DefaultValue** Valori predefiniti specificati nella definizione del set di dati condiviso. I parametri della query possono essere multivalore. Per eseguire l'override dei valori predefiniti, digitare i nuovi valori nelle aree apposite della casella di testo.  
+-   **Valori predefiniti** I valori predefinito specificati nella definizione del set di dati condiviso. I parametri della query possono essere multivalore. Per eseguire l'override dei valori predefiniti, digitare i nuovi valori nelle aree apposite della casella di testo.  
   
  Se nella definizione del set di dati condiviso viene specificata l'opzione **Ometti dalla query** per un parametro, non è necessario fornire un valore predefinito. Questo flag indica che il parametro del set di dati non è utilizzato nella query. Il parametro viene ad esempio visualizzato nella definizione del set di dati condiviso perché è un parametro del report utilizzato solo nel filtro del set di dati.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66109915"
   
 -   Deselezionare o selezionare l'opzione di sola lettura per un parametro della query del set di dati associato al piano di aggiornamento, quindi salvare la nuova definizione nel server di report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività a livello di elemento](security/tasks-and-permissions-item-level-tasks.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   

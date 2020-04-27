@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107625"
 ---
 # <a name="saving-reports-report-builder"></a>Salvataggio di report (Generatore report)
@@ -28,9 +28,9 @@ ms.locfileid: "66107625"
   
 -   Utilizzare la cronologia dei report per salvare versioni di report visualizzabili come copie dei risultati delle esecuzioni dei report in momenti diversi.  
   
- Per altre informazioni sulla visualizzazione e sulla gestione dei report direttamente nel server di report, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?LinkId=154888) nel sito msdn.microsoft.com.  
+ Per altre informazioni sulla visualizzazione e sulla gestione dei report direttamente nel server di report, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online di ](https://go.microsoft.com/fwlink/?LinkId=154888) nel sito msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a>Salvataggio delle definizioni dei report  
+##  <a name="saving-report-definitions"></a><a name="SavingReportDefinitions"></a>Salvataggio delle definizioni dei report  
  Sebbene sia possibile salvare i report nel computer in uso, il salvataggio in un server di report offre molti vantaggi.  
   
  Il salvataggio di un report in un server di report presenta i vantaggi seguenti:  
@@ -51,22 +51,22 @@ ms.locfileid: "66107625"
   
 
   
-##  <a name="ExportingAndSavingReports"></a> Esportazione e salvataggio di report  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> Esportazione e salvataggio di report  
  Se il numero di report da archiviare è limitato, è consigliabile esportare un report e salvarlo come file. Dopo aver esportato un report in un'applicazione, ad esempio in formato PDF o Excel, è possibile salvarlo come file e copiarlo in una directory condivisa protetta in rete. In alternativa, è possibile caricare un file PDF o Excel salvato come risorsa se si desidera mantenere tutte le copie del report, indipendentemente dal formato, nel database del server di report. Per ulteriori informazioni sull'esportazione di un report, vedere [esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md) e [caricare un file o un report &#40;Gestione report&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
-##  <a name="UsingFileShareDelivery"></a> Utilizzo del recapito tramite condivisione file  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> Utilizzo del recapito tramite condivisione file  
  Se i report da archiviare sono numerosi, è possibile creare una sottoscrizione che recapiti il report direttamente al file system. Per questo approccio è necessario creare una sottoscrizione per ogni report, scegliere una cartella condivisa per archiviare i report e definire una pianificazione che determini quando il file deve essere creato. Quando un utente definisce una sottoscrizione, il server di report è in grado di eseguire automaticamente il report e di aggiungere i file del report all'archivio in base alla pianificazione specificata dall'utente. È inoltre possibile creare pianificazioni a utilizzo singolo per archiviare report occasionalmente. Per ulteriori informazioni sulle sottoscrizioni e sul recapito tramite condivisione file, vedere "Recapito tramite condivisione file in Reporting Services" nella [documentazione di Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
 
   
-##  <a name="UsingReportHistory"></a> Utilizzo della cronologia dei report  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> Utilizzo della cronologia dei report  
  È inoltre possibile utilizzare la cronologia dei report per creare copie dei risultati delle esecuzioni dei report in momenti diversi. Per utilizzare queste copie in futuro, è consigliabile eseguire il backup del database del server di report e archiviare tale backup in una posizione sicura. Nel database del server di report viene archiviata l'intera cronologia dei report, insieme ai report, alle origini dei dati condivise, alle cartelle, alle sottoscrizioni e alle pianificazioni condivise. È possibile eseguire il backup per mantenere una copia permanente della cronologia dei report e dei metadati quali le informazioni sulla sottoscrizione che indicano i destinatari di un report. Per ulteriori informazioni, vedere "Gestione della cronologia dei report" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
 
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure  
   
 -   [Salvare i report in un server di report &#40;Generatore report&#41;](save-reports-to-a-report-server-report-builder.md)  
   
@@ -76,10 +76,10 @@ ms.locfileid: "66107625"
   
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Installazione, disinstallazione e Generatore report del supporto](../install-uninstall-and-report-builder-support.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Stampa di report &#40;Generatore report e SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   

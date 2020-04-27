@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109882"
 ---
 # <a name="choose-link-page-report-manager"></a>Pagina Scegli collegamento (Gestione report)
@@ -36,13 +36,13 @@ ms.locfileid: "66109882"
 4.  Nella scheda **Generale** nella pagina delle proprietà fare clic su **Modifica collegamento**.  
   
 ## <a name="options"></a>Opzioni  
- **Location**  
+ **Posizione**  
  Specificare il nome completo del report pubblicato, incluso il percorso. È possibile digitare il nome completo del report oppure selezionare il report da utilizzare nella visualizzazione albero.  
   
  **Visualizzazione albero**  
  Mostra tutte le cartelle nella gerarchia di cartelle nel server di report. Fare clic sul nome del report nella visualizzazione albero per inserire il nome e il percorso nel campo **Percorso** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Pagina nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105225"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Funzione LookupSet (Generatore report e SSRS)
@@ -49,7 +49,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Osservazioni  
  Usare la funzione `LookupSet` per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione uno-a-molti. Per un identificatore di cliente in una tabella, ad esempio, è possibile usare la funzione `LookupSet` per recuperare tutti i numeri di telefono relativi al cliente da un set di dati non associato all'area dati.  
   
- `LookupSet`esegue le operazioni seguenti:  
+ Tramite la funzione `LookupSet` vengono effettuate le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente.  
   
@@ -99,7 +99,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Esempio  
  Poiché tramite `LookupSet` viene restituita una raccolta di oggetti, non è possibile visualizzare direttamente l'espressione di risultato in una casella di testo. È possibile concatenare il valore di ogni oggetto nella raccolta come stringa.  
   
- Usare la funzione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] di `Join` per creare una stringa delimitata da un set di oggetti. Usare una virgola come separatore per combinare gli oggetti in un'unica riga. In alcuni renderer, è possibile usare un avanzamento riga di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) come separatore per elencare ogni valore su una nuova riga.  
+ Usare la funzione `Join` di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per creare una stringa delimitata da un set di oggetti. Usare una virgola come separatore per combinare gli oggetti in un'unica riga. In alcuni renderer, è possibile usare un avanzamento riga di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) come separatore per elencare ogni valore su una nuova riga.  
   
  L'espressione seguente, quando viene usata come proprietà Value per una casella di testo, USA `Join` per creare un elenco.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109354"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Finestra di dialogo Definisci parametri query (Generatore report)
@@ -29,7 +29,7 @@ ms.locfileid: "66109354"
  **Valore parametro**  
  Digitare il valore che si desidera utilizzare per il parametro della query.  
   
-## <a name="see-also"></a>Vedere anche  
- [Progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Finestre di progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

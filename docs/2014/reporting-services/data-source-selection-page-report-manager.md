@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109441"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Pagina di selezione dell'origine dei dati (Gestione report)
@@ -36,7 +36,7 @@ ms.locfileid: "66109441"
 5.  Nel riquadro delle proprietà selezionare **Origine dei dati condivisa** , quindi fare clic su **Sfoglia**.  
   
 ## <a name="options"></a>Opzioni  
- **Location**  
+ **Posizione**  
  Specificare il percorso completo dell'origine dati condivisa a partire dal nome della cartella radice. È possibile digitare il nome del percorso oppure selezionare l'origine dati condivisa desiderata nella visualizzazione albero.  
   
  **Visualizzazione albero**  
@@ -45,9 +45,9 @@ ms.locfileid: "66109441"
  **OK**  
  Fare clic per copiare l'origine dati selezionata nella pagina delle proprietà delle origini dati.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
- [Specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Gestione delle origini dati del report](report-data/manage-report-data-sources.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Pagina delle proprietà origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Pagina nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104852"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66104852"
 > [!NOTE]  
 >  L'asse delle categorie è in genere l'asse orizzontale, ovvero l'asse X. Tuttavia, per i grafici a barre, l'asse delle categorie è l'asse verticale, ovvero l'asse y.  
   
- Un esempio di un grafico che specifica intervalli dell'asse diversi è disponibile come report di esempio. Per ulteriori informazioni sul download di questo report di esempio e di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]altri, vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un esempio di un grafico che specifica intervalli dell'asse diversi è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,12 +51,12 @@ ms.locfileid: "66104852"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati in un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Ordinare i dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà asse, opzioni asse &#40;Generatore report e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Traccia di dati su un asse secondario &#40;Generatore report e SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   

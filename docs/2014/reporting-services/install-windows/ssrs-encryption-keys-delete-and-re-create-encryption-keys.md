@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108694"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Eliminare e ricreare chiavi di crittografia (Gestione configurazione SSRS)
@@ -115,8 +115,8 @@ ms.locfileid: "66108694"
   
 4.  Aprire ogni sottoscrizione che utilizza dati crittografati, incluse l'estensione per il recapito tramite condivisione file ed eventuali estensioni per il recapito di terze parti che utilizzano la crittografia, e quindi digitare di nuovo le credenziali. Le sottoscrizioni che utilizzano il recapito tramite posta elettronica di Report Server non utilizzano dati crittografati e quindi non sono interessate dalla modifica delle chiavi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Configurare e gestire chiavi di crittografia &#40;Configuration Manager SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

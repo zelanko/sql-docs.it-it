@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107802"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funzionalità interattiva per estensioni per il rendering di report differenti (Generatore report e SSRS)
@@ -108,7 +108,7 @@ ms.locfileid: "66107802"
 |Word|Il server di report esporta il report in Word utilizzando i dati filtrati nel report corrente.|  
 |Altri|Il server di report esporta il report in altri formati utilizzando i dati filtrati nel report corrente.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
