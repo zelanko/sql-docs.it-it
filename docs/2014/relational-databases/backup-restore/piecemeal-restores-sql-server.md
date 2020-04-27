@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876083"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
@@ -172,11 +172,11 @@ ms.locfileid: "62876083"
   
 4.  Il backup differenziale seguito da tutti i backup ripristinati durante la sequenza del ripristino a fasi originale per ripristinare i dati fino al punto di recupero originale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Applicare i backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Ripristino temporizzato di un database di SQL Server &#40;modello di recupero con esecuzione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Pianificare ed eseguire sequenze di ripristino &#40;modello di recupero con versione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907409"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "67907409"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID dell'agente di distribuzione.|  
-|**nome**|**nvarchar (100)**|Nome dell'agente di distribuzione.|  
+|**id**|**int**|ID dell'agente di distribuzione.|  
+|**name**|**nvarchar (100)**|Nome dell'agente di distribuzione.|  
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
@@ -41,8 +41,8 @@ ms.locfileid: "67907409"
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anonimo.|  
 |**local_job**|**bit**|Indica se nel server di distribuzione locale è presente un processo di SQL Server Agent.|  
-|**job_id**|**binario (16)**|Numero di identificazione del processo.|  
-|**subscription_guid**|**binario (16)**|ID delle sottoscrizioni dell'agente.|  
+|**job_id**|**binary(16)**|Numero di identificazione del processo.|  
+|**subscription_guid**|**binary(16)**|ID delle sottoscrizioni dell'agente.|  
 |**profile_id**|**int**|ID configurazione dal [MSagent_profiles &#40;tabella&#41;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**anonymous_subid**|**uniqueidentifier**|ID di un agente anonimo.|  
 |**subscriber_name**|**sysname**|Nome del Sottoscrittore utilizzato solo dagli agenti anonimi.|  
@@ -56,9 +56,9 @@ ms.locfileid: "67907409"
 |**dts_package_name**|**sysname**|Nome del pacchetto DTS. Per un pacchetto denominato **DTSPub_Package**, ad esempio, specificare `@dts_package_name = N'DTSPub_Package'`.|  
 |**dts_package_password**|**nvarchar (524)**|Password del pacchetto.|  
 |**dts_package_location**|**int**|Posizione del pacchetto. Il percorso del pacchetto può essere **Distributor** o **Subscriber**.|  
-|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'agente di distribuzione o di merge durante la prima esecuzione dell'agente.|  
+|**sid**|**varbinary (85)**|ID di sicurezza (SID) dell'agente di distribuzione o di merge durante la prima esecuzione dell'agente.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al Sottoscrittore. I possibili valori sono i seguenti:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticazione<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al Sottoscrittore. I possibili valori sono i seguenti:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticazione<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.|  
 |**subscriber_login**|**sysname**|Account di accesso utilizzato per la connessione al Sottoscrittore.|  
 |**subscriber_password**|**nvarchar (524)**|Valore crittografato della password utilizzata per la connessione al Sottoscrittore.|  
 |**reset_partial_snapshot_progress**|**bit**|Indica se uno snapshot scaricato parzialmente deve essere scartato in modo da consentire il riavvio dell'intero processo di snapshot.|  
@@ -68,7 +68,7 @@ ms.locfileid: "67907409"
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

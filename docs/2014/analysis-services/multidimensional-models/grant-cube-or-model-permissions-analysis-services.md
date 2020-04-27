@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075030"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
@@ -60,7 +60,7 @@ ms.locfileid: "66075030"
   
 1.  Nel riquadro **cubi** selezionare un cubo e quindi fare clic su `Read` accesso in **lettura/scrittura** .  
   
-     `Read`l'accesso è sufficiente per la maggior parte delle operazioni. **Lettura/scrittura** viene usato solo per il writeback e non per l'elaborazione. Per altre informazioni su questa funzionalità, vedere [Set Partition Writeback](set-partition-writeback.md) .  
+     `Read`l'accesso è sufficiente per la maggior parte delle operazioni. **Lettura/Scrittura** viene usato solo per il writeback e non per l'elaborazione. Per altre informazioni su questa funzionalità, vedere [Set Partition Writeback](set-partition-writeback.md) .  
   
      Si noti che è possibile selezionare più cubi nonché altri oggetti disponibili nella finestra di dialogo Crea ruolo. Quando si concedono le autorizzazioni a un cubo, si autorizza l'accesso alle dimensioni e alle prospettive associate al cubo. Non è necessario aggiungere manualmente gli oggetti già rappresentati nel cubo.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66075030"
 ## <a name="next-step"></a>Passaggio successivo  
  È possibile ottimizzare le autorizzazioni del cubo per limitare l'accesso ai dati delle celle o della dimensione. Per informazioni dettagliate, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) e [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  

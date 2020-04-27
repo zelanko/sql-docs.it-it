@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068694"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Impostare o modificare il metodo di connessione preferito per DirectQuery
@@ -38,11 +38,11 @@ ms.locfileid: "66068694"
   
 3.  Nel riquadro **Proprietà** modificare la proprietà **DirectQueryMode**su uno dei valori che supportano l'utilizzo di DirectQuery:  
   
-    -   **InMemory con DirectQuery**: se si usa questa opzione, il modello viene distribuito, ma è necessario elaborare la cache prima di poter eseguire query sul modello.  
+    -   **InMemorywithDirectQuery**: se si utilizza questa opzione, il modello viene distribuito, ma è necessario elaborare la cache prima di poter eseguire query sul modello.  
   
-    -   **DirectQuery con InMemory**: se si usa questa opzione, la cache sarà disponibile per l'uso da parte dei client se è già stata elaborata. Se si distribuisce il modello con questa impostazione e non si elabora la cache, alcuni client riceveranno un errore al tentativo di connettersi al modello.  
+    -   **DirectQuery with InMemory**: se si utilizza questa opzione, la cache potrà essere utilizzata dai client se è già stata elaborata. Se si distribuisce il modello con questa impostazione e non si elabora la cache, alcuni client riceveranno un errore al tentativo di connettersi al modello.  
   
-    -   **Solo DirectQuery**: se si usa questa opzione, i metadati vengono distribuiti, ma il modello non contiene dati. I client che tentano di connettersi utilizzando la modalità in memoria riceveranno un errore che indica che il modello non esiste o non è stato elaborato.  
+    -   **DirectQuery only:** se si utilizza questa opzione, i metadati vengono distribuiti, ma il modello non contiene dati. I client che tentano di connettersi utilizzando la modalità in memoria riceveranno un errore che indica che il modello non esiste o non è stato elaborato.  
   
 4.  In caso di errori, in Visual Studio aprire l' **Elenco errori** e risolvere eventuali problemi che impedirebbero di distribuire il modello nella modalità DirectQuery.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "66068694"
   
     -   **Solo DirectQuery**  
   
-    -   **InMemory con DirectQuery**  
+    -   **InMemorywithDirectQuery**  
   
-    -   **DirectQuery with InMemory**  
+    -   **DirectQuery con InMemory**  
   
  Si noti che queste proprietà corrispondono alle proprietà impostate sul progetto prima della distribuzione in Visual Studio. È possibile modificare in qualsiasi momento la modalità di connessione preferita per la modalità DirectQuery, a condizione che il modello sia stato configurato per supportare l'utilizzo di DirectQuery.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
  [Abilitare la modalità di progettazione DirectQuery &#40;SSAS tabulare&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   

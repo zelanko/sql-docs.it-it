@@ -21,10 +21,10 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910238"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67910238"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  Questa funzione non dispone di alcun argomento.  
   
 ## <a name="table-returned"></a>Tabella restituita  
@@ -54,7 +54,7 @@ smart_admin.fn_get_current_xevent_settings ()
 |is_configurable|NVARCHAR(128)|Questa impostazione è impostata su **true** se l'evento è configurabile. in caso contrario, viene impostato su **false**.|  
 |is_enabled|NVARCHAR(128)|Viene impostato su True se l'evento è abilitato; in caso contrario, viene impostato su False. Utilizzare smart_admin.sp_set_parameter per abilitare gli eventi di debug.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni **Select** per la funzione.  

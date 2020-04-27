@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889813"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include i provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile usare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
   
  È possibile configurare l'ambito di registrazione che si verifica durante l'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
@@ -43,8 +43,7 @@ ms.locfileid: "62889813"
   
  Quando si aggiunge un log a un pacchetto, è necessario scegliere il provider di log e il percorso del log. Il provider di log specifica il formato dei dati del log, ad esempio un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un file di testo.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili i provider di log seguenti:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili i provider di log seguenti:  
   
 -   Provider di log File di testo, che scrive le voci di log in file di testo ASCII in formato CSV. L'estensione predefinita dei file per questo provider è log.  
   
@@ -110,8 +109,7 @@ ms.locfileid: "62889813"
 |DataCode|Valore intero facoltativo che in genere contiene un valore dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> che indica il risultato dell'esecuzione del contenitore o dell'attività:<br /><br /> 0 - Esito positivo<br /><br /> 1 - Esito negativo<br /><br /> 2 - Esecuzione completata<br /><br /> 3 - Esecuzione annullata|  
   
 ##### <a name="log-entries"></a>Voci di log  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta voci di log per gli eventi predefiniti e offre voci di log personalizzate per molti oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tali eventi e voci di log personalizzate sono elencati nella finestra di dialogo **Configura log SSIS** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta voci di log per gli eventi predefiniti e offre voci di log personalizzate per molti oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tali eventi e voci di log personalizzate sono elencati nella finestra di dialogo **Configura log SSIS** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Nella tabella seguente vengono descritti gli eventi predefiniti che è possibile abilitare per scrivere voci di log quando si verificano eventi di run-time. Queste voci sono relative ai file eseguibili, al pacchetto e alle attività e ai contenitori inclusi nel pacchetto. Il nome della voce di log corrisponde al nome dell'evento di run-time che è stato generato e che ha causato la scrittura della voce.  
   
@@ -130,9 +128,9 @@ ms.locfileid: "62889813"
 |**OnVariableValueChanged**|Viene registrata una voce di log quando il valore di una variabile viene modificato.|  
 |**OnWarning**|Viene registrata una voce di log in corrispondenza di un avviso.|  
 |**PipelineComponentTime**|Per ogni componente del flusso di dati, viene registrata una voce di log per ogni fase di convalida ed esecuzione. La voce di log specifica il tempo di elaborazione per ogni fase.|  
-|**Diagnostica**|Viene registrata una voce di log che fornisce informazioni diagnostiche.<br /><br /> È ad esempio possibile registrare un messaggio prima e dopo ogni chiamata a un provider di dati esterno. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
+|**Diagnostic**|Viene registrata una voce di log che fornisce informazioni diagnostiche.<br /><br /> È ad esempio possibile registrare un messaggio prima e dopo ogni chiamata a un provider di dati esterno. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
   
- Per il pacchetto e per molte attività sono disponibili voci di log personalizzate che è possibile abilitare per la registrazione. Per l'attività Invia messaggi è ad esempio disponibile la voce di log personalizzata **SendMailTaskBegin** , che registra informazioni quando l'attività viene avviata, ma prima che invii un messaggio di posta elettronica. Per altre informazioni, vedere [Custom Messages for Logging](../custom-messages-for-logging.md).  
+ Per il pacchetto e per molte attività sono disponibili voci di log personalizzate che è possibile abilitare per la registrazione. Per l'attività Invia messaggi è ad esempio disponibile la voce di log personalizzata **SendMailTaskBegin** , che registra informazioni quando l'attività viene avviata, ma prima che invii un messaggio di posta elettronica. Per ulteriori informazioni, vedere [la pagina relativa ai messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
 ### <a name="differentiating-package-copies"></a>Differenziazione delle copie di un pacchetto  
  I dati del log includono il nome e il GUID del pacchetto a cui appartengono le voci di log. Se si crea un nuovo pacchetto copiando un pacchetto esistente, verranno copiati anche il nome e il GUID del pacchetto esistente. Possono essere pertanto presenti due pacchetti con nome e GUID uguali e questo può impedire di distinguere tali pacchetti nei dati del log.  
@@ -166,8 +164,7 @@ ms.locfileid: "62889813"
  L'attività Flusso di dati offre molte voci di log personalizzate che è possibile utilizzare per monitorare e regolare le prestazioni. È ad esempio possibile monitorare i componenti che potrebbero causare perdite di memoria o tenere traccia del tempo necessario per eseguire un componente specifico. Per un elenco di queste voci di log personalizzate e un output di registrazione di esempio, vedere [Data Flow Task](../control-flow/data-flow-task.md).  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>Utilizzo dell'evento PipelineComponentTime  
- La voce di log personalizzata più utile è probabilmente l'evento PipelineComponentTime. Questa voce di log indica il numero di millisecondi che ogni componente del flusso di dati dedica a ognuno dei cinque passaggi principali dell'elaborazione. Nella tabella seguente vengono descritti i passaggi di elaborazione. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Gli sviluppatori di Integration Services riconosceranno tali passaggi come i metodi principali di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
+ La voce di log personalizzata più utile è probabilmente l'evento PipelineComponentTime. Questa voce di log indica il numero di millisecondi che ogni componente del flusso di dati dedica a ognuno dei cinque passaggi principali dell'elaborazione. Nella tabella seguente vengono descritti i passaggi di elaborazione. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Gli sviluppatori di Integration Services riconosceranno tali passaggi come i metodi principali di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
 |Passaggio|Descrizione|  
 |----------|-----------------|  
@@ -217,7 +214,7 @@ ms.locfileid: "62889813"
 ## <a name="related-content"></a>Contenuto correlato  
  [Strumento DTLoggedExec per la registrazione completa e dettagliata (progetto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare le voci di log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md)  
   
   

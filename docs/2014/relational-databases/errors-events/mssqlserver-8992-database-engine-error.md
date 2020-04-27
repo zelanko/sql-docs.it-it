@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912545"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
@@ -30,7 +30,7 @@ ms.locfileid: "62912545"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC3_CHECK_CATALOG|  
-|Testo del messaggio|Messaggio di controllo del catalogo ERROR, stato STATE: MESSAGE.|  
+|Testo del messaggio|Messaggio di controllo del catalogo ERROR Level LEVEL State STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Spiegazione  
  DBCC CHECKCATALOG o DBCC CHECKDB ha rilevato un'incoerenza nelle tabelle di metadati di sistema per l'oggetto specificato. Ciò significa che vi è un'incoerenza tra l'ID dell'oggetto registrato e l'oggetto specificato nel messaggio di errore.  
@@ -74,7 +74,7 @@ ms.locfileid: "62912545"
 ### <a name="do-not-manually-update-system-tables"></a>Non aggiornare manualmente le tabelle di sistema  
  Non effettuare aggiornamenti manuali alle tabelle di sistema. SQL Server non supporta alcuna modifica manuale ai database di sistema. Se si aggiorna una tabella di sistema in un database di SQL Server, vengono registrati due eventi, evento ID 17659 ed evento ID 3859. Per ulteriori informazioni, vedere l'articolo della Knowledge Base 2688307 relativo agli eventi ID 17659 e ID 3859 registrati durante l'aggiornamento di tabelle di sistema in un database di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gli eventi con ID 17659 e ID 3859 vengono registrati durante l'aggiornamento delle tabelle di sistema in un database di SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

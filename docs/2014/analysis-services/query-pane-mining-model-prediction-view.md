@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070520"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Riquadro Query (visualizzazione Stima modello di data mining)
   Nel riquadro **Query** vengono visualizzate le istruzioni DMX (Data Mining Extensions) create dal generatore delle query di stima. È possibile modificare le istruzioni e quindi fare clic sul pulsante **Passa alla visualizzazione dei risultati della query** per visualizzare i risultati restituiti. Se si torna alla visualizzazione **Progettazione**, tutte le modifiche apportate all'istruzione andranno perdute.  
   
- **Per ulteriori informazioni:** [data Mining Extensions &#40;DMX&#41; istruzioni di manipolazione dei dati](/sql/dmx/dmx-statements-data-manipulation), [creare una query DMX in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Per altre informazioni:** [Istruzioni DMX &#40;Data Mining Extensions&#41; per la manipolazione dei dati](/sql/dmx/dmx-statements-data-manipulation), [Creare una query DMX in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opzioni  
  **Passa alla visualizzazione dei risultati della query**  
@@ -37,9 +37,9 @@ ms.locfileid: "66070520"
  **Aggiorna risultati query**  
  Consente di rielaborare la query di stima. Questa opzione è attivata solo nel riquadro **Risultato** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Interfacce di query di data mining](data-mining/data-mining-query-tools.md)   
  [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
+ [Generatore delle query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

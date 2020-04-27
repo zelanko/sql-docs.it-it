@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062149"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Proprietà avviso-nuovo avviso (pagina generale)
@@ -29,14 +29,14 @@ ms.locfileid: "63062149"
  **Abilitare**  
  Consente di abilitare l'avviso. Se l'avviso non è abilitato, le azioni specificate nell'avviso non verranno eseguite.  
   
- **Tipo**  
+ **Type**  
  Consente di selezionare il tipo di avviso:  
   
--   **SQL Server avviso di evento** risponde ai messaggi nel registro [!INCLUDE[msCoName](../../includes/msconame-md.md)] eventi di Windows.  
+-   **Avviso per evento di SQL Server** risponde ai messaggi nel registro degli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
--   **SQL Server avviso della condizione delle prestazioni** risponde a una condizione specifica in un contatore delle prestazioni.  
+-   **Avviso relativo alle prestazioni di SQL Server** risponde a una specifica condizione in un contatore delle prestazioni.  
   
--   L' **avviso di evento WMI** risponde a un evento Strumentazione gestione Windows (WMI).  
+-   **Avviso per evento WMI** risponde a un evento del servizio Strumentazione gestione Windows (WMI, Windows Management Instrumentation).  
   
 ## <a name="sql-server-event-alert-options"></a>Opzioni di Avviso per evento di SQL Server  
  **Nome database**  
@@ -55,7 +55,7 @@ ms.locfileid: "63062149"
  Consente di specificare la stringa da utilizzare come filtro per gli eventi.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Opzioni di Avviso relativo alle prestazioni di SQL Server  
- **Object**  
+ **Oggetto**  
  Consente di specificare l'oggetto prestazioni da monitorare.  
   
  **Contatore**  
@@ -64,20 +64,20 @@ ms.locfileid: "63062149"
  **Istanza**  
  Consente di specificare l'istanza del contatore da monitorare.  
   
- **Avviso se contatore**  
+ **Avvisa se il contatore**  
  Consente di specificare il comportamento del contatore a cui risponde l'evento. È ad esempio possibile impostare questa opzione in modo che l'avviso risponda a una condizione in cui il valore del contatore **Spazio disponibile in tempdb (KB)** scende al di sotto di un determinata soglia o il valore di **Compilazioni SQL/sec** supera un determinato livello.  
   
  **Valore**  
  Consente di specificare un valore per il contatore.  
   
 ## <a name="wmi-event-alert-options"></a>Opzioni di Avviso per evento WMI  
- **Spazio dei nomi**  
+ **Namespace**  
  Consente di specificare lo spazio dei nomi da utilizzare per l'istruzione WQL (WMI Query Language). Sono supportati solo gli spazi dei nomi sul computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
  **Query**  
  Consente di specificare l'istruzione WQL che identifica l'evento al quale risponde l'avviso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avvisi](alerts.md)   
  [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Creare un avviso usando un numero di errore](create-an-alert-using-an-error-number.md)   

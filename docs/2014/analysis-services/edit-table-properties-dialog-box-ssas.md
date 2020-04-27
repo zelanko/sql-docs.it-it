@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081439"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Finestra di dialogo Modifica proprietà tabella (SSAS)
@@ -46,7 +46,7 @@ ms.locfileid: "66081439"
  **Nomi colonne da**  
  |||  
 |-|-|  
-|**Origine**|Selezionare questa opzione per sostituire i nomi delle colonne correnti con i nomi delle colonne della tabella di origine selezionata.|  
+|**origine**|Selezionare questa opzione per sostituire i nomi delle colonne correnti con i nomi delle colonne della tabella di origine selezionata.|  
 |**Modello**|Selezionare questa opzione per utilizzare i nomi delle colonne correnti poiché presenti nel modello.|  
   
  **Aggiorna anteprima**  
@@ -98,7 +98,7 @@ ms.locfileid: "66081439"
  **OK**  
  Fare clic per applicare tutte le modifiche apportate, inclusa la sostituzione delle colonne.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

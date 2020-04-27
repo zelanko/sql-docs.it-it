@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150486"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
-  Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide** . Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
+   Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide**. Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Acquisizione del testo di una query tramite SQL Server Profiler  
  Se si esegue una query e se ne acquisisce il testo esattamente come è stato inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], sarà possibile creare una guida di piano di tipo SQL o TEMPLATE che corrisponderà esattamente al testo della query. Questo garantisce che la guida di piano verrà utilizzata da Query Optimizer.  
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Aprire il file del testo del batch nel Blocco note e copiare il testo.  
   
-8.  Creare la guida di piano e incollare il testo copiato tra le virgolette (**"**) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell' **@stmt** argomento facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''** .  
+8.  Creare la guida di piano e incollare il testo copiato tra le virgolette (**"**) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell' **@stmt** argomento facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''**.  
   
  La guida di piano ottenuta è la seguente:  
   
@@ -94,9 +94,9 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  L'evento **Showplan XML for Query Compile** non può essere usato. **PlanGuideDB** non esiste nell'evento in questione.  
   
-5.  Se la guida di piano è di tipo OBJECT o SQL, verificare che nell'evento **Showplan XML** siano contenuti gli attributi **PlanGuideDB** e **PlanGuideName** per la guida di piano che si prevedeva corrispondesse alla query. In alternativa, se la guida di piano è di tipo TEMPLATE, verificare che l'evento **Showplan XML** contenga gli attributi **TemplatePlanGuideDB** e **TemplatePlanGuideName** per la guida di piano prevista. Se tali attributi sono presenti, la guida di piano funziona regolarmente. Questi attributi sono contenuti nell'elemento **\<StmtSimple>** del piano.  
+5.  Se la guida di piano è di tipo OBJECT o SQL, verificare che nell'evento **Showplan XML** siano contenuti gli attributi **PlanGuideDB** e **PlanGuideName** per la guida di piano che si prevedeva corrispondesse alla query. In alternativa, se la guida di piano è di tipo TEMPLATE, verificare che l'evento **Showplan XML** contenga gli attributi **TemplatePlanGuideDB** e **TemplatePlanGuideName** per la guida di piano prevista. Se tali attributi sono presenti, la guida di piano funziona regolarmente. Questi attributi sono contenuti nell'elemento ** \<>StmtSimple** del piano.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  
   
   

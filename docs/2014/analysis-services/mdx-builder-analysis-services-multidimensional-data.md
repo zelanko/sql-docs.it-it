@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078019"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Generatore MDX (Analysis Services - Dati multidimensionali)
@@ -33,7 +33,7 @@ ms.locfileid: "66078019"
 |**Metadati**|Visualizza i metadati relativi all'oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] corrente che è possibile includere nell'espressione MDX definita in **Espressione**.<br /><br /> È possibile copiare la sintassi MDX relativa all'elemento selezionato facendo clic con il pulsante destro del mouse sull'elemento e scegliendo **Copia** dal menu di scelta rapida oppure trascinando l'elemento selezionato in **Espressione**.|  
 |**Funzioni**|Consente di visualizzare le funzioni MDX disponibili per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] corrente. Gli elementi elencati sono recuperati dal set di righe dello schema MDSCHEMA_FUNCTIONS.<br /><br /> È possibile copiare la sintassi MDX relativa all'elemento selezionato facendo clic con il pulsante destro del mouse sull'elemento e scegliendo **Copia** dal menu di scelta rapida oppure trascinando l'elemento selezionato in **Espressione**.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Dati delle celle &#40;Progettazione ruoli&#41; &#40;Analysis Services Dati multidimensionali&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
   

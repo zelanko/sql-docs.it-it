@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078555"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lezione 6: Creare colonne calcolate
   In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per altre informazioni, vedere [Colonne calcolate &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns.md).  
   
- Verranno create cinque nuove colonne calcolate in tre tabelle diverse. I passaggi sono leggermente diversi per ogni attività. Lo scopo è dimostrare che esistono diversi modi per creare nuove colonne, rinominarle e inserirle in diverse posizioni in una tabella.  
+ Verranno create cinque nuove colonne calcolate in tre tabelle diverse. I passaggi sono leggermente diversi per ogni attività. L'obiettivo è quello di mostrare che vi sono diversi metodi per creare nuove colonne, rinominarle e collocarle in diverse posizioni in una tabella.  
   
  Tempo previsto per il completamento della lezione: **15 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 5: Creare relazioni](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Creare colonne calcolate  
@@ -33,7 +33,7 @@ ms.locfileid: "66078555"
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Vista modelli** nel menu **Modello**, quindi fare clic su **Vista dati**.  
   
-     Le colonne calcolate possono essere create solo tramite la finestra di progettazione dei modelli in vista dati.  
+     Le colonne calcolate possono essere create solo tramite Progettazione modelli in Vista dati.  
   
 2.  In Progettazione modelli fare clic sulla tabella (scheda) **Data** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66078555"
 4.  Fare clic sull'intestazione di colonna, quindi trascinare la colonna tra le colonne **Day Name** e **Day of Month** .  
   
     > [!TIP]  
-    >  Spostare le colonne nella tabella facilita la navigazione.  
+    >  Lo spostamento delle colonne nella tabella semplifica l'esplorazione.  
   
  La colonna calcolata Day of Week fornisce un nome ordinabile per il giorno della settimana.  
   

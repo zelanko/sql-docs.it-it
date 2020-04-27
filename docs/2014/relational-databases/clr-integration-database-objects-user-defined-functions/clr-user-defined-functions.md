@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874485"
 ---
 # <a name="clr-user-defined-functions"></a>Funzioni CLR definite dall'utente
@@ -39,7 +39,7 @@ ms.locfileid: "62874485"
  [Aggregazioni CLR definite dall'utente](clr-user-defined-aggregates.md)  
  Viene descritto come implementare e utilizzare le aggregazioni definite dall'utente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni definite dall'utente](../user-defined-functions/user-defined-functions.md)  
   
   

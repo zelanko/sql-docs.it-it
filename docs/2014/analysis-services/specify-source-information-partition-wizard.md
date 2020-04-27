@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068164"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Impostazione informazioni origine (Creazione guidata partizione)
   Utilizzare la pagina **Impostazione informazioni origine** per selezionare il gruppo di misure in cui creare la partizione, nonché la vista origine dati e le tabelle di filtro per la partizione.  
   
 > [!CAUTION]  
->  Se si specifica una tabella in **tabelle disponibili** utilizzate da un'altra partizione, sarà necessario specificare una query nella pagina **Limitazione righe** o rischiare la duplicazione dei dati nel cubo.  
+>   Se in **Tabelle disponibili** si seleziona una tabella utilizzata da un'altra partizione, sarà necessario specificare una query nella pagina **Limitazione righe** per evitare il rischio di duplicazioni di dati nel cubo.  
   
 ## <a name="options"></a>Opzioni  
  **Gruppo di misure**  
  Consente di selezionare un gruppo di misure per la partizione.  
   
- **Look in**  
+ **Cerca in**  
  Consente di selezionare l'origine dei dati o la vista origine dati contenente le tabelle di origine per la partizione. Per impostazione predefinita, è selezionata la vista origine dati utilizzata dal gruppo di misure.  
   
  **Filtro tabelle**  
@@ -48,7 +48,7 @@ ms.locfileid: "66068164"
 > [!NOTE]  
 >  Se sono selezionate più tabelle, non sarà possibile visualizzare la pagina **Limitazione righe** , né ridurre le righe per le partizioni create dalle tabelle specificate. Per limitare le righe per ogni partizione, eseguire la Creazione guidata partizione una volta per ogni tabella da cui deve essere creata la partizione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

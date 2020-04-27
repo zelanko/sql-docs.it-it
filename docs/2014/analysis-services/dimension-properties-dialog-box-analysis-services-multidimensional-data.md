@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081841"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Proprietà dimensione (Analysis Services - Dati multidimensionali)
@@ -31,15 +31,15 @@ ms.locfileid: "66081841"
 |**Nome**|Consente di visualizzare il nome della dimensione.|  
 |**ID**|Consente di visualizzare l'identificatore della dimensione.|  
 |**Descrizione**|Consente di visualizzare la descrizione della dimensione.|  
-|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione della dimensione.|  
+|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione della dimensione.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati della dimensione.|  
 |**Modalità di elaborazione**|Consente di selezionare la modalità di elaborazione da utilizzare per la dimensione. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>.|  
-|**Stato**|Consente di visualizzare lo stato di elaborazione della dimensione. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Consente di visualizzare lo stato di elaborazione della dimensione. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione della dimensione.|  
 |**Modalità di archiviazione corrente**|Consente di visualizzare la modalità di archiviazione corrente per la dimensione. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

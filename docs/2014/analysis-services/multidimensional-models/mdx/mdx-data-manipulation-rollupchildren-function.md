@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074271"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Utilizzo della funzione RollupChildren (MDX)
@@ -72,7 +72,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  L'istruzione MDX esamina l'operatore unario del membro figlio. Se l'operatore unario viene utilizzato per eseguire una sottrazione, ad esempio quando sono presenti resi nazionali ed esteri, la funzione `IIf` sostituisce l'operatore unario ~, in caso contrario la funzione `IIf` utilizza l'operatore unario del membro figlio. Il totale di rollup restituito viene infine moltiplicato per 1,1 per determinare il valore della stima per le vendite nazionali ed estere lorde.  
   
-## <a name="see-also"></a>Vedere anche  
- [Manipolazione dei dati &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Manipolazione dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

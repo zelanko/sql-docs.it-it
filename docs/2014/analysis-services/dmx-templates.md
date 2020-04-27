@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081555"
 ---
 # <a name="dmx-templates"></a>Modelli DMX
@@ -52,7 +52,7 @@ ms.locfileid: "66081555"
 ## <a name="list-of-dmx-templates"></a>Elenco dei modelli DMX  
  I seguenti modelli DMX sono inclusi nel client di data mining per Excel.  
   
- **Stima**  
+ **Previsioni**  
   
  Utilizzare tali modelli per creare query di stima avanzate, comprese le query non supportate dalle procedure guidate nei componenti aggiuntivi, ad esempio le query che utilizzano tabelle annidate o origini dati esterne.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66081555"
   
 -   Query di stima TOP sulla tabella nidificata  
   
- **Creare**  
+ **Crea**  
   
  Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate: è possibile usare qualsiasi algoritmo data mining supportato dall'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi, inclusi gli algoritmi plug-in.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66081555"
 ### <a name="requirements"></a>Requisiti  
  A seconda del modello utilizzato, potrebbero essere necessarie autorizzazioni amministrative per l'accesso al server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e l'esecuzione della query.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

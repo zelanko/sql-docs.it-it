@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d2ba009efa61cd4694ca0d008d8885ae7ae6c48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072809"
 ---
 # <a name="test-an-action"></a>Test di un'azione
-  È possibile testare un'azione utilizzando la visualizzazione Esplorazione in Progettazione cubi. L'accesso a Progettazione cubi può essere eseguito da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato l'azione, è necessario elaborare il cubo prima di poter testare l'azione. Per ulteriori informazioni, vedere [elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
+  È possibile testare un'azione utilizzando la visualizzazione Esplorazione in Progettazione cubi. L'accesso a Progettazione cubi può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato l'azione, è necessario elaborare il cubo prima di poter testare l'azione. Per ulteriori informazioni, vedere [elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-test-an-action"></a>Per testare un'azione  
   

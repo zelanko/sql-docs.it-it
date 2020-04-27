@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072055"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli prospettiva (scheda Prospettive, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66072055"
  **Oggetti cubo**  
  Consente di visualizzare un elenco gerarchico di proprietà e oggetti contenuti nel cubo che è possibile includere nella prospettiva.  
   
- **Tipo di oggetto**  
+ **Tipo oggetto**  
  Consente di visualizzare il nome della proprietà o il tipo di oggetto del cubo che può essere incluso nella prospettiva.  
   
  **Nome prospettiva**  
@@ -44,6 +44,6 @@ ms.locfileid: "66072055"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**Nuova prospettiva**|Fare clic su questo pulsante per creare una nuova prospettiva nel cubo selezionato.|  
-|**Elimina prospettiva**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare la prospettiva selezionata.|  
+|**Elimina prospettiva**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare la prospettiva selezionata|  
   
   

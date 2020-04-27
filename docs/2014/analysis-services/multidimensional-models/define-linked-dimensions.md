@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075582"
 ---
 # <a name="define-linked-dimensions"></a>Definizione delle dimensioni collegate
@@ -30,7 +30,7 @@ ms.locfileid: "66075582"
 > [!NOTE]  
 >  Poiché l'aggiornamento non è disponibile, molti sviluppatori di Analysis Services copiano le dimensioni anziché collegarle. È possibile copiare dimensioni tra i diversi progetti della stessa soluzione. Per altre informazioni, vedere la pagina [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)(Aggiornamento di una dimensione collegata in SSAS).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Il database di origine che fornisce la dimensione e il database corrente che la utilizza devono essere della stessa versione e dello stesso livello di compatibilità. Per ulteriori informazioni, vedere [impostare il livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  Il database di origine deve essere distribuito e online. È necessario configurare i server che pubblicano o utilizzano oggetti collegati per consentire l'operazione (vedere sotto).  
@@ -55,7 +55,7 @@ ms.locfileid: "66075582"
   
 4.  Nella pagina **Completamento procedura guidata** è possibile visualizzare l'anteprima degli oggetti collegati. In caso di collegamento a una dimensione con lo stesso nome di una dimensione esistente, al nome verrà associato un numero ordinale a partire da '1' per il primo nome duplicato. Dopo il completamento della procedura guidata la dimensione viene aggiunta alla cartella **Dimensioni** .  
   
-##  <a name="bkmk_CreateNew"></a>Crea una nuova connessione origine dati a un database di Analysis Services  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a> Creare una nuova connessione di origine dati a un database di Analysis Services  
  Utilizzare la procedura guidata Nuova origine dati per aggiungere informazioni sul database di Analysis Services che fornisce la dimensione alla connessione del progetto. È possibile avviare la procedura guidata facendo clic su **Nuova origine dati** nella pagina Selezione origine dati del Collegamento guidato oggetti.  
   
 1.  Nella pagina Selezione metodo di definizione connessione della Creazione guidata origine dati fare clic su **Nuovo**.  
@@ -75,7 +75,7 @@ ms.locfileid: "66075582"
 ## <a name="next-steps"></a>Passaggi successivi  
  Non è possibile modificare la struttura di una dimensione collegata e per questo motivo non è possibile visualizzarla nella scheda **Struttura dimensione** di Progettazione dimensioni. Dopo l'elaborazione della dimensione collegata, è possibile visualizzarla nella scheda **esplorazione** . È anche possibile modificare il nome e creare una traduzione per il nome.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostazione del livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Gruppi di misure collegati](linked-measure-groups.md)   
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

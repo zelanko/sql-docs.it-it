@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067075"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Gerarchie (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "66067075"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
  Nelle tabelle sono incluse decine, se non addirittura centinaia, di colonne con nomi insoliti senza nessun ordine apparente. Questa situazione può comportare una visualizzazione non ordinata negli elenchi di campi del client di creazione report, rendendo difficile per gli utenti il rilevamento e l'inclusione dei dati in un report. Le gerarchie possono consentire una visualizzazione semplice e intuitiva di una struttura dei dati altrimenti complessa.  
   
  In una tabella Date è ad esempio possibile creare una gerarchia Calendar. Anno di calendario verrà utilizzato come livello padre superiore, con Mese, Settimana e Anno inclusi come livelli figlio (Anno di calendario->Mese->Settimana->Giorno). In questa gerarchia viene illustrata una relazione logica da Calendar Year a Day. Un utente client può quindi selezionare l'anno di calendario in un elenco dei campi per includere tutti i livelli in una tabella pivot oppure espandere la gerarchia e selezionare solo livelli particolari da includere nella tabella pivot.  
@@ -39,7 +39,7 @@ ms.locfileid: "66067075"
   
  Le gerarchie non sono pensate per essere utilizzate come meccanismo di sicurezza, ma piuttosto come strumento per migliorare l'esperienza utente. Tutte le impostazioni di sicurezza di una determinata gerarchia vengono ereditate dal modello sottostante. Le gerarchie non possono consentire l'accesso agli oggetti del modello se l'utente non dispone già del relativo diritto di accesso. È quindi necessario risolvere la sicurezza del database modello prima di poter fornire l'accesso agli oggetti del modello tramite una gerarchia. I ruoli di sicurezza possono essere utilizzati per proteggere i metadati e i dati del modello. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_define"></a>Definizione di gerarchie  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>Definizione di gerarchie  
  Per creare e gestire gerarchie è possibile utilizzare Progettazione modelli in Vista diagramma. La creazione e la gestione di gerarchie non sono supportate in Progettazione modelli in Vista dati. Per visualizzare Progettazione modelli in Vista diagramma fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi fare clic su **Vista diagramma**.  
   
  Per creare una gerarchia, fare clic con il pulsante destro del mouse su una colonna che si desidera specificare come livello padre, quindi fare clic su **Crea gerarchia**. È possibile selezionare qualsiasi numero di colonne (all'interno di un'unica tabella) da includere oppure aggiungere in un secondo momento le colonne come livelli figlio facendo clic e trascinando le colonne nel livello padre. In caso di selezione di più colonne, la relativa posizione viene scelta automaticamente secondo un ordine basato sulla cardinalità. È possibile modificare l'ordine facendo clic e trascinando una colonna (livello) in un ordine diverso oppure utilizzando i controlli per la navigazione Su e Giù del menu di scelta rapida. Quando si aggiunge una colonna come livello figlio, è possibile utilizzare il rilevamento automatico trascinando la colonna nel livello padre.  
@@ -50,13 +50,13 @@ ms.locfileid: "66067075"
   
  Dopo aver creato le gerarchie, è possibile utilizzare la funzionalità Analizza in Excel per eseguire un test sulla loro efficacia. Per altre informazioni, vedere la sezione [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
 |Attività|Descrizione|  
 |----------|-----------------|  
 |[Creare e gestire gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)|Viene descritto come creare e gestire gerarchie utilizzando Progettazione modelli in Vista diagramma.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-designer-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  

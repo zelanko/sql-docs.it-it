@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076684"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Impostare il livello di compatibilità di un database multidimensionale (Analysis Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66076684"
 > [!NOTE]  
 >  I modelli tabulari presentano livelli di compatibilità dei database aggiuntivi non applicabili ai modelli multidimensionali. Il livello di compatibilità `1103` non esiste per i modelli multidimensionali. Per ulteriori informazioni su `1103` per le soluzioni tabulari, vedere Novità [del modello tabulare in SQL Server 2012 SP1 e livello di compatibilità](https://go.microsoft.com/fwlink/?LinkId=301727) .  
   
- **Livelli di compatibilità per i database multidimensionali**  
+ **Livelli di compatibilità per database multidimensionali**  
   
  Attualmente, l'unico comportamento di database multidimensionale che varia in base al livello funzionale è l'architettura di archiviazione basata su stringa. L'aumento del livello di compatibilità di un database consente di ignorare il limite massimo di 4 GB per l'archiviazione di stringhe di misure e dimensioni.  
   
@@ -34,12 +34,12 @@ ms.locfileid: "66076684"
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
 |`1050`|Questo valore non è visibile negli script o negli strumenti, ma corrisponde ai database creati in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Qualsiasi database il cui `CompatibilityLevel` non è impostato in modo esplicito viene eseguito in modo implicito al livello `1050`.|  
-|`1100`|Si tratta del valore predefinito per i nuovi database creati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questa impostazione può essere specificata anche per i database creati in versioni precedenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per consentire l'utilizzo di funzionalità che sono supportate solo a questo livello di compatibilità (vale a dire, archivio di stringhe esteso per misure Distinct Count o attributi della dimensione contenenti dati di tipo stringa).<br /><br /> Database che dispongono di `CompatibilityLevel` un set `1100` per ottenere una proprietà aggiuntiva, `StringStoresCompatibilityLevel`, che consente di scegliere l'archiviazione di stringhe alternativa per partizioni e dimensioni.|  
+|`1100`|Si tratta del valore predefinito per i nuovi database creati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questa impostazione può essere specificata anche per i database creati in versioni precedenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per consentire l'utilizzo di funzionalità che sono supportate solo a questo livello di compatibilità (vale a dire, archivio di stringhe esteso per misure totale valori distinti o attributi della dimensione contenenti dati di tipo stringa).<br /><br /> Database che dispongono di `CompatibilityLevel` un set `1100` per ottenere una proprietà aggiuntiva, `StringStoresCompatibilityLevel`, che consente di scegliere l'archiviazione di stringhe alternativa per partizioni e dimensioni.|  
   
 > [!WARNING]  
 >  L'impostazione della compatibilità del database su un livello superiore è irreversibile. Dopo aver aumentato il livello di compatibilità `1100`a, è necessario continuare a eseguire il database in server più recenti. Non è possibile eseguire `1050`il rollback a. Non è possibile aggiungere o ripristinare `1100` un database in una versione del server precedente a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  I livelli di compatibilità del database vengono introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Per visualizzare o impostare il livello di compatibilità del database, è necessario [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o versione successiva.  
   
  Il database non può essere un cubo locale. I cubi locali non supportano la proprietà `CompatibilityLevel`.  
@@ -91,7 +91,7 @@ ms.locfileid: "66076684"
 ## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver aumentato il livello di compatibilità del database, è possibile impostare la proprietà `StringStoresCompatibilityLevel` in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. In questo modo viene aumentato l'archivio di stringhe per misure e dimensioni. Per altre informazioni su questa funzionalità, vedere [Configurare l'archivio di stringhe per dimensioni e partizioni](configure-string-storage-for-dimensions-and-partitions.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

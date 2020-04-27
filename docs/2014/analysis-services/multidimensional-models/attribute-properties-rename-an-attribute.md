@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077216"
 ---
 # <a name="rename-an-attribute"></a>Rinominare un attributo
@@ -27,7 +27,7 @@ ms.locfileid: "66077216"
   
  Per altre informazioni sulla ridenominazione di un attributo, vedere [Associare un attributo a una colonna chiave](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
   
   

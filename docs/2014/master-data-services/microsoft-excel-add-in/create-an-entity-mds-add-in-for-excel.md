@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478928"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Creare un'entità (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], gli amministratori possono creare nuove entità per archiviare i dati. Quando si crea un'entità, è necessario caricare almeno un campionamento dei dati che si desidera archiviare.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso alle aree funzionali **Amministrazione sistema** e **Visualizzatore** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   È necessario disporre di un modello esistente in cui creare l'entità. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](../create-a-model-master-data-services.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65478928"
   
     -   Nei dati deve essere presente una riga di intestazione.  
   
-    -   È utile disporre delle colonne **Nome** e **Codice** . Il **codice** è un identificatore univoco per ogni riga.  
+    -   È utile disporre delle colonne **Nome** e **Codice** . **Codice** è un identificatore univoco per ogni riga.  
   
     -   Deve essere presente almeno una riga di dati diversa dall'intestazione. Non è necessario che siano presenti valori in tutte le colonne, ma i dati devono essere rappresentativi di quelli che saranno presenti nell'entità.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65478928"
   
 6.  Non deselezionare la casella di controllo **Dati con intestazioni** .  
   
-7.  Dall'elenco **Modello** , selezionare un modello.  
+7.  Selezionare un modello dall'elenco **Modello** .  
   
 8.  Selezionare una versione dall'elenco **Versione** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65478928"
   
 10. Nell'elenco **Codice** selezionare la colonna contenente identificatori univoci o codici generatati automaticamente.  
   
-11. Facoltativa. Nell'elenco **Nome** selezionare una colonna contenente i nomi per ogni membro.  
+11. Facoltativo. Nell'elenco **Nome** selezionare una colonna contenente i nomi per ogni membro.  
   
 12. Fare clic su **OK**. Dopo che l'entità è stata creata, viene visualizzata una nuova riga di intestazione, le celle vengono evidenziate e il nome del foglio viene aggiornato in base al nome dell'entità.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65478928"
   
 -   Verificare che gli attributi siano stati creati con il tipo di dati previsto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Creare un attributo basato su dominio &#40;Componente aggiuntivo MDS per Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Creare un attributo basato su dominio &#40;componente aggiuntivo MDS per Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di tipi di dati XML | Microsoft Docs
+title: Uso di tipi di dati XML | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -31,14 +31,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136667"
 ---
 # <a name="using-xml-data-types"></a>Utilizzo di tipi di dati XML
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in è stato introdotto un tipo di dati **XML** che consente di archiviare documenti e frammenti XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un database di. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il tipo di dati **xml** che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
   
 ## <a name="programming-considerations"></a>Considerazioni sulla programmazione  
  XML può essere autodescrittivo in quanto può eventualmente includere un'intestazione XML che specifica la codifica del documento, ad esempio:  
@@ -58,13 +58,12 @@ ms.locfileid: "63136667"
   
 -   Stringa di testo  
   
--   
-  **ISequentialStream**  
+-   **ISequentialStream**  
   
 > [!NOTE]  
 >  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non include un lettore sax, ma è possibile passare facilmente **ISequentialStream** a oggetti sax e Dom in MSXML.  
   
- È consigliabile utilizzare **ISequentialStream** per il recupero di documenti XML di grandi dimensioni. A XML si applicano le stesse tecniche utilizzate per altri tipi di valore di grandi dimensioni. Per ulteriori informazioni, vedere [utilizzo di tipi di valore di grandi dimensioni](using-large-value-types.md).  
+ È consigliabile utilizzare **ISequentialStream** per il recupero di documenti XML di grandi dimensioni. A XML si applicano le stesse tecniche utilizzate per altri tipi di valore di grandi dimensioni. Per altre informazioni, vedere la sezione [Uso di tipi valore di grandi dimensioni](using-large-value-types.md).  
   
  I dati in colonne di tipo XML in un set di righe possono inoltre essere recuperati, inseriti o aggiornati da un'applicazione tramite le normali interfacce, ad esempio **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. Analogamente al caso di recupero, un programma applicativo può passare una stringa di testo o un **ISequentialStream** al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client.  
   
@@ -78,12 +77,12 @@ ms.locfileid: "63136667"
  Se i dati XML di input vengono associati come DBTYPE_WSTR, l'applicazione deve verificare che i dati siano già codificati come Unicode per evitare qualsiasi rischio di danni dovuti a conversioni di dati indesiderate.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
- Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con il tipo di dati xml[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** di **.  
+ Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si usano i tipi di dati elencati con il tipo di dati  **xml** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 |Tipo di dati|Al server<br /><br /> **XML**|Al server<br /><br /> **Non XML**|Dal server<br /><br /> **XML**|Dal server<br /><br /> **Non XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pass-through<sup>6,7</sup>|Errore<sup>1</sup>|OK<sup>11,6</sup>|Errore<sup>8</sup>|  
-|DBTYPE_BYTES|Pass-through<sup>6,7</sup>|N/A<sup>2</sup>|OK <sup>11, 6</sup>|N/D <sup>2</sup>|  
+|DBTYPE_BYTES|Pass-through<sup>6,7</sup>|N/D<sup>2</sup>|OK <sup>11, 6</sup>|N/D <sup>2</sup>|  
 |DBTYPE_WSTR|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_BSTR|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK <sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|OK<sup>6, 9, 10</sup>|N/D <sup>2</sup>|OK<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
@@ -95,23 +94,23 @@ ms.locfileid: "63136667"
   
  <sup>2</sup> Esula dall'ambito di questo argomento.  
   
- <sup>3</sup> Il formato è UTF-16, nessun contrassegno per il bye (BOM), nessuna specifica di codifica, nessuna terminazione null.  
+ <sup>3</sup>Il formato è UTF-16, nessun byte order mark (BOM), nessuna specifica di codifica, nessuna terminazione Null.  
   
- <sup>4</sup> Il formato è UTF-16, nessun BOM, nessuna specifica di codifica, terminazione null.  
+ <sup>4</sup>Il formato è UTF-16, nessun BOM, nessuna specifica di codifica, terminazione Null.  
   
- <sup>5</sup> Il formato è caratteri multibyte codificati nella tabella codici del client con terminatore null. Poiché la conversione dal formato Unicode fornito dal server può provocare danni ai dati, questa associazione è sconsigliata.  
+ <sup>5</sup>Il formato è caratteri multibyte codificati nella tabella codici del client con terminatore Null. Poiché la conversione dal formato Unicode fornito dal server può provocare danni ai dati, questa associazione è sconsigliata.  
   
- <sup>6</sup> È possibile utilizzare BY_REF.  
+ <sup>6</sup>Può essere usato BY_REF.  
   
- <sup>7</sup> I dati UTF-16 devono iniziare con un BOM. In caso contrario, la codifica potrebbe non essere riconosciuta correttamente dal server.  
+ <sup>7</sup>I dati UTF-16 devono iniziare con un indicatore BOM. In caso contrario, la codifica potrebbe non essere riconosciuta correttamente dal server.  
   
- <sup>8</sup> La convalida può verificarsi in fase di creazione della funzione di accesso o in fase di recupero. L'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione è impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>8</sup>La convalida può verificarsi in fase di creazione della funzione di accesso o in fase di recupero. L'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione è impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>9</sup> I dati vengono convertiti in Unicode utilizzando la tabella codici client prima di essere inviati al server. Se la codifica del documento non corrisponde alla tabella codici del client, i dati possono risultare danneggiati e, pertanto, questa associazione è fortemente sconsigliata.  
+ <sup>9</sup>I dati vengono convertiti in Unicode usando la tabella codici del client prima di inviarli al server. Se la codifica del documento non corrisponde alla tabella codici del client, i dati possono risultare danneggiati e, pertanto, questa associazione è fortemente sconsigliata.  
   
- <sup>10</sup> Un BOM viene sempre aggiunto ai dati inviati al server. Se i dati iniziano già con un indicatore dell'ordine dei byte, saranno presenti due indicatori dell'ordine dei byte all'inizio del buffer. Il server utilizza il primo indicatore dell'ordine dei byte per riconoscere la codifica come UTF-16, quindi lo ignora. Il secondo indicatore dell'ordine dei byte viene interpretato come spazio unificatore di larghezza zero.  
+ <sup>10</sup>Ai dati inviati al server viene sempre aggiunto un indicatore BOM (Byte Order Mark). Se i dati iniziano già con un indicatore dell'ordine dei byte, saranno presenti due indicatori dell'ordine dei byte all'inizio del buffer. Il server utilizza il primo indicatore dell'ordine dei byte per riconoscere la codifica come UTF-16, quindi lo ignora. Il secondo indicatore dell'ordine dei byte viene interpretato come spazio unificatore di larghezza zero.  
   
- <sup>11</sup> Il formato è UTF-16, nessuna specifica di codifica, viene aggiunto un BOM ai dati ricevuti dal server. Se dal server viene restituita una stringa vuota, all'applicazione viene comunque restituito un indicatore dell'ordine dei byte. Se la lunghezza di buffer è un numero dispari di byte, i dati vengono troncati correttamente. Se il valore intero viene restituito in blocchi, questi possono essere concatenati per ricostituire il valore corretto.  
+ <sup>11</sup>Il formato è UTF-16, nessuna specifica di codifica, BOM aggiunto ai dati ricevuti dal server. Se dal server viene restituita una stringa vuota, all'applicazione viene comunque restituito un indicatore dell'ordine dei byte. Se la lunghezza di buffer è un numero dispari di byte, i dati vengono troncati correttamente. Se il valore intero viene restituito in blocchi, questi possono essere concatenati per ricostituire il valore corretto.  
   
  <sup>12</sup> Se la lunghezza del buffer è minore di due caratteri, ovvero non è sufficiente spazio per la terminazione null, viene segnalato un errore di overflow.  
   
@@ -220,7 +219,7 @@ ms.locfileid: "63136667"
  Nel caso di DBTYPE_IUNKNOWN/ISequentialStream, se il consumer non specifica alcun oggetto di archiviazione, il consumer deve creare un oggetto **ISequentialStream** in anticipo, associare il documento XML all'oggetto, quindi passare l'oggetto al provider tramite il metodo **IRowsetChange:: SetData** . Il consumer può creare inoltre un oggetto di archiviazione, impostare l'argomento pObject su IID_ISequentialStream, creare un oggetto **ISequentialStream**, quindi passare l'oggetto **ISequentialStream** al metodo **IRowsetChange::SetData**. In entrambi casi, il provider può recuperare l'oggetto XML tramite l'oggetto **ISequentialStream** e può inserirlo in una colonna appropriata.  
   
 #### <a name="the-irowsetupdate-interface"></a>Interfaccia IRowsetUpdate  
- L'interfaccia **IRowsetUpdate** fornisce funzionalità per gli aggiornamenti ritardati. I dati resi disponibili per i set di righe non vengono resi disponibili ad altre transazioni fino a quando il consumer non chiama il metodo **IRowsetUpdate: Update** .  
+ L'interfaccia **IRowsetUpdate** fornisce una funzionalità per aggiornamenti ritardati. I dati resi disponibili per i set di righe non vengono resi disponibili ad altre transazioni fino a quando il consumer non chiama il metodo **IRowsetUpdate: Update** .  
   
 #### <a name="the-irowsetfind-interface"></a>Interfaccia IRowsetFind  
  Non è possibile usare il metodo **IRowsetFind::FindNextRow** con il tipo di dati **xml**. Quando **IRowsetFind::FindNextRow** viene chiamato e l'argomento *hAccessor* specifica una colonna di tipo DBTYPE_XML, viene restituito DB_E_BADBINDINFO. Ciò si verifica indipendentemente dal tipo di colonna di cui si esegue la ricerca. Per qualsiasi altro tipo di associazione, **FindNextRow** ha esito negativo con DB_E_BADCOMPAREOP se la colonna da cercare è del tipo di dati **xml**.  
@@ -268,7 +267,7 @@ ms.locfileid: "63136667"
   
  Lo standard XML richiede che i dati XML con codifica UTF-16 inizino con un indicatore dell'ordine dei byte, codice di carattere UTF-16 0xFEFF. Quando si utilizza un'associazione SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client non richiede né aggiunge un BOM, perché la codifica è implicita nell'associazione. Lo scopo consiste nel fornire semplicità di gestione con altri elaboratori XML e sistemi dell'archiviazione. In questo caso, con i dati XML con codifica UTF-16 deve essere presente un indicatore dell'ordine dei byte e l'applicazione non deve considerare l'effettiva codifica, in quando la maggior parte dei processori XML, incluso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], deduce la codifica controllando i primi byte del valore. I dati XML ricevuti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da Native client usando associazioni SQL_C_BINARY vengono sempre codificati in UTF-16 con un BOM e senza una dichiarazione di codifica incorporata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

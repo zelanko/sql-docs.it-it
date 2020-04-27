@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075608"
 ---
 # <a name="define-database-dimensions"></a>Definire le dimensioni del database
@@ -52,7 +52,7 @@ ms.locfileid: "66075608"
  [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
  Descrive come definire e configurare un attributo di una dimensione.  
   
- [Creazione di gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
+ [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
  Descrive come definire e configurare una gerarchia definita dall'utente.  
   
  [Definire relazioni tra attributi](attribute-relationships-define.md)  

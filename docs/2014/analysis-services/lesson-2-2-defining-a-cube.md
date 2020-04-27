@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079062"
 ---
 # <a name="defining-a-cube"></a>Definizione di un cubo
@@ -22,7 +22,7 @@ ms.locfileid: "66079062"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Per definire un cubo e le relative proprietà  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **cubi**, quindi scegliere **nuovo cubo**. Verrà visualizzata la Creazione guidata cubo.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Cubi**e quindi scegliere **Nuovo cubo**. Verrà visualizzata la Creazione guidata cubo.  
   
 2.  Nella pagina **Creazione guidata cubo** fare clic su **Avanti**.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "66079062"
   
 7.  Nella pagina **Selezione misure** esaminare le misure selezionate nel gruppo di misure **Internet Sales** , quindi deselezionare le caselle di controllo per le misure seguenti:  
   
-    -   **Chiave Promozione**  
+    -   **Promotion Key**  
   
-    -   **Chiave di valuta**  
+    -   **Currency Key**  
   
-    -   **Chiave territorio vendita**  
+    -   **Sales Territory Key**  
   
-    -   **Numero revisione**  
+    -   **Revision Number**  
   
      Per impostazione predefinita, la procedura guidata seleziona come misure tutte le colonne numeriche della tabella dei fatti che non sono collegate a dimensioni. Tuttavia, queste quattro colonne non sono effettive misure. Le prime tre sono valori chiave che collegano la tabella dei fatti alle tabelle delle dimensioni che non sono utilizzate nella versione iniziale di questo cubo.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66079062"
   
 12. Nella pagina **Completamento procedura guidata** modificare il nome del cubo in `Analysis Services Tutorial`. Nel riquadro Anteprima è possibile visualizzare il gruppo di misure **InternetSales** e le relative misure. È inoltre possibile visualizzare le dimensioni **Date**, **Customer** e **Product** .  
   
-13. Fare clic su **Finish** per completare la procedura guidata.  
+13. Fare clic su **Fine** per completare la procedura guidata.  
   
      In Esplora soluzioni, nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial viene visualizzato nella cartella **Cubi** e le dimensioni del database Customer e Product vengono visualizzate nella cartella **Dimensions** . Il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial viene inoltre visualizzato al centro dell'ambiente di sviluppo nella scheda Struttura cubo.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66079062"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Aggiunta di attributi alle dimensioni](lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

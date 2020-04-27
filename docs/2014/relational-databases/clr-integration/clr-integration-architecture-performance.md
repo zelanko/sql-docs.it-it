@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874511"
 ---
 # <a name="performance-of-clr-integration"></a>Prestazioni dell'integrazione con CLR
@@ -46,8 +46,7 @@ ms.locfileid: "62874511"
 ### <a name="streaming-table-valued-functions"></a>STVF (Streaming Table-Valued Function, Funzioni di flusso con valori di tabella)  
  Le applicazioni spesso devono restituire una tabella come risultato della chiamata di una funzione. Gli esempi includono la lettura di dati tabulari da un file nell'ambito di un'operazione di importazione e la conversione di valori delimitati da virgole in una rappresentazione relazionale. Per effettuare queste operazioni in genere è necessario materializzare e popolare la tabella dei risultati prima che possa essere utilizzata dal chiamante. L'integrazione di CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] introduce un nuovo meccanismo di extensibility definito tabella di streaming con valori di tabella (STVF, streaming table-valued function). Le funzioni di flusso con valori di tabella offrono prestazioni migliori rispetto alle implementazioni delle stored procedure estese confrontabili.  
   
- Le funzioni di flusso con valori di tabella sono funzioni gestite che restituiscono un'interfaccia `IEnumerable`. 
-  `IEnumerable` dispone di metodi per spostarsi all'interno del set di risultati restituito da STVF. Quando viene richiamata la funzione, l'interfaccia `IEnumerable` restituita viene connessa direttamente al piano di query. Il piano di query chiama quindi i metodi `IEnumerable` qualora sia necessario recuperare righe. Questo modello di iterazione consente di utilizzare immediatamente i risultati subito dopo la produzione della prima riga, anziché dover attendere che venga popolata l'intera tabella. Riduce inoltre significativamente la quantità di memoria utilizzata quando si richiama la funzione.  
+ Le funzioni di flusso con valori di tabella sono funzioni gestite che restituiscono un'interfaccia `IEnumerable`. `IEnumerable` dispone di metodi per spostarsi all'interno del set di risultati restituito da STVF. Quando viene richiamata la funzione, l'interfaccia `IEnumerable` restituita viene connessa direttamente al piano di query. Il piano di query chiama quindi i metodi `IEnumerable` qualora sia necessario recuperare righe. Questo modello di iterazione consente di utilizzare immediatamente i risultati subito dopo la produzione della prima riga, anziché dover attendere che venga popolata l'intera tabella. Riduce inoltre significativamente la quantità di memoria utilizzata quando si richiama la funzione.  
   
 ### <a name="arrays-vs-cursors"></a>Confronto tra matrici e cursori  
  Quando i cursori [!INCLUDE[tsql](../../../includes/tsql-md.md)] devono attraversare i dati che sono espressi più facilmente come una matrice, è possibile utilizzare il codice gestito per ottenere prestazioni di gran lunga superiori.  
@@ -78,7 +77,7 @@ ms.locfileid: "62874511"
 ### <a name="scalable-memory-usage"></a>Utilizzo della memoria scalabile  
  Per ottenere prestazioni e scalabilità soddisfacenti del processo di Garbage Collection gestito in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], evitare una singola allocazione di grandi dimensioni. Le allocazioni di dimensioni maggiori di 88 kilobyte (KB) vengono inserite nell'heap oggetti grandi che determina prestazioni e scalabilità nettamente inferiori rispetto ad allocazioni più piccole. Se ad esempio è necessario allocare una matrice multidimensionale di dimensioni elevate, è preferibile allocare una matrice di matrici (a dispersione).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi CLR definiti dall'utente](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011494"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Procedure per la gestione di account di accesso, utenti e schemi
@@ -24,7 +24,7 @@ ms.locfileid: "63011494"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Creare un account di accesso](create-a-login.md)  
+-   [Creazione di un account di accesso](create-a-login.md)  
   
 -   [Creazione di un utente di database](create-a-database-user.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63011494"
   
 -   [Concedere un'autorizzazione a un'entità](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Entità &#40;motore di database&#41;](principals-database-engine.md)   
  [Sicurezza di SQL Server](../securing-sql-server.md)  
   

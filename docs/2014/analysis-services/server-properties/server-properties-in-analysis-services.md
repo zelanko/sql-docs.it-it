@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068896"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurare le proprietà del server in Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "66068896"
   
  [Riferimento alle proprietà del server](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>Configurare le proprietà del server (istanza)  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>Configurare le proprietà del server (istanza)  
  La pagina delle proprietà in SQL Server Management Studio contiene un subset delle proprietà disponibili e consente di visualizzare solo le proprietà la cui modifica è più probabile. Il set completo delle proprietà è disponibile nel file msmdsrv.ini.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "66068896"
   
 4.  Dopo aver salvato il file, è necessario riavviare il servizio.  
   
-##  <a name="bkmk_ref"></a>Riferimento alle proprietà del server  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a> Guida di riferimento alle proprietà del server  
  Le proprietà di configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono importanti per ottimizzare il proprio sistema. È ad esempio possibile impostare particolari proprietà per fare in modo che il log delle query funzioni in conformità ai propri requisiti.  
   
  Negli argomenti seguenti vengono descritte le varie proprietà di configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -92,7 +92,7 @@ ms.locfileid: "66068896"
 |[Proprietà di sicurezza](security-properties.md)|La sezione sulla sicurezza comprende proprietà di base e proprietà avanzate che consentono di definire le autorizzazioni di accesso. Comprendono anche proprietà riguardanti amministratori ed utenti.|  
 |[Proprietà dei pool di thread](thread-pool-properties.md)|Le proprietà di pooling dei thread controllano il numero di thread creati dal server. Queste proprietà sono destinate principalmente ad utenti esperti.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione dell'istanza di Analysis Services](../instances/analysis-services-instance-management.md)   
  [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

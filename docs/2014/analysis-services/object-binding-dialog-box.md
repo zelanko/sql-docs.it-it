@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072193"
 ---
 # <a name="object-binding-dialog-box"></a>Finestra di dialogo Associazione oggetto
@@ -45,7 +45,7 @@ ms.locfileid: "66072193"
  Consente di indicare che è necessario definire una nuova colonna nella vista origine dati. Su tale colonna verrà quindi eseguita un'associazione colonna.  
   
 > [!NOTE]  
->  Se questa opzione è selezionata, è necessario eseguire la **generazione guidata schema** prima di distribuire [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] l'oggetto.  
+>  Se questa opzione è selezionata è necessario eseguire la **Generazione guidata schema** prima di distribuire l'oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Associazione righe  
  Consente di associare l'oggetto a una riga in una tabella dei fatti, in modo da semplificare le misure Distinct Count in base al numero di righe elaborate nella tabella dei fatti.  
@@ -56,7 +56,7 @@ ms.locfileid: "66072193"
  **Colonna di origine**  
  Consente di visualizzare un elenco di colonne nella tabella selezionata in **Tabella di origine**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

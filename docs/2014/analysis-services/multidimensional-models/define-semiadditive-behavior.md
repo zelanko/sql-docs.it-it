@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075543"
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
@@ -33,7 +33,7 @@ ms.locfileid: "66075543"
 ## <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva  
  Nella pagina **Definizione funzioni semiadditive** della procedura guidata selezionare la modalità di definizione delle funzioni semiadditive selezionando una delle opzioni seguenti:  
   
- **Disattiva il comportamento di funzioni semiadditive**  
+ **Disabilita funzioni semiadditive**  
  Consente di rimuovere le funzioni semiadditive da un cubo in cui tali funzioni sono state precedentemente definite. Se si seleziona questa opzione, una misura viene reimpostata su `SUM` se è impostata su uno dei tipi di funzione di aggregazione seguenti:  
   
 -   By Account  
@@ -58,7 +58,7 @@ ms.locfileid: "66075543"
 > [!NOTE]  
 >  Questa opzione è selezionata per impostazione predefinita se la procedura guidata rileva una dimensione di tipo Conti.  
   
- **Definire il comportamento di funzioni semiadditive per le singole misure**  
+ **Definisci funzioni semiadditive per singole misure**  
  Consente di selezionare individualmente le funzioni semiadditive di ogni misura. L'impostazione predefinita è `SUM` (additività completa).  
   
 > [!NOTE]  

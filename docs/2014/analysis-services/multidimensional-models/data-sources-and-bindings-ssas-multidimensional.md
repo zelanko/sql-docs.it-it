@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076075"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
@@ -49,8 +49,7 @@ ms.locfileid: "66076075"
   
  La modalità di espressione dell'origine dati varia in base al tipo di origine dati. Un'origine dati relazionale si distingue ad esempio per la stringa di connessione. Per altre informazioni sulle origini dati, vedere [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md).  
   
- Indipendentemente dall'origine dati utilizzata, la vista origine dati contiene i metadati per l'origine dati. Le associazioni per un cubo o altri oggetti [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono pertanto espresse sotto forma di associazioni alla vista origine dati. Queste associazioni possono includere associazioni a oggetti logici, ad esempio viste, colonne calcolate e relazioni che non esistono fisicamente nell'origine dati. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aggiunge una colonna calcolata che incapsula l'espressione nella vista origine dati, quindi associa la misura OLAP corrispondente a tale colonna nella vista origine dati. Per altre informazioni sulle viste origine dati, vedere [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md).  
+ Indipendentemente dall'origine dati utilizzata, la vista origine dati contiene i metadati per l'origine dati. Le associazioni per un cubo o altri oggetti [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono pertanto espresse sotto forma di associazioni alla vista origine dati. Queste associazioni possono includere associazioni a oggetti logici, ad esempio viste, colonne calcolate e relazioni che non esistono fisicamente nell'origine dati. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aggiunge una colonna calcolata che incapsula l'espressione nella vista origine dati, quindi associa la misura OLAP corrispondente a tale colonna nella vista origine dati. Per altre informazioni sulle viste origine dati, vedere [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md).  
   
  Ciascun oggetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene associato all'origine dati in modo specifico. Inoltre, le associazioni dati per tali oggetti e la definizione dell'origine dati possono essere fornite inline con la definizione dell'oggetto associato a dati, ad esempio la dimensione, oppure out-of-line come un set di definizioni distinto.  
   
@@ -60,10 +59,10 @@ ms.locfileid: "66076075"
 |Tipo di dati di Analysis Services|Descrizione|  
 |---------------------------------|-----------------|  
 |BigInt|Intero con segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int64 in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I8 in OLE DB.|  
-|Booleano|Valore booleano. Per questo tipo di dati viene eseguito il mapping al tipo di dati Boolean in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_BOOL in OLE DB.|  
+|Bool|Valore booleano. Per questo tipo di dati viene eseguito il mapping al tipo di dati Boolean in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_BOOL in OLE DB.|  
 |Valuta|Valore di valuta compreso nell'intervallo tra -2 63 (o -922337.203.685.477,5808) e 2 63 -1 (o +922.337.203.685.477,5807) con un'approssimazione pari a dieci millesimi di unità di valuta. Per questo tipo di dati viene eseguito il mapping al tipo di dati Decimal in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_CY in OLE DB.|  
-|Data|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
-|DOUBLE|Numero a virgola mobile a precisione doppia compreso tra -1.79E +308 e 1.79E +308. Per questo tipo di dati viene eseguito il mapping al tipo di dati Double in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R8 in OLE DB.|  
+|Date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
+|Double|Numero a virgola mobile a precisione doppia compreso tra -1.79E +308 e 1.79E +308. Per questo tipo di dati viene eseguito il mapping al tipo di dati Double in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R8 in OLE DB.|  
 |Integer|Intero con segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I4 in OLE DB.|  
 |Single|Numero a virgola mobile a precisione singola compreso tra -3.40E +38 e 3.40E +38. Per questo tipo di dati viene eseguito il mapping al tipo di dati Single in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R4 in OLE DB.|  
 |SmallInt|Intero con segno a 16 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int16 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I2 in OLE DB.|  
@@ -73,8 +72,7 @@ ms.locfileid: "66076075"
 |UnsignedSmallInt|Numero intero non firmato a 16 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt16 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI2 in OLE DB.|  
 |WChar|Flusso con terminazione Null di caratteri Unicode. Per questo tipo di dati viene eseguito il mapping al tipo di dati String in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_WSTR in OLE DB.|  
   
- Tutti dati ricevuti dall'origine dati vengono convertiti nel tipo [!INCLUDE[ssAS](../../includes/ssas-md.md)] specificato nell'associazione, in genere durante l'elaborazione. Viene generato un errore se non è possibile eseguire la conversione (ad esempio da String a Int). 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] imposta in genere il tipo di dati nell'associazione su quello che corrisponde meglio al tipo di origine nell'origine dati. Ad esempio, per i tipi di dati SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset viene eseguito il mapping a [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date e il tipo SQL Time a String.  
+ Tutti dati ricevuti dall'origine dati vengono convertiti nel tipo [!INCLUDE[ssAS](../../includes/ssas-md.md)] specificato nell'associazione, in genere durante l'elaborazione. Viene generato un errore se non è possibile eseguire la conversione (ad esempio da String a Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] imposta in genere il tipo di dati nell'associazione su quello che corrisponde meglio al tipo di origine nell'origine dati. Ad esempio, per i tipi di dati SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset viene eseguito il mapping a [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date e il tipo SQL Time a String.  
   
 ## <a name="bindings-for-dimensions"></a>Associazioni per dimensioni  
  Ciascun attributo di una dimensione è associato a una colonna in una vista origine dati. Tutti gli attributi di una dimensione devono provenire da una singola origine dati. È tuttavia possibile associare gli attributi a colonne di diverse tabelle. Le relazioni tra le tabelle sono definite nella vista origine dati. Nel caso in cui esistano più set di relazioni nella stessa tabella, potrebbe essere necessario introdurre una query denominata nella vista origine dati per fungere da tabella ' alias '. Le espressioni e i filtri sono definiti nella tabella origine dati mediante calcoli denominati e query denominate.  

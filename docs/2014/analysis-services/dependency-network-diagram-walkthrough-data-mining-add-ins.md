@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081964"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Descrizione dettagliata del diagramma della rete di dipendenze (componenti aggiuntivi Data mining)
@@ -105,7 +105,7 @@ ms.locfileid: "66081964"
      **Livello attendibilità bordo**  
      Consente di attivare e disattivare la visualizzazione del livello di attendibilità bordo per l'intero grafico. Un bordo è un collegamento tra nodi. È possibile utilizzare il controllo dispositivo di scorrimento per escludere tramite filtro i collegamenti non attendibili.  
   
-     **Dispositivo di scorrimento**  
+     **Slider**  
      Il **dispositivo di scorrimento** consente di controllare il livello di attendibilità delle relazioni visualizzate nel diagramma della rete di dipendenze.  
   
      Ogni nodo del grafico rappresenta uno stato. Una freccia rappresenta una transizione tra due stati e la probabilità associata alla transizione. Per ridurre il numero di nodi nel grafico, spostare il dispositivo di scorrimento verso l'alto.  
@@ -122,7 +122,7 @@ ms.locfileid: "66081964"
 > [!WARNING]  
 >  L'evidenziazione di nodi dipendenti e altre opzioni del menu di scelta rapida disponibili nelle versioni precedenti dei componenti aggiuntivi non funzionano in Office 2013.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Risoluzione dei problemi relativi ai diagrammi di data mining di Visio &#40;componenti aggiuntivi Data mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

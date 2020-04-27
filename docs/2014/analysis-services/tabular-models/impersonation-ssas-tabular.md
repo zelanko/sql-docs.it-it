@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067056"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
@@ -28,12 +28,12 @@ ms.locfileid: "66067056"
   
 -   [Sicurezza](#bkmk_impers_sec)  
   
--   [Rappresentazione durante l'importazione di un modello](#bkmk_imp_newmodel)  
+-   [Rappresentazione in caso di importazione di un modello](#bkmk_imp_newmodel)  
   
 -   [Configurazione della rappresentazione](#bkmk_conf_imp_info)  
   
-##  <a name="bkmk_how_imper"></a>Vantaggi  
- La *rappresentazione* è la capacità di un'applicazione server, ad esempio Analysis Services, di assumere l'identità di un'applicazione client. Analysis Services viene eseguito utilizzando un account del servizio, tuttavia, quando tramite il server viene stabilita una connessione a un'origine dati, viene utilizzata la rappresentazione in modo che sia possibile eseguire controlli di accesso per l'importazione e l'elaborazione dei dati.  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Vantaggi  
+ La*rappresentazione* è la capacità di un'applicazione server, ad esempio Analysis Services, di assumere l'identità di un'applicazione client. Analysis Services viene eseguito utilizzando un account del servizio, tuttavia, quando tramite il server viene stabilita una connessione a un'origine dati, viene utilizzata la rappresentazione in modo che sia possibile eseguire controlli di accesso per l'importazione e l'elaborazione dei dati.  
   
  Le credenziali utilizzate per la rappresentazione sono diverse da quelle dell'utente attualmente connesso. Le credenziali dell'utente che ha effettuato l'accesso vengono utilizzate per particolari operazioni lato client in caso di creazione di un modello.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067056"
 > [!IMPORTANT]  
 >  Durante la creazione di un modello, assicurarsi che le credenziali dell'utente attualmente connesso e quelle specificate per la rappresentazione dispongano di diritti sufficienti per il recupero dei dati dall'origine dati.  
   
-##  <a name="bkmk_imp_info_options"></a>Opzioni  
+##  <a name="options"></a><a name="bkmk_imp_info_options"></a>Opzioni  
  Quando si configura la rappresentazione o si modificano proprietà per una connessione all'origine dati esistente in Analysis Services, è possibile specificare una delle opzioni seguenti:  
   
 |Opzione|ImpersonationMode<sup>1</sup>|Descrizione|  
@@ -74,27 +74,27 @@ ms.locfileid: "66067056"
   
  <sup>2</sup> Quando si utilizza questa opzione, se il database dell'area di lavoro viene rimosso dalla memoria, a causa di un riavvio o se la proprietà **memorizzazione area di lavoro** è impostata su **Scarica dalla memoria** o **Elimina dall'area di lavoro**e il progetto di modello è chiuso, nella sessione successiva, se si tenta di elaborare i dati della tabella, verrà richiesto di immettere le credenziali per ogni origine dati. Analogamente, se un database modello distribuito viene rimosso dalla memoria, verranno richieste le credenziali per ogni origine dati.  
   
-##  <a name="bkmk_impers_sec"></a> Sicurezza  
+##  <a name="security"></a><a name="bkmk_impers_sec"></a> Sicurezza  
  Le credenziali utilizzate con la rappresentazione sono salvate in modo permanente in memoria dal motore di analisi in memoria xVelocity (VertiPaq™) associato al server Analysis Services tramite cui viene gestito il database dell'area di lavoro o un modello distribuito.  In nessuna circostanza si tratta di credenziali scritte su disco. Se il database dell'area di lavoro non è in memoria quando il modello viene distribuito, all'utente verrà richiesto di immettere le credenziali utilizzate per la connessione all'origine dati e il recupero dei dati.  
   
 > [!NOTE]  
 >  Si consiglia di specificare un account utente di Windows e una password per le credenziali di rappresentazione. È possibile configurare un account utente di Windows per utilizzare privilegi minimi necessari per la connessione e la lettura dei dati dall'origine dati.  
   
-##  <a name="bkmk_imp_newmodel"></a>Rappresentazione durante l'importazione di un modello  
+##  <a name="impersonation-when-importing-a-model"></a><a name="bkmk_imp_newmodel"></a>Rappresentazione durante l'importazione di un modello  
  A differenza dei modelli tabulari in cui è possibile utilizzare molte modalità di rappresentazione diverse per supportare la raccolta dati out-of-process, in PowerPivot viene utilizzata un'unica modalità, ovvero ImpersonateCurrentUser. Poiché PowerPivot viene eseguito sempre in-process, la connessione alle origini dati viene stabilita utilizzando le credenziali dell'utente attualmente connesso. Con i modelli tabulari, le credenziali dell'utente attualmente connesso vengono usate solo con la funzionalità **Visualizza anteprima e applica filtro** nell'Importazione guidata tabella e in caso di visualizzazione di **Proprietà tabella**. Le credenziali di rappresentazione vengono utilizzate durante l'importazione o l'elaborazione di dati nel database dell'area di lavoro o in un modello distribuito.  
   
  In caso di creazione di un nuovo modello importando una cartella di lavoro di PowerPivot esistente, per impostazione predefinita, in Progettazione modelli verrà configurata la rappresentazione per utilizzare l'account del servizio (ImpersonateServiceAccount). Si consiglia di impostare le credenziali di rappresentazione nei modelli importati da PowerPivot su un account utente di Windows. Dopo aver importato la cartella di lavoro di PowerPivot e creato il nuovo modello in Progettazione modelli, è possibile modificare le credenziali utilizzando la finestra di dialogo **connessioni esistenti** .  
   
  In caso di creazione di un nuovo modello importando da un modello esistente in un server Analysis Services, le credenziali di rappresentazione vengono passate dal database modello esistente al nuovo database dell'area di lavoro del modello. Se necessario, è possibile modificare le credenziali nel nuovo modello tramite la finestra di dialogo **Connessioni esistenti** .  
   
-##  <a name="bkmk_conf_imp_info"></a>Configurazione della rappresentazione  
+##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>Configurazione della rappresentazione  
  La posizione e il contesto di un modello esistente consentiranno di determinare la modalità di configurazione delle informazioni sulla rappresentazione. Per la creazione di modelli in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile configurare le informazioni sulla rappresentazione nella pagina **Impostazioni di rappresentazione** dell'Importazione guidata tabella o modificando una connessione all'origine dati nella finestra di dialogo **Connessioni esistenti** . Per visualizzare le connessioni esistenti, nel menu [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Modello **di** fare clic su **Connessioni esistenti**.  
   
  Per i modelli distribuiti in un server di Analysis Services, è possibile configurare le informazioni sulla rappresentazione facendo clic sui puntini di sospensione (...) della proprietà impostazioni di **rappresentazione origine dati** nella finestra di dialogo **Proprietà database** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)   
  [Origini dati &#40;SSAS tabulare&#41;](../data-sources-ssas-tabular.md)   
- [Distribuzione di soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

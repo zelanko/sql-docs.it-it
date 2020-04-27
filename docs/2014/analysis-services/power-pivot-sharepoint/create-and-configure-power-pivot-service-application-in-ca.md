@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071580"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Creare e configurare un'applicazione del servizio PowerPivot in Amministrazione centrale
@@ -32,7 +32,7 @@ ms.locfileid: "66071580"
   
  [Modificare le proprietà dell'applicazione di servizio](#EditGSA)  
   
-##  <a name="determine"></a>Determinare se creare una nuova applicazione di servizio PowerPivot  
+##  <a name="determine-whether-to-create-a-new-powerpivot-service-application"></a><a name="determine"></a>Determinare se creare una nuova applicazione di servizio PowerPivot  
  Nella farm di un'installazione di PowerPivot per SharePoint deve essere presente almeno un'applicazione di servizio PowerPivot. Un'applicazione del servizio viene creata automaticamente se è stato utilizzato lo strumento di configurazione PowerPivot per configurare il server. In caso contrario, è necessario creare manualmente un'applicazione del servizio PowerPivot in Amministrazione centrale.  
   
  Creando un'applicazione di servizio si rende disponibile il servizio e si genera il database dell'applicazione di servizio. A seconda delle opzioni selezionate durante la creazione dell'applicazione di servizio, una connessione al servizio PowerPivot viene aggiunta al gruppo di connessioni predefinito del servizio. A tutte le applicazioni Web di SharePoint sottoscritte al gruppo di connessioni predefinito del servizio sarà concesso l'accesso immediato all'applicazione di servizio PowerPivot.  
@@ -49,9 +49,9 @@ ms.locfileid: "66071580"
   
  Se non esiste alcun motivo specifico per cui creare un'applicazione di servizio PowerPivot aggiuntiva, è preferibile utilizzare una sola applicazione di servizio per tutte le applicazioni Web della farm.  
   
-##  <a name="CreateApp"></a>Creare un'applicazione di servizio PowerPivot  
+##  <a name="create-a-powerpivot-service-application"></a><a name="CreateApp"></a>Creare un'applicazione di servizio PowerPivot  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Nella barra multifunzione **Applicazioni di servizio** fare clic su **Nuovo**.  
   
@@ -75,12 +75,12 @@ ms.locfileid: "66071580"
   
      Per ulteriori informazioni sulle associazioni di servizio, vedere [connettere un'applicazione del servizio PowerPivot a un'applicazione Web di SharePoint in Amministrazione centrale](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-10. Scegliere **OK.** Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
+10. Fare clic su **OK**. Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
   
-##  <a name="ConfigApp"></a>Configurare l'applicazione di servizio PowerPivot  
+##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>Configurare l'applicazione di servizio PowerPivot  
  Un'applicazione di servizio PowerPivot viene creata utilizzando una configurazione predefinita. Le impostazioni predefinite sono consigliate per la maggior parte degli scenari. Modificarle solo in caso di connessioni interrotte o tempi di risposta lunghi o se si intende variare la configurazione del servizio PowerPivot per applicazioni Web di SharePoint specifiche.  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
      Nell'elenco di applicazioni di servizio dovrebbe essere presente l'applicazione di servizio appena creata e a cui è stato assegnato un nome. Il nome predefinito è **PowerPivotServiceApplication1**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66071580"
   
      Le modifiche apportate al timeout di caricamento o al metodo di allocazione vengono applicate unicamente alle nuove richieste in arrivo. Le richieste già in corso sono soggette ai valori che erano attivi nel momento in cui era stata ricevuta la richiesta.  
   
-##  <a name="AssignGSA"></a>Assegnare un'applicazione del servizio PowerPivot a un'applicazione Web  
+##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>Assegnare un'applicazione del servizio PowerPivot a un'applicazione Web  
  Dopo avere configurato un'applicazione di servizio PowerPivot, è possibile assegnarla a un'applicazione Web aggiungendola all'elenco di connessioni all'applicazione di servizio per quell'applicazione Web. A questo scopo è possibile procedere in due modi:  
   
 -   Aggiungere l'applicazione di servizio al gruppo di connessioni **predefinito** . Il *gruppo di connessioni predefinito* è una raccolta di connessioni all'applicazione di servizio disponibili a qualsiasi applicazione Web che fa riferimento a tale gruppo. È necessario aggiungere un'applicazione di servizio PowerPivot a questo elenco.  
@@ -131,28 +131,28 @@ ms.locfileid: "66071580"
   
  Il gruppo di connessioni predefinito accetterà più di un'applicazione di servizio dello stesso tipo. Tenere presente, tuttavia, che l'aggiunta di più di un'applicazione di servizio PowerPivot a questo elenco non è supportata.  
   
-1.  In **Gestione applicazioni**di amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
+1.  In **Gestione applicazioni**di Amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
   
 2.  Selezionare l'applicazione per la quale si desidera assegnare una connessione, ad esempio SharePoint -80.  
   
 3.  Fare clic su **Connessioni servizio**.  
   
-4.  In **Edit the following group of associations**(Modifica il gruppo di associazioni seguente) selezionare **default** o **[custom]**.  
+4.  In **modifica il gruppo di associazioni seguente**selezionare **predefinito** o **[Custom]**.  
   
-5.  Per **[custom]**, selezionare la casella di controllo accanto a ogni connessione all'applicazione di servizio che si desidera usare. Se sono presenti più applicazioni di servizio PowerPivot (indicato dal tipo impostato su `PowerPivot Service Application Proxy`), assicurarsi di sceglierne una sola.  
+5.  Per **[Custom]** selezionare la casella di controllo accanto a ogni connessione all'applicazione di servizio che si vuole usare. Se sono presenti più applicazioni di servizio PowerPivot (indicato dal tipo impostato su `PowerPivot Service Application Proxy`), assicurarsi di sceglierne una sola.  
   
 6.  Fare clic su **OK**.  
   
-##  <a name="EditGSA"></a>Modificare le proprietà dell'applicazione di servizio  
+##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>Modificare le proprietà dell'applicazione di servizio  
  Utilizzare le istruzioni seguenti per aprire nuovamente la pagina delle proprietà contenente il nome dell'applicazione di servizio, il pool di applicazioni, le impostazioni del database e le associazioni del servizio.  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Selezionare l'applicazione del servizio PowerPivot (ma non fare clic su di essa). È possibile fare clic sul nome del tipo per selezionare l'intera riga.  
   
 3.  Sulla barra multifunzione fare clic su **Proprietà** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

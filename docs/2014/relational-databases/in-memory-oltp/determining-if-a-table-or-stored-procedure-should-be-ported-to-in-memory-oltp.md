@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072378"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
@@ -99,7 +99,7 @@ ms.locfileid: "63072378"
   
 7.  Nella schermata successiva fare clic su **fine** per uscire dalla procedura guidata.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurare la raccolta dati in un'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurare la raccolta dati in un'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Per la raccolta dati è necessario che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia avviato. È sufficiente configurare un agente di raccolta dati su un server.  
   
  Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]successiva di.  
@@ -118,7 +118,7 @@ ms.locfileid: "63072378"
   
 6.  Verificare le selezioni. Fare clic su **indietro** per modificare le impostazioni. Fare clic su **Fine** al termine.  
   
-###  <a name="xxx"></a>Configurare la raccolta dati in un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza remota  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurare la raccolta dati in un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza remota  
  Per la raccolta dati è necessario che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia avviato nell'istanza che raccoglierà i dati.  
   
  Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]successiva di.  
@@ -224,7 +224,7 @@ ms.locfileid: "63072378"
   
  Per visualizzare i dettagli su come convertire un stored procedure in un stored procedure compilato in modo nativo, usare l' [Assistente compilazione nativa](native-compilation-advisor.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

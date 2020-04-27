@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891792"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat
@@ -24,9 +24,9 @@ ms.locfileid: "62891792"
   
  Per questa esercitazione si configureranno le seguenti proprietà nella gestione connessione file flat:  
   
--   **Nomi delle colonne:** Poiché il file flat non ha nomi di colonna, la gestione connessione file flat crea nomi di colonna predefiniti. Questi nomi predefiniti non sono utili per identificare i dati rappresentati da ogni colonna. Per rendere questi nomi predefiniti più utili, è necessario modificarli in nomi che corrispondano alla tabella dei fatti in cui i dati dei file flat devono essere caricati.  
+-   **Nomi di colonne:** dal momento che il file flat non presenta nomi di colonne, con la gestione connessione file flat vengono creati nomi di colonna predefiniti. Questi nomi predefiniti non sono utili per identificare i dati rappresentati da ogni colonna. Per rendere questi nomi predefiniti più utili, è necessario modificarli in nomi che corrispondano alla tabella dei fatti in cui i dati dei file flat devono essere caricati.  
   
--   **Mapping dei dati:** I mapping dei tipi di dati specificati per la gestione connessione file flat verranno utilizzati da tutti i componenti dell'origine dati file flat che fanno riferimento alla gestione connessione. È possibile eseguire manualmente il mapping dei tipi di dati usando la gestione connessione file flat oppure usare la finestra di dialogo **Suggerisci tipi di colonne** . In questa esercitazione verranno visualizzati i mapping suggeriti nella finestra di dialogo **Suggerisci tipi di colonne** e quindi verranno effettuati manualmente i mapping necessari nella finestra di dialogo **Editor gestione connessione file flat** .  
+-   **Mapping dei dati:** i mapping dei tipi di dati specificati per la gestione connessione file flat verranno usati da tutti i componenti di origine dati dei file flat che fanno riferimento alla gestione connessione. È possibile eseguire manualmente il mapping dei tipi di dati usando la gestione connessione file flat oppure usare la finestra di dialogo **Suggerisci tipi di colonne** . In questa esercitazione verranno visualizzati i mapping suggeriti nella finestra di dialogo **Suggerisci tipi di colonne** e quindi verranno effettuati manualmente i mapping necessari nella finestra di dialogo **Editor gestione connessione file flat** .  
   
  Gestione connessione file flat fornisce informazioni sulle impostazioni locali per il file di dati. Se il computer non è configurato per l'utilizzo dell'opzione Regional (lingua inglese) (Stati Uniti), è necessario impostare proprietà aggiuntive nella finestra di dialogo **Editor gestione connessione file flat** .  
   
@@ -77,8 +77,7 @@ ms.locfileid: "62891792"
   
 1.  Nella finestra di dialogo **Editor gestione connessione file flat** fare clic su **Suggerisci tipi**.  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] indica automaticamente i tipi di dati più appropriati in base alle prime 200 righe di dati. È inoltre possibile modificare le opzioni suggerite in modo da campionare più o meno dati, specificare il tipo di dati predefinito per numeri interi o dati booleani oppure aggiungere spazi come spaziatura interna nelle colonne stringa.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] indica automaticamente i tipi di dati più appropriati in base alle prime 200 righe di dati. È inoltre possibile modificare le opzioni suggerite in modo da campionare più o meno dati, specificare il tipo di dati predefinito per numeri interi o dati booleani oppure aggiungere spazi come spaziatura interna nelle colonne stringa.  
   
      Per il momento non apportare modifiche alle opzioni nella finestra di dialogo **Suggerisci tipi di colonne** e fare clic su **OK** in modo che [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggerisca i tipi di dati per le colonne. In questo modo verrà nuovamente visualizzato il riquadro **Avanzate** della finestra di dialogo **Editor gestione connessione file flat** in cui è possibile visualizzare i tipi di dati delle colonne suggeriti da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se si fa clic su **Annulla**non verranno indicati suggerimenti relativi ai metadati delle colonne e verrà usato il tipo di dati string predefinito, ovvero DT_STR.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62891792"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)   
  [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md)  
   

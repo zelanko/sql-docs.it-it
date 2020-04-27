@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62999549"
 ---
 # <a name="name-not-found-dialog-box"></a>Nome non trovato - finestra di dialogo
@@ -37,7 +37,7 @@ ms.locfileid: "62999549"
  **Immettere il nome dell'oggetto**  
  Contiene il nome dell'oggetto non trovato. Correggere il nome dell'oggetto o digitare un nuovo nome di oggetto.  
   
- *****Rimuovi\<nome oggetto>* **dalla selezione**      
+ **Remove***Rimuovi\<nome oggetto>* **dalla selezione**      
  Selezionare questa opzione per chiudere la finestra di dialogo **Nome non trovato** e rimuovere l'elemento dalla finestra di dialogo **Seleziona oggetti** .  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035735"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Attività Pulizia file manutenzione (Piano di manutenzione)
@@ -58,13 +58,13 @@ ms.locfileid: "63035735"
  **Includi sottocartelle di primo livello**  
  Consente di eliminare i file con l'estensione specificata in **Estensione file** dalle sottocartelle di primo livello in **Cartella**.  
   
- **Elimina i file in base all'età del file in fase di esecuzione dell'attività**  
+ **Elimina i file in base alla data del file al momento dell'esecuzione dell'attività**  
  Specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati, indicando un numero e un'unità di tempo nella casella **Elimina i file con data anteriore a** .  
   
- **Elimina i file più vecchi di quanto segue**  
+ **Elimina i file con data anteriore a**  
  Consente di specificare la data minima dei file da eliminare indicando un numero e un'unità di tempo (giorno/i, settimana/e, mese/i o anno/i). I file con data anteriore alla data specificata verranno eliminati.  
   
- **Visualizza T-SQL**  
+ **Visualizza codice T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ ms.locfileid: "63035735"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere un nome di server**  
+ **Selezionare o immettere il nome di un server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **...**  
@@ -83,7 +83,7 @@ ms.locfileid: "63035735"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows**  
+ **Usa la sicurezza integrata di Windows NT**  
  Consente di connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzando l'autenticazione di Microsoft Windows.  
   
  **Usa nome utente e password specifici**  
@@ -95,7 +95,7 @@ ms.locfileid: "63035735"
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Piani di manutenzione](maintenance-plans.md)  
   
   

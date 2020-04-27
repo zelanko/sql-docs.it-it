@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899403"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
@@ -26,10 +26,10 @@ ms.locfileid: "67899403"
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|ID della query corrente o dell'ultima esecuzione della query (se la sessione viene TERMINAta e la query è stata eseguita al momento della terminazione). Chiave per questa visualizzazione.|Univoco in tutte le sessioni del sistema.|  
+|session_id|**nvarchar(32)**|ID della query corrente o dell'ultima esecuzione della query (se la sessione viene TERMINAta e la query è stata eseguita al momento della terminazione). Chiave per questa visualizzazione.|Univoco in tutte le sessioni del sistema.|  
 |status|**nvarchar (10)**|Per le sessioni correnti, indica se la sessione è attualmente attiva o inattiva. Per le sessioni passate è possibile che lo stato della sessione venga visualizzato chiuso o terminato (se la sessione è stata chiusa forzatamente).|' ACTIVE ',' CLOSED ',' IDLE ',' TERMINATE '|  
-|request_id|**nvarchar (32)**|ID della query corrente o dell'ultima esecuzione della query.|Univoco tra tutte le richieste nel sistema. Null se non ne è stato eseguito nessuno.|  
-|security_id|**varbinary(85)**|ID di sicurezza dell'entità che esegue la sessione.||  
+|request_id|**nvarchar(32)**|ID della query corrente o dell'ultima esecuzione della query.|Univoco tra tutte le richieste nel sistema. Null se non ne è stato eseguito nessuno.|  
+|security_id|**varbinary (85)**|ID di sicurezza dell'entità che esegue la sessione.||  
 |login_name|**nvarchar(128)**|Nome dell'account di accesso dell'entità che esegue la sessione.|Qualsiasi stringa conforme alle convenzioni di denominazione degli utenti.|  
 |login_time|**datetime**|Data e ora in cui l'utente ha effettuato l'accesso e questa sessione è stata creata.|**DateTime** valido prima dell'ora corrente.|  
 |query_count|**int**|Acquisisce il numero di query o la sessione requeststhis è stata eseguita dopo la creazione.|Maggiore o uguale a 0.|  
@@ -43,7 +43,7 @@ ms.locfileid: "67899403"
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

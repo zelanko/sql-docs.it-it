@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897360"
 ---
 # <a name="operators-ssis-expression"></a>Operatori (espressione SSIS)
@@ -36,7 +36,7 @@ ms.locfileid: "62897360"
 |[- &#40;sottrazione&#41; &#40;espressione SSIS&#41;](subtract-ssis-expression.md)|Viene sottratta la seconda espressione numerica dalla prima.|  
 |[- &#40;negazione&#41; &#40;espressione SSIS&#41;](negate-ssis-expression.md)|Viene applicato un segno negativo a un'espressione numerica.|  
 |[&#42; &#40;moltiplicazione&#41; &#40;espressione SSIS&#41;](multiply-ssis-expression.md)|Vengono moltiplicate due espressioni numeriche.|  
-|[Divide &#40;espressione SSIS&#41;](divide-ssis-expression.md)|Viene divisa la prima espressione numerica per la seconda.|  
+|[Divisione &#40;espressione SSIS&#41;](divide-ssis-expression.md)|Viene divisa la prima espressione numerica per la seconda.|  
 |[&#40;modulo&#41; &#40;espressione SSIS&#41;](modulo-ssis-expression.md)|Viene restituito il resto Integer dopo aver diviso la prima espressione numerica per la seconda.|  
 |[&#124;&#124; &#40;OR logico&#41; &#40;espressione SSIS&#41;](logical-or-ssis-expression.md)|Viene eseguita un'operazione con OR logico.|  
 |[&& &#40;AND logico&#41; &#40;espressione SSIS&#41;](logical-and-ssis-expression.md)|Viene eseguita un'operazione con AND logico.|  
@@ -44,7 +44,7 @@ ms.locfileid: "62897360"
 |[&#124; &#40;OR inclusivo bit per bit&#41; &#40;espressione SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)|Viene eseguita un'operazione con OR bit per bit su due valori integer.|  
 |[^ &#40;OR esclusivo bit per bit&#41; &#40;Espressione SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)|Viene eseguita un'operazione con OR esclusivo bit per bit su due valori integer.|  
 |[& &#40;AND bit per bit&#41; &#40;espressione SSIS&#41;](bitwise-and-ssis-expression.md)|Esegue un'operazione con AND bit per bit tra due valori integer.|  
-|[~ &#40;bit per bit non&#41; &#40;espressione SSIS&#41;](bitwise-not-ssis-expression.md)|Viene eseguita una negazione bit per bit di un valore integer.|  
+|[~ &#40;NOT bit per bit&#41; &#40;espressione SSIS&#41;](bitwise-not-ssis-expression.md)|Viene eseguita una negazione bit per bit di un valore integer.|  
 |[== &#40;uguale&#41; &#40;espressione SSIS&#41;](equal-ssis-expression.md)|Viene eseguito un confronto per determinare se due espressioni sono uguali.|  
 |[\!= &#40;diverso da&#41; &#40;espressione SSIS&#41;](unequal-ssis-expression.md)|Esegue un confronto per determinare se due espressioni sono diverse.|  
 |[&#62; &#40;maggiore di&#41; &#40;espressione SSIS&#41;](greater-than-ssis-expression.md)|Esegue un confronto per determinare se la prima espressione è maggiore della seconda.|  

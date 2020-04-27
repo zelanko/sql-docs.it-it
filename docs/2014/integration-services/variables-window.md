@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877876"
 ---
 # <a name="variables-window"></a>Finestra Variabili
@@ -49,7 +49,7 @@ ms.locfileid: "62877876"
  `Name`  
  Consente di visualizzare il nome della variabile. È possibile aggiornare il nome delle variabili definite dall'utente.  
   
- **Scope**  
+ **Ambito**  
  Consente di visualizzare l'ambito della variabile, che può essere costituito dall'intero pacchetto oppure da un contenitore o da un'attività. L'ambito della variabile deve essere sufficiente affinché la variabile sia visibile per qualsiasi altro componente o attività che necessita di leggerne o impostarne il valore.  
   
  È possibile modificare l'ambito facendo clic sulla variabile e quindi selezionando **Sposta variabile** nella finestra **Variabili** .  
@@ -66,7 +66,7 @@ ms.locfileid: "62877876"
  `Namespace`  
  Consente di visualizzare il nome dello spazio dei nomi. Le variabili definite dall'utente vengono inizialmente create nello spazio dei nomi **User** , ma è possibile modificare il nome dello `Namespace` spazio dei nomi nel campo. Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
- **Genera evento di modifica**  
+ **Raise Change Event**  
  Consente di indicare se generare l'evento `OnVariableValueChanged` alla modifica di un valore. È possibile aggiornare il valore per le variabili definite dall'utente e le variabili di sistema. Per impostazione predefinita, questa colonna non viene visualizzata nella finestra **Variabili** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
  **Descrizione**  
@@ -77,10 +77,10 @@ ms.locfileid: "62877876"
   
  Se si assegna un'espressione a una variabile, accanto a quest'ultima viene visualizzato un marcatore icona speciale. Tale marcatore icona speciale viene visualizzato anche accanto alle gestioni connessioni e alle attività in cui sono impostate espressioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
- [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Generazione di file di dump per l'esecuzione dei pacchetti](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Integration Services &#40;espressioni di&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Generazione di file di dump per l'esecuzione del pacchetto](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

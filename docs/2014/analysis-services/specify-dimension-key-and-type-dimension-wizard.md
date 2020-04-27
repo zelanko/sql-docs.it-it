@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068385"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>Impostazione chiave e tipo della dimensione (Creazione guidata dimensione)
@@ -35,7 +35,7 @@ ms.locfileid: "66068385"
  **Dimensione modificabile**  
  Selezionare questa opzione per indicare che si tratta di una dimensione a modifica lenta. Selezionando questa opzione vengono create colonne e attributi aggiuntivi che possono essere utilizzati per tenere traccia di tutti gli spostamenti dei membri tra le gerarchie della dimensione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

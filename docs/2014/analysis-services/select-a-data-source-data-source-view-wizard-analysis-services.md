@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069854"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Selezionare un'origine dati (Configurazione guidata vista origine dati) (Analysis Services)
@@ -37,7 +37,7 @@ ms.locfileid: "66069854"
  **Nuova origine dati**  
  Apre la Creazione guidata origine dati, che consente di creare una nuova origine dei dati che verrà aggiunta al progetto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Guida sensibile al contesto della creazione guidata origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126013"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
@@ -29,8 +29,7 @@ ms.locfileid: "63126013"
   
  Prima di iniziare il processo di ridenominazione, tenere presenti le considerazioni seguenti.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la ridenominazione di server coinvolti nella replica, eccetto nel caso in cui venga utilizzata il log shipping con la replica. È possibile rinominare il server secondario nel log shipping in caso di perdita definitiva del server primario. Per altre informazioni, vedere [Log shipping e replica &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la ridenominazione di server coinvolti nella replica, eccetto nel caso in cui venga utilizzata il log shipping con la replica. È possibile rinominare il server secondario nel log shipping in caso di perdita definitiva del server primario. Per altre informazioni, vedere [Log shipping e replica &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Se si rinomina un server virtuale configurato per l'utilizzo del mirroring del database, è necessario disabilitare il mirroring del database prima di eseguire la ridenominazione e quindi riabilitarlo con il nome del nuovo server virtuale. I metadati per il mirroring del database non verranno aggiornati automaticamente in modo da riflettere il nome del nuovo server virtuale.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63126013"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Ulteriori considerazioni dopo la ridenominazione dell'operazione  
  Dopo la ridenominazione del nome di rete del cluster di failover, è necessario verificare e applicare le istruzioni riportate di seguito per abilitare tutti gli scenari in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Dopo aver modificato il nome di rete di [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] un'istanza del cluster di failover utilizzando lo strumento Amministrazione cluster di Windows, l'operazione di aggiornamento o disinstallazione futura potrebbe non riuscire. Per risolvere questo problema, aggiornare la voce del registro di sistema **clustername** seguendo le istruzioni nella [](https://go.microsoft.com/fwlink/?LinkId=244002) sezione relativahttps://go.microsoft.com/fwlink/?LinkId=244002)alla risoluzione di questo (.  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Dopo aver modificato il nome di rete di [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] un'istanza del cluster di failover utilizzando lo strumento Amministrazione cluster di Windows, l'operazione di aggiornamento o disinstallazione futura potrebbe non riuscire. Per risolvere questo problema, aggiornare la voce del registro di sistema **clustername** seguendo le istruzioni nella [this](https://go.microsoft.com/fwlink/?LinkId=244002) sezione relativahttps://go.microsoft.com/fwlink/?LinkId=244002)alla risoluzione di questo (.  
   
  ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:** Verificare ed eseguire le azioni aggiuntive seguenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il servizio Agent:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "63126013"
   
 -   Aggiornare i passaggi del processo che dipendono dal nome del server. Per altre informazioni, vedere [Gestire passaggi di processo](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

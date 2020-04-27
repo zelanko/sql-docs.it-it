@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074470"
 ---
 # <a name="format_string-contents-mdx"></a>Contenuto di FORMAT_STRING (MDX)
@@ -78,11 +78,10 @@ ms.locfileid: "66074470"
 |**,**|Rappresenta il separatore delle migliaia, che separa le migliaia dalle centinaia all'interno di un numero con quattro o più posizioni a sinistra del separatore decimale.<br /><br /> Se il formato include un separatore delle migliaia racchiuso tra segnaposti di cifra (**0** o **#**), il separatore delle migliaia verrà usato in modo standard.<br /><br /> Se sono presenti due separatori delle migliaia consecutivi oppure un separatore delle migliaia immediatamente a sinistra del separatore decimale, indipendentemente dal fatto che sia specificato un decimale, il numero verrà diviso per 1000 e arrotondato come necessario. È possibile, ad esempio, usare la stringa di formato "**##0**,," per rappresentare 100 milioni come 100. I numeri minori di 1 milione vengono visualizzati come 0. Due separatori delle migliaia adiacenti in una posizione diversa da quella immediatamente a sinistra del separatore decimale vengono considerati elementi che specificano l'utilizzo di un separatore delle migliaia.<br /><br /> Il carattere effettivo utilizzato come separatore delle migliaia nell'output formattato dipende dal formato numerico riconosciuto dal computer in uso.<br /><br /> Nota: in alcune impostazioni locali viene usato il punto come separatore delle migliaia.|  
 |**:**|Rappresenta il separatore dell'ora che separa le ore, i minuti e i secondi nei valori di ora formattati.<br /><br /> Nota: in alcune impostazioni locali potrebbero essere usati altri caratteri come separatore dell'ora.<br /><br /> Il carattere effettivo utilizzato come separatore dell'ora nell'output formattato è determinato dalle impostazioni di sistema del computer in uso.|  
 |**/**|Rappresenta il separatore della data che separa il giorno, il mese e l'anno nei valori di data formattati.<br /><br /> Il carattere effettivo utilizzato come separatore della data nell'output formattato è determinato dalle impostazioni di sistema del computer in uso.<br /><br /> Nota: in alcune impostazioni locali potrebbero essere usati altri caratteri come separatore della data.|  
-|**E-E + e-e +**|Rappresenta il formato scientifico.<br /><br /> Se l'espressione di formato contiene almeno un segnaposto di cifra (**0** o **#**) a destra di **E-**, **E+**, **e-** o **e+**, il valore formattato verrà visualizzato in formato scientifico e tra il numero e l'esponente verrà inserito il carattere E o e. Il numero di segnaposti di cifra a destra determina il numero di cifre nell'esponente. Usare **E-** o **e-** per inserire un segno di sottrazione accanto agli esponenti negativi. Usare **E+** o **e+** per inserire un segno di sottrazione accanto agli esponenti negativi e un segno di addizione accanto agli esponenti positivi.|  
+|**E- E+ e- e+**|Rappresenta il formato scientifico.<br /><br /> Se l'espressione di formato contiene almeno un segnaposto di cifra (**0** o **#**) a destra di **E-**, **E+**, **e-** o **e+**, il valore formattato verrà visualizzato in formato scientifico e tra il numero e l'esponente verrà inserito il carattere E o e. Il numero di segnaposti di cifra a destra determina il numero di cifre nell'esponente. Usare **E-** o **e-** per inserire un segno di sottrazione accanto agli esponenti negativi. Usare **E+** o **e+** per inserire un segno di sottrazione accanto agli esponenti negativi e un segno di addizione accanto agli esponenti positivi.|  
 |**- + $ ( )**|Visualizza un carattere letterale.<br /><br /> Per visualizzare un carattere diverso da uno di quelli elencati, inserire una barra rovesciata (**\\**) prima del carattere o racchiudere il carattere tra virgolette doppie (**""**).|  
 |**\\**|Visualizza il carattere successivo nella stringa di formato.<br /><br /> Per visualizzare un carattere con un significato speciale come carattere letterale, inserire una barra rovesciata (**\\**) prima del carattere. La barra rovesciata non viene visualizzata. Utilizzare una barra rovesciata equivale a racchiudere il carattere successivo tra virgolette doppie. Per visualizzare una barra rovesciata, usare due barre rovesciate (**\\**). I caratteri che non possono essere visualizzati come caratteri letterali includono i seguenti:<br /><br /> I caratteri di formattazione di data e ora:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** e **:**<br /><br /> Caratteri**#** di formattazione numerica, ovvero **0**, **%**, **e**, **e**, **virgola**e **punto**<br /><br /> Caratteri di formattazione delle**@** stringhe, **&** **\<** **>**,,, e **!**|  
-|**ABC**|Visualizza la stringa racchiusa tra virgolette doppie (**" "**).<br /><br /> Per includere una stringa formattata dal codice, racchiudere il testo tra due Chr(**34**). 
-  **34**è il codice carattere per la virgoletta doppia.|  
+|**ABC**|Visualizza la stringa racchiusa tra virgolette doppie (**" "**).<br /><br /> Per includere una stringa formattata dal codice, racchiudere il testo tra due Chr(**34**). **34**è il codice carattere per la virgoletta doppia.|  
   
 ### <a name="named-numeric-formats"></a>Formati numerici denominati  
  Nella tabella seguente sono indicati i nomi dei formati numerici predefiniti:  
@@ -108,20 +107,20 @@ ms.locfileid: "66074470"
 |**/**|Rappresenta il separatore della data che separa il giorno, il mese e l'anno nei valori di data formattati.<br /><br /> Il carattere effettivo utilizzato come separatore della data nell'output formattato è determinato dalle impostazioni di sistema del computer in uso.<br /><br /> Nota: in alcune impostazioni locali potrebbero essere usati altri caratteri per rappresentare il separatore della data|  
 |**C**|Visualizza la data come **ddddd** e l'ora come **ttttt**, in questo ordine.<br /><br /> Se il numero seriale della data non include una parte frazionaria, verranno visualizzate solo le informazioni della data. Se non esiste una parte intera, verranno visualizzate solo le informazioni dell'ora.|  
 |**d**|Visualizza il giorno sotto forma di numero senza zero iniziali (1-31).|  
-|**gg**|Visualizza il giorno sotto forma di numero con uno zero principale (01-31).|  
+|**GG**|Visualizza il giorno sotto forma di numero con uno zero principale (01-31).|  
 |**ddd**|Visualizza il giorno come abbreviazione (Dom-Sat).|  
 |**dddd**|Visualizza il giorno come nome completo (domenica-sabato).|  
 |**ddddd**|Visualizza la data completa, inclusi il giorno, il mese e l'anno, formattata in base all'impostazione del formato di data breve del sistema in uso.<br /><br /> In Microsoft Windows il formato di data breve predefinito è **g/m/aa**.|  
 |**dddddd**|Visualizza un numero seriale di data sotto forma di una data completa, inclusi il giorno, il mese e l'anno, formattata in base all'impostazione del formato di data estesa riconosciuta dal computer in uso.<br /><br /> In Windows il formato di data estesa predefinito è **gg mmmm aaaa**.|  
 |**w**|Visualizza il giorno della settimana sotto forma di numero (1 corrisponde al lunedì e 7 alla domenica).|  
-|**WW**|Visualizza la settimana dell'anno sotto forma di numero (1-54).|  
+|**ww**|Visualizza la settimana dell'anno sotto forma di numero (1-54).|  
 |**m**|Visualizza il mese sotto forma di numero senza zero iniziali (1-12).<br /><br /> Se il segnaposto **m** è indicato immediatamente dopo **h** o **hh**, anziché il mese verrà visualizzato il minuto.|  
-|**MM**|Visualizza il mese sotto forma di numero con uno zero principale (01-12).<br /><br /> Se il segnaposto **m** è indicato immediatamente dopo **h** o **hh**, anziché il mese verrà visualizzato il minuto.|  
+|**mm**|Visualizza il mese sotto forma di numero con uno zero principale (01-12).<br /><br /> Se il segnaposto **m** è indicato immediatamente dopo **h** o **hh**, anziché il mese verrà visualizzato il minuto.|  
 |**mmm**|Visualizza il mese come abbreviazione (gen-DEC).|  
 |**mmmm**|Visualizza il nome completo del mese (gennaio-dicembre).|  
 |**d**|Consente di visualizzare il trimestre dell'anno sotto forma di numero (1-4).|  
 |**y**|Visualizza il giorno dell'anno sotto forma di numero (1-366).|  
-|**AA**|Visualizza l'anno come numero a due cifre (00-99).|  
+|**yy**|Visualizza l'anno come numero a due cifre (00-99).|  
 |**aaaa**|Visualizza l'anno come numero a quattro cifre (100-9999).|  
 |**h**|Visualizza l'ora sotto forma di numero senza zeri iniziali (0-23).|  
 |**hh**|Visualizza l'ora sotto forma di numero con zeri iniziali (00-23).|  
@@ -133,8 +132,8 @@ ms.locfileid: "66074470"
 |**AM/PM**|Visualizza i caratteri **AM** maiuscoli accanto a tutte le ore da mezzanotte a mezzogiorno e i caratteri **PM** maiuscoli accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
 |**AM/PM**|Visualizza i caratteri **am** minuscoli accanto a tutte le ore da mezzanotte a mezzogiorno e i caratteri **pm** minuscoli accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
 |**A/P**|Visualizza il carattere **A** maiuscolo accanto a tutte le ore da mezzanotte a mezzogiorno e il carattere **P** maiuscolo accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
-|**a/p**|Visualizza il carattere **a** minuscolo accanto a tutte le ore da mezzanotte a mezzogiorno e il carattere **p** minuscolo accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
-|**AMPM**|Visualizza la stringa letterale AM in base a quanto specificato dal computer in uso accanto a tutte le ore da mezzanotte e mezzogiorno e la stringa letterale PM in base a quanto specificato dal computer in uso accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.<br /><br /> **AMPM** può essere in maiuscolo o in minuscolo, ma il caso della stringa visualizzata corrisponde alla stringa definita dalle impostazioni di sistema del computer.<br /><br /> In Windows viene usato il formato **AM/PM**per impostazione predefinita.|  
+|**A/P**|Visualizza il carattere **a** minuscolo accanto a tutte le ore da mezzanotte a mezzogiorno e il carattere **p** minuscolo accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
+|**AMPM**|Visualizza la stringa letterale AM in base a quanto specificato dal computer in uso accanto a tutte le ore da mezzanotte e mezzogiorno e la stringa letterale PM in base a quanto specificato dal computer in uso accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.<br /><br /> **AMPM** può essere formattato in maiuscolo o in minuscolo, ma la formattazione della stringa effettivamente visualizzata corrisponde alla stringa definita dalle impostazioni di sistema del computer.<br /><br /> In Windows viene usato il formato **AM/PM**per impostazione predefinita.|  
   
 ### <a name="named-date-formats"></a>Formati di data denominati  
  Nella tabella seguente sono indicati i nomi dei formati di data e ora predefiniti:  
@@ -149,7 +148,7 @@ ms.locfileid: "66074470"
 |`Medium Time`|Viene visualizzata l'ora nel formato a 12 ore utilizzando ore e minuti e l'identificatore AM/PM.|  
 |`Short Time`|Viene visualizzata l'ora utilizzando il formato a 24 ore, ad esempio, 17:45.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [LINGUA e FORMAT_STRING FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
  [Utilizzo delle proprietà delle celle &#40;&#41;MDX](mdx-cell-properties-using-cell-properties.md)   
  [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   

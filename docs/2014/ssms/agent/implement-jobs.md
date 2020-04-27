@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074016"
 ---
 # <a name="implement-jobs"></a>Implementazione di processi
@@ -34,7 +34,7 @@ ms.locfileid: "63074016"
 |||  
 |-|-|  
 |**Descrizione**|**Argomento**|  
-|Contiene informazioni sulla creazione dei processi e sull'assegnazione della proprietà.|[Crea processi](create-jobs.md)|  
+|Contiene informazioni sulla creazione dei processi e sull'assegnazione della proprietà.|[Creazione di processi](create-jobs.md)|  
 |Contiene informazioni sull'organizzazione dei processi in categorie.|[organizzare processi](organize-jobs.md)|  
 |Contiene informazioni sui diversi tipi di passaggi di processo che è possibile creare e sulla rispettiva modalità di gestione.|[Gestire passaggi di processo](manage-job-steps.md)|  
 |Contiene informazioni sulla definizione del momento di avvio dei processi e sulla relativa frequenza di esecuzione.|[Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)|  
@@ -43,7 +43,7 @@ ms.locfileid: "63074016"
 |Contiene informazioni sulla visualizzazione dei processi esistenti e sulla cronologia processo eseguiti, nonché sulle modalità di modifica dei processi.|[Visualizzare o modificare processi](view-or-modify-jobs.md)|  
 |Contiene informazioni sulla modalità di eliminazione dei processi.|[eliminare processi](delete-jobs.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md)  
   
   

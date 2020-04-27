@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077658"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Finestra di dialogo Proprietà struttura di data mining (Analysis Services - Data Mining)
@@ -33,7 +33,7 @@ ms.locfileid: "66077658"
 |**Generale**|Utilizzare la pagina **Generale** per visualizzare e modificare le proprietà generali della struttura di data mining. Per altre informazioni su questa pagina, vedere [Generale &#40;finestra di dialogo Struttura di data mining&#41; &#40;Analysis Services - Data mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
 |**Configurazione errori**|Utilizzare la pagina **Configurazione errori** per visualizzare e modificare le impostazioni di configurazione degli errori per la struttura di data mining. Per altre informazioni su questa pagina, vedere [Errore &#40;finestra di dialogo Struttura di data mining&#41; &#40;Analysis Services - Dati multidimensionali&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services-&#41;di data mining](data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066708"
 ---
 # <a name="properties-ssas-tabular"></a>Proprietà (SSAS tabulare)
@@ -24,10 +24,10 @@ ms.locfileid: "66066708"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Proprietà di Power View Reporting &#40;SSAS tabulare&#41;](power-view-reporting-properties-ssas-tabular.md)|Gli argomenti di questa sezione forniscono descrizioni e opzioni di configurazione per modelli tabulari che saranno connessi e visualizzati da [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
+|[Proprietà report Power View &#40;SSAS tabulare&#41;](power-view-reporting-properties-ssas-tabular.md)|Gli argomenti di questa sezione forniscono descrizioni e opzioni di configurazione per modelli tabulari che saranno connessi e visualizzati da [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
 |[Proprietà del progetto &#40;SSAS tabulare&#41;](project-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà del progetto in cui sono incluse le impostazioni delle opzioni di distribuzione e del file del progetto.|  
-|[Proprietà del modello &#40;SSAS tabulare&#41;](model-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà del modello. Tali proprietà influiscono sulle azioni di compilazione, sul backup e sul database dell'area di lavoro del progetto di modello, durante la creazione di modelli.|  
-|[Proprietà della tabella &#40;SSAS tabulare&#41;](table-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà della tabella di base. Le proprietà della tabella qui descritte differiscono da quelle presenti nella finestra di dialogo Modifica proprietà tabella, che consentono di visualizzare ed eseguire la selezione e il filtraggio di colonne dall'origine.|  
+|[Proprietà modello &#40;SSAS tabulare&#41;](model-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà del modello. Tali proprietà influiscono sulle azioni di compilazione, sul backup e sul database dell'area di lavoro del progetto di modello, durante la creazione di modelli.|  
+|[Proprietà delle tabelle &#40;SSAS tabulare&#41;](table-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà della tabella di base. Le proprietà della tabella qui descritte differiscono da quelle presenti nella finestra di dialogo Modifica proprietà tabella, che consentono di visualizzare ed eseguire la selezione e il filtraggio di colonne dall'origine.|  
 |[Proprietà delle colonne &#40;SSAS tabulare&#41;](column-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà della colonna. Le proprietà delle colonne definiscono il tipo di dati, il formato e le impostazioni nascoste di una colonna.|  
 |[Configurare la modellazione dei dati e le proprietà di distribuzione predefinite &#40;SSAS tabulare&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Vengono forniti passaggi di configurazione e descrizioni per le proprietà di modellazione e distribuzione predefinite. Le proprietà predefinite vengono applicate ai nuovi progetti di modello tabulare. Dopo aver creato un progetto, queste proprietà possono essere modificate per un particolare progetto di modello in base ai requisiti specifici.|  
   

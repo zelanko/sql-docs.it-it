@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081461"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni drill-through (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66081461"
 >  Le azioni drill-through non eseguono più il drill-down nell'archivio di dati sottostante. Le informazioni accessibili dalle azioni drill-through devono essere modellate all'interno del cubo utilizzando membri di dimensione o di gerarchia.  
   
 ## <a name="options"></a>Opzioni  
- **nome**  
+ **name**  
  Consente di digitare il nome dell'azione.  
   
  **Destinazione azione**  
@@ -56,7 +56,7 @@ ms.locfileid: "66081461"
  **Proprietà aggiuntive**  
  Espandere questa opzione per visualizzare le opzioni **Impostazione predefinita**, **Numero massimo di righe**, **Chiamata**, **Applicazione**, **Descrizione**, **Didascalia**e **Didascalia MDX** .  
   
- **Default**  
+ **Predefinita**  
  Selezionare **True** per includere l'azione drill-through attuale come azione predefinita. In caso contrario selezionare **False**.  
   
  Se la `RETURN` clausola viene omessa da un'istruzione `DRILLTHROUGH` MDX eseguita da un'applicazione client, l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di valuta tutte le azioni drill-through predefinite ed esegue la prima azione drill-through predefinita che restituisce un set non vuoto. Per ulteriori informazioni sull'istruzione MDX `DRILLTHROUGH` , vedere [istruzione drill-through &#40;&#41;MDX ](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -64,7 +64,7 @@ ms.locfileid: "66081461"
 > [!NOTE]  
 >  Questa opzione viene utilizzata per garantire la compatibilità con le versioni precedenti.  
   
- **Righe massime**  
+ **Numero massimo di righe**  
  Consente di digitare il numero massimo di righe che devono essere restituite dall'azione drill-through. Se si imposta questa opzione a zero o a un valore vuoto l'azione drill-through restituirà all'applicazione client tutte le righe recuperate.  
   
  **Chiamata**  
@@ -78,7 +78,7 @@ ms.locfileid: "66081461"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un'attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interattività|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
+|Interactive (Interattivo)|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
 |Su apertura|L'azione viene eseguita quando il cubo viene aperto per la prima volta.|  
   
  **Applicazione**  
@@ -92,7 +92,7 @@ ms.locfileid: "66081461"
  **Descrizione**  
  Consente di digitare la descrizione facoltativa dell'azione.  
   
- **Sottotitolo**  
+ **Didascalia**  
  Consente di digitare la didascalia da visualizzare per l'azione nell'applicazione client se l'opzione **Didascalia MDX** è impostata su **False**.  
   
  Consente di digitare l'espressione MDX che restituisce una stringa per la didascalia se l'opzione **Didascalia MDX** è impostata su **True**.  
@@ -102,7 +102,7 @@ ms.locfileid: "66081461"
   
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Espressioni multidimensionali &#40;riferimento&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072140"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Outlier (componenti aggiuntivi Data mining di SQL Server)
@@ -88,13 +88,13 @@ ms.locfileid: "66072140"
 ### <a name="related-options"></a>Opzioni correlate  
  La procedura guidata fornisce le seguenti opzioni:  
   
-|**Opzioni**|**Comment**|  
+|**Opzioni**|**Commento**|  
 |-----------------|-----------------|  
 |**Seleziona colonna**|È possibile utilizzare una sola colonna alla volta.|  
 |**Gestione di Impostazione valori di soglia**|Impostare una soglia usando il valore **minimo** per escludere i valori presenti in un minor numero di righe rispetto al valore soglia.<br /><br /> Inizialmente, il valore **minimo** è uguale al valore con il minor numero di righe e non è possibile rendere il valore minimo inferiore a tale valore.|  
 |**Gestione outlier**|Se si decide di eliminare gli outlier, è possibile modificare i dati nel foglio di lavoro corrente oppure creare una copia dei dati in un nuovo foglio di lavoro.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
   

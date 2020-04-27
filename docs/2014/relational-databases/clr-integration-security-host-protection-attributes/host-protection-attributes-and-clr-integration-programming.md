@@ -18,28 +18,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874346"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributi di protezione host e programmazione dell'integrazione con CLR
   Common Language Runtime (CLR) fornisce un meccanismo di annotazione delle API gestite che fanno parte di .NET Framework con determinati attributi che possono interessare un host di CLR, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Di seguito sono riportati alcuni esempi di attributi di protezione host:  
   
--   
-  `SharedState`, che indica se l'API espone la possibilità di creare o gestire uno stato condiviso, ad esempio campi classe statici.  
+-   `SharedState`, che indica se l'API espone la possibilità di creare o gestire uno stato condiviso, ad esempio campi classe statici.  
   
--   
-  `Synchronization`, che indica se l'API espone la possibilità di eseguire la sincronizzazione tra thread.  
+-   `Synchronization`, che indica se l'API espone la possibilità di eseguire la sincronizzazione tra thread.  
   
--   
-  `ExternalProcessMgmt`, che indica se l'API espone una modalità per controllare il processo host.  
+-   `ExternalProcessMgmt`, che indica se l'API espone una modalità per controllare il processo host.  
   
  Sulla base di tali attributi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica un elenco di attributi di protezione host non consentiti nell'ambiente host attraverso la sicurezza da accesso di codice. I requisiti della protezione dall'accesso di codice sono specificati da uno dei tre set di autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SAFE`, `EXTERNAL_ACCESS` o `UNSAFE`. Uno dei tre livelli di sicurezza viene specificato quando l'assembly viene registrato nel server, mediante l'istruzione `CREATE ASSEMBLY`. Durante l'esecuzione di codice nell'ambito dei set di autorizzazioni `SAFE` o `EXTERNAL_ACCESS`, è necessario evitare alcuni tipi o membri a cui è applicato l'attributo `System.Security.Permissions.HostProtectionAttribute`. Per ulteriori informazioni, vedere [creazione di un assembly](../clr-integration/assemblies/creating-an-assembly.md) e [restrizioni del modello di programmazione dell'integrazione CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
- 
-  `HostProtectionAttribute` rappresenta più una modalità per migliorare l'affidabilità che un'autorizzazione di sicurezza, in quanto identifica i costrutti di codice specifici, tipi o metodi, che possono essere disattivati dall'host. L'utilizzo di `HostProtectionAttribute` impone un modello di programmazione che consente di migliorare la stabilità dell'host.  
+ `HostProtectionAttribute` rappresenta più una modalità per migliorare l'affidabilità che un'autorizzazione di sicurezza, in quanto identifica i costrutti di codice specifici, tipi o metodi, che possono essere disattivati dall'host. L'utilizzo di `HostProtectionAttribute` impone un modello di programmazione che consente di migliorare la stabilità dell'host.  
   
 ## <a name="host-protection-attributes"></a>Attributi di protezione host  
  Gli attributi di protezione host identificano i tipi o i membri non inclusi nel modello di programmazione host e rappresentano i livelli di pericolo per l'affidabilità, riportati di seguito in ordine crescente di gravità:  
@@ -74,7 +70,7 @@ ms.locfileid: "62874346"
  [Tipi e membri non consentiti in System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
  Elenca i tipi e i membri in System.Core.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza dall'accesso di codice per l'integrazione con CLR](../clr-integration/security/clr-integration-code-access-security.md)   
  [Restrizioni del modello di programmazione dell'integrazione con CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Creazione di un assembly](../clr-integration/assemblies/creating-an-assembly.md)  

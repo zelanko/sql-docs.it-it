@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069785"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>Selezione dimensione gruppo di misure (procedura guidata Aggiungi nuova tabella nidificata)
   Usare la pagina **Selezione dimensione gruppo di misure** per selezionare una dimensione nel gruppo di misure da usare come tabella annidata.  
   
- **Per ulteriori informazioni:** [creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Gruppi di misure**  
  Consente di selezionare una tabella nidificata da una dimensione del gruppo di misure.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Impostazione utilizzo colonne modello di data mining &#40;creazione guidata modello di data mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
  [Selezionare la chiave della tabella nidificata &#40;procedura guidata Aggiungi nuova tabella nidificata&#41;](select-nested-table-key-add-new-nested-table-wizard.md)  

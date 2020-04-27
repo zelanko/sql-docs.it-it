@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9122db448e95a6734ea3cf3c1010665b60f4650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481179"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Aggiunta di informazioni a una Knowledge Base
@@ -26,46 +26,46 @@ ms.locfileid: "65481179"
   
 -   [Esecuzione dell'individuazione delle informazioni](#Discovery)  
   
--   [Gestire i valori dei dati in un dominio](#ManageDomain)  
+-   [Gestione dei valori dei dati in un dominio](#ManageDomain)  
   
 -   [Importazione di informazioni da un file DQS](#DQSFile)  
   
--   [Importa informazioni da un file di Excel](#Excel)  
+-   [Importazione di informazioni da un file di Excel](#Excel)  
   
--   [Importare le informazioni da un progetto di nuovo nella Knowledge base](#Project)  
+-   [Re-importazione di informazioni da un progetto nella Knowledge Base](#Project)  
   
--   [Utilizzare la Knowledge Base DQS predefinita](#Default)  
+-   [Utilizzo della Knowledge Base DQS predefinita](#Default)  
   
-##  <a name="Discovery"></a>Eseguire l'individuazione delle informazioni  
+##  <a name="perform-knowledge-discovery"></a><a name="Discovery"></a>Eseguire l'individuazione delle informazioni  
  L'individuazione delle informazioni consente di analizzare un esempio di dati per stabilire i criteri di qualità, quindi di aggiungere le informazioni acquisite alla Knowledge Base. Si tratta di un processo computerizzato che identifica le incoerenze e gli errori di sintassi, proponendo modifiche ai dati. L'attività di individuazione delle informazioni è una procedura guidata che include una pagina in cui è possibile gestire i valori di dominio in modo interattivo.  
   
 -   Per ulteriori informazioni, vedere [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 -   Per un video in cui si dimostra come eseguire l'individuazione delle informazioni, fare clic [qui](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
-##  <a name="ManageDomain"></a>Gestire i valori dei dati in un dominio  
+##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a>Gestire i valori dei dati in un dominio  
  DQS consente di modificare e aumentare in modo interattivo i metadati generati dall'attività di individuazione delle informazioni computerizzata. L'operazione viene eseguita nell'attività di gestione del dominio, dove è possibile applicare una modifica a un valore dei dati specifico.  
   
 -   Per ulteriori informazioni, vedere [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
 -   Per un video in cui si dimostra come eseguire la gestione di un dominio, fare clic [qui](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Si noti che in questo video si modificano i valori di dominio nella pagina di gestione dei valori di dominio della procedura guidata relativa all'individuazione delle informazioni. È inoltre possibile eseguire questi passaggi nella pagina Valori di dominio dell'attività di gestione del dominio.  
   
-##  <a name="DQSFile"></a>Importazione di informazioni da un file DQS  
+##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a>Importazione di informazioni da un file DQS  
  È possibile importare un dominio da un file dqs in una Knowledge Base esistente oppure importare una Knowledge Base intera da un file dqs in una nuova Knowledge Base. A tale scopo, è prima necessario esportare un dominio o Knowledge Base esistente in un file dqs. Un file dqs che contiene un dominio include tutti i dati del dominio; un file dqs che contiene una Knowledge Base conterrà tutte le informazioni sulla Knowledge Base, inclusi i domini e i criteri di corrispondenza.  
   
 -   Per altre informazioni, vedere [Importare un dominio da un file DQS](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md) o [Importare una Knowledge Base da un file DQS](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md).  
   
-##  <a name="Excel"></a>Importa informazioni da un file di Excel  
+##  <a name="import-knowledge-from-an-excel-file"></a><a name="Excel"></a>Importa informazioni da un file di Excel  
  È possibile importare valori di dominio da un foglio di calcolo di Excel in un dominio o Knowledge Base esistente. A tale scopo, è necessario prima creare un foglio di calcolo di Excel con i valori di dominio da importare e assicurarsi che Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] per essere in grado di importare valori utilizzando [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Non è possibile esportare valori di dominio da un dominio o Knowledge Base a un file di Excel.  
   
 -   Per altre informazioni nella documentazione, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) o [Importare i domini da un file di Excel in Individuazione informazioni](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).  
   
-##  <a name="Project"></a>Importare le informazioni da un progetto di nuovo nella Knowledge base  
+##  <a name="import-knowledge-from-a-project-back-into-the-knowledge-base"></a><a name="Project"></a>Importare le informazioni da un progetto di nuovo nella Knowledge base  
  Dopo aver eseguito un progetto di pulizia o di qualità dei dati corrispondenti utilizzando una Knowledge Base, è possibile re-importare le informazioni create durante la pulizia o l'individuazione delle corrispondenze nella Knowledge Base. Questo consente di conservare le informazioni generate durante il progetto e di continuare l'aggiunta di informazioni alla Knowledge Base.  
   
 -   Per altre informazioni, vedere [Importare i valori di un progetto di pulizia in un dominio](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md).  
   
-##  <a name="Default"></a>Utilizzare la Knowledge Base DQS predefinita  
+##  <a name="use-the-default-dqs-knowledge-base"></a><a name="Default"></a>Utilizzare la Knowledge Base DQS predefinita  
  In DQS è disponibile una Knowledge Base precompilata denominata DQS Data che contiene domini con dati relativi nomi e indirizzi di società statunitensi. Questa Knowledge Base può essere utilizzata per avviare rapidamente un progetto senza creare una nuova Knowledge Base. La Knowledge Base DQS Data è di sola lettura, ma l'amministratore dei dati può creare una nuova Knowledge Base basandosi su di essa.  
   
 -   Per ulteriori informazioni, vedere [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  

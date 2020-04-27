@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081323"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Estendi da esempio (Strumenti di analisi tabelle per Excel)
@@ -77,7 +77,7 @@ ms.locfileid: "66081323"
 ## <a name="related-tools-and-information"></a>Strumenti e informazioni correlati  
  È inoltre possibile utilizzare la procedura guidata [esplorazione dati](explore-data-sql-server-data-mining-add-ins.md) , disponibile nel client di data mining per Excel, per esaminare la distribuzione dei valori in una colonna di Excel. Per ulteriori informazioni, vedere [esplorazione e pulizia dei dati](exploring-and-cleaning-data.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

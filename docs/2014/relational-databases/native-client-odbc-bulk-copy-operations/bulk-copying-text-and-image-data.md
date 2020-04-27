@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067477"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia bulk di dati di tipo text e image
@@ -27,7 +27,7 @@ ms.locfileid: "63067477"
   
  **bcp_moretext** non dispone di un parametro per identificare una colonna. Quando in una riga sono presenti più colonne di tipo **Text**, **ntext**o **Image** , **bcp_moretext** opera sulle colonne **Text**, **ntext**o **Image** a partire dalla colonna con il numero ordinale più basso e procedendo alla colonna con il numero ordinale più alto. **bcp_moretext** passa da una colonna a quella successiva quando la somma delle lunghezze dei dati inviati è uguale alla lunghezza specificata nell' **bcp_collen** o **bcp_bind** più recente per la colonna corrente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di operazioni di copia bulk &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

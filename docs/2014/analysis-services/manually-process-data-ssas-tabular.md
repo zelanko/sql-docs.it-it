@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077967"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Elaborare manualmente i dati (SSAS tabulare)
@@ -30,7 +30,7 @@ ms.locfileid: "66077967"
   
 -   [Stato elaborazione dati](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a>Elaborare manualmente i dati  
+##  <a name="manually-process-data"></a><a name="bkmk_mahually_process"></a>Elaborare manualmente i dati  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>Per elaborare i dati per una sola tabella o tutte le tabelle in un modello  
   
@@ -54,26 +54,26 @@ ms.locfileid: "66077967"
     |----------|-----------------|  
     |**Elaborazione predefinita**|Rileva lo stato di elaborazione di un oggetto partizione ed esegue l'elaborazione necessaria per recapitare oggetti partizione non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Vengono caricati i dati per le tabelle vuote e le partizioni; vengono compilate o ricompilate le gerarchie, le colonne calcolate e le relazioni.|  
     |**Elaborazione completa**|Elabora un oggetto partizione e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa per un oggetto che è stato già elaborato, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vengono eliminati tutti i dati dell'oggetto, quindi quest'ultimo viene elaborato. Questo tipo di elaborazione è necessario quando è stata apportata una modifica strutturale a un oggetto.|  
-    |**Elaborare dati**|Carica i dati in una partizione o in una tabella senza ricompilare le gerarchie o le relazioni oppure ricalcolare le colonne calcolate e le misure.|  
-    |**Cancellazione processo**|Rimuove tutti i dati da una partizione.|  
+    |**Elaborare i dati**|Carica i dati in una partizione o in una tabella senza ricompilare le gerarchie o le relazioni oppure ricalcolare le colonne calcolate e le misure.|  
+    |**Elaborazione pulizia**|Rimuove tutti i dati da una partizione.|  
     |**Elaborazione aggiunta**|Aggiornare in modo incrementale la partizione con i nuovi dati.|  
   
 3.  Nell'elenco delle partizioni selezionare le partizioni da elaborare, quindi scegliere **OK**.  
   
-##  <a name="bkmk_data_process_progress"></a>Stato elaborazione dati  
+##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>Stato elaborazione dati  
  La finestra di dialogo **Stato elaborazione dati** consente di monitorare l'elaborazione di dati importati nel modello da un'origine esterna. Per accedere a questa finestra di dialogo, scegliere **Elabora partizioni** , **Elabora tabella**o **Elabora tutto** dal menu **Modello**.  
   
- **Status**  
+ **Stato**  
  Viene indicato se l'operazione di elaborazione ha avuto esito positivo o negativo.  
   
  **Dettagli**  
  Vengono elencate le tabelle e le visualizzazioni importate, il numero di righe importato e viene fornito un collegamento a un report di qualsiasi problema.  
   
- **Interrompi aggiornamento**  
+ **Arresta aggiornamento**  
  Fare clic per arrestare l'operazione di elaborazione. Questa opzione è utile se l'operazione è troppo lunga o se si sono verificati troppi errori.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborare dati &#40;SSAS tabulare&#41;](process-data-ssas-tabular.md)   
- [Risolvere i problemi di elaborazione dei dati &#40;SSAS tabulare&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Risolvere i problemi relativi all'elaborazione dei dati &#40;SSAS tabulare&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

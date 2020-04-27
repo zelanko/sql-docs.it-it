@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081489"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Finestra di dialogo Drill-through (Visualizzatore modello di data mining)
@@ -34,7 +34,7 @@ ms.locfileid: "66081489"
  **Elenco colonne**  
  Visualizza le colonne contenute nel modello, seguite dalle colonne della struttura.  
   
- **Nota** Le colonne della struttura vengono visualizzate solo se nella struttura di data mining è abilitato il drill-through e se sono state selezionate le colonne dell'opzione, del **modello e della struttura**. Per visualizzare le colonne è inoltre necessario disporre delle autorizzazioni drill-through per il modello di data mining e per la struttura di data mining.  
+ **Nota** Le colonne della struttura sono visualizzate solo se nella struttura di data mining è abilitato il drill-through e viene selezionata l'opzione **Colonne struttura e modello**. Per visualizzare le colonne è inoltre necessario disporre delle autorizzazioni drill-through per il modello di data mining e per la struttura di data mining.  
   
  Le colonne della struttura non incluse nel modello vengono visualizzate come **strutture.\< nome della colonna>**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66081489"
  **Play**  
  Fare clic sul pulsante con la freccia verde per aggiornare i dati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Query drill-through &#40;&#41;di data mining](data-mining/drillthrough-queries-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Attività e procedure relative al visualizzatore modello di data mining](data-mining/mining-model-viewer-tasks-and-how-tos.md)  

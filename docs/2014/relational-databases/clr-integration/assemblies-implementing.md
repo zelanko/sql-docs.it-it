@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874465"
 ---
 # <a name="implementing-assemblies"></a>Implementazione di assembly
@@ -77,7 +77,7 @@ ms.locfileid: "62874465"
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
-##  <a name="_managing"></a>Gestione delle versioni degli assembly  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>Gestione delle versioni degli assembly  
  Quando si carica un assembly in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'assembly viene archiviato e gestito all'interno dei cataloghi di sistema del database. Tutte le modifiche apportate alla definizione dell'assembly in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] devono essere propagate all'assembly archiviato nel catalogo del database.  
   
  Quando si modifica un assembly, è necessario eseguire un'istruzione ALTER ASSEMBLY per aggiornare l'assembly nel database. In questo modo l'assembly verrà aggiornato in base alla copia più recente dei moduli [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che ne contengono l'implementazione.  
@@ -89,14 +89,11 @@ ms.locfileid: "62874465"
 -   Se esistono colonne di un tipo CLR definito dall'utente che dipendono dall'assembly e il tipo implementa un formato di serializzazione **UserDefined** (non **Native**).  
   
 > [!CAUTION]  
->  Se non è specificata la clausola WITH UNCHECKED DATA, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di impedire l'esecuzione dell'istruzione ALTER ASSEMBLY nel caso in cui la nuova versione dell'assembly modifichi i dati esistenti in tabelle, indici o altre posizioni persistenti. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non garantisce tuttavia che le colonne calcolate, gli indici, le viste indicizzate o le espressioni saranno consistenti con i tipi e le routine sottostanti in caso di aggiornamento dell'assembly CLR. Quando si esegue l'istruzione ALTER ASSEMBLY è pertanto necessario verificare che non vi siano discrepanze tra il risultato di una determinata espressione e il valore basato su tale espressione archiviato nell'assembly.  
+>  Se non è specificata la clausola WITH UNCHECKED DATA, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di impedire l'esecuzione dell'istruzione ALTER ASSEMBLY nel caso in cui la nuova versione dell'assembly modifichi i dati esistenti in tabelle, indici o altre posizioni persistenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non garantisce tuttavia che le colonne calcolate, gli indici, le viste indicizzate o le espressioni saranno consistenti con i tipi e le routine sottostanti in caso di aggiornamento dell'assembly CLR. Quando si esegue l'istruzione ALTER ASSEMBLY è pertanto necessario verificare che non vi siano discrepanze tra il risultato di una determinata espressione e il valore basato su tale espressione archiviato nell'assembly.  
   
  Solo i membri del ruolo predefinito del database **db_owner** e **DB_DDLOWNER** possono eseguire ALTER assembly utilizzando la clausola with unchecked data.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invia al registro eventi applicazioni di Windows il messaggio che l'assembly è stato modificato con dati non controllati nelle tabelle. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna quindi le eventuali tabelle che contengono dati dipendenti dall'assembly come contenenti dati non controllati. La colonna **has_unchecked_assembly_data** della vista del catalogo **sys. Tables** contiene il valore 1 per le tabelle che contengono dati non verificati e 0 per le tabelle senza dati non verificati.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invia al registro eventi applicazioni di Windows il messaggio che l'assembly è stato modificato con dati non controllati nelle tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna quindi le eventuali tabelle che contengono dati dipendenti dall'assembly come contenenti dati non controllati. La colonna **has_unchecked_assembly_data** della vista del catalogo **sys. Tables** contiene il valore 1 per le tabelle che contengono dati non verificati e 0 per le tabelle senza dati non verificati.  
   
  Per verificare l'integrità dei dati non controllati, eseguire DBCC CHECKTABLE su tutte le tabelle contenenti dati non controllati. Se DBCC CHECKTABLE ha esito negativo è necessario eliminare le righe non valide della tabella oppure modificare il codice dell'assembly per risolvere i problemi e quindi eseguire altre istruzioni ALTER ASSEMBLY.  
   
@@ -115,7 +112,7 @@ ms.locfileid: "62874465"
   
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Assembly &#40;motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Recupero di informazioni sugli assembly](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

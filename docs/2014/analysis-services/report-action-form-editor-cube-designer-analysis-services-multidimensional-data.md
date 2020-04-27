@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070303"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni report (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -44,7 +44,7 @@ ms.locfileid: "66070303"
 |Membri del livello|In **Oggetto di destinazione** è selezionato un membro del livello.|  
   
  **Oggetto di destinazione**  
- Consente di selezionare l'oggetto a cui associare l'azione. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] L' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di restituisce al client solo le azioni che si applicano all'oggetto selezionato. L'elenco degli oggetti disponibili è vincolato dall'opzione selezionata in **Tipo di destinazione**.  
+ Consente di selezionare l'oggetto a cui associare l'azione. L'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce nel client solo le azioni applicabili all'oggetto selezionato. L'elenco degli oggetti disponibili è vincolato dall'opzione selezionata in **Tipo di destinazione**.  
   
  **Condizione (facoltativa)**  
  Consente di immettere l'espressione MDX (Multidimensional Expression) che descrive una condizione facoltativa, usata insieme a **Oggetto di destinazione**, per vincolare ulteriormente la disponibilità dell'azione. L'espressione deve restituire un valore booleano il quale, se è True, indica che l'azione è disponibile.  
@@ -70,7 +70,7 @@ ms.locfileid: "66070303"
 |Excel|Il report viene restituito come file di cartella di lavoro (XLS) di [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel.|  
 |PDF|Il report viene restituito come file Adobe PDF con estensione pdf.|  
   
- **Parametri (facoltativo)**  
+ **Parametri (facoltativi)**  
  Espandere la finestra per visualizzare una griglia in cui è possibile immettere i parametri del report specificati in **Report**. La griglia include le colonne seguenti:  
   
 |Colonna|Descrizione|  
@@ -92,7 +92,7 @@ ms.locfileid: "66070303"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di un'attività.|  
-|Interattività|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
+|Interactive (Interattivo)|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
 |Su apertura|L'azione viene eseguita quando il cubo viene aperto per la prima volta.|  
   
  **Applicazione**  
@@ -106,7 +106,7 @@ ms.locfileid: "66070303"
  **Descrizione**  
  Consente di digitare la descrizione facoltativa dell'azione.  
   
- **Sottotitolo**  
+ **Didascalia**  
  Consente di digitare la didascalia da visualizzare per l'azione nell'applicazione client se l'opzione **Didascalia MDX** è impostata su **False**.  
   
  Digitare l'espressione MDX che restituisce una stringa per la didascalia se l'opzione **Didascalia MDX** è impostata su **True**.  
@@ -116,7 +116,7 @@ ms.locfileid: "66070303"
   
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

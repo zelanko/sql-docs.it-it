@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080094"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provider di dati usati per le connessioni ad Analysis Services
-  Analysis Services fornisce tre provider di dati per l'accesso al server e ai dati. Tutte le applicazioni che si connettono ad Analysis Services effettuano l'accesso mediante una di tali provider. Due provider, ADOMD.NET e Analysis Services Management Objects (AMO), sono provider di dati gestiti, Il provider Analysis Services OLE DB (MSOLAP DLL) è un provider di dati nativo.  
+  Analysis Services fornisce tre provider di dati per l'accesso al server e ai dati. Tutte le applicazioni che si connettono ad Analysis Services effettuano l'accesso mediante una di tali provider. Due provider, ADOMD.NET e Analysis Services Management Objects (AMO), sono provider di dati gestiti, mentre il provider OLE DB di Analysis Services (MSOLAP DLL) è un provider di dati nativo.  
   
  Nelle organizzazioni in cui vengono eseguite più versioni di Analysis Services potrebbe essere necessario installare versioni più recenti dei provider di dati nelle workstation degli utenti che si connettono ai dati di Analysis Services. Le connessioni a versioni più recenti di Analysis Services richiedono provider di dati della stessa versione principale. Per accedere [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], ad esempio, in ogni workstation deve essere presente un provider di dati della versione 2014. Sebbene con Excel vengano installati provider di dati a cui è necessario connettersi, il provider fornito spesso non è aggiornato rispetto alle istanze di Analysis Services in uso.  
   
@@ -26,9 +26,9 @@ ms.locfileid: "66080094"
   
  [Come determinare la versione del server](#bkmk_ServVers)  
   
- [Come determinare la versione dei provider di dati Analysis Services](#bkmk_LibUpdate)  
+ [Come determinare la versione dei provider di dati di Analysis Services](#bkmk_LibUpdate)  
   
- [Dove ottenere i provider di dati della versione più recente](#bkmk_downloadsite)  
+ [Dove trovare li provider di dati con la versione più recente](#bkmk_downloadsite)  
   
  [Provider OLE DB per Analysis Services](#bkmk_OLE)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66080094"
   
  [AMO](#blkmk_AMO)  
   
-##  <a name="bkmk_ServVers"></a>Come determinare la versione del server  
+##  <a name="how-to-determine-server-version"></a><a name="bkmk_ServVers"></a>Come determinare la versione del server  
  Se si conosce la versione dell'istanza di Analysis Services, sarà possibile determinare se è necessario installare versioni più recenti dei provider di dati nelle workstation dell'organizzazione.  
   
 -   In SQL Server Management Studio connettersi all'istanza di Analysis Services. Fare clic con il pulsante destro del mouse sull'istanza che si desidera controllare, scegliere **report**, quindi fare clic su **generale**. Nel report vengono visualizzate le informazioni su build di versione ed edizione.  
@@ -45,7 +45,7 @@ ms.locfileid: "66080094"
   
  Per ulteriori dettagli su come ottenere le informazioni sulla versione e sulla build, vedere [Identificazione della versione e dell'edizione di SQL Server e relativi componenti](https://support.microsoft.com/kb/321185).  
   
-##  <a name="bkmk_LibUpdate"></a>Come determinare la versione dei provider di dati Analysis Services  
+##  <a name="how-to-determine-the-version-of-the-analysis-services-data-providers"></a><a name="bkmk_LibUpdate"></a>Come determinare la versione dei provider di dati Analysis Services  
  I provider di dati vengono installati con Analysis Services e con le applicazioni client che si connettono normalmente ai database di Analysis Services, ad esempio Excel.  
   
  Office 2007 installa i provider di dati da SQL Server 2005. Office 2010 installa i provider di dati da SQL Server 2008. e in Office 2013 da SQL Server 2012. Se si utilizzano più versioni di Office o di SQL Server e le connessioni e funzionalità disponibili non sono quelle previste, potrebbe essere necessario installare una versione più recente dei provider di dati. È possibile eseguire più versioni principali di ogni provider di dati side-by-side sullo stesso computer.  
@@ -68,7 +68,7 @@ ms.locfileid: "66080094"
   
  Per ulteriori informazioni sui numeri di versione e di build, vedere [Build di SQL Server su Blogspot](http://sqlserverbuilds.blogspot.com).  
   
-##  <a name="bkmk_downloadsite"></a>Dove ottenere i provider di dati della versione più recente  
+##  <a name="where-to-get-newer-version-data-providers"></a><a name="bkmk_downloadsite"></a>Dove ottenere i provider di dati della versione più recente  
  La versione installata nel computer client deve corrispondere alla versione principale del server che fornisce i dati. Se l'installazione del server è più recente dei provider di dati installati nelle workstation in rete, potrebbe essere necessario installare librerie più recenti.  
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Individuare i provider di dati nel sito di download  
@@ -79,7 +79,7 @@ ms.locfileid: "66080094"
   
 3.  Scorrere verso il basso fino alla sezione contenente i componenti di Analysis Services. ADOMD.NET, il provider OLE DB e AMO sono la seconda, la terza e la quarta voce dell'elenco. Ogni libreria è disponibile nelle versioni a 32 o 64 bit. I server e le workstation più recenti che eseguono un sistema operativo a 64 bit richiedono la versione a 64 bit.  
   
-##  <a name="bkmk_OLE"></a>Provider OLE DB Analysis Services  
+##  <a name="analysis-services-ole-db-provider"></a><a name="bkmk_OLE"></a>Provider OLE DB Analysis Services  
  Il provider OLE DB per Analysis Services è il provider nativo per le connessioni di database Analysis Services. MSOLAP viene utilizzato indirettamente da ADOMD.NET e AMO, delegando le richieste di connessione al provider di dati. È inoltre possibile chiamare il provider OLE DB direttamente dal codice dell'applicazione, il che è possibile se i requisiti della soluzione precludono l'utilizzo di un'API gestita.  
   
  Il provider OLE DB per Analysis Services viene installato automaticamente dal programma di installazione di SQL Server, Excel e altre applicazioni utilizzate con frequenza per accedere ai database di Analysis Services. Può essere installato anche manualmente scaricandolo dall'Area download. Per impostazione predefinita, il provider è contenuto nella cartella \Programmi\Microsoft Analysis Services. Il provider deve essere installato su qualsiasi workstation utilizzata per accedere ai dati di Analysis Services.  
@@ -90,7 +90,7 @@ ms.locfileid: "66080094"
   
  MSOLAP.5.dll è il provider OLE DB per Analysis Services corrente installato con Excel 2013. Le versioni precedenti, ad esempio MSOLAP.4.dll o MSOLAP.3.dll, sono spesso disponibili nelle workstation che eseguono versioni meno recenti di Excel. Alcune funzionalità di Analysis Services, ad esempio il componente aggiuntivo PowerPivot, richiedono versioni specifiche del provider OLE DB. Per altre informazioni, vedere [Proprietà delle stringhe di connessione &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
-##  <a name="bkmk_ADOMD"></a>ADOMD.NET  
+##  <a name="adomdnet"></a><a name="bkmk_ADOMD"></a>ADOMD.NET  
  ADOMD.NET è un provider di dati gestito utilizzata per eseguire query sui dati di Analysis Services. Excel utilizza ADOMD.NET per la connessione a un cubo di Analysis Services specifico. La stringa di connessione indicata in Excel è destinata a una connessione ADOMD.NET.  
   
  ADOMD.NET viene installato dal programma di installazione di SQL Server ed è utilizzato dalle applicazioni client SQL Server per la connessione ad Analysis Services. In Office questa libreria viene installata per supportare le connessioni dati da Excel. Come con altri provider di dati inclusi in SQL Server, è possibile ridistribuire ADOMD.NET se si utilizza la libreria nel codice personalizzato. È anche possibile scaricarlo e installarlo manualmente per ottenere la versione più recente. A questo proposito, vedere [Come determinare la versione dei provider di dati di Analysis Services](#bkmk_LibUpdate) in questo argomento.  
@@ -101,7 +101,7 @@ ms.locfileid: "66080094"
   
  Per ulteriori informazioni sulla connessione a livello di programmazione, vedere [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
-##  <a name="blkmk_AMO"></a>AMO  
+##  <a name="amo"></a><a name="blkmk_AMO"></a> AMO  
  AMO è un provider di dati gestito utilizzato per l'amministrazione del server e la definizione dei dati. Ad esempio, in SQL Server Management Studio si utilizza AMO per connettersi ad Analysis Services.  
   
  AMO viene installato dal programma di installazione di SQL Server ed è utilizzato dalle applicazioni client SQL Server per la connessione ad Analysis Services. È anche possibile scaricarlo e installarlo manualmente quando si usa AMO nel codice personalizzato. A questo proposito, vedere [Come determinare la versione dei provider di dati di Analysis Services](#bkmk_LibUpdate) in questo argomento. AMO può essere presente nella Global Assembly Cache, come `Microsoft.AnalysisServices`.  
@@ -110,7 +110,7 @@ ms.locfileid: "66080094"
   
  Per ulteriori informazioni sulla connessione a livello di programmazione, vedere [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Connetti ad Analysis Services](connect-to-analysis-services.md)  
   
   

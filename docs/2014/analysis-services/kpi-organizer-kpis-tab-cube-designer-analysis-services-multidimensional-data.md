@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079398"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -41,7 +41,7 @@ ms.locfileid: "66079398"
 |**Sposta giù**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** inferiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: se non è possibile spostare ulteriormente l'indicatore KPI, questa opzione è disabilitata.|  
 |**Elimina**|Selezionare questa opzione per eliminare l'indicatore KPI specificato.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

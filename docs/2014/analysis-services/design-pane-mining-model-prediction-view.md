@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081845"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Riquadro Progettazione (visualizzazione Stima modello di data mining)
@@ -29,7 +29,7 @@ ms.locfileid: "66081845"
 > [!NOTE]  
 >  Qualsiasi modifica manuale eventualmente apportata alla query andrà perduta quando si torna alla visualizzazione della struttura. Per salvare la query DMX, è possibile copiarla negli Appunti di Windows e incollarla quindi in un file di testo.  
   
- **Per ulteriori informazioni:** [query di data mining](data-mining/data-mining-queries.md)  
+ **Per altre informazioni, vedere** [Query di data mining](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opzioni  
  **Passa alla visualizzazione dei risultati della query**  
@@ -73,7 +73,7 @@ ms.locfileid: "66081845"
 |**Colonna modello di data mining**|Elenca le colonne del modello di data mining contenute nel modello di data mining selezionato nella tabella **Modello di data mining** .|  
 |**Valore**|Consente di selezionare un valore nell'elenco che contiene ogni possibile stato della colonna del modello di data mining selezionata.<br /><br /> Se la colonna è la colonna di una tabella nidificata, fare clic sulla cella del valore per aprire la finestra di dialogo **Input tabella nidificata** .|  
   
- **Origine**  
+ **origine**  
  Consente di selezionare l'origine contenente il campo che verrà utilizzato per la colonna. È possibile usare il modello di data mining selezionato nella tabella **Modello di data mining** , la tabella o le tabelle di input selezionate nella tabella **Seleziona tabella/e di input** , una funzione di stima o un'espressione personalizzata.  
   
  È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
@@ -87,12 +87,12 @@ ms.locfileid: "66081845"
  **E/o**  
  Utilizzare questa opzione per creare una query logica. Ad esempio: `(expr1 Or expr2) And expr3`.  
   
- **Criteri/argomento**  
+ **Criteri/Argomento**  
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfacce di query di data mining](data-mining/data-mining-query-tools.md)   
- [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
+ [Generatore delle query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071683"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Connettere un'applicazione del servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale
@@ -29,7 +29,7 @@ ms.locfileid: "66071683"
   
  [Aggiungere l'applicazione di servizio PowerPivot a un elenco personalizzato di associazioni al servizio](#custom)  
   
-##  <a name="default"></a>Aggiungere l'applicazione di servizi PowerPivot al gruppo predefinito  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>Aggiungere l'applicazione di servizi PowerPivot al gruppo predefinito  
  Un elenco di associazioni al servizio è un elenco di servizi condivisi che forniscono risorse ad altre applicazioni Web SharePoint nella farm. Per la farm è disponibile un gruppo predefinito di associazioni al servizio.  
   
  Per essere nell'elenco, un'applicazione di servizio PowerPivot può essere aggiunta al momento della creazione o in seguito eseguendo i passaggi seguenti.  
@@ -42,10 +42,10 @@ ms.locfileid: "66071683"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="custom"></a>Aggiunta di un'applicazione di servizi PowerPivot a un elenco di associazioni di servizi personalizzato  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Aggiunta di un'applicazione di servizi PowerPivot a un elenco di associazioni di servizi personalizzato  
  Il gruppo predefinito può essere sostituito da un elenco personalizzato. Un elenco personalizzato viene creato in modo specifico per una sola applicazione Web SharePoint. Il gruppo predefinito viene sostituito solo dalle associazioni al servizio specificate da un amministratore di farm o del servizio. Se sono state create più applicazioni di servizio PowerPivot, è necessario utilizzare un elenco personalizzato per specificare quale utilizzare. Un elenco personalizzato non può essere riutilizzato da altre applicazioni Web. Si applica solo all'applicazione Web per cui è stato creato.  
   
-1.  In **Gestione applicazioni**di amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
+1.  In **Gestione applicazioni**di Amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
   
 2.  Selezionare l'applicazione, ad esempio SharePoint -80.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66071683"
   
 6.  Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione e configurazione di un'applicazione di servizio PowerPivot in Amministrazione centrale](create-and-configure-power-pivot-service-application-in-ca.md)   
  [Configurazione iniziale &#40;PowerPivot per SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   

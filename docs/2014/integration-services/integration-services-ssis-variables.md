@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892279"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
-  Le variabili archiviano i [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] valori che un pacchetto e i relativi contenitori, attività e gestori eventi possono usare in fase di esecuzione. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
+  Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
   
  Nei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile usare variabili per gli scopi seguenti:  
   
@@ -43,17 +43,16 @@ ms.locfileid: "62892279"
 -   Compilazione di espressioni che includono valori di variabili. La trasformazione Colonna derivata può ad esempio popolare una colonna con i risultati ottenuti moltiplicando il valore di una variabile per il valore di una colonna.  
   
 ## <a name="system-and-user-defined-variables"></a>Variabili definite dall'utente e variabili di sistema  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta due tipi di variabili: variabili definite dall'utente e variabili di sistema. Le variabili definite dall'utente vengono definite dagli sviluppatori dei pacchetti, mentre quelle di sistema sono definite da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È possibile creare un numero illimitato di variabili definite dall'utente, ma non è possibile creare ulteriori variabili di sistema.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta due tipi di variabili: variabili definite dall'utente e variabili di sistema. Le variabili definite dall'utente vengono definite dagli sviluppatori dei pacchetti, mentre quelle di sistema sono definite da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È possibile creare un numero illimitato di variabili definite dall'utente, ma non è possibile creare ulteriori variabili di sistema.  
   
  Tutte le variabili, sia di sistema che definite dall'utente, possono essere usate nelle associazioni di parametro con cui l'attività Esegui SQL esegue il mapping delle variabili ai parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Per i nomi delle variabili di sistema e delle variabili definite dall'utente viene fatta distinzione tra maiuscole e minuscole.  
   
- È possibile creare variabili definite dall'utente per tutti i tipi di contenitori di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ovvero pacchetti, contenitori Ciclo Foreach, contenitori Ciclo For, contenitori Sequenza, attività e gestori di eventi. Le variabili definite dall'utente sono membri della raccolta Variables del contenitore.  
+ È possibile creare variabili definite dall'utente per tutti i tipi di contenitori di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ovvero pacchetti, contenitori Ciclo Foreach, contenitori Ciclo For, contenitori Sequenza, attività e gestori di eventi. Le variabili definite dall'utente sono membri della raccolta Variables del contenitore.  
   
- Se si crea il pacchetto usando Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], sarà possibile vedere i membri di una raccolta Variables nella cartella **Variabili** della scheda **Esplora pacchetti** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)]. Nelle cartelle vengono elencate sia le variabili definite dall'utente che le variabili di sistema.  
+ Se si crea il pacchetto usando Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , sarà possibile vedere i membri di una raccolta Variables nella cartella **Variabili** della scheda **Esplora pacchetti** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Nelle cartelle vengono elencate sia le variabili definite dall'utente che le variabili di sistema.  
   
  Nella configurazione delle variabili definite dall'utente è possibile:  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62892279"
  Specifica il nome della variabile.  
   
  Spazio dei nomi  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]in sono disponibili due spazi dei nomi, **User** e **System**. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** , mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare altri spazi dei nomi per le variabili definite dall'utente e modificare il nome dello spazio dei nomi **User** , ma non è possibile modificare il nome dello spazio dei nomi **System** , né aggiungere variabili allo spazio dei nomi **System** o assegnare variabili di sistema a uno spazio dei nomi diverso.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre due spazi dei nomi: **User** e **System**. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** , mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare altri spazi dei nomi per le variabili definite dall'utente e modificare il nome dello spazio dei nomi **User** , ma non è possibile modificare il nome dello spazio dei nomi **System** , né aggiungere variabili allo spazio dei nomi **System** o assegnare variabili di sistema a uno spazio dei nomi diverso.  
   
  RaiseChangedEvent  
  Se la proprietà è impostata su `True`, quando viene modificato il valore della variabile viene generato l'evento `OnVariableValueChanged`.  
@@ -115,7 +114,7 @@ ms.locfileid: "62892279"
  IncludeInDebugDump  
  Indica se il valore della variabile viene incluso nei file di dump del debug.  
   
- Per le variabili definite dall'utente e le variabili di sistema, il valore **** predefinito per l' `true`opzione InclueInDebugDump è.  
+ Per le variabili definite dall'utente e le variabili di sistema, il valore **InclueInDebugDump** predefinito per l' `true`opzione InclueInDebugDump è.  
   
  Per le variabili definite dall'utente, tuttavia, il sistema Reimposta l'opzione **IncludeInDebugDump** su `false` quando vengono soddisfatte le condizioni seguenti:  
   
@@ -123,14 +122,14 @@ ms.locfileid: "62892279"
   
      Per includere il testo dell'espressione come valore della variabile nei file di dump del debug, impostare l'opzione **IncludeInDebugDump** su `true`.  
   
--   Se il tipo di dati della variabile viene modificato in una stringa, il sistema Reimposta **** l'opzione IncludeInDebugDump `false`su.  
+-   Se il tipo di dati della variabile viene modificato in una stringa, il sistema Reimposta **IncludeInDebugDump** l'opzione IncludeInDebugDump `false`su.  
   
  Quando il sistema Reimposta l'opzione **IncludeInDebugDump** su, `false`è possibile che venga eseguito l'override del valore selezionato dall'utente.  
   
  valore  
  Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Le variabili includono opzioni per l'impostazione del valore e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  
   
- Se la variabile è configurata in modo da essere valutata come espressione, sarà necessario specificare un'espressione. In fase di esecuzione l'espressione verrà valutata e la variabile verrà impostata sul risultato della valutazione. Se ad esempio una variabile usa l'espressione `DATEPART("month", GETDATE())`, assumerà un valore equivalente al numero del mese della data corrente. È necessario utilizzare un'espressione valida che utilizza la sintassi della grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)]. Quando si utilizza un'espressione con variabili, quest'ultima può includere valori letterali, nonché le funzioni e gli operatori previsti dalla grammatica delle espressioni, ma non può fare riferimento a colonne di un flusso di dati del pacchetto. Un'espressione può avere una lunghezza massima di 4000 caratteri. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
+ Se la variabile è configurata in modo da essere valutata come espressione, sarà necessario specificare un'espressione. In fase di esecuzione l'espressione verrà valutata e la variabile verrà impostata sul risultato della valutazione. Se ad esempio una variabile usa l'espressione `DATEPART("month", GETDATE())` , assumerà un valore equivalente al numero del mese della data corrente. È necessario utilizzare un'espressione valida che utilizza la sintassi della grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Quando si utilizza un'espressione con variabili, quest'ultima può includere valori letterali, nonché le funzioni e gli operatori previsti dalla grammatica delle espressioni, ma non può fare riferimento a colonne di un flusso di dati del pacchetto. Un'espressione può avere una lunghezza massima di 4000 caratteri. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  ValueType  
  > [!NOTE]  

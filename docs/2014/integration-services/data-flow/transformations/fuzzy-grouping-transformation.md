@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900560"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
@@ -85,7 +85,7 @@ ms.locfileid: "62900560"
   
 -   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Gestione connessione&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor trasformazione Raggruppamento fuzzy &#40;scheda colonne&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Colonne&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
 -   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Avanzate&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62900560"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione di questa attività, fare clic su uno degli argomenti seguenti:  
@@ -102,7 +102,7 @@ ms.locfileid: "62900560"
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Trasformazione Ricerca fuzzy](lookup-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078925"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modifica della dimensione Customer
@@ -122,11 +122,11 @@ ms.locfileid: "66078925"
   
 2.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
-    -   **city**  
+    -   **Città**  
   
     -   `Country-Region`  
   
-    -   **Cap**  
+    -   **Postal Code**  
   
     -   `State-Province`  
   
@@ -142,11 +142,11 @@ ms.locfileid: "66078925"
   
     -   **Genere**  
   
-    -   **Flag proprietario casa**  
+    -   **House Owner Flag**  
   
     -   **Marital Status**  
   
-    -   **Numero automobili di proprietà**  
+    -   **Number Cars Owned**  
   
     -   **Numero di figli a casa**  
   
@@ -264,7 +264,7 @@ ms.locfileid: "66078925"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica della dimensione Product](lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Rimuovere un attributo da una dimensione](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [Rinominare un attributo](multidimensional-models/attribute-properties-rename-an-attribute.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072200"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Notifiche (finestra di dialogo Opzioni di archiviazione) (Analysis Services - Dati multidimensionali)
@@ -40,7 +40,7 @@ ms.locfileid: "66072200"
 |**Attiva aggiornamenti incrementali**|Consente di eseguire un aggiornamento incrementale della cache MOLAP per un oggetto in base a un set di query di polling e di elaborazione progettato per identificare solo i dati aggiuntivi. Se questa opzione è selezionata la query di polling è associata a un identificatore di tabella nella vista origine dati. La query di elaborazione viene quindi utilizzata per identificare le modifiche confrontando il valore corrente della query di polling e il valore archiviato della query eseguita precedentemente.<br /><br /> Se questa opzione non è selezionata la cache MOLAP viene aggiornata interamente. La query di polling viene utilizzata per rilevare che è stata apportata una modifica e non è necessario alcun identificatore di tabella o query di elaborazione.|  
 |**Griglia di polling**|Contiene le query di polling, le query di elaborazione e gli identificatori di tabella usati da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per eseguire il polling dell'origine dei dati e identificare le modifiche apportate alle tabelle sottostanti per l'oggetto. La griglia include le colonne seguenti:<br /><br /> **Query di polling**: digitare la query singleton eseguita nell'intervallo di polling per identificare le modifiche per l'oggetto oppure fare clic sul pulsante con i puntini di sospensione (**...**) per aprire la finestra di dialogo **Crea query di polling** e definire la query singleton. Per altre informazioni, vedere [Finestra di dialogo Crea query di polling &#40;Analysis Services - Dati multidimensionali&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md). Se l'opzione **Abilita aggiornamenti incrementali** è selezionata, la query di polling deve restituire un valore che identifica l'ultimo record aggiunto alla tabella identificata nella colonna **Tabella**. Se l'opzione **Abilita aggiornamenti incrementali** non è selezionata, la query di polling deve restituire un valore che identifica il numero corrente di record nella tabella.<br /><br /> **Query di elaborazione**: digitare la query eseguita all'intervallo di polling per recuperare nuovi record dalla tabella identificata **nella tabella**oppure fare clic sul pulsante con i puntini di sospensione (**...**) per aprire la finestra di dialogo **Crea query di elaborazione** e definire la query. Per altre informazioni, vedere [Finestra di dialogo Crea query di elaborazione &#40;Analysis Services - Dati multidimensionali&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md). La query deve essere parametrizzata in modo da accettare due parametri: il valore precedente restituito dalla query in **query di polling** e il valore corrente restituito dalla query in query di **polling**, che può essere usato per identificare ed estrarre solo i record che sono stati aggiunti durante il periodo di polling. Questa opzione è abilitata solo se è selezionata l'opzione **Abilita aggiornamenti incrementali** .<br /><br /> **Tabella**: digitare l'identificatore della tabella nella quale la query in **query di polling** rileva l'ultimo record oppure fare clic sul pulsante con i puntini di sospensione (**...**) per aprire la finestra di dialogo **Trova tabella** e selezionare la tabella. Per altre informazioni, vedere [Finestra di dialogo Trova tabella &#40;Analysis Services - Dati multidimensionali&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Opzioni di archiviazione &#40;Analysis Services-Dati multidimensionali&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)  
   
   

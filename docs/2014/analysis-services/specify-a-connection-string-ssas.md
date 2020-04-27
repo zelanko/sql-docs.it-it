@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068544"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Specifica di una stringa di connessione (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "66068544"
  **Stringa di connessione**  
  Digitare una stringa di connessione per connettersi a un'origine dati OLE DB o ODBC.  
   
- **Compilare**  
+ **Build**  
  Specificare le proprietà per una stringa di connessione tramite la finestra di dialogo **Proprietà di Data Link** . Per ulteriori informazioni, vedere la Guida di Microsoft Data Link accessibile da tale finestra di dialogo.  
   
  **Test connessione**  
