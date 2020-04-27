@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056275"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor gestione connessione SAP BW
@@ -112,7 +112,7 @@ ms.locfileid: "66056275"
  **Test connessione**  
  Verificare la connessione utilizzando i valori forniti. Dopo avere fatto clic su **Test connessione**viene visualizzata una finestra di messaggio che indica se la connessione ha avuto esito positivo o negativo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida (F1) di Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055664"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Impostazione delle proprietà di un'attività o di un contenitore
@@ -68,8 +68,8 @@ ms.locfileid: "66055664"
   
 8.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Contenitori in Integration Services](control-flow/integration-services-containers.md)  
   
   

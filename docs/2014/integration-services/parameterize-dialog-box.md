@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056869"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,7 +29,7 @@ ms.locfileid: "66056869"
  **Usa parametro esistente**  
  Selezionare questa opzione per associare la proprietà dell'attività a un parametro esistente, quindi selezionare il parametro dall'elenco a discesa.  
   
- **Non usare il parametro**  
+ **Non utilizzare il parametro**  
  Selezionare questa opzione per rimuovere un riferimento a un parametro. Il parametro non viene eliminato.  
   
  **Crea nuovo parametro**  
@@ -44,13 +44,13 @@ ms.locfileid: "66056869"
  **Valore**  
  Specificare il valore predefinito per il parametro. Definito anche valore predefinito per la progettazione, potrà essere sostituito in seguito in fase di distribuzione.  
   
- **Scope**  
+ **Ambito**  
  Specificare l'ambito del parametro selezionando l'opzione **Progetto** o **Pacchetto**. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
   
  **Distinzione**  
  Specificare se il parametro è sensibile selezionando o deselezionando la casella di controllo. I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.  
   
- **Obbligatoria**  
+ **Obbligatorio**  
  Specificare se il parametro richiede che un valore diverso dal valore predefinito per la progettazione venga specificato prima dell'esecuzione del pacchetto.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  

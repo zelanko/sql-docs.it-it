@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059273"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor gestione connessione Excel
-  Usare la finestra di dialogo **Editor gestione connessione Excel**per aggiungere una connessione a un file di cartella di lavoro di [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] nuovo o esistente.  
+  Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di ** nuovo o esistente.  
   
  Per altre informazioni sulla gestione connessioni Excel, vedere [Gestione connessione Excel](connection-manager/excel-connection-manager.md).  
   
@@ -52,8 +52,8 @@ ms.locfileid: "66059273"
  **Nomi di colonna nella prima riga**  
  Consente di specificare se la prima riga di dati del foglio di lavoro selezionato contiene nomi di colonna. Il valore predefinito di questa opzione è **True**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

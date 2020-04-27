@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057289"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor origine OData (pagina Output degli errori)
@@ -46,7 +46,7 @@ ms.locfileid: "66057289"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor origine OData &#40;pagina connessione&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [Editor origine OData &#40;pagina colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origine OData](data-flow/odata-source.md)   

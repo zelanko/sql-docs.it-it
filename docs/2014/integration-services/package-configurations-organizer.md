@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056970"
 ---
 # <a name="package-configurations-organizer"></a>Libreria configurazioni pacchetto
@@ -32,14 +32,13 @@ ms.locfileid: "66056970"
 > [!NOTE]  
 >  Il caricamento delle configurazioni di pacchetto nell'ordine preferito avviene a partire dall'inizio dell'elenco visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** fino alla fine dell'elenco. In fase di esecuzione, tuttavia, tali configurazioni potrebbero non essere caricate nell'ordine preferito. In particolare, le configurazioni di pacchetto padre vengono caricate dopo quelle di altri tipi.  
   
- Le configurazioni di pacchetto aggiornano i valori delle proprietà degli oggetti pacchetto in fase di esecuzione. Quando viene caricato un pacchetto, i valori delle configurazioni sostituiscono quelli impostati durante lo sviluppo del pacchetto. 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta diversi tipi di configurazione. È possibile, ad esempio, utilizzare un file XML che contiene più configurazioni o una variabile di ambiente che ne contiene una sola. Per altre informazioni, vedere [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md).  
+ Le configurazioni di pacchetto aggiornano i valori delle proprietà degli oggetti pacchetto in fase di esecuzione. Quando viene caricato un pacchetto, i valori delle configurazioni sostituiscono quelli impostati durante lo sviluppo del pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta diversi tipi di configurazione. È possibile, ad esempio, utilizzare un file XML che contiene più configurazioni o una variabile di ambiente che ne contiene una sola. Per altre informazioni, vedere [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md).  
   
 ## <a name="options"></a>Opzioni  
  **Abilita configurazioni pacchetto**  
  Selezionare questa opzione per utilizzare le configurazioni con il pacchetto.  
   
- **Nome della configurazione**  
+ **Nome configurazione**  
  Consente di visualizzare il nome della configurazione.  
   
  **Tipo di configurazione**  
@@ -66,7 +65,7 @@ ms.locfileid: "66056970"
  **Frecce**  
  Selezionare una configurazione e utilizzare le frecce in su o in giù per spostarla verso l'alto o il basso nell'elenco. Le configurazioni vengono caricate nella sequenza in base a cui sono ordinate nell'elenco.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
   

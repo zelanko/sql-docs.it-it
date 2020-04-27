@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055005"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor attività Trasferisci processi (pagina Generale)
@@ -37,9 +37,9 @@ ms.locfileid: "66055005"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Trasferisci processi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci processi &#40;pagina processi&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

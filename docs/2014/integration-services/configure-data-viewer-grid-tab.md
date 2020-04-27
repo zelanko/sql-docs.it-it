@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060659"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configura visualizzatore dati (scheda Griglia)
@@ -31,7 +31,7 @@ ms.locfileid: "66060659"
  **Colonne visualizzate**  
  Selezionare il nome di una colonna e quindi fare clic sulla freccia singola per spostare la colonna nell'elenco **Colonne inutilizzate** . Per spostare tutti i nomi delle colonne nell'elenco **Colonne inutilizzate** , fare clic sulla freccia doppia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare il Visualizzatore dati &#40;scheda generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurare il Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

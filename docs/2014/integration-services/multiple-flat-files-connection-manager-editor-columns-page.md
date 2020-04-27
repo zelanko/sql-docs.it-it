@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057502"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor gestione connessione per più file flat (pagina Colonne)
@@ -41,9 +41,9 @@ ms.locfileid: "66057502"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**CR Se**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**CR**|Le righe sono delimitate da un ritorno a capo.|  
-|**Se**|Le righe sono delimitate da un avanzamento riga.|  
+|**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
+|**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
 |**Virgole{,}**|Le righe sono delimitate da una virgola.|  
@@ -55,9 +55,9 @@ ms.locfileid: "66057502"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**CR Se**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**CR**|Le colonne sono delimitate da un ritorno a capo.|  
-|**Se**|Le colonne sono delimitate da un avanzamento riga.|  
+|**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
+|**{LF}**|Le colonne sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le colonne sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le colonne sono delimitate da due punti.|  
 |**Virgole{,}**|Le colonne sono delimitate da una virgola.|  
@@ -71,10 +71,10 @@ ms.locfileid: "66057502"
  **Carattere**  
  Consente di selezionare il tipo di carattere per la visualizzazione in anteprima dei dati.  
   
- **Colonne di dati di origine**  
+ **Colonne dati di origine**  
  Per modificare la larghezza della riga, trascinare l'indicatore di riga verticale, mentre per modificare la larghezza delle colonne, fare clic sul righello nella parte superiore della finestra di anteprima.  
   
- **Lunghezza riga**  
+ **Larghezza riga**  
  Consente di specificare la larghezza della riga prima dell'aggiunta dei delimitatori per le singole colonne. In alternativa, trascinare la linea verticale nella finestra di anteprima per contrassegnare la fine della riga. Il valore relativo alla larghezza della riga viene aggiornato automaticamente.  
   
  **Reimposta colonne**  
@@ -88,7 +88,7 @@ ms.locfileid: "66057502"
  **Carattere**  
  Consente di selezionare il tipo di carattere per la visualizzazione in anteprima dei dati.  
   
- **Colonne di dati di origine**  
+ **Colonne dati di origine**  
  Per modificare la larghezza della riga, trascinare l'indicatore di riga verticale, mentre per modificare la larghezza delle colonne, fare clic sul righello nella parte superiore della finestra di anteprima.  
   
  **Delimitatore di riga**  
@@ -96,9 +96,9 @@ ms.locfileid: "66057502"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**CR Se**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**CR**|Le righe sono delimitate da un ritorno a capo.|  
-|**Se**|Le righe sono delimitate da un avanzamento riga.|  
+|**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
+|**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
 |**Virgole{,}**|Le righe sono delimitate da una virgola.|  
@@ -108,10 +108,10 @@ ms.locfileid: "66057502"
  **Reimposta colonne**  
  Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione per più file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor gestione connessione per più file flat &#40;pagina avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor gestione connessione per più file flat &#40;pagina anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor gestione connessione per più file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

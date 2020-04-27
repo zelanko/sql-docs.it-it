@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055107"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor attività Trasferisci database (pagina Database)
@@ -48,7 +48,7 @@ ms.locfileid: "66055107"
 > [!NOTE]  
 >  Se i file di database vengono individuati tramite il pulsante Sfoglia, il percorso dei file viene immesso usando l'annotazione dell'unità locale, ad esempio c:\\. È necessario sostituire questa annotazione con quella di condivisione di rete, includendo il nome del computer e il nome di condivisione. In caso di condivisione amministrativa predefinita, è necessario utilizzare l'annotazione $ e disporre di accesso amministrativo alla condivisione.  
   
- **Proprietà DestinationOverwrite**  
+ **DestinationOverwrite**  
  Indicare se il database nel server di destinazione può essere sovrascritto.  
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
@@ -87,11 +87,11 @@ ms.locfileid: "66055107"
 |**True**|Ricollega il database di origine.|  
 |**False**|Non ricollega il database di origine.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci database &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

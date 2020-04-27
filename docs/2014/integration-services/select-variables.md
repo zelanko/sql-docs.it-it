@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055921"
 ---
 # <a name="select-variables"></a>Seleziona variabili
@@ -31,18 +31,18 @@ ms.locfileid: "66055921"
  **Variabili selezionate**  
  Consente di selezionare una o più variabili.  
   
- **Frecce a destra**  
+ **Freccia DESTRA**  
  Consente di spostare le variabili selezionate nell'elenco **Variabili selezionate** .  
   
- **Frecce sinistre**  
+ **Freccia SINISTRA**  
  Consente di spostare nuovamente le variabili selezionate nell'elenco **Variabili disponibili** .  
   
  **Nuova variabile**  
  Consente di creare una nuova variabile.  
   
- **Argomenti correlati:** [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Message Queue Task](control-flow/message-queue-task.md)  
   
   

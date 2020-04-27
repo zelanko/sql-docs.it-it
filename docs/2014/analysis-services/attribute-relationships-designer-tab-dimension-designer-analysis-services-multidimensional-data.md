@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062268"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Relazione tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "66062268"
   
  **Per visualizzare il riquadro Relazione tra attributi**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni e quindi fare clic sulla scheda **Relazione tra attributi** .  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni, quindi fare clic sulla scheda **Relazione tra attributi** .  
   
 2.  Sulla barra degli strumenti, fare clic sull'icona **Mostra visualizzazioni elenco** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66062268"
  **Proprietà**  
  Visualizza le proprietà dell'attributo nella finestra **Proprietà** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Relazioni tra attributi &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Attributi &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060978"
 ---
 # <a name="character-map-transformation-editor"></a>Editor trasformazione Mappa caratteri
@@ -33,7 +33,7 @@ ms.locfileid: "66060978"
  **Colonna di input**  
  Consente di visualizzare le colonne di input selezionate nella tabella precedente. È inoltre possibile modificare o rimuovere una selezione utilizzando l'elenco di colonne di input disponibili.  
   
- **Destinazione**  
+ **Destination**  
  Consente di specificare se salvare i risultati delle operazioni di stringa sul posto, utilizzando la colonna esistente, o se salvare i dati modificati come nuova colonna.  
   
 |valore|Descrizione|  
@@ -41,7 +41,7 @@ ms.locfileid: "66060978"
 |Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
 |Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
   
- **operazione**  
+ **Operazione**  
  Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
   
 |valore|Descrizione|  
@@ -63,7 +63,7 @@ ms.locfileid: "66060978"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare le opzioni di gestione degli errori per la trasformazione corrente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

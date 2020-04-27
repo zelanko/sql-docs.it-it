@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066506"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelle e colonne (SSAS tabulare)
@@ -28,10 +28,10 @@ ms.locfileid: "66066506"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
  Nei modelli tabulari, le tabelle garantiscono il framework con cui vengono definiti le colonne e altri metadati. Nelle tabelle sono inclusi gli elementi seguenti:  
   
- **Definizione tabella**  
+ **Definizione della tabella**  
  Nella definizione della tabella è incluso il set di colonne. Le colonne possono essere importate da un'origine dati o aggiunte manualmente, ad esempio con le colonne calcolate.  
   
  **Metadati della tabella**  
@@ -40,7 +40,7 @@ ms.locfileid: "66066506"
  **Dati**  
  I dati vengono popolati nelle colonne delle tabelle alla prima importazione delle tabelle tramite l'Importazione guidata tabella o la creazione di nuovi dati nelle colonne calcolate. Quando i dati vengono modificati all'origine oppure quando un modello viene rimosso dalla memoria, è necessario eseguire un'operazione di elaborazione per popolare nuovamente i dati nelle tabelle.  
   
-##  <a name="bkmk_working"></a>Utilizzo di tabelle e colonne  
+##  <a name="working-with-tables-and-columns"></a><a name="bkmk_working"></a>Utilizzo di tabelle e colonne  
  In Progettazione modelli non vengono create direttamente nuove tabelle del modello. Viene creata automaticamente una nuova scheda ogni volta che si importano o copiano dati da un'altra origine. In ciascuna scheda di Progettazione modelli è contenuta una tabella di dati in cui possono essere inclusi gli elementi seguenti:  
   
 -   Una singola tabella o vista di un database relazionale o di altre origini non relazionali, ad esempio un cubo di Analysis Services.  
@@ -55,19 +55,19 @@ ms.locfileid: "66066506"
   
  Se si utilizzano set di dati molto grandi, potrebbe essere necessario filtrare alcuni dati affinché non siano visibili. Potrebbe anche essere necessario ordinare i dati in modo diverso. Tramite Progettazione modelli, è possibile utilizzare le funzionalità che consentono di filtrare, ordinare e nascondere al fine di visualizzare o meno colonne intere o determinati dati.  
   
-##  <a name="bkmk_related_tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Aggiungere colonne a una tabella &#40;SSAS tabulare&#41;](add-columns-to-a-table-ssas-tabular.md)|Viene descritto come aggiungere una colonna di origine a una definizione della tabella.|  
 |[Eliminare una colonna &#40;SSAS tabulare&#41;](delete-a-column-ssas-tabular.md)|Viene descritto come eliminare una colonna di tabella di un modello utilizzando Progettazione modelli o la finestra di dialogo Proprietà tabella.|  
-|[Modificare i mapping dei filtri tabella, colonna o riga &#40;SSAS tabulare&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Viene descritto come modificare i mapping di filtri tabella, colonna o riga tramite l'anteprima della tabella o l'editor di query SQL nella finestra di dialogo Modifica proprietà tabella.|  
-|[Specificare Contrassegna come tabella data per l'uso con la funzionalità di Business Intelligence per l'ora &#40;SSAS tabulare&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Viene descritto come utilizzare la finestra di dialogo Contrassegna come tabella data per specificare una tabella relativa alla data e una colonna dell'identificatore univoco. La specifica di una tabella relativa alla data e l'identificatore univoco è necessaria quando si utilizzano le funzioni di Business Intelligence per la gerarchia temporale nelle formule DAX.|  
+|[Modificare i mapping di filtri tabella, colonna o riga &#40;SSAS tabulare&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Viene descritto come modificare i mapping di filtri tabella, colonna o riga tramite l'anteprima della tabella o l'editor di query SQL nella finestra di dialogo Modifica proprietà tabella.|  
+|[Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Viene descritto come utilizzare la finestra di dialogo Contrassegna come tabella data per specificare una tabella relativa alla data e una colonna dell'identificatore univoco. La specifica di una tabella relativa alla data e l'identificatore univoco è necessaria quando si utilizzano le funzioni di Business Intelligence per la gerarchia temporale nelle formule DAX.|  
 |[Aggiungere una tabella &#40;SSAS tabulare&#41;](add-a-table-ssas-tabular.md)|Viene descritto come aggiungere una tabella da un'origine dati tramite una connessione all'origine dati esistente.|  
 |[Eliminare una tabella &#40;SSAS tabulare&#41;](delete-a-table-ssas-tabular.md)|Viene descritto come eliminare le tabelle non più necessarie nel database dell'area di lavoro modello.|  
 |[Rinominare una tabella o una colonna &#40;SSAS tabulare&#41;](rename-a-table-or-column-ssas-tabular.md)|Viene descritto come rinominare una tabella o una colonna per renderla più identificabile nel modello.|  
 |[Impostare il tipo di dati di una colonna &#40;SSAS tabulare&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Viene descritto come modificare il tipo di dati di una colonna. Il tipo di dati consente di definire la modalità di archiviazione e presentazione dei dati della colonna.|  
-|[Nascondere o bloccare le colonne &#40;SSAS tabulare&#41;](hide-or-freeze-columns-ssas-tabular.md)|Viene descritto come nascondere le colonne che non si desidera visualizzare e come tenere visibile un'area di un modello mentre si scorre verso un'altra area del modello bloccando le colonne specifiche in un'area.|  
+|[Nascondere o bloccare colonne &#40;SSAS tabulare&#41;](hide-or-freeze-columns-ssas-tabular.md)|Viene descritto come nascondere le colonne che non si desidera visualizzare e come tenere visibile un'area di un modello mentre si scorre verso un'altra area del modello bloccando le colonne specifiche in un'area.|  
 |[Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)|Negli argomenti di questa sezione viene descritto come utilizzare le colonne calcolate per aggiungere dati aggregati al modello.|  
 |[Filtrare e ordinare dati &#40;SSAS tabulare&#41;](../filter-and-sort-data-ssas-tabular.md)|Negli argomenti di questa sezione viene descritto come filtrare oppure ordinare i dati utilizzando i controlli disponibili in Progettazione modelli.|  
   

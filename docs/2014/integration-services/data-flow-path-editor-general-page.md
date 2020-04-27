@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059960"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor percorso flusso di dati (pagina Generale)
@@ -42,13 +42,13 @@ ms.locfileid: "66059960"
  **PathAnnotation**  
  Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per abilitare le annotazioni su richiesta, **SourceName** per aggiungere automaticamente le annotazioni utilizzando il valore dell'opzione **SourceName** e **PathName** per aggiungere automaticamente le annotazioni utilizzano il valore della proprietà **Nome** .  
   
- **Destinazione**  
+ **DestinationName**  
  Consente di visualizzare l'input corrispondente alla fine del percorso.  
   
  **SourceName**  
  Indica l'output che corrisponde all'inizio del percorso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor percorso flusso di dati &#40;pagina metadati&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor percorso flusso di dati &#40;pagina visualizzatori dati&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flusso di dati](data-flow/data-flow.md)   

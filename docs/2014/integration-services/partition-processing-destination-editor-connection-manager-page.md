@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056709"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione partizione (pagina Gestione connessione)
-  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione partizione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione partizione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Per ulteriori informazioni sulla destinazione elaborazione partizione, vedere [Partition Processing Destination](data-flow/partition-processing-destination.md).  
   
@@ -30,10 +30,10 @@ ms.locfileid: "66056709"
 >  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
   
 ## <a name="options"></a>Opzioni  
- **Connection manager**  
+ **Gestione connessione**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Elenco delle partizioni disponibili**  
@@ -48,9 +48,9 @@ ms.locfileid: "66056709"
 |Full|Consente di eseguire l'elaborazione completa della partizione.|  
 |Solo dati|Consente di eseguire un'elaborazione di aggiornamento della partizione.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione partizione &#40;pagina mapping&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Editor destinazione elaborazione partizione &#40;pagina avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Editor destinazione elaborazione partizione &#40;pagina Avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

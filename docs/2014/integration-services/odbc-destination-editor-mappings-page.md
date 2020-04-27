@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057232"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC Destination Editor (pagina Mapping)
@@ -33,12 +33,12 @@ ms.locfileid: "66057232"
  Elenco delle colonne di destinazione disponibili. Trascinare un colonna di destinazione in una colonna di input disponibile per eseguire il mapping tra le colonne.  
   
 ### <a name="input-column"></a>Colonna di input  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignora>** per escludere colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando ** \<ignora>** per escludere le colonne dall'output.  
   
 ### <a name="destination-column"></a>Colonna di destinazione  
  Consente di visualizzare tutte le colonne di destinazione disponibili, con o senza mapping eseguito.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

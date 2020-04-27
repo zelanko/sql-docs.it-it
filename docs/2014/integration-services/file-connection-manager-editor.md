@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058814"
 ---
 # <a name="file-connection-manager-editor"></a>Editor gestione connessione file
@@ -30,7 +30,7 @@ ms.locfileid: "66058814"
  Per ulteriori informazioni sulla gestione connessione file, vedere [File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
- **Usage Type**  
+ **Tipo di utilizzo**  
  Consente di specificare se **Gestione connessione file flat** deve connettersi a un file o a una cartella esistente o creare un nuovo file o cartella.  
   
 |valore|Descrizione|  
@@ -40,7 +40,7 @@ ms.locfileid: "66058814"
 |Creazione cartella|Consente di creare una nuova cartella in fase di esecuzione.|  
 |Cartella esistente|Consente di utilizzare una cartella esistente.|  
   
- **File/cartella**  
+ **File/Cartella**  
  Se si sceglie **File**, specificare il file da usare.  
   
  Se si sceglie **Cartella**, specificare la cartella da utilizzare.  
@@ -48,7 +48,7 @@ ms.locfileid: "66058814"
  **Sfoglia**  
  Selezionare il file o la cartella usando la finestra di dialogo **Seleziona file** o **Sfoglia cartella** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

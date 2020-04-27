@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058013"
 ---
 # <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
@@ -44,15 +44,15 @@ ms.locfileid: "66058013"
   
  Se si inizia la procedura guidata in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], per impostazione predefinita tramite la procedura guidata viene selezionata l'istanza del server connessa e viene immesso il percorso al progetto selezionato. È possibile modificare questi valori per distribuire il progetto in un percorso diverso.  
   
-## <a name="review"></a>Revisione  
+## <a name="review"></a>Verifica  
  Con la procedura guidata è possibile verificare le impostazioni selezionate prima di distribuire il progetto. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.  
   
 ## <a name="deployresults"></a>Distribuisci/Risultati  
  Quando si fa clic su **Distribuisci** nella pagina **Verifica** , il progetto viene distribuito e nella pagina **risultati** viene visualizzato l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva report...** per salvare i risultati in un file XML.  
   
- Per uscire dalla procedura guidata, fare clic su **Chiudi**.  
+ Fare clic su **Chiudi** per uscire dalla procedura guidata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

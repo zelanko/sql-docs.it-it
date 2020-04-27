@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057674"
 ---
 # <a name="merge-transformation-editor"></a>Editor trasformazione Unione
@@ -39,10 +39,10 @@ ms.locfileid: "66057674"
  **Input unione 2**  
  Consente di selezionare la colonna da unire come Input unione 2.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ordinare i dati per le trasformazioni Unione e merge join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Trasformazione Merge join](data-flow/transformations/merge-join-transformation.md)   
- [Trasformazione Unione input multipli](data-flow/transformations/union-all-transformation.md)  
+ [Merge join-trasformazione](data-flow/transformations/merge-join-transformation.md)   
+ [Unione input multipli - trasformazione](data-flow/transformations/union-all-transformation.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066390"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partizioni di modelli tabulari (SSAS tabulare)
@@ -28,11 +28,11 @@ ms.locfileid: "66066390"
   
 -   [Autorizzazioni](#bkmk_permissions)  
   
--   [Elabora partizioni](#bkmk_process_partitions)  
+-   [Elaborare le partizioni](#bkmk_process_partitions)  
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
  Un modello di progetto efficace consente di utilizzare le partizioni per eliminare elaborazioni e successivi carichi del processore non necessari nei server Analysis Services assicurando, nel contempo, che i dati vengano elaborati e aggiornati con una frequenza tale da riflettere i dati più recenti dalle origini dati.  
   
  Ad esempio, in un modello tabulare può essere disponibile una tabella Sales in cui sono inclusi i dati di vendita per l'anno fiscale 2011 e tutti gli anni fiscali precedenti. Nella tabella Sales del modello sono presenti le tre partizioni seguenti:  
@@ -51,18 +51,18 @@ ms.locfileid: "66066390"
   
  La modalità di implementazione di una strategia di partizione per i modelli tabulari dell'organizzazione dipende in gran parte dalle specifiche esigenze di elaborazione dei dati del modello e dalle risorse disponibili.  
   
-##  <a name="bkmk_permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Autorizzazioni  
  Per creare, gestire ed elaborare partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario disporre delle autorizzazioni appropriate di Analysis Services definite in un ruolo di sicurezza. In ogni ruolo di sicurezza è disponibile una delle autorizzazioni seguenti:  
   
 |Autorizzazione|Azioni|  
 |----------------|-------------|  
 |Amministratore|Lettura, elaborazione, creazione, copia, unione, eliminazione|  
-|Processo|Lettura, elaborazione|  
+|Process|Lettura, elaborazione|  
 |Sola lettura|Lettura|  
   
  Per altre informazioni sulla creazione di ruoli durante la generazione di modelli tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md). Per altre informazioni sulla gestione dei membri dei ruoli del modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Ruoli nei modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_process_partitions"></a>Elabora partizioni  
+##  <a name="process-partitions"></a><a name="bkmk_process_partitions"></a>Elabora partizioni  
  Le partizioni possono essere elaborate (aggiornate) indipendentemente dalle altre partizioni usando la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o tramite uno script. L'elaborazione prevede le opzioni seguenti:  
   
 |Mode|Descrizione|  
@@ -73,7 +73,7 @@ ms.locfileid: "66066390"
 |Elaborazione pulizia|Rimuove tutti i dati da una partizione.|  
 |Elaborazione aggiunta|Aggiornare in modo incrementale la partizione con i nuovi dati.|  
   
-##  <a name="bkmk_related_tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
 |Attività|Descrizione|  
 |----------|-----------------|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058249"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor gestione connessione HTTP (pagina Server)
@@ -62,8 +62,8 @@ ms.locfileid: "66058249"
  **Test connessione**  
  Dopo aver configurato la gestione connessione HTTP, fare clic su **Test connessione**per assicurarsi che la connessione sia operativa.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione HTTP &#40;pagina proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor gestione connessione HTTP &#40;pagina Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

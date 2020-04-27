@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061792"
 ---
 # <a name="add-variable"></a>Aggiungi variabile
@@ -31,7 +31,7 @@ ms.locfileid: "66061792"
  **Nome**  
  Consente di digitare il nome della variabile.  
   
- **Spazio dei nomi**  
+ **Namespace**  
  Consente di specificare lo spazio dei nomi della variabile. Per impostazione predefinita, le variabili definite dall'utente si trovano nello spazio dei nomi **Utente** .  
   
  **Tipo di valore**  
@@ -43,9 +43,9 @@ ms.locfileid: "66061792"
  **Sola lettura**  
  Selezionare questa opzione se il valore deve essere di sola lettura.  
   
-## <a name="see-also"></a>Vedere anche  
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
- [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md)   
- [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
+ [Tipi di dati Integration Services](data-flow/integration-services-data-types.md)   
+ [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  
   
   

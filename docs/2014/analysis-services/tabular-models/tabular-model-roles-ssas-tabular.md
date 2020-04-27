@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066446"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Ruoli nei modelli tabulari (SSAS tabulare)
@@ -26,6 +26,6 @@ ms.locfileid: "66066446"
   
 |Attività|Descrizione|  
 |----------|-----------------|  
-|[Gestire i ruoli usando SSMS &#40;SSAS tabulare&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Descrive come creare ruoli, aggiungere e rimuovere membri da un ruolo, modificare le autorizzazioni per un ruolo e aggiungere, modificare o rimuovere filtri a livello di riga tramite DAX.|  
+|[Gestire ruoli tramite SSMS &#40;SSAS tabulare&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Descrive come creare ruoli, aggiungere e rimuovere membri da un ruolo, modificare le autorizzazioni per un ruolo e aggiungere, modificare o rimuovere filtri a livello di riga tramite DAX.|  
   
   

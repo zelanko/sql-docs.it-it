@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066692"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Rinominare una tabella o una colonna (SSAS tabulare)
@@ -55,9 +55,9 @@ ms.locfileid: "66066692"
   
  È necessario aggiornare inoltre tutti i calcoli che utilizzano la tabella rinominata o le relative colonne, nonché i dati da essi derivati, che devono essere ricalcolati. A seconda del numero di tabelle e di calcoli interessati, l'operazione può richiedere del tempo prima di essere completata. Il momento migliore per rinominare le tabelle ricade pertanto nell'arco del processo di importazione o prima dell'inizio della compilazione di relazioni e calcoli complessi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
  [Importazione da PowerPivot &#40;SSAS tabulare&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importa da Analysis Services &#40;SSAS tabulare&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Importare da Analysis Services &#40;SSAS tabulare&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

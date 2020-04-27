@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056694"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione partizione (pagina Mapping)
@@ -42,9 +42,9 @@ ms.locfileid: "66056694"
  **Colonna di destinazione**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione partizione &#40;pagina Gestione connessione&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Editor destinazione elaborazione partizione &#40;pagina avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Editor destinazione elaborazione partizione &#40;pagina Avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

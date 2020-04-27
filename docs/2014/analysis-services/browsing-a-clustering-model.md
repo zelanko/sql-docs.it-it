@@ -16,29 +16,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064675"
 ---
 # <a name="browsing-a-clustering-model"></a>Esplorazione di un modello di clustering
   Quando si apre un modello di clustering utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore clustering in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare i cluster creati e comprenderne le caratteristiche. È inoltre possibile confrontare e contrapporre singoli segmenti con altri segmenti o con la popolazione.  
   
-##  <a name="BKMK_Tabs"></a>Esplorare il modello  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Esplorare il modello  
  Nella finestra **Sfoglia** sono inclusi gli strumenti seguenti che consentono di comprendere il modello di clustering ed esplorare gli attributi dei gruppi di dati sottostanti:  
   
--   [Diagramma del cluster](#BKMK_ClusterDiagram)  
+-   [Diagramma dei cluster](#BKMK_ClusterDiagram)  
   
 -   [Profili cluster](#BKMK_ClusterProfiles)  
   
 -   [Caratteristiche del cluster](#BKMK_ClusterCharacteristics)  
   
--   [Analisi discriminante cluster](#BKMK_ClusterDiscrimination)  
+-   [Analisi discriminante tra cluster](#BKMK_ClusterDiscrimination)  
   
  Per sperimentare un modello di clustering, è possibile utilizzare i dati di esempio nella scheda Training della cartella di lavoro dei dati di esempio e compilare un modello di clustering utilizzando la [creazione guidata cluster &#40;componenti aggiuntivi Data mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) e tutte le impostazioni predefinite.  
   
-###  <a name="BKMK_ClusterDiagram"></a>Diagramma del cluster  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>Diagramma del cluster  
  Nella scheda **diagramma dei cluster** vengono visualizzati tutti i cluster presenti in un modello di data mining. Di seguito è possibile visualizzare il numero di raggruppamenti differenti trovati nel set di dati e la posizione che occupano gli uni rispetto agli altri.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Esplorazione del diagramma dei cluster  
@@ -85,7 +85,7 @@ ms.locfileid: "66064675"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>Profili cluster  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>Profili cluster  
  La scheda **Profili cluster** consente di confrontare a colpo d'occhio la composizione di tutti i cluster. In questa scheda è possibile iniziare quando si sta acquisendo familiarità con il modello. Questa vista è anche utile successivamente, se, dopo aver esplorato un cluster specifico, si stabilisce che è necessario trovare quelli correlati.  
   
  I **Profili cluster** offrono anche una panoramica di come i cluster sono diversi tra loro. Di conseguenza, potrebbe risultare comodo utilizzare questa vista per assegnare a ogni cluster un nome descrittivo.  
@@ -148,7 +148,7 @@ ms.locfileid: "66064675"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>Caratteristiche del cluster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a> Caratteristiche cluster  
  La vista Caratteristiche cluster consente di esplorare realmente un singolo cluster per trovare gli attributi che caratterizzano più fortemente questo gruppo di dati.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Esplorazione delle caratteristiche del cluster  
@@ -185,7 +185,7 @@ ms.locfileid: "66064675"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>Analisi discriminante cluster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>Analisi discriminante cluster  
  Utilizzare la scheda analisi **discriminante tra cluster** per confrontare gli attributi tra due cluster o tra un cluster e tutti gli altri case del set di dati.  
   
  Per evidenziare le funzionalità di questo visualizzatore, viene confrontato con le tabelle affiancate in Excel create in base alla visualizzazione delle **caratteristiche del cluster** .  
@@ -220,7 +220,7 @@ ms.locfileid: "66064675"
   
  Una volta ottenute informazioni dettagliate sui gruppi di clienti, provare a utilizzare lo [scenario di simulazione &#40;strumenti di analisi tabelle per excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) o [uno scenario di ricerca obiettivo &#40;strumenti di analisi tabelle per Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) strumenti, per esplorare i fattori del modello che potrebbero essere modificati per influire sul risultato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
  [Creazione guidata cluster &#40;componenti aggiuntivi Data mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   

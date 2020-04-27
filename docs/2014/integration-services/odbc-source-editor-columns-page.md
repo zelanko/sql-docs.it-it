@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057165"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor origine ODBC (pagina Colonne)
@@ -46,7 +46,7 @@ ms.locfileid: "66057165"
 ### <a name="output-column"></a>Colonna di output  
  Consente di immettere un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome immesso viene visualizzato in Progettazione SSIS.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   

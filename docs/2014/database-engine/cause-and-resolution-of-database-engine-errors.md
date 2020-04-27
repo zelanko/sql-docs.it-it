@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065193"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Causa e risoluzione degli errori del Motore di database
@@ -26,7 +26,7 @@ ms.locfileid: "66065193"
 ## <a name="reference"></a>Informazioni di riferimento  
  [Informazioni sugli errori del Motore di database](../relational-databases/native-client-ole-db-errors/errors.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi ed errori di Motore di database](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

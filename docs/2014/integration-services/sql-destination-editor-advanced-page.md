@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055454"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor destinazione SQL Server (pagina Avanzate)
@@ -27,10 +27,10 @@ ms.locfileid: "66055454"
  Per ulteriori informazioni sulla destinazione SQL Server, vedere [SQL Server Destination](data-flow/sql-server-destination.md).  
   
 ## <a name="options"></a>Opzioni  
- **Mantieni identità**  
+ **Mantieni valori Identity**  
  Consente di specificare se l'attività deve inserire valori nelle colonne Identity. Il valore predefinito di questa proprietà è `False`.  
   
- **Mantieni valori null**  
+ **Mantieni valori Null**  
  Consente di specificare se l'attività deve mantenere i valori Null. Il valore predefinito di questa proprietà è `False`.  
   
  **Blocco di tabella**  
@@ -39,7 +39,7 @@ ms.locfileid: "66055454"
  **Vincoli CHECK**  
  Consente di specificare se l'attività deve verificare i vincoli. Il valore predefinito di questa proprietà è `True`.  
   
- **Attiva trigger**  
+ **Attive trigger**  
  Consente di specificare se l'inserimento bulk deve attivare i trigger nelle tabelle. Il valore predefinito di questa proprietà è `False`.  
   
  **Prima riga**  
@@ -49,7 +49,7 @@ ms.locfileid: "66055454"
 >  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
   
  **Ultima riga**  
- Consente di specificare l'ultima riga da inserire. Il valore predefinito di questa proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
+ Consente di specificare l'ultima riga da inserire. Il valore predefinito della proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
   
 > [!NOTE]  
 >  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
@@ -63,11 +63,11 @@ ms.locfileid: "66055454"
  **Timeout**  
  Consente di specificare il numero di secondi di attesa prima che l'inserimento bulk venga arrestato a causa di un timeout.  
   
- **Colonne degli ordini**  
+ **Colonne di ordinamento**  
  Consente di digitare i nomi delle colonne di ordinamento. È possibile ordinare ogni colonna in ordine crescente o decrescente. Se si utilizzando più colonne di ordinamento, delimitare l'elenco con virgole.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione SQL &#40;pagina Gestione connessione&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Editor destinazione SQL &#40;pagina mapping&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Caricamento bulk dei dati tramite la destinazione SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  

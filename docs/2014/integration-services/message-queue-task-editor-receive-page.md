@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057667"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor attività Message Queue (pagina Ricezione)
@@ -42,7 +42,7 @@ ms.locfileid: "66057667"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
-|**Messaggio variabile**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
+|**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
 |**Messaggio stringa**|Il messaggio viene archiviato nell'attività Message Queue. La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
 |**Messaggio stringa in variabile**|Il messaggio viene archiviato in una variabile.<br /><br /> La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66057667"
  **SaveFileAs**  
  Digitare il percorso del file da usare o fare clic sul pulsante con i puntini di sospensione **(...)** e quindi individuare il file.  
   
- **Overwrite**  
+ **Sovrascrivere**  
  Consente di indicare se sovrascrivere i dati in un file esistente durante il salvataggio del contenuto di un messaggio con file di dati. Il valore predefinito è `False`.  
   
  **Filter**  
@@ -73,7 +73,7 @@ ms.locfileid: "66057667"
  **Identificatore**  
  Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
- **Argomenti correlati:** [selezionare un pacchetto](control-flow/select-a-package.md)  
+ **Argomenti correlati:** [Seleziona pacchetto](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Messaggio variabili  
  **Filter**  
@@ -87,7 +87,7 @@ ms.locfileid: "66057667"
  **Variabile**  
  Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...**> per configurare una nuova variabile.  
   
- **Argomenti correlati:** [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Opzioni dinamiche di filtro  
   
@@ -99,10 +99,10 @@ ms.locfileid: "66057667"
  **Identificatore**  
  Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
- **Argomenti correlati:** [selezionare un pacchetto](control-flow/select-a-package.md)  
+ **Argomenti correlati:** [Seleziona pacchetto](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
- **Confrontare**  
+ **Confronta**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  
@@ -110,13 +110,13 @@ ms.locfileid: "66057667"
 |**Nessuno**|I messaggi non vengono confrontati.|  
 |**Corrispondenza esatta**|I messaggi devono corrispondere esattamente alla stringa nell'opzione indicata **CompareString** .|  
 |**Ignora maiuscole/minuscole**|I messaggi devono corrispondere alla stringa indicata nell'opzione **CompareString** , ma nel confronto non viene rilevata la distinzione tra maiuscole e minuscole.|  
-|**Contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
+|**Stringa contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
   
  **CompareString**  
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = Messaggio stringa in variabile  
- **Confrontare**  
+ **Confronta**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  
@@ -124,7 +124,7 @@ ms.locfileid: "66057667"
 |**Nessuno**|I messaggi non vengono confrontati.|  
 |**Corrispondenza esatta**|I messaggi devono corrispondere esattamente alla stringa indicata nell'opzione **CompareString** .|  
 |**Ignora maiuscole/minuscole**|I messaggi devono corrispondere alla stringa indicata nell'opzione **CompareString** , ma nel confronto non viene rilevata la distinzione tra maiuscole e minuscole.|  
-|**Contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
+|**Stringa contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
   
  **CompareString**  
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
@@ -132,13 +132,13 @@ ms.locfileid: "66057667"
  **Variabile**  
  Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...**> e quindi configurare una nuova variabile.  
   
- **Argomenti correlati:** [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Message Queue &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Message Queue &#40;Invia pagina&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Message Queue Task](control-flow/message-queue-task.md)  
   
   

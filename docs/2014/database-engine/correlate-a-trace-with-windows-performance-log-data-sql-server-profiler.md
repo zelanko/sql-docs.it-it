@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065045"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlare una traccia e i dati dei registri di prestazioni di Windows (SQL Server Profiler)
@@ -29,11 +29,11 @@ ms.locfileid: "66065045"
   
 1.  In [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]aprire un file o una tabella di traccia salvata. Non è possibile correlare una traccia in esecuzione che sta ancora raccogliendo dati degli eventi. Per assicurare che la correlazione ai dati di monitoraggio di sistema sia corretta, è necessario che la traccia includa le due colonne di dati **StartTime** ed **EndTime** .  
   
-2.  Nel menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, click **Import Performance Data**.  
+2.  Scegliere **Importa dati prestazioni** dal menu  **File** di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 3.  Nella finestra di dialogo **Apri** selezionare un file contenente un registro di prestazioni. I dati del registro di prestazioni devono essere acquisiti quando è in corso l'acquisizione dei dati della traccia.  
   
-4.  Nella finestra di dialogo **Limite contatori prestazioni** selezionare le caselle di controllo corrispondenti agli oggetti e ai contatori di monitoraggio di sistema che si desidera visualizzare insieme alla traccia. Scegliere **OK.**  
+4.  Nella finestra di dialogo **Limite contatori prestazioni** selezionare le caselle di controllo corrispondenti agli oggetti e ai contatori di monitoraggio di sistema che si desidera visualizzare insieme alla traccia. Fare clic su **OK**.  
   
 5.  Selezionare un evento nella finestra degli eventi di traccia oppure nella finestra degli eventi di traccia scorrere alcune righe consecutive tramite i tasti di direzione. La barra rossa verticale visualizzata nella finestra dei **dati di monitoraggio di sistema** indica i dati del registro di prestazioni correlati all'evento di traccia selezionato.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66065045"
   
 11. Fare clic su **OK** . Verrà creato il registro di prestazioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Avviare SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060856"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurazione di un pacchetto per l'utilizzo di transazioni
@@ -41,7 +41,7 @@ ms.locfileid: "66060856"
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo e quindi scegliere **Proprietà**.  
+4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
 5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Required`.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66060856"
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo e quindi scegliere **Proprietà**.  
+4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
 5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported`.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66060856"
   
 10. Ripetere i passaggi da 6 a 9 per ogni attività e ogni contenitore che avvierà una transazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Transazioni di Integration Services](integration-services-transactions.md)  
   
   

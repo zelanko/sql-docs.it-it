@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058361"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Colonne)
@@ -42,7 +42,7 @@ ms.locfileid: "66058361"
  **Alias di output**  
  Consente di immettere un nome descrittivo per la colonna di output corrispondente. Per impostazione predefinita, il nome della colonna di output corrisponde al nome della colonna di input.  
   
- **Alias di output del gruppo**  
+ **Alias di output gruppo**  
  Consente di immettere un nome descrittivo per la colonna che conterrà il valore canonico per i duplicati raggruppati. Il nome predefinito di questa colonna di output è il nome della colonna di input con l'aggiunta di _clean.  
   
  **Tipo di corrispondenza**  
@@ -54,12 +54,12 @@ ms.locfileid: "66058361"
  **Alias di output somiglianza**  
  Consente di specificare il nome di una nuova colonna di output contenente i punteggi di somiglianza per il join selezionato. Se non si specifica un valore, la colonna di output non viene creata.  
   
- **Numeri**  
+ **Numerali**  
  Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Né**|I numerali iniziali e finali non sono significativi.|  
+|**Nessuno**|I numerali iniziali e finali non sono significativi.|  
 |**Leader**|Sono significativi solo i numerali iniziali.|  
 |**Finali**|Sono significativi solo i numerali finali.|  
 |**Iniziali e finali**|Sono significativi i numerali sia iniziali che finali.|  
@@ -67,8 +67,8 @@ ms.locfileid: "66058361"
  **Flag di confronto**  
  Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](data-flow/comparing-string-data.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

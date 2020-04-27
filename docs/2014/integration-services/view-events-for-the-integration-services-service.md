@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054668"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Visualizzare eventi per il servizio Integration Services
@@ -62,7 +62,7 @@ ms.locfileid: "66054668"
   
 9. Scegliere **Esci** dal menu **File** per chiudere la finestra di dialogo **Visualizzatore eventi** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestire il servizio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
  [Aggiunta di un registro per i contatori delle prestazioni del flusso di dati](performance/performance-counters.md)  
   

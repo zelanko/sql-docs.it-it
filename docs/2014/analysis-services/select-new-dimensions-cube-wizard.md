@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069337"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>Seleziona nuove dimensioni (Creazione guidata cubo)
@@ -30,7 +30,7 @@ ms.locfileid: "66069337"
   
  Per assegnare un altro nome alla dimensione, fare clic sul nome della dimensione e digitare un nuovo nome. Non è possibile rinominare le tabelle.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062849"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Finestra di dialogo Opzioni avanzate vista origine dati (Creazione guidata vista origine dati) (Analysis Services)
@@ -31,7 +31,7 @@ ms.locfileid: "66062849"
  **Limita agli schemi seguenti**  
  Consente di specificare un elenco separato da virgole di nomi di schemi da utilizzare per limitare gli schemi recuperati dall'origine dati. Se per questa opzione non è disponibile un elenco di nomi di schemi, non vi saranno restrizioni sugli schemi utilizzabili.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

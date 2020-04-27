@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054824"
 ---
 # <a name="union-all-transformation-editor"></a>Editor trasformazione Unione input multipli
@@ -36,10 +36,10 @@ ms.locfileid: "66054824"
  **Input unione input multipli n**  
  Consente di selezionare nell'elenco di colonne di input disponibili nel secondo input e negli input aggiuntivi. I metadati delle colonne mappate devono corrispondere.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Unione di dati tramite la trasformazione Unione input multipli](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [Trasformazione Unione](data-flow/transformations/merge-transformation.md)   
- [Trasformazione Merge join](data-flow/transformations/merge-join-transformation.md)  
+ [Merge join - trasformazione](data-flow/transformations/merge-join-transformation.md)  
   
   

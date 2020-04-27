@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055430"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor gestione connessione SQL Server Compact Edition (pagina Connessione)
@@ -27,17 +27,17 @@ ms.locfileid: "66055430"
  Per ulteriori informazioni sulla gestione connessione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition, vedere [Editor gestione connessione SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
- **Immettere il nome e il percorso del file di database**  
+ **Percorso e nome di file del database**  
  Immettere il percorso e il nome del file per il database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Sfoglia**  
  Consente di individuare il file di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact desiderato usando la finestra di dialogo **Select SQL Server Compact Edition database** (Seleziona database di SQL Compact Edition).  
   
- **Immettere la password del database**  
+ **Password del database**  
  Consente di immettere la password per il database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione SQL Server Compact Edition &#40;pagina tutti&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor gestione connessione SQL Server Compact Edition &#40;pagina Tutte&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

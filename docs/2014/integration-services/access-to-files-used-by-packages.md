@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062185"
 ---
 # <a name="access-to-files-used-by-packages"></a>Accesso ai file utilizzati dai pacchetti
@@ -33,13 +33,12 @@ ms.locfileid: "66062185"
   
 -   file del checkpoint  
   
--   File di log  
+-   File di registro  
   
  Questi file devono essere protetti separatamente, soprattutto se includono informazioni riservate.  
   
 ## <a name="configuration-files"></a>File di configurazione  
- Se un file di configurazione contiene dati riservati, come informazioni su account di accesso e password, è consigliabile salvare tale configurazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]oppure usare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella in cui sono archiviati i file e consentire l'accesso solo a determinati account. L'accesso viene in genere concesso agli account autorizzati all'esecuzione dei pacchetti e agli account utilizzati per la gestione e la risoluzione dei problemi dei pacchetti, che possono comportare la revisione dei contenuti dei file di configurazione, del checkpoint e di log. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone di un'archiviazione più sicura perché la protezione viene garantita ai livelli del server e del database. Per salvare le configurazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare il tipo di configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre per salvarle nel file system è necessario utilizzare il tipo di configurazione XML.  
+ Se un file di configurazione contiene dati riservati, come informazioni su account di accesso e password, è consigliabile salvare tale configurazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]oppure usare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella in cui sono archiviati i file e consentire l'accesso solo a determinati account. L'accesso viene in genere concesso agli account autorizzati all'esecuzione dei pacchetti e agli account utilizzati per la gestione e la risoluzione dei problemi dei pacchetti, che possono comportare la revisione dei contenuti dei file di configurazione, del checkpoint e di log. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone di un'archiviazione più sicura perché la protezione viene garantita ai livelli del server e del database. Per salvare le configurazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare il tipo di configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre per salvarle nel file system è necessario utilizzare il tipo di configurazione XML.  
   
  Per altre informazioni, vedere [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md), [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)e [Considerazioni sulla sicurezza per un'installazione SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   

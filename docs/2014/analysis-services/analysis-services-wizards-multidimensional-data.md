@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062392"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Procedure guidate di Analysis Services (Dati multidimensionali)
@@ -39,7 +39,7 @@ ms.locfileid: "66062392"
 |[Guida sensibile al contesto della generazione guidata schema &#40;Analysis Services-Dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Utilizzare la Generazione guidata schema per definire una vista origine dati e, facoltativamente, per generare uno script per lo schema relazionale tra la vista origine dati e un'origine dati, da un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esistente.|  
 |[Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo](usage-based-optimization-wizard-f1-help.md)|Utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per definire aggregazioni per una progettazione delle aggregazioni basata sulle query archiviate nel log di query per un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Riferimento all'interfaccia utente &#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   

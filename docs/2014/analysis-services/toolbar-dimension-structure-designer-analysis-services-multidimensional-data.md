@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066046"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -38,7 +38,7 @@ ms.locfileid: "66066046"
   
      Consente di visualizzare una visualizzazione albero di attributi per la dimensione corrente, con le proprietà membro di un dato attributo visualizzate come nodo subordinato di tale attributo.  
   
--   Griglia  
+-   Grid  
   
      Consente di visualizzare un elenco dettagliato di attributi, che includono le proprietà **Name**, **Usage**e **Type** , il tipo di dati della colonna chiave, se applicabile, e l'eventuale corrispondenza tra la colonna nome e la colonna chiave.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66066046"
  **Elimina selezione**  
  Elimina l'oggetto attualmente selezionato.  
   
- **Mostra tabelle**  
+ **Mostra tabella**  
  Consente di visualizzare la finestra di dialogo **Mostra tabelle** per visualizzare una tabella nel riquadro **Vista origine dati** .  
   
  **Nascondi tabella**  

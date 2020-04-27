@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056656"
 ---
 # <a name="path-properties"></a>Proprietà del percorso
@@ -38,8 +38,8 @@ ms.locfileid: "66056656"
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|L'input associato al percorso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|L'output associato al percorso.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Proprietà comuni](../../2014/integration-services/common-properties.md)   
  [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
  [Proprietà del flusso di dati che è possibile impostare tramite espressioni](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  

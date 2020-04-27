@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062808"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi tabella (Analysis Services - Dati multidimensionali)
@@ -35,7 +35,7 @@ ms.locfileid: "66062808"
 |**Aggiorna**|Fare clic su questo pulsante per ricaricare tutte le tabelle nella finestra di dialogo.|  
 |**Aggiungere**|Fare clic su questo pulsante per aggiungere l'elemento correntemente selezionato. **Nota:**  Questa opzione è abilitata solo se è selezionato un elemento.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Finestra di dialogo Crea query denominata o modifica query denominata &#40;Analysis Services Dati multidimensionali&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
  [Finestra di dialogo Crea query di polling &#40;Analysis Services-Dati multidimensionali&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062984"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Grafico di accuratezza (componenti aggiuntivi Data mining di SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "66062984"
   
  Per ulteriori informazioni sul funzionamento di un grafico di accuratezza e sul calcolo dell'accuratezza in base alle linee di stima casuali e ideali, vedere l'argomento "Grafico di accuratezza" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

@@ -96,14 +96,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068865"
 ---
 # <a name="olap-properties"></a>Proprietà OLAP
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server OLAP elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Si applica a:** Solo modalità server multidimensionale  
@@ -197,7 +196,7 @@ ms.locfileid: "66068865"
  `PartitionLatencyAccuracy`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Processo  
+## <a name="process"></a>Process  
  `AggregationMemoryLimitMax`  
  Proprietà con numero a virgola mobile e precisione doppia a 64 bit con segno che definisce la quantità massima di memoria dedicata all'elaborazione di aggregazioni, espressa come percentuale della memoria fisica.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "66068865"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `CheckDistinctRecordSortOrder`  
- Proprietà booleana che specifica se l'ordinamento dei risultati di una query Distinct Count è significativo durante l'elaborazione di partizioni. Il valore True indica che l'ordinamento non è significativo e deve essere "verificato" dal server. Quando si elaborano partizioni con misura Distinct Count, le query vengono inviate a SQL con la clausola ORDER BY. Per un'elaborazione più veloce, è necessario impostare questa proprietà su False.  
+ Proprietà booleana che specifica se l'ordinamento dei risultati di una query Distinct Count è significativo durante l'elaborazione di partizioni. Il valore True indica che l'ordinamento non è significativo e deve essere "verificato" dal server. Quando si elaborano partizioni con misura totale valori distinti, le query vengono inviate a SQL con la clausola ORDER BY. Per un'elaborazione più veloce, è necessario impostare questa proprietà su False.  
   
  Il valore predefinito di questa proprietà è True, che indica che l'ordinamento non è significativo e deve essere verificato.  
   
@@ -478,7 +477,7 @@ ms.locfileid: "66068865"
  `ProcessAggregation\ ProcessProperty\ Tax`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

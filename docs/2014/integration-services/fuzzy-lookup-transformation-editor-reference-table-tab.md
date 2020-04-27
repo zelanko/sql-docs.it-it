@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058312"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Tabella di riferimento)
@@ -36,7 +36,7 @@ ms.locfileid: "66058312"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Genera nuovo indice**  
@@ -51,11 +51,11 @@ ms.locfileid: "66058312"
  **Nome nuovo indice**  
  Consente di digitare un nome descrittivo per il nuovo indice di ricerca da salvare.  
   
- **Mantieni indice archiviato**  
+ **Manutenzione indice archiviato**  
  Consente di specificare se la manutenzione dell'indice deve essere eseguita anche da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se si è scelto di salvare il nuovo indice di ricerca.  
   
 > [!NOTE]  
->  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione di Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione con Common Language Runtime (CLR) presente in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Considerato che l'opzione **Manutenzione indice archiviato** richiede l'integrazione con CLR, questa funzionalità può essere usata solo se si seleziona una tabella di riferimento in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui è abilitata l'integrazione con CLR.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "66058312"
  **Nome di un indice esistente**  
  Consente di selezionare nell'elenco un indice di ricerca creato precedentemente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Ricerca fuzzy &#40;scheda colonne&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda Avanzate&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

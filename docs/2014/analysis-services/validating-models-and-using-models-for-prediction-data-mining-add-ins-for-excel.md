@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065494"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Convalida e utilizzo dei modelli per le stime (componenti aggiuntivi Data Mining per Excel)
@@ -58,12 +58,12 @@ ms.locfileid: "66065494"
   
  [&#40;di query SQL Server componenti aggiuntivi Data mining&#41;](query-sql-server-data-mining-add-ins.md)  
   
-## <a name="advanced-query-editor"></a>Editor query avanzata  
+## <a name="advanced-query-editor"></a>Editor avanzato query  
  L' **editor di query avanzato** è un set interattivo di finestre di dialogo che consente di compilare tutti i tipi di istruzioni DMX, dall'esecuzione di query personalizzate per la creazione e il training di nuovi modelli, l'eliminazione di modelli o la creazione di nuovi set di dati.  
   
  [Editor avanzato query di data mining](advanced-data-mining-query-editor.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorazione e pulizia dei dati](exploring-and-cleaning-data.md)   
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

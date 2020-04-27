@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059616"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Distribuzione di pacchetti con l'utilità di distribuzione
@@ -64,7 +64,7 @@ ms.locfileid: "66059616"
   
 8.  Se è stata impostata la convalida dei pacchetti dopo l'installazione, esaminare i risultati della convalida dei pacchetti distribuiti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

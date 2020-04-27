@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062255"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analizza fattori di influenza chiave (Strumenti di analisi tabelle per Excel)
@@ -115,7 +115,7 @@ ms.locfileid: "66062255"
   
  Per ulteriori informazioni sull'algoritmo utilizzato dallo strumento **Analizza fattori di influenza chiave** , vedere l'argomento relativo all'algoritmo Microsoft Naive Bayes in documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)   
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   

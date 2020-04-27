@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065449"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Visualizza dettagli (Analysis Services - Dati multidimensionali)
@@ -30,7 +30,7 @@ ms.locfileid: "66065449"
  **Dettagli**  
  Consente di visualizzare informazioni aggiuntive sull'operazione o il messaggio selezionato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Finestra di dialogo Stato elaborazione &#40;Analysis Services-Dati multidimensionali&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
  [Elaborazione di oggetti del modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

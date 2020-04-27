@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061344"
 ---
 # <a name="azure-data-lake-store-source"></a>Origine di Azure Data Lake Store
@@ -33,6 +33,6 @@ ms.locfileid: "66061344"
   
     2.  Per il campo **Formato file** specificare il formato file che si vuole usare.  
   
-        Se il formato del file è testo, è necessario specificare il valore del **carattere delimitatore di colonna** . Selezionare anche **nomi di colonna nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
+        Se il formato del file corrisponde a testo, è necessario impostare il valore **Carattere delimitatore di colonna** . Selezionare anche **Nomi di colonne nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
   
 3.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.  

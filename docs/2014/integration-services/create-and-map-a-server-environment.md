@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060144"
 ---
 # <a name="create-and-map-a-server-environment"></a>Creare ed eseguire il mapping di un ambiente server
@@ -28,7 +28,7 @@ ms.locfileid: "66060144"
 > [!IMPORTANT]  
 >  Per un'esecuzione specifica, un pacchetto può essere eseguito solo con i valori contenuti in un ambiente server singolo.  
   
- È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È inoltre possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **ambienti server, variabili del server e riferimenti all'ambiente del server** nel [Catalogo SSIS](catalog/ssis-catalog.md).  
+ È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È inoltre possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Per creare e utilizzare un ambiente server  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060144"
   
 5.  Nella pagina **Variabili** effettuare le operazioni seguenti per aggiungere una variabile.  
   
-    1.  Selezionare il **Tipo** per la variabile. Il nome della variabile non deve corrispondere al nome del parametro del progetto di cui si **esegue** il mapping alla variabile.  
+    1.  Selezionare il **Tipo** per la variabile. Il nome della variabile **non deve** corrispondere al nome del parametro del progetto di cui verrà eseguito il mapping alla variabile.  
   
     2.  Immettere una **Descrizione** facoltativa per la variabile.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060144"
   
 13. Per eseguire il mapping della variabile di ambiente a una proprietà di gestione connessione, effettuare le operazioni seguenti. I parametri vengono automaticamente generati nel server SSIS per le proprietà di gestione connessione.  
   
-    1.  Nella scheda **Gestioni connessioni** della pagina **Parametri** fare clic sul pulsante Sfoglia accanto al campo **Valore**.  
+    1.  Nella scheda **Gestioni connessioni** della pagina **Parametri** fare clic sul pulsante Sfoglia accanto al campo **Valore** .  
   
     2.  Fare clic su **Usa variabile di ambiente**, quindi selezionare la variabile di ambiente creata.  
   

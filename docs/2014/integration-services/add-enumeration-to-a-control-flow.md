@@ -17,14 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061906"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Aggiunta di un'enumerazione a un flusso di controllo
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
   
  Il contenitore Ciclo Foreach non offre funzionalità, ma solo una struttura in cui è possibile compilare un flusso di controllo ripetibile, nonché specificare e configurare un tipo di enumeratore. Per aggiungere funzionalità al contenitore Ciclo Foreach è necessario includervi almeno un'attività. Per altre informazioni, vedere [Attività di Integration Services](control-flow/integration-services-tasks.md).  
@@ -43,8 +42,8 @@ ms.locfileid: "66061906"
   
 4.  Configurare il contenitore Ciclo Foreach. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Raggruppare o disraggruppare componenti](group-or-ungroup-components.md)   
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Aggiungere un'iterazione a un flusso di controllo](add-iteration-to-a-control-flow.md)   

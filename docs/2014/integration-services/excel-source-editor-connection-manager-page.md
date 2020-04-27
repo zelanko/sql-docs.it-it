@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059173"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor origine Excel (pagina Gestione connessione)
@@ -33,7 +33,7 @@ ms.locfileid: "66059173"
  **Gestione connessione OLE DB**  
  Consente di selezionare una gestione connessione Excel esistente dall'elenco o di creare una nuova connessione facendo clic su **Nuova**.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova gestione connessione nella finestra di dialogo **Gestione connessione Excel** .  
   
  **Modalità di accesso ai dati**  
@@ -42,7 +42,7 @@ ms.locfileid: "66059173"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Tabella o vista|Consente di recuperare dati da un foglio di lavoro o da un intervallo denominato nel file di Excel.|  
-|Variabile nome vista o nome tabella|Consente di specificare il foglio di lavoro o il nome dell'intervallo in una variabile.<br /><br /> **Informazioni correlate:** [utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variabile nome vista o nome tabella|Consente di specificare il foglio di lavoro o il nome dell'intervallo in una variabile.<br /><br /> **Informazioni correlate:** [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Consente di recuperare dati dal file di Excel utilizzando una query SQL. Per informazioni sulla sintassi di query, vedere [Origine Excel](data-flow/excel-source.md).|  
 |Comando SQL da variabile|Consente di specificare il testo della query SQL in una variabile.|  
   
@@ -63,11 +63,11 @@ ms.locfileid: "66059173"
  **Testo comando SQL**  
  È possibile digitare il testo di una query SQL, compilare la query facendo clic su **Compila query**o cercare il file contenente il testo della query facendo clic su **Sfoglia**.  
   
- **Parameters**  
+ **Parametri**  
  Se è stata immessa una query con parametri utilizzando ? come segnaposto per il parametro nel testo della query, usare la finestra di dialogo **Imposta parametri query** per eseguire il mapping tra i parametri di input della query e le variabili del pacchetto.  
   
  **Compila query**  
- Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici.  
+ Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici visuali.  
   
  **Sfoglia**  
  Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
@@ -79,8 +79,8 @@ ms.locfileid: "66059173"
  **Nome variabile**  
  Consente di selezionare la variabile contenente il testo della query SQL.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina colonne&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Editor origine Excel &#40;pagina output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   

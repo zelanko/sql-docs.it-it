@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067331"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Eliminare relazioni (SSAS tabulare)
@@ -51,7 +51,7 @@ ms.locfileid: "66067331"
   
 4.  Fare clic su **Chiudi** nella finestra di dialogo **Gestisci relazioni**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md)   
  [Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   

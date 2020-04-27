@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055981"
 ---
 # <a name="select-script-component-type"></a>Seleziona tipo componente script
@@ -27,8 +27,8 @@ ms.locfileid: "66055981"
 ## <a name="options"></a>Opzioni  
  La selezione dell'opzione **Origine**, **Destinazione**o **Trasformazione** influisce sulla configurazione della trasformazione Script e sulle pagine dell'editor trasformazione Script visualizzate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione script &#40;pagina colonne di input&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Editor trasformazione script &#40;pagina input e output&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Editor trasformazione script &#40;pagina script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

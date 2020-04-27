@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055847"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Impostazione o modifica del livello di protezione dei pacchetti
@@ -30,7 +30,7 @@ ms.locfileid: "66055847"
  Le procedure presenti in questo argomento descrivono come utilizzare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o l'utilità della riga di comando dtutil per modificare la proprietà `ProtectionLevel`.  
   
 > [!NOTE]  
->  Oltre alle procedure di questo argomento, è in genere possibile impostare o modificare la proprietà `ProtectionLevel` di un pacchetto quando si importa o esporta il pacchetto. È inoltre possibile modificare la proprietà `ProtectionLevel` di un pacchetto quando si utilizza l'importazione e l'esportazione guidata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per salvare un pacchetto.  
+>  Oltre alle procedure di questo argomento, è in genere possibile impostare o modificare la proprietà `ProtectionLevel` di un pacchetto quando si importa o esporta il pacchetto. È inoltre possibile modificare la proprietà [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di un pacchetto quando si utilizza l'importazione e l'esportazione guidata di `ProtectionLevel` per salvare un pacchetto.  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Per impostare o modificare il livello di protezione di un pacchetto in SQL Server Data Tools  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66055847"
   
          Se si utilizza un comando simile in un file batch, immettere il segnaposto del file "% f" come "%% f" nel file batch.  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilità dtutil](dtutil-utility.md)  
+## <a name="see-also"></a>Vedi anche  
+ [utilità dtutil](dtutil-utility.md)  
   
   

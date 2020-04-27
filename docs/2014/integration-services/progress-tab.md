@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e1c4e5ac4bf399a2c839c7e8cc71b2d378e268a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056631"
 ---
 # <a name="progress-tab"></a>Scheda Stato
@@ -26,7 +26,7 @@ ms.locfileid: "66056631"
   
  All'arresto dell'esecuzione del pacchetto, la scheda **Stato** viene sostituita dalla scheda **Risultati esecuzione** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione SSIS](ssis-designer.md)  
   
   

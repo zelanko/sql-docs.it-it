@@ -13,21 +13,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04dd01f5a91e95152b66247182027c0ba8b5025c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065250"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Risultati delle query di Analysis Services (pagina Generale)
-  Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Timeout esecuzione**  
  Consente di indicare il numero di secondi di attesa prima dell'annullamento della query.  
   
  Il valore 0 indica un'attesa infinita, ovvero nessun timeout.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

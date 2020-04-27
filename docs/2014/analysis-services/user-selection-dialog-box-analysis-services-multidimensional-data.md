@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065487"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Selezione utenti (Analysis Services - Dati multidimensionali)
@@ -28,7 +28,7 @@ ms.locfileid: "66065487"
  **Seleziona utenti**  
  Consente di selezionare gli utenti in base a cui filtrare le query del log di query.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Specificare i criteri di query &#40;Ottimizzazione guidata basata sulle informazioni di utilizzo&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   

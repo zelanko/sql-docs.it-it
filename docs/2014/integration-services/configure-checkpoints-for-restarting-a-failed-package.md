@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060764"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurazione dei checkpoint per il riavvio di un pacchetto non riuscito
@@ -32,7 +32,7 @@ ms.locfileid: "66060764"
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo e quindi scegliere **Proprietà**.  
+4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
 5.  Impostare la proprietà SaveCheckpoints su `True`.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66060764"
   
     -   Impostare la proprietà FailPackageOnFailure su `True` per ogni attività e contenitore selezionati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riavvio dei pacchetti tramite checkpoint](packages/restart-packages-by-using-checkpoints.md)  
   
   

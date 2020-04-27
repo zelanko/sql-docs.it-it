@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062740"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modellazione avanzata (componenti aggiuntivi Data mining per Excel)
@@ -42,7 +42,7 @@ ms.locfileid: "66062740"
   
  Ad esempio, è possibile utilizzare uno qualsiasi degli algoritmi supportati da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ad esempio:  
   
--   Linear regression  
+-   Linear Regression  
   
 -   Sequence Clustering  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66062740"
   
  Per ulteriori informazioni, vedere la pagina relativa [all'aggiunta di un modello a una struttura &#40;componenti aggiuntivi Data mining per Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestire i modelli &#40;SQL Server componenti aggiuntivi Data mining&#41;](manage-models-sql-server-data-mining-add-ins.md)   
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   

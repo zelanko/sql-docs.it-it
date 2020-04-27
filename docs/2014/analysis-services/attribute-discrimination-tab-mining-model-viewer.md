@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063127"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Scheda Analisi discriminante attributi (Visualizzatore modello di data mining)
   Usare la scheda **Analisi discriminante attributi** per confrontare gli stati degli attributi di input e visualizzare la relativa correlazione con l'attributo risultante. I valori degli attributi che presentano le maggiori differenze tra i due stati di attributo stimabile selezionati vengono elencati per primi.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md)e [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -48,12 +48,12 @@ ms.locfileid: "66063127"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Attributes**|Un attributo di input nel modello di data mining.|  
+|**Attributi**|Un attributo di input nel modello di data mining.|  
 |**Valori**|Uno stato dell'attributo contenuto nell'elenco **Attributi**.|  
 |**Predilige \<il valore 1>**|La barra indica se l'attributo corrente e il valore prediligono il risultato di destinazione selezionato in **Valore 1**.|  
 |**Predilige \<il valore 2>**|La barra indica se l'attributo corrente e il valore prediligono il risultato di destinazione selezionato in **Valore 2**.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

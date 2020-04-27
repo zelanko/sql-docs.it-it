@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057836"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Editor trasformazione Ricerca (pagina Generale)
@@ -25,10 +25,10 @@ ms.locfileid: "66057836"
  Per ulteriori informazioni sulla trasformazione Ricerca, vedere [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## <a name="options"></a>Opzioni  
- **Full cache**  
+ **Full Cache**  
  Generare e caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca.  
   
- **Cache parziale**  
+ **Partial Cache**  
  Generare il set di dati di riferimento durante l'esecuzione della trasformazione Ricerca. Caricare le righe con le voci corrispondenti nel set di dati di riferimento e le righe senza voci corrispondenti nel set di dati nella cache.  
   
  **Nessuna cache**  
@@ -50,11 +50,11 @@ ms.locfileid: "66057836"
 ## <a name="external-resources"></a>Risorse esterne  
  Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione connessione della cache](connection-manager/cache-connection-manager.md)   
  [Editor trasformazione Ricerca &#40;pagina connessione&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Editor trasformazione Ricerca &#40;pagina colonne&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Editor trasformazione Ricerca &#40;pagina avanzate&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor trasformazione Ricerca &#40;pagina output degli errori&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055043"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor attività Trasferisci messaggi di errore (pagina Messaggi)
@@ -56,9 +56,9 @@ ms.locfileid: "66055043"
 > [!NOTE]  
 >  È necessario specificare la proprietà **SourceConnection** prima di poter selezionare i messaggi di errore di cui eseguire la copia.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci messaggi di errore &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Gestione connessione SMO](connection-manager/smo-connection-manager.md)   
  [Editor attività Trasferisci messaggi di errore &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   

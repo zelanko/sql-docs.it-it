@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065715"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Risoluzione dei problemi relativi ai diagrammi di data mining di Visio (componenti aggiuntivi Data mining di SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66065715"
   Nessun contenuto visualizzato  
   Non è possibile visualizzare i dettagli  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione di modelli di data mining in Visio &#40;componenti aggiuntivi Data mining&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
  [Visualizzazione di modelli di data mining in Visio &#40;componenti aggiuntivi Data mining&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   

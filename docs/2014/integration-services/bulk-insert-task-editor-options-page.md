@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061184"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor attività Inserimento bulk (pagina Opzioni)
@@ -46,10 +46,10 @@ ms.locfileid: "66061184"
  |Termine|Definizione|  
 |----------|----------------|  
 |**Vincoli CHECK**|Selezionare questa opzione per verificare i vincoli di colonna e tabella.|  
-|**Mantieni valori null**|Selezionare questa opzione per mantenere i valori Null durante l'operazione di inserimento bulk anziché inserire tutti i valori predefiniti per le colonne vuote.|  
-|**Abilita inserimento identità**|Selezionare questa opzione per inserire valori esistenti in una colonna Identity.|  
+|**Mantieni valori Null**|Selezionare questa opzione per mantenere i valori Null durante l'operazione di inserimento bulk anziché inserire tutti i valori predefiniti per le colonne vuote.|  
+|**Consenti IDENTITY_INSERT**|Selezionare questa opzione per inserire valori esistenti in una colonna Identity.|  
 |**Blocco di tabella**|Selezionare questa opzione per bloccare la tabella durante l'inserimento bulk.|  
-|**Attiva trigger**|Selezionare questa opzione per attivare tutti i trigger di eliminazione, aggiornamento o inserimento nella tabella.|  
+|**Attive trigger**|Selezionare questa opzione per attivare tutti i trigger di eliminazione, aggiornamento o inserimento nella tabella.|  
   
  **SortedData**  
  Consente di specificare la clausola ORDER BY nell'istruzione di inserimento bulk. Il nome della colonna deve corrispondere a una colonna valida della tabella di destinazione. Il valore predefinito è `false`. Questo valore implica che i dati non vengono ordinati da una clausola ORDER BY.  
@@ -60,11 +60,11 @@ ms.locfileid: "66061184"
 > [!NOTE]  
 >  Ogni riga che non è possibile importare tramite l'operazione di caricamento bulk viene considerata un errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Inserimento bulk &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Inserimento bulk &#40;pagina connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)  
   
   

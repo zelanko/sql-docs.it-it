@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057762"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapping di set di risultati a variabili in un'attività Esegui SQL
@@ -59,7 +59,7 @@ ms.locfileid: "66057762"
   
 11. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Set di risultati nell'attività Esegui SQL](result-sets-in-the-execute-sql-task.md)   
  [Attività Esegui pacchetto](control-flow/execute-package-task.md)   

@@ -16,17 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054724"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utilizzare i valori di variabili e parametri in un pacchetto figlio
   In questa procedura viene descritto come creare una configurazione di pacchetto in cui viene utilizzato il tipo di configurazione variabile padre. Questo tipo di configurazione consente a un pacchetto figlio eseguito da un pacchetto padre di accedere a una variabile del pacchetto padre.  
   
 > [!NOTE]  
->  È inoltre possibile passare valori a un pacchetto figlio configurando l'attività Esegui pacchetto per eseguire il mapping delle variabili o dei parametri del pacchetto padre o dei parametri del progetto ai parametri del pacchetto figlio. Per ulteriori informazioni, vedere [attività Esegui pacchetto](control-flow/execute-package-task.md).  
+>  È inoltre possibile passare valori a un pacchetto figlio configurando l'attività Esegui pacchetto per eseguire il mapping delle variabili o dei parametri del pacchetto padre o dei parametri del progetto ai parametri del pacchetto figlio. Per altre informazioni, vedere [Attività Esegui pacchetto](control-flow/execute-package-task.md).  
   
  Non è necessario creare la variabile nel pacchetto padre prima di creare la configurazione di pacchetto nel pacchetto figlio. La variabile può essere aggiunta al pacchetto padre in qualsiasi momento, ma nella configurazione di pacchetto è necessario utilizzare il nome esatto della variabile padre. Affinché sia possibile creare una configurazione che utilizza la variabile padre, tuttavia, nel pacchetto figlio deve essere presente una variabile che possa essere aggiornata dalla configurazione. Per altre informazioni sull'aggiunta e la configurazione di variabili, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
@@ -101,12 +101,12 @@ ms.locfileid: "66054724"
   
 12. Nella finestra di dialogo **Libreria configurazioni pacchetto** la nuova configurazione è elencata nella casella **Configurazione** .  
   
-13. Fare clic su **Close**.  
+13. Fare clic su **Chiudi**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
  [Creazione di configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
+ [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  
   
   

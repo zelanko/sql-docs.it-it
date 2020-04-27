@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055944"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Finestra di dialogo Seleziona enumerazione SMO
   Usare la finestra di dialogo **Seleziona enumerazione SMO** per specificare l'oggetto SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) nell'istanza specificata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di cui eseguire l'enumerazione e selezionare il tipo di enumerazione.  
   
 ## <a name="options"></a>Opzioni  
- **Enumerare**  
+ **Enumerazione**  
  Consente di espandere il server e selezionare l'oggetto SMO.  
   
  **Oggetti**  
@@ -37,13 +37,13 @@ ms.locfileid: "66055944"
  **Nomi**  
  Consente di utilizzare il tipo di enumerazione Nomi.  
   
- **Urn**  
+ **URN**  
  Consente di utilizzare il tipo di enumerazione URN.  
   
- **Posizioni**  
+ **Località**  
  Consente di utilizzare il tipo di enumerazione Percorsi. Questa opzione è disponibile solo per i file.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenitore ciclo foreach](control-flow/foreach-loop-container.md)   
  [Guida alla programmazione di SQL Server Management Objects &#40;SMO&#41;](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

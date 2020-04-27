@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056425"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Set di risultati nell’attività Esegui SQL
@@ -27,13 +27,13 @@ ms.locfileid: "66056425"
   
  Per usare i set di risultati in un'attività Esegui SQL non è sufficiente sapere se il comando SQL restituisce un set di risultati né conoscere il contenuto di tale set di risultati. Sono previsti ulteriori requisiti e linee guida per usare correttamente i set di risultati nell'attività Esegui SQL. Nella parte restante di questo argomento vengono illustrati tali requisiti e linee guida:  
   
--   [Specifica di un tipo di set di risultati](#Result_set_type)  
+-   [Impostazione del tipo di un set di risultati](#Result_set_type)  
   
 -   [Popolamento di una variabile con un set di risultati](#Populate_variable_with_result_set)  
   
 -   [Configurazione dei set di risultati nell'editor attività Esegui SQL](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a>Specifica di un tipo di set di risultati  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>Specifica di un tipo di set di risultati  
  L'attività Esegui SQL supporta i tipi di set di risultati seguenti:  
   
 -   Se la query non restituisce risultati, sarà usato il set di risultati **Nessuno** . Questo set di risultati può essere usato ad esempio per le query che aggiungono, modificano ed eliminano record in una tabella.  
@@ -46,7 +46,7 @@ ms.locfileid: "66056425"
   
  Se nell'attività Esegui SQL è usato il **Set dei risultati completo** e la query restituisce più set di righe, l'attività restituisce solo il primo di tali set. Se questo set di righe genera un errore, l'attività segnala l'errore. Se altri set di righe generano errori, l'attività non li segnala.  
   
-##  <a name="Populate_variable_with_result_set"></a>Popolamento di una variabile con un set di risultati  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>Popolamento di una variabile con un set di risultati  
  Se il set di risultati restituito da una query è una riga singola, un set di righe o di tipo XML, sarà possibile associarlo a una variabile definita dall'utente.  
   
  Se il tipo di set di risultati è **Riga singola**, è possibile associare una colonna nel risultato restituito a una variabile usando il nome della colonna come nome del set di risultati oppure usare la posizione ordinale della colonna nell'elenco di colonne come nome del set di risultati. Il nome del set di risultati per la query `SELECT Color FROM Production.Product WHERE ProductID = ?` , ad esempio, potrebbe essere **Color** o **0**. Se la query restituisce più colonne e si desidera accedere ai valori in tutte le colonne, è necessario associare ogni colonna a una variabile diversa. Se si esegue il mapping delle colonne alle variabili usando numeri come nomi del set di risultati, i numeri riflettono l'ordine in cui le colonne vengono visualizzate nell'elenco di colonne della query. Nella query `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, ad esempio, viene usato 0 per la colonna **Color** e 1 per la colonna **ListPrice** . La possibilità di usare un nome di colonna come nome di un set di risultati dipende dal provider per il quale l'attività è configurata. Non tutti i provider permettono l'uso di nomi di colonna.  
@@ -72,7 +72,7 @@ ms.locfileid: "66056425"
   
  La variabile può essere definita nell'ambito dell'attività Esegui SQL o nell'ambito del pacchetto. Se la variabile viene definita nell'ambito del pacchetto, il set di risultati sarà disponibile per altre attività e contenitori all'interno del pacchetto e per altri pacchetti eseguiti dalle attività Esegui pacchetto o Esegui pacchetto DTS 2000.  
   
- Quando si esegue il mapping di una variabile a un set di risultati di tipo **Riga singola**, i valori non costituiti da stringhe restituiti dall'istruzione SQL vengono convertiti in stringhe se sussistono le condizioni seguenti:  
+ Quando si esegue il mapping di una variabile a un set di risultati di tipo **Riga singola** , i valori non costituiti da stringhe restituiti dall'istruzione SQL vengono convertiti in stringhe se sussistono le condizioni seguenti:  
   
 -   La proprietà **TypeConversionMode** è impostata su true. Il valore della proprietà viene impostato nella finestra Proprietà o tramite l' **Editor attività Esegui SQL**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66056425"
   
  Per informazioni sul caricamento di un set di risultati in una variabile, vedere [Mapping di set di risultati a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a>Configurazione dei set di risultati nell'attività Esegui SQL  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>Configurazione dei set di risultati nell'attività Esegui SQL  
  Per altre informazioni sulle proprietà dei set di risultati che è possibile impostare in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Editor attività Esegui SQL &#40;pagina del set di risultati&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

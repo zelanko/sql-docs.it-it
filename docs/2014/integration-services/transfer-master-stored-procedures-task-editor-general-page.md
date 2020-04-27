@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054922"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor attività Trasferisci stored procedure master (pagina Generale)
@@ -37,10 +37,10 @@ ms.locfileid: "66054922"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Trasferisci stored procedure master.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci stored procedure master &#40;pagina Stored procedure&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
+ [Editor attività Trasferisci stored procedure master &#40;pagina stored procedure&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

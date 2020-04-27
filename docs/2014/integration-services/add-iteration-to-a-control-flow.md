@@ -18,14 +18,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061976"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Aggiunta di un'iterazione a un flusso di controllo
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo For, un elemento del flusso di controllo che semplifica l'implementazione di un ciclo che consente la ripetizione condizionale di un flusso di controllo in un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo For](control-flow/for-loop-container.md).  
   
  Il contenitore Ciclo For valuta una condizione a ogni iterazione del ciclo e si arresta quando la condizione restituisce False. Il contenitore Ciclo For include espressioni per l'inizializzazione del ciclo, la definizione della condizione da valutare per determinare se arrestare o meno l'esecuzione del flusso di controllo ripetuto, nonché l'assegnazione di un valore a un'espressione che aggiorna il valore con cui confrontare la condizione da valutare. La condizione da valutare è obbligatoria, mentre le espressioni di inizializzazione e di assegnazione sono facoltative.  
@@ -41,7 +40,7 @@ ms.locfileid: "66061976"
   
  Quando si specifica una variabile in un'espressione è necessario anteporre il simbolo @ al nome della variabile. Per una variabile denominata `Counter`, ad esempio, immettere @Counter nell'espressione utilizzata dal contenitore ciclo for. Se la variabile include la proprietà Namespace, sarà necessario racchiudere la variabile e lo spazio dei nomi tra parentesi quadre. Per una `Counter` variabile nello `MyNamespace` spazio dei nomi, ad esempio, digitare@MyNamespace::Counter[].  
   
- Le variabili utilizzate dal contenitore Ciclo For devono essere definite nell'ambito del contenitore Ciclo For o di un altro contenitore di livello superiore nella gerarchia dei contenitori del pacchetto. Un contenitore Ciclo For può ad esempio utilizzare sia variabili definite nel proprio ambito, sia variabili definite nell'ambito del pacchetto. Per ulteriori informazioni, vedere [Integration Services &#40;le variabili&#41; SSIS](integration-services-ssis-variables.md) e [utilizzare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md).  
+ Le variabili utilizzate dal contenitore Ciclo For devono essere definite nell'ambito del contenitore Ciclo For o di un altro contenitore di livello superiore nella gerarchia dei contenitori del pacchetto. Un contenitore Ciclo For può ad esempio utilizzare sia variabili definite nel proprio ambito, sia variabili definite nell'ambito del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md).  
   
  La grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] offre un set completo di operatori e funzioni per l'implementazione di espressioni complesse che è possibile utilizzare per la valutazione, l'inizializzazione o l'assegnazione. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
@@ -57,8 +56,8 @@ ms.locfileid: "66061976"
   
 4.  Configurare il contenitore Ciclo For. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo For](../../2014/integration-services/configure-a-for-loop-container.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Raggruppare o disraggruppare componenti](group-or-ungroup-components.md)   
  [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Aggiungere un'enumerazione a un flusso di controllo](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

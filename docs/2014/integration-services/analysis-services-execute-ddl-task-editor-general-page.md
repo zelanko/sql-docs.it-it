@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061549"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor attività Esegui DDL Analysis Services (pagina Generale)
@@ -36,12 +36,12 @@ ms.locfileid: "66061549"
  **Descrizione**  
  Consente di digitare una descrizione per l'attività Esegui DDL Analysis Services di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui DDL Analysis Services &#40;pagina DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
  [Analysis Services linguaggio di scripting &#40;riferimento&#41; ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis &#40;riferimento&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Guida di riferimento a XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

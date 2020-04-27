@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060047"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor trasformazione Conversione dati
@@ -40,15 +40,15 @@ ms.locfileid: "66060047"
  Consente di digitare un alias per ogni nuova colonna. L'impostazione predefinita è `Copy of` seguita dal nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
  **Tipo di dati**  
- Consente di selezionare un tipo di dati disponibile nell'elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
+ Consente di selezionare un tipo di dati disponibile nell'elenco. Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).  
   
- **Length**  
+ **Lunghezza**  
  Consente di selezionare la lunghezza della colonna per dati di tipo stringa.  
   
- **Precision**  
+ **Precisione**  
  Consente di impostare la precisione per dati numerici.  
   
- **Scalabilità**  
+ **Ridimensionare**  
  Consente di impostare la scala per dati numerici.  
   
  **Tabella codici**  
@@ -57,8 +57,8 @@ ms.locfileid: "66060047"
  **Configurare l'output degli errori**  
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

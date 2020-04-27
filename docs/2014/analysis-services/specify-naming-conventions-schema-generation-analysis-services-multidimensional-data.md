@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068350"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Impostazione convenzioni di denominazione (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66068350"
 |**Separatore**|Consente di specificare il carattere che separa le parole in un nome di oggetto. Nella colonna **Valore** selezionare **Carattere di sottolineatura**, **Spazio**o **Nessuno**. Il valore predefinito è **Carattere di sottolineatura**.|  
 |**Prefisso colonna chiave primaria**|Consente di specificare la stringa utilizzata come prefisso per il nome di ogni colonna chiave primaria. Il valore predefinito è **PK**.|  
 |**Prefisso colonna chiave esterna**|Consente di specificare la stringa utilizzata come prefisso per il nome di ogni colonna chiave esterna. Il valore predefinito è **FK**.|  
-|**Suffisso nome attributo**|Consente di specificare la stringa da aggiungere al nome di ogni colonna attributo. Il valore predefinito è **Name**.|  
+|**Suffisso nome attributo**|Consente di specificare la stringa da aggiungere al nome di ogni colonna attributo. Il valore predefinito è **Nome**.|  
 |**Suffisso rollup personalizzato**|Consente di specificare la stringa da aggiungere al nome di ogni colonna rollup. Il valore predefinito è **CustomRollup**.|  
 |**Suffisso proprietà rollup personalizzato**|Consente di specificare la stringa da aggiungere al nome di ogni colonna di proprietà rollup. Il valore predefinito è **CustomRollupProperties**.|  
 |**Suffisso operatore unario**|Consente di specificare la stringa da aggiungere al nome di ogni colonna di operatore unario. Il valore predefinito è **UnaryOperator**.|  
@@ -39,7 +39,7 @@ ms.locfileid: "66068350"
  **Valore**  
  Consente di indicare un valore per l'opzione specificata in **Opzione** da usare per la generazione dello schema.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della generazione guidata schema &#40;Analysis Services-Dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

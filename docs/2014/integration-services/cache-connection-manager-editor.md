@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061080"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor gestione connessione cache
@@ -29,13 +29,13 @@ ms.locfileid: "66061080"
   
  La finestra di dialogo **Editor gestione connessione della cache** include le schede seguenti:  
   
--   [Generale](#generaltab)  
+-   [Scheda generale](#generaltab)  
   
 -   [Scheda colonne](#columnstab)  
   
- Per ulteriori informazioni sulla gestione connessione cache, vedere [cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a>Scheda generale  
+##  <a name="general-tab"></a><a name="generaltab"></a>Scheda generale  
  Usare la scheda **Generale** della finestra di dialogo **Editor gestione connessione della cache** per indicare se leggere la cache da un file o salvare la cache in un file.  
   
 ### <a name="options"></a>Opzioni  
@@ -49,7 +49,7 @@ ms.locfileid: "66061080"
  Indicare se utilizzare un file di cache.  
   
 > [!NOTE]  
->  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per ulteriori informazioni, vedere [accesso ai file utilizzati dai pacchetti](../../2014/integration-services/access-to-files-used-by-packages.md).  
+>  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../2014/integration-services/access-to-files-used-by-packages.md).  
   
  Se la gestione connessione della cache viene configurata in modo da utilizzare un file di cache, la gestione connessione eseguirà una delle seguenti azioni:  
   
@@ -66,14 +66,14 @@ ms.locfileid: "66061080"
  **Aggiorna metadati**  
  Eliminare i metadati della colonna nella Gestione connessione cache e ripopolare la Gestione connessione cache con i metadati della colonna da un file di cache selezionato.  
   
-##  <a name="columnstab"></a>Scheda colonne  
+##  <a name="columns-tab"></a><a name="columnstab"></a>Scheda colonne  
  Utilizzare la scheda **Colonne** della finestra di dialogo **Editor gestione connessione cache** per configurare le proprietà di ciascuna colonna nella cache.  
   
 ### <a name="options"></a>Opzioni  
  **Colonna**  
  Consente di specificare il nome della colonna.  
   
- **Posizione di indice**  
+ **Posizione dell'indice**  
  Consente di specificare quali colonne sono colonne dell'indice specificando la relativa posizione di ogni colonna. L'indice è un insieme di una o più colonne.  
   
  Per le colonne non dell'indice, la posizione è 0.  
@@ -83,7 +83,7 @@ ms.locfileid: "66061080"
 > [!NOTE]  
 >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice.  
   
- **Tipo**  
+ **Type**  
  Consente di specificare il tipo di dati della colonna.  
   
  `Length`  
@@ -98,7 +98,7 @@ ms.locfileid: "66061080"
  `Code Page`  
  Specifica la tabella codici per il tipo di colonna. Se applicabile al tipo di dati, è possibile aggiornare `Code Page`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060417"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Eseguire una connessione a un server Integration Services remoto (servizio SSIS)
     
 > [!IMPORTANT] 
-> In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]supporta il servizio per la compatibilità con le versioni precedenti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]di. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
+> In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
  Per la connessione a un'istanza di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un server remoto da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o da un'altra applicazione di gestione, è necessario un set specifico di diritti nel server per gli utenti dell'applicazione.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060417"
   
 3.  Nell'elenco **Tipo server** selezionare **Integration Services** .  
   
-4.  Nella casella di testo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] digitare il nome di un server di **** .  
+4.  Nella casella di testo **Nome server** digitare il nome di un server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
     > [!NOTE]  
     >  Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non è specifico dell'istanza. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione Integration Services.  
@@ -105,7 +105,7 @@ Per impostazione predefinita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 Per altre informazioni, vedere [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Supporto di Kerberos e della delega tra domini con il pacchetto SSIS).
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare un Windows Firewall per l'accesso al servizio SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

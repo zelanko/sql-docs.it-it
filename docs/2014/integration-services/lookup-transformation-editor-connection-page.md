@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057944"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor trasformazione Ricerca (pagina Connessione)
@@ -32,27 +32,27 @@ ms.locfileid: "66057944"
  **Gestione connessione della cache**  
  Selezionare una gestione connessione della cache esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuovo**  
- Consente di creare una nuova connessione utilizzando la finestra di dialogo **Editor gestione connessione della cache** .  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione nella finestra di dialogo **Editor gestione connessione della cache** .  
   
  Le opzioni seguenti sono disponibili quando si selezionano **Full cache**, **Partial cache**o **No cache**e **Gestione connessione OLE DB**nella pagina Generale della finestra di dialogo **Editor trasformazione Ricerca** .  
   
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
- **Usare una tabella o una vista**  
- Consente di selezionare una tabella o vista esistente nell'elenco o di creare una nuova tabella facendo clic su **Nuova**.  
+ **Tabella o vista**  
+ Consente di selezionare una tabella o una vista esistente nell'elenco oppure di creare una nuova tabella facendo clic su **nuova**.  
   
 > [!NOTE]  
 >  Se si specifica un'istruzione SQL nella pagina **Avanzate** di **Editor trasformazione Ricerca**, tale istruzione sostituisce il nome di tabella selezionato, in quanto ha priorità su di esso. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Avanzate&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
   
- **Usare i risultati di una query SQL**  
+ **Usa i risultati di una query SQL**  
  Questa opzione consente di visualizzare una query preesistente, compilare una nuova query, controllare la sintassi della query e visualizzare in anteprima i risultati della query.  
   
  **Compila query**  
@@ -70,9 +70,9 @@ ms.locfileid: "66057944"
 ## <a name="external-resources"></a>Risorse esterne  
  Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor trasformazione Ricerca &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Editor trasformazione Ricerca &#40;pagina colonne&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Editor trasformazione Ricerca &#40;pagina avanzate&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [Editor trasformazione Ricerca &#40;pagina output degli errori&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Ricerca fuzzy - trasformazione](data-flow/transformations/fuzzy-lookup-transformation.md)  

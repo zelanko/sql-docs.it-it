@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055646"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Impostazione delle proprietà di una variabile definita dall'utente
@@ -28,8 +28,7 @@ ms.locfileid: "66055646"
 -   Finestra Proprietà. La finestra **Proprietà** elenca le proprietà per la configurazione delle variabili non disponibili nella finestra **Variabili** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include anche un set di variabili di sistema le cui proprietà non possono essere aggiornate, ad eccezione della proprietà RaiseChangedEvent.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include anche un set di variabili di sistema le cui proprietà non possono essere aggiornate, ad eccezione della proprietà RaiseChangedEvent.  
   
  **Impostazione di espressioni nelle variabili**  
   
@@ -97,8 +96,8 @@ ms.locfileid: "66055646"
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

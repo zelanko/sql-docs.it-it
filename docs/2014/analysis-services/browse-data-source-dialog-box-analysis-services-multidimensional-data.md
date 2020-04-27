@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064551"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo per l'esplorazione dell'origine dei dati (Analysis Services - Dati multidimensionali)
@@ -28,7 +28,7 @@ ms.locfileid: "66064551"
  **Tabella Origine dati**  
  Visualizza i primi 1.000 record della tabella selezionata. I dati sono di sola lettura.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

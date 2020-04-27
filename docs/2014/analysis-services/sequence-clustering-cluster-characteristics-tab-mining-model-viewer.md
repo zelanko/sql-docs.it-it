@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069170"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Scheda Caratteristiche cluster di Microsoft Sequence Clustering (Visualizzatore modello di data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "66069170"
   
  Utilizzare questa vista di un modello Sequence Clustering per eseguire il drill-down nel contenuto del cluster e visualizzare le sequenze rappresentative di un cluster.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -50,7 +50,7 @@ ms.locfileid: "66069170"
 |**Valori**|Il valore di questa colonna varia a seconda che la caratteristica sia una semplice coppia attributo-valore o una transizione di stato che rappresenta una sequenza comune di elementi o eventi.<br /><br /> Se la caratteristica è un valore, la colonna **valore** contiene lo stato.<br /><br /> Se la caratteristica rappresenta una transizione di stato, la colonna **valore** contiene la descrizione della transizione di stato.|  
 |**Probabilità**|In questa colonna viene visualizzata una barra tramite cui viene indicata la probabilità relativa che questa caratteristica (una semplice coppia attributo-valore o una combinazione di stati) sia membro del cluster corrente.<br /><br /> È possibile posizionare il mouse sulla coppia per visualizzare il valore di frequenza della caratteristica.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

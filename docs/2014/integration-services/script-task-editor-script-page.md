@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056193"
 ---
 # <a name="script-task-editor-script-page"></a>Editor attività Script (pagina Script)
@@ -38,18 +38,18 @@ ms.locfileid: "66056193"
  Per impostare il linguaggio di scripting predefinito per l'attività Script, utilizzare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni** . Per ulteriori informazioni, vedere [General Page](general-page-of-integration-services-designers-options.md).  
   
  **EntryPoint**  
- Specificare il metodo chiamato dal runtime [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come punto di ingresso nel codice dell'attività Script. Il metodo specificato deve essere nella classe ScriptMain del progetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain è la classe predefinita generata dai modelli di script.  
+ Specificare il metodo chiamato dal runtime [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come punto di ingresso nel codice dell'attività Script. Il metodo specificato deve essere nella classe ScriptMain del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] progetto Tools for Applications (VSTA) la classe ScriptMain è la classe predefinita generata dai modelli di script.  
   
  Se si modifica il nome del metodo nel progetto VSTA, è necessario modificare il valore della proprietà **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Digitare un elenco delimitato da virgole di variabili di sola lettura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione ( **...** ) e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
+ Digitare un elenco delimitato da virgole di variabili di sola lettura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**...**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
   
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
  **ReadWriteVariables**  
- Digitare un elenco delimitato da virgole di variabili di lettura/scrittura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione ( **...** ) e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
+ Digitare un elenco delimitato da virgole di variabili di lettura/scrittura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**...**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
   
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
@@ -57,13 +57,13 @@ ms.locfileid: "66056193"
  **Modifica script**  
  Apre VSTA IDE, dove è possibile creare o modificare lo script.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina generale](general-page-of-integration-services-designers-options.md)   
  [Editor attività script &#40;pagina generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Esempi di attività script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

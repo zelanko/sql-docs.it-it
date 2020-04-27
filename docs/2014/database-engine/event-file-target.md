@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064859"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -57,10 +57,10 @@ SELECT *, CAST(event_data AS XML) AS 'event_data_XML'
 FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Destinazioni degli eventi estesi di SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+## <a name="see-also"></a>Vedi anche  
+ [SQL Server destinazioni degli eventi estesi](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys. fn_xe_file_target_read_file &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [CREARE una sessione eventi &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

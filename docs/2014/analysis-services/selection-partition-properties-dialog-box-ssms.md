@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069218"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Selezione (finestra di dialogo Proprietà partizione) (SSMS)
   Utilizzare la pagina **Selezione** della finestra di dialogo **Proprietà partizione** in SQL Server Management Studio per selezionare una partizione in un gruppo di misure di cui visualizzare o modificare le proprietà nel riquadro **Generale**, **Memorizzazione attiva nella cache**o **Configurazione errori** .  
   
 ## <a name="options"></a>Opzioni  
- **Griglia**  
+ **Grid**  
  Consente di visualizzare le partizioni del gruppo di misure contenente la partizione selezionata.  
   
  Selezionare la partizione di cui si desidera visualizzare le proprietà nella pagina **Generale**, **Memorizzazione nella cache attiva**o **Configurazione errori** .  
@@ -33,10 +33,10 @@ ms.locfileid: "66069218"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome**|Consente di visualizzare il nome della partizione.|  
-|**Origine**|Consente di visualizzare la tabella o la query utilizzata per reperire i dati di origine per la partizione.|  
+|**origine**|Consente di visualizzare la tabella o la query utilizzata per reperire i dati di origine per la partizione.|  
 |**Aggregazioni**|Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Proprietà partizione &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [Finestra di dialogo Proprietà generali &#40;partizione&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
  [Caching attivo &#40;finestra di dialogo Proprietà partizione&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   

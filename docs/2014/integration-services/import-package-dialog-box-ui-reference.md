@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058075"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Importa pacchetto
-  Usare la finestra di dialogo **Importa pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per importare un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e impostare o modificare il livello di protezione del pacchetto.  
+  Usare la finestra di dialogo **Importa pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]per importare un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e impostare o modificare il livello di protezione del pacchetto.  
   
 ## <a name="options"></a>Opzioni  
  **Posizione pacchetto**  
@@ -30,7 +30,7 @@ ms.locfileid: "66058075"
   
  **SQL Server**  
   
- **File system**  
+ **File System**  
   
  **Archivio pacchetti SSIS**  
   
@@ -61,10 +61,10 @@ ms.locfileid: "66058075"
  **Livello di protezione**  
  Fare clic sul pulsante Sfoglia **(...)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto**. Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Salva copia del pacchetto](../../2014/integration-services/save-copy-of-package.md)   
  [Riferimento all'interfaccia utente della finestra di dialogo Esporta pacchetto](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Salvare i pacchetti](save-packages.md)   
+ [Salva pacchetti](save-packages.md)   
  [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

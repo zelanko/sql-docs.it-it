@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065849"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Dettagli di traduzione (Scheda traduzione, Progettazione dimensioni) (Analysis Services –Dati multidimensionali)
@@ -32,7 +32,7 @@ ms.locfileid: "66065849"
  **Lingua predefinita**  
  Consente di impostare i nomi degli oggetti dimensione nella lingua predefinita.  
   
- **Tipo di oggetto**  
+ **Tipo oggetto**  
  Consente di visualizzare la proprietà che verrà tradotta. Possono essere tradotti soltanto oggetti e proprietà di cui sono stati specificati i valori. È possibile tradurre le proprietà seguenti:  
   
 -   Dimension  
@@ -52,12 +52,12 @@ ms.locfileid: "66065849"
   
 -   Level  
   
-     `Caption`Proprietà  
+     Proprietà `Caption`  
   
  **\<>della lingua**  
  Consente di digitare o selezionare il valore della proprietà dell'oggetto dimensione nella lingua selezionata. Fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare altre finestre di dialogo, a seconda della proprietà che si sta modificando:  
   
--   `NamingTemplate`Proprietà  
+-   Proprietà `NamingTemplate`  
   
      Consente di visualizzare la [Finestra di dialogo Modello denominazione livelli &#40;Analysis Services - Dati multidimensionali&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66065849"
  Selezionare per visualizzare la finestra di dialogo **Traduzione dati attributo** e per modificare una colonna di didascalia già esistente durante la modifica di un attributo nella griglia **Dettagli di traduzione** .  
   
 > [!NOTE]  
->  L'opzione è abilitata solo se nella griglia **Dettagli traduzione** è selezionata una cella di una colonna di traduzione contenente una colonna didascalia per un attributo.  
+>   Questa opzione è abilitata solo se nella griglia dei dettagli traduzione è selezionata una cella di una colonna per la traduzione contenente una colonna didascalia per un attributo. ****  
   
  **Elimina colonna didascalia**  
  Selezionare questa opzione per eliminare la colonna di didascalia per l'attributo selezionato nella griglia **Dettagli di traduzione** .  
@@ -98,7 +98,7 @@ ms.locfileid: "66065849"
  **Mostra tutti gli attributi**  
  Selezionare o deselezionare questa opzione per attivare o disabilitare la visualizzazione di tutti gli attributi definiti per la dimensione selezionata, inclusi gli attributi per i quali le gerarchie sono disattivate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

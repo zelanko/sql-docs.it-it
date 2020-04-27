@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066078"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66066078"
 |------------|-----------------|  
 |**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
 |**Processo**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo.|  
-|**Ricollegare**|Fare clic su questo pulsante per riconnettere la scheda **Calcoli** all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo nel caso in cui la sessione per la scheda **Calcoli** sia stata disconnessa a causa della perdita della connessione o per il verificarsi del timeout.|  
+|**Riconnetti**|Fare clic su questo pulsante per riconnettere la scheda **Calcoli** all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo nel caso in cui la sessione per la scheda **Calcoli** sia stata disconnessa a causa della perdita della connessione o per il verificarsi del timeout.|  
 |**Nuovo membro calcolato**|Fare clic su questo pulsante per visualizzare il riquadro **Editor form membro calcolato** e creare un nuovo membro calcolato. Questa opzione è attivata solo nella visualizzazione Form.|  
 |**Nuovo set denominato**|Fare clic su questo pulsante per visualizzare il riquadro **Editor form set denominato** e creare un nuovo set denominato. Questa opzione è attivata solo nella visualizzazione Form.|  
 |**Nuovo comando script**|Fare clic su questo pulsante per visualizzare **Microsoft Script Editor** e creare un nuovo comando di script. Questa opzione è attivata solo nella visualizzazione Form.|  
@@ -37,7 +37,7 @@ ms.locfileid: "66066078"
 |**Visualizzazione script**|Selezionare questa opzione per visualizzare la scheda **Calcoli** nella visualizzazione Script.|  
 |**Controlla sintassi**|Fare clic su questo pulsante per controllare la sintassi nello script del cubo.|  
 |**Carattere**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Carattere** e inserire un set valido di valori delle proprietà di cella correlate al carattere in corrispondenza del punto di selezione nello script del cubo. Questa opzione è attivata solo nella visualizzazione Script.|  
-|**Color**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Colore** e inserire un valore RGB (Red-Green-Blue) valido in corrispondenza del punto di selezione nello script del cubo. Questa opzione è attivata solo nella visualizzazione Script.|  
+|**Colore**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Colore** e inserire un valore RGB (Red-Green-Blue) valido in corrispondenza del punto di selezione nello script del cubo. Questa opzione è attivata solo nella visualizzazione Script.|  
 |**Proprietà calcolo**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Proprietà calcolo** e modificare i valori delle proprietà di calcolo per i calcoli nello script del cubo.|  
 |**Cambia utente**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Contesto di sicurezza** e cambiare l'utente e il ruolo utilizzati nella scheda **Calcoli** .|  
 |**Evidenzia celle modificate**|Questa opzione non è disponibile.|  

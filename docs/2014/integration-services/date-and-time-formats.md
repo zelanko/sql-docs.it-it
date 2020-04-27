@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059651"
 ---
 # <a name="date-and-time-formats"></a>Formati di data e ora
@@ -52,7 +52,7 @@ ms.locfileid: "66059651"
   
  I dati di output dell'analisi veloce sono di tipo DT_DBDATE. Ai valori di data con formati troncati viene applicato un riempimento. Ad esempio, AAAA diventa AAAA0101.  
   
- Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
+ Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).  
   
 ## <a name="time-data-type"></a>Tipi di dati per i valori di ora  
  L'analisi veloce supporta i formati stringa seguenti per i dati di ora:  
@@ -80,7 +80,7 @@ ms.locfileid: "66059651"
     |-HH|Formato troncato che indica il numero di ore da sottrarre all'ora UTC per ottenere l'ora locale.|  
     |Z|Valore 0 che indica che l'ora è rappresentata in formato UTC.|  
   
-     I formati per tutti i dati di ora e di data e ora possono includere un elemento relativo al fuso orario. Il valore del fuso orario viene tuttavia ignorato dal sistema, ad eccezione del caso in cui i dati sono di tipo DT_DBTIMESTAMPOFFSET. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
+     I formati per tutti i dati di ora e di data e ora possono includere un elemento relativo al fuso orario. Il valore del fuso orario viene tuttavia ignorato dal sistema, ad eccezione del caso in cui i dati sono di tipo DT_DBTIMESTAMPOFFSET. Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).  
   
      Nei formati che includono un elemento del fuso orario, non vi sono spazi tra l'elemento relativo all'ora e quello relativo al fuso orario, come illustrato nell'esempio seguente:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66059651"
   
  Le stringhe di output dell'analisi veloce sono di tipo DT_DBTIME e DT_DBTIME2. Ai valori di ora con formati troncati viene applicato un riempimento. HH:MI diventa ad esempio HH:MM:00.000.  
   
- Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
+ Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).  
   
 ## <a name="datetime-data-type"></a>Tipi di dati per i valori di data e ora  
  L'analisi veloce supporta i formati stringa seguenti per i dati di data e ora:  
@@ -128,6 +128,6 @@ ms.locfileid: "66059651"
 |Giorno|Viene aggiunto 01 come giorno del mese.|  
 |Month|Viene aggiunto 01 come mese dell'anno.|  
   
- Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
+ Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).  
   
   

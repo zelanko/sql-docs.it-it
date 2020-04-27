@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063053"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Scheda Caratteristiche attributo (Visualizzatore modello di data mining)
   Usare il riquadro **Caratteristiche attributo** per esplorare le relazioni tra i risultati e gli attributi di input in un modello Naive Bayes. È possibile scegliere il valore dell'attributo di destinazione, quindi visualizzare un elenco degli attributi di input che influiscono maggiormente sui risultati.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md)e [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -49,7 +49,7 @@ ms.locfileid: "66063053"
 |**Valori**|Viene elencato ogni stato dell'attributo di input in **Variabile**.|  
 |**Probabilità**|La barra rappresenta la probabilità che l'attributo e il valore in tale riga siano associati allo stato selezionato dell'attributo stimabile. Posizionare il mouse sulla barra per visualizzare la probabilità in percentuale.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061182"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor trasformazione cache (pagina Mapping)
@@ -27,7 +27,7 @@ ms.locfileid: "66061182"
   
  Per ulteriori informazioni sulla Trasformazione cache, vedere [Cache Transform](data-flow/transformations/cache-transform.md).  
   
- Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Per ulteriori informazioni sulla gestione connessione cache, vedere [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
  **Colonne di input disponibili**  
@@ -46,7 +46,7 @@ ms.locfileid: "66061182"
  **Colonna di destinazione**  
  Consente di visualizzare le colonne di destinazione disponibili.  
   
-## <a name="see-also"></a>Vedere anche  
- [Editor trasformazione cache &#40;pagina Gestione connessione&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

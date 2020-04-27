@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061024"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Editor origine CDC (pagina Colonne)
@@ -25,7 +25,7 @@ ms.locfileid: "66061024"
  Per ulteriori informazioni sull'origine CDC, vedere [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per aprire CDC Source Editor (pagina colonne)**  
+ **Per aprire CDC Source Editor (pagina Colonne)**  
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] che contiene l'origine CDC.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66061024"
  **Colonna di output**  
  Consente di immettere un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome immesso viene visualizzato in Progettazione SSIS.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Editor origine CDC &#40;pagina Output degli errori&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   

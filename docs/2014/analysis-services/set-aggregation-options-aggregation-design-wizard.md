@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068805"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Impostazione opzioni di aggregazione (Progettazione guidata aggregazioni)
@@ -38,13 +38,13 @@ ms.locfileid: "66068805"
  **Inizia**  
  Avvia il processo di progettazione delle aggregazioni.  
   
- **Stop**  
+ **Arresta**  
  Termina il processo di progettazione delle aggregazioni.  
   
- **Reimpostazione**  
+ **Reimposta**  
  Reimposta i valori predefiniti di tutte le opzioni di aggregazione presenti in questa pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067374"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "66067374"
   
 -   [Suggerimenti per la scelta delle origini dati](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>Origini dati supportate  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Origini dati supportate  
  È possibile importare dati dalle origini dati riportate nella tabella seguente. Il programma di installazione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non consente di installare i provider elencati per ogni origine dati. Alcuni provider potrebbero già essere installati con altre applicazioni nel computer; negli altri casi sarà necessario scaricare e installare il provider.  
   
 |||||  
@@ -45,10 +45,10 @@ ms.locfileid: "66067374"
 |Altri database relazionali|(non applicabile)|(non applicabile)|Provider OLE DB o driver ODBC|  
 |File di testo|(non applicabile)|Con estensione txt, tab, csv|Provider OLE DB per ACE 14 per Microsoft Access|  
 |File di Microsoft Excel|Excel 97-2003, 2007 e 2010|Con estensione xlsx, xlsm, xlsb, xltx, xltm|Provider OLE DB per ACE 14|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]cartella|Microsoft SQL Server Analysis Services 2008 R2|Con estensione xlsx, xlsm, xlsb, xltx, xltm|ASOLEDB 10.5<br /><br /> (usato solo con le cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate nelle farm di SharePoint con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installato)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro|Microsoft SQL Server Analysis Services 2008 R2|Con estensione xlsx, xlsm, xlsb, xltx, xltm|ASOLEDB 10.5<br /><br /> (usato solo con le cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate nelle farm di SharePoint con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installato)|  
 |Cubo di Analysis Services|Microsoft SQL Server Analysis Services 2005, 2008 e 2008 R2|(non applicabile)|ASOLEDB 10|  
 |Feed di dati<br /><br /> (utilizzato per importare dati dai report di Reporting Services, documenti di servizio Atom, Microsoft Azure Marketplace DataMarket e singoli feed di dati)|Formato Atom 1.0<br /><br /> Qualsiasi database o documento esposto come Windows Communication Foundation (WCF) Data Service (precedentemente ADO.NET Data Services).|Con estensione atomsvc per un documento di servizio che consente di definire uno o più feed<br /><br /> Con estensione atom per un documento di feed Web Atom|Provider di feed di dati Microsoft per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provider di feed di dati .NET Framework per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
-|File Office Database Connection||odc||  
+|File Office Database Connection||Con estensione odc||  
   
  <sup>1</sup> è inoltre possibile utilizzare il Provider di OLE DB per ODBC.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "66067374"
   
  <sup>4</sup> in alcuni casi, l'utilizzo del provider OLE DB MSDAORA può causare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
   
-##  <a name="bkmk_unsupported_ds"></a>Origini non supportate  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>Origini non supportate  
  L'origine dati seguente non è attualmente supportata:  
   
 -   I documenti del server, ad esempio i database di Access già pubblicati in SharePoint, non possono essere importati.  
   
-##  <a name="bkmk_tips"></a>Suggerimenti per la scelta delle origini dati  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>Suggerimenti per la scelta delle origini dati  
   
 1.  L'importazione di tabelle dai database relazionali consente di risparmiare alcuni passaggi perché le relazioni di *chiave esterna* vengono utilizzate durante l'importazione per creare relazioni tra tabelle in Progettazione modelli.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66067374"
   
 4.  I provider OLE DB offrono talvolta prestazioni migliori in termini di velocità per dati in larga scala. Quando si sceglie tra provider diversi per la stessa origine dati, provare innanzitutto il provider OLE DB.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Origini dati &#40;SSAS tabulare&#41;](../data-sources-ssas-tabular.md)   
  [Importare dati &#40;SSAS tabulare&#41;](../import-data-ssas-tabular.md)  
   

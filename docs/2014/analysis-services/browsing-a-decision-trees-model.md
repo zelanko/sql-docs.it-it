@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064665"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Esplorazione di un modello Decision Trees
   Quando si apre un modello di classificazione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore albero delle decisioni interattivo, simile [!INCLUDE[msCoName](../includes/msconame-md.md)] al Visualizzatore Decision Trees in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
   
-##  <a name="bkmk_Top"></a>Esplorare il modello  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Esplorare il modello  
  I modelli basati sull'algoritmo Decision Trees contengono molte informazioni interessanti da esplorare. La finestra **Esplora** include le schede e i riquadri seguenti che consentono di acquisire familiarità con i modelli e prevedere i risultati mediante il grafo:  
   
 -   [Albero delle decisioni](#BKMK_DecisionTree)  
@@ -36,7 +36,7 @@ ms.locfileid: "66064665"
   
  Per provare un modello di albero delle decisioni, è possibile utilizzare i dati di esempio nella scheda Dati di training (o Origine dati) della cartella di lavoro dei dati di esempio e compilare un modello di albero delle decisioni utilizzando Bike Buyer come attributo stimabile.  
   
-###  <a name="BKMK_DecisionTree"></a>Albero delle decisioni  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>Albero delle decisioni  
  Questa vista è stata progettata per comprendere ed esplorare i fattori che portano un risultato.  
   
  Il grafico dell'albero delle decisioni può essere letto da sinistra a destra nel modo seguente:  
@@ -119,7 +119,7 @@ ms.locfileid: "66064665"
   
  [Torna all'inizio](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a>Rete di dipendenze  
+###  <a name="dependency-network"></a><a name="BKMK_DNetwork"></a>Rete di dipendenze  
  Nella visualizzazione **rete di dipendenze** vengono visualizzate le connessioni tra gli attributi di input e gli attributi stimabili nel modello.  
   
 1.  Fare clic e trascinare il dispositivo di scorrimento a sinistra del visualizzatore.  
@@ -153,7 +153,7 @@ ms.locfileid: "66064665"
   
      ![risultati di drill-through salvati in Excel](media/dm13-dectree-drillthroughresults.gif "risultati di drill-through salvati in Excel")  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

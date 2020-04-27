@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059765"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor trasformazione Query di data mining (scheda Modello di data mining)
@@ -30,7 +30,7 @@ ms.locfileid: "66059765"
  **Connessione**  
  Consente di selezionare una connessione Analysis Services esistente usando la casella di riepilogo o di creare una nuova connessione usando il pulsante **Nuova** descritto di seguito.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Struttura di data mining**  
@@ -39,8 +39,8 @@ ms.locfileid: "66059765"
  **Modelli di data mining**  
  Consente di visualizzare l'elenco dei modelli di data mining associati alla struttura di data mining selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione query di data mining &#40;scheda query&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Query di data mining &#40;scheda Query&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

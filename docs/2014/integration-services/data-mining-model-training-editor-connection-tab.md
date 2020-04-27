@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059883"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor training modelli di data mining (scheda Connessione)
@@ -27,23 +27,23 @@ ms.locfileid: "66059883"
  Per ulteriori informazioni sulla destinazione del training modelli di data mining, vedere [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Opzioni  
- **Connection manager**  
+ **Gestione connessione**  
  Selezionare una connessione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esistente dall'elenco oppure creare una nuova connessione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando il pulsante **Nuova** descritto di seguito.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Struttura di data mining**  
  Selezionare una struttura di data mining dall'elenco di quelle disponibili oppure creare una nuova struttura facendo clic su **Nuova**.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova struttura e un nuovo modello di data mining mediante la **Creazione guidata modello di data mining**.  
   
  **Modelli di data mining**  
  Consente di visualizzare l'elenco dei modelli di data mining associati alla struttura di data mining selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor training modelli di data mining &#40;scheda colonne&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor training modelli di data mining &#40;scheda Colonne&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055142"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor trasformazione Estrazione termini (scheda Estrazione termini)
@@ -39,8 +39,8 @@ ms.locfileid: "66055142"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare la gestione degli errori per le righe che causano errori.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Estrazione termini &#40;scheda esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [Ricerca termini - trasformazione](data-flow/transformations/lookup-transformation.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057084"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Editor destinazione OLE DB (pagina Mapping)
@@ -34,13 +34,13 @@ ms.locfileid: "66057084"
  Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
   
  **Colonna di input**  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignora>** per escludere colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando ** \<ignora>** per escludere le colonne dall'output.  
   
  **Colonna di destinazione**  
  Consente di visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che sia mappata o meno.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [Editor destinazione OLE DB &#40;pagina output degli errori&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Caricamento dei dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  

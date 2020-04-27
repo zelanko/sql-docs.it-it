@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061058"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor origine CDC (pagina Gestione connessione)
@@ -37,18 +37,18 @@ ms.locfileid: "66061058"
  **Gestione connessione ADO.NET**  
  Selezionare una gestione connessione esistente nell'elenco o creare una nuova connessione facendo clic su **Nuova** . La connessione deve essere stabilita a un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] abilitato per CDC e in cui si trova la tabella delle modifiche selezionata.  
   
- **Nuovo**  
- Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Editor della gestione connessione ADO.NET** in cui è possibile creare una nuova gestione connessione  
+ **Nuova**  
+ Fare clic su **New**. Verrà visualizzata la finestra di dialogo **Editor della gestione connessione ADO.NET** in cui è possibile creare una nuova gestione connessione  
   
- **Tabella CDC**  
+ **CDC Table**  
  Selezionare la tabella di origine CDC contenente le modifiche acquisite che si desidera leggere e inviare ai componenti SSIS a valle per l'elaborazione.  
   
  **Istanza di acquisizione**  
  Selezionare o digitare il nome dell'istanza di acquisizione CDC con la tabella CDC da leggere.  
   
- Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema_\<tabella, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene eseguita la lettura è la tabella CDC **cdc .\<istanza-acquisizione>_CT**.  
+ Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema_\<tabella, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene letta è la tabella CDC **CDC.\<>_CT dell'istanza di acquisizione**.  
   
- **Modalità di elaborazione CDC**  
+ **CDC Processing Mode**  
  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
 -   **All**: restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update** .  
@@ -67,15 +67,15 @@ ms.locfileid: "66061058"
  **Variabile contenente lo stato CDC**  
  Selezionare la variabile del pacchetto di stringhe SSIS che gestisce lo stato CDC per il contesto CDC corrente. Per altre informazioni sulla variabile di stato CDC, vedere [Definire una variabile di stato](data-flow/define-a-state-variable.md).  
   
- **Includi colonna indicatore di rielaborazione**  
+ **Include reprocessing indicator column**  
  Selezionare questa casella di controllo per creare una colonna di output speciale denominata **__$reprocessing**.  
   
  Questa colonna contiene un valore **true** quando l'intervallo di elaborazione CDC si sovrappone all'intervallo di elaborazione iniziale (l'intervallo di LSN che corrisponde al periodo di caricamento iniziale) o quando un intervallo di elaborazione CDC viene rielaborato a causa di un errore in un'esecuzione precedente. Questa colonna indicatore consente agli sviluppatori di SSIS di gestire gli errori in modo diverso durante la rielaborazione delle modifiche. Azioni quali l'eliminazione di una riga non esistente e l'inserimento non riuscito su una chiave duplicata, ad esempio, possono essere ignorate.  
   
  Per altre informazioni, vedere [Proprietà personalizzate dell'origine CDC](data-flow/cdc-source-custom-properties.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Editor origine CDC &#40;pagina Colonne&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Editor origine CDC &#40;pagina colonne&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Editor origine CDC &#40;pagina Output degli errori&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061356"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Gestione connessione Azure Resource Manager
@@ -27,5 +27,5 @@ Per creare e configurare una **gestione connessione Azure Resource Manager**, es
 
 1. Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **AzureResourceManager** e fare clic su **Aggiungi**.
 2. Nella finestra di dialogo **Editor gestione connessione Azure Resource Manager** compilare i campi **ID applicazione**, **Chiave applicazione** e **ID tenant** per l'entità servizio. Per informazioni dettagliate su queste proprietà, vedere [questo](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) articolo.
-3. Scegliere **OK** per chiudere la finestra di dialogo.
+3. Fare clic su **OK** per chiudere la finestra di dialogo.
 4. È possibile visualizzare le proprietà del componente Gestione connessione create nella finestra **Proprietà** .

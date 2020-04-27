@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059910"
 ---
 # <a name="data-flow-taps"></a>Scelte del flusso di dati
@@ -22,7 +22,7 @@ ms.locfileid: "66059910"
   
 1.  Creare un'istanza di esecuzione di un pacchetto usando la stored procedure [catalog.create_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
-2.  Aggiungere una scelta dei dati usando la stored procedure [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) o [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid).  
+2.  Aggiungere una scelta dei dati usando la stored procedure [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) o [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid) .  
   
 3.  Avviare l'istanza di esecuzione del pacchetto usando [catalog.start_execution &#40;databse SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).  
   
@@ -82,6 +82,6 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ## <a name="related-tasks"></a>Attività correlate  
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  
   
- [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

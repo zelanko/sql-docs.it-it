@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069141"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Scheda Analisi discriminante tra cluster di Sequence Clustering (Visualizzatore modello di data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "66069141"
   
  Utilizzare questa vista di un modello Sequence Clustering per confrontare due cluster e vedere quali stati e transizioni sono diversi.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -51,11 +51,11 @@ ms.locfileid: "66069141"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Variabili**|Un attributo nel modello di data mining.|  
+|**variables**|Un attributo nel modello di data mining.|  
 |**Valori**|Uno stato dell'attributo contenuto nell'elenco **Variabili**.|  
 |**Predilige \<il cluster 1>**|È contenuta una barra ombreggiata che indica il livello di predilezione dell'attributo e dello stato elencati in **Variabili** e **Valore** per il cluster selezionato in **Cluster 1**.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

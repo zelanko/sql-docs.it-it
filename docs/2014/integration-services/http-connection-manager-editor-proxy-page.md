@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058256"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Editor gestione connessione HTTP (pagina Proxy)
@@ -48,7 +48,7 @@ ms.locfileid: "66058256"
  **Dominio**  
  Se per la gestione connessione HTTP è stato impostato l'utilizzo di credenziali, è necessario specificare nome utente, password e dominio.  
   
- **Elenco proxy bypass**  
+ **Elenco proxy da ignorare**  
  Elenco degli indirizzi per i quali si desidera ignorare il server proxy.  
   
  **Aggiungere**  
@@ -57,8 +57,8 @@ ms.locfileid: "66058256"
  **Rimuovi**  
  Consente di selezionare un indirizzo e quindi di rimuoverlo facendo clic su **Rimuovi**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

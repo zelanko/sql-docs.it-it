@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056692"
 ---
 # <a name="precedence-constraint-editor"></a>Editor vincoli di precedenza
@@ -32,7 +32,7 @@ ms.locfileid: "66056692"
  Consente di specificare il valore di vincolo, ovvero **Operazione completata**, **Errore**oppure **Completamento**.  
   
 > [!NOTE]  
->  La riga del vincolo di precedenza è verde per l' **esito positivo**, evidenziata per **errore**e blu per il **completamento**.  
+>   La riga del vincolo di precedenza è di colore verde in caso di **Esito positivo**, evidenziata per **Esito negativo**e blu per **Completamento**.  
   
  **Espressione**  
  Se si usano le operazioni **Espressione**, **Espressione e vincolo**o **Espressione o vincolo**, digitare un'espressione o avviare Generatore di espressioni per creare l'espressione. L'espressione deve restituire un valore booleano.  
@@ -52,10 +52,10 @@ ms.locfileid: "66056692"
 > [!NOTE]  
 >  Questo tipo di vincolo di precedenza viene visualizzato come riga di colore verde, evidenziata o blu tratteggiata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Contenitori in Integration Services](control-flow/integration-services-containers.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
+ [Contenitori di Integration Services](control-flow/integration-services-containers.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)  
   
   

@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061454"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destinazione di Azure Data Lake Store
@@ -33,7 +33,7 @@ ms.locfileid: "66061454"
   
     2.  Per il campo **Formato file** specificare il formato file che si vuole usare.  
   
-        Se il formato del file è testo, è necessario specificare il valore del **carattere delimitatore di colonna** . Selezionare anche **Nomi di colonne nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
+        Se il formato del file corrisponde a testo, è necessario impostare il valore **Carattere delimitatore di colonna** . Selezionare anche **nomi di colonna nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
 
         Se il formato del file corrisponde a ORC, è necessario installare JRE per la piattaforma corrispondente. 
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056940"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Riferimento all'interfaccia utente della Configurazione guidata pacchetti
@@ -37,7 +37,7 @@ ms.locfileid: "66056940"
  **Non visualizzare più questa pagina**  
  Consente di evitare la visualizzazione della pagina di benvenuto alla successiva apertura della procedura guidata.  
   
- **Prossimo**  
+ **Avanti**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
 ## <a name="select-configuration-type-page"></a>Pagina Selezione tipo di configurazione  
@@ -57,13 +57,13 @@ ms.locfileid: "66056940"
 |**Variabile pacchetto padre**|Consente di archiviare la configurazione come variabile nel pacchetto contenente l'attività.  Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
 |**SQL Server**|Consente di archiviare la configurazione in una tabella in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
   
- **Prossimo**  
+ **Avanti**  
  Consente di visualizzare la pagina successiva della procedura guidata.  
   
 ### <a name="dynamic-options"></a>Opzioni dinamiche  
   
 #### <a name="configuration-type-option--xml-configuration-file"></a>Opzione tipo di configurazione = File di configurazione XML  
- **Specificare le impostazioni di configurazione direttamente**  
+ **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
 |valore|Descrizione|  
@@ -71,7 +71,7 @@ ms.locfileid: "66056940"
 |**Nome file di configurazione**|Consente di digitare il percorso del file di configurazione generato dalla procedura guidata.|  
 |**Sfoglia**|Usare la finestra di dialogo **Selezionare il percorso del file di configurazione** per impostare il percorso del file di configurazione generato dalla procedura guidata. Se il file non esiste, verrà creato durante la procedura guidata.|  
   
- **Il percorso di configurazione è archiviato in una variabile di ambiente**  
+ **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
 |valore|Descrizione|  
@@ -83,14 +83,14 @@ ms.locfileid: "66056940"
  Consente di selezionare la variabile di ambiente contenente le informazioni di configurazione.  
   
 #### <a name="configuration-type-option--registry-entry"></a>Opzione tipo di configurazione = Voce del Registro di sistema  
- **Specificare le impostazioni di configurazione direttamente**  
+ **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Voce del registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<chiave del Registro di sistema>.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>.|  
   
- **Il percorso di configurazione è archiviato in una variabile di ambiente**  
+ **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
 |valore|Descrizione|  
@@ -98,14 +98,14 @@ ms.locfileid: "66056940"
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
 #### <a name="configuration-type-option--parent-package-variable"></a>Opzione tipo di configurazione = Variabile pacchetto padre  
- **Specificare le impostazioni di configurazione direttamente**  
+ **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile padre**|Consente di specificare la variabile inclusa nel pacchetto padre contenente le informazioni di configurazione.|  
   
- **Il percorso di configurazione è archiviato in una variabile di ambiente**  
+ **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui viene memorizzata la configurazione.  
   
 |valore|Descrizione|  
@@ -113,16 +113,16 @@ ms.locfileid: "66056940"
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
 #### <a name="configuration-type-options--sql-server"></a>Opzione tipo di configurazione = SQL Server  
- **Specificare le impostazioni di configurazione direttamente**  
+ **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
-|**Tabella di configurazione**|Consente di selezionare una tabella esistente o di creare una nuova tabella facendo clic su **Nuova** per scrivere un'apposita istruzione SQL.|  
-|**Filtro di configurazione**|Consente di selezionare un nome esistente o di digitarne uno nuovo per la configurazione.<br /><br /> È possibile memorizzare nella stessa tabella molteplici configurazioni di SQL Server, ciascuna delle quali può includere più elementi di configurazione.<br /><br /> Questo valore definito dall'utente è memorizzato nella tabella per identificare gli elementi della configurazione appartenenti a una configurazione specifica.|  
+|**Tabella configurazione**|Consente di selezionare una tabella esistente o di creare una nuova tabella facendo clic su **Nuova** per scrivere un'apposita istruzione SQL.|  
+|**Filtro configurazione**|Consente di selezionare un nome esistente o di digitarne uno nuovo per la configurazione.<br /><br /> È possibile memorizzare nella stessa tabella molteplici configurazioni di SQL Server, ciascuna delle quali può includere più elementi di configurazione.<br /><br /> Questo valore definito dall'utente è memorizzato nella tabella per identificare gli elementi della configurazione appartenenti a una configurazione specifica.|  
   
- **Il percorso di configurazione è archiviato in una variabile di ambiente**  
+ **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui è memorizzata la configurazione.  
   
 |valore|Descrizione|  
@@ -139,7 +139,7 @@ ms.locfileid: "66056940"
  **Attributi proprietà**  
  Consente di visualizzare gli attributi di una proprietà.  
   
- **Prossimo**  
+ **Avanti**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
 ## <a name="completing-the-wizard-page"></a>Pagina Completamento procedura guidata  
@@ -155,7 +155,7 @@ ms.locfileid: "66056940"
  **Fine**  
  Consente di creare la configurazione e uscire dalla **Configurazione guidata pacchetto**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
   

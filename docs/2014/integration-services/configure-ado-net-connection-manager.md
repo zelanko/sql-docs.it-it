@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060841"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configura gestione connessione ADO.NET
@@ -33,13 +33,13 @@ ms.locfileid: "66060841"
  **Proprietà connessione dati**  
  Consente di visualizzare proprietà e valori per la connessione dati ADO.NET selezionata.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una connessione dati ADO.NET tramite la finestra di dialogo **Gestione connessione** .  
   
  **Elimina**  
  Selezionare una connessione e quindi eliminarla utilizzando il pulsante **Elimina** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

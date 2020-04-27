@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055727"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Impostazione delle proprietà di un percorso tramite l'Editor percorso flusso di dati
@@ -36,8 +36,8 @@ ms.locfileid: "66055727"
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   
   

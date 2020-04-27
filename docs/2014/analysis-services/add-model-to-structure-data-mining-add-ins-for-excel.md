@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062880"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Aggiunta modello a struttura (componenti aggiuntivi Data mining per Excel)
@@ -82,19 +82,18 @@ ms.locfileid: "66062880"
   
          Per ulteriori informazioni, vedere [drill-through sui modelli di data mining](data-mining/drillthrough-on-mining-models.md).  
   
-10. Fare clic su **fine** per salvare le modifiche. Dopo aver eseguito questa operazione, il nuovo modello viene distribuito nel server e viene elaborato.  
+10. Fare clic su **Fine** per salvare le modifiche. Dopo aver eseguito questa operazione, il nuovo modello viene distribuito nel server e viene elaborato.  
   
 ### <a name="related-options"></a>Opzioni correlate  
   
 |Opzione|Commenti|  
 |------------|--------------|  
 |Finestra di dialogo **Seleziona struttura o modello**|Scegliere una struttura di data mining esistente da utilizzare come base per la compilazione di un nuovo modello.  La struttura selezionata deve trovarsi nella connessione corrente. In caso contrario, modificare le connessioni utilizzando lo strumento [Connetti a dati di origine &#40;client di data mining per&#41;Excel](connect-to-source-data-data-mining-client-for-excel.md) .|  
-|**Selezione algoritmo di data mining** -finestra di dialogo|L'elenco di algoritmi di data mining dipende dal server a cui si è connessi. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce algoritmi diversi nelle versioni Standard ed Enterprise. Inoltre, è possibile che l'amministratore abbia aggiunto algoritmi personalizzati.<br /><br /> Se non è possibile visualizzare alcun algoritmo, verificare di essere connessi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Selezione algoritmo di data mining** -finestra di dialogo|L'elenco di algoritmi di data mining dipende dal server a cui si è connessi. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce algoritmi diversi nelle versioni Standard ed Enterprise. Inoltre, è possibile che l'amministratore abbia aggiunto algoritmi personalizzati.<br /><br /> Se non è possibile visualizzare alcun algoritmo, verificare di essere connessi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Parametri dell'algoritmo** Finestra di dialogo|In queste impostazioni è possibile personalizzare ogni algoritmo utilizzando parametri specifici del metodo analitico. È inoltre possibile impostare un valore di inizializzazione per garantire che i risultati del modello possano essere riprodotti in più sessioni di training.<br /><br /> Per ulteriori informazioni, vedere [parametri algoritmo &#40;SQL Server componenti aggiuntivi Data Mining&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Imposta flag di modellazione colonna** Finestra di dialogo|Con i flag di modellazione è possibile migliorare il modello specificando la modalità con cui i dati mancanti devono essere gestiti. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](data-mining/modeling-flags-data-mining.md).|  
   
-###  <a name="Bkmk_mdlcolumn"></a>Impostazione dell'utilizzo delle colonne  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>Impostazione dell'utilizzo delle colonne  
  Quando si aggiunge un nuovo modello a una struttura di data mining esistente, è necessario specificare in che modo il modello utilizzerà le singole colonne di dati della struttura di data mining. Probabilmente si osserverà che le opzioni di questa procedura guidata sono molto più dettagliate delle opzioni della struttura di data mining. Perché?  
   
  Il motivo è che quando si creano contemporaneamente un modello e una struttura tramite una procedura guidata, molte delle opzioni con cui viene controllata la modalità di utilizzo dei dati da parte dell'algoritmo vengono impostate automaticamente. Tuttavia, quando si aggiunge un nuovo modello a una struttura esistente, è necessario verificare queste opzioni manualmente e specificare se i dati devono essere utilizzati per l'analisi, se il tipo di dati è corretto e così via.  
@@ -118,5 +117,5 @@ ms.locfileid: "66062880"
   
  Se non è possibile visualizzare la struttura di data mining desiderata, è possibile che la struttura sia stata salvata in un'istanza o in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diverso. Per informazioni su come passare a una connessione data mining diversa, vedere [connettersi a un server di data mining](connect-to-a-data-mining-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   

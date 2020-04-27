@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061107"
 ---
 # <a name="catalog-properties-dialog-box"></a>Finestra di dialogo Proprietà catalogo
@@ -33,7 +33,7 @@ ms.locfileid: "66061107"
   
 -   [Configurare le opzioni](#options)  
   
-##  <a name="open_dialog"></a>Aprire la finestra di dialogo Proprietà catalogo  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>Aprire la finestra di dialogo Proprietà catalogo  
   
 1.  Aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66061107"
   
 3.  In Esplora oggetti espandere il nodo **Integration Services** , fare clic con il pulsante destro del mouse su **SSISDB**, quindi fare clic su **Proprietà**.  
   
-##  <a name="options"></a> Configurare le opzioni  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurare le opzioni  
   
 ### <a name="options"></a>Opzioni  
  Nella tabella seguente sono descritte determinate proprietà nella finestra di dialogo e le proprietà corrispondenti nella vista catalog.catalog_property.  

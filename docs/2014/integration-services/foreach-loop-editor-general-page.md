@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058515"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor ciclo Foreach (pagina Generale)
@@ -34,11 +34,11 @@ ms.locfileid: "66058515"
  **Descrizione**  
  Consente di digitare una descrizione del contenitore Ciclo Foreach.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Editor ciclo foreach &#40;pagina Mapping variabili&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Contenitore ciclo foreach](control-flow/foreach-loop-container.md)   
  [Contenitore Ciclo For](control-flow/for-loop-container.md)  
   

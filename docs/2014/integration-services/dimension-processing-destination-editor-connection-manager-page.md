@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059442"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione dimensione (pagina Gestione connessione)
-  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione dimensione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione dimensione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Per ulteriori informazioni sulla destinazione elaborazione dimensione, vedere [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## <a name="options"></a>Opzioni  
- **Connection manager**  
+ **Gestione connessione**  
  Consente di selezionare una gestione connessione esistente nell'elenco o di creare una nuova gestione connessione facendo clic su **Nuova** .  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Elenco delle dimensioni disponibili**  
@@ -41,13 +41,13 @@ ms.locfileid: "66059442"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Aggiungi (incrementale)**|Consente di eseguire un'elaborazione incrementale della dimensione.|  
+|**Aggiunta (incrementale)**|Consente di eseguire un'elaborazione incrementale della dimensione.|  
 |**Completo**|Consente di eseguire un'elaborazione completa della dimensione.|  
 |**Aggiornamento**|Consente di eseguire un'elaborazione di aggiornamento della dimensione.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione dimensione &#40;pagina mapping&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [Editor destinazione elaborazione dimensione &#40;pagina avanzate&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Editor destinazione elaborazione dimensione &#40;pagina Avanzate&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

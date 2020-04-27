@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066695"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
@@ -43,7 +43,7 @@ ms.locfileid: "66066695"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="what"></a>Vantaggi  
+##  <a name="benefits"></a><a name="what"></a>Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
 |CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantità|  
@@ -56,7 +56,7 @@ ms.locfileid: "66066695"
   
 ### <a name="customers"></a>Clienti  
   
-|[CustomerID]|Nome|Email|  
+|[CustomerID]|Nome|Posta elettronica|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -68,7 +68,7 @@ ms.locfileid: "66066695"
 |1|.05|  
 |2|0,10|  
   
-### <a name="orders"></a>Ordini  
+### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Prodotto|Quantità|  
 |--------------------|-------------|---------------|-------------|--------------|  
@@ -106,7 +106,7 @@ ms.locfileid: "66066695"
 ### <a name="relationships-and-performance"></a>Relazioni e prestazioni  
  Dopo aver creato una relazione, Progettazione modelli richiede generalmente il ricalcolo delle formule in cui sono usate le colonne provenienti dalle tabelle della relazione appena creata. L'elaborazione può richiedere del tempo, a seconda della quantità di dati e della complessità delle relazioni.  
   
-##  <a name="requirements"></a>Requisiti per le relazioni  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a>Requisiti per le relazioni  
  Progettazione modelli prevede che vengano rispettati diversi requisiti durante la creazione di relazioni:  
   
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
@@ -137,7 +137,7 @@ ms.locfileid: "66066695"
   
  Se si desidera creare una relazione tra due tabelle in Progettazione modelli e sono presenti più colonne che consentono di definire le chiavi primarie ed esterne, è necessario combinare i valori per creare una singola colonna chiave prima di creare la relazione. Tale operazione può essere effettuata prima di importare i dati oppure in Progettazione modelli creando una colonna calcolata.  
   
-###  <a name="bkmk_many_to_many"></a>Relazioni molti-a-molti  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>Relazioni molti-a-molti  
  I modelli tabulari non supportano relazioni molti-a-molti e non è possibile aggiungere semplicemente *tabelle di collegamento* in Progettazione modelli. È tuttavia possibile utilizzare funzioni DAX per modellare relazioni molti-a-molti.  
   
 ### <a name="self-joins-and-loops"></a>Self-join e cicli  
@@ -153,7 +153,7 @@ ms.locfileid: "66066695"
   
  Se si tenta di creare una relazione che comporterebbe la creazione di un ciclo, viene generato un errore.  
   
-##  <a name="detection"></a>Inferenza delle relazioni  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>Inferenza delle relazioni  
  In alcuni casi, le relazioni tra le tabelle vengono concatenate automaticamente. Se ad esempio si crea una relazione tra i primi due set di tabelle indicati di seguito, viene dedotta l'esistenza di una relazione tra le altre due tabelle e viene stabilita automaticamente una relazione.  
   
  Products e Category -- creata manualmente  
@@ -164,17 +164,17 @@ ms.locfileid: "66066695"
   
  Affinché relazioni vengano concatenate automaticamente, le relazioni devono andare in una direzione, come riportato in precedenza. Se le relazioni iniziali erano tra, ad esempio, Sales e Products e Sales e Customers, la relazione non viene dedotta. Ciò avviene perché la relazione tra Products e Customers è una relazione molti-a-molti.  
   
-##  <a name="bkmk_detection"></a>Rilevamento di relazioni durante l'importazione di dati  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a>Rilevamento di relazioni durante l'importazione di dati  
  Quando si importano dati da una tabella dell'origine dati relazionale, l'Importazione guidata tabella rileva le relazioni esistenti in tali tabelle di origine basate sui dati dello schema di origine. Se vengono importate tabelle correlate, tali relazioni verranno duplicate nel modello.  
   
-##  <a name="bkmk_manually_create"></a>Creazione manuale di relazioni  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a>Creazione manuale di relazioni  
  Sebbene la maggior parte delle relazioni tra tabelle in una singola origine dati relazionale vengano rilevate automaticamente e create nel modello tabulare, vi sono casi in cui le relazioni tra le tabelle del modello devono essere create manualmente.  
   
  Se il modello contiene dati da più origini, è probabile che le relazioni debbano essere create manualmente. È ad esempio possibile importare le tabelle Customers, CustomerDiscounts e Orders da un'origine dati relazionale. Le relazioni esistenti tra queste tabelle all'origine vengono create automaticamente nel modello. È quindi possibile aggiungere un'altra tabella da un'origine diversa, ad esempio, importare dati dell'area da una tabella Geography in una cartella di lavoro di Microsoft Excel. È quindi possibile creare manualmente una relazione tra una colonna nella tabella Customers e una colonna nella tabella Geography.  
   
  Per creare manualmente relazioni in un modello tabulare, è possibile utilizzare Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Nella Vista diagramma sono visualizzate le tabelle, con le relative relazioni, in formato grafico. È possibile fare clic su una colonna in una tabella e trascinare il cursore in un'altra tabella per creare facilmente una relazione, nell'ordine corretto, tra le tabelle. Nella finestra di dialogo Gestisci relazioni vengono visualizzate relazioni tra tabelle in un formato tabella semplice. Per istruzioni sulla creazione manuale di relazioni, vedere [Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
-##  <a name="bkmk_dupl_errors"></a>Valori duplicati e altri errori  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>Valori duplicati e altri errori  
  Se si sceglie una colonna che non può essere utilizzata nella relazione, accanto alla colonna viene visualizzata una X rossa. È possibile passare il cursore sull'icona di errore per visualizzare un messaggio in cui sono contenute ulteriori informazioni sul problema. Di seguito sono riportati alcuni dei problemi che possono impedire la creazione di una relazione tra le colonne selezionate:  
   
 |Problema o messaggio|Risoluzione|  
@@ -182,14 +182,14 @@ ms.locfileid: "66066695"
 |Impossibile creare la relazione perché in entrambe le colonne selezionate sono contenuti valori duplicati.|Per creare una relazione valida, in almeno una colonna della coppia selezionata devono essere contenuti solo valori univoci.<br /><br /> È possibile modificare le colonne per rimuovere i duplicati o invertire l'ordine delle colonne in modo che la colonna in cui sono contenuti i valori univoci venga usata come **Colonna di ricerca correlata**.|  
 |Nella colonna è presente un valore Null o vuoto.|Non è possibile creare un join tra le colonne di dati in base a un valore Null. In entrambe le colonne utilizzate in una relazione deve essere presente un valore per ogni riga.|  
   
-##  <a name="bkmk_related_tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Viene descritto come creare manualmente una relazione tra due tabelle.|  
 |[Eliminare relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
  [Importare dati &#40;SSAS tabulare&#41;](../import-data-ssas-tabular.md)  
   

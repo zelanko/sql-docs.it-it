@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054928"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor attività Trasferisci account di accesso (pagina Account di accesso)
@@ -57,17 +57,17 @@ ms.locfileid: "66054928"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**FailTask**|L'attività ha esito negativo se esistono già account di accesso con lo stesso nome nel server di destinazione.|  
-|**Overwrite**|L'attività sovrascrive gli account di accesso con lo stesso nome nel server di destinazione.|  
-|**Skip**|L'attività ignora gli account di accesso con lo stesso nome nel server di destinazione.|  
+|**Sovrascrivere**|L'attività sovrascrive gli account di accesso con lo stesso nome nel server di destinazione.|  
+|**Ignorare**|L'attività ignora gli account di accesso con lo stesso nome nel server di destinazione.|  
   
  **CopySids**  
- Consente di indicare se gli identificatori di sicurezza associati agli account di accesso devono essere copiati sul server di destinazione. **CopySids** deve essere impostato su **true** se l'attività Trasferisci account di accesso viene utilizzata insieme all'attività Trasferisci database. In caso contrario, gli account di accesso copiati non verranno riconosciuti dal database trasferito.  
+ Consente di indicare se gli identificatori di sicurezza associati agli account di accesso devono essere copiati sul server di destinazione. L'opzione**CopySids** deve essere impostata su **True** se l'attività Trasferisci account di accesso viene usata contestualmente all'attività Trasferisci database. In caso contrario, gli account di accesso copiati non verranno riconosciuti dal database trasferito.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci account di accesso &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Gestione connessione SMO](connection-manager/smo-connection-manager.md)   
  [Password complesse](../relational-databases/security/strong-passwords.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065025"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Creare una sessione Eventi estesi tramite l'editor di query
@@ -35,7 +35,7 @@ ms.locfileid: "66065025"
   
  Per informazioni su come creare una sessione eventi estesi usando la Creazione guidata nuova sessione, vedere [Creare una sessione Eventi estesi usando la procedura guidata &#40;Esplora oggetti&#41;](../ssms/object/object-explorer.md). Per informazioni su come creare una sessione eventi estesi usando l'interfaccia utente Nuova sessione, vedere [Creare una sessione Eventi estesi usando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorizzazioni  
  Per creare una sessione Eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Creazione di una sessione Eventi estesi tramite l'editor di query  
@@ -218,9 +218,9 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename = 'c:\temp\xelog.xel', metadatafile = 'c:\temp\xelog.xem')  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [Destinazioni degli eventi estesi di SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+## <a name="see-also"></a>Vedi anche  
+ [CREARE una sessione eventi &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinazioni degli eventi estesi](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Pacchetti degli eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

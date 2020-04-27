@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060219"
 ---
 # <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "66060219"
   
 8.  Fare clic su **OK** per aggiungere la soluzione alla **soluzione Esplora**r e aggiungere il progetto alla soluzione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integration Services &#40;progetti SSIS&#41;](integration-services-ssis-projects-and-solutions.md)   
  [Aggiunta o rimozione di un progetto di Integration Services da una soluzione](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   

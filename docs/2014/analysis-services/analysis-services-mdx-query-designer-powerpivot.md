@@ -1,5 +1,5 @@
 ---
-title: Finestra di progettazione query MDX di Analysis Services (PowerPivot) Documenti Microsoft
+title: Progettazione query MDX di Analysis Services (PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062473"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Progettazione query MDX di Analysis Services (PowerPivot)
-  Progettazione query MDX (Analysis Services Multidimensional Expression) offre un'interfaccia utente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] grafica che consente di creare query MDX per un'origine dati. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro dei metadati da cui è possibile trascinare membri dei cubi selezionati per compilare una query MDX per il recupero dei dati che si desidera utilizzare.  
+  La Analysis Services progettazione query MDX (Multidimensional Expression) fornisce un'interfaccia utente grafica che consente di creare query MDX per un' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origine dati. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro dei metadati da cui è possibile trascinare membri dei cubi selezionati per compilare una query MDX per il recupero dei dati che si desidera utilizzare.  
   
 > [!IMPORTANT]  
 >  Gli utenti accedono alle origini dati quando creano ed eseguono query. È necessario concedere autorizzazioni minime per le origini dati, ad esempio autorizzazioni di sola lettura.  
@@ -60,7 +60,7 @@ ms.locfileid: "66062473"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra degli strumenti di Progettazione query MDX in modalità progettazione  
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query MDX utilizzando l'interfaccia grafica. Nella tabella seguente vengono elencati i pulsanti con le relative funzioni.  
   
-|Pulsante|Descrizione|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Non abilitato per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system.|  

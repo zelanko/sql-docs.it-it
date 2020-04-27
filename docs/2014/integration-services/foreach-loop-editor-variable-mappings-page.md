@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058528"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor ciclo Foreach (pagina Mapping variabili)
@@ -28,10 +28,10 @@ ms.locfileid: "66058528"
   
 ## <a name="options"></a>Opzioni  
  **Variabile**  
- Selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
+ Selezionare una variabile esistente oppure fare clic \<su **nuova variabile...**> per creare una nuova variabile.  
   
 > [!NOTE]  
->  Dopo aver eseguito il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco di **variabili** .  
+>   Dopo il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco **Variabile** .  
   
  **Argomenti correlati**: [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
@@ -41,16 +41,16 @@ ms.locfileid: "66058528"
 > [!NOTE]  
 >  L'indice è in base 0.  
   
- **Argomenti correlati**: eseguire [un ciclo su file e tabelle di Excel utilizzando un contenitore ciclo foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Argomenti correlati**: [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Elimina**  
  Selezionare una variabile e quindi fare clic su **Elimina**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor ciclo foreach &#40;pagina raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Contenitore Ciclo For](control-flow/for-loop-container.md)  
   
   

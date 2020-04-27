@@ -19,17 +19,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060172"
 ---
 # <a name="create-package-configurations"></a>Creazione di configurazioni dei pacchetti
   Le configurazioni di pacchetto vengono create nella finestra di dialogo **Libreria configurazioni pacchetto** e tramite la Configurazione guidata pacchetto. Per accedere a questi strumenti, fare clic su **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  È inoltre possibile accedere a **Libreria configurazioni pacchetto**facendo clic sul pulsante con i puntini di sospensione accanto alla proprietà di **configurazione** . Quest'ultima viene visualizzata nella finestra delle proprietà del pacchetto.  
+>  È inoltre possibile accedere a **Libreria configurazioni pacchetto** facendo clic sul pulsante con i puntini di sospensione accanto alla proprietà **Configuration**. Quest'ultima viene visualizzata nella finestra delle proprietà del pacchetto.  
   
 > [!NOTE]  
 >  Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "66060172"
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
-|**Nome della configurazione**|Nome della configurazione.|  
+|**Nome configurazione**|Nome della configurazione.|  
 |**Tipo di configurazione**|Tipo di configurazione.|  
 |**Stringa di configurazione**|Posizione della configurazione. La posizione può corrispondere a un percorso, a una variabile di ambiente, a una chiave del Registro di sistema, a un nome di variabile del pacchetto padre oppure a una tabella in un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Oggetto di destinazione**|Nome dell'oggetto a cui è associata una proprietà con configurazione. Se la configurazione è un file di configurazione XML, la colonna è vuota in quanto questo tipo di configurazione può aggiornare più oggetti.|  
@@ -106,17 +106,17 @@ ms.locfileid: "66060172"
   
 10. La configurazione sarà visibile nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-11. Fare clic su **Close**.  
+11. Fare clic su **Chiudi**.  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Articolo tecnico [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643) (Informazioni sulle configurazioni dei pacchetti di Integration Services) sul sito Web msdn.microsoft.com  
+-   Articolo tecnico [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643)(Informazioni sulle configurazioni dei pacchetti di Integration Services) sul sito Web msdn.microsoft.com  
   
 -   Intervento nel Blog sulla [creazione di pacchetti in configurazioni di pacchetti di codice](https://go.microsoft.com/fwlink/?LinkId=217663)in www.sqlis.com.  
   
 -   Intervento nel Blog relativo [all'esempio di API: aggiungere a livello di codice un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), in Blogs.msdn.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
  [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Utilizzo delle variabili a livello di programmazione](building-packages-programmatically/working-with-variables-programmatically.md)  

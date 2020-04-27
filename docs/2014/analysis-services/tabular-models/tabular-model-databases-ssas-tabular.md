@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066414"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Database modello tabulare (SSAS tabulare)
@@ -31,7 +31,7 @@ ms.locfileid: "66066414"
 ## <a name="related-tasks"></a>Attività correlate  
  [Elaborare database, tabelle o partizioni](process-database-table-or-partition-analysis-services.md)  
   
- [Ruoli del modello tabulare &#40;SSAS tabulare&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Ruoli nei modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-roles-ssas-tabular.md)  
   
  [Partizioni di modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-partitions-ssas-tabular.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66066414"
   
  [Sincronizzare database di Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Passare a un database Analysis Services tra le modalità ReadOnly e ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Modificare o eliminare un database di Analysis Services](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

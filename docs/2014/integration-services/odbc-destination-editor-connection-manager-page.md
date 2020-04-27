@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057211"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Editor destinazione ODBC (pagina Gestione connessione)
@@ -39,8 +39,8 @@ ms.locfileid: "66057211"
 ### <a name="connection-manager"></a>Gestione connessione  
  Consente di selezionare una gestione connessione ODBC esistente nell'elenco o di creare una nuova connessione facendo clic su Nuova. La connessione può essere a qualsiasi database supportato da ODBC.  
   
-### <a name="new"></a>Nuovo  
- Fare clic su **Nuovo**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione.  
+### <a name="new"></a>Nuova  
+ Fare clic su **New**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione.  
   
 ### <a name="data-access-mode"></a>Modalità di accesso ai dati  
  Consente di selezionare il metodo di caricamento dei dati nella destinazione. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
@@ -55,9 +55,9 @@ ms.locfileid: "66057211"
 ### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare fino a 200 dati per la tabella selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà personalizzate della destinazione ODBC](data-flow/odbc-destination-custom-properties.md)   
- [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
+ [Editor destinazione ODBC pagina mapping &#40;&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

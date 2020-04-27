@@ -11,16 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062436"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scenario di Analysis Services Tutorial
-  Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
+  Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
   
  Negli ultimi anni [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha acquistato un piccolo impianto di produzione in Messico, Importadores Neptuno, presso il quale vengono realizzati diversi componenti di assemblaggio essenziali per la gamma di prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Tali componenti vengono quindi consegnati alla sede di Bothell per l'assemblaggio finale dei prodotti. Nel 2005, tutte le attività di produzione e distribuzione relative al gruppo di prodotti delle biciclette da turismo sono state concentrate nell'impianto Importadores Neptuno.  
   
@@ -64,7 +62,7 @@ ms.locfileid: "66062436"
   
  Nelle lezioni dell'esercitazione su Analysis Services vengono fornite istruzioni sulla compilazione di un database del cubo che soddisfa tutti questi obiettivi. Per iniziare, passare alla prima lezione: [Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione di modellazione multidimensionale &#40;Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

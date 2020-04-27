@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061588"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Editor trasformazione Aggregazione (scheda Avanzate)
@@ -27,7 +27,7 @@ ms.locfileid: "66061588"
 > [!NOTE]  
 >  Le opzioni per il conteggio delle chiavi, la scala delle chiavi, il conteggio delle chiavi distinct e la scala delle chiavi distinct vengono applicate a livello di componente quando vengono specificate nella scheda **Avanzate** , a livello di output quando vengono specificate nella sezione delle opzioni avanzate della scheda **Aggregazioni** e a livello di colonna quando vengono specificate nell'elenco delle colonne nella parte inferiore della scheda **Aggregazioni** .  
 >   
->  Nella trasformazione Aggregazione **Chiavi** e **Scala chiavi** fanno riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by** . Le **chiavi conteggio valori distinct** e **Scala conteggio valori distinct** fanno riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** .  
+>  Nella trasformazione Aggregazione **Chiavi** e **Scala chiavi** fanno riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by** . **Chiavi conteggio valori distinct** e **Scala conteggio valori distinct** fanno riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct count** .  
   
  Per altre informazioni sulla trasformazione Aggregazione, vedere [Trasformazione Aggregazione](data-flow/transformations/aggregate-transformation.md).  
   
@@ -38,8 +38,8 @@ ms.locfileid: "66061588"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Non specificata|La proprietà **Scala chiavi** non viene usata.|  
-|Basso|L'aggregazione può scrivere circa 500.000 chiavi.|  
-|Media|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
+|Medio|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di chiavi.|  
   
  **Numero di chiavi**  
@@ -51,8 +51,8 @@ ms.locfileid: "66061588"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Non specificata|La proprietà CountDistinctScale non viene utilizzata.|  
-|Basso|L'aggregazione può scrivere circa 500.000 valori distinct.|  
-|Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
+|Medio|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
   
  **Chiavi conteggio valori distinct**  
@@ -61,8 +61,8 @@ ms.locfileid: "66061588"
  **Fattore di estensione automatica**  
  Consente di utilizzare un valore compreso tra 1 e 100 per specificare la percentuale di estensione possibile della memoria durante l'aggregazione. Il valore predefinito di questa opzione è **25%**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione aggregazione &#40;scheda Aggregazioni&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   

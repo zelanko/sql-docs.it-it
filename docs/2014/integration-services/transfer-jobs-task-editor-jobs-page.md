@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054986"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor attività Trasferisci processi (pagina Processi)
@@ -60,8 +60,8 @@ ms.locfileid: "66054986"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**FailTask**|L'attività viene interrotta se nel server di destinazione esistono processi con lo stesso nome.|  
-|**Overwrite**|L'attività sovrascrive i processi con lo stesso nome che si trovano nel server di destinazione.|  
-|**Skip**|L'attività ignora i processi con lo stesso nome che si trovano nel server di destinazione.|  
+|**Sovrascrivere**|L'attività sovrascrive i processi con lo stesso nome che si trovano nel server di destinazione.|  
+|**Ignorare**|L'attività ignora i processi con lo stesso nome che si trovano nel server di destinazione.|  
   
  **EnableJobsAtDestination**  
  Specificare se i processi copiati nel server di destinazione devono essere attivati.  
@@ -73,11 +73,11 @@ ms.locfileid: "66054986"
 |**True**|Attiva i processi nel server di destinazione.|  
 |**False**|Disabilita i processi nel server di destinazione.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci processi &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
+ [Editor attività Trasferisci processi &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

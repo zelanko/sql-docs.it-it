@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058426"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor attività FTP (pagina Generale)
@@ -28,12 +28,12 @@ ms.locfileid: "66058426"
   
 ## <a name="options"></a>Opzioni  
  **FtpConnection**  
- Consente di selezionare una gestione connessione FTP esistente o di creare una gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione FTP esistente oppure fare clic \<su **nuova connessione...**> per creare una gestione connessione.  
   
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati**: [gestione connessione FTP](connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Argomenti correlati**: [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Consente di specificare il termine dell'attività FTP in caso di esito negativo di un'operazione FTP.  
@@ -47,8 +47,8 @@ ms.locfileid: "66058426"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività FTP.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività FTP &#40;pagina trasferimento file&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

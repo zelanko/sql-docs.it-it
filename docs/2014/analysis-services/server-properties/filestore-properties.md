@@ -25,17 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069090"
 ---
 # <a name="filestore-properties"></a>FileStore - proprietà
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà della cache dei file del server elencate nelle tabelle seguenti. Si tratta di proprietà avanzate, che vanno modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Si applica a:** Modalità server multidimensionale e tabulare  
+ **Si applica a:** modalità server multidimensionale e tabulare  
   
 ## <a name="properties"></a>Proprietà  
  `MemoryLimit`  
@@ -78,7 +77,7 @@ ms.locfileid: "66069090"
  `MemoryModel\InitialBonus`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

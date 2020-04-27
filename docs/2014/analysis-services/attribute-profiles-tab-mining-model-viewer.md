@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063164"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Scheda Profili attributo (Visualizzatore modello di data mining)
   Usare la scheda **Profili attributo** per vedere il modo in cui la distribuzione dei valori di input in uno stato del modello Naive Bayes contribuisce a ogni stato dell'attributo risultante. La distribuzione dei valori viene mostrata come un istogramma colorato e tutte le distribuzioni vengono presentate in un formato tabulare per rendere più semplice il confronto dei valori.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md)e [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -48,12 +48,12 @@ ms.locfileid: "66063164"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Attributes**|Elenca le colonne del modello di data mining contenute nel modello di data mining.|  
+|**Attributi**|Elenca le colonne del modello di data mining contenute nel modello di data mining.|  
 |**Stati**|Colonna facoltativa che descrive lo stato rappresentato dal colore nella riga degli attributi. Aggiungere o rimuovere la colonna usando la casella di controllo **Mostra legenda** .|  
 |**Popolazione**|Consente di visualizzare la distribuzione dell'attributo nell'intero set di dati.|  
 |**Colonna per gli stati dell'attributo stimabile**|Consente di visualizzare una colonna per ogni stato della colonna stimabile, con ogni riga corrispondente a un attributo di input nel modello.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

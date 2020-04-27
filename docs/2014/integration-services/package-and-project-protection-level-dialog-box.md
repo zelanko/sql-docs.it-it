@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056951"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
@@ -28,7 +28,7 @@ ms.locfileid: "66056951"
  Per comprendere i requisiti e le opzioni per la sicurezza del pacchetto, può essere utile vedere [Controllo dell'accesso per dati sensibili nei pacchetti](security/access-control-for-sensitive-data-in-packages.md) e [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
 ## <a name="options"></a>Opzioni  
- **Livello di protezione del pacchetto**  
+ **Livello di protezione pacchetto**  
  Selezionare un livello di protezione dall'elenco.  
   
  **Password**  
@@ -37,7 +37,7 @@ ms.locfileid: "66056951"
  **Conferma password**  
  Digitare di nuovo la password.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

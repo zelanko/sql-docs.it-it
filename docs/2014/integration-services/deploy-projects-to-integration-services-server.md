@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059583"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
@@ -50,11 +50,11 @@ ms.locfileid: "66059583"
   
      Per altre informazioni sull'aggiornamento di pacchetti, vedere [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md) e [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto nel server Integration Services](#deploy).  
+3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [per distribuire un progetto nel Server Integration Services](#deploy).  
   
 4.  (Facoltativo) Creare un ambiente per il progetto distribuito. Per altre informazioni, vedere [Creare ed eseguire il mapping di un ambiente server](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a>Per convertire un progetto nel modello di distribuzione del progetto  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>Per convertire un progetto nel modello di distribuzione del progetto  
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66059583"
   
 2.  Completare la procedura guidata. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a>Per distribuire un progetto nel server Integration Services  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>Per distribuire un progetto nel server Integration Services  
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], quindi scegliere **Distribuisci** dal menu **Progetto** per avviare la **Distribuzione guidata Integration Services**.  
   

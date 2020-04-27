@@ -14,17 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055841"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Impostazione delle proprietà di una gestione connessione
   Tutti i tipi di gestione connessione possono essere configurati nella finestra **Proprietà** .  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include anche finestre di dialogo personalizzate per la modifica dei vari tipi di gestione connessione in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Queste finestre di dialogo includono opzioni diverse a seconda del tipo di gestione connessione.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include anche finestre di dialogo personalizzate per la modifica dei vari tipi di gestione connessione in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Queste finestre di dialogo includono opzioni diverse a seconda del tipo di gestione connessione.  
   
 ### <a name="to-modify-a-connection-manager-using-the-properties-window"></a>Per modificare una gestione connessione utilizzando la finestra Proprietà  
   
@@ -60,21 +59,21 @@ ms.locfileid: "66055841"
     |[Gestione connessione Excel](connection-manager/excel-connection-manager.md)|[Editor gestione connessione Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[gestione connessione file](connection-manager/file-connection-manager.md)|[Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[gestione connessione per più file](connection-manager/multiple-files-connection-manager.md)|[Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione file](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[Gestione connessione file flat](connection-manager/flat-file-connection-manager.md)|[Editor gestione connessione file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor gestione connessione file flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor gestione connessione file flat &#40;pagina anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[gestione connessione per più file flat](connection-manager/multiple-flat-files-connection-manager.md)|[Editor gestione connessione per più file flat &#40;pagina generale&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor gestione connessione per più file flat &#40;pagina colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor gestione connessione per più file flat &#40;pagina avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor gestione connessione per più file flat &#40;pagina anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[Flat File Connection Manager](connection-manager/flat-file-connection-manager.md)|[Editor gestione connessione file flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor gestione connessione file flat &#40;pagina Colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
+    |[gestione connessione per più file flat](connection-manager/multiple-flat-files-connection-manager.md)|[Editor gestione connessione per più file flat &#40;pagina Generale&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor gestione connessione per più file flat &#40;pagina Colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor gestione connessione per più file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor gestione connessione per più file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[gestione connessione FTP](connection-manager/ftp-connection-manager.md)|[Editor gestione connessione FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[gestione connessione HTTP](connection-manager/http-connection-manager.md)|[Editor gestione connessione HTTP &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor gestione connessione HTTP &#40;pagina proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[gestione connessione HTTP](connection-manager/http-connection-manager.md)|[Editor gestione connessione HTTP &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor gestione connessione HTTP &#40;pagina Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[gestione connessione MSMQ](connection-manager/msmq-connection-manager.md)|[Editor gestione connessione MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[gestione connessione ODBC](connection-manager/odbc-connection-manager.md)|[Riferimento all'interfaccia utente di Gestione connessione ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)|[Configura gestione connessione OLE DB](configure-ole-db-connection-manager.md)|  
     |[gestione connessione SMO](connection-manager/smo-connection-manager.md)|[Editor gestione connessione SMO](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[Gestione connessione SMTP](connection-manager/smtp-connection-manager.md)|[Editor gestione connessione SMTP](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[Gestione connessione SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor gestione connessione SQL Server Compact Edition &#40;pagina connessione&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor gestione connessione SQL Server Compact Edition &#40;pagina tutti&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[Gestione connessione SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor gestione connessione SQL Server Compact Edition &#40;pagina Connessione&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor gestione connessione SQL Server Compact Edition &#40;pagina Tutte&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[Gestione connessione WMI](connection-manager/wmi-connection-manager.md)|[Editor gestione connessione WMI](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
 5.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integration Services &#40;connessioni SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
  [Aggiunta, eliminazione o condivisione di una gestione connessione in un pacchetto](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

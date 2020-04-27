@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056992"
 ---
 # <a name="package-and-project-password"></a>Password pacchetto e Password progetto
@@ -27,8 +27,8 @@ ms.locfileid: "66056992"
  **Password**  
  Consente di immettere la password.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   
   

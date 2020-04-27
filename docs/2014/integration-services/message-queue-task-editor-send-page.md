@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057594"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor attività Message Queue (pagina Invio)
-  Utilizzare la pagina **Invio** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue per l'invio di messaggi da un pacchetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Usare la pagina **Invio** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue per l'invio di messaggi da un pacchetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Per ulteriori informazioni su questa attività, vedere [Message Queue Task](control-flow/message-queue-task.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66057594"
  Se si sceglie di utilizzare la crittografia, consente di specificare il nome dell'algoritmo di crittografia da utilizzare. L'attività Message Queue può utilizzare gli algoritmi RC2 e RC4. L'impostazione predefinita è **RC2**.  
   
 > [!NOTE]  
->  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
+>  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
   
 > [!IMPORTANT]  
 >  Questi algoritmi di crittografia sono quelli supportati dalla tecnologia Microsoft Message Queuing (nota anche come MSMQ). Entrambi gli algoritmi di crittografia sono ormai considerati vulnerabili rispetto ad altri più recenti che tuttavia non sono ancora supportati da MSMQ. È pertanto consigliabile valutare con attenzione le esigenze di crittografia ai fini dell'invio di messaggi tramite l'attività Message Queue.  
@@ -45,27 +45,27 @@ ms.locfileid: "66057594"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
-|**Messaggio variabile**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
+|**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
 |**Messaggio stringa**|Il messaggio viene archiviato nell'attività Message Queue. La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
   
 ## <a name="messagetype-dynamic-options"></a>Opzioni dinamiche di MessageType  
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Messaggio file di dati  
  **DataFileMessage**  
- Digitare il percorso del file di dati o fare clic sui puntini di sospensione **(...)** e quindi individuare il file.  
+ Digitare il percorso del file di dati oppure fare clic sui puntini di sospensione **(...)** e quindi individuare il file.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Messaggio variabili  
  **VariableMessage**  
- Digitare i nomi delle variabili o fare clic sui puntini di sospensione **(...)** e quindi selezionare le variabili. Le variabili sono separate da virgole.  
+ Digitare i nomi delle variabili oppure fare clic sui puntini di sospensione **(...)** e quindi selezionare le variabili. Le variabili sono separate da virgole.  
   
- **Argomenti correlati:** Selezionare le variabili  
+ **Argomenti correlati:** Seleziona variabili  
   
 ### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
  **StringMessage**  
- Digitare il messaggio stringa o fare clic sui puntini di sospensione **(...)** e quindi digitare il messaggio nella finestra di dialogo **Immettere il messaggio stringa**.  
+ Digitare il messaggio stringa oppure fare clic sui puntini di sospensione **(...)** e quindi digitare il messaggio nella finestra di dialogo **Immetti messaggio stringa** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Message Queue &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Message Queue &#40;pagina ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

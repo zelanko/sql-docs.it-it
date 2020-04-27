@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058808"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor attività File system (pagina Generale)
@@ -26,7 +26,7 @@ ms.locfileid: "66058808"
   
  Per altre informazioni su questa attività, vedere [Attività Inserimento bulk](control-flow/file-system-task.md).  
   
- È necessario specificare una gestione connessione di origine e di destinazione impostando le proprietà SourceConnection e DestinationConnection. È possibile specificare i nomi delle gestioni connessione file che puntano ai file utilizzati dall'attività come origine o come destinazione oppure, se i percorsi dei file sono archiviati in variabili, è possibile specificare i nomi delle variabili. Per usare variabili per l'archiviazione dei percorsi dei file, è innanzitutto necessario impostare su **True**l'opzione IsSourcePathVariable per la connessione di origine e l'opzione IsDestinationPathVariable per la connessione di destinazione. È quindi possibile scegliere quali variabili utilizzare tra le variabili di sistema o definite dall'utente esistenti, oppure creare nuove variabili. Nella finestra di dialogo **Aggiungi variabile** è possibile configurare e specificare l'ambito delle variabili. L'ambito deve essere l'attività File system o un contenitore padre. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md).  
+ È necessario specificare una gestione connessione di origine e di destinazione impostando le proprietà SourceConnection e DestinationConnection. È possibile specificare i nomi delle gestioni connessione file che puntano ai file utilizzati dall'attività come origine o come destinazione oppure, se i percorsi dei file sono archiviati in variabili, è possibile specificare i nomi delle variabili. Per usare variabili per l'archiviazione dei percorsi dei file, è innanzitutto necessario impostare su **True**l'opzione IsSourcePathVariable per la connessione di origine e l'opzione IsDestinationPathVariable per la connessione di destinazione. È quindi possibile scegliere quali variabili utilizzare tra le variabili di sistema o definite dall'utente esistenti, oppure creare nuove variabili. Nella finestra di dialogo **Aggiungi variabile** è possibile configurare e specificare l'ambito delle variabili. L'ambito deve essere l'attività File system o un contenitore padre. Per ulteriori informazioni, vedere [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md) e [utilizzare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md).  
   
 > [!NOTE]  
 >  Per eseguire l'override delle variabili selezionate per `SourceConnection` le `DestinationConnection` proprietà e, immettere un'espressione per le proprietà di **origine** e di **destinazione** . Le espressioni devono essere immesse nella pagina **Espressioni** di **Editor attività File system**. Ad esempio, per impostare il percorso dei file utilizzati dall'attività come destinazione, potrebbe essere necessario utilizzare la variabile A in determinate condizione e la variabile B in altre.  
@@ -57,7 +57,7 @@ ms.locfileid: "66058808"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività File system.  
   
- **operazione**  
+ **Operazione**  
  Consente di selezionare l'operazione di file system da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  
@@ -71,7 +71,7 @@ ms.locfileid: "66058808"
 |**Sposta directory**|Consente di spostare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
 |**Sposta file**|Consente di spostare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.<br /><br /> Nota: quando si trasferisce un file, non includere un nome file nel percorso della directory fornito come destinazione.|  
 |**Rinomina file**|Consente di rinominare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.<br /><br /> Nota: quando si rinomina un file, includere il nuovo nome del file nel percorso della directory fornito per la destinazione.|  
-|**Impostare gli attributi**|Consente di impostare gli attributi di un file o di una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e l'operazione.|  
+|**Imposta attributi**|Consente di impostare gli attributi di un file o di una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e l'operazione.|  
   
  `IsSourcePathVariable`  
  Consente di specificare se il percorso di destinazione è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
@@ -93,7 +93,7 @@ ms.locfileid: "66058808"
  `DestinationConnection`  
  Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>Opzioni dinamiche di IsSourcePathVariable  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66058808"
  `SourceConnection`  
  Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Opzioni dinamiche di Operation  
   
@@ -128,8 +128,8 @@ ms.locfileid: "66058808"
  `UseDirectoryIfExists`  
  Indica se l'operazione **Crea directory** usa una directory esistente con il nome specificato anziché creare una nuova directory.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

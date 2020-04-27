@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069394"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>Seleziona chiavi di dimensione mancanti (Creazione guidata cubo)
@@ -28,7 +28,7 @@ ms.locfileid: "66069394"
   
  Se vengono selezionate più colonne chiave, sarà creata una chiave composta.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

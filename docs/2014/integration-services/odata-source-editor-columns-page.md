@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057337"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor origine OData (pagina Colonne)
@@ -32,7 +32,7 @@ ms.locfileid: "66057337"
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor origine OData &#40;pagina connessione&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [Editor origine OData &#40;pagina output degli errori&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Origine OData](data-flow/odata-source.md)   

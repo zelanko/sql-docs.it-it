@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061773"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor destinazione ADO NET (pagina Output errori)
@@ -56,8 +56,8 @@ ms.locfileid: "66061773"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor destinazione ADO NET &#40;pagina mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Editor destinazione ADO NET &#40;pagina Mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

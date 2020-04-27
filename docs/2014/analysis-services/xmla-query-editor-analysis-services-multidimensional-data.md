@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065305"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Editor di query XMLA (Analysis Services - Dati multidimensionali)
@@ -48,7 +48,7 @@ ms.locfileid: "66065305"
 |**Nuova query con connessione corrente**|Consente di aprire una nuova finestra dell'editor di query XMLA utilizzando le stesse informazioni di connessione della finestra dell'editor di query XMLA corrente.|  
 |**Database disponibili**|Consente di cambiare la connessione a un diverso database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella stessa istanza.|  
 |**Eseguire**|Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte specifica del codice, di eseguire tutto il codice contenuto nell'editor di query XMLA.|  
-|**Analizza**|Consente di controllare la sintassi del codice selezionato. Se non è selezionata alcuna parte di codice, consente di controllare la sintassi di tutto il contenuto della finestra dell'editor di query XMLA.|  
+|**Analizzare**|Consente di controllare la sintassi del codice selezionato. Se non è selezionata alcuna parte di codice, consente di controllare la sintassi di tutto il contenuto della finestra dell'editor di query XMLA.|  
 |**Annulla esecuzione query**|Consente di inviare una richiesta di annullamento al server. Alcune query non possono essere annullate immediatamente, ma devono attendere una condizione di annullamento adatta. Quando le query vengono annullate, è possibile che si verifichino ritardi durante il rollback delle transazioni.|  
   
 ## <a name="xmla-query-editor-window"></a>Finestra dell'editor di query XMLA  
@@ -56,11 +56,11 @@ ms.locfileid: "66065305"
   
 |Termine|Definizione|  
 |----------|----------------|  
-|**Finestra dell'editor di query**|Consente di digitare istruzioni e script XMLA da eseguire mediante l'editor di query XMLA.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: consente di copiare la selezione corrente negli Appunti e di rimuovere la selezione dalla finestra dell'editor di query.<br />**Copia**: copia la selezione corrente negli Appunti.<br />**Incolla**: incolla il contenuto degli Appunti nella selezione corrente.<br />**Connetti**: apre la finestra di dialogo **Connetti al server** per stabilire una connessione a un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.<br />**Disconnetti**: disconnette l'editor di query corrente da un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.<br />**Disconnetti tutte le query**: disconnette tutti gli editor di query aperti.<br />**Cambia connessione**: apre la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diversa.<br />**Apri server in Esplora oggetti**: apre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di a cui è connesso l'editor di query corrente nel **Esplora oggetti**.<br />**Esegui**: esegue il codice selezionato oppure, se non è selezionato alcun codice, esegue l'intero codice nell'editor di query corrente.<br />**Finestra Proprietà**: consente di **** visualizzare la finestra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proprietà in per la finestra di query corrente.<br />**Opzioni query**: consente di visualizzare la finestra di dialogo **Opzioni query** .|  
+|**Finestra dell'editor di query**|Consente di digitare istruzioni e script XMLA da eseguire mediante l'editor di query XMLA.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: consente di copiare la selezione corrente negli Appunti e di rimuovere la selezione dalla finestra dell'editor di query.<br />**Copy**: copia la selezione corrente negli Appunti.<br />**Incolla**: incolla il contenuto degli Appunti nella selezione corrente.<br />**Connetti**: apre la finestra di dialogo **Connetti al server** , per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Disconnetti**: disconnette l'editor di query corrente da un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.<br />**Disconnetti tutte le query**: disconnette tutti gli editor di query aperti.<br />**Cambia connessione**: apre la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diversa.<br />**Apri server in Esplora oggetti**: apre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di a cui è connesso l'editor di query corrente nel **Esplora oggetti**.<br />**Esegui**: esegue il codice selezionato oppure, se non è selezionato alcun codice, esegue l'intero codice nell'editor di query corrente.<br />**Finestra Proprietà**: consente di **Properties** visualizzare la finestra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proprietà in per la finestra di query corrente.<br />**Opzioni query**: consente di visualizzare la finestra di dialogo **Opzioni query** .|  
 |**Finestra Risultati**|Consente di visualizzare i risultati di un'istruzione o di uno script XMLA in formato testo.|  
 |**Finestra Messaggi**|Consente di visualizzare informazioni sull'esecuzione di un'istruzione o di uno script XMLA. Ad esempio, in questa finestra vengono visualizzati gli eventuali errori rilevati durante l'esecuzione o il numero di celle recuperate dopo l'esecuzione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor di query MDX &#40;Analysis Services Dati multidimensionali&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [Editor di query DMX &#40;Analysis Services-Data mining&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

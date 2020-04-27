@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056417"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Eseguire un pacchetto in SQL Server Data Tools
@@ -27,7 +27,7 @@ ms.locfileid: "66056417"
   
  Durante l'esecuzione di un pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] , in progettazione viene visualizzato lo stato di avanzamento dell'esecuzione del pacchetto nella scheda **stato** . È possibile visualizzare l'ora di inizio e di fine del pacchetto e le relative attività e contenitori, oltre a informazioni su eventuali attività o contenitori nel pacchetto non riusciti. Al termine dell'esecuzione del pacchetto, le informazioni di run-time rimangono disponibili nella scheda **Risultati esecuzione** . Per ulteriori informazioni, vedere la sezione relativa alla creazione di report sullo stato di avanzamento nell'argomento [debug del flusso di controllo](control-flow/control-flow.md).  
   
- **Distribuzione in fase di progettazione**. Quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], il pacchetto viene compilato e quindi distribuito in una cartella. Prima di eseguire il pacchetto è possibile specificare la cartella in cui deve essere distribuito. Se non si specifica alcuna cartella, per impostazione predefinita viene usata la cartella **bin**. Questo tipo di distribuzione è detto distribuzione in fase di progettazione.  
+ **Distribuzione in fase di progettazione**. Quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], il pacchetto viene compilato e quindi distribuito in una cartella. Prima di eseguire il pacchetto è possibile specificare la cartella in cui deve essere distribuito. Se non si specifica alcuna cartella, per impostazione predefinita viene usata la cartella **bin** . Questo tipo di distribuzione è detto distribuzione in fase di progettazione.  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>Per eseguire un pacchetto in SQL Server Data Tools  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66056417"
   
 3.  Aggiornare il valore della proprietà OutputPath per specificare la cartella da usare per la distribuzione in fase di progettazione e quindi fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)   
  [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   

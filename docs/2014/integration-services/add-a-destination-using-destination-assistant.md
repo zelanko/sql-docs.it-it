@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66e48903776824b0e540b854a5704ceef3a9782e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062065"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>Aggiunta di una destinazione tramite Assistente destinazione
@@ -28,7 +28,7 @@ ms.locfileid: "66062065"
   
 3.  Selezionare il tipo della destinazione nell'elenco **Tipi**.  
   
-4.  Selezionare una gestione connessione esistente nell'elenco **Gestioni connessioni** oppure selezionare **\<Nuova>** per creare una nuova gestione connessione.  
+4.  Selezionare una gestione connessione esistente nell'elenco **gestioni connessioni** oppure selezionare ** \<nuova>** per creare una nuova gestione connessione.  
   
 5.  Se si seleziona una gestione connessione esistente, fare clic su **OK** per chiudere la finestra di dialogo **Aggiungi nuova destinazione**. La destinazione e le gestioni connessioni verranno aggiunte al flusso di dati.  
   

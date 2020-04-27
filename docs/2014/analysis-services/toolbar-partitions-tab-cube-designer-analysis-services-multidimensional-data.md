@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066089"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Partizioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -27,7 +27,7 @@ ms.locfileid: "66066089"
 |**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
 |**Processo**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare la partizione o il gruppo di misure selezionati.|  
 |**Nuova partizione**|Fare clic per visualizzare la **Creazione guidata partizione** e creare una nuova partizione nel gruppo di misure selezionato.|  
-|**Rinominare**|Fare clic per rinominare la partizione selezionata.<br /><br /> Nota: questa opzione è abilitata solo se nella griglia **Partizioni** di un gruppo di misure incluso nel riquadro **Gruppi di misure** è selezionata una qualsiasi cella di una partizione.|  
+|**Rinomina**|Fare clic per rinominare la partizione selezionata.<br /><br /> Nota: questa opzione è abilitata solo se nella griglia **Partizioni** di un gruppo di misure incluso nel riquadro **Gruppi di misure** è selezionata una qualsiasi cella di una partizione.|  
 |**Elimina**|Fare clic per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare l'azione selezionata.<br /><br /> Nota: questa opzione è abilitata solo se nella griglia **Partizioni** di un gruppo di misure incluso nel riquadro **Gruppi di misure** è selezionata l'intera riga di una partizione.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Progetta aggregazioni**|Fare clic per visualizzare la **Progettazione guidata aggregazioni** e creare una progettazione delle aggregazioni per la partizione selezionata.<br /><br /> Nota: questa opzione è abilitata solo se nella griglia **Partizioni** di un gruppo di misure incluso nel riquadro **Gruppi di misure** è selezionata una qualsiasi cella di una partizione.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Ottimizzazione basata sulle statistiche di utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle statistiche di utilizzo** e creare una progettazione delle aggregazioni basata su modelli di utilizzo esistenti per la partizione selezionata.<br /><br /> Nota: questa opzione è abilitata solo se nella griglia **Partizioni** di un gruppo di misure incluso nel riquadro **Gruppi di misure** è selezionata una qualsiasi cella di una partizione.<br /><br /> Si noti inoltre che questa opzione è disabilitata se è stata selezionata una partizione writeback.|  

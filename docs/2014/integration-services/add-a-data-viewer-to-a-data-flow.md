@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062089"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Aggiunta di un visualizzatore dati a un flusso di dati
@@ -49,13 +49,13 @@ ms.locfileid: "66062089"
 9. Nell'area Colonne da visualizzare selezionare le colonne che si desidera visualizzare nel visualizzatore dati. Per impostazione predefinita, nell'elenco **Colonne visualizzate** sono elencate e selezionate tutte le colonne disponibili. Spostare le colonne da non usare nell'elenco **Colonne inutilizzate** selezionandole e facendo clic sulla freccia sinistra.  
   
     > [!NOTE]  
-    >  I valori nella griglia che rappresentano i tipi di dati DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET vengono visualizzati come stringhe formattate ISO 8601. Uno spazio separatore sostituisce il separatore `T`. I valori che rappresentano i tipi di dati DT_DATE e DT_FILETIME includono sette cifre per i secondi frazionari. Poiché il tipo di dati DT_FILETIME memorizza solo tre cifre dei secondi frazionari, nella griglia viene visualizzato zero per le quattro cifre rimanenti. I valori che rappresentano il tipo di dati DT_DBTIMESTAMP includono tre cifre per i secondi frazionari. Per i valori che rappresentano i tipi di dati DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, il numero di cifre dei secondi frazionari corrisponde alla scala specificata per il tipo di dati della colonna. Per altre informazioni sui formati ISO 8601, vedere [Formati di data e ora](../../2014/integration-services/date-and-time-formats.md). Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
+    >  I valori nella griglia che rappresentano i tipi di dati DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET vengono visualizzati come stringhe formattate ISO 8601. Uno spazio separatore sostituisce il separatore `T`. I valori che rappresentano i tipi di dati DT_DATE e DT_FILETIME includono sette cifre per i secondi frazionari. Poiché il tipo di dati DT_FILETIME memorizza solo tre cifre dei secondi frazionari, nella griglia viene visualizzato zero per le quattro cifre rimanenti. I valori che rappresentano il tipo di dati DT_DBTIMESTAMP includono tre cifre per i secondi frazionari. Per i valori che rappresentano i tipi di dati DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, il numero di cifre dei secondi frazionari corrisponde alla scala specificata per il tipo di dati della colonna. Per altre informazioni sui formati ISO 8601, vedere [Formati di data e ora](../../2014/integration-services/date-and-time-formats.md). Per ulteriori informazioni sui tipi di dati, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).  
   
 10. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni di Integration Services](data-flow/transformations/integration-services-transformations.md)   
- [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Trasformazioni Integration Services](data-flow/transformations/integration-services-transformations.md)   
+ [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Flusso di dati](data-flow/data-flow.md)   
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  
   

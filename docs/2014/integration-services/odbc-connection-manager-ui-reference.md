@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057281"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Riferimento all'interfaccia utente di Gestione connessione ODBC
@@ -33,13 +33,13 @@ ms.locfileid: "66057281"
  **Proprietà connessione dati**  
  Consente di visualizzare proprietà e valori per la gestione connessione ODBC selezionata.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una gestione connessione ODBC tramite la finestra di dialogo **Gestione connessione** . In questa finestra di dialogo è inoltre possibile creare una nuova origine dei dati ODBC, se necessario.  
   
  **Elimina**  
  Selezionare una connessione e quindi eliminarla utilizzando il pulsante **Elimina** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

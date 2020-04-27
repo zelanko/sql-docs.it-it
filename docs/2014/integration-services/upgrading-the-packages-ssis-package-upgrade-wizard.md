@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054741"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Aggiornamento pacchetti (Aggiornamento guidato pacchetti SSIS)
@@ -37,13 +37,13 @@ ms.locfileid: "66054741"
  **Azione**  
  Consente di visualizzare le azioni incluse nell'aggiornamento.  
   
- **Status**  
+ **Stato**  
  Consente di visualizzare il risultato di ogni azione.  
   
  **Messaggio**  
  Consente di visualizzare i messaggi di errore generati da ogni azione.  
   
- **Stop**  
+ **Arresta**  
  Consente di arrestare l'aggiornamento del pacchetto.  
   
  **Report**  
@@ -57,7 +57,7 @@ ms.locfileid: "66054741"
   
 -   Inviare il report come messaggio di posta elettronica.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

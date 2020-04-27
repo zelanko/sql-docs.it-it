@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060954"
 ---
 # <a name="common-properties"></a>Proprietà comuni
@@ -63,7 +63,7 @@ ms.locfileid: "66060954"
   
 -   [Proprietà personalizzate dell'origine ODBC](data-flow/odbc-source-custom-properties.md)  
   
--   [OLE DB proprietà personalizzate](data-flow/ole-db-custom-properties.md) OLE DB proprietà personalizzate  
+-   [Proprietà personalizzate OLE DB](data-flow/ole-db-custom-properties.md)Proprietà personalizzate OLE DB  
   
 -   [Proprietà personalizzate della destinazione elaborazione partizione](data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -75,11 +75,11 @@ ms.locfileid: "66060954"
   
 -   [Proprietà personalizzate della destinazione SQL Server](data-flow/sql-server-destination-custom-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](data-flow/transformations/transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)  
   
 -   [Proprietà personalizzate dell'origine XML](data-flow/xml-source-custom-properties.md)  
   
-##  <a name="components"></a>Proprietà del componente  
+##  <a name="component-properties"></a><a name="components"></a>Proprietà del componente  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  Nella tabella seguente vengono descritte le proprietà dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -99,7 +99,7 @@ ms.locfileid: "66060954"
 |ValidateExternalMetadata|Boolean|Indica se i metadati delle colonne esterne sono convalidati. Il valore predefinito di questa proprietà è `True`.|  
 |Versione|Integer|Versione di un componente.|  
   
-##  <a name="inputs"></a>Proprietà di input  
+##  <a name="input-properties"></a><a name="inputs"></a>Proprietà di input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le trasformazioni e le destinazioni includono input. L'input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Nella tabella seguente vengono descritte le proprietà degli input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -119,7 +119,7 @@ ms.locfileid: "66060954"
   
  Le destinazioni e alcune trasformazioni non supportano gli output degli errori e le proprietà ErrorRowDisposition e TruncationRowDisposition di questi componenti sono di sola lettura.  
   
-###  <a name="inputcolumns"></a>Proprietà delle colonne di input  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a>Proprietà delle colonne di input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un input contiene una raccolta di colonne di input. Una colonna di input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -142,7 +142,7 @@ ms.locfileid: "66060954"
   
  Le colonne di input includono anche le proprietà del tipo di dati descritte in "Proprietà del tipo di dati".  
   
-##  <a name="outputs"></a>Proprietà di output  
+##  <a name="output-properties"></a><a name="outputs"></a>Proprietà di output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le origini e le trasformazioni includono output. L'output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Nella tabella seguente vengono descritte le proprietà degli output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -163,7 +163,7 @@ ms.locfileid: "66060954"
 |SynchronousInputID|Integer|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I possibili valori sono `Fail component`, `Ignore failure` e `Redirect row`.|  
   
-###  <a name="outputcolumns"></a>Proprietà della colonna di output  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a>Proprietà della colonna di output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un output contiene una raccolta di colonne di output. Una colonna di output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -207,12 +207,12 @@ ms.locfileid: "66060954"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Specifica la tabella codici per i dati stringa non Unicode.|  
-|DataType|Integer (enumerazione)|Tipo di dati [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] della colonna. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).|  
+|DataType|Integer (enumerazione)|Tipo di dati [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] della colonna. Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).|  
 |Length|Integer|Lunghezza della colonna in caratteri.|  
 |Precision|Integer|Precisione di una colonna numerica.|  
 |Scalabilità|Integer|Scala di una colonna numerica.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Flusso di dati](data-flow/data-flow.md)   
  [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
  [Proprietà percorso](../../2014/integration-services/path-properties.md)   

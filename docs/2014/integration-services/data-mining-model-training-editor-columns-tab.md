@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059885"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor training modelli di data mining (scheda Colonne)
@@ -39,8 +39,8 @@ ms.locfileid: "66059885"
  **Colonne della struttura di data mining**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che ne venga eseguito il mapping.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor training modello di data mining &#40;scheda connessione&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor training modelli di data mining &#40;scheda Connessione&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

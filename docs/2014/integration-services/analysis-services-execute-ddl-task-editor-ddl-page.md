@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061612"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor attività Esegui DDL Analysis Services (pagina DDL)
@@ -30,7 +30,7 @@ ms.locfileid: "66061612"
  **Connessione**  
  Selezionare un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o una gestione connessione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dall'elenco oppure fare clic su <\<**Nuova connessione**> e usare la finestra di dialogo **Aggiungi gestione connessione Analysis Services** per creare una nuova connessione.  
   
- **Argomenti correlati: riferimento all'** [interfaccia utente della finestra di dialogo Aggiungi Analysis Services gestione connessione](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Consente di specificare il tipo di origine delle istruzioni DDL. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
@@ -44,27 +44,27 @@ ms.locfileid: "66061612"
 ## <a name="dynamic-options"></a>Opzioni dinamiche  
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Direct Input  
- **Origine**  
+ **origine**  
  Digitare le istruzioni DDL o fare clic sul pulsante con i puntini di sospensione **(...)** e quindi digitare le istruzioni nella finestra di dialogo **Istruzioni DDL**.  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
- **Origine**  
+ **origine**  
  Selezionare una connessione file dall'elenco oppure fare clic su \<**Nuova connessione...**> e usare la finestra di dialogo **Gestione connessione file** per creare una nuova connessione.  
   
- **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md)  
+ **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
- **Origine**  
+ **origine**  
  Selezionare una variabile dall'elenco oppure fare clic su \<**Nuova variabile**> e usare la finestra di dialogo **Aggiungi variabile** per creare una nuova variabile.  
   
- **Argomenti correlati:** [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services Editor attività Esegui DDL &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
  [Analysis Services linguaggio di scripting &#40;riferimento&#41; ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis &#40;riferimento&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Guida di riferimento a XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065431"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avvisi (Progettazione database) (Analysis Services - Dati multidimensionali)
@@ -47,10 +47,10 @@ ms.locfileid: "66065431"
   
  La griglia **Avvisi ignorati** ha i seguenti elementi :  
   
- **Object**  
+ **Oggetto**  
  Visualizza un'icona che rappresenta il tipo di oggetto e il nome dell'oggetto.  
   
- **Tipo**  
+ **Type**  
  Visualizza il tipo di oggetto.  
   
  **Descrizione**  
@@ -68,7 +68,7 @@ ms.locfileid: "66065431"
 > [!NOTE]  
 >  Se un oggetto ha un avviso, ma è in uno stato non valido o è stato rimosso manualmente dal progetto, verrà visualizzata un'icona Errori nell'elenco accanto all'avviso. Per ignorare l'avviso, selezionarlo, quindi fare clic su **Riabilita**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Ignora avviso &#40;Analysis Services-Dati multidimensionali&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
  [&#40;generale di progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   

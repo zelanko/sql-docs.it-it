@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059453"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Firma digitale
@@ -33,7 +33,7 @@ ms.locfileid: "66059453"
  **Rimuovi**  
  Fare clic su questo pulsante per rimuovere la firma digitale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

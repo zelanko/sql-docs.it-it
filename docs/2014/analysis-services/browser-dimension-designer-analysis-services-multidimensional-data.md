@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064624"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Browser (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -33,7 +33,7 @@ ms.locfileid: "66064624"
  [Livelli e membri](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
  Usare il riquadro **Livelli e membri** per esplorare e modificare i membri della gerarchia selezionata, nella lingua selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   

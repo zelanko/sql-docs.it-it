@@ -24,14 +24,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068886"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà della memoria del server elencate nella tabella seguente. Per le linee guida di impostazione di queste proprietà, vedere la [Guida operativa di SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  I valori compresi tra 1 e 100 rappresentano le percentuali di **memoria fisica totale** o **spazio degli indirizzi virtuali**, a seconda di quale dei due elementi sia inferiore. I valori maggiori di 100 rappresentano limiti di memoria in byte.  
@@ -58,7 +57,7 @@ ms.locfileid: "66068886"
   
  Zero (**0**) Disabilita il paging. Se la memoria è insufficiente, l'elaborazione ha esito negativo e provoca un errore memoria insufficiente. Se si disabilita il paging, è necessario concedere i privilegi di Windows all'account del servizio. Per istruzioni, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md).  
   
- **1** è il valore predefinito. Questa proprietà abilita il paging su disco utilizzando il file di paging del sistema operativo (pagefile.sys).  
+ Il valore predefinito è**1** . Questa proprietà abilita il paging su disco utilizzando il file di paging del sistema operativo (pagefile.sys).  
   
  Quando `VertiPaqPagingPolicy` è impostato su 1, è meno probabile che l'elaborazione non venga completata a causa di limitazioni di memoria perché il server tenterà di eseguire il paging su disco utilizzando il metodo specificato. L'impostazione della proprietà `VertiPaqPagingPolicy` non garantisce che non si verificheranno mai gli errori della memoria. Gli errori di memoria insufficiente si possono comunque verificare nelle condizioni seguenti:  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66068886"
  `WaitCountIfHighMemory`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

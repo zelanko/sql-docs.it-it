@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064422"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2014
@@ -33,10 +33,10 @@ ms.locfileid: "66064422"
   
 -   [Modifiche di rilievo in SQL Server 2008/SQL Server 2008 R2](#bkmk_sql10)  
   
-##  <a name="bkmk_sql2014"></a>Modifiche di rilievo in[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="breaking-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>Modifiche di rilievo in[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In questa versione non sono annunciate nuove modifiche di rilievo per le funzionalità tabulari, multidimensionali, di data mining o di [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] .  Tuttavia, considerata l'analogia di  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] con le versioni [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] , le modifiche di rilievo rispetto a entrambe le versioni precedenti sono elencate qui per praticità, nel caso si effettui l'aggiornamento da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-##  <a name="bkmk_2012Sp1"></a>Modifiche di rilievo in SQL Server 2012 SP1  
+##  <a name="breaking-changes-in-sql-server-2012-sp1"></a><a name="bkmk_2012Sp1"></a>Modifiche di rilievo in SQL Server 2012 SP1  
  È noto che le modifiche al codice correlato alla globalizzazione causano errori in alcune applicazioni, tra cui:  
   
  **Distinzione tra maiuscole/minuscole degli identificatori di oggetto**  
@@ -46,14 +46,14 @@ ms.locfileid: "66064422"
   
  Per il cirillico e gli altri alfabeti composti da due set di caratteri maiuscoli/minuscoli distinti (greco, armeno e copto), negli identificatori di oggetto viene ora applicata la distinzione tra maiuscole e minuscole. Le modifiche di rilievo si verificano con maggiore probabilità nel caso in cui vi sia una differenza tra maiuscole e minuscole tra un identificatore di oggetto e il modo in cui viene fatto riferimento all'identificatore stesso, ad esempio uno script di elaborazione che fa riferimento all'identificatore di oggetto in tutte lettere minuscole. Questo comportamento verrà modificato in futuro, ma come soluzione alternativa temporanea è consigliabile modificare gli script in modo da usare le stesse lettere (maiuscole o minuscole) dell'identificatore di oggetto.  
   
-##  <a name="bkmk_sql11"></a>Modifiche di rilievo in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="breaking-changes-in-sssql11"></a><a name="bkmk_sql11"></a>Modifiche di rilievo in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  In questa sezione sono illustrate le modifiche di rilievo riportate per le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Problema|Descrizione|  
 |-----------|-----------------|  
 |Comandi di installazione rimossi per un'installazione [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] .|L'installazione installa, ma non configura più un [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]. I comandi di installazione che raccolgono valori utilizzati per le azioni di configurazione sono ora rimossi. Tra questi sono inclusi /FARMACCOUNT, /FARMPASSWORD, /PASSPHRASE e /FARMADMINPORT.<br /><br /> Se sono stati creati script di installazione per l'installazione automatica, sarà necessario modificare quegli script per un'installazione [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . In alternativa, utilizzare cmdlet di PowerShell per configurare il server in modalità automatica. Per ulteriori informazioni, vedere [installare PowerPivot dal prompt dei comandi](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md) e [configurazione di PowerPivot utilizzando Windows PowerShell](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).|  
   
-##  <a name="bkmk_sql10"></a>Modifiche di rilievo in[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+##  <a name="breaking-changes-in-sskatmaisskilimanjaro"></a><a name="bkmk_sql10"></a>Modifiche di rilievo in[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  In questa sezione sono incluse le modifiche di rilievo rispetto alle versioni precedenti. Se si aggiorna da [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], è necessario rivedere le modifiche di rilievo introdotte in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
 |Problema|Descrizione|  
@@ -64,7 +64,7 @@ ms.locfileid: "66064422"
 |Si sconsiglia di inserire il percorso della partizione nella cartella Dati.|Il server gestisce la cartella Dati e crea o rimuove cartelle in seguito alla creazione, eliminazione e modifica degli oggetti. La specifica di un percorso di archiviazione per le partizioni nella cartella Dati è pertanto assolutamente sconsigliata, soprattutto nelle sottocartelle relative a database, cubi e dimensioni. Sebbene il server consenta l'esecuzione di questa operazione mediante la creazione o la modifica, verrà visualizzato un avviso. Quando si aggiornano database dalla versione SQL Server 2005 Analysis Services alla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] che include percorsi di archiviazione delle partizioni nella cartella Dati, il server funzionerà. Per le operazioni di ripristino o sincronizzazione sarà necessario spostare i percorsi di archiviazione delle partizioni all'esterno della cartella Dati.|  
 |Si potrebbero ottenere risultati imprevisti per le query che utilizzano la parola chiave MDX "EXISTING" in ProClarity Analytics Server e Microsoft Office PerformancePoint Server 2007.|ProClarity Analytics Server e Microsoft Office PerformancePoint Server 2007 utilizzano erroneamente la parola chiave EXISTING in MDX in determinati scenari. A causa delle modifiche apportate in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Analysis Services, tramite queste query potrebbero essere restituiti risultati imprevisti.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

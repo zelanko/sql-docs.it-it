@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061136"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Editor attività Inserimento bulk (pagina Generale)
@@ -36,11 +36,11 @@ ms.locfileid: "66061136"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Inserimento bulk.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Inserimento bulk &#40;pagina connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Editor attività Inserimento bulk &#40;pagina Opzioni&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Flusso di controllo](control-flow/control-flow.md)  
   

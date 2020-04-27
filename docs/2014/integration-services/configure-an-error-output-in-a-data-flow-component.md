@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060821"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurazione di un output degli errori in un componente del flusso di dati
@@ -89,11 +89,11 @@ ms.locfileid: "66060821"
     > [!NOTE]  
     >  L'elenco di colonne include le colonne dell'input del componente, le colonne **ErrorCode** e **ErrorColumn** aggiunte dall'output degli errori precedente e le colonne **ErrorCode** e **ErrorColumn** aggiunte dal componente corrente.  
   
-7.  Scegliere **OK.**  
+7.  Fare clic su **OK**.  
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
   
   

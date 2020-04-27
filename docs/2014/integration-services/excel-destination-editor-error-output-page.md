@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059202"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor destinazione Excel (pagina Output degli errori)
@@ -50,8 +50,8 @@ ms.locfileid: "66059202"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Editor destinazione Excel &#40;pagina mapping&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  

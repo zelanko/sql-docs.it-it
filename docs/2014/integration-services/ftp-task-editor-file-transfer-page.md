@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058443"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor attività FTP (pagina Trasferimento file)
@@ -46,7 +46,7 @@ ms.locfileid: "66058443"
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **LocalVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **LocalPath**.|  
   
- **operazione**  
+ **Operazione**  
  Consente di selezionare l'operazione FTP da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  
@@ -73,9 +73,9 @@ ms.locfileid: "66058443"
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Consente di selezionare una gestione connessione FTP esistente o di creare una gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione FTP esistente oppure fare clic \<su **nuova connessione...**> per creare una gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione FTP](connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione FTP](connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>Opzioni dinamiche di IsLocalPathVariable  
   
@@ -89,10 +89,10 @@ ms.locfileid: "66058443"
  **LocalPath**  
  Consente di selezionare una gestione connessione file esistente o \<di creare una gestione connessione facendo clic su **nuova connessione**>.  
   
- **Argomenti correlati**: [gestione connessione file Flat](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:**[Gestione connessione file flat](connection-manager/file-connection-manager.md), [Editor gestione connessione file flat](../../2014/integration-services/file-connection-manager-editor.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività FTP &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

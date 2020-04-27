@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062963"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -54,7 +54,7 @@ ms.locfileid: "66062963"
  **Contenuto azione**  
  Espandere per visualizzare le opzioni **Tipo** ed **Espressione azione** .  
   
- **Tipo**  
+ **Type**  
  Consente di selezionare il tipo di azione da intraprendere quando l'azione viene eseguita. Sono disponibili i tipi di azione seguenti:  
   
 |valore|Descrizione|  
@@ -84,7 +84,7 @@ ms.locfileid: "66062963"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un'attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interattività|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
+|Interactive (Interattivo)|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
 |Su apertura|L'azione viene eseguita quando il cubo viene aperto per la prima volta.|  
   
  **Applicazione**  
@@ -98,7 +98,7 @@ ms.locfileid: "66062963"
  **Descrizione**  
  Consente di digitare la descrizione facoltativa dell'azione.  
   
- **Sottotitolo**  
+ **Didascalia**  
  Consente di digitare la didascalia da visualizzare per l'azione nell'applicazione client se l'opzione **Didascalia MDX** è impostata su **False**.  
   
  Consente di digitare l'espressione MDX che restituisce una stringa per la didascalia se l'opzione **Didascalia MDX** è impostata su **True**.  
@@ -108,7 +108,7 @@ ms.locfileid: "66062963"
   
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

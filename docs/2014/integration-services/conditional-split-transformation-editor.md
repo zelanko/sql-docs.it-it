@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060889"
 ---
 # <a name="conditional-split-transformation-editor"></a>Editor trasformazione Suddivisione condizionale
@@ -30,7 +30,7 @@ ms.locfileid: "66060889"
  Per altre informazioni sulla trasformazione Suddivisione condizionale, vedere [Trasformazione Suddivisione condizionale](data-flow/transformations/conditional-split-transformation.md).  
   
 ## <a name="options"></a>Opzioni  
- **JSON**  
+ **Ordine**  
  Selezionare una riga e utilizzare i tasti di direzione a destra per modificare l'ordine in base a cui valutare le espressioni.  
   
  **Nome output**  
@@ -41,7 +41,7 @@ ms.locfileid: "66060889"
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  
   
- **Argomenti correlati:**[Integration Services &#40;espressioni di&#41; ssis](expressions/integration-services-ssis-expressions.md), [operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md)e [funzioni &#40;espressione SSIS](expressions/functions-ssis-expression.md)&#41;   
+ **Argomenti correlati:**  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nome output predefinito**  
  Consente di immettere un nome per la trasformazione. In alternativa, utilizzare quello predefinito.  
@@ -49,8 +49,8 @@ ms.locfileid: "66060889"
  **Configurare l'output degli errori**  
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

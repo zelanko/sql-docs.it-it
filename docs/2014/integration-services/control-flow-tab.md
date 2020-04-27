@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060358"
 ---
 # <a name="control-flow-tab"></a>Scheda Flusso di controllo
@@ -40,7 +40,7 @@ ms.locfileid: "66060358"
   
  Per aggiungere queste funzioni a singole attività o contenitori nello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic con il pulsante destro del mouse sull'oggetto corrispondente nell'area di progettazione e quindi scegliere l'opzione desiderata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Progettazione SSIS](ssis-designer.md)   
  [Flusso di controllo](control-flow/control-flow.md)  

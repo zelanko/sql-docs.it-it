@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069074"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Scheda Transizioni di stato in Sequence Clustering (Visualizzatore modello di data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "66069074"
   
  Utilizzare questa vista di un modello Sequence Clustering per visualizzare i modelli. Un collegamento e un nodo del diagramma rappresentano rispettivamente la probabilità di una transizione e uno stato di sequenza.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -59,7 +59,7 @@ ms.locfileid: "66069074"
  **Collegamenti**  
  Utilizzare il dispositivo di scorrimento per controllare il numero di stati e transizioni visualizzati nel grafico. Abbassando il dispositivo di scorrimento vengono mostrati solo gli stati e le transizioni con la probabilità più elevata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057378"
 ---
 # <a name="odata-connection-manager-editor"></a>Editor gestione connessione OData
@@ -35,7 +35,7 @@ ms.locfileid: "66057378"
  **Test connessione**  
  Fare clic su questo pulsante per testare la connessione all'origine OData.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione connessione OData](connection-manager/odata-connection-manager.md)  
   
   

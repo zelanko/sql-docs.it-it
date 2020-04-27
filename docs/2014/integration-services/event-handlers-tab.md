@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059290"
 ---
 # <a name="event-handlers-tab"></a>Scheda Gestori eventi
   Utilizzare la scheda **Gestori eventi** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare un flusso di controllo in un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Un gestore di evento viene eseguito in risposta a un evento generato dal pacchetto oppure da un'attività o da un contenitore incluso nel pacchetto.  
   
 ## <a name="options"></a>Opzioni  
- **Eseguibile**  
+ **File eseguibile**  
  Consente di selezionare il file eseguibile per il quale si desidera compilare un gestore di evento. Il file eseguibile può essere il pacchetto oppure un'attività o un contenitore incluso nel pacchetto.  
   
  **Gestore eventi**  
@@ -39,8 +39,8 @@ ms.locfileid: "66059290"
   
  È inoltre possibile fare clic con il pulsante destro del mouse sull'area di progettazione, quindi scegliere **Aggiungi annotazione**dal menu per aggiungere annotazioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services &#40;i gestori eventi&#41; SSIS](integration-services-ssis-event-handlers.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
  [Progettazione SSIS](ssis-designer.md)   
  [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061993"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto
@@ -42,7 +42,7 @@ ms.locfileid: "66061993"
   
 4.  Scegliere **Variabili** dal menu **SSIS**. Facoltativamente, è possibile visualizzare la finestra **Variabili** eseguendo il mapping del comando View.Variables a una combinazione di tasti scelta dall'utente nella pagina **Tastiera** della finestra di dialogo **Opzioni** .  
   
-5.  Nella finestra **Variabili** fare clic sull'icona **Aggiungi variabile** . La nuova variabile verrà aggiunta all'elenco.  
+5.  Nella finestra **variabili** fare clic sull'icona **Aggiungi variabile** . La nuova variabile verrà aggiunta all'elenco.  
   
 6.  Facoltativamente, fare clic sull'icona **Opzioni griglia** , selezionare le colonne aggiuntive da visualizzare nella finestra di dialogo **Variables Grid Options** (Opzioni griglia variabili) e quindi fare clic su **OK**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66061993"
   
 4.  Selezionare la variabile che si desidera eliminare e quindi fare clic su **Elimina variabile**.  
   
-     Se la variabile non viene visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** e quindi selezionare **Mostra variabili di tutti gli ambiti**.  
+     Se la variabile non viene visualizzata nella finestra variabili, fare clic su **Opzioni griglia** , quindi selezionare **Mostra variabili di tutti gli ambiti**.  
   
 5.  Se viene visualizzata la finestra di dialogo **Conferma eliminazione variabili** , fare clic su **Sì** per confermare.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "66061993"
   
 4.  Selezionare la variabile e quindi fare clic su **Sposta variabile**.  
   
-     Se la variabile non viene visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** e quindi selezionare **Mostra variabili di tutti gli ambiti**.  
+     Se la variabile non viene visualizzata nella finestra variabili, fare clic su **Opzioni griglia** , quindi selezionare **Mostra variabili di tutti gli ambiti**.  
   
 5.  Nella finestra di dialogo **Seleziona nuovo ambito** selezionare il pacchetto oppure un contenitore, un'attività o un gestore eventi del pacchetto per modificare l'ambito della variabile.  
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Impostare le proprietà di una variabile definita dall'utente](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066026"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -34,7 +34,7 @@ ms.locfileid: "66066026"
 |**Elimina**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare gli oggetti selezionati nel riquadro **Misure** o **Dimensioni** .|  
 |**Sposta su**|Fare clic su questo pulsante per spostare verso l'alto di una posizione l'elemento selezionato nel riquadro **Misure** o **Dimensioni** .<br /><br /> Nota: se non è possibile spostare l'elemento selezionato verso l'alto, questa opzione è disabilitata.|  
 |**Sposta giù**|Fare clic su questo pulsante per spostare verso il basso di una posizione l'elemento selezionato nel riquadro **Misure** o **Dimensioni** .<br /><br /> Nota: se non è possibile spostare l'elemento selezionato verso il basso, questa opzione è disabilitata.|  
-|**Mostra tabelle**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Mostra tabelle** e visualizzare una tabella della vista origine dati associata al cubo nel riquadro **Vista origine dati** .|  
+|**Mostra tabella**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Mostra tabelle** e visualizzare una tabella della vista origine dati associata al cubo nel riquadro **Vista origine dati** .|  
 |**Nascondi tabella**|Fare clic su questo pulsante per nascondere la tabella selezionata nel riquadro **Vista origine dati** .<br /><br /> Nota: questa opzione è disabilitata se non viene selezionata una tabella nel riquadro **Vista origine dati** .|  
 |**Trova tabella**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Trova tabella** e cercare una tabella nel riquadro **Vista origine dati** .|  
 |**Zoom**|Fare clic su questo pulsante per selezionare in successione le opzioni relative alle percentuali di zoom oppure per selezionare una percentuale di zoom disponibile per il riquadro **Vista origine dati** .|  

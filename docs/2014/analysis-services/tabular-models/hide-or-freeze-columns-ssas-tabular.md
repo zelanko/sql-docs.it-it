@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067086"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Nascondere o bloccare colonne (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "66067086"
  Quando si nasconde una colonna, è possibile scegliere se nasconderla mentre si lavora in Progettazione modelli o nei report. Se si nascondono tutte le colonne, l'intera tabella appare vuota in Progettazione modelli.  
   
 > [!NOTE]  
->  Se sono molte le colonne da nascondere, è possibile creare una prospettiva anziché nascondere e scoprire colonne. Una prospettiva è una vista personalizzata dei dati tramite cui si semplifica l'utilizzo di un subset di dati correlati. Per altre informazioni, vedere [creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)  
+>  Se sono molte le colonne da nascondere, è possibile creare una prospettiva anziché nascondere e scoprire colonne. Una prospettiva è una vista personalizzata dei dati tramite cui si semplifica l'utilizzo di un subset di dati correlati. Per altre informazioni, vedere [Creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)  
   
 ### <a name="to-hide-an-individual-column"></a>Per nascondere una singola colonna  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66067086"
     > [!NOTE]  
     >  Quando una colonna viene bloccata, viene spostata a sinistra della tabella (o davanti) nella finestra di progettazione. Se sbloccata, la colonna non torna nella relativa posizione originale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  

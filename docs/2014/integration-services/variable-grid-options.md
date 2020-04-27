@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054681"
 ---
 # <a name="variable-grid-options"></a>Opzioni griglia variabili
@@ -38,23 +38,23 @@ ms.locfileid: "66054681"
 ## <a name="options-for-columns"></a>Opzioni per le colonne  
  Selezionare le colonne che si desidera visualizzare nella finestra **Variabili** .  
   
--   **Scope**  
+-   **Ambito**  
   
 -   **Tipo di dati**  
   
 -   **Valore**  
   
--   **Spazio dei nomi**  
+-   **Namespace**  
   
--   **Genera evento quando cambia il valore della variabile**  
+-   **Genera evento alla modifica del valore della variabile**  
   
 -   **Descrizione**  
   
 -   **Espressione**  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra variabili](../../2014/integration-services/variables-window.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   

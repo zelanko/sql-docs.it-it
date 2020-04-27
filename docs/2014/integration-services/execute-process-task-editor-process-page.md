@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059027"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
@@ -30,7 +30,7 @@ ms.locfileid: "66059027"
  **RequireFullFileName**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il file eseguibile non venga trovato nel percorso specificato.  
   
- **Eseguibile**  
+ **File eseguibile**  
  Consente di digitare il nome del file eseguibile da avviare.  
   
  **Argomenti**  
@@ -42,12 +42,12 @@ ms.locfileid: "66059027"
  **StandardInputVariable**  
  Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova:  
   
- **Argomenti correlati:**  [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:**  [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
   
- **StandardErrorVariable che consentono**  
+ **StandardErrorVariable**  
  Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
@@ -65,8 +65,8 @@ ms.locfileid: "66059027"
  **WindowStyle**  
  Consente di specificare lo stile della finestra in cui viene eseguito il processo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

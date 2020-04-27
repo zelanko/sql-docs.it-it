@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057215"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor origine ODBC (pagina Gestione connessione)
@@ -34,10 +34,10 @@ ms.locfileid: "66057215"
 ## <a name="options"></a>Opzioni  
   
 ### <a name="connection-manager"></a>Gestione connessione  
- Consente di selezionare una gestione connessione ODBC esistente nell'elenco o di creare una nuova connessione facendo clic su **Nuova** . La connessione può essere a qualsiasi database supportato da ODBC.  
+ Selezionare una gestione connessione ODBC esistente nell'elenco oppure fare clic su **nuova** per creare una nuova connessione. La connessione può essere a qualsiasi database supportato da ODBC.  
   
-### <a name="new"></a>Nuovo  
- Fare clic su **Nuovo**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione ODBC.  
+### <a name="new"></a>Nuova  
+ Fare clic su **New**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione ODBC.  
   
 ### <a name="data-access-mode"></a>Modalità di accesso ai dati  
  Consente di selezionare il metodo per la selezione dei dati dall'origine. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
@@ -55,9 +55,9 @@ ms.locfileid: "66057215"
 ### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare un massimo di 200 righe dei dati estratti dalla tabella o dalla vista selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà personalizzate dell'origine ODBC](data-flow/odbc-source-custom-properties.md)   
- [Editor origine ODBC &#40;pagina Colonne&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
+ [Editor origine ODBC &#40;pagina colonne&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066163"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Esplorazione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "66066163"
  **Processo**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Elabora** ed elaborare la dimensione selezionata.  
   
- **Ricollegare**  
+ **Riconnetti**  
  Fare clic su questo pulsante per riconnettere la scheda **Esplorazione** all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente la dimensione, se la sessione della scheda **Esplorazione** viene disconnessa a causa dell'interruzione o del timeout della connessione.  
   
  **Aggiorna**  

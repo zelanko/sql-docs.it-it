@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062063"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Aggiunta di un registro per i contatori delle prestazioni del flusso di dati
@@ -51,7 +51,7 @@ ms.locfileid: "66062063"
   
 9. Fare clic su **Aggiungi**.  
   
-10. Fare clic su **Close**.  
+10. Fare clic su **Chiudi**.  
   
 11. Nella finestra di dialogo **MioRegistro** esaminare l'elenco della registrazione dei contatori delle prestazioni nell'elenco **Contatori** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66062063"
     > [!NOTE]  
     >  Il servizio Avvisi e registri di prestazioni deve essere avviato in base a un account locale o un account di dominio appartenente al gruppo Administrators.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contatori delle prestazioni](performance/performance-counters.md)   
  [Visualizzare le voci di log nella finestra Registra eventi](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   

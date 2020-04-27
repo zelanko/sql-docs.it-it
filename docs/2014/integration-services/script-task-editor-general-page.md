@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056177"
 ---
 # <a name="script-task-editor-general-page"></a>Editor attività Script (pagina Generale)
@@ -36,10 +36,10 @@ ms.locfileid: "66056177"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Script.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività script &#40;pagina script&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Esempi di attività Script](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

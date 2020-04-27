@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056062"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor trasformazione Script (pagina Script)
@@ -44,8 +44,8 @@ ms.locfileid: "66056062"
  **Modifica script**  
  Usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) per creare o modificare uno script.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seleziona tipo componente script](../../2014/integration-services/select-script-component-type.md)   
  [Editor trasformazione script &#40;pagina colonne di input&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Editor trasformazione script &#40;pagina input e output&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   

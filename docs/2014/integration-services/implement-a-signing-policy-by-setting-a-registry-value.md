@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058223"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementazione di criteri per le firme impostando un valore del Registro di sistema
@@ -46,7 +46,7 @@ ms.locfileid: "66058223"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Per implementare criteri per le firme per i pacchetti  
   
-1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
+1.  Fare clic sul pulsante **Start**, quindi scegliere **Esegui**.  
   
 2.  Nella finestra di dialogo Esegui digitare `Regedit`e quindi fare clic su **OK**.  
   
@@ -64,8 +64,8 @@ ms.locfileid: "66058223"
   
 9. Scegliere **Esci** dal menu **File**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

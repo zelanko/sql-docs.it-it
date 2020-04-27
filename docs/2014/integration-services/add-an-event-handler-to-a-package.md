@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062033"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Aggiunta di un gestore eventi a un pacchetto
@@ -38,7 +38,7 @@ ms.locfileid: "66062033"
   
 3.  Fare clic sulla scheda **Gestori eventi** .  
   
-     ![Schermata dell'area di progettazione con gestore eventi](media/eventhandlers.gif "Schermata dell'area di progettazione con gestore eventi")  
+     ![Screenshot dell'area di progettazione con gestore dell'evento](media/eventhandlers.gif "Screenshot dell'area di progettazione con gestore dell'evento")  
   
      La creazione del flusso di controllo e dei flussi di dati di un gestore dell'evento è analoga alla creazione del flusso di controllo e dei flussi di dati di un pacchetto. Per altre informazioni, vedere [Flusso di controllo](control-flow/control-flow.md) e [Flusso di dati](data-flow/data-flow.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66062033"
   
 9. Scegliere **Salva elementi selezionati** dal menu **File** per salvare il pacchetto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

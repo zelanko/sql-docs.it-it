@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059903"
 ---
 # <a name="data-flow-tab"></a>Scheda Flusso di dati
@@ -34,9 +34,9 @@ ms.locfileid: "66059903"
   
  Per aggiungere queste funzioni in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic con il pulsante destro del mouse sull'area di progettazione e quindi selezionare l'opzione desiderata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
- [Attività Flusso di dati](control-flow/data-flow-task.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
+ [Attività flusso di dati](control-flow/data-flow-task.md)   
  [Progettazione SSIS](ssis-designer.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   

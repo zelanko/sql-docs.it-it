@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057007"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Editor origine OLE DB (pagina Output degli errori)
@@ -50,8 +50,8 @@ ms.locfileid: "66057007"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [Editor origine OLE DB &#40;pagina colonne&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Estrarre dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061121"
 ---
 # <a name="cdc-control-task-editor"></a>Editor attività Controllo CDC
@@ -80,7 +80,7 @@ ms.locfileid: "66061121"
  È disponibile solo se si seleziona **AutomaticStatePersistence** ed è un parametro obbligatorio.  
   
  **Tabella da utilizzare per l'archiviazione dello stato**  
- Digitare il nome della tabella di stato da utilizzare per l'archiviazione dello stato CDC. La tabella specificata deve disporre di due colonne denominate **name** e **state** , entrambe dello stesso tipo di dati **varchar (256)** .  
+ Digitare il nome della tabella di stato da utilizzare per l'archiviazione dello stato CDC. La tabella specificata deve disporre di due colonne denominate **name** e **state** , entrambe dello stesso tipo di dati **varchar (256)**.  
   
  Facoltativamente, è possibile selezionare **Nuova** per ottenere uno script SQL che compila una nuova tabella Stato con le colonne obbligatorie. Se **AutomaticStatePersistence** è selezionato, lo sviluppatore deve creare una tabella di stato in base ai requisiti elencati in precedenza.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66061121"
  **Nome dello stato**  
  Digitare un nome da associare allo stato CDC persistente. Un nome dello stato comune verrà specificato dal caricamento completo e dai pacchetti CDC che utilizzano lo stesso contesto. Questo nome viene utilizzato per cercare la riga di stato nella tabella di stato  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Proprietà personalizzate dell'attività di controllo CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

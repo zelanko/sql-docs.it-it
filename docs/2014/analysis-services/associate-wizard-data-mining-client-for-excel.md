@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062310"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Procedura guidata Associazione (client di data mining per Excel)
@@ -97,7 +97,7 @@ ms.locfileid: "66062310"
   
  I dati di origine devono essere ordinati in base alla colonna di identificazione delle transazioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Esplorazione di un modello Association Rules](browsing-an-association-rules-model.md)   
  [Shopping Basket Analysis &#40;Table AnalysisTools per Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)   

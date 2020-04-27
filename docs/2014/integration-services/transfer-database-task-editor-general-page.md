@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055100"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor attività Trasferisci database (pagina Generale)
@@ -34,9 +34,9 @@ ms.locfileid: "66055100"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Trasferisci database.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci database &#40;pagina database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

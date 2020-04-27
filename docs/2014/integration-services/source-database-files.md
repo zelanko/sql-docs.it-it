@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055541"
 ---
 # <a name="source-database-files"></a>File di database di origine
@@ -26,21 +26,21 @@ ms.locfileid: "66055541"
   
 ## <a name="options"></a>Opzioni  
  **File di origine**  
- Nomi dei file di database nel server di origine che verranno trasferiti. Il **file di origine** è di sola lettura.  
+ Nomi dei file di database nel server di origine che verranno trasferiti. Il valore**File di origine** è di sola lettura.  
   
  **Cartella di origine**  
- Cartella nel server di origine in cui si trovano i file di database da trasferire. La **cartella di origine** è di sola lettura.  
+ Cartella nel server di origine in cui si trovano i file di database da trasferire. Il valore**Cartella di origine** è di sola lettura.  
   
  **Condivisione file di rete**  
- Cartella di rete condivisa nel server di origine da cui verranno trasferiti i file di database. Utilizzare **condivisione file di rete** quando si trasferisce un database in modalità offline specificando **DatabaseOffline** per **Metodo** nella pagina **database** della finestra di dialogo **Editor attività Trasferisci database** .  
+ Cartella di rete condivisa nel server di origine da cui verranno trasferiti i file di database. Utilizzare **Condivisione file di rete** quando si trasferisce un database in modalità offline impostando l'opzione **DatabaseOffline** per **Metodo** nella pagina **Database** della finestra di dialogo **Editor attività Trasferisci database** .  
   
  Digitare il percorso della condivisione file di rete oppure fare clic sul pulsante Sfoglia **(...)** per individuarlo.  
   
  Quando si trasferisce un database in modalità offline, i rispettivi file vengono copiati nel percorso specificato in **Condivisione file di rete** nel server di origine prima di essere trasferiti al server di destinazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Trasferisci database &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Trasferisci database &#40;pagina database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor attività Trasferisci database &#40;pagina Database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

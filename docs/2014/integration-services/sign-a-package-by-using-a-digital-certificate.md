@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055620"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firma di un pacchetto tramite certificato digitale
@@ -66,7 +66,7 @@ ms.locfileid: "66055620"
   
      Anche se il pacchetto è stato firmato, è necessario configurare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per controllare o verificare la firma digitale prima del caricamento del pacchetto. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059422"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Finestra di dialogo Editor trasformazione DQS Cleansing
@@ -37,23 +37,23 @@ ms.locfileid: "66059422"
   
 -   [Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing](#manager)  
   
-##  <a name="open"></a> Aprire Editor trasformazione DQS Cleansing  
+##  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a>Aprire l'Editor trasformazione DQS cleaning  
   
 1.  Aggiungere la trasformazione DQS Cleansing al pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Fare clic con il pulsante destro del mouse sul componente e quindi scegliere **Modifica**.  
   
-##  <a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
  **Gestione connessione Data Quality**  
  Consente di selezionare una gestione connessione DQS esistente nell'elenco oppure di crearne una facendo clic sul pulsante **Nuova**.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione DQS Cleansing** . Per altre informazioni, vedere [Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing](#manager).  
   
  **Data Quality Knowledge Base**  
  Selezionare una Knowledge Base DQS esistente per l'origine dati connessa. Per altre informazioni sulla Knowledge Base DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Crittografia connessione**  
+ **Crittografa connessione**  
  consente di specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]DQS e.  
   
  **Domini disponibili**  
@@ -68,11 +68,11 @@ ms.locfileid: "66059422"
   
  Di seguito sono riportati i valori validi:  
   
--   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Si tratta del valore predefinito.  
+-   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Questo è il valore predefinito.  
   
 -   **Reindirizza riga**: indica che i dati di input non vengono inseriti nel database di Data Quality Services e che vengono reindirizzati all'output degli errori.  
   
-##  <a name="mapping"></a> Impostare le opzioni nella scheda Mapping  
+##  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a>Impostare le opzioni nella scheda mapping  
  Per informazioni su come eseguire il mapping di colonne a domini composti, vedere [Eseguire il mapping delle colonne ai domini compositi](data-flow/transformations/map-columns-to-composite-domains.md).  
   
  **Colonne di input disponibili**  
@@ -97,11 +97,11 @@ ms.locfileid: "66059422"
  **Alias di stato**  
  Consente di visualizzare la colonna contenente le informazioni sullo stato per i dati corretti. Fare clic all'interno del campo per modificare il nome della colonna.  
   
-##  <a name="advanced"></a> Impostare le opzioni nella scheda Avanzate  
+##  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a>Impostare le opzioni nella scheda Avanzate  
  **Standardizzare output**  
  Consente di specificare se restituire i dati nel formato standardizzato basato sul formato di output definito per i domini. Per altre informazioni sul formato standardizzato, vedere [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md).  
   
- **Confidenza**  
+ **Fiducia**  
  Consente di specificare se includere il livello di confidenza per i dati corretti. Il livello di confidenza indica il livello di certezza di DQS in relazione a correzione o suggerimento. Per altre informazioni sui livelli di confidenza, vedere [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md).  
   
  **Motivo**  
@@ -113,7 +113,7 @@ ms.locfileid: "66059422"
  **Schema dati accodati**  
  Consente di specificare se restituire lo schema dati. Per ulteriori informazioni, vedere [la pagina relativa alla connessione di un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="manager"></a> Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing  
+##  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a>Impostare le opzioni nella finestra di dialogo Gestione connessione DQS cleaning  
  **Nome server**  
  Selezionare o digitare il nome del server DQS a cui si desidera connettersi. Per altre informazioni sul server, vedere [Amministrazione DQS](../../2014/data-quality-services/dqs-administration.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66059422"
   
 3.  Fare clic su **Aggiungi**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicare le regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Applicazione delle regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

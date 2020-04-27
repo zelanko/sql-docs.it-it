@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7541ba23401bf964f0aa5c8a0425719b89d96b43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067987"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Opzioni di archiviazione (Analysis Services - Dati multidimensionali)
@@ -24,14 +24,14 @@ ms.locfileid: "66067987"
   
  La finestra di dialogo **Opzioni di archiviazione** contiene le schede elencate nella tabella seguente.  
   
-## <a name="tabs"></a>Tabulazioni  
+## <a name="tabs"></a>Schede  
   
 |Pagina|Definizione|  
 |----------|----------------|  
 |**Generale**|Utilizzare la scheda **Generale** per specificare le impostazioni relative all'archiviazione e alla memorizzazione nella cache attiva. Per altre informazioni su questa pagina, vedere [Generale &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Notifiche**|Utilizzare la scheda **Notifiche** per specificare il metodo di notifica e le impostazioni correlate. Per altre informazioni su questa scheda, vedere [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Caching attivo &#40;partizioni&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   

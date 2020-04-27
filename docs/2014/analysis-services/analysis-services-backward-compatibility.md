@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c8a1d9023e0bcbb852974f11ebe4b89d36d93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062636"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
@@ -37,7 +37,7 @@ ms.locfileid: "66062636"
 |[Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)|Descrive le modifiche al codice introdotte in questa versione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che avrebbero potuto causare il malfunzionamento di un modello, applicazioni personalizzate o uno script creato in versioni precedenti del software.|  
 |[Differenze di funzionamento delle funzionalità di Analysis Services in SQL Server 2014](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|Descrive le funzionalità esistenti che presentano comportamenti diversi in questa versione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Sono esempi comuni la modifica di un valore predefinito in un valore nuovo o diverso, la disabilitazione di un'operazione o una configurazione consentita in precedenza oppure l'introduzione di un requisito per modificare o sostituire manualmente un'impostazione o configurazione persa durante l'aggiornamento.<br /> .|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Novità di Analysis Services e Business Intelligence](what-s-new-in-analysis-services.md)   
  [Aggiornare Analysis Services](../database-engine/install-windows/upgrade-analysis-services.md)  
   

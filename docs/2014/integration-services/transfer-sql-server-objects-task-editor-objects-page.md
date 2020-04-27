@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054871"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor attività Trasferisci oggetti di SQL Server (pagina Oggetti)
@@ -55,10 +55,10 @@ ms.locfileid: "66054871"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Sostituire**|I dati nel server di destinazione verranno sovrascritti.|  
-|**Accoda**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  
+|**Aggiungere**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  
   
 > [!NOTE]  
->  L'opzione **ExistingData** è disponibile solo se **CopyData** è impostato su **true**.  
+>   L'opzione **ExistingData** è disponibile solo se **CopyData** è impostata su **True**.  
   
  **CopySchema**  
  Consente di indicare se lo schema deve essere copiato durante l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -79,7 +79,7 @@ ms.locfileid: "66054871"
  Espandere **ObjectsToCopy** per specificare quali oggetti devono essere copiati dal database di origine a quello di destinazione.  
   
 > [!NOTE]  
->  **ObjectsToCopy** è disponibile solo se **CopyAllObjects** è impostato su **false**.  
+>  **ObjectsToCopy** è disponibile solo se **CopyAllObjects** è impostata su **False**.  
   
  Le opzioni per la copia dei tipi di oggetti seguenti sono supportate solo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -208,11 +208,11 @@ ms.locfileid: "66054871"
  **XmlSchemaCollectionsList**  
  Fare clic per aprire la finestra di dialogo **Selezionare le raccolte XML Schema** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Attività di Integration Services](control-flow/integration-services-tasks.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci oggetti SQL Server &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina Espressioni](expressions/expressions-page.md)   
+ [Pagina espressioni](expressions/expressions-page.md)   
  [Formati di dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

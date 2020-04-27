@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056583"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Editor destinazione file non elaborato (pagina Colonne)
@@ -30,13 +30,13 @@ ms.locfileid: "66056583"
   
 -   [Impostare le opzioni nella scheda Colonne](#mapping)  
   
-##  <a name="open"></a> Aprire l'Editor destinazione file non elaborato  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Aprire l'Editor destinazione file non elaborato  
   
 1.  Aggiungere la destinazione file non elaborato in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Fare clic con il pulsante destro del mouse sul componente e quindi scegliere **Modifica**.  
   
-##  <a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
  **Modalità di accesso**  
  Selezionare come il nome file viene specificato. Selezionare **Nome file** per immettere direttamente il nome file e il percorso o **Nome file da variabile** per specificare una variabile che contiene il nome file.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66056583"
   
  Quando si fa clic sul pulsante, viene visualizzato un elenco delle colonne. È possibile fare clic su Annulla e modificare le colonne o fare clic su OK per procedere con la creazione del file.  
   
-##  <a name="mapping"></a> Impostare le opzioni nella scheda Colonne  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>Impostare le opzioni nella scheda colonne  
  **Colonne di input disponibili**  
  Selezionare uno o più colonne di input per scrivere nel file non elaborato.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66056583"
  **Alias di output**  
  Specificare un nome alternativo da utilizzare per la colonna di output.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [file non elaborato - destinazione](data-flow/raw-file-destination.md)  
   
   

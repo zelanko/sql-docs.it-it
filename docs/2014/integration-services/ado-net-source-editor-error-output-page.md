@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061641"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Editor origine ADO NET (pagina Output errori)
@@ -56,7 +56,7 @@ ms.locfileid: "66061641"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [Editor origine ADO NET &#40;pagina colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  

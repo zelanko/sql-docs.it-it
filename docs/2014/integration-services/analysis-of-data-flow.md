@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061594"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
@@ -36,11 +36,11 @@ order by source_component_name, destination_component_name
   
  Nell'esempio seguente viene calcolato il numero di righe per millisecondi inviate da ogni componente per un'esecuzione specifica. I valori calcolati sono:  
   
--   **total_rows** -la somma di tutte le righe inviate dal componente  
+-   **total_rows** : somma di tutte le righe inviate dal componente  
   
--   **wall_clock_time_ms** : tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
+-   **wall_clock_time_ms**: tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
   
--   **num_rows_per_millisecond** : numero di righe per millisecondi inviate da ogni componente  
+-   **num_rows_per_millisecond**: numero di righe per millisecondi inviate da ogni componente  
   
  La `HAVING` clausola viene utilizzata per evitare un errore di divisione per zero nei calcoli.  
   
@@ -61,9 +61,9 @@ order by source_component_name desc
 ## <a name="related-tasks"></a>Attività correlate  
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  
   
- [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dati nei flussi di dati](data-flow/data-in-data-flows.md)  
   
   

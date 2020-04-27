@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060880"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurare un contenitore Ciclo Foreach
@@ -65,14 +65,14 @@ ms.locfileid: "66060880"
   
     -   Per usare l'enumeratore Foreach SMO, selezionare una connessione ADO.NET esistente oppure fare clic su **Nuova connessione** nell'elenco **Connessione** e quindi digitare la stringa da usare oppure fare clic su **Sfoglia**. Se si fa clic su **Sfoglia**, nella finestra di dialogo **Seleziona enumerazione SMO** selezionare il tipo di oggetto da enumerare e il tipo di enumerazione e quindi fare clic su **OK**.  
   
-6.  Facoltativamente, fare clic sul pulsante sfoglia **(...)** nella casella di testo **Espressioni** della pagina **Raccolta** per creare espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](expressions/add-or-change-a-property-expression.md).  
+6.  Facoltativamente, fare clic sul pulsante Sfoglia **(...)** nella casella di testo **espressioni** della pagina **raccolta** per creare le espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Le proprietà incluse nell'elenco **Proprietà** variano a seconda dell'enumeratore.  
   
 7.  Facoltativamente, fare clic su **Mapping variabili** per eseguire il mapping delle proprietà degli oggetti ai valori della raccolta e quindi eseguire le operazioni seguenti:  
   
-    1.  Nell'elenco **Variabili** selezionare una variabile oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile.  
+    1.  Nell'elenco **variabili** selezionare una variabile oppure fare clic su ** \<nuova variabile>** per creare una nuova variabile.  
   
     2.  Se si aggiunge una nuova variabile, impostarne le proprietà nella finestra di dialogo **Aggiungi variabile** e fare clic su **OK**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060880"
   
 9. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

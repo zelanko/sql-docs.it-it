@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d8196a46437975a2b8e00bb2fbe8d183540025c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054605"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>Visualizzare pacchetti di Integration Services in SQL Server Management Studio (servizio SSIS)
     
 > [!IMPORTANT]  
->  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]supporta il servizio per la compatibilità con le versioni precedenti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]di. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
+>  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
  In questo argomento viene descritta la procedura per la connessione a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e la visualizzazione di un elenco dei pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -44,8 +44,8 @@ ms.locfileid: "66054605"
   
 2.  Espandere le sottocartelle di Pacchetti archiviati per visualizzare i pacchetti.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione dei pacchetti &#40;servizio SSIS&#41;](service/package-management-ssis-service.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Gestione pacchetti &#40;servizio SSIS&#41;](service/package-management-ssis-service.md)   
  [Utilizzo di SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

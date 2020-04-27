@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057635"
 ---
 # <a name="msmq-connection-manager-editor"></a>Editor gestione connessione MSMQ
@@ -41,17 +41,15 @@ ms.locfileid: "66057635"
   
 |Tipo di coda|Percorso di esempio|  
 |----------------|-----------------|  
-|Pubblico|
-  \<nome computer>\\<nome della coda\>|  
-|Private|
-  \<nome computer>\Private$\\\<nome della coda\>|  
+|Public|\<nome computer>\\<nome della coda\>|  
+|Private|\<nome computer>\Private$\\\<nome della coda\>|  
   
  Per rappresentare il computer locale è possibile utilizzare ".".  
   
  **Test**  
  Dopo aver configurato la gestione connessione MSMQ, verificare che la connessione può essere stabilita facendo clic su **Test**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

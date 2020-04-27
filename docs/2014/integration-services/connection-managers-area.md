@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060395"
 ---
 # <a name="connection-managers-area"></a>Area Gestioni connessioni
@@ -26,7 +26,7 @@ ms.locfileid: "66060395"
   
  Fare clic con il pulsante destro del mouse in questa area e quindi scegliere l'opzione per l'attività che si desidera eseguire dal menu di scelta rapida.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integration Services &#40;connessioni SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
  [Progettazione SSIS](ssis-designer.md)  
   

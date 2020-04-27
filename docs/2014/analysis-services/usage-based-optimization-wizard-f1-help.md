@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065565"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo
@@ -38,13 +38,12 @@ ms.locfileid: "66065565"
   
 -   Salvare ed eventualmente elaborare la partizione, il gruppo di misure o il cubo per generare le aggregazioni definite.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] include la Progettazione guidata aggregazioni per progettare aggregazioni basate su analisi statistiche della struttura della partizione per creare una progettazione di aggregazione che possa essere limitata in base alle dimensioni di archiviazione o al miglioramento delle prestazioni stimato. È possibile utilizzare la Progettazione guidata aggregazioni per migliorare le prestazioni generali di una partizione, tuttavia la progettazione delle aggregazioni non è concepita per far fronte ad esigenze specifiche degli utenti aziendali. Tramite l'Ottimizzazione guidata basata sulle statistiche di utilizzo è possibile ottenere una progettazione delle aggregazioni mirata a risolvere esigenze specifiche, ma la procedura può garantire questi risultati solo se il log di query per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiene informazioni sufficienti per creare tali query.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] include la Progettazione guidata aggregazioni per progettare aggregazioni basate su analisi statistiche della struttura della partizione per creare una progettazione di aggregazione che possa essere limitata in base alle dimensioni di archiviazione o al miglioramento delle prestazioni stimato. È possibile utilizzare la Progettazione guidata aggregazioni per migliorare le prestazioni generali di una partizione, tuttavia la progettazione delle aggregazioni non è concepita per far fronte ad esigenze specifiche degli utenti aziendali. Tramite l'Ottimizzazione guidata basata sulle statistiche di utilizzo è possibile ottenere una progettazione delle aggregazioni mirata a risolvere esigenze specifiche, ma la procedura può garantire questi risultati solo se il log di query per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiene informazioni sufficienti per creare tali query.  
   
  In genere le due procedure guidate vengono utilizzate insieme per migliorare le prestazioni in fase di distribuzione e in seguito. È consigliabile utilizzare prima la Progettazione guidata aggregazioni quando la partizione (o il cubo o il gruppo di misure che contiene la partizione) viene inizialmente distribuita, per garantire un miglioramento generale delle prestazioni. Dopo un periodo di tempo durante il quale sono state registrate le query degli utenti aziendali per la partizione nel log di query, sarà possibile utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per ottimizzare la progettazione delle aggregazioni in modo da gestire al meglio i requisiti relativi alle prestazioni e alle query degli utenti aziendali.  
   
 > [!NOTE]  
->  Per informazioni sulla configurazione del log di query, vedere [configurazione del log di query di Analysis Services](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog).  
+>  er ulteriori informazioni sulla configurazione del log di query, vedere [Configurazione del log di query di Analysis Services](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66065565"
   
 -   [Completamento della procedura guidata &#40;Ottimizzazione guidata basata sulle utilizzo&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggregazioni e progettazioni delle aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   

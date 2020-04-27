@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058748"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor gestione connessione file flat (pagina Generale)
@@ -39,7 +39,7 @@ ms.locfileid: "66058748"
  **Sfoglia**  
  Consente di individuare il nome del file da utilizzare nella connessione file flat.  
   
- **Impostazioni locali**  
+ **Locale**  
  Consente di specificare le impostazioni locali specifiche di una lingua per l'ordinamento e i formati di data e ora.  
   
  **Unicode**  
@@ -68,9 +68,9 @@ ms.locfileid: "66058748"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**CR Se**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**CR**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
-|**Se**|La riga di intestazione è delimitata da un carattere di avanzamento riga.|  
+|**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
+|**{LF}**|La riga di intestazione è delimitata da un carattere di avanzamento riga.|  
 |**Punto e virgola {;}**|La riga di intestazione è delimitata da un carattere punto e virgola.|  
 |**Due punti {:}**|La riga di intestazione è delimitata da un carattere due punti.|  
 |**Virgole{,}**|La riga di intestazione è delimitata da una virgola.|  
@@ -80,13 +80,13 @@ ms.locfileid: "66058748"
  **Righe di intestazione da ignorare**  
  Consente di specificare il numero di eventuali righe di intestazione o righe di dati iniziali da ignorare.  
   
- **Nomi di colonna nella prima riga di dati**  
+ **Nomi di colonne nella prima riga di dati**  
  Consente di indicare se prevedere o fornire nomi di colonne nella prima riga di dati.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione file flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [Editor gestione connessione file flat &#40;pagina anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

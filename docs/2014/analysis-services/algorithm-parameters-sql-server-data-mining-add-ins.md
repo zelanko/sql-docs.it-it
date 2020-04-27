@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062603"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parametri degli algoritmi (componenti aggiuntivi Data mining di SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "66062603"
   
  Nella tabella seguente sono elencati i parametri con una descrizione delle relative funzionalità e vengono forniti collegamenti a ulteriori informazioni tecniche.  
   
-|Nome parametro|Usato in|Descrizione|  
+|Nome parametro|Campo di utilizzo|Descrizione|  
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Algoritmo Microsoft Time Series|Specifica un valore numerico compreso tra 0 e 1 utilizzato per il rilevamento della periodicità. L'impostazione di un valore prossimo a 1 favorisce l'individuazione di numerosi modelli quasi-periodici e la generazione automatica di hint di periodicità. La gestione di un numero elevato di hint di periodicità porterà probabilmente a tempi di esecuzione di training del modello significativamente più lunghi e a modelli più accurati. Se il valore è prossimo allo zero, la periodicità viene rilevata solo per i dati fortemente periodici.<br /><br /> Il valore predefinito è 0,6.|  
 |CLUSTER_COUNT|Algoritmo Microsoft Clustering<br /><br /> Algoritmo Microsoft Sequence Clustering|Specifica il numero approssimativo di cluster che devono essere generati dall'algoritmo. Se i dati non consentono di generare il numero approssimativo di cluster, l'algoritmo compila il maggior numero di cluster possibile. Se si imposta CLUSTER_COUNT su 0, l'algoritmo utilizzerà l'euristica per determinare con maggiore accuratezza il numero di cluster da compilare.<br /><br /> Il valore predefinito è 10.|  
@@ -108,7 +108,7 @@ ms.locfileid: "66062603"
 |PERIODICITY_HINT|Algoritmo Microsoft Time Series|Fornisce un hint all'algoritmo in riferimento alla periodicità dei dati. Se, ad esempio, le vendite variano in base all'anno e l'unità di misura utilizzata nella serie è il mese, la periodicità è 12. Questo parametro viene espresso nel formato {n [, n]}, dove n è qualsiasi numero positivo. Il valore n all'interno delle parentesi quadre [] è facoltativo e può essere ripetuto con la frequenza necessaria.<br /><br /> Il valore predefinito è {1}.|  
 |PREDICTION_SMOOTHING|Algoritmo Microsoft Time Series|Controlla la combinazione degli algoritmi Time Series ARTXP e ARIMA. Il valore specificato è valido solo quando il parametro FORECAST_METHOD è impostato su MIXED. I valori devono essere compresi tra 0 e 1. Se il valore è 0, il modello utilizza solo ARTXP. Se il valore è 1, il modello utilizza solo ARIMA. Un valore più vicino allo 0 indica che il risultato viene ponderato maggiormente rispetto all'algoritmo ARTXP. Un valore più vicino a 1 indica che il risultato viene ponderato maggiormente rispetto all'algoritmo ARIMA.|  
 |SAMPLE_SIZE|Algoritmo Microsoft Clustering|Specifica il numero di case utilizzati dall'algoritmo a ogni passaggio se il parametro CLUSTERING_METHOD è impostato su uno dei metodi di clustering scalabili. Se si imposta il parametro SAMPLE_SIZE su 0, l'intero set di dati verrà inserito nel cluster in un unico passaggio. Questo può provocare problemi di memoria e prestazioni.<br /><br /> Il valore predefinito è 50000.|  
-|SAMPLE_SIZE|Algoritmo Microsoft Logistic Regression<br /><br /> Microsoft Neural Network Algorithm|Specifica il numero di case da utilizzare per eseguire il training del modello. Il provider dell'algoritmo utilizza questo numero o la percentuale del numero totale di case non inclusi nella percentuale di controllo specificata dal parametro HOLDOUT_PERCENTAGE, a seconda del valore minore.<br /><br /> In altre parole, se il parametro HOLDOUT_PERCENTAGE è impostato su 30, l'algoritmo userà il valore di questo parametro o un valore pari al 70% del numero totale di case, a seconda del valore minore.<br /><br /> Il valore predefinito è 10.000.|  
+|SAMPLE_SIZE|Algoritmo Microsoft Logistic Regression<br /><br /> Microsoft Neural Network Algorithm|Specifica il numero di case da utilizzare per eseguire il training del modello. Il provider dell'algoritmo utilizza questo numero o la percentuale del numero totale di case non inclusi nella percentuale di controllo specificata dal parametro HOLDOUT_PERCENTAGE, a seconda del valore minore.<br /><br /> In altre parole, se il parametro HOLDOUT_PERCENTAGE è impostato su 30, l'algoritmo userà il valore di questo parametro o un valore pari al 70% del numero totale di case, a seconda del valore minore.<br /><br /> Il valore predefinito è 10000.|  
 |SCORE_METHOD|Algoritmo Microsoft Decision Trees|Determina il metodo utilizzato per calcolare il punteggio di divisione. Sono disponibili le opzioni seguenti: (1) entropia, (2) Bayes con probabilità a priori K2 o (3) Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme.<br /><br /> Il valore predefinito è 3.|  
 |SPLIT_METHOD|Algoritmo Microsoft Decision Trees|Determina il metodo utilizzato per la divisione del nodo. Sono disponibili le opzioni seguenti: Binario (1), Completo (2) o Entrambi (3).<br /><br /> Il valore predefinito è 3.|  
 |STOPPING_TOLERANCE|Riferimento tecnico per l'algoritmo Microsoft Clustering|Specifica il valore utilizzato per determinare quando viene raggiunta la convergenza e l'algoritmo ha completato la compilazione del modello. La convergenza viene raggiunta quando la variazione complessiva nelle probabilità del cluster è inferiore al rapporto tra il parametro STOPPING_TOLERANCE e la dimensione del modello.<br /><br /> Il valore predefinito è 10.|  
@@ -116,7 +116,7 @@ ms.locfileid: "66062603"
 ### <a name="comments"></a>Commenti  
  Per ulteriori informazioni sugli algoritmi, vedere la documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
   

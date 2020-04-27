@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064635"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Procedure per la gestione dei servizi (Gestione configurazione SQL Server)
@@ -30,11 +30,11 @@ ms.locfileid: "66064635"
   
 -   [Impedire l'avvio automatico di un'istanza di SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [Modificare l'account di avvio del servizio per SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [Modificare l'account di avvio del servizio di SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
 -   [Configurare le opzioni di avvio del server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
--   [Modificare la password degli account utilizzati da SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+-   [Modificare la password degli account usati da SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
 -   [Configura log degli errori di SQL Server](configure-windows/scm-services-configure-sql-server-error-logs.md)  
   

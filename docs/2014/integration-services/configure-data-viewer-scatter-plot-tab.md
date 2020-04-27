@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060682"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Configura visualizzatore dati (scheda Grafico a dispersione)
@@ -31,7 +31,7 @@ ms.locfileid: "66060682"
  **Colonna asse Y**  
  Consente di selezionare la colonna da utilizzare come asse Y. È possibile selezionare solo una colonna per ogni asse.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare il Visualizzatore dati &#40;scheda generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurare la scheda griglia &#40;visualizzatore dati&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   

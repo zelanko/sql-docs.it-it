@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068656"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Mostra tabelle (Analysis Services - Dati multidimensionali)
@@ -41,7 +41,7 @@ ms.locfileid: "66068656"
  **Filter**  
  Consente di digitare il filtro usato per limitare gli oggetti elencati e quindi di filtrare le tabelle visualizzate in **Selezionare le tabelle aggiuntive da visualizzare**facendo clic sul pulsante.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

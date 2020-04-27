@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061036"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor origine CDC (pagina Output degli errori)
@@ -25,7 +25,7 @@ ms.locfileid: "66061036"
  Per ulteriori informazioni sull'origine CDC, vedere [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per aprire CDC Source Editor (pagina output degli errori)**  
+ **Per aprire CDC Source Editor (pagina Output degli errori)**  
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] che contiene l'origine CDC.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66061036"
  **Reindirizza flusso**  
  La riga di dati contenente l'errore o il troncamento viene indirizzata all'output degli errori dell'origine CDC. In questo caso, viene utilizzata la gestione degli errori dell'origine CDC. Per altre informazioni, vedere [Origine CDC](data-flow/cdc-source.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Editor origine CDC &#40;pagina Colonne&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   

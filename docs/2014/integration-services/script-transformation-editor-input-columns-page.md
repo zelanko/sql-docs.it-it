@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056084"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor trasformazione Script (pagina Colonne di input)
@@ -42,11 +42,11 @@ ms.locfileid: "66056084"
  **Alias di output**  
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
- **Usage Type**  
+ **Tipo di utilizzo**  
  Consente di specificare se la trasformazione script deve considerare ogni colonna come `ReadOnly` o `ReadWrite`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seleziona tipo componente script](../../2014/integration-services/select-script-component-type.md)   
  [Editor trasformazione script &#40;pagina input e output&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Editor trasformazione script &#40;pagina script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069064"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilità di configurazione del server (componenti aggiuntivi data mining per Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "66069064"
   
 
   
-##  <a name="bkmk_step1"></a>Passaggio 1: connettersi a Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>Passaggio 1: connettersi a Analysis Services  
  Scegliere il server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fornisce gli algoritmi di data mining e archivia i modelli di data mining.  
   
  Quando si crea una connessione per abilitare il data mining, è necessario scegliere un server in cui è possibile provare a utilizzare i modelli di data mining. È consigliabile creare un nuovo database nel server e dedicarlo al data mining oppure chiedere all'amministratore di preparare un server di data mining da utilizzare. In tal modo è possibile compilare modelli senza influire sulle prestazioni degli altri servizi.  
@@ -35,7 +35,7 @@ ms.locfileid: "66069064"
  **autenticazione**  
  Specificare i metodi di autenticazione. L'autenticazione di Windows è obbligatoria per le connessioni a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a meno che l'amministratore non abbia configurato l'accesso al server tramite HTTPPump.  
   
-##  <a name="bkmk_step2"></a>Passaggio 2: consentire i modelli temporanei  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>Passaggio 2: consentire i modelli temporanei  
  Per poter utilizzare i componenti aggiuntivi, è necessario modificare una proprietà del server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per consentire la creazione di modelli di data mining temporanei.  
   
  I modelli di data mining temporanei sono anche denominati *modelli di sessione*. in quanto i modelli rimangono archiviati solo fino a quando la sessione corrente è aperta. Quando si chiude la connessione al server, la sessione viene terminata e i modelli utilizzati durante la sessione vengono eliminati.  
@@ -44,7 +44,7 @@ ms.locfileid: "66069064"
   
  Durante la procedura guidata vengono innanzitutto rilevate le impostazioni specificate nel server. Se il server consente già i modelli di data mining temporanei, è possibile fare clic su **Avanti** per continuare. La procedura guidata fornisce inoltre le istruzioni relative all'abilitazione dei modelli di data mining temporanei nel server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] specificato o le indicazioni per effettuare una richiesta all'amministratore di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a>Passaggio 3: creare il database per gli utenti dei componenti aggiuntivi  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>Passaggio 3: creare il database per gli utenti dei componenti aggiuntivi  
  In questa pagina della procedura guidata di installazione e configurazione è possibile creare un nuovo database dedicato al data mining o selezionare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esistente.  
   
 > [!WARNING]  
@@ -66,7 +66,7 @@ ms.locfileid: "66069064"
  **Database**  
  Se si sceglie l'opzione per utilizzare un database esistente, è necessario selezionare il nome del database nell'elenco.  
   
-##  <a name="bkmk_step4"></a>Passaggio 4: concedere agli utenti del componente aggiuntivo le autorizzazioni appropriate  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>Passaggio 4: concedere agli utenti del componente aggiuntivo le autorizzazioni appropriate  
  È necessario verificare che tutti gli utenti dei componenti aggiuntivi dispongano delle autorizzazioni necessarie per esplorare, modificare, elaborare o creare strutture e modelli di data mining.  
   
  Per impostazione predefinita, per utilizzare i componenti aggiuntivi è necessaria l'autenticazione integrata di Windows.  

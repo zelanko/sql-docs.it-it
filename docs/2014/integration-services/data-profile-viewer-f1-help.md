@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059717"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore profilo dati
@@ -31,13 +31,13 @@ ms.locfileid: "66059717"
  **Apri**  
  Consente di accedere al file salvato che contiene l'output dell'attività Profiling dati.  
   
- Riquadro **profili**  
+ Riquadro**Profili**  
  Espandere l'albero nel riquadro **Profili** per visualizzare i profili inclusi nell'output. Selezionare un profilo per visualizzarne i risultati.  
   
- Riquadro **messaggi**  
+ Riquadro**Messaggio**  
  Visualizza i messaggi di stato.  
   
- Riquadro **drill-down**  
+ Riquadro**Drill-down**  
  Visualizza le righe di dati che corrispondono a un valore nell'output, se l'origine dati utilizzata dall'attività Profiling dati è disponibile.  
   
  Se, ad esempio, si visualizza l'output di un profilo Distribuzione valori di colonna per una colonna US State, il riquadro **Distribuzione dettagliata valori** potrebbe contenere una riga per "WA". Fare doppio clic sulla riga nel riquadro **Distribuzione dettagliata valori** per visualizzare le righe di dati in cui il valore della colonna di stato è "WA" nel riquadro di drill-down.  
@@ -63,10 +63,10 @@ ms.locfileid: "66059717"
  Visualizza il numero di righe della tabella o della vista.  
   
 #### <a name="detailed-length-distribution-pane"></a>Riquadro Distribuzione dettagliata lunghezze  
- **Length**  
+ **Lunghezza**  
  Visualizza le lunghezze di colonna rilevate nella colonna analizzata.  
   
- **Conteggio**  
+ **Numero**  
  Visualizza il numero di righe in cui il valore della colonna analizzata ha la lunghezza indicata nella colonna **Lunghezza** .  
   
  **Percentuale**  
@@ -75,10 +75,10 @@ ms.locfileid: "66059717"
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo di profilo: profilo Rapporto di valori Null nella colonna  
   
 #### <a name="column-null-ratio-profile---column-pane"></a>Profilo Rapporto di valori Null - riquadro \<colonna>  
- **Conteggio valori null**  
+ **Conteggio valori Null**  
  Visualizza il numero di righe in cui il valore della colonna analizzata è un valore Null.  
   
- **Percentuale valori null**  
+ **Percentuale valori Null**  
  Visualizza la percentuale di righe in cui il valore della colonna analizzata è un valore Null.  
   
  **Conteggio righe**  
@@ -100,7 +100,7 @@ ms.locfileid: "66059717"
 ### <a name="profile-type--column-statistics-profile"></a>Tipo di profilo: profilo Statistiche di colonna  
   
 #### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - riquadro \<colonna>  
- **Minima**  
+ **Minimo**  
  Visualizza il valore minimo rilevato nella colonna analizzata.  
   
  **Massimo**  
@@ -125,7 +125,7 @@ ms.locfileid: "66059717"
  **Valore**  
  Visualizza i valori distinct rilevati nella colonna analizzata.  
   
- **Conteggio**  
+ **Numero**  
  Visualizza il numero di righe in cui la colonna analizzata ha il valore indicato nella colonna **Valore** .  
   
  **Percentuale**  
@@ -144,7 +144,7 @@ ms.locfileid: "66059717"
  **\<Column1>, \<Column2> e così via.**  
  Visualizza i valori duplicati rilevati nella colonna analizzata.  
   
- **Conteggio**  
+ **Numero**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Tipo di profilo: profilo Dipendenza funzionale  
@@ -153,7 +153,7 @@ ms.locfileid: "66059717"
  **Colonne determinanti**  
  Visualizza la colonna o le colonne selezionate come colonne determinanti. Nell'esempio in cui uno stesso codice postale ZIP (Stati Uniti) deve essere associato sempre allo stesso stato, il codice postale rappresenta la colonna determinante.  
   
- **Colonne dipendenti**  
+ **Colonna dipendente**  
  Visualizza la colonna o le colonne selezionate come colonne dipendenti. Nell'esempio in cui uno stesso codice postale ZIP (Stati Uniti) deve essere associato sempre allo stesso stato, lo stato rappresenta la colonna dipendente.  
   
  **Attendibilità dipendenza funzionale**  
@@ -170,13 +170,13 @@ ms.locfileid: "66059717"
  **\<Nome colonna dipendente>**  
  Visualizza il valore della colonna dipendente in questa istanza di una violazione della dipendenza funzionale.  
   
- **conteggio del supporto**  
+ **Conteggio del supporto**  
  Visualizza il numero di righe in cui il valore della colonna determinante determina la colonna dipendente.  
   
- **Conteggio delle violazioni**  
+ **Conteggio violazioni**  
  Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. (Si tratta delle righe in cui il valore dipendente corrisponde al valore indicato nel ** \<nome della colonna dipendente>** colonna).  
   
- **percentuale del supporto**  
+ **Percentuale del supporto**  
  Visualizza la percentuale di righe in cui la colonna determinante determina la colonna dipendente.  
   
 ### <a name="profile-type--value-inclusion-profile"></a>Tipo di profilo: profilo Inclusione valore  
@@ -195,10 +195,10 @@ ms.locfileid: "66059717"
  **\<Column1>, \<Column2> e così via.**  
  Visualizza i valori nella colonna o colonne del subset che non sono disponibili nella colonna o colonne del superset.  
   
- **Conteggio**  
+ **Numero**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzatore profilo dati](control-flow/data-profile-viewer.md)   
  [Attività Profiling dati e visualizzatore](control-flow/data-profiling-task-and-viewer.md)  
   

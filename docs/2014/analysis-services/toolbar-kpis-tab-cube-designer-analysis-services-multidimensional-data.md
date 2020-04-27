@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066004"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -27,7 +27,7 @@ ms.locfileid: "66066004"
  **Processo**  
  Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo.  
   
- **Ricollegare**  
+ **Riconnetti**  
  Fare clic su questo pulsante per riconnettere la scheda **KPIs** all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo, se la sessione relativa alla scheda **KPIs** viene disconnessa a causa dell'interruzione o del timeout della connessione.  
   
  **Nuovo indicatore KPI**  
@@ -57,7 +57,7 @@ ms.locfileid: "66066004"
  **Visualizzazione form**  
  Selezionare questa opzione per usare la scheda **KPIs** nella visualizzazione Form.  
   
- **Visualizzazione Esplorazione**  
+ **Visualizzazione browser**  
  Selezionare questa opzione per usare la scheda **KPIs** nella visualizzazione Esplorazione.  
   
  **Controlla sintassi**  

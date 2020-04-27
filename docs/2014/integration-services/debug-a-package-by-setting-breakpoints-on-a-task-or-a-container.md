@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059663"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
@@ -38,14 +38,14 @@ ms.locfileid: "66059663"
   
     -   Per impostare punti di interruzione in un gestore evento, nella scheda **Gestore evento** fare clic con il pulsante destro del mouse su un'attività o su un contenitore Ciclo For, Ciclo Foreach o Sequenza e quindi scegliere **Modifica punti di interruzione**.  
   
-4.  Nella finestra di dialogo **Imposta punti di interruzione \<nome contenitore>** selezionare i punti di interruzione da attivare.  
+4.  Nella finestra di dialogo **imposta \<nome contenitore punti di interruzione>** Selezionare i punti di interruzione da abilitare.  
   
 5.  Facoltativamente, modificare il tipo di passaggi e il numero di passaggi per ogni punto di interruzione.  
   
 6.  Per salvare il pacchetto, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Strumenti per la risoluzione dei problemi per lo sviluppo di pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Eseguire il debug di uno script impostando punti di interruzione in un'attività script e in un componente script](data-flow/transformations/script-component.md)   
  [Codifica e debug dell'attività script](control-flow/script-task.md)   
  [Codifica e debug del componente script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  

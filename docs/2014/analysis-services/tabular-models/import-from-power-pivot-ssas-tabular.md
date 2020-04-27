@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067023"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importare da PowerPivot (SSAS tabulare)
@@ -46,7 +46,7 @@ ms.locfileid: "66067023"
   
 4.  Nella finestra di dialogo **Apri** selezionare il file di [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] in cui sono contenuti i metadati e i dati del modello da importare, quindi fare clic su **Apri**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Database dell'area di lavoro &#40;SSAS tabulare&#41;](workspace-database-ssas-tabular.md)   
  [Copiare e incollare dati &#40;SSAS tabulare&#41;](../copy-and-paste-data-ssas-tabular.md)  
   

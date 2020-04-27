@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060138"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -29,11 +29,11 @@ ms.locfileid: "66060138"
   
 1.  Aprire il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] e quindi fare clic sulla scheda **Parametri** in Progettazione SSIS.  
   
-     ![Scheda dei parametri del pacchetto](media/denali-package-parameters.gif "Scheda dei parametri del pacchetto")  
+     ![Scheda Parametri del pacchetto](media/denali-package-parameters.gif "Scheda Parametri del pacchetto")  
   
 2.  Fare clic sul pulsante **Aggiungi parametro** sulla barra degli strumenti.  
   
-     ![Pulsante Aggiungi barra degli strumenti](media/denali-parameter-add.gif "Pulsante della barra degli strumenti Aggiungi")  
+     ![Pulsante Aggiungi parametro della barra degli strumenti](media/denali-parameter-add.gif "Pulsante Aggiungi parametro della barra degli strumenti")  
   
 3.  Immettere i valori per le proprietà **Nome**, **Tipo di dati**, **Valore**, **Sensibile** e **Richiesto** nell'elenco stesso o nella finestra **Proprietà**. Nella tabella seguente vengono descritte tali proprietà.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "66060138"
   
 2.  Fare clic con il pulsante destro del mouse su **Project.params** in Esplora soluzioni e quindi scegliere **Apri** (OPPURE) fare doppio clic su **Project.params** per aprirlo.  
   
-     ![Finestra Parametri progetto](media/denali-project-parameters.gif "Finestra Parametri progetto")  
+     ![Finestra dei parametri del progetto](media/denali-project-parameters.gif "Finestra dei parametri del progetto")  
   
 3.  Fare clic sul pulsante **Aggiungi parametro** sulla barra degli strumenti.  
   
-     ![Pulsante Aggiungi barra degli strumenti](media/denali-parameter-add.gif "Pulsante della barra degli strumenti Aggiungi")  
+     ![Pulsante Aggiungi parametro della barra degli strumenti](media/denali-parameter-add.gif "Pulsante Aggiungi parametro della barra degli strumenti")  
   
 4.  Immettere valori per le proprietà **Nome**, **Tipo di dati**, **Valore**, **Sensibile** e **Richiesto**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060138"
     > [!WARNING]  
     >  È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Usando l'ultimo pulsante della barra degli strumenti per aprire la finestra di dialogo **Gestione dei valori dei parametri**, è possibile specificare un valore per un parametro usato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integration Services &#40;parametri di&#41; SSIS](integration-services-ssis-package-and-project-parameters.md)  
   
   

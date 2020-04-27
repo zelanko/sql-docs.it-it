@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057801"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapping di parametri di query a variabili in un'attività Esegui SQL
@@ -58,7 +58,7 @@ ms.locfileid: "66057801"
     |Tipo di connessione|Marcatore di parametro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET e SQLMOBILE|@\<Nome parametro>|  
+    |ADO.NET e SQLMOBILE|@\<nome parametro>|  
     |ODBC|?|  
     |EXCEL e OLE DB|?|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66057801"
     |Tipo di connessione|Nome parametro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET e SQLMOBILE|@\<Nome parametro>|  
+    |ADO.NET e SQLMOBILE|@\<nome parametro>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66057801"
   
 14. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  

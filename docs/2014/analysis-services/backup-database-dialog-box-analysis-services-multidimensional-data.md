@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064375"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Backup database (Analysis Services - Dati multidimensionali)
@@ -58,7 +58,7 @@ ms.locfileid: "66064375"
  Selezionare questa opzione per sovrascrivere un file di backup esistente o un file di backup remoto, se disponibile.  
   
 > [!NOTE]  
->  Se questa opzione non è selezionata e il file di backup specificato in file di **backup** o in un file di backup remoto specificato in **file di backup remoto** esiste, si verificherà un errore.  
+>   Se questa opzione non viene selezionata e il file di backup specificato in **File di backup** o il file di backup remoto specificato in **File di backup remoto** esiste, si verifica un errore.  
   
  **Applica compressione**  
  Selezionare questa opzione per comprimere il contenuto del file di backup e dei file di backup remoti eventualmente specificati.  
@@ -70,13 +70,13 @@ ms.locfileid: "66064375"
  Consente di digitare la password da utilizzare per la crittografia del file di backup e dei file di backup remoti eventualmente specificati.  
   
 > [!NOTE]  
->  Questa opzione è abilitata solo se è selezionato **Crittografa file di backup** .  
+>   Questa opzione è attivata solo se viene selezionato **Crittografa file di backup** .  
   
- **Conferma password**  
+ **Confirm Password**  
  Consente di digitare la password immessa in **Password** per confermare la password per il file di backup e i file di backup remoti eventualmente specificati.  
   
 > [!NOTE]  
->  Questa opzione è abilitata solo se è selezionato **Crittografa file di backup** .  
+>   Questa opzione è attivata solo se viene selezionato **Crittografa file di backup** .  
   
  **Backup partizioni remote**  
  Selezionare questa opzione per includere le informazioni sulla partizione e i dati per le partizioni remote nel file di backup.  
@@ -94,7 +94,7 @@ ms.locfileid: "66064375"
 |**Elenco partizioni**|Visualizza l'elenco delle partizioni remote contenute nel database visualizzato in **Database**.|  
 |**File di backup remoto**|Digitare il percorso completo e il nome di file del file di backup remoto da usare oppure fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Salva file con nome** e selezionare il percorso e il nome di file del file di backup remoto da usare. Per altre informazioni sulla finestra di dialogo **Salva file con nome** vedere [Finestra di dialogo Salva file con nome &#40;Analysis Services - Dati multidimensionali&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

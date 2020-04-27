@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058059"
 ---
 # <a name="inherited-transactions"></a>Transazioni ereditate
@@ -37,11 +37,11 @@ ms.locfileid: "66058059"
   
  Ai pacchetti e alle attività sono associati gli attributi di transazione seguenti:  
   
--   **TransactionOption** è impostata su **required** per i pacchetti a e C  
+-   **TransactionOption** è impostata su **Required** per i pacchetti A e C  
   
--   **TransactionOption** è impostata su **supported** per i pacchetti b e D e nelle attività Esegui pacchetto b, Esegui pacchetto D e Esegui pacchetto F.  
+-   **TransactionOption** è impostata su **Supported** per i pacchetti B e D e per le attività Esegui pacchetto B, Esegui pacchetto D e Esegui pacchetto F.  
   
--   **TransactionOption** è impostato su **NotSupported** nel pacchetto e e nelle attività Esegui pacchetto C e Esegui pacchetto e.  
+-   **TransactionOption** è impostata su **NotSupported** per il pacchetto E e per le attività Esegui pacchetto C e Esegui pacchetto E.  
   
  ![Flusso di transazioni ereditate](media/mw-dts-executepack.gif "Flusso di transazioni ereditate")  
   

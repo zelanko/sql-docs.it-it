@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060227"
 ---
 # <a name="create-a-deployment-utility"></a>Creazione di un'utilità di distribuzione
@@ -47,7 +47,7 @@ ms.locfileid: "66060227"
   
 3.  Nella finestra di dialogo ** \<nome progetto> pagine delle proprietà** fare clic su **utilità di distribuzione**.  
   
-4.  Per aggiornare le configurazioni dei pacchetti durante la distribuzione dei **** pacchetti, `True`impostare AllowConfigurationChanges su.  
+4.  Per aggiornare le configurazioni dei pacchetti durante la distribuzione dei **AllowConfigurationChanges** pacchetti, `True`impostare AllowConfigurationChanges su.  
   
 5.  Impostare `CreateDeploymentUtility` su `True`.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66060227"
   
 9. Nella finestra **Output** vengono visualizzati lo stato del processo di compilazione e gli eventuali errori di compilazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
  [Creazione di configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
  [Distribuire pacchetti con l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   

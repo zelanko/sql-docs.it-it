@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055825"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor attività Invia messaggi (pagina Messaggio)
@@ -33,9 +33,9 @@ ms.locfileid: "66055825"
 > [!IMPORTANT]  
 >  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
   
- **Argomenti correlati:** [gestione connessione SMTP](connection-manager/smtp-connection-manager.md)  
+ **Argomenti correlati:** [Gestione connessione SMTP](connection-manager/smtp-connection-manager.md)  
   
- **Da**  
+ **From**  
  Consente di specificare l'indirizzo di posta elettronica del mittente.  
   
  **A**  
@@ -59,7 +59,7 @@ ms.locfileid: "66055825"
 |**Connessione file**|Consente di impostare l'origine sul file contenente il testo del messaggio. Selezionando questo valore, verrà visualizzata l'opzione dinamica **MessageSource**.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il testo del messaggio. Selezionando questo valore, verrà visualizzata l'opzione dinamica **MessageSource**.|  
   
- **Priorità**  
+ **Priority**  
  Consente di impostare il livello di priorità del messaggio.  
   
  **Allegati**  
@@ -76,9 +76,9 @@ ms.locfileid: "66055825"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Connessione file  
  **MessageSource**  
- Selezionare una gestione connessione file nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic \<su **nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variabile  
  **MessageSource**  
@@ -86,8 +86,8 @@ ms.locfileid: "66055825"
   
  **Argomenti correlati:** [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Invia messaggi &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

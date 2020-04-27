@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055144"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca termini (scheda Tabella di riferimento)
@@ -30,7 +30,7 @@ ms.locfileid: "66055144"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Nome tabella di riferimento**  
@@ -39,8 +39,8 @@ ms.locfileid: "66055144"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Ricerca termini &#40;scheda ricerca termini&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Editor trasformazione Ricerca termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Estrazione termini - trasformazione](data-flow/transformations/term-extraction-transformation.md)  

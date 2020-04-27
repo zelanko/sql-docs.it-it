@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066895"
 ---
 # <a name="partitions-ssas-tabular"></a>Partizioni (SSAS tabulare)
@@ -26,7 +26,7 @@ ms.locfileid: "66066895"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
  Le partizioni, nei modelli tabulari, consentono di dividere una tabella in oggetti partizione logici. Ogni partizione può quindi essere elaborata indipendentemente dalle altre. Ad esempio, è possibile che in una tabella siano inclusi determinati set di righe contenenti dati che raramente vengono modificati, a differenza di altri set i cui dati vengono invece modificati spesso. In questi casi, non è necessario elaborare tutti i dati quando in realtà si desidera effettuare tale operazione solo per una parte. Le partizioni consentono di dividere parti di dati che devono essere elaborati di frequente dai dati che possono invece essere elaborati meno frequentemente.  
   
  Un modello di progetto efficace consente di utilizzare le partizioni per eliminare elaborazioni e successivi carichi del processore non necessari nei server Analysis Services assicurando, nel contempo, che i dati vengano elaborati e aggiornati con una frequenza tale da riflettere i dati più recenti dalle origini dati. La modalità con cui le partizioni vengono implementate e utilizzate durante la creazione di modelli può essere molto diversa se riguarda modelli distribuiti. Tenere presente che, durante la fase di creazione dei modelli, è possibile che si utilizzi solo un subset dei dati che alla fine si troveranno nel modello distribuito.  
@@ -44,14 +44,14 @@ ms.locfileid: "66066895"
 ### <a name="partitions-in-a-deployed-model-database"></a>Partizioni in un database modello distribuito  
  Quando si distribuisce un modello, le partizioni per il database modello distribuito verranno visualizzate come oggetti di database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile creare, modificare, unire ed eliminare partizioni per un modello distribuito tramite la finestra di dialogo Partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La gestione delle partizioni per un modello distribuito in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non rientra nell'ambito di questo argomento. Per altre informazioni sulla gestione delle partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare e gestire partizioni nel database dell'area di lavoro &#40;SSAS tabulare&#41;](workspace-database-ssas-tabular.md)|Viene descritto come creare e gestire partizioni nel database dell'area di lavoro del modello tramite Gestione partizioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |[Elaborare partizioni nel database dell'area di lavoro &#40;SSAS tabulare&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Viene descritto come elaborare (aggiornare) le partizioni nel database dell'area di lavoro modello.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)   
  [Elaborare dati &#40;SSAS tabulare&#41;](../process-data-ssas-tabular.md)  
   

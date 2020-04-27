@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065875"
 ---
 # <a name="translations-analysis-services"></a>Traduzioni (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66065875"
   
  I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà `FormatString`. Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lezione 9: definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md) nella Analysis Services esercitazione illustra i passaggi per creare e testare le traduzioni.  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) nelle Esercitazioni su Analysis Services illustrerà in dettaglio i passaggi per creare e testare le traduzioni.  
   
 ## <a name="defining-translations"></a>Definizione di traduzioni  
  La definizione di una traduzione crea un oggetto `Translation` come elemento figlio dell'oggetto cubo, dimensione o database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Usare [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per aprire la soluzione e definire le traduzioni.  
@@ -116,10 +116,10 @@ ms.locfileid: "66065875"
 ## <a name="resolving-translations"></a>Risoluzione di traduzioni  
  Se un'applicazione client richiede un identificatore delle impostazioni locali, l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tenta di risolvere i dati e metadati per gli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con l'identificatore LCID corrispondente più vicino. Se l'applicazione client non specifica una lingua predefinita oppure specifica l'identificatore delle impostazioni locali neutro (0) o l'identificatore della lingua predefinita (1024), [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce i dati e i metadati per l'oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella lingua predefinita.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054842"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor trasformazione UnPivot
   Utilizzare la finestra di dialogo **Editor trasformazione UnPivot** per selezionare le colonne da trasformare in righe tramite Pivot e specificare la colonna di dati e la nuova colonna di output per il valore pivot.  
   
 > [!NOTE]  
->  Per illustrare l'uso delle opzioni, questo argomento si basa sullo scenario UnPivot descritto in [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) .  
+>   Per illustrare l'utilizzo delle opzioni, questo argomento si basa sullo scenario UnPivot descritto in [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) .  
   
  Per ulteriori informazioni sulla trasformazione tramite UnPivot, vedere [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
@@ -61,8 +61,8 @@ ms.locfileid: "66054842"
   
  Nello scenario UnPivot descritto in [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), il Nome colonna valore chiave pivot è **Product** e designa la nuova colonna **Product** come la colonna in cui viene applicata la trasformazione tramite UnPivot alle colonne **Ham**, **Soda**, **Milk**, **Beer**e **Chips** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Pivot - trasformazione](data-flow/transformations/pivot-transformation.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Trasformazione pivot](data-flow/transformations/pivot-transformation.md)  
   
   

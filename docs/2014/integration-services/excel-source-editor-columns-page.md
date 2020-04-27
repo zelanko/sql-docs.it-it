@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059206"
 ---
 # <a name="excel-source-editor-columns-page"></a>Editor origine Excel (pagina Colonne)
@@ -36,8 +36,8 @@ ms.locfileid: "66059206"
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Editor origine Excel &#40;pagina output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   

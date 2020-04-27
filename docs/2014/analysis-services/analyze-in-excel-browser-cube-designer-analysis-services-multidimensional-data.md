@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062371"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analizza in Excel (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
-  **Analizza in Excel** offre allo sviluppatore del cubo un modo per esaminare rapidamente l'aspetto di un progetto all'utente finale. La funzionalità **Analizza in Excel** consente di aprire Microsoft Excel, creare una connessione origine dati al database dell'area di lavoro modello e di aggiungere automaticamente una tabella pivot al foglio di lavoro. Questa funzionalità sostituisce il controllo Web di Office che nelle versioni precedenti forniva una tabella pivot incorporata nella scheda Esplorazione.  
+  La funzionalità**Analizza in Excel** offre allo sviluppatore del cubo un modo per verificare rapidamente come apparirebbe un progetto all'utente finale. La funzionalità **Analizza in Excel** consente di aprire Microsoft Excel, creare una connessione origine dati al database dell'area di lavoro modello e di aggiungere automaticamente una tabella pivot al foglio di lavoro. Questa funzionalità sostituisce il controllo Web di Office che nelle versioni precedenti forniva una tabella pivot incorporata nella scheda Esplorazione.  
   
  **Per visualizzare i dati del cubo:**  
   
@@ -44,13 +44,13 @@ ms.locfileid: "66062371"
   
  Per ulteriori informazioni sulla funzionalità **Analizza in Excel** , vedere le seguenti risorse.  
   
- [Analizza in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analizzare in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
  [Analizzare un modello tabulare in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Esplorare dati e metadati in un cubo](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione cubi &#40;browser&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Scheda Esplorazione &#40;metadati, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058052"
 ---
 # <a name="import-project-wizard"></a>Importazione guidata progetto
@@ -46,6 +46,6 @@ ms.locfileid: "66058052"
   
 8.  La pagina **Risultati** deve visualizzare i risultati dall'operazione di importazione che la procedura guidata ha eseguito. Fare clic su **Salva report** per salvare il report in un file XML.  
   
-9. Fare clic su **Chiudi** per chiudere la procedura guidata.  
+9. Fare clic su **Chiudi** per uscire dalla procedura guidata.  
   
   

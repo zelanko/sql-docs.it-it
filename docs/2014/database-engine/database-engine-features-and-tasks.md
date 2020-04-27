@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064983"
 ---
 # <a name="database-engine-features-and-tasks"></a>Caratteristiche e attività del motore di database
@@ -26,7 +26,7 @@ ms.locfileid: "66064983"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Istanze del motore di database &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
- [Caratteristiche del database](../relational-databases/database-features.md)  
+ [Funzionalità di database](../relational-databases/database-features.md)  
   
  [Caratteristiche del motore di database tra istanze](../../2014/database-engine/database-engine-cross-instance-features.md)  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054633"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Visualizzare le voci di log nella finestra Registra eventi
@@ -30,9 +30,9 @@ ms.locfileid: "66054633"
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
-2.  Scegliere **Registra eventi** dal menu **SSIS**. Facoltativamente, è possibile visualizzare la finestra **Registra eventi** eseguendo il mapping tra il comando View.LogEvents e una combinazione di tasti scelta dall'utente nella pagina **Tastiera** della finestra di dialogo **Opzioni** .  
+2.  Scegliere **Registra eventi**dal menu **SSIS** . Facoltativamente, è possibile visualizzare la finestra **Registra eventi** eseguendo il mapping tra il comando View.LogEvents e una combinazione di tasti scelta dall'utente nella pagina **Tastiera** della finestra di dialogo **Opzioni** .  
   
-3.  Scegliere **Avvia debug** dal menu **Debug**.  
+3.  Scegliere **Avvia debug**dal menu **debug** .  
   
      Quando il runtime rileva i messaggi personalizzati e gli eventi per cui è attivata la registrazione, le voci di log per ogni evento o messaggio vengono scritte nella finestra **Registra eventi** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66054633"
   
 9. Aprire un editor di testo, incollare e quindi salvare la voce di log in un file di testo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

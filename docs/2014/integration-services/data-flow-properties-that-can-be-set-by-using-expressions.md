@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059935"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Proprietà del flusso di dati che è possibile impostare tramite espressioni
@@ -70,18 +70,18 @@ ms.locfileid: "66059935"
 |----------------------|--------------|  
 |Destinazione ADO NET|Proprietà TableOrViewName<br /><br /> Proprietà BatchSize<br /><br /> Proprietà CommandTimeout|  
 |file flat - destinazione|Proprietà dell'intestazione|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Destinazione Compact|Proprietà TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]destinazione|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
+|Destinazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Proprietà TableName|  
+|Destinazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Aggiungere o modificare un'espressione di proprietà](expressions/add-or-change-a-property-expression.md)  
+-   [Aggiunta o modifica di un'espressione di proprietà](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Usare espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
  [Proprietà comuni](../../2014/integration-services/common-properties.md)   
  [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
  [Proprietà del percorso](../../2014/integration-services/path-properties.md)  
