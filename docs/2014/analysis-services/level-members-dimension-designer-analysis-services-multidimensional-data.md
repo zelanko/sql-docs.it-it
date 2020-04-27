@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078105"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Livello e membri (scheda Esplorazione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -92,7 +92,7 @@ ms.locfileid: "66078105"
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è abilitata la modalità writeback.  
   
- **Rinominare**  
+ **Rinomina**  
  Selezionare questa opzione per modificare il nome del membro selezionato.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "66078105"
  **Writeback**  
  Selezionare questa opzione per abilitare la modalità writeback.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Barra degli strumenti &#40;scheda Esplorazione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

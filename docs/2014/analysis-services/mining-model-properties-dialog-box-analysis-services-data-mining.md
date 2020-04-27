@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077687"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Finestra di dialogo Proprietà modello di data mining (Analysis Services - Data Mining)
@@ -31,12 +31,12 @@ ms.locfileid: "66077687"
 |**Nome**|Consente di visualizzare il nome del modello di data mining.|  
 |**ID**|Consente di visualizzare l'identificatore del modello di data mining.|  
 |**Descrizione**|Consente di visualizzare la descrizione del modello di data mining.|  
-|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione del modello di data mining.|  
+|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione del modello di data mining.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati del modello di data mining.|  
-|**Stato**|Consente di visualizzare lo stato di elaborazione del modello di data mining. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Consente di visualizzare lo stato di elaborazione del modello di data mining. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione del modello di data mining.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

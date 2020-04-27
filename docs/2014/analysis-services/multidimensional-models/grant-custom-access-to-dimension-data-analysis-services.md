@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075056"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
@@ -41,10 +41,10 @@ ms.locfileid: "66075056"
   
  La sicurezza delle dimensioni di base è la più semplice. È sufficiente selezionare gli attributi della dimensione e le gerarchie di attributi da includere o escludere nel ruolo. La sicurezza avanzata è più complessa e richiede una certa esperienza nella creazione di script MDX. Di seguito vengono descritti entrambi gli approcci.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Negli scenari di accesso personalizzati non è possibile usare tutte le misure e i membri della dimensione. La connessione non riesce se un ruolo limita l'accesso a una misura o un membro predefinito oppure limita l'accesso a misure che fanno parte di espressioni di misura.  
   
- **Verificare la presenza di ostacoli alla sicurezza delle dimensioni: misure predefinite, membri predefiniti e misure utilizzate nelle espressioni di misura**  
+ **Verificare la presenza di limitazioni alla sicurezza delle dimensioni: misure predefinite, membri predefiniti e misure usate in espressioni di misura**  
   
 1.  In SQL Server Management Studio fare clic con il pulsante destro del mouse su un cubo e selezionare Crea **script per cubo come** | **ALTER in** | **nuova finestra Editor di query**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66075056"
   
      In alternativa, è possibile usare l'opzione **Deseleziona tutti i membri** per revocare l'accesso a tutti i membri e quindi selezionare i membri a cui consentire l'accesso. Nelle successive operazioni di elaborazione, i nuovi membri non saranno visibili finché non si modifica manualmente la sicurezza dei dati della dimensione per consentirne l'accesso.  
   
-5.  Facoltativamente, fare **** clic su Avanzate `Visual Totals` per abilitare questa gerarchia dell'attributo. Questa opzione ricalcola le aggregazioni in base ai membri disponibili tramite il ruolo.  
+5.  Facoltativamente, fare **Advanced** clic su Avanzate `Visual Totals` per abilitare questa gerarchia dell'attributo. Questa opzione ricalcola le aggregazioni in base ai membri disponibili tramite il ruolo.  
   
     > [!NOTE]  
     >  Quando si applicano le autorizzazioni che escludono i membri della dimensione, i totali aggregati non vengono ricalcolati automaticamente. Si supponga `All` che il membro di una gerarchia dell'attributo restituisca un conteggio di 200 prima dell'applicazione delle autorizzazioni. Dopo aver applicato le autorizzazioni che negano l'accesso `All` ad alcuni membri, restituisce comunque 200, anche se i valori del membro visibili all'utente sono molto inferiori. Per evitare di confondere gli utenti del cubo, è possibile `All` configurare il membro come aggregato dei soli membri a cui appartengono i membri del ruolo, anziché l'aggregazione di tutti i membri della gerarchia dell'attributo. Per richiamare questo comportamento, è possibile abilitare `Visual Totals` nella scheda **Avanzate** durante la configurazione della sicurezza delle dimensioni. Una volta abilitato, l'aggregato viene calcolato in fase di query anziché recuperato dalle aggregazioni precalcolate. Questa operazione può influire in modo significativo sulle prestazioni. Usarla pertanto solo quando è necessario.  
@@ -91,7 +91,7 @@ ms.locfileid: "66075056"
  **Attributo**  
  Consente di selezionare l'attributo per cui gestire la sicurezza dei membri.  
   
- **Set di membri consentiti**  
+ **Set di membri autorizzati**  
  La proprietà AllowedSet può restituire nessun membro (impostazione predefinita), tutti i membri o alcuni membri. Se si consente l'accesso a un attributo e non si definisce alcun membro del set delle autorizzazioni concesse, verrà consentito l'accesso a tutti i membri. Se si consente l'accesso a un attributo e si definisce un set di membri dell'attributo, saranno visibili solo i membri consentiti in modo esplicito.  
   
  La creazione di AllowedSet genera una reazione a catena quando l'attributo fa parte di una gerarchia a più livelli. Si supponga, ad esempio, che un ruolo consenta l'accesso allo stato di Washington. Si consideri uno scenario in cui il ruolo conceda le autorizzazioni alla divisione vendite dello stato di Washington di una società. Per gli utenti che si connettono tramite questo ruolo, le query che includono predecessori (Stati Uniti) o discendenti (Seattle e Redmond) visualizzeranno solo i membri in una catena che includono lo stato di Washington. Poiché gli altri stati non vengono consentiti in modo esplicito, l'effetto sarà identico a quello del caso in cui gli stati vengano negati.  
@@ -99,7 +99,7 @@ ms.locfileid: "66075056"
 > [!NOTE]  
 >  Se si definisce un set vuoto ({}) di membri dell'attributo, nessun membro dell'attributo sarà visibile al ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
   
- **Set di membri negato**  
+ **Set di membri non autorizzati**  
  La proprietà DeniedSet può restituire nessun membro, tutti i membri (impostazione predefinita) o alcuni membri dell'attributo. Se il set delle autorizzazioni negate contiene solo un set specifico di membri dell'attributo, al ruolo del database viene negato l'accesso solo a tali membri specifici, oltre ai discendenti se l'attributo fa parte di una gerarchia a più livelli. Si consideri l'esempio della divisione vendite dello stato di Washington. Se Washington viene inserito in DeniedSet, gli utenti che si connettono tramite questo ruolo visualizzeranno tutti gli altri stati eccetto Washington e gli attributi dei relativi discendenti.  
   
  Tenere presente, secondo quanto indicato nella sezione precedente, che il set delle autorizzazioni negate è una raccolta fissa. Se l'elaborazione successivamente introduce nuovi membri a cui deve essere negato l'accesso, sarà necessario modificare questo ruolo per aggiungere tali membri all'elenco.  
@@ -113,7 +113,7 @@ ms.locfileid: "66075056"
   
  Si supponga, ad esempio, che un ruolo del database specifichi `Male` come membro predefinito per l'attributo `Gender`. A meno che una query non includa in modo esplicito l'attributo `Gender` e non specifichi un membro diverso per l'attributo, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà restituito un set di dati contenente solo i clienti di sesso maschile. Per altre informazioni sull'impostazione del membro predefinito, vedere [Definire un membro predefinito](attribute-properties-define-a-default-member.md).  
   
- **Abilita totale oggetti visivi**  
+ **Consenti totale visualizzato**  
  La proprietà VisualTotals indica se i valori di cella aggregati visualizzati vengono calcolati in base a tutti i valori di cella o solo in base ai valori di cella visibili al ruolo del database.  
   
  Per impostazione predefinita, la proprietà VisualTotals è disabilitata ( `False`impostata su). L'impostazione predefinita garantisce prestazioni ottimali, in quanto consente di calcolare in modo rapido il totale di tutti i valori di cella tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , anziché dedicare il tempo necessario per selezionare i valori di cella da calcolare.  
@@ -125,7 +125,7 @@ ms.locfileid: "66075056"
  **Controllo**  
  Fare clic su questa opzione per testare la sintassi MDX definita in questa pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concedere le autorizzazioni per il cubo o il modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Concessione dell'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

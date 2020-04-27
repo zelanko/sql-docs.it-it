@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072898"
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
@@ -59,9 +59,9 @@ ms.locfileid: "66072898"
   
  Per convertire i dati writeback in una partizione, usare la finestra di dialogo **Converti in partizione** , a cui è possibile accedere facendo clic con il pulsante destro del mouse sulla tabella writeback di una partizione abilitata per la scrittura in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile specificare il nome della partizione e quindi progettare la relativa aggregazione durante la creazione della partizione stessa o in un secondo momento. Per creare l'aggregazione quando si seleziona la partizione, è necessario scegliere di copiare la progettazione dell'aggregazione da una partizione esistente, che in genere, ma non necessariamente, corrisponde alla partizione writeback corrente. È inoltre possibile scegliere di elaborare la partizione durante la creazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Partizioni abilitate per la scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Abilitazione del writeback in un cubo OLAP a livello di cella in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Abilitazione e protezione dell'immissione di dati con Analysis Services writeback](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Abilitazione e protezione dell'immissione di dati con il writeback di Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

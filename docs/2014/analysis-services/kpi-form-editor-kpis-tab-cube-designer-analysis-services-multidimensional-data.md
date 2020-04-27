@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079445"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -46,7 +46,7 @@ ms.locfileid: "66079445"
   
  Trascinare gli elementi selezionati dal riquadro **Strumenti di calcolo** alla casella di questa opzione per includere la sintassi MDX per l'elemento selezionato.  
   
- **Status**  
+ **Stato**  
  Espandere questa casella per visualizzare le opzioni **Icona stato** ed **Espressione stato** .  
   
  **Icona stato**  
@@ -90,13 +90,13 @@ ms.locfileid: "66079445"
  **Cartella di visualizzazione**  
  Consente di digitare la categorizzazione dell'indicatore KPI che deve essere utilizzata dall'applicazione client per la visualizzazione.  
   
- Usare una barra rovesciata (\\) per separare i nomi delle cartelle in una cartella di visualizzazione e il punto e virgola (;) per separare più cartelle di visualizzazione. Ad esempio, immettere `Category\Goal\Scientific;Category\Goal\Metric`.  
+ Usare una barra rovesciata (\\) per separare i nomi delle cartelle in una cartella di visualizzazione e il punto e virgola (;) per separare più cartelle di visualizzazione. Ad esempio digitare `Category\Goal\Scientific;Category\Goal\Metric`.  
   
  **KPI padre**  
  Consente di selezionare un indicatore KPI esistente sotto il quale categorizzare gli indicatori KPI che devono essere utilizzati dall'applicazione client.  
   
 > [!NOTE]  
->  Se questa opzione è impostata su un indicatore KPI esistente, la **cartella di visualizzazione** viene ignorata.  
+>  Se questa opzione è impostata su un indicatore KPI esistente, l'opzione **Cartella di visualizzazione** viene ignorata.  
   
  **Membro temporale corrente**  
  Consente di digitare l'espressione MDX che restituisce il membro che identifica il contesto temporale dell'indicatore KPI.  
@@ -104,7 +104,7 @@ ms.locfileid: "66079445"
  Trascinare gli elementi selezionati dal riquadro **Strumenti di calcolo** alla casella di questa opzione per includere la sintassi MDX per l'elemento selezionato.  
   
 > [!IMPORTANT]  
->  L'espressione MDX deve restituire il nome univoco di un membro all'interno di una dimensione temporale associata al gruppo di misure specificato nel **gruppo di misure associato**.  
+>  L'espressione MDX deve restituire il nome univoco di un membro all'interno di una dimensione temporale associata al gruppo di misure specificato in **Gruppo di misure associato**.  
   
  **Peso**  
  Espandere questa casella per visualizzare o modificare l'espressione MDX per il fattore di ponderazione dell'indicatore KPI.  
@@ -114,7 +114,7 @@ ms.locfileid: "66079445"
  **Descrizione**  
  Consente di digitare una descrizione facoltativa dell'indicatore KPI.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

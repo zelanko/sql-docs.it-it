@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075346"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Impostazione delle opzioni di distribuzione dei ruoli e delle partizioni
@@ -41,7 +41,7 @@ ms.locfileid: "66075346"
 > [!NOTE]  
 >  Se il gruppo di misure contenente la partizione viene eliminato, la partizione viene eliminata automaticamente.  
   
- **Opzioni di distribuzione del ruolo**  
+ **Opzioni di distribuzione dei ruoli**  
  Il \< *nome del progetto*> file con estensione deploymentoptions specifica una delle opzioni di distribuzione dei ruoli seguenti:  
   
 -   I ruoli e i membri di ruolo esistenti contenuti nel database di destinazione vengono mantenuti e vengono distribuiti solo i nuovi ruoli e membri di ruolo.  
@@ -50,7 +50,7 @@ ms.locfileid: "66075346"
   
 -   I ruoli e i membri di ruolo esistenti contenuti nel database di destinazione vengono mantenuti e non viene distribuito nessun nuovo ruolo.  
   
--   **Nota** Quando vengono mantenuti i ruoli e i membri esistenti, le autorizzazioni associate a tali ruoli vengono reimpostate su None. Le autorizzazioni di sicurezza sono contenute negli oggetti da esse protetti, non nei ruoli di sicurezza a cui sono associate. Per ulteriori informazioni su come utilizzare questo comportamento utilizzando la distribuzione guidata Analysis Services, vedere "Mantieni ruoli e membri" nella Microsoft Knowledge base.  
+-   **Nota** Quando vengono mantenuti i ruoli e i membri esistenti, le autorizzazioni associate a tali ruoli vengono reimpostate su nessuna autorizzazione. Le autorizzazioni di sicurezza sono contenute negli oggetti da esse protetti, non nei ruoli di sicurezza a cui sono associate. Per ulteriori informazioni su come utilizzare questo comportamento utilizzando la distribuzione guidata Analysis Services, vedere "Mantieni ruoli e membri" nella Microsoft Knowledge base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modifica delle opzioni di distribuzione dei ruoli e delle partizioni  
  Potrebbe essere necessario distribuire il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto usando diverse opzioni di partizione e ruolo rispetto a quelle archiviate \<nel *nome del progetto*> file deploymentoptions. È possibile, ad esempio, mantenere le partizioni, i ruoli e i membri del ruolo esistenti, anziché sostituire tutte le partizioni, i ruoli e i membri esistenti, \<come indicato nel *nome del progetto*> file con estensione deploymentoptions.  
@@ -69,7 +69,7 @@ ms.locfileid: "66075346"
   
 -   Aprire il \< *nome del progetto*>. deploymentoptions in un qualsiasi editor di testo e modificare manualmente le opzioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostazione della destinazione di installazione](deployment-script-files-specifying-the-installation-target.md)   
  [Specifica delle impostazioni di configurazione per la distribuzione della soluzione](deployment-script-files-solution-deployment-config-settings.md)   
  [Impostazione delle opzioni di elaborazione](deployment-script-files-specifying-processing-options.md)  

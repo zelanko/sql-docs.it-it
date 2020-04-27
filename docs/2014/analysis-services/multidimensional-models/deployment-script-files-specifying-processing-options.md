@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075231"
 ---
 # <a name="specifying-processing-options"></a>Impostazione delle opzioni di elaborazione
@@ -29,7 +29,7 @@ ms.locfileid: "66075231"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Esame delle opzioni di elaborazione per la distribuzione  
  Di seguito sono riportate \<le impostazioni di configurazione archiviate nel *nome del progetto*> file con estensione deploymentoptions:  
   
--   **Metodo di elaborazione** Questa impostazione determina se gli oggetti distribuiti vengono elaborati dopo la distribuzione e il tipo di elaborazione che verrà eseguita. Sono previste tre opzioni di elaborazione:  
+-   **Metodo di elaborazione** Questa impostazione determina se gli oggetti distribuiti vengono elaborati dopo la distribuzione e il tipo di elaborazione a cui verranno sottoposti. Sono previste tre opzioni di elaborazione:  
   
     -   Elaborazione predefinita (impostazione predefinita)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075231"
   
     -   nessuno  
   
--   **Opzioni tabella writeback** Se il writeback è abilitato nel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, questa impostazione definisce il modo in cui viene gestito il writeback. Sono previste tre opzioni per la tabella writeback:  
+-   **Opzioni tabella writeback** Se il writeback è attivato nel progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , questa impostazione stabilisce come verrà gestito. Sono previste tre opzioni per la tabella writeback:  
   
     -   Per impostazione predefinita, se esiste una tabella writeback essa verrà utilizzata. Se non esiste alcuna tabella writeback, ne verrà creata una nuova.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075231"
   
     -   Anche se dovesse esistere già una tabella writeback, ne verrà creata una nuova. In questo caso, Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina ogni eventuale tabella esistente e la sostituisce con una nuova tabella writeback.  
   
--   **Distribuzione transazionale** Questa impostazione determina se la distribuzione delle modifiche dei metadati e dei comandi di elaborazione viene eseguita in una singola transazione o in transazioni separate.  
+-   **Distribuzione transazionale** Questa impostazione stabilisce se la distribuzione delle modifiche dei metadati e dei comandi di elaborazione viene eseguita attraverso una singola transazione o in transazioni separate.  
   
     -   Se questa opzione è impostata su `True` (impostazione predefinita), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuisce tutte le modifiche dei metadati e tutti i comandi di elaborazione attraverso una singola transazione.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66075231"
   
 -   Modificare il \< *nome del progetto*> file deploymentoptions utilizzando un editor di testo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostazione della destinazione di installazione](deployment-script-files-specifying-the-installation-target.md)   
  [Impostazione delle opzioni di distribuzione di partizioni e ruoli](deployment-script-files-partition-and-role-deployment-options.md)   
  [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](deployment-script-files-solution-deployment-config-settings.md)  

@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073209"
 ---
 # <a name="remote-processing-analysis-services"></a>Elaborazione remota (Analysis Services)
   È possibile eseguire l'elaborazione pianificata o automatica in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dove la richiesta di elaborazione proviene da un computer ma viene eseguita in un computer diverso nella stessa rete.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   Se si eseguono versioni diverse di SQL Server in ogni computer, le librerie client devono corrispondere alla versione dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante la quale viene elaborato il modello. Ad esempio, se l'elaborazione viene eseguita in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , la libreria client del computer da cui proviene la richiesta deve corrispondere a [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]. Vedere [Provider di dati utilizzati per le connessioni ad Analysis Services](../instances/data-providers-used-for-analysis-services-connections.md).  
   
@@ -31,8 +31,7 @@ ms.locfileid: "66073209"
 -   Risolvere tutti gli errori di elaborazione locale esistenti prima di tentare l'elaborazione remota. Verificare che quando la richiesta di elaborazione è locale, i dati possono essere recuperati correttamente dall'origine dati relazionale esterna. Vedere [Impostare opzioni di rappresentazione &#40;SSAS - multidimensionale&#41;](set-impersonation-options-ssas-multidimensional.md) per istruzioni su come specificare le credenziali usate per recuperare i dati.  
   
 ## <a name="on-demand-remote-processing"></a>Elaborazione remota su richiesta  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono accettate richieste di elaborazione da account utente o applicazione che dispongono di autorizzazioni di amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si è un amministratore, verificare che sia possibile connettersi all'istanza remota ed elaborare il database manualmente tramite la connessione remota.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono accettate richieste di elaborazione da account utente o applicazione che dispongono di autorizzazioni di amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si è un amministratore, verificare che sia possibile connettersi all'istanza remota ed elaborare il database manualmente tramite la connessione remota.  
   
 1.  Nel computer che sarà usato per pianificare l'elaborazione, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66073209"
   
 -   [Configurazione di SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent componenti](../../ssms/agent/sql-server-agent.md#Components) suggerisce ruoli predefiniti del server alternativi se la concessione di autorizzazioni **sysadmin** non è possibile.  
+-   Tramite i[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) vengono suggeriti i ruoli predefiniti del server qualora non sia possibile la concessione di autorizzazioni **sysadmin** .  
   
  Dopo aver configurato le autorizzazioni dell'account, continuare con i passaggi riportati di seguito.  
   
@@ -91,11 +90,11 @@ ms.locfileid: "66073209"
   
 2.  Come passaggio finale, modificare il processo da eseguire in base a una pianificazione definita, aggiungendo le notifiche o gli avvisi necessari per amministrare il processo. Potrebbe inoltre essere necessario ridefinire lo script di elaborazione oppure creare più passaggi del processo per elaborare in modo indipendente gli oggetti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Componenti SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
  [Pianificare le attività amministrative di SSAS con SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)   
- [Elaborazione di oggetti &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+ [Elaborazione di oggetti &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

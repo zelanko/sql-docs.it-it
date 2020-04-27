@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081636"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Ignora avviso (Analysis Services - Dati multidimensionali)
@@ -35,7 +35,7 @@ ms.locfileid: "66081636"
  **Commenti (facoltativo)**  
  Digitare una spiegazione del perché si sta ignorando l'avviso. Il commento verrà visualizzato nella colonna **Commento** della tabella **Avvisi ignorati** sulla scheda **Avvisi** di Progettazione database.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avvisi &#40;progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

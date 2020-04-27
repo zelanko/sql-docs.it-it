@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080405"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Finestra di dialogo Inserisci funzione (SSAS)
@@ -24,7 +24,7 @@ ms.locfileid: "66080405"
   
 |||  
 |-|-|  
-|Elemento|Descrizione|  
+|Item|Descrizione|  
 |**Seleziona una categoria**|Se si conosce a grandi linee il tipo di funzione necessario, scegliere una categoria dall'elenco o selezionare **Tutte** per visualizzare un elenco di funzioni in ordine alfabetico.|  
 |**Selezionare una funzione**|Consente di visualizzare un elenco delle funzioni nella categoria selezionata.|  
 |**Descrizione**|Consente di visualizzare una descrizione della funzione, insieme a tutti gli argomenti richiesti o facoltativi, ad esempio nomi di colonne ed espressioni.|  
@@ -44,12 +44,12 @@ ms.locfileid: "66080405"
   
  Statistica  
   
- Text  
+ Testo  
   
 ## <a name="measures-and-formulas"></a>Misure e formule  
  La finestra di dialogo **Inserisci funzione** è disponibile solo quando si compila una formula. È possibile creare i calcoli in una colonna calcolata o in una tabella o grafico pivot. Le formule compilate espressamente per essere usate in una tabella pivot vengono chiamate anche *misure*. Per altre informazioni, vedere [Creare una colonna calcolata &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [Creare e gestire misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Calcoli &#40;SSAS tabulare&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

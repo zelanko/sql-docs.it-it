@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080941"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introduzione al data mining (componenti aggiuntivi Data mining per Excel)
@@ -38,13 +38,13 @@ ms.locfileid: "66080941"
   
 -   Analisi dei fattori con Bayes reti neurali  
   
--   Analisi di serie temporali  
+-   Analisi delle serie temporali  
   
 -   Analisi di associazione, indicazioni e analisi di tipo Market basket analysis  
   
 -   Valutazione di risultati binari  
   
--   Linear regression  
+-   Linear Regression  
   
  Inoltre, i componenti aggiuntivi semplificano la fase di preparazione dei dati: selezione, esplorazione e pulizia.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66080941"
   
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cosa è incluso nei componenti aggiuntivi Data mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
  [Guida di riferimento tecnico &#40;componenti aggiuntivi Data mining per Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   

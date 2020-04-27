@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073325"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partizioni nei modelli multidimensionali
@@ -36,7 +36,7 @@ ms.locfileid: "66073325"
 ## <a name="remote-partitions"></a>Partizioni remote  
  Le partizioni remote sono partizioni definite in un solo server, ma elaborate e archiviate in un altro server. Se si desidera distribuire l'archiviazione di dati e metadati tra più server, utilizzare le partizioni remote. In genere, nel passaggio dallo sviluppo alla produzione, le dimensioni dei dati analizzati aumentano notevolmente. Quando esistono gruppi di dati di grandi dimensioni, è possibile distribuirli su più computer, non tanto perché i dati non possono essere contenuti tutti in uno stesso computer, quanto per consentirne l'elaborazione in parallelo. Per altre informazioni, vedere [Creare e gestire una partizione remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md).  
   
-## <a name="aggregations"></a>Aggregazioni  
+## <a name="aggregations"></a>Aggregations  
  Le aggregazioni sono riepiloghi precalcolati dei dati del cubo che consentono a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di fornire rapidamente le risposte alle query. È possibile determinare il numero di aggregazioni create per un gruppo di misure impostando limiti sull'archiviazione e sul miglioramento delle prestazioni oppure arrestando arbitrariamente il processo di compilazione delle aggregazioni dopo un certo periodo di esecuzione. Un numero superiore di aggregazioni non costituisce necessariamente un vantaggio. Ogni nuova aggregazione ha un costo, sia in termini di spazio su disco che di tempo di elaborazione. Si consiglia di creare aggregazioni fino a ottenere un miglioramento delle prestazioni pari al 30% e quindi di aumentarne il numero solo se richiesto da attività di test o dall'esperienza. Per altre informazioni, vedere [Progettazione di aggregazioni &#40;Analysis Services - Multidimensionale&#41;](designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Unione e modifica di partizioni  
@@ -47,9 +47,9 @@ ms.locfileid: "66073325"
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Sono contenute informazioni su come partizionare i dati utilizzando filtri o tabelle dei fatti diverse senza duplicare i dati.|  
-|[Impostare l'archiviazione delle partizioni &#40;Analysis Services-&#41;multidimensionali](set-partition-storage-analysis-services-multidimensional.md)|Viene descritto come configurare l'archiviazione per le partizioni.|  
+|[Impostare l'archiviazione delle partizioni &#40;Analysis Services - Multidimensionale&#41;](set-partition-storage-analysis-services-multidimensional.md)|Viene descritto come configurare l'archiviazione per le partizioni.|  
 |[Modificare o eliminare partizioni &#40;Analysis Services-multidimensionale&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Viene descritto come visualizzare e modificare le partizioni.|  
-|[Unire partizioni in Analysis Services &#40;SSAS-&#41;multidimensionali](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Sono contenute informazioni su come unire le partizioni in cui sono presenti tabelle dei fatti o sezioni dei dati diverse senza duplicare i dati.|  
+|[Unire partizioni in Analysis Services &#40;SSAS - Multidimensionale&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Sono contenute informazioni su come unire le partizioni in cui sono presenti tabelle dei fatti o sezioni dei dati diverse senza duplicare i dati.|  
 |[Impostare tabelle writeback delle partizioni](set-partition-writeback.md)|Vengono fornite istruzioni su come abilitare una partizione per la scrittura.|  
 |[Creare e gestire una partizione remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Viene descritto come creare e gestire una partizione remota.|  
   

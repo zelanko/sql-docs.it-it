@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073042"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Esecuzione della Distribuzione guidata Analysis Services
   Quando si utilizza la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata per distribuire un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, è possibile eseguire la procedura guidata nei modi seguenti:  
   
--   In modo **interattivo** Quando viene eseguito in modo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interattivo, la distribuzione guidata genera uno script di distribuzione XML basato sui file di input, modificato in modo interattivo dall'input dell'utente. Tramite la procedura guidata eventuali modifiche apportate dall'utente vengono applicate solo allo script di distribuzione. I file di input non vengono modificati. Per altre informazioni sui file di input, vedere [Informazioni sui file di input usati per creare uno script di distribuzione](deployment-script-files-input-used-to-create-deployment-script.md).  
+-   **In modo interattivo** Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di generare uno script di distribuzione XML basato sui file in input, in base alle modifiche interattive apportate tramite l'input dell'utente. Tramite la procedura guidata eventuali modifiche apportate dall'utente vengono applicate solo allo script di distribuzione. I file di input non vengono modificati. Per altre informazioni sui file di input, vedere [Informazioni sui file di input usati per creare uno script di distribuzione](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 -   **Dal prompt dei comandi** Quando viene eseguito al prompt dei comandi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la distribuzione guidata genera uno script di distribuzione di XML for Analysis (XMLA) basato sulle opzioni utilizzate per eseguire la procedura guidata. Tramite la procedura guidata potrebbe venire richiesto l'input dell'utente e potrebbero venire modificati i file di input in base a tale input, potrebbe venire eseguita una distribuzione automatica invisibile all'utente oppure potrebbe venire creato uno script di distribuzione da utilizzare successivamente.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66073042"
   
  Per eseguire la procedura guidata in modalità file di risposte, usare l'opzione **/a** .  
   
- **Modalità invisibile all'utente**  
+ **Modalità automatica**  
  In modalità non interattiva viene eseguita una distribuzione automatica invisibile all'utente basata sulle informazioni incluse nei file di input.  
   
  Per eseguire la procedura guidata in modalità invisibile all'utente, usare l'opzione **/s** . Quando si esegue la procedura guidata in modalità non interattiva, i messaggi vengono inviati alla console o a un file di log, se presente.  
@@ -73,7 +73,7 @@ ms.locfileid: "66073042"
   
 2.  Digitare **Microsoft.AnalysisServices.Deployment.exe** seguito dalle opzioni corrispondenti alla modalità in cui si desidera eseguire la procedura guidata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Informazioni sullo script di distribuzione Analysis Services](understanding-the-analysis-services-deployment-script.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   

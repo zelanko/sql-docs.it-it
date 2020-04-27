@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072693"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Utilizzare un modello per creare un'azione
-  Nella vista **Azioni** di Progettazione cubi sono inclusi diversi modelli usabili per la creazione di azioni comuni. L'accesso a Progettazione cubi può essere eseguito da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Nella vista **Azioni** di Progettazione cubi sono inclusi diversi modelli usabili per la creazione di azioni comuni. L'accesso a Progettazione cubi può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
 >  Una volta creata, l'azione diventerà disponibile agli utenti al termine dell'aggiornamento o della rielaborazione del cubo. Per ulteriori informazioni, vedere [elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "66072693"
   
 -   Inserire le informazioni necessarie per completare la compilazione dell'azione in base al modello.  
   
-## <a name="see-also"></a>Vedere anche  
- [Azioni &#40;Analysis Services Dati multidimensionali&#41;](actions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

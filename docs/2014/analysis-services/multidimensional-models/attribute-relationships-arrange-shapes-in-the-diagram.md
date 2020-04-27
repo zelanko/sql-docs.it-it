@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077135"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Disporre le forme nel diagramma di relazione tra attributi
@@ -30,7 +30,7 @@ ms.locfileid: "66077135"
   
      È anche possibile fare clic su **Disponi forme** per disporre automaticamente tutte le forme in base all'algoritmo di layout utilizzato da Progettazione dimensioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Definire relazioni tra attributi](attribute-relationships-define.md)  
   

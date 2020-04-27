@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070004"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Pianificare un aggiornamento dati (PowerPivot per SharePoint)
@@ -26,7 +26,7 @@ ms.locfileid: "66070004"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
  [Prerequisiti](#prereq)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66070004"
 > [!NOTE]  
 >  L'aggiornamento dati PowerPivot viene eseguito dalle istanze del server Analysis Services nella farm di SharePoint. Non è correlato alla funzionalità di aggiornamento dati fornita in Excel Services. La funzionalità Pianificazione dell'aggiornamento dati non aggiornerà i dati non PowerPivot.  
   
-##  <a name="prereq"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
  Per creare una pianificazione dell'aggiornamento dati è necessario disporre almeno del livello di autorizzazione di collaborazione relativamente alla cartella di lavoro.  
   
  Devono essere disponibili le origini dati esterne a cui si accede durante l'aggiornamento dati e le credenziali specificate nella pianificazione devono consentire di accedere a tali origini dati. L'aggiornamento dati pianificato richiede l'accesso a un percorso origine dati tramite una connessione di rete (ad esempio da una condivisione file di rete piuttosto che da una cartella locale nella workstation).  
@@ -53,7 +53,7 @@ ms.locfileid: "66070004"
 > [!NOTE]  
 >  Il server non consente di bloccare la cartella di lavoro mentre l'aggiornamento dei dati è in corso. Tuttavia, consente di bloccare il file alla fine dell'aggiornamento allo scopo di archiviare il file aggiornato. Se al momento il file viene Estratto da un altro utente, i dati aggiornati verranno eliminati. Analogamente, se il file viene archiviato, ma è significativamente diverso dalla copia recuperata dal server all'inizio dell'aggiornamento dati, i dati aggiornati verranno rimossi.  
   
-##  <a name="intro"></a>Panoramica dell'aggiornamento dati  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>Panoramica dell'aggiornamento dati  
  I dati PowerPivot in una cartella di lavoro di Excel possono provenire da più origini dati esterne, inclusi database esterni o file di dati ai quali si accede da server remoti o da condivisioni file di rete. Per le cartelle di lavoro di PowerPivot in cui sono contenuti i dati importati da origini dati connesse o esterne, è possibile configurare l'aggiornamento dei dati per pianificare un'importazione automatica di dati aggiornati da tali origini iniziali.  
   
  L'accesso a un'origine dati esterna viene eseguito tramite una stringa di connessione incorporata, un URL o un percorso UNC specificati quando i dati originali sono stati importati nella cartella di lavoro tramite l'applicazione client di PowerPivot. Le informazioni di connessione originali archiviate nella cartella di lavoro di PowerPivot vengono riutilizzate per le successive operazioni di aggiornamento dati. Sebbene sia possibile sovrascrivere le credenziali usate per connettersi alle origini dati, non è possibile sovrascrivere le stringhe di connessione per ragioni di aggiornamento dati; vengono usate solo le informazioni di connessione esistenti.  
@@ -72,7 +72,7 @@ ms.locfileid: "66070004"
   
  La creazione di pianificazioni granulari per singole origini dati consente di associare la pianificazione dell'aggiornamento alle fluttuazioni nelle origini dati esterne. Ad esempio, se in un'origine dati esterna sono contenuti dati transazionali generati durante il giorno, è possibile creare una singola pianificazione dell'aggiornamento dei dati per tale origine dati per ottenere le informazioni aggiornate di notte.  
   
-##  <a name="drenablesched"></a>Abilitare e pianificare l'aggiornamento dati  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>Abilitare e pianificare l'aggiornamento dati  
  Usare le istruzioni seguenti per pianificare l'aggiornamento dei dati PowerPivot in una cartella di lavoro di Excel pubblicata in una raccolta di SharePoint.  
   
 1.  Nella raccolta in cui è contenuta la cartella di lavoro, selezionare la cartella di lavoro, quindi fare clic sulla freccia GIÙ per visualizzare un elenco di comandi.  
@@ -88,9 +88,9 @@ ms.locfileid: "66070004"
   
 5.  In Prima ora di inizio scegliere uno degli elementi seguenti:  
   
-    1.  **Dopo l'orario di ufficio** viene specificato un periodo di elaborazione non in orario in cui è più probabile che i server di database dispongano dei dati correnti generati durante il giorno lavorativo.  
+    1.  Tramite l'opzione**Dopo l'orario di ufficio** viene specificato un periodo di elaborazione dopo le ore di lavoro stabilite quando è più probabile che i server di database dispongano dei dati correnti generati durante tutto il giorno lavorativo.  
   
-    2.  La prima ora di **inizio specifica** è l'ora e i minuti della prima ora del giorno in cui la richiesta di aggiornamento dati viene aggiunta a una coda di processi. I minuti possono essere specificati in intervalli di 15 minuti. L'impostazione si applica al giorno corrente e alle date future. Ad esempio, se si specifica un valore pari alle 6.30 e l'ora corrente è 16.30, la richiesta di aggiornamento verrà aggiunta alla coda del giorno corrente in quanto le 16.30 sono successive alle 6.30.  
+    2.  **Prima ora di inizio specifica** rappresenta l'ora e i minuti esatti della prima ora del giorno in cui la richiesta di aggiornamento dei dati viene aggiunta a una coda dei processi. I minuti possono essere specificati in intervalli di 15 minuti. L'impostazione si applica al giorno corrente e alle date future. Ad esempio, se si specifica un valore pari alle 6.30 e l'ora corrente è 16.30, la richiesta di aggiornamento verrà aggiunta alla coda del giorno corrente in quanto le 16.30 sono successive alle 6.30.  
   
      Tramite la prima ora di inizio viene definito il momento in cui una richiesta viene aggiunta alla coda dei processi. L'elaborazione effettiva si verifica quando il server dispone di risorse adatte per iniziare l'elaborazione dati. Il tempo dell'elaborazione effettiva sarà registrato nella cronologia dell'aggiornamento dati dopo il completamento dell'elaborazione.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070004"
   
 11. Scegliere **OK** per salvare la pianificazione.  
   
-##  <a name="drverify"></a>Verifica aggiornamento dati  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>Verifica aggiornamento dati  
  Il modo migliore per verificare l'aggiornamento dati consiste nell'eseguire subito questa operazione e di esaminare la pagina della cronologia per controllare se l'aggiornamento è stato completato correttamente. Selezionare la casella di controllo **Aggiorna anche appena possibile** per verificare che l'aggiornamento dati è operativo.  
   
  È possibile visualizzare il record corrente e passato delle operazioni di aggiornamento dati nella pagina Cronologia aggiornamento dati per la cartella di lavoro. Questa pagina viene visualizzata solo se l'aggiornamento dei dati è stato pianificato per una cartella di lavoro. Se non esiste nessuna pianificazione dell'aggiornamento dei dati, viene visualizzata la pagina di definizione della pianificazione.  
@@ -158,7 +158,7 @@ ms.locfileid: "66070004"
 > [!NOTE]  
 >  Gli amministratori di SharePoint possono assistere nella risoluzione dei problemi relativi all'aggiornamento dei dati visualizzando i report consolidati sull'aggiornamento dei dati nel Dashboard di gestione PowerPivot in Amministrazione centrale. Per ulteriori informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Visualizzare la cronologia dell'aggiornamento dati &#40;PowerPivot per SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
  [Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot &#40;PowerPivot per SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077414"
 ---
 # <a name="define-a-default-member"></a>Definire un membro predefinito
@@ -43,7 +43,7 @@ ms.locfileid: "66077414"
   
  Quando i livelli di una gerarchia vengono aggregati in modo naturale, è possibile definire un membro predefinito per qualsiasi attributo della gerarchia senza tenere conto di altri attributi di tale gerarchia. Ad esempio, nella gerarchia Country-Province-City è possibile definire un membro predefinito per City come [City]. [Montreal] senza definire il membro predefinito per state o Country.  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurare il &#40;tutti i livelli di&#41; per le gerarchie di attributi](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

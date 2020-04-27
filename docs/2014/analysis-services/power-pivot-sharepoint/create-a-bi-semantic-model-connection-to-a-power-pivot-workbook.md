@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071638"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Creare una connessione BISM (BI Semantic Model) a una cartella di lavoro di PowerPivot
@@ -30,11 +30,11 @@ ms.locfileid: "66071638"
   
  [Configurare le autorizzazioni di SharePoint per la connessione BI Semantic Model](#bkmk_permissions)  
   
- [Configurare le autorizzazioni di SharePoint per la cartella di lavoro](#bkmk_userdb)  
+ [Configurare autorizzazioni di SharePoint sulla cartella di lavoro](#bkmk_userdb)  
   
  [Passaggi successivi](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>Verificare i prerequisiti  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Verificare i prerequisiti  
  Per creare un file di connessione BISM, è necessario disporre delle autorizzazioni di collaborazione.  
   
  È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per ulteriori informazioni, vedere [aggiungere un tipo di contenuto connessione BI Semantic Model a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "66071638"
   
  Tutti i computer e gli utenti che partecipano nella sequenza di connessione devono essere nello stesso dominio o nel dominio attendibile (attendibilità bidirezionale).  
   
-##  <a name="bkmk_create"></a>Creare una connessione  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>Creare una connessione  
   
 1.  Nella raccolta che conterrà la connessione BISM, fare clic su **Documenti** sulla barra multifunzione di SharePoint. Fare clic sulla freccia GIÙ su Nuovo documento e selezionare **File di connessione BISM** per aprire la pagina Nuova connessione BISM.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071638"
   
      Facoltativamente, se si dispone di autorizzazioni di SharePoint per la cartella di lavoro, viene eseguito un passaggio di convalida aggiuntivo, per verificare la validità del percorso. Se non si dispone dell'autorizzazione per accedere ai dati, è possibile salvare la connessione BISM senza la risposta della convalida.  
   
-##  <a name="bkmk_permissions"></a>Configurare le autorizzazioni di SharePoint per la connessione BI Semantic Model  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>Configurare le autorizzazioni di SharePoint per la connessione BI Semantic Model  
  Per utilizzare una connessione BISM come origine dati per una cartella di lavoro di Excel o un report di Reporting Services, sono necessarie autorizzazioni **Lettura** sull'elemento della connessione BISM in una raccolta di SharePoint. Nel livello di autorizzazione di lettura è inclusa l'autorizzazione **Apertura elementi** che consente di scaricare le informazioni sulla connessione BISM in un'applicazione desktop di Excel.  
   
  Sono disponibili diversi modi per concedere le autorizzazioni in SharePoint. Le istruzioni seguenti illustrano come creare un nuovo gruppo denominato **Utenti BISM** con il livello di autorizzazione di **lettura** .  
@@ -88,15 +88,15 @@ ms.locfileid: "66071638"
   
 4.  Fare clic su **Rimuovi autorizzazioni utente**.  
   
-##  <a name="bkmk_userdb"></a>Configurare le autorizzazioni di SharePoint per la cartella di lavoro  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>Configurare le autorizzazioni di SharePoint per la cartella di lavoro  
  Se si utilizza un database PowerPivot in una cartella di lavoro di Excel, le autorizzazioni di SharePoint per la cartella di lavoro di Excel determinano l'accesso ai dati tramite la connessione BISM. Tutti gli utenti che accedono alla cartella di lavoro devono disporre delle autorizzazioni di lettura sulla cartella di lavoro per poterla utilizzare come origine dati esterna.  
   
  Se è stato creato un gruppo **Utenti BISM** con le istruzioni della sezione precedente, gli account utente e di gruppo che sono membri del gruppo **Utenti BISM** hanno autorizzazioni sufficienti sulla cartella di lavoro e sul file di connessione BI Semantic Model, presupponendo che la cartella di lavoro usi autorizzazioni ereditate.  
   
-##  <a name="bkmk_next"></a>Passaggi successivi  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> Passaggi successivi  
  Dopo avere creato e protetto una connessione BISM è possibile specificarla come origine dati. Per altre informazioni, vedere [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Connessione BI Semantic Model di PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Usare una connessione BI Semantic Model in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Creare una connessione BISM a un database modello tabulare](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  

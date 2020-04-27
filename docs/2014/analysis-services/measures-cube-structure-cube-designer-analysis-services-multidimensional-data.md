@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077917"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Misure (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66077917"
   
  Per visualizzare le misure, espandere i gruppi di misure. Fare clic su una misura o un gruppo di misure selezionato per rinominare rispettivamente la misura o il gruppo.  
   
- Griglia  
+ Grid  
  Consente di visualizzare una griglia di misure e le relative proprietà a cui si accede più di frequente. Fare clic su **Aggiungi nuova misura** per visualizzare la finestra di dialogo **Nuova misura** e aggiungere una nuova misura alla griglia.  
   
  La griglia include le colonne seguenti:  
@@ -63,9 +63,9 @@ ms.locfileid: "66077917"
 |Opzione|Definizione|  
 |------------|----------------|  
 |**Albero**|Consente di visualizzare gruppi di misure e misure in una visualizzazione albero.|  
-|**Griglia**|Consente di visualizzare gruppi di misure e misure in una griglia.|  
+|**Grid**|Consente di visualizzare gruppi di misure e misure in una griglia.|  
   
- **Rinominare**  
+ **Rinomina**  
  Selezionare questa opzione per rinominare la misura o il gruppo di misure selezionato.  
   
  **Elimina**  
@@ -89,7 +89,7 @@ ms.locfileid: "66077917"
  **Proprietà**  
  Selezionare questa opzione per visualizzare la finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla misura o al gruppo di misure selezionato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configura proprietà misura](multidimensional-models/configure-measure-properties.md)   
  [Misure e gruppi di misure](multidimensional-models/measures-and-measure-groups.md)  
   

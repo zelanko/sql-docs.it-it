@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071116"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
@@ -32,10 +32,10 @@ ms.locfileid: "66071116"
   
  [Creare report personalizzati per il dashboard di gestione PowerPivot](#reports)  
   
-##  <a name="prereq"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
  È necessario essere un amministratore del servizio per aprire il dashboard di gestione PowerPivot per un'applicazione di servizio PowerPivot gestita.  
   
-##  <a name="items"></a>Panoramica delle sezioni del dashboard  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> Panoramica delle sezioni del dashboard  
  Nel dashboard di gestione PowerPivot sono contenuti web part e report incorporati che consentono di eseguire il drill-down in categorie di informazioni specifiche. Nell'elenco seguente sono descritte le singole parti del dashboard:  
   
 |Dashboard|Descrizione|  
@@ -48,7 +48,7 @@ ms.locfileid: "66071116"
 |Aggiornamento dati: errori recenti|Vengono elencate le cartelle di lavoro di PowerPivot per le quali non è stato completato correttamente l'aggiornamento dati.|  
 |Report|Sono inclusi i collegamenti ai report che è possibile aprire in Excel.|  
   
-##  <a name="open"></a>Aprire il dashboard di gestione PowerPivot  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>Aprire il dashboard di gestione PowerPivot  
  Nel dashboard vengono mostrate le informazioni relative a un'applicazione di servizio PowerPivot per volta. È possibile aprire il dashboard di gestione da due percorsi diversi.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Aprire il dashboard da Impostazioni generali applicazione  
@@ -72,21 +72,21 @@ ms.locfileid: "66071116"
   
 3.  Fare clic sul nome dell'applicazione di servizio PowerPivot per cui si desidera visualizzare i report del dashboard di gestione.  
   
-##  <a name="sourcedata"></a>Dati di origine nei dashboard  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a> Dati di origine nei dashboard  
  Nei dashboard, nei report e nelle web part vengono visualizzati dati provenienti da un modello di dati interno tramite cui è possibile estrarre i dati dal sistema e dai database dell'applicazione PowerPivot. Il modello di dati interno è incorporato in una cartella di lavoro di PowerPivot ospitata nel sito Amministrazione centrale. La struttura del modello di dati è fissa. Anche se è possibile utilizzare la cartella di lavoro di PowerPivot come origine dati per creare nuovi report, è necessario non modificare la struttura in maniera da causare l'interruzione dei report predefiniti in cui viene utilizzata.  
   
- Per altre informazioni sulla modalità di raccolta dei dati, vedere quanto riportato di seguito:  
+ Per ulteriori informazioni sulla modalità di raccolta dei dati, vedere quanto riportato di seguito:  
   
 -   [Raccolta dati di utilizzo di PowerPivot](power-pivot-usage-data-collection.md)  
   
 -   [Configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione di servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** Se si disattiva la cronologia degli eventi o dell'utilizzo, i report composti saranno incompleti o errati.  
+ Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione di servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** se si disabilita la cronologia degli eventi o dell'utilizzo, i report composti risulteranno incompleti o errati.  
   
-##  <a name="edit"></a>Modificare il dashboard PowerPivot  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>Modificare il dashboard PowerPivot  
  Gli utenti esperti nello sviluppo e nella personalizzazione di dashboard potranno modificare il dashboard in modo da includere nuove web part. È possibile modificare anche le proprietà delle web part incluse nel dashboard.  
   
-##  <a name="reports"></a>Creazione di report personalizzati per il dashboard di gestione PowerPivot  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>Creazione di report personalizzati per il dashboard di gestione PowerPivot  
  Ai fini dei report, i dati di utilizzo e la cronologia di PowerPivot vengono mantenuti in una cartella di lavoro di PowerPivot interna creata e configurata con il dashboard. Se i report predefiniti non forniscono le informazioni necessarie, è possibile creare report personalizzati in Excel in base alla cartella di lavoro. Sia la cartella di lavoro sia eventuali report personalizzati creati dall'utente verranno conservati se si aggiornano o si disinstallano i file della soluzione PowerPivot in un secondo momento. La cartella di lavoro e i report sono archiviati nella raccolta gestione PowerPivot all'interno del sito Amministrazione centrale. Questa raccolta non è visibile per impostazione predefinita, ma può essere visualizzata utilizzando l'azione Visualizza tutto il contenuto del sito in Azioni sito.  
   
  Per iniziare a utilizzare la creazione di report personalizzati, il dashboard di gestione PowerPivot fornisce un file Office Data Connection (ODC) per la connessione alla cartella di lavoro di origine. Ad esempio, è possibile utilizzare il file con estensione odc in Excel per la creazione di report aggiuntivi.  
@@ -148,7 +148,7 @@ ms.locfileid: "66071116"
   
     9. In Specifica di una query MDX fare clic su **Progettazione** per aprire Progettazione query MDX al fine di assemblare i dati che si desidera utilizzare, quindi creare i report della tabella pivot o del grafico pivot per visualizzare i dati in Excel.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dati PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

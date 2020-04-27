@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080336"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologie di autenticazione supportate da Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66080336"
   
  Per altre informazioni sui flussi di autenticazione di Analysis Services e Business Intelligence, vedere [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)(Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
   
-##  <a name="bkmk_auth"></a>Informazioni sulle alternative di autenticazione  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> Individuazione delle possibilità di autenticazione  
  Per la connessione a un database di Analysis Services è necessaria un'identità di gruppo o utente Windows e le relative autorizzazioni associate. L'identità può essere costituita da un account di accesso generico utilizzato da chiunque voglia visualizzare un report o, più probabilmente, dall'identità di singoli utenti.  
   
  In un modello tabulare o multidimensionale sono spesso presenti diversi livelli di accesso ai dati, per oggetto o all'interno dei dati stessi, in base all'autore della richiesta. Per soddisfare questo requisito, è possibile utilizzare NTLM, Kerberos, EffectiveUserName o l'autenticazione di base. Le tecniche sopra descritte permettono di passare identità utente diverse con ciascuna connessione. Tuttavia, la maggior parte di tali scelte è soggetta a una limitazione a un hop singolo. Soltanto nel caso di Kerberos con delega è possibile far passare l'identità utente originale tra più connessioni verso un archivio dati di back-end in un server remoto.  
@@ -78,7 +78,7 @@ ms.locfileid: "66080336"
   
  Per altre informazioni sulle credenziali archiviate, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Use Excel Services with Secure Store Service in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869) (Utilizzare Excel Services con il servizio di archiviazione sicura in SharePoint Server 2013).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo della rappresentazione con la sicurezza del trasporto](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [Configurare l'accesso HTTP per Analysis Services in Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurare Analysis Services per la delega vincolata Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076895"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione
@@ -46,13 +46,13 @@ ms.locfileid: "66076895"
   
     |Tipo di conto del server|Aggregazione|Descrizione|  
     |-------------------------|-----------------|-----------------|  
-    |**Statistica**|`None`|Rapporto calcolato oppure conteggio che non viene aggregato nel tempo. Questo tipo di conto non viene convertito da una valuta all'altra in base alle regole di conversione.|  
-    |**Responsabilità**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è debitori in un dato momento. Questo tipo di conto non cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
+    |**Statistiche**|`None`|Rapporto calcolato oppure conteggio che non viene aggregato nel tempo. Questo tipo di conto non viene convertito da una valuta all'altra in base alle regole di conversione.|  
+    |**Liability**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è debitori in un dato momento. Questo tipo di conto non cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Asset**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è in possesso in un dato momento. Questo tipo di conto cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Balance**|`LastNonEmpty`|Conteggio risultante in un dato momento. Questo tipo di conto cresce, ma non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati.|  
     |**Flusso**|`Sum`|Conteggio incrementale. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo, ma non viene convertito in base alle regole di conversione della valuta.|  
-    |**Spese**|`Sum`|Importo di denaro o valore dei beni speso. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
-    |**Reddito**|`Sum`|Importo di denaro o valore dei beni ricevuto. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
+    |**Expense**|`Sum`|Importo di denaro o valore dei beni speso. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
+    |**Income**|`Sum`|Importo di denaro o valore dei beni ricevuto. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
   
     > [!NOTE]  
     >  Se appropriato, è possibile eseguire il mapping di più tipi di conto nella dimensione a un tipo di conto del server specifico.  

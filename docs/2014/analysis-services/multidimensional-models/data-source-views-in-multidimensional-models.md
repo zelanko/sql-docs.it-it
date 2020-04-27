@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076102"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
@@ -49,13 +49,13 @@ ms.locfileid: "66076102"
   
  [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [Esplorazione dei dati in una vista origine dati &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
  [Eliminare una vista origine dati &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
  [Aggiornare lo schema in una vista origine dati &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a8feb2b80a629d51c7447843ff5a8b41f0700b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069835"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Finestra di dialogo Seleziona colonna (Configurazione guidata funzionalità di Business Intelligence)
@@ -26,7 +26,7 @@ ms.locfileid: "66069835"
  **Visualizzazione albero**  
  Fare clic su questo pulsante per selezionare una colonna per la Configurazione guidata funzionalità di Business Intelligence.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

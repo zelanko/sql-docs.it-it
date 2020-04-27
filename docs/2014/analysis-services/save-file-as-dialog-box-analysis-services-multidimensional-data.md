@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070044"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Salva file con nome (Analysis Services - Dati multidimensionali)
@@ -36,8 +36,8 @@ ms.locfileid: "66070044"
  **Nome file**  
  Consente di digitare un testo per modificare il file selezionato da **Selezionare la cartella**o per specificare un file non elencato in **Selezionare la cartella**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Finestra di dialogo Backup database &#40;Analysis Services-Dati multidimensionali&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestra di dialogo Backup database &#40;Analysis Services - Dati multidimensionali&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072374"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utilizzare diagrammi in Progettazione vista origine dati (Analysis Services)
@@ -35,13 +35,13 @@ ms.locfileid: "66072374"
   
  [Modificare o eliminare un diagramma](#bkmk_edit)  
   
- [Trovare le tabelle in un diagramma](#bkmk_findtables)  
+ [Ricercare tabelle in un diagramma](#bkmk_findtables)  
   
  [Disporre oggetti in un diagramma](#bkmk_arrangeobjects)  
   
- [Mantieni la disposizione degli oggetti](#bkmk_preserve)  
+ [Mantenere la disposizione degli oggetti](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>Aggiungere un diagramma  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a> Aggiungere un diagramma  
  I diagrammi delle viste origine dati vengono creati automaticamente durante la creazione di tale vista. Quando la vista origine dati è disponibile, è possibile creare diagrammi aggiuntivi, rimuoverli o nascondere oggetti specifici per generare una rappresentazione della vista origine dati più gestibile.  
   
  Per creare un nuovo diagramma, fare clic con il pulsante destro del mouse in qualsiasi punto del riquadro **Libreria diagrammi** e scegliere **Nuovo diagramma**.  
@@ -52,14 +52,14 @@ ms.locfileid: "66072374"
   
  È possibile raggruppare query denominate e tabelle correlate in diagrammi separati per scopi aziendali, nonché per rendere maggiormente comprensibile una vista origine dati contenente un numero elevato di tabelle e query denominate. La stessa tabella o query denominata può essere inclusa in più diagrammi, ad \<eccezione di tutte le tabelle> diagramma. Nel diagramma \<tutte le tabelle> tutti gli oggetti contenuti nella vista origine dati vengono visualizzati esattamente una volta.  
   
-##  <a name="bkmk_edit"></a>Modificare o eliminare un diagramma  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Modificare o eliminare un diagramma  
  Quando si utilizza un diagramma, prestare molta attenzione ai comandi utilizzati per l'aggiunta e la rimozione di oggetti. Ad esempio, l'eliminazione di un oggetto da un diagramma ne comporterà l'eliminazione anche dalla vista origine dati. Se si desidera eliminare l'oggetto solo dal diagramma, usare invece **Nascondi tabella** .  
   
  ![Schermata dell'area di lavoro del diagramma, menu di scelta rapida](../media/ssas-olapdsv-diagram.gif "Schermata dell'area di lavoro del diagramma, menu di scelta rapida")  
   
  Sebbene sia possibile nascondere gli oggetti singolarmente, restituendoli utilizzando il comando Mostra tabelle correlate vengono restituiti anche tutti gli oggetti correlati al diagramma. Per controllare quali oggetti vengono restituiti all'area di lavoro, trascinarli invece dal riquadro Tabelle.  
   
-##  <a name="bkmk_findtables"></a>Trovare le tabelle in un diagramma  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>Trovare le tabelle in un diagramma  
  Se le dimensioni dello schema sono elevate, potrebbe essere difficile scorrere fino a una tabella specifica nel riquadro **Diagramma** . Gli strumenti seguenti semplificano tuttavia la ricerca di una tabella in un diagramma.  
   
 -   Scorrere l'elenco di tabelle nel riquadro **Tabelle** .  
@@ -74,22 +74,22 @@ ms.locfileid: "66072374"
   
      È possibile digitare stringhe e caratteri jolly nella casella Filtro per visualizzare subset delle tabelle presenti nel diagramma.  
   
-##  <a name="bkmk_arrangeobjects"></a>Disporre oggetti in un diagramma  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a> Disporre oggetti in un diagramma  
  Sebbene in Progettazione vista origine dati sia possibile definire più diagrammi per rendere una vista origine dati maggiormente comprensibile, i diagrammi contenenti decine di tabelle possono risultare di difficile lettura e la riorganizzazione manuale dei layout delle tabelle potrebbe essere un'operazione laboriosa. In Progettazione vista origine dati, le tabelle del diagramma corrente possono essere riorganizzate automaticamente con un layout rettangolare o diagonale basato sulle relazioni tra tali tabelle.  
   
 -   In un layout rettangolare, le linee di relazione vengono tracciate tra le tabelle anziché tra le colonne, in senso orizzontale e verticale.  
   
 -   In un layout diagonale, le linee di relazione vengono tracciate nel modo più diretto possibile tra le colonne correlate delle tabelle. Una relazione tra più colonne viene collegata alla prima colonna correlata nella tabella. Se le colonne di una tabella non sono visibili, le linee vengono tracciate verso la parte superiore della tabella.  
   
-##  <a name="bkmk_preserve"></a>Mantieni la disposizione degli oggetti  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>Mantieni la disposizione degli oggetti  
  Dopo aver disposto manualmente le tabelle nel modo desiderato, l'aggiunta di più tabelle al diagramma può comportare un aggiornamento del diagramma che rimuove tutte le modifiche recenti apportate al layout dell'oggetto.  
   
  Questo comportamento si verifica con più probabilità quando si aggiunge una tabella, poiché causa lo spostamento di altre tabelle nella Libreria diagrammi per consentire l'inserimento di quella nuova. Il diagramma viene quindi ridisegnato per assicurare che tutte le tabelle e le linee di connessione siano rappresentate correttamente. A questo punto è possibile che tutte le modifiche manuali apportate alla posizione di oggetti specifici vadano perse.  
   
  Per evitare il problema, aggiungere tutte le tabelle prima di procedere alle modifiche finali. In tal modo gli oggetti dovrebbero mantenere la relativa posizione nel diagramma quando verrà riaperto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
- [Progettazione vista origine dati &#40;Analysis Services Dati multidimensionali&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

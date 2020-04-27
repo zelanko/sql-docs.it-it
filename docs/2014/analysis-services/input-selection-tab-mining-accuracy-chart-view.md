@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080419"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Scheda Selezione input (vista Grafico accuratezza modello di data mining)
   Usare la scheda **Selezione input** della finestra di progettazione **Grafico accuratezza modello di data mining** per specificare l'origine dati usata per eseguire il test del modello e compilare il grafico di accuratezza.  
   
- **Per ulteriori informazioni:** [test e convalida &#40;data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Per altre informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opzioni  
- **Sincronizza****colonne e valori di** stima    
+ **Sincronizza colonne**  **e valori di stima**  
  Selezionare questa opzione per coordinare gli attributi stimabili della griglia in modo che, se il nome è diverso, vengono derivati dalla stessa colonna della struttura di data mining stimabile utilizzata durante il training del modello.  
   
  **Nota** Questa opzione è selezionata per impostazione predefinita. Deselezionare questa casella di controllo solo se si è certi che due colonne della struttura di data mining derivano dalla stessa origine relazionale o multidimensionale sottostante e che contengono gli stessi stati o sono state discretizzate nello stesso modo.  
@@ -45,9 +45,9 @@ ms.locfileid: "66080419"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**USA test case del modello di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining e di applicare il filtro definito sul modello. Per informazioni sui filtri dei modelli, vedere [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
-|**USA test case della struttura di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining.|  
-|**Specificare un set di dati diverso**|Consente di specificare una tabella di una vista origine dati esistente da utilizzare come un set di dati di test.|  
+|**Utilizza test case del modello di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining e di applicare il filtro definito sul modello. Per informazioni sui filtri dei modelli, vedere [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
+|**Utilizza test case della struttura di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining.|  
+|**Specifica un set di dati diverso**|Consente di specificare una tabella di una vista origine dati esistente da utilizzare come un set di dati di test.|  
   
 ## <a name="filtering-options"></a>Opzioni di filtro  
  Se si seleziona l'opzione **Specifica un set di dati diverso**, è possibile definire una vista origine dati e creare filtri da applicare a questi dati. Quando si crea un filtro, sostanzialmente si crea una clausola WHERE nella query che restituisce i dati di test dalla vista origine dati.  
@@ -67,10 +67,10 @@ ms.locfileid: "66080419"
  **Apri editor filtri**  
  Consente di aprire la finestra di dialogo **Filtro dei set di dati** , in cui è possibile selezionare le tabelle esterne e impostare le condizioni sulle colonne delle tabelle del case e la finestra di dialogo **Filtro** in cui è possibile compilare condizioni che si applicano alle singole colonne della tabella selezionata o alle colonne delle tabelle annidate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Applicare un filtro a un modello di data mining](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

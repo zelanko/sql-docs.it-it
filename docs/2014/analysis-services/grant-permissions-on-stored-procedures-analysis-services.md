@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080725"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Concedere le autorizzazioni per le stored procedure (Analysis Services)
@@ -25,8 +25,7 @@ ms.locfileid: "66080725"
 ## <a name="security-context-for-stored-procedure-execution"></a>Contesto di sicurezza per l'esecuzione di stored procedure  
  Una stored procedure può essere chiamata da qualsiasi utente. In base al modo in cui è stata configurata, una stored procedure può essere eseguita nel contesto dell'utente che chiama la procedura o nel contesto di un utente anonimo. Poiché un utente anonimo non dispone di un contesto di sicurezza, utilizzare questa funzionalità quando si configura l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo da concedere l'accesso anonimo.  
   
- Dopo che l'utente chiama una stored procedure ma prima che [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esegui la stored procedure, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valuta le azioni all'interno della stored procedure. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valuta le azioni in una stored procedure in base all'intersezione delle autorizzazioni concesse all'utente e al set di autorizzazioni utilizzato per eseguire la routine. Se la stored procedure contiene un'azione che non può essere eseguita dal ruolo del database a cui appartiene l'utente, l'azione non viene eseguita.  
+ Dopo che l'utente chiama una stored procedure ma prima che [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esegui la stored procedure, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valuta le azioni all'interno della stored procedure. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valuta le azioni in una stored procedure in base all'intersezione delle autorizzazioni concesse all'utente e al set di autorizzazioni utilizzato per eseguire la routine. Se la stored procedure contiene un'azione che non può essere eseguita dal ruolo del database a cui appartiene l'utente, l'azione non viene eseguita.  
   
  Di seguito sono indicati i set di autorizzazioni utilizzati per eseguire le stored procedure:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66080725"
   
 -   **Senza restrizioni** Con il set di autorizzazioni senza restrizioni, un stored procedure può accedere alle risorse esterne usando qualsiasi codice. Con questo set di autorizzazioni non vi sono garanzie di sicurezza o di affidabilità per le stored procedure.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di assembly di modelli multidimensionali](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

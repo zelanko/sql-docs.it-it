@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071815"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurare le dimensioni massime di caricamento dei file (PowerPivot per SharePoint)
@@ -28,11 +28,11 @@ ms.locfileid: "66071815"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Configurare le dimensioni massime del file per Excel Services  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Fare clic sul nome dell'applicazione Excel Services.  
   
-3.  Fare clic su **Posizioni attendibili file**.  
+3.  Fare clic su **Percorsi attendibili file**.  
   
 4.  Fare clic sulla posizione per modificare le proprietà. Per impostazione predefinita, in Excel Services l'applicazione Web predefinita viene considerata sito attendibile. Se si usa l'applicazione Web predefinita, fare clic su **http://** per aprire la pagina di configurazione per questo percorso.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071815"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Configurare le dimensioni massime del file per un'applicazione Web di SharePoint  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
   
     > [!NOTE]  
     >  Effettuare i passaggi seguenti solo se è stato aumentato il valore dell'opzione Dimensioni massime cartella di lavoro in Excel Services.  

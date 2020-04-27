@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077270"
 ---
 # <a name="group-attribute-members-discretization"></a>Raggruppare membri di attributo (discretizzazione)
@@ -34,7 +34,7 @@ ms.locfileid: "66077270"
   
  La proprietà `DiscretizationMethod` di un attributo controlla la modalità di raggruppamento dei membri.  
   
-|`DiscretizationMethod`Impostazione|Descrizione|  
+|Impostazione di `DiscretizationMethod`|Descrizione|  
 |--------------------------------------|-----------------|  
 |`None`|Visualizza i membri.|  
 |`Automatic`|Seleziona il metodo in grado di rappresentare in modo ottimale i dati, ovvero il metodo `EqualAreas` o il metodo `Clusters`.|  
@@ -109,7 +109,7 @@ ms.locfileid: "66077270"
   
 -   Se la tabella di una dimensione contenente gruppi di membri viene aggiornata e la dimensione viene quindi completamente elaborata, verrà generato un nuovo set di gruppi di membri. I nomi e gli elementi figlio dei nuovi gruppi di membri potranno essere diversi da quelli dei gruppi di membri precedenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

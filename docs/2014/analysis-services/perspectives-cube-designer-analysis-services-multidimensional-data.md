@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072018"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>Prospettive (Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66072018"
  **Dettagli della prospettiva**  
  Usare il riquadro dei **dettagli della prospettiva** per creare e modificare prospettive per il cubo selezionato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [prospettive](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070475"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Query (componenti aggiuntivi Data mining di SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "66070475"
 ### <a name="requirements"></a>Requisiti  
  Per utilizzare la procedura guidata **query** , è necessario essere connessi a un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]di. Il server deve inoltre contenere almeno un modello di data mining di tipo appropriato. Se non è disponibile alcun modello di data mining, è possibile crearne uno con le procedure guidate incluse nel client di data mining per Excel. Per informazioni sulla creazione di una nuova modalità di data mining tramite una procedura guidata, vedere [creazione di un modello di data mining](creating-a-data-mining-model.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
  [Client di data mining per Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076040"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Origini dati nei modelli multidimensionali
@@ -58,9 +58,9 @@ ms.locfileid: "66076040"
 |[Creare un'origine dati &#40;SSAS multidimensionale&#41;](create-a-data-source-ssas-multidimensional.md)|Viene illustrato come aggiungere un oggetto origine dati a un modello multidimensionale.|  
 |[Eliminare un'origine dati in Esplora soluzioni &#40;SSAS multidimensionale&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilizzare questa procedura per eliminare un oggetto origine dati da un modello multidimensionale.|  
 |[Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](set-data-source-properties-ssas-multidimensional.md)|Viene descritta ogni proprietà e fornite informazioni su come impostarle.|  
-|[Impostare le opzioni di rappresentazione &#40;SSAS-multidimensionale&#41;](set-impersonation-options-ssas-multidimensional.md)|Viene descritto come configurare le opzioni nella finestra di dialogo Impostazioni di rappresentazione.|  
+|[Impostare opzioni di rappresentazione &#40;SSAS multidimensionale&#41;](set-impersonation-options-ssas-multidimensional.md)|Viene descritto come configurare le opzioni nella finestra di dialogo Impostazioni di rappresentazione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetti di database &#40;Analysis Services-Dati multidimensionali&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Architettura logica &#40;Analysis Services-Dati multidimensionali&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079026"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Aggiunta di attributi alle dimensioni
@@ -64,7 +64,7 @@ ms.locfileid: "66079026"
   
 5.  Trascinare le colonne seguenti dalla tabella **Geography** nel riquadro **Vista origine dati** al riquadro **Attributi** :  
   
-    -   **city**  
+    -   **Città**  
   
     -   **StateProvinceName**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66079026"
   
     -   **PostalCode**  
   
-6.  Scegliere **Salva tutto**dal menu File.  
+6.  Scegliere Salva tutti dal menu **File**.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Aggiunta di attributi alla dimensione Product  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079026"
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **Colore**  
   
     -   **SafetyStockLevel**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079026"
   
     -   **DealerPrice**  
   
-    -   **Classe**  
+    -   **Class**  
   
     -   **Style**  
   
@@ -118,14 +118,14 @@ ms.locfileid: "66079026"
   
     -   **EndDate**  
   
-    -   **Status**  
+    -   **Stato**  
   
-5.  Scegliere **Salva tutto**dal menu File.  
+5.  Scegliere Salva tutti dal menu **File**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esame delle proprietà del cubo e delle dimensioni](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

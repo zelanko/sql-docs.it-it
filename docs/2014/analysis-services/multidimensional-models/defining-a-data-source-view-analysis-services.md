@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075395"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definizione di una vista origine dati (Analysis Services)
@@ -39,13 +39,13 @@ ms.locfileid: "66075395"
   
  [Composizione della vista origine dati](#bkmk_dsvdef)  
   
- [Creare una vista origine dati utilizzando la creazione guidata vista origine dati](#bkmk_startWiz)  
+ [Creare una vista origine dati tramite la Creazione guidata vista origine dati](#bkmk_startWiz)  
   
- [Specificare i criteri di corrispondenza nomi per le relazioni](#bkmk_NameMatch)  
+ [Impostare i criteri di corrispondenza nomi per le relazioni](#bkmk_NameMatch)  
   
  [Aggiungere un'origine dati secondaria](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a>Composizione della vista origine dati  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>Composizione della vista origine dati  
  Una vista origine dati contiene gli elementi seguenti:  
   
 -   Un nome e una descrizione  
@@ -78,7 +78,7 @@ ms.locfileid: "66075395"
   
     -   Relazioni tra chiave esterna e chiave primaria logica tra tabelle, viste e query denominate.  
   
-##  <a name="bkmk_startWiz"></a>Creare una vista origine dati utilizzando la creazione guidata vista origine dati  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>Creare una vista origine dati utilizzando la creazione guidata vista origine dati  
  Per creare una vista origine dati, eseguire la Creazione guidata vista origine dati da Esplora soluzioni in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ ms.locfileid: "66075395"
   
      Per le origini dati di grandi dimensioni contenenti più schemi è possibile selezionare quali schemi utilizzare mediante un elenco delimitato da virgole, senza spazi.  
   
-     **Recuperare relazioni**  
+     **Recupera relazioni**  
   
      È possibile omettere espressamente le informazioni sulla relazione tra tabelle deselezionando la casella di controllo **Recupera relazioni** nella finestra di dialogo Opzioni avanzate vista origine dati, consentendo di creare manualmente relazioni tra tabelle in Progettazione vista origine dati.  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66075395"
   
 5.  Per le origini dati relazionali che non dispongono di relazioni tra tabelle definite, viene visualizzata una pagina **Corrispondenza nomi** che consente di selezionare il metodo di corrispondenza nomi appropriato. Per altre informazioni, vedere la sezione [Impostare i criteri di corrispondenza nomi per le relazioni](#bkmk_NameMatch) di questo argomento.  
   
-##  <a name="bkmk_secondaryDS"></a>Aggiungere un'origine dati secondaria  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>Aggiungere un'origine dati secondaria  
  Quando si definisce una vista origine dati contenente tabelle, viste o colonne di più origini dei dati, la prima origine dei dati da cui vengono aggiunti oggetti alla vista origine dati viene designata come origine dei dati primaria. Dopo che è stata definita, l'origine dei dati primaria non può essere modificata. Dopo aver definito una vista origine dati basata su oggetti di una singola origine dei dati, è successivamente possibile aggiungere oggetti di altre origini dei dati.  
   
  Se per una query di data mining o elaborazione OLAP sono necessari dati di più origini dei dati in una singola query, l'origine dei dati primaria deve supportare query remote tramite `OpenRowset`. Si tratterà in genere di un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se ad esempio si progetta una dimensione OLAP contenente attributi associati a colonne di più origini dei dati, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà costruita una query `OpenRowset` per popolare la dimensione durante l'elaborazione. Non verrà invece costruita una query `OpenRowset` se è possibile popolare un oggetto OLAP o risolvere una query di data mining da una singola origine dei dati. In determinate situazioni, è possibile eliminare l'esigenza di una query `OpenRowset` definendo relazioni tra attributi. Per altre informazioni sulle relazioni tra attributi, vedere [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) e [Definire relazioni tra attributi](attribute-relationships-define.md).  
   
  Per aggiungere tabelle e colonne da un'origine dati secondaria, fare doppio clic sulla vista origine dati in Esplora soluzioni per aprirla in Progettazione vista origine dati, quindi utilizzare la finestra di dialogo Aggiungi/Rimuovi tabelle per includere oggetti di altre origini dati definite nel progetto. Per altre informazioni, vedere [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_NameMatch"></a>Specificare i criteri di corrispondenza nomi per le relazioni  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>Specificare i criteri di corrispondenza nomi per le relazioni  
  Durante la creazione di una vista origine dati, le relazioni tra tabelle vengono definite in base a vincoli di chiave esterna nell'origine dati. Tali relazioni sono necessarie per consentire al motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di costruire le query di data mining e di elaborazione OLAP appropriate. Talvolta, tuttavia, un'origine dei dati con più tabelle non include vincoli di chiave esterna. In tal caso, nella Creazione guidata vista origine dati viene richiesto di definire i criteri di corrispondenza nomi desiderati per colonne di tabelle diverse.  
   
 > [!NOTE]  
@@ -130,7 +130,7 @@ ms.locfileid: "66075395"
 > [!NOTE]  
 >  Al termine della Creazione guidata vista origine dati, è possibile aggiungere o rimuovere le relazioni nel riquadro degli schemi di Progettazione vista origine dati. Per altre informazioni, vedere [Definire relazioni logiche in una vista origine dati &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Definire chiavi primarie logiche in una vista origine dati &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   

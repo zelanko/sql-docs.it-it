@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62df5e05019b8b00fa5297bc3c7c3291a6c0f918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072182"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Finestra di dialogo Nuovo modello di data mining (visualizzazione Struttura di data mining)
@@ -29,7 +29,7 @@ ms.locfileid: "66072182"
  **Nome dell'algoritmo**  
  Consente di selezionare l'algoritmo su cui si desidera basare il nuovo modello di data mining.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Aggiungere un modello di data mining a una struttura di data mining esistente](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   

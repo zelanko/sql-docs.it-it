@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070855"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcolo stime (Strumenti di analisi tabelle per Excel)
@@ -78,7 +78,7 @@ ms.locfileid: "66070855"
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabella per la specifica di costi e profitti  
  Il primo strumento di questo report, che si trova in alto a sinistra nel report, è una tabella in cui è possibile specificare i costi e i profitti associati alla stima corretta e non corretta di un valore.  Questi costi e profitti sono necessari per calcolare il valore di soglia ottimale per il punteggio per lo strumento di calcolo.  
   
-|Elemento|Descrizione ed esempio|  
+|Item|Descrizione ed esempio|  
 |----------|-----------------------------|  
 |Costo falso positivo|Costo da sostenere quando si presuppone che il modello abbia stimato correttamente un risultato positivo mentre in realtà la stima è errata.<br /><br /> Questo avviene, ad esempio, quando tramite il modello viene stimato che un cliente acquisterà un determinato oggetto e, in base a tale stima, si concepisce una campagna destinata a tale cliente. In questo caso è possibile immettere in questo campo il costo sostenuto per raggiungere il cliente.|  
 |Costo falso negativo|Costo da sostenere quando si presuppone che il modello abbia stimato correttamente un risultato negativo mentre in realtà la stima è errata.<br /><br /> Questo avviene, ad esempio, quando tramite il modello viene stimato che è improbabile che i clienti meno giovani acquistino una bicicletta, ma ci si accorge di una distorsione del modello a causa della quale si è persa l'opportunità di rivolgersi ai clienti meno giovani. In questo caso è possibile immettere in questo campo il costo legato all'opportunità persa.|  
@@ -101,8 +101,8 @@ ms.locfileid: "66070855"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
-|Sesso|Femmina|13|  
-|Sesso|Maschio|0|  
+|Sesso|Female|13|  
+|Sesso|Male|0|  
   
  È possibile interpretare questi fattori come indicato di seguito:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070855"
 |Attributo|valore|Impatto relativo|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
-|Sesso|Maschio|0|  
+|Sesso|Male|0|  
 |Income|39050-71062|117|  
 |Children|0|157|  
 |Formazione|Bachelors|22|  
@@ -175,10 +175,9 @@ ms.locfileid: "66070855"
 8.  Convertire il punteggio in un risultato stimato usando i criteri stampati nel foglio immediatamente dopo la riga del **totale** .  
   
 ## <a name="related-tools"></a>Strumenti correlati  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce l'algoritmo Microsoft Logistic Regression per l'utilizzo con questo tipo di analisi. Se si ha già familiarità con la regressione logistica, è possibile creare facilmente modelli di regressione logistica utilizzando l'opzione **Avanzate** del client di data mining per Excel. Per ulteriori informazioni, vedere la pagina relativa alla [modellazione avanzata &#40;componenti aggiuntivi Data mining per&#41;Excel ](advanced-modeling-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sulle opzioni e sui parametri per i modelli di regressione logistica, vedere l'argomento "algoritmo di regressione logistica [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Microsoft" nella documentazione online di.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce l'algoritmo Microsoft Logistic Regression per l'utilizzo con questo tipo di analisi. Se si ha già familiarità con la regressione logistica, è possibile creare facilmente modelli di regressione logistica utilizzando l'opzione **Avanzate** del client di data mining per Excel. Per ulteriori informazioni, vedere la pagina relativa alla [modellazione avanzata &#40;componenti aggiuntivi Data mining per&#41;Excel ](advanced-modeling-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sulle opzioni e sui parametri per i modelli di regressione logistica, vedere l'argomento "algoritmo di regressione logistica [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Microsoft" nella documentazione online di.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070532"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Finestra di dialogo Parametri query (MDX)
@@ -35,10 +35,10 @@ ms.locfileid: "66070532"
  **Più valori**  
  Descrizione  
   
- **Default**  
+ **Predefinito**  
  Indicare il valore predefinito per il parametro, se disponibile. Per impostazione predefinita, non è assegnato alcun valore.  
   
- **Altri**  
+ **Altro**  
  Utilizzare il tasto CANC o il pulsante X per rimuovere i parametri non più utilizzati. Utilizzare i tasti di direzione per spostare il parametro evidenziato sopra o sotto nell'elenco. Le regole seguenti si applicano all'ordinamento dei parametri:  
   
 -   Ambito dei parametri.  

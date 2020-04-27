@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081744"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Struttura dimensione (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -40,10 +40,10 @@ ms.locfileid: "66081744"
  [Gerarchie](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare il riquadro **Gerarchie** per gestire le gerarchie e i livelli relativi alla dimensione.  
   
- [Attributes](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attributi](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare il riquadro **Attributi** per esplorare e gestire attributi per una dimensione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

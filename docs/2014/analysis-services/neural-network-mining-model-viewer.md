@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072323"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rete neurale (Visualizzatore modello di data mining)
   Utilizzare il visualizzatore **Microsoft Neural Network** per esplorare i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Neural Network](data-mining/microsoft-neural-network-algorithm.md), [algoritmo Microsoft Logistic regressione](data-mining/microsoft-logistic-regression-algorithm.md),[visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Neural Network](data-mining/microsoft-neural-network-algorithm.md), [Algoritmo Microsoft Logistic Regression](data-mining/microsoft-logistic-regression-algorithm.md),[Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -51,7 +51,7 @@ ms.locfileid: "66072323"
 |**Valore 1**|Consente di scegliere uno stato dell'attributo stimabile da confrontare con lo stato contenuto in **Valore 2**.<br /><br /> È possibile confrontare uno qualsiasi dei due valori discreti o discretizzati; tuttavia, non è possibile confrontare un valore rispetto al relativo complemento, operazione che invece può essere effettuata in altri visualizzatori.|  
 |**Valore 2**|Consente di scegliere uno stato dell'attributo stimabile da confrontare con lo stato contenuto in **Valore 1**.|  
   
- **Variabili**  
+ **variables**  
  In questa parte della scheda **Rete neurale** è contenuto un grafico a barre interattivo che rappresenta le risposte alle selezioni eseguite per gli attributi di input e del risultato. Poiché una rete neurale consente di calcolare la probabilità di influenza di un particolare valore su un determinato risultato, è possibile scegliere qualsiasi combinazione di input e nel grafico a barre verrà visualizzato il modo in cui tale combinazione influisce sulla coppia di risultati in fase di confronto.  
   
 |valore|Descrizione|  
@@ -61,7 +61,7 @@ ms.locfileid: "66072323"
 |**Predilige \<il valore 1>**|Visualizza una barra che indica il livello di influenza di questa particolare combinazione attributo-valore sul risultato di destinazione scelto in **Valore 1**.|  
 |**Predilige \<il valore 2>**|Visualizza una barra che indica il livello di influenza di questa particolare combinazione attributo-valore sul risultato di destinazione scelto in **Valore 2**.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

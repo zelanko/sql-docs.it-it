@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074420"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Creazione di formule per il calcolo di celle con ambito query (MDX)
@@ -34,13 +34,13 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
 |Set di membri di un livello|Espressione set MDX che restituisce i membri di un singolo livello. Un esempio di tale espressione set è la *Level_Expression*.`Members` . Per includere i membri calcolati, utilizzare il *Level_Expression*.`AllMembers` . Per altre informazioni, vedere [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio di tale espressione `Descendants`set è la funzione MDX (*Member_Expression*, *Level_Expresion* *Desc_Flag*). Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx) (Discendenti &#40;MDX&#41;).|  
+|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio di tale espressione `Descendants`set è la funzione MDX (*Member_Expression*, *Level_Expresion* *Desc_Flag*). Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Se l'argomento `String_Expression` non descrive una dimensione, MDX presupporrà che tutti i membri debbano essere inclusi al fine di costruire il sottocubo per il calcolo. Se l'argomento `String_Expression` è NULL, la definizione delle celle calcolate verrà pertanto applicata all'intero cubo.  
   
  L'argomento `MDX_Expression` contiene un'espressione MDX che restituisce un valore di cella per tutte le celle definite nell'argomento `String_Expression` .  
   
-## <a name="additional-considerations"></a>Considerazione aggiuntive  
+## <a name="additional-considerations"></a>Ulteriori considerazioni  
  In MDX la condizione di calcolo, specificata dalla proprietà `CONDITION`, viene elaborata una volta sola. Questa singola elaborazione consente di migliorare le prestazioni durante la valutazione di più definizioni di celle calcolate, soprattutto nel caso di celle calcolate sovrapposte nelle varie sessioni di calcolo del cubo.  
   
  Il momento in cui viene eseguita questa singola elaborazione dipende dall'ambito di creazione della definizione delle celle calcolate:  
@@ -53,7 +53,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  La formula di calcolo, invece, viene elaborata ogni volta che sul cubo viene eseguita una query MDX che coinvolge celle incluse nella definizione delle celle calcolate, indipendentemente dall'ambito di creazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

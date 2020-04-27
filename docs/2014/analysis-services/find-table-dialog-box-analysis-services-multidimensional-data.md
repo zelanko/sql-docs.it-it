@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081092"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Trova tabella (Analysis Services - Dati multidimensionali)
@@ -41,7 +41,7 @@ ms.locfileid: "66081092"
  **Filter**  
  Consente di specificare il filtro usato per limitare il numero di oggetti elencati e quindi di applicare il filtro alle tabelle elencate in **Selezionare una tabella dalla vista origine dati**facendo clic sul pulsante.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Proprietà assembly &#40;Analysis Services-Dati multidimensionali&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075639"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definire chiavi primarie logiche in una vista origine dati (Analysis Services)
@@ -36,7 +36,7 @@ ms.locfileid: "66075639"
   
 2.  In Esplora soluzioni espandere la cartella **Viste origine dati** e quindi fare doppio clic sulla vista origine dati.  
   
-     Per individuare una tabella o una vista, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati**  o facendo clic con il pulsante destro del mouse su un'area vuota nel riquadro **Tabelle** o **Diagramma** .  
+     Per individuare una tabella o una vista, è possibile utilizzare l'opzione **Trova tabella** facendo clic sul menu **vista origine dati** o facendo clic con il pulsante destro del mouse su un'area aperta dei riquadri **tabelle** o **diagramma** .  
   
 3.  Nel riquadro **Tabelle** o **Diagramma** fare clic con il pulsante destro del mouse sulle colonne da usare per definire una chiave primaria logica, quindi scegliere **Imposta chiave primaria logica**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66075639"
   
      Una volta impostata la chiave, le colonne chiave primaria saranno identificate da un'icona a forma di chiave.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

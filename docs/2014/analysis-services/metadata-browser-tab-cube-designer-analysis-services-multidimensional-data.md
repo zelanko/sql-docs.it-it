@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077850"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadati (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -49,7 +49,7 @@ ms.locfileid: "66077850"
 |**Aggiungi a filtro**|Fare clic per aggiungere la dimensione, l'attributo, la gerarchia o il livello selezionato all'area filtro di **Esplorazione**.<br /><br /> Nota: questa opzione è abilitata solo se è selezionato un attributo, una dimensione, una gerarchia o un livello.|  
 |**Copia**|Fare clic su questo pulsante per aggiungere l'elemento selezionato agli Appunti.<br /><br /> Nota: questa opzione consente di copiare il nome completo dell'oggetto.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Barra degli strumenti &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Analizza in Excel &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Eseguire query e filtrare &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078795"
 ---
 # <a name="modifying-the-date-dimension"></a>Modifica della dimensione Date
@@ -175,7 +175,7 @@ ms.locfileid: "66078795"
   
      Questo script SQL consente di concatenare il semestre e l'anno di calendario per ogni semestre della tabella in una nuova colonna.  
   
-10. Scegliere **OK.**  
+10. Fare clic su **OK**.  
   
 11. Scegliere **Salva tutti** dal menu **File**.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66078795"
   
 3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e sul pulsante sfoglia (**..**).  
   
-4.  Nell'elenco **Colonne disponibili** della finestra di dialogo **Colonne chiave** selezionare la colonna **CalendarYear**e fare clic sul pulsante **>** .  
+4.  Nell'elenco **colonne disponibili** della finestra di dialogo **colonne chiave** selezionare la colonna **CalendarYear**, quindi fare clic sul **>** pulsante.  
   
 5.  Le colonne **EnglishMonthName** e **CalendarYear** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66078795"
   
 2.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e sul pulsante sfoglia (**..**).  
   
-3.  Nell'elenco **Colonne disponibili** della finestra di dialogo **Colonne chiave** selezionare la colonna **CalendarYear**e fare clic sul pulsante **>** .  
+3.  Nell'elenco **colonne disponibili** della finestra di dialogo **colonne chiave** selezionare la colonna **CalendarYear**, quindi fare clic sul **>** pulsante.  
   
      Le colonne **CalendarQuarter** e **CalendarYear** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
@@ -226,7 +226,7 @@ ms.locfileid: "66078795"
   
 2.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e sul pulsante sfoglia (**..**).  
   
-3.  Nell'elenco **colonne disponibili** della finestra di dialogo **colonne chiave** selezionare la colonna **CalendarYear**e quindi fare clic sul **>** pulsante.  
+3.  Nell'elenco **Colonne disponibili** della finestra di dialogo **Colonne chiave** selezionare la colonna **CalendarYear**e fare clic sul pulsante **>** .  
   
      Le colonne **CalendarSemester** e **CalendarYear** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
@@ -299,7 +299,7 @@ ms.locfileid: "66078795"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esplorazione di un cubo distribuito](lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

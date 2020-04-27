@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077457"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
@@ -47,7 +47,7 @@ ms.locfileid: "66077457"
   
     -   Nell'elenco a discesa **Tipo** selezionare il tipo di azione che si desidera creare. Nella tabella seguente sono elencati i tipi di azioni disponibili.  
   
-        |Type|Descrizione|  
+        |Type|Description|  
         |----------|-----------------|  
         |Set di dati|Consente di recuperare un set di dati.|  
         |Proprietario|Consente di eseguire un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -63,7 +63,7 @@ ms.locfileid: "66077457"
   
         |Opzione|Descrizione|  
         |------------|-----------------|  
-        |Interattività|L'azione viene attivata dall'interazione dell'utente.|  
+        |Interactive (Interattivo)|L'azione viene attivata dall'interazione dell'utente.|  
         |Batch|L'azione viene eseguita come operazione batch.|  
         |Su apertura|L'azione viene eseguita in seguito all'apertura del cubo da parte dell'utente.|  
   

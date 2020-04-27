@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071805"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint)
@@ -72,7 +72,7 @@ ms.locfileid: "66071805"
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>Come limitare la durata di un database nella cache  
   
-1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Fare clic su **Applicazione di servizio PowerPivot predefinita** per aprire il dashboard di gestione.  
   
@@ -80,20 +80,20 @@ ms.locfileid: "66071805"
   
 4.  Nella sezione Cache su disco è possibile specificare la durata in memoria di un database inattivo per soddisfare nuove richieste (per impostazione predefinita, 48 ore) e la relativa durata nella cache (per impostazione predefinita, 120 ore).  
   
-     **Mantieni database inattivo in memoria** consente di specificare per quanto tempo un database inattivo rimane in memoria per soddisfare nuove richieste per tali dati. Un database attivo viene mantenuto sempre in memoria purché vengano eseguite query su di esso. Una volta inattivo, tuttavia, viene mantenuto in memoria per un ulteriore periodo di tempo, in caso vi siano ulteriori richieste per tali dati.  
+     L'opzione**Mantieni in memoria database inattivo** consente di specificare la durata in memoria di un database inattivo per soddisfare nuove richieste per tali dati. Un database attivo viene mantenuto sempre in memoria purché vengano eseguite query su di esso. Una volta inattivo, tuttavia, viene mantenuto in memoria per un ulteriore periodo di tempo, in caso vi siano ulteriori richieste per tali dati.  
   
      Poiché i database PowerPivot vengono memorizzati prima nella cache e successivamente caricati in memoria, lo spazio su disco viene utilizzato immediatamente dai file di database. Tuttavia, mentre il database è attivo (e per le 48 ore successive), tutte le richieste vengono indirizzate prima al database in memoria, ignorando il database memorizzato nella cache. Dopo 48 ore di inattività, il file viene scaricato dalla memoria, ma rimane nella cache dove può essere rapidamente ricaricato se viene intercettata una nuova richiesta di connessione per tali dati dall'istanza del server PowerPivot locale. Le richieste di connessione a un database inattivo vengono soddisfatte dalla cache piuttosto che dalla raccolta contenuto, riducendo l'impatto sui database di contenuto.  
   
      È importante notare che la raccolta contenuto è l'unico percorso permanente per i database PowerPivot. Le copie memorizzate nella cache vengono utilizzate solo se il database nella raccolta è lo stesso della copia su disco.  
   
-     **Mantieni database inattivo nella cache** consente di specificare il tempo di permanenza di un database inattivo nel file System dopo che è stato scaricato dalla memoria. Questa impostazione viene utilizzata dal processo di pulizia per determinare i file da eliminare. Tutti i database PowerPivot che sono inattivi per 168 ore (48 ore in memoria e 120 nella cache) vengono eliminati dal disco dal processo di pulizia.  
+     L'opzione**Mantieni nella cache database inattivo** consente di specificare il tempo di permanenza di un database nel file system dopo che è stato scaricato dalla memoria. Questa impostazione viene utilizzata dal processo di pulizia per determinare i file da eliminare. Tutti i database PowerPivot che sono inattivi per 168 ore (48 ore in memoria e 120 nella cache) vengono eliminati dal disco dal processo di pulizia.  
   
 5.  Fare clic su **OK** per salvare le modifiche.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Un'installazione di PowerPivot per SharePoint fornisce regole di integrità in modo che sia possibile eseguire azioni correttive in caso di problemi di integrità, configurazione o disponibilità del server. Alcune di queste regole consentono di utilizzare le impostazioni di configurazione per stabilire le condizioni in base alle quali vengono attivate le regole di integrità. Se si ottimizzano le prestazioni del server, è necessario rivedere queste impostazioni anche per assicurarsi che le impostazioni predefinite rappresentino la scelta migliore per il sistema. Per ulteriori informazioni, vedere [regole di integrità di PowerPivot-Configure](configure-power-pivot-health-rules.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

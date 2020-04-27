@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076743"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modificare le proprietà in una vista origine dati (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66076743"
 |SchemaRestriction|Specifica le eventuali restrizioni relative agli schemi recuperati da un'origine dei dati. Per impostazione predefinita, non esistono restrizioni dello schema.|  
   
 ## <a name="viewing-or-changing-datatable-properties"></a>Visualizzazione o modifica delle proprietà di DataTable  
- Le proprietà **DataTable** sono le proprietà di tabelle, viste e query denominate in una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati. La tabella seguente elenca e descrive le proprietà degli oggetti **DataTable** di una vista origine dati.  
+ Le proprietà di**DataTable** sono le proprietà di tabelle, viste e query denominate di una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati. La tabella seguente elenca e descrive le proprietà degli oggetti **DataTable** di una vista origine dati.  
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "66076743"
 |TableType|Specifica il tipo di tabella per la tabella, la vista o la query denominata. Questa proprietà non è modificabile.|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>Visualizzazione o modifica delle proprietà di DataColumn  
- Le proprietà di **DataColumn** sono le proprietà delle colonne di tabelle, viste e query denominate in una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati, dalla vista o dalla tabella sottostante, da una query denominata o in base alle definizione di un calcolo denominato. La tabella seguente elenca e descrive le proprietà degli oggetti **DataColumn** di una vista origine dati.  
+ Le proprietà di**DataColumn** sono le proprietà delle colonne di tabelle, viste e query denominate di una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati, dalla vista o dalla tabella sottostante, da una query denominata o in base alle definizione di un calcolo denominato. La tabella seguente elenca e descrive le proprietà degli oggetti **DataColumn** di una vista origine dati.  
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "66076743"
 |Length|Specifica la lunghezza massima della colonna, in base ai dati nella colonna della vista o della tabella sottostante.|  
 |Nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

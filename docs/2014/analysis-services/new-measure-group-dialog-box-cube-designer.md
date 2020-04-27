@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072268"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Finestra di dialogo Nuovo gruppo di misure (Progettazione cubi)
@@ -32,7 +32,7 @@ ms.locfileid: "66072268"
  **Selezionare una tabella dalla vista origine dati**  
  Consente di selezionare la tabella dei fatti per il nuovo gruppo di misure. Non è possibile utilizzare le tabelle come tabelle dei fatti per più di una volta nello stesso cubo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Struttura Cube &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

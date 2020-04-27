@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075360"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
@@ -33,7 +33,7 @@ ms.locfileid: "66075360"
     {[/s[:logfile]] | [/a] | [[/o[:output_script_file]] [/d]]}  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  *ASdatabasefile*  
  Percorso completo della cartella in cui si trova il file dello script di distribuzione (con estensione asdatabase) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questo file viene generato quando si distribuisce un progetto in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Si trova nella cartella bin del progetto. Nel file .asdatabase sono contenute le definizioni degli oggetti da distribuire. Se omesso, viene utilizzata la cartella corrente.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66075360"
   
  L'utilità di trova nella cartella \Programmi (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a>Modalità  
+##  <a name="modes"></a><a name="Modes"></a> Modalità  
  L'utilità può essere eseguita nelle modalità riportate nella tabella seguente.  
   
 |Mode|Descrizione|  
@@ -85,7 +85,7 @@ ms.locfileid: "66075360"
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento all'utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

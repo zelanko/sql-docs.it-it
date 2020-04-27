@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081585"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentazione di modelli di data mining (componenti aggiuntivi Data mining per Excel)
@@ -59,7 +59,7 @@ ms.locfileid: "66081585"
 |**Risultati modello**|Association Rules|Numero di set di elementi<br /><br /> Numero di regole|  
 ||Clustering|Numero di cluster<br /><br /> Supporto per ogni cluster|  
 ||Albero delle decisioni|Numero di alberi<br /><br /> Numero di nodi in ogni albero|  
-||Linear regression|Numero di alberi (sempre 1)<br /><br /> Numero di nodi (sempre 1)|  
+||Linear Regression|Numero di alberi (sempre 1)<br /><br /> Numero di nodi (sempre 1)|  
 ||Naive Bayes|Attributi importanti|  
 ||Neural Network|Numero di nodi di input<br /><br /> Numero di nodi di output<br /><br /> Numero di nodi nascosti|  
 ||Sequence Clustering|Numero di cluster|  
@@ -77,7 +77,7 @@ ms.locfileid: "66081585"
 > [!NOTE]  
 >  È possibile documentare qualsiasi tipo di modello supportato da SQL Server Analysis Services. Nella tabella sono pertanto inclusi alcuni tipi di modelli che non è possibile creare tramite Strumenti di analisi tabelle o utilizzando le procedure guidate in Client di data mining. Tuttavia, è possibile creare tutti i tipi di modello utilizzando l' **Editor avanzato query di data mining**. Per ulteriori informazioni, vedere [Query &#40;SQL Server componenti aggiuntivi Data Mining&#41;](query-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

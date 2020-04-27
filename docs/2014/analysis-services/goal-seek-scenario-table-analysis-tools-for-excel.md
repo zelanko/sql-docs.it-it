@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080743"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Ricerca obiettivo (Strumenti di analisi tabelle per Excel)
@@ -101,7 +101,7 @@ ms.locfileid: "66080743"
   
  Per ulteriori informazioni sull'algoritmo utilizzato dallo strumento per lo scenario di **Ricerca obiettivo** , vedere l'argomento "algoritmo di regressione logistica Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] " nella documentazione online di.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

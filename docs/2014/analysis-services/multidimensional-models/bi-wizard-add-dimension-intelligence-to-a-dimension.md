@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076916"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione
@@ -40,7 +40,7 @@ ms.locfileid: "66076916"
   
  Si supponga, ad esempio, di voler aggiungere la funzionalità di Business Intelligence per le dimensioni a una dimensione di tipo Conti. In **Tipo dimensione**selezionare **Conti**. Se la dimensione dispone degli attributi **Account Type** e **Account Description** , nella colonna **Includi** selezionare la casella di controllo per i tipi di conto **Account Name** e **Account Type** . Nella colonna **Attributo dimensione** associare questi tipi di conto rispettivamente agli attributi **Account Description** e **Account Type** nella dimensione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

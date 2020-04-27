@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070751"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Elabora (Analysis Services - Dati multidimensionali)
@@ -39,10 +39,10 @@ ms.locfileid: "66070751"
  **nome oggetto**  
  Consente di visualizzare il nome dell'oggetto da elaborare. L'icona a sinistra del nome indica il tipo di oggetto.  
   
- **Tipo**  
+ **Type**  
  Consente di visualizzare il tipo dell'oggetto da elaborare.  
   
- **Opzioni di elaborazione**  
+ **Opzioni elaborazione**  
  Consente di selezionare il tipo di elaborazione da eseguire sull'oggetto selezionato. Per ulteriori informazioni sulle opzioni di elaborazione disponibili, vedere [elaborazione di oggetti del modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Impostazioni**  
@@ -51,7 +51,7 @@ ms.locfileid: "66070751"
  **Rimuovi**  
  Fare clic su questo pulsante per rimuovere gli elementi selezionati da **Elenco oggetti**.  
   
- **Analisi di effetto**  
+ **Analisi di impatto**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Analisi di impatto** e visualizzare gli oggetti interessati dall'attività di elaborazione. Per altre informazioni sulla finestra di dialogo **Analisi di impatto**, vedere [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
@@ -60,10 +60,10 @@ ms.locfileid: "66070751"
  **Modifica impostazioni**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Cambia impostazioni** e modificare le impostazioni che controllano l'elaborazione degli oggetti selezionati, incluse quelle relative a writeback, elaborazione batch ed errori di chiave della dimensione. Per altre informazioni sulla finestra di dialogo **Cambia impostazioni**, vedere [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Esegui**  
+ **Correre**  
  Fare clic su questo pulsante per elaborare gli oggetti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Finestra di dialogo Stato elaborazione &#40;Analysis Services-Dati multidimensionali&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   

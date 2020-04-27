@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070585"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Grafico profitti (componenti aggiuntivi Data mining di SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "66070585"
   
  Se ad esempio il picco della curva dei profitti corrisponde al 55% della popolazione e la probabilità di stima associata è pari al 20%, per raggiungere i profitti massimi è consigliabile contattare solo i clienti la cui risposta viene stimata con una probabilità del 20% o superiore.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

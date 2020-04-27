@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072854"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Data Sources Supported (SSAS Multidimensional)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati in un modello multidimensionale.  
   
-##  <a name="bkmk_supported_ds"></a>Origini dati supportate  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Origini dati supportate  
  È possibile recuperare dati dalle origini dati riportate nella tabella seguente. Il programma di installazione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non consente di installare i provider elencati per ogni origine dati. Alcuni provider potrebbero già essere installati con altre applicazioni nel computer; negli altri casi sarà necessario scaricare e installare il provider.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ ms.locfileid: "66072854"
   
  <sup>5</sup> per alcune funzionalità è necessario un SQL Server database relazionale in esecuzione in locale. In particolare, per il writeback e l'archiviazione ROLAP viene richiesto che l'origine dati sottostante sia un database relazionale di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Origini dati supportate &#40;SSAS tabulare&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  

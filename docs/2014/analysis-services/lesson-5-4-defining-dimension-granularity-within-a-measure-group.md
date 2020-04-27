@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078463"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definizione della granularità della dimensione in un gruppo di misure
@@ -48,7 +48,7 @@ ms.locfileid: "66078463"
   
 7.  Passare al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sulla scheda **Struttura cubo** .  
   
-8.  Fare clic con il pulsante destro **** del mouse in un punto qualsiasi del riquadro misure `SalesQuotas` , scegliere **nuovo gruppo**di misure, fare clic nella finestra di dialogo **nuovo gruppo** di misure, quindi fare clic su **OK**.  
+8.  Fare clic con il pulsante destro **Measures** del mouse in un punto qualsiasi del riquadro misure `SalesQuotas` , scegliere **nuovo gruppo**di misure, fare clic nella finestra di dialogo **nuovo gruppo** di misure, quindi fare clic su **OK**.  
   
      Il `Sales Quotas` gruppo di misure verrà visualizzato nel riquadro **misure** . Nel riquadro **dimensioni** si noti che viene definita anche `Date` una nuova dimensione del cubo basata sulla dimensione del `Date` database. Viene definita una nuova dimensione temporale del cubo poiché [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non è in grado di stabilire quale delle dimensioni temporali esistenti del cubo correlare alla colonna **DateKey** nella tabella dei fatti **FactSalesQuota** sottostante al gruppo di misure Sales Quotas. Questa modifica verrà eseguita più avanti in un'altra attività di questo argomento.  
   
@@ -60,8 +60,7 @@ ms.locfileid: "66078463"
   
 12. Eliminare la misura **Calendar Quarter** dal gruppo `Sales Quotas` di misure.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ha rilevato che la colonna sottostante la misura Calendar Quarter è una colonna contenente misure. Questa colonna e la colonna CalendarYear, tuttavia, contengono i valori che saranno utilizzati più avanti in questo argomento per collegare il gruppo di misure Sales Quotas alla dimensione Date.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ha rilevato che la colonna sottostante la misura Calendar Quarter è una colonna contenente misure. Questa colonna e la colonna CalendarYear, tuttavia, contengono i valori che saranno utilizzati più avanti in questo argomento per collegare il gruppo di misure Sales Quotas alla dimensione Date.  
   
 13. Nel riquadro **misure** fare clic con il pulsante destro `Sales Quotas` del mouse sul gruppo di misure, quindi scegliere **nuova misura**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66078463"
   
 14. Nella finestra di dialogo **nuova misura** selezionare **Distinct Count** nell'elenco **utilizzo** , verificare che `SalesQuotas` sia selezionato nell'elenco tabella di **origine** , selezionare **EmployeeKey** nell'elenco colonna di **origine** e quindi fare clic su **OK**.  
   
-     Si noti che la misura viene creata in un nuovo gruppo di misure denominato **Sales Quotas 1**. Le misure Distinct Count in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono create nei gruppi di misure per ottimizzare le prestazioni di elaborazione.  
+     Si noti che la misura viene creata in un nuovo gruppo di misure denominato **Sales Quotas 1**. Le misure totale valori distinti in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono create nei gruppi di misure per ottimizzare le prestazioni di elaborazione.  
   
 15. Modificare il valore della proprietà **Name** per la misura **Distinct Count della chiave Employee** in `Sales Person Count`, quindi digitare `#,#` come valore per la proprietà **FormatString** .  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66078463"
   
      ![Gerarchia Sales Territories visualizzata nell'elenco di campi](../../2014/tutorials/media/l5-granularity-1a.png "Gerarchia Sales Territories visualizzata nell'elenco di campi")  
   
-8.  Nel filtro fare clic sulla casella di controllo Seleziona tutto per annullare tutte le selezioni, quindi scegliere solo **North America**.  
+8.  Nel filtro fare clic sulla casella di controllo Seleziona tutto per annullare tutte le selezioni, quindi scegliere solo **America del Nord**.  
   
      ![Riquadro Filtro per la selezione di North America](../../2014/tutorials/media/l5-granularity-1b.png "Riquadro Filtro per la selezione di North America")  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66078463"
   
 3.  In Progettazione cubi per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo Tutorial fare clic sulla scheda **Utilizzo dimensioni** e quindi esaminare l'utilizzo della dimensione nei gruppi `Sales Quotas` di misure e **Sales Quotas 1** .  
   
-     Si noti che **** le dimensioni `Date` del dipendente e del cubo sono collegate ai gruppi di misure **Sales Quotasand Sales Quotas 1** tramite relazioni regolari. Si noti anche che la dimensione del cubo **Sales Territory** non è collegata a nessuno di questi gruppi di misure.  
+     Si noti che **Employee** le dimensioni `Date` del dipendente e del cubo sono collegate ai gruppi di misure **Sales Quotasand Sales Quotas 1** tramite relazioni regolari. Si noti anche che la dimensione del cubo **Sales Territory** non è collegata a nessuno di questi gruppi di misure.  
   
 4.  Fare clic sulla cella nel punto di intersezione tra la dimensione **Sales Territory** e `Sales Quotas` il gruppo di misure, quindi fare clic sul pulsante Sfoglia (**...**). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
@@ -206,7 +205,7 @@ ms.locfileid: "66078463"
   
 4.  Trascinare la misura **Sales Amount Quota** nell'area Valori.  
   
-5.  Trascinare la gerarchia utente **Sales Territories** in Etichette di colonna, quindi applicare il filtro per **North America**.  
+5.  Trascinare la gerarchia utente **Sales Territories** in Etichette di colonna, quindi applicare il filtro per **America del Nord**.  
   
 6.  Trascinare la gerarchia utente **Date.FiscalDate** in Etichette di riga, fare clic sulla freccia giù accanto a **Etichette di riga** nella tabella pivot e deselezionare tutte le caselle di controllo ad eccezione di **FY 2008**per visualizzare solo l'anno fiscale 2008.  
   
@@ -223,7 +222,7 @@ ms.locfileid: "66078463"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 6: Definizione di calcoli](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definire una relazione di normale e le proprietà delle relazioni regolari](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
  [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

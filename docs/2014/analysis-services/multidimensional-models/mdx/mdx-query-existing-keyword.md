@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073971"
 ---
 # <a name="existing-keyword-mdx"></a>Parola chiave EXISTING (MDX)
@@ -76,7 +76,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Conteggio &#40;set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
  [AddCalculatedMembers &#40;&#41;MDX](/sql/mdx/addcalculatedmembers-mdx)   
  [Aggregazione MDX &#40;&#41;](/sql/mdx/aggregate-mdx)   
@@ -84,6 +84,6 @@ WHERE
  [Proprietà &#40;&#41;MDX](/sql/mdx/properties-mdx)   
  [DrilldownLevel &#40;&#41;MDX](/sql/mdx/drilldownlevel-mdx)   
  [Hierarchize &#40;&#41;MDX](/sql/mdx/hierarchize-mdx)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

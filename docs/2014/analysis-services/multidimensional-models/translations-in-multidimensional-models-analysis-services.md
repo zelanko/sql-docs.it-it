@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072736"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traduzioni nei modelli multidimensionali
@@ -76,7 +76,7 @@ ms.locfileid: "66072736"
 ## <a name="deleting-translation-objects"></a>Eliminazione di oggetti Translation  
  È possibile fare clic con il pulsante destro del mouse su un oggetto di questo tipo in Progettazione dimensioni o Progettazione cubi per rimuoverlo definitivamente. Non è possibile ripristinare o riciclare un oggetto eliminato, quindi è opportuno accertarsi di controllare l'elenco degli oggetti interessati prima di continuare.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   

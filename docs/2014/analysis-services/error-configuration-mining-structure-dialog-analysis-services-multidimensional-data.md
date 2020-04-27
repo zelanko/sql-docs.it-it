@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081364"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configurazione errori (finestra di dialogo Struttura di data mining) (Analysis Services - Dati multidimensionali)
@@ -26,28 +26,28 @@ ms.locfileid: "66081364"
  **Usa configurazione errori predefinita**  
  Selezionare questa opzione per utilizzare la configurazione errori predefinita per gli oggetti nell'operazione di elaborazione.  
   
- **Azione errore chiave**  
+ **Azione per errore chiave**  
  Consente di scegliere una delle azioni seguenti da eseguire quando viene rilevata una nuova chiave che non può essere ricercata durante l'elaborazione:  
   
 -   **Converti in sconosciuta** aggrega le informazioni relative al record nel membro sconosciuto.  
   
--   **Scarto record** esclude le informazioni per l'elaborazione del record con l'oggetto.  
+-   **Scarta record** esclude le informazioni relative al record dall'elaborazione dell'oggetto.  
   
  **Ignora conteggio errori**  
  Fare clic su questa opzione per ignorare qualsiasi eventuale errore che si verifichi durante l'elaborazione.  
   
- **Arresta in un errore**  
+ **Arresta in caso di errore**  
  Fare clic su questa opzione per arrestare l'elaborazione in caso di errori. Questa opzione implica l'attivazione delle impostazioni **Numero di errori** e **Azione in caso di errore** .  
   
  **Numero di errori**  
  Consente di immettere il numero di errori che verranno ignorati prima di arrestare l'elaborazione.  
   
- **Azione in errore**  
+ **Azione in caso di errore**  
  Consente di scegliere una delle azioni seguenti da eseguire se il numero di errori supera il valore impostato in **Numero di errori**:  
   
--   **Interrompi elaborazione** termina l'operazione di elaborazione.  
+-   **Arresta elaborazione** termina l'operazione di elaborazione.  
   
--   **Arresta registrazione** arresta la registrazione degli errori, ma continua l'operazione di elaborazione.  
+-   **Arresta registrazione** arresta la registrazione degli errori senza però interrompere l'elaborazione.  
   
  **Chiave non trovata**  
  Specificare una delle azioni seguenti da eseguire quando non viene trovata una chiave durante l'elaborazione di un oggetto:  
@@ -76,7 +76,7 @@ ms.locfileid: "66081364"
   
 -   **Segnala e arresta** segnala l'errore e arresta l'operazione di elaborazione.  
   
- **Chiave null non consentita**  
+ **Chiave Null non consentita**  
  Consente di specificare una delle azioni seguenti da eseguire quando viene trovata una chiave Null non consentita durante l'elaborazione di un oggetto.  
   
 -   **Ignora errore** ignora l'errore  
@@ -88,7 +88,7 @@ ms.locfileid: "66081364"
  **Percorso log degli errori**  
  Consente di digitare il percorso completo e il nome del file di log degli errori.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestra di dialogo Proprietà struttura di data mining &#40;Analysis Services-&#41;di data mining](mining-structure-properties-dialog-analysis-services-data-mining.md)   
  [&#40;finestra di dialogo struttura di data mining generale&#41; &#40;Analysis Services di data mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   

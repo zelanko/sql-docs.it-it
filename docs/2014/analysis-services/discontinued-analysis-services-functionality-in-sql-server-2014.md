@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081680"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Funzionalità di Analysis Services non più utilizzate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non più disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Funzionalità non più disponibili in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Funzionalità non più disponibili in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
 |Category|Funzionalità deprecata|Sostituzione|  
 |--------------|------------------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "66081680"
   
  Anche la libreria DSO (Decision Support Objects), che forniva compatibilità con i database di SQL Server 2000 Analysis Services non è più disponibile e non fa più parte di SQL Server.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076112"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubi nei modelli multidimensionali
@@ -34,21 +34,21 @@ ms.locfileid: "66076112"
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |Dimensioni|[Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)|  
-|Misure e gruppi di misure|[Creazione di misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|Misure e gruppi di misure|[Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partizioni|[Partizioni nei modelli multidimensionali](partitions-in-multidimensional-models.md)|  
 |prospettive|[Prospettive nei modelli multidimensionali](perspectives-in-multidimensional-models.md)|  
-|Gerarchie|[Creazione di gerarchie definite dall'utente](user-defined-hierarchies-create.md)|  
+|Gerarchie|[Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)|  
 |Azioni|[Azioni nei modelli multidimensionali](actions-in-multidimensional-models.md)|  
-|Indicatori KPI|[Indicatori di prestazioni chiave &#40;&#41; KPI nei modelli multidimensionali](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Indicatori KPI|[Indicatori KPI nei modelli multidimensionali](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calcoli|[Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md)|  
 |Traduzioni|[Traduzioni nei modelli multidimensionali](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare un cubo mediante la Creazione guidata cubo](create-a-cube-using-the-cube-wizard.md)|Viene illustrato come utilizzare la Creazione guidata cubo per definire un cubo, le dimensioni, gli attributi delle dimensioni e le gerarchie definite dall'utente.|  
-|[Creazione di misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|Descrive come definire i gruppi di misure.|  
+|[Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|Descrive come definire i gruppi di misure.|  
 |[Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md)|Descrive come definire e configurare un calcolo in uno script MDX.|  
 |[Azioni nei modelli multidimensionali](actions-in-multidimensional-models.md)|Descrive come definire e configurare un'azione.|  
 |[Prospettive nei modelli multidimensionali](perspectives-in-multidimensional-models.md)|Descrive come definire e configurare una prospettiva.|  

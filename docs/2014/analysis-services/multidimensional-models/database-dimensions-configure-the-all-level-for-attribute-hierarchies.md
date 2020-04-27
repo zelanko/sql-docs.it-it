@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95e1693333bbc228e16d01646283d41138d0aaf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076000"
 ---
 # <a name="configure-the-all-level-for-attribute-hierarchies"></a>Configurare il livello (Totale) per le gerarchie di attributi
@@ -37,7 +37,7 @@ ms.locfileid: "66076000"
 ## <a name="all-member-and-all-level"></a>Membro Totale e livello (Totale)  
  Il singolo membro del livello (Totale) è denominato membro Totale. La `AttributeAllMemberName`proprietà di una dimensione specifica il nome del membro totale per gli attributi in una dimensione. La proprietà `AllMemberName` di una gerarchia specifica il nome del membro Totale per la gerarchia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Definire un membro predefinito](attribute-properties-define-a-default-member.md)  
   
   

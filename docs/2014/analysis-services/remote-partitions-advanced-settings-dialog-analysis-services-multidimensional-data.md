@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070377"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Partizioni remote – Impostazioni avanzate (Analysis Services - Dati multidimensionali)
@@ -32,7 +32,7 @@ ms.locfileid: "66070377"
 |**Modifica**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Proprietà di Data Link** e modificare le proprietà contenute nella stringa di connessione.|  
 |**Elenco partizioni**|Selezionare questa opzione per specificare percorsi diversi in cui ripristinare le partizioni remote. Si noti che è possibile modificare solo la cartella di ripristino di una partizione remota nel caso in cui sia stato specificato un percorso diverso dal percorso predefinito per tale partizione remota nel cubo. Quando si seleziona questa opzione, viene attivata la griglia seguente che consente di specificare una cartella di ripristino per ogni partizione remota:<br /><br /> **Cube**: Visualizza il nome del cubo contenente la partizione remota.<br /><br /> **MeasureGroup**: Visualizza il nome del gruppo di misure che contiene la partizione remota.<br /><br /> **Partition**: Visualizza il nome della partizione remota.<br /><br /> **Dimensioni (MB)**: Visualizza le dimensioni, in megabyte, della partizione remota.<br /><br /> **Cartella originale**: Visualizza il nome della cartella originale in cui è stata archiviata la partizione remota.<br /><br /> **Cartella di ripristino**: digitare il nome della cartella di ripristino per la partizione remota oppure fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare il percorso della cartella da utilizzare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Partizioni &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

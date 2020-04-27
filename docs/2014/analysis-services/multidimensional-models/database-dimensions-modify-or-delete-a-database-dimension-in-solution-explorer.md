@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075891"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>Modificare o eliminare una dimensione di database in Esplora soluzioni
@@ -38,7 +38,7 @@ ms.locfileid: "66075891"
   
 -   In Esplora soluzioni fare clic con il pulsante destro del mouse sulla dimensione da eliminare, quindi scegliere **Elimina**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)  
   
   

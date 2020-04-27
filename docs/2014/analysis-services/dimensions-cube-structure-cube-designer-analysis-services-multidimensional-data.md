@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081703"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensioni (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -28,7 +28,7 @@ ms.locfileid: "66081703"
   
  Espandere una dimensione del cubo e **selezionare \<modifica dimensione>** per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Attributes**  
+ **Attributi**  
  Fare clic su questo pulsante per visualizzare le dimensioni del cubo disponibili e gli attributi del cubo associati.  
   
  Espandere una dimensione del cubo e **selezionare \<modifica dimensione>** per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
@@ -45,11 +45,11 @@ ms.locfileid: "66081703"
  **Modifica dimensione**  
  Fare clic su questo pulsante per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Rinominare**  
+ **Rinomina**  
  Fare clic su questo pulsante per rinominare la dimensione del cubo selezionata per il cubo.  
   
 > [!NOTE]  
->  La ridenominazione di una dimensione del cubo nel riquadro **dimensioni** non comporta la ridenominazione della dimensione del database sulla quale è basata la dimensione del cubo.  
+>  Rinominando una dimensione del cubo nel riquadro **Dimensioni** non si rinomina la dimensione del database sulla quale è basata la dimensione del cubo.  
   
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è selezionata una dimensione.  
@@ -58,7 +58,7 @@ ms.locfileid: "66081703"
  Fare clic su questo pulsante per eliminare la dimensione del cubo selezionata dal cubo.  
   
 > [!NOTE]  
->  La rimozione di una dimensione del cubo dal riquadro **dimensioni** non comporta l'eliminazione della dimensione del database sulla quale è basata la dimensione del cubo.  
+>  Rimuovendo una dimensione del cubo dal riquadro **Dimensioni** non si elimina la dimensione del database sulla quale è basata la dimensione del cubo.  
   
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è selezionata una dimensione.  
@@ -84,7 +84,7 @@ ms.locfileid: "66081703"
  **Proprietà**  
  Fare clic su questo pulsante per visualizzare la finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per la dimensione, la gerarchia o l'attributo del cubo selezionato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Misure &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   

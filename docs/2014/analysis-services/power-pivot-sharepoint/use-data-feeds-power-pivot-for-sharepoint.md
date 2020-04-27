@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070913"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utilizzare feed di dati (PowerPivot per SharePoint)
@@ -30,18 +30,18 @@ ms.locfileid: "66070913"
   
  [Creare un feed di dati da un elenco SharePoint](#sharepointlist)  
   
- [Creare un feed di dati da un report Reporting Services](#rsreport)  
+ [Creare un feed di dati da un report di Reporting Services](#rsreport)  
   
  [Creare un feed di dati da un documento di servizio dati](#dsdoc)  
   
-##  <a name="prereq"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
  È necessario disporre di PowerPivot per Excel per importare un feed di dati in Excel 2010.  
   
  È necessario disporre di un servizio Web o di un servizio dati che consenta di fornire dati tabulari XML in formato Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] E SharePoint 2010 possono fornire dati in questo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] formato.  
   
  Prima di poter esportare un elenco SharePoint come un feed di dati, è necessario installare ADO.NET Data Services nel server SharePoint. Per altre informazioni, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="sharepointlist"></a>Creare un feed di dati da un elenco SharePoint  
+##  <a name="create-a-data-feed-from-a-sharepoint-list"></a><a name="sharepointlist"></a>Creare un feed di dati da un elenco SharePoint  
  In una farm di SharePoint 2010 un elenco SharePoint dispone di un pulsante Esporta come feed di dati nella barra multifunzione dell'elenco. È possibile fare clic su questo pulsante per esportare l'elenco come feed. Per migliori risultati, è necessario che nella workstation sia disponibile Excel 2010 con l'applicazione client PowerPivot. L'applicazione client PowerPivot verrà avviata in risposta all'esportazione dei feed di dati, creando una nuova tabella di PowerPivot contenente l'elenco.  
   
 1.  Aprire l'elenco nel sito di SharePoint.  
@@ -59,7 +59,7 @@ ms.locfileid: "66070913"
   
  Si verificherà un errore se ADO.NET Data Services 3.5.1 non è installato nel server SharePoint. Per altre informazioni sull'errore e su come risolverlo, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="rsreport"></a>Creare un feed di dati da un report Reporting Services  
+##  <a name="create-a-data-feed-from-a-reporting-services-report"></a><a name="rsreport"></a>Creare un feed di dati da un report Reporting Services  
  Se si dispone di una distribuzione di SQL Server 2008 R2 Reporting Services, è possibile utilizzare la nuova estensione per il rendering Atom per generare un feed di dati da un report esistente. Per risultati ottimali, è necessario che nella workstation sia disponibile Excel 2010 con PowerPivot per Excel. L'applicazione client PowerPivot verrà avviata in risposta all'esportazione dei feed di dati, aggiungendo e facendo riferimento automaticamente alle tabelle e alle colonne come sono state trasmesse.  
   
  Per istruzioni su come esportare un feed di dati da un report, vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) nel [file della Guida di Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494).  
@@ -67,7 +67,7 @@ ms.locfileid: "66070913"
 > [!NOTE]  
 >  Per impostare una pianificazione di aggiornamento dati ricorrente che consenta di importare nuovamente i dati del report in una cartella di lavoro di PowerPivot pubblicata in una raccolta di SharePoint, è necessario configurare il server di report per l'integrazione con SharePoint. Per ulteriori informazioni sull'utilizzo di PowerPivot per SharePoint e Reporting Services insieme, vedere [configurazione e amministrazione di un server di Report &#40;Reporting Services modalità SharePoint&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
-##  <a name="dsdoc"></a>Creare un feed di dati da un documento di servizio dati  
+##  <a name="create-a-data-feed-from-a-data-service-document"></a><a name="dsdoc"></a>Creare un feed di dati da un documento di servizio dati  
  Se si dispone di un servizio dati personalizzato che consente di generare feed Atom, è possibile configurare un documento di servizio dati come metodo per rendere i dati disponibili a utenti e applicazioni. Un file *documento di servizio dati* (con estensione atomsvc) consente di specificare una o più connessioni a origini online tramite cui vengono pubblicati dati nel formato wire Atom. È possibile creare documenti di servizio dati in una *libreria feed di dati*, che rappresenta una libreria per scopi specifici che fornisce un punto di accesso comune per esplorare documenti di servizio dati pubblicati in un server di SharePoint. Gli information Worker che dispongono dell'autorizzazione per accedere ai documenti di servizio dati nella libreria feed di dati possono fare riferimento all'URL di SharePoint del documento per importare i feed di dati nelle cartelle di lavoro e nelle applicazioni in uso.  
   
 1.  Aprire una libreria di feed di dati creata dall'amministratore del sito. Per ulteriori informazioni, vedere [creare o personalizzare una libreria di feed di dati &#40;PowerPivot per SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
@@ -80,15 +80,15 @@ ms.locfileid: "66070913"
   
 5.  Specificare uno o più URL che forniscono il feed:  
   
-    1.  L' **URL di base** è facoltativo. È necessario specificare questo valore se un documento di servizio dati fornisce più feed. L'URL di base specifica la parte di URL comune a tutti i feed, ad esempio il nome del server e il sito. Se si crea un documento di servizio dati in un report di Reporting Services, l'URL di base sarà costituito dall'URL e dal report del server di report.  
+    1.  **URL di base** è facoltativo. È necessario specificare questo valore se un documento di servizio dati fornisce più feed. L'URL di base specifica la parte di URL comune a tutti i feed, ad esempio il nome del server e il sito. Se si crea un documento di servizio dati in un report di Reporting Services, l'URL di base sarà costituito dall'URL e dal report del server di report.  
   
-    2.  L' **URL del servizio Web** è obbligatorio. Se l'URL di base questo valore deve includere http:// o https:// nell'indirizzo. Se è stato specificato un URL di base, l'URL servizio Web è costituito dalla parte che segue l'URL di base. Ad esempio, se l'URL completo è http://adventure-works/inventory/today.aspx, l'URL di base sarà http://adventure-works/inventorye l'URL del servizio Web sarà/Today.aspx  
+    2.  **URL servizio Web** è obbligatorio. Se l'URL di base questo valore deve includere http:// o https:// nell'indirizzo. Se è stato specificato un URL di base, l'URL servizio Web è costituito dalla parte che segue l'URL di base. Ad esempio, se l'URL completo è http://adventure-works/inventory/today.aspx, l'URL di base sarà http://adventure-works/inventorye l'URL del servizio Web sarà/Today.aspx  
   
          L'URL servizio Web può includere parametri che filtrano o selezionano un subset di dati. L'applicazione o il servizio che fornisce il feed deve supportare i parametri specificati nell'URL.  
   
 6.  Immettere un valore in **Nome tabella**, una tabella per ogni feed. Questo valore è obbligatorio. Il nome della tabella viene utilizzato da un'applicazione client che utilizza il feed di dati. In PowerPivot per Excel, il nome della tabella viene utilizzato per denominare le tabelle nella finestra di PowerPivot che conterrà i dati importati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attivare l'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [Condividere feed di dati usando una libreria di feed di dati &#40;PowerPivot per SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

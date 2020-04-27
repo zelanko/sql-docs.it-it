@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078894"
 ---
 # <a name="modifying-measures"></a>Modifica delle misure
@@ -36,17 +36,17 @@ ms.locfileid: "66078894"
   
 5.  Selezionare le misure seguenti. Per selezionare più misure, fare clic su ognuna di esse tenendo premuto CTRL:  
   
-    -   **Prezzo unitario**  
+    -   **Unit Price**  
   
-    -   **Importo esteso**  
+    -   **Extended Amount**  
   
-    -   **Importo dello sconto**  
+    -   **Discount Amount**  
   
-    -   **Costo standard prodotto**  
+    -   **Product Standard Cost**  
   
-    -   **Costo totale prodotto**  
+    -   **Total Product Cost**  
   
-    -   **Importo vendite**  
+    -   **Sales Amount**  
   
     -   **Tax Amt**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66078894"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica della dimensione Customer](lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Definire le dimensioni del database](multidimensional-models/define-database-dimensions.md)   
  [Configurare le proprietà delle misure](multidimensional-models/configure-measure-properties.md)  
   

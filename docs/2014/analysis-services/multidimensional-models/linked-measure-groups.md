@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074774"
 ---
 # <a name="linked-measure-groups"></a>Gruppi di misure collegati
@@ -70,7 +70,7 @@ ms.locfileid: "66074774"
   
  Per definire o usare un gruppo di misure collegato, è necessario che l'account di servizio di Windows per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appartenga a un ruolo di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con diritti di accesso `ReadDefinition` e `Read` nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine per il cubo e il gruppo di misure di origine oppure che appartenga al ruolo Administrators di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Definizione delle dimensioni collegate](define-linked-dimensions.md)  
   
   

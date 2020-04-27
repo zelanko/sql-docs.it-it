@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073167"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
   Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisiti relativi a memoria e processore  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è necessaria una quantità maggiore di risorse di memoria e processore nei casi seguenti:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è necessaria una quantità maggiore di risorse di memoria e processore nei casi seguenti:  
   
 -   In caso di elaborazione di cubi di grandi dimensioni o complessi. Questi cubi richiedono maggiori risorse di memoria e processore rispetto ai cubi di piccole dimensioni o semplici.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66073167"
  Cubi  
  I cubi che includono tabelle dei fatti di grandi dimensioni richiedono una quantità maggiore di spazio su disco rispetto a quelli contenenti tabelle dei fatti di piccole dimensioni. Analogamente, sebbene in proporzioni minori, i cubi che includono un numero elevato di dimensioni grandi richiedono una maggiore quantità di spazio su disco rispetto ai cubi che contengono un numero minore di membri della dimensione. In genere, un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] richiede approssimativamente il 20% dello spazio su disco necessario per gli stessi dati archiviati nel database relazionale sottostante.  
   
- Aggregazioni  
+ Aggregations  
  Le aggregazioni richiedono spazio aggiuntivo proporzionale alle aggregazioni aggiunte: maggiore è il numero di aggregazioni, maggiore sarà lo spazio necessario. Se si evita la creazione di aggregazioni non necessarie, lo spazio su disco aggiuntivo necessario per le aggregazioni non supera in genere il 10% circa della dimensione dei dati archiviati nel database relazionale sottostante.  
   
  Data Mining  
@@ -70,7 +69,7 @@ ms.locfileid: "66073167"
  Elaborazione di oggetti  
  Durante l'elaborazione, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] archivia le copie degli oggetti in fase di elaborazione nella transazione di elaborazione sul disco fino al termine del processo. Al termine dell'elaborazione, le copie elaborate degli oggetti sostituiscono gli oggetti originali. È pertanto necessario verificare che vi sia spazio su disco aggiuntivo sufficiente per una seconda copia di ogni oggetto da elaborare. Se, ad esempio, si desidera elaborare un intero cubo in un'unica transazione, è necessario disporre di spazio su disco sufficiente per l'archiviazione di una seconda copia dell'intero cubo.  
   
-##  <a name="BKMK_Availability"></a>Considerazioni sulla disponibilità  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>Considerazioni sulla disponibilità  
  In un ambiente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un cubo o un modello di data mining potrebbe non essere disponibile per l'esecuzione di query a causa di un problema hardware o software. Un cubo potrebbe inoltre non essere disponibile in quanto necessita di essere elaborato.  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Metodi per garantire la disponibilità in caso di problemi hardware o software  
@@ -87,7 +86,7 @@ ms.locfileid: "66073167"
   
  Per elaborare in modo trasparente gli aggiornamenti incrementali ai dati di origine, abilitare il caching attivo. Tramite il caching attivo i cubi vengono aggiornati con i nuovi dati di origine senza che sia necessaria l'elaborazione manuale e senza influire sulla disponibilità dei cubi. Per altre informazioni, vedere [Memorizzazione nella cache attiva &#40;partizioni&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-##  <a name="BKMK_Scalability"></a>Considerazioni sulla scalabilità  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Considerazioni sulla scalabilità  
  Più istanze di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nello stesso computer possono causare problemi di prestazioni. Per risolvere questi problemi, un'opzione consiste nell'aumentare le risorse di memoria, processore e disco nel server. Potrebbe inoltre essere necessario distribuire le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in più computer.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Distribuzione di Analysis Services in più computer  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077775"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Finestra di progettazione Grafico accuratezza modello di data mining (Data mining)
@@ -36,7 +36,7 @@ ms.locfileid: "66077775"
   
      Consente di visualizzare la matrice di classificazione per i modelli selezionati nella scheda `Input Selection`.  
   
--   [Scheda convalida incrociata &#40;vista Grafico accuratezza modello di data mining&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Scheda Convalida incrociata &#40;vista Grafico accuratezza modello di data mining&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Consente di impostare le opzioni e generare i risultati della convalida incrociata per la struttura di data mining selezionata.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "66077775"
   
 -   [Finestra di dialogo Filtro dei set di dati o Filtro modello](data-set-filter-or-model-filter-dialog-box.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Visualizzazione modelli di data mining &#40;Progettazione modelli di data mining&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
+ [Generatore delle query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

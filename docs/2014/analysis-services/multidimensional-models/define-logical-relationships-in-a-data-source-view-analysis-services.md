@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075615"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definire relazioni logiche in una vista origine dati (Analysis Services)
@@ -43,11 +43,11 @@ ms.locfileid: "66075615"
   
  [Per aggiungere una relazione tra tabelle, query denominate o viste](#bkmk_addRel)  
   
- [Per visualizzare o modificare una relazione nel riquadro diagramma](#bkmk_diagrampane)  
+ [Per visualizzare o modificare una relazione nel riquadro Diagramma](#bkmk_diagrampane)  
   
- [Per visualizzare o modificare una relazione nel riquadro tabelle](#bkmk_tablespane)  
+ [Per visualizzare o modificare una relazione nel riquadro Tabelle](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a>Per aggiungere una relazione tra tabelle, query denominate o viste  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>Per aggiungere una relazione tra tabelle, query denominate o viste  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto o connettersi al database contenente la vista origine dati in cui si vuole aggiungere una relazione logica.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075615"
   
     4.  Facoltativamente, digitare una descrizione per la relazione nella casella **Descrizione** .  
   
-##  <a name="bkmk_diagrampane"></a>Per visualizzare o modificare una relazione nel riquadro diagramma  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a>Per visualizzare o modificare una relazione nel riquadro diagramma  
   
 -   Nel riquadro **Diagramma** di **Progettazione vista origine dati**fare clic con il pulsante destro del mouse sulla relazione da visualizzare e scegliere **Modifica relazione** oppure fare semplicemente doppio clic sulla freccia della relazione.  Usare la finestra di dialogo **Modifica relazione** per modificare la relazione.  
   
-##  <a name="bkmk_tablespane"></a>Per visualizzare o modificare una relazione nel riquadro tabelle  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a>Per visualizzare o modificare una relazione nel riquadro tabelle  
   
 1.  Nel riquadro **Tabelle** di **Progettazione vista origine dati**individuare e quindi espandere la tabella, la vista o la query denominata contenente la relazione da visualizzare o modificare.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66075615"
   
 3.  Fare clic con il pulsante destro del mouse sulla relazione da modificare e quindi scegliere **Modifica relazione**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   
   

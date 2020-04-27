@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074154"
 ---
 # <a name="using-member-properties-mdx"></a>Utilizzo delle proprietà dei membri (MDX)
@@ -73,7 +73,7 @@ SELECT [<axis_specification>
   
 -   Le proprietà dei membri definite dall'utente devono essere precedute dal nome del livello in cui si trovano. Per ulteriori informazioni sull'utilizzo della parola chiave `PROPERTIES` con le proprietà dei membri definite dall'utente, vedere [proprietà dei membri definite dall'utente &#40;&#41;MDX ](mdx-member-properties-user-defined-member-properties.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

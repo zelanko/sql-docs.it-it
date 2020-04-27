@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079089"
 ---
 # <a name="defining-a-dimension"></a>Definizione di una dimensione
@@ -39,33 +39,33 @@ ms.locfileid: "66079089"
   
 7.  Nella pagina **Selezione attributi dimensione** selezionare le caselle di controllo accanto agli attributi seguenti:  
   
-    -   **Chiave Data**  
+    -   **Date Key**  
   
-    -   **Chiave alternativa data completa**  
+    -   **Full Date Alternate Key**  
   
-    -   **Nome del mese Italiano**  
+    -   **English Month Name**  
   
-    -   **Trimestre di calendario**  
+    -   **Calendar Quarter**  
   
-    -   **Anno di calendario**  
+    -   **Calendar Year**  
   
-    -   **Semestre di calendario**  
+    -   **Calendar Semester**  
   
 8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Quindi, fare clic su **date** > **Calendar** > **date**. Fare clic su **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
   
-    -   **English Month Name** in **Month**  
+    -   **English Month Name** in **Mese**  
   
-    -   Dal trimestre al **trimestre** del **Calendario**  
+    -   **Calendar Quarter** in **Trimestre**  
   
-    -   **Anno di calendario** in **anno**  
+    -   **Calendar Year** in **Anno**  
   
-    -   Da **semestre di calendario** a **semestre**  
+    -   **Calendar Semester** in **Semestre**  
   
 9. Fare clic su **Avanti**.  
   
 10. Nel riquadro Anteprima della pagina **Completamento procedura guidata** è possibile visualizzare la dimensione **Date** e i relativi attributi.  
   
-11. Fare clic su **Finish** per completare la procedura guidata.  
+11. Fare clic su **Fine** per completare la procedura guidata.  
   
      In Esplora soluzioni nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial la dimensione Date viene visualizzata nella cartella **Dimensioni** . Al centro dell'ambiente di sviluppo, in Progettazione dimensioni viene visualizzata la dimensione Date.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66079089"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Definizione di un cubo](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Creare una dimensione utilizzando una tabella esistente](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [Creare una dimensione utilizzando la Creazione guidata dimensione](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

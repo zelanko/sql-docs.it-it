@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081163"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Filtra membri (Analysis Services - Dati multidimensionali)
@@ -28,11 +28,11 @@ ms.locfileid: "66081163"
   
 |Termine|Definizione|  
 |----------|----------------|  
-|**Espressione di filtro**|Consente di visualizzare una griglia di proprietà, operatori e valori utilizzati per creare un'espressione di filtro. Si noti che non è possibile rimuovere una riga dopo averla aggiunta. Per specificare una nuova espressione di filtro è necessario chiudere e riaprire la finestra di dialogo. La griglia include le colonne seguenti:<br /><br /> **Proprietà**: selezionare la proprietà del membro da utilizzare per l'espressione di filtro.<br /><br /> **Operatore**: selezionare l'operatore da utilizzare per l'espressione di filtro.<br /><br /> **Valore**: digitare il valore della proprietà selezionata in **Proprietà** da valutare utilizzando l'operatore specificato in **operatore**.|  
-|**Riquadro test**|Quando si fa clic sul pulsante **Test** questo riquadro visualizza i membri restituiti dall'espressione di filtro. Se non viene restituito alcun membro usando i criteri specificati in **Espressione filtro**verrà visualizzato un avviso.|  
+|**Espressione filtro**|Consente di visualizzare una griglia di proprietà, operatori e valori utilizzati per creare un'espressione di filtro. Si noti che non è possibile rimuovere una riga dopo averla aggiunta. Per specificare una nuova espressione di filtro è necessario chiudere e riaprire la finestra di dialogo. La griglia include le colonne seguenti:<br /><br /> **Proprietà**: selezionare la proprietà del membro da utilizzare per l'espressione di filtro.<br /><br /> **Operatore**: selezionare l'operatore da utilizzare per l'espressione di filtro.<br /><br /> **Valore**: digitare il valore della proprietà selezionata in **Proprietà** da valutare utilizzando l'operatore specificato in **operatore**.|  
+|**Riquadro Test**|Quando si fa clic sul pulsante **Test** questo riquadro visualizza i membri restituiti dall'espressione di filtro. Se non viene restituito alcun membro usando i criteri specificati in **Espressione filtro**verrà visualizzato un avviso.|  
 |**Test**|Fare clic su questo pulsante per eseguire un test dei criteri specificati in **Espressione filtro**.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

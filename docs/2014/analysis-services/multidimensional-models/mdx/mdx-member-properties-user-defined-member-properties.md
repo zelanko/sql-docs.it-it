@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074257"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Proprietà dei membri definite dall'utente (MDX)
@@ -66,8 +66,8 @@ FROM [Adventure Works]
   
  Per altre informazioni sulla compilazione di membri calcolati, vedere [Compilazione di membri calcolati in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo delle proprietà del membro &#40;&#41;MDX](mdx-member-properties.md)   
- [Proprietà &#40;&#41;MDX](/sql/mdx/properties-mdx)  
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075942"
 ---
 # <a name="create-a-date-type-dimension"></a>Creare una dimensioni di tipo Date
@@ -40,8 +40,7 @@ ms.locfileid: "66075942"
  Dimensione temporale del server  
  Se non si dispone di una tabella della dimensione a cui associare gli attributi relativi al tempo, è possibile fare in modo che tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] venga definita una dimensione temporale del server basata sui periodi di tempo. Per definire gerarchie, livelli e membri rappresentati dalla dimensione temporale del server, si selezionano i periodi di tempo standard al momento della creazione della dimensione.  
   
- Gli attributi in una dimensione temporale del server presentano un'associazione tempo-attributo speciale. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa i tipi di attributo correlati alle date, ad esempio Year, Month o Day,per definire i membri degli attributi in una dimensione temporale.  
+ Gli attributi in una dimensione temporale del server presentano un'associazione tempo-attributo speciale. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa i tipi di attributo correlati alle date, ad esempio Year, Month o Day,per definire i membri degli attributi in una dimensione temporale.  
   
  Dopo avere incluso la dimensione temporale del server in un cubo, è possibile impostare la relazione tra il gruppo di misure e la dimensione temporale del server specificandola nella pagina **Definizione utilizzo delle dimensioni** della Creazione guidata cubo.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075942"
   
  È possibile creare manualmente questi diversi calendari in Progettazione dimensioni. La Creazione guidata dimensione offre tuttavia diversi modelli di gerarchia che è possibile utilizzare per generare automaticamente diversi tipi di calendari quando si crea una dimensione temporale o una dimensione temporale del server. Nella tabella seguente vengono illustrati i diversi calendari che è possibile generare tramite la Creazione guidata dimensione.  
   
-|Calendario|Descrizione|  
+|Calendar|Descrizione|  
 |--------------|-----------------|  
 |Calendario standard|Calendario gregoriano di dodici mesi con inizio l'1 gennaio e fine il 31 dicembre.<br /><br /> Indipendentemente dal fatto che si utilizzi la Creazione guidata dimensione per creare una dimensione temporale o una dimensione temporale del server, tramite la procedura guidata viene generata una gerarchia per un calendario standard dopo che sono stati definiti gli attributi che rappresentano i periodi di tempo per la dimensione. Se si usa la Creazione guidata dimensione per creare una dimensione temporale del server, è possibile modificare la data di inizio del calendario standard impostandola su un giorno diverso rispetto all'1 gennaio.|  
 |Calendario fiscale|Calendario fiscale di dodici mesi. Quando si seleziona questo calendario, è necessario specificare il giorno e il mese di inizio dell'anno fiscale in uso nell'organizzazione.<br /><br /> Nota: questo calendario è disponibile solo se si usa la Creazione guidata dimensione per creare una dimensione temporale del server.|  
@@ -68,7 +67,7 @@ ms.locfileid: "66075942"
 > [!NOTE]  
 >  Non è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per aggiungere funzionalità di Business Intelligence per le gerarchie temporali alle dimensioni temporali del server. Tramite la Configurazione guidata funzionalità di Business Intelligence viene aggiunta una gerarchia per supportare le funzionalità di Business Intelligence per le gerarchie temporali e tale gerarchia deve essere associata a una colonna della tabella della dimensione temporale. Le dimensioni temporali del server non dispongono di una tabella della dimensione temporale corrispondente e pertanto non supportano questa gerarchia aggiuntiva.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](../business-intelligence-wizard-f1-help.md)   
  [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

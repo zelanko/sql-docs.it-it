@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069766"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Finestra di dialogo Seleziona colonna chiave tabella nidificata (visualizzazione Struttura di data mining)
@@ -40,12 +40,12 @@ ms.locfileid: "66069766"
   
  Questa opzione può essere utilizzata solo per i modelli di dati mining relazionali.  
   
- **Attributes**  
+ **Attributi**  
  Elenco di attributi utilizzabili come chiave della tabella nidificata.  
   
  Questa opzione può essere utilizzata solo per i modelli di dati mining OLAP.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

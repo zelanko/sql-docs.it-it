@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079278"
 ---
 # <a name="defining-a-data-source-view"></a>Definizione di una vista origine dati
@@ -52,7 +52,7 @@ ms.locfileid: "66079278"
   
 5.  Fare **>** clic su questo pulsante per aggiungere le tabelle selezionate all'elenco **oggetti inclusi** .  
   
-6.  Fare clic su **Avanti**.  
+6.  Fare clic su **Avanti.**  
   
 7.  Nel campo Nome assicurarsi che sia visualizzato **Adventure Works DW 2012** , quindi fare clic su **Fine**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66079278"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica dei nomi predefiniti delle tabelle](lesson-1-4-modifying-default-table-names.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

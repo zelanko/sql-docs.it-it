@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076763"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
@@ -65,7 +65,7 @@ ms.locfileid: "66076763"
 |--------------|-----------------------|-----------------|  
 |Uguale|Uno o più membri|I valori devono essere uguali a un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
 |Diverso|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
-|In|Uno o più set denominati|I valori devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
+|In ingresso|Uno o più set denominati|I valori devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
 |Non incluso|Uno o più set denominati|I valori non devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
 |Intervallo (inclusivo)|Uno o due membri di delimitazione di un intervallo|I valori devono essere compresi tra o uguali ai membri di delimitazione. Se i membri di delimitazione sono uguali o solo un membro viene specificato, non viene applicato alcun intervallo e tutti i valori sono consentiti.<br /><br /> Supportato solo per le gerarchie di attributi. L'intervallo deve trovarsi in un livello di una gerarchia. Gli intervalli non associati non sono attualmente supportati.|  
 |Intervallo (esclusivo)|Uno o due membri di delimitazione di un intervallo|I valori devono essere compresi tra i membri di delimitazione. Se i membri di delimitazione sono uguali o solo un membro viene specificato, i valori devono essere maggiori o minori del membro di delimitazione.<br /><br /> Supportato solo per le gerarchie di attributi. L'intervallo deve trovarsi in un livello di una gerarchia. Gli intervalli non associati non sono attualmente supportati.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66076763"
   
  Per gerarchie definite dall'utente in cui è possibile specificare più membri nell'espressione di filtro, tutti i membri specificati devono essere allo stesso livello e condividere lo stesso padre. Questa restrizione non viene applicata alle gerarchie padre-figlio.  
   
-## <a name="working-with-data"></a>Uso dei dati  
+## <a name="working-with-data"></a>Utilizzo dei dati  
   
 ##### <a name="drilling-down-into-a-member"></a>Drill-down di un membro  
  Per eseguire il drill-down di un particolare membro, fare clic sul segno più (+) accanto al membro o fare doppio clic sul membro.  
@@ -83,7 +83,7 @@ ms.locfileid: "66076763"
   
  Dopo aver impostato questo filtro sulle dimensioni, è possibile attivare o disattivare quest'ultimo facendo clic con il pulsante destro del mouse in un punto qualsiasi del riquadro Dati e selezionando **Filtro automatico**.  
   
-##### <a name="filtering-data"></a>Filtro dei dati  
+##### <a name="filtering-data"></a>Filtraggio dei dati  
  È possibile utilizzare l'area del filtro per definire un sottocubo in cui eseguire la ricerca. È possibile aggiungere un filtro facendo clic su una dimensione nel riquadro Filtro o espandendo una dimensione nel riquadro Metadati, quindi trascinando una gerarchia nella pagina Filtro. Successivamente specificare un **Operatore** e un' **Espressione filtro**.  
   
 ##### <a name="performing-actions"></a>Esecuzione di azioni  

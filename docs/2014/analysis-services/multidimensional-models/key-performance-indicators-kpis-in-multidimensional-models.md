@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074801"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
@@ -46,10 +46,10 @@ ms.locfileid: "66074801"
   
 |Termine|Definizione|  
 |----------|----------------|  
-|Obiettivo|Espressione numerica MDX o calcolo che restituisce il valore di destinazione dell'indicatore KPI.|  
-|valore|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore KPI.|  
-|Stato|Espressione MDX che rappresenta lo stato dell'indicatore KPI in un punto specifico nel tempo.<br /><br /> L'espressione MDX relativa allo stato deve restituire un valore normalizzato compreso tra -1 e 1. I valori minori o uguali a -1 vengono interpretati come "errati" o "bassi". Un valore pari a zero (0) viene interpretato come "accettabile" o "medio". I valori maggiori di o uguali a 1 vengono interpretati come "buoni" o "alti".<br /><br /> Facoltativamente, può venire restituito un numero illimitato di valori intermedi e questi valori possono essere utilizzati per visualizzare un numero qualsiasi di stati aggiuntivi, se l'applicazione client lo consente.|  
-|Tendenza|Espressione MDX che restituisce il valore dell'indicatore KPI nel tempo. La tendenza può essere un qualsiasi criterio basato sul tempo utile in un contesto aziendale specifico.<br /><br /> L'espressione MDX relativa alla tendenza consente a un utente aziendale di determinare se l'indicatore di prestazioni chiave sta migliorando o peggiorando nel tempo.|  
+|Obiettivo|Calcolo o espressione numerica MDX che restituisce il valore di destinazione dell'indicatore di prestazioni chiave.|  
+|valore|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
+|Stato|Espressione MDX che rappresenta lo stato dell'indicatore di prestazioni chiave in un punto nel tempo specifico.<br /><br /> L'espressione MDX relativa allo stato deve restituire un valore normalizzato compreso tra -1 e 1. I valori minori o uguali a -1 vengono interpretati come "errati" o "bassi". Un valore pari a zero (0) viene interpretato come "accettabile" o "medio". I valori maggiori di o uguali a 1 vengono interpretati come "buoni" o "alti".<br /><br /> Facoltativamente, può venire restituito un numero illimitato di valori intermedi e questi valori possono essere utilizzati per visualizzare un numero qualsiasi di stati aggiuntivi, se l'applicazione client lo consente.|  
+|Tendenza|Espressione MDX che valuta il valore dell'indicatore di prestazioni chiave nel tempo. La tendenza può essere rappresentata da qualsiasi criterio basato sul tempo che sia utile in un contesto aziendale specifico.<br /><br /> L'espressione MDX relativa alla tendenza consente a un utente aziendale di determinare se l'indicatore di prestazioni chiave sta migliorando o peggiorando nel tempo.|  
 |Indicatore di stato|Elemento visivo che offre un'indicazione immediata dello stato dell'indicatore di prestazioni chiave. Il tipo di visualizzazione dell'elemento è determinato dal valore dell'espressione MDX che valuta lo stato.|  
 |Indicatore di tendenza|Elemento visivo che offre un'indicazione immediata della tendenza dell'indicatore di prestazioni chiave. Il tipo di visualizzazione dell'elemento è determinato dal valore dell'espressione MDX che valuta la tendenza.|  
 |Cartella di visualizzazione|Cartella in cui l'indicatore di prestazioni chiave viene visualizzato quando un utente esplora il cubo.|  
@@ -60,10 +60,9 @@ ms.locfileid: "66074801"
 ## <a name="parent-kpis"></a>Indicatori di prestazioni chiave padre  
  In un'organizzazione potrebbe essere necessario tenere traccia di metriche aziendali diverse a più livelli. Potrebbero ad esempio venire utilizzati solo due o tre indicatori di prestazioni chiave per valutare il successo aziendale, ma questi indicatori validi per l'intera azienda potrebbero essere basati su altri tre o quattro indicatori di prestazioni chiave calcolati dalle business unit nella società. Le business unit di una società potrebbero inoltre utilizzare dati statistici diversi per calcolare lo stesso indicatore di prestazioni chiave, dei cui risultati è possibile eseguire il rollup nell'indicatore di prestazioni chiave valido per l'intera azienda.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire una relazione padre-figlio tra indicatori di prestazioni chiave. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire una relazione padre-figlio tra indicatori di prestazioni chiave. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
   
-## <a name="weights"></a>Weights  
+## <a name="weights"></a>Pesi  
  È possibile assegnare pesi anche agli indicatori di prestazioni chiave figlio. I pesi consentono ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di modificare in modo proporzionale i risultati dell'indicatore di prestazioni chiave figlio quando si calcola il valore dell'indicatore di prestazioni chiave padre.  
   
 ## <a name="retrieving-and-displaying-kpis"></a>Recupero e visualizzazione di indicatori di prestazioni chiave  

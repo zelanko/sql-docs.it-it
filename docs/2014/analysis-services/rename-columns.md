@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070323"
 ---
 # <a name="lesson-3-rename-columns"></a>Lezione 3: Rinominare colonne
@@ -25,7 +25,7 @@ ms.locfileid: "66070323"
   
  Tempo previsto per il completamento della lezione: **20 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 2: Aggiungere dati](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Rinominare colonne  
@@ -73,7 +73,7 @@ ms.locfileid: "66070323"
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Data|  
+    |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070323"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geografia**  
+     **Area geografica**  
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
@@ -143,7 +143,7 @@ ms.locfileid: "66070323"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Vendite Internet**  
+     **Internet Sales**  
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079661"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configurazione successiva all'installazione (Analysis Services)
@@ -39,10 +39,10 @@ ms.locfileid: "66079661"
 ## <a name="next-steps"></a>Passaggi successivi  
  Sono disponibili informazioni su come connettersi ad Analysis Services da applicazioni Microsoft o personalizzate mediante le librerie client. A seconda dei requisiti della soluzione, potrebbe essere inoltre necessario configurare il servizio per l'autenticazione Kerberos. Le connessioni che devono attraversare i limiti di dominio richiedono l'accesso HTTP. Per istruzioni sui passaggi successivi, vedere [Connect to Analysis Services](connect-to-analysis-services.md) .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installazione per SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [Installare Analysis Services in modalità multidimensionale e di data mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Installare Analysis Services in modalità tabulare](install-windows/install-analysis-services.md)   
- [PowerPivot for SharePoint 2013 Installation](install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installazione di PowerPivot per SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

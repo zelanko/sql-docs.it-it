@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078099"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Scheda Grafico di accuratezza (vista Grafico di accuratezza modello di data mining)
@@ -42,9 +42,9 @@ ms.locfileid: "66078099"
  **Copia**  
  Consente di copiare il grafico negli Appunti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test e convalida &#40;&#41;di data mining](data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

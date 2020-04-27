@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071854"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurare gli account del servizio PowerPivot
@@ -32,17 +32,17 @@ ms.locfileid: "66071854"
   
  [Aggiornare una password scaduta per l'applicazione del servizio PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
- [Modificare l'account con cui viene eseguito ogni servizio](#bkmk_newacct)  
+ [Modificare l'account usato per l'esecuzione di ogni servizio](#bkmk_newacct)  
   
  [Creare o modificare il pool di applicazioni per un'applicazione del servizio PowerPivot](#bkmk_appPool)  
   
- [Requisiti dell'account e autorizzazioni](#requirements)  
+ [Requisiti e autorizzazioni relativi all'account](#requirements)  
   
  [Risoluzione dei problemi: concedere manualmente le autorizzazioni amministrative](#updatemanually)  
   
- [Risoluzione dei problemi: risolvere gli errori HTTP 503 dovuti alle password scadute per amministrazione centrale o il servizio applicazione Web di SharePoint Foundation](#expired)  
+ [Risoluzione dei problemi: risolvere gli errori HTTP 503 dovuti alle password scadute per Amministrazione centrale o il servizio di applicazione Web di SharePoint](#expired)  
   
-##  <a name="bkmk_passwordssas"></a>Aggiornare una password scaduta per l'istanza di SQL Server Analysis Services (PowerPivot)  
+##  <a name="update-an-expired-password-for-sql-server-analysis-services-powerpivot-instance"></a><a name="bkmk_passwordssas"></a>Aggiornare una password scaduta per l'istanza di SQL Server Analysis Services (PowerPivot)  
   
 1.  Fare clic sul pulsante Start, scegliere **Strumenti di amministrazione**, quindi fare clic su **Servizi**. Fare doppio clic su **SQL Server Analysis Services (PowerPivot)**. Scegliere **Accesso**, quindi immettere la nuova password per l'account.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66071854"
   
 5.  Selezionare **Imposta password account sul nuovo valore**. In tutti i servizi eseguiti nell'account gestito verranno usate le credenziali aggiornate.  
   
-##  <a name="bkmk_passwordapp"></a>Aggiornare una password scaduta per l'applicazione di servizio PowerPivot  
+##  <a name="update-an-expired-password-for-the-powerpivot-service-application"></a><a name="bkmk_passwordapp"></a>Aggiornare una password scaduta per l'applicazione di servizio PowerPivot  
   
 1.  Nella sezione Sicurezza di Amministrazione centrale scegliere **Configura account gestiti**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66071854"
   
 4.  Selezionare **Imposta password account sul nuovo valore**. In tutti i servizi eseguiti nell'account gestito verranno usate le credenziali aggiornate.  
   
-##  <a name="bkmk_newacct"></a>Modificare l'account con cui viene eseguito ogni servizio  
+##  <a name="change-the-account-under-which-each-service-runs"></a><a name="bkmk_newacct"></a>Modificare l'account con cui viene eseguito ogni servizio  
   
 1.  Nella sezione Sicurezza di Amministrazione centrale scegliere **Configura account di servizio**.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66071854"
   
 6.  Fare clic su **OK**.  
   
-##  <a name="bkmk_appPool"></a>Creare o modificare il pool di applicazioni per un'applicazione del servizio PowerPivot  
+##  <a name="create-or-change-the-application-pool-for-a-powerpivot-service-application"></a><a name="bkmk_appPool"></a>Creare o modificare il pool di applicazioni per un'applicazione del servizio PowerPivot  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Selezionare l'applicazione del servizio PowerPivot (ma non fare clic su di essa). Se si fa clic sul nome dell'applicazione viene aperto il dashboard di gestione PowerPivot in cui non è incluso alcun collegamento alla pagina delle proprietà in cui è specificato il pool di applicazioni.  È possibile fare clic sullo spazio vuoto nella riga oppure sul nome del tipo per selezionare l'applicazione del servizio PowerPivot.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66071854"
   
 4.  Selezionare **Crea un nuovo pool di applicazioni**. Specificare un nome per il pool di applicazioni e un account gestito per la relativa identità.  
   
-##  <a name="requirements"></a>Requisiti dell'account e autorizzazioni  
+##  <a name="account-requirements-and-permissions"></a><a name="requirements"></a>Requisiti dell'account e autorizzazioni  
  Quando si pianifica una distribuzione di PowerPivot per SharePoint, è necessario pianificare i seguenti account di servizio.  
   
 -   Account del servizio Analysis Services. Analysis Services consente di elaborare query e processi di aggiornamento dei dati PowerPivot nella farm. Questo account viene sempre specificato durante l'installazione di SQL Server quando si installa PowerPivot per SharePoint.  
@@ -113,9 +113,9 @@ ms.locfileid: "66071854"
 |Requisito di provisioning|Il servizio di sistema PowerPivot è una risorsa condivisa nella farm che diventa disponibile quando si crea un'applicazione di servizio. Il pool di applicazioni del servizio deve essere specificato quando viene creata l'applicazione di servizio. Può essere specificato in due modi, cioè tramite lo strumento di configurazione PowerPivot o i comandi PowerShell.<br /><br /> È probabile che l'identità del pool di applicazioni sia stata configurata in modo da essere eseguita in un account univoco. In caso contrario, è consigliabile modificarlo ora per l'esecuzione con un account diverso.|  
 |Requisito dell'account utente di dominio|Questa identità del pool di applicazioni deve essere un account utente di dominio Windows. Gli account del computer predefiniti, ad esempio Servizio di rete o Servizio locale, non sono consentiti.|  
 |Requisiti relativi alle autorizzazioni|Per questo account non sono richieste autorizzazioni di amministratore di sistema locale nel computer. Questo account deve, tuttavia, disporre delle autorizzazioni dell'amministratore di sistema di Analysis Services nel [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] locale installato nello stesso computer. Queste autorizzazioni vengono concesse automaticamente dal programma di installazione di SQL Server o quando si imposta o modifica l'identità del pool di applicazioni in Amministrazione centrale.<br /><br /> Le autorizzazioni amministrative sono necessarie per inoltrare query al [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Sono necessarie anche per il monitoraggio dell'integrità, per la chiusura di sessioni inattive e per l'attesa degli eventi di traccia.<br /><br /> L'account deve disporre di autorizzazioni di connessione, lettura e scrittura per il database dell'applicazione del servizio PowerPivot. Queste autorizzazioni vengono concesse automaticamente quando si crea l'applicazione e aggiornate automaticamente quando si modificano gli account o le password in Amministrazione centrale.<br /><br /> L'applicazione del servizio PowerPivot verifica che un utente SharePoint sia autorizzato a visualizzare i dati prima di recuperare il file, ma non rappresenta l'utente. Non esistono requisiti relativi alle autorizzazioni per la rappresentazione.|  
-|Requisiti relativi alla distribuzione con scalabilità orizzontale|No.|  
+|Requisiti relativi alla distribuzione con scalabilità orizzontale|Nessuno.|  
   
-##  <a name="updatemanually"></a>Risoluzione dei problemi: concedere manualmente le autorizzazioni amministrative  
+##  <a name="troubleshooting-grant-administrative-permissions-manually"></a><a name="updatemanually"></a>Risoluzione dei problemi: concedere manualmente le autorizzazioni amministrative  
  Le autorizzazioni amministrative non vengono aggiornate se l'utente che aggiorna le credenziali non è l'amministratore locale del computer. In questo caso, è possibile concedere manualmente le autorizzazioni amministrative. Il modo più semplice per eseguire questa operazione consiste nell'eseguire Processo timer configurazione PowerPivot in Amministrazione centrale. In questo modo è possibile reimpostare le autorizzazioni per tutti i server PowerPivot nella farm. Si noti che questo approccio funziona solo se il processo timer SharePoint è in esecuzione come amministratore della farm e come amministratore locale nel computer.  
   
 1.  In Monitoraggio scegliere **Rivedi definizioni processi**.  
@@ -132,7 +132,7 @@ ms.locfileid: "66071854"
   
 2.  Fare clic con il pulsante destro del mouse sul nome del server e scegliere **Proprietà**.  
   
-3.  Fare clic su **Security**.  
+3.  Fare clic su **Sicurezza**.  
   
 4.  Fare clic su **Aggiungi**.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66071854"
   
 11. Digitare il nome dell'account utilizzato per il pool di applicazioni del servizio PowerPivot, quindi fare clic su **OK**.  
   
-##  <a name="expired"></a>Risoluzione dei problemi: risolvere gli errori HTTP 503 dovuti alle password scadute per amministrazione centrale o il servizio applicazione Web di SharePoint Foundation  
+##  <a name="troubleshooting-resolve-http-503-errors-due-to-expired-passwords-for-central-administration-or-the-sharepoint-foundation-web-application-service"></a><a name="expired"></a>Risoluzione dei problemi: risolvere gli errori HTTP 503 dovuti alle password scadute per amministrazione centrale o il servizio applicazione Web di SharePoint Foundation  
  Se il servizio Amministrazione centrale o il servizio di applicazione Web di SharePoint Foundation smettono di funzionare a causa della reimpostazione di un account o della scadenza di una password, verrà generato un messaggio di errore HTTP 503 "Servizio non disponibile" quando si tenta di aprire Amministrazione centrale SharePoint o un sito di SharePoint. Per riportare online il server, eseguire le operazioni seguenti: Quando Amministrazione centrale è disponibile, è possibile aggiornare le informazioni scadute relative all'account.  
   
 1.  In Strumenti di amministrazione fare clic su **Gestione Internet Information Services**.  
@@ -179,7 +179,7 @@ ms.locfileid: "66071854"
   
  Se Reporting Services è installato, usare Gestione configurazione Reporting Services per aggiornare le password per il server di report e la connessione al database del server di report. Per altre informazioni, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avviare o arrestare un server di PowerPivot per SharePoint](start-or-stop-a-power-pivot-for-sharepoint-server.md)   
  [Configurare l'account di aggiornamento dati automatico PowerPivot &#40;PowerPivot per SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
   

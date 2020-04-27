@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078969"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
@@ -26,8 +26,8 @@ ms.locfileid: "66078969"
   
  Tempo previsto per il completamento della lezione: **20 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
- Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione, è necessario aver completato la lezione precedente: [lezione 1: creare un nuovo progetto di modello tabulare](lesson-1-create-a-new-tabular-model-project.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+ Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione, è necessario aver completato la lezione precedente: [Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Creare una connessione  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66078969"
 6.  Nella pagina **Impostazioni di rappresentazione** specificare le credenziali usate da Analysis Services per la connessione all'origine dati quando vengono importati ed elaborati i dati. Verificare che l'opzione **Nome utente e password specifici di Windows** sia selezionata, immettere le credenziali di accesso a Windows in **Nome utente** e **Password**e fare clic su **Avanti**.  
   
     > [!NOTE]  
-    >  Il metodo più sicuro per la connessione a un'origine dati consiste nell'usare un account utente di Windows e relativa password. Per altre informazioni, vedere [Rappresentazione &#40;SSAS tabulare&#41;](tabular-models/impersonation-ssas-tabular.md).  
+    >  L'utilizzo di un account utente e una password di Windows rappresenta il metodo più sicuro per la connessione a un'origine dati. Per altre informazioni, vedere [Rappresentazione &#40;SSAS tabulare&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 7.  Nella pagina **Scelta della modalità di importazione dei dati** verificare che l'opzione **Seleziona da un elenco di tabelle e viste per scegliere i dati da importare** sia selezionata. Poiché si vuole selezionare da un elenco di tabelle e viste, fare clic su **Avanti** per visualizzare un elenco di tutte le tabelle di origine nel database di origine.  
   
@@ -60,18 +60,18 @@ ms.locfileid: "66078969"
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
-    |DimDate|Data|  
+    |DimDate|Date|  
     |DimGeography|Area geografica|  
     |DimProduct|Prodotto|  
     |DimProductCategory|Categoria di prodotto|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
   
-     **Non fare clic su** **fine**.  
+     **NON** fare clic su **Fine**.  
   
  Dopo avere stabilito la connessione al database, avere selezionato le tabelle da importare e avere assegnato nomi descrittivi alle tabelle, passare alla sezione successiva per [filtrare i dati della tabella prima dell'importazione](#FilterData).  
   
-##  <a name="FilterData"></a>Filtrare i dati della tabella  
+##  <a name="filter-the-table-data"></a><a name="FilterData"></a>Filtrare i dati della tabella  
  La tabella DimCustomer importata dal database contiene un subset dei dati del database SQL Server Adventure Works originale. Verranno filtrate alcune colonne della tabella DimCustomer che non sono necessarie. Quando possibile, utilizzare filtri per escludere dati che non verranno utilizzati, per risparmiare spazio in memoria utilizzato dal modello.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>Per filtrare i dati della tabella prima dell'importazione  
@@ -87,7 +87,7 @@ ms.locfileid: "66078969"
     |**SpanishOccupation**|  
     |**FrenchOccupation**|  
   
-     Dato che i valori per queste colonne non sono attinenti all'analisi delle vendite Internet, non è necessario importare queste colonne. Eliminando le colonne non necessarie, è possibile ridurre le dimensioni del modello.  
+     Poiché i valori per queste colonne non sono attinenti all'analisi delle vendite Internet, non è necessario importare queste colonne. Eliminando le colonne non necessarie, è possibile ridurre le dimensioni del modello.  
   
 3.  Verificare che tutte le altre colonne siano selezionate e fare clic su **OK**.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "66078969"
   
 4.  Filtrare le tabelle restanti deselezionando le caselle di controllo per le colonne seguenti in ogni tabella:  
   
-    |Data|  
+    |Date|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
     |**FrenchDayNameOfWeek**|  
-    |**SpanishMonthName nell'**|  
-    |**FrenchMonthName nell'**|  
+    |**SpanishMonthName**|  
+    |**FrenchMonthName**|  
   
     |Area geografica|  
     |---------------|  
@@ -140,8 +140,8 @@ ms.locfileid: "66078969"
   
  Dopo avere visualizzato l'anteprima ed escluso tramite filtro i dati non necessari, è possibile importare i dati. Passare alla sezione successiva **Importare i dati di tabelle e colonna selezionati**.  
   
-##  <a name="Import"></a>Importa i dati delle tabelle e delle colonne selezionate  
- È ora possibile importare i dati selezionati. La procedura guidata importa i dati delle tabelle insieme alle eventuali relazioni tra le tabelle. Nel modello verranno create nuove tabelle e colonne utilizzando i nomi descrittivi specificati e i dati esclusi tramite filtro non verranno importati.  
+##  <a name="import-the-selected-tables-and-column-data"></a><a name="Import"></a>Importa i dati delle tabelle e delle colonne selezionate  
+ È ora possibile importare i dati selezionati. La procedura guidata consente di importare i dati delle tabelle e qualsiasi relazione presente tra le tabelle. Nel modello verranno create nuove tabelle e colonne utilizzando i nomi descrittivi specificati e i dati esclusi tramite filtro non verranno importati.  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>Per importare i dati delle tabelle e delle colonne selezionate  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66078969"
     > [!TIP]  
     >  Per vedere le relazioni create automaticamente tra le tabelle importate, fare clic su **Dettagli** nella riga **Preparazione dati**.  
   
-2.  Fare clic su **Close**.  
+2.  Fare clic su **Chiudi**.  
   
      La procedura guidata verrà chiusa e verrà visualizzata la finestra Progettazione modelli. Ogni tabella è stata aggiunta come nuova scheda in Progettazione modelli.  
   

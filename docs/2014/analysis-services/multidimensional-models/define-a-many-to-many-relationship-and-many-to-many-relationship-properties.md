@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075782"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definire una relazione molti-a-molti e le relative proprietà
@@ -146,11 +146,11 @@ ms.locfileid: "66075782"
   
 3.  Creare una tabella pivot che utilizzi:  
   
-    -   **Importo vendite** come valore  
+    -   **Sales amount** come valore  
   
-    -   **Nome motivo vendite** sulle colonne  
+    -   **Sales Reason Name** sulle colonne  
   
-    -   **Numero di ordine di vendita** sulle righe  
+    -   **Sales Order Number** sulle righe  
   
 4.  Analizzare i risultati. Poiché si utilizzano dati di esempio, potrà sembrare inizialmente che gli ordini di vendita abbiano tutti valori identici. Tuttavia, scorrendo verso il basso, si iniziano a vedere dati diversi.  
   
@@ -176,16 +176,16 @@ ms.locfileid: "66075782"
   
 4.  Evitare di utilizzare gruppi di misure collegati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
   
-##  <a name="bkmk_Learn"></a>Ulteriori informazioni  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>Ulteriori informazioni  
  Per informazioni aggiuntive su questi concetti, vedere i collegamenti seguenti.  
   
  [Definizione della dimensione molti-a-molti in Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [La rivoluzione molti-a-molti 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [La rivoluzione molti-a-molti 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
  [Esercitazione: esempio di dimensione molti-a-molti per SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale Analysis Services](../install-sample-data-and-projects.md)   
  [Distribuzione di progetti Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   

@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074210"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Proprietà intrinseche dei membri (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] espone proprietà intrinseche sui membri della dimensione che è possibile includere in una query per restituire dati o metadati aggiuntivi da usare in un'applicazione personalizzata o per supportare la costruzione o l'analisi dei modelli. Se si utilizzano gli strumenti client di SQL Server, è possibile visualizzare le proprietà intrinseche in SQL Server Management Studio (SSMS).  
   
  Le proprietà intrinseche includono `ID`, `KEY`, `KEYx` e `NAME`, che sono proprietà esposte da ogni membro a qualsiasi livello. È inoltre possibile restituire informazioni sulla posizione, come `LEVEL_NUMBER` o `PARENT_UNIQUE_NAME`.  
@@ -113,8 +112,7 @@ ms.locfileid: "66074210"
 |`MEMBER_VALUE`|Valore del membro nel tipo originale.|  
 |`PARENT_COUNT`|Numero di elementi padre del membro.|  
 |`PARENT_LEVEL`|Distanza dell'elemento padre del membro dal livello radice della gerarchia. Per il livello radice è zero.|  
-|`PARENT_UNIQUE_NAME`|Nome univoco del nodo padre del membro. 
-  `NULL` viene restituito per tutti i membri al livello di radice. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
+|`PARENT_UNIQUE_NAME`|Nome univoco del nodo padre del membro. `NULL` viene restituito per tutti i membri al livello di radice. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
 |`SKIPPED_LEVELS`|Il numero di livelli ignorati per il membro.|  
 |`UNARY_OPERATOR`|Operatore unario per il membro.|  
 |`UNIQUE_NAME`|Nome completo del membro nel formato: [dimension].[level].[key6].|  
@@ -153,7 +151,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Esempio 2: proprietà intrinseche non sensibili al contesto**  
+ **Esempio 2: utilizzare proprietà intrinseche non sensibili al contesto**  
   
  Nell'esempio seguente è riportato l'elenco completo delle proprietà intrinseche non sensibili al contesto. Dopo aver eseguito la query in SSMS, fare clic sui singoli membri per visualizzare le proprietà nella finestra di dialogo Proprietà membro.  
   
@@ -207,7 +205,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [PeriodsToDate &#40;&#41;MDX](/sql/mdx/periodstodate-mdx)   
  [Elementi figlio &#40;&#41;MDX](/sql/mdx/children-mdx)   
  [Hierarchize &#40;&#41;MDX](/sql/mdx/hierarchize-mdx)   
@@ -218,6 +216,6 @@ FROM [Adventure Works]
  [Proprietà &#40;&#41;MDX](/sql/mdx/properties-mdx)   
  [PrevMember &#40;&#41;MDX](/sql/mdx/prevmember-mdx)   
  [Utilizzo delle proprietà del membro &#40;&#41;MDX](mdx-member-properties.md)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

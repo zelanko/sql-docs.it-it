@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069924"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Finestra di dialogo Seleziona colonna (visualizzazione Struttura di data mining)
@@ -45,7 +45,7 @@ ms.locfileid: "66069924"
   
  Questa opzione viene utilizzata solo per i modelli di data mining OLAP.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Aggiungere colonne a una struttura di data mining](data-mining/add-columns-to-a-mining-structure.md)  
   

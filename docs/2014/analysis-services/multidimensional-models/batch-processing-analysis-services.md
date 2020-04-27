@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076935"
 ---
 # <a name="batch-processing-analysis-services"></a>Elaborazione batch (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66076935"
   
  [Elaborazione batch con XMLA in Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>Elaborazione batch in SQL Server Data Tools  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a> Elaborazione batch in SQL Server Data Tools  
  Prima di poter elaborare gli oggetti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è necessario distribuire il progetto contenente gli oggetti. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Aprire [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,9 +53,9 @@ ms.locfileid: "66076935"
   
 9. In **Opzioni di elaborazione**contrassegnare le impostazioni seguenti:  
   
-    -   L' **ordine di elaborazione** è impostato su **sequenziale**e la **modalità transazione** è impostata su **una transazione**.  
+    -   **Ordine di elaborazione** è impostato su **Sequenziale**e **Modalità transazione** è impostato su **Una sola transazione**.  
   
-    -   L' **opzione della tabella writeback** è impostata su **Usa esistente**.  
+    -   **Opzione tabella writeback** è impostato su **Use existing**(Usa esistente).  
   
     -   In **Oggetti interessati**selezionare la casella di controllo **Elabora oggetti interessati** .  
   
@@ -69,12 +69,12 @@ ms.locfileid: "66076935"
   
 14. Fare clic su **Chiudi** nella schermata **Elabora oggetti** .  
   
-##  <a name="bkmk_xmla"></a>Elaborazione batch con XMLA in Management Studio  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Elaborazione batch con XMLA in Management Studio  
  È possibile creare uno script XMLA che esegue l'elaborazione batch. Iniziare generando uno script XMLA in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per ogni oggetto, quindi combinarli in una sola query XMLA da eseguire in modo interattivo o in un'attività pianificata.  
   
  Per istruzioni dettagliate, vedere l' **esempio 2** in [Pianificare attività amministrative SSAS con SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
   
   

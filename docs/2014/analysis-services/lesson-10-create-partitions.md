@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079197"
 ---
 # <a name="lesson-11-create-partitions"></a>Lezione 11: Creare partizioni
@@ -22,7 +22,7 @@ ms.locfileid: "66079197"
   
  Tempo previsto per il completamento della lezione: **15 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 10: Creare gerarchie](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Creare partizioni  
@@ -150,7 +150,7 @@ ms.locfileid: "66079197"
   
      Se vengono richieste le credenziali di rappresentazione, immettere il nome utente e la password di Windows specificati al passaggio 6 della lezione 2.  
   
-     Verrà visualizzata la finestra di dialogo **elaborazione dati** con i dettagli del processo per ogni partizione. Si noti che viene trasferito un numero diverso di righe per ogni partizione, perché ogni partizione include solo le righe per l'anno specificato nella clausola WHERE nell'istruzione SQL. Non vi sono dati per l'anno 2010.  
+     Verrà visualizzata la finestra di dialogo **elaborazione dati** con i dettagli del processo per ogni partizione. Si noti che per ogni partizione viene trasferito un numero diverso di righe. Questo avviene in quanto ogni partizione include solo le righe per l'anno specificato nella clausola WHERE dell'istruzione SQL. Non vi sono dati per l'anno 2010.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 12: Creare ruoli](lesson-11-create-roles.md).  

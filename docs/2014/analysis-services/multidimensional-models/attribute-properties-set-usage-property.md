@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077173"
 ---
 # <a name="set-usage-property"></a>Impostare la proprietà Usage
@@ -33,13 +33,13 @@ ms.locfileid: "66077173"
   
 2.  In **Attributi**fare clic con il pulsante destro del mouse sull'attributo di cui si desidera impostare l'utilizzo, scegliere **Imposta utilizzo attributi**e quindi selezionare una delle opzioni seguenti:  
   
-    -   **Regolare**  
+    -   **Regular**  
   
-    -   **Chiave**  
+    -   **Codice**  
   
     -   **Parent**  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Aggiungere un attributo a una dimensione](attribute-properties-add-an-attribute-to-a-dimension.md)  
   

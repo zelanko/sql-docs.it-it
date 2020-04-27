@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081050"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Previsione (Strumenti di analisi tabelle per Excel)
@@ -91,7 +91,7 @@ ms.locfileid: "66081050"
   
  Per ulteriori informazioni sulla procedura guidata **previsione** , vedere la [procedura guidata previsione &#40;componenti aggiuntivi data mining per&#41;Excel ](forecast-wizard-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sull'algoritmo utilizzato per la previsione, vedere l'argomento "Algoritmo Microsoft Time Series" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

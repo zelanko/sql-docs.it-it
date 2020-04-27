@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074335"
 ---
 # <a name="using-cell-properties-mdx"></a>Utilizzo delle proprietà delle celle (MDX)
@@ -52,18 +52,14 @@ SELECT [<axis_specification>
 |`ACTION_TYPE`|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
 |**BACK_COLOR**|Colore di sfondo per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Numero ordinale della cella nel set di dati.|  
-|**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Il valore 5 rappresenta ad esempio l'applicazione combinata degli effetti grassetto (`MDFF_BOLD`) e sottolineato (`MDFF_UNDERLINE`) al carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> `MDFF_BOLD`= 1<br /><br /> 
-  `MDFF_ITALIC` = 2<br /><br /> 
-  `MDFF_UNDERLINE` = 4<br /><br /> 
-  `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Il valore 5 rappresenta ad esempio l'applicazione combinata degli effetti grassetto (`MDFF_BOLD`) e sottolineato (`MDFF_UNDERLINE`) al carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|Tipo di carattere da utilizzare per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`.|  
 |**FONT_SIZE**|Dimensioni del carattere da utilizzare per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`.|  
 |**FORE_COLOR**|Colore di primo piano per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`FORMAT`|Come per `FORMAT_STRING`.|  
 |`FORMAT_STRING`|Stringa di formato utilizzata per creare il valore della proprietà `FORMATTED_VALUE`. Per altre informazioni, vedere [Contenuto di FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|Stringa di caratteri che rappresenta una visualizzazione formattata della proprietà `VALUE`.|  
-|`LANGUAGE`|Le impostazioni locali dove verrà applicato `FORMAT_STRING`. 
-  `LANGUAGE` è utilizzato generalmente per la conversione della valuta.|  
+|`LANGUAGE`|Le impostazioni locali dove verrà applicato `FORMAT_STRING`. `LANGUAGE` è utilizzato generalmente per la conversione della valuta.|  
 |`UPDATEABLE`|Valore che indica se la cella può essere aggiornata. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> `MD_MASK_ENABLED`(0x00000000) la cella può essere aggiornata.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) la cella non può essere aggiornata.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) la cella può essere aggiornata nel celle.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) la cella può essere aggiornata con un'istruzione Update. Se si aggiorna una cella foglia non abilitata per la scrittura, l'aggiornamento potrebbe non riuscire.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) la cella non può essere aggiornata perché la cella contiene un membro calcolato tra le coordinate. la cella è stata recuperata con un set nella clausola WHERE. È possibile aggiornare una cella anche se il suo valore è influenzato da una formula o da una cella calcolata, ovvero si trova in un punto qualsiasi del percorso di aggregazione. In questo scenario, il valore finale della cella potrebbe non essere il valore aggiornato, perché il risultato è influenzato dal calcolo.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) la cella non può essere aggiornata perché non è possibile aggiornare misure non Sum (count, min, Max, Distinct Count, semiadditive).<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) la cella non può essere aggiornata perché la cella non esiste perché si trova in corrispondenza dell'intersezione di una misura e di un membro della dimensione non correlato al gruppo di misure della misura.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) la cella non può essere aggiornata perché la cella è protetta.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) riservato per un utilizzo futuro.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) la cella non può essere aggiornata a causa di motivi interni.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) la cella non può essere aggiornata perché l'aggiornamento non è supportato nelle dimensioni dei modelli di data mining, indirette o data mining.|  
 |`VALUE`|Valore non formattato della cella.|  
   
@@ -98,7 +94,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

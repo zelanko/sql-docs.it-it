@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075985"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Esplorare i dati di una dimensione in Progettazione dimensioni
@@ -36,7 +36,7 @@ ms.locfileid: "66075985"
     > [!NOTE]  
     >  È necessario che nella dimensione sia disponibile una traduzione definita per la lingua selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Introduzione alle dimensioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077584"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
@@ -40,8 +40,7 @@ ms.locfileid: "66077584"
   
  La condizione è un'espressione MDX `Boolean` valutata nell'evento relativo all'azione. Se la condizione restituisce `true`, l'azione viene eseguita. In caso contrario, l'azione non viene eseguita.  
   
- Il tipo rappresenta il tipo di azione da eseguire. 
-  <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
+ Il tipo rappresenta il tipo di azione da eseguire. <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'azione è un'istruzione MDX archiviata che può essere presentata e utilizzata dalle applicazioni client. In altre parole, un'azione è un comando client definito e archiviato nel server. Un'azione contiene inoltre informazioni che specificano quando e come l'istruzione MDX dovrà essere visualizzata e gestita dall'applicazione client. L'operazione specificata dall'azione consente di avviare un'applicazione, utilizzando le informazioni dell'azione come parametro, o di recuperare informazioni basate sui criteri indicati dall'azione.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077584"
 ## <a name="resolving-and-executing-actions"></a>Risoluzione ed esecuzione di azioni  
  Quando un utente aziendale accede all'oggetto per cui l'oggetto comando è stato definito, l'istruzione associata all'azione viene risolta automaticamente, in modo da renderla disponibile all'applicazione client, ma l'azione non viene eseguita automaticamente. L'azione viene eseguita solo quando l'utente finale esegue l'operazione specifica del client che avvia tale azione. In un'applicazione client può ad esempio essere visualizzato un elenco di azioni sotto forma di menu popup quando l'utente aziendale fa clic con il pulsante destro del mouse su un membro o una cella particolare.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Azioni nei modelli multidimensionali](actions-in-multidimensional-models.md)  
   
   

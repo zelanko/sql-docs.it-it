@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078835"
 ---
 # <a name="modifying-the-product-dimension"></a>Modifica della dimensione Product
@@ -95,19 +95,19 @@ ms.locfileid: "66078835"
   
 1.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
-    -   **Classe**  
+    -   **Class**  
   
-    -   **Color**  
+    -   **Colore**  
   
     -   **Giorni per la produzione**  
   
-    -   **Riordina punto**  
+    -   **Reorder Point**  
   
-    -   **Livello di scorte di sicurezza**  
+    -   **Safety Stock Level**  
   
     -   **Dimensione**  
   
-    -   **Intervallo dimensioni**  
+    -   **Size Range**  
   
     -   **Style**  
   
@@ -119,11 +119,11 @@ ms.locfileid: "66078835"
   
 3.  Nel riquadro **Attributi** selezionare i seguenti attributi:  
   
-    -   **Prezzo del rivenditore**  
+    -   **Dealer Price**  
   
-    -   **Prezzo di listino**  
+    -   **List Price**  
   
-    -   **Costo standard**  
+    -   **Standard Cost**  
   
 4.  Nella cella della proprietà **AttributeHierarchyDisplayFolder** del finestra Proprietà, digitare `Financial`.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66078835"
   
     -   **Data di inizio**  
   
-    -   **Status**  
+    -   **Stato**  
   
 6.  Nella cella della proprietà **AttributeHierarchyDisplayFolder** del finestra Proprietà, digitare `History`.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "66078835"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica della dimensione Date](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Creazione di gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurare il &#40;tutti i livelli di&#41; per le gerarchie di attributi](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

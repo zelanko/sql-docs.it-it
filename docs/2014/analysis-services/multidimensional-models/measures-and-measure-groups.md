@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073670"
 ---
 # <a name="measures-and-measure-groups"></a>Misure e gruppi di misure
@@ -34,14 +34,14 @@ ms.locfileid: "66073670"
   
 |**Collegamento**|**Descrizione**|  
 |--------------|---------------------|  
-|[Creazione di misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|Scegliere uno dei diversi approcci per la creazione di misure e gruppi di misure.|  
+|[Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|Scegliere uno dei diversi approcci per la creazione di misure e gruppi di misure.|  
 |[Configurare le proprietà delle misure](configure-measure-properties.md)|Se è stata usata la Creazione guidata cubo per avviare il cubo, è necessario modificare il metodo di aggregazione, applicare un formato dati, impostare la visibilità della misura in applicazioni client o eventualmente aggiungere un'espressione di misura per modificare i dati prima che i valori vengano aggregati.|  
 |[Configurare le proprietà dei gruppi di misure](configure-measure-group-properties.md)|In un modello multidimensionale, un gruppo di misure equivale a una tabella dei fatti nel data warehouse di origine. Le proprietà in un gruppo di misure consentono di specificare i comportamenti di memorizzazione nella cache, l'archiviazione e l'elaborazione delle istruzioni che operano collettivamente a livello del gruppo di misure. La configurazione della partizione dipende in parte dalle proprietà impostate per gli oggetti del gruppo di misure.|  
 |[Utilizzare le funzioni di aggregazione](use-aggregate-functions.md)|Informazioni sui metodi di aggregazione che possono essere assegnati a una misura.|  
 |[Definire una funzione semiadditiva](define-semiadditive-behavior.md)|Le funzioni semiadditive fanno riferimento alle aggregazioni valide solo per alcune dimensioni. Un esempio comune è un saldo del conto bancario. L'utente potrebbe voler aggregare i saldi in base al cliente e alla regione, ma non al tempo. Ad esempio, l'utente potrebbe non voler aggiungere i saldi dallo stesso conto per più giorni consecutivi. Per definire le funzioni semiadditive, usare la procedura guidata Aggiungi funzionalità di Business Intelligence.|  
 |[Gruppi di misure collegati](linked-measure-groups.md)|Ridefinire un gruppo di misure esistente in altri cubi dello stesso database o in diversi database di Analysis Services.|  
   
-##  <a name="bkmk_measure"></a>Misure  
+##  <a name="measures"></a><a name="bkmk_measure"></a>Misure  
  Una misura rappresenta una colonna contenente dati quantificabili, spesso di tipo numerico, che è possibile aggregare. Le misure rappresentano alcuni aspetti delle attività aziendali espressi in termini monetari (ad esempio ricavi, margini o costi), sotto forma di conteggi (livelli di inventario, numero di dipendenti, clienti o ordini) o come calcoli più complessi che incorporano la logica di business.  
   
  Ogni cubo deve avere almeno una misura, ma in genere il numero di misure associate è elevato e può raggiungere le centinaia. A livello di struttura, una misura viene spesso mappata a una colonna di origine in una tabella dei fatti e tale colonna fornisce i valori usati per caricare la misura. In alternativa, è possibile definire una misura usando MDX.  
@@ -60,13 +60,13 @@ ms.locfileid: "66073670"
   
  Per ridurre al minimo la probabilità che questi comportamenti si verifichino in un'applicazione client, è possibile creare più cubi o prospettive nello stesso database e assicurarsi che ogni cubo o prospettiva contenga solo gli oggetti correlati. Le relazioni da controllare sono quelle tra il gruppo di misure (mappato alla tabella dei fatti) e le dimensioni.  
   
-##  <a name="bkmk_mg"></a>Gruppi di misure  
- In un cubo le misure vengono raggruppate in gruppi di misure in base alle tabelle dei fatti sottostanti. I gruppi di misure consentono di associare dimensioni a misure. Vengono inoltre utilizzati per misure con la modalità di aggregazione Distinct Count. Il posizionamento di ogni misura Distinct Count nel relativo gruppo di misure consente di ottimizzare l'elaborazione delle aggregazioni.  
+##  <a name="measure-groups"></a><a name="bkmk_mg"></a>Gruppi di misure  
+ In un cubo le misure vengono raggruppate in gruppi di misure in base alle tabelle dei fatti sottostanti. I gruppi di misure consentono di associare dimensioni a misure. Vengono inoltre utilizzati per misure con la modalità di aggregazione Distinct Count. Il posizionamento di ogni misura totale valori distinti nel relativo gruppo di misure consente di ottimizzare l'elaborazione delle aggregazioni.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.MeasureGroup> semplice è composto da informazioni di base come nome del gruppo, modalità di archiviazione e modalità di elaborazione. Contiene inoltre le relative parti costituenti: misure, dimensioni e partizioni che formano la composizione del gruppo di misure.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cubi nei modelli multidimensionali](cubes-in-multidimensional-models.md)   
- [Creazione di misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077497"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
@@ -57,7 +57,7 @@ ms.locfileid: "66077497"
  **Contenuto azione**  
  Selezionare il tipo di azione. Nella tabella seguente vengono riepilogati i tipi disponibili.  
   
-|Type|Descrizione|  
+|Type|Description|  
 |----------|-----------------|  
 |Set di dati|Consente di recuperare un set di dati.|  
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -72,10 +72,10 @@ ms.locfileid: "66077497"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattività<br /><br /> Su apertura|  
+|**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interactive (Interattivo)<br /><br /> Su apertura|  
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
 |**Descrizione**|Descrive l'azione.|  
-|**Sottotitolo**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, `True` specificare per la **Didascalia MDX**.|  
+|**Didascalia**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, `True` specificare per la **Didascalia MDX**.|  
 |**Didascalia MDX**|Specificare `True` se la didascalia è MDX, in caso contrario specificare `False`.|  
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ ms.locfileid: "66077497"
 |**Percorso server**|Percorso esposto dal server di report.|  
 |**Formato report**|HTML5, HTML3, Excel o PDF.|  
   
- **Parametri (facoltativo)**  
+ **Parametri (facoltativi)**  
  I parametri vengono inviati al server come parte della stringa dell'URL quando viene creata l'azione. Includono **Nome parametro** e **Valore parametro**, che è un'espressione MDX.  
   
  L'URL del server di report viene creato nel modo seguente:  
@@ -123,7 +123,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **Colonne drill-through**  
  Selezionare una o più dimensioni e per ogni dimensione selezionare le colonne drill-through restituite all'applicazione client dall'azione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Cubi nei modelli multidimensionali](cubes-in-multidimensional-models.md)  
   
   

@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078365"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lezione 8: Creare indicatori di prestazioni chiave
-  In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli indicatori KPI vengono usati per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch ' esso da una misura o da un valore assoluto. Nelle applicazioni client per la creazione di report, gli indicatori KPI possono fornire ai professionisti aziendali un modo rapido e semplice per comprendere i risultati aziendali positivi nel loro complesso o per identificare tendenze significative. Per altre informazioni, vedere [KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md).  
+  In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli indicatori di prestazioni chiave vengono usati per misurare le prestazioni di un valore, definito mediante una misura di *base* , rispetto a un valore *target* , definito anch'esso da una misura o da un valore assoluto. Nelle applicazioni client per la creazione di report, gli indicatori KPI possono fornire ai professionisti aziendali un modo rapido e semplice per comprendere i risultati aziendali positivi nel loro complesso o per identificare tendenze significative. Per altre informazioni, vedere [KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md).  
   
  Tempo previsto per il completamento della lezione: **15 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 7: Creare misure](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Creare indicatori di prestazioni chiave  
@@ -39,7 +39,7 @@ ms.locfileid: "66078365"
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-     Questa misura verrà usata come misura di base per l'indicatore KPI.  
+     Tale misura definirà fungerà da misura di base per l'indicatore KPI.  
   
 4.  Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura **Internet Current Quarter Sales Performance** , quindi scegliere **Crea KPI**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66078365"
   
 7.  In **Definisci soglie stato**, nel campo del dispositivo di scorrimento a sinistra ( `1`in basso), digitare e quindi nel campo del dispositivo di scorrimento `1.07`a destra (alto), digitare.  
   
-8.  In **Seleziona stile icona** selezionare l'icona a forma di rombo (rossa), di triangolo (gialla) o di cerchio (verde).  
+8.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde).  
   
     > [!TIP]  
     >  Si noti il campo espandibile **Descrizioni** sotto gli stili di icona disponibili. È possibile digitare le descrizioni per i diversi elementi KPI per semplificarne l'identificazione nelle applicazioni client.  

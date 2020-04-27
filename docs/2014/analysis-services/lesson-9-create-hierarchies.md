@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078185"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lezione 10: Creare gerarchie
-  In questa lezione si procederà alla creazione di gerarchie. Le gerarchie sono gruppi di colonne disposti in livelli. Ad esempio, una gerarchia Geografia potrebbe includere i sottolivelli Paese, Stato, Regione e Città. Le gerarchie possono essere visualizzate separatamente da altre colonne in un elenco di campi dell'applicazione client per la creazione di report, in modo che sia più semplice per gli utenti del client individuare i campi appropriati da includere in un report. Per altre informazioni, vedere [Gerarchie &#40;SSAS tabulare&#41;](tabular-models/hierarchies-ssas-tabular.md).  
+  In questa lezione si procederà alla creazione di gerarchie. Le gerarchie sono gruppi di colonne disposti in livelli. Una gerarchia Geografia potrebbe ad esempio includere i sottolivelli Paese, Stato, Regione e Città. Le gerarchie possono essere visualizzate separatamente da altre colonne in un elenco di campi dell'applicazione client per la creazione di report, in modo che sia più semplice per gli utenti del client individuare i campi appropriati da includere in un report. Per altre informazioni, vedere [Gerarchie &#40;SSAS tabulare&#41;](tabular-models/hierarchies-ssas-tabular.md).  
   
  Per creare le gerarchi viene usata la funzionalità Progettazione modelli in *Vista diagramma*. La creazione e la gestione di gerarchie non sono supportate in Progettazione modelli in Vista dati.  
   
  Tempo previsto per il completamento della lezione: **20 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 9: Creare prospettive](lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Creare gerarchie  
@@ -45,7 +45,7 @@ ms.locfileid: "66078185"
 5.  Nella `Category` gerarchia, fare clic con il pulsante destro del mouse sulla colonna **Product Category Name** , scegliere **Rinomina**, `Category`quindi digitare.  
   
     > [!NOTE]  
-    >  La ridenominazione di una colonna in una gerarchia non comporta la ridenominazione di tale colonna nella tabella. Una colonna in una gerarchia è semplicemente una rappresentazione della colonna nella tabella.  
+    >  La ridenominazione di una colonna in una gerarchia non comporta la ridenominazione della colonna nella tabella. Una colonna in una gerarchia è solo una rappresentazione della colonna nella tabella.  
   
 6.  Nella `Product` tabella fare clic con il pulsante destro del mouse sulla colonna **Product Subcategory Name** , scegliere **Aggiungi a gerarchia**dal menu di scelta rapida e quindi fare `Category`clic su.  
   
