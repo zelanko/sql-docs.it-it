@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081074"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Generale (Progettazione database) (Analysis Services - Dati multidimensionali)
@@ -60,7 +60,7 @@ ms.locfileid: "66081074"
  Espandere la sezione **Mapping tipi di conto** per modificare la funzione di aggregazione predefinita associata a ogni **tipo** di conto nel database selezionato.  
   
 > [!NOTE]  
->  Questa opzione è applicabile solo ai cubi nei quali una o più misure utilizzano la funzione di aggregazione *ByAccount* .  
+>   Questa opzione si applica esclusivamente ai cubi nei quali una o più misure utilizzano la funzione di aggregazione *ByAccount* .  
   
  Nella griglia visualizzata in questa sezione sono incluse le colonne seguenti:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66081074"
  **Funzione di aggregazione**  
  Consente di selezionare la funzione di aggregazione da utilizzare per il tipo di conto selezionato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [Avvisi &#40;progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  

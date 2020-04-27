@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081062"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Generale (finestra di dialogo Struttura di data mining) (Analysis Services – Data Mining)
@@ -29,12 +29,12 @@ ms.locfileid: "66081062"
 |**Nome**|Consente di visualizzare il nome della struttura di data mining.|  
 |**ID**|Consente di visualizzare l'identificatore della struttura di data mining.|  
 |**Descrizione**|Consente di visualizzare la descrizione della struttura di data mining.|  
-|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione della struttura di data mining.|  
+|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione della struttura di data mining.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati per la struttura di data mining.|  
-|**Stato**|Consente di visualizzare lo stato di elaborazione della struttura di data mining. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Consente di visualizzare lo stato di elaborazione della struttura di data mining. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione della struttura di data mining.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services-&#41;di data mining](data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
