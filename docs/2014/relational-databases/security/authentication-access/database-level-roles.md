@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011728"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
@@ -89,19 +89,19 @@ ms.locfileid: "63011728"
   
 |Funzionalità|Type|Descrizione|  
 |-------------|----------|-----------------|  
-|[sp_helpdbfixedrole &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadati|Restituisce un elenco dei ruoli predefiniti del database.|  
-|[sp_dbfixedrolepermission &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadati|Visualizza le autorizzazioni di un ruolo predefinito del database.|  
-|[sp_helprole &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadati|Restituisce informazioni sui ruoli del database corrente.|  
-|[sp_helprolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadati|Restituisce informazioni sui membri di un ruolo del database corrente.|  
+|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadati|Restituisce un elenco dei ruoli predefiniti del database.|  
+|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadati|Visualizza le autorizzazioni di un ruolo predefinito del database.|  
+|[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadati|Restituisce informazioni sui ruoli del database corrente.|  
+|[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadati|Restituisce informazioni sui membri di un ruolo del database corrente.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Metadati|Restituisce una riga per ogni membro di ogni ruolo del database.|  
-|[IS_MEMBER &#40;&#41;Transact-SQL](/sql/t-sql/functions/is-member-transact-sql)|Metadati|Indica se l'utente corrente è membro del gruppo di Microsoft Windows o del ruolo di database di Microsoft SQL Server specificato.|  
-|[CREAZIONE di un ruolo &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Comando|Crea un nuovo ruolo di database nel database corrente.|  
+|[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Metadati|Indica se l'utente corrente è membro del gruppo di Microsoft Windows o del ruolo di database di Microsoft SQL Server specificato.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Comando|Crea un nuovo ruolo di database nel database corrente.|  
 |[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Comando|Modifica il nome di un ruolo del database.|  
 |[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Comando|Rimuove un ruolo dal database.|  
-|[sp_addrole &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Comando|Crea un nuovo ruolo di database nel database corrente.|  
-|[sp_droprole &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Comando|Rimuove un ruolo del database dal database corrente.|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Comando|Crea un nuovo ruolo di database nel database corrente.|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Comando|Rimuove un ruolo del database dal database corrente.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Comando|Aggiunge un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows a un ruolo del database nel database corrente.|  
-|[sp_droprolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Comando|Rimuove un account di sicurezza da un ruolo di SQL Server nel database corrente.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Comando|Rimuove un account di sicurezza da un ruolo di SQL Server nel database corrente.|  
   
 ## <a name="public-database-role"></a>Ruolo di database public  
  Ogni utente di database appartiene al ruolo di database **public** . Quando a un utente non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a **public** su tale oggetto.  
@@ -109,12 +109,12 @@ ms.locfileid: "63011728"
 ## <a name="related-content"></a>Contenuto correlato  
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)  
   
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
  [Sicurezza di SQL Server](../securing-sql-server.md)  
   
- [sp_helprotect &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
+ [sp_helprotect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
   
   

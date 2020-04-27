@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033513"
 ---
 # <a name="preconnectstarting-event-class"></a>Classe di evento PreConnect:Starting
@@ -35,7 +35,7 @@ ms.locfileid: "63033513"
 |ObjectID|`int`|ID dell'oggetto di classificazione definito dall'utente.|22|Sì|  
 |ObjectName|`nvarchar(256)`|Nome in due parti della funzione di classificazione definita dall'utente, ad esempio dbo.classifier.|34|Sì|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [Classe di evento PreConnect: Completed](preconnect-completed-event-class.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  

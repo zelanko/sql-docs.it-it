@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057544"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
@@ -48,7 +48,7 @@ ms.locfileid: "63057544"
 ## <a name="user-action"></a>Azione dell'utente  
  I passaggi seguenti possono contribuire alla risoluzione del problema. Se uno dei passaggi consente l'avvio senza errori dell'agente di lettura log, non è necessario completare i passaggi rimanenti.  
   
--   Verificare nella cronologia dell'agente di lettura log la presenza di eventuali altri errori che potrebbero contribuire a questo errore. Per informazioni sui dettagli di stato e di errore dell'agente di visualizzazione in Monitoraggio replica, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   Verificare nella cronologia dell'agente di lettura log la presenza di eventuali altri errori che potrebbero contribuire a questo errore. Per informazioni sulla visualizzazione dello stato dell'agente e dei dettagli degli errori in Monitoraggio replica, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Verificare nell'output di [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) la presenza di numeri di identificazione di processo (SPID) connessi al database pubblicato. Chiudere le connessioni che potrebbero aver eseguito **sp_repldone**, **sp_replcmds**o **sp_replshowcmds**.  
   

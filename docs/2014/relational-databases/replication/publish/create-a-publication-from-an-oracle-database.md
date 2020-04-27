@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020863"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Creazione di una pubblicazione da un database Oracle
@@ -29,22 +29,22 @@ ms.locfileid: "63020863"
   
      [Prerequisiti](#Prerequisites)  
   
--   **Per creare una pubblicazione da un database Oracle utilizzando:**  
+-   **Per creare una pubblicazione da un database Oracle, utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
--   Prima di creare una pubblicazione, è necessario installare il software Oracle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel server di distribuzione ed è necessario configurare il database Oracle. Per altre informazioni, vedere [Configurare un server di pubblicazione Oracle](../non-sql/configure-an-oracle-publisher.md).  
+-   Prima di creare una pubblicazione, è necessario installare il software Oracle nel server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e configurare il database Oracle. Per altre informazioni, vedere [Configurare un server di pubblicazione Oracle](../non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Creare una pubblicazione snapshot o transazionale da un database Oracle con la Creazione guidata nuova pubblicazione.  
   
- La prima volta che si crea una pubblicazione da un database Oracle, è necessario identificare il server di pubblicazione Oracle nel database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Non è necessario ripetere l'operazione per le pubblicazioni successive provenienti dallo stesso database. L'identificazione del server di pubblicazione Oracle può essere effettuata tramite la Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**. In questo argomento viene illustrata la finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**.  
+ La prima volta che si crea una pubblicazione da un database Oracle, è necessario identificare il server di pubblicazione Oracle nel database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Non è necessario ripetere l'operazione per le pubblicazioni successive provenienti dallo stesso database. L'identificazione del server di pubblicazione Oracle può essere effettuata tramite la Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** . In questo argomento viene illustrata la finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** .  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>Per identificare il server di pubblicazione Oracle nel server di distribuzione SQL Server  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63020863"
   
      L'opzione **Completa** è progettata per offrire pubblicazioni snapshot e transazionali con il set completo di caratteristiche supportate per la pubblicazione Oracle. L'opzione **Gateway** consente l'ottimizzazione della progettazione specifica per migliorare le prestazioni per i casi in cui la replica funge da gateway tra i sistemi. Non è possibile utilizzare l'opzione **Gateway** se si intende pubblicare la stessa tabella in più pubblicazioni transazionali. Se si seleziona **Gateway**, una tabella può essere presente al massimo in una pubblicazione transazionale e in un numero qualsiasi di pubblicazioni snapshot.  
   
-7.  Fare clic su **Connetti**per creare una connessione al server di pubblicazione Oracle e configurarla per la replica. La finestra di dialogo **Connetti al server** verrà chiusa e verrà visualizzata di nuovo la finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**.  
+7.  Fare clic su **Connetti**per creare una connessione al server di pubblicazione Oracle e configurarla per la replica. La finestra di dialogo **Connetti al server** verrà chiusa e verrà visualizzata di nuovo la finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** .  
   
     > [!NOTE]  
     >  Se si verificano problemi con la configurazione di rete, a questo punto verrà visualizzato un errore. Se si verificano problemi durante la connessione al database Oracle, vedere la sezione relativa all'impossibilità di connessione del server di distribuzione SQL Server all'istanza del database Oracle in [Troubleshooting Oracle Publishers](../non-sql/troubleshooting-oracle-publishers.md).  
@@ -105,8 +105,8 @@ ms.locfileid: "63020863"
   
 11. Nella pagina **Completamento procedura guidata** specificare un nome per la pubblicazione.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
- Dopo aver configurato il database Oracle come server di pubblicazione, è possibile creare una pubblicazione transazionale o snapshot in modo analogo a quello di un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server di pubblicazione, utilizzando stored procedure di sistema.  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+ Dopo aver configurato il database Oracle come server di pubblicazione, è possibile creare una pubblicazione transazionale o snapshot in modo analogo a quanto possibile con un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], usando stored procedure di sistema.  
   
 #### <a name="to-create-an-oracle-publication"></a>Per creare una pubblicazione Oracle  
   
@@ -114,8 +114,7 @@ ms.locfileid: "63020863"
   
 2.  Se non esiste un server di distribuzione remoto, configurarlo. Per altre informazioni, vedere [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  Nel server di distribuzione remoto che verrà usato dal server di pubblicazione Oracle, eseguire [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Specificare il nome TNS (Transparent Network Substrate) dell'istanza del **@publisher** database Oracle per e `ORACLE` il `ORACLE GATEWAY` valore **@publisher_type**o per. 
-  `Specify` la modalità di sicurezza utilizzata per la connessione dal server di pubblicazione Oracle al database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remoto. I possibili valori sono i seguenti:  
+3.  Nel server di distribuzione remoto che verrà usato dal server di pubblicazione Oracle, eseguire [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Specificare il nome TNS (Transparent Network Substrate) dell'istanza del **@publisher** database Oracle per e `ORACLE` il `ORACLE GATEWAY` valore **@publisher_type**o per. `Specify` la modalità di sicurezza utilizzata per la connessione dal server di pubblicazione Oracle al database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remoto. I possibili valori sono i seguenti:  
   
     -   Per utilizzare l'autenticazione standard di Oracle, che corrisponde all'impostazione predefinita, specificare il valore **0** per **@security_mode**, l'account di accesso dello schema utente di amministrazione della replica creato nel server di pubblicazione Oracle durante la configurazione per **@login**e la password per **@password**.  
   
@@ -145,8 +144,8 @@ ms.locfileid: "63020863"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../non-sql/configure-an-oracle-publisher.md)   
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)   
- [Configurare il processo del set di transazioni per un server di pubblicazione Oracle &#40;la programmazione Transact-SQL della replica&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Configurare il processo del set di transazioni per un server di pubblicazione Oracle &#40;programmazione Transact-SQL della replica&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Panoramica della pubblicazione Oracle](../non-sql/oracle-publishing-overview.md)   
- [Script per la concessione di autorizzazioni Oracle](../non-sql/script-to-grant-oracle-permissions.md)  
+ [Script per la concessione di autorizzazioni per Oracle](../non-sql/script-to-grant-oracle-permissions.md)  
   
   

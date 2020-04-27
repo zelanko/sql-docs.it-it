@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022600"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
@@ -26,7 +26,7 @@ ms.locfileid: "63022600"
   
 2.  Concedere direttamente, anziché tramite un ruolo, all'utente di amministrazione di Oracle creato nel passaggio 1 l'autorizzazione SELECT per ogni tabella che verrà pubblicata.  
   
-3.  Installare il software client Oracle e il provider di OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel server di distribuzione, quindi arrestare e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riavviare l'istanza. Se il server di distribuzione viene eseguito su una piattaforma a 64 bit, è necessario utilizzare la versione a 64 bit del provider OLE DB Oracle.  
+3.  Installare il software client Oracle e il provider OLE DB nel server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se il server di distribuzione viene eseguito su una piattaforma a 64 bit, è necessario utilizzare la versione a 64 bit del provider OLE DB Oracle.  
   
 4.  Configurare il database Oracle come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63022600"
   
  Dopo aver stabilito una connessione al server di pubblicazione Oracle, tentare di eseguire l'accesso al database utilizzando l'account e la password associati allo schema utente di amministrazione della replica creato. La procedura seguente deve essere eseguita utilizzando lo stesso account di Windows adoperato dal servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  Fare clic su **Start**, quindi scegliere **Esegui**.  
+1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
 2.  Digitare `cmd` e fare clic su **OK**.  
   
@@ -128,9 +128,9 @@ ms.locfileid: "63022600"
   
  Per configurare un server di pubblicazione Oracle e creare una pubblicazione, vedere [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Considerazioni amministrative per i server di pubblicazione Oracle](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Considerazioni amministrative per i Publisher Oracle](administrative-considerations-for-oracle-publishers.md)   
+ [Mapping dei tipi di dati per i Publisher Oracle](data-type-mapping-for-oracle-publishers.md)   
  [Glossario dei termini per la pubblicazione Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  
   

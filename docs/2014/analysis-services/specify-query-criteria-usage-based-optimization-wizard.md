@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068217"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Impostazione criteri di query (Ottimizzazione guidata basata sulle statistiche di utilizzo)
@@ -40,13 +40,13 @@ ms.locfileid: "66068217"
  Consente di filtrare le query del log di query in base a una data e ora di inizio. Selezionare o digitare una data nell'elenco a discesa.  
   
 > [!NOTE]  
->  Se la **Data di fine** non è selezionata, vengono considerate tutte le query del log di query di o dopo la data e l'ora specificate per questa opzione.  
+>  Se l'opzione **Data di fine** non è selezionata, vengono considerate tutte le query del log di query con data e ora corrispondenti o successive a quelle specificate per questa opzione.  
   
  **Data di fine**  
  Consente di filtrare le query del log di query in base a una data e ora di fine. Selezionare o digitare una data nell'elenco a discesa.  
   
 > [!NOTE]  
->  Se la **Data di inizio** non è selezionata, vengono considerate tutte le query del log di query in o prima della data e dell'ora specificate per questa opzione.  
+>  Se l'opzione **Data di inizio** non è selezionata, vengono considerate tutte le query del log di query con data e ora corrispondenti o precedenti a quelle specificate per questa opzione.  
   
  **Utenti**  
  Consente di filtrare le query del log di query in base a un set di utenti. Fare clic sul pulsante (**...**) per visualizzare la finestra di dialogo **Selezione utenti** e selezionare gli utenti in base ai quali filtrare le query. Per altre informazioni sulla finestra di dialogo **Selezione utenti**, vedere [Finestra di dialogo Selezione utenti &#40;Analysis Services - Dati multidimensionali&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "66068217"
  **Query più frequenti**  
  Consente di filtrare le query del log di query in base alla percentuale maggiore di query distinte eseguite più spesso per le partizioni selezionate. Selezionare o digitare un valore percentuale nella casella di testo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

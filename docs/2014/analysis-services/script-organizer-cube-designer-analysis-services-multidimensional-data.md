@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069929"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria script (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66069929"
   
  Fare clic su **Sposta su** o **Sposta giù** nel riquadro **Barra degli strumenti** oppure scegliere i comandi corrispondenti dal menu di scelta rapida per modificare l'ordine di esecuzione dei calcoli.  
   
- **Tipo**  
+ **Type**  
  Consente di visualizzare un'icona che identifica il calcolo come membro calcolato, set denominato o comando di script.  
   
  **Comando**  
@@ -51,7 +51,7 @@ ms.locfileid: "66069929"
 |**Sposta giù**|Scegliere questa opzione per spostare il calcolo selezionato verso il basso di una posizione.<br /><br /> Nota: questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
 |**Elimina**|Scegliere questa opzione per eliminare il calcolo selezionato.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Strumenti di calcolo &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   

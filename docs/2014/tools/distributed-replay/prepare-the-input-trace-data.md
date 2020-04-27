@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149999"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparazione dei dati di traccia di input
-  Prima di avviare una riproduzione distribuita con la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità riesecuzione distribuita, è necessario preparare i dati di traccia di input avviando la fase di pre-elaborazione dallo strumento di amministrazione riesecuzione distribuita. Nella fase di pre-elaborazione Distributed Replay Controller elabora i dati di traccia e genera un file intermedio:  
+  Prima di avviare una riesecuzione distribuita con la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario preparare i dati di traccia di input avviando la fase di pre-elaborazione dallo strumento di amministrazione Riesecuzione distribuita. Nella fase di pre-elaborazione Distributed Replay Controller elabora i dati di traccia e genera un file intermedio:  
   
  ![Fase di pre-elaborazione di Riesecuzione distribuita](../../database-engine/media/preprocess.gif "Fase di pre-elaborazione di Riesecuzione distribuita")  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63149999"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Per preparare i dati di traccia di input  
   
-1.  **(Facoltativo) modificare le impostazioni di configurazione della pre-elaborazione**: se si desidera modificare le impostazioni di configurazione della pre-elaborazione, ad esempio se filtrare le sessioni di sistema o configurare il tempo di `<PreprocessModifiers>` inattività massimo, è necessario modificare l'elemento del file `DReplay.exe.preprocess.config`di configurazione della pre-elaborazione basata su XML,. Se si modifica il file di configurazione della pre-elaborazione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
+1.  **Modificare le impostazioni di configurazione della pre-elaborazione (facoltativo)** : se si vogliono modificare le impostazioni di configurazione della pre-elaborazione, ad esempio se filtrare o meno le sessioni di sistema o configurare il tempo di inattività massimo, è necessario modificare l'elemento `<PreprocessModifiers>` del file XML di configurazione della pre-elaborazione `DReplay.exe.preprocess.config`. Se si modifica il file di configurazione della pre-elaborazione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
   
     1.  Creare una copia del file di configurazione della pre-elaborazione predefinito `DReplay.exe.preprocess.config`e rinominare il nuovo file. Il file di configurazione della pre-elaborazione predefinito si trova nella cartella di installazione dello strumento di amministrazione.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63149999"
 3.  Al termine della fase di pre-elaborazione, il file intermedio viene archiviato nella directory di lavoro del controller. Per avviare la fase di riproduzione dell'evento, è necessario eseguire lo strumento di amministrazione con l'opzione **replay** . Per altre informazioni, vedere [Riprodurre dati di traccia](replay-trace-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
- [Requisiti di Riesecuzione distribuita](distributed-replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Distributed Replay](configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Requisiti relativi a Riesecuzione distribuita](distributed-replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
   
   

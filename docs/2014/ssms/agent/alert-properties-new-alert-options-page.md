@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061272"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>Proprietà avviso - Nuovo avviso (pagina Opzioni)
+# <a name="alert-properties-new-alert-options-page"></a>Proprietà avviso: Nuovo avviso (pagina Opzioni)
   Utilizzare questa pagina per visualizzare e modificare le opzioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Posta elettronica**  
  Consente di includere l'eventuale testo dell'errore risultante dall'evento nelle notifiche inviate tramite posta elettronica.  
   
- **Pager**  
+ **Cercapersone**  
  Consente di includere l'eventuale testo dell'errore risultante dall'evento nelle notifiche inviate tramite cercapersone.  
   
  **NET SEND**  
@@ -35,7 +35,7 @@ ms.locfileid: "63061272"
  **Messaggio di notifica aggiuntivo da inviare**  
  Consente di digitare un testo aggiuntivo da includere nei messaggi di notifica.  
   
- **Ritardo tra risposte**  
+ **Intervallo tra le risposte**  
  Consente di specificare un ritardo per le occorrenze ripetute dell'evento. È possibile che alcuni eventi si verifichino frequentemente durante un breve periodo di tempo. In questo caso, è possibile che si desideri sapere che l'evento si è verificato ma che non si desideri ricevere una risposta per ogni evento. Usare questa opzione per specificare un timeout. Con un ritardo, dopo la risposta dell'avviso a un evento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent attende il ritardo specificato prima di rispondere di nuovo, indipendentemente dal fatto che l'evento si verifichi durante il ritardo.  
   
  **Minuti**  
@@ -44,7 +44,7 @@ ms.locfileid: "63061272"
  **Secondi**  
  Consente di specificare un ritardo in secondi. Per attivare una risposta ogni volta che si verifica l'evento, specificare 0 minuti e 0 secondi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avvisi](alerts.md)  
   
   

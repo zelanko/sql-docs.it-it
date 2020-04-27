@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022517"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
-  La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla pubblicazione da un database [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
+  La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pubblicazione da un database. È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
   
 -   L'opzione Oracle Gateway offre prestazioni migliori rispetto all'opzione Oracle Complete, ma non è possibile utilizzarla per pubblicare la stessa tabella in più pubblicazioni transazionali. Una tabella può essere visualizzata al massimo in una pubblicazione transazionale e in qualsiasi numero di pubblicazioni snapshot. Se è necessario pubblicare la stessa tabella in più pubblicazioni transazionali, scegliere l'opzione Oracle Complete.  
   
@@ -165,8 +165,8 @@ ms.locfileid: "63022517"
   
  Per ulteriori informazioni sulla sicurezza della replica, vedere [replica di SQL Server sicurezza](../security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Considerazioni amministrative per i server di pubblicazione Oracle](administrative-considerations-for-oracle-publishers.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Considerazioni amministrative per i Publisher Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
  [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  
   

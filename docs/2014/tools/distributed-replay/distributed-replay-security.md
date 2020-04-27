@@ -11,27 +11,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150343"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
-  Prima di installare e utilizzare la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità riesecuzione distribuita, è necessario esaminare le importanti informazioni di sicurezza in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
+  Prima di installare e usare la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario leggere le importanti informazioni sulla sicurezza riportate in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
   
 ## <a name="user-and-service-accounts"></a>Account utente e di servizio  
  Nella tabella seguente vengono descritti gli account utilizzati per Distributed Replay. Dopo l'installazione di Distributed Replay, è necessario assegnare le entità di sicurezza con cui verranno eseguiti gli account dei servizi controller e client. È pertanto consigliabile configurare gli account utente di dominio corrispondenti prima di installare le funzionalità di Distributed Replay.  
   
 |Account utente|Requisiti|  
 |------------------|------------------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio controller di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, lo strumento di amministrazione, il controller e il client devono essere tutti eseguiti nello stesso computer.<br /><br /> ** \* Nota sulla sicurezza \* \* ** È consigliabile che l'account non sia un membro del gruppo Administrators locale in Windows.|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, il controller, il client e l'istanza di SQL Server di destinazione devono essere tutti eseguiti nello stesso computer.<br /><br /> ** \* Nota sulla sicurezza \* \* ** È consigliabile che l'account non sia un membro del gruppo Administrators locale in Windows.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio controller di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, lo strumento di amministrazione, il controller e il client devono essere tutti eseguiti nello stesso computer.<br /><br /> **\*\* Nota sulla sicurezza \*\*** È consigliabile evitare che l'account sia un membro del gruppo Administrators locale in Windows.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, il controller, il client e l'istanza di SQL Server di destinazione devono essere tutti eseguiti nello stesso computer.<br /><br /> **\*\* Nota sulla sicurezza \*\*** È consigliabile evitare che l'account sia un membro del gruppo Administrators locale in Windows.|  
 |Account utente interattivo utilizzato per eseguire lo strumento Distributed Replay Administration Tool|Può essere un account utente locale o di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.|  
   
- **Importante**: quando si configura riesecuzione distribuita controller, è possibile specificare uno o più account utente che verranno usati per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+ **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
 -   Account utente di dominio  
   
@@ -49,7 +47,7 @@ ms.locfileid: "63150343"
   
 1.  Effettuare una delle operazioni seguenti a seconda del sistema operativo in uso:  
   
-    -   Fare **** clic su Start `services.msc` , digitare nella casella di **ricerca** e quindi premere INVIO.  
+    -   Fare **Start**clic su Start `services.msc` , digitare nella casella di **ricerca** e quindi premere INVIO.  
   
     -   Fare clic sul pulsante **Start**, scegliere `services.msc` **Esegui**, digitare e quindi premere INVIO.  
   
@@ -64,19 +62,15 @@ ms.locfileid: "63150343"
   
 |Account|Autorizzazioni per le cartelle|  
 |-------------|------------------------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio controller di Riesecuzione distribuita|`<Controller_Installation_Path>\DReplayController`(Lettura, scrittura, eliminazione)<br /><br /> 
-  `DReplayServer.xml` file (Lettura, Scrittura)|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|`<Client_Installation_Path>\DReplayClient`(Lettura, scrittura, eliminazione)<br /><br /> 
-  `DReplayClient.xml` file (Lettura, Scrittura)<br /><br /> Le directory di lavoro e dei risultati, secondo quanto specificato nel file di configurazione del client rispettivamente tramite gli elementi `WorkingDirectory` e `ResultDirectory` . (Lettura, Scrittura)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio controller di Riesecuzione distribuita|`<Controller_Installation_Path>\DReplayController` (Lettura, Scrittura, Eliminazione)<br /><br /> `DReplayServer.xml` file (Lettura, Scrittura)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|`<Client_Installation_Path>\DReplayClient` (Lettura, Scrittura, Eliminazione)<br /><br /> `DReplayClient.xml` file (Lettura, Scrittura)<br /><br /> Le directory di lavoro e dei risultati, secondo quanto specificato nel file di configurazione del client rispettivamente tramite gli elementi `WorkingDirectory` e `ResultDirectory` . (Lettura, Scrittura)|  
   
 ## <a name="dcom-permissions"></a>Autorizzazioni DCOM  
  DCOM viene utilizzato per la comunicazione RPC (Remote Procedure Call) tra il controller e lo strumento di amministrazione e tra il controller e tutti i client. È necessario configurare le autorizzazioni DCOM a livello di computer e specifiche dell'applicazione sul controller dopo l'installazione delle funzionalità di Distributed Replay.  
   
  Per configurare le autorizzazioni DCOM del controller, effettuare le seguenti operazioni:  
   
-1.  **Aprire DCOMCNFG. exe, lo snap-in Servizi componenti,** ovvero lo strumento utilizzato per configurare le autorizzazioni DCOM.  
+1.  **Aprire dcomcnfg.exe, lo snap-in Servizi componenti**: si tratta dello strumento usato per configurare le autorizzazioni DCOM.  
   
     1.  Nel computer controller fare clic sul menu **Start**.  
   
@@ -84,17 +78,16 @@ ms.locfileid: "63150343"
   
     3.  Premere INVIO.  
   
-2.  **Configurare le autorizzazioni DCOM a livello di computer**: concedere le corrispondenti autorizzazioni DCOM a livello di computer per ogni account elencato nella tabella seguente. Per altre informazioni sull'impostazione di autorizzazioni a livello di computer, vedere [Elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurare le autorizzazioni DCOM a livello di computer**: concedere le autorizzazioni DCOM a livello di computer corrispondenti per ogni account elencato nella tabella seguente. Per altre informazioni sull'impostazione di autorizzazioni a livello di computer, vedere [Elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurare le autorizzazioni DCOM specifiche dell'applicazione**: concedere le corrispondenti autorizzazioni DCOM specifiche dell'applicazione per ogni account elencato nella tabella seguente. Il nome dell'applicazione DCOM per il servizio controller è **DReplayController**. Per altre informazioni sull'impostazione di autorizzazioni specifiche dell'applicazione, vedere [Elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurare le autorizzazioni DCOM specifiche dell'applicazione**: concedere le autorizzazioni DCOM corrispondenti specifiche dell'applicazione per ogni account elencato nella tabella seguente. Il nome dell'applicazione DCOM per il servizio controller è **DReplayController**. Per altre informazioni sull'impostazione di autorizzazioni specifiche dell'applicazione, vedere [Elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  Nella tabella seguente sono descritte le autorizzazioni DCOM richieste per l'account utente interattivo dello strumento di amministrazione e per gli account del servizio client:  
   
 |Funzionalità|Account|Autorizzazioni DCOM necessarie sul controller|  
 |-------------|-------------|---------------------------------------------|  
 |Distributed Replay Administration Tool|Account utente interattivo|Accesso locale<br /><br /> Accesso remoto<br /><br /> Avvio locale<br /><br /> Avvio remoto<br /><br /> Attivazione locale<br /><br /> Attivazione remota|  
-|Client Riesecuzione distribuita|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Accesso locale<br /><br /> Accesso remoto<br /><br /> Avvio locale<br /><br /> Avvio remoto<br /><br /> Attivazione locale<br /><br /> Attivazione remota|  
+|Client Riesecuzione distribuita|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Accesso locale<br /><br /> Accesso remoto<br /><br /> Avvio locale<br /><br /> Avvio remoto<br /><br /> Attivazione locale<br /><br /> Attivazione remota|  
   
 > [!IMPORTANT]  
 >  Per facilitare la protezione da query dannose o attacchi Denial of Service, accertarsi di utilizzare solo un account utente attendibile per l'account del servizio client. Questo account sarà in grado di connettersi e riprodurre i carichi di lavoro sull'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -104,7 +97,7 @@ ms.locfileid: "63150343"
   
  Dopo avere installato il servizio client di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un set di computer, all'entità di sicurezza usata per tali account di servizio è necessario concedere il ruolo del server sysadmin per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si prevede di riprodurre il carico di lavoro dei file di traccia. Questo passaggio non viene eseguito automaticamente durante l'esecuzione del programma di installazione di Distributed Replay.  
   
-## <a name="data-protection"></a>Protezione dati  
+## <a name="data-protection"></a>Protezione dei dati  
  Nell'ambiente Distributed Replay, agli account utente seguenti viene concesso l'accesso completo all'istanza del server di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ai dati di traccia di input e ai file di traccia dei risultati:  
   
 -   Account utente interattivo utilizzato per eseguire lo strumento di amministrazione.  
@@ -136,7 +129,7 @@ ms.locfileid: "63150343"
 -   Eliminare qualsiasi file di traccia, intermedio, di recapito e di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzati per i test. I file intermedi e di recapito vengono archiviati nella directory di lavoro rispettivamente nel controller e nel client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Installare Riesecuzione distribuita](install-distributed-replay-overview.md)  
   
   

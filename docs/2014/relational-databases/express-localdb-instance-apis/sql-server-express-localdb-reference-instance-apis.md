@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128635"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Riferimento all'API dell'istanza del database locale di SQL Server ExpressSQL Server
@@ -74,7 +74,7 @@ ms.locfileid: "63128635"
  Per evitare conflitti di denominazione, le istanze del database locale denominate non possono avere un nome che segue il modello di denominazione per le istanze automatiche, come descritto in precedenza in "regole di denominazione automatica dell'istanza". Un tentativo di creare un'istanza denominata con un nome che segue il modello di denominazione dell'istanza automatica crea in modo efficace un'istanza predefinita.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>Argomenti di riferimento al database locale di SQL Server Express  
- [Informazioni sulla versione e intestazione del database locale di SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
  Vengono fornite informazioni sul file di intestazione e le chiavi del Registro di sistema per l'individuazione dell'API dell'istanza del database locale.  
   
  [Strumento di gestione della riga di comando: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  

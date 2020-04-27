@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031935"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opzioni (Esplora oggetti di SQL Server-pagina di scripting)
@@ -63,7 +63,7 @@ ms.locfileid: "63031935"
  **Genera script per oggetti dipendenti**  
  Consente di generare uno script per oggetti aggiuntivi, richiesti quando viene eseguito lo script per l'oggetto selezionato. Il valore predefinito è False.  
   
- **Includi clausola If NOT EXISTs**  
+ **Includi clausola IF NOT EXISTS**  
  Consente di includere un'istruzione per verificare che ogni oggetto non sia presente nel database prima del tentativo di crearlo. Il valore predefinito è False. Per ulteriori informazioni, vedere [if... In caso contrario &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/if-else-transact-sql) ed [esiste &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Schema per qualifica dei nomi degli oggetti**  
@@ -138,7 +138,7 @@ ms.locfileid: "63031935"
  **ScriptDriIncludeSystemNames**  
  Consente di includere nomi di vincoli generati dal sistema per applicare l'integrità referenziale dichiarativa. Il valore predefinito è False. Per ulteriori informazioni, vedere [REFERENTIAL_CONSTRAINTS &#40;&#41;Transact-SQL ](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Generazione di script &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)  
   
   

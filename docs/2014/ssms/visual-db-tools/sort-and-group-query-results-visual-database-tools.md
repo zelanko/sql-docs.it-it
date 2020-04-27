@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070881"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Ordinare e raggruppare i risultati delle query (Visual Database Tools)
@@ -35,22 +35,22 @@ ms.locfileid: "63070881"
  Per informazioni dettagliate sulla creazione di query di questo tipo, vedere gli argomenti indicati nella seguente tabella:  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Ordinamento di righe &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Ordinare le righe &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Vengono illustrati i vari metodi di ordinamento delle righe e i motivi per cui utilizzare l'uno o l'altro.  
   
- [Comprimi gruppi di righe &#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
+ [Comprimere i gruppi di righe &#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
  Vengono illustrati i vari metodi di compressione delle righe, ad esempio il calcolo o l'eliminazione dei duplicati.  
   
- [Ordinamento con ORDER BY &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
+ [Ordinare con ORDER BY &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
  Viene descritta la procedura per ottenere i risultati in un ordine specifico.  
   
- [Ordinamento in ordine crescente o decrescente &#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
+ [Ordinare in modo crescente o decrescente &#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
  Viene descritta la procedura per cambiare o impostare la direzione dell'ordinamento.  
   
  [Ordinare più colonne nelle query &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  Viene descritta la procedura per impostare l'ordine dei set di risultati per più colonne.  
   
- [Raggruppare righe nei risultati delle query &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
+ [Raggruppare righe nei risultati di una query &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
  Viene descritta la procedura per creare subset di informazioni di riepilogo organizzando i dati in gruppi.  
   
  [Specificare le condizioni per i gruppi &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  

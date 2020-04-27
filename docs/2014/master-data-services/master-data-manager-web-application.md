@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482899"
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
@@ -22,7 +22,7 @@ ms.locfileid: "65482899"
   
  L'area funzionale Esplora risorse dell'applicazione Web è la sola area non utilizzata dagli amministratori. Esplora risorse è pensata per quegli utenti che aggiornano i dati master frequentemente. Questi utenti dispongono delle autorizzazioni per i dati necessari per l'esecuzione dei processi.  
   
- [Area funzionale Esplora &#40;Gestione dati master&#41;](../../2014/master-data-services/explorer-functional-area-master-data-manager.md)  
+ [Area funzionale Esplora risorse &#40;Gestione dati master&#41;](../../2014/master-data-services/explorer-functional-area-master-data-manager.md)  
   
  [Area funzionale Gestione versioni &#40;Gestione dati master&#41;](../../2014/master-data-services/version-management-functional-area-master-data-manager.md)  
   

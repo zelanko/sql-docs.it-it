@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63075183"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connessione a un'origine dati (ODBC)
@@ -111,7 +111,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  La funzione di gestione degli errori di un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione per le connessioni deve chiamare **SQLGetDiagRec** fino a quando non restituisce SQL_NO_DATA. Deve quindi agire su tutti i messaggi diversi da quelli con codice *pfNative* 5701 o 5703.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Comunicazione con SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067537"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Selezione di righe non corrispondenti a un valore (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63067537"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>Per individuare le righe che non corrispondono a un valore  
   
-1.  Se non è già stato fatto, aggiungere al [riquadro Criteri](visual-database-tools.md)le colonne o le espressioni che si desidera utilizzare nella condizione di ricerca.  
+1.  Se non è ancora stato fatto, aggiungere nel [riquadro Criteri](visual-database-tools.md)le colonne o le espressioni da usare nella condizione di ricerca.  
   
 2.  Individuare la riga contenente la colonna di dati o l'espressione da includere nella ricerca, quindi immettere l'operatore NOT seguito da un valore di ricerca nella colonna **Filtro** della griglia.  
   

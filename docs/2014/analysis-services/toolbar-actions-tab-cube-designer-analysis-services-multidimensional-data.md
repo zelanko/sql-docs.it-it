@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066212"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66066212"
 |------------|-----------------|  
 |**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
 |**Processo**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo.|  
-|**Ricollegare**|Fare clic su questo pulsante per riconnettere la scheda **Azioni** all'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo se la sessione della scheda **Azioni** è stata disconnessa a causa di timeout o perdita della connessione.|  
+|**Riconnetti**|Fare clic su questo pulsante per riconnettere la scheda **Azioni** all'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo se la sessione della scheda **Azioni** è stata disconnessa a causa di timeout o perdita della connessione.|  
 |**Nuova azione**|Fare clic su questo pulsante per visualizzare il riquadro dell' **editor dei form delle azioni** e creare una nuova azione.|  
 |**Nuova azione drill-through**|Fare clic su questo pulsante per visualizzare l' **editor dei form delle azioni drill-through** e creare una nuova azione drill-through.|  
 |**Nuova azione report**|Fare clic su questo pulsante per visualizzare l' **editor dei form delle azioni report** e creare una nuova azione report.|  

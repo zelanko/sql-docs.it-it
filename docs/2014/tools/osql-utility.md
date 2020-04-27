@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017183"
 ---
 # <a name="osql-utility"></a>Utilità osql
@@ -67,14 +67,14 @@ ms.locfileid: "63017183"
 > [!NOTE]  
 >  A causa della natura delle trasmissioni in rete, è possibile che **osql** non riceva una risposta tempestiva da tutti i server e pertanto che l'elenco di server restituito sia diverso per ogni chiamata di questa opzione.  
   
- **-U** _login_ID_  
+ **-U** _login_id_  
  ID di accesso dell'utente. Negli ID di accesso viene fatta distinzione tra maiuscole e minuscole.  
   
  **-P** _password_  
  Password specificata dall'utente. Se si omette l'opzione **-P** , **osql** richiede una password. Se l'opzione **-P** viene specificata alla fine del prompt dei comandi senza indicare una password, **osql** usa la password predefinita (NULL).  
   
 > [!IMPORTANT]  
->  Non usare una password vuota. Usare una password complessa. Per ulteriori informazioni, vedere [Password complesse](../relational-databases/security/strong-passwords.md).  
+>  Non usare una password vuota. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../relational-databases/security/strong-passwords.md).  
   
  Per le password viene fatta distinzione tra maiuscole e minuscole.  
   
@@ -93,8 +93,8 @@ C:\>osql
  **-E**  
  Utilizza una connessione trusted anziché richiedere una password.  
   
- **-S** _server_name_[ **\\** _instance_name_]  
- Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Specificare *server_name* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in tale server. Se non si specifica alcun server, **osql** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria per l'esecuzione di **osql** da un computer remoto sulla rete.  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Specificare _server_name_**\\**_instance_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in tale server. Se non si specifica alcun server, **osql** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria per l'esecuzione di **osql** da un computer remoto sulla rete.  
   
  **-H** _wksta_name_  
  Nome della workstation. Il nome della workstation viene archiviato in **sysprocesses.hostname** ed è visualizzato tramite **sp_who**. Se omesso, viene utilizzato il nome del computer corrente.  
@@ -103,13 +103,13 @@ C:\>osql
  Esegue un'istruzione USE *db_name* all'avvio di **osql**.  
   
  **-l** _time_out_  
- Specifica il numero di secondi prima del timeout di un accesso **osql** . Il timeout predefinito per l'accesso a **osql** è otto secondi.  
+ Specifica il numero di secondi prima del timeout di accesso a **osql** . Il valore predefinito per il timeout di accesso a **osql** è otto secondi.  
   
  **-t** _time_out_  
- Specifica il numero di secondi prima del timeout di un comando. Se non si specifica un valore di *time_out* , non si timeout per i comandi.  
+ Specifica il numero di secondi prima del timeout del comando. Se per *time_out* non viene specificato alcun valore, ai comandi non viene associato alcun timeout.  
   
- _intestazioni_ **-h**  
- Specifica il numero di righe da stampare tra le intestazioni delle colonne. Per impostazione predefinita, le intestazioni vengono stampate una volta per ogni set di risultati delle query. Utilizzare -1 per non stampare alcuna intestazione. Se si usa -1, non inserire spazi tra il parametro e l'impostazione (**-h-1**e non **-h -1**).  
+ **-h** _headers_  
+ Specifica il numero di righe da stampare tra le intestazioni delle colonne. Per impostazione predefinita, le intestazioni vengono stampate una volta per ogni set di risultati delle query. Utilizzare -1 per non stampare alcuna intestazione. Se si usa -1, non inserire spazi tra il parametro e l'impostazione ( **-h-1**e non **-h -1**).  
   
  **-s** _col_separator_  
  Specifica il carattere separatore di colonne che, per impostazione predefinita, è uno spazio vuoto. Per utilizzare caratteri con un significato speciale per il sistema operativo (ad esempio, |; & \< >), racchiudere il carattere tra virgolette doppie (").  
@@ -118,8 +118,7 @@ C:\>osql
  Consente di impostare la larghezza della schermata per l'output. Il valore predefinito è 80 caratteri. Se una riga di output raggiunge la larghezza massima della schermata, viene suddivisa su più righe.  
   
  **-a** _packet_size_  
- Consente di richiedere un pacchetto di dimensioni diverse. I valori validi per *packet_size* sono compresi tra 512 e 65535. Il valore predefinito per **osql** è il valore predefinito del server. Aumentando le dimensioni del pacchetto si possono ottenere miglioramenti delle prestazioni di esecuzione di script di grandi dimensioni, che includono numerose istruzioni SQL tra i comandi GO. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] indicano che, per le operazioni di copia bulk, l'impostazione che garantisce le prestazioni più veloci è in genere 8.192. È possibile richiedere una dimensione maggiore del pacchetto, ma se questa non è disponibile **osql** usa il valore predefinito del server.  
+ Consente di richiedere un pacchetto di dimensioni diverse. I valori validi per *packet_size* sono compresi tra 512 e 65535. Il valore predefinito per **osql** è il valore predefinito del server. Aumentando le dimensioni del pacchetto si possono ottenere miglioramenti delle prestazioni di esecuzione di script di grandi dimensioni, che includono numerose istruzioni SQL tra i comandi GO. [!INCLUDE[msCoName](../includes/msconame-md.md)] indicano che, per le operazioni di copia bulk, l'impostazione che garantisce le prestazioni più veloci è in genere 8.192. È possibile richiedere una dimensione maggiore del pacchetto, ma se questa non è disponibile **osql** usa il valore predefinito del server.  
   
  **-e**  
  Esegue l'eco dell'input.  
@@ -146,23 +145,23 @@ osql -E -q "select name, object_id from %table%"
   
  Racchiudere la query tra virgolette doppie e utilizzare le virgolette singole per altri elementi inclusi nella query.  
   
- **-Q "** _query_ **"**  
+ **-Q"** _query_ **"**  
  Esegue una query ed esce immediatamente da **osql**. Racchiudere la query tra virgolette doppie e utilizzare le virgolette singole per altri elementi inclusi nella query.  
   
  **-n**  
  Rimuove la numerazione e il simbolo del prompt (>) dalle righe di input.  
   
  **-m** _error_level_  
- Personalizza la visualizzazione dei messaggi di errore. Per gli errori con livello di gravità pari o superiore a quello specificato vengono visualizzati il numero, lo stato e il livello di errore del messaggio. Per gli errori con livelli di gravità inferiori a quello specificato non viene visualizzato nulla. Usare **-1** per specificare che con i messaggi, anche quelli informativi, devono essere restituite anche tutte le rispettive intestazioni. Se si usa **-1**, non inserire spazi tra il parametro e l'impostazione (**-m-1**e non **-m -1**).  
+ Personalizza la visualizzazione dei messaggi di errore. Per gli errori con livello di gravità pari o superiore a quello specificato vengono visualizzati il numero, lo stato e il livello di errore del messaggio. Per gli errori con livelli di gravità inferiori a quello specificato non viene visualizzato nulla. Usare **-1** per specificare che con i messaggi, anche quelli informativi, devono essere restituite anche tutte le rispettive intestazioni. Se si usa **-1**, non inserire spazi tra il parametro e l'impostazione ( **-m-1**e non **-m -1**).  
   
  **-r** { **0**| **1**}  
  Reindirizza l'output dei messaggi sullo schermo (**stderr**). Se il parametro viene omesso o si specifica **0**, vengono reindirizzati solo i messaggi di errore con gravità pari o superiore a 11. Se si specifica **1**, viene reindirizzato l'output di tutti i messaggi (incluso quello dell'istruzione "print").  
   
  **-i** _input_file_  
- Identifica il file che include un batch di istruzioni SQL o stored procedure. L'operatore di confronto**\<** minore di () può essere utilizzato al posto di **-i**.  
+ Identifica il file che include un batch di istruzioni SQL o stored procedure. Anziché **\<** -i **, è possibile utilizzare l'operatore di confronto minore di (** ).  
   
  **-o** _output_file_  
- Identifica il file che riceve l'output di **osql**. È possibile usare l'**>** operatore di confronto maggiore di () al posto di **-o**.  
+ Identifica il file che riceve l'output di **osql**. Anziché **>** -o **, è possibile usare l'operatore di confronto maggiore di (** ).  
   
  Se *input_file* non è un file Unicode e l'opzione **-u** non è specificata, *output_file* viene archiviato in formato OEM. Se *input_file* è un file Unicode o l'opzione **-u** è specificata, *output_file* viene archiviato in formato Unicode.  
   
@@ -170,8 +169,7 @@ osql -E -q "select name, object_id from %table%"
  Stampa le statistiche sulle prestazioni.  
   
  **-b**  
- Specifica che, in caso di errore, **osql** termini, restituendo un valore DOS ERRORLEVEL. Il valore restituito alla variabile DOS ERRORLEVEL è 1 se al messaggio di errore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di gravità maggiore o uguale a 11. In caso contrario, il valore restituito è 0. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] I file batch MS-DOS consentono di verificare il valore di DOS ERRORLEVEL, nonché di gestire correttamente l'errore.  
+ Specifica che, in caso di errore, **osql** termini, restituendo un valore DOS ERRORLEVEL. Il valore restituito alla variabile DOS ERRORLEVEL è 1 se al messaggio di errore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di gravità maggiore o uguale a 11. In caso contrario, il valore restituito è 0. [!INCLUDE[msCoName](../includes/msconame-md.md)] I file batch MS-DOS consentono di verificare il valore di DOS ERRORLEVEL, nonché di gestire correttamente l'errore.  
   
  **-u**  
  Specifica l'archiviazione di *output_file* in formato Unicode, indipendentemente dal formato di *input_file*.  
@@ -258,7 +256,7 @@ osql -E -i titles.qry -o titles.res
  Quando si usa **osql** in modo interattivo, è possibile leggere un file del sistema operativo nel buffer dei comandi con **: r**_file_name_. In questo modo lo script SQL in *file_name* viene inviato direttamente al server come batch singolo.  
   
 > [!NOTE]  
->  Quando si **** utilizza osql [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , gestisce il separatore di batch GO, se viene visualizzato in un file di script SQL, come un errore di sintassi.  
+>  Quando si usa **osql**, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la presenza del separatore di batch GO in un file script SQL viene considerata un errore di sintassi.  
   
 ## <a name="inserting-comments"></a>Inserimento di commenti  
  L'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **consente di inserire commenti in un'istruzione Transact-SQL inviata a**. Sono supportati due tipi di indicatori di commento: -- and /*...\*/.  
@@ -338,7 +336,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Commento &#40;MDX&#41;](/sql/mdx/comment-mdx)   
- [--&#40;commento&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

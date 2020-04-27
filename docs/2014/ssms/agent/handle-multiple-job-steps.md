@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074055"
 ---
 # <a name="handle-multiple-job-steps"></a>Gestione di più passaggi di processo
@@ -40,15 +40,14 @@ ms.locfileid: "63074055"
 > [!NOTE]  
 >  Se si creano passaggi di processo ciclici (al passaggio 1 segue il passaggio 2, quindi dal passaggio 2 si torna al passaggio 1) e il processo viene creato tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene visualizzato un messaggio di avviso.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra i dati relativi al processo e ai passaggi di processo nella cronologia del processo.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra i dati relativi al processo e ai passaggi di processo nella cronologia del processo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_add_job &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [dbo. sysjobhistory &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
  [dbo. sysjobs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
  [dbo. sysjobsteps &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
- [Implementazione di processi](implement-jobs.md)   
+ [Implementare processi](implement-jobs.md)   
  [Gestire passaggi di processo](manage-job-steps.md)  
   
   

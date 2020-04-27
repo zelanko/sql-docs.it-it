@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066259"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigazione all'interno di Progettazione viste e Progettazione query (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066259"
   
 ## <a name="any-pane"></a>Qualsiasi riquadro  
   
-|**A**|**Premere**|**Clicca**|  
+|**To**|**Premere**|**Fare clic**|  
 |------------|---------------|---------------|  
 |Spostarsi fra i riquadri di Progettazione query e Progettazione viste|F6, MAIUSC+F6|Su qualsiasi punto del riquadro di destinazione|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63066259"
   
 ## <a name="diagram-pane"></a>Riquadro Diagramma  
   
-|**A**|**Premere**|**Clicca**|  
+|**To**|**Premere**|**Fare clic**|  
 |------------|---------------|---------------|  
 |Spostarsi fra tabelle, altri oggetti strutturati a tabella (e su linee join, se disponibili)|TAB o MAIUSC+TAB|Sulla tabella, sull'oggetto strutturato a tabella o sulla linea join su cui spostarsi|  
 |Spostarsi fra colonne di una tabella o di un oggetto strutturato a tabella|Tasti di direzione|Sulla colonna in cui spostarsi|  
@@ -51,7 +51,7 @@ ms.locfileid: "63066259"
   
 ## <a name="criteria-pane"></a>Riquadro Criteri  
   
-|A|Premere|Fare clic su |  
+|A|Premere|Fare clic su|  
 |--------|-----------|-----------|  
 |Spostarsi tra le celle|Tasti di direzione o TAB o MAIUSC+TAB|Sulla cella di destinazione|  
 |Spostarsi sull'ultima riga della colonna selezionata|CTRL+FRECCIA GIÙ||  
@@ -86,7 +86,7 @@ ms.locfileid: "63066259"
   
 ## <a name="results-pane"></a>Riquadro Risultati  
   
-|**A**|**Premere**|**Clicca**|  
+|**To**|**Premere**|**Fare clic**|  
 |------------|---------------|---------------|  
 |Spostarsi tra le celle|Tasti di direzione o TAB o MAIUSC+TAB|Sulla cella di destinazione|  
 |Spostarsi sulla prima o sull'ultima cella della riga corrente|HOME o FINE||  

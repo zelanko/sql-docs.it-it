@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032411"
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
@@ -30,11 +30,11 @@ ms.locfileid: "63032411"
  **Oggetti che dipendono dall'**  _\<oggetto selezionato>_  
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
- **Oggetti da cui**_\<dipende l'oggetto selezionato>_ ****      
+ **Oggetti da cui**_\<dipende l'oggetto selezionato>_ **depends**      
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
  **Dipendenze**  
- Se si fa clic su **oggetti che dipendono** dall' _ \<oggetto selezionato>_ , viene visualizzata una vista gerarchica degli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **oggetti da cui** _ \<dipende>oggetto selezionato_ , viene visualizzata una vista gerarchica degli oggetti da cui dipende l'oggetto selezionato. ****  
+ Se si fa clic su **oggetti che dipendono** dall' _ \<oggetto selezionato>_ , viene visualizzata una vista gerarchica degli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **oggetti da cui** _ \<dipende>oggetto selezionato_ , viene visualizzata una vista gerarchica degli oggetti da cui dipende l'oggetto selezionato. **depends**  
   
  **Nome**  
  Consente di visualizzare il nome dell'oggetto selezionato nella visualizzazione albero **Dipendenze** precedente.  

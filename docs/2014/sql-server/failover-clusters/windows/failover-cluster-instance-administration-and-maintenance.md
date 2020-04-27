@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049441"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Gestione e manutenzione dell'istanza del cluster di failover
@@ -37,8 +37,7 @@ ms.locfileid: "63049441"
  Dopo avere installato un'istanza FCI, è possibile modificarlo o ripristinarlo tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile, ad esempio, aggiungere ulteriori nodi a un'istanza FCI, eseguire un'istanza FCI come istanza autonoma o rimuovere un nodo da una configurazione di un'istanza FCI.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Aggiunta di un nodo a un'istanza del cluster di failover esistente  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile scegliere l'opzione di manutenzione di un'istanza FCI esistente. Se si sceglie questa opzione, è possibile aggiungere altri nodi all'istanza di FCI eseguendo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer che si vuole aggiungere all'istanza di FCI. Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) e [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile scegliere l'opzione di manutenzione di un'istanza FCI esistente. Se si sceglie questa opzione, è possibile aggiungere altri nodi all'istanza di FCI eseguendo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer che si vuole aggiungere all'istanza di FCI. Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) e [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Rimozione di un nodo da un'istanza del cluster di failover esistente  
  È possibile rimuovere un nodo da una configurazione dell'istanza FCI eseguendo l'installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer che si desidera rimuovere dall'istanza FCI. Ogni nodo di un'istanza FCI è considerato come peer senza dipendenze da altri nodi nell'istanza FCI e può essere rimosso. Per poter essere rimosso, un nodo danneggiato non deve necessariamente essere disponibile. Se il nodo non è disponibile, non verranno disinstallati i file binari di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Un nodo rimosso può essere nuovamente aggiunto a 'istanza FCI in qualsiasi momento. Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
@@ -57,15 +56,15 @@ ms.locfileid: "63049441"
   
 |Descrizione dell'attività|Collegamento all'argomento|  
 |----------------------|----------------|  
-|Viene descritto come aggiungere dipendenze a una risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Aggiunta di dipendenze a una risorsa di SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
+|Viene descritto come aggiungere dipendenze a una risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Aggiungere dipendenze a una risorsa di SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
 |Kerberos è un protocollo di autenticazione di rete progettato per fornire un'autenticazione avanzata alle applicazioni client/server. Oltre a offrire un'infrastruttura di interoperabilità, il protocollo Kerberos contribuisce ad aumentare la sicurezza dell'autenticazione estesa all'intera azienda. È possibile utilizzare l'autenticazione Kerberos con le istanze autonome di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o con le istanze FCI AlwaysOn.|[Registrare un nome dell'entità servizio per le connessioni Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Vengono forniti i collegamenti a contenuti che descrivono come abilitare l'autenticazione Kerberos||  
 |Viene descritta la procedura utilizzata per recuperare da un errore di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Ripristino da un errore dell'istanza del cluster di failover](recover-from-failover-cluster-instance-failure.md)|  
-|Descrivere la procedura utilizzata per modificare la risorsa indirizzo IP per un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifica dell'indirizzo IP di un'istanza del cluster di failover](change-the-ip-address-of-a-failover-cluster-instance.md)|  
+|Descrivere la procedura utilizzata per modificare la risorsa indirizzo IP per un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modificare l'indirizzo IP di un'istanza del cluster di failover](change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare le impostazioni delle proprietà HealthCheckTimeout](configure-healthchecktimeout-property-settings.md)   
  [Configurare le impostazioni delle proprietà FailureConditionLevel](configure-failureconditionlevel-property-settings.md)   
- [Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover](view-and-read-failover-cluster-instance-diagnostics-log.md)  
+ [Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover](view-and-read-failover-cluster-instance-diagnostics-log.md)  
   
   

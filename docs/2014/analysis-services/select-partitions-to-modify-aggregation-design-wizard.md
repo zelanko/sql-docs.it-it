@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069295"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>Selezione partizioni da modificare (Progettazione guidata aggregazioni)
@@ -31,13 +31,13 @@ ms.locfileid: "66069295"
  **Nome partizione**  
  Consente di visualizzare il nome della partizione.  
   
- **Origine**  
+ **origine**  
  Consente di visualizzare la tabella o la query utilizzata per reperire i dati di origine per la partizione.  
   
  **Aggregazioni**  
  Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

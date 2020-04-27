@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati (OLE DB) | Microsoft Docs
+title: Oggetti di origine dati (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130593"
 ---
 # <a name="data-source-objects-ole-db"></a>Oggetti origine dati (OLE DB)
@@ -75,7 +75,7 @@ else
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Proprietà dell'origine dati &#40;OLE DB&#41;](data-source-properties-ole-db.md)  
+-   [Proprietà delle origini dati &#40;OLE DB&#41;](data-source-properties-ole-db.md)  
   
 -   [Proprietà delle informazioni sulle origini dati](data-source-information-properties.md)  
   
@@ -87,7 +87,7 @@ else
   
 -   [Oggetti origine dati persistenti](persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   
