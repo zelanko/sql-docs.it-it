@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046025"
 ---
 # <a name="helplink-element"></a>Elemento HelpLink
   L'elemento **HelpLink** della proprietà **Detail** è una stringa URL generata dal server di report. L'URL rimanda a una pagina Web gestita dal Supporto tecnico [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e fornisce ulteriori informazioni e articoli della Knowledge Base su errori specifici che si verificano in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La sintassi dell'URL è la seguente:  
   
- **http://** www.Microsoft.com**/****/** Products**/** ee transform. aspx **? Valore EvtSrc**=__ **&valore EvtID**=__ **&valore ProdName**=__ **&**=_valore_ ProdVer  
+ **http://** www.Microsoft.com**/****/** Products**/** ee transform. aspx **? Valore EvtSrc**=_value_ **&valore EvtID**=_value_ **&valore ProdName**=_value_ **&**=_valore_ ProdVer  
   
  Nella tabella seguente sono elencati gli argomenti dell'URL **HelpLink**.  
   
@@ -65,9 +65,9 @@ catch (SoapException e)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Introduzione alla gestione delle eccezioni in Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Classe SoapException di Reporting Services](reporting-services-soapexception-class.md)   
- [Uso della proprietà Detail per la gestione di errori specifici](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Reporting Services classe SoapException](reporting-services-soapexception-class.md)   
+ [Utilizzo della proprietà Detail per la gestione di errori specifici](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

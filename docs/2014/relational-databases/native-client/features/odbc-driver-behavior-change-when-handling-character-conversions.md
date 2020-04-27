@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162430"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri
@@ -54,10 +54,8 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
   
 |Versione del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Risultato della lunghezza o dell'indicatore|Descrizione|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|
-  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o versioni precedenti|6|È stato erroneamente presupposto dal driver che la conversione di CHAR in WCHAR potesse essere effettuata come lunghezza * 2.|  
-|
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|Il driver non presuppone più che la conversione da CHAR a WCHAR o WCHAR a CHAR sia un'azione ( \*moltiplicazione) 2 o (divisione)/2.<br /><br /> La chiamata a **SQLGetData** non restituisce più la lunghezza della conversione prevista. Tramite il driver viene rilevata la conversione a o da CHAR e WCHAR e viene restituito (-4) SQL_NO_TOTAL anziché il comportamento *2 o /2 che potrebbe essere errato.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o versioni precedenti|6|È stato erroneamente presupposto dal driver che la conversione di CHAR in WCHAR potesse essere effettuata come lunghezza * 2.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|Il driver non presuppone più che la conversione da CHAR a WCHAR o WCHAR a CHAR sia un'azione ( \*moltiplicazione) 2 o (divisione)/2.<br /><br /> La chiamata a **SQLGetData** non restituisce più la lunghezza della conversione prevista. Tramite il driver viene rilevata la conversione a o da CHAR e WCHAR e viene restituito (-4) SQL_NO_TOTAL anziché il comportamento *2 o /2 che potrebbe essere errato.|  
   
  Utilizzare **SQLGetData** per recuperare i blocchi di dati. (di seguito è riportato uno pseudocodice):  
   
@@ -85,10 +83,8 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
   
 |Versione del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Risultato della lunghezza o dell'indicatore|Descrizione|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|
-  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o versioni precedenti|20|-   **SQLFetch** segnala la presenza di un troncamento sul lato destro dei dati.<br />-Length è la lunghezza dei dati restituiti, non quello archiviato (presuppone la conversione da * 2 CHAR a WCHAR, che può non essere corretta per i glifi).<br />-I dati archiviati nel buffer sono 123 \ 0. Viene garantito che la terminazione del buffer sia NULL.|  
-|
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|-   **SQLFetch** segnala la presenza di un troncamento sul lato destro dei dati.<br />-Length indica-4 (SQL_NO_TOTAL) perché il resto dei dati non è stato convertito.<br />-I dati archiviati nel buffer sono 123 \ 0. - Viene garantito che la terminazione del buffer sia NULL.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o versioni precedenti|20|-   **SQLFetch** segnala la presenza di un troncamento sul lato destro dei dati.<br />-Length è la lunghezza dei dati restituiti, non quello archiviato (presuppone la conversione da * 2 CHAR a WCHAR, che può non essere corretta per i glifi).<br />-I dati archiviati nel buffer sono 123 \ 0. Viene garantito che la terminazione del buffer sia NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|-   **SQLFetch** segnala la presenza di un troncamento sul lato destro dei dati.<br />-Length indica-4 (SQL_NO_TOTAL) perché il resto dei dati non è stato convertito.<br />-I dati archiviati nel buffer sono 123 \ 0. - Viene garantito che la terminazione del buffer sia NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (comportamento del parametro OUTPUT)  
  Query`create procedure spTest @p1 varchar(max) OUTPUT`  
@@ -101,10 +97,8 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 |Versione del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Risultato della lunghezza o dell'indicatore|Descrizione|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|
-  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o versioni precedenti|2468|-   **SQLFetch** non restituisce più dati disponibili.<br />-   **SQLMoreResults** non restituisce più dati disponibili.<br />-Length indica le dimensioni dei dati restituiti dal server, non archiviati nel buffer.<br />-Il buffer originale contiene 63 byte e un carattere di terminazione NULL. Viene garantito che la terminazione del buffer sia NULL.|  
-|
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|-   **SQLFetch** non restituisce più dati disponibili.<br />-   **SQLMoreResults** non restituisce più dati disponibili.<br />-Length indica (-4) SQL_NO_TOTAL perché il resto dei dati non è stato convertito.<br />-Il buffer originale contiene 63 byte e un carattere di terminazione NULL. Viene garantito che la terminazione del buffer sia NULL.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o versioni precedenti|2468|-   **SQLFetch** non restituisce più dati disponibili.<br />-   **SQLMoreResults** non restituisce più dati disponibili.<br />-Length indica le dimensioni dei dati restituiti dal server, non archiviati nel buffer.<br />-Il buffer originale contiene 63 byte e un carattere di terminazione NULL. Viene garantito che la terminazione del buffer sia NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|-   **SQLFetch** non restituisce più dati disponibili.<br />-   **SQLMoreResults** non restituisce più dati disponibili.<br />-Length indica (-4) SQL_NO_TOTAL perché il resto dei dati non è stato convertito.<br />-Il buffer originale contiene 63 byte e un carattere di terminazione NULL. Viene garantito che la terminazione del buffer sia NULL.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>Esecuzione delle conversioni CHAR e WCHAR  
  Nel driver ODBC di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client sono disponibili diverse modalità di esecuzione delle conversioni CHAR e WCHAR. La logica è simile alla manipolazione dei BLOB (varchar (max), nvarchar (max),...):  
@@ -113,7 +107,7 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 -   Se non si esegue l'associazione, è possibile recuperare i dati in blocchi utilizzando **SQLGetData** e **SQLParamData**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  
   
   

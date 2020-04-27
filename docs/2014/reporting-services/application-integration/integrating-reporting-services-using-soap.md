@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b6fffd65b22900d7c505c4b50ec290b95fe9ab4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126190"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Integrazione di Reporting Services tramite SOAP
@@ -32,15 +32,15 @@ ms.locfileid: "63126190"
  La funzionalità di esecuzione viene esposta tramite l'endpoint <xref:ReportExecution2005> e viene utilizzata quando il server di report è configurato in modalità nativa o in modalità integrata SharePoint. Negli argomenti seguenti viene illustrato come utilizzare questi endpoint per lo sviluppo di soluzioni di creazione di report in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, in SharePoint e nelle applicazioni Web.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Utilizzo dell'API SOAP in un'applicazione Windows](integrating-reporting-services-using-soap-windows-application.md)  
+ [Uso dell'API SOAP in un'applicazione Windows](integrating-reporting-services-using-soap-windows-application.md)  
  Viene descritto come utilizzare l'API SOAP per integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un ambiente Windows.  
   
- [Utilizzo dell'API SOAP in un'applicazione Web](integrating-reporting-services-using-soap-web-application.md)  
+ [Uso dell'API SOAP in un'applicazione Web](integrating-reporting-services-using-soap-web-application.md)  
  Viene descritto come utilizzare l'API SOAP per integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un ambiente Web.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integrazione di Reporting Services in applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
  [Servizio Web ReportServer](../report-server-web-service/report-server-web-service.md)   
- [Creazione di applicazioni mediante il servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Compilazione di applicazioni tramite servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

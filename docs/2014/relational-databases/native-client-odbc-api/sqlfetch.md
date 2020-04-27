@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015803"
 ---
 # <a name="sqlfetch"></a>SQLFetch
@@ -25,11 +25,10 @@ ms.locfileid: "63015803"
  Per informazioni sul modo in cui i valori della colonna dei risultati dei tipi di data/ora vengono convertiti, vedere [conversioni da SQL a C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Supporto di SQLFetch per tipi CLR definiti dall'utente di grandi dimensioni  
- 
-  `SQLFetch` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLFetch` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

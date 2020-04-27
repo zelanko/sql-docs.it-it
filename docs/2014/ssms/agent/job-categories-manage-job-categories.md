@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937018"
 ---
-# <a name="job-categories-manage-job-categories"></a>Categorie di processi - Gestisci categorie di processi
-  Utilizzare la finestra di dialogo **categorie di processi** per aggiungere o eliminare categorie di processi. Le categorie di processi predefinite non possono essere eliminate.  
+# <a name="job-categories-manage-job-categories"></a>Categorie di processi: Gestisci categorie di processi
+  Utilizzare la finestra di dialogo **Categorie di processi** per aggiungere o eliminare categorie di processi. Le categorie di processi predefinite non possono essere eliminate.  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  

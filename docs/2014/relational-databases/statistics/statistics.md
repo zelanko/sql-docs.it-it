@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033729"
 ---
 # <a name="statistics"></a>Statistiche
   In Query Optimizer vengono utilizzate le statistiche per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive o modificare la progettazione delle query per ottenere risultati migliori. In questo argomento vengono illustrati i concetti relativi alle statistiche e vengono fornite linee guida per un utilizzo efficace delle statistiche di ottimizzazione delle query.  
   
-##  <a name="DefinitionQOStatistics"></a> Componenti e concetti  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Componenti e concetti  
  Statistiche  
- Le statistiche di ottimizzazione delle query sono oggetti contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella o di una vista indicizzata. Il Query Optimizer utilizza queste statistiche per stimare la *cardinalità*o il numero di righe nel risultato della query. Queste *stime della cardinalità* consentono al Query Optimizer di creare un piano di query di alta qualità. Query Optimizer può ad esempio utilizzare le stime della cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan che utilizza un numero più elevato di risorse, migliorando di conseguenza le prestazioni di esecuzione delle query.  
+ Le statistiche di ottimizzazione delle query sono oggetti contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella o di una vista indicizzata. In Query Optimizer queste statistiche vengono usate per la stima della *cardinalità*o del numero di righe nel risultato della query. Queste *stime di cardinalità* consentono a Query Optimizer di creare un piano di query di alta qualità. Query Optimizer può ad esempio utilizzare le stime della cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan che utilizza un numero più elevato di risorse, migliorando di conseguenza le prestazioni di esecuzione delle query.  
   
  Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un istogramma in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità*derivano dal numero di righe distinte di valori di colonna. Per altre informazioni sugli oggetti statistiche, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
@@ -103,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**Si applica a** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]da a.|  
+|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-##  <a name="CreateStatistics"></a>Quando creare le statistiche  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a>Quando creare le statistiche  
  Query Optimizer crea già le statistiche nelle modalità seguenti:  
   
 1.  Query Optimizer crea statistiche per gli indici in tabelle o viste, al momento della creazione dell'indice stesso. Tali statistiche vengono create nelle colonne chiave dell'indice. Se l'indice è filtrato, Query Optimizer crea statistiche filtrate nello stesso subset di righe specificato per l'indice filtrato. Per altre informazioni sugli indici filtrati, vedere [Creare indici filtrati](../indexes/create-filtered-indexes.md) e [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
@@ -191,11 +191,11 @@ GO
   
 -   Eliminare le statistiche temporanee usando l'istruzione [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) .  
   
--   Monitorare le statistiche usando le viste del catalogo **sys.stats** e **sys.stats_columns**. **sys_stats** include la colonna **is_temporary** , per indicare quali statistiche sono permanenti e quali sono temporanee.  
+-   Monitorare le statistiche usando le viste del catalogo **sys.stats** e **sys.stats_columns** . **sys_stats** include una colonna, **is_temporary** , che indica quali statistiche sono permanenti e quali invece temporanee.  
   
  Poiché le statistiche temporanee sono archiviate in `tempdb`, un riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta l'indisponibilità di tutte le statistiche temporanee.  
   
-##  <a name="UpdateStatistics"></a>Quando aggiornare le statistiche  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a>Quando aggiornare le statistiche  
  Query Optimizer determina che le statistiche potrebbero non essere aggiornate, quindi ne effettua l'aggiornamento qualora siano necessarie per un piano di query. In alcuni casi, è possibile migliorare il piano di query e le prestazioni di esecuzione delle query aggiornando le statistiche più frequentemente di quanto accada quando AUTO_UPDATE_STATISTICS è impostata su ON. È possibile aggiornare le statistiche mediante l'istruzione UPDATE STATISTICS o la stored procedure sp_updatestats.  
   
  Sebbene consenta di garantire che le query vengano compilate con statistiche aggiornate, l'aggiornamento delle statistiche causa la ricompilazione delle query. Si consiglia di non aggiornare le statistiche troppo frequentemente perché è necessario mantenere un equilibrio a livello di prestazioni tra la necessità di migliorare i piani di query e il tempo necessario per la ricompilazione delle query. Tale equilibrio dipende dall'applicazione in uso.  
@@ -225,7 +225,7 @@ GO
   
  Operazioni quali la ricompilazione, la deframmentazione o la riorganizzazione di un indice non modificano la distribuzione dei dati. Non è pertanto necessario aggiornare le statistiche in seguito all'esecuzione di operazioni ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE. L'aggiornamento delle statistiche viene eseguito in Query Optimizer in seguito alla ricompilazione di un indice in una tabella o una vista mediante ALTER INDEX REBUILD o DBCC DBREINDEX. Tale aggiornamento delle statistiche è tuttavia il risultato della ricostruzione dell'indice. L'aggiornamento delle statistiche non viene eseguito in Query Optimizer dopo operazioni DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE.  
   
-##  <a name="DesignStatistics"></a>Query che utilizzano le statistiche in modo efficace  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a>Query che utilizzano le statistiche in modo efficace  
  Alcune implementazioni delle query, quali le variabili locali e le espressioni complesse nel predicato di query, possono comportare la definizione di piani di query non ottimali. Per evitare che ciò accada, attenersi alle linee guida relative alla progettazione delle query per un utilizzo efficace delle statistiche. Per altre informazioni sui predicati, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
   
  È possibile migliorare i piani di query applicando le linee guida relative alla progettazione delle query che prevedono un utilizzo efficace delle statistiche, al fine di migliorare le *stime della cardinalità* per espressioni, variabili e funzioni usate nei predicati di query. Se il valore di un'espressione, di una variabile o di una funzione non è noto, Query Optimizer non è in grado di determinare il valore da ricercare nell'istogramma e non può pertanto recuperare la stima della cardinalità ottimale dall'istogramma. In tal caso, la stima della cardinalità di Query Optimizer si basa sul numero medio di righe per valore distinct per tutte le righe campionate nell'istogramma. Ciò comporta stime della cardinalità non ottimali e può causare una riduzione delle prestazioni di esecuzione delle query.  
@@ -322,13 +322,13 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>Miglioramento delle stime della cardinalità con le guide di piano  
  È possibile che le linee guida relative alla progettazione delle query non siano valide per alcune applicazioni, in quanto non è possibile modificare la query o l'utilizzo dell'hint per la query RECOMPILE potrebbe causare un numero eccessivo di ricompilazioni. È possibile utilizzare le guide di piano per specificare altri hint, ad esempio USE PLAN, in modo da controllare il comportamento della query mentre si collabora con il fornitore dell'applicazione per esaminarne le modifiche. Per altre informazioni sulle guide di piano, vedere [Guide di piano](../performance/plan-guides.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
- [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [CREAZIONE di statistiche &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-statistics-transact-sql)   
+ [AGGIORNARE le statistiche &#40;&#41;Transact-SQL](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
+ [DBCC SHOW_STATISTICS &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
  [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [DROP STATISTICs &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Creare indici filtrati](../indexes/create-filtered-indexes.md)  

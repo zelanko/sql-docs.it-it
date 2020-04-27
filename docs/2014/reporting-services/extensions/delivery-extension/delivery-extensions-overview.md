@@ -14,15 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165222"
 ---
 # <a name="delivery-extensions-overview"></a>Cenni preliminari sulle estensioni per il recapito
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che, una volta creati e pubblicati, possono essere recapitati a diverse posizioni. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che dopo la creazione e la pubblicazione possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Nella tabella seguente sono elencate le estensioni per il recapito incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -48,13 +47,13 @@ Architettura delle estensioni per il recapito di Reporting Services
   
 -   Un computer di distribuzione in cui sia installato un server di report.  
   
--   Un computer di sviluppo [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] in cui [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è installato o Software Development Kit (SDK).  
+-   Un computer di sviluppo in cui sia installato [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK).  
   
 -   Conoscenza approfondita delle caratteristiche e delle caratteristiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], in particolare degli aspetti di sottoscrizione e recapito.  
   
 -   Conoscenza approfondita di [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e dei controlli Web, se si intende implementare un'interfaccia utente di sottoscrizione personalizzata per Gestione report.  
   
--   Esperienza di sviluppo in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] un linguaggio, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ad esempio Visual [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] C# o .NET.  
+-   Esperienza di sviluppo in un linguaggio [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione per il recapito](../delivery-extension/implementing-a-delivery-extension.md)   

@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4741c822dab24026d823a0e08571ac6aacea9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165178"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Distribuzione di un'estensione per l'elaborazione dati
-  Dopo aver scritto e compilato l' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per l'elaborazione dati in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] una libreria, è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, è sufficiente copiare l'estensione nelle directory appropriate e aggiungere voci ai file di configurazione appropriati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Dopo avere scritto e compilato l'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario consentirne l'individuazione da parte del server di report e di Progettazione report. A tale scopo, è sufficiente copiare l'estensione nelle directory appropriate e aggiungere voci ai file di configurazione appropriati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="configuration-file-extension-element"></a>Elemento Extension del file di configurazione  
  Le estensioni per l'elaborazione dati distribuite nel server di report o in Progettazione report devono essere immesse come elementi **Extension** nei file di configurazione. Questi file sono RSReportServer.config per il server di report e RSReportDesigner.config per Progettazione report.  
@@ -41,11 +41,11 @@ ms.locfileid: "63165178"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Procedura: Distribuzione di un'estensione per l'elaborazione dati in un server di report](deploying-a-data-processing-extension-to-a-report-server.md)|Viene descritto come distribuire un'estensione per l'elaborazione dati in un server di report.|  
-|[Procedura: Distribuzione di un'estensione per l'elaborazione dati in Progettazione report](deploying-a-data-processing-extension-to-report-designer.md)|Viene descritto come distribuire un'estensione per l'elaborazione dati in Progettazione report.|  
+|[Procedura: Distribuire un'estensione per l'elaborazione dati in un server di report](deploying-a-data-processing-extension-to-a-report-server.md)|Viene descritto come distribuire un'estensione per l'elaborazione dati in un server di report.|  
+|[Procedura: Distribuire un'estensione per l'elaborazione dati in Progettazione report](deploying-a-data-processing-extension-to-report-designer.md)|Viene descritto come distribuire un'estensione per l'elaborazione dati in Progettazione report.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Estensioni di Reporting Services](../reporting-services-extensions.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Estensioni Reporting Services](../reporting-services-extensions.md)   
  [Implementazione di un'estensione per l'elaborazione dati](implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../reporting-services-extension-library.md)  
   

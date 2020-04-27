@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127400"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene in genere utilizzata per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiamare da un stored procedure esteso per registrare un errore (definito dalla stored procedure estesa) nel file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di log degli errori o [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel registro applicazioni di Windows.  
   
@@ -77,7 +76,7 @@ oserrtextlen
  *errornum*  
  Numero dell'errore definito dalla stored procedure estesa. Questo numero deve essere compreso tra 50.001 e 2.147.483.647.  
   
- *gravità*  
+ *severity*  
  Valore di gravità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard per l'errore. Questo numero deve essere compreso tra 0 e 24.  
   
  *state*  

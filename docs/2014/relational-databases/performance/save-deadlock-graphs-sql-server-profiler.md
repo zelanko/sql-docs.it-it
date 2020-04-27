@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150698"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Salvare eventi Deadlock Graph (SQL Server Profiler)
@@ -37,7 +37,7 @@ ms.locfileid: "63150698"
   
 3.  Nell'elenco **Modello** selezionare un modello di traccia sul quale basare la traccia oppure selezionare **Vuoto** per non utilizzare alcun modello.  
   
-4.  Eseguire una delle operazioni seguenti:  
+4.  Effettua una delle seguenti operazioni:  
   
     -   Selezionare la casella di controllo**Salva nel file** per acquisire la traccia in un file. Specificare un valore per l'opzione **Dimensioni massime del file**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63150698"
   
     -   Selezionare la casella di controllo **Salva nella tabella** per acquisire la traccia in una tabella di database.  
   
-         Facoltativamente selezionare la casella di controllo **Numero massimo di righe**e specificare un valore.  
+         Facoltativamente fare clic su **Numero massimo di righe**e specificare un valore.  
   
 5.  Facoltativamente, selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare una data e un'ora di arresto della traccia.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "63150698"
   
 10. Fare clic su **Tutti i batch deadlock XML in un singolo file** per salvare tutti gli eventi Deadlock Graph in un file XML singolo oppure fare clic su **Crea un file distinto per ogni singolo batch deadlock XML**per creare un nuovo file XML per ogni evento Deadlock Graph.  
   
- Dopo aver salvato il file deadlock, è possibile aprire il file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per ulteriori informazioni, vedere [aprire, visualizzare e stampare un file Deadlock &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
+ Dopo aver salvato il file deadlock, è possibile aprire il file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Apertura, visualizzazione e stampa di un file deadlock &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Analizzare deadlock con SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

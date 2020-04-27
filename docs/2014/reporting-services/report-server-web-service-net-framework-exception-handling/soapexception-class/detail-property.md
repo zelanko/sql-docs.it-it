@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046007"
 ---
 # <a name="detail-property"></a>Proprietà Detail
@@ -60,7 +60,7 @@ ms.locfileid: "63046007"
  **MoreInformation**  
  Stringa XML contenente eccezioni nidificate che si sono verificate durante l'esecuzione del metodo.  
   
- **Origine**  
+ **origine**  
  Elemento figlio di **MoreInformation**. Indica l'origine dell'errore.  
   
  **Messaggio**  
@@ -69,9 +69,9 @@ ms.locfileid: "63046007"
  **Avvisi**  
  Stringa XML contenente gli avvisi restituiti dall'elaborazione del report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Introduzione alla gestione delle eccezioni in Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Classe SoapException di Reporting Services](reporting-services-soapexception-class.md)   
- [Uso della proprietà Detail per la gestione di errori specifici](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Reporting Services classe SoapException](reporting-services-soapexception-class.md)   
+ [Utilizzo della proprietà Detail per la gestione di errori specifici](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

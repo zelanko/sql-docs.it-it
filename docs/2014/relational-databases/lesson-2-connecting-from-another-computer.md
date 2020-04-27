@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144794"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
@@ -32,7 +32,7 @@ ms.locfileid: "63144794"
   
 -   [Connessione tramite il servizio SQL Server Browser](#browser)  
   
-##  <a name="protocols"></a>Abilitazione di protocolli  
+##  <a name="enabling-protocols"></a><a name="protocols"></a>Abilitazione di protocolli  
  Per migliorare la sicurezza, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]Developer ed Evaluation vengono installati solo con una connettività di rete limitata. Le connessioni a [!INCLUDE[ssDE](../includes/ssde-md.md)] possono essere eseguite da strumenti in esecuzione sullo stesso computer, non da altri computer. Se si intende eseguire l'attività di sviluppo nello stesso computer del [!INCLUDE[ssDE](../includes/ssde-md.md)], non è necessario abilitare protocolli aggiuntivi. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] si connetterà al [!INCLUDE[ssDE](../includes/ssde-md.md)] usando il protocollo Shared Memory. che è già abilitato.  
   
  Se si intende effettuare la connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] da un altro computer, è necessario abilitare un protocollo, ad esempio TCP/IP.  
@@ -46,14 +46,14 @@ ms.locfileid: "63144794"
   
 2.  In **Gestione configurazione SQL Server**espandere **SQL Server configurazione di rete**, quindi fare clic su **protocolli per** _ \<NomeIstanza>_.  
   
-     L'istanza predefinita (un'istanza senza nome) è indicata come **MSSQLSERVER**. Se è stata installata un'istanza denominata, il nome fornito è elencato. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)]viene installato come **SQLEXPRESS**, a meno che il nome non sia stato modificato durante l'installazione.  
+     L'istanza predefinita (un'istanza senza nome) è indicata come **MSSQLSERVER**. Se è stata installata un'istanza denominata, il nome fornito è elencato. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] viene installato come **SQLEXPRESS**, a meno che non sia stato specificato un nome diverso durante l'installazione.  
   
 3.  Nell'elenco dei protocolli fare clic con il pulsante destro del mouse sul protocollo da abilitare (**TCP/IP**), quindi scegliere **Abilita**.  
   
     > [!NOTE]  
     >  Dopo avere apportato modifiche ai protocolli di rete, è necessario riavviare il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Questa operazione viene completata nell'attività successiva.  
   
-##  <a name="port"></a>Configurazione di una porta fissa  
+##  <a name="configuring-a-fixed-port"></a><a name="port"></a>Configurazione di una porta fissa  
  Per una maggiore sicurezza, in Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] e Windows 7 è abilitato Windows Firewall. Se si desidera connettersi a questa istanza da un altro computer, è necessario aprire una porta di comunicazione nel firewall. L'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] resta in attesa sulla porta 1433 e non è pertanto necessario configurare una porta fissa. Le istanze denominate, inclusa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , restano tuttavia in attesa su porte dinamiche. Per aprire una porta nel firewall, è innanzitutto necessario configurare il [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'attesa su una porta specifica nota come porta fissa o statica. In caso contrario, è possibile che il [!INCLUDE[ssDE](../includes/ssde-md.md)] resti in attesa su una porta diversa a ogni avvio. Per altre informazioni sui firewall e sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
@@ -75,11 +75,11 @@ ms.locfileid: "63144794"
   
 7.  Nel riquadro di destra fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Riavvia**. Quando il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene riavviato, resterà in ascolto `49172`sulla porta.  
   
-##  <a name="firewall"></a>Apertura di porte nel firewall  
- I sistemi firewall consentono di impedire l'accesso non autorizzato alle risorse del computer. Per connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un altro computer quando un firewall è attivato, è necessario aprire una porta nel firewall.  
+##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Apertura di porte nel firewall  
+ I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Per connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un altro computer quando un firewall è attivato, è necessario aprire una porta nel firewall.  
   
 > [!IMPORTANT]  
->  L'apertura di porte nel firewall potrebbe esporre il server ad attacchi dannosi. Prima di aprire porte, è opportuno avere familiarità con i sistemi firewall. Per ulteriori informazioni, vedere [considerazioni sulla sicurezza per un'installazione di SQL Server](../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+>  L'apertura di porte nel firewall potrebbe esporre il server ad attacchi dannosi. Prima di aprire porte, è opportuno avere familiarità con i sistemi firewall. Per altre informazioni, vedere [Security Considerations for a SQL Server Installation](../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
  Dopo aver configurato [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'utilizzo di una porta fissa, attenersi alle istruzioni seguenti per aprire tale porta in Windows Firewall. Non è necessario configurare una porta fissa per l'istanza predefinita poiché è già impostata sulla porta TCP 1433.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "63144794"
   
 6.  Nella finestra di dialogo **Profilo** selezionare tutti i profili che descrivono l'ambiente di connessione del computer quando si desidera eseguire la connessione al [!INCLUDE[ssDE](../includes/ssde-md.md)], quindi fare clic su **Avanti**.  
   
-7.  Nella finestra di dialogo **Nome** digitare un nome e una descrizione per la regola e quindi fare clic su **Fine**.  
+7.  Nella finestra di dialogo **Nome** digitare un nome e una descrizione per questa regola, quindi fare clic su **Fine**.  
   
  Per altre informazioni sulla configurazione del firewall e le istruzioni per [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-##  <a name="otherComp"></a>Connessione al motore di database da un altro computer  
+##  <a name="connecting-to-the-database-engine-from-another-computer"></a><a name="otherComp"></a>Connessione al motore di database da un altro computer  
  Dopo avere configurato [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'ascolto su una porta fissa e avere aperto tale porta nel firewall, è possibile connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un altro computer.  
   
  Se il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser è in esecuzione nel computer server e la porta UDP 1434 è aperta nel firewall, è possibile stabilire la connessione specificando il nome del computer e quello dell'istanza. Per migliorare la sicurezza, in questo esempio non viene utilizzato il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser.  
@@ -119,7 +119,7 @@ ms.locfileid: "63144794"
   
 4.  Nella casella **autenticazione** confermare l' **autenticazione della finestra**, quindi fare clic su **Connetti**.  
   
-##  <a name="browser"></a>Connessione tramite il servizio SQL Server Browser  
+##  <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>Connessione tramite il servizio SQL Server Browser  
  Il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser resta in attesa delle richieste in ingresso di risorse di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e fornisce informazioni sulle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installate nel computer. Quando il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser è in esecuzione, gli utenti possono connettersi a istanze denominate specificando il nome del computer e il nome dell'istanza anziché il nome del computer e il numero della porta. Dato che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser riceve richieste UDP non autenticate, non sempre è abilitato durante l'installazione. Per una descrizione del servizio e dei casi in cui viene attivato, vedere [Servizio SQL Server Browser &#40;Motore database e SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
  Per utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser, è necessario seguire la stessa procedura descritta in precedenza e aprire la porta UDP 1434 nel firewall.  

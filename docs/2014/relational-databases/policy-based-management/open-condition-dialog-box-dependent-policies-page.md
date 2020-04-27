@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182925"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Finestra di dialogo Apri condizione, pagina Criteri dipendenti
@@ -26,7 +26,7 @@ ms.locfileid: "63182925"
  **Nome**  
  Indica il nome dei criteri che fanno riferimento alla condizione corrente.  
   
- **Enabled**  
+ **Attivata**  
  Un segno di spunta indica che i criteri sono attualmente abilitati. Se i criteri non sono abilitati, questo campo è vuoto.  
   
  **History**  
@@ -35,7 +35,7 @@ ms.locfileid: "63182925"
  **Creato**  
  Data di creazione dei criteri.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157855"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduzione alle tabelle con ottimizzazione per la memoria
@@ -56,7 +56,7 @@ ms.locfileid: "63157855"
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabelle ottimizzate per la memoria|Sì|Sì|Nessun <sup>1</sup>|  
 |[Variabili di tabella con ottimizzazione per la memoria](../../database-engine/memory-optimized-table-variables.md)|Sì|Sì|No|  
-|[Stored procedure compilate in modo nativo](https://msdn.microsoft.com/library/dn133184.aspx)|Non è possibile utilizzare l'istruzione EXECUTE per eseguire una stored procedure qualsiasi da una stored procedure compilata in modo nativo.|Sì|Nessun <sup>1</sup>|  
+|[stored procedure compilate in modo nativo](https://msdn.microsoft.com/library/dn133184.aspx)|Non è possibile utilizzare l'istruzione EXECUTE per eseguire una stored procedure qualsiasi da una stored procedure compilata in modo nativo.|Sì|Nessun <sup>1</sup>|  
   
  <sup>1</sup> non è possibile accedere a una tabella ottimizzata per la memoria o a una stored procedure compilata in modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo dalla connessione del contesto (la connessione da quando si esegue un modulo CLR). È tuttavia possibile creare e aprire un'altra connessione da cui accedere a tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo. Per altre informazioni, vedere [confronto tra normali e connessioni di contesto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63157855"
  Comunicazione  
  Il miglioramento delle prestazioni per un'applicazione con molte chiamate a stored procedure brevi può risultare inferiore rispetto a un'applicazione con meno chiamate e più funzionalità implementate in ogni stored procedure.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]Esecuzione  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] Esecuzione  
  In OLTP in memoria si ottengono le migliori prestazioni quando si utilizzano le stored procedure compilate in modo nativo anziché le stored procedure interpretate o l'esecuzione delle query. Le stored procedure che comportano l'esecuzione di altre stored procedure non possono essere compilate in modo nativo, ma l'accesso alle tabelle ottimizzate per la memoria da queste stored procedure può offrire alcuni vantaggi.  
   
  Analisi dell'intervallo e ricerca di punti  
@@ -84,7 +84,7 @@ ms.locfileid: "63157855"
 |Prestazioni<br /><br /> Utilizzo elevato delle risorse (CPU, I/O, rete o memoria).|CPU<br /> Le stored procedure compilate in modo nativo possono ridurre in modo significativo l'utilizzo della CPU perché richiedono un numero decisamente inferiore di istruzioni per eseguire un'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] rispetto alle stored procedure interpretate.<br /><br /> OLTP in memoria può ridurre l'investimento hardware nei carichi di lavoro con scalabilità orizzontale, in quanto un server può potenzialmente fornire la velocità effettiva di cinque/dieci server.<br /><br /> I/O<br /> Se si verifica un collo di bottiglia a livello di I/O in seguito all'elaborazione di pagine di dati o di indice, in OLTP in memoria il collo di bottiglia potrebbe risultare contenuto. Inoltre, il checkpoint degli oggetti di OLTP in memoria è continuo e non genera aumenti improvvisi nelle operazioni di I/O. Se tuttavia il working set delle tabelle critiche per le prestazioni eccede la memoria disponibile, OLTP in memoria non sarà in grado di migliorare le prestazioni in quanto è necessario che i dati siano residenti in memoria. Se si verifica un collo di bottiglia a livello di I/O durante la registrazione, OLTP in memoria può ridurre il collo di bottiglia perché richiede meno attività di registrazione. Se una o più tabelle ottimizzate per la memoria sono configurate come tabelle non durevoli, è possibile eliminare la registrazione dei dati.<br /><br /> Memoria<br /> Con OLTP in memoria non si ottiene alcun vantaggio in termini di prestazioni. È possibile che OLTP in memoria comporti un utilizzo elevato di memoria, in quando gli oggetti devono essere residenti in memoria.<br /><br /> Rete<br /> Con OLTP in memoria non si ottiene alcun vantaggio in termini di prestazioni. I dati devo essere comunicati dal livello dati al livello applicazione.|  
 |Scalabilità<br /><br /> La maggior parte dei problemi di scalabilità nelle applicazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è causata da problemi di concorrenza, ad esempio la contesa in blocchi, latch e spinlock.|Contesa di latch<br /> Uno scenario tipico riguarda la contesa nell'ultima pagina di un indice quando vengono inserite contemporaneamente righe nell'ordine delle chiavi. Poiché in OLTP in memoria non vengono utilizzati latch per l'accesso ai dati, i problemi di scalabilità correlati alle contese di latch vengono completamente rimossi.<br /><br /> Contesa di spinlock<br /> Poiché in OLTP in memoria non vengono utilizzati latch per l'accesso ai dati, i problemi di scalabilità correlati alle contese di spinlock vengono completamente rimossi.<br /><br /> Contesa correlata al blocco<br /> Se nell'applicazione di database vengono rilevati problemi di blocco tra operazioni di lettura e scrittura, con OLTP in memoria vengono rimossi i problemi che impediscono di proseguire perché è previsto l'utilizzo di una nuova forma di controllo della concorrenza ottimistica per implementare tutti i livelli di isolamento delle transazioni. In OLTP in memoria, TempDB non viene utilizzato per l'archiviazione delle versioni di riga.<br /><br /> Se il problema di scalabilità è determinato dal conflitto tra due operazioni di scrittura, ad esempio due transazioni simultanee che tentano di aggiornare la stessa riga, OLTP in memoria consente il completamento di una transazione e genera un errore per l'altra. La transazione non riuscita deve essere inviata di nuovo in modo esplicito o implicito, ripetendone l'esecuzione. In entrambi i casi è necessario apportare modifiche all'applicazione.<br /><br /> Se nell'applicazione si verificano frequenti conflitti tra due operazioni di scrittura, il valore del blocco ottimistico viene ridotto. L'applicazione non è appropriata per OLTP in memoria. La maggior parte delle applicazioni OLTP non presenta conflitti di scrittura, a meno che il conflitto non venga attivato da escalation blocchi.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62956135"
 ---
 # <a name="change-the-default-location-for-projects"></a>Modifica del percorso predefinito per i progetti
@@ -25,7 +25,7 @@ ms.locfileid: "62956135"
   
 ### <a name="to-change-the-default-location-for-projects"></a>Per modificare il percorso predefinito per i progetti  
   
-1.  Modificare il percorso predefinito aprendo o salvando un file o un progetto da un altro percorso. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] archivia il percorso del progetto aperto in precedenza e lo usa per la successiva apertura o salvataggio di un progetto.  
+1.  Modificare il percorso predefinito aprendo o salvando un file o un progetto da un altro percorso. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] archivia il percorso del progetto aperto precedentemente e lo usa per la successiva apertura o salvataggio di un progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](solution-explorer.md)  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127011"
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
@@ -68,20 +68,20 @@ ms.locfileid: "63127011"
  **-?**  
  Visualizza le informazioni sull'utilizzo.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-PublisherDB** _publisher_database_  
  Nome del database del server di pubblicazione.  
   
- **-Continuo**  
+ **-Continuous**  
  Specifica se l'agente tenta di eseguire continuamente il polling delle transazioni replicate. Se specificato, l'agente esegue il polling delle transazioni replicate dall'origine in base agli intervalli di polling, anche se non vi sono transazioni in sospeso.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti della riga di comando per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
   
- **-** _Server_name_database di**\\**distribuzione [_instance_name_]  
- Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-DistributorLogin** _distributor_login_  
  Nome dell'account di accesso del database di distribuzione.  
@@ -109,25 +109,25 @@ ms.locfileid: "63127011"
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Consente di specificare il percorso e il nome del file di configurazione XML di eventi estesi. Il file di configurazione di eventi estesi consente di configurare sessioni e abilitare eventi per la traccia.  
   
- **-HistoryVerboseLevel più elevato** [ **0**| **1**| **2**]  
+ **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Consente di specificare la quantità di cronologia registrata durante un'operazione dell'agente di lettura log. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
 |Valore di HistoryVerboseLevel|Descrizione|  
 |-------------------------------|-----------------|  
 |**0**||  
-|**1**|Default. Aggiorna sempre un messaggio di cronologia precedente con lo stesso stato (avvio, avanzamento, esito positivo e così via). Se non è presente un record precedente con lo stesso stato, inserisce un nuovo record.|  
+|**1**|Valore predefinito. Aggiorna sempre un messaggio di cronologia precedente con lo stesso stato (avvio, avanzamento, esito positivo e così via). Se non è presente un record precedente con lo stesso stato, inserisce un nuovo record.|  
 |**2**|Inserisce nuovi record della cronologia, a meno che il record sia per eventi come messaggi inattivi o messaggi di processo con esecuzione prolungata, nel qual caso aggiorna i record precedenti.|  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Numero di secondi prima che il thread per la cronologia controlli se una delle connessioni esistenti è in attesa di una risposta dal server. Questo valore può essere ridotto per evitare che l'agente di controllo contrassegni l'agente di lettura log come sospetto in caso di esecuzione di un batch con esecuzione prolungata. Il valore predefinito è 300 secondi.  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- Numero di secondi prima del timeout dell'accesso. Il valore predefinito è 15 secondi.  
+ Numero di secondi prima del timeout di accesso. Il valore predefinito è 15 secondi.  
   
  **-LogScanThreshold** _scan_threshold_  
  Solo per uso interno.  
   
- **-Parametro maxcmdsintran** _number_of_commands_  
+ **-MaxCmdsInTran** _number_of_commands_  
  Specifica il numero massimo di istruzioni raggruppate in una transazione durante la scrittura dei comandi nel database di distribuzione da parte dell'agente di lettura log. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando applicate al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione.  
   
 > [!NOTE]  
@@ -141,7 +141,7 @@ ms.locfileid: "63127011"
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **** 3 | **4** ]  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Specifica se l'output deve essere dettagliato.  
   
 |valore|Descrizione|  
@@ -160,10 +160,10 @@ ms.locfileid: "63127011"
  **-PollingInterval** _polling_interval_  
  Frequenza, in secondi, di esecuzione di query sul log per le transazioni replicate. Il valore predefinito è 5 secondi.  
   
- **-Profilename** _profile_name_  
+ **-ProfileName** _profile_name_  
  Specifica un profilo agente da utilizzare per i parametri dell'agente. Se **ProfileName** è NULL, il profilo agente è disabilitato. Se **ProfileName** non viene specificato, viene utilizzato il profilo predefinito per il tipo di agente. Per altre informazioni, vedere [Profili degli agenti di replica](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -176,7 +176,7 @@ ms.locfileid: "63127011"
  Password del server di pubblicazione.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- Numero di secondi prima del timeout della query. Il valore predefinito è 1800 secondi.  
+ Numero di secondi prima del timeout delle query. Il valore predefinito è 1800 secondi.  
   
  **-ReadBatchSize** _number_of_transactions_  
  Numero massimo di transazioni lette dal log delle transazioni del database di pubblicazione per ciclo di elaborazione, con un valore predefinito di 500. L'agente continuerà a leggere transazioni nei batch fino a quando viene completata la lettura di tutte le transazioni nel log. Questo parametro non è supportato per i server di pubblicazione Oracle.  

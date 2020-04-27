@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149698"
 ---
 # <a name="review-the-replay-results"></a>Controllo dei risultati della riproduzione
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Al termine di una riproduzione distribuita, l'attività di riesecuzione per ogni client può essere acquisita e salvata in file di traccia dei risultati in ogni client. riesecuzione distribuita Per acquisire questa attività, è necessario usare il parametro **-o** quando si esegue lo strumento di amministrazione con l'opzione **replay** . Per altre informazioni sull'opzione replay, vedere [Opzione replay &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Al termine di una riesecuzione distribuita in Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'attività di riesecuzione per ogni client può essere acquisita e salvata in file di traccia dei risultati in ogni client. Per acquisire questa attività, è necessario usare il parametro **-o** quando si esegue lo strumento di amministrazione con l'opzione **replay** . Per altre informazioni sull'opzione replay, vedere [Opzione replay &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  La posizione in cui vengono archiviati i file di traccia dei risultati è specificata dall'elemento XML `<ResultDirectory>` nel file di configurazione del client `DReplayClient.xml`, disponibile in ogni client. I file di traccia nella directory dei risultati del client vengono sovrascritti a ogni riproduzione.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "63149698"
 |ReplayHostName|`nvarchar`|Nome del computer in cui viene eseguito il client durante la riproduzione.|16|  
 |ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante l'acquisizione.|17|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
  [Requisiti di Riesecuzione distribuita](distributed-replay-requirements.md)   
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Distributed Replay](configure-distributed-replay.md)  
+ [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
   
   

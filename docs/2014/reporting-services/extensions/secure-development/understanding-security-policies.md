@@ -22,24 +22,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990127"
 ---
 # <a name="understanding-security-policies"></a>Informazioni sui criteri di sicurezza
-  Qualsiasi codice eseguito da un server di report deve far parte di criteri di sicurezza dall'accesso di codice specifici. Tali criteri di sicurezza sono costituiti da gruppi di codice che eseguono il mapping dell'evidenza a un insieme di set di autorizzazioni denominati. I gruppi di codice sono spesso associati a un set di autorizzazioni denominato che specifica le autorizzazioni consentite per il codice appartenente al gruppo specifico. In fase di esecuzione l'evidenza viene usata da un host trusted o dal caricatore per determinare i gruppi di codice cui il codice appartiene e, di conseguenza, le autorizzazioni per concedere il codice. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]aderisce a questa architettura dei criteri di sicurezza in base [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] a quanto definito dall'Common Language Runtime (CLR). Nelle sezioni seguenti vengono descritti i diversi tipi di codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e le regole dei criteri associate.  
+  Qualsiasi codice eseguito da un server di report deve far parte di criteri di sicurezza dall'accesso di codice specifici. Tali criteri di sicurezza sono costituiti da gruppi di codice che eseguono il mapping dell'evidenza a un insieme di set di autorizzazioni denominati. I gruppi di codice sono spesso associati a un set di autorizzazioni denominato che specifica le autorizzazioni consentite per il codice appartenente al gruppo specifico. In fase di esecuzione l'evidenza viene usata da un host trusted o dal caricatore per determinare i gruppi di codice cui il codice appartiene e, di conseguenza, le autorizzazioni per concedere il codice. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aderisce a questo tipo di architettura relativa ai criteri di sicurezza come definito da Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Nelle sezioni seguenti vengono descritti i diversi tipi di codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e le regole dei criteri associate.  
   
 ## <a name="report-server-assemblies"></a>Assembly del server di report  
- Gli assembly del server di report contengono codice incluso nel prodotto [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene scritto usando assembly del codice gestito. Tutti questi assembly hanno un nome sicuro, ossia sono firmati digitalmente. I gruppi di codice per questi assembly vengono definiti usando **StrongNameMembershipCondition**, che offre evidenza basata sulle informazioni relative alla chiave pubblica per il nome sicuro dell'assembly. Al gruppo di codice viene concesso il set di autorizzazioni **FullTrust**.  
+ Gli assembly del server di report contengono codice incluso nel prodotto [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene scritto usando assembly del codice gestito. Tutti questi assembly hanno un nome sicuro, ossia sono firmati digitalmente. I gruppi di codice per questi assembly vengono definiti usando **StrongNameMembershipCondition**, che offre evidenza basata sulle informazioni relative alla chiave pubblica per il nome sicuro dell'assembly. Al gruppo di codice viene concesso il set di autorizzazioni **FullTrust**.  
   
 ## <a name="report-server-extensions-rendering-data-delivery-and-security"></a>Estensioni del server di report (rendering, dati, recapito e sicurezza)  
  Le estensioni del server di report sono estensioni per dati personalizzati, per il recapito, per il rendering e di sicurezza create dall'utente o da terze parti per estendere le funzionalità di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. È necessario concedere l'autorizzazione **FullTrust** a queste estensioni o al codice assembly nei file di configurazione dei criteri associati al componente di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a cui viene applicata l'estensione. Le estensioni incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono firmate con la chiave pubblica del server di report e ricevono il set di autorizzazioni **FullTrust**.  
   
 > [!IMPORTANT]  
->  Per concedere l'autorizzazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]FullTrust** alle estensioni di terze parti è necessario modificare i file di configurazione dei criteri di **. Se non si aggiunge un gruppo di codice con autorizzazione **FullTrust** per le estensioni personalizzate, queste non potranno essere usate dal server di report.  
+>  Per concedere l'autorizzazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]FullTrust**alle estensioni di terze parti è necessario modificare i file di configurazione dei criteri di**. Se non si aggiunge un gruppo di codice con autorizzazione **FullTrust** per le estensioni personalizzate, queste non potranno essere usate dal server di report.  
   
  Per altre informazioni sui file di configurazione dei criteri in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vedere [Uso di file di criteri di sicurezza di Reporting Services](using-reporting-services-security-policy-files.md).  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62990127"
 </CodeGroup>  
 ```  
   
- **L'** autorizzazione di esecuzione consente di eseguire il codice (esecuzione), ma non di usare risorse protette. Tutte le espressioni presenti all'interno di un report vengono compilate in un assembly (denominato assembly "delle espressioni") archiviato come parte del report compilato. Quando il report viene eseguito, il server di report carica l'assembly delle espressioni ed effettua chiamate in tale assembly per eseguire le espressioni. Gli assembly delle espressioni vengono firmati con una chiave specifica usata per definire il gruppo di codice per tutte le espressioni.  
+ L'autorizzazione **Execution** consente l'esecuzione del codice che non può tuttavia usare le risorse protette. Tutte le espressioni presenti all'interno di un report vengono compilate in un assembly (denominato assembly "delle espressioni") archiviato come parte del report compilato. Quando il report viene eseguito, il server di report carica l'assembly delle espressioni ed effettua chiamate in tale assembly per eseguire le espressioni. Gli assembly delle espressioni vengono firmati con una chiave specifica usata per definire il gruppo di codice per tutte le espressioni.  
   
  Le espressioni del report fanno riferimento a raccolte di modelli a oggetti del report (campi, parametri e così via) ed eseguono semplici attività, ad esempio operazioni aritmetiche e di stringa. Per il codice che esegue queste semplici operazioni è necessaria solo l'autorizzazione **Execution**. Per impostazione predefinita, ai metodi definiti dall'utente nell'elemento **Code** e agli assembly personalizzati viene concessa l'autorizzazione **Execution** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Di conseguenza, per la maggior parte delle espressioni, non è necessario modificare alcun file di criteri di sicurezza per la configurazione corrente. Per concedere autorizzazioni aggiuntive agli assembly delle espressioni, è necessario che un amministratore modifichi i file di configurazione dei criteri del server di report e di Progettazione report e il gruppo di codice delle espressioni del report. Poiché è un'impostazione globale, la modifica di autorizzazioni predefinite per le espressioni influisce su tutti i report. Per tale ragione, è consigliabile posizionare tutto il codice per cui è necessario usare sicurezza aggiuntiva in un assembly personalizzato. Le autorizzazioni necessarie verranno concesse solo a tale assembly.  
   
@@ -78,6 +77,6 @@ ms.locfileid: "62990127"
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza dall'accesso di codice in Reporting Services](code-access-security-in-reporting-services.md)   
- [&#40;di sviluppo sicuro Reporting Services&#41;](secure-development-reporting-services.md)  
+ [Sviluppo sicuro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

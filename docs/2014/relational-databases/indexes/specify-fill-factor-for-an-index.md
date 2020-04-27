@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036230"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
@@ -44,9 +44,9 @@ ms.locfileid: "63036230"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Performance"></a> Considerazioni sulle prestazioni  
+###  <a name="performance-considerations"></a><a name="Performance"></a> Considerazioni sulle prestazioni  
   
 #### <a name="page-splits"></a>Divisioni di pagina  
  Un valore del fattore di riempimento scelto correttamente consente di ridurre le potenziali divisioni di pagina rendendo disponibile uno spazio sufficiente per l'espansione dell'indice durante l'aggiunta di dati alla tabella sottostante. Quando viene aggiunta una nuova riga a una pagina di indice completa, tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene spostata circa la metà delle righe in una nuova pagina per lasciare spazio per la nuova riga. Questa riorganizzazione è nota come divisione di pagina. Una divisione di pagina consente di creare spazio per nuovi record, ma può richiedere una certa quantità di tempo e un elevato utilizzo di risorse. Può inoltre provocare la frammentazione, che a sua volta causa l'aumento delle operazioni di I/O. Quando si verificano frequenti divisioni di pagina, l'indice può essere ricompilato utilizzando un valore del fattore di riempimento nuovo o esistente per ridistribuire i dati. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](reorganize-and-rebuild-indexes.md).  
@@ -56,12 +56,12 @@ ms.locfileid: "63036230"
 #### <a name="adding-data-to-the-end-of-the-table"></a>Aggiunta di dati alla fine della tabella  
  Un valore del fattore di riempimento diverso da 0 o 100 può risultare efficace per le prestazioni se i nuovi dati vengono distribuiti uniformemente in tutta la tabella. Se tuttavia tutti i dati vengono aggiunti alla fine della tabella, lo spazio vuoto nelle pagine di indice non verrà riempito. Se ad esempio la colonna chiave dell'indice è una colonna IDENTITY, la chiave per le nuove righe aumenta di continuo e le righe di indice vengono aggiunte logicamente alla fine dell'indice. Se le righe esistenti verranno aggiornate con dati che ne aumentano le dimensioni, utilizzare un fattore di riempimento minore di 100. I byte aggiuntivi in ogni pagina consentiranno di ridurre le divisioni di pagina causate dalla maggiore lunghezza delle righe.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Per specificare un fattore di riempimento tramite Progettazione tabelle  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63036230"
   
 8.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   

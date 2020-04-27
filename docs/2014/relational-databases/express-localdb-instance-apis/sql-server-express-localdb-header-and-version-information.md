@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128691"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Informazioni sulla versione e intestazione del database locale di SQL Server Express
@@ -25,7 +25,7 @@ ms.locfileid: "63128691"
 ## <a name="localdb-versioning"></a>Controllo delle versioni del database locale  
  Per l'installazione del database locale viene utilizzato un solo set di file binari per la versione di SQL Server principale. Queste versioni del database locale sono gestite e installate con patch in modo indipendente. Pertanto, l'utente deve specificare quale versione di base (ovvero, versione di SQL Server principale) del database locale utilizzerà. La versione è specificata nel formato della versione standard definito dalla classe .NET Framework **System. Version** :  
   
- *Major. minor [. Build [. Revisione]]*  
+ *principale.secondario[.build[.revisione]]*  
   
  I primi due numeri nella stringa di versione (*principale* e *secondaria*) sono obbligatori. Gli ultimi due numeri nella stringa di versione (*compilazione* e *Revisione*) sono facoltativi e il valore predefinito è zero se l'utente li lascia fuori. Ciò significa che se l'utente specifica solo "12,2" come numero di versione del database locale, verrà considerato come se l'utente avesse specificato "12.2.0.0".  
   

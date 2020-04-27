@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183016"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server - Oggetto Statistiche del pool di risorse
@@ -47,12 +47,12 @@ ms.locfileid: "63183016"
 |I/O letti da disco (ms)|Tempo medio in millisecondi, richiesto per un'operazione di lettura dal disco.|  
 |I/O scritti su disco/sec|Numero delle operazioni di scrittura su disco nell'ultimo secondo.|  
 |I/O limitati scritti su disco/sec|Numero delle operazioni di scrittura limitate nell'ultimo secondo.|  
-| Byte scritti su disco/sec|Numero di byte scritti su disco nell'ultimo secondo.|  
+|Byte scritti su disco/sec|Numero di byte scritti su disco nell'ultimo secondo.|  
 |I/O scritti su disco (ms)|Tempo medio in millisecondi, richiesto per un'operazione di scrittura su disco.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Server - Oggetto Statistiche gruppi del carico di lavoro](sql-server-workload-group-stats-object.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Monitorare l'utilizzo delle risorse &#40;monitoraggio di sistema&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, oggetto statistiche gruppo del carico di lavoro](sql-server-workload-group-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
   
   

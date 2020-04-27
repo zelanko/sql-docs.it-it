@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162175"
 ---
 # <a name="how-online-index-operations-work"></a>Funzionamento delle operazioni sugli indici online
@@ -58,12 +58,11 @@ ms.locfileid: "63162175"
   
 |Fase|Attività di origine|Blocchi di origine|  
 |-----------|---------------------|------------------|  
-|Operazioni preliminari<br /><br /> Fase molto breve|Preparazione dei metadati di sistema per la creazione della nuova struttura vuota dell'indice.<br /><br /> Viene definito uno snapshot della tabella, ovvero viene utilizzato il controllo delle versioni delle righe per garantire la consistenza in lettura a livello di transazione.<br /><br /> Le operazioni utente di scrittura simultanee sull'origine vengono bloccate per un breve periodo di tempo.<br /><br /> Non sono consentite operazioni DDL simultanee, ad eccezione della creazione di più indici non cluster.|S (condiviso) nella tabella*<br /><br /> IS (preventivo condiviso)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|Preparazione<br /><br /> Fase molto breve|Preparazione dei metadati di sistema per la creazione della nuova struttura vuota dell'indice.<br /><br /> Viene definito uno snapshot della tabella, ovvero viene utilizzato il controllo delle versioni delle righe per garantire la consistenza in lettura a livello di transazione.<br /><br /> Le operazioni utente di scrittura simultanee sull'origine vengono bloccate per un breve periodo di tempo.<br /><br /> Non sono consentite operazioni DDL simultanee, ad eccezione della creazione di più indici non cluster.|S (condiviso) nella tabella*<br /><br /> IS (preventivo condiviso)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
 |Compilare<br /><br /> Fase principale|I dati vengono sottoposti ad analisi, ordinati, uniti e inseriti nella destinazione in operazioni di caricamento bulk.<br /><br /> Le operazioni utente simultanee di selezione, inserimento, aggiornamento ed eliminazione vengono applicate agli indici preesistenti e ai nuovi indici compilati.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Finale<br /><br /> Fase molto breve|Prima dell'avvio di questa fase, è necessario che tutte le transazioni di aggiornamento di cui non è stato eseguito il commit vengano completate. A seconda del blocco acquisito, tutte le nuove transazioni utente di lettura o di scrittura vengono bloccate per un breve periodo di tempo finché questa fase non viene completata.<br /><br /> I metadati di sistema vengono aggiornati per sostituire l'origine con la destinazione.<br /><br /> Se necessario, l'origine viene eliminata, ad esempio dopo la ricompilazione o l'eliminazione di un indice cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S nella tabella se viene creato un indice non cluster.\*<br /><br /> SCH-M (modifica dello schema) se viene eliminata la struttura di origine (indice o tabella).\*|  
   
- 
-  \* Per l'operazione sull'indice si dovrà attendere il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella.  
+ \* Per l'operazione sull'indice si dovrà attendere il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella.  
   
  ** Con il blocco di risorsa INDEX_BUILD_INTERNAL_RESOURCE viene impedita l'esecuzione di operazioni DDL (Data Definition Language) simultanee sulle strutture di origine e preesistenti mentre è in corso l'operazione sull'indice. Questo blocco impedisce ad esempio la ricompilazione simultanea di due indici nella stessa tabella. Nonostante questo blocco di risorsa sia associato al blocco SCH-M, non impedisce l'esecuzione di istruzioni DML.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "63162175"
   
 |Fase|Attività di destinazione|Blocchi di destinazione|  
 |-----------|---------------------|------------------|  
-|Operazioni preliminari|Il nuovo indice viene creato e impostato in sola scrittura.|IS|  
+|Preparazione|Il nuovo indice viene creato e impostato in sola scrittura.|IS|  
 |Compilare|Vengono inseriti i dati dall'origine.<br /><br /> Vengono applicate le modifiche utente (inserimenti, aggiornamenti, eliminazioni) apportate all'origine.<br /><br /> Questa attività è visibile all'utente.|IS|  
 |Finale|Vengono aggiornati i metadati dell'indice.<br /><br /> Viene impostato lo stato lettura/scrittura per l'indice.|S<br /><br /> o<br /><br /> SCH-M|  
   
@@ -87,6 +86,6 @@ ms.locfileid: "63162175"
 ## <a name="related-content"></a>Contenuto correlato  
  [Eseguire operazioni online sugli indici](perform-index-operations-online.md)  
   
- [Linee guida per operazioni di indice online](guidelines-for-online-index-operations.md)  
+ [Linee guida per le operazioni sugli indici online](guidelines-for-online-index-operations.md)  
   
   

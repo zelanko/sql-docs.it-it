@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992263"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello di previsione (Esercitazione intermedia sul data mining)
@@ -28,7 +28,7 @@ ms.locfileid: "62992263"
   
 -   [Microsoft Generic Content Tree Viewer](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>Scheda grafici  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>Scheda grafici  
  La scheda **grafici** del visualizzatore [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Mostra graficamente ogni serie, inclusi i dati cronologici e le stime. Ogni linea del grafico della serie temporale rappresenta una combinazione univoca di prodotto, area e attributo stimabile.  
   
  Nella legenda a destra del visualizzatore vengono elencate le serie temporali disponibili, in base alle selezioni nell'elenco a discesa. È possibile scegliere le serie temporali da visualizzare nel grafico selezionando o deselezionando le caselle di controllo.  
@@ -87,10 +87,10 @@ ms.locfileid: "62992263"
   
  [Torna all'inizio](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>Scheda modello  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>Scheda modello  
  La scheda **modello** del visualizzatore [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series in Progettazione modelli di data mining consente di visualizzare il modello di previsione sotto forma di grafico ad albero.  
   
- Notare innanzitutto che poiché i dati descrivono due misure diverse (Amount e Quantity) per vendite di più linee di prodotti (T1000 e così via) in tre aree diverse (Europa, Nord America e Pacific), il modello compilato contiene in effetti 24 alberi diversi, ognuno dei quali rappresenta un modello dei modelli di vendita per una combinazione diversa di area, prodotto e attributo stimabile.  
+ Notare innanzitutto che poiché i dati descrivono due misure diverse (Amount e Quantity) per vendite di più linee di prodotti (T1000 e così via) in tre aree diverse (Europa, America del Nord e Pacific), il modello compilato contiene in effetti 24 alberi diversi, ognuno dei quali rappresenta un modello dei modelli di vendita per una combinazione diversa di area, prodotto e attributo stimabile.  
   
  È possibile scegliere la combinazione di linea prodotto, area e metrica vendite che si desidera visualizzare selezionando una serie dall'elenco a discesa **albero** nella scheda **modello** .  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62992263"
   
 -   Se un grafico dell'albero per una serie temporale dispone di più rami, significa che la serie temporale rilevata è troppo complessa per essere rappresentata come una singola equazione. Il grafico ad albero può invece contenere più rami, ogni ramo etichettato con le condizioni che hanno causato la *suddivisione*dell'albero. Quando l'albero viene diviso, ogni ramo rappresenta un segmento temporale diverso, all'interno del quale la tendenza può essere descritta come una singola equazione.  
   
-     Se, ad esempio, si osserva il grafico grafico e si verifica un improvviso salto nel volume di vendita che inizia a settembre e si continua fino a un giorno festivo, è possibile passare alla visualizzazione **modello** per visualizzare la data esatta in cui la tendenza è cambiata. I rami nell'albero che rappresentano "prima di settembre" e "dopo settembre" contengono formule diverse: una formula che descrive matematicamente le tendenze di vendita fino alla divisione e un'altra formula che descrive le tendenze di vendita per il settembre fino a festività di fine anno.  
+     Se, ad esempio, si osserva il grafico grafico e si verifica un improvviso salto nel volume di vendita che inizia a settembre e si continua fino a un giorno festivo, è possibile passare alla visualizzazione **modello** per visualizzare la data esatta in cui la tendenza è cambiata. I rami nell'albero che rappresentano "prima di settembre" e "dopo settembre" contengono formule diverse: una formula che descrive matematicamente le tendenze di vendita fino alla divisione e un'altra formula che descrive le tendenze di vendita per settembre fino alla festività di fine anno.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Per esplorare l'albero delle decisioni per un modello Time Series  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992263"
   
  [Torna all'inizio](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>Opzionale Generic Content Tree Viewer  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>Opzionale Generic Content Tree Viewer  
  Oltre al visualizzatore personalizzato per la serie temporale, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce **MicrosoftGeneric Content Tree Viewer** per l'uso con tutti i modelli di data mining. Questo visualizzatore fornisce alcuni vantaggi:  
   
 -   **Visualizzatore Microsoft Time Series**: questa visualizzazione unisce i risultati dei due algoritmi. Anche se è possibile visualizzare ogni serie separatamente, non è possibile determinare come sono stati combinati i risultati di ogni algoritmo. Inoltre in questa vista le descrizioni comando e Legenda data mining mostrano solo le statistiche più importanti.  
@@ -172,7 +172,7 @@ ms.locfileid: "62992263"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di stime basate su serie temporali &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di query sul modello Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   

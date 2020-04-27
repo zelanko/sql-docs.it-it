@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51cf4acc8ed270c8302137fe5050c06cb35e91ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023529"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
@@ -46,7 +46,7 @@ ms.locfileid: "63023529"
 ## <a name="user-action"></a>Azione dell'utente  
  Accertarsi di eseguire le procedure nell'ordine corretto. Per ulteriori informazioni, vedere [creazione di una pubblicazione](publish/create-a-publication.md), aggiornamento di questi script per includere le stored procedure e i [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] parametri richiesti da e versioni successive. Per altre informazioni, vedere [Aggiornare gli script di replica &#40;programmazione Transact-SQL della replica&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento a errori ed eventi &#40;replica&#41;](errors-and-events-reference-replication.md)  
   
   

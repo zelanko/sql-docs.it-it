@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPInit (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPInit (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033594"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -69,7 +69,7 @@ inteDirection);
  Nome del file utente per la copia interna o esterna.  
   
  *pwszErrorFile*[in]  
- Nome del file degli errori in cui inserire messaggi di stato, messaggi di errore e copie delle righe che non è stato possibile copiare da un file utente in una tabella. Se l'argomento *pwszErrorFile* è impostato su null, non viene utilizzato alcun file degli errori.  
+ Nome del file degli errori in cui inserire messaggi di stato, messaggi di errore e copie delle righe che non è stato possibile copiare da un file utente in una tabella. Se l'argomento *pwszErrorFile* è impostato su NULL, non viene usato alcun file degli errori.  
   
  *eDirection*[in]  
  Direzione dell'operazione di copia, BCP_DIRECTION_IN o BCP_DIRECTION _OUT. BCP_DIRECTION _IN indica una copia da un file utente in una tabella di database e BCP_DIRECTION _OUT indica una copia da una tabella di database in un file utente.  
@@ -87,7 +87,7 @@ inteDirection);
  E_INVALIDARG  
  Uno o più argomenti non sono stati specificati correttamente, ad esempio è stato immesso un nome file non valido.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

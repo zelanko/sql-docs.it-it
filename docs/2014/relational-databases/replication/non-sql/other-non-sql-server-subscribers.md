@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021943"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Altri Sottoscrittori non SQL Server
-  Per un elenco di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sottoscrittori non supportati da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vedere [Sottoscrittori non SQL Server](non-sql-server-subscribers.md). In questo argomento vengono fornite informazioni sui requisiti per i driver ODBC e i provider OLE DB.  
+  Per un elenco di Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportati da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vedere [Non-SQL Server Subscribers](non-sql-server-subscribers.md). In questo argomento vengono fornite informazioni sui requisiti per i driver ODBC e i provider OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Requisiti per i driver ODBC  
  Il driver ODBC deve soddisfare i requisiti seguenti:  
@@ -40,15 +40,15 @@ ms.locfileid: "63021943"
 ## <a name="replicating-using-ole-db-interfaces"></a>Esecuzione della replica tramite interfacce OLE DB  
  Per la replica transazionale i provider OLE DB devono supportare gli oggetti seguenti:  
   
--   **DataSource** (oggetto)  
+-   **DataSource**  
   
--   Oggetto **Session**  
+-   **Session**  
   
--   Oggetto **Command**  
+-   **Command**  
   
--   Oggetto **rowset**  
+-   **Rowset**  
   
--   **Error** (oggetto)  
+-   **Error**  
   
 ### <a name="datasource-object-interfaces"></a>Interfacce per oggetti DataSource  
  Per la connessione a un'origine dei dati sono necessarie le interfacce seguenti:  
@@ -59,7 +59,7 @@ ms.locfileid: "63021943"
   
 -   `IDBProperties`  
   
- Se il provider supporta l'interfaccia **IDBInfo** , tale interfaccia viene utilizzata in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il recupero di informazioni quali l'identificatore tra virgolette, la lunghezza massima delle istruzioni SQL e il numero massimo di caratteri nei nomi delle colonne e delle tabelle.  
+ Se il provider supporta l'interfaccia **IDBInfo**, che viene usata in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il recupero di informazioni quali l'identificatore tra virgolette, la lunghezza massima delle istruzioni SQL e il numero massimo di caratteri nei nomi di colonne e tabelle.  
   
 ### <a name="session-object-interfaces"></a>Interfacce per oggetti Session  
  Sono necessarie le interfacce seguenti:  
@@ -89,7 +89,7 @@ ms.locfileid: "63021943"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** è necessario per creare funzioni di accesso ai parametri. Se il provider supporta **interfaccia IColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza tale interfaccia per determinare se una colonna è una colonna Identity.  
+ L'interfaccia**IAccessor** è necessaria per la creazione di funzioni di accesso ai parametri. Se il provider supporta **interfaccia IColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza tale interfaccia per determinare se una colonna è una colonna Identity.  
   
 ### <a name="rowset-object-interfaces"></a>Interfacce per oggetti Rowset  
  Sono necessarie le interfacce seguenti:  
@@ -100,7 +100,7 @@ ms.locfileid: "63021943"
   
 -   **IColumnsInfo**  
   
- In un'applicazione può essere necessario aprire un set di righe di una tabella replicata creata nel database di sottoscrizione. **IColumnsInfo** e **IAccessor** sono necessari per accedere ai dati nel set di righe.  
+ In un'applicazione può essere necessario aprire un set di righe di una tabella replicata creata nel database di sottoscrizione. Le interfacce**IColumnsInfo** e **IAccessor** consentono di accedere ai dati del set di righe.  
   
 ### <a name="error-object-interfaces"></a>Interfacce per oggetti Error  
  Per la gestione degli errori, utilizzare le interfacce seguenti:  
@@ -113,7 +113,7 @@ ms.locfileid: "63021943"
   
  Per ulteriori informazioni sul provider OLE DB, vedere la relativa documentazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

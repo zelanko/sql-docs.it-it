@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960769"
 ---
 # <a name="replication-tutorials"></a>Esercitazioni sulla replica
@@ -39,7 +39,7 @@ ms.locfileid: "62960769"
  [Replica di dati con client mobili](tutorial-replicating-data-with-mobile-clients.md)  
  Descrive come utilizzare la replica di tipo merge per lo scambio di dati tra un server e uno o più client connessi solo occasionalmente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza replica di SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

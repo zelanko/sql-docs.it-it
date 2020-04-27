@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183553"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Recupero di dati BLOB mediante IRow::Open e ISequentialStream
@@ -78,7 +78,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia **ISequentialStream**. Per le colonne associate l'impostazione del flag di stato DBSTATUS_S_TRUNCATED consente di indicare se i dati vengono troncati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Recupero di dati BLOB tramite IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
   
   

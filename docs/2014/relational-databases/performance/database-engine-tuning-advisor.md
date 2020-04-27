@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151204"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -63,7 +63,7 @@ ms.locfileid: "63151204"
  Interfaccia utente grafica di Ottimizzazione guidata motore di database  
  Un'interfaccia di facile utilizzo nella quale è possibile specificare il carico di lavoro e selezionare diverse opzioni di ottimizzazione.  
   
- Utilità**dta**  
+ **DTA** Utilità  
  Versione del prompt dei comandi di Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
  workload  
@@ -117,6 +117,6 @@ ms.locfileid: "63151204"
 |Attività di Ottimizzazione guidata motore di database|Argomento|  
 |-----------------------------------------|-----------|  
 |Inizializzare e avviare Ottimizzazione guidata motore di database.<br /><br /> Creare un carico di lavoro specificando la cache dei piani, creando uno script o generando un file di traccia o una tabella di traccia.<br /><br /> Ottimizzare un database tramite lo strumento dell'interfaccia utente grafica Ottimizzazione guidata motore di database.<br /><br /> Creare file input XML per l'ottimizzazione di carichi di lavoro.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Avviare e usare Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
-|Visualizzare i risultati dell'operazione di ottimizzazione del database.<br /><br /> Selezionare e implementare le indicazioni relative all'ottimizzazione.<br /><br /> Eseguire l'analisi di simulazione esplorativa nel carico di lavoro.<br /><br /> Rivedere le sessioni di ottimizzazione esistenti, clonare le sessioni in base a quelle esistenti <br />o modificare le indicazioni di ottimizzazione per un'ulteriore valutazione o implementazione.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Visualizzare e usare l'output di Ottimizzazione guidata motore di database](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
+|Visualizzare i risultati dell'operazione di ottimizzazione del database.<br /><br /> Selezionare e implementare le indicazioni relative all'ottimizzazione.<br /><br /> Eseguire l'analisi di simulazione esplorativa nel carico di lavoro.<br /><br /> Rivedere le sessioni di ottimizzazione esistenti, clonare le sessioni in base a quelle esistenti <br />o modificare le indicazioni di ottimizzazione per un'ulteriore valutazione o implementazione.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   

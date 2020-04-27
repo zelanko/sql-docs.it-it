@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067722"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -27,12 +27,11 @@ ms.locfileid: "63067722"
 > [!NOTE]  
 >  Per i tipi di valori di grandi dimensioni, tutti i parametri della lunghezza verranno restituiti con un valore di SQL_SS_LENGTH_UNLIMITED.  
   
- 
-  `SQLColumns` può essere eseguito in un cursore del server statico. Un tentativo di eseguire `SQLColumns` in un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO, che indica che il tipo di cursore è stato modificato.  
+ `SQLColumns` può essere eseguito in un cursore del server statico. Un tentativo di eseguire `SQLColumns` in un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO, che indica che il tipo di cursore è stato modificato.  
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la segnalazione di informazioni per le tabelle nei server collegati accettando un nome in due parti per il parametro *catalogname* : *linked_server_name. catalog_name*.  
   
- Per ODBC 2. *x* le applicazioni che non utilizzano caratteri ** jolly in TableName `SQLColumns` restituiscono informazioni su tutte le tabelle i cui nomi corrispondono a *TableName* e sono di proprietà dell'utente corrente. Se l'utente corrente non è proprietario di alcuna tabella il ** cui nome corrisponde al `SQLColumns` parametro TableName, restituisce informazioni sulle tabelle di proprietà di altri utenti in cui il nome della tabella corrisponde al parametro *TableName* . Per ODBC 2. *x* applicazioni che utilizzano caratteri jolly `SQLColumns` , restituisce tutte le tabelle i cui nomi corrispondono a *TableName*. Per ODBC 3. *x* Applications `SQLColumns` restituisce tutte le tabelle i cui nomi corrispondono a *TableName* indipendentemente dal proprietario o dal fatto che vengano utilizzati caratteri jolly.  
+ Per ODBC 2. *x* le applicazioni che non utilizzano caratteri *TableName*jolly in TableName `SQLColumns` restituiscono informazioni su tutte le tabelle i cui nomi corrispondono a *TableName* e sono di proprietà dell'utente corrente. Se l'utente corrente non è proprietario di alcuna tabella il *TableName* cui nome corrisponde al `SQLColumns` parametro TableName, restituisce informazioni sulle tabelle di proprietà di altri utenti in cui il nome della tabella corrisponde al parametro *TableName* . Per ODBC 2. *x* applicazioni che utilizzano caratteri jolly `SQLColumns` , restituisce tutte le tabelle i cui nomi corrispondono a *TableName*. Per ODBC 3. *x* Applications `SQLColumns` restituisce tutte le tabelle i cui nomi corrispondono a *TableName* indipendentemente dal proprietario o dal fatto che vengano utilizzati caratteri jolly.  
   
  Nella tabella seguente vengono elencate le colonne restituite dal set di risultati:  
   
@@ -73,8 +72,7 @@ ms.locfileid: "63067722"
  Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Supporto di SQLColumns per tipi CLR definiti dall'utente di grandi dimensioni  
- 
-  `SQLColumns` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColumns` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Supporto di SQLColumns per colonne di tipo sparse  
  Al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di risultati per SQLColumns sono state aggiunte due colonne specifiche:  
@@ -90,8 +88,8 @@ ms.locfileid: "63067722"
   
  Per ulteriori informazioni sulle colonne di tipo sparse in ODBC, vedere [supporto di colonne di tipo sparse &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzione SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

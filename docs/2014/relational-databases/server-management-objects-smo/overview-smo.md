@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131794"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
@@ -66,7 +66,7 @@ ms.locfileid: "63131794"
   
 -   Trigger DDL per l'aggiunta di funzionalità quando si verificano eventi DDL. Per altre informazioni, vedere [Trigger DDL](../triggers/ddl-triggers.md).  
   
- Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ciò significa che Common Language Runtime (CLR) da [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installato prima di utilizzare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Per altre informazioni, vedere la documentazione di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ciò significa che Common Language Runtime (CLR) da [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installato prima di utilizzare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Per altre informazioni, vedere la documentazione di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>Classi SMO  
  Le classi SMO includono due categorie: classi di istanze e classi di utilità.  
@@ -167,8 +167,7 @@ ms.locfileid: "63131794"
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] e la relativa funzionalità sono rappresentati da un gruppo di oggetti  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] e la relativa funzionalità sono rappresentati da un gruppo di oggetti  
   
  **Miglioramenti degli indici**  
   
@@ -179,10 +178,9 @@ ms.locfileid: "63131794"
   
  La libreria DMO è un modello a oggetti COM, mentre SMO viene implementato come assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. I componenti COM sono librerie che forniscono funzionalità riutilizzabili per le applicazioni e per la programmazione di applicazioni non gestite. Gli assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] forniscono funzionalità riutilizzabili per [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per la scrittura di applicazioni in codice gestito.  
   
- Durante la transizione alla tecnologia [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è possibile avere applicazioni scritte in parte in codice gestito e in parte in codice non gestito. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] consente di interfacciarsi con i componenti COM che richiedono un assembly di interoperabilità primario. È necessario un wrapper di runtime per SQL-DMO in modo che possa essere chiamato da un'applicazione basata su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Durante la transizione alla tecnologia [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è possibile avere applicazioni scritte in parte in codice gestito e in parte in codice non gestito. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] consente di interfacciarsi con i componenti COM che richiedono un assembly di interoperabilità primario. È necessario un wrapper di runtime per SQL-DMO in modo che possa essere chiamato da un'applicazione basata su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concetti di base relativi a RMO (Replication Management Objects)](../replication/concepts/replication-management-objects-concepts.md)  
   
   

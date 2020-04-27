@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158804"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>Determinare il valore minimo per MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT.  
  Dopo aver determinato la memoria necessaria per le tabelle ottimizzate per la memoria, è necessario determinare la percentuale di memoria disponibile necessaria e impostare le percentuali di memoria su un valore uguale o superiore.  
   
- **Esempio**   
+ **Esempio:**    
 In questo esempio si suppone che sia stato calcolato che gli indici e le tabelle ottimizzate per la memoria richiedano 16 GB di memoria. Si suppone inoltre che siano stati riservati 32 GB di memoria per l'utilizzo da parte dell'utente.  
   
  A prima vista, si potrebbe ritenere corretto impostare MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT su 50 (16 è il 50% di 32).  Tuttavia, questo valore non garantirebbe memoria sufficiente alle tabelle ottimizzate per la memoria. Nella tabella seguente ([la sezione relativa alla percentuale di memoria disponibile per indici e tabelle ottimizzate per la memoria](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)) è possibile notare che se si riservano 32 GB di memoria, solo l'80% di tale valore sarà disponibile per gli indici e le tabelle ottimizzate per la memoria.  Pertanto, le percentuali minima e massima sono calcolate in base alla memoria disponibile, non alla memoria riservata.  
@@ -142,15 +142,14 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>Percentuale di memoria disponibile per indici e tabelle ottimizzate per la memoria  
  Se si esegue il mapping di un database con tabella ottimizzata per la memoria e un carico di lavoro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allo stesso pool di risorse, tramite Resource Governor viene impostata una soglia interna per l'utilizzo di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in modo tale che gli utenti del pool non abbiano conflitti per l'utilizzo del pool. In generale, la soglia per l'utilizzo di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è di circa l'80% del pool. Nella tabella seguente vengono illustrate le soglie effettive per varie dimensioni di memoria.  
   
- Quando si crea un pool di risorse dedicato per il database [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , è necessario stimare la quantità di memoria fisica necessaria per le tabelle in memoria dopo aver tenuto conto delle versioni di riga e della crescita dei dati. Dopo avere stimato la memoria necessaria, è possibile creare un pool di risorse con una percentuale della memoria di destinazione di commit per l'istanza di SQL come indicato nella colonna 'committed_target_kb' nella DMV `sys.dm_os_sys_info` (vedere [sys.dm_os_sys_information](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Ad esempio, è possibile creare un pool di risorse P1 con il 40% della memoria totale disponibile per l'istanza. Da questo 40%, il motore di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ottiene una percentuale inferiore per archiviare i dati di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  Ciò garantisce che [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] non utilizzi tutta la memoria del pool.  Il valore della percentuale inferiore dipende dalla memoria riservata alla destinazione. Nella tabella seguente viene descritta la memoria disponibile per il database [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in un pool di risorse (denominato o predefinito) prima che venga generato un errore di memoria insufficiente.  
+ Quando si crea un pool di risorse dedicato per il database [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , è necessario stimare la quantità di memoria fisica necessaria per le tabelle in memoria dopo aver tenuto conto delle versioni di riga e della crescita dei dati. Dopo aver stimato la memoria necessaria, è possibile creare un pool di risorse con una percentuale della memoria di destinazione del commit per l'istanza SQL, come riflesso dalla `sys.dm_os_sys_info` colonna ' committed_target_kb ' nella DMV (vedere [sys. dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Ad esempio, è possibile creare un pool di risorse P1 con il 40% della memoria totale disponibile per l'istanza. Da questo 40%, il motore di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ottiene una percentuale inferiore per archiviare i dati di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  Ciò garantisce che [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] non utilizzi tutta la memoria del pool.  Il valore della percentuale inferiore dipende dalla memoria riservata alla destinazione. Nella tabella seguente viene descritta la memoria disponibile per il database [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in un pool di risorse (denominato o predefinito) prima che venga generato un errore di memoria insufficiente.  
   
 |Memoria riservata di destinazione|Percentuale disponibile per le tabelle in memoria|  
 |-----------------------------|---------------------------------------------|  
 |<= 8 GB|70%|  
 |<= 16 GB|75%|  
 |<= 32 GB|80%|  
-|
-  \<= 96 GB|85%|  
+|\<= 96 GB|85%|  
 |> 96 GB|90%|  
   
  Ad esempio, se la 'memoria riservata alla destinazione' è di 100 GB e si stima che gli indici e le tabelle ottimizzate per la memoria richiedano 60 GB di memoria, è possibile creare un pool di risorse con MAX_MEMORY_PERCENT = 67 (60 GB necessari/0,90 = 66,667 GB - arrotondamento per eccesso a 67 GB; 67 GB/100 GB installato = 67%) per garantire i 60 GB di memoria necessari agli oggetti di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
@@ -185,8 +184,8 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Se il database non viene associato a un pool di risorse denominato, viene associato al pool predefinito ('default'). Poiché il pool di risorse predefinito è usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la maggior parte delle altre allocazioni, non sarà possibile monitorare in modo accurato la memoria usata dalle tabelle ottimizzate per la memoria tramite la DMV sys.dm_resource_governor_resource_pools per il database di interesse.  
   
-## <a name="see-also"></a>Vedere anche  
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [sys. sp_xtp_bind_db_resource_pool &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sys. sp_xtp_unbind_db_resource_pool &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [Resource Governor](../resource-governor/resource-governor.md)   
  [Pool di risorse Resource Governor](../resource-governor/resource-governor-resource-pool.md)   

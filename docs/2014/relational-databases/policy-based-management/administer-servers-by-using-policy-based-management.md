@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157095"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
@@ -53,7 +53,7 @@ ms.locfileid: "63157095"
  Per i criteri con errori, in Esplora oggetti viene restituito un avviso di integrità critica come icona rossa accanto alla destinazione e ai nodi di livello superiore nell'albero.  
   
 > [!NOTE]  
->  Durante il calcolo del set di oggetti per i criteri, per impostazione predefinita gli oggetti di sistema sono esclusi.  Ad esempio, se il set di oggetti dei criteri si riferisce a tutte le tabelle, i criteri non verranno applicati alle tabelle di sistema. Se gli utenti desiderano valutare i criteri negli oggetti di sistema, possono aggiungere in modo esplicito questi oggetti al set di oggetti. Tuttavia, sebbene tutti i criteri siano supportati per la modalità di valutazione **Controllo su pianificazione** , per motivi di prestazioni, non tutti i criteri con i set di oggetti arbitrari sono supportati per la modalità di valutazione **Controllo su modifiche** . Per altre informazioni, vedere [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Durante il calcolo del set di oggetti per i criteri, per impostazione predefinita gli oggetti di sistema sono esclusi.  Ad esempio, se il set di oggetti dei criteri si riferisce a tutte le tabelle, i criteri non verranno applicati alle tabelle di sistema. Se gli utenti desiderano valutare i criteri negli oggetti di sistema, possono aggiungere in modo esplicito questi oggetti al set di oggetti. Tuttavia, sebbene tutti i criteri siano supportati per la modalità di valutazione **Controllo su pianificazione** , per motivi di prestazioni, non tutti i criteri con i set di oggetti arbitrari sono supportati per la modalità di valutazione **Controllo su modifiche** . Per ulteriori informazioni, vedere.[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Concetti relativi alla gestione basata su criteri  
  Nella gestione basata su criteri sono inclusi tre componenti:  
@@ -91,8 +91,7 @@ ms.locfileid: "63157095"
  Set di proprietà logiche che definiscono il comportamento o le caratteristiche di certi tipi di destinazioni gestite. Il numero e le caratteristiche delle proprietà vengono incorporati nel facet e possono essere aggiunti o rimossi solo dal creatore del facet. Un tipo di destinazione può implementare uno o più facet di gestione e un facet di gestione può essere implementato da uno o più tipi di destinazione. Alcune proprietà di un facet possono essere valide solo per una versione specifica.  
   
  Condizione della gestione basata su criteri  
- Espressione booleana che specifica un set di stati consentiti per una destinazione gestita tramite la gestione basata su criteri in relazione a un facet di gestione. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di osservare le regole di confronto in caso di valutazione di una condizione. Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non corrispondono esattamente a quelle di Windows, testare la condizione per determinare come risolvere i conflitti dell'algoritmo.  
+ Espressione booleana che specifica un set di stati consentiti per una destinazione gestita tramite la gestione basata su criteri in relazione a un facet di gestione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di osservare le regole di confronto in caso di valutazione di una condizione. Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non corrispondono esattamente a quelle di Windows, testare la condizione per determinare come risolvere i conflitti dell'algoritmo.  
   
  Criteri di gestione basata su criteri  
  Condizione della gestione basata su criteri e comportamento previsto, ad esempio la modalità di valutazione, i filtri di destinazione e la pianificazione. I criteri possono contenere solo una condizione. I criteri possono essere abilitati o disabilitati. I criteri vengono archiviati nel database msdb.  
@@ -132,7 +131,7 @@ ms.locfileid: "63157095"
 |È disponibile un set di file di criteri che è possibile importare per le procedure consigliate e viene descritto come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database.|[Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Sono inclusi gli argomenti della Guida F1 relativi al nodo **Gestione criteri** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nodo Gestione criteri &#40;Esplora oggetti&#41;](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Viste della gestione basata su criteri &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
+## <a name="see-also"></a>Vedi anche  
+ [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

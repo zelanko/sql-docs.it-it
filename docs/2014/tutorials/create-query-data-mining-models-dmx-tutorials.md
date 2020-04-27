@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180542"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni (Analysis Services - Data mining)
@@ -39,9 +39,9 @@ ms.locfileid: "63180542"
      Questa esercitazione consente di creare un modello di stima per illustrare l'utilizzo dell'istruzione CREATE MODEL (DMX). È quindi possibile aggiungere modelli correlati e personalizzare il comportamento di ognuno modificando i parametri dell'algoritmo Microsoft Time Series. Infine, è possibile creare stime e aggiornarle con i nuovi dati. La capacità di aggiornare una serie temporale durante l'esecuzione di stime è stata aggiunta in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## <a name="reference"></a>Informazioni di riferimento  
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63180542"
   
      Questa esercitazione contiene numerose lezioni indipendenti, ognuna delle quali presenta un tipo di modello diverso. In ogni lezione viene illustrato il processo di creazione, esplorazione e personalizzazione di un modello, oltre al processo di creazione di query di stima.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Soluzioni di data mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Strumenti di data mining](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [Progetti di data mining](../../2014/analysis-services/data-mining/data-mining-projects.md)  

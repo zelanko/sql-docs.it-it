@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151107"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server - Oggetto Statistiche gruppi del carico di lavoro
@@ -39,9 +39,9 @@ ms.locfileid: "63151107"
 |Piani non ottimali/sec|Numero di piani non ottimali generati nel gruppo del carico di lavoro al secondo.|  
 |Thread paralleli attivi|Numero corrente degli utilizzi di thread paralleli.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Server - Oggetto Statistiche del pool di risorse](sql-server-resource-pool-stats-object.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Monitorare l'utilizzo delle risorse &#40;monitoraggio di sistema&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, oggetto statistiche del pool di risorse](sql-server-resource-pool-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
   
   

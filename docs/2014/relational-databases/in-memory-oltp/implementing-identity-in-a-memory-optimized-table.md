@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157823"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementazione di IDENTITY in una tabella con ottimizzazione per la memoria
@@ -51,7 +51,7 @@ insert into T1 values (@c1, 'test', getdate())
   
  Dopo aver eseguito l'inserimento più volte, nella colonna [c1] vengono visualizzati valori validi a incremento progressivo costante. Questo set di risultati viene generato utilizzando la scansione della tabella e l'indice hash senza `ORDER BY` e quindi le righe non vengono ordinate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

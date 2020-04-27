@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155723"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Costrutti supportati in stored procedure compilate in modo nativo
@@ -38,7 +38,7 @@ ms.locfileid: "63155723"
   
  Per informazioni complete sui costrutti non supportati e per informazioni su come sopperire ad alcune funzionalità non supportate nelle stored procedure compilate in modo nativo, vedere [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Per altre informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a>Programmabilità nelle stored procedure compilate in modo nativo  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>Programmabilità nelle stored procedure compilate in modo nativo  
  Sono supportati gli elementi seguenti:  
   
 -   BEGIN ATOMIC (al livello esterno della stored procedure), LANGUAGE, ISOLATION LEVEL, DATEFORMAT e DATEFIRST.  
@@ -63,7 +63,7 @@ ms.locfileid: "63155723"
   
      Per ottimizzare le prestazioni, utilizzare un solo blocco TRY/CATCH per un'intera stored procedure compilata in modo nativo.  
   
-##  <a name="so"></a>Operatori supportati  
+##  <a name="supported-operators"></a><a name="so"></a>Operatori supportati  
  Di seguito vengono elencati gli operatori supportati.  
   
 -   [Gli operatori di confronto &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (ad esempio, \<>,, >= e <=) sono supportati nelle istruzioni condizionali (se, while).  
@@ -78,7 +78,7 @@ ms.locfileid: "63155723"
   
 -   Operatori bit per bit ~, &, | e ^  
   
-##  <a name="bfncsp"></a>Funzioni predefinite nelle stored procedure compilate in modo nativo  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>Funzioni predefinite nelle stored procedure compilate in modo nativo  
  Le seguenti funzioni sono supportate nei vincoli predefiniti nelle tabelle ottimizzate per la memoria e nelle stored procedure compilate in modo nativo.  
   
 -   Funzioni matematiche: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE e TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155723"
   
 -   Funzioni di sistema: @@rowcount. Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno della stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
   
-##  <a name="qsancsp"></a>Superficie di attacco delle query nelle stored procedure compilate in modo nativo  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>Superficie di attacco delle query nelle stored procedure compilate in modo nativo  
  Sono supportati gli elementi seguenti:  
   
 -   BETWEEN  
@@ -134,14 +134,11 @@ ms.locfileid: "63155723"
   
  <sup>1</sup> order by e Top sono supportati nelle stored procedure compilate in modo nativo, con alcune restrizioni:  
   
--   
-  `DISTINCT` non è supportata nella clausola `SELECT` o `ORDER BY`.  
+-   `DISTINCT` non è supportata nella clausola `SELECT` o `ORDER BY`.  
   
--   
-  `WITH TIES` o `PERCENT` non è supportata nella clausola `TOP`.  
+-   `WITH TIES` o `PERCENT` non è supportata nella clausola `TOP`.  
   
--   
-  `TOP` in combinazione con `ORDER BY` non supporta un valore superiore a 8.192 quando si utilizza una costante nella clausola `TOP`. Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
+-   `TOP` in combinazione con `ORDER BY` non supporta un valore superiore a 8.192 quando si utilizza una costante nella clausola `TOP`. Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
   
      È possibile che si ottengano risultati maggiori di 8.192 archiviando il numero di righe in una variabile:  
   
@@ -154,12 +151,12 @@ ms.locfileid: "63155723"
   
  Queste limitazioni non si applicano all'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato nelle tabelle ottimizzate per la memoria.  
   
-##  <a name="auditing"></a>Controllo  
+##  <a name="auditing"></a><a name="auditing"></a>Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo. Il controllo a livello di istruzione non è supportato.  
   
  Per ulteriori informazioni sul controllo, vedere [Creazione di un controllo del server e di una specifica del controllo del database](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a>Hint di tabella, query e join  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>Hint di tabella, query e join  
  Sono supportati gli elementi seguenti:  
   
 -   Gli hint INDEX, FORCESCAN e FORCESEEK, nella sintassi di hint di tabella o nella [clausola OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) della query.  
@@ -172,7 +169,7 @@ ms.locfileid: "63155723"
   
  Per ulteriori informazioni, vedere [hint &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a>Limitazioni relative all'ordinamento  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitazioni relative all'ordinamento  
  È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) può ordinare fino a 8.000 righe, meno se sono presenti join.  
   
  Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) che una [clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe, viene visualizzato il messaggio di errore: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>*, riga *\<<numeroRiga>*. L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>*.**  
@@ -223,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitazioni sulle righe restituite:** Esistono due casi in cui è possibile ridurre potenzialmente il numero di righe che possono essere restituite dall'operatore TOP:  
+ **Limitazioni per le righe restituite.** In due casi è possibile che il numero di righe che possono essere restituite dall'operatore TOP venga ridotto:  
   
 -   Utilizzando JOIN nella query.  L'influenza di JOIN sulla limitazione dipende dal piano di query.  
   
@@ -231,7 +228,7 @@ GO
   
  La formula per calcolare un valore N massimo supportato nel caso peggiore in TOP N è: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)   
  [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](migration-issues-for-natively-compiled-stored-procedures.md)  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071786"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
@@ -181,13 +181,13 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  I risultati previsti forniscono tempi di risposta effettivi che mostrano come l'utilizzo di tabelle ottimizzate per la memoria e di stored procedure compilate in modo nativo in genere garantisca in modo coerente tempi di risposta più rapidi rispetto all'esecuzione degli stessi carichi di lavoro su tabelle basate su disco tradizionali.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Estensioni a AdventureWorks per illustrare OLTP in memoria](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)   
  [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)   
  [Requisiti per l'uso di tabelle ottimizzate per la memoria](requirements-for-using-memory-optimized-tables.md)   
- [CREAZIONE di &#40;di DATABASE SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [CREATE PROCEDURE e tabelle con ottimizzazione per la memoria](/sql/t-sql/statements/create-procedure-transact-sql)  
   

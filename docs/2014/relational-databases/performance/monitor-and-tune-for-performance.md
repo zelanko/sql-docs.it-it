@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150712"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitoraggio e ottimizzazione delle prestazioni
@@ -75,10 +75,10 @@ ms.locfileid: "63150712"
 |[Visualizzare e salvare piani di esecuzione](display-and-save-execution-plans.md)|Viene descritto come visualizzare e salvare piani di esecuzione in un file in formato XML.|  
 |[Monitoraggio delle prestazioni con Archivio query](monitoring-performance-by-using-the-query-store.md)|L'archivio di query acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva per la consultazione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione automatizzata in un'organizzazione](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Monitorare l'utilizzo delle risorse &#40;monitoraggio di sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

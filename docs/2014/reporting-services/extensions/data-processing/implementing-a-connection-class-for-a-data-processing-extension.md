@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fbd293c156f373de0cdad53b4419633ded15af8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164143"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementazione di una classe Connection per un'estensione per l'elaborazione dati
-  L'oggetto **Connection** rappresenta una connessione al database o una risorsa simile ed è il punto di partenza per gli utenti di un'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questo oggetto rappresenta le connessioni ai server di database, sebbene qualsiasi entità con un comportamento simile possa essere esposta come oggetto **Connection**.  
+  L'oggetto **Connection** rappresenta una connessione di database o una risorsa simile ed è il punto di partenza per gli utenti di un'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questo oggetto rappresenta le connessioni ai server di database, sebbene qualsiasi entità con un comportamento simile possa essere esposta come oggetto **Connection**.  
   
  Per implementare un oggetto **Connection**, creare una classe che implementa <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> e, facoltativamente, <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
@@ -31,14 +31,13 @@ ms.locfileid: "63164143"
  Le proprietà della connessione desiderata vengono rappresentate come stringa di connessione. È consigliabile che l'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs.md)] supporti la proprietà <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> utilizzando il sistema familiare di coppia nome/valore definito da OLE DB.  
   
 > [!NOTE]  
->  Gli oggetti **connessione** spesso richiedono un uso intensivo delle risorse, quindi è consigliabile prendere in considerazione le connessioni in pool o altre tecniche per attenuare questo problema.  
+>  Per ottenere gli oggetti **Connection** è spesso necessario un impiego elevato delle risorse, pertanto è consigliabile considerare la creazione di pool di connessioni o l'applicazione di altre tecniche che prevedano un minor sovraccarico delle risorse.  
   
- 
-  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> eredita da <xref:Microsoft.ReportingServices.Interfaces.IExtension>. È necessario implementare l'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IExtension> come parte dell'implementazione della classe Connection. L'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IExtension> consente a una classe di implementare un nome di estensione localizzato e di elaborare le informazioni di configurazione specifiche dell'estensione archiviate nel file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> eredita da <xref:Microsoft.ReportingServices.Interfaces.IExtension>. È necessario implementare l'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IExtension> come parte dell'implementazione della classe Connection. L'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IExtension> consente a una classe di implementare un nome di estensione localizzato e di elaborare le informazioni di configurazione specifiche dell'estensione archiviate nel file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  L'oggetto **Connection** contiene la proprietà <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> tramite l'implementazione di <xref:Microsoft.ReportingServices.Interfaces.IExtension>. È consigliabile che le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supportino la proprietà <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A>, in modo che gli utenti possano visualizzare un nome familiare e localizzato per l'estensione in un'interfaccia utente, ad esempio Gestione report.  
   
- <xref:Microsoft.ReportingServices.Interfaces.IExtension>consente inoltre all'oggetto **Connection** di recuperare ed elaborare i dati di configurazione personalizzati archiviati nel file RSReportServer. config. Per ulteriori informazioni sull'elaborazione dei dati di configurazione personalizzati, vedere il metodo <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
+ <xref:Microsoft.ReportingServices.Interfaces.IExtension> consente anche all'oggetto **Connection** di recuperare ed elaborare i dati di configurazione personalizzati archiviati nel file RSReportServer.config. Per ulteriori informazioni sull'elaborazione dei dati di configurazione personalizzati, vedere il metodo <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
   
  La classe che implementa <xref:Microsoft.ReportingServices.Interfaces.IExtension> non viene scaricata dalla memoria quando vengono scaricate le altre classi delle estensioni per l'elaborazione dati. Per questo motivo, è possibile usare la classe **Extension** per archiviare le informazioni sullo stato tra le connessioni o i dati che possono essere memorizzati nella cache. La classe **Extension** rimane in memoria fino a quando il server di report è in esecuzione.  
   

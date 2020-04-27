@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession2:: BCPSetBulkMode | Microsoft Docs'
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989981"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  IBCPSession2:: BCPSetBulkMode fornisce un'alternativa a [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di IBCPSession:: BCPColFmt, che imposta singoli attributi di formato di colonna, IBCPSession2:: BCPSetBulkMode imposta tutti gli attributi.  
+  IBCPSession2::BCPSetBulkMode offre un'alternativa a [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di IBCPSession::BCPColFmt, che imposta i singoli attributi di formato di colonna, IBCPSession2::BCPSetBulkMode imposta tutti gli attributi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Proprietà*  
+ *property*  
  Costante di tipo BYTE. Per un elenco di costanti, vedere la tabella nella sezione Osservazioni.  
   
  *pField*  
@@ -52,7 +52,7 @@ HRESULT BCPSetBulkMode (
  Lunghezza, in byte, del valore del carattere di terminazione della riga.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- IBCPSession2:: BCPSetBulkMode può restituire uno dei seguenti elementi:  
+ IBCPSession2::BCPSetBulkMode può restituire uno dei valori seguenti:  
   
 |||  
 |-|-|  
@@ -63,9 +63,9 @@ HRESULT BCPSetBulkMode (
 |`E_OUTOFMEMORY`|Errore di memoria insufficiente.|  
   
 ## <a name="remarks"></a>Osservazioni  
- IBCPSession2:: BCPSetBulkMode può essere usato per eseguire una copia bulk da una query o da una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` per specificare l'istruzione di query.  
+ IBCPSession2::BCPSetBulkMode può essere usato per creare una copia bulk da una query o una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` per specificare l'istruzione di query.  
   
- È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  In questo modo, ICommandPrepare::P repare per restituire un errore e impedire il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  
+ È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  Un'operazione di questo tipo comporterebbe la restituzione di un errore da parte di ICommandPrepare::Prepare, rendendo impossibile il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  
   
  Nella tabella seguente sono elencate le costanti per il parametro *property*.  
   
@@ -76,11 +76,11 @@ HRESULT BCPSetBulkMode (
 |BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata `BCP_TYPE_SQLNCHAR` su se il tipo di colonna è una `BCP_TYPE_DEFAULT` stringa o se non è una stringa.|  
 |BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata `BCP_TYPE_DEFAULT`su.|  
   
- È possibile chiamare IBCPSession:: BCPControl e IBCPSession2:: BCPSetBulkMode per le opzioni IBCPSession:: BCPControl che non sono in conflitto con IBCPSession2:: BCPSetBulkMode. Ad esempio, è possibile chiamare IBCPSession:: BCPControl con `BCP_OPTION_FIRST` e IBCPSession2:: BCPSetBulkMode.  
+ È possibile chiamare IBCPSession::BCPControl e IBCPSession2::BCPSetBulkMode per le opzioni IBCPSession::BCPControl che non sono in conflitto con IBCPSession2::BCPSetBulkMode. Ad esempio, è possibile chiamare IBCPSession:: BCPControl con `BCP_OPTION_FIRST` e IBCPSession2:: BCPSetBulkMode.  
   
  Non è possibile chiamare IBCPSession:: BCPControl `BCP_OPTION_TEXTFILE` con e IBCPSession2:: BCPSetBulkMode.  
   
- Se si tenta di chiamare IBCPSession2:: BCPSetBulkMode con una sequenza di chiamate di funzione che include IBCPSession:: BCPColFmt, IBCPSession:: BCPControl e IBCPSession:: BCPReadFmt, una delle chiamate di funzione restituirà un errore di sequenza. Se si sceglie di correggere l'errore, chiamare IBCPSession::BCPInit per reimpostare le impostazioni e ricominciare.  
+ Se si tenta di chiamare IBCPSession2::BCPSetBulkMode con una sequenza di chiamate di funzione che include IBCPSession::BCPColFmt, IBCPSession::BCPControl e IBCPSession::BCPReadFmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare IBCPSession::BCPInit per reimpostare le impostazioni e ricominciare.  
   
  Nella tabella seguente sono illustrati alcuni esempi di chiamate di funzione che comportano un errore nella sequenza della funzione:  
   
@@ -360,7 +360,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

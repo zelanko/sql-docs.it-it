@@ -17,21 +17,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044222"
 ---
 # <a name="server-event-category"></a>Categoria di eventi Server
-  La categoria di eventi **Server** contiene eventi generali del server.  
+  La categoria di eventi **Server** contiene eventi generali relativi al server.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Mount Tape - classe di evento](mount-tape-event-class.md)|Indica la ricezione di una richiesta di montaggio nastro.|  
-|[Server Memory Change - classe di evento](server-memory-change-event-class.md)|Indica che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'utilizzo della memoria è stato modificato.|  
-|[Trace File Close - classe di evento](trace-file-close-event-class.md)|Indica la chiusura di un file di traccia durante un rollback del file di traccia.|  
+|[Classe di evento Mount Tape](mount-tape-event-class.md)|Indica la ricezione di una richiesta di montaggio nastro.|  
+|[Classe di evento Server Memory Change](server-memory-change-event-class.md)|Indica una modifica nell'utilizzo della memoria da parte di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Classe di evento Trace File Close](trace-file-close-event-class.md)|Indica la chiusura di un file di traccia durante un rollback del file di traccia.|  
   
   

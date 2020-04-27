@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035668"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
@@ -58,7 +58,7 @@ GO;
  Nell'output sono elencati gli utenti e gli identificatori di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [sp_change_users_login &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **** non è possibile utilizzare sp_change_users_login [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gli account di accesso creati da Windows.  
+>  **sp_change_users_login** non è possibile utilizzare sp_change_users_login [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gli account di accesso creati da Windows.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>Per risolvere un utente isolato (orfano)  
  Per risolvere un utente isolato (orfano), eseguire la procedura seguente:  
@@ -92,7 +92,7 @@ GO;
   
      Per ulteriori informazioni, vedere [sp_password &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CREAZIONE di un utente &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
  [Crea account di accesso &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)   
  [sp_change_users_login &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   

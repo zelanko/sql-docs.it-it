@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62961068"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors - classe di evento
-  La classe di evento OLEDB Errors [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generata in quando una chiamata a un provider OLE DB restituisce un errore. Includere questa classe di evento nelle tracce per visualizzare un HRESULT negativo da un provider OLE DB.  
+  La classe di evento OLEDB Errors viene generata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando una chiamata a un provider OLE DB restituisce un errore. Includere questa classe di evento nelle tracce per visualizzare un HRESULT negativo da un provider OLE DB.  
   
  Quando la classe di evento OLEDB Errors viene inclusa in una traccia, la quantità di overhead dipende dalla frequenza con cui si verificano errori del provider OLE DB relativi al database durante la traccia. Se tali errori sono molto frequenti, è possibile che la traccia influisca in modo significativamente negativo sulle prestazioni.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62961068"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
-|DatabaseID|`int`|ID del database specificato nell'istruzione *USE database* oppure ID del *database* predefinito, se per una determinata istanza non viene eseguita un'istruzione USE database. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]consente di visualizzare il nome del database se la colonna di dati ServerName viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|`int`|ID del database specificato nell'istruzione *USE database* oppure ID del *database* predefinito, se per una determinata istanza non viene eseguita un'istruzione USE database. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Errore|`int`|Risultato HRESULT restituito dal provider.|31|Sì|  
 |EventClass|`int`|Tipo di evento = 61.|27|No|  
@@ -54,8 +54,8 @@ ms.locfileid: "62961068"
 |TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|No|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## <a name="see-also"></a>Vedere anche  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Oggetti di automazione OLE in Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
   

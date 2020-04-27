@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151038"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151038"
 ## <a name="new-xevents"></a>Nuovi XEvent  
  Sono disponibili due nuovi XEvent query_optimizer_estimate_cardinality per supportare i nuovi piani di query.  
   
--   *query_optimizer_estimate_cardinality* si verifica quando il Query Optimizer stima la cardinalità in un'espressione relazionale.  
+-   *query_optimizer_estimate_cardinality* si verifica quando Query Optimizer stima la cardinalità in un'espressione relazionale.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors si verifica quando sono abilitati sia flag 2312 che 9481, tentando di forzare contemporaneamente il comportamento di stima di cardinalità precedente e nuovo.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors si verifica quando entrambi i flag di traccia 2312 e 9481 sono abilitati e tentano di forzare contemporaneamente sia il comportamento precedente della stima della cardinalità sia quello nuovo.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti sono illustrate alcune delle modifiche introdotte nelle nuove stime della cardinalità. Il codice per la stima della cardinalità è stato riscritto. La logica è complessa e non è possibile fornire un elenco completo di tutte le modifiche.  
@@ -87,7 +87,7 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
   
  Questo comportamento è stato modificato. Ora, la nuova logica di stima della cardinalità presuppone che s.type non sia correlato a r.date. In pratica, si presuppone che i giocattoli siano restituiti ogni giorno e non solo in un giorno specifico. In questo caso, le nuove stime della cardinalità restituiranno un numero inferiore rispetto alle stime della cardinalità precedenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitoraggio e ottimizzazione delle prestazioni](monitor-and-tune-for-performance.md)  
   
   

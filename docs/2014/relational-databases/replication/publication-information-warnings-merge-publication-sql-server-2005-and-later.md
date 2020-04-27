@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021689"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Avvisi (pubblicazione di tipo merge, SQL Server 2005 e versioni successive)
-  La scheda **Avvisi** è disponibile per i server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. La scheda **Avvisi** consente di eseguire le attività seguenti per la pubblicazione selezionata:  
+   La scheda **Avvisi** è disponibile per i server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. La scheda **Avvisi** consente di eseguire le attività seguenti per la pubblicazione selezionata:  
   
 -   Abilitazione di avvisi.  
   
@@ -52,34 +52,34 @@ ms.locfileid: "63021689"
  Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. Gli avvisi vengono definiti facendo clic su **Configura avvisi** e specificando le informazioni appropriate nella finestra di dialogo **Configura avvisi di replica** .  
   
 ## <a name="options"></a>Opzioni  
- **Enabled**  
+ **Attivata**  
  Selezionare questa opzione per abilitare un avviso e specificare un valore soglia.  
   
  **Avviso**  
  Selezionare questa opzione per abilitare l'impostazione di avvisi per un determinato avviso di replica.  
   
- **Warning**  
+ **Avviso**  
  Descrizione dell'avviso associato al valore soglia.  
   
  **Soglia**  
  Consente di specificare un valore per la soglia.  
   
- **Configura avvisi**  
+ **Configurare gli avvisi**  
  Selezionare una riga nella griglia **Avvisi** e fare clic su **Configura avvisi** per aprire la finestra di dialogo **Configura avvisi di replica** . Tramite questa finestra di dialogo è possibile definire un avviso associato al valore soglia e all'avviso selezionati.  
   
  **Ignora modifiche**  
  Fare clic su questo pulsante per ignorare le eventuali modifiche apportate agli avvisi e alle soglie.  
   
 > [!NOTE]  
->  La scelta del pulsante **Ignora modifiche** non influisce sugli avvisi definiti nella finestra di dialogo **Configura avvisi di replica** .  
+>   La scelta del pulsante **Ignora modifiche** non influisce sugli avvisi definiti nella finestra di dialogo **Configura avvisi di replica** .  
   
  **Salva modifiche**  
  Fare clic su questo pulsante per salvare le eventuali modifiche apportate agli avvisi e alle soglie.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitorare le prestazioni con Monitoraggio replica](monitor/monitor-performance-with-replication-monitor.md)   
+ [Visualizzazione delle informazioni ed esecuzione di attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Monitorare le prestazioni con monitoraggio replica](monitor/monitor-performance-with-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

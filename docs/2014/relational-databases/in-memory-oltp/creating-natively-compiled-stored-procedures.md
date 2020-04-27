@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071820"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
@@ -55,8 +55,7 @@ go
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Le stored procedure compilate in modo nativo devono essere associate allo schema degli oggetti a cui fa riferimento. Ciò significa che i riferimenti alla tabella della procedura non possono essere eliminati. Le tabelle a cui viene fatto riferimento nella procedura devono includere il nome dello schema e\*i caratteri jolly () non sono consentiti nelle query. 
-  `SCHEMABINDING` è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Le stored procedure compilate in modo nativo devono essere associate allo schema degli oggetti a cui fa riferimento. Ciò significa che i riferimenti alla tabella della procedura non possono essere eliminati. Le tabelle a cui viene fatto riferimento nella procedura devono includere il nome dello schema e\*i caratteri jolly () non sono consentiti nelle query. `SCHEMABINDING` è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Le stored procedure compilate in modo nativo non supportano `EXECUTE AS CALLER`, ovvero il contesto di esecuzione predefinito. Di conseguenza, è necessario specificare il contesto di esecuzione. Sono supportate `EXECUTE AS OWNER`le `EXECUTE AS`opzioni, *User*e `EXECUTE AS SELF` .|  
 |`BEGIN ATOMIC`|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Vedere [livelli di isolamento delle transazioni](../../database-engine/transaction-isolation-levels.md) per i livelli di isolamento supportati.<br /><br /> `LANGUAGE`. Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
   
@@ -110,7 +109,7 @@ go
   
  Il vantaggio di questo approccio consiste nel fatto che l'applicazione non risulta offline. Tuttavia, è necessario più impegno per mantenere i riferimenti e verificare che puntino sempre alla versione più recente della stored procedure.  
   
-## <a name="see-also"></a>Vedere anche  
- [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Vedi anche  
+ [stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
   
   

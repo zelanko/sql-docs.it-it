@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164051"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Sequence Clustering (Esercitazione intermedia sul data mining)
@@ -32,7 +32,7 @@ ms.locfileid: "63164051"
   
 -   [Generic Content Tree Viewer](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>Scheda Diagramma cluster  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>Scheda Diagramma cluster  
  Nella scheda **diagramma dei cluster** vengono visualizzati graficamente i cluster individuati dall'algoritmo nel database. Il layout del diagramma rappresenta la relazione tra i cluster, con i cluster simili raggruppati. Per impostazione predefinita, l'ombreggiatura di ogni nodo rappresenta la densità di tutti i case nel cluster: quanto più scura appare l'ombreggiatura del nodo, maggiore sarà il numero di case contenuti. È possibile modificare il significato dell'ombreggiatura dei nodi in modo da rappresentare il supporto, all'interno di ogni cluster, di un attributo e uno stato.  
   
  È inoltre possibile rinominare i cluster per facilitare l'identificazione e l'utilizzo dei cluster di destinazione. In questa esercitazione verranno rinominati il cluster con la percentuale più elevata di clienti dell'area del Pacifico e il cluster che contiene il maggior numero di case.  
@@ -87,7 +87,7 @@ ms.locfileid: "63164051"
   
  [Torna all'inizio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>Scheda Profili cluster  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>Scheda Profili cluster  
  Nella scheda **Profili cluster** vengono visualizzate le sequenze presenti in ogni cluster. I cluster sono elencati in singole colonne a destra della colonna **Stati** .  
   
  Nel visualizzatore la riga del **modello** descrive la distribuzione complessiva degli elementi in un cluster e la riga **Model. Samples** contiene le sequenze degli elementi. Ogni riga delle sequenze di colori in ogni cella della riga **Model. Samples** rappresenta il comportamento di un utente selezionato in modo casuale nel cluster.  
@@ -96,7 +96,7 @@ ms.locfileid: "63164051"
   
 #### <a name="to-view-the-sequences-that-are-most-common-in-a-cluster"></a>Per visualizzare le sequenze più comuni in un cluster  
   
-1.  Fare clic con il **** pulsante destro del mouse sulla riga del modello `Largest Cluster`nella colonna per il cluster e selezionare **Mostra legenda**.  
+1.  Fare clic con il **Model** pulsante destro del mouse sulla riga del modello `Largest Cluster`nella colonna per il cluster e selezionare **Mostra legenda**.  
   
      La colonna **color** contiene una barra ombreggiata che indica la frequenza degli elementi trovati nelle sequenze. Ogni articolo è rappresentato da un colore diverso. Nella colonna **significato** sono elencati i nomi dei modelli di prodotto per ogni colore. La colonna **Distribution** indica la percentuale di case che contengono questo elemento in una sequenza.  
   
@@ -126,13 +126,13 @@ ms.locfileid: "63164051"
   
 5.  Spostare la barra di scorrimento per rivedere tutti i clienti contenuti in questo cluster.  
   
-     Eseguendo il drill-through nei dettagli è possibile notare anche questa volta che il cluster contiene prevalentemente ordini provenienti dall'area del Pacifico, oltre ad alcuni ordini provenienti dal Nord America e dall'Europa.  
+     Eseguendo il drill-through nei dettagli è possibile notare anche questa volta che il cluster contiene prevalentemente ordini provenienti dall'area del Pacifico, oltre ad alcuni ordini provenienti dal America del Nord e dall'Europa.  
   
 6.  Chiudere la finestra di dialogo **drill-through** .  
   
  [Torna all'inizio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>Scheda Caratteristiche cluster  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>Scheda Caratteristiche cluster  
  La scheda **Caratteristiche cluster** riepiloga le transizioni tra gli stati in un cluster visualizzando le barre che rappresentano visivamente l'importanza del valore dell'attributo per il cluster selezionato. La colonna **variabili** indica il modo in cui il modello è importante per il cluster o il popolamento selezionato, ovvero un particolare valore o la relazione tra i valori, nota come *transizione*. Nella colonna **valori** sono disponibili maggiori dettagli sul valore o la transizione, mentre la colonna **probabilità** rappresenta visivamente il peso dell'attributo o della transizione.  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>Per visualizzare gli attributi importanti per un cluster  
@@ -169,7 +169,7 @@ ms.locfileid: "63164051"
   
  [Torna all'inizio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>Scheda Analisi discriminante tra cluster  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>Scheda Analisi discriminante tra cluster  
  La scheda analisi **discriminante tra cluster** consente di confrontare due cluster, per determinare gli attributi che distinguono un determinato cluster da un altro cluster. La scheda contiene quattro colonne: **variabili**, **valori**, **cluster 1**e **cluster 2**.  È possibile scegliere qualsiasi cluster da usare come **cluster 1** e **cluster 2**.  
   
  La colonna **variabili** indica il nome dell'attributo, che può essere un nome di colonna o una combinazione di nome di colonna e **transizione**di parola. Nella colonna **valori** viene visualizzato il valore esatto dell'attributo o della transizione. Le barre ombreggiate nelle colonne per **cluster 1** e **cluster 2** indicano il livello di attendibilità dell'attributo nei cluster da confrontare. Più lunga è la barra, maggiore è la probabilità che il cluster includa case con tale attributo.  
@@ -188,7 +188,7 @@ ms.locfileid: "63164051"
   
  [Torna all'inizio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>Scheda transizioni di stato  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>Scheda transizioni di stato  
  Nella scheda **transizioni di stato** è possibile selezionare un cluster ed esplorare le transizioni di stato. Se si seleziona **popolamento (tutti)** nell'elenco a discesa cluster, il diagramma mostra la distribuzione degli Stati per l'intero modello di data mining.  
   
  Ogni nodo del grafico rappresenta uno stato o un possibile valore delle sequenze che si sta tentando di analizzare. Il colore di sfondo dei nodi rappresenta la frequenza di tale stato. Alcuni stati sono collegati da linee che indicano la presenza di una transizione tra tali stati. È possibile spostare il dispositivo di scorrimento verso l'alto o verso il basso per modificare la soglia di probabilità delle transizioni. Ad alcuni nodi sono associati numeri che indicano la probabilità dello stato.  
@@ -227,7 +227,7 @@ ms.locfileid: "63164051"
   
  [Torna all'inizio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>Generic Content Tree Viewer  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>Generic Content Tree Viewer  
  Questo visualizzatore può essere utilizzato per tutti i modelli, indipendentemente dall'algoritmo o dal tipo di modello. **MicrosoftGeneric Content Tree Viewer** è disponibile nell'elenco a discesa **Visualizzatore** .  
   
  Un albero dei contenuti è una rappresentazione di un modello di data mining sotto forma di una serie di nodi, in cui ogni nodo rappresenta le informazioni relative ai dati di training. Il nodo può contenere un modello, un set di regole, un cluster o la definizione di un intervallo di date che condividono alcuni attributi. Il contenuto esatto del nodo differisce a seconda dell'algoritmo e dell'attributo stimabile, ma la rappresentazione generale del contenuto è la stessa.  
@@ -255,7 +255,7 @@ ms.locfileid: "63164051"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di un modello Sequence Clustering correlato &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   

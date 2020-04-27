@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62955844"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicare dati in colonne crittografate (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "62955844"
   
 4.  Eseguire [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) per chiudere la chiave.  
   
-5.  Pubblicare la tabella contenente la colonna crittografata. Per altre informazioni, vedere [Create a Publication](../publish/create-a-publication.md).  
+5.  Pubblicare la tabella contenente la colonna crittografata. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una pubblicazione](../publish/create-a-publication.md).  
   
 6.  Sottoscrivere la pubblicazione. Per altre informazioni, vedere [Creare una sottoscrizione pull](../create-a-pull-subscription.md) o [Creare una sottoscrizione push](../create-a-push-subscription.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62955844"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)   
  [Creare chiavi simmetriche identiche su due server](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   

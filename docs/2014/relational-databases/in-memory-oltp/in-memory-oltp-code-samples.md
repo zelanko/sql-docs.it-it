@@ -11,16 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157892"
 ---
 # <a name="in-memory-oltp-code-samples"></a>Esempi di codice di OLTP in memoria
   In questa sezione sono riportati esempi di codice che illustrano OLTP in memoria:  
   
--   [Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria](demonstration-performance-improvement-of-in-memory-oltp.md)  
+-   [Dimostrazione: miglioramento delle prestazioni di OLTP in memoria](demonstration-performance-improvement-of-in-memory-oltp.md)  
   
 -   [Estensioni a AdventureWorks per illustrare OLTP in memoria](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "63157892"
   
 -   [Partizionamento a livello di applicazione](application-level-partitioning.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

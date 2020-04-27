@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150689"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Apertura, visualizzazione e stampa di un file deadlock (SQL Server Management Studio)
@@ -27,13 +27,13 @@ ms.locfileid: "63150689"
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>Per aprire e visualizzare un file deadlock  
   
-1.  Scegliere **Apri** dal menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]File **di**e quindi fare clic su **File**.  
+1.  Scegliere **Apri**dal [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]menu **file** , quindi fare clic su **file**.  
   
 2.  Nella finestra di dialogo **Apri file** selezionare il tipo di file con estensione xdl nella casella **Tipo file** . Verrà visualizzato un elenco filtrato contenente solo i file deadlock.  
   
 ### <a name="to-print-a-deadlock-file"></a>Per stampare un file deadlock  
   
-1.  Scegliere Apri **** dal menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]file **,** quindi fare clic su **file**.  
+1.  Scegliere **Apri** dal menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]File **di** e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri file** selezionare il tipo di file con estensione xdl nella casella **Tipo file** . Verrà visualizzato un elenco filtrato contenente solo i file deadlock.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63150689"
   
 4.  Scegliere **Stampa** dal menu **File**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Salva grafici deadlock &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
   

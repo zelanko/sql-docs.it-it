@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990699"
 ---
 # <a name="extended-events"></a>Eventi estesi
@@ -25,11 +25,11 @@ ms.locfileid: "62990699"
   
  Per ulteriori informazioni sugli eventi estesi, visitare il sito Web [Eventi estesi di SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vantaggi degli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Con gli eventi estesi sono disponibili due interfacce utente grafiche (**creazione guidata nuova sessione** e **nuova sessione**) per creare, modificare, visualizzare e analizzare i dati della sessione.  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Vantaggi degli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Per gli eventi estesi sono disponibili due interfacce utente grafiche (**Creazione guidata nuova sessione** e **Nuova sessione**) per creare, modificare, visualizzare e analizzare i dati della sessione.  
   
 ## <a name="extended-events-concepts"></a>Concetti degli eventi estesi  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gli eventi estesi (eventi estesi) si basano su concetti esistenti, ad esempio un evento o un consumer di eventi, usano i concetti di Event Tracing for Windows e introduce nuovi concetti.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli eventi estesi sono basati su concetti esistenti, ad esempio un evento o un consumer di eventi, usano concetti di Event Tracing for Windows (ETW) e ne introducono di nuovi.  
   
  Nella seguente tabella vengono descritti i concetti negli eventi estesi.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62990699"
 |[Pacchetti degli eventi estesi di SQL Server](sql-server-extended-events-packages.md)|Vengono descritti i pacchetti degli eventi estesi che contengono oggetti utilizzati per ottenere ed elaborare dati durante l'esecuzione di una sessione degli eventi estesi.|  
 |[Destinazioni degli eventi estesi di SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Vengono descritti i consumer di eventi che possono ricevere dati durante una sessione dell'evento.|  
 |[Motore degli eventi estesi di SQL Server](sql-server-extended-events-engine.md)|Viene descritto il motore che implementa e gestisce una sessione degli eventi estesi.|  
-|[Sessioni Eventi estesi di SQL Server](sql-server-extended-events-sessions.md)|Viene descritta la sessione Eventi estesi.|  
+|[Sessioni degli eventi estesi di SQL Server](sql-server-extended-events-sessions.md)|Viene descritta la sessione Eventi estesi.|  
   
 ## <a name="extended-events-architecture"></a>Architettura degli eventi estesi  
  Gli eventi estesi (Eventi estesi) costituiscono un sistema generale di gestione degli eventi per sistemi server. L'infrastruttura degli eventi estesi supporta la correlazione di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e in certe condizioni, la correlazione di dati dal sistema operativo e dalle applicazioni di database. Nel secondo caso, l'output degli eventi estesi deve essere indirizzato a ETW (Event Tracing for Windows) per correlare i dati degli eventi con i dati degli eventi delle applicazioni o del sistema operativo.  
@@ -73,7 +73,7 @@ ms.locfileid: "62990699"
   
 -   Possibilità di monitorare dinamicamente i processi attivi, con un impatto minimo su tali processi.  
   
--   Sessione di integrità di sistema predefinita che viene eseguita senza effetti visibili sulle prestazioni. Tale sessione consente di raccogliere dati di sistema che è possibile utilizzare per risolvere i problemi relativi alle prestazioni. Per altre informazioni, vedere [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md).  
+-   Sessione di integrità di sistema predefinita che viene eseguita senza effetti visibili sulle prestazioni. Tale sessione consente di raccogliere dati di sistema che è possibile utilizzare per risolvere i problemi relativi alle prestazioni. Per ulteriori informazioni, vedere [utilizzare la sessione system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="extended-events-tasks"></a>Attività degli eventi estesi  
  L'utilizzo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire funzioni, DMV e istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] o viste del catalogo consente di creare soluzioni per la risoluzione dei problemi relativi agli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] semplici o complesse per l'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,14 +90,14 @@ ms.locfileid: "62990699"
 |Viene descritto come ottenere informazioni sui campi associati agli eventi.|[Recuperare i campi per tutti gli eventi](../../database-engine/get-the-fields-for-all-events.md)|  
 |Viene descritto come individuare gli eventi disponibili nei pacchetti registrati.|[Visualizzare gli eventi per i pacchetti registrati](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Viene descritto come individuare le destinazioni degli eventi estesi disponibili nei pacchetti registrati.|[Visualizzare le destinazioni degli eventi estesi per i pacchetti registrati](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
-|Viene descritto come visualizzare gli eventi e le azioni Eventi estesi equivalenti a ogni evento di Traccia SQL e alle colonne associate.|[Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Viene descritto come visualizzare gli eventi e le azioni Eventi estesi equivalenti a ogni evento di Traccia SQL e alle colonne associate.|[Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Viene descritto come trovare i parametri che è possibile impostare quando si utilizza l'argomento ADD TARGET in CREATE EVENT SESSION o ALTER EVENT SESSION.|[Recuperare i parametri configurabili per l'argomento ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Viene descritto come convertire uno script di Traccia SQL esistente in una sessione Eventi estesi.|[Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Viene descritto come determinare quali query mantengono il blocco, il piano della query e lo stack [!INCLUDE[tsql](../../includes/tsql-md.md)] al momento del blocco.|[Individuare le query che mantengono attivi i blocchi](determine-which-queries-are-holding-locks.md)|  
+|Viene descritto come determinare quali query mantengono il blocco, il piano della query e lo stack [!INCLUDE[tsql](../../includes/tsql-md.md)] al momento del blocco.|[Determinare le query che mantengono attivi i blocchi](determine-which-queries-are-holding-locks.md)|  
 |Viene descritto come individuare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.|[Cercare gli oggetti con il maggior numero di blocchi acquisiti](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Viene illustrato come utilizzare gli eventi estesi con Analisi eventi per Windows al fine di monitorare l'attività del sistema.|[Monitorare l'attività del sistema mediante gli eventi estesi](monitor-system-activity-using-extended-events.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Applicazioni livello dati](../data-tier-applications/data-tier-applications.md)   
  [Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Distribuire un'applicazione livello dati](../data-tier-applications/deploy-a-data-tier-application.md)   

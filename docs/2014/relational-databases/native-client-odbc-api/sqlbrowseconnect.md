@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067665"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -31,7 +31,7 @@ ms.locfileid: "63067665"
 |DSN|N/D|No|Nome dell'origine dati restituita da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
 |DRIVER|N/D|No|Microsoft? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Il nome del driver ODBC di Native[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client è {Native Client 11}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
   
-## <a name="level-2"></a>Level 2  
+## <a name="level-2"></a>Livello 2  
   
 |Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
@@ -72,8 +72,8 @@ ms.locfileid: "63067665"
 |---------------------|  
 |Informazioni su SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQLBrowseConnect (funzione)](https://go.microsoft.com/fwlink/?LinkId=59329)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

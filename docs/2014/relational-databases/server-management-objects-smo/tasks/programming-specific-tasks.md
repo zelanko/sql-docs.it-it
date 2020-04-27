@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158715"
 ---
 # <a name="programming-specific-tasks"></a>Programmazione di attività specifiche
@@ -30,12 +30,12 @@ ms.locfileid: "63158715"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Utilizzo di server collegati in SMO](using-linked-servers-in-smo.md)|Viene descritto l'utilizzo in SMO dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> per collegare server OLE-DB.|  
+|[Uso di server collegati in SMO](using-linked-servers-in-smo.md)|Viene descritto l'utilizzo in SMO dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> per collegare server OLE-DB.|  
 |[Configurazione di SQL Server in SMO](configuring-sql-server-in-smo.md)|Viene descritto come visualizzare e modificare le impostazioni di configurazione per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO.|  
-|[Utilizzo del partizionamento di tabelle e indici](using-table-and-index-partitioning.md)|Viene descritto come utilizzare il partizionamento di indici e tabelle in SMO.|  
-|[Utilizzo di filegroup e file per archiviare dati](using-filegroups-and-files-to-store-data.md)|Viene descritto come utilizzare filegroup in SMO.|  
-|[Gestione di servizi e di impostazioni di rete tramite il provider WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Vengono descritti diversi modi per tenere traccia dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> che rappresenta il provider WMI per la gestione della configurazione.|  
-|[Utilizzo degli oggetti di database](creating-altering-and-removing-database-objects.md)|Viene descritto come creare classi di istanze che rappresentano oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Uso del partizionamento di tabelle e indici](using-table-and-index-partitioning.md)|Viene descritto come utilizzare il partizionamento di indici e tabelle in SMO.|  
+|[Uso di filegroup e file per archiviare dati](using-filegroups-and-files-to-store-data.md)|Viene descritto come utilizzare filegroup in SMO.|  
+|[Gestione di servizi e di impostazioni di rete con il provider WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Vengono descritti diversi modi per tenere traccia dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> che rappresenta il provider WMI per la gestione della configurazione.|  
+|[Uso degli oggetti di database](creating-altering-and-removing-database-objects.md)|Viene descritto come creare classi di istanze che rappresentano oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Gestione di utenti, ruoli e account di accesso](managing-users-roles-and-logins.md)|Viene descritto come utilizzare i ruoli di sicurezza in SMO.|  
 |[Concessione, revoca e negazione delle autorizzazioni](granting-revoking-and-denying-permissions.md)|Viene descritto come utilizzare SMO per concedere, revocare e negare autorizzazioni a utenti o membri di un ruolo.|  
 |[Uso della crittografia](using-encryption.md)|Viene descritto come proteggere i dati utilizzando la crittografia in SMO.|  
@@ -45,8 +45,8 @@ ms.locfileid: "63158715"
 |[Trasferimento di dati](transferring-data.md)|Viene descritto come trasferire dati in SMO.|  
 |[Utilizzo di Posta elettronica database](using-database-mail.md)|Viene descritto l'utilizzo dei servizi di posta elettronica da parte di SMO.|  
 |[Gestione di Service Broker](managing-service-broker.md)|Viene descritto come configurare Service Broker tramite SMO.|  
-|[Utilizzo di XML Schema](using-xml-schemas.md)|Viene descritto come utilizzare il tipo di dati XML in SMO.|  
-|[Utilizzo dei sinonimi](using-synonyms.md)|Viene descritto come creare sinonimi in SMO.|  
+|[Uso di XML Schema](using-xml-schemas.md)|Viene descritto come utilizzare il tipo di dati XML in SMO.|  
+|[Uso dei sinonimi](using-synonyms.md)|Viene descritto come creare sinonimi in SMO.|  
 |[Utilizzo di messaggi](using-messages.md)|Viene descritto come utilizzare i messaggi di sistema e come specificare messaggi definiti dall'utente.|  
 |[Implementazione della ricerca full-text](implementing-full-text-search.md)|Viene descritto come implementare cataloghi e indici di ricerca full-text in SMO.|  
 |[Implementazione di endpoint](implementing-endpoints.md)|Viene descritto come creare endpoint per gestire payload per il mirroring di database, le richieste SOAP e Service Broker.|  

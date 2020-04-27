@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044456"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestione configurazione SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "63044456"
 > 
 >  -   **Windows 10**:  
 >          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nella **pagina iniziale**digitare SQLServerManager12. msc (per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Se si fa clic su SQLServerManager12.msc, viene aperto Gestione configurazione. Per aggiungere la Configuration Manager alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
-> -   **Windows 8**:  
+> -   **Windows 8**.  
 >          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nell'accesso alla **ricerca** in **app**digitare **SQLServerManager\<Version>. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
   
  Per avviare, arrestare, sospendere, riprendere o configurare i servizi in un altro computer tramite Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Connessione a un altro computer &#40;Gestione configurazione SQL Server&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md).  
@@ -61,8 +61,7 @@ ms.locfileid: "63044456"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione consente di gestire i protocolli di rete server e client, imporre la crittografia dei protocolli, visualizzare le proprietà con alias o attivare/disabilitare un protocollo.  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di creare o rimuovere un alias, modificare l'ordine di utilizzo dei protocolli o visualizzare le proprietà per un alias server, compresi:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di creare o rimuovere un alias, modificare l'ordine di utilizzo dei protocolli o visualizzare le proprietà per un alias server, compresi:  
   
 -   Alias server: l'alias server usato per il computer a cui si sta connettendo il client.  
   
@@ -73,15 +72,14 @@ ms.locfileid: "63044456"
  Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente inoltre di visualizzare le informazioni sulle istanze cluster di failover, sebbene per alcune azioni, ad esempio l'avvio e l'arresto di servizi, sia necessario utilizzare Amministrazione cluster.  
   
 ### <a name="available-network-protocols"></a>Protocolli di rete disponibili  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta protocolli Shared Memory, TCP/IP e Named Pipes. Per ulteriori informazioni sulla scelta dei protocolli di rete, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta i protocolli di rete VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX/SPX. Per i client che in precedenza eseguivano la connessione con questi protocolli, è necessario selezionare un protocollo diverso per la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non è possibile utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per configurare il proxy WinSock. Per configurare il proxy WinSock, vedere la documentazione su ISA Server.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta protocolli Shared Memory, TCP/IP e Named Pipes. Per ulteriori informazioni sulla scelta dei protocolli di rete, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta i protocolli di rete VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX/SPX. Per i client che in precedenza eseguivano la connessione con questi protocolli, è necessario selezionare un protocollo diverso per la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non è possibile utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per configurare il proxy WinSock. Per configurare il proxy WinSock, vedere la documentazione su ISA Server.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Procedure per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
   
  [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Avvio, arresto o sospensione del servizio SQL Server Agent](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
  [Impostare un'istanza di SQL Server per l'avvio automatico &#40;Gestione configurazione SQL Server&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

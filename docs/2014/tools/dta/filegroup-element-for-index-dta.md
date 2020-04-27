@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154603"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento Filegroup per Index (DTA)
@@ -39,8 +39,7 @@ ms.locfileid: "63154603"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|
-  `string`, lunghezza illimitata.|  
+|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
 |**Valore predefinito**|No.|  
 |**Occorrenza**|Facoltativa. È possibile utilizzarlo una volta per ogni elemento `Index`. Questo elemento non può essere utilizzato se per l'elemento `PartitionScheme` sono specificati gli elementi `PartitionColumn` e `Index`.|  
   

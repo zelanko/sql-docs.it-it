@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150461"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>Proprietà TCP-IP (scheda protocolli)
@@ -35,8 +35,7 @@ ms.locfileid: "63150461"
  Specificare se SQL Server resterà in attesa su tutti gli indirizzi IP associati alle schede di rete del computer. Se è impostato su **No**, configurare separatamente ogni indirizzo IP usando la finestra di dialogo delle proprietà dei singoli indirizzi. Se è impostato su **Sì**, le impostazioni della casella delle proprietà relative a **IPAll** verranno applicate a tutti gli indirizzi IP. Il valore predefinito è **Sì**.  
   
  **Nessun ritardo**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa modifiche a questa proprietà.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa modifiche a questa proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

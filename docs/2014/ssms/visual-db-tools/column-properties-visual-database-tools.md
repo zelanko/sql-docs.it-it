@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990197"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
@@ -47,7 +47,7 @@ ms.locfileid: "62990197"
  **Database**  
  Consente di visualizzare il nome dell'origine dei dati della colonna selezionata (solo per OLE DB).  
   
- **Categoria varie**  
+ **Categoria Varie**  
  Viene espansa per visualizzare le proprietà rimanenti.  
   
  **Tipo di dati**  
@@ -62,16 +62,16 @@ ms.locfileid: "62990197"
  **Identità**  
  Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
- **Length**  
+ **Lunghezza**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.  
   
- **Nullable**  
+ **Ammette i valori Null**  
  Indica se la colonna accetta valori Null.  
   
- **Precision**  
+ **Precisione**  
  Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
- **Scalabilità**  
+ **Ridimensionare**  
  Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
 ## <a name="column-properties-tab"></a>Scheda Proprietà colonne  
@@ -95,16 +95,16 @@ ms.locfileid: "62990197"
  **Tipo di dati**  
  Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **Valore predefinito o binding**  
+ **Valore predefinito dell'associazione**  
  Mostra il valore predefinito utilizzato per la colonna quando non ne viene specificato alcuno. Nell'elenco a discesa sono contenuti tutti i valori predefiniti globali impostati nell'origine dei dati. Per associare la colonna a un valore predefinito globale, selezionarlo dall'elenco a discesa. In alternativa, per creare un vincolo predefinito per la colonna, digitare direttamente il valore predefinito come testo.  
   
- **Length**  
+ **Lunghezza**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
- **Precision**  
+ **Precisione**  
  Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
- **Scalabilità**  
+ **Ridimensionare**  
  Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
  **Categoria Progettazione tabelle**  
@@ -113,25 +113,25 @@ ms.locfileid: "62990197"
  **Regole di confronto**  
  Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(...)** a destra del valore.  
   
- **Categoria specifica colonna calcolata**  
+ **Categoria Specifica colonna calcolata**  
  Si espande per visualizzare le proprietà **Formula** e **Persistente**. Se la colonna è calcolata, verrà visualizzata anche la formula. Per modificare la formula, espandere questa categoria e apportare la modifica nella proprietà **Formula** .  
   
  **Formula**  
  Consente di visualizzare la formula se la colonna selezionata è una colonna calcolata. Utilizzare questo campo per immettere o modificare una formula.  
   
- **Permanente**  
+ **Persistente**  
  Consente di salvare la colonna calcolata con l'origine dei dati. Una colonna calcolata persistente può essere indicizzata.  
   
- **Tipo di dati condensato**  
+ **Tipo di dati abbreviato**  
  Consente di visualizzare informazioni sul tipo di dati del campo, nello stesso formato dell'istruzione SQL CREATE TABLE. Un campo contenente ad esempio una stringa di lunghezza variabile con un massimo di 20 caratteri viene rappresentato come "varchar(20)". Per modificare questa proprietà, digitare direttamente il valore desiderato.  
   
  **Descrizione**  
  Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(...)** a destra della proprietà.  
   
- **Categoria specifica full-text**  
+ **Categoria Specifica full-text**  
  Viene espansa per visualizzare le proprietà specifiche per le colonne full-text.  
   
- **Con indicizzazione full-text**  
+ **Con indice full-text**  
  Indica se la colonna è indicizzata con un indice full-text. Questa proprietà può essere impostata su **Sì** solo se il tipo di dati della colonna consente ricerche full-text e se per la tabella a cui la colonna appartiene è specificato un indice full-text. Per modificare questo valore, fare clic su di esso, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Colonna di tipo full-text**  
@@ -148,7 +148,7 @@ ms.locfileid: "62990197"
  **Con Sottoscrittore non SQL Server**  
  Indica se la colonna è associata a un Sottoscrittore SQL Server non Microsoft.  
   
- **Categoria specifica identità**  
+ **Categoria Specifica identità**  
  Si espande per visualizzare le proprietà **Identity**, **Incremento Identity**e **Valore di inizializzazione identity**.  
   
  **Identità**  
@@ -163,16 +163,16 @@ ms.locfileid: "62990197"
  **Deterministico**  
  Indica se il tipo di dati della colonna selezionata può essere determinato con certezza.  
   
- **Pubblicato da DTS**  
+ **Con pubblicazione di tipo DTS**  
  Indica se la pubblicazione della colonna è di tipo DTS.  
   
- **Indicizzabile**  
+ **Is Indexable**  
  Indica se la colonna selezionata può essere indicizzata. Le colonne calcolate non deterministiche, ad esempio, non sono indicizzabili.  
   
  **Con pubblicazione di tipo merge**  
  Indica se la pubblicazione della colonna è di tipo merge.  
   
- **Non è per la replica**  
+ **Non per la replica**  
  Indica se durante la replica vengono mantenuti i valori di identità originari. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Replicato**  
@@ -185,7 +185,6 @@ ms.locfileid: "62990197"
  Indica la dimensione in byte consentita dal tipo di dati della colonna. Un tipo di dati `nchar`, ad esempio, può avere come lunghezza 10 (numero di caratteri), ma come dimensione 20, in modo da supportare i set di caratteri Unicode.  
   
 > [!NOTE]  
->  La lunghezza di un tipo di dati `varchar(max)` varia per ogni riga. sp_help restituisce (-1) come lunghezza della `varchar(max)` colonna. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
+>  La lunghezza di un tipo di dati `varchar(max)` varia per ogni riga. sp_help restituisce (-1) come lunghezza della `varchar(max)` colonna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
   
   

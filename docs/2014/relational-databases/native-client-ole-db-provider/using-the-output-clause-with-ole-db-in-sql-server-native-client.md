@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee680b4bf201b5942e66051ac89dba45d05af3c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183655"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>Utilizzo della clausola OUTPUT con OLE DB in SQL Server Native Client
   Se si utilizza una clausola OUTPUT in un comando INSERT, UPDATE, DELETE o MERGE, il numero di righe interessate non risulta disponibile. L'applicazione deve contare il numero di righe nel set di righe restituito dalla clausola OUTPUT.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un'applicazione del provider OLE DB di SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

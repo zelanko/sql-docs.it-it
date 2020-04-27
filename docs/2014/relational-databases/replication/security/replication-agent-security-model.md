@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960828"
 ---
 # <a name="replication-agent-security-model"></a>Modello di sicurezza dell'agente di replica
@@ -50,11 +50,11 @@ ms.locfileid: "62960828"
  Gli account utilizzati per l'esecuzione e le connessioni degli agenti richiedono varie autorizzazioni. Tali autorizzazioni sono descritte nella tabella seguente. È consigliabile eseguire ogni agente con un account di Windows differente e assegnare all'account solo le autorizzazioni necessarie. Per informazioni sull'elenco di accesso alla pubblicazione, rilevante per numerosi agenti, vedere [Proteggere il server di pubblicazione](secure-the-publisher.md).  
   
 > [!NOTE]  
->  Controllo account utente in alcuni sistemi operativi Windows può impedire l'accesso amministrativo alla condivisione snapshot. Le autorizzazioni per la condivisione snapshot devono pertanto essere concesse in modo esplicito agli account di Windows utilizzati dall'agente snapshot, dall'agente di distribuzione e dall'agente di merge. È necessario eseguire questa operazione anche se gli account di Windows sono membri del gruppo Administrators. Per altre informazioni, vedere [Proteggere la cartella snapshot](secure-the-snapshot-folder.md).  
+>  Controllo account utente in alcuni sistemi operativi Windows può impedire l'accesso amministrativo alla condivisione snapshot. Le autorizzazioni per la condivisione snapshot devono pertanto essere concesse in modo esplicito agli account di Windows utilizzati dall'agente snapshot, dall'agente di distribuzione e dall'agente di merge. È necessario eseguire questa operazione anche se gli account di Windows sono membri del gruppo Administrators. Per altre informazioni, vedere [proteggere la cartella snapshot](secure-the-snapshot-folder.md).  
   
 |Agente|Autorizzazioni|  
 |-----------|-----------------|  
-|agente snapshot|L'account di Windows con cui viene eseguito l'agente viene utilizzato per le connessioni al server di distribuzione. Tale account deve:<br /><br /> - Essere almeno un membro del ruolo predefinito del database **db_owner** nel database di distribuzione.<br /><br /> - Avere le autorizzazioni di lettura, scrittura e modifica per la condivisione snapshot.<br /><br /> <br /><br /> L'account utilizzato per la connessione al server di pubblicazione deve essere almeno membro del ruolo predefinito del database **db_owner** nel database di pubblicazione.|  
+|agente snapshot|L'account di Windows con cui viene eseguito l'agente viene utilizzato per le connessioni al server di distribuzione. Tale account deve:<br /><br /> Come minimo, essere un membro del ruolo predefinito del database **db_owner** nel database di distribuzione.<br /><br /> - Avere le autorizzazioni di lettura, scrittura e modifica per la condivisione snapshot.<br /><br /> <br /><br /> L'account utilizzato per la connessione al server di pubblicazione deve essere almeno membro del ruolo predefinito del database **db_owner** nel database di pubblicazione.|  
 |Agente di lettura log|L'account di Windows con cui viene eseguito l'agente viene utilizzato per le connessioni al server di distribuzione. Tale account deve essere almeno membro del ruolo predefinito del database **db_owner** nel database di distribuzione.<br /><br /> L'account utilizzato per la connessione al server di pubblicazione deve essere almeno membro del ruolo predefinito del database **db_owner** nel database di pubblicazione.<br /><br /> Quando `sync_type` si selezionano le opzioni *solo supporto replica*, *inizializza con backup*o *Inizializza da LSN*, l'agente di lettura log deve essere eseguito `sp_addsubscription`dopo l'esecuzione di, in modo che gli script di configurazione vengano scritti nel database di distribuzione. L'agente di lettura log deve essere in esecuzione con un account membro del ruolo predefinito del server **sysadmin** . Quando l' `sync_type` opzione è impostata su *automatico*, non sono necessarie azioni speciali dell'agente di lettura log.|  
 |Agente di distribuzione per una sottoscrizione push|L'account di Windows con cui viene eseguito l'agente viene utilizzato per le connessioni al server di distribuzione. Tale account deve:<br /><br /> -Essere almeno un membro del ruolo predefinito del database **db_owner** nel database di distribuzione.<br /><br /> - Essere un membro dell'elenco di accesso alla pubblicazione.<br /><br /> - Avere le autorizzazioni di lettura per la condivisione snapshot.<br /><br /> - Avere le autorizzazioni di lettura per la directory di installazione del provider OLE DB per il Sottoscrittore se la sottoscrizione riguarda un Sottoscrittore non SQL Server.<br /><br /> - Quando si esegue la replica dei dati line-of-business, l'agente di distribuzione deve avere le autorizzazioni di scrittura per la replica **C:\Programmi\Microsoft SQL Server\XX\COMfolder** dove XX rappresenta l'ID istanza.<br /><br /> <br /><br /> L'account utilizzato per la connessione al Sottoscrittore deve essere almeno membro del ruolo predefinito del database **db_owner** nel database di sottoscrizione o disporre di autorizzazioni equivalenti se la sottoscrizione riguarda un Sottoscrittore non SQL Server.<br /><br /> Nota: quando si `-subscriptionstreams >= 2` USA nell'agente di distribuzione, è necessario concedere `View Server State` anche l'autorizzazione per i sottoscrittori per rilevare i deadlock.|  
 |Agente di distribuzione per una sottoscrizione pull|L'account di Windows con cui viene eseguito l'agente viene utilizzato per le connessioni al Sottoscrittore. Tale account deve essere almeno membro del ruolo predefinito del database **db_owner** nel database di sottoscrizione. L'account utilizzato per la connessione al server di distribuzione deve:<br /><br /> - Essere un membro dell'elenco di accesso alla pubblicazione.<br /><br /> - Avere le autorizzazioni di lettura per la condivisione snapshot.<br /><br /> - Quando si esegue la replica dei dati line-of-business, l'agente di distribuzione deve avere le autorizzazioni di scrittura per la replica **C:\Programmi\Microsoft SQL Server\XX\COMfolder** dove XX rappresenta l'ID istanza.<br /><br /> <br /><br /> Nota: quando si `-subscriptionstreams >= 2` USA nell'agente di distribuzione, è necessario concedere `View Server State` anche l'autorizzazione per i sottoscrittori per rilevare i deadlock.|  
@@ -67,15 +67,15 @@ ms.locfileid: "62960828"
   
 |Agente|Nome processo|  
 |-----------|--------------|  
-|agente snapshot|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<ServerPubblicazione>-\<intero>**|  
+|agente snapshot|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>-\<Integer>**|  
 |Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<GUID>**|  
-|Agente di lettura log|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<intero>**|  
-|Agente di merge per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<intero>**|  
-|Agente di merge per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
-|Agente di distribuzione per le sottoscrizioni push|Server di pubblicazione **>-\<databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>1 \<** <sup></sup>|  
-|Agente di distribuzione per le sottoscrizioni pull|**\<\<\<\<Publisher>-databasepubblicazione>-publication>-Subscriber>-databasesottoscrizione>\<-GUID>2 \<** <sup></sup>|  
-|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
-|Agente di lettura coda|**[\<DatabaseDistribuzione>].\<intero>**|  
+|Agente di lettura log|**\<Server di pubblicazione\<>-databasepubblicazione\<>-Integer>**|  
+|Agente di merge per le sottoscrizioni pull|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>\<-\<Subscriber>-\<databasesottoscrizione>-Integer>**|  
+|Agente di merge per le sottoscrizioni push|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>**|  
+|Agente di distribuzione per le sottoscrizioni push|Server di pubblicazione **>-\<databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>1 \<** <sup>1</sup>|  
+|Agente di distribuzione per le sottoscrizioni pull|**\<\<\<\<Publisher>-databasepubblicazione>-publication>-Subscriber>-databasesottoscrizione>\<-GUID>2 \<** <sup>2</sup>|  
+|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>**|  
+|Agente di lettura coda|**[\<Database di distribuzione>]. \<>Integer**|  
   
  <sup>1</sup> per le sottoscrizioni push di pubblicazioni Oracle, il nome del processo è ** \<Publisher>-\<Publisher**> anziché ** \<Publisher\<>-databasepubblicazione>**.  
   
@@ -83,16 +83,16 @@ ms.locfileid: "62960828"
   
  Durante la configurazione della replica si specificano gli account utilizzati per l'esecuzione degli agenti. Tutti i passaggi del processo, tuttavia, vengono eseguiti nel contesto di sicurezza di un *proxy*e pertanto la replica esegue internamente i mapping seguenti per gli account dell'agente specificati:  
   
--   Viene innanzitutto eseguito il mapping tra l'account e una credenziale utilizzando l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) statement. I proxy di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows.  
+-   Prima di tutto viene eseguito il mapping tra l'account e una credenziale usando l'istruzione  [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) di [!INCLUDE[tsql](../../../includes/tsql-md.md)]. I proxy di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows.  
   
 -   Viene chiamata la stored procedure [sp_add_proxy](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql) e le credenziali vengono utilizzate per creare un proxy.  
   
 > [!NOTE]  
 >  Queste informazioni vengono fornite allo scopo di illustrare i processi richiesti per l'esecuzione degli agenti nel contesto di sicurezza appropriato. Non è in genere necessario interagire direttamente con le credenziali o i proxy creati.  
   
-## <a name="see-also"></a>Vedere anche  
- [Replication Security Best Practices](replication-security-best-practices.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Procedure consigliate per la sicurezza della replica](replication-security-best-practices.md)   
  [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)   
- [Sicurezza della cartella snapshot](secure-the-snapshot-folder.md)  
+ [Proteggere la cartella snapshot](secure-the-snapshot-folder.md)  
   
   

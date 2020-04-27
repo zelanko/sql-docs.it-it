@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025716"
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
-  Il riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce contenitori denominati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
+  Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
   
  Una soluzione include uno o più progetti, oltre ai file e ai metadati che contribuiscono a definire la soluzione nel suo complesso. Un progetto è composto da un set di file e da metadati correlati, ad esempio le informazioni di connessione. Le soluzioni e i progetti contengono elementi che rappresentano gli script, le query, le informazioni di connessione e i file necessari per creare la soluzione di database.  
   

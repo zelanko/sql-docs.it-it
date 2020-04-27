@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057121"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -66,19 +66,19 @@ ms.locfileid: "63057121"
   
      È consigliabile impostare il parametro **-LoginTimeOut** su un valore inferiore rispetto all'intervallo di esecuzione del processo di controllo degli agenti di replica. In alcuni casi, il valore di **-LoginTimeout** è impostato su un valore superiore a causa di problemi di rete che causano il timeout degli accessi. Se **-LoginTimeout** è impostato su un valore inferiore, la replica può segnalare errori più specifici, consentendo di risolvere i problemi di accesso che potrebbero essere causati da autorizzazioni, problemi di rete o altri problemi. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
-    -   [Utilizzo dei profili agenti di replica](agents/replication-agent-profiles.md)  
+    -   [Usare i profili agenti di replica](agents/replication-agent-profiles.md)  
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Concetti relativi ai file eseguibili dell'agente di replica](concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione dell'agente di replica](agents/replication-agent-administration.md)   
- [Guida di riferimento a errori ed eventi &#40;replica&#41;](errors-and-events-reference-replication.md)   
+ [Guida di riferimento a errori ed eventi &#40;&#41;di replica](errors-and-events-reference-replication.md)   
  [agente di distribuzione di replica](agents/replication-distribution-agent.md)   
  [agente di lettura log di replica](agents/replication-log-reader-agent.md)   
  [agente di merge di replica](agents/replication-merge-agent.md)   
  [agente di lettura coda di replica](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [Agente snapshot repliche](agents/replication-snapshot-agent.md)  
   
   

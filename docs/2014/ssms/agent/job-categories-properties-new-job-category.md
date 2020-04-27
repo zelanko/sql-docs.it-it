@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62936991"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>Proprietà Categorie di processi e Nuova categoria di processi
@@ -26,19 +26,19 @@ ms.locfileid: "62936991"
  **Nome**  
  Digitare il nome della nuova categoria di processi. Se la finestra di dialogo corrente è quella delle proprietà delle categorie di processi, la categoria in esame viene visualizzata in questa finestra.  
   
- **Processi in questa categoria**  
+ **Processi della categoria**  
  Consente di visualizzare tutti i processi presenti nella categoria.  
   
  **Mostra tutti i processi**  
  Consente di visualizzare un elenco di tutti i processi.  
   
- **Selezionare**  
+ **Seleziona**  
  Consente di modificare la categoria del processo selezionandolo o deselezionandolo.  
   
  **Processo**  
  Consente di visualizzare il nome del processo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Crea processi](create-jobs.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Creazione di processi](create-jobs.md)  
   
   

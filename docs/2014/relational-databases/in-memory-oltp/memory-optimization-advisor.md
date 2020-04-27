@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157998"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
@@ -84,7 +84,7 @@ ms.locfileid: "63157998"
 > [!WARNING]  
 >  Selezionare questa opzione solo se si comprende il rischio della perdita dei dati con le tabelle non durevoli.  
   
- Fare clic su **Avanti** per continuare.  
+ Scegliere **Avanti** per continuare.  
   
 ### <a name="review-primary-key-conversion"></a>Verifica conversione chiave primaria  
  La schermata successiva è denominata **Verifica conversione chiave primaria**. In Ottimizzazione guidata per la memoria viene rilevato se nella tabella sono presenti una o più chiavi primarie e viene popolato l'elenco di colonne in base ai metadati delle chiavi primarie. Se non è presente alcuna chiave primaria, per eseguire la migrazione a una tabella ottimizzata per la memoria durevole, sarà necessario crearne una.  
@@ -121,7 +121,7 @@ ms.locfileid: "63157998"
   
  Al termine, aggiornare **Esplora oggetti** per visualizzare la nuova tabella ottimizzata per la memoria e la vecchia tabella basata su disco. La vecchia tabella può essere conservata o eliminata a seconda delle proprie esigenze.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

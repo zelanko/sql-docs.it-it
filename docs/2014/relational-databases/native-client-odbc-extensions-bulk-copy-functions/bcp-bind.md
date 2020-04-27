@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140564"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare **bcp_bind** per un modo rapido ed efficiente per copiare dati da una variabile di programma in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in.  
   
- Chiamare [bcp_init](bcp-init.md) prima di chiamare questa o qualsiasi altra funzione di copia bulk. La **** chiamata di bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imposta la tabella di destinazione per la copia bulk. Quando si chiama **bcp_init** per l'uso con **bcp_bind** e [bcp_sendrow](bcp-sendrow.md), il **bcp_init** parametro _szDataFile_ , che indica il file di dati, è impostato su null. il **bcp_init**parametro_eDirection_ è impostato su DB_IN.  
+ Chiamare [bcp_init](bcp-init.md) prima di chiamare questa o qualsiasi altra funzione di copia bulk. La **bcp_init** chiamata di bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imposta la tabella di destinazione per la copia bulk. Quando si chiama **bcp_init** per l'uso con **bcp_bind** e [bcp_sendrow](bcp-sendrow.md), il **bcp_init** parametro _szDataFile_ , che indica il file di dati, è impostato su null. il **bcp_init**parametro_eDirection_ è impostato su DB_IN.  
   
  Eseguire una chiamata di **bcp_bind** separata per ogni colonna della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella in cui si desidera copiare. Una volta effettuate le chiamate **bcp_bind** necessarie, chiamare **bcp_sendrow** per inviare una riga di dati dalle variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La riassociazione della colonna non è supportata.  
   
@@ -266,7 +266,7 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

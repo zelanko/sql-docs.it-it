@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137064"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
@@ -33,7 +33,7 @@ ms.locfileid: "63137064"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questo strumento consente di creare ed eseguire gli esempi di codice forniti negli argomenti relativi agli eventi estesi. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md).  
   
- Oltre alle sessioni create, nel server è presente una sessione di integrità di sistema predefinita. Tale sessione consente di raccogliere dati di sistema che è possibile utilizzare per risolvere i problemi relativi alle prestazioni. Per altre informazioni, vedere [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md).  
+ Oltre alle sessioni create, nel server è presente una sessione di integrità di sistema predefinita. Tale sessione consente di raccogliere dati di sistema che è possibile utilizzare per risolvere i problemi relativi alle prestazioni. Per ulteriori informazioni, vedere [utilizzare la sessione system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="ddl-statements"></a>Istruzioni DDL  
  Le istruzioni DDL seguenti consentono di creare, modificare ed eliminare una sessione Eventi estesi.  
@@ -82,11 +82,11 @@ ms.locfileid: "63137064"
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|Contiene una riga per ogni evento degli eventi estesi di cui è stato eseguito il mapping a una classe di evento di Traccia SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|Contiene una riga per ogni azione degli eventi estesi di cui è stato eseguito il mapping a un ID della colonna di Traccia SQL.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../views/views.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Tabelle degli eventi estesi di SQL Server &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
- [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md)   
- [Usare il provider PowerShell per eventi estesi](use-the-powershell-provider-for-extended-events.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](../views/views.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
+ [SQL Server tabelle degli eventi estesi &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/system-tables-transact-sql)   
+ [Usare la sessione di system_health](use-the-ssms-xe-profiler.md)   
+ [Utilizzare il provider PowerShell per eventi estesi](use-the-powershell-provider-for-extended-events.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990194"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (Programma di installazione)
@@ -72,19 +72,19 @@ ms.locfileid: "62990194"
   
 2.  **Eliminare i gruppi di sicurezza locali.** Prima di disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eliminare i gruppi di sicurezza locali per i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  **Arrestare tutti i** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **servizi.**   Prima di disinstallare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile arrestare tutti i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le connessioni attive possono impedire la corretta esecuzione della disinstallazione.  
+3.  **Arrestare tutti i **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **servizi** di . Prima di disinstallare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile arrestare tutti i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le connessioni attive possono impedire la corretta esecuzione della disinstallazione.  
   
-4.  **Utilizzare un account con le autorizzazioni appropriate.** Accedere al server utilizzando l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account che dispone di autorizzazioni equivalenti. È possibile, ad esempio, accedere al server utilizzando un account membro del gruppo di amministratori locali.  
+4.  **Utilizzare un account dotato di autorizzazioni appropriate.** Accedere al server utilizzando l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account che dispone di autorizzazioni equivalenti. È possibile, ad esempio, accedere al server utilizzando un account membro del gruppo di amministratori locali.  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Per avviare il processo di disinstallazione, nel **Pannello di controllo** scegliere **Programmi e funzionalità**.  
   
 2.  Fare clic ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** con il pulsante destro del mouse e scegliere **Disinstalla**. Fare clic su **Rimuovi**. Verrà avviata l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Verranno eseguite le regole di supporto dell'installazione per verificare la configurazione del computer. Scegliere **Avanti**per continuare.  
+     Verranno eseguite le regole di supporto dell'installazione per verificare la configurazione del computer. Per continuare, fare clic su **Avanti**.  
   
-3.  Nella pagina Seleziona istanza utilizzare la casella di riepilogo a discesa per specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da rimuovere o indicare l'opzione per rimuovere solo gli strumenti di gestione e le funzionalità condivise di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Scegliere **Avanti**per continuare.  
+3.  Nella pagina Seleziona istanza utilizzare la casella di riepilogo a discesa per specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da rimuovere o indicare l'opzione per rimuovere solo gli strumenti di gestione e le funzionalità condivise di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per continuare, fare clic su **Avanti**.  
   
 4.  Nella pagina Seleziona funzionalità specificare le funzionalità da rimuovere dall'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -98,13 +98,13 @@ ms.locfileid: "62990194"
   
 1.  Se il processo di disinstallazione non viene completato correttamente, tentare di eliminare la causa del problema. Gli articoli seguenti possono aiutare a individuare la causa della mancata disinstallazione:  
   
-    -   [Come identificare i problemi di installazione di SQL Server 2008 nei file di log del programma di installazione](https://support.microsoft.com/kb/955396/en-us)  
+    -   [Come identificare i problemi del programma di installazione di SQL Server 2008 nei file di log dell'installazione](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
 2.  Se non è possibile eliminare la causa del problema di disinstallazione, contattare il Supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] . In alcuni casi, ad esempio quando si eliminano inavvertitamente file importanti, la reinstallazione del sistema operativo può essere necessaria per reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

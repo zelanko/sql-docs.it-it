@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150824"
 ---
 # <a name="plan-guides"></a>Guide di piano
@@ -141,18 +141,18 @@ sp_create_plan_guide
 |----------|-----------|  
 |Viene descritto come creare una guida di piano.|[Creare una nuova guida di piano](create-a-new-plan-guide.md)|  
 |Viene descritto come creare una guida di piano per le query con parametri.|[Creare una guida di piano per le query con parametri](create-a-plan-guide-for-parameterized-queries.md)|  
-|Viene descritto come controllare il comportamento di parametrizzazione delle query utilizzando guide di piano.|[Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano](specify-query-parameterization-behavior-by-using-plan-guides.md)|  
+|Viene descritto come controllare il comportamento di parametrizzazione delle query utilizzando guide di piano.|[Specificare il comportamento di parametrizzazione delle query tramite guide di piano](specify-query-parameterization-behavior-by-using-plan-guides.md)|  
 |Viene descritto come includere un piano di query fisso in una guida di piano.|[Applicare un piano di query fisso a una guida di piano](apply-a-fixed-query-plan-to-a-plan-guide.md)|  
-|Viene descritto come specificare hint per la query in una guida di piano.|[Associazione degli hint per le query a una guida di piano](attach-query-hints-to-a-plan-guide.md)|  
+|Viene descritto come specificare hint per la query in una guida di piano.|[Associare gli hint per le query a una guida di piano](attach-query-hints-to-a-plan-guide.md)|  
 |Viene descritto come visualizzare le proprietà di una guida di piano.|[Visualizzare le proprietà delle guide di piano](view-plan-guide-properties.md)|  
-|Viene descritto come utilizzare SQL Server Profiler per creare e testare guide di piano.|[Usare SQL Server Profiler per creare e testare guide di piano](plan-guides.md)|  
+|Viene descritto come utilizzare SQL Server Profiler per creare e testare guide di piano.|[Usare SQL Server Profiler per creare e testare le guide di piano](plan-guides.md)|  
 |Viene descritto come convalidare una guida di piano.|[Convalidare le guide di piano dopo l'aggiornamento](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_create_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys. fn_validate_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

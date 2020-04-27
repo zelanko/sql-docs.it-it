@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162442"
 ---
 # <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
@@ -36,11 +36,11 @@ ms.locfileid: "63162442"
   
 -   Requisiti dell'opzione SET  
   
- **Requisiti di proprietà**  
+ **Ownership Requirements**  
   
  Tutti i riferimenti a funzioni nella colonna calcolata devono avere lo stesso proprietario della tabella.  
   
- **Requisiti di determinismo**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  Le espressioni sono deterministiche se restituiscono sempre lo stesso risultato per un determinato set di input. La proprietà **IsDeterministic** della funzione [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) indica se una *computed_column_expression* è deterministica.  
@@ -64,7 +64,7 @@ ms.locfileid: "63162442"
 >   
 >  Se l'impostazione del livello di compatibilità del database è 90, non è possibile creare indici su colonne calcolate contenenti tali espressioni. Tuttavia, le colonne calcolate esistenti che includono queste espressioni da un database aggiornato sono gestibili. Se si utilizzano colonne calcolate che includono conversioni implicite da valori di tipo stringa a valori di tipo data, verificare che le impostazioni LANGUAGE e DATEFORMAT siano consistenti nei database e nelle applicazioni per evitare l'eventuale danneggiamento dell'indice.  
   
- **Requisiti di precisione**  
+ **Precision Requirements**  
   
  La *computed_column_expression* deve essere precisa. Una *computed_column_expression* è precisa quando viene soddisfatta una o più delle condizioni seguenti:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63162442"
   
  La proprietà **IsPrecise** della funzione COLUMNPROPERTY indica se una *computed_column_expression* è precisa.  
   
- **Requisiti del tipo di dati**  
+ **Data Type Requirements**  
   
 -   Il *computed_column_expression* definito per la colonna calcolata non può restituire i `text`tipi `ntext`di dati `image` , o.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63162442"
   
      Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON.  
   
-##  <a name="BKMK_persisted"></a> Creazione di indici per colonne calcolate persistenti  
+##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Creazione di indici per colonne calcolate persistenti  
  È possibile creare un indice su una colonna calcolata. definita da un'espressione deterministica, ma non precisa, se la colonna è contrassegnata come PERSISTED nell'istruzione CREATE TABLE oppure ALTER TABLE. Ciò significa che [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utilizza questi valori salvati in modo permanente quando crea un indice sulla colonna e quando viene fatto riferimento all'indice in una query. Questa opzione consente di creare un indice in una colonna calcolata quando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]è deterministico e preciso.  
   
 ## <a name="related-content"></a>Contenuto correlato  

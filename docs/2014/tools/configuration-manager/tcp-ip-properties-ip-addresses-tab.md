@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151440"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Proprietà TCP-IP (scheda indirizzi IP)
@@ -49,17 +49,16 @@ ms.locfileid: "63151440"
  **Porta TCP**  
  Consente di visualizzare o modificare la porta sulla quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resta in attesa. Per impostazione predefinita, l'istanza predefinita di [!INCLUDE[ssDE](../../includes/ssde-md.md)] resta in attesa sulla porta 1433.  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può restare in attesa su più porte sullo stesso indirizzo IP. Elencare le porte separandole con una virgola, nel formato 1433,1500,1501. La lunghezza massima del campo è 2047 caratteri.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può restare in attesa su più porte sullo stesso indirizzo IP. Elencare le porte separandole con una virgola, nel formato 1433,1500,1501. La lunghezza massima del campo è 2047 caratteri.  
   
  Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No**nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP** . Per ulteriori informazioni, vedere "Procedura: Configurazione del Motore di database per l'attesa su più porte TCP" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Aggiunta o rimozione di indirizzi IP  
  Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza gli indirizzi IP disponibili al momento dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aggiungendo o modificando schede di rete, alla scadenza di un indirizzo IP assegnato dinamicamente, quando si riconfigura la struttura della rete o quando si sposta fisicamente il computer, ad esempio quando un computer portatile si connette alla rete in un edificio diverso, gli indirizzi IP disponibili cambiano. Per modificare un indirizzo IP, modificare la casella **Indirizzo IP**, quindi riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Creazione di una stringa di connessione valida con TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Servizio SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [Creazione di una stringa di connessione valida tramite TCP IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162016"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
@@ -57,7 +57,7 @@ ms.locfileid: "63162016"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (vedere [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) per altre informazioni)  
+-   ICommandWithParameters:: GetParameterInfo (per altre informazioni, vedere [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md))  
   
  È inoltre possibile notare un miglioramento nelle prestazioni quando si specifica il formato dei metadati utilizzando IBCPSession::BCPSetBulkMode  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63162016"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  
   
   

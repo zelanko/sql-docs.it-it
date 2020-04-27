@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164359"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Implementazione dell'interfaccia ISubscriptionBaseUIUserControl per un'estensione per il recapito
@@ -35,7 +35,7 @@ ms.locfileid: "63164359"
   
  Per un esempio di uso dell'interfaccia di <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Implementazione di un'estensione per il recapito](implementing-a-delivery-extension.md)   
  [Libreria di estensioni di Reporting Services](../reporting-services-extension-library.md)  
   

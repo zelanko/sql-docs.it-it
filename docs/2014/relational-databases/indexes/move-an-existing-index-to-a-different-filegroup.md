@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036225"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Spostare un indice esistente in un filegroup diverso
@@ -40,20 +40,20 @@ ms.locfileid: "63036225"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Se una tabella presenta un indice cluster, lo spostamento di tale indice in un nuovo filegroup causa lo spostamento della tabella in tale filegroup.  
   
 -   Non è possibile spostare gli indici creati utilizzando un vincolo UNIQUE o PRIMARY KEY tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per spostare questi indici, usare l'istruzione [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) con l'opzione DROP_EXISTING=ON in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Per spostare un indice esistente in un filegroup diverso tramite Progettazione tabelle  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63036225"
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella contenente l'indice da spostare e selezionare **Progetta**.  
   
-4.  Scegliere **Indici/chiavi**dal menu **Progettazione tabelle** .  
+4.  Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.  
   
 5.  Selezionare l'indice che si desidera spostare.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63036225"
   
 8.  Fare clic su **Close**.  
   
-9. Scegliere **salva**_table_name_dal menu **file** .  
+9. Selezionare **Salva** table_name **dal menu**_File_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Per spostare un indice esistente in un filegroup diverso in Esplora oggetti  
   
@@ -117,31 +117,31 @@ ms.locfileid: "63036225"
   
  Se la tabella non è partizionata, il campo è vuoto.  
   
- **Parametro dello schema di partizione**  
+ **Parametro schema partizione**  
  Consente di visualizzare il nome della colonna che partecipa allo schema di partizione.  
   
- **Colonna tabella**  
+ **Colonne della tabella**  
  Consente di selezionare la tabella o la vista su cui eseguire il mapping allo schema di partizione.  
   
- **Tipo di dati column**  
+ **Tipo di dati colonna**  
  Consente di visualizzare le informazioni sul tipo di dati relative alla colonna.  
   
 > [!NOTE]  
->  Se la colonna della tabella è una colonna calcolata, il **tipo di dati della colonna** Visualizza "colonna calcolata".  
+>  Se la colonna della tabella è una colonna calcolata, l'opzione **Tipo di dati colonna** visualizza "colonna calcolata".  
   
- **Consenti elaborazione online di istruzioni DML durante lo stato di trasferimento dell'indice**  
+ **Consenti elaborazione online di istruzioni DML durante lo spostamento dell'indice**  
  Consente agli utenti di accedere ai dati della tabella o dell'indice cluster sottostanti e a eventuali indici non cluster associati durante l'operazione sull'indice.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile per gli indici XML o se l'indice è un indice cluster disabilitato.  
   
- **Impostare il grado massimo di parallelismo**  
+ **Imposta massimo grado di parallelismo**  
  Consente di limitare il numero di processori da usare durante l'esecuzione di piani paralleli. Il valore predefinito è 0 e corrisponde al numero effettivo di CPU disponibili. L'impostazione del valore su 1 impedisce la generazione di piani paralleli. L'impostazione del valore su un numero maggiore di 1 limita il numero massimo di processori usati da una singola esecuzione della query. Questa opzione diventa disponibile solo se la finestra di dialogo è nello stato **Ricompila** o **Ricrea** .  
   
 > [!NOTE]  
 >  Se viene specificato un valore maggiore del numero di CPU disponibili, verrà usato l'effettivo numero di CPU disponibili.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Per spostare un indice esistente in un filegroup diverso  
   

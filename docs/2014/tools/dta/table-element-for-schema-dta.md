@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63138783"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento Table per Schema (DTA)
@@ -37,15 +37,15 @@ ms.locfileid: "63138783"
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`NumberOfRows`|Facoltativa. Valore intero che consente la simulazione di tabelle di diverse dimensioni.|  
+|`NumberOfRows`|Facoltativo. Valore intero che consente la simulazione di tabelle di diverse dimensioni.|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**stringa**con una lunghezza compresa tra 1 e 255 caratteri.|  
-|**Valore predefinito**|No.|  
-|**Occorrenza**|Facoltativa. Elenca tutte le tabelle appropriate per il carico di lavoro.|  
+|**Valore predefinito**|Nessuno.|  
+|**Occorrenza**|Facoltativo. Elenca tutte le tabelle appropriate per il carico di lavoro.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63138783"
 ## <a name="example"></a>Esempio  
  Per un esempio d'uso, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

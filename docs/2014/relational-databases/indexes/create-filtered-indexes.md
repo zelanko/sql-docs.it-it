@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155383"
 ---
 # <a name="create-filtered-indexes"></a>Creare indici filtrati
@@ -56,15 +56,15 @@ ms.locfileid: "63155383"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Design"></a> Considerazioni sulla progettazione  
+###  <a name="design-considerations"></a><a name="Design"></a> Considerazioni sulla progettazione  
   
 -   Quando una colonna dispone solo di un numero ridotto di valori rilevanti per le query, è possibile creare un indice filtrato sul subset di valori. Ad esempio, quando la maggior parte dei valori di una colonna è costituita da valori NULL e la query esegue la selezione solo dai valori non NULL, è possibile creare un indice filtrato per le righe di dati non NULL. L'indice risultante sarà minore e sarà possibile gestirlo con costi ridotti rispetto a un indice non cluster di tabella completa definito sulle stesse colonne chiave.  
   
 -   Se in una tabella sono presenti righe di dati eterogenei, è possibile creare un indice filtrato per una o più categorie di dati. In questo modo è possibile migliorare le prestazioni delle query in queste righe di dati restringendo lo stato attivo di una query a un'area specifica della tabella. L'indice risultante sarà di nuovo più piccolo e sarà possibile gestirlo con costi ridotti rispetto a un indice non cluster di tabella completa.  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Non è possibile creare un indice filtrato in una vista. Con Query Optimizer è tuttavia possibile sfruttare i vantaggi offerti da un indice filtrato definito in una tabella a cui si fa riferimento in una vista e, se i risultati della query saranno corretti, viene considerato un indice filtrato per una query per la quale la selezione viene effettuata da una vista.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155383"
   
 -   Se l'operatore di confronto specificato nell'espressione che definisce l'indice filtrato determina una conversione dei dati implicita o esplicita, si verificherà un errore se la conversione viene eseguita sul lato sinistro di un operatore di confronto. Una soluzione consiste nello scrivere l'espressione che definisce l'indice filtrato con l'operatore di conversione dei dati (CAST o CONVERT) sul lato destro dell'operatore di confronto.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** . Per modificare l'espressione dell'indice filtrato, utilizzare CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Per creare un indice filtrato  
   
@@ -105,13 +105,13 @@ ms.locfileid: "63155383"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice filtrato.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **indici** , scegliere **nuovo indice**e selezionare **indice non cluster.**  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
 6.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ Selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
+7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
 8.  Fare clic su **OK**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63155383"
   
 10. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Per creare un indice filtrato  
   

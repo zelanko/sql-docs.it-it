@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137458"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lezione 4: Aggiornamento della definizione del report a livello di programmazione
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lezione 4: Aggiornare la definizione del report a livello di programmazione
   Dopo aver caricato la definizione del report dal server di report e aver definito un riferimento alla definizione mediante il campo del report, è necessario aggiornare la definizione del report. Per questo esempio verrà aggiornata la proprietà `Description` per il report.  
   
 ### <a name="to-update-the-report-definition"></a>Per aggiornare la definizione del report  
@@ -90,7 +90,7 @@ ms.locfileid: "63137458"
 ## <a name="next-lesson"></a>Lezione successiva  
  Nella lezione successiva la definizione del report aggiornata verrà salvata nel server di report. Vedere [lezione 5: pubblicare la definizione del report nel server di report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

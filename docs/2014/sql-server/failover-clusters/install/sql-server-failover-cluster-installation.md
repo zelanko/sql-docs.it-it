@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067647"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installazione del cluster di failover di SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "63067647"
   
         -   [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   La procedura di configurazione deve essere eseguita prima di eseguire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il programma di installazione. utilizzare Amministrazione cluster di Windows per eseguirli. È necessario disporre di un gruppo WSFC per ogni istanza del cluster di failover che si desidera configurare.  
+    -   La procedura di configurazione deve essere effettuata prima dell'esecuzione del programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A tale scopo, utilizzare Amministrazione cluster di Windows. È necessario prevedere un gruppo WSFC per ogni istanza del cluster di failover da configurare.  
   
     -   È necessario assicurarsi che il sistema soddisfi i requisiti minimi. Per altre informazioni sui requisiti specifici per un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vedere [Operazioni preliminari all'installazione del clustering di failover](before-installing-failover-clustering.md).  
   
@@ -41,20 +41,17 @@ ms.locfileid: "63067647"
   
 3.  Specificare più indirizzi IP per ogni istanza del cluster di failover. È possibile specificare più indirizzi IP per ogni subnet. Se i diversi indirizzi IP si trovano nella stessa subnet, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare la dipendenza su AND. Se si sta eseguendo il clustering di nodi in più subnet, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare la dipendenza su OR.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opzioni di installazione del cluster di failover  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opzioni di installazione del cluster di failover  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Opzione 1: installazione integrata con la funzionalità per l'aggiunta del nodo  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è costituita da due passaggi:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è costituita da due passaggi:  
   
 1.  Creazione e configurazione di un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a nodo singolo. Dopo il completamento di una configurazione del nodo, è disponibile un'istanza del cluster di failover in grado di funzionare correttamente, ma senza disponibilità elevata poiché nel cluster di failover è presente solo un nodo.  
   
 2.  In ogni nodo da aggiungere al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , eseguire il programma di installazione per aggiungere il nodo specifico con la funzionalità relativa.  
   
 ##### <a name="option-2-advancedenterprise-installation"></a>Opzione 2: installazione avanzata o aziendale  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione avanzata o aziendale del cluster di failover prevede due passaggi:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione avanzata o aziendale del cluster di failover prevede due passaggi:  
   
 1.  In ogni nodo che apparterrà al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eseguire il programma di installazione con la funzionalità per la preparazione del cluster di failover. Questo passaggio prepara i nodi per l'inserimento nel cluster, ma al termine del passaggio non è ancora presente alcuna istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] operativa.  
   
@@ -67,8 +64,7 @@ ms.locfileid: "63067647"
     >  La lettera di unità del sistema operativo per i percorsi di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve corrispondere per tutti i nodi aggiunti al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="ip-address-configuration-during-setup"></a>Configurazione dell'indirizzo IP durante l'installazione  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare o modificare le impostazioni della dipendenza delle risorse IP durante le azioni seguenti:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare o modificare le impostazioni della dipendenza delle risorse IP durante le azioni seguenti:  
   
 -   Installazione integrata: [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -78,13 +74,12 @@ ms.locfileid: "63067647"
   
 -   Rimozione di un nodo: [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
- **Nota** Gli indirizzi IP IPV6 sono supportati.  Se configurati entrambi, gli indirizzi IPv4 e IPv6 vengono trattati come subnet diverse e IPv6 viene portato online per primo.  
+ **Nota** Gli indirizzi IP IPv6 sono supportati.  Se configurati entrambi, gli indirizzi IPv4 e IPv6 vengono trattati come subnet diverse e IPv6 viene portato online per primo.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster di failover su più subnet  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster di failover su più subnet  
  È possibile impostare le dipendenze OR quando i nodi del cluster si trovano in subnet diverse. Tuttavia, ogni nodo del cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere un possibile proprietario di almeno uno degli indirizzi IP specificati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Prima di installare il clustering di failover](before-installing-failover-clustering.md)   
  [Creare un nuovo cluster di failover di SQL Server &#40;installazione&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [Installare SQL Server 2014 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   

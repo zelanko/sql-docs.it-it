@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161730"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Come mettere una topologia di replica in stato di inattività (programmazione Transact-SQL della replica)
-  Mettere in*stato di inattività* un sistema significa arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi. In questo argomento è illustrato come mettere in stato di inattività una topologia di replica, operazione necessaria per diverse attività amministrative, e assicurarsi che un nodo abbia ricevuto tutte le modifiche dagli altri nodi.  
+   Mettere in *stato di inattività* un sistema significa arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi. In questo argomento è illustrato come mettere in stato di inattività una topologia di replica, operazione necessaria per diverse attività amministrative, e assicurarsi che un nodo abbia ricevuto tutte le modifiche dagli altri nodi.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>Per mettere in stato di inattività una topologia di replica transazionale con sottoscrizioni di sola lettura  
   
@@ -79,8 +79,8 @@ ms.locfileid: "63161730"
     > [!NOTE]  
     >  Se si verificano conflitti durante la sincronizzazione, è possibile che le modifiche richieste per la risoluzione dei conflitti non vengano propagate in tutti i nodi dopo aver eseguito due volte l'agente di merge.  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Amministrare una topologia peer-to-peer &#40;la programmazione Transact-SQL della replica&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Misurare la latenza e convalidare le connessioni per la replica transazionale](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

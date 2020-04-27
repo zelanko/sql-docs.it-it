@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989071"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
@@ -61,7 +61,7 @@ ms.locfileid: "62989071"
 ## <a name="static-row-filters"></a>filtri di riga statici  
  Nella figura seguente viene illustrata una tabella pubblicata, filtrata in modo che solo le righe 2, 3 e 6 siano incluse nella pubblicazione.  
   
- ![Filtri di riga](../media/repl-16.gif "Filtri di riga")  
+ ![Applicazione di filtri alle righe](../media/repl-16.gif "Applicazione di filtri alle righe")  
   
  Un filtro di riga statico utilizza una clausola WHERE per selezionare i dati appropriati da pubblicare. La parte finale di tale clausola viene specificata dall'utente. Si consideri la tabella **Product** nel database di esempio AdventureWorks in cui è inclusa la colonna **ProductLine**. Per pubblicare solo le righe contenenti dati su prodotti correlati alle mountain bike, specificare `ProductLine = 'M'`.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "62989071"
 ## <a name="column-filters"></a>Filtri colonne  
  Nella figura seguente viene illustrata una pubblicazione in cui la colonna C viene esclusa tramite un filtro.  
   
- ![Applicazioni filtri alle colonne](../media/repl-17.gif "Applicazioni filtri alle colonne")  
+ ![Applicazione di filtri alle colonne](../media/repl-17.gif "Applicazioni filtri alle colonne")  
   
  È inoltre possibile utilizzare contemporaneamente il filtro di riga e di colonna, come illustrato di seguito.  
   
- ![Filtri di riga e colonna](../media/repl-18.gif "Filtri di riga e colonna")  
+ ![Applicazione di filtri a righe e colonne](../media/repl-18.gif "Applicazione di filtri a righe e colonne")  
   
  Dopo aver creato una pubblicazione, è possibile utilizzare il filtro di colonna per eliminare una colonna da una pubblicazione esistente, mantenendola nella tabella del server di pubblicazione, nonché includere una colonna esistente nella pubblicazione. Per altre modifiche, ad esempio l'aggiunta di una nuova colonna a una tabella e quindi all'articolo pubblicato, utilizzare la replica di modifica dello schema. Per altre informazioni, vedere le sezioni "Aggiunta di colonne" ed "Eliminazione di colonne" nell'argomento [Apportare modifiche allo schema nei database di pubblicazione](make-schema-changes-on-publication-databases.md).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62989071"
   
  I filtri di riga non sono progettati per funzionare nei database. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (in cui vengono eseguiti i filtri) al proprietario del database (`dbo`). Al `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , limita l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare questo percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)  
   
   

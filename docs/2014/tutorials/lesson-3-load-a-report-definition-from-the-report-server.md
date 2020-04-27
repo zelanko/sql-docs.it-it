@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042517"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lezione 3: Caricamento della definizione di un report dal Server report
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lezione 3: Caricare la definizione di un report dal server di report
   Dopo aver creato il progetto e generato le classi dallo schema RDL, è possibile caricare la definizione di un report dal server di report.  
   
 ### <a name="to-load-a-report-definition"></a>Per caricare la definizione di un report  
@@ -99,7 +99,7 @@ ms.locfileid: "63042517"
 ## <a name="next-lesson"></a>Lezione successiva  
  Nella lezione successiva si scriverà il codice per l'aggiornamento della definizione del report caricata dal server di report. Vedere [lezione 4: aggiornare la definizione del report a livello di codice](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

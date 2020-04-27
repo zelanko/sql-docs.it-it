@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156815"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
@@ -43,27 +43,27 @@ ms.locfileid: "63156815"
   
 -   **Prima di iniziare:**  
   
-     [Suggerimenti per la progettazione](#DesignRecs)  
+     [Consigli sulla progettazione](#DesignRecs)  
   
      [Limitazioni e restrizioni](#Restrictions)  
   
      [Sicurezza](#Security)  
   
--   **Per creare un indice con colonne colonne utilizzando:**  
+-   **Per creare un indice con colonne non chiave utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="DesignRecs"></a> Indicazioni sulla progettazione  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>Suggerimenti per la progettazione  
   
 -   Progettare nuovamente gli indici non cluster con chiavi di indice dalle dimensioni elevate in modo da utilizzare come colonne chiave solo le colonne utilizzate per le ricerche. Modificare in colonne non chiave tutte le altre colonne che coprono la query. In questo modo si avranno tutte le colonne necessarie per coprire la query, contenendo al tempo stesso le dimensioni della chiave dell'indice e mantenendone l'efficienza.  
   
 -   Includere colonne non chiave in un indice non cluster per evitare il superamento delle limitazioni di dimensione correnti degli indici (numero massimo di colonne chiave pari a 16 e dimensione massima delle chiavi di indice pari a 900 byte). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prende in esame le colonne non chiave durante il calcolo del numero di colonne chiave indice o della dimensione delle chiavi di indice.  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Le colonne non chiave possono essere definite solo negli indici non cluster.  
   
@@ -81,12 +81,12 @@ ms.locfileid: "63156815"
   
     -   Aumento della lunghezza di colonne `varchar`, `nvarchar` o `varbinary`.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63156815"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice con colonne non chiave.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **indici** , scegliere **nuovo indice**e selezionare **indice non cluster.**  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "63156815"
   
 12. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022558"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considerazioni amministrative per i server di pubblicazione Oracle
@@ -62,9 +62,9 @@ ms.locfileid: "63022558"
   
  Per informazioni sull'eliminazione e sulla riconfigurazione del server di pubblicazione, vedere la sezione relativa alle modifiche che richiedono la riconfigurazione del server di pubblicazione nell'argomento [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
- [Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Considerazioni e limitazioni relative alla progettazione per i Publisher Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  
   
   

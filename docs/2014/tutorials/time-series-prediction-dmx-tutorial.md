@@ -11,21 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044186"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Esercitazione su DMX per le stime basate su serie temporali
   In questa esercitazione verrà illustrato come creare una struttura di data mining Time Series e tre modelli di data mining Time Series personalizzati, quindi eseguire stime tramite tali modelli.  
   
- I modelli di data mining si basano sui dati contenuti nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], in cui sono memorizzati i dati relativi alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una grande società multinazionale.  
+ I modelli di data mining si basano sui dati contenuti nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], in cui sono memorizzati i dati relativi alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una grande società multinazionale.  
   
 ## <a name="tutorial-scenario"></a>Scenario dell'esercitazione  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di utilizzare il data mining per generare proiezioni di vendita. Sono già stati compilati alcuni modelli di previsione regionali; Per ulteriori informazioni, vedere [lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). Il reparto vendite deve essere tuttavia in grado di aggiornare periodicamente il modello di data mining con i nuovi dati sulle vendite. Desidera inoltre personalizzare i modelli per fornire proiezioni diverse.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di utilizzare il data mining per generare proiezioni di vendita. Sono già stati compilati alcuni modelli di previsione regionali; Per ulteriori informazioni, vedere [lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). Il reparto vendite deve essere tuttavia in grado di aggiornare periodicamente il modello di data mining con i nuovi dati sulle vendite. Desidera inoltre personalizzare i modelli per fornire proiezioni diverse.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in sono disponibili diversi strumenti che possono essere utilizzati per completare questa [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attività:  
   
@@ -51,7 +49,7 @@ ms.locfileid: "63044186"
  [Lezione 3: Elaborazione di strutture e modelli Time Series](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
  In questa lezione verrà illustrato come eseguire il training dei modelli utilizzando l'istruzione `INSERT INTO` e popolando la struttura con i dati del database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
- [Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Lezione 4: Creazione di stime basate su serie temporali con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
  In questa lezione verrà illustrato come creare stime basate su serie temporali.  
   
  [Lezione 5: Estensione del modello Time Series](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
@@ -71,7 +69,7 @@ ms.locfileid: "63044186"
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere i pulsanti **argomento successivo** e **argomento precedente** alla barra degli strumenti del Visualizzatore di documenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Esercitazione intermedia sul data mining &#40;Analysis Services-&#41;di data mining](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   

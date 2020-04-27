@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155569"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Filegroup con ottimizzazione per la memoria
@@ -67,7 +67,7 @@ Con l'allocazione round robin, i primi dati e il primo file differenziale verran
 Analogamente, il file di dati e differenziali successivi verrà allocato da container-3 e container-4, mappati all'unità Y. In questo modo è possibile distribuire uniformemente i file di dati e differenziali in due unità.  
  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)     
 [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)    
   

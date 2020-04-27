@@ -19,17 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033559"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è un'API COM di basso livello utilizzata per l'accesso ai dati. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è consigliato per lo sviluppo di strumenti, utilità o componenti di basso livello che necessitano di prestazioni elevate. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client un provider nativo a prestazioni elevate che accede direttamente al protocollo TDS (Tabular Data Stream) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornisce supporto OLE DB alle applicazioni che si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornisce supporto OLE DB alle applicazioni che si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client è un provider OLE DB conforme alla versione 2,0.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "63033559"
   
 -   [Creazione di un'applicazione del provider OLE DB di SQL Server Native Client](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [Oggetti origine dati &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Oggetti di origine dati &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [Comandi](../../native-client-ole-db-commands/commands.md)  
+-   [Comandi:](../../native-client-ole-db-commands/commands.md)  
   
 -   [Set di righe](../../native-client-ole-db-rowsets/rowsets.md)  
   
@@ -51,11 +50,11 @@ ms.locfileid: "63033559"
   
 -   [Tipi di dati &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [&#40;OLE DB di supporto per set di righe dello schema&#41;](schema-rowset-support-ole-db.md)  
+-   [Supporto del set di righe dello schema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
 -   [Parametri con valori di tabella &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Miglioramenti di data e ora &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63033559"
   
 -   [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Colonne di tipo sparse supportano &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
+-   [Supporto per colonne di tipo sparse &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
 -   [Riferimento SQL Server Native Client &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Procedure per l'utilizzo di OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Procedure per OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Programmazione in SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

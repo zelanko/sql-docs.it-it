@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150145"
 ---
 # <a name="configuration-element-dta"></a>Elemento Configuration (DTA)
@@ -42,27 +42,27 @@ ms.locfileid: "63150145"
   
 |Attributo di configurazione|Descrizione|  
 |-----------------------------|-----------------|  
-|`SpecificationMode`|Facoltativa. Indica se Ottimizzazione guidata motore di database deve analizzare la configurazione specificata in relazione alla configurazione esistente corrente o come configurazione autonoma completamente nuova. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:<br /><br /> `Relative`: <br />                  Valuta la configurazione specificata in relazione alla configurazione esistente corrente delle strutture di progettazione fisica (indici, viste indicizzate, partizionamento) nel database sottoposto a ottimizzazione. Ad esempio: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Valuta la configurazione specificata come configurazione autonoma. Se viene specificato Absolute, Ottimizzazione guidata motore di database non prende in considerazione la configurazione esistente. Ad esempio:<br />`<Configuration SpecificationMode="Absolute">`|  
+|`SpecificationMode`|Facoltativo. Indica se Ottimizzazione guidata motore di database deve analizzare la configurazione specificata in relazione alla configurazione esistente corrente o come configurazione autonoma completamente nuova. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:<br /><br /> `Relative`: <br />                  Valuta la configurazione specificata in relazione alla configurazione esistente corrente delle strutture di progettazione fisica (indici, viste indicizzate, partizionamento) nel database sottoposto a ottimizzazione. Ad esempio: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Valuta la configurazione specificata come configurazione autonoma. Se viene specificato Absolute, Ottimizzazione guidata motore di database non prende in considerazione la configurazione esistente. Ad esempio:<br />`<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|No.|  
-|**Valore predefinito**|No.|  
-|**Occorrenza**|Facoltativa. È possibile utilizzarlo una volta per ogni elemento `DTAInput`.|  
+|**Tipo di dati e lunghezza**|Nessuno.|  
+|**Valore predefinito**|Nessuno.|  
+|**Occorrenza**|Facoltativo. È possibile utilizzarlo una volta per ogni elemento `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Elementi figlio**|[Elemento server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Elementi figlio**|[Elemento Server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Esempio  
- Per un esempio d'uso di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
+ Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

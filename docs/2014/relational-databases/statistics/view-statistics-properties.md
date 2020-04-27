@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015651"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
@@ -31,20 +31,20 @@ ms.locfileid: "63015651"
   
      [Sicurezza](#Security)  
   
--   **Per visualizzare le proprietà delle statistiche tramite:**  
+-   **Visualizzare le proprietà delle statistiche tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per visualizzare l'oggetto statistiche, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server `sysadmin` o del ruolo predefinito del database `db_owner` o `db_ddladmin`.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63015651"
      **Nome statistiche**  
      Consente di visualizzare il nome dell'oggetto di database in cui sono archiviate le statistiche.  
   
-     **Statistiche per INDEXstatistics_name**  
+     **Statistiche per l'indice nome_statistiche**  
      Questa casella di testo consente di visualizzare le proprietà restituite dall'oggetto statistiche. Queste proprietà sono divise in tre sezioni: intestazione delle statistiche, vettore di densità e istogramma.  
   
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per l'intestazione delle statistiche.  
@@ -82,33 +82,33 @@ ms.locfileid: "63015651"
      **prime righe**  
      Numero totale di righe della tabella o della vista indicizzata al momento dell'ultimo aggiornamento delle statistiche. Se le statistiche vengono filtrate o corrispondono a un indice filtrato, il numero di righe potrebbe essere inferiore al numero di righe della tabella.  
   
-     **Righe campionate**  
+     **Rows Sampled**  
      Numero totale di righe campionate per i calcoli statistici. Se Rows Sampled < Rows, l'istogramma e i risultati relativi alla densità visualizzati vengono stimati in base alle righe campionate.  
   
      **Passaggi**  
      Numero di intervalli nell'istogramma. Ogni intervallo comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Gli intervalli dell'istogramma vengono definiti nella prima colonna chiave delle statistiche. Il numero massimo di intervalli è 200.  
   
-     **Densità**  
+     **Density**  
      Valore calcolato come 1/ *valori distinct* per tutti i valori nella prima colonna chiave dell'oggetto statistiche, ad eccezione dei valori limite dell'istogramma. Questo valore Density non viene utilizzato da Query Optimizer e viene visualizzato per compatibilità con le versioni precedenti rispetto a SQL Server 2008.  
   
-     **Lunghezza media della chiave**  
+     **Average Key Length**  
      Numero medio di byte per valore per tutte le colonne chiave nell'oggetto statistiche.  
   
-     **Indice stringa**  
-     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **Text**o **ntext**.  
+     **String Index**  
+     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**o **ntext**.  
   
      **Espressione filtro**  
      Predicato per il subset di righe della tabella incluso nell'oggetto statistiche. NULL = statistiche non filtrate.  
   
-     **Righe non filtrate**  
+     **Unfiltered Rows**  
      Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro. Se l'espressione di filtro è NULL, Unfiltered Rows è uguale a Rows.  
   
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per il vettore di densità.  
   
-     **Densità totale**  
+     **All Density**  
      Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A, B) e (A, B, C). Utilizzando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Utilizzando il prefisso (A, B), agli stessi valori di colonna sono associati elenchi di valori distinti (3, 5), (4, 4) e (4, 5).  
   
-     **Lunghezza media**  
+     **Average Length**  
      Lunghezza media, in byte, per archiviare un elenco di valori di colonna per il prefisso di colonna. Se per ogni valore presente nell'elenco (3, 5, 6), ad esempio, sono necessari 4 byte, la lunghezza media è di 12 byte.  
   
      **Colonne**  
@@ -133,7 +133,7 @@ ms.locfileid: "63015651"
   
 7.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   

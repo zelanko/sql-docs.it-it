@@ -11,20 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155003"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un ambiente integrato per la gestione dell'infrastruttura di SQL Server. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] vengono forniti gli strumenti per configurare, monitorare e amministrare le istanze di SQL Server. Vengono inoltre forniti gli strumenti per distribuire, monitorare e aggiornare i componenti livello dati, ad esempio i database e i data warehouse utilizzati dalle applicazioni, e per compilare query e script.  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>Vantaggi di SQL Server Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un'utilità completa per la gestione di oggetti SQL Server che abbina un'interfaccia grafica di facile utilizzo con funzionalità di scripting avanzate. 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere utilizzato per gestire il [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un'utilità completa per la gestione di oggetti SQL Server che abbina un'interfaccia grafica di facile utilizzo con funzionalità di scripting avanzate. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere utilizzato per gestire il [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="sql-server-management-studio-components"></a>Componenti di SQL Server Management Studio  
   
@@ -38,7 +35,7 @@ ms.locfileid: "63155003"
 |Viene descritto come utilizzare gli strumenti di progettazione visivi inclusi in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |Viene descritto come utilizzare gli editor di linguaggio di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per compilare ed eseguire il debug di query e script in modo interattivo.|[Editor di query e di testo &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazione: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
  [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

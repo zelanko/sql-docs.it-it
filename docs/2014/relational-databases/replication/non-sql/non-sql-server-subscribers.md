@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022242"
 ---
 # <a name="non-sql-server-subscribers"></a>Sottoscrittori non SQL Server
@@ -87,8 +87,7 @@ ms.locfileid: "63022242"
   
 ### <a name="replication-feature-support"></a>Supporto della funzionalità di replica  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include due tipi di sottoscrizione: push e pull. I Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono utilizzare le sottoscrizioni push nelle quali l'agente di distribuzione viene eseguito nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include due tipi di sottoscrizione: push e pull. I Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono utilizzare le sottoscrizioni push nelle quali l'agente di distribuzione viene eseguito nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include due formati di snapshot: in modalità bcp nativa e in modalità carattere. I Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiedono snapshot in modalità carattere.  
   
@@ -96,8 +95,8 @@ ms.locfileid: "63022242"
   
 -   I Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non possono essere inizializzati automaticamente da un backup.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Replica di database eterogenei](heterogeneous-database-replication.md)   
- [Sottoscrizione delle pubblicazioni](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

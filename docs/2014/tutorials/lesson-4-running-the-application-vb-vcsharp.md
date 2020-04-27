@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137469"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>Lezione 4: esecuzione dell'applicazione (VB-VC #)
@@ -43,7 +43,7 @@ ms.locfileid: "63137469"
   
 2.  Premere un tasto per chiudere GetPropertiesSample.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
  [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

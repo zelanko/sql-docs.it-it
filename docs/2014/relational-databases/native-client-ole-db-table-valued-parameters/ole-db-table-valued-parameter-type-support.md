@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046505"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Supporto del tipo di parametro con valori di tabella OLE DB
   In questo argomento viene descritto il supporto del tipo OLE DB per i parametri con valori di tabella.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Oggetto set di righe di parametri con valori di tabella  
- È possibile creare un oggetto set di righe specifico per i parametri con valori di tabella. Per creare l'oggetto set di righe di parametri con valori di tabella, utilizzare ITableDefinitionWithConstraints:: CreateTableWithConstraints o IOpenRowset:: OpenRowset. A questo scopo, impostare il membro *eKind* del parametro *pTableID* su DBKIND_GUID_NAME e specificare CLSID_ROWSET_INMEMORY come membro *guid*. Il nome del tipo di server per il parametro con valori di tabella deve essere specificato nel membro *pwszName* di *pTableID* quando si usa IOpenRowset:: OPENROWSET. L'oggetto set di righe di parametri con valori di tabella si comporta come un normale oggetto del provider OLE DB di SQL Server Native Client.  
+ È possibile creare un oggetto set di righe specifico per i parametri con valori di tabella. Per creare l'oggetto set di righe per i parametri con valori di tabella, usare ITableDefinitionWithConstraints::CreateTableWithConstraints o IOpenRowset::OpenRowset. A questo scopo, impostare il membro *eKind* del parametro *pTableID* su DBKIND_GUID_NAME e specificare CLSID_ROWSET_INMEMORY come membro *guid*. Il nome del tipo di server per il parametro con valori di tabella deve essere specificato nel membro *pwszName* di *pTableID* quando si usa IOpenRowset::OpenRowset. L'oggetto set di righe di parametri con valori di tabella si comporta come un normale oggetto del provider OLE DB di SQL Server Native Client.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -54,12 +54,12 @@ CoType RowsetTVP
  Le conversioni da e verso DBTYPE_TABLE per altri tipi non sono supportate. IConvertType::CanConvert restituisce S_FALSE per la conversione non supportata per tutte le richieste diverse dalla conversione da DBTYPE_TABLE a DBTYPE_TABLE. In questa situazione si presuppone l'uso di DBCONVERTFLAGS_PARAMETER sull'oggetto Command.  
   
 ## <a name="methods"></a>Metodi  
- Per informazioni sui metodi di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB supporto dei tipi di parametro con valori di tabella &#40;&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
+ Per informazioni sui metodi di OLE DB che supportano i parametri con valori di tabella, vedere [Supporto dei tipi di parametri con valori di tabella OLE DB &#40;metodi&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Proprietà  
- Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB tipo di parametro con valori di tabella supporto di &#40;proprietà&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
+ Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [Supporto dei tipi di parametri con valori di tabella OLE DB &#40;proprietà&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

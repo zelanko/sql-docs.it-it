@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164420"
 ---
 # <a name="deploying-a-delivery-extension"></a>Distribuzione di un'estensione per il recapito
@@ -26,7 +26,7 @@ ms.locfileid: "63164420"
   
  Se un'estensione per il recapito viene sostituita o aggiornata, tutte le sottoscrizioni che fanno riferimento all'estensione per il recapito rimangono valide.  
   
- Dopo aver scritto e compilato l'estensione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per il recapito [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] in una libreria, è necessario copiare l'estensione nella directory appropriata e aggiungere una voce al file [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] di configurazione appropriato in modo che possa essere individuata dal server di report.  
+ Dopo avere scritto e compilato l'estensione per il recapito [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario copiarla nella directory appropriata e aggiungere una voce al file di configurazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriato, in modo che il server di report possa individuarla.  
   
 ## <a name="configuration-file-extension-element"></a>Elemento Extension del file di configurazione  
  Le estensioni per il recapito distribuite nel server di report devono essere immesse come elementi `Extension` nel file di configurazione. Il file di configurazione per il server di report è RSReportServer.config.  
@@ -138,7 +138,7 @@ ms.locfileid: "63164420"
 ## <a name="verifying-the-deployment"></a>Verifica della distribuzione  
  È possibile verificare se l'estensione per il recapito è stata distribuita correttamente nel server di report tramite il metodo <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servizio Web. È inoltre possibile aprire Gestione report e verificare che l'estensione sia inclusa nell'elenco delle estensioni per il recapito disponibili per una sottoscrizione. Per ulteriori informazioni su Gestione report e sulle sottoscrizioni, vedere [sottoscrizioni e recapito &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Implementazione di un'estensione per il recapito](implementing-a-delivery-extension.md)   
  [Libreria di estensioni di Reporting Services](../reporting-services-extension-library.md)  
   

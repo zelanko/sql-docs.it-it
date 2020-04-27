@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126240"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Utilizzo dell'accesso con URL in un'applicazione Windows
@@ -113,7 +113,7 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integrazione di Reporting Services in applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
  [Integrazione di Reporting Services tramite l'accesso con URL](integrating-reporting-services-using-url-access.md)   
  [Integrazione di Reporting Services tramite SOAP](integrating-reporting-services-using-soap.md)   
