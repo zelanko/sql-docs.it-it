@@ -23,20 +23,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011928"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
   
  I ruoli predefiniti del server vengono forniti per motivi di praticità e compatibilità con le versioni precedenti. Laddove possibile, assegnare autorizzazioni più specifiche.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce nove ruoli predefiniti del server. Le autorizzazioni concesse ai ruoli predefiniti del server non possono essere modificate. A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile creare ruoli del server definiti dall'utente e aggiungere autorizzazioni a livello di server a tali ruoli.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce nove ruoli predefiniti del server. Le autorizzazioni concesse ai ruoli predefiniti del server non possono essere modificate. A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile creare ruoli del server definiti dall'utente e aggiungere autorizzazioni a livello di server a tali ruoli.  
   
  È possibile aggiungere entità a livello di server, ad esempio account di accesso di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , account di Windows e gruppi di Windows, nei ruoli a livello di server. Tutti i membri di un ruolo predefinito del server possono aggiungere altri account di accesso allo stesso ruolo. I membri dei ruoli del server definiti dall'utente non possono aggiungere altre entità del server al ruolo.  
   
@@ -75,23 +73,23 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
 |Funzionalità|Type|Descrizione|  
 |-------------|----------|-----------------|  
-|[sp_helpsrvrole &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadati|Restituisce un elenco di ruoli a livello di server.|  
-|[sp_helpsrvrolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadati|Restituisce informazioni sui membri di un ruolo a livello di server.|  
-|[sp_srvrolepermission &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadati|Visualizza le autorizzazioni di un ruolo a livello di server.|  
-|[IS_SRVROLEMEMBER &#40;&#41;Transact-SQL](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadati|Indica se un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è un membro del ruolo a livello di server specificato.|  
+|[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadati|Restituisce un elenco di ruoli a livello di server.|  
+|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadati|Restituisce informazioni sui membri di un ruolo a livello di server.|  
+|[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadati|Visualizza le autorizzazioni di un ruolo a livello di server.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadati|Indica se un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è un membro del ruolo a livello di server specificato.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|Metadati|Restituisce una riga per ogni membro di ogni ruolo a livello di server.|  
-|[sp_addsrvrolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Comando|Aggiunge un account di accesso come membro di un ruolo a livello di server. Operazione deprecata. Usare [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
-|[sp_dropsrvrolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Comando|Rimuove un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows da un ruolo a livello di server. Operazione deprecata. Usare [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
-|[CREAZIONE del ruolo del SERVER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Comando|Crea un ruolo del server definito dall'utente.|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Comando|Aggiunge un account di accesso come membro di un ruolo a livello di server. Operazione deprecata. Usare [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Comando|Rimuove un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows da un ruolo a livello di server. Operazione deprecata. Usare [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
+|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Comando|Crea un ruolo del server definito dall'utente.|  
 |[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Comando|Modifica l'appartenenza di un ruolo del server o il nome di un ruolo del server definito dall'utente.|  
 |[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Comando|Rimuove un ruolo del server definito dall'utente.|  
-|[IS_SRVROLEMEMBER &#40;&#41;Transact-SQL](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Funzione|Determina l'appartenenza del ruolo del server.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Funzione|Determina l'appartenenza del ruolo del server.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ruoli a livello di database](../authentication-access/database-level-roles.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
  [Funzioni di sicurezza &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)   
- [Protezione SQL Server](../securing-sql-server.md)   
+ [Sicurezza di SQL Server](../securing-sql-server.md)   
  [CONCEDERE autorizzazioni per entità server &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
  [REVOKE-autorizzazioni per entità server &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
  [DENY-autorizzazioni per entità server &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   

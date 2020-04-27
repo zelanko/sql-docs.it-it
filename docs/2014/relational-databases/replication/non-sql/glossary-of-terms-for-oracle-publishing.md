@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022399"
 ---
-# <a name="glossary-of-terms-for-oracle-publishing"></a>Glossary of Terms for Oracle Publishing
+# <a name="glossary-of-terms-for-oracle-publishing"></a>Glossario dei termini per la pubblicazione Oracle
   In caso di configurazione e amministrazione della pubblicazione Oracle, è consigliabile avere familiarità con i termini Oracle seguenti. Per un elenco completo dei termini Oracle, vedere la documentazione online Oracle.  
   
  Tabelle organizzate a indice (IOT, Index Organized Table)  
- Tabella i cui dati sono fisicamente ordinati su disco in ordine di indice; è simile a una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella con un indice cluster. Una tabella organizzata a indice viene replicata in un Sottoscrittore come una tabella con indice cluster.  
+ Tabella i cui dati sono fisicamente ordinati su disco in base a un indice. È simile a una tabella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con indice cluster. Una tabella organizzata a indice viene replicata in un Sottoscrittore come una tabella con indice cluster.  
   
  Istanza  
  Un database Oracle è associato a un'istanza, che include la memoria e i processi in background che supportano il database. Un'istanza di Oracle è sempre mappata a un singolo database, mentre un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può contenere più database. In alcuni casi, un database Oracle può disporre di più istanze.  
@@ -38,7 +38,7 @@ ms.locfileid: "63022399"
  Oggetto di database utilizzato per generare numeri univoci. Le sequenze vengono utilizzate nella replica per ordinare le modifiche apportate alle tabelle pubblicate.  
   
  SQL\*Plus  
- Applicazione utilizzata per l'accesso e l'esecuzione di query in database Oracle. È simile a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**.  
+ Applicazione utilizzata per l'accesso e l'esecuzione di query in database Oracle. È simile a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sqlcmd**di**.  
   
  Sinonimo  
  Alias di un oggetto. Lo speciale sinonimo public **MSSQLSERVERDISTRIBUTOR** viene creato automaticamente quando viene configurato un server di pubblicazione Oracle. Il sinonimo fa riferimento alla tabella **HREPL_Distributor** e garantisce un puntatore logico al server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che gestisce il server di pubblicazione.  
@@ -57,7 +57,7 @@ ms.locfileid: "63022399"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
  [Oggetti creati nel server di pubblicazione Oracle](objects-created-on-the-oracle-publisher.md)   
- [Editori non SQL Server](non-sql-server-publishers.md)   
+ [Server di pubblicazione non SQL Server](non-sql-server-publishers.md)   
  [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  
   
   

@@ -17,21 +17,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140539"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Esercitazione su DMX per Bike Buyer
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione di modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime relative alla probabilità che un cliente acquisti una bicicletta.  
   
- I modelli di data mining verranno creati a partire dai dati contenuti nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], in cui sono memorizzati i dati relativi alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una grande società multinazionale. che produce e vende biciclette in metallo e a struttura mista per i mercati di America del nord, Europa e Asia. La sede operativa si trova a Bothell, nello stato di Washington, in cui lavorano 290 dipendenti, e la società dispone di numerosi reparti vendite dislocati nelle diverse aree di mercato a livello internazionale.  
+ I modelli di data mining verranno creati a partire dai dati contenuti nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], in cui sono memorizzati i dati relativi alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una grande società multinazionale. che produce e vende biciclette in metallo e a struttura mista per i mercati di America del nord, Europa e Asia. La sede operativa si trova a Bothell, nello stato di Washington, in cui lavorano 290 dipendenti, e la società dispone di numerosi reparti vendite dislocati nelle diverse aree di mercato a livello internazionale.  
   
 ## <a name="tutorial-scenario"></a>Scenario dell'esercitazione  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di espandere la propria struttura di analisi dei dati creando un'applicazione personalizzata dotata di funzionalità di data mining. Gli obiettivi dell'applicazione personalizzata sono i seguenti:  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di espandere la propria struttura di analisi dei dati creando un'applicazione personalizzata dotata di funzionalità di data mining. Gli obiettivi dell'applicazione personalizzata sono i seguenti:  
   
 -   Utilizzare come input determinate caratteristiche di un potenziale cliente e stimare se tale cliente acquisterà una bicicletta.  
   
@@ -108,7 +106,7 @@ ms.locfileid: "63140539"
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere i pulsanti **argomento successivo** e **argomento precedente** alla barra degli strumenti del Visualizzatore di documenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazione su Market basket DMX](../../2014/tutorials/market-basket-dmx-tutorial.md)   
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   

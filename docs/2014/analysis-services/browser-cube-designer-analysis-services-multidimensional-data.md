@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174300"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Esplorazione (Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -30,7 +30,7 @@ ms.locfileid: "78174300"
 
  ![Progettazione query MDX di Analysis Services, visualizzazione progettazione](media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services, visualizzazione progettazione")
 
- Quando si utilizza la modalità di progettazione grafica, se l'interruttore **esecuzione** automatica (![esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")) sulla barra degli strumenti è selezionato, il **browser** esegue una query ogni volta che si rilascia un oggetto metadati nel riquadro dati. È anche possibile eseguire manualmente la query usando il pulsante **Esegui query** (![Esegui query](media/rsqdicon-run.gif "Esecuzione della query")) sulla barra degli strumenti.
+ Quando si utilizza la modalità di progettazione grafica, se l'interruttore **esecuzione** automatica (![esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")) sulla barra degli strumenti è selezionato, il **browser** esegue una query ogni volta che si rilascia un oggetto metadati nel riquadro dati. È anche possibile eseguire manualmente la query usando il pulsante **Esegui query** (![Esegui query](media/rsqdicon-run.gif "Eseguire la query")) sulla barra degli strumenti.
 
  Per modificare la finestra Progettazione query con interfaccia grafica attivando la modalità **Query** e usare il testo delle istruzioni MDX, fare clic sul pulsante **Modalità progettazione** sulla barra degli strumenti.
 
@@ -46,7 +46,7 @@ ms.locfileid: "78174300"
 
  Nel riquadro **Metadati** vengono visualizzate le schede relative a **Metadati** e **Funzioni**. Dalla scheda **Metadati** è possibile trascinare dimensioni, gerarchie, indicatori KPI e misure nell'area di progettazione della query. È possibile trascinare funzioni dalla scheda **Funzioni** nell'area di progettazione della query. Quando si esegue la query, nell'area di progettazione della query vengono visualizzati i risultati per la query MDX. È possibile anche fare clic su **Analizza in Excel** nella **barra degli strumenti** per esportare i dati in Microsoft Office Excel e visualizzare i risultati in una Tabella pivot come farebbero gli utenti in un PivotTable. Le sezioni seguenti descrivono più dettagliatamente la barra degli strumenti e tutti i riquadri per ogni modalità disponibile in **Esplorazione** .
 
- Si noti che, mentre si lavora in modalità testo, l'interruttore **esecuzione** automatica (![esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")) sulla barra degli strumenti non è disponibile. È tuttavia possibile eseguire manualmente le query usando il pulsante **Esegui query** (![Esegui query](media/rsqdicon-run.gif "Esecuzione della query")) sulla barra degli strumenti.
+ Si noti che, mentre si lavora in modalità testo, l'interruttore **esecuzione** automatica (![esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")) sulla barra degli strumenti non è disponibile. È tuttavia possibile eseguire manualmente le query usando il pulsante **Esegui query** (![Esegui query](media/rsqdicon-run.gif "Eseguire la query")) sulla barra degli strumenti.
 
 ## <a name="sections"></a>Sezioni
  **Barra degli strumenti** La barra degli strumenti contiene lo strumento che può essere utilizzato nella visualizzazione progettazione o nella visualizzazione query. Per altre informazioni sulla barra degli strumenti e su come usare queste funzionalità, vedere [Barra degli strumenti &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services – Dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
@@ -57,7 +57,7 @@ ms.locfileid: "78174300"
 
  **Filtrare ed eseguire query** Utilizzare questa area dell'area di progettazione per compilare query MDX, trascinando e rilasciando oggetti dal riquadro **metadati** e specificando criteri di filtro per il cubo o la dimensione di origine. Per altre informazioni, vedere [Query e filtro &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md) [cubi in Progettazione cubi modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md) [&#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)
 
 

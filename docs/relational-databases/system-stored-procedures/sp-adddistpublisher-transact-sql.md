@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771392"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
@@ -58,7 +58,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (impostazione predefinita)|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di Windows.|  
   
-`[ @login = ] 'login'`Account di accesso. Questo parametro è obbligatorio se *security_mode* è **0**. *login* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
+`[ @login = ] 'login'`Account di accesso. Questo parametro è obbligatorio se *security_mode* è **0**. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
 `[ @password = ] 'password']`Password. *password* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
@@ -81,7 +81,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0** (impostazione predefinita)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database.|  
+|**0** (predefinito)|Database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Database non di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 `[ @publisher_type = ] 'publisher_type'`Specifica il tipo di server di pubblicazione quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]server di pubblicazione non lo è. *publisher_type* è di tipo sysname. i possibili valori sono i seguenti.  
@@ -106,12 +106,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_adddistpublisher**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)  
   
   

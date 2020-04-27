@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d6edc91257b31703573923ae8d7e63f2e1ccf1c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174705"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
@@ -53,11 +53,11 @@ ms.locfileid: "78174705"
 
  I requisiti per un modello di clustering sono i seguenti:
 
--   **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
+-   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
 
--   **Colonne di input** Ogni modello deve contenere almeno una colonna di input che contiene i valori utilizzati per compilare i cluster. È possibile includere tutte le colonne di input desiderate, ma a seconda del numero di valori in ciascuna colonna, l'aggiunta di colonne supplementari può implicare un aumento del tempo necessario per il training del modello.
+-   **Colonne di input** Ogni modello deve contenere almeno una colonna di input che contiene i valori usati per compilare i cluster. È possibile includere tutte le colonne di input desiderate, ma a seconda del numero di valori in ciascuna colonna, l'aggiunta di colonne supplementari può implicare un aumento del tempo necessario per il training del modello.
 
--   **Colonna stimabile facoltativa** L'algoritmo non richiede una colonna stimabile per compilare il modello, ma è possibile aggiungere una colonna stimabile di quasi tutti i tipi di dati. I valori della colonna stimabile possono essere considerati come input per il modello di clustering oppure è possibile specificare che devono essere utilizzati solo per la stima. Se ad esempio si desidera stimare il reddito dei clienti creando cluster in base a dati demografici come l'area o l'età, specificare il reddito come `PredictOnly` e aggiungere tutte le altre colonne, ad esempio area o età, come input.
+-   **Colonna stimabile facoltativa** L'algoritmo non richiede una colonna stimabile per compilare il modello, ma è possibile aggiungere una colonna stimabile di qualsiasi tipo di dati. I valori della colonna stimabile possono essere considerati come input per il modello di clustering oppure è possibile specificare che devono essere utilizzati solo per la stima. Se ad esempio si desidera stimare il reddito dei clienti creando cluster in base a dati demografici come l'area o l'età, specificare il reddito come `PredictOnly` e aggiungere tutte le altre colonne, ad esempio area o età, come input.
 
  Per informazioni più dettagliate sui tipi di contenuto e i tipi di dati supportati per i modelli di clustering, vedere la sezione Requisiti di [Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md).
 
@@ -81,7 +81,7 @@ ms.locfileid: "78174705"
 
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) il contenuto del modello di data mining di [riferimento tecnico](microsoft-clustering-algorithm-technical-reference.md) [per i &#40;modelli di Clustering Analysis Services esempi di](mining-model-content-for-clustering-models-analysis-services-data-mining.md) [query sul modello](clustering-model-query-examples.md) di clustering&#41;data mining
 
 

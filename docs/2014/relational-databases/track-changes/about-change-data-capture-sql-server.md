@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211738"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
@@ -106,10 +106,10 @@ ms.locfileid: "68211738"
   
  Change Data Capture non funziona correttamente quando il servizio Motore di database o SQL Server Agent è in esecuzione con l'account NETWORK SERVICE. Questa situazione può generare l'errore 22832.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [Usare Change Data &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
+ [Usare i dati delle modifiche &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

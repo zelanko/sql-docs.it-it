@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211411"
 ---
 # <a name="disable-or-enable-a-job"></a>Abilitare o disabilitare un processo
@@ -37,12 +37,12 @@ ms.locfileid: "68211411"
   
      [Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-job"></a>Per disabilitare o abilitare un processo  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68211411"
   
 4.  Per disabilitare un processo fare clic su **Disabilita**. Per abilitare un processo fare clic su **Abilita**.  
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-job"></a>Per disabilitare o abilitare un processo  
   

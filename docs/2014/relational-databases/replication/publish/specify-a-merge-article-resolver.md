@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212099"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
@@ -30,21 +30,21 @@ ms.locfileid: "68212099"
   
      [Indicazioni](#Recommendations)  
   
--   **Per specificare un sistema di risoluzione dell'articolo di merge, utilizzando:**  
+-   **Per specificare un sistema di risoluzione dell'articolo di merge, utilizzando**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   La replica di tipo merge consente i tipi di sistemi di risoluzione dei conflitti dell'articolo indicati di seguito:  
   
     -   Il sistema di risoluzione dei conflitti predefinito. Il comportamento del sistema di risoluzione dei conflitti predefinito dipende dal tipo di sottoscrizione, ovvero se si tratta di una sottoscrizione client o server. Per altre informazioni sulla specifica del tipo di sottoscrizione, vedere [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   Un sistema di risoluzione dei conflitti personalizzato, che può essere un gestore della logica di business (scritto in codice gestito) oppure un sistema di risoluzione dei conflitti personalizzato basato su COM. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se è necessario implementare logica personalizzata che viene eseguita per ogni riga replicata e non solo per quelle in conflitto, vedere [Implementare un gestore della logica di business per un articolo di merge](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Un sistema di risoluzione dei conflitti personalizzato, che può essere un gestore della logica di business (scritto in codice gestito) oppure un sistema di risoluzione dei conflitti personalizzato basato su COM. Per ulteriori informazioni, vedere [rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se è necessario implementare logica personalizzata che viene eseguita per ogni riga replicata e non solo per quelle in conflitto, vedere [Implementare un gestore della logica di business per un articolo di merge](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Un sistema di risoluzione dei conflitti standard basato su COM, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]incluso in.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "68212099"
   
     -   Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) per una sottoscrizione pull che utilizza la sincronizzazione Web  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  In seguito alla registrazione del sistema di risoluzione dei conflitti, specificare che è necessario che un articolo usi il sistema nella scheda **Sistema di risoluzione** della finestra di dialogo **Proprietà articolo - \<Articolo>**, disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Per specificare un sistema di risoluzione dei conflitti  
   
-1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
   
 2.  Fare clic su **Proprietà articolo**e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68212099"
   
 7.  Ripetere questa procedura per ogni articolo che richiede un sistema di risoluzione dei conflitti.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Per registrare un sistema di risoluzione dei conflitti personalizzato  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68212099"
   
     -   Sistema di risoluzione basato su codice gestito come gestore della logica di business. Per ulteriori informazioni, vedere [implementare un gestore della logica di business per un articolo di merge](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Sistema di risoluzione basato sulla stored procedure e sistema di risoluzione basato su COM. Per altre informazioni, vedere [Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge](../implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+    -   Sistema di risoluzione basato sulla stored procedure e sistema di risoluzione basato su COM. Per ulteriori informazioni, vedere [implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di merge](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
 2.  Per determinare se il sistema di risoluzione desiderato è già registrato, eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) in qualsiasi database nel server di pubblicazione. Verrà visualizzata una descrizione del sistema di risoluzione personalizzato, nonché l'identificatore di classe (CLSID) di ogni sistema di risoluzione basato su COM registrato nel server di distribuzione oppure informazioni sull'assembly gestito per ogni gestore della logica di business registrato nel server di distribuzione.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68212099"
   
 2.  Eseguire [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) nel database di distribuzione. Specificare il nome completo del sistema di risoluzione personalizzato ottenuto al passaggio **@article_resolver**1 per.  
   
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio viene creato un nuovo articolo e viene impostato l'utilizzo del sistema di risoluzione dei conflitti medi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per calcolare la media della colonna **UnitPrice** in caso di conflitti.  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  
@@ -143,8 +143,8 @@ ms.locfileid: "68212099"
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_changemerge_resolver)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Implementazione di un gestore della logica di business per un articolo di merge](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

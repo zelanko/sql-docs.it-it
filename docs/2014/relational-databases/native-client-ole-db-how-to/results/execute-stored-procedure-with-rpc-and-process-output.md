@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206683"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Eseguire una stored procedure mediante la sintassi dell'istruzione RPC ed elaborare i codici restituiti e i parametri di output (OLE DB)
@@ -34,8 +34,7 @@ ms.locfileid: "68206683"
   
 3.  Creare un set di associazioni (uno per ogni creatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-4.  Creare una funzione di accesso per i parametri definiti tramite il metodo `IAccessor::CreateAccessor`. 
-  `CreateAccessor` consente di creare una funzione di accesso da un set di associazioni.  
+4.  Creare una funzione di accesso per i parametri definiti tramite il metodo `IAccessor::CreateAccessor`. `CreateAccessor` consente di creare una funzione di accesso da un set di associazioni.  
   
 5.  Completare la struttura DBPARAMS.  
   
@@ -394,7 +393,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedure per l'elaborazione dei risultati &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

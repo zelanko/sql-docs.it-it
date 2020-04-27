@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144597"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
@@ -45,7 +45,7 @@ ms.locfileid: "63144597"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) Questo argomento mostra come recuperare le informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorizzazioni  
  Per connettersi a un file di log offline, è necessario disporre delle autorizzazioni seguenti nei computer locale e remoto:  
   
 -   Accesso in lettura allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account. Per ulteriori informazioni, vedere la procedura "Per verificare le autorizzazioni WMI" più avanti in questa sezione.  
@@ -60,7 +60,7 @@ ms.locfileid: "63144597"
   
 1.  Aprire lo snap-in Controllo WMI. A tale scopo, effettuare una delle operazioni seguenti a seconda del sistema operativo in uso:  
   
-    -   Fare **** clic su Start `wmimgmt.msc` , digitare nella casella **Inizia ricerca** , quindi premere INVIO.  
+    -   Fare **Start**clic su Start `wmimgmt.msc` , digitare nella casella **Inizia ricerca** , quindi premere INVIO.  
   
     -   Fare clic sul pulsante **Start**, scegliere `wmimgmt.msc` **Esegui**, digitare e quindi premere INVIO.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144597"
   
     3.  Immettere il nome del computer remoto, quindi fare clic su **OK**.  
   
-3.  Fare clic con il pulsante destro del mouse su **controllo WMI (locale)** o **controllo WMI (***NomeComputerRemoto***)**, quindi scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (***NomeComputerRemoto***)**, quindi scegliere **Proprietà**.  
   
 4.  Nella finestra di dialogo delle proprietà di **Controllo WMI** fare clic sulla scheda **Sicurezza** .  
   

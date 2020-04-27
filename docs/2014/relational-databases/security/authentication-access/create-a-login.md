@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012025"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
@@ -46,38 +46,38 @@ ms.locfileid: "63012025"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [passaggi da eseguire dopo la creazione di un account di accesso](#FollowUp)  
+-   **Completamento:**  [passaggi da effettuare dopo aver creato un account di accesso](#FollowUp)  
   
-##  <a name="Background"></a> Background  
+##  <a name="background"></a>Informazioni di background sul <a name="Background"></a>  
  Un accesso è un'entità di sicurezza o un'entità che può essere autenticata da un sistema sicuro. Per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], gli utenti necessitano di un account di accesso. È possibile creare un account di accesso basato su un'entità di Windows (quale un utente del dominio o un gruppo del dominio Windows) o è possibile creare un account di accesso che non è basato su un'entità di Windows (ad esempio, un accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > [!NOTE]  
->  Per utilizzare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve utilizzare l'autenticazione a modalità mista. Per altre informazioni, vedere [Scegliere una modalità di autenticazione](../choose-an-authentication-mode.md).  
+>  Per utilizzare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve utilizzare l'autenticazione a modalità mista. Per altre informazioni, vedere [scegliere una modalità di autenticazione](../choose-an-authentication-mode.md).  
   
  È possibile concedere autorizzazioni agli account di accesso, in quanto entità di sicurezza. L'ambito di un account di sicurezza è l'intero [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso. È possibile concedere a un account di accesso le autorizzazioni il cui ambito è l'intera istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ad esempio, l'autorizzazione `CREATE ENDPOINT`).  
   
-##  <a name="Security"></a> Sicurezza  
+##  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `ALTER ANY LOGIN` o `ALTER LOGIN` per il server.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 ##### <a name="to-create-a-sql-server-login"></a>Per creare un account di accesso di SQL Server  
   
 1.  In Esplora oggetti espandere la cartella dell'istanza del server in cui si desidera creare il nuovo account di accesso.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e selezionare **Account di accesso...** .  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **sicurezza** , scegliere **nuovo**e quindi **account di accesso.**  
   
 3.  Nella pagina **Generale** della finestra di dialogo **Account di accesso - Nuovo** immettere il nome di un utente nella casella **Nome account di accesso**. In alternativa, fare clic su **Cerca...** per aprire la finestra di dialogo **Seleziona un utente o un gruppo**.  
   
-     Se si fa clic su **Cerca...** :  
+     Se si fa clic su **Cerca...**:  
   
-    1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le opzioni seguenti o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
+    1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti...** per aprire la finestra di dialogo **Tipi di oggetto** e selezionare alcune o tutte le opzioni seguenti: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
   
     2.  In **Da questo percorso** fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi server disponibili. Al termine, fare clic su **OK**.  
   
-    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)** , immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Fare clic su **Avanzate...** per opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](https://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -87,15 +87,15 @@ ms.locfileid: "63012025"
   
 5.  Per creare un account di accesso salvato in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , selezionare **Autenticazione di SQL Server**.  
   
-    1.  Nella casella **Password** digitare una password per il nuovo utente. Digitare di nuovo la password nella casella **Conferma password** .  
+    1.  Nella casella **Password**, immettere una password per il nuovo utente. Immettere nuovamente quella password nella casella **Conferma password**.  
   
     2.  In caso di modifica di una password esistente, selezionare **Specifica vecchia password**e quindi digitare la password precedente nella casella **Vecchia password** .  
   
-    3.  Per applicare le opzioni dei criteri password per la complessità e l'applicazione, selezionare **Applica criteri password**. Per ulteriori informazioni, vedere [Password Policy](../password-policy.md). È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
+    3.  Per applicare le opzioni dei criteri password per la complessità e l'applicazione, selezionare **Applica criteri password**. Per ulteriori informazioni, vedere [Password Policy](../password-policy.md). Si tratta di un'opzione predefinita quando si seleziona **l'autenticazione SQL Server** .  
   
-    4.  Per applicare le opzioni dei criteri password per la scadenza, selezionare **Imponi scadenza password**. Per abilitare questa casella di controllo, è necessario selezionare**Applica criteri password** . È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
+    4.  Per applicare le opzioni dei criteri password per la scadenza, selezionare **Imponi scadenza password**. Per abilitare questa casella di controllo, è necessario selezionare**Applica criteri password** . Si tratta di un'opzione predefinita quando si seleziona **l'autenticazione SQL Server** .  
   
-    5.  Per forzare l'utente a creare una nuova password dopo la prima volta che l'account di accesso viene utilizzato, selezionare **Richiedi modifica della password all'accesso successivo**. Per abilitare questa casella di controllo, è necessario selezionare**Imponi scadenza password** . È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
+    5.  Per forzare l'utente a creare una nuova password dopo la prima volta che l'account di accesso viene utilizzato, selezionare **Richiedi modifica della password all'accesso successivo**. Per abilitare questa casella di controllo, è necessario selezionare**Imponi scadenza password** . Si tratta di un'opzione predefinita quando si seleziona **l'autenticazione SQL Server** .  
   
 6.  Per associare l'account di accesso a un certificato di sicurezza autonomo, selezionare **Mapping con certificato** , quindi selezionare il nome di un certificato esistente dall'elenco.  
   
@@ -103,14 +103,14 @@ ms.locfileid: "63012025"
   
 8.  Per associare l'accesso a credenziali di sicurezza, selezionare la casella di controllo **Credenziali con mapping** , quindi selezionare credenziali esistenti dall'elenco o fare clic su **Aggiungi** per creare nuove credenziali. Per rimuovere un mapping a credenziali di sicurezza dall'account di accesso, selezionare le credenziali da **Credenziali con mapping** e fare clic su **Rimuovi**. Per altre informazioni sulle credenziali in generale, vedere [Credenziali &#40;motore di database&#41;](credentials-database-engine.md).  
   
-9. Selezionare dall'elenco **Database predefinito** un database predefinito per l'account di accesso. **Principale** è il valore predefinito per questa opzione.  
+9. Selezionare dall'elenco **Database predefinito** un database predefinito per l'account di accesso. Il valore predefinito per questa opzione è **Master** .  
   
 10. Selezionare dall'elenco **Lingua predefinita** una lingua predefinita per l'account di accesso.  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Account di accesso - Nuovo** offre inoltre opzioni in altre quattro pagine: **Ruoli del server**, **Mapping utenti**, **Entità a protezione diretta** e **Stato**.  
+ La finestra di dialogo **account di accesso-nuovo** offre inoltre opzioni in altre quattro pagine: **ruoli del server**, **mapping utenti**, **entità a protezione diretta**e **stato**.  
   
 ### <a name="server-roles"></a>Ruoli del server  
  Nella pagina **Ruoli del server** sono elencati tutti i possibili ruoli che possono essere assegnati al nuovo account accesso. Sono disponibili le opzioni seguenti:  
@@ -160,10 +160,10 @@ ms.locfileid: "63012025"
  **Schema predefinito**  
  Consente di specificare lo schema predefinito dell'utente. Lo schema predefinito dei nuovi utenti creati è **dbo**. È possibile specificare uno schema predefinito non ancora creato. Non è possibile specificare uno schema predefinito per un utente del quale è stato eseguito il mapping a un gruppo di Windows, un certificato o una chiave asimmetrica.  
   
- **Account Guest abilitato per:** _database_name_  
+ **Account Guest abilitato per:**  _database_name_  
  Attributo di sola lettura che indica se l'account Guest è abilitato nel database selezionato. Utilizzare la pagina **Stato** della finestra di dialogo **Proprietà account di accesso** dell'account Guest per abilitare o disabilitare tale account.  
   
- **Appartenenza a ruoli del database per:** _database_name_  
+ **Appartenenza a ruoli del database per:**  _database_name_  
  Consente di selezionare i ruoli per l'utente nel database specificato. Tutti gli utenti sono membri del ruolo **public** in ogni database e non possono essere eliminati. Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](database-level-roles.md).  
   
 ### <a name="securables"></a>Entità a protezione diretta  
@@ -174,31 +174,31 @@ ms.locfileid: "63012025"
   
  Per aggiungere elementi alla griglia superiore:  
   
-1.  Fare clic su **Cerca**.  
+1.  Scegliere **Cerca**.  
   
 2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **oggetti specifici...**, **tutti gli oggetti di tipo...** o **il server**_server_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Selezionando **il server**_server_name_ viene automaticamente riempita la griglia superiore con tutti gli oggetti a protezione diretta di tale server.  
   
-3.  Se si seleziona **Oggetti specifici...** :  
+3.  Se si seleziona **oggetti specifici...**:  
   
-    1.  Nella finestra di dialogo **Seleziona oggetti** in **Selezionare i tipi di oggetti seguenti** fare clic su **Tipi di oggetti...** .  
+    1.  Nella finestra di dialogo **Seleziona oggetti** , in **selezionare questi tipi**di oggetti, fare clic su **tipi di oggetto...**.  
   
-    2.  Nella finestra di dialogo **Seleziona tipi di oggetti** selezionare uno o tutti i tipi di oggetti seguenti: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità** e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Nella casella del finestra di dialogo **Seleziona tipi di oggetti** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità**e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)** fare clic su **Sfoglia...** .  
+    3.  In **immettere i nomi degli oggetti da selezionare (esempi)**, fare clic su **Sfoglia..**..  
   
     4.  Nella finestra di dialogo **Cerca oggetti** , selezionare gli oggetti disponibili del tipo selezionato nella finestra di dialogo **Seleziona tipi di oggetti** , quindi fare clic su **OK**.  
   
     5.  Nella finestra di dialogo **Seleziona oggetti** fare clic su **OK**.  
   
-4.  Se si seleziona **Tutti gli oggetti di tipo** nella finestra di dialogo **Seleziona tipi di oggetti**, selezionare uno o tutti i tipi di oggetti seguenti: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità** e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se si seleziona **tutti gli oggetti dei tipi...**, nella finestra di dialogo **Seleziona tipi di oggetti** Selezionare uno o tutti i tipi di oggetti seguenti: **endpoint**, **account di accesso**, **Server**, **gruppi di disponibilità**e **ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  Nome di ogni entità o entità a sicurezza diretta aggiunto alla griglia.  
   
- **Tipo**  
+ **Type**  
  Descrive il tipo di ogni elemento.  
   
  **Scheda Esplicita**  
@@ -207,16 +207,16 @@ ms.locfileid: "63012025"
  **Autorizzazioni**  
  Nome dell'autorizzazione.  
   
- **Utente che concede le autorizzazioni**  
+ **Concedente**  
  Entità che ha concesso l'autorizzazione.  
   
- **Concedi**  
+ **Grant**  
  Selezionare questa opzione per concedere l'autorizzazione all'account di accesso, deselezionarla per revocare l'autorizzazione.  
   
  **Con diritto di concessione**  
  Riflette lo stato dell'opzione WITH GRANT relativo all'autorizzazione elencata. Il contenuto di questa casella è di sola lettura. Per applicare questa autorizzazione, utilizzare l'istruzione [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Nega**  
+ **Negare**  
  Selezionare questa opzione per negare l'autorizzazione all'account di accesso, deselezionarla per revocare l'autorizzazione.  
   
 ### <a name="status"></a>Stato  
@@ -237,9 +237,9 @@ ms.locfileid: "63012025"
  Selezionare questa opzione per abilitare o disabilitare l'account di accesso. Questa opzione utilizza l'istruzione ALTER LOGIN insieme all'opzione ENABLE o DISABLE.  
   
  **Autenticazione di SQL Server**  
- La casella di controllo **Account di accesso bloccato** è disponibile solo se l'account di accesso selezionato si connette utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è stato bloccato. Questa impostazione è di sola lettura. Per sbloccare un account di accesso bloccato, eseguire l'istruzione ALTER LOGIN con l'opzione UNLOCK.  
+ L'account di accesso della casella di controllo **è bloccato** è disponibile solo se l'account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di accesso selezionato si connette utilizzando l'autenticazione di e l'account di accesso è stato bloccato. Questa impostazione è di sola lettura. Per sbloccare un account di accesso bloccato, eseguire l'istruzione ALTER LOGIN con l'opzione UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>Per creare un account di accesso tramite l'autenticazione di Windows  
   
@@ -278,7 +278,7 @@ ms.locfileid: "63012025"
   
  Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Completamento: passaggi da effettuare dopo aver creato un account di accesso  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a>Completamento: passaggi da eseguire dopo la creazione di un account di accesso  
  Una volta creato, un account di accesso può connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ma potrebbe non disporre delle autorizzazioni necessarie a eseguire operazioni utili. Nell'elenco seguente vengono indicati alcuni collegamenti alle operazioni più comuni degli account di accesso.  
   
 -   Per consentire l'aggiunta di un account di accesso a un ruolo database, vedere [Aggiungere un ruolo](join-a-role.md).  

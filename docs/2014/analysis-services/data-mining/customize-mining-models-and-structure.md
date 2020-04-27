@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174445"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizzare struttura e modelli di data mining
@@ -43,7 +43,7 @@ ms.locfileid: "78174445"
 ### <a name="using-feature-selection"></a>Utilizzo della selezione delle funzionalità
  Nella maggior parte degli algoritmi di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usato un processo denominato *selezione delle caratteristiche* per selezionare solo gli attributi più utili da aggiungere a un modello. La riduzione del numero di colonne e di attributi può migliorare le prestazione e la qualità del modello. I metodi disponibili per la selezione delle funzionalità differiscono a seconda dell'algoritmo scelto.
 
- [Selezione funzionalità &#40;&#41;di data mining ](feature-selection-data-mining.md).
+ [Selezione delle caratteristiche &#40;Data mining&#41;](feature-selection-data-mining.md).
 
 ### <a name="changing-usage"></a>Modifica dell'utilizzo
  È possibile modificare le colonne incluse in un modello di data mining e la modalità di utilizzo di ciascuna colonna. Se non si ottengono i risultati previsti, è necessario esemplificare le colonne utilizzate come input e considerare se si tratta della scelta corretta e se è possibile migliorare la gestione dei dati, ad esempio:
@@ -132,7 +132,7 @@ ms.locfileid: "78174445"
 |SPLIT_METHOD|[Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)|
 |STOPPING_TOLERANCE|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) [architettura fisica &#40;Analysis Services-Data mining&#41;](physical-architecture-analysis-services-data-mining.md)
 
 

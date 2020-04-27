@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211302"
 ---
 # <a name="view-job-activity"></a>Visualizza attività processi
@@ -41,10 +41,10 @@ ms.locfileid: "68211302"
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-job-activity"></a>Per visualizzare l'attività del processo  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68211302"
   
 6.  Per aggiornare Monitoraggio attività processo fare clic su **Aggiorna**. Per visualizzare un numero inferiore di righe, fare clic su **Filtro** e specificare i parametri del filtro.  
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-job-activity"></a>Per visualizzare l'attività del processo  
   

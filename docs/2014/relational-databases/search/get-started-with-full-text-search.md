@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011290"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
   Per impostazione predefinita, nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata la funzionalità full-text. Per utilizzare un indice full-text in una tabella, è tuttavia necessario impostare la funzionalità di indicizzazione full-text nelle colonne delle tabelle a cui si desidera accedere mediante il motore di ricerca full-text.  
   
-##  <a name="configure"></a>Configurazione di un database per la ricerca full-text  
+##  <a name="configuring-a-database-for-full-text-search"></a><a name="configure"></a>Configurazione di un database per la ricerca full-text  
  Per qualsiasi scenario, un amministratore di database esegue i passaggi di base seguenti per configurare le colonne di tabella di un database per la ricerca full-text:  
   
 1.  Creazione di un catalogo full-text.  
@@ -42,7 +42,7 @@ ms.locfileid: "66011290"
   
  La ricerca full-text supporta più lingue con l'uso dei *componenti linguistici* seguenti: word breaker e stemmer, elenchi di parole non significative e file del thesaurus. I file del thesaurus e, in alcuni casi, gli elenchi di parole non significative richiedono la configurazione da parte di un amministratore di database. Un determinato file del thesaurus supporta tutti gli indici full-text che utilizzano la lingua corrispondente. È inoltre possibile associare un determinato elenco di parole non significative al numero desiderato di indici full-text.  
   
-##  <a name="setup"></a>Configurazione di un catalogo e di un indice full-text  
+##  <a name="setting-up-a-full-text-catalog-and-index"></a><a name="setup"></a>Configurazione di un catalogo e di un indice full-text  
  L'operazione comporta i passaggi principali seguenti:  
   
 1.  Creazione di un catalogo full-text per archiviare indici full-text.  
@@ -62,7 +62,7 @@ ms.locfileid: "66011290"
 |Sono raggruppati all'interno dello stesso database in uno o più cataloghi full-text.|Non sono raggruppati.|  
   
   
-##  <a name="options"></a>Scelta delle opzioni per un indice full-text  
+##  <a name="choosing-options-for-a-full-text-index"></a><a name="options"></a>Scelta delle opzioni per un indice full-text  
  In questa sezione vengono trattati i seguenti argomenti:  
   
 -   Scelta della lingua delle colonne  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  In genere, se è in corso un popolamento completo, il risultato restituito è 1.  
   
   
-##  <a name="example"></a>Esempio: impostazione della ricerca full-text  
+##  <a name="example-setting-up-full-text-search"></a><a name="example"></a>Esempio: impostazione della ricerca full-text  
  L'esempio in due parti seguente consiste nella creazione di un catalogo full-text denominato `AdvWksDocFTCat` nel database AdventureWorks e quindi nella creazione di un indice full-text nella tabella `Document` in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Questa istruzione determina la creazione del catalogo full-text nella directory predefinita specificata durante l'installazione. La cartella denominata `AdvWksDocFTCat` si trova nella directory predefinita.  
   
 1.  Per creare un catalogo full-text denominato `AdvWksDocFTCat`, nell'esempio viene usata un'istruzione [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) :  
@@ -164,13 +164,13 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
      L'elemento TYPE COLUMN definito in questo esempio specifica la colonna del tipo nella tabella che contiene il tipo di documento in ciascuna riga della colonna 'Document' (che è di tipo binario). Nella colonna tipo è archiviata l'estensione di file fornita dall'utente, ovvero "doc", "xls" e così via, del documento in una determinata riga. Il motore di ricerca full-text utilizza l'estensione file in una determinata riga per richiamare il filtro corretto da utilizzare per l'analisi dei dati di quella riga. Al termine dell'analisi dei dati binari della riga eseguita tramite il filtro, il word breaker specificato analizzerà il contenuto. In questo esempio viene utilizzato il word breaker per l'Inglese britannico. Si noti che il processo di filtro viene eseguito unicamente durante l'indicizzazione o quando un utente inserisce o aggiorna una colonna della tabella di base con il rilevamento delle modifiche automatico abilitato per l'indice full-text. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md).  
   
   
-##  <a name="tasks"></a>Attività comuni  
+##  <a name="common-tasks"></a><a name="tasks"></a>Attività comuni  
   
 ### <a name="to-create-a-full-text-catalog"></a>Per creare un catalogo full-text  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
--   [Creazione e gestione dei cataloghi full-text](create-and-manage-full-text-catalogs.md)  
+-   [Creare e gestire cataloghi full-text](create-and-manage-full-text-catalogs.md)  
   
 ### <a name="to-view-the-indexes-of-a-table-or-view"></a>Per visualizzare gli indici di una tabella (o vista)  
   
@@ -180,7 +180,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [Apri Progettazione tabelle &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
+-   [Aprire Progettazione tabelle &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### <a name="to-create-a-full-text-index"></a>Per creare un indice full-text  
   
@@ -201,10 +201,10 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|Restituisce informazioni sui popolamenti di indici full-text in corso.|  
   
   
-## <a name="see-also"></a>Vedere anche  
- [CREAZIONE di un catalogo full-text &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [CREAZIONE di un &#40;di parole non significative full-text&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [Popolamento degli indici full-text](populate-full-text-indexes.md)   
  [FULLTEXTCATALOGPROPERTY &#40;&#41;Transact-SQL](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   

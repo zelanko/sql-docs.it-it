@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63073943"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
@@ -74,7 +74,7 @@ ms.locfileid: "63073943"
 |Modifiche apportate a una colonna|Sì|Sì|  
 |Tipo DML|Sì|Sì|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="change-data-capture"></a><a name="Capture"></a>Change Data Capture  
  Change Data Capture fornisce informazioni cronologiche sulle modifiche per una tabella utente acquisendo l'esecuzione di modifiche DML e le modifiche effettive apportate ai dati. Le modifiche vengono acquisite utilizzando un processo asincrono che legge il log delle transazioni senza un impatto significativo sul sistema.  
   
  Come illustrato nella figura seguente, le modifiche apportate alle tabelle utente vengono acquisite nella tabella delle modifiche corrispondente. In tali tabelle è disponibile una vista cronologica delle modifiche nel tempo. Le funzioni di [Change Data Capture](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di utilizzare i dati delle modifiche in modo semplice e sistematico.  
@@ -150,7 +150,7 @@ ms.locfileid: "63073943"
  È possibile usare [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) per rimuovere Change Data Capture da un database collegato o ripristinato.  
  
 
-  ##  <a name="Tracking"></a> Rilevamento delle modifiche  
+  ##  <a name="change-tracking"></a><a name="Tracking"></a>Rilevamento modifiche  
  Il rilevamento delle modifiche consente di acquisire l'esecuzione di modifiche alle righe di una tabella, ma non di acquisire i dati modificati. In questo modo le applicazioni sono in grado di determinare le righe che sono state modificate con gli ultimi dati delle righe ottenuti direttamente dalle tabelle utente. Di conseguenza, il rilevamento delle modifiche è più limitato nelle richieste relative alla cronologia cui è in grado di rispondere rispetto a Change Data Capture. Per le applicazioni che non richiedono le informazioni cronologiche, tuttavia, l'overhead di archiviazione relativo al rilevamento delle modifiche è notevolmente minore poiché i dati modificati non vengono acquisiti. Per tenere traccia delle modifiche, viene utilizzato un meccanismo di rilevamento sincrono appositamente progettato per consentire un overhead minimo per le operazioni DML.  
   
  Nella figura seguente viene illustrato uno scenario di sincronizzazione per cui sarebbe più vantaggioso utilizzare il rilevamento delle modifiche. In tale scenario un'applicazione richiede tutte le righe della tabella modificate dall'ultima sincronizzazione della tabella e solo i dati della riga correnti. Poiché per tenere traccia delle modifiche viene utilizzato un meccanismo sincrono, un'applicazione può eseguire una sincronizzazione bidirezionale e rilevare qualsiasi conflitto che potrebbe essersi verificato in modo affidabile.  
@@ -179,17 +179,17 @@ ms.locfileid: "63073943"
 |Fornisce una panoramica di Change Data Capture.|[Informazioni su Change Data Capture &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)|  
 |Descrive come abilitare e disabilitare Change Data Capture in un database o una tabella.|[Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |Descrive come amministrare ed eseguire il monitoraggio di Change Data Capture.|[Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  
-|Descrive come utilizzare i dati di modifica disponibili agli utenti di Change Data Capture. In questo argomento viene illustrata la convalida dei limiti LSN, le funzioni di query e gli scenari delle funzioni di query.|[Usare i dati delle modifiche &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)|  
+|Descrive come utilizzare i dati di modifica disponibili agli utenti di Change Data Capture. In questo argomento viene illustrata la convalida dei limiti LSN, le funzioni di query e gli scenari delle funzioni di query.|[Usare Change Data &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)|  
 |Fornisce una panoramica del rilevamento delle modifiche.|[Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)|  
 |Descrive come abilitare e disabilitare il rilevamento delle modifiche in un database o una tabella.|[Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)|  
 |Descrive come gestire il rilevamento delle modifiche, configurare la sicurezza e determinare gli effetti sull'archiviazione e sulle prestazioni quando si utilizza il rilevamento delle modifiche.|[Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)|  
 |Descrive come le applicazioni che utilizzano il rilevamento delle modifiche possano ottenere le modifiche registrate, applicare tali modifiche a un altro archivio dati e aggiornare il database di origine. In questo argomento viene inoltre descritto il ruolo svolto dal rilevamento delle modifiche quando si verifica un failover ed è necessario ripristinare un database da un backup.|[Utilizzare il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni Change Data Capture &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
- [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
+ [Funzioni Rilevamento modifiche &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
  [Stored procedure Change Data Capture &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
- [Tabelle Change Data Capture &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
+ [Tabelle Change Data Capture &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
  [Viste a gestione dinamica correlate a Change Data Capture &#40;Transact-SQL&#41;](../views/views.md)  
   
   

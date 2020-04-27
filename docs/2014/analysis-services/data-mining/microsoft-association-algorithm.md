@@ -31,10 +31,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174739"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Microsoft Association Rules
@@ -59,9 +59,9 @@ ms.locfileid: "78174739"
 
  I requisiti per un modello Association Rules sono i seguenti:
 
--   **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
+-   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
 
--   **Una singola colonna stimabile** Un modello di associazione può avere solo una colonna stimabile. In genere si tratta della colonna chiave della tabella nidificata, ad esempio il campo in cui sono elencati i prodotti acquistati. I valori devono essere discreti o discretizzati.
+-   **Una singola colonna stimabile** Un modello di associazione può includere un'unica colonna stimabile. In genere si tratta della colonna chiave della tabella nidificata, ad esempio il campo in cui sono elencati i prodotti acquistati. I valori devono essere discreti o discretizzati.
 
 -   **Colonne di input** . Le colonne di input devono essere discrete. Spesso, i dati di input per il modello di associazione sono contenuti in due tabelle. Ad esempio, una tabella può contenere informazioni sui clienti mentre l'altra può contenere informazioni sugli acquisti dei clienti. È possibile inserire tali dati nel modello tramite una tabella nidificata. Per altre informazioni sulle tabelle annidate, vedere [Tabelle annidate &#40;Analysis Services - Data mining&#41;](nested-tables-analysis-services-data-mining.md).
 
@@ -96,7 +96,7 @@ ms.locfileid: "78174739"
 
 -   Supporta la creazione di dimensioni di data mining.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) [visualizzare un modello utilizzando il contenuto del modello di data mining del Visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md) [per i modelli di associazione &#40;Analysis Services-Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md) [esempi di query sul modello](association-model-query-examples.md) di associazione di [riferimento tecnico Microsoft Association](microsoft-association-algorithm-technical-reference.md)
 
 

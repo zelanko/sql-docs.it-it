@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015283"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Problemi di migrazione relativi alle stored procedure compilate in modo nativo
@@ -34,7 +34,7 @@ ms.locfileid: "63015283"
   
 -   [Implementazione dell'operatore OR in stored procedure compilate in modalità nativa](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

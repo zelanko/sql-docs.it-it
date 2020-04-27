@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207006"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce i set di risultati ai consumer utilizzando due metodi.  
   
 -   Set di risultati predefiniti che:  
@@ -86,12 +85,11 @@ ms.locfileid: "68207006"
   
  T = VARIANT_TRUE  
   
- 
-  \- = VARIANT_TRUE o VARIANT_FALSE  
+ \- = VARIANT_TRUE o VARIANT_FALSE  
   
  Per utilizzare un determinato tipo di modello di cursore, individuare la colonna che corrisponde al modello desiderato e trovare tutte le proprietà del set di righe con valore 'T' nella colonna. Impostare queste proprietà del set di righe su VARIANT_TRUE per utilizzare il modello di cursore specifico. Le proprietà del set di righe con '-' come valore possono essere impostate su VARIANT_TRUE o VARIANT_FALSE.  
   
-|Proprietà del set di righe/modelli di cursore|Predefinito<br /><br /> risultato<br /><br /> set<br /><br /> (RO)|Veloce<br /><br /> forward-<br /><br /> only<br /><br /> (RO)|Statico<br /><br /> (RO)|Keyset<br /><br /> keyset<br /><br /> (RO)|  
+|Proprietà del set di righe/modelli di cursore|Impostazione predefinita<br /><br /> result<br /><br /> set<br /><br /> (RO)|Veloce<br /><br /> forward-<br /><br /> only<br /><br /> (RO)|Static<br /><br /> (RO)|Keyset<br /><br /> keyset<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -152,7 +150,7 @@ ms.locfileid: "68207006"
   
  Indipendentemente dal metodo utilizzato per popolare il set di righe e formare il blocco del cursore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il blocco del cursore è attivo fino all'esecuzione del metodo di recupero righe successivo sul set di righe.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Set di righe](rowsets.md)  
   
   

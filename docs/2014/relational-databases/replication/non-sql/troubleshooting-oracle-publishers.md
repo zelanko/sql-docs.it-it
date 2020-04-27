@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021902"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
   In questo argomento vengono elencati alcuni problemi che possono verificarsi durante la configurazione e l'uso di un server di pubblicazione Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Viene generato un errore relativo al software di rete e client Oracle  
- All'account con cui [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito nel server di distribuzione devono essere concesse le autorizzazioni di lettura ed esecuzione per la directory e tutte le sottodirectory in cui è installato il software di rete client Oracle. Se tali autorizzazioni non vengono concesse o i componenti client Oracle non sono installati correttamente, verrà visualizzato il messaggio di errore seguente:  
+ L'account con cui viene eseguito [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel server di distribuzione deve disporre di autorizzazioni di lettura ed esecuzione per la directory e tutte le sottodirectory in cui è installato il software di rete client Oracle. Se tali autorizzazioni non vengono concesse o i componenti client Oracle non sono installati correttamente, verrà visualizzato il messaggio di errore seguente:  
   
  "Impossibile connettersi al server con [provider Microsoft OLE DB per Oracle]. Impossibile trovare il client e i componenti di rete Oracle. Tali componenti vengono forniti da Oracle Corporation e fanno parte dell'installazione del software client Oracle versione 7.3.3 o successive. Se non si installano tali componenti, non sarà possibile utilizzare questo provider."  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63021902"
   
 -   "L'istanza del server Oracle '\<*NomeServerPubblicazioneOracle*>' è stata precedentemente configurata per l'uso di '\<*NomeDatabaseDistribuzioneSQLServer*>' come database di distribuzione. Per iniziare a usare '\<*NuovoDatabaseDistribuzioneSQLServer*>' come database di distribuzione, è necessario rimuovere la configurazione corrente della replica nell'istanza del server Oracle, eliminando così tutte le pubblicazioni presenti in tale istanza del server."  
   
--   "Il server Oracle '\<*NomeServerOracleServer*>' è già definito come server di pubblicazione '\<*NomeServerPubblicazioneOracle*>' nel database di distribuzione '\<*NomeDatabaseDistribuzioneSQL*>.*\<NomeDatabaseDistribuzione>*'. Eliminare il server di pubblicazione oppure eliminare il sinonimo public '*\<synonymname>*' per ricrearlo. "  
+-   "Il server Oracle '\<*NomeServerOracleServer*>' è già definito come server di pubblicazione '\<*NomeServerPubblicazioneOracle*>' nel database di distribuzione '\<*NomeDatabaseDistribuzioneSQL*>. *\<NomeDatabaseDistribuzione>* '. Eliminare il server di pubblicazione oppure eliminare il sinonimo public ' *\<NomeSinonimo*' per ricrearlo."  
   
  Con l'eliminazione di un server di pubblicazione Oracle, vengono automaticamente rimossi gli oggetti di replica nel database Oracle. In alcuni casi è tuttavia necessario eseguire manualmente la pulizia degli oggetti di replica Oracle. Per rimuovere manualmente gli oggetti di replica Oracle creati con la replica:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021902"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Viene generato l'errore SQL Server 21642 relativo all'accesso a un server collegato duplicato  
  Durante la configurazione iniziale di un server di pubblicazione Oracle, viene creata una voce di server collegato per la connessione tra server di pubblicazione e server di distribuzione. Il nome del server collegato corrisponde al nome del servizio TNS Oracle. Se si tenta di creare un server collegato con lo stesso nome, viene visualizzato il messaggio di errore seguente:  
   
- 'Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato '*\<nomeservercollegato>*'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso'.  
+ 'Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato ' *\<NomeServerCollegato*'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso'.  
   
  Questo errore si può verificare se si tenta di creare il server collegato direttamente oppure se è stata precedentemente eliminata la relazione tra il server di pubblicazione Oracle e il server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e si tenta ora di riconfigurarla. Se questo errore viene visualizzato durante un tentativo di riconfigurazione del server di pubblicazione, eliminare il server collegato con [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63021902"
   
  Se il provider Oracle OLEDB è installato, verificare che sia registrato. Per registrare la DLL del provider, eseguire il comando seguente dalla directory in cui è installata la DLL e quindi arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  `regsvr32 OraOLEDB10.dll`o `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll` o `regsvr32 OraOLEDB.dll`.  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>Viene generato l'errore SQL Server 21626 o 21627  
  Per verificare che l'ambiente di pubblicazione Oracle sia configurato correttamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenta di connettersi al server di pubblicazione Oracle con le credenziali di accesso specificate durante la configurazione. Se tramite il server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è possibile connettersi al server di pubblicazione Oracle, verrà visualizzato il messaggio di errore seguente:  
@@ -143,8 +143,7 @@ ms.locfileid: "63021902"
  Se viene visualizzato questo messaggio di errore, verificare la connettività al database Oracle eseguendo direttamente SQL*PLUS utilizzando lo stesso account di accesso e la stessa password specificati durante la configurazione del server di pubblicazione Oracle. Per ulteriori informazioni, vedere la sezione "Il server di distribuzione SQL Server non è in grado di connettersi all'istanza del database Oracle" più indietro in questo argomento.  
   
 ## <a name="sql-server-error-21628-is-raised"></a>Viene generato l'errore SQL Server 21628  
- Per i server di distribuzione a 64 bit, la pubblicazione Oracle utilizza il provider Oracle OLEDB per Oracle (OraOLEDB.Oracle). 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di creare una voce nel Registro di sistema che permette l'esecuzione in-process del provider Oracle con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se si verifica un problema durante la lettura o la scrittura della voce del Registro di sistema, verrà visualizzato il messaggio di errore seguente:  
+ Per i server di distribuzione a 64 bit, la pubblicazione Oracle utilizza il provider Oracle OLEDB per Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di creare una voce nel Registro di sistema che permette l'esecuzione in-process del provider Oracle con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se si verifica un problema durante la lettura o la scrittura della voce del Registro di sistema, verrà visualizzato il messaggio di errore seguente:  
   
  "Impossibile aggiornare il Registro di sistema del server di distribuzione '%s' per consentire l'esecuzione in-process del provider Oracle OLEDB OraOLEDB.Oracle con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Verificare che l'account di accesso corrente sia autorizzato per la modifica delle chiavi del Registro di sistema di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -152,11 +151,11 @@ ms.locfileid: "63021902"
   
  Per visualizzare e modificare l'impostazione nel Registro di sistema:  
   
-1.  Fare clic su **Start**, quindi scegliere **Esegui**.  
+1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
 2.  Nella finestra di dialogo **Esegui** digitare **regedit**e quindi fare clic su **OK**.  
   
-3.  Passare a HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>* \Providers.  
+3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<NomeIstanza>* \Providers.  
   
      Nella cartella Providers dovrebbe essere presente una cartella denominata OraOLEDB.Oracle. In questa cartella dovrebbe essere incluso il nome valore DWORD **AllowInProcess**, con un valore pari a **1**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "63021902"
   
  "Le autorizzazioni associate all'account di accesso di amministratore per il server di pubblicazione Oracle '%s' non sono sufficienti."  
   
- Per verificare le autorizzazioni assegnate all'utente, eseguire la query `SELECT * from session_privs`. L'output dovrebbe essere simile al seguente:  
+ Per verificare le autorizzazioni assegnate all'utente, eseguire la query `SELECT * from session_privs`. L'output avrà un aspetto analogo al seguente:  
   
  `PRIVILEGE`  
   

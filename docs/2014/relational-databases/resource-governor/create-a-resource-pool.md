@@ -14,30 +14,30 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211998"
 ---
 # <a name="create-a-resource-pool"></a>Creare un pool di risorse
   È possibile creare un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Prima di iniziare:**  [limitazioni e restrizioni](#LimitationsRestrictions), [autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
 -   **Per creare un pool di risorse usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  La percentuale massima della CPU deve essere uguale o maggiore della percentuale minima della CPU. La percentuale massima della memoria deve essere uguale o maggiore della percentuale minima della memoria.  
   
  La somma delle percentuali minime della CPU e delle percentuali minime della memoria per tutti i pool di risorse non deve superare 100.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare un pool di risorse è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a>Creare un pool di risorse usando SQL Server Management Studio  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a>Creare un pool di risorse usando SQL Server Management Studio  
  **Per creare un pool di risorse utilizzando[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**incluso.  
@@ -52,7 +52,7 @@ ms.locfileid: "68211998"
   
 6.  Per salvare le modifiche, fare clic su **OK**.  
   
-##  <a name="CreRPTSQL"></a>Creare un pool di risorse usando Transact-SQL  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>Creare un pool di risorse usando Transact-SQL  
  **Per creare un pool di risorse utilizzando[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Eseguire l'istruzione `CREATE RESOURCE POOL` specificando i valori di proprietà da impostare.  
@@ -70,7 +70,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Resource Governor](resource-governor.md)   
  [Abilita Resource Governor](enable-resource-governor.md)   
  [Pool di risorse Resource Governor](resource-governor-resource-pool.md)   

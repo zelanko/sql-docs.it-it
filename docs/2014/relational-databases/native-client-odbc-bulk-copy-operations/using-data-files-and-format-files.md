@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206827"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilizzo di file di dati e file di formato
@@ -51,7 +51,7 @@ ms.locfileid: "68206827"
   
  La funzione **bcp_control** controlla diverse opzioni durante la copia bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in da un file di dati. **bcp_control** imposta le opzioni, ad esempio il numero massimo di errori prima della terminazione, la riga del file in cui avviare la copia bulk, la riga in cui arrestare e le dimensioni del batch.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di operazioni di copia bulk &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

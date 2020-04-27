@@ -16,10 +16,10 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68811391"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
@@ -74,7 +74,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @source_table = ] 'source_table'`Questo parametro è stato deprecato. in alternativa, usare *source_object* .  
   
- *Questo parametro non è supportato per i Publisher Oracle.*  
+ *Questo parametro non è supportato per i server di pubblicazione Oracle.*  
   
 `[ @destination_table = ] 'destination_table'`Nome della tabella di destinazione (sottoscrizione), se diversa da *source_table*o stored procedure. *destination_table* è di **tipo sysname**e il valore predefinito è null, il che significa che *source_table* è uguale a *destination_table * *.*  
   
@@ -152,7 +152,7 @@ sp_addarticle [ @publication = ] 'publication'
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**nessuno**|Non utilizza alcun comando.|  
-|**eliminare**|Elimina i dati dalla tabella di destinazione prima di applicare lo snapshot. Se l'articolo è filtrato in modo orizzontale, vengono eliminati solo i dati nelle colonne specificate dalla clausola di filtro. Valore non supportato per i server di pubblicazione Oracle quando è definito un filtro orizzontale.|  
+|**delete**|Elimina i dati dalla tabella di destinazione prima di applicare lo snapshot. Se l'articolo è filtrato in modo orizzontale, vengono eliminati solo i dati nelle colonne specificate dalla clausola di filtro. Valore non supportato per i server di pubblicazione Oracle quando è definito un filtro orizzontale.|  
 |**Drop** (impostazione predefinita)|Rimuove la tabella di destinazione.|  
 |**troncare**|Tronca la tabella di destinazione. Questo valore non è valido per i Sottoscrittori ODBC o OLE DB.|  
   
@@ -391,8 +391,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addarticle**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
@@ -400,7 +400,7 @@ sp_addarticle [ @publication = ] 'publication'
  [sp_droparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
- [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

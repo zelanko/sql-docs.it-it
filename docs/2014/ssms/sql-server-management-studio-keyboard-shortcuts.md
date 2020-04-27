@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127038"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tasti di scelta rapida di SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]offre agli utenti due schemi di tastiera. Per impostazione predefinita, USA lo [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] schema, con tasti di scelta rapida [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] basati su 2010. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] è inoltre disponibile uno schema di tastiera simile allo schema standard di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Per cambiare lo schema di tastiera o aggiungere tasti di scelta rapida, scegliere **Opzioni** dal menu **Strumenti**. Selezionare lo schema della tastiera desiderato nella pagina **Ambiente**, **Tastiera** .  
+  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono disponibili due schemi di tastiera. Per impostazione predefinita, viene usato lo schema di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], in cui i tasti di scelta rapida sono basati su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] è inoltre disponibile uno schema di tastiera simile allo schema standard di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Per cambiare lo schema di tastiera o aggiungere tasti di scelta rapida, scegliere **Opzioni** dal menu **Strumenti**. Selezionare lo schema della tastiera desiderato nella pagina **Ambiente**, **Tastiera** .  
   
 > [!NOTE]  
 >  Per visualizzare solo le intestazioni, fare clic su **Comprimi tutto** nella parte superiore di questa pagina.  
@@ -97,7 +97,7 @@ ms.locfileid: "63127038"
 |Azione|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Spostare il cursore a sinistra|FRECCIA SINISTRA|FRECCIA SINISTRA|  
-|Spostare il cursore a destra|Freccia DESTRA|Freccia DESTRA|  
+|Spostare il cursore a destra|FRECCIA DESTRA|FRECCIA DESTRA|  
 |Spostare il cursore in alto|FRECCIA SU|FRECCIA SU|  
 |Spostare in cursore in basso|Freccia GIÙ|Freccia GIÙ|  
 |Spostare il cursore all'inizio della riga|HOME|HOME|  
@@ -449,7 +449,7 @@ ms.locfileid: "63127038"
 |------------|-----------------------------|---------------------------------|  
 |Spostare il controllo selezionato verso il basso in incrementi di 8 nell'area di progettazione|Freccia GIÙ|Nessun equivalente|  
 |Spostare il controllo selezionato a sinistra in incrementi di 8 nell'area di progettazione|FRECCIA SINISTRA|Nessun equivalente|  
-|Spostare il controllo selezionato a destra in incrementi di 8 nell'area di progettazione|Freccia DESTRA|Nessun equivalente|  
+|Spostare il controllo selezionato a destra in incrementi di 8 nell'area di progettazione|FRECCIA DESTRA|Nessun equivalente|  
 |Spostare il controllo selezionato verso l'alto in incrementi di 8 nell'area di progettazione|FRECCIA SU|Nessun equivalente|  
 |Aumentare l'altezza del controllo selezionato in incrementi di 8|MAIUSC+FRECCIA GIÙ|Nessun equivalente|  
 |Ridurre la larghezza del controllo selezionato in incrementi di 8|MAIUSC+FRECCIA SINISTRA|Nessun equivalente|  

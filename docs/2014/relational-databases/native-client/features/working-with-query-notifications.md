@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206605"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
@@ -131,9 +131,9 @@ RECEIVE * FROM MyQueue
   
  Se una richiesta di sottoscrizione viene eseguita per un batch o una stored procedure, verrà eseguita una richiesta di sottoscrizione separata per ogni istruzione eseguita all'interno del batch o della stored procedure. Le istruzioni EXECUTE non registreranno una notifica, ma invieranno la richiesta di notifica al comando eseguito. Nel caso di un batch, il contesto verrà applicato alle istruzioni eseguite e verranno applicate le stesse regole illustrate in precedenza.  
   
- L'invio di una query per la notifica inviata dallo stesso utente nello stesso contesto di database e ha lo stesso modello, gli stessi valori dei parametri, lo stesso ID di notifica e lo stesso percorso di recapito di una sottoscrizione attiva esistente, rinnoverà il sottoscrizione, reimpostazione del nuovo timeout specificato. Ciò significa che se viene richiesta una notifica per query identiche, verrà inviata solo una notifica. Questa restrizione è applicabile a una query duplicata in un batch o a una query in una stored procedure chiamata più volte.  
+ L'invio di una query per la notifica inviata dallo stesso utente nello stesso contesto di database e ha lo stesso modello, gli stessi valori dei parametri, lo stesso ID di notifica e lo stesso percorso di recapito di una sottoscrizione attiva esistente, rinnoverà la sottoscrizione esistente, reimpostando il nuovo timeout specificato. Ciò significa che se viene richiesta una notifica per query identiche, verrà inviata solo una notifica. Questa restrizione è applicabile a una query duplicata in un batch o a una query in una stored procedure chiamata più volte.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  
   
   

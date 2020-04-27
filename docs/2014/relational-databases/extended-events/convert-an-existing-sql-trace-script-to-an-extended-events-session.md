@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015773"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
@@ -100,7 +100,7 @@ ms.locfileid: "63015773"
 ## <a name="to-create-the-extended-events-session"></a>Per creare la sessione Eventi estesi  
  Utilizzare l'editor di query per creare la sessione Eventi estesi e scrivere l'output in una destinazione file. Nei passaggi seguenti viene descritta una singola query e viene illustrato come compilarla. Per l'esempio di query completo, vedere la sezione "Esempio" di questo argomento.  
   
-1.  Aggiungere istruzioni per creare la sessione eventi, sostituendo s*ession_name* con il nome che si desidera utilizzare per la sessione eventi estesi.  
+1.  Aggiungere istruzioni per creare la sessione eventi, sostituendo*session_name* con il nome che si desidera utilizzare per la sessione Eventi estesi.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

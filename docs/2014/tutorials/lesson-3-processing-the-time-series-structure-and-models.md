@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042877"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lezione 3: Elaborazione di strutture e modelli Time Series
@@ -146,9 +146,9 @@ OPENQUERY (<source data definition>)
  Al termine dell'esecuzione della query, è possibile creare stime utilizzando i modelli di data mining elaborati. Nella lezione successiva verranno create diverse stime basate sui modelli di data mining creati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Lezione 4: Creazione di stime basate su serie temporali con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;query sui dati di origine&#62;](/sql/dmx/source-data-query)   
  [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  

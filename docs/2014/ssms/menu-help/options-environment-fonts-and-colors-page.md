@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211250"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>Opzioni (pagina Ambiente/Tipi di carattere e colori)
-  La finestra di dialogo **Opzioni** consente di definire una combinazione di tipi di carattere e colori personalizzati per vari [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]elementi dell'interfaccia utente in. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
+  La finestra di dialogo **Opzioni** consente di specificare una combinazione colori e un tipo di carattere personalizzati per vari elementi dell'interfaccia utente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
   
  Le modifiche apportate alla combinazione colori non diventano effettive durante la sessione in cui vengono eseguite. Per valutare le modifiche dei colori, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e riprodurre le condizioni in cui si prevede che tali modifiche vengano applicate.  
   
@@ -34,14 +34,14 @@ ms.locfileid: "68211250"
 |Finestra Risultati ricerca|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra Risultati ricerca.|  
 |Finestra di output|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra di output.|  
 |Risultati in formato griglia|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nell'area **Risultati in formato griglia** della finestra Query.|  
-|Piano di esecuzione|Le modifiche alle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aspetto [!INCLUDE[ssEW](../../includes/ssew-md.md)] del testo nel piano di esecuzione delle query e.|  
+|Piano di esecuzione|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo in Piano di esecuzione delle query di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |Risultati in formato testo|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nell'area **Risultati in formato testo** della finestra Query.|  
 |Finestre di progettazione Business Intelligence|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre di Progettazione di Business Intelligence .|  
   
- **Usa impostazioni predefinite**  
+ **Valori predefiniti**  
  Il pulsante **Valori predefiniti** reimposta i valori predefiniti del tipo di carattere e dei colori dell'elemento selezionato dall'elenco **Mostra impostazioni per** .  
   
- **Font (il tipo Bold indica i tipi di carattere a larghezza fissa)**  
+ **Carattere (tipi di carattere a larghezza fissa in grassetto)**  
  Consente di visualizzare l'elenco di tutti i tipi di carattere installati nel sistema. Quando si apre questo elenco a discesa per la prima volta, viene selezionato il tipo di carattere corrente dell'elemento scelto nell'elenco **Mostra impostazioni per** . I tipi di carattere a larghezza fissa, più facili da allineare in un editor, vengono visualizzati in grassetto.  
   
  **Dimensione**  

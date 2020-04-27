@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062159"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Proprietà avviso-nuovo avviso (pagina risposta)
@@ -32,7 +32,7 @@ ms.locfileid: "63062159"
  **Visualizzare il processo**  
  Consente di visualizzare o modificare il processo selezionato. Questa opzione non è disponibile se l'opzione **Esegui processo** non è selezionata.  
   
- **Notifica operatori**  
+ **Invia notifica a operatori**  
  Consente di abilitare i controlli che consentono di aggiungere, rimuovere o modificare operatori.  
   
  **Elenco operatori**  
@@ -41,7 +41,7 @@ ms.locfileid: "63062159"
  **Posta elettronica**  
  Consente di utilizzare la posta elettronica per l'invio della notifica all'operatore.  
   
- **Pager**  
+ **Cercapersone**  
  Utilizzare l'indirizzo di posta elettronica del cercapersone per l'invio della notifica all'operatore.  
   
  **NET SEND**  
@@ -53,7 +53,7 @@ ms.locfileid: "63062159"
  **Visualizza operatore**  
  Visualizza la finestra di dialogo **Proprietà** per l'operatore attualmente selezionato. È possibile visualizzare e modificare le proprietà dell'operatore nella finestra di dialogo **Proprietà operatore**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Avvisi](alerts.md)   
  [Creare un avviso utilizzando il livello di gravità](create-an-alert-using-severity-level.md)   
  [Avvisi](alerts.md)   

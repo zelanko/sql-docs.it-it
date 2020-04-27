@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017173"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Esercitazione intermedia sul data mining (Analysis Services - Data mining)
@@ -52,13 +52,13 @@ ms.locfileid: "63017173"
   
  Verranno compilati modelli per le singole aree geografiche, oltre a un modello generale che può essere utilizzato per la stima incrociata.  
   
- [Lezione 3: creazione di uno scenario Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  In questa lezione verrà aggiunta una nuova vista origine dati e verrà illustrato come utilizzare le chiavi e le tabelle nidificate. In base a questi dati, verrà creato un modello di data mining che può essere utilizzato in uno scenario di analisi degli acquisti. Verranno inoltre esplorati i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
   
  [Lezione 4: compilazione di uno scenario di clustering delle sequenze &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  In questa lezione verrà creato un modello di data mining che può essere utilizzato in uno scenario di clustering delle sequenze. Verranno inoltre esaminati i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering.  
   
- [Lezione 5: creazione di modelli di rete neurale e di regressione logistica &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lezione 5: Compilazione dei modelli di rete neurale e di regressione logistica &#40;Esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  In questa lezione si creeranno alcuni modelli di data mining correlati, utilizzando Microsoft Neural Network e gli algoritmi di Microsoft Logistic Regression. Si apprenderà inoltre a utilizzare le viste origine dati per esplorare i dati sottostanti i modelli.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -68,12 +68,11 @@ ms.locfileid: "63017173"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
  Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare la pagina relativa ai [database di esempio di Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) e selezionare la versione appropriata del database di esempio.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Esercitazione DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Esercitazione su DMX per Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  

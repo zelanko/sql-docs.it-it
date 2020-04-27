@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033643"
 ---
 # <a name="create-statistics"></a>Creare statistiche
@@ -42,9 +42,9 @@ ms.locfileid: "63033643"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Prima di creare statistiche con l'istruzione CREATE STATISTICS, verificare che l'opzione AUTO_CREATE_STATISTICS sia impostata a livello di database. In questo modo, tramite Query Optimizer continuano a essere normalmente create statistiche di colonna singola per colonne dei predicati di query.  
   
@@ -52,12 +52,12 @@ ms.locfileid: "63033643"
   
 -   Non è possibile eliminare, rinominare o modificare la definizione di una colonna di tabella specificata in un predicato delle statistiche filtrate.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63033643"
   
 4.  Fare clic con il pulsante destro del mouse sulla cartella **Statistiche** e selezionare **Nuove statistiche...** .  
   
-     Le proprietà seguenti vengono visualizzate nella pagina **generale** della finestra di dialogo **nuove statistiche per**_table_name_ tabella.  
+     Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella**_table_name_ vengono visualizzate le proprietà seguenti.  
   
      **Nome tabella**  
      Consente di visualizzare il nome della tabella descritta dalle statistiche.  
@@ -113,12 +113,12 @@ ms.locfileid: "63033643"
      **Aggiorna statistiche per le colonne selezionate**  
      Selezionare questa opzione per aggiornare le statistiche alla chiusura della finestra di dialogo.  
   
-     La proprietà seguente viene visualizzata nella pagina **filtro** della finestra di dialogo **nuove statistiche per**_table_name_ tabella.  
+     Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella**_table_name_ viene visualizzata la proprietà seguente.  
   
      **Espressione filtro**  
      Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella pagina **generale** della finestra di dialogo **nuove statistiche per**_table_name_ della tabella fare clic su **Aggiungi**.  
+5.  Nella pagina **Generale**_della finestra di dialogo_ Nuove statistiche per Tabella **table_name** fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
@@ -139,9 +139,9 @@ ms.locfileid: "63033643"
   
 6.  Nella finestra di dialogo **Seleziona colonne** selezionare le caselle di controllo per tutte le colonne per cui si desidera creare una statistica e quindi fare clic su **OK**.  
   
-7.  Nella finestra di dialogo **nuove statistiche per**_table_name_ tabella fare clic su **OK**.  
+7.  Nella finestra di dialogo **Nuove statistiche per Tabella**_table_name_ fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   

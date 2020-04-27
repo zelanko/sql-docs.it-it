@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032005"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Aprire Monitoraggio attività (SQL Server Management Studio)
@@ -37,21 +37,21 @@ ms.locfileid: "63032005"
   
 -   **Per impostare l'intervallo di aggiornamento usando:**  [SQL Server Management Studio](#Refresh)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Monitoraggio attività esegue query sull'istanza monitorata per ottenere informazioni per i riquadri di visualizzazione di Monitoraggio attività. Quando l'intervallo di aggiornamento viene impostato su un valore inferiore a 10 secondi, il tempo utilizzato per eseguire queste query può ridurre le prestazioni del server  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per visualizzare Monitoraggio attività, è necessario che l'utente disponga dell'autorizzazione VIEW SERVER STATE. Per visualizzare la sezione I/O dati di file di Monitoraggio attività, è necessario disporre delle autorizzazioni CREATE DATABASE, ALTER ANY DATABASE, o VIEW ANY DEFINITION oltre a VIEW SERVER STATE.  
   
  Per eseguire il comando KILL in un processo, è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin o processadmin.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Per aprire Monitoraggio attività in SQL Server Management Studio  
   
-1.  Sulla barra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] degli strumenti standard fare clic su **monitoraggio attività**.  
+1.  Nella barra degli strumenti standard di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic su **Monitoraggio attività**.  
   
 2.  Nella finestra di dialogo **Connetti al server** selezionare il nome del server e la modalità di autenticazione, quindi fare clic su **Connetti**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032005"
   
 4.  Per attivare le modifiche, chiudere e riaprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a>Per impostare l'intervallo di aggiornamento di monitoraggio attività  
+###  <a name="to-set-the-activity-monitor-refresh-interval"></a><a name="Refresh"></a>Per impostare l'intervallo di aggiornamento di monitoraggio attività  
   
 -   Aprire il Monitoraggio attività.  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044156"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change - classe di evento
-  La classe di evento **Server Memory Change** viene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generata quando l'utilizzo della memoria è aumentato o diminuito di 1 megabyte (MB) o del 5% della memoria massima del server, a seconda del valore maggiore.  
+  La classe di evento **Server Memory Change** viene generata quando l'utilizzo di memoria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è aumentato o diminuito di 1 MB o del 5% della quantità di memoria massima del server, a seconda del valore maggiore.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Colonne di dati della classe di evento Server Memory Change  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63044156"
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**ID transazione**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
+|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**XactSequence**|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  

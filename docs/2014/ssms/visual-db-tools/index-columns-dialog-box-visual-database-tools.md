@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015793"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
@@ -30,8 +30,8 @@ ms.locfileid: "63015793"
  Consente di selezionare l'ordinamento della colonna specificata. Le opzioni disponibili sono **Crescente** o **Decrescente**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)   
- [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
+ [Creazione di indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)   
+ [Creazione di indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Finestra di dialogo indici e chiavi &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

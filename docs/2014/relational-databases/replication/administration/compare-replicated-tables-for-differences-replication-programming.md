@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210781"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Confronto di tabelle replicate al fine di individuare le differenze (programmazione della replica)
@@ -72,7 +72,7 @@ ms.locfileid: "68210781"
   
     -   (Facoltativo) Utilizzare **-strict** per imporre il confronto dello schema di tipo strict tra le tabelle di origine e di destinazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati nel Sottoscrittore](../validate-data-at-the-subscriber.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Convalida dei dati nel Sottoscrittore](../validate-data-at-the-subscriber.md)  
   
   

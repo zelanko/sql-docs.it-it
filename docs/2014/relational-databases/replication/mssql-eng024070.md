@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023908"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
@@ -48,8 +48,8 @@ ms.locfileid: "63023908"
   
  L'appartenenza a questo gruppo di sicurezza consente al nuovo account di ottenere le autorizzazioni necessarie per eseguire il processo dell'agente di replica.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento a errori ed eventi &#40;replica&#41;](errors-and-events-reference-replication.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Guida di riferimento a errori ed eventi &#40;&#41;di replica](errors-and-events-reference-replication.md)   
  [Gestire gli account di accesso e le password nella replica](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Gestione configurazione SQL Server](../sql-server-configuration-manager.md)  
   

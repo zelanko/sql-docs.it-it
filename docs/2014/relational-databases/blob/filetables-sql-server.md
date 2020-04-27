@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010085"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66010085"
   
  La caratteristica FileTable si basa sulla tecnologia FILESTREAM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni su FILESTREAM, vedere [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md).  
   
-##  <a name="Goals"></a> Vantaggi della caratteristica FileTable  
+##  <a name="benefits-of-the-filetable-feature"></a><a name="Goals"></a> Vantaggi della caratteristica FileTable  
  Tra gli obiettivi della caratteristica FileTable sono inclusi i seguenti:  
   
 -   Compatibilità con le API Windows per dati dei file archiviati all'interno di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La compatibilità con le API Windows include gli elementi seguenti:  
@@ -46,7 +46,7 @@ ms.locfileid: "66010085"
   
  Le tabelle FileTable eliminano pertanto un ostacolo significativo all'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione e la gestione di dati non strutturati che si trovano attualmente come file in file server. Le organizzazioni possono spostare tali dati da file server a tabelle FileTable per sfruttare l'amministrazione integrata e altri servizi forniti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contemporaneamente, le organizzazioni possono gestire la compatibilità delle applicazioni di Windows che riconoscono tali dati come file nel file system.  
     
-##  <a name="Description"></a> Definizione di tabella FileTable  
+##  <a name="what-is-a-filetable"></a><a name="Description"></a> Definizione di tabella FileTable  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce una speciale **tabella di file**, denominata anche **FileTable**, per applicazioni che richiedono archiviazione di file e directory nel database, con compatibilità con le API Windows e accesso non transazionale. Il termine FileTable indica una tabella utente specifica con uno schema predefinito per l'archiviazione di dati FILESTREAM, nonché informazioni sulla gerarchia di file e directory e attributi di file.  
   
  Una tabella FileTable offre le funzionalità seguenti:  
@@ -82,9 +82,9 @@ ms.locfileid: "66010085"
 -   È inoltre possibile eseguire query su tabelle FileTable e aggiornarle tramite normale accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le tabelle FileTable sono inoltre integrate con gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e con caratteristiche quali il backup.  
   
   
-##  <a name="additional"></a> Ulteriori considerazioni sull'utilizzo di tabelle FileTable  
+##  <a name="additional-considerations-for-using-filetables"></a><a name="additional"></a>Ulteriori considerazioni sull'utilizzo di tabelle FileTable  
   
-###  <a name="DBA"></a> Considerazioni sull'amministrazione  
+###  <a name="administrative-considerations"></a><a name="DBA"></a>Considerazioni amministrative  
  **Informazioni su FILESTREAM e tabelle FileTable**  
   
 -   È necessario configurare tabelle FileTable separatamente da FILESTREAM. È pertanto possibile continuare a utilizzare la caratteristica FILESTREAM senza abilitare l'accesso non transazionale o creare tabelle FileTable.  
@@ -98,41 +98,41 @@ ms.locfileid: "66010085"
 -   È possibile configurare o ottimizzare l'accesso non transazionale a livello di database disabilitando o abilitando l'accesso in sola lettura o in lettura/scrittura.  
   
   
-###  <a name="memory"></a> Mancanza di supporto di file con mapping in memoria per le tabelle FileTable  
+###  <a name="filetables-do-not-support-memory-mapped-files"></a><a name="memory"></a>Le tabelle FileTable non supportano i file mappati alla memoria  
  Le tabelle FileTable non supportano file con mapping in memoria. Blocco note e Paint sono due esempi comuni di applicazioni in cui vengono utilizzati file con mapping in memoria. Non è possibile utilizzare queste applicazioni nello stesso computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aprire file archiviati in una tabella FileTable. Tuttavia è possibile utilizzare queste applicazioni da un computer remoto per aprire file archiviati in una tabella FileTable, perché in queste circostanze la caratteristica con mapping in memoria non viene utilizzata.  
   
   
-##  <a name="reltasks"></a> Attività correlate  
- [Abilitare i prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Attività correlate  
+ [Abilitazione dei prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)  
  Viene descritto come abilitare i prerequisiti per la creazione e l'utilizzo di tabelle FileTable.  
   
- [Creare, modificare ed eliminare FileTable](create-alter-and-drop-filetables.md)  
+ [Creare, modificare e rilasciare FileTables](create-alter-and-drop-filetables.md)  
  Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
- [Caricare file in FileTable](load-files-into-filetables.md)  
+ [Caricamento di file in FileTable](load-files-into-filetables.md)  
  Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
   
- [Usare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)  
+ [Utilizzare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)  
  Descrive la struttura di directory nella quale vengono archiviati i file in FileTable.  
   
- [Accedere a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)  
+ [Accesso a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)  
  Viene descritto il funzionamento dei comandi Transact-SQL DML (Data Manipulation Language) con una tabella FileTable.  
   
- [Accedere alle tabelle FileTable con API di input/output dei file](access-filetables-with-file-input-output-apis.md)  
+ [Accedere alle tabelle FileTable con API di Input-Output dei file](access-filetables-with-file-input-output-apis.md)  
  Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
- [Gestire tabelle FileTable](manage-filetables.md)  
+ [Gestione di tabelle FileTable](manage-filetables.md)  
  Vengono descritte attività amministrative comuni per la gestione di tabelle FileTable.  
   
   
-##  <a name="relcontent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="relcontent"></a> Contenuto correlato  
  [Schema delle tabelle FileTable](filetable-schema.md)  
  Viene descritto lo schema predefinito e fisso di una tabella FileTable.  
   
  [Compatibilità di FileTable con altre funzionalità di SQL Server](filetable-compatibility-with-other-sql-server-features.md)  
  Viene descritto il funzionamento delle tabelle FileTable con altre caratteristiche di SQL Server.  
   
- [DDL, funzioni, stored procedure e viste FileTable](../views/views.md)  
+ [DDL FileTable, funzioni, stored Procedure e viste](../views/views.md)  
  Vengono elencate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunti o modificati per supportare la funzione FileTable.  
   
  

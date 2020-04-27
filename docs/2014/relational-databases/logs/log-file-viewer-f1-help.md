@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63143833"
 ---
 # <a name="log-file-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore file di log
@@ -32,7 +32,7 @@ ms.locfileid: "63143833"
  **Carica log**  
  Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
   
- **Esportazione**  
+ **Export**  
  Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log** .  
   
  **Aggiorna**  
@@ -48,13 +48,13 @@ ms.locfileid: "63143833"
  Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
  **Riepilogo file di log**  
- Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo **Filtra voci del log in cui:** \<criteri di filtro>.  
+ Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo seguente: **Filtra voci del log in cui:** \<criteri di filtro>.  
   
  **Dettagli riga selezionata**  
  Consente di selezionare una riga di evento nella parte inferiore della pagina per visualizzare dettagli aggiuntivi sulla riga. È possibile riordinare le colonne trascinandole su nuove posizioni all'interno della griglia. Le colonne possono inoltre essere ridimensionate trascinando verso destra o verso sinistra le corrispondenti barre di separazione nell'intestazione della griglia. Per adattare automaticamente le dimensioni della colonna al contenuto, fare doppio clic sulle barre di separazione nell'intestazione della griglia.  
   
  **Istanza**  
- Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come nome *computer*\\*nome istanza*.  
+ Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come *nome computer*\\*nome istanza*.  
   
 ## <a name="frequently-displayed-columns"></a>Colonne generalmente visualizzate  
  **Data**  
@@ -66,7 +66,7 @@ ms.locfileid: "63143833"
  **Messaggio**  
  Consente di visualizzare i messaggi associati all'evento.  
   
- **Tipo di log**  
+ **Tipo log**  
  Consente di visualizzare il tipo di log cui appartiene l'evento. Tutti i log selezionati vengono visualizzati nella finestra di riepilogo dei log.  
   
  **Origine log**  
@@ -79,7 +79,7 @@ ms.locfileid: "63143833"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzatore file di log](log-file-viewer.md)   
- [Apri Visualizzatore file di log](open-log-file-viewer.md)   
+ [Aprire il visualizzatore file di log](open-log-file-viewer.md)   
  [Visualizzare file di log offline](view-offline-log-files.md)  
   
   

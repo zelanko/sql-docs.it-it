@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151834"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
@@ -34,7 +34,7 @@ ms.locfileid: "70151834"
  **Sfoglia**  
  Passare al percorso in cui è disponibile un report.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Impostare altre proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
   
  **Test connessione**  
@@ -52,7 +52,7 @@ ms.locfileid: "70151834"
   
  Fare clic su **Visualizza set di dati disponibili di DataMarket Azure** per visualizzare i set di dati disponibili.  
   
- **Chiave dell'account**  
+ **Chiave account**  
  Specificare la chiave dell'account usata per accedere alle sottoscrizioni del set di dati di Azure Marketplace.  
   
  **Trovare**  
@@ -61,7 +61,7 @@ ms.locfileid: "70151834"
  **Salva chiave account**  
  Salvare la chiave di account (crittografata) con la connessione dati.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Impostare altre proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
   
  **Test connessione**  
@@ -79,7 +79,7 @@ ms.locfileid: "70151834"
  **Sfoglia**  
  Passare al percorso in cui è disponibile un feed di dati.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** .  
   
  **Test connessione**  

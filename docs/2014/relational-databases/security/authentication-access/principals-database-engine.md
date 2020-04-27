@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011918"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
-  Le *entità sono entità* che possono richiedere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorse. Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. Il campo di influenza di un'entità dipende dall'ambito della definizione dell'entità (Windows, server o database) e dal tipo di entità (indivisibile o raccolta). Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID).  
+  Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. Il campo di influenza di un'entità dipende dall'ambito della definizione dell'entità (Windows, server o database) e dal tipo di entità (indivisibile o raccolta). Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID).  
   
  **Entità a livello di Windows**  
   
@@ -44,15 +44,15 @@ ms.locfileid: "63011918"
   
 -   Account di accesso locale di Windows  
   
- ****-**** **Entità** a livello di SQL Server  
+ **SQL Server**-**level** **Entità** a livello di SQL Server  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Accesso  
+-   Account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   Ruolo del server  
+-   Ruolo server  
   
  **Entità a livello di database**  
   
--   Utente database  
+-   Utente di database  
   
 -   Ruolo del database  
   
@@ -70,26 +70,19 @@ ms.locfileid: "63011918"
 ## <a name="certificate-based-sql-server-logins"></a>Account di accesso basati su certificati di SQL Server  
  Le entità del server i cui nomi sono racchiusi tra due simboli di cancelletto (##) sono solo per uso interno di sistema. Al momento dell'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono create le seguenti entità che non devono essere eliminate.  
   
--   
-  \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   
-  \##MS_SQLReplicationSigningCertificate##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   
-  \##MS_SQLAuthenticatorCertificate##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   
-  \##MS_AgentSigningCertificate##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>L'utente Guest  
  Ogni database include un **guest**. Le autorizzazioni garantite all'utente **guest** sono ereditate dagli utenti che hanno accesso al database ma non dispongono di un account utente nel database. Non è possibile eliminare l'utente **Guest** , ma è possibile disabilitarlo revocando l' `CONNECT` autorizzazione. È `CONNECT` possibile revocare l'autorizzazione eseguendo `REVOKE CONNECT FROM GUEST` all'interno di qualsiasi database diverso da master o tempdb.  
@@ -108,10 +101,10 @@ ms.locfileid: "63011918"
   
 -   [Ruoli applicazione](application-roles.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione SQL Server](../securing-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Sicurezza di SQL Server](../securing-sql-server.md)   
  [sys. database_principals &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys. server_principals &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [sys. sql_logins &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
  [sys. database_role_members &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Ruoli a livello di server](server-level-roles.md)   

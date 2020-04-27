@@ -17,14 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022178"
 ---
-# <a name="ibm-db2-subscribers"></a>Sottoscrittori IBM DB2
-  
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta le sottoscrizioni push a database IBM DB2/AS 400, DB2/MVS e DB2/Universal tramite i provider OLE DB inclusi in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Configurazione di un Sottoscrittore IBM DB2  
@@ -75,7 +74,7 @@ ms.locfileid: "63022178"
   
     5.  Eseguire sp_changearticle specificando il percorso e il nome del file per la proprietà *creation_script*. Per altre informazioni, vedere [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
-     **Per creare uno script di articolo e fornirlo come script di creazione personalizzato**  
+     **Per creare lo script di un articolo e fornirlo come script di creazione personalizzato**  
   
     1.  Creare lo script di un articolo utilizzando il sottolinguaggio DB2 SQL. Verificare che la prima riga del file sia **bypass_translation**e non contenga altro.  
   
@@ -166,8 +165,8 @@ ms.locfileid: "63022178"
   
      In alcuni ambienti DB2, un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento di dati non è limitato a caratteri a byte singolo. la lunghezza di un elemento CHAR o VARCHAR deve tenere conto di questo. È inoltre necessario considerare i *caratteri di controllo SI* e i *caratteri di controllo SO* , se richiesti. Se si replicano tabelle con `nchar` colonne e `nvarchar` , potrebbe essere necessario specificare una lunghezza massima maggiore per il tipo di dati in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [Sottoscrizione delle pubblicazioni](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

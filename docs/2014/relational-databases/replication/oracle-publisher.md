@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022035"
 ---
 # <a name="oracle-publisher"></a>Server di pubblicazione Oracle
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]A partire da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consente di pubblicare dati da un database Oracle mediante la replica transazionale e snapshot. Per altre informazioni, vedere [Panoramica della pubblicazione Oracle](non-sql/oracle-publishing-overview.md).  
+  A partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di pubblicare i dati di un database Oracle tramite la replica transazionale o snapshot. Per altre informazioni, vedere [Panoramica della pubblicazione Oracle](non-sql/oracle-publishing-overview.md).  
   
  Il server di pubblicazione Oracle deve utilizzare un server di distribuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remoto nel quale deve essere eseguita la procedura guidata dopo che il software di rete Oracle necessario è stato installato e testato. Per altre informazioni, vedere [Configurare un server di pubblicazione Oracle](non-sql/configure-an-oracle-publisher.md).  
   
@@ -28,7 +28,7 @@ ms.locfileid: "63022035"
 >  Se un altro amministratore ha configurato il database Oracle come database di pubblicazione, dopo aver fatto clic su **Avanti** verrà richiesto di digitare la password per l'accesso alla replica utilizzata per connettersi al database Oracle. In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà quindi definito il mapping tra l'account di accesso utilizzato e la connessione del server collegato al database Oracle. Non sarà più necessario digitare la password per le connessioni successive al database Oracle.  
   
 ## <a name="options"></a>Opzioni  
- **Publisher Oracle**  
+ **Server di pubblicazione Oracle**  
  Consente di selezionare un server di pubblicazione Oracle nell'elenco. Nell'elenco sono inclusi i server di pubblicazione Oracle precedentemente configurati per l'utilizzo del server su cui viene eseguita la procedura guidata come server di distribuzione. Se l'elenco è vuoto oppure il server di pubblicazione Oracle desiderato non è presente, fare clic su **Aggiungi server di pubblicazione Oracle**.  
   
  **Aggiungi server di pubblicazione Oracle**  
@@ -38,7 +38,7 @@ ms.locfileid: "63022035"
 >  Se il server su cui viene eseguita la procedura guidata non è stato ancora configurato come server di distribuzione, viene richiesto di eseguire la configurazione adesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una pubblicazione da un Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
+ [Creare una pubblicazione da un database Oracle](publish/create-a-publication-from-an-oracle-database.md)   
 
   
   

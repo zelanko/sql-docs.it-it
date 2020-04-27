@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174008"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
@@ -104,7 +104,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**nessuno**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
-|**eliminare**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
+|**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
 |**Drop** (impostazione predefinita)|Elimina la tabella prima di ricrearla. Necessario per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori.|  
 |**troncare**|Tronca la tabella di destinazione.|  
   
@@ -255,7 +255,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0** (impostazione predefinita)|Il filtro applicato all'articolo è statico oppure non restituisce un subset di dati univoco per ogni partizione, ovvero si creano partizioni sovrapposte.|  
+|**0** (predefinito)|Il filtro applicato all'articolo è statico oppure non restituisce un subset di dati univoco per ogni partizione, ovvero si creano partizioni sovrapposte.|  
 |**1**|Le partizioni sono sovrapposte e gli aggiornamenti DML (Data Manipulation Language) eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.|  
 |**2**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte, ma più Sottoscrittori possono ricevere la stessa partizione.|  
 |**3**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.|  
@@ -269,7 +269,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0** (impostazione predefinita)|Nessuna restrizione. Le modifiche eseguite nel Sottoscrittore vengono caricate nel server di pubblicazione.|  
+|**0** (predefinito)|Nessuna restrizione. Le modifiche eseguite nel Sottoscrittore vengono caricate nel server di pubblicazione.|  
 |**1**|Sono consentite modifiche in un Sottoscrittore, ma tali modifiche non vengono caricate nel server di pubblicazione.|  
 |**2**|Non sono consentite modifiche nel Sottoscrittore.|  
   
@@ -334,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**tavolo**|**** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pubblicazioni compatibili con 0x0C034FD1: e versioni successive con snapshot in modalità nativa.<br /><br /> **** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pubblicazioni compatibili con 0x08034FF1 e versioni successive con snapshot in modalità carattere.|  
+|**tabella**|**0x0C034FD1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pubblicazioni compatibili con 0x0C034FD1: e versioni successive con snapshot in modalità nativa.<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pubblicazioni compatibili con 0x08034FF1 e versioni successive con snapshot in modalità carattere.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -348,7 +348,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01** e **0x2000**|  
 |**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
 |**proc schema only**|**0x01** e **0x2000**|  
-|**tavolo**|Tutte le opzioni.|  
+|**tabella**|Tutte le opzioni.|  
 |**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
   
 ## <a name="example"></a>Esempio  
@@ -357,8 +357,8 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replica colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
