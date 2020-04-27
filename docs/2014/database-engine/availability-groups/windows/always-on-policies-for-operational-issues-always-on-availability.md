@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815754"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62815754"
   
  
   
-##  <a name="TermsAndDefinitions"></a>Termini e definizioni  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Termini e definizioni  
  Criteri predefiniti AlwaysOn  
  Set di criteri predefiniti che consentono a un amministratore del database di verificare la conformità di un gruppo di disponibilità e delle relative repliche di disponibilità, nonché dei database, con gli stati definiti dai criteri AlwaysOn.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "62815754"
  Dashboard AlwaysOn  
  Un dashboard [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] fornisce una vista immediata dell'integrità di un gruppo di disponibilità. Per ulteriori informazioni, vedere [Dashboard AlwaysOn](#Dashboard)di seguito in questo argomento.  
   
-##  <a name="AlwaysOnPBM"></a>Criteri e problemi predefiniti  
+##  <a name="predefined-policies-and-issues"></a><a name="AlwaysOnPBM"></a> Criteri predefiniti e problemi  
  Nella tabella seguente sono riepilogati i criteri predefiniti.  
   
-|Nome criteri|Problema|Categoria**<sup>*</sup>**|facet|  
+|Nome criteri|Problema|Categoria**<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
 |Stato del cluster WSFC|Il [servizio cluster WSFC è offline](wsfc-cluster-service-is-offline.md).|Critico|Istanza di SQL Server|  
 |Stato online del gruppo di disponibilità|Il [gruppo di disponibilità è offline](availability-group-is-offline.md).|Critico|gruppo di disponibilità|  
@@ -66,7 +66,7 @@ ms.locfileid: "62815754"
 > [!IMPORTANT]  
 >  **<sup>*</sup>** Per i criteri AlwaysOn, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria AlwaysOn causa l'interruzione della funzionalità di valutazione dell'integrità. Evitare pertanto di modificare i nomi di categorie AlwaysOn.  
   
-##  <a name="Dashboard"></a>Dashboard AlwaysOn  
+##  <a name="alwayson-dashboard"></a><a name="Dashboard"></a>Dashboard AlwaysOn  
  Il dashboard AlwaysOn fornisce una vista immediata dell'integrità di un gruppo di disponibilità. Nel dashboard AlwaysOn sono incluse le nuove funzionalità seguenti:  
   
 -   Consente di visualizzare facilmente i dettagli relativi a un gruppo di disponibilità specificato, le repliche di disponibilità e i database corrispondenti.  
@@ -81,18 +81,18 @@ ms.locfileid: "62815754"
   
 -   Se il failover sul gruppo di disponibilità costituisce una possibile risoluzione per un problema, fornisce un punto di avvio per i collegamenti alla[Procedura guidata Failover del gruppo di disponibilità](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). Questa procedura guida un amministratore del database attraverso il processo di failover manuale.  
   
-##  <a name="ExtendHealthModel"></a>Estensione del modello di integrità AlwaysOn  
+##  <a name="extending-the-alwayson-health-model"></a><a name="ExtendHealthModel"></a>Estensione del modello di integrità AlwaysOn  
  L'estensione del modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] riguarda semplicemente la creazione di propri criteri definiti dall'utente e l'inserimento in determinate categorie in base al tipo di oggetto di cui si sta eseguendo il monitoraggio.  Dopo aver modificato alcune impostazioni, tramite il dashboard AlwaysOn verranno valutati automaticamente i propri criteri definiti dall'utente, nonché i criteri predefiniti AlwaysOn.  
   
  I criteri definiti dall'utente possono usare qualsiasi facet della gestione basata su criteri disponibile, inclusi quelli utilizzati dai criteri predefiniti AlwaysOn (vedere [Criteri predefiniti e problemi](#AlwaysOnPBM), precedentemente in questo argomento). Il facet Server fornisce le proprietà seguenti per il monitoraggio dell'integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` e `HadrManagerStatus`). Fornisce inoltre le proprietà dei seguenti criteri per il monitoraggio della configurazione del cluster WSFC: `ClusterQuorumType` e `ClusterQuorumState`.  
   
  Per altre informazioni, vedere la pagina relativa alla [seconda parte del modelli di integrità AlwaysOn riguardante l’estensione del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog del team di SQL Server AlwaysOn).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62815754"
   
 -   [Risolvere i problemi relativi a un'operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Pagina sulla prima parte del modello di integrità AlwaysOn riguardante l'architettura del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62815754"
   
 -   [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gruppi di disponibilità AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Amministrazione di un gruppo di disponibilità &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   

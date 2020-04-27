@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814057"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
@@ -27,9 +27,9 @@ ms.locfileid: "62814057"
   
  
   
-##  <a name="Overview"></a>Panoramica della replica in Gruppi di disponibilità AlwaysOn  
+##  <a name="overview-of-replication-on-alwayson-availability-groups"></a><a name="Overview"></a>Panoramica della replica in Gruppi di disponibilità AlwaysOn  
   
-###  <a name="PublisherRedirect"></a> Reindirizzamento del server di pubblicazione  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a>Reindirizzamento editore  
  Se un database pubblicato è compatibile con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], il database di distribuzione tramite cui viene fornito agli agenti l'accesso al database di pubblicazione viene configurato con le voci redirected_publishers. Tramite queste voci la coppia server di pubblicazione/database configurata originariamente viene reindirizzata, usando un nome del listener del gruppo di disponibilità per connettersi al server e al database di pubblicazione. Il failover delle connessioni stabilite tramite il nome del listener del gruppo di disponibilità avrà esito negativo. Al riavvio dell'agente di replica dopo il failover, la connessione verrà reindirizzata automaticamente al nuovo database primario.  
   
  In un gruppo di disponibilità AlwaysOn un database secondario non può essere un server di pubblicazione. La ripubblicazione non è supportata quando la replica è combinata con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "62814057"
 > [!NOTE]  
 >  Dopo il failover su una replica secondaria, tramite Monitoraggio replica non è possibile regolare il nome dell'istanza di pubblicazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le informazioni sulla replica continueranno a essere visualizzate con il nome dell'istanza primaria originale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dopo il failover, non è possibile immettere un token di traccia tramite Monitoraggio replica, nondimeno un token di traccia immesso nel nuovo server di pubblicazione tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]è visibile in Monitoraggio replica.  
   
-###  <a name="Changes"></a>Modifiche generali apportate agli agenti di replica per supportare Gruppi di disponibilità AlwaysOn  
+###  <a name="general-changes-to-replication-agents-to-support-alwayson-availability-groups"></a><a name="Changes"></a>Modifiche generali apportate agli agenti di replica per supportare Gruppi di disponibilità AlwaysOn  
  Tre agenti di replica sono stati modificati per supportare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Gli agenti di lettura log, snapshot e di merge sono stati modificati in modo da eseguire query sul database di distribuzione per il server di pubblicazione reindirizzato e usare il nome del listener del gruppo di disponibilità restituito, se è stato dichiarato un server di pubblicazione reindirizzato, per connettersi al server di pubblicazione del database.  
   
  Per impostazione predefinita, quando gli agenti eseguono una query sul database di distribuzione per determinare se il server di pubblicazione originale è stato reindirizzato, l'appropriatezza del database di destinazione o del reindirizzamento corrente verrà verificata prima che l'host reindirizzato venga restituito all'agente. Questo è il comportamento consigliato. Tuttavia, se l'avvio dell'agente si verifica molto frequentemente, l'overhead associato alla stored procedure di convalida può essere ritenuto troppo costoso. Una nuova opzione della riga di comando, *BypassPublisherValidation*, è stata aggiunta agli agenti di lettura log, snapshot e di merge. Quando viene usata l'opzione, il server di pubblicazione reindirizzato viene restituito immediatamente all'agente e l'esecuzione della stored procedure di convalida viene ignorata.  
@@ -59,7 +59,7 @@ ms.locfileid: "62814057"
   
      Con il flag di traccia 1448 è possibile far procedere l'agente lettura log repliche anche se il ricevimento di una modifica non è stato riconosciuto dalle repliche secondarie asincrone. Anche con questo flag di traccia abilitato, tramite l'agente di lettura log vengono sempre attese le repliche secondarie sincrone. L'agente di lettura log non procederà oltre il riconoscimento minimo delle repliche secondarie sincrone. Questo flag di traccia si applica all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non solo a un gruppo di disponibilità, a un database di disponibilità o a un'istanza di lettura log. Questo flag di traccia diventa immediatamente effettivo senza un riavvio. Può essere attivato anticipatamente o quando si verifica un errore in una replica secondaria asincrona.  
   
-###  <a name="StoredProcs"></a>Stored procedure che supportano AlwaysOn  
+###  <a name="stored-procedures-supporting-alwayson"></a><a name="StoredProcs"></a>Stored procedure che supportano AlwaysOn  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62814057"
   
      Questa stored procedure viene sempre eseguita manualmente. Il chiamante deve avere il ruolo di **sysadmin** nel database di distribuzione, **dbowner** nel database di distribuzione o deve essere membro dell' **elenco di accesso alla pubblicazione** di una pubblicazione del server di pubblicazione. Inoltre, l'accesso del chiamante deve essere valido per tutti gli host di replica di disponibilità e devono essere disponibili privilegi selezionati nel database di disponibilità associato al server di pubblicazione.  
   
-###  <a name="CDC"></a> Change Data Capture  
+###  <a name="change-data-capture"></a><a name="CDC"></a>Change Data Capture  
  Nei database abilitati per Change Data Capture (CDC) è possibile sfruttare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non solo per assicurare che il database rimanga disponibile in caso di errore, ma anche per fare in modo che le modifiche apportate alle tabelle del database continuino a essere monitorate e depositate nelle tabelle delle modifiche CDC. L'ordine in cui CDC e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sono configurati non è importante. I database abilitati per CDC possono essere aggiunti a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]e i database che sono membri di un gruppo di disponibilità AlwaysOn possono essere abilitati per CDC. In entrambi i casi, tuttavia, la configurazione di CDC viene sempre eseguita nella replica corrente o progettata. In CDC viene usato l'agente di lettura log e sono presenti le stesse limitazioni descritte nella sezione **Modifiche all'agente di lettura log** riportata in precedenza in questo argomento.  
   
 -   **Raccolta di modifiche per Change Data Capture senza replica**  
@@ -142,7 +142,7 @@ ms.locfileid: "62814057"
   
      Anche se in molti casi tramite un'applicazione client verrà sempre effettuato il tentativo di connessione alla replica primaria corrente, questo non è il solo modo per sfruttare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se un gruppo di disponibilità viene configurato per supportare repliche secondarie leggibili, è possibile raggruppare i dati delle modifiche anche dai nodi secondari.  
   
-     Quando viene configurato un gruppo di disponibilità, l'attributo ALLOW_CONNECTIONS associato a SECONDARY_ROLE viene usato per specificare il tipo di accesso secondario supportato. Se viene configurato come ALL, tutte le connessioni al database secondario saranno accettate, ma solo quelle per cui viene richiesto l'accesso in sola lettura avranno esito positivo. Se viene configurato come READ_ONLY, è necessario specificare la finalità di sola lettura mentre si stabilisce la connessione al database secondario affinché la connessione venga stabilita. Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+     Quando viene configurato un gruppo di disponibilità, l'attributo ALLOW_CONNECTIONS associato a SECONDARY_ROLE viene usato per specificare il tipo di accesso secondario supportato. Se viene configurato come ALL, tutte le connessioni al database secondario saranno accettate, ma solo quelle per cui viene richiesto l'accesso in sola lettura avranno esito positivo. Se viene configurato come READ_ONLY, è necessario specificare la finalità di sola lettura mentre si stabilisce la connessione al database secondario affinché la connessione venga stabilita. Per altre informazioni, vedere [configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
      La query seguente può essere usata per determinare se la finalità di sola lettura è necessaria per connettersi a una replica secondaria leggibile.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62814057"
   
      In generale, è consigliabile usare account di accesso al dominio per l'accesso client ai dati delle modifiche nei database che sono membri di gruppi di disponibilità AlwaysOn. Per assicurare accesso continuato ai dati delle modifiche dopo il failover, l'utente del dominio avrà bisogno di privilegi di accesso su tutti gli host che supportano repliche del gruppo di disponibilità. Se un utente di database viene aggiunto a un database in una replica primaria e l'utente è associato a un account di accesso al dominio, tale utente viene propagato nei database secondari e continua a essere associato all'account di accesso al dominio specificato. Se il nuovo utente del database è associato a un account di accesso con autenticazione SQL Server, l'utente nei database secondari sarà propagato senza un account di accesso. Mentre l'accesso con autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associato potrebbe essere usato per accedere ai dati delle modifiche nel database primario dove l'utente del database è stato definito originariamente, il nodo è il solo in cui sarebbe possibile l'accesso. L'accesso con autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non consentirebbe di accedere ai dati da un database secondario, né da un nuovo database primario diverso dal database originale dove è stato definito l'utente del database.  
   
-###  <a name="CT"></a> Rilevamento delle modifiche  
+###  <a name="change-tracking"></a><a name="CT"></a>Rilevamento modifiche  
  Un database abilitato per il rilevamento delle modifiche (CT) può far parte di un gruppo di disponibilità AlwaysOn. Non è necessaria alcuna configurazione aggiuntiva. Le applicazioni client di rilevamento delle modifiche in cui vengono usate le funzioni con valori di tabella CDC per accedere ai dati delle modifiche devono poter essere in grado di individuare la replica primaria dopo il failover. Se l'applicazione client viene connessa tramite il nome del listener del gruppo di disponibilità, le richieste di connessione verranno sempre indirizzate in modo appropriato alla replica primaria corrente.  
   
 > [!NOTE]  
@@ -182,10 +182,10 @@ ms.locfileid: "62814057"
 >   
 >  Per i database membri di una replica secondaria (cioè per i database secondari), il rilevamento delle modifiche non è supportato. Eseguire le query di rilevamento modifiche sui database nella replica primaria.  
   
-##  <a name="Prereqs"></a> Prerequisiti, restrizioni e considerazioni per l'utilizzo della replica  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Prerequisiti, restrizioni e considerazioni per l'utilizzo della replica  
  In questa sezione vengono descritte le considerazioni per la distribuzione della replica con la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e suggerimenti.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
   
 -   Quando si usano la replica transazionale e il database di pubblicazione si trova in un gruppo di disponibilità, sia nel server di pubblicazione che nel database di distribuzione deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Il sottoscrittore può invece usare un livello inferiore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -204,7 +204,7 @@ ms.locfileid: "62814057"
   
 |||||  
 |-|-|-|-|  
-||**Autore**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
+||**Editore**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
 |**Transazionale**|Sì<sup>1</sup>|No|Sì<sup>2</sup>|  
 |**P2P**|No|No|No|  
 |**Merge**|Sì|No|Sì<sup>2</sup>|  
@@ -224,7 +224,7 @@ ms.locfileid: "62814057"
   
 -   I metadati e gli oggetti esterni al database, ad esempio account di accesso, processi e server collegati, non vengono propagati alle repliche secondarie. Se i metadati e gli oggetti sono necessari nel nuovo database primario dopo il failover, è necessario copiarli manualmente. Per altre informazioni, vedere [Gestione di account di accesso e processi per i database di un gruppo di disponibilità &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Replica**  
   
 -   [Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
@@ -233,15 +233,15 @@ ms.locfileid: "62814057"
   
 -   [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **Change Data Capture**  
   
 -   [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
 -   [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
--   [Usare i dati delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
+-   [Usare Change Data &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Change tracking**  
+ **Rilevamento modifiche**  
   
 -   [Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   
@@ -249,15 +249,15 @@ ms.locfileid: "62814057"
   
 -   [Utilizzare il rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sottoscrittori della replica e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  Gruppi di disponibilità AlwaysOn: istanze del cluster di failover AlwaysOn di [interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [(SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
- [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
- [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Informazioni su Rilevamento modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
+ [replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
+ [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   
   
