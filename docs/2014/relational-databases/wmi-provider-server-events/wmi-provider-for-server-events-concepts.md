@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211576"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Concetti relativi al provider WMI per eventi del server
@@ -30,7 +30,7 @@ ms.locfileid: "68211576"
  [Informazioni sul provider WMI per eventi del server](understanding-the-wmi-provider-for-server-events.md)  
  Viene fornita una panoramica dell'architettura del provider e viene illustrato come programmare SQL Server Agent per l'utilizzo in questa architettura.  
   
- [Utilizzo del provider WMI per eventi del server](working-with-the-wmi-provider-for-server-events.md)  
+ [Uso del provider WMI per eventi del server](working-with-the-wmi-provider-for-server-events.md)  
  Vengono illustrati i fattori che è necessario considerare prima di programmare con il provider.  
   
  [Utilizzo di WQL con il provider WMI per eventi del server](using-wql-with-the-wmi-provider-for-server-events.md)  

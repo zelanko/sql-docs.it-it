@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217123"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
@@ -61,9 +61,9 @@ ms.locfileid: "79217123"
   
 -   Poiché il data mining è un servizio fornito da un server, l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve poter accedere all'origine dati.  È necessario poter accedere al percorso e all'identità.  
   
-     Il **percorso** indica che, se si compila un modello utilizzando i dati archiviati solo nel computer e quindi si distribuisce il modello in un server, il modello non viene elaborato perché non è possibile trovare l'origine dati. Per risolvere questo problema, potrebbe essere necessario trasferire i dati nella stessa istanza di SQL Server in cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in esecuzione oppure spostare i file in un percorso condiviso.  
+     **Percorso** : se si compila un modello usando i dati archiviati solo nel computer e si distribuisce il modello in un server, il modello non viene elaborato perché non è possibile trovare l'origine dati. Per risolvere questo problema, potrebbe essere necessario trasferire i dati nella stessa istanza di SQL Server in cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in esecuzione oppure spostare i file in un percorso condiviso.  
   
-     **Identity** significa che i servizi in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devono essere in grado di aprire il file di dati o l'origine dati con le credenziali appropriate. È ad esempio probabile che al momento di compilare il modello si disponesse di autorizzazioni illimitate per la visualizzazione dei dati, ma che l'utente che elabora e aggiorna i modelli nel server non disponga dell'accesso ai dati, cosa che può causare errori di elaborazione o compromettere il contenuto di un modello. Come minimo, l'account utilizzato per la connessione all'origine dati remota deve disporre delle autorizzazioni di lettura per i dati.  
+     **Identità** : i servizi in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devono poter aprire il file di dati o l'origine dati con le credenziali appropriate. È ad esempio probabile che al momento di compilare il modello si disponesse di autorizzazioni illimitate per la visualizzazione dei dati, ma che l'utente che elabora e aggiorna i modelli nel server non disponga dell'accesso ai dati, cosa che può causare errori di elaborazione o compromettere il contenuto di un modello. Come minimo, l'account utilizzato per la connessione all'origine dati remota deve disporre delle autorizzazioni di lettura per i dati.  
   
 -   Gli stessi requisiti si applicano allo spostamento di un modello: è necessario configurare l'accesso appropriato al percorso dell'origine dati precedente, copiare le origini dati o configurarne una nuova. È inoltre necessario trasferire i ruoli e gli account di accesso o configurare le autorizzazioni per consentire l'elaborazione e l'aggiornamento degli oggetti di data mining nel nuovo percorso.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "79217123"
   
 -   **AllowedProvidersInOpenRowset** Specifica il provider, se l'accesso ad hoc è abilitato. È possibile specificare più provider, immettendo un elenco delimitato da virgole di ProgID.  
   
--   **MaxConcurrentPredictionQueries** Controlla il carico sul server causato dalle stime. Il valore predefinito 0 consente query illimitate per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition e un massimo di cinque query simultanee per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition. Le query oltre il limite vengono serializzate e sono soggette a timeout.  
+-   **MaxConcurrentPredictionQueries** Controlla il caricamento sul server causato dalle stime. Il valore predefinito 0 consente query illimitate per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition e un massimo di cinque query simultanee per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition. Le query oltre il limite vengono serializzate e sono soggette a timeout.  
   
  Il server offre proprietà aggiuntive che determinano gli algoritmi di data mining disponibili, incluse eventuali restrizioni sugli algoritmi, e le impostazioni predefinite per tutti i servizi di data mining. Non sono tuttavia disponibili impostazioni che consentano di controllare in modo specifico l'accesso alle stored procedure di data mining. Per altre informazioni, vedere [Proprietà di data mining](../server-properties/data-mining-properties.md).  
   
@@ -93,15 +93,15 @@ ms.locfileid: "79217123"
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accesso a livello di codice agli oggetti di data mining  
  Per creare una connessione a un database di Analysis Services e utilizzare oggetti di data mining, è possibile utilizzare i modelli a oggetti seguenti:  
   
- **ADO** USA OLE DB per connettersi a un server di Analysis Services. Quando si utilizza ADO, il client è limitato alle query sul set di righe dello schema e alle istruzioni DMX.  
+ **ADO** Usa OLE DB per la connessione a un server Analysis Services. Quando si utilizza ADO, il client è limitato alle query sul set di righe dello schema e alle istruzioni DMX.  
   
- **ADO.NET** Interagisce con i provider di SQL Server meglio di altri provider. Utilizza adattatori dati per archiviare set di righe dinamici. Utilizza l'oggetto set di dati, ovvero una cache dei dati server archiviati come tabelle di dati che è possibile aggiornare o salvare come XML.  
+ **ADO.NET** Interagisce meglio con i provider SQL Server rispetto ad altri provider. Utilizza adattatori dati per archiviare set di righe dinamici. Utilizza l'oggetto set di dati, ovvero una cache dei dati server archiviati come tabelle di dati che è possibile aggiornare o salvare come XML.  
   
- **ADOMD.NET** Provider di dati gestito ottimizzato per l'utilizzo di data mining e OLAP. ADOMD.NET è più veloce e più efficiente nell'utilizzo della memoria rispetto ad ADO.NET. ADOMD.NET consente inoltre di recuperare metadati relativi agli oggetti server. È consigliato per le applicazioni client tranne nel caso in cui .NET non sia disponibile.  
+ **ADOMD.NET** Provider di dati gestito ottimizzato per l'uso con data mining e OLAP. ADOMD.NET è più veloce e più efficiente nell'utilizzo della memoria rispetto ad ADO.NET. ADOMD.NET consente inoltre di recuperare metadati relativi agli oggetti server. È consigliato per le applicazioni client tranne nel caso in cui .NET non sia disponibile.  
   
  **Server ADOMD** Modello a oggetti per l'accesso agli oggetti Analysis Services direttamente nel server. Utilizzato dalle stored procedure Analysis Services, non è destinato all'utilizzo client.  
   
- **Amo** Interfaccia di gestione per Analysis Services che sostituisce DSO (Decision Support Objects). Per operazioni quali l'iterazione di oggetti sono necessarie autorizzazioni di livello più alto se si utilizza AMO anziché altre interfacce. Questa condizione è dovuta al fatto che AMO accede direttamente ai metadati, mentre ADOMD.NET e le altre interfacce accedono unicamente agli schemi del database.  
+ **AMO** Interfaccia di gestione per Analysis Services che sostituisce DSO (Decision Support Objects). Per operazioni quali l'iterazione di oggetti sono necessarie autorizzazioni di livello più alto se si utilizza AMO anziché altre interfacce. Questa condizione è dovuta al fatto che AMO accede direttamente ai metadati, mentre ADOMD.NET e le altre interfacce accedono unicamente agli schemi del database.  
   
 ### <a name="browse-and-query-access-to-servers"></a>Esplorare ed eseguire query sull'accesso ai server  
  È possibile eseguire qualsiasi tipo di stima tramite un'istanza di Analysis Services in modalità OLAP/Data mining, con le restrizioni seguenti:  
@@ -122,7 +122,7 @@ ms.locfileid: "79217123"
 > [!NOTE]  
 >  Non è possibile utilizzare le stored procedure per modificare la sicurezza per gli oggetti server dei dati. Quando si esegue una stored procedure, viene utilizzato il contesto corrente dell'utente per determinare l'accesso a tutti gli oggetti server. Gli utenti devono pertanto disporre delle autorizzazioni appropriate per qualsiasi oggetto di database a cui accedono.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Architettura fisica &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Architettura fisica &#40;Analysis Services-&#41;di data mining](physical-architecture-analysis-services-data-mining.md)   
  [Gestione degli oggetti e delle soluzioni di data mining](management-of-data-mining-solutions-and-objects.md)  

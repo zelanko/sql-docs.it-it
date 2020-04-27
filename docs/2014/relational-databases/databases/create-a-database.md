@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872327"
 ---
 # <a name="create-a-database"></a>Creare un database
@@ -42,47 +42,47 @@ ms.locfileid: "62872327"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   In un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile specificare al massimo 32.767 database.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   L'istruzione CREATE DATABASE deve essere eseguita in modalità autocommit, la modalità predefinita per la gestione delle transazioni, e non è consentita in una transazione esplicita o implicita.  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
--   È necessario eseguire il backup del database [Master](master-database.md) ogni volta che viene creato, modificato o eliminato un database utente.  
+-   Il backup del database [master](master-database.md) dovrebbe essere eseguito ogni volta che si crea, modifica o si rimuove un database utente.  
   
 -   Durante la creazione di un database, creare file di dati di dimensioni corrispondenti alla quantità massima di dati che si prevede di includere nel database.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE DATABASE per il database master oppure l'autorizzazione CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
  Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>Per creare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti**connettersi a un'istanza del, quindi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] espandere l'istanza.  
   
-2.  Fare clic con il pulsante destro del mouse su **Database**, quindi scegliere **Nuovo database**.  
+2.  Fare clic con il pulsante destro del mouse su **database**, quindi scegliere **nuovo database**.  
   
 3.  In **Nuovo database**immettere un nome per il database.  
   
 4.  Per creare il database accettando tutti i valori predefiniti, scegliere **OK**. In caso contrario, continuare con i passaggi facoltativi seguenti.  
   
-5.  Per modificare il nome del proprietario, fare clic su (**...**) per selezionare un nome diverso.  
+5.  Per modificare il nome del proprietario, fare clic su (**...**) per selezionare un altro proprietario.  
   
     > [!NOTE]  
     >  L'opzione **Usa indicizzazione full-text** è sempre selezionata e visualizzata in grigio, in quanto, a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], tutti i database utente sono abilitati per la funzionalità full-text.  
   
-6.  Per modificare i valori predefiniti dei file di dati primario e di log delle transazioni, fare clic sulla cella appropriata nella griglia **File di database** , quindi immettere il nuovo valore. Per altre informazioni, vedere [Aggiungere file di dati o file di log a un database](add-data-or-log-files-to-a-database.md).  
+6.  Per modificare i valori predefiniti dei file di dati primario e di log delle transazioni, fare clic sulla cella appropriata nella griglia **File di database** , quindi immettere il nuovo valore. Per ulteriori informazioni, vedere [Aggiungere file di dati o file di log a un database](add-data-or-log-files-to-a-database.md).  
   
 7.  Per modificare le regole di confronto del database, selezionare la pagina **Opzioni** , quindi selezionare le regole di confronto nell'elenco.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62872327"
   
 12. Per creare il database, scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-database"></a>Per creare un database  
   
@@ -131,9 +131,9 @@ GO
   
  Per altri esempi, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
-## <a name="see-also"></a>Vedere anche  
- [Database Files and Filegroups](database-files-and-filegroups.md)   
- [Collegamento e scollegamento di un database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Filegroup e file di database](database-files-and-filegroups.md)   
+ [Scollegamento e collegamento del database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Aggiungere file di dati o file di log a un database](add-data-or-log-files-to-a-database.md)  
   

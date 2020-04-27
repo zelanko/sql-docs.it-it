@@ -11,10 +11,10 @@ ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: c15f708a6deb8da2b0ea32efc70635ef50124621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729283"
 ---
 # <a name="create-a-custom-workflow---example"></a>Creare un flusso di lavoro personalizzato - Esempio
@@ -71,7 +71,7 @@ namespace MDSWorkflowTestLib
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Creare un &#40;del flusso di lavoro personalizzato Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Creare un flusso di lavoro personalizzato &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
   
   

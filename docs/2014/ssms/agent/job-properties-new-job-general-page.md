@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211380"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Proprietà processo e Nuovo processo (pagina Generale)
@@ -38,10 +38,10 @@ ms.locfileid: "68211380"
  **Descrizione**  
  Consente di modificare la descrizione del processo.  
   
- **Enabled**  
+ **Attivata**  
  Consente di abilitare il processo. Quando non è abilitato, il processo non viene eseguito in risposta a una pianificazione o a un avviso, sebbene sia comunque possibile avviare il processo usando la stored procedure **sp_start_job** .  
   
- **Origine**  
+ **origine**  
  Visualizza il server master per il processo. Questa opzione è disponibile solo nella pagina **Proprietà processo - Generale** .  
   
  **Creato**  
@@ -50,14 +50,14 @@ ms.locfileid: "68211380"
  **Data Ultima modifica**  
  Visualizza la data e l'ora dell'ultima modifica apportata al processo. Questa opzione è disponibile solo nella pagina **Proprietà processo - Generale** .  
   
- **Ultima esecuzione**  
+ **Data ultima esecuzione**  
  Visualizza la data e l'ora dell'ultima esecuzione del processo. Questa opzione è disponibile solo nella pagina **Proprietà processo - Generale** .  
   
- **Visualizza cronologia processi**  
+ **Visualizza cronologia processo**  
  Consente di visualizzare la cronologia processo per il processo. Questa opzione è disponibile solo nella pagina **Proprietà processo - Generale** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Implementazione di processi](implement-jobs.md)   
- [Categorie di processi - Gestisci categorie di processi](job-categories-manage-job-categories.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Implementare processi](implement-jobs.md)   
+ [Categorie di processi: Gestisci categorie di processi](job-categories-manage-job-categories.md)  
   
   

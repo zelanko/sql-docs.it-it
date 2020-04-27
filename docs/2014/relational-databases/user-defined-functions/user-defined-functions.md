@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211693"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
@@ -39,7 +39,7 @@ ms.locfileid: "68211693"
   
  [Attività correlate](#Tasks)  
   
-##  <a name="Benefits"></a>Vantaggi delle funzioni definite dall'utente  
+##  <a name="user-defined-function-benefits"></a><a name="Benefits"></a>Vantaggi delle funzioni definite dall'utente  
  Di seguito vengono elencati i vantaggi delle funzioni definite dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Consentono la programmazione modulare.  
@@ -59,7 +59,7 @@ ms.locfileid: "68211693"
 > [!NOTE]  
 >  Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente nelle query possono essere eseguite solo su un solo thread (piano di esecuzione seriale).  
   
-##  <a name="FunctionTypes"></a>Tipi di funzioni  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a>Tipi di funzioni  
  Funzioni scalari  
  Le funzioni scalari definite dall'utente restituiscono un singolo valore di dati del tipo definito nella clausola RETURNS. Per una funzione scalare inline, non è disponibile alcun corpo della funzione. Il valore scalare corrisponde al risultato di una singola istruzione. Per una funzione scalare con istruzioni multiple, il corpo della funzione, definito in un blocco BEGIN...END, include una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un solo valore. Il tipo restituito può essere qualsiasi tipo di dati ad eccezione di `text`, `ntext`, `image`, `cursor` e `timestamp`.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211693"
  Funzioni di sistema  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili molte funzioni di sistema che è possibile utilizzare per eseguire diverse operazioni. Tali funzioni non possono essere modificate. Per altre informazioni, vedere [Funzioni predefinite &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql), and [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
   
-##  <a name="Guidelines"></a>Linee guida  
+##  <a name="guidelines"></a><a name="Guidelines"></a>Linee guida  
  Gli errori [!INCLUDE[tsql](../../includes/tsql-md.md)] che causano l'annullamento di un'istruzione e l'esecuzione dell'istruzione successiva nel modulo (ad esempio trigger o stored procedure) vengono trattati in modo diverso all'interno di una funzione. Nelle funzioni tali errori arrestano l'esecuzione della funzione, che a sua volta comporta l'interruzione dell'istruzione che ha richiamato la funzione.  
   
  Le istruzioni in un blocco BEGIN...END non possono avere effetti collaterali. Gli effetti collaterali di una funzione sono le modifiche permanenti allo stato di una risorsa il cui ambito è al di fuori della funzione, ad esempio la modifica di una tabella di database. Le uniche modifiche che possono essere apportate dalle istruzioni nella funzione sono le modifiche agli oggetti locali rispetto alla funzione, ad esempio variabili o cursori locali. Modifiche a tabelle di database, operazioni su cursori che non sono locali rispetto alla funzione, invio di messaggi di posta elettronica, tentativi di modifica del catalogo e generazione di un set di risultati da restituire all'utente sono esempi di azioni che non possono essere eseguite in una funzione.  
@@ -79,7 +79,7 @@ ms.locfileid: "68211693"
   
  Il numero di volte in cui viene effettivamente eseguita una funzione specificata in una query varia in base ai piani di esecuzione compilati da Query Optimizer. Si consideri ad esempio una funzione richiamata da una sottoquery in una clausola WHERE. Il numero di volte in cui la sottoquery e la relativa funzione vengono eseguite varia in base ai diversi percorsi di accesso scelti da Query Optimizer.  
   
-##  <a name="ValidStatements"></a>Istruzioni valide in una funzione  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a>Istruzioni valide in una funzione  
  I tipi di istruzioni valide in una funzione sono i seguenti:  
   
 -   Istruzioni DECLARE che definiscono variabili di dati e cursori locali rispetto alla funzione.  
@@ -120,7 +120,7 @@ ms.locfileid: "68211693"
   
  Per un elenco delle funzioni di sistema predefinite deterministiche e non deterministiche, vedere [Funzioni deterministiche e non deterministiche](../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a>Funzioni con associazione a schema  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a>Funzioni con associazione a schema  
  L'istruzione CREATE FUNCTION supporta la clausola SCHEMABINDING che associa la funzione allo schema degli oggetti a cui fa riferimento, ad esempio tabelle, viste e altre funzioni definite dall'utente. I tentativi di modifica o eliminazione degli oggetti a cui fa riferimento una funzione associata a schema hanno esito negativo.  
   
  Per includere la clausola SCHEMABINDING in un'istruzione CREATE FUNCTION devono essere soddisfatte le condizioni seguenti:  
@@ -133,21 +133,21 @@ ms.locfileid: "68211693"
   
  È possibile utilizzare l'istruzione ALTER FUNCTION per eliminare l'associazione allo schema. L'istruzione ALTER FUNCTION deve ridefinire la funzione senza specificare WITH SCHEMABINDING.  
   
-##  <a name="Parameters"></a>Specifica di parametri  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>Specifica di parametri  
  Le funzioni definite dall'utente accettano zero o più parametri di input e restituiscono tabelle o valori scalari. Una funzione può avere al massimo 1024 parametri di input. Quando a un parametro della funzione è associato un valore predefinito, quando si chiama la funzione è necessario specificare la parola chiave DEFAULT per ottenere il valore predefinito. Questa funzionalità risulta diversa per i parametri con valore predefinito nelle stored procedure definite dall'utente in cui l'omissione del parametro implica l'utilizzo del valore predefinito. Le funzioni definite dall'utente non supportano parametri di output.  
   
-##  <a name="Tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Attività correlate  
   
 |||  
 |-|-|  
 |**Descrizione dell'attività**|**Argomento**|  
 |Viene descritto come creare una funzione Transact-SQL definita dall'utente.|[Creare funzioni definite dall'utente &#40;motore di database&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Viene descritto come creare una funzione CLR.|[Creare funzioni CLR](../user-defined-functions/create-clr-functions.md)|  
-|Viene descritto come creare una funzione di aggregazione definita dall'utente.|[Creare funzioni di aggregazione definite dall'utente](../user-defined-functions/create-user-defined-aggregates.md)|  
+|Viene descritto come creare una funzione di aggregazione definita dall'utente.|[Creazione di funzioni di aggregazione definite dall'utente](../user-defined-functions/create-user-defined-aggregates.md)|  
 |Viene descritto come modificare una funzione Transact-SQL definita dall'utente.|[Modificare funzioni definite dall'utente](../user-defined-functions/user-defined-functions.md)|  
 |Viene descritto come eliminare una funzione definita dall'utente.|[Eliminare funzioni definite dall'utente](../user-defined-functions/delete-user-defined-functions.md)|  
 |Viene descritto come eseguire una funzione definita dall'utente.|[Eseguire funzioni definite dall'utente](../user-defined-functions/execute-user-defined-functions.md)|  
 |Viene descritto come rinominare una funzione definita dall'utente.|[Ridenominare funzioni definite dall'utente](../user-defined-functions/rename-user-defined-functions.md)|  
-|Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare funzioni definite dall'utente](view-user-defined-functions.md)|  
+|Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare le funzioni definite dall'utente](view-user-defined-functions.md)|  
   
   

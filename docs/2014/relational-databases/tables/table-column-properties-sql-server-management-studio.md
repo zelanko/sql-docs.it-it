@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211792"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Proprietà delle colonne delle tabelle (SQL Server Management Studio)
@@ -81,17 +81,17 @@ ms.locfileid: "68211792"
  **Con pubblicazione di tipo DTS**  
  Indica se la pubblicazione della colonna è di tipo DTS.  
   
- **Specifica full-text**  
+ **Specifica testo completo**  
  Visualizza informazioni su un indice full-text. Il valore di questa proprietà corrisponde al valore della proprietà figlio **Indice full-text** e indica se a questa colonna è applicata l'indicizzazione full-text.  
   
 > [!NOTE]  
 >  Per modificare il valore visualizzato per la proprietà **Specifica full-text** , è necessario espandere la proprietà e modificare la proprietà figlio **Indice full-text** .  
   
--   Con **indicizzazione full-text** Indica se la colonna è con indicizzazione full-text. Questa proprietà può essere impostata su **Sì** solo se il tipo di dati della colonna consente ricerche full-text e se per la tabella a cui la colonna appartiene è specificato un indice full-text. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un valore.  
+-   **Indice full-text** Indica se a questa colonna è applicata l'indicizzazione full-text. Questa proprietà può essere impostata su **Sì** solo se il tipo di dati della colonna consente ricerche full-text e se per la tabella a cui la colonna appartiene è specificato un indice full-text. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un valore.  
   
--   **Colonna di tipo full-text** Consente di visualizzare il nome della colonna in cui si trova la colonna con indicizzazione full-text. È necessario impostare questa proprietà se la proprietà **Tipo di dati** relativa a questa colonna è impostata su **image** o su **varbinary**. La colonna indicata in questa proprietà deve essere di tipo **[n]char, [n]varchar** o **xml**e l'elenco a discesa di questa proprietà include solo colonne con uno di questi tre tipi di dati. Nelle righe incluse nella colonna indicata da questa proprietà viene visualizzato il tipo di documento disponibile nelle righe corrispondenti della colonna in cui è possibile eseguire una ricerca full-text. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+-   **Colonna di tipo full-text** Visualizza il nome della colonna in base alla quale viene applicata l'indicizzazione full-text a questa colonna. È necessario impostare questa proprietà se la proprietà **Tipo di dati** relativa a questa colonna è impostata su **image** o su **varbinary**. La colonna indicata in questa proprietà deve essere di tipo **[n]char, [n]varchar** o **xml**e l'elenco a discesa di questa proprietà include solo colonne con uno di questi tre tipi di dati. Nelle righe incluse nella colonna indicata da questa proprietà viene visualizzato il tipo di documento disponibile nelle righe corrispondenti della colonna in cui è possibile eseguire una ricerca full-text. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
--   **Lingua** di Indica la lingua del Word breaker utilizzato per indicizzare la colonna. Il valore archiviato nella proprietà corrisponde effettivamente all'identificatore delle impostazioni locali relativo al word breaker. Per ulteriori informazioni sui word breaker e sugli identificatori delle impostazioni locali (LCID), vedere l'articolo relativo ai word breaker e agli stemmer. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+-   **Lingua** Indica la lingua del word breaker usato per indicizzare la colonna. Il valore archiviato nella proprietà corrisponde effettivamente all'identificatore delle impostazioni locali relativo al word breaker. Per ulteriori informazioni sui word breaker e sugli identificatori delle impostazioni locali (LCID), vedere l'articolo relativo ai word breaker e agli stemmer. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Semantica statistica**  
  Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
@@ -101,19 +101,19 @@ ms.locfileid: "68211792"
  **Con Sottoscrittore non SQL Server**  
  Indica se la colonna viene replicata in un Sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Specifica di identità**  
+ **Specifica identità**  
  Visualizza informazioni su se e come l'univocità viene applicata da questa colonna ai valori inclusi nella colonna. Il valore di questa proprietà indica se si tratta di una colonna identity e se corrisponde al valore della proprietà figlio **Identity**.  
   
 > [!NOTE]  
 >  Per modificare il valore visualizzato per la proprietà **Specifica Identity** , è necessario espandere la proprietà e modificare la proprietà figlio **Identity** .  
   
--   **Identità** Indica se la colonna è una colonna Identity. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+-   **Identity** Indica se si tratta di una colonna identity. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
--   Valore di **inizializzazione Identity** Consente di visualizzare il valore di inizializzazione specificato durante la creazione di questa colonna Identity. Questo valore viene assegnato alla prima riga nella tabella. Se si lascia vuota questa cella, verrà assegnato un valore predefinito pari a 1. Per modificare questa proprietà, digitare direttamente il nuovo valore.  
+-   **Valore di inizializzazione Identity** Visualizza il valore di inizializzazione Identity specificato durante la creazione di questa colonna identity. Questo valore viene assegnato alla prima riga nella tabella. Se si lascia vuota questa cella, verrà assegnato un valore predefinito pari a 1. Per modificare questa proprietà, digitare direttamente il nuovo valore.  
   
--   **Incremento identità** Consente di visualizzare il valore di incremento specificato durante la creazione di questa colonna Identity. Tale valore è l'incremento che verrà aggiunto a **Valore di inizializzazione Identity** per ogni riga successiva. Se si lascia vuota questa cella, verrà assegnato un valore predefinito pari a 1. Per modificare questa proprietà, digitare direttamente il nuovo valore.  
+-   **Incremento Identity** Visualizza il valore di incremento specificato durante la creazione della colonna identity. Tale valore è l'incremento che verrà aggiunto a **Valore di inizializzazione Identity** per ogni riga successiva. Se si lascia vuota questa cella, verrà assegnato un valore predefinito pari a 1. Per modificare questa proprietà, digitare direttamente il nuovo valore.  
   
- **Indicizzabili**  
+ **Indicizzabile**  
  Indica se la colonna selezionata può essere indicizzata. Le colonne calcolate non deterministiche, ad esempio, non sono indicizzabili.  
   
  **Con pubblicazione di tipo merge**  
@@ -122,7 +122,7 @@ ms.locfileid: "68211792"
  **Non per la replica**  
  Indica se durante la replica vengono mantenuti i valori di identità originari. Per ulteriori informazioni sulla replica, vedere CREATE TABLE. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
- **Replicati**  
+ **Replicata**  
  Indica se questa colonna è replicata in un'altra posizione.  
   
  **RowGuid**  
@@ -132,7 +132,6 @@ ms.locfileid: "68211792"
  Indica la dimensione in byte consentita dal tipo di dati della colonna. Ad esempio, un tipo di dati nchar può avere una lunghezza di 10 (il numero di caratteri), ma avrebbe una dimensione di 20 per quanto riguarda i set di caratteri Unicode.  
   
 > [!NOTE]  
->  La lunghezza di un tipo di dati **(max)** varia per ogni riga. **sp_help** restituisce (-1) come lunghezza delle colonne **(max)** . 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] visualizza -1 come dimensione della colonna.  
+>  La lunghezza di un tipo di dati **(max)** varia per ogni riga. **sp_help** restituisce (-1) come lunghezza delle colonne **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] visualizza -1 come dimensione della colonna.  
   
   

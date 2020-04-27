@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211980"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
@@ -41,24 +41,24 @@ ms.locfileid: "68211980"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. Quando una specifica del controllo del database viene creata, il relativo stato è disabilitato.  
   
  Durante la creazione o la modifica di una specifica di controllo in un database utente, non includere azioni di controllo su oggetti con ambito server, come le viste di sistema. Se si includono oggetti con ambito server, verrà creato il controllo, ma gli oggetti con ambito server non saranno inclusi e non verranno restituiti errori. Per eseguire il controllo degli oggetti con ambito server, utilizzare una specifica di controllo database nel database master.  
   
  Le specifiche di controllo del database risiedono nel database dove sono create, ad eccezione del database di sistema `tempdb`.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
 -   Gli utenti che dispongono dell'autorizzazione ALTER ANY DATABASE AUDIT possono creare specifiche del controllo del database e associarle a qualsiasi controllo.  
   
 -   Dopo essere stata creata, la specifica di controllo del database può essere visualizzata dalle entità che dispongono delle autorizzazioni CONTROL SERVER, ALTER ANY DATABASE AUDIT o dell'account sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211980"
   
 2.  Espandere la cartella **Sicurezza** .  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo database** e selezionare **Nuova specifica controllo data base...**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo** database e selezionare **nuova specifica controllo database...**.  
   
      Nella finestra di dialogo **Crea specifica controllo database** sono disponibili le opzioni indicate di seguito.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68211980"
   
 4.  Una volta selezionate le opzioni, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   

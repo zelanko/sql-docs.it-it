@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729294"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modificare un'entità (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "73729294"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare un'entità.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-edit-an-entity"></a>Per modificare un'entità  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73729294"
   
 8.  Selezionare o deselezionare la casella di controllo **Crea valori di codice automaticamente** .  
   
-     Per ulteriori informazioni, vedere [creazione automatica di codice &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
+     Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
   
 9. Selezionare o deselezionare la casella di controllo **Abilita compressione dei dati** . La compressione di riga è attivata per impostazione predefinita.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73729294"
   
  ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK")  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Eliminare un'entità &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

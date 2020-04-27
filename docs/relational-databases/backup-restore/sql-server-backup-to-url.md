@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8679d1e430ff2755aac32721ff40184cbe0a3c6a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529085"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087371"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 
 - Se il server accede ad Azure tramite un server proxy, è necessario usare il flag di traccia 1819 e quindi impostare la configurazione del proxy WinHTTP con uno dei metodi seguenti:
    - L'utility [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) in Windows XP o Windows Server 2003 e versioni precedenti. 
-   - L'utility [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) in Windows Vista e Windows Server 2008 o versioni successive. 
+   - L'utility [netsh.exe](/windows/win32/winsock/netsh-exe) in Windows Vista e Windows Server 2008 o versioni successive. 
   
 ## <a name="supported-arguments--statements"></a>Argomenti e istruzioni supportate
 

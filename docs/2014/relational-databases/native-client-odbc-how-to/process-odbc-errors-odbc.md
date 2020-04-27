@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206796"
 ---
 # <a name="process-odbc-errors-odbc"></a>Elaborare errori ODBC (ODBC)
   È possibile usare due chiamate di funzione ODBC per recuperare messaggi ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Per ottenere informazioni correlate a ODBC nei campi di diagnostica **SQLState**, **pfNative** e **ErrorMessage**, chiamare [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) fino a quando no viene restituito SQL_NO_DATA. Per ogni record di diagnostica, è possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per recuperare i singoli campi. Tutti i campi specifici del driver devono essere recuperati utilizzando `SQLGetDiagField`.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) vengono elaborati da Gestione driver ODBC, non da un singolo driver. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. È possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. Sono inclusi i comandi della connessione ODBC, anche se restituiscono SQL_SUCCESS_WITH_INFO. I campi di diagnostica specifici dei driver non saranno disponibili sino alla successiva chiamata alla funzione ODBC.  
+ L'elaborazione di [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) viene eseguita da Gestione driver ODBC, non da un singolo driver. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. È possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. Sono inclusi i comandi della connessione ODBC, anche se restituiscono SQL_SUCCESS_WITH_INFO. I campi di diagnostica specifici dei driver non saranno disponibili sino alla successiva chiamata alla funzione ODBC.  
   
 ## <a name="example"></a>Esempio  
   
@@ -235,7 +235,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure per l'utilizzo di ODBC](odbc-how-to-topics.md)  
   
   

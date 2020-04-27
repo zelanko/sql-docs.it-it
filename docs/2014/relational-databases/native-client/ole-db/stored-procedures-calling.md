@@ -1,5 +1,5 @@
 ---
-title: Chiamata di una stored procedure (OLE DB) | Microsoft Docs
+title: Chiamata a una stored procedure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206582"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Esecuzione di una chiamata a una stored procedure (OLE DB)
@@ -43,7 +43,7 @@ ms.locfileid: "68206582"
   
 1.  Completare le informazioni sui parametri in una matrice di strutture DBPARAMBINDINFO, ovvero nome del parametro, nome specifico del provider per il tipo di dati del parametro o nome del tipo di dati standard e così via. Ogni struttura della matrice descrive un solo parametro. Questa matrice viene quindi passata al metodo **SetParameterInfo**.  
   
-2.  Chiamare il metodo **ICommandWithParameters::SetParameterInfo** per descrivere i parametri al provider. **Sqlparameterinfo** specifica il tipo di dati nativo di ogni parametro. Gli argomenti di **sqlparameterinfo** sono:  
+2.  Chiamare il metodo **ICommandWithParameters::SetParameterInfo** per descrivere i parametri al provider. **SetParameterInfo** specifica il tipo di dati nativo di ogni parametro. Gli argomenti di **SetParameterInfo** sono:  
   
     -   Numero di parametri per i quali impostare le informazioni sul tipo.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68206582"
   
  Quando la sequenza di escape RPC viene utilizzata per eseguire una stored procedure, il provider non chiama la funzione di supporto per determinare le informazioni sui parametri (come avviene nel caso della sintassi ODBC CALL). La sintassi RPC è più semplice della sintassi ODBC CALL, pertanto il comando viene analizzato più velocemente, migliorando le prestazioni. In questo caso, è necessario fornire le informazioni sui parametri eseguendo **ICommandWithParameters::SetParameterInfo**.  
   
- Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile eseguire una query sui metadati delle colonne; IColumnsInfo::GetColumnInfo e IColumnsRowset::GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
+ Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile eseguire una query sui metadati delle colonne. IColumnsInfo::GetColumnInfo e IColumnsRowset::GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
   
  Se si conoscono tutti i metadati dei parametri, la sequenza di escape RPC è la modalità consigliata per eseguire le stored procedure.  
   
@@ -114,18 +114,18 @@ ms.locfileid: "68206582"
 {rpc SalesByCategory}  
 ```  
   
- Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una stored Procedure &#40;utilizzando la sintassi rpc&#41; ed elaborare i codici restituiti e i parametri di Output &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [Eseguire una stored procedure &#40;con la sintassi RPC&#41; ed elaborare i codici restituiti e i parametri di output &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
  La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client utilizza il meccanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC di per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
- Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
+ Di seguito è riportato un esempio dell'istruzione  **EXECUTE** di [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure](stored-procedures.md)  
   
   

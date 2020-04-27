@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1517e17a7b0ecaf9137e3af21e076dacc2fd98f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207063"
 ---
 # <a name="executing-statements-odbc"></a>Esecuzione di istruzioni (ODBC)
@@ -45,7 +45,7 @@ ms.locfileid: "68207063"
   
 -   [Effetti delle opzioni ISO](effects-of-iso-options.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di query &#40;ODBC&#41;](../executing-queries-odbc.md)  
   
   

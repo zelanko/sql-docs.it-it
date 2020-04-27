@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206615"
 ---
 # <a name="using-user-defined-types"></a>Utilizzo dei tipi definiti dall'utente (UDT)
@@ -42,28 +42,28 @@ ms.locfileid: "68206615"
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
  Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne con tipo definito dall' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utente vengono esposte tramite il provider OLE DB di Native Client come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
   
-|Tipo di dati|Al server<br /><br /> **UDT**|Al server<br /><br /> **non definito dall'utente**|Dal server<br /><br /> **UDT**|Dal server<br /><br /> **non definito dall'utente**|  
+|Tipo di dati|Al server<br /><br /> **UDT**|Al server<br /><br /> **non UDT**|Dal server<br /><br /> **UDT**|Dal server<br /><br /> **non UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Supportato<sup>6</sup>|Errore<sup>1</sup>|Supportato<sup>6</sup>|Errore<sup>5</sup>|  
-|DBTYPE_BYTES|Supportato<sup>6</sup>|N/A<sup>2</sup>|Supportato<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|Supportato<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|Supportato<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|Supportato<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Non supportate|N/A<sup>2</sup>|Non supportate|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato<sup>6</sup>|N/A<sup>2</sup>|Supportato<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|N/D|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_WSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4,6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_BSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_STR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4,6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Non supportato|N/D<sup>2</sup>|Non supportato|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
   
- <sup>1</sup> Se un tipo di server diverso da DBTYPE_UDT viene specificato con **ICommandWithParameters:: separameterinfo** e il tipo di funzione di accesso è DBTYPE_UDT, si verifica un errore durante l'esecuzione dell'istruzione (DB_E_ERRORSOCCURRED; lo stato del parametro è DBSTATUS_E_BADACCESSOR). In caso contrario, i dati vengono inviati al server, ma il server restituisce un errore indicando che non è possibile eseguire una conversione implicita dal tipo definito dall'utente al tipo di dati del parametro.  
+ <sup>1</sup>Se viene specificato un tipo di server diverso da DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_UDT, si verifica un errore quando viene eseguita l'istruzione (DB_E_ERRORSOCCURRED; lo stato del parametro è DBSTATUS_E_BADACCESSOR). In caso contrario, i dati vengono inviati al server, ma il server restituisce un errore indicando che non è possibile eseguire una conversione implicita dal tipo definito dall'utente al tipo di dati del parametro.  
   
  <sup>2</sup> Esula dall'ambito di questo argomento.  
   
- <sup>3</sup> la conversione dei dati da stringa esadecimale a dati binari viene eseguita.  
+ <sup>3</sup>Si verifica la conversione dei dati da stringa esadecimale a dati binari.  
   
- <sup>4</sup> la conversione dei dati da dati binari a stringa esadecimale si verifica.  
+ <sup>4</sup>Si verifica la conversione dei dati da dati binari a stringa esadecimale.  
   
- <sup>5</sup> La convalida può verificarsi in fase di creazione della funzione di accesso o in fase di recupero. l'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione è impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>5</sup>La convalida può verificarsi durante la creazione della funzione di accesso o durante il recupero, l'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>6</sup> È possibile utilizzare BY_REF.  
+ <sup>6</sup>Può essere usato BY_REF.  
   
  DBTYPE_NULL e DBTYPE_EMPTY possono essere associati per i parametri di input ma non per i parametri di output o per i risultati. Se vengono associati per i parametri di input, lo stato deve essere impostato su DBSTATUS_S_ISNULL o DBSTATUS_S_DEFAULT.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68206615"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
  Per supportare la creazione di tabelle nell'interfaccia **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge le tre nuove colonne seguenti al set di proprietà DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nome|Descrizione|Type|Descrizione|  
+|Nome|Descrizione|Type|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Per le colonne di tipo DBTYPE_UDT questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Per le colonne di tipo DBTYPE_UDT questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -179,7 +179,7 @@ ms.locfileid: "68206615"
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
  Oltre all'interfaccia **ISSCommandWithParameters** , Native client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiunge anche nuovi valori al set di righe restituito dalla chiamata al metodo **IColumnsRowset:: GetColumnRowset** , inclusi i seguenti.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Type|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome di catalogo del tipo definito dall'utente.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome dello schema del tipo definito dall'utente.|  
@@ -204,7 +204,7 @@ ms.locfileid: "68206615"
   
  Quando si esegue la conversione dai tipi di dati C ai tipi di dati SQL, SQL_C_WCHAR, SQL_C_BINARY e SQL_C_CHAR possono essere convertiti tutti in SQL_SS_UDT. Tenere tuttavia presente che i dati binari vengono convertiti in una stringa esadecimale durante la conversione dai tipi di dati SQL SQL_C_WCHAR e SQL_C_CHAR.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

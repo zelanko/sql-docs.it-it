@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211102"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizzare query con risultati SHOWPLAN in SQL Server Profiler
@@ -26,7 +26,7 @@ ms.locfileid: "68211102"
   
  L'estrazione di eventi Showplan dalla traccia può essere eseguita in uno dei modi seguenti:  
   
--   In fase di configurazione della traccia utilizzare la scheda **Impostazioni estrazione eventi** . si noti che questa scheda non viene visualizzata fino a quando non si seleziona uno degli eventi Showplan nella scheda **Selezione eventi** .  
+-   Durante la configurazione della traccia, con la scheda **Impostazioni estrazione eventi** . Questa scheda non viene visualizzata a meno che non si selezioni uno degli eventi Showplan presenti nella scheda **Selezione eventi** .  
   
 -   Con il comando **Estrai eventi di SQL Server** del menu **File** .  
   
@@ -37,14 +37,14 @@ ms.locfileid: "68211102"
   
 |Nome evento|Descrizione|  
 |----------------|-----------------|  
-|**Statistiche sulle prestazioni**|Indica la prima volta che uno Showplan compilato viene inserito nella cache, quando viene ricompilato e quando viene eliminato dalla cache del piano. La colonna **TextData** contiene Showplan in formato XML. Per altre informazioni, vedere [Classe di evento Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
+|**Performance statistics**|Indica la prima volta che uno Showplan compilato viene inserito nella cache, quando viene ricompilato e quando viene eliminato dalla cache del piano. La colonna **TextData** contiene Showplan in formato XML. Per altre informazioni, vedere [Classe di evento Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Visualizza il piano della query dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita con dettagli completi sulla compilazione, ad esempio i costi stimati e gli elenchi di colonne. Per altre informazioni, vedere [Classe di evento Showplan All](../../relational-databases/event-classes/showplan-all-event-class.md).|  
-|**Showplan All per la compilazione di query**|Si verifica quando una query viene compilata o ricompilata su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È la controparte per il tempo di compilazione dell'evento **Showplan All** . **Showplan All** si verifica quando viene eseguita una query. **Showplan All for Query Compile** si verifica quando viene compilata una query. Per altre informazioni, vedere [Classe di evento Showplan All for Query Compile](../../relational-databases/event-classes/showplan-all-for-query-compile-event-class.md).|  
-|**Profilo Statistiche Showplan**|Visualizza il piano della query dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in esecuzione con dettagli completi sulla fase di run-time, inclusi il numero effettivo di righe passate tramite ogni operazione. Per altre informazioni, vedere [Classe di evento Showplan Statistics Profile](../../relational-databases/event-classes/showplan-statistics-profile-event-class.md).|  
-|**Testo Showplan**|Visualizza l'albero del piano della query per l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in esecuzione come dati binari. Per altre informazioni, vedere [Classe di evento Showplan Text](../../relational-databases/event-classes/showplan-text-event-class.md).|  
+|**Showplan All For Query Compile**|Si verifica quando una query viene compilata o ricompilata su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È la controparte per il tempo di compilazione dell'evento **Showplan All** . **Showplan All** si verifica quando viene eseguita una query. **Showplan All For Query Compile** si verifica quando viene compilata una query. Per altre informazioni, vedere [Classe di evento Showplan All for Query Compile](../../relational-databases/event-classes/showplan-all-for-query-compile-event-class.md).|  
+|**Showplan Statistics Profile**|Visualizza il piano della query dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in esecuzione con dettagli completi sulla fase di run-time, inclusi il numero effettivo di righe passate tramite ogni operazione. Per altre informazioni, vedere [Classe di evento Showplan Statistics Profile](../../relational-databases/event-classes/showplan-statistics-profile-event-class.md).|  
+|**Showplan Text**|Visualizza l'albero del piano della query per l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in esecuzione come dati binari. Per altre informazioni, vedere [Classe di evento Showplan Text](../../relational-databases/event-classes/showplan-text-event-class.md).|  
 |**Showplan Text (Unencoded)**|Visualizza l'albero del piano della query per l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in esecuzione come testo. Questa classe di evento visualizza le stesse informazioni di Showplan Text, con la sola differenza che le informazioni sono visualizzate come testo anziché come dati binari. Per altre informazioni, vedere [Classe di evento Showplan Text &#40;Unencoded&#41;](../../relational-databases/event-classes/showplan-text-unencoded-event-class.md).|  
 |**Showplan XML**|Visualizza il piano della query con i dati completi raccolti durante l'ottimizzazione della query. Questo evento viene generato unicamente quando un piano di query è ottimizzato. Per altre informazioni, vedere [Classe di evento Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).|  
-|**Showplan XML for Query Compile**|Visualizza il piano della query quando la query viene compilata. Per altre informazioni, vedere [Classe di evento Showplan XML for Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md).|  
+|**Showplan XML For Query Compile**|Visualizza il piano della query quando la query viene compilata. Per altre informazioni, vedere [Classe di evento Showplan XML for Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md).|  
 |**Showplan XML Statistics Profile**|Visualizza il piano della query con dettagli completi sulla fase di esecuzione in formato XML. Ad esempio, la classe di evento acquisisce il numero di righe passate tramite ogni operatore dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in esecuzione. Per altre informazioni, vedere [Classe di evento Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

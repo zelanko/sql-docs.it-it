@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211398"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Integrare un server di destinazione in un server master
@@ -32,7 +32,7 @@ ms.locfileid: "68211398"
   
  **Contenuto dell'articolo**  
   
--   **Per integrare un server di destinazione utilizzando:**  
+-   **Per integrare un server di destinazione tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68211398"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   
@@ -50,15 +50,15 @@ ms.locfileid: "68211398"
   
 3.  In Configurazione guidata server di destinazione, eseguire i passaggi necessari per completare la procedura.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   
 1.  Utilizzare la stored procedure `sp_msx_enlist`.  Per ulteriori informazioni, vedere [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a>Utilizzo di SQL Server Management Objects (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Utilizzo di SQL Server Management Objects (SMO)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   
   

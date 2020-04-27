@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625564"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728378"
 ---
 # <a name="using-basic-data-types"></a>Uso di tipi di dati di base
 
@@ -101,20 +101,20 @@ Se è necessario aggiornare il valore di un campo in un'origine dati, usare uno 
 
 Se è necessario aggiornare dati in un'origine dati usando una query con parametri, è possibile impostare il tipo di dati dei parametri usando uno dei metodi set\<Type> della classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), noti anche come *metodi setter*. Nell'esempio seguente viene usato il metodo [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) per precompilare la query con parametri, quindi viene usato il metodo [setString](reference/setstring-method-sqlserverpreparedstatement.md) per impostare il valore stringa del parametro prima di chiamare il metodo [executeUpdate](reference/executeupdate-method.md).  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-Per altre informazioni sulle query con parametri, vedere [Uso di istruzioni SQL con parametri](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Per altre informazioni sulle query con parametri, vedere [Uso di istruzioni SQL con parametri](using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Passaggio di parametri a una stored procedure
 
 Se è necessario passare parametri tipizzati in una stored procedure, è possibile impostare i parametri in base all'indice o al nome usando uno dei metodi set\<Type> della classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Nell'esempio seguente viene usato il metodo [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) per impostare la chiamata alla stored procedure, quindi viene usato il metodo [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) per impostare il parametro per la chiamata prima di chiamare il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > In questo esempio viene restituito un set di risultati con i risultati dell'esecuzione della stored procedure.
 
-Per altre informazioni sull'uso del driver JDBC con stored procedure e parametri di input, vedere [Uso di una stored procedure con parametri di input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Per altre informazioni sull'uso del driver JDBC con stored procedure e parametri di input, vedere [Uso di una stored procedure con parametri di input](using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recupero di parametri da una stored procedure
 

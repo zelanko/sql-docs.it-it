@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174655"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Microsoft Decision Trees
@@ -72,7 +72,7 @@ ms.locfileid: "78174655"
 
  I requisiti per un modello di albero delle decisioni sono i seguenti:
 
--   **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
+-   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
 
 -   **Una colonna stimabile** Richiede almeno una colonna stimabile. È possibile includere più attributi stimabili in un modello e tali attributi possono essere di tipi diversi, numerici o discreti. Tuttavia, aumentando il numero di attributi stimabili può aumentare il tempo di elaborazione.
 
@@ -100,7 +100,7 @@ ms.locfileid: "78174655"
 
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) l' [algoritmo Microsoft Decision](microsoft-decision-trees-algorithm-technical-reference.md) Trees [esempi di query sul modello](decision-trees-model-query-examples.md) [di albero delle decisioni modelli di modello di data mining per i modelli di albero delle decisioni &#40;Analysis Services-Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)
 
 

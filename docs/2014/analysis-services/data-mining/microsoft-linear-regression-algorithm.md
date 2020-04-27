@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174420"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Microsoft Linear Regression
@@ -44,11 +44,11 @@ ms.locfileid: "78174420"
 ## <a name="data-required-for-linear-regression-models"></a>Dati necessari per i modelli di regressione lineare
  Per preparare i dati da utilizzare in un modello di regressione lineare è necessario comprendere i requisiti dell'algoritmo, tra cui la quantità di dati necessaria e la modalità di utilizzo dei dati. I requisiti di questo tipo di modello sono i seguenti:
 
--   **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
+-   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
 
 -   **Una colonna stimabile** Richiede almeno una colonna stimabile. È possibile includere più attributi stimabili in un modello, ma tali attributi devono essere tipi di dati numerici continui. Non è possibile utilizzare un tipo di dati datetime come attributo stimabile anche se l'archiviazione nativa dei dati è numerica.
 
--   **Colonne di input** Le colonne di input devono contenere dati numerici continui a cui viene assegnato il tipo di dati appropriato.
+-   **Colonne di input** Le colonne di input devono contenere dati numerici continui ed essere associate al tipo di dati appropriato.
 
  Per altre informazioni, vedere la sezione Requisiti in [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "78174420"
 
 -   Supporta l'utilizzo di modelli di data mining OLAP.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) [esempio di query sul modello](linear-regression-model-query-examples.md) di regressione lineare dell' [algoritmo Microsoft Linear](microsoft-linear-regression-algorithm-technical-reference.md) regressione, [contenuto del modello di data mining per i modelli di regressione lineare &#40;Analysis Services-Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)
 
 

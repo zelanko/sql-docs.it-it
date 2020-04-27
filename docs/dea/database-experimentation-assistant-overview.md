@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247120"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Panoramica di Database Experimentation Assistant
@@ -113,6 +113,6 @@ La raccolta e l'invio di dati di telemetria sono facoltativi. Per specificare qu
 
 DEA è disciplinato dall' [informativa sulla privacy Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - L'articolo [Panoramica del processo di confronto del carico di lavoro](database-experimentation-assistant-get-started.md), che illustra il processo di confronto dei carichi di lavoro in due ambienti.

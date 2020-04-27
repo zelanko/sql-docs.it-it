@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174512"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
@@ -41,10 +41,10 @@ ms.locfileid: "78174512"
  Si noti che la curva non si sposta mai su valori maggiori di 1 o minori di 0. È possibile utilizzare la regressione logistica per descrivere le colonne di input significative ai fini della determinazione dello stato della colonna stimabile.
 
 ### <a name="feature-selection"></a>Selezione caratteristiche
- Tutti gli algoritmi di data mining di Analysis Services utilizzano automaticamente la caratteristica di selezione degli attributi per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la caratteristica di selezione degli attributi in un modello di regressione logistica dipende dal tipo di dati dell'attributo. Poiché è basata sull'algoritmo Microsoft Neural Network, la regressione logistica utilizza un subset dei metodi relativi alla caratteristica di selezione degli attributi che si applicano alle reti neurali. Per altre informazioni, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](feature-selection-data-mining.md).
+ Tutti gli algoritmi di data mining di Analysis Services utilizzano automaticamente la caratteristica di selezione degli attributi per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la caratteristica di selezione degli attributi in un modello di regressione logistica dipende dal tipo di dati dell'attributo. Poiché è basata sull'algoritmo Microsoft Neural Network, la regressione logistica utilizza un subset dei metodi relativi alla caratteristica di selezione degli attributi che si applicano alle reti neurali. Per altre informazioni, vedere [Selezione delle funzionalità &#40;Data mining&#41;](feature-selection-data-mining.md).
 
 ### <a name="scoring-inputs"></a>Valutazione degli input
- Il *Punteggio* nel contesto di un modello di rete neurale o di un modello di regressione logistica indica il processo di conversione dei valori presenti nei dati in un set di valori che usano la stessa scala e pertanto possono essere confrontati tra loro. Si supponga ad esempio che l'intervallo degli input per Income sia compreso tra 0 e 100.000 mentre quello degli input per [Number of Children] sia compreso tra 0 e 5. Questo processo di conversione consente di assegnare *punteggi*, o confrontare, l'importanza di ogni input indipendentemente dalla differenza di valori.
+ Per*assegnazione di punteggi* nel contesto di un modello di rete neurale o di un modello di regressione logistica si intende la conversione dei valori presenti nei dati in un set di valori che usano la stessa scala e possono quindi essere confrontati tra loro. Si supponga ad esempio che l'intervallo degli input per Income sia compreso tra 0 e 100.000 mentre quello degli input per [Number of Children] sia compreso tra 0 e 5. Questo processo di conversione consente di assegnare *punteggi*, o confrontare, l'importanza di ogni input indipendentemente dalla differenza di valori.
 
  Per ogni stato visualizzato nel set di training, il modello genera un input. Per gli input discreti o discretizzati, viene creato un input aggiuntivo per rappresentare lo stato Missing, se tale stato è visualizzato almeno una volta nel set di training. Per gli input continui vengono creati al massimo due nodi di input: uno per i valori Missing, se presenti nei dati di training, e uno per tutti i valori esistenti o non Null. Ogni input viene ridimensionato in un formato numerico usando il metodo di normalizzazione del punteggio z (x-μ)/StdDev.
 
@@ -120,7 +120,7 @@ WHERE NODE_TYPE = 23
 
  In altre parole, se il parametro HOLDOUT_PERCENTAGE è impostato su 30, l'algoritmo userà il valore di questo parametro o un valore pari al 70% del numero totale di case, a seconda del valore minore.
 
- Il valore predefinito è 10.000.
+ Il valore predefinito è 10000.
 
 ### <a name="modeling-flags"></a>Flag di modellazione
  Di seguito sono indicati i flag di modellazione il cui uso è supportato con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression.
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 23
 |Attributo di input|Continuous, Discrete, Discretized, Key, Table|
 |Attributo stimabile|Continuous, Discrete, Discretized|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Esempi di query sul modello](linear-regression-model-query-examples.md) di regressione lineare degli algoritmi di regressione lineare di [Microsoft logistica](microsoft-logistic-regression-algorithm.md) [per i modelli di regressione logistica &#40;Analysis Services-Data mining&#41;](mining-model-content-for-logistic-regression-models.md) [algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)
 
 

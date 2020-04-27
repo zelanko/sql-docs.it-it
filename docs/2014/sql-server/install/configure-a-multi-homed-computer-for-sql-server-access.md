@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211509"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "68211509"
   
  Prima di continuare con questo argomento, è necessario conoscere le informazioni disponibili nell'argomento [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). In tale argomento sono contenute informazioni di base sulle modalità di funzionamento dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il firewall.  
   
- **Presupposti per questo esempio:**  
+ **Presupposti per l'esecuzione di questo esempio:**  
   
 -   Nel computer sono installate due schede di rete, di cui una o più possono essere wireless. È possibile simulare la presenza di due schede di rete tramite l'indirizzo IP di una scheda di rete e utilizzando l'indirizzo IP di loopback (127.0.0.1) come seconda scheda di rete.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211509"
   
 -   In questo esempio l'accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene configurato tramite la porta TCP 1433. È possibile configurare le altre porte utilizzate dai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversi tramite gli stessi passaggi generali.  
   
- **I passaggi generali di questo esempio sono i seguenti:**  
+ **Di seguito vengono elencati i passaggi generali dell'esempio:**  
   
 -   Determinare gli indirizzi IP nel computer.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "68211509"
   
 3.  Annotare gli indirizzi IPv4 e gli indirizzi IPv6 utilizzati. Le altre informazioni presenti nell'elenco, ad esempio gli indirizzi temporanei, le subnet mask e i gateway predefiniti, rappresentano informazioni importanti per la configurazione di una rete TCP/IP, ma non vengono utilizzate in questo esempio.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Per determinare le porte e gli indirizzi IP usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Per determinare le porte e gli indirizzi IP usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  In ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, nel riquadro della console espandere ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurazione di rete**, espandere **protocolli per \<nome istanza>**, quindi fare doppio clic su **TCP/IP**.  
+2.  In **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nel riquadro della console espandere **Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , espandere **Protocolli per \<nome istanza>** e quindi fare doppio clic su **TCP/IP**.  
   
 3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2**e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68211509"
   
 4.  Nella pagina **Panoramica** confermare che Windows Firewall è abilitato.  
   
-5.  Nel riquadro sinistro fare clic su **Regole connessioni in ingresso**.  
+5.  Nel riquadro sinistro fare clic su **Regole connessioni in entrata**.  
   
 6.  Fare clic con il pulsante destro del mouse su **Regole connessioni in entrata**, quindi scegliere **Nuova regola** per aprire **Creazione guidata nuova regola connessioni in entrata**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68211509"
 9. Per configurare gli altri indirizzi IP in un computer multihomed, ripetere questa procedura utilizzando un altro indirizzo IP e un'altra regola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database &#40;del servizio SQL Server Browser e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Connettersi a SQL Server tramite un server proxy &#40;Gestione configurazione SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
+ [Servizio SQL Server Browser &#40;motore di database e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Connessione a SQL Server tramite un server proxy &#40;Gestione configurazione SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207048"
 ---
 # <a name="prepared-execution"></a>Esecuzione preparata
@@ -43,7 +43,7 @@ ms.locfileid: "68207048"
   
  Alcune applicazioni ODBC iniziali utilizzano **SQLPrepare** ogni volta che si utilizza [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) . **SQLBindParameter** non richiede l'uso di **SQLPrepare**, può essere usato con **SQLExecDirect**. Ad esempio, utilizzare **SQLExecDirect** con **SQLBindParameter** per recuperare il codice restituito o i parametri di output da un stored procedure eseguito una sola volta. Non usare **SQLPrepare** con **SQLBindParameter** a meno che la stessa istruzione non venga eseguita più volte.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di istruzioni &#40;ODBC&#41;](executing-statements-odbc.md)  
   
   

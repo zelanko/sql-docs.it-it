@@ -14,10 +14,10 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728177"
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorizzazioni per le entità (Master Data Services)
@@ -40,14 +40,14 @@ ms.locfileid: "73728177"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
+|**Crea**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
 |**Aggiornamento**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
 |**Elimina**|L'utente può eliminare i membri.|  
-|**Nega**|Nega ogni accesso all'entità.|  
+|**Negare**|Nega ogni accesso all'entità.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

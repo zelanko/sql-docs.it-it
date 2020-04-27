@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528725"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727924"
 ---
 # <a name="using-advanced-data-types"></a>Uso di tipi di dati avanzati
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-È inoltre possibile usare il metodo [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) per leggere i dati come matrice di byte, come nell'esempio seguente:  
+È inoltre possibile usare il metodo [getBytes](reference/getbytes-method-sqlserverresultset.md) per leggere i dati come matrice di byte, come nell'esempio seguente:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Modifica dei tipi per valori di grandi dimensioni in un database
 
-Nella maggior parte dei casi, l'approccio consigliato per aggiornare o modificare valori di grandi dimensioni nel database consiste nel passare parametri mediante le classi [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), usando comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] quali `UPDATE`, `WRITE` e `SUBSTRING`.  
+Nella maggior parte dei casi, l'approccio consigliato per aggiornare o modificare valori di grandi dimensioni nel database consiste nel passare parametri mediante le classi [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md), usando comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] quali `UPDATE`, `WRITE` e `SUBSTRING`.  
 
 Se è necessario sostituire l'istanza di una parola in un file di testo di grandi dimensioni, quale ad esempio un file HTML archiviato, è possibile usare un oggetto Clob, come nell'esempio seguente:  
 
@@ -173,12 +173,12 @@ Per altre informazioni sui tipi di dati definiti dall'utente, vedere la sezione 
   
 ## <a name="sql_variant-data-type"></a>Tipo di dati sql_variant
 
-Per informazioni sul tipo di dati sql_variant, vedere [Uso del tipo di dati sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Per informazioni sul tipo di dati sql_variant, vedere [Uso del tipo di dati sql_variant](using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Tipi di dati spaziali
 
-Per informazioni sui tipi di dati spaziali, vedere [Uso dei tipi di dati spaziali](../../connect/jdbc/use-spatial-datatypes.md).  
+Per informazioni sui tipi di dati spaziali, vedere [Uso dei tipi di dati spaziali](use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Informazioni sui tipi di dati del driver JDBC](understanding-the-jdbc-driver-data-types.md)  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207097"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
@@ -46,29 +46,29 @@ ms.locfileid: "68207097"
 |SQL_COPT_SS_BROWSE_CONNECT|Prima|  
 |SQL_COPT_SS_BROWSE_SERVER|Prima|  
 |SQL_COPT_SS_CONCAT_NULL|Prima|  
-|SQL_COPT_SS_CONNECTION_DEAD|Dopo|  
+|SQL_COPT_SS_CONNECTION_DEAD|After|  
 |SQL_COPT_SS_ENCRYPT|Prima|  
-|SQL_COPT_SS_ENLIST_IN_DTC|Dopo|  
-|SQL_COPT_SS_ENLIST_IN_XA|Dopo|  
+|SQL_COPT_SS_ENLIST_IN_DTC|After|  
+|SQL_COPT_SS_ENLIST_IN_XA|After|  
 |SQL_COPT_SS_FALLBACK_CONNECT|Prima|  
 |SQL_COPT_SS_FAILOVER_PARTNER|Prima|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|Prima|  
 |SQL_COPT_SS_MARS_ENABLED|Prima|  
 |SQL_COPT_SS_MULTISUBMIT_FAILOVER|Prima|  
 |SQL_COPT_SS_OLDPWD|Prima|  
-|SQL_COPT_SS_PERF_DATA|Dopo|  
-|SQL_COPT_SS_PERF_DATA_LOG|Dopo|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|Dopo|  
-|SQL_COPT_SS_PERF_QUERY|Dopo|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|Dopo|  
-|SQL_COPT_SS_PERF_QUERY_LOG|Dopo|  
+|SQL_COPT_SS_PERF_DATA|After|  
+|SQL_COPT_SS_PERF_DATA_LOG|After|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
+|SQL_COPT_SS_PERF_QUERY|After|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
+|SQL_COPT_SS_PERF_QUERY_LOG|After|  
 |SQL_COPT_SS_PRESERVE_CURSORS|Prima|  
-|SQL_COPT_SS_QUOTED_IDENT|È possibile usare il|  
-|SQL_COPT_SS_TRANSLATE|È possibile usare il|  
+|SQL_COPT_SS_QUOTED_IDENT|Prima o dopo|  
+|SQL_COPT_SS_TRANSLATE|Prima o dopo|  
 |SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|Prima|  
-|SQL_COPT_SS_TXN_ISOLATION|È possibile usare il|  
-|SQL_COPT_SS_USE_PROC_FOR_PREP|È possibile usare il|  
-|SQL_COPT_SS_USER_DATA|È possibile usare il|  
+|SQL_COPT_SS_TXN_ISOLATION|Prima o dopo|  
+|SQL_COPT_SS_USE_PROC_FOR_PREP|Prima o dopo|  
+|SQL_COPT_SS_USER_DATA|Prima o dopo|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|Prima|  
   
  L'utilizzo di un attributo di pre-connessione e del comando [!INCLUDE[tsql](../../includes/tsql-md.md)] equivalente per la stessa sessione, del database o dello stato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può generare un comportamento imprevisto. Ad esempio,  
@@ -85,7 +85,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_AD_ON|Default. La connessione utilizza il comportamento ANSI predefinito per la gestione dei confronti di valori NULL, per il riempimento, gli avvisi e le concatenazioni NULL.|  
+|SQL_AD_ON|Valore predefinito. La connessione utilizza il comportamento ANSI predefinito per la gestione dei confronti di valori NULL, per il riempimento, gli avvisi e le concatenazioni NULL.|  
 |SQL_AD_OFF|La connessione utilizza la gestione di valori NULL, la spaziatura dei tipi di dati character e gli avvisi definiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  Se si usa il pool di connessioni, è necessario impostare SQL_COPT_SS_ANSI_NPW nella stringa di connessione, invece che con SQLSetConnectAttr. Una volta stabilita una connessione, qualsiasi tentativo di modifica di questo attributo avrà esito negativo senza generare alcun avviso quando si utilizza un pool di connessioni.  
@@ -111,7 +111,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_BCP_OFF|Default. Le funzioni di copia bulk non sono disponibili nella connessione.|  
+|SQL_BCP_OFF|Valore predefinito. Le funzioni di copia bulk non sono disponibili nella connessione.|  
 |SQL_BCP_ON|Le funzioni di copia bulk sono disponibili nella connessione.|  
   
 ## <a name="sql_copt_ss_browse_connect"></a>SQL_COPT_SS_BROWSE_CONNECT  
@@ -119,7 +119,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_MORE_INFO_NO|Default. Restituisce un elenco di server.|  
+|SQL_MORE_INFO_NO|Valore predefinito. Restituisce un elenco di server.|  
 |SQL_MORE_INFO_YES|**SQLBrowseConnect** restituisce una stringa estesa di proprietà del server.|  
   
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
@@ -128,14 +128,14 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |valore|Descrizione|  
 |-----------|-----------------|  
 |nomecomputer|**SQLBrowseConnect** restituisce un elenco di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Le barre rovesciate doppie\\\\() non devono essere usate per il nome del server (ad esempio, \\invece di \MyServer, è necessario usare MyServer).|  
-|NULL|Default. **SQLBrowseConnect** restituisce informazioni per tutti i server nel dominio.|  
+|NULL|Valore predefinito. **SQLBrowseConnect** restituisce informazioni per tutti i server nel dominio.|  
   
 ## <a name="sql_copt_ss_concat_null"></a>SQL_COPT_SS_CONCAT_NULL  
  SQL_COPT_SS_CONCAT_NULL abilita o disabilita l'utilizzo della gestione ISO di valori NULL per la concatenazione delle stringhe. Per ulteriori informazioni, vedere SET CONCAT_NULL_YIELDS_NULL.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_CN_ON|Default. La connessione utilizza il comportamento predefinito ISO per la gestione di valori NULL per la concatenazione delle stringhe.|  
+|SQL_CN_ON|Valore predefinito. La connessione utilizza il comportamento predefinito ISO per la gestione di valori NULL per la concatenazione delle stringhe.|  
 |SQL_CN_OFF|La connessione utilizza il comportamento definito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la gestione dei valori NULL per la concatenazione delle stringhe.|  
   
 ## <a name="sql_copt_ss_encrypt"></a>SQL_COPT_SS_ENCRYPT  
@@ -174,7 +174,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_IS_OFF|Default. L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata per convalidare ID utente e password al momento dell'accesso.|  
+|SQL_IS_OFF|Valore predefinito. L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata per convalidare ID utente e password al momento dell'accesso.|  
 |SQL_IS_ON|Viene utilizzata la modalità di autenticazione di Windows per convalidare i diritti di accesso di un utente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="sql_copt_ss_mars_enabled"></a>SQL_COPT_SS_MARS_ENABLED  
@@ -182,7 +182,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_MARS_ENABLED_NO|Default. MARS è disabilitato.|  
+|SQL_MARS_ENABLED_NO|Valore predefinito. MARS è disabilitato.|  
 |SQL_MARS_ENABLED_YES|MARS è abilitato.|  
   
  Per altre informazioni su MARS, vedere [uso di più set di risultati attivi &#40;&#41;Mars ](../native-client/features/using-multiple-active-result-sets-mars.md).  
@@ -198,15 +198,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_IS_ON|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consente una riconnessione più veloce in caso di failover.|  
-|SQL_IS_OFF|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non consente una riconnessione più veloce in caso di failover.|  
+|SQL_IS_ON|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consente una riconnessione più veloce in caso di failover.|  
+|SQL_IS_OFF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non consente una riconnessione più veloce in caso di failover.|  
   
 ## <a name="sql_copt_ss_oldpwd"></a>SQL_COPT_SS_OLDPWD  
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è stata introdotta la scadenza della password per l'autenticazione di SQL Server. L'attributo SQL_COPT_SS_OLDPWD è stato aggiunto per consentire al client di fornire sia la vecchia password che la nuova per la connessione. Quando questa proprietà è impostata, il provider non utilizzerà il pool di connessioni per la prima connessione o per le connessioni successive, in quanto la stringa di connessione conterrà la password precedente che è stata modificata.  
   
- Per ulteriori informazioni, vedere [modifica delle password a livello di codice](../native-client/features/changing-passwords-programmatically.md).  
+ Per altre informazioni, vedere [Modifica delle password a livello di programmazione](../native-client/features/changing-passwords-programmatically.md).  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
@@ -249,7 +247,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_PC_OFF|Default. I cursori vengono chiusi quando viene eseguito il commit o il rollback della transazione utilizzando **SQLEndTran**.|  
+|SQL_PC_OFF|Valore predefinito. I cursori vengono chiusi quando viene eseguito il commit o il rollback della transazione utilizzando **SQLEndTran**.|  
 |SQL_PC_ON|I cursori non vengono chiusi quando viene eseguito il commit o il rollback della transazione utilizzando **SQLEndTran**, tranne quando si utilizza un cursore statico o keyset in modalità asincrona. Se si esegue un rollback quando il popolamento del cursore non è completo, il cursore viene chiuso.|  
   
 ## <a name="sql_copt_ss_quoted_ident"></a>SQL_COPT_SS_QUOTED_IDENT  
@@ -258,7 +256,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_QI_OFF|La connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la presenza di identificatori tra virgolette in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite.|  
-|SQL_QI_ON|Default. La connessione consente la presenza di identificatori tra virgolette in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite.|  
+|SQL_QI_ON|Valore predefinito. La connessione consente la presenza di identificatori tra virgolette in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite.|  
   
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
  SQL_COPT_SS_TRANSLATE fa in modo che il driver converta caratteri tra le tabelle codici del client e del server durante lo scambio di dati MBCS. L'attributo influiscono solo sui dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]archiviati nelle colonne **char**, **varchar**e **Text** .  
@@ -266,7 +264,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_XL_OFF|Il driver non converte i caratteri da una tabella codici all'altra nei dati di tipo carattere scambiati tra il client e il server.|  
-|SQL_XL_ON|Default. Il driver converte caratteri da una tabella codici a un'altra in dati di tipo carattere scambiati tra il client e il server. Il driver configura automaticamente la conversione dei caratteri, determinando la tabella codici installata nel server e quella utilizzata dal client.|  
+|SQL_XL_ON|Valore predefinito. Il driver converte caratteri da una tabella codici a un'altra in dati di tipo carattere scambiati tra il client e il server. Il driver configura automaticamente la conversione dei caratteri, determinando la tabella codici installata nel server e quella utilizzata dal client.|  
   
 ## <a name="sql_copt_ss_trust_server_certificate"></a>SQL_COPT_SS_TRUST_SERVER_CERTIFICATE  
  SQL_COPT_SS_TRUST_SERVER_CERTIFICATE fa in modo che il driver abiliti o disabiliti la convalida del certificato quando si utilizza la crittografia. Questo attributo è un valore di lettura/scrittura, ma non ha alcun effetto se lo si imposta una volta stabilita una connessione.  
@@ -275,7 +273,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|SQL_TRUST_SERVER_CERTIFICATE_NO|Default. La crittografia senza convalida del certificato non è abilitata.|  
+|SQL_TRUST_SERVER_CERTIFICATE_NO|Valore predefinito. La crittografia senza convalida del certificato non è abilitata.|  
 |SQL_TRUST_SERVER_CERTIFICATE_YES|La crittografia senza convalida del certificato è abilitata.|  
   
 ## <a name="sql_copt_ss_txn_isolation"></a>SQL_COPT_SS_TXN_ISOLATION  
@@ -357,13 +355,13 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzione SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)   
  [Funzioni di copia bulk](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [IMPOSTA ANSI_NULLS &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [IMPOSTA ANSI_PADDING &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [IMPOSTA ANSI_WARNINGS &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [IMPOSTA CONCAT_NULL_YIELDS_NULL &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [IMPOSTA QUOTED_IDENTIFIER &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SQLPrepare (funzione)](https://go.microsoft.com/fwlink/?LinkId=59360)   

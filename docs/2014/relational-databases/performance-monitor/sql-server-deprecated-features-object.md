@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206965"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
@@ -30,7 +30,7 @@ ms.locfileid: "68206965"
 |Istanze del contatore SQL Server Deprecated Features|Descrizione|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
-|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM` * \< function_name>* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
+|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM` * \< function_name>* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
 |"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
 |ADDING TAPE DEVICE|È stata rilevata la`tape`funzionalità deprecata sp_addumpdevice ''. Usare invece sp_addumpdevice`disk`''. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
@@ -262,13 +262,13 @@ ms.locfileid: "68206965"
 |xp_loginConfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
 |xp_revokelogin|È stata rilevata la procedura xp_revokelogin. In alternativa, usare ALTER LOGIN DISABLE o DROP LOGIN. Si verifica una volta per ogni compilazione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di motore di database deprecate SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funzionalità deprecate della ricerca full-text in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe di evento Deprecation annuncio](../event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support-classe di evento](../event-classes/deprecation-final-support-event-class.md)   
  [Funzionalità di motore di database sospese in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Funzionalità di ricerca full-text non più supportate in SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
- [Usare oggetti di SQL Server](use-sql-server-objects.md)  
+ [Utilizzare oggetti di SQL Server](use-sql-server-objects.md)  
   
   

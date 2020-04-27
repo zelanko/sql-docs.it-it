@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4e336eb9c89c05656d75cc13cec4d46ddde68d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211591"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Esempio: Utilizzo del provider di eventi WMI con .NET Framework
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Esempio: Uso del provider di eventi WMI con .NET Framework
   Nell'esempio seguente viene creata un'applicazione in C# che utilizza il provider di eventi WMI per restituire dati degli eventi per tutti gli eventi DDL che si verificano in un'istanza dell'installazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
@@ -75,7 +75,7 @@ class SQLWEPExample
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concetti relativi al provider WMI per eventi del server](wmi-provider-for-server-events-concepts.md)  
   
   

@@ -13,10 +13,10 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258518"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Panoramica del processo di confronto del carico di lavoro
@@ -63,6 +63,6 @@ Considerazioni:
 - Se uno o più componenti risultano mancanti, viene visualizzata una pagina dei prerequisiti con collegamenti per i download quando si tenta di generare un nuovo report di analisi (connessione Internet necessaria).
 - Per visualizzare un report generato in una versione precedente dello strumento, è necessario prima aggiornare lo schema.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per informazioni su come produrre un file di traccia con un log degli eventi che si verificano in un server, vedere l'articolo [acquisire una traccia in database Experimentation Assistant](database-experimentation-assistant-capture-trace.md).

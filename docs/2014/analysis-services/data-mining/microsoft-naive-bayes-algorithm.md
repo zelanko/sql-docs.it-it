@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174460"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Microsoft Naive Bayes
@@ -55,7 +55,7 @@ ms.locfileid: "78174460"
 
  I requisiti di un modello Naive Bayes sono i seguenti:
 
--   **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
+-   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.
 
 -   **Colonne di input** In un modello Naive Bayes tutte le colonne devono essere colonne discrete o deselezionate. Per informazioni sulle colonne discretizzazione, vedere [metodi di discretizzazione &#40;&#41;di data mining ](discretization-methods-data-mining.md).
 
@@ -65,7 +65,7 @@ ms.locfileid: "78174460"
 
      Viceversa, la possibilità dell'algoritmo di identificare le correlazioni fra variabili è utile quando si esplora un modello o un set di dati, per identificare le relazioni fra input.
 
--   Almeno **una colonna stimabile** L'attributo stimabile deve contenere valori discreti o discreti.
+-   **Almeno una colonna stimabile** Nell'attributo stimabile devono essere contenuti valori discreti o discretizzati.
 
      I valori della colonna stimabile possono essere utilizzati come input. Ciò può essere utile quando si esplora un nuovo set di dati, per trovare le relazioni fra le colonne.
 
@@ -91,7 +91,7 @@ ms.locfileid: "78174460"
 
 -   Supporta l'utilizzo di modelli di data mining OLAP.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) [selezione delle funzioni &#40;data mining&#41;](feature-selection-data-mining.md) [modello Naive Bayes esempi di query](naive-bayes-model-query-examples.md) sul contenuto dei modelli [di data mining per i modelli naive Bayes &#40;Analysis Services-Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md) [riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)
 
 

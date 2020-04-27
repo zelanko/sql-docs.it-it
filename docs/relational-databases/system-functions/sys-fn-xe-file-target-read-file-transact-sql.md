@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982985"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -47,17 +47,17 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *percorso*  
- Percorso dei file da leggere. il *percorso* può contenere caratteri jolly e includere il nome di un file. *path* è di **tipo nvarchar (260)**. Non esiste un valore predefinito. Nel contesto del database SQL di Azure, questo valore è un URL HTTP di un file in archiviazione di Azure.
+ *path*  
+ Percorso dei file da leggere. il *percorso* può contenere caratteri jolly e includere il nome di un file. *path* è di **tipo nvarchar (260)**. Non prevede alcun valore predefinito. Nel contesto del database SQL di Azure, questo valore è un URL HTTP di un file in archiviazione di Azure.
   
  *mdpath*  
- Percorso del file di metadati che corrisponde al file o ai file specificati dall'argomento *path* . *mdpath* è di **tipo nvarchar (260)**. Non esiste un valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
+ Percorso del file di metadati che corrisponde al file o ai file specificati dall'argomento *path* . *mdpath* è di **tipo nvarchar (260)**. Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]non richiede il parametro *mdpath* . È tuttavia disponibile per la compatibilità con i file di log generati in versioni precedenti di SQL Server.  
   
  *initial_file_name*  
- Primo file da leggere dal *percorso*. *initial_file_name* è di **tipo nvarchar (260)**. Non esiste un valore predefinito. Se viene specificato **null** come argomento, vengono letti tutti i file trovati nel *percorso* .  
+ Primo file da leggere dal *percorso*. *initial_file_name* è di **tipo nvarchar (260)**. Non prevede alcun valore predefinito. Se viene specificato **null** come argomento, vengono letti tutti i file trovati nel *percorso* .  
   
 > [!NOTE]  
 >  *initial_file_name* e *initial_offset* sono argomenti abbinati. Se si specifica un valore per uno dei due argomenti, è necessario specificare un valore anche per l'altro.  
@@ -75,7 +75,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Contenuto dell'evento in formato XML. Non ammette i valori Null.|  
 |file_name|**nvarchar(260)**|Nome del file che contiene l'evento. Non ammette i valori Null.|  
 |file_offset|**bigint**|Offset del blocco nel file che contiene l'evento. Non ammette i valori Null.|  
-|timestamp_utc|**datetime2**|**Si applica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] e versioni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]successive e.<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
+|timestamp_utc|**datetime2**|**SI APPLICA A**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
 
   
 ## <a name="remarks"></a>Osservazioni  
@@ -93,9 +93,9 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste a gestione dinamica degli eventi estesi](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Viste del catalogo degli eventi estesi &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Viste del catalogo degli eventi estesi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

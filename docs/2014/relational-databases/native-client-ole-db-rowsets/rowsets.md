@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206648"
 ---
 # <a name="rowsets"></a>Set di righe
@@ -60,9 +60,9 @@ ms.locfileid: "68206648"
   
 -   [Segnalibri](bookmarks.md)  
   
--   [Aggiornamento dei dati nei set di righe](updating-data-in-rowsets.md)  
+-   [Aggiornamento dei dati dei set di righe](updating-data-in-rowsets.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   
