@@ -1,5 +1,5 @@
 ---
-title: Cache della libreria di cursori Documenti Microsoft
+title: Cache della libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5686bf0c3e261b1df947c02e2edaa419da498ecb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284691"
 ---
 # <a name="cursor-library-cache"></a>Cache della libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità del cursore del driver.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- Per ogni riga di dati nel set di risultati, la libreria di cursori memorizza nella cache i dati per ogni colonna associata, la lunghezza dei dati in ogni colonna associata e lo stato della riga. La libreria di cursori utilizza i valori nella cache sia per restituire tramite **SQLFetch** e **SQLFetchScroll** che per costruire istruzioni ricercate per le operazioni posizionate. Per ulteriori informazioni, vedere [Creazione di istruzioni ricercate](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+ Per ogni riga di dati nel set di risultati, la libreria di cursori memorizza nella cache i dati per ogni colonna associata, la lunghezza dei dati in ogni colonna associata e lo stato della riga. La libreria di cursori utilizza i valori nella cache per restituire i valori tramite **SQLFetch** e **SQLFetchScroll** e per costruire istruzioni ricercate per le operazioni posizionate. Per ulteriori informazioni, vedere [creazione di istruzioni ricercate](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

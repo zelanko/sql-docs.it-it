@@ -17,19 +17,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174230"
 ---
 # <a name="browsing-a-neural-network-model"></a>Esplorazione di un modello di rete neurale
   Quando si apre un modello di regressione logistica o di rete neurale utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore del modello di rete neurale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sugli schemi del modello e sui dati sottostanti.
 
-##  <a name="BKMK_Tabs"></a>Esplorare il modello
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Esplorare il modello
  I modelli basati sugli algoritmi di [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o Logistic Regression sono simili nel senso che analizzano i dati come set di connessioni tra gli input e gli output noti. Il visualizzatore **Sfoglia** consente di esplorare tali connessioni tramite i controlli seguenti:
 
--   [Variabili](#BKMK_Variables)
+-   [variables](#BKMK_Variables)
 
 -   [Input](#BKMK_Inputs)
 
@@ -37,7 +37,7 @@ ms.locfileid: "78174230"
 
  Per provare questo visualizzatore, è possibile creare un modello tramite [Procedura guidata Classificazione &#40;componenti aggiuntivi Data Mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) e usare l'opzione **Avanzate** per modificare l'algoritmo in Microsoft Logistic Regression nella finestra di dialogo **Parametri algoritmo**.
 
-###  <a name="BKMK_Variables"></a>Variabili
+###  <a name="variables"></a><a name="BKMK_Variables"></a>Variabili
  Nel riquadro **Variabili** viene visualizzato un elenco di variabili di input nell'ordine del relativo effetto sul modello. Usare i controlli **Output** e **Input** per filtrare il modello, influendo sulle variabili visualizzate e sul relativo ordine.
 
  Utilizzando questo visualizzatore, è possibile esplorare i fattori che sono più importanti per determinare se è più probabile che un cliente appartenga alla categoria di acquirenti di biciclette o alla categoria di non acquirenti.
@@ -72,17 +72,17 @@ ms.locfileid: "78174230"
 
      Viene visualizzata una descrizione comando che include un punteggio della *priorità*, una coppia di punteggi di *probabilità* e una coppia di valori di *accuratezza*.
 
-    -   L' **importanza** viene calcolata nell'intero set di dati e identifica l'attributo che, dati tutti gli input, è più correlato al risultato di destinazione. Nel visualizzatore vengono ordinati i valori nel grafico in base ai punteggi di priorità.
+    -   La **priorità** viene calcolata nell'intero set di dati e identifica l'attributo che, dati tutti gli input, è più correlato al risultato di destinazione. Nel visualizzatore vengono ordinati i valori nel grafico in base ai punteggi di priorità.
 
     -   La **probabilità** viene calcolata per ogni set di coppie attributo-valore, per i risultati di destinazione, nell'intero set di dati.
 
-    -   **Lift** indica quanto è utile questa particolare coppia attributo-valore per la promozione di un risultato o di un altro.
+    -   L'**accuratezza** indica quanto è utile questa determinata coppia attributo-valore per la promozione di un risultato o di un altro.
 
      Nota: nella descrizione comando sono contenute le stesse informazioni indipendentemente dal fatto che si posizioni il mouse su una colonna o sull'altra.
 
  [Torna all'inizio](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>Input
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Input
  Il riquadro **Input** consente di scegliere un set di input e applicarlo come filtro al modello. In questo modo è possibile vedere l'influenza di tali scelte sul risultato, in base ai dati di training
 
 ##### <a name="explore-inputs"></a>Esplorazione degli input
@@ -99,7 +99,7 @@ ms.locfileid: "78174230"
 
      Nel riquadro **Input** fare clic sulla cella vuota sotto **Age** e selezionare **Region**.
 
-     Per **Valore** selezionare **Europe**.
+     Per **Valore** selezionare **Europa**.
 
 3.  Continuare ad aggiungere i filtri di input per concentrarsi su un gruppo di particolare interesse.
 
@@ -113,7 +113,7 @@ ms.locfileid: "78174230"
 
  [Torna all'inizio](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>Uscite
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Uscite
  Nel riquadro **Output** è possibile scegliere il risultato a cui si è interessati. Le reti neurali consentono di specificare il numero di colonne di risultati desiderato, sebbene l'aggiunta di più output aumenti la complessità del modello e possa richiedere un tempo di elaborazione più lungo.
 
  Per confrontare due output, essi devono essere stati definiti come colonne **Stima** o **Solo stima**.
@@ -133,7 +133,7 @@ ms.locfileid: "78174230"
 
  Per altre informazioni, vedere [Crea struttura di data mining &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md) e [Aggiunta modello a struttura &#40;componenti aggiuntivi Data Mining per Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)
 
 

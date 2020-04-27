@@ -13,10 +13,10 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729280"
 ---
 # <a name="entity-dependencies-explorer"></a>Esplorazione delle dipendenze di entità
@@ -24,8 +24,7 @@ ms.locfileid: "73729280"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 aggiunge una nuova pagina di esplorazione relativa alle dipendenze di entità che fornisce un modo alternativo per visualizzare le relazioni tra i membri di entità all'interno di un modello, come specificato dai relativi valori di attributo basati sul dominio (DBA), ma senza dover prima definire una gerarchia derivata.   
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 aggiunge una nuova pagina di esplorazione relativa alle dipendenze di entità che fornisce un modo alternativo per visualizzare le relazioni tra i membri di entità all'interno di un modello, come specificato dai relativi valori di attributo basati sul dominio (DBA), ma senza dover prima definire una gerarchia derivata.   
   
 Tale pagina consente di conoscere chi sta utilizzando l'entità e in che modo. La visualizzazione è simile a quella della pagina di esplorazione Gerarchia derivata, ma è più completa. Consente di visualizzare tutte le relazioni DBA, non solo quelle definite come parte di una specifica gerarchia. Non è necessaria una definizione della gerarchia perché la struttura gerarchica visualizzata viene semplicemente dedotta dai DBA esistenti.  
   

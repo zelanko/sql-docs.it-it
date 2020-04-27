@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c7eab32f251b9622c6ac77febf2c004806c024b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174593"
 ---
 # <a name="column-distributions-data-mining"></a>Distribuzioni delle colonne (Data mining)
@@ -43,7 +43,7 @@ ms.locfileid: "78174593"
 
  Per altre informazioni sugli algoritmi forniti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
  [Tipi di contenuto &#40;data mining&#41;](content-types-data-mining.md) le strutture di data mining &#40;i metodi [di discretizzazione Analysis Services di](mining-structures-analysis-services-data-mining.md) data mining&#41;le distribuzioni &#40;di [data mining](discretization-methods-data-mining.md)&#41;[DMX &#40;](/sql/dmx/distributions-dmx) [colonne della struttura](mining-structure-columns.md) di data mining
 
 

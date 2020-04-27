@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782645"
 ---
 # <a name="analysis-services-powershell"></a>PowerShell per Analysis Services
@@ -39,18 +39,18 @@ ms.locfileid: "72782645"
 
 Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Services riferimenti di PowerShell](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
-##  <a name="bkmk_prereq"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Prerequisiti  
  È necessario installare Windows PowerShell 2.0. Questa applicazione è installata per impostazione predefinita nelle versioni più recenti dei sistemi operativi Windows. Per altre informazioni, vedere [installare Windows PowerShell 2,0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  È necessario installare una funzionalità di SQL Server che include il modulo SQL Server PowerShell (SQLPS) e librerie client. Il modo più semplice per effettuare questa operazione consiste nell'installare SQL Server Management Studio che include automaticamente la funzionalità PowerShell e librerie client. Nel modulo SQL Server PowerShell (SQLPS) sono inclusi tutti i cmdlet e i provider PowerShell per tutte le funzionalità di SQL Server, tra cui il modulo SQLASCmdlets e il provider SQLAS utilizzati per la navigazione nella gerarchia di oggetti di Analysis Services.  
   
- Prima di poter utilizzare **** il provider e i `SQLAS` cmdlet, è necessario importare il modulo sqlps. Il provider SQLAS è un'estensione del `SQLServer` provider. Sono disponibili diversi modi per importare il modulo SQLPS. Per altre informazioni, vedere [Importare il modulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
+ Prima di poter utilizzare **SQLPS** il provider e i `SQLAS` cmdlet, è necessario importare il modulo sqlps. Il provider SQLAS è un'estensione del `SQLServer` provider. Sono disponibili diversi modi per importare il modulo SQLPS. Per altre informazioni, vedere [Importare il modulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
   
  Per l'accesso remoto a un'istanza di Analysis Services è necessaria l'abilitazione dell'amministrazione remota e la condivisione di file. Per ulteriori informazioni, vedere [Enable Remote Administration](#bkmk_remote) in questo argomento.  
   
-##  <a name="bkmk_vers"></a>Versioni e modalità supportate di Analysis Services  
+##  <a name="supported-versions-and-modes-of-analysis-services"></a><a name="bkmk_vers"></a> Versioni e modalità supportate di Analysis Services  
  Attualmente, PowerShell per Analysis Services è supportato in qualsiasi edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services in esecuzione in Windows Server 2008 R2, Windows Server 2008 SP1 o Windows 7.  
   
  Nella tabella seguente viene mostrata la disponibilità di PowerShell per Analysis Services in contesti diversi.  
@@ -65,7 +65,7 @@ Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Service
 |Connessioni incorporate ai database PowerPivot<br /><br /> "Data Source = $Embedded $"|Non supportato.|  
 |Contesto del server locale nelle stored procedure di Analysis Services<br /><br /> "Data Source = *"|Non supportato.|  
   
-##  <a name="bkmk_auth"></a>Considerazioni sulla sicurezza e sui requisiti di autenticazione  
+##  <a name="authentication-requirements-and-security-considerations"></a><a name="bkmk_auth"></a>Considerazioni sulla sicurezza e sui requisiti di autenticazione  
  Quando si stabilisce la connessione ad Analysis Services, è necessario creare tale connessione utilizzando un'identità utente di Windows. Nella maggior parte dei casi, una connessione viene creata tramite la sicurezza integrata di Windows, dove l'identità dell'utente corrente imposta il contesto di sicurezza nel quale vengono eseguite le operazioni del server. Tuttavia, metodi di autenticazione aggiuntivi diventano disponibili quando si configura l'accesso HTTP ad Analysis Services. In questa sezione viene illustrato in che modo il tipo di connessione determina quali opzioni di autenticazione è possibile utilizzare.  
   
  Le connessioni ad Analysis Services sono caratterizzate come connessioni native o come connessioni HTTP. Una connessione nativa è una connessione diretta da un'applicazione client al server. In una sessione di PowerShell, il client PowerShell utilizza il provider OLE DB per Analysis Services per connettersi direttamente a un'istanza di Analysis Services. Una connessione nativa viene sempre creata tramite la sicurezza integrata di Windows, dove PowerShell per Analysis Services viene eseguito come utente corrente. In Analysis Services non è supportata la rappresentazione. Se si desidera eseguire un'operazione come utente specifico, è necessario avviare la sessione di PowerShell con il nome di tale utente.  
@@ -111,7 +111,7 @@ $pwd.Dispose()
 Remove-Variable -Name pwd  
 ```  
   
-##  <a name="bkmk_tasks"></a>Attività di Analysis Services PowerShell  
+##  <a name="analysis-services-powershell-tasks"></a><a name="bkmk_tasks"></a>Attività di Analysis Services PowerShell  
  È possibile eseguire PowerShell per Analysis Services dalla shell di gestione di Windows PowerShell o da un prompt dei comandi di Windows. L'esecuzione di PowerShell per Analysis Services da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non è supportata.  
   
  In questa sezione vengono descritte le attività comuni per l'utilizzo di PowerShell per Analysis Services.  
@@ -126,7 +126,7 @@ Remove-Variable -Name pwd
   
 -   [Ottenere la Guida per PowerShell per Analysis Services](#bkmk_help)  
   
-###  <a name="bkmk_load"></a>Caricare il provider di Analysis Services e i cmdlet  
+###  <a name="load-the-analysis-services-provider-and-cmdlets"></a><a name="bkmk_load"></a>Caricare il provider di Analysis Services e i cmdlet  
  Il provider per Analysis Services è un'estensione del provider radice per SQL Server disponibile quando si importa il modulo SQLPS. I cmdlet di Analysis Services vengono caricati contemporaneamente. È possibile caricarli anche in modo indipendente se si desidera utilizzarli senza il provider.  
   
 -   Eseguire il cmdlet Import-module per caricare SQLPS in cui sono incluse tutte le funzionalità di PowerShell per Analysis Services. Se non è possibile importare il modulo, è possibile impostare temporaneamente i criteri di esecuzione su senza limitazioni relativamente al caricamento del modulo. Per altre informazioni, vedere [Importare il modulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
@@ -143,7 +143,7 @@ Remove-Variable -Name pwd
     Import-Module "sqlascmdlets"  
     ```  
   
-###  <a name="bkmk_remote"></a>Abilita amministrazione remota  
+###  <a name="enable-remote-administration"></a><a name="bkmk_remote"></a>Abilita amministrazione remota  
  Prima che sia possibile utilizzare PowerShell per Analysis Services con un'istanza di Analysis Services remota, è necessario abilitare innanzitutto l'amministrazione remota e la condivisione di file. L'errore seguente indica un problema di configurazione del firewall: "il server RPC non è disponibile. Eccezione da HRESULT: 0x800706BA.  
   
 1.  Verificare che sia il computer locale sia quello remoto dispongano delle versioni di [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] degli strumenti client e server.  
@@ -175,7 +175,7 @@ Enable-PSRemoting
 ```  
   
   
-###  <a name="bkmk_connect"></a>Connettersi a un oggetto Analysis Services  
+###  <a name="connect-to-an-analysis-services-object"></a><a name="bkmk_connect"></a>Connettersi a un oggetto Analysis Services  
  Il provider PowerShell per Analysis Services supporta la navigazione all'interno della gerarchia di oggetti di Analysis Services e consente di impostare il contesto per l'esecuzione dei comandi. Il provider è un'estensione del provider radice per SQLSERVER disponibile tramite il modulo SQLPS. Dopo aver caricato questo modulo, è possibile passare al percorso.  
   
  È possibile connettersi a un'istanza locale o remota, ma alcuni cmdlet vengono eseguiti solo in un'istanza locale, vale a dire partizione di tipo merge. È possibile utilizzare una connessione nativa o una HTTP per i server Analysis Services configurati per l'accesso HTTP. Nelle illustrazioni seguenti viene mostrato il percorso di navigazione per le connessioni native e HTTP. Nelle illustrazioni seguenti viene mostrato il percorso di navigazione per le connessioni native e HTTP.  
@@ -212,7 +212,7 @@ PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir
   
  È consigliabile vedere le raccolte Assembly, Database, Ruoli e Tracce. Se non è possibile visualizzare il contenuto di queste raccolte, controllare le impostazioni di autenticazione nella directory virtuale OLAP. Verificare che l'accesso anonimo sia disabilitato. Se si utilizza Autenticazione di Windows, assicurarsi che l'account utente di Windows disponga delle autorizzazioni amministrative per l'istanza di Analysis Services.  
   
-###  <a name="bkmk_admin"></a>Amministrare il servizio  
+###  <a name="administer-the-service"></a><a name="bkmk_admin"></a>Amministrare il servizio  
  Verificare che il servizio sia in esecuzione. Vengono restituiti lo stato, il nome e il nome visualizzato dei servizi SQL Server, inclusi Analysis Services (MSSQLServerOLAPService) e il motore di database.  
   
 ```powershell
@@ -231,7 +231,7 @@ Get-Process msmdsrv
 Restart-Service mssqlserverolapservice  
 ```  
   
-###  <a name="bkmk_help"></a>Ottenere la guida per Analysis Services PowerShell  
+###  <a name="get-help-for-analysis-services-powershell"></a><a name="bkmk_help"></a>Ottenere la guida per Analysis Services PowerShell  
  Utilizzare alcuni dei cmdlet seguenti per verificare la disponibilità del cmdlet e per ottenere ulteriori informazioni su servizi, processi e oggetti.  
   
 1.  Tramite `Get-Help` viene restituita la Guida incorporata per un cmdlet di Analysis Services, tra cui examples:  
@@ -260,8 +260,7 @@ Restart-Service mssqlserverolapservice
     Get-Process msmdsrv | Get-Member -Type Property  
     ```  
   
-4.  
-  `Get-Member` può essere utilizzato anche per restituire proprietà o metodi di un oggetto, ad esempio metodi AMO nell'oggetto server, utilizzando il provider per SQLAS per specificare l'istanza del server.  
+4.  `Get-Member` può essere utilizzato anche per restituire proprietà o metodi di un oggetto, ad esempio metodi AMO nell'oggetto server, utilizzando il provider per SQLAS per specificare l'istanza del server.  
   
     ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
@@ -274,9 +273,9 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Installare SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Installa SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [Gestire i modelli tabulari tramite PowerShell (Blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
- [Configurare l'accesso HTTP per Analysis Services in Internet Information Services &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

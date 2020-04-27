@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174681"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
@@ -31,7 +31,7 @@ ms.locfileid: "78174681"
 
  Un grafico dei profitti è un tipo di grafico correlato contenente le stesse informazioni di un grafico di accuratezza, ma consente di visualizzare anche l'aumento di profitto previsto associato all'utilizzo di ogni modello.
 
-##  <a name="bkmk_Top"></a>Informazioni sul grafico di accuratezza
+##  <a name="understanding-the-lift-chart"></a><a name="bkmk_Top"></a> Utilizzo del grafico di accuratezza
  Può essere difficile capire i grafici di accuratezza in astratto. Pertanto, per illustrare l'utilizzo degli strumenti del grafico di accuratezza e le informazioni nel grafico, in questa sezione viene presentato uno scenario in cui un grafico di accuratezza viene utilizzato per stimare la risposta a una campagna di mailing diretto.
 
  Il reparto Marketing in questo scenario sa che la percentuale di risposta tipica delle campagne di mailing è pari più o meno al 10%. In una tabella del database è archiviato un elenco di 10.000 potenziali clienti. In base alla percentuale di risposta tipica, è possibile prevedere che risponderanno solo circa 1.000 di questi clienti. Si consideri inoltre che il budget del progetto non è sufficiente per raggiungere tutti i 10.000 clienti archiviati nel database e che si desidera migliorare la percentuale di risposta. Si supponga che per questo scenario sia disponibile un budget che consente di inviare un annuncio pubblicitario solo a 5.000 clienti. Il reparto Marketing ha due opzioni:
@@ -65,7 +65,7 @@ ms.locfileid: "78174681"
 
  In **Legenda data mining** sono inoltre presenti i punteggi e le statistiche che agevolano l'interpretazione del grafico. Questi risultati rappresentano l'accuratezza del modello in corrispondenza della linea grigia, che qui è posizionata in modo da includere il 30% dei test case complessivi.
 
-|Serie e modello|Score|Popolazione target|Probabilità di stima|
+|Serie e modello|Punteggio|Popolazione target|Probabilità di stima|
 |-----------------------|-----------|-----------------------|-------------------------|
 |Targeted mailing all|0.71|47.40%|61.38%|
 |Targeted mailing under 30|0.85|51.81%|46.62%|
@@ -95,7 +95,7 @@ ms.locfileid: "78174681"
 
  È possibile fare clic sul grafico per spostare la barra grigia verticale in modo da visualizzare in **Legenda data mining** la percentuale di case complessivi e la percentuale di case stimati correttamente. Ad esempio, se si posiziona la barra di scorrimento grigia in corrispondenza del contrassegno del 50%, in **Legenda data mining** vengono visualizzati i punteggi di accuratezza riportati di seguito. Le cifre sono basate sul modello TM_Decision Tree creato nell'Esercitazione di base sul data mining.
 
-|Serie, modello|Score|Popolazione target|Probabilità di stima|
+|Serie, modello|Punteggio|Popolazione target|Probabilità di stima|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_DecisionTree|0.77|40.50%|72.91%|
 |Modello ideale||50,00%||
@@ -116,7 +116,7 @@ ms.locfileid: "78174681"
 ### <a name="related-content"></a>Contenuto correlato
  [Torna all'inizio](#bkmk_Top)
 
-## <a name="see-also"></a>Vedere anche
- [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)
+## <a name="see-also"></a>Vedi anche
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)
 
 
