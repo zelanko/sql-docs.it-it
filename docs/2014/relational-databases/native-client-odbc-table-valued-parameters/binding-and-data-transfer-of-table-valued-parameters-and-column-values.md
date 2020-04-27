@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199958"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associazione e trasferimento dati di valori di colonna e parametri con valori di tabella
@@ -87,7 +87,7 @@ ms.locfileid: "63199958"
   
 6.  Chiama di nuovo SQLParamData. Se sono presenti parametri data-at-execution tra le colonne di parametri con valori di tabella, questi verranno identificati dal valore *ValuePtrPtr* restituito da SQLParamData. Quando sono disponibili tutti i valori di colonna, SQLParamData restituirà nuovamente il valore *ParameterValuePtr* per il parametro con valori di tabella e l'applicazione verrà riavviata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Parametri con valori di tabella &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

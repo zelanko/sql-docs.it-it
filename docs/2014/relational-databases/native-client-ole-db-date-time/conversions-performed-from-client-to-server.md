@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237962"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
@@ -27,7 +27,7 @@ ms.locfileid: "63237962"
   
  Se ICommandWithParameters:: separameterinfo non viene chiamato, le associazioni DBTYPE_DBTIMESTAMP vengono convertite come se fossero `datetime2`.  
   
-|A -><br /><br /> Da|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|A -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> Data|  
@@ -47,7 +47,7 @@ ms.locfileid: "63237962"
   
 |Simbolo|Significato|  
 |------------|-------------|  
-|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidata quando viene chiamato IAccessor:: CreateAccessor, in *rgStatus*viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
+|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidata quando viene chiamato IAccessor::CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
 |N/D|Non applicabile.|  
 |1|Se i dati forniti non sono validi, viene impostato DBSTATUS_E_CANTCONVERTVALUE. I dati di input vengono convalidati prima che vengano applicate le conversioni, pertanto quando un componente verrà ignorato da una conversione successiva, dovrà ancora essere valido per consentire la conversione.|  
 |2|I campi relativi all'ora vengono ignorati.|  
@@ -66,7 +66,7 @@ ms.locfileid: "63237962"
 |15|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per `datetime`. I secondi vengono arrotondati al 300° di secondo più prossimo.|  
 |16|Il comportamento di conversione di un valore (di un tipo specificato) incorporato in una struttura client SSVARIANT corrisponde al comportamento dello stesso valore e tipo quando non è incorporato in una struttura client SSVARIANT.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Associazioni e conversioni &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

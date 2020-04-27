@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184424"
 ---
 # <a name="sequence-properties-general-page"></a>Proprietà sequenza (pagina Generale)
@@ -45,15 +45,14 @@ ms.locfileid: "63184424"
 |`int`|Da -2.147.483.648 a 2.147.483.647|  
 |`bigint`|Da -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
   
--   
-  `decimal` o `numeric` con scala 0.  
+-   `decimal` o `numeric` con scala 0.  
   
 -   Qualsiasi tipo di dati definito dall'utente (tipo di alias) basato su uno di questi tipi.  
   
- **Precision**  
+ **Precisione**  
  Consente di specificare la precisione per i tipi di dati `decimal` o `numeric` (la scala è sempre 0).  
   
- **Inizia con valore**  
+ **Valore iniziale**  
  Primo valore che verrà restituito dall'oggetto sequenza. Il valore **START** deve essere minore o uguale al valore massimo e maggiore o uguale al valore minimo dell'oggetto sequenza. Il valore iniziale predefinito per un nuovo oggetto sequenza è il valore minimo per un oggetto sequenza con ordine crescente e il valore massimo per un oggetto sequenza con ordine decrescente.  
   
  **Incremento di**  
@@ -65,7 +64,7 @@ ms.locfileid: "63184424"
  **Valore massimo**  
  Specifica i limiti per l'oggetto sequenza. Il valore massimo predefinito per un nuovo oggetto sequenza è il valore massimo del tipo di dati dell'oggetto sequenza.  
   
- **La sequenza di cicli viene riavviata al raggiungimento del limite**  
+ **Riavvio sequenza ciclica al raggiungimento del limite**  
  Selezionare questa opzione per consentire il riavvio dell'oggetto sequenza dal valore minimo (o massimo per gli oggetti sequenza con ordine decrescente) quando viene superato il valore minimo o massimo.  
   
 > [!NOTE]  
@@ -78,8 +77,7 @@ ms.locfileid: "63184424"
   
 -   Nessuna cache: in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i numeri di sequenza non vengono memorizzati nella cache.  
   
--   Memorizzazione nella cache con dimensione: in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono memorizzati nella cache i valori di sequenza. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di tenere traccia del valore corrente e del numero di valori rimasti nella cache. La quantità di memoria richiesta per l'archiviazione della cache è pertanto sempre corrispondente a due istanze del tipo di dati dell'oggetto sequenza.  
+-   Memorizzazione nella cache con dimensione: in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono memorizzati nella cache i valori di sequenza. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di tenere traccia del valore corrente e del numero di valori rimasti nella cache. La quantità di memoria richiesta per l'archiviazione della cache è pertanto sempre corrispondente a due istanze del tipo di dati dell'oggetto sequenza.  
   
  In caso di creazione con l'opzione CACHE, un arresto imprevisto quale un'interruzione dell'alimentazione, può provocare la perdita dei numeri di sequenza nella cache.  
   
@@ -88,7 +86,7 @@ ms.locfileid: "63184424"
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **CREATE SEQUENCE**, **ALTER**o **CONTROL** per l'oggetto SCHEMA.  
   
-## <a name="see-also"></a>Vedere anche  
- [sys. Sequences &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+## <a name="see-also"></a>Vedi anche  
+ [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

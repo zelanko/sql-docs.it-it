@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200012"
 ---
 # <a name="mapping-data-types-odbc"></a>Mapping dei tipi di dati (ODBC)
@@ -88,7 +88,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 ### <a name="sending-data-to-the-server"></a>Invio dei dati al server  
  **SQL_SS_VARIANT**, un nuovo tipo di dati specifico del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client, viene utilizzato per i dati inviati a una colonna **sql_variant** . Quando si inviano dati al server utilizzando parametri (ad esempio, INSERT INTO TableName VALUEs (?,?)), [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) viene utilizzato per specificare le informazioni sui parametri, inclusi il tipo C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo corrispondente. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client converte il tipo di dati C in uno dei sottotipi di **sql_variant** appropriati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione dei risultati &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241211"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
   In questo argomento vengono descritte le opzioni query che è necessario specificare per eseguire query sui dati XML. Vengono inoltre descritte le parti di istanze XML che non vengono mantenute quando vengono archiviate nei database.  
   
-##  <a name="features"></a> Caratteristiche di un'istanza XML non mantenute  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Caratteristiche di un'istanza XML non mantenute  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il contenuto dell'istanza XML, ma non mantiene gli aspetti dell'istanza XML che non sono considerati significativi nel modello di dati XML. Ciò significa che un'istanza XML recuperata potrebbe non essere identica all'istanza archiviata nel server, ma conterrà le stesse informazioni.  
   
 ### <a name="xml-declaration"></a>Dichiarazione XML  
@@ -86,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Impostazione di opzioni query obbligatorie  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Impostazione di opzioni query obbligatorie  
  Quando si eseguono `xml` query su colonne o variabili `xml` di tipo utilizzando metodi con tipo di dati, è necessario impostare le opzioni seguenti come illustrato.  
   
 |Opzioni SET|Valori richiesti|  

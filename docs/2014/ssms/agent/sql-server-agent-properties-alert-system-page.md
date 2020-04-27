@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245745"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Proprietà SQL Server Agent (pagina Sistema avvisi)
@@ -35,34 +35,34 @@ ms.locfileid: "63245745"
 > [!NOTE]  
 >  Dopo avere modificato il sistema di posta elettronica, è necessario riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per rendere operative le modifiche.  
   
- **Profilo di posta**  
+ **Profilo posta**  
  Consente di impostare il profilo che deve essere utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È anche possibile selezionare ** \<nuovo profilo posta elettronica database >** per creare un nuovo profilo.  
   
- **Messaggi di posta elettronica cercapersone**  
+ **Messaggi di posta elettronica tramite cercapersone**  
  Le opzioni incluse in questa sezione consentono di configurare i messaggi di posta elettronica inviati a indirizzi di cercapersone in modo che possano funzionare con il sistema di cercapersone utilizzato.  
   
- **Formattazione degli indirizzi per i messaggi di posta elettronica tramite cercapersone**  
+ **Formato indirizzo per messaggi di posta elettronica tramite cercapersone**  
  Questa sezione consente di specificare il formato degli indirizzi e della riga dell'oggetto dei messaggi di posta elettronica inviati tramite cercapersone.  
   
- **Riga a**  
+ **Riga A**  
  Consente di specificare le opzioni della riga **A** del messaggio  
   
  **Prefisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone all'inizio della riga **A** dei messaggi inviati a un cercapersone.  
   
- **Pager**  
+ **Cercapersone**  
  Consente di includere l'indirizzo di posta elettronica del messaggio tra il prefisso e il suffisso.  
   
  **Suffisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone alla fine della riga **A** dei messaggi inviati a un cercapersone.  
   
- **Linea CC**  
+ **Riga Cc**  
  Consente di specificare le opzioni della riga **Cc** del messaggio.  
   
  **Prefisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone all'inizio della riga **Cc** dei messaggi inviati a un cercapersone.  
   
- **Pager**  
+ **Cercapersone**  
  Consente di includere l'indirizzo di posta elettronica del messaggio tra il prefisso e il suffisso.  
   
  **Suffisso**  
@@ -77,7 +77,7 @@ ms.locfileid: "63245745"
  **Suffisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone alla fine della riga **Oggetto** dei messaggi inviati a un cercapersone.  
   
- **Includi il corpo della posta elettronica nel messaggio di notifica**  
+ **Includi corpo del messaggio nel messaggio di notifica**  
  Consente di includere il corpo del messaggio di posta elettronica nel messaggio inviato al cercapersone.  
   
  **Operatore alternativo**  
@@ -103,7 +103,7 @@ ms.locfileid: "63245745"
  **Sostituisci token per tutte le risposte del processo ad avvisi**  
  Selezionare questa casella di controllo per abilitare la sostituzione dei token per i processi attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Operatori](operators.md)   
  [Configurare SQL Server Agent Mail per l'uso di Posta elettronica database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  

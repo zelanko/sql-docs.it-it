@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204615"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
@@ -51,7 +51,7 @@ FROM titles
   
 1.  Assicurarsi che la tabella che si desidera aggregare sia già presente nel riquadro Diagramma.  
   
-2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma e scegliere **Raggruppa** dal menu di scelta rapida. In [Progettazione query e Progettazione viste](query-and-view-designer-tools-visual-database-tools.md) verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
+2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma e scegliere **Raggruppa** dal menu di scelta rapida. In [Progettazione query e Progettazione viste](query-and-view-designer-tools-visual-database-tools.md) verrà aggiunta una colonna **Group by** alla griglia nel riquadro criteri.  
   
 3.  Aggiungere al riquadro Criteri la colonna da aggregare. Assicurarsi che la colonna sia contrassegnata per l'output.  
   
@@ -77,7 +77,7 @@ FROM titles
 > [!NOTE]  
 >  In Progettazione query e Progettazione viste le funzioni di aggregazione vengono mantenute nell'istruzione SQL nel riquadro SQL fino a quando non viene disabilitata esplicitamente la modalità di raggruppamento. Se pertanto si modifica la query cambiandone il tipo o cambiando le tabelle o gli oggetti con valori di tabella presenti nel riquadro Diagramma, la query risultante potrebbe includere funzioni di aggregazione non valide.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   

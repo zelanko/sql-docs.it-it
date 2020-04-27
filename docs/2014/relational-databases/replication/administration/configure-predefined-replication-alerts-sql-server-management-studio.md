@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187256"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurazione degli avvisi di replica predefiniti (SQL Server Management Studio)
@@ -59,9 +59,9 @@ ms.locfileid: "63187256"
          Se l'avviso è **replica: la convalida dei dati del Sottoscrittore non è riuscita**, è possibile specificare il processo di risposta fornito dalla replica per questo avviso: selezionare **Esegui processo**e quindi fare clic sul pulsante Sfoglia (**...**). Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-5.  Fare clic su **Close**.  
+5.  Fare clic su **Chiudi**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Usare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md)  
   
   

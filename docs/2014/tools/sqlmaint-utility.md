@@ -19,18 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187005"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
-  L'utilità**SQLMaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **SQLMaint** esegue i piani di manutenzione del database creati con le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]versioni precedenti di. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
+  L'utilità**sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Usare invece la funzionalità di pianificazione della manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni sui piani di manutenzione, vedere [Piani di manutenzione](../relational-databases/maintenance-plans/maintenance-plans.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Usare invece la funzionalità di pianificazione della manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni sui piani di manutenzione, vedere [Piani di manutenzione](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -80,8 +79,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Specifica che deve essere restituito il diagramma della sintassi di **sqlmaint** . Questo parametro deve essere utilizzato da solo.  
   
- **-S** _server_name_[ **\\** _instance_name_]  
- Specifica l'istanza di destinazione [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]di. Specificare *server_name* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in tale server. Specificare *server_name**_\\_** instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] in tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su tale server. Specificare *server_name**_\\_** instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] in tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
   
  **-U** _login_ID_  
  Specifica l'ID di accesso utilizzato per la connessione al server. Se omesso, **sqlmaint** prova a usare l'autenticazione di Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se *login_ID* contiene caratteri speciali, il valore deve essere racchiuso tra virgolette doppie ("). In caso contrario, le virgolette doppie sono facoltative.  
@@ -98,14 +97,14 @@ number[minutes | hours | days | weeks | months]
  **-D** _database_name_  
  Specifica il nome del database nel quale eseguire l'operazione di manutenzione. Se *database_name* contiene caratteri speciali, il valore deve essere racchiuso tra virgolette doppie. In caso contrario, le virgolette doppie sono facoltative.  
   
- **-** _Nome_ piano  
+ **-PlanName** _name_  
  Specifica il nome di un piano di manutenzione del database definito utilizzando Creazione guidata piano di manutenzione database. L'unica informazione del piano usata da **sqlmaint** è l'elenco dei database. Le attività di manutenzione specificate negli altri parametri di **sqlmaint** vengono applicate a questo elenco di database.  
   
- **-** _GUID_ PlanID  
+ **-PlanID** _guid_  
  Specifica l'identificatore univoco globale (GUID, Globally Unique Identifier) del piano di manutenzione del database definito utilizzando Creazione guidata piano di manutenzione database. L'unica informazione del piano usata da **sqlmaint** è l'elenco dei database. Le attività di manutenzione specificate negli altri parametri di **sqlmaint** vengono applicate a questo elenco di database. Questo valore deve corrispondere al valore plan_id di msdb.dbo.sysdbmaintplans.  
   
  **-Rpt** _text_file_  
- Specifica il percorso completo e il nome del file in cui deve essere generato il report. Il report viene visualizzato anche sullo schermo. Il report gestisce informazioni sulla versione tramite l'aggiunta di una data al nome del file. La data viene inserita alla fine del nome file ma prima del punto, in formato _*yyyyMMddhhmm*. *aaaa* = anno, *mm* = mese, *GG* = giorno, *HH* = ora, *mm* = minuto.  
+ Specifica il percorso completo e il nome del file in cui deve essere generato il report. Il report viene visualizzato anche sullo schermo. Il report gestisce informazioni sulla versione tramite l'aggiunta di una data al nome del file. La data viene inserita alla fine del nome file ma prima del punto, in formato _*yyyyMMddhhmm*. *yyyy* = anno, *MM* = mese, *dd* = giorno, *hh* = ora, *mm* = minuto.  
   
  Se si esegue l'utilità alle 10.23 del 1° dicembre 1996 e il valore di *text_file* è:  
   
@@ -121,26 +120,26 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  Quando si accede a un server remoto con *sqlmaint* , è necessario specificare il nome UNC (Universal Naming Convention) completo del file per **text_file** .  
   
- **-Per** _operator_name_  
+ **-To** _operator_name_  
  Specifica l'operatore al quale il report generato viene inviato tramite SQL Mail.  
   
  **-HtmlRpt** _html_file_  
- Specifica il percorso completo e il nome del file in cui generare il report HTML. **SQLMaint** genera il nome del file aggiungendo una stringa nel formato _*yyyyMMddhhmm* al nome del file, analogamente a quanto avviene per il parametro **-RPT** .  
+ Specifica il percorso completo e il nome del file in cui generare il report HTML. **sqlmaint** aggiunge al nome file una stringa nel formato _*yyyyMMddhhmm* , in modo analogo a quanto avviene per il parametro **-Rpt** .  
   
  Quando si accede a un server remoto con *sqlmaint* , è necessario specificare il nome UNC completo del file per **html_file** .  
   
- **-DelHtmlRpt** \< *time_period*>  
- Specifica che è necessario eliminare dalla directory dei report tutti i report HTML se l'intervallo di tempo dopo la creazione del file di report supera \<*time_period*>. **-DelHtmlRpt** Cerca i file il cui nome corrisponde al modello generato dal parametro *html_file* . Se *html_file* è c:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fa sì che **sqlmaint** elimini tutti i file i cui nomi corrispondono al modello C:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e successivi al valore specificato per \<*time_period*>.  
+ **-DelHtmlRpt** \<*time_period*>  
+ Specifica che è necessario eliminare dalla directory dei report tutti i report HTML se l'intervallo di tempo dopo la creazione del file di report supera \<*time_period*>. **-DelHtmlRpt** cerca i file con nome corrispondente al modello generato dal parametro *html_file*. Se *html_file* è c:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fa sì che **sqlmaint** elimini tutti i file i cui nomi corrispondono al modello C:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e successivi al valore specificato per \<*time_period*>.  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
- Specifica la rimozione dello spazio inutilizzato dal database indicato in **-D**. Questa opzione è utile solo nel caso di database per i quali è stato impostato l'aumento automatico delle dimensioni. *Threshold_percent* specifica in megabyte la dimensione che il database deve raggiungere prima che **SQLMaint** tenti di rimuovere lo spazio dati inutilizzato. Se le dimensioni del database sono inferiori a *threshold_percent*, non viene eseguita alcuna azione. *Free_percent* specifica la quantità di spazio inutilizzato che deve rimanere nel database, specificata come percentuale delle dimensioni finali del database. Se ad esempio un database di 200 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , le dimensioni finali del database saranno di 110 MB. Le dimensioni del database non vengono aumentate se sono inferiori a *free_percent* più la quantità di dati del database. Se ad esempio un database di 108 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , il database non viene esteso a 110 MB, ma resta di 108 MB.  
+ Specifica la rimozione dello spazio inutilizzato dal database indicato in **-D**. Questa opzione è utile solo nel caso di database per i quali è stato impostato l'aumento automatico delle dimensioni. *Threshold_percent* specifica le dimensioni, in megabyte, che il database deve raggiungere prima che **sqlmaint** rimuova lo spazio inutilizzato. Se le dimensioni del database sono inferiori a *threshold_percent*, non viene eseguita alcuna azione. *Free_percent* specifica la quantità di spazio inutilizzato che deve rimanere nel database, in termini di percentuale delle dimensioni finali del database. Se ad esempio un database di 200 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , le dimensioni finali del database saranno di 110 MB. Le dimensioni del database non vengono aumentate se sono inferiori a *free_percent* più la quantità di dati del database. Se ad esempio un database di 108 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , il database non viene esteso a 110 MB, ma resta di 108 MB.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  Specifica l'esecuzione di un'istruzione DBCC CHECKDB o DBCC CHECKDB con l'opzione NOINDEX nel database indicato in **-D**. Per ulteriori informazioni, vedere DBCC CHECKDB.  
   
  Se durante l'esecuzione di *sqlmaint* il database è in uso, viene scritto un avviso in **text_file** .  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  Specifica l'esecuzione di un'istruzione DBCC CHECKALLOC con l'opzione NOINDEX nel database indicato in **-D**. Per altre informazioni, vedere [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql).  
   
  **-CkCat**  
@@ -162,16 +161,16 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  Se gli indici si trovano in colonne calcolate e si usa **-RebldIdx** , è anche necessario specificare l'argomento **-SupportComputedColumn**.  
   
- **-E**  
+ **-RebldIdx**  
  Specificare questo argomento per eseguire i comandi di manutenzione DBCC sulle colonne calcolate usando **sqlmaint** .  
   
  **-WriteHistory**  
  Specifica l'aggiunta di una voce in msdb.dbo.sysdbmaintplan_history per ogni azione di manutenzione eseguita da **sqlmaint**. Se si specifica **-PlanName** o **-PlanID** , le voci in sysdbmaintplan_history usano l'ID del piano specificato. Se si specifica **-D** , l'ID del piano delle voci di sysdbmaintplan_history viene rappresentato da zeri.  
   
  **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
- Specifica un'azione di backup. **-BkUpDB** esegue il backup dell'intero database. **-BkUpLog** esegue il backup solo del log delle transazioni.  
+ Specifica un'azione di backup. **-BkUpDb** esegue il backup di tutto il database. **-BkUpLog** esegue solo il backup del log delle transazioni.  
   
- *backup_path* specifica la directory per il backup. *backup_path* non è necessario se si specifica **-UseDefDir** ed è sottoposto a override da **-UseDefDir** se sono specificati entrambi. È possibile memorizzare il backup in una directory o usare l'indirizzo di un dispositivo nastro, ad esempio \\\\.\TAPE0. Il nome del file per il backup di un database viene generato automaticamente nel formato seguente:  
+ *backup_path* specifica la directory di backup. *backup_path* non è necessario se si specifica **-UseDefDir** e, se vengono specificati entrambi, **-UseDefDir** è prioritario. È possibile memorizzare il backup in una directory o usare l'indirizzo di un dispositivo nastro, ad esempio \\\\.\TAPE0. Il nome del file per il backup di un database viene generato automaticamente nel formato seguente:  
   
 ```  
 dbname_db_yyyyMMddhhmm.BAK  
@@ -180,9 +179,9 @@ dbname_db_yyyyMMddhhmm.BAK
   
  dove  
   
--   *dbname* è il nome del database di cui viene eseguito il backup.  
+-   *dbname* è il nome del database del quale eseguire il backup.  
   
--   *yyyyMMddhhmm* è l'ora dell'operazione di backup con *aaaa* = anno, *mm* = mese, *GG* = giorno, *HH* = ora e *mm* = minuto.  
+-   *yyyyMMddhhmm* rappresenta la data e l'ora dell'operazione di backup in cui *yyyy* = anno, *MM* = mese, *dd* = giorno, *hh* = ora e *mm* = minuto.  
   
  Il nome del file per il backup del log delle transazioni viene generato automaticamente nel formato seguente:  
   
@@ -193,36 +192,36 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se si usa il parametro **-BkUpDB** è anche necessario specificare il supporto con il parametro **-BkUpMedia** .  
   
- **-Parametro BkUpMedia**  
+ **-BkUpMedia**  
  Specifica il tipo di supporto per il backup, ovvero DISK o TAPE.  
   
- **DISCO**  
+ **DISK**  
  Indica che il supporto di backup è un disco.  
   
- **-DelBkUps** \< *time_period* >  
+ **-DelBkUps**\< *time_period* >  
  Per i backup su disco, specifica che è necessario eliminare dalla directory di backup tutti i file di backup se l'intervallo di tempo dopo la creazione del backup supera \<*time_period*>.  
   
- **-CrBkSubDir consente**  
- Per i backup su disco, specifica la creazione di una sottodirectory nella directory [*backup_path*] o nella directory di backup predefinita, se si usa anche **-UseDefDir** . Il nome della sottodirectory viene generato in base al nome del database specificato in **-D**. **-CrBkSubDir consente** offre un modo semplice per inserire tutti i backup per database diversi in sottodirectory separate senza dover modificare il parametro *backup_path* .  
+ **-CrBkSubDir**  
+ Per i backup su disco, specifica la creazione di una sottodirectory nella directory [*backup_path*] o nella directory di backup predefinita, se si usa anche **-UseDefDir** . Il nome della sottodirectory viene generato in base al nome del database specificato in **-D**. **-CrBkSubDir** consente di memorizzare in modo semplice tutti i backup di database diversi in sottodirectory separate senza dover modificare il parametro *backup_path* .  
   
  **-UseDefDir**  
- Per i backup su disco, specifica la creazione del file di backup nella directory di backup predefinita. **UseDefDir** esegue l'override di *backup_path* se sono specificati entrambi. Con una configurazione [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] predefinita, la directory di backup predefinita è c:\Programmi\Microsoft SQL Server \ MSSQL10_50. MSSQLSERVER\MSSQL\Backup.  
+ Per i backup su disco, specifica la creazione del file di backup nella directory di backup predefinita. Se sono specificati entrambi,**UseDefDir** è prioritario rispetto a *backup_path* . Nel caso di un'installazione predefinita di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la directory di backup predefinita è C:\Programmi\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
   
- **NASTRO**  
+ **TAPE**  
  Indica che il supporto di backup è un nastro.  
   
  **-BkUpOnlyIfClean**  
- Specifica che il backup viene eseguito solo se i controlli **-Ck** specificati non rilevano problemi con i dati. Le azioni di manutenzione vengono eseguite nella stessa sequenza in cui sono indicate nel prompt dei comandi. Specificare i parametri **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** prima dei parametri **-BkUpDB**/**-BkUpLog** se si intende specificare anche **- BkUpOnlyIfClean**, oppure il backup verrà eseguito a prescindere dal fatto che il controllo abbia segnalato problemi.  
+ Specifica che il backup viene eseguito solo se i controlli **-Ck** specificati non rilevano problemi con i dati. Le azioni di manutenzione vengono eseguite nella stessa sequenza in cui sono indicate nel prompt dei comandi. Specificare i parametri **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** prima dei parametri **-BkUpDB**/ **-BkUpLog** se si intende specificare anche **- BkUpOnlyIfClean**, oppure il backup verrà eseguito a prescindere dal fatto che il controllo abbia segnalato problemi.  
   
  **-VrfyBackup**  
  Specifica l'esecuzione dell'istruzione RESTORE VERIFYONLY al termine del backup.  
   
- *numero*[**minuti**| **ore**| **** giorni| **settimane******)|   
- Specifica l'intervallo di tempo trascorso il quale un report o un file di backup può essere eliminato. *Number* è un numero intero seguito (senza spazi) da un'unità di tempo. ad esempio:  
+ *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
+ Specifica l'intervallo di tempo trascorso il quale un report o un file di backup può essere eliminato. *number* è un numero intero seguito (senza spazi) da un'unità di tempo, ad esempio:  
   
 -   **12weeks**  
   
--   **3 mesi**  
+-   **3months**  
   
 -   **15days**  
   
@@ -235,8 +234,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Una delle azioni di manutenzione ha esito negativo.  
   
--   
-  **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** rileva problemi con i dati.  
+-   **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** rileva problemi con i dati.  
   
 -   Si verifica un errore generale.  
   

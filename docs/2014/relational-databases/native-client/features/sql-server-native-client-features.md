@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225557"
 ---
 # <a name="sql-server-native-client-features"></a>Funzionalità di SQL Server Native Client
@@ -59,7 +59,7 @@ ms.locfileid: "63225557"
  [Esecuzione di operazioni di copia bulk](performing-bulk-copy-operations.md)  
  Viene descritto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in che modo Native Client supporta operazioni di copia bulk che consentono il trasferimento di grandi quantità di dati all' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interno o all'esterno di una tabella o vista.  
   
- [Utilizzo della crittografia senza convalida](using-encryption-without-validation.md)  
+ [Uso della crittografia senza convalida](using-encryption-without-validation.md)  
  Si illustra l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per crittografare i dati inviati al server senza convalidare il certificato.  
   
  [Parametri con valori di tabella &#40;SQL Server Native Client&#41;](table-valued-parameters-sql-server-native-client.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "63225557"
  [Supporto per colonne di tipo sparse in SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
  Si illustra il supporto delle colonne di tipo sparse da parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Miglioramenti di data e ora](date-and-time-improvements.md)  
+ [Miglioramenti relativi a data e ora](date-and-time-improvements.md)  
  Si illustra il supporto aggiunto a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per i tipi di dati di data e ora.  
   
  [Individuazione dei metadati](metadata-discovery.md)  
@@ -89,13 +89,13 @@ ms.locfileid: "63225557"
  [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Illustra come configurare l'applicazione per sfruttare le funzionalità di ripristino di emergenza a disponibilità elevata aggiunte in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Accesso alle informazioni di diagnostica nel log degli eventi estesi](accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [Accesso alle informazioni di diagnostica nel registro eventi estesi](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Si illustrano i miglioramenti apportati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e alla traccia dei dati che consente l'accesso alle informazioni di diagnostica nel buffer circolare e nel registro XEvents.  
   
  [Supporto SQL Server Native Client per il database locale](sql-server-native-client-support-for-localdb.md)  
  Si illustra il supporto della funzionalità del database locale da parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Programmazione SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Procedure per ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Procedure per OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   

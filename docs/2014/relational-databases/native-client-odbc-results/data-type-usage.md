@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200189"
 ---
 # <a name="data-type-usage"></a>Utilizzo del tipo di dati
@@ -43,11 +43,10 @@ ms.locfileid: "63200189"
 |Tipi di dati alias|Quando si è connessi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di 4,2*x*, il driver ODBC aggiunge null a una definizione di colonna che non dichiara in modo esplicito il supporto di valori null per una colonna. Per questo motivo, il supporto di valori Null che viene archiviato nella definizione di un tipo di dati alias viene ignorato.<br /><br /> Quando si è connessi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di 4,2*x*, le colonne con un tipo di dati alias con tipo di dati di base **char** o **Binary** e per le quali non viene dichiarato alcun supporto di valori null vengono create come tipo di dati **varchar** o **varbinary**. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md)e [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) restituiscono SQL_VARCHAR o SQL_VARBINARY come tipo di dati per queste colonne. Ai dati recuperati da queste colonne non viene applicato il riempimento. **Nota:**  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 6,5 e versioni precedenti.|  
 |Tipi di dati LONG|i parametri *data-at-execution* sono limitati per i tipi di dati SQL_LONGVARBINARY e SQL_LONGVARCHAR.|  
 |Tipi per valori di grandi dimensioni|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client esporrà i tipi **varchar (max)**, **varbinary (max)** e **nvarchar (max)** come SQL_VARCHAR, SQL_VARBINARY e SQL_WVARCHAR (rispettivamente) nelle API che accettano o restituiscono tipi di dati ODBC SQL.|  
-|Tipo definito dall'utente (UDT)|Le colonne con tipo definito dall'utente vengono mappate come SQL_SS_UDT. Se una colonna con tipo definito dall'utente viene mappata in modo esplicito a un altro tipo nell'istruzione SQL mediante i metodi ToString() o ToXMLString() del tipo definito dall'utente oppure mediante le funzioni CAST/CONVERT, il tipo di colonna nel set di risultati rifletterà il tipo effettivo nel quale è stata convertita la colonna.<br /><br /> Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client può essere associato solo a una colonna con tipo definito dall'utente come binario. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta solamente la conversione tra i tipi di dati SQL_SS_UDT e SQL_C_BINARY.|  
+|Tipo definito dall'utente (UDT)|Le colonne con tipo definito dall'utente vengono mappate come SQL_SS_UDT. Se una colonna con tipo definito dall'utente viene mappata in modo esplicito a un altro tipo nell'istruzione SQL mediante i metodi ToString() o ToXMLString() del tipo definito dall'utente oppure mediante le funzioni CAST/CONVERT, il tipo di colonna nel set di risultati rifletterà il tipo effettivo nel quale è stata convertita la colonna.<br /><br /> Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client può essere associato solo a una colonna con tipo definito dall'utente come binario. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta solamente la conversione tra i tipi di dati SQL_SS_UDT e SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]converte automaticamente il codice XML in testo Unicode. Il tipo XML viene mappato come SQL_SS_XML.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione dei risultati &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

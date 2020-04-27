@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209872"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
@@ -63,9 +63,9 @@ ms.locfileid: "63209872"
   
 -   Percentuale condivisa = Valore effettivo MAX% - MIN%.  
   
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Comment|  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|Interne|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
+|internal|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
 |default|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
 |Pool 1|20|100|50|30|Il valore MAX effettivo viene calcolato come: min(100,100-50) = 50. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
 |Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-20) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
@@ -116,7 +116,7 @@ ms.locfileid: "63209872"
 |Viene descritto come modificare le impostazioni del pool di risorse.|[Modificare le impostazioni del pool di risorse](change-resource-pool-settings.md)|  
 |Viene descritto come eliminare un pool di risorse.|[Eliminare un pool di risorse](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Resource Governor](resource-governor.md)   
  [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
  [Funzione di classificazione Resource Governor](resource-governor-classifier-function.md)   

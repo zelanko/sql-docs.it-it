@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217879"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Creazione di stime per i modelli Call Center (Esercitazione intermedia sul data mining)
@@ -150,7 +150,7 @@ ms.locfileid: "63217879"
   
  Nella tabella seguente vengono illustrati i risultati dell'esempio per ogni turno.  
   
-|MAIUSC|WageType|Livello di servizio stimato|Probabilità|  
+|Turno|WageType|Livello di servizio stimato|Probabilità|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|giorno festivo|0,165|0,377520666|  
 |mezzanotte|giorno festivo|0,105|0,364105573|  
@@ -181,7 +181,7 @@ ms.locfileid: "63217879"
  È possibile creare molte altre query di stima su questo modello. È ad esempio possibile stimare il numero di operatori necessari per garantire un determinato livello di servizio o per rispondere a un determinato numero di chiamate in ingresso. Poiché è possibile includere più output in un modello di regressione logistica, è facile provare a utilizzare variabili indipendenti e risultati diversi senza dover creare molti modelli distinti.  
   
 ## <a name="remarks"></a>Osservazioni  
- I componenti aggiuntivi Data mining per Excel 2007 forniscono procedure guidate di regressione logistica che semplificano la risoluzione di problemi complessi, ad esempio il numero di operatori di livello 2 necessari per migliorare il livello del servizio e raggiungere un livello desiderato per un turno specifico. I componenti aggiuntivi per il data mining sono disponibili gratuitamente per il download e includono procedure guidate basate su algoritmi di regressione logistica o rete neurale. Per ulteriori informazioni, vedere i collegamenti seguenti:  
+ I componenti aggiuntivi Data mining per Excel 2007 forniscono procedure guidate di regressione logistica che semplificano la risoluzione di problemi complessi, ad esempio il numero di operatori di livello 2 necessari per migliorare il livello del servizio e raggiungere un livello desiderato per un turno specifico. I componenti aggiuntivi per il data mining sono disponibili gratuitamente per il download e includono procedure guidate basate su algoritmi di regressione logistica o rete neurale. Per ulteriori informazioni, vedere i seguenti collegamenti:  
   
 -   [SQL Server 2005 componenti aggiuntivi Data mining per Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): ricerca obiettivo e analisi dello scenario What If  
   
@@ -192,7 +192,7 @@ ms.locfileid: "63217879"
   
  Questi algoritmi consentono tuttavia di scorrere molte combinazioni di fattori e identificare automaticamente le correlazioni maggiori, fornendo il supporto statistico per ottenere informazioni che sarebbe molto difficile individuare tramite l'esplorazione manuale dei dati utilizzando Transact-SQL o PowerPivot.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esempi di query sul modello di regressione logistica](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Algoritmo di regressione logistica Microsoft](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Algoritmo Microsoft Neural Network](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   

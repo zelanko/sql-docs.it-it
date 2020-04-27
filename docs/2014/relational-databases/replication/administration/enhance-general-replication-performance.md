@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187095"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
@@ -33,7 +33,7 @@ ms.locfileid: "63187095"
   
 ## <a name="server-and-network"></a>Server e rete  
   
--   Impostare la quantità minima e massima di memoria allocata [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]a.  
+-   Impostare la quantità minima e massima di memoria allocata a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
      Per impostazione predefinita, nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili. Per evitare che durante le attività di replica la memoria risulti insufficiente, impostare la quantità minima di memoria disponibile tramite l'opzione **min server memory** . Per evitare che il sistema operativo richieda memoria del disco, è inoltre possibile impostare una quantità massima di memoria mediante l'opzione **max server memory** . Per altre informazioni, vedere [Opzioni di configurazione del server Server Memory](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63187095"
   
      Se è necessario inviare ai Sottoscrittori quantità di modifiche elevate, può essere più conveniente reinizializzarle tutte con un nuovo snapshot anziché utilizzare la replica per spostare le singole modifiche. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
-     Per la replica transazionale, nella scheda **Comandi non distribuiti** di Monitoraggio replica vengono visualizzate informazioni relative al numero di transazioni presenti nel database di distribuzione e non ancora distribuite in un Sottoscrittore e al tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Per la replica transazionale, nella scheda **Comandi non distribuiti** di Monitoraggio replica vengono visualizzate informazioni relative al numero di transazioni presenti nel database di distribuzione e non ancora distribuite in un Sottoscrittore e al tempo stimato per la relativa distribuzione. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considerazioni sugli snapshot  
   
@@ -160,10 +160,10 @@ ms.locfileid: "63187095"
   
  I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
--   [Utilizzo dei profili agenti di replica](../agents/work-with-replication-agent-profiles.md)  
+-   [Usare i profili agenti di replica](../agents/work-with-replication-agent-profiles.md)  
   
 -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Concetti relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
+-   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
   

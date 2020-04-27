@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190432"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "63190432"
 ## <a name="benefits-of-the-sql-server-utility"></a>Vantaggi di Utilità SQL Server  
  Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di modellare le entità relative all'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'organizzazione in una visualizzazione unificata. I punti di visualizzazione di Esplora utilità e Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) offrono agli amministratori una visualizzazione olistica dell'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da punto di controllo dell'utilità. La combinazione di dati riepilogativi e dettagliati visualizzata nel punto di controllo dell'utilità sia per i criteri di sottoutilizzo che per quelli di sovrautilizzo e per vari parametri principali consente di identificare facilmente le possibilità di consolidamento delle risorse e il sovrautilizzo delle risorse. I criteri di integrità sono configurabili e possono essere modificati per impostare soglie di utilizzo delle risorse più alte o più basse. È possibile modificare i criteri di monitoraggio globali o configurare criteri di monitoraggio singoli per ogni entità gestita in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="typical_scenarios"></a> Introduzione a Utilità SQL Server  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Introduzione a Utilità SQL Server  
  Lo scenario utente tipico prevede innanzitutto la creazione di un punto di controllo dell'utilità che stabilisce il punto ragionevole centrale per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il punto di controllo dell'utilità fornisce una visualizzazione consolidata dell'integrità delle risorse raccolta da istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In seguito alla creazione del punto di controllo dell'utilità, le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono registrate in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che possano essere gestite dal punto di controllo dell'utilità.  
   
  Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazione del livello dati gestita da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere monitorata in base alle definizioni dei criteri globali o alle definizioni dei criteri singoli.  

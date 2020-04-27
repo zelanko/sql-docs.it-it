@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224604"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Esplorazione dei modelli Market Basket (Esercitazione intermedia sul data mining)
@@ -32,7 +32,7 @@ ms.locfileid: "63224604"
   
  Per questa esercitazione, si inizierà dalla scheda **rete di dipendenze** , quindi si utilizzeranno la scheda **regole** e la scheda **set** di elementi per approfondire la comprensione delle relazioni rivelate nel visualizzatore. Si utilizzerà inoltre **Microsoft Generic Content Tree Viewer** per recuperare statistiche dettagliate per singole regole o set di elementi.  
   
-##  <a name="bkmk_DepNet"></a>Scheda rete di dipendenze  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>Scheda rete di dipendenze  
  Con la scheda **rete di dipendenze** è possibile esaminare l'interazione dei diversi elementi nel modello. Ogni nodo nel visualizzatore rappresenta un elemento, mentre le linee tra i nodi rappresentano regole. Selezionando un nodo, è possibile visualizzare gli altri nodi che stimano l'elemento selezionato oppure gli elementi stimati dall'elemento corrente. In alcuni casi, è presente un'associazione bidirezionale tra gli elementi, ovvero che compaiono spesso nella stessa transazione. È possibile fare riferimento alla legenda dei colori nella parte inferiore della scheda per determinare la direzione dell'associazione.  
   
  Una linea che collega due elementi indica che è probabile che questi elementi compaiano insieme in una transazione. In altre parole, è probabile che i clienti acquistino insieme questi elementi. Il dispositivo di scorrimento è associato alla probabilità della regola. Spostare il dispositivo di scorrimento verso l'alto o verso il basso per escludere le associazioni deboli, ovvero le regole con una bassa probabilità.  
@@ -77,7 +77,7 @@ ms.locfileid: "63224604"
   
  [Torna all'inizio](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>Scheda set di elementi  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>Scheda set di elementi  
  Il passaggio successivo consiste nell'ottenere maggiori informazioni sulle regole e sui set di elementi generati dal modello per i prodotti Touring Tire e Touring Tire Tube. Nella scheda **set** di elementi vengono visualizzate tre importanti informazioni correlate ai set di elementi individuati dall' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo di associazione:  
   
 -   **Supporto:** Numero di transazioni in cui si verifica il set di elementi.  
@@ -134,7 +134,7 @@ ms.locfileid: "63224604"
   
  [Torna all'inizio](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>Scheda regole  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>Scheda regole  
  Nella scheda **regole** vengono visualizzate le informazioni seguenti relative alle regole individuate dall'algoritmo.  
   
 -   **Probabilità:** *Probabilità* di una regola, definita come la probabilità dell'elemento a destra in base alla parte sinistra.  
@@ -171,7 +171,7 @@ ms.locfileid: "63224604"
   
  [Torna all'inizio](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>Generic Content Tree Viewer  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>Generic Content Tree Viewer  
  Questo visualizzatore può essere utilizzato per tutti i modelli, indipendentemente dall'algoritmo o dal tipo di modello. **Microsoft Generic Content Tree Viewer** è disponibile nell'elenco a discesa **Visualizzatore** .  
   
  Un albero del contenuto è una rappresentazione di un modello di data mining sotto forma di una serie di nodi, dove ogni nodo rappresenta le informazioni relative a un subset di dati. Il nodo può contenere un modello, un set di regole, un cluster o la definizione di un intervallo di date che condividono le stesse caratteristiche. Il contenuto esatto del nodo differisce a seconda dell'algoritmo e del tipo di attributo stimabile, ma la rappresentazione generale del contenuto è la stessa. È possibile espandere ogni nodo per aumentare il livello di dettaglio e copiare il contenuto di qualsiasi nodo negli Appunti.  
@@ -195,7 +195,7 @@ ms.locfileid: "63224604"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Applicazione di filtri a una tabella nidificata in un modello di data mining &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Lezione 3: creazione di uno scenario Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
  [Lezione 4: compilazione di uno scenario di clustering delle sequenze &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Algoritmo Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   

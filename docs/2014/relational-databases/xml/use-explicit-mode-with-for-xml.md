@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231283"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
-  Come descritto nell'argomento relativo alla [costruzione di codice XML tramite for XML](../xml/for-xml-sql-server.md), la modalità RAW e auto non fornisce un controllo molto sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
+  Come illustrato nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](../xml/for-xml-sql-server.md), le modalità RAW e AUTO forniscono scarso controllo sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
   
  La query in modalità EXPLICIT deve essere formulata in modo tale che le informazioni aggiuntive relative al codice XML, ad esempio la nidificazione desiderata vengano specificate in modo esplicito nell'ambito della query stessa. In base al codice XML desiderato, la formulazione di query in modalità EXPLICIT può essere un'operazione complessa. L' [uso della modalità PATH](../xml/use-path-mode-with-for-xml.md) con annidamento è un'alternativa più semplice alla scrittura di query in modalità EXPLICIT.  
   
@@ -123,14 +123,14 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se si specifica *Directive*, *AttributeName* può essere vuoto. Ad esempio, ElementName!TagNumber!!Directive. In questo caso, il valore della colonna è direttamente contenuto da *ElementName*.  
   
- *Direttiva*  
- La *direttiva* è facoltativa e può essere utilizzata per fornire informazioni aggiuntive per la costruzione del codice XML. La *direttiva* ha due scopi.  
+ *Directive*  
+ *Directive* è facoltativo e può essere usato per specificare altre informazioni per la generazione del codice XML. *Directive* svolge due funzioni.  
   
  Il primo è la codifica dei valori come ID, IDREF e IDREFS. È possibile specificare le parole chiave **ID**, **IDREF**e **IDREFS** come valori di *Directive*. Queste direttive sovrascrivono i tipi di attributo, consentendo di creare collegamenti tra più documenti.  
   
  È anche possibile usare *Directive* per definire il mapping tra i dati di tipo stringa e il codice XML. Le parole chiave **hide**, **element, elementxsinil**, **xml**, **xmltext**e **cdata** possono essere usate come valori di *Directive*. La direttiva **hide** nasconde il nodo. È utile quando si recuperano i valori solo a scopo di ordinamento, ma non si desidera che vengano inseriti nel codice XML risultante.  
   
- La direttiva **element** genera un elemento contenuto anziché un attributo. I dati contenuti vengono codificati come entità. Il **<** carattere, ad esempio, &lt;diventa. Per i valori di colonna NULL non vengono generati elementi. Se si vuole che venga generato un elemento anche per i valori di colonna NULL è possibile specificare la direttiva **elementxsinil** . Verrà generato un elemento con attributo xsi:nil=TRUE.  
+ La direttiva **element** genera un elemento contenuto anziché un attributo. I dati contenuti vengono codificati come entità. Ad esempio, il carattere **<** viene convertito in &lt;. Per i valori di colonna NULL non vengono generati elementi. Se si vuole che venga generato un elemento anche per i valori di colonna NULL è possibile specificare la direttiva **elementxsinil** . Verrà generato un elemento con attributo xsi:nil=TRUE.  
   
  La direttiva **xml** equivale a una direttiva **element** , ma non viene eseguita alcuna codifica di entità. Si noti che è possibile combinare la direttiva **element** con **ID**, **IDREF**o **IDREFS**, mentre la direttiva **xml** può essere usata solo con **hide**.  
   
@@ -147,17 +147,17 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Negli esempi seguenti viene illustrato l'utilizzo della modalità EXPLICIT.  
   
--   [Esempio: Recupero di informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
+-   [Esempio: recupero di informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
   
 -   [Esempio: specifica della direttiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
 -   [Esempio: specifica della direttiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Esempio: Creazione di elementi di pari livello utilizzando la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Esempio: creazione di elementi di pari livello con la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Esempio: specifica delle direttive ID, IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Esempio: specifica delle direttive ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Esempio: specifica delle direttive ID, IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Esempio: specifica delle direttive ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
 -   [Esempio: specifica della direttiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
@@ -168,9 +168,9 @@ ElementName!TagNumber!AttributeName!Directive
 -   [Esempio: specifica della direttiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare la modalità RAW con FOR XML](../xml/use-raw-mode-with-for-xml.md)   
- [Usare la modalità AUTO con FOR XML](../xml/use-auto-mode-with-for-xml.md)   
- [Usare la modalità PATH con FOR XML](../xml/use-path-mode-with-for-xml.md)   
+ [Utilizzo della modalità RAW con FOR XML](../xml/use-raw-mode-with-for-xml.md)   
+ [Utilizzo della modalità AUTO con FOR XML](../xml/use-auto-mode-with-for-xml.md)   
+ [Utilizzare la modalità PATH con FOR XML](../xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   

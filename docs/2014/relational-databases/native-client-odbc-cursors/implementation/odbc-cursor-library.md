@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b81a7871434691a5940a04c7c60aaad9254b645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63201164"
 ---
 # <a name="odbc-cursor-library"></a>Libreria di cursori ODBC
@@ -45,7 +45,7 @@ ms.locfileid: "63201164"
   
  La libreria di cursori consente alle applicazioni di utilizzare più istruzioni attive in una connessione, nonché cursori scorrevoli aggiornabili. Per il supporto di tale funzionalità è necessario caricare la libreria di cursori. Utilizzare [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) per specificare la modalità di utilizzo della libreria di cursori e [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per specificare le dimensioni del tipo di cursore, della concorrenza e del set di righe.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Modalità di implementazione dei cursori](how-cursors-are-implemented.md)  
   
   

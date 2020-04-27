@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207011"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversioni da tipi di dati C a tipi di dati SQL
@@ -62,7 +62,7 @@ ms.locfileid: "63207011"
 |13|Se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati".<br /><br /> Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione in base a quanto segue:<br /><br /> **Tipo:** SQL_C_TYPE_TIMESTAMP<br /><br /> Scala implicita<br /><br /> 0<br /><br /> 19<br /><br /> Scala implicita<br /><br /> 1.. 9<br /><br /> 21..29<br /><br /> Per SQL_C_TYPE_TIMESTAMP, tuttavia, se i secondi frazionari possono essere rappresentati con tre cifre senza perdita di dati e la dimensione della colonna è almeno 23, vengono generate esattamente tre cifre di secondi frazionari. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando driver ODBC meno recenti.<br /><br /> Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da ODBC.<br /><br /> Una dimensione della colonna pari a zero implica una dimensione illimitata per i tipi di carattere a lunghezza variabile in ODBC (9 cifre, a meno che non si applichi la regola delle 3 cifre per SQL_C_TYPE_TIMESTAMP). La specifica di una dimensione della colonna pari a zero con un tipo di carattere a lunghezza fissa è un errore.|  
 |N/D|Viene mantenuto il comportamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni precedenti.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

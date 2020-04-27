@@ -1,5 +1,5 @@
 ---
-title: Risultati dell'elaborazione | Microsoft Docs
+title: Elaborazione dei risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209667"
 ---
 # <a name="processing-results"></a>Risultati dell'elaborazione
@@ -41,8 +41,8 @@ ms.locfileid: "63209667"
   
  Dopo aver specificato le strutture DBBINDING, viene creata una funzione di accesso (**IAccessor::CreateAccessor**). Una funzione di accesso è una raccolta di associazioni e viene utilizzata per ottenere o impostare i dati nel buffer del consumer.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un'applicazione provider OLE DB SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Procedure per l'utilizzo di OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure per OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

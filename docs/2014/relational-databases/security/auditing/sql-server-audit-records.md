@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238385"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
@@ -35,7 +35,7 @@ ms.locfileid: "63238385"
 |**session_id**|ID della sessione in cui si è verificato l'evento.|`int`|Sì|  
 |**server_principal_id**|ID del contesto dell'account di accesso utilizzato per eseguire l'azione.|`int`|Sì|  
 |**database_principal_id**|ID del contesto dell'utente del database in cui viene eseguita l'azione.|`int`|No|  
-|**ID object_**|ID primario dell'entità in cui si è verificato il controllo. Sono inclusi:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|`int`|No|  
+|**ID object_**|ID primario dell'entità in cui si è verificato il controllo. È possibile creare, ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|`int`|No|  
 |**target_server_principal_id**|Entità server cui si applica l'azione controllabile.|`int`|Sì|  
 |**target_database_principal_id**|Entità di database cui si applica l'azione controllabile.|`int`|No|  
 |**class_type**|Tipo di entità controllabile in cui si verifica il controllo.|`varchar(2)`|Sì|  
@@ -49,20 +49,18 @@ ms.locfileid: "63238385"
 |**server_instance_name**|Nome dell'istanza del server in cui si è verificato il controllo. Viene utilizzato il formato standard computer\istanza.|`nvarchar(120)`|Sì|  
 |**database_name**|Contesto del database in cui si è verificata l'azione.|`sysname`|No|  
 |**schema_name**|Contesto dello schema in cui si è verificata l'azione.|`sysname`|No|  
-|**object_name**|Nome dell'entità in cui si è verificato il controllo. Sono inclusi:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|`sysname`|No|  
+|**object_name**|Nome dell'entità in cui si è verificato il controllo. È possibile creare, ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|`sysname`|No|  
 |**istruzione**|istruzione TSQL (se presente)|`nvarchar(4000)`|No|  
 |**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|`nvarchar(4000)`|No|  
   
 ## <a name="remarks"></a>Osservazioni  
  Alcune azioni non consentono l'inserimento di un valore di colonna perché il valore potrebbe non essere valido per l'azione.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit archivia 4000 caratteri di dati per ogni campo di tipo carattere in un record di controllo. Quando i valori **additional_information** e **statement** restituiti da un'azione controllabile sono costituiti da più di 4000 caratteri, viene usata la colonna **sequence_no** per scrivere più record nel report del controllo in modo che i dati vengano registrati da una singola azione di controllo. Il processo è il seguente:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit archivia 4000 caratteri di dati per ogni campo di tipo carattere in un record di controllo. Quando i valori **additional_information** e **statement** restituiti da un'azione controllabile sono costituiti da più di 4000 caratteri, viene usata la colonna **sequence_no** per scrivere più record nel report del controllo in modo che i dati vengano registrati da una singola azione di controllo. Il processo è il seguente:  
   
 -   La colonna **statement** viene divisa in 4000 caratteri.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit scrive i dati parziali come prima riga del record di controllo. Tutti gli altri campi vengono duplicati in ogni riga.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit scrive i dati parziali come prima riga del record di controllo. Tutti gli altri campi vengono duplicati in ogni riga.  
   
 -   Viene incrementato il valore di **sequence_no** .  
   

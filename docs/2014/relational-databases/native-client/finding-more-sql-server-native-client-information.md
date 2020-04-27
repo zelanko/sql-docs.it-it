@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205846"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Ricerca di ulteriori informazioni su SQL Server Native Client
@@ -36,7 +36,7 @@ ms.locfileid: "63205846"
   
  Ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client sono reperibili eseguendo una ricerca nell' [supporto tecnico Microsoft](https://support.microsoft.com).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Programmazione in SQL Server Native Client](sql-server-native-client-programming.md)  
   
   

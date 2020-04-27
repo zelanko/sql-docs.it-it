@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200075"
 ---
 # <a name="fetching-result-data"></a>Recupero di dati dei risultati
@@ -60,7 +60,7 @@ ms.locfileid: "63200075"
   
  Questa ottimizzazione può essere applicata alle applicazioni in modo che non vengano visualizzati dati di tipo **Text**, **ntext**o **Image** quando un utente scorre verso l'alto e verso il basso di un cursore. Dopo che l'utente ha selezionato una riga, l'applicazione può chiamare **SQLGetData** per recuperare i dati di tipo **Text**, **ntext**o **Image** . In questo modo viene salvata la trasmissione dei dati di tipo **Text**, **ntext**o **Image** per tutte le righe che l'utente non seleziona e che può salvare la trasmissione di quantità molto elevate di dati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione dei risultati &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

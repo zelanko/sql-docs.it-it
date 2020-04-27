@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63210142"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Supporto delle API ODBC per le funzionalità avanzate di data e ora
@@ -68,7 +68,7 @@ ms.locfileid: "63210142"
   
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

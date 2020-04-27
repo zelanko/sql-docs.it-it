@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63239054"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilizzo del controllo Windows Form ReportViewer
@@ -26,7 +26,7 @@ ms.locfileid: "63239054"
   
 1.  Creare una nuova applicazione Windows utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-O  
+     \- oppure -  
   
      Aprire un progetto Applicazione Windows esistente e aggiungere un nuovo form.  
   
@@ -40,14 +40,13 @@ ms.locfileid: "63239054"
   
  Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **Attività di ReportViewer** che richiede di selezionare un report.  
   
- Se il report da visualizzare è stato distribuito in un server di report, selezionare l'opzione ** \<report del server>** dall'elenco a discesa **Scegli report** . Dopo aver selezionato l'opzione ** \<>report del server** , vengono visualizzate due proprietà aggiuntive: **URL server di report** e **percorso report**. 
-  **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
+ Se il report da visualizzare è stato distribuito in un server di report, selezionare l'opzione ** \<report del server>** dall'elenco a discesa **Scegli report** . Dopo aver selezionato l'opzione ** \<>report del server** , vengono visualizzate due proprietà aggiuntive: **URL server di report** e **percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
   
- ![Selezione report del server](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selezione report del server")  
+ ![Selezionare il report del server](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selezionare il report del server")  
   
  Se il report da visualizzare è un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente.  
   
- ![Seleziona report locale](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Seleziona report locale")  
+ ![Selezionare il report locale](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Selezionare il report locale")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Visualizzazione di report in modalità di elaborazione remota  
  Nell'esempio seguente viene illustrato come eseguire il rendering di un report distribuito in un server di report mediante il controllo Windows Form ReportViewer. In questo esempio viene usato il report Sales Order Detail incluso nel progetto di report di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -170,7 +169,7 @@ End Class
   
 6.  Dopo aver rinominato il report, selezionare il file e individuare la finestra Proprietà. Modificare la proprietà **Copia nella directory di output** in **Copia se più recente**.  
   
-     ![Configurazione impostazione copia nell'output](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configurazione impostazione copia nell'output")  
+     ![Configurazione dell'impostazione di copia nell'output](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configurazione dell'impostazione di copia nell'output")  
   
      Se la finestra **Proprietà** non è visibile, è possibile aprirla scegliendo **Finestra Proprietà** dal menu **Visualizza**.  
   
@@ -502,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integrazione di Reporting Services tramite i controlli ReportViewer](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

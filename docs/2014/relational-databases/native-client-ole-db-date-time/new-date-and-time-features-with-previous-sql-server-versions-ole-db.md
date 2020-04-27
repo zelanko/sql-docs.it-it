@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233071"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuove funzionalità di data e ora con le versioni precedenti di SQL Server (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233071"
   
 |Tipo di client OLE DB|Tipo di SQL Server 2005|Tipo di SQL Server 2008 (o versioni successive)|Conversione risultati (da server a client)|Conversione parametri (da client a server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Data|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi dell'ora impostati su zero.|IRowsetChange avrà esito negativo a causa del troncamento della stringa se il campo dell'ora è diverso da zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi della data impostati sulla data corrente.|IRowsetChange avrà esito negativo a causa del troncamento della stringa se i secondi frazionari sono diversi da zero.<br /><br /> La data viene ignorata.|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233071"
 |DBTYPE_DBTIMESTAMP|||Ha esito negativo. valore letterale ora non valido.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Data|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi dell'ora impostati su zero.|IRowsetChange avrà esito negativo a causa del troncamento della stringa se il campo dell'ora è diverso da zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi della data impostati sulla data corrente.|IRowsetChange avrà esito negativo a causa del troncamento della stringa se i secondi frazionari sono diversi da zero.<br /><br /> La data viene ignorata.|  
@@ -55,7 +55,7 @@ ms.locfileid: "63233071"
   
 -   Passaggio a `datetime2` in quanto tipo di dati preferito per la data e l'ora.  
   
- Le applicazioni che utilizzano i metadati del server ottenuti tramite ICommandWithParameters:: GetParameterInfo o set di righe dello schema per impostare le informazioni sul tipo di parametro tramite ICommandWithParameters:: sqlparameterinfo avranno esito negativo durante le conversioni client dove la stringa la rappresentazione di un tipo di origine è maggiore della rappresentazione di stringa del tipo di destinazione. Se, ad esempio, un'associazione client utilizza DBTYPE_DBTIMESTAMP e la colonna Server è data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in Native Client il valore verrà convertito in "aaaa-gg-mm HH: mm: SS. fff", ma i metadati del server `nvarchar(10)`verranno restituiti come. L'overflow risultante restituisce DBSTATUS_E_CATCONVERTVALUE. Problemi analoghi si verificano con le conversioni di dati da IRowsetChange, perché i metadati del set di righe vengono impostati dai metadati del ResultSet.  
+ Le applicazioni che utilizzano i metadati del server ottenuti tramite ICommandWithParameters:: GetParameterInfo o set di righe dello schema per impostare le informazioni sul tipo di parametro tramite ICommandWithParameters:: sqlparameterinfo avranno esito negativo durante le conversioni client dove la rappresentazione di stringa di un tipo di origine è maggiore della rappresentazione di stringa del tipo di destinazione. Se, ad esempio, un'associazione client utilizza DBTYPE_DBTIMESTAMP e la colonna Server è data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in Native Client il valore verrà convertito in "aaaa-gg-mm HH: mm: SS. fff", ma i metadati del server `nvarchar(10)`verranno restituiti come. L'overflow risultante restituisce DBSTATUS_E_CATCONVERTVALUE. Problemi analoghi si verificano con le conversioni di dati da IRowsetChange, perché i metadati del set di righe vengono impostati dai metadati del ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Metadati per parametri e set di righe  
  In questa sezione vengono descritti i metadati per parametri, colonne dei risultati e set di righe dello schema per i client compilati con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -165,7 +165,7 @@ ms.locfileid: "63233071"
 ## <a name="comparability-for-irowsetfind"></a>Possibilità di confronto per IRowsetFind  
  Per i nuovi tipi di data/ora sono consentiti tutti gli operatori di confronto, in quanto vengono visualizzati come tipi stringa anziché come tipi di data/ora.  
   
-## <a name="see-also"></a>Vedere anche  
- [Miglioramenti di data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

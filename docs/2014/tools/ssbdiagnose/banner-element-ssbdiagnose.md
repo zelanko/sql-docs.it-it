@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186875"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
@@ -46,8 +46,8 @@ ms.locfileid: "63186875"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|No.|  
-|**Valore predefinito**|No.|  
+|**Tipo di dati e lunghezza**|Nessuno.|  
+|**Valore predefinito**|Nessuno.|  
 |**Occorrenza**|Una volta per ogni file di output XML di **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -55,7 +55,7 @@ ms.locfileid: "63186875"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementi figlio**|No.|  
+|**Elementi figlio**|Nessuno.|  
   
 ## <a name="example"></a>Esempio  
  Di seguito viene riportato un esempio di un elemento Banner.  
@@ -64,7 +64,7 @@ ms.locfileid: "63186875"
 <Banner title="Service Broker Diagnostics Utility" product="Microsoft SQL Server" version="10.0.1073.0" />  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilità ssbdiagnose &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

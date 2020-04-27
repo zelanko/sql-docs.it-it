@@ -22,17 +22,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238138"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
   La funzionalità [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi singoli a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono costituiti da zero o da più attività di controllo. Tali attività possono essere un gruppo di azioni, ad esempio Server_Object_Change_Group, oppure azioni singole, ad esempio operazioni SELECT da eseguire in una tabella.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono costituiti da zero o da più attività di controllo. Tali attività possono essere un gruppo di azioni, ad esempio Server_Object_Change_Group, oppure azioni singole, ad esempio operazioni SELECT da eseguire in una tabella.  
   
 > [!NOTE]  
 >  Server_Object_Change_Group include le operazioni CREATE, ALTER e DROP per qualsiasi oggetto server (database o endpoint).  
@@ -161,7 +160,7 @@ ms.locfileid: "63238138"
 |SELECT|Questo evento viene generato ogni volta che viene eseguita un'istruzione SELECT.|  
 |UPDATE|Questo evento viene generato ogni volta che viene eseguita un'istruzione UPDATE.|  
 |INSERT|Questo evento viene generato ogni volta che viene eseguita un'istruzione INSERT.|  
-|Elimina|Questo evento viene generato ogni volta che viene eseguita un'istruzione DELETE.|  
+|DELETE|Questo evento viene generato ogni volta che viene eseguita un'istruzione DELETE.|  
 |EXECUTE|Questo evento viene generato ogni volta che viene eseguita un'istruzione EXECUTE.|  
 |RECEIVE|Questo evento viene generato ogni volta che viene eseguita un'istruzione RECEIVE.|  
 |REFERENCES|Questo evento viene generato ogni volta che viene controllata un'autorizzazione REFERENCES.|  

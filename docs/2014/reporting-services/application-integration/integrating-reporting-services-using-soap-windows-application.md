@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb34dc31d65c9b0814a348232d0e2405d7676fda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63218339"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>Utilizzo dell'API SOAP in un'applicazione Windows
@@ -98,6 +98,6 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrazione di Reporting Services in applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
- [Utilizzo dell'API SOAP in un'applicazione Web](integrating-reporting-services-using-soap-web-application.md)  
+ [Uso dell'API SOAP in un'applicazione Web](integrating-reporting-services-using-soap-web-application.md)  
   
   

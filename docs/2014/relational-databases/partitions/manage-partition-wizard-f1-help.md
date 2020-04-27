@@ -24,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249677"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
-  Utilizzare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
+  Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Per avviare la Gestione guidata partizione  
   
@@ -43,26 +43,26 @@ ms.locfileid: "63249677"
   
  Questa sezione include le informazioni necessarie per gestire, modificare e implementare partizioni tramite la **Gestione guidata partizione**.  
   
-##  <a name="Top"></a>Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="Top"></a> Contenuto della sezione  
  Le sezioni seguenti forniscono informazioni sulle pagine della **Gestione guidata partizione**.  
   
- [Gestione guidata partizione (pagina Selezione azione partizione)](#SelectPartitionAction)  
+ [Gestione guidata partizione (pagina Selezionare un'azione relativa alla partizione)](#SelectPartitionAction)  
   
- [Gestione guidata partizione (pagina attiva)](#SwitchIn)  
+ [Gestione guidata partizione (pagina Attiva)](#SwitchIn)  
   
  [Gestione guidata partizione (pagina Disattiva)](#SwitchOut)  
   
- [Gestione guidata partizione (pagina Selezione Opzioni tabella di staging)](#StagingTableOptions)  
+ [Gestione guidata partizione (pagina Seleziona opzioni per la tabella di gestione temporanea)](#StagingTableOptions)  
   
  [Gestione guidata partizione (pagina Seleziona un'opzione di output)](#OutputOption)  
   
- [Gestione guidata partizione (pagina nuova pianificazione processo)](#NewJob)  
+ [Gestione guidata partizione (pagina Nuova pianificazione processo)](#NewJob)  
   
  [Gestione guidata partizione (pagina Riepilogo)](#Summary)  
   
- [Gestione guidata partizione (pagina stato)](#Progress)  
+ [Gestione guidata partizione (pagina Stato)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a>Pagina Seleziona azione partizione  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Pagina Selezionare un'azione relativa alla partizione  
  Usare la pagina **Selezionare un'azione relativa alla partizione** per scegliere l'azione che si desidera eseguire sulla partizione.  
   
 ### <a name="create-a-staging-table"></a>Creazione di una tabella di gestione temporanea  
@@ -85,12 +85,12 @@ ms.locfileid: "63249677"
  **Partizione di attivazione**  
  Fornisce le opzioni per l'aggiunta di una partizione alla tabella.  
   
- **Gestire i dati partizionati in uno scenario basato su finestra temporale scorrevole**  
+ **Gestisci dati partizionati in uno scenario basato su finestra temporale scorrevole**  
  Consente di aggiungere una partizione vuota alla tabella esistente da utilizzare per spostare i dati. La procedura guidata supporta attualmente lo spostamento all'interno dell'ultima partizione e all'esterno della prima partizione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="SwitchIn"></a>Pagina Seleziona opzioni di cambio partizione  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
  Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di staging che si desidera attivare nella tabella partizionata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -103,9 +103,9 @@ ms.locfileid: "63249677"
  **Tabella di attivazione**  
  Consente di selezionare la tabella di staging contenente la partizione che si desidera aggiungere alla tabella partizionata. È necessario creare questa tabella di staging prima di attivare partizioni usando la **Gestione guidata partizione**.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="SwitchOut"></a>Pagina Seleziona opzioni per la disattivazione della partizione  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
  Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di staging contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -121,9 +121,9 @@ ms.locfileid: "63249677"
  **Esistente**  
  Consente di selezionare una tabella di staging esistente che si desidera utilizzare per la partizione che si desidera disattivare per la tabella di origine corrente. Gli eventuali dati contenuti nella tabella verranno sovrascritti con i dati utilizzati per la disattivazione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="StagingTableOptions"></a>Pagina Seleziona opzioni per la tabella di staging  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Pagina Seleziona opzioni per la tabella di gestione temporanea  
  Usare la pagina **Seleziona opzioni per la tabella di staging** per creare la tabella di staging che si desidera utilizzare per lo spostamento dei dati partizionati.  
   
  Le tabelle di gestione temporanea devono risiedere nello stesso filegroup della partizione selezionata in cui è presente la tabella di origine. La tabella di staging deve riflettere la struttura della tabella di origine e della tabella di destinazione.  
@@ -131,7 +131,7 @@ ms.locfileid: "63249677"
  È inoltre possibile creare gli stessi indici nella tabella di staging presenti nella partizione di origine. La tabella di staging contiene automaticamente un vincolo basato sugli elementi della partizione di origine. In genere tale vincolo viene generato dal valore limite della partizione di origine.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome tabella di staging**  
+ **Nome tabella di gestione temporanea**  
  Consente di creare un nome per la tabella di staging o di accettare il nome predefinito visualizzato nella casella di modifica.  
   
  **Cambia partizione**  
@@ -143,9 +143,9 @@ ms.locfileid: "63249677"
  **Filegroup**  
  Consente di selezionare un filegroup per la nuova tabella.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="OutputOption"></a>Pagina Seleziona un'opzione di output  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Pagina Seleziona un'opzione di output  
  Usare la pagina **Seleziona un'opzione di output** per specificare il modo in cui si desidera completare le modifiche alle partizioni.  
   
 ### <a name="create-script"></a>Crea script  
@@ -157,22 +157,22 @@ ms.locfileid: "63249677"
  **Genera script negli Appunti**  
  Consente di salvare lo script negli Appunti.  
   
- **Genera script in nuova finestra query**  
+ **Genera script in nuova finestra Query**  
  Consente di generare lo script in una finestra dell'editor di query. Se non è aperta alcuna finestra dell'editor, ne viene aperta una nuova da utilizzare come destinazione per lo script.  
   
 ### <a name="run-immediately"></a>Esegui immediatamente  
- **Esegui immediatamente**  
+ **Run immediately**  
  Per completare l'applicazione di modifiche alle partizioni nella procedura guidata, fare clic su **Avanti** o **Fine**.  
   
 ### <a name="schedule"></a>Pianificazione  
  Selezionare questa opzione per modificare le partizioni della tabella a una data e a un'ora pianificata.  
   
- **Modifica pianificazione**  
+ **Cambia pianificazione**  
  Viene aperta la finestra di dialogo **Nuova pianificazione processo** , in cui è possibile selezionare, modificare o visualizzare le proprietà del processo pianificato.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="NewJob"></a>Pagina nuova pianificazione processo  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Pagina Nuova pianificazione processo  
  Usare la pagina **Nuova pianificazione processo** per visualizzare e modificare le proprietà della pianificazione.  
   
 ### <a name="options"></a>Opzioni  
@@ -184,31 +184,31 @@ ms.locfileid: "63249677"
  **Processi nella pianificazione**  
  Consente di visualizzare i processi esistenti che utilizzano la pianificazione.  
   
- **Tipo di pianificazione**  
+ **Tipo pianificazione**  
  Consente di selezionare il tipo di pianificazione.  
   
  **Enabled**  
- Abilitare o disabilitare la pianificazione.  
+ Consente di abilitare o disabilitare la pianificazione.  
   
 ### <a name="recurring-schedule-types-options"></a>Opzioni relative ai tipi di pianificazione periodica  
  Selezionare la frequenza del processo pianificato.  
   
- **Avviene**  
+ **Ricorrenza**  
  Consente di selezionare l'intervallo in base al quale ripetere la pianificazione.  
   
  **Ogni**  
  Consente di selezionare il numero di giorni o di settimane quale intervallo di esecuzione delle pianificazioni. Questa opzione non è disponibile per pianificazioni mensili.  
   
- **Monday**  
+ **Lunedì**  
  Consente di impostare l'esecuzione del processo ogni lunedì. Questa opzione è disponibile solo per pianificazioni settimanali.  
   
  **Martedì**  
  Consente di impostare l'esecuzione del processo ogni martedì. Questa opzione è disponibile solo per pianificazioni settimanali.  
   
- **Wednesday**  
+ **Mercoledì**  
  Consente di impostare l'esecuzione del processo ogni mercoledì. Questa opzione è disponibile solo per pianificazioni settimanali.  
   
- **Thursday**  
+ **Giovedì**  
  Consente di impostare l'esecuzione del processo ogni giovedì. Questa opzione è disponibile solo per pianificazioni settimanali.  
   
  **Venerdì**  
@@ -217,28 +217,28 @@ ms.locfileid: "63249677"
  **Sabato**  
  Consente di impostare l'esecuzione del processo ogni sabato. Questa opzione è disponibile solo per pianificazioni settimanali.  
   
- **Sunday**  
+ **Domenica**  
  Consente di impostare l'esecuzione del processo ogni domenica. Questa opzione è disponibile solo per pianificazioni settimanali.  
   
- **Giorno**  
+ **Day**  
  Consente di selezionare il giorno del mese in cui eseguire la pianificazione. Questa opzione è disponibile solo per pianificazioni mensili.  
   
  **ogni**  
  Consente di selezionare il numero di mesi tra una pianificazione e l'altra. Questa opzione è disponibile solo per pianificazioni mensili.  
   
- **Il parametro**  
+ **Ogni**  
  Consente di specificare una pianificazione per un giorno specifico di una determinata settimana del mese. Questa opzione è disponibile solo per pianificazioni mensili.  
   
- **Si verifica una sola volta alle**  
+ **Una sola volta alle**  
  Consente di impostare l'ora per l'esecuzione giornaliera di un processo.  
   
- **Si verifica ogni**  
+ **Ogni**  
  Consente di impostare il numero di ore o di minuti di intervallo tra un'esecuzione e l'altra.  
   
- **Data di inizio**  
+ **Data inizio**  
  Consente di impostare la data iniziale di validità per la pianificazione.  
   
- **Data di fine**  
+ **Data fine**  
  Consente di impostare la data finale di validità per la pianificazione.  
   
  **Nessuna data di fine**  
@@ -253,19 +253,19 @@ ms.locfileid: "63249677"
  **Time**  
  Selezionare l'ora di esecuzione del processo.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="Summary"></a> Pagina Riepilogo  
+##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Usare la pagina **Riepilogo** per verificare le opzioni selezionate nelle pagine precedenti.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Verificare le selezioni**  
+ **Controlla selezioni**  
  Consente di visualizzare le opzioni selezionate in ogni pagina della procedura guidata. Fare clic su un nodo per espandere e visualizzare le opzioni selezionate in precedenza.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="Progress"></a> Pagina Stato  
- Usare la pagina **Stato** per monitorare le informazioni sullo stato delle azioni eseguite nella **Gestione guidata partizione**. A seconda delle opzioni selezionate nella procedura guidata, la pagina **stato** può contenere una o più azioni. Nella casella superiore viene visualizzato lo stato complessivo della procedura guidata e viene indicato il numero di messaggi di stato, di errore e di avviso restituiti durante l'esecuzione della procedura guidata.  
+##  <a name="progress-page"></a><a name="Progress"></a> Pagina Stato  
+ Usare la pagina **Stato** per monitorare le informazioni sullo stato delle azioni eseguite nella **Gestione guidata partizione**. A seconda delle opzioni selezionate nella procedura guidata, la pagina **Stato** può contenere una o più azioni. Nella casella superiore viene visualizzato lo stato complessivo della procedura guidata e viene indicato il numero di messaggi di stato, di errore e di avviso restituiti durante l'esecuzione della procedura guidata.  
   
 ### <a name="options"></a>Opzioni  
  **Dettagli**  
@@ -292,7 +292,7 @@ ms.locfileid: "63249677"
   
 -   **Copia report negli Appunti**  
   
--   **Invia report come messaggio di posta elettronica**  
+-   **Invia report per posta elettronica**  
   
  **Visualizza report**  
  Consente di aprire la finestra di dialogo **Visualizza report** , che contiene un report di testo dello stato della **Gestione guidata partizione**.  
@@ -300,7 +300,7 @@ ms.locfileid: "63249677"
  **Close**  
  Consente di chiudere la procedura guidata.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle e indici partizionati](partitioned-tables-and-indexes.md)  

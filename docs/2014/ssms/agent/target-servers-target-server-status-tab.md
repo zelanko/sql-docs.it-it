@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245719"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Server di destinazione (scheda Stato server di destinazione)
@@ -35,16 +35,16 @@ ms.locfileid: "63245719"
  **Istruzioni non lette**  
  Consente di visualizzare il numero di istruzioni che il server di destinazione non ha ancora ricevuto.  
   
- **Status**  
+ **Stato**  
  Consente di visualizzare lo stato del server di destinazione.  
   
- **Forza polling**  
+ **Imponi polling**  
  Fare clic su questo pulsante per imporre ai server di destinazione selezionati di eseguire il polling sul server master.  
   
  **Imponi esclusione**  
  Fare clic su questo pulsante per imporre ai server di destinazione selezionati di escludersi dal server master.  
   
- **Istruzioni post**  
+ **Invia istruzioni**  
  Consente di inviare istruzioni ai server di destinazione selezionati.  
   
  **Abilita aggiornamento automatico**  
@@ -53,7 +53,7 @@ ms.locfileid: "63245719"
  **Aggiorna ogni**  
  Consente di specificare la frequenza di aggiornamento delle informazioni visualizzate in questa pagina.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   
   

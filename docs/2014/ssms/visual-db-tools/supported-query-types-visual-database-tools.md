@@ -23,29 +23,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204654"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipi di query supportati (Visual Database Tools)
-  È possibile creare i tipi di query seguenti nei riquadri diagramma e criteri (i riquadri grafici) di [Progettazione query e Progettazione viste](visual-database-tools.md):  
+  Nei riquadri Diagramma e Criteri di [Progettazione query e Progettazione viste](visual-database-tools.md)è possibile creare i tipi di query seguenti:  
   
--   **Seleziona query** Recupera i dati da una o più tabelle o viste. Questo tipo di query crea un'istruzione SQL SELECT.  
+-   **Query di selezione** Recupera dati da una o più tabelle o viste. Questo tipo di query crea un'istruzione SQL SELECT.  
   
--   **Inserisci risultati** Crea nuove righe copiando righe esistenti da una tabella a un'altra o nella stessa tabella come nuove righe. Questo tipo di query crea un'istruzione SQL INSERT INTO...SELECT.  
+-   **Accodamento** Crea nuove righe copiando righe esistenti da una tabella a un'altra o all'interno della stessa tabella come righe nuove. Questo tipo di query crea un'istruzione SQL INSERT INTO...SELECT.  
   
--   **Inserisci valori** Crea una nuova riga e inserisce valori in colonne specificate. Questo tipo di query crea un'istruzione SQL INSERT INTO...VALUES.  
+-   **Accodamento valori** Crea una nuova riga e inserisce valori nelle colonne specificate. Questo tipo di query crea un'istruzione SQL INSERT INTO...VALUES.  
   
--   **Aggiorna query** Modifica i valori di singole colonne di una o più righe esistenti in una tabella. Questo tipo di query crea un'istruzione SQL UPDATE...SET.  
+-   **Query di aggiornamento** Modifica i valori di singole colonne di una o più righe esistenti in una tabella. Questo tipo di query crea un'istruzione SQL UPDATE...SET.  
   
--   **Elimina query** Rimuove una o più righe da una tabella. Questo tipo di query crea un'istruzione SQL DELETE.  
+-   **Query di eliminazione** Rimuove una o più righe da una tabella. Questo tipo di query crea un'istruzione SQL DELETE.  
   
     > [!NOTE]  
     >  Una query di eliminazione rimuove intere righe dalla tabella. Se si desidera eliminare valori da singole colonne di dati, utilizzare una query di aggiornamento.  
   
--   **Esegui query tabella** Crea una nuova tabella e crea righe al suo interno copiando i risultati di una query. Questo tipo di query crea un'istruzione SQL SELECT...INTO.  
+-   **Query di creazione tabella** Crea una nuova tabella e le relative righe copiandovi i risultati di una query. Questo tipo di query crea un'istruzione SQL SELECT...INTO.  
   
  Oltre a creare le query utilizzando i riquadri grafici, è possibile immettere qualsiasi istruzione SQL nel riquadro SQL per creare query come quelle di unione.  
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249374"
 ---
 # <a name="subscription-type"></a>Tipo di sottoscrizione
-  La replica di tipo merge offre due tipi di sottoscrizione: server e client (indicati rispettivamente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle versioni precedenti di come globale e locale). I Sottoscrittori con una sottoscrizione di tipo server sono in grado di:  
+  La replica di tipo merge offre due tipi di sottoscrizioni, ovvero server e client, definiti rispettivamente come globale e locale nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I Sottoscrittori con una sottoscrizione di tipo server sono in grado di:  
   
 -   Ripubblicare i dati di altri Sottoscrittori.  
   

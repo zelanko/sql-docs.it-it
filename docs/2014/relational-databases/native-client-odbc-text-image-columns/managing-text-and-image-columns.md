@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195322"
 ---
 # <a name="managing-text-and-image-columns"></a>Gestione di colonne di tipo text e image
@@ -36,11 +36,11 @@ ms.locfileid: "63195322"
   
 -   [Colonne di tipo text e image associate e non associate](bound-vs-unbound-text-and-image-columns.md)  
   
--   [Confronto tra modifiche registrate e non registrate](logged-vs-unlogged-modifications.md)  
+-   [Modifiche registrate e non registrate](logged-vs-unlogged-modifications.md)  
   
 -   [Colonne data-at-execution di tipo text, ntext o image](data-at-execution-and-text-ntext-or-image-columns.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

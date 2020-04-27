@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati permanente | Microsoft Docs
+title: Oggetti di origine dati persistenti | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231442"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
@@ -227,7 +227,7 @@ HRESULT InitFromPersistedDS
   
  Il metodo **IPersistFile::Save** può essere chiamato prima o dopo la chiamata al metodo **IDBInitialize::Initialize**. Se si chiama il metodo al termine del completamento di **IDBInitialize::Initialize** viene resa persistente una specifica di origine dati valida.  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetti origine dati &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Oggetti di origine dati &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249396"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizzazione ed elaborazione del modello di previsione (Esercitazione intermedia sul data mining)
@@ -35,7 +35,7 @@ ms.locfileid: "63249396"
   
  Il *PERIODICITY_HINT* parametro fornisce all'algoritmo informazioni sui periodi di tempo aggiuntivi che si prevede di visualizzare nei dati. Per impostazione predefinita, i modelli Time Series tenteranno di rilevare automaticamente un modello nei dati. Se tuttavia si conosce già il ciclo temporale previsto, l'indicazione di un hint di periodicità può migliorare potenzialmente l'accuratezza del modello. Se si fornisce tuttavia l'hint di periodicità errato, l'accuratezza può diminuire. Di conseguenza, in caso di dubbi sul valore da utilizzare, è preferibile utilizzare il valore predefinito.  
   
- Ad esempio, la vista utilizzata per questo modello aggrega dati di vendita da [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] su base mensile. Ogni intervallo di tempo utilizzato dal modello rappresenta pertanto un mese e tutte le stime saranno anch'esse indicate in termini di mesi. Poiché sono presenti 12 mesi in un anno e si prevede che i modelli di vendita vengano ripetuti più o meno su base annuale, impostare ** il parametro PERIODICITY_HINT `12`su per indicare che 12 intervalli di tempo (mesi) costituiscono un ciclo di vendita completo.  
+ Ad esempio, la vista utilizzata per questo modello aggrega dati di vendita da [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] su base mensile. Ogni intervallo di tempo utilizzato dal modello rappresenta pertanto un mese e tutte le stime saranno anch'esse indicate in termini di mesi. Poiché sono presenti 12 mesi in un anno e si prevede che i modelli di vendita vengano ripetuti più o meno su base annuale, impostare *PERIODICITY_HINT* il parametro PERIODICITY_HINT `12`su per indicare che 12 intervalli di tempo (mesi) costituiscono un ciclo di vendita completo.  
   
  **Metodo di previsione**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63249396"
   
 3.  Nella `FORECAST_METHOD` riga verificare che la casella di testo **valore** sia vuota o impostata su `MIXED`. Se è stato inserito un valore diverso, digitare `MIXED` per ripristinare il valore predefinito del parametro.  
   
-4.  Nella riga **PREDICTION_SMOOTHING** verificare che la casella di testo **valore** sia vuota o impostata su 0,5. Se è stato immesso un valore diverso, **** fare clic su `0.5` valore e digitare per ripristinare il valore predefinito del parametro.  
+4.  Nella riga **PREDICTION_SMOOTHING** verificare che la casella di testo **valore** sia vuota o impostata su 0,5. Se è stato immesso un valore diverso, **Value** fare clic su `0.5` valore e digitare per ripristinare il valore predefinito del parametro.  
   
     > [!NOTE]  
     >  Il parametro PREDICTION_SMOOTHING è disponibile solo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise. Non è pertanto possibile visualizzare o modificare il valore di tale parametro in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard. Il comportamento predefinito consiste tuttavia nell'utilizzare entrambi gli algoritmi con un fattore di ponderazione equivalente.  
@@ -103,9 +103,9 @@ ms.locfileid: "63249396"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esplorazione del modello di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

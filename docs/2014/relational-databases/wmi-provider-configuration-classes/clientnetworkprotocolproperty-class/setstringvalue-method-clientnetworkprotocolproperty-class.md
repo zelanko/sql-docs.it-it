@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 82b89246d6289d0b19ee97e68e94f77d7cb30a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63244992"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Metodo SetStringValue (classe ClientNetworkProtocolProperty)
@@ -54,7 +54,7 @@ StrValue
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
+## <a name="see-also"></a>Vedi anche  
+ [configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209741"
 ---
 # <a name="move-a-workload-group"></a>Spostare un gruppo di carico di lavoro
@@ -29,16 +29,16 @@ ms.locfileid: "63209741"
   
 -   **Per spostare un gruppo di carico di lavoro usando:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Non è possibile spostare un gruppo di carico di lavoro se un'operazione di configurazione di Resource Governor è in sospeso.  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Non è possibile spostare un gruppo di carico di lavoro se un'operazione di configurazione di Resource Governor è in sospeso. È possibile determinare se è presente una configurazione in sospeso eseguendo una query alla vista a gestione dinamica [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) per ottenere lo stato corrente di is_configuration_pending.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per spostare un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="MoveWGSSMS"></a> Spostare un gruppo di carico di lavoro utilizzando SQL Server Management Studio  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> Spostare un gruppo di carico di lavoro utilizzando SQL Server Management Studio  
  **Per spostare un gruppo di carico di lavoro utilizzando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  In Esplora oggetti espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**.  
@@ -55,7 +55,7 @@ ms.locfileid: "63209741"
   
 7.  Se l'operazione di creazione o riconfigurazione del pool di risorse o gruppo di carico di lavoro non viene completata, viene visualizzato un messaggio di riepilogo degli errori sotto il titolo della pagina delle proprietà. Per visualizzare un messaggio di errore dettagliato, fare clic sulla freccia GIÙ sul messaggio di errore.  
   
-##  <a name="MoveWGTSQL"></a> Spostare un gruppo di carico di lavoro utilizzando Transact-SQL  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> Spostare un gruppo di carico di lavoro utilizzando Transact-SQL  
  **Per spostare un gruppo di carico di lavoro utilizzando Transact-SQL**  
   
 1.  Eseguire l'istruzione `ALTER WORKLOAD GROUP` specificando il nome del gruppo di carico di lavoro da spostare e il pool di risorse in cui deve essere spostato.  

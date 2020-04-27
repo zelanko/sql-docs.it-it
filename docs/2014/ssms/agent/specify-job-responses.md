@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246001"
 ---
 # <a name="specify-job-responses"></a>Specifica delle risposte ai processi
@@ -45,7 +45,7 @@ ms.locfileid: "63246001"
 |Viene descritto come notificare lo stato del processo a un operatore.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
 |Viene descritto come scrivere lo stato del processo nel registro applicazioni di Windows.|[Registrare lo stato del processo nel registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitoraggio e risposta agli eventi](monitor-and-respond-to-events.md)  
   
   

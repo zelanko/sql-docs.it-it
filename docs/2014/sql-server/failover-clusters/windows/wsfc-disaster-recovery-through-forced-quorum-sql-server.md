@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224631"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)
   Un errore del quorum è causato generalmente da una situazione di emergenza a livello di sistema, da un errore di comunicazione persistente o da una configurazione errata che interessa diversi nodi del cluster WSFC.  Per il recupero da un errore del quorum è necessario intervenire manualmente.  
   
--   **Prima di iniziare:**  [prerequisiti](#Prerequisites), [sicurezza](#Security)  
+-   **Prima di iniziare:**  [Prerequisiti](#Prerequisites), [Sicurezza](#Security)  
   
--   **Ripristino di emergenza WSFC tramite la procedura di quorum forzata** [ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato](#Main)  
+-   **Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato** [Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato](#Main)  
   
 -   [Attività correlate](#RelatedTasks)  
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Nella procedura relativa al quorum forzato si presuppone che il quorum fosse integro prima dell'errore.  
   
 > [!WARNING]  
@@ -42,10 +42,10 @@ ms.locfileid: "63224631"
 >   
 >  Per altre informazioni, vedere:  [WSFC (Windows Server Failover Clustering) con SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modalità quorum WSFC e configurazione del voto (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  L'utente deve disporre di un account di dominio che sia membro del gruppo Administrators locale su ogni nodo del cluster WSFC.  
   
-##  <a name="Main"></a>Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato  
  Si tenga presente che l'errore del quorum imposterà offline tutti i servizi del cluster, le istanze di SQL Server e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]nel cluster WSFC, poiché il cluster, in base alla configurazione, non è in grado di assicurare la tolleranza di errore a livello di nodo.  Un errore del quorum significa che i nodi votanti integri del cluster WSFC non soddisfano più il modello di quorum. È possibile che alcuni nodi abbiano avuto esito completamente negativo e alcuni abbiano solo arrestato il servizio WSFC e siano altrimenti integri, a eccezione della perdita della capacità di comunicare con un quorum.  
   
  Per riportare online il cluster WSFC è necessario correggere la causa principale dell'errore del quorum con la configurazione esistente, recuperare i database interessati in base alle esigenze ed eventualmente riconfigurare i nodi restanti nel cluster WSFC per riflettere la topologia di cluster esistente.  
@@ -70,28 +70,27 @@ ms.locfileid: "63224631"
     > [!NOTE]  
     >  L'impostazione del quorum forzato comporta il blocco dei controlli del quorum a livello di cluster, finché il cluster WSFC logico non otterrà una maggioranza di voti e passerà automaticamente alla modalità operativa di un quorum normale.  
   
-3.  **Avviare il servizio WSFC normalmente su tutti i nodi altrimenti integri, uno alla volta.** Non è necessario specificare l'opzione per il quorum forzato quando si avvia il servizio cluster sugli altri nodi.  
+3.  **Avviare il servizio WSFC normalmente su tutti i nodi diversamente integri, uno alla volta.** Non è necessario specificare l'opzione per il quorum forzato quando si avvia il servizio cluster sugli altri nodi.  
   
      Man mano che il servizio WSFC ritorna online su ogni nodo, viene avviata la negoziazione con gli altri nodi integri per sincronizzare il nuovo stato di configurazione del cluster.  Questa operazione deve essere effettuata un nodo alla volta per evitare possibili race condition nella risoluzione dell'ultimo stato noto del cluster.  
   
     > [!WARNING]  
     >  Assicurarsi che ogni nodo che si avvia possa comunicare con gli altri nodi appena riportati online.  Considerare la possibilità di disabilitare il servizio WSFC sugli altri nodi.  In caso contrario, si corre il rischio di creare di più di un set di nodi del quorum, ottenendo uno scenario "split brain". Se i risultati nel passaggio 1 sono accurati, questa situazione non dovrebbe verificarsi.  
   
-4.  **Applicare la nuova modalità quorum e la configurazione di voto del nodo.** Se tramite la forzatura del quorum vengono riavviati tutti i nodi del cluster e la causa principale dell'errore del quorum è stata corretta, non sarà necessario apportare modifiche alla modalità quorum originale e alla configurazione di voto dei nodi.  
+4.  **Applicare la nuova modalità quorum e la configurazione di voto dei nodi.** Se tramite la forzatura del quorum vengono riavviati tutti i nodi del cluster e la causa principale dell'errore del quorum è stata corretta, non sarà necessario apportare modifiche alla modalità quorum originale e alla configurazione di voto dei nodi.  
   
      In caso contrario, è necessario valutare il nodo del cluster appena recuperato e la topologia della replica di disponibilità e modificare la modalità quorum e le assegnazioni dei voti per ogni nodo, a seconda dei casi. Sarà necessario impostare offline i nodi non recuperati oppure impostare su zero i relativi voti.  
   
     > [!TIP]  
     >  A questo punto è possibile che i nodi e le istanze di SQL Server risultino apparentemente ripristinati al normale funzionamento.  È tuttavia possibile che non sia ancora disponibile un quorum integro.  Utilizzando Gestione cluster di failover o Dashboard AlwaysOn all'interno di SQL Server Management Studio o le DMV appropriate, verificare che sia stato ripristinato un quorum.  
   
-5.  **Ripristinare le repliche di database del gruppo di disponibilità in base alle esigenze.** I database del gruppo non di disponibilità dovrebbero essere recuperati e ritornare online autonomamente come parte del normale processo di avvio di SQL Server.  
+5.  **Recuperare le repliche di database del gruppo di disponibilità in base alle esigenze.** I database del gruppo non di disponibilità dovrebbero essere recuperati e ritornare online autonomamente come parte del normale processo di avvio di SQL Server.  
   
      È possibile ridurre al minimo la possibile perdita di dati e il tempo di recupero per le repliche del gruppo di disponibilità riportandoli online in questa sequenza: replica primaria, repliche secondarie sincrone, repliche secondarie asincrone.  
   
-6.  **Ripristinare o sostituire i componenti con errori e convalidare di nuovo il cluster.** Dopo aver eseguito il recupero dalla situazione di emergenza iniziale e dall'errore del quorum, è necessario ripristinare o sostituire i nodi con errori e modificare di conseguenza le configurazioni WSFC e AlwaysOn correlate.  Questa operazione può includere l'eliminazione di repliche del gruppo di disponibilità, la rimozione di nodi dal cluster o l'eliminazione e la reinstallazione del software in un nodo.  
+6.  **Ripristinare o sostituire componenti con errori e convalidare di nuovo il cluster.** Dopo aver eseguito il recupero dalla situazione di emergenza iniziale e dall'errore del quorum, è necessario ripristinare o sostituire i nodi con errori e modificare di conseguenza le configurazioni WSFC e AlwaysOn correlate.  Questa operazione può includere l'eliminazione di repliche del gruppo di disponibilità, la rimozione di nodi dal cluster o l'eliminazione e la reinstallazione del software in un nodo.  
   
-     È necessario ripristinare o rimuovere tutte le repliche di disponibilità con errori.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il log delle transazioni non verrà troncato oltre l'ultimo punto noto della replica di disponibilità meno aggiornata.   Se una replica con errori non viene ripristinata o rimossa dal gruppo di disponibilità, le dimensioni dei log delle transazioni aumenteranno e si correrà il rischio di esaurire lo spazio dei log delle transazioni delle altre repliche.  
+     È necessario ripristinare o rimuovere tutte le repliche di disponibilità con errori.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il log delle transazioni non verrà troncato oltre l'ultimo punto noto della replica di disponibilità meno aggiornata.   Se una replica con errori non viene ripristinata o rimossa dal gruppo di disponibilità, le dimensioni dei log delle transazioni aumenteranno e si correrà il rischio di esaurire lo spazio dei log delle transazioni delle altre repliche.  
   
     > [!NOTE]  
     >  Se si esegue la Convalida guidata configurazione di WSFC quando nel cluster WSFC è presente un listener del gruppo di disponibilità, tramite la procedura guidata verrà generato il seguente messaggio di avviso non corretto:  
@@ -102,9 +101,9 @@ ms.locfileid: "63224631"
   
 7.  **Ripetere il passaggio 4 in base alle esigenze.** L'obiettivo è ristabilire il livello appropriato di tolleranza di errore e disponibilità elevata per le operazioni integre.  
   
-8.  **Eseguire l'analisi RPO/RTO.** È consigliabile analizzare i log di sistema di SQL Server, i timestamp del database e i registri eventi di Windows per determinare la causa principale dell'errore e documentare il punto e il tempo di recupero effettivi.  
+8.  **Eseguire un'analisi RPO/RTO.** È consigliabile analizzare i log di sistema di SQL Server, i timestamp del database e i registri eventi di Windows per determinare la causa principale dell'errore e documentare il punto e il tempo di recupero effettivi.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Forzare l'avvio di un cluster WSFC senza un quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -114,15 +113,15 @@ ms.locfileid: "63224631"
   
 -   [Configurare le impostazioni NodeWeight per il quorum del cluster](configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 
+-   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Cmdlet del cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187924"
 ---
 # <a name="metadata-visibility-configuration"></a>Configurazione della visibilità dei metadati
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Viste del catalogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)]stored procedure **sp_help**|  
+|Viste del catalogo|Stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**del**|  
 |Metadati che espongono funzioni predefinite|Viste degli schemi delle informazioni|  
 |Viste di compatibilità|Proprietà estese|  
   
@@ -51,8 +51,7 @@ GO
   
 |||  
 |-|-|  
-|Tabelle di sistema per il log shipping|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle di sistema dell'agente|  
+|Tabelle di sistema per il log shipping|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle di sistema dell'agente|  
 |Tabelle di sistema del piano di manutenzione database|Tabelle di sistema di backup|  
 |Tabelle di sistema di replica|Replica e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **dell'agente**|  
   
@@ -64,7 +63,7 @@ GO
   
 -   È possibile che le funzioni predefinite per la creazione di metadati quali OBJECTPROPERTYEX restituiscano NULL.  
   
--   È possibile che le stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   È possibile che le stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**del** restituiscano solo un subset di righe o NULL.  
   
  I moduli SQL, ad esempio le stored procedure e i trigger, vengono eseguiti nel contesto di sicurezza del chiamante e pertanto la relativa accessibilità ai metadati è limitata. Nel codice di esempio seguente, quando la stored procedure tenta di accedere ai metadati relativi alla tabella `myTable` per la quale il chiamante non dispone di alcun diritto, viene restituito un set di risultati vuoto. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene invece restituita una riga.  
   
@@ -183,17 +182,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys. messages**|  
-|**sys. schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys.messages**|  
+|**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## <a name="see-also"></a>Vedere anche  
- [CONCEDERE &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-transact-sql)   
- [DENY &#40;&#41;Transact-SQL](/sql/t-sql/statements/deny-transact-sql)   
- [Revoke &#40;&#41;Transact-SQL](/sql/t-sql/statements/revoke-transact-sql)   
+ [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
  [Clausola EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Viste del catalogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Viste di compatibilità &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Viste della compatibilità &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

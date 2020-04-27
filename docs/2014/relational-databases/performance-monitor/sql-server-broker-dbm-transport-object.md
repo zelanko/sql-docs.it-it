@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250726"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>Oggetto Trasporto Broker/mirroring del database di SQL Server
@@ -56,8 +56,8 @@ ms.locfileid: "63250726"
 |**Lunghezza media I/O invio**|Questo contatore indica le dimensioni medie in byte di ogni operazione di invio del trasporto. Si noti che un'operazione di invio del trasporto può includere più frammenti di messaggi.|  
 |**I/O invio/sec**|Questo contatore indica il numero di operazioni di I/O di invio del trasporto al secondo completate. Si noti che un'operazione di invio del trasporto può includere più frammenti di messaggi.|  
   
-## <a name="see-also"></a>Vedere anche  
- [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   
+## <a name="see-also"></a>Vedi anche  
+ [sys. dm_broker_forwarded_messages &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   

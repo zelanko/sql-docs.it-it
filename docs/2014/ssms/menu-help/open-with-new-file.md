@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63240147"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
@@ -42,4 +42,4 @@ ms.locfileid: "63240147"
 >  Nell'elenco di programmi visualizzato in **Selezionare un programma dall'elenco**, il nome dell'editor predefinito per il tipo di file selezionato è seguito da **(Predefinito)** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+ [Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

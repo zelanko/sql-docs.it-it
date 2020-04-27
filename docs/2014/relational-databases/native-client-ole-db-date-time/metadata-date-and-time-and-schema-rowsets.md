@@ -1,5 +1,5 @@
 ---
-title: Data e ora e set di righe dello schema | Microsoft Docs
+title: Set di righe dello schema e dei tipi Date e Time | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238019"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Data e ora e set di righe dello schema
@@ -27,10 +27,10 @@ ms.locfileid: "63238019"
   
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Data|DBTYPE_DBDATE|Cancella|0|  
+|Data|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Set|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Cancella|0|  
-|Datetime|DBTYPE_DBTIMESTAMP|Cancella|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63238019"
   
  Poiché OLE DB definisce solo MINIMUM_SCALE e MAXIMUM_SCALE per i tipi numerici e decimali, l'utilizzo da parte di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client di queste colonne per time, datetime2 e datetimeoffset è di tipo non standard.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Metadati &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

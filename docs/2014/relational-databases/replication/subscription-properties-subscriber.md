@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250265"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Proprietà replica di SQL Server sottoscrizione 
@@ -54,12 +54,12 @@ In questa sezione vengono fornite informazioni sulla finestra di dialogo **Propr
  **Definizione partizione (HOST_NAME)**  
  Nel caso di una pubblicazione che utilizza filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore, ovvero **SUSER_SNAME()** o **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Tipo di sottoscrizione** e **priorità**  
+ **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
   
  Se si seleziona un tipo di sottoscrizione server nella Creazione guidata nuova sottoscrizione, al Sottoscrittore viene assegnata una priorità che verrà utilizzata nella risoluzione dei conflitti.  
   
- **Risoluzione interattiva dei conflitti**  
+ **Risoluzione interattiva**  
  Consente di indicare di utilizzare l'interfaccia utente del sistema di risoluzione dei conflitti interattivo durante la sincronizzazione di tipo merge. A tale scopo, è necessario impostare **Usa Gestione sincronizzazione Microsoft Windows** su **Abilita**. Per altre informazioni, vedere [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
 
 
@@ -78,16 +78,16 @@ In questa sezione vengono fornite informazioni sulla finestra di dialogo **Propr
 >  Se non è stato ancora creato un processo dell'agente di merge o di distribuzione per la sottoscrizione, numerose proprietà non verranno visualizzate. Per creare un processo dell'agente per una sottoscrizione pull, eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) in caso di una sottoscrizione a una pubblicazione transazionale o snapshot o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) in caso di una sottoscrizione a una pubblicazione di tipo merge.  
   
 ### <a name="options-for-all-subscriptions"></a>Opzioni per tutte le sottoscrizioni  
- **Inizializzare i dati pubblicati da uno snapshot**  
+ **Inizializza dati pubblicati da uno snapshot**  
  Consente di stabilire se le sottoscrizioni vengono inizializzate tramite uno snapshot, impostazione predefinita, o un altro metodo. Per altre informazioni sull'inizializzazione delle sottoscrizioni, vedere [Inizializzare una sottoscrizione](initialize-a-subscription.md).  
   
  **Posizione snapshot**  
  Consente di determinare la posizione da cui si accede ai file di snapshot durante l'inizializzazione o una nuova inizializzazione. La posizione può essere uno dei valori seguenti:  
   
--   **Percorso predefinito**: il percorso predefinito, che viene definito durante la configurazione di un database di distribuzione. Per ulteriori informazioni, vedere [specificare la posizione predefinita degli snapshot](snapshot-options.md#snapshot-folder-locations).    
--   **Cartella alternativa**: un percorso alternativo, che può essere specificato nella finestra di dialogo **Proprietà pubblicazione** . Per altre informazioni, vedere [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
--   **Cartella snapshot dinamici**: un percorso snapshot per le pubblicazioni di tipo merge che utilizzano filtri di riga con parametri. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
--   **Cartella FTP**: una cartella accessibile a un server ftp (file Transfer Protocol). Per altre informazioni, vedere [Trasferire snapshot tramite FTP](transfer-snapshots-through-ftp.md).  
+-   **Posizione predefinita**. Si tratta della posizione predefinita, che viene stabilita durante la configurazione di un server di distribuzione. Per ulteriori informazioni, vedere [specificare la posizione predefinita degli snapshot](snapshot-options.md#snapshot-folder-locations).    
+-   **Cartella alternativa**. Si tratta di una posizione alternativa, che può essere specificata nella finestra di dialogo **Proprietà pubblicazione** . Per altre informazioni, vedere [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
+-   **Cartella snapshot dinamici**. Si tratta di una posizione degli snapshot per pubblicazioni di tipo merge che utilizzano filtri di riga con parametri. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Cartella FTP**. È una cartella accessibile a un server FTP (File Transfer Protocol). Per altre informazioni, vedere [Trasferire snapshot tramite FTP](transfer-snapshots-through-ftp.md).  
   
  **Cartella snapshot**  
  Se si seleziona un valore qualsiasi diverso da **Posizione predefinita** per l'opzione **Posizione snapshot** , sarà necessario specificare un percorso per la cartella snapshot.  
@@ -112,16 +112,16 @@ In questa sezione vengono fornite informazioni sulla finestra di dialogo **Propr
  **Definizione partizione (HOST_NAME)**  
  Nel caso di una pubblicazione che utilizza filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore, ovvero **SUSER_SNAME()** o **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Tipo di sottoscrizione** e **priorità**  
+ **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
   
  Se si seleziona un tipo di sottoscrizione server nella Creazione guidata nuova sottoscrizione, al Sottoscrittore viene assegnata una priorità che verrà utilizzata nella risoluzione dei conflitti  
   
- **Risoluzione interattiva dei conflitti**  
+ **Risoluzione interattiva**  
  Consente di indicare di utilizzare l'interfaccia utente del sistema di risoluzione dei conflitti interattivo durante la sincronizzazione di tipo merge. A tale scopo, è necessario impostare **Usa Gestione sincronizzazione Microsoft Windows** su **Abilita**. Per altre informazioni, vedere [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Sincronizzazione Web**  
- **Usa sincronizzazione Web** determina se connettersi a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] server Internet Information Services (IIS) per sincronizzare la sottoscrizione. Questa opzione è disponibile solo se la pubblicazione è abilitata per la sincronizzazione Web. Per altre informazioni, vedere [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+ **Usa sincronizzazione Web** consente di indicare di sincronizzare la sottoscrizione tramite una connessione a un server [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Questa opzione è disponibile solo se la pubblicazione è abilitata per la sincronizzazione Web. Per altre informazioni, vedere [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  Se si seleziona **Vero** per **Usa sincronizzazione Web**:  
   
@@ -131,9 +131,9 @@ In questa sezione vengono fornite informazioni sulla finestra di dialogo **Propr
   
  Per ulteriori informazioni sulla configurazione, vedere [Configure Web Synchronization](configure-web-synchronization.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md)   
  [Visualizzare e modificare le proprietà delle sottoscrizioni push](view-and-modify-push-subscription-properties.md)   
- [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

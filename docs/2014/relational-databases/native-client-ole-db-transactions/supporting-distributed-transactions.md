@@ -1,5 +1,5 @@
 ---
-title: Supporto delle transazioni distribuite | Microsoft Docs
+title: Supporto di transazioni distribuite | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213501"
 ---
 # <a name="supporting-distributed-transactions"></a>Supporto di transazioni distribuite
@@ -38,7 +38,7 @@ ms.locfileid: "63213501"
 |---------------|-----------------|  
 |*punkTransactionCoord*|Puntatore a un oggetto transazione MS DTC.|  
 |*IsoLevel*|Ignorato dal provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di OLE DB di Native Client. Il livello di isolamento per le transazioni coordinate da MS DTC viene determinato quando il consumer acquisisce un oggetto transazione da MS DTC.|  
-|*IsoFlag*|Deve essere 0. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce XACT_E_NOISORETAIN se un altro valore viene specificato dall'utente.|  
+|*IsoFlags*|Deve essere 0. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce XACT_E_NOISORETAIN se un altro valore viene specificato dall'utente.|  
 |*POtherOptions*|Se non è NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider di OLE DB di Native Client richiede l'oggetto Options dall'interfaccia. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce XACT_E_NOTIMEOUT se il membro *ulTIMEOUT* dell'oggetto options è diverso da zero. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client ignora il valore del membro *szDescription* .|  
   
  In questo esempio viene coordinata la transazione tramite MS DTC.  
@@ -138,7 +138,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Transazioni](transactions.md)  
   
   

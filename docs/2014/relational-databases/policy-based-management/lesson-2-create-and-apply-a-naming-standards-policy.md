@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63206955"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lezione 2: Creazione e applicazione di criteri per gli standard di denominazione
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lezione 2: Creare e applicare criteri per gli standard di denominazione
   Alcuni tipi di criteri della gestione basata su criteri possono creare trigger per l'applicazione della conformità successiva tramite i criteri. In questa lezione verranno creati criteri per l'applicazione di uno standard di denominazione per le tabelle. Si verificheranno quindi i criteri tentando di creare una tabella che violi i criteri.  
   
  In questa lezione sono inclusi gli argomenti seguenti:  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188776"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
@@ -29,11 +29,11 @@ ms.locfileid: "63188776"
   
 |Parametro|Attributo correlato per i tipi di parametro non con valori di tabella, incluse le colonne di parametri con valori di tabella|Attributo correlato per i parametri con valori di tabella|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*Sottotipo*|Ignorato|Per i record di tipo SQL_DATETIME o SQL_INTERVAL, impostare su SQL_DESC_DATETIME_INTERVAL_CODE.|  
-|*Length*|SQL_DESC_OCTET_LENGTH|Lunghezza del nome del tipo di parametro con valori di tabella. Può essere SQL_NTS, se il nome del tipo è con terminazione Null oppure zero se il nome del tipo di parametro con valori di tabella non è obbligatorio.|  
-|*Precision*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*Scalabilità*|SQL_DESC_SCALE|Non utilizzato. Questo parametro deve essere zero.|  
+|*Lunghezza*|SQL_DESC_OCTET_LENGTH|Lunghezza del nome del tipo di parametro con valori di tabella. Può essere SQL_NTS, se il nome del tipo è con terminazione Null oppure zero se il nome del tipo di parametro con valori di tabella non è obbligatorio.|  
+|*Precisione*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
+|*Ridimensionare*|SQL_DESC_SCALE|Non utilizzato. Questo parametro deve essere zero.|  
 |*DataPtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Questo parametro è facoltativo per le chiamate di stored procedure ed è possibile specificare NULL se non è obbligatorio. È necessario specificarlo per istruzioni SQL che non sono chiamate di procedure.<br /><br /> *DataPtr* funge anche da valore univoco che l'applicazione può utilizzare per identificare questo parametro con valori di tabella quando viene utilizzata l'associazione di righe variabile.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Per un parametro con valori di tabella, è il numero di righe da trasferire o SQL_DATA_AT_EXEC.SQL_DATA_AT_EXEC. Si tratta di un puntatore a un valore che include il numero di righe da trasferire con SQLExecDirect.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -43,7 +43,7 @@ ms.locfileid: "63188776"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Supporto di SQLSetDescRec per le caratteristiche avanzate di data e ora  
  I valori consentiti per i tipi di data/ora sono i seguenti:  
   
-||*Tipo*|*Sottotipo*|*Length*|*Precision*|*Scalabilità*|  
+||*Type*|*Sottotipo*|*Lunghezza*|*Precisione*|*Ridimensionare*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |Datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -55,11 +55,10 @@ ms.locfileid: "63188776"
  Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>Supporto di SQLSetDescRec per tipi definiti dall'utente CLR di grandi dimensioni  
- 
-  `SQLSetDescRec` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLSetDescRec` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

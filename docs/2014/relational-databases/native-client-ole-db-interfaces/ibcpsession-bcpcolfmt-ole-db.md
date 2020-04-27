@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColFmt (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63240268"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -61,14 +61,14 @@ DBORDINALidxServerCol);
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Per modificare ad esempio le impostazioni predefinite per tre campi in un file di dati dell'utente con cinque campi, chiamare prima `BCPColumns(5)` e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e impostare *cbIndicator*, *cbUserData*e *cbUserDataTerm* su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Per modificare ad esempio le impostazioni predefinite per tre campi in un file di dati dell'utente con cinque campi, chiamare prima `BCPColumns(5)` e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e *cbIndicator*, *cbUserData* e *cbUserDataTerm* su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
 > [!NOTE]  
 >  Il metodo [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) deve essere chiamato prima di qualsiasi chiamata a **BCPColFmt**. È necessario chiamare **BCPColFmt** una volta per ogni colonna del file utente. Se **BCPColFmt** viene chiamato più di una volta per qualsiasi colonna del file utente, viene generato un errore.  
   
  Non è necessario copiare tutti i dati di un file utente in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ignorare una colonna, specificare il formato dei dati per la colonna impostando il parametro idxServerCol su 0. Per ignorare un campo, è necessario comunque disporre di tutte le informazioni affinché il metodo possa funzionare correttamente.  
   
- **Nota** La funzione [IBCPSession:: BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) può essere usata per salvare in modo permanente la specifica di formato fornita tramite **BCPColFmt**.  
+ **Nota** La funzione [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) può essere usata per rendere persistente la specifica del formato fornita tramite **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argomenti  
  *idxUserDataCol*[in]  
@@ -95,7 +95,7 @@ DBORDINALidxServerCol);
   
  Il `cbUserData` valore rappresenta il numero di byte di dati. Se i dati di tipo carattere sono rappresentati da caratteri wide Unicode `cbUserData` , un valore di parametro positivo rappresenta il numero di caratteri moltiplicato per la dimensione, in byte, di ogni carattere.  
   
- *pbUserDataTerm*[size_is] [in]  
+ *pbUserDataTerm*[size_is][in]  
  Sequenza di caratteri di terminazione da utilizzare per il campo. Questo parametro risulta particolarmente utile per i dati di tipo carattere, in quanto tutti gli altri tipi hanno una lunghezza fissa o, nel caso dei dati binari, richiedono un indicatore di lunghezza per registrare in modo accurato il numero di byte presenti.  
   
  Per evitare di terminare i dati estratti o per indicare che i dati di un file utente non devono essere terminati, impostare questo parametro su NULL.  
@@ -107,7 +107,7 @@ DBORDINALidxServerCol);
  *cbUserDataTerm*[in]  
  Lunghezza, espressa in byte, della sequenza di caratteri di terminazione da utilizzare per la colonna. Se non sono presenti caratteri di terminazione nei dati o non si desidera includerli, impostare questo valore su 0.  
   
- *idxServerCol su*[in]  
+ *idxServerCol*[in]  
  Posizione ordinale della colonna nella tabella del database. Il numero della prima colonna è 1. La posizione ordinale di una colonna viene indicata da **IColumnsInfo::GetColumnInfo** o da metodi simili. Se questo valore è 0, la copia bulk ignora il campo nel file di dati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -115,7 +115,7 @@ DBORDINALidxServerCol);
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
+ Si è verificato un errore specifico del provider. per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) prima della chiamata a questo metodo.  
@@ -126,7 +126,7 @@ DBORDINALidxServerCol);
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245005"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Proprietà - Protocolli per MSSQLSERVER (scheda Certificato)
-  Utilizzare la scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per MSSQLSERVER** per selezionare un certificato per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o visualizzare le proprietà di un certificato. Tutti i campi sono vuoti se non è selezionato alcun certificato.  
+  Usare la scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per MSSQLSERVER** per selezionare un certificato per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o visualizzare le proprietà di un certificato. Tutti i campi sono vuoti se non è selezionato alcun certificato.  
   
  I certificati per gli utenti vengono archiviati nel computer locale. Per caricare un certificato da utilizzare con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso account utente del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63245005"
  **Cancella**  
  Rimuove la selezione dalla casella **Certificato** .  
   
- **Certificato**  
+ **Certificate**  
  Nome del certificato come stabilito dal provider di sicurezza. Selezionare un certificato per visualizzarne i dettagli nella griglia delle proprietà.  
   
 ## <a name="options"></a>Opzioni  

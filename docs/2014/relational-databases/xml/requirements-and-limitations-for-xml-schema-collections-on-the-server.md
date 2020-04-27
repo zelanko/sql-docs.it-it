@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241253"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server
@@ -41,10 +41,8 @@ ms.locfileid: "63241253"
 |**\<xsd:include>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Gli elementi XML Schema che includono tale elemento vengono rifiutati dal server.<br /><br /> Per risolvere questo problema, è possibile eseguire la pre-elaborazione di XML Schema che includono la direttiva **\<xsd:include>** per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema da caricare nel server. Per alte informazioni, vedere [Pre-elaborazione di uno schema per unire schemi inclusi](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>** , **\<xsd:keyref>** e **\<xsd:unique>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questi seguenti vincoli basati su XSD per imporre l'univocità o stabilire chiavi e relativi riferimenti. Non è possibile registrare XML Schema che contengono questi elementi.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Per informazioni su un'altra modalità di aggiornamento degli schemi, vedere [Elemento &#60;xsd:redefine&#62;](the-xsd-redefine-element.md).|  
-|Valori **\<xsd:simpleType>**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta soltanto la precisione in millisecondi per i tipi semplici che hanno un secondo componente diverso rispetto a `xs:time` e `xs:dateTime` e una precisione da 100 nanosecondi per `xs:time` e `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone limiti a tutte le enumerazioni di tipo semplice XSD riconosciute.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore "NaN" nelle dichiarazioni **\<xsd:simpleType>** .<br /><br /> Per alte informazioni, vedere[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
-|**xsi:schemaLocation** e **xsi:noNamespaceSchemaLocation**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora questi attributi se sono presenti nei dati dell'istanza XML inseriti in una colonna o una variabile con tipo di dati `xml`.|  
+|Valori **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta soltanto la precisione in millisecondi per i tipi semplici che hanno un secondo componente diverso rispetto a `xs:time` e `xs:dateTime` e una precisione da 100 nanosecondi per `xs:time` e `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone limiti a tutte le enumerazioni di tipo semplice XSD riconosciute.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore "NaN" nelle dichiarazioni **\<xsd:simpleType>** .<br /><br /> Per alte informazioni, vedere[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
+|**xsi:schemaLocation** e **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora questi attributi se sono presenti nei dati dell'istanza XML inseriti in una colonna o una variabile con tipo di dati `xml`.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi derivati da **xs:QName** che usano un elemento di restrizione XML Schema.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi di unione con **xs:QName** come elemento membro.<br /><br /> Per altre informazioni, vedere [Xs:Tipo QName](the-xs-qname-type.md).|  
 |Aggiunta di membri a un gruppo di sostituzione esistente|Non è possibile aggiungere membri a un gruppo di sostituzione esistente in una raccolta di XML Schema. La restrizione relativa a un gruppo di sostituzione in un elemento XML Schema impone che l'elemento Head e tutti gli elementi membri corrispondenti vengano definiti nella stessa istruzione {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Forme canoniche e restrizioni di pattern|La rappresentazione canonica di un valore non deve violare la restrizione del pattern per il tipo corrispondente. Per altre informazioni, vedere [Forme canoniche e restrizioni di pattern](canonical-forms-and-pattern-restrictions.md).|  

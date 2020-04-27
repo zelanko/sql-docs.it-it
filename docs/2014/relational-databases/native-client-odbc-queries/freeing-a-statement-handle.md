@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200053"
 ---
 # <a name="freeing-a-statement-handle"></a>Rilascio di un handle di istruzione
@@ -29,7 +29,7 @@ ms.locfileid: "63200053"
   
  Al termine dell'utilizzo dell'istruzione, l'applicazione chiama [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) per liberare l'istruzione. Si noti che **Disconnect** libera automaticamente tutte le istruzioni in una connessione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

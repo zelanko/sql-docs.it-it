@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di operazioni asincrone | Microsoft Docs
+title: Esecuzione di operazioni asincrone |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246153"
 ---
 # <a name="performing-asynchronous-operations"></a>Esecuzione di operazioni asincrone
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente alle applicazioni di eseguire operazioni asincrone sul database. L'elaborazione asincrona consente la restituzione immediata dei metodi senza bloccare il thread chiamante. Questa caratteristica offre molto della potenza e della flessibilità del multithreading, senza richiedere allo sviluppatore la creazione esplicita di thread o la gestione della sincronizzazione. Le applicazioni richiedono l'elaborazione asincrona in caso di inizializzazione di una connessione al database o di inizializzazione del risultato dall'esecuzione di un comando.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Apertura e chiusura di una connessione al database  
@@ -35,14 +34,14 @@ ms.locfileid: "63246153"
   
  È stata inoltre aggiunta la proprietà SSPROP_ISSAsynchStatus al set di proprietà DBPROPSET_SQLSERVERROWSET. I provider che supportano l'interfaccia **ISSAsynchStatus** devono implementare questa proprietà con un valore VARIANT_TRUE.  
   
- È possibile chiamare **IDBAsynchStatus:: Abort** o [ISSAsynchStatus:: Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) per annullare la chiamata di **inizializzazione** asincrona. Il consumer deve richiedere in modo esplicito l'inizializzazione asincrona dell'origine dati. In caso contrario, **IDBInitialize::Initialize** non restituisce nulla fino a quando l'oggetto origine dati non viene inizializzato completamente.  
+ È possibile chiamare **IDBAsynchStatus::Abort** o [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) per annullare la chiamata a **Initialize** asincrona. Il consumer deve richiedere in modo esplicito l'inizializzazione asincrona dell'origine dati. In caso contrario, **IDBInitialize::Initialize** non restituisce nulla fino a quando l'oggetto origine dati non viene inizializzato completamente.  
   
 > [!NOTE]  
->  Gli oggetti origine dati utilizzati per il pool di connessioni non **** possono chiamare l'interfaccia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ISSAsynchStatus nel provider OLE DB di Native Client. L'interfaccia **ISSAsynchStatus** non è esposta per gli oggetti di origine dati inseriti in pool.  
+>  Gli oggetti origine dati utilizzati per il pool di connessioni non **ISSAsynchStatus** possono chiamare l'interfaccia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ISSAsynchStatus nel provider OLE DB di Native Client. L'interfaccia **ISSAsynchStatus** non è esposta per gli oggetti di origine dati inseriti in pool.  
 >   
 >  Se un'applicazione forza in modo esplicito l'uso del motore del cursore, **IOpenRowset::OpenRowset** e **IMultipleResults::GetResult** non supporteranno l'elaborazione asincrona.  
 >   
->  Inoltre, la DLL proxy/stub di comunicazione remota (in MDAC 2,8) non è **** in grado di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiamare l'interfaccia ISSAsynchStatus in Native Client. L'interfaccia **ISSAsynchStatus** non è esposta attraverso i servizi remoti.  
+>  Inoltre, la DLL proxy/stub di comunicazione remota (in MDAC 2,8) non è **ISSAsynchStatus** in grado di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiamare l'interfaccia ISSAsynchStatus in Native Client. L'interfaccia **ISSAsynchStatus** non è esposta attraverso i servizi remoti.  
 >   
 >  I componenti del servizio non supportano **ISSAsynchStatus**.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63246153"
  Al termine dell'esecuzione del comando, è possibile usare **IMultipleResults** normalmente, con un'eccezione dal caso sincrono: può essere restituito DB_S_ASYNCHRONOUS. In tal caso, è possibile usare **IDBAsynchStatus** o **ISSAsynchStatus** per determinare il momento in cui l'operazione è completata.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente l'applicazione chiama un metodo non bloccante, esegue altre attività di elaborazione e quindi torna a elaborare i risultati. **ISSAsynchStatus:: WaitForAsynchCompletion** attende l'oggetto evento interno fino a quando non viene eseguita l'operazione in esecuzione asincrona o viene passata l'intervallo di tempo specificato da *dwMilisecTimeOut* .  
+ Nell'esempio seguente l'applicazione chiama un metodo non bloccante, esegue altre attività di elaborazione e quindi torna a elaborare i risultati. **ISSAsynchStatus::WaitForAsynchCompletion** resta in attesa dell'oggetto evento interno fino al completamento dell'operazione di esecuzione asincrona o allo scadere della quantità di tempo specificata da *dwMilisecTimeOut*.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -105,7 +104,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus:: WaitForAsynchCompletion** attende l'oggetto evento interno fino a quando non viene eseguita l'operazione in esecuzione asincrona o viene passato il valore *dwMilisecTimeOut* .  
+ **ISSAsynchStatus::WaitForAsynchCompletion** resta in attesa dell'oggetto evento interno fino al completamento dell'operazione di esecuzione asincrona o al passaggio del valore *dwMilisecTimeOut*.  
   
  Nell'esempio seguente viene illustrata l'elaborazione asincrona con più set di risultati:  
   
@@ -185,7 +184,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)   
  [Proprietà e comportamenti dei set di righe](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  

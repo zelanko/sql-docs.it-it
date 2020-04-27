@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238209"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
@@ -26,7 +26,7 @@ ms.locfileid: "63238209"
   
 1.  Creare un nuovo [!INCLUDE[msCoName](../../includes/msconame-md.md)] sito [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] Web ASP.NET usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-O  
+     \- oppure -  
   
      Aprire un sito Web ASP.NET esistente e aggiungere un nuovo Web Form.  
   
@@ -478,7 +478,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Integrazione di Reporting Services tramite i controlli ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)  
   
   

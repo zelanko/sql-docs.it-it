@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193335"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
@@ -201,11 +201,9 @@ ms.locfileid: "63193335"
   
  Nell'esempio, per la restituzione e il rendering dei risultati della query FOR XML vengono utilizzate le API gestite di Microsoft .NET Framework seguenti:  
   
-1.  
-  `SqlConnection` consente di stabilire una connessione a SQL Server, basata sul contenuto di una variabile stringa di connessione specificata, strConn.  
+1.  `SqlConnection` consente di stabilire una connessione a SQL Server, basata sul contenuto di una variabile stringa di connessione specificata, strConn.  
   
-2.  
-  `SqlDataAdapter` funge quindi da adattatore dati e consente di eseguire la query FOR XML utilizzando la connessione SQL e una stringa di query SQL specificata.  
+2.  `SqlDataAdapter` funge quindi da adattatore dati e consente di eseguire la query FOR XML utilizzando la connessione SQL e una stringa di query SQL specificata.  
   
 3.  Dopo avere eseguito la query, viene chiamato il metodo `SqlDataAdapter.Fill`, che viene quindi passato a un'istanza di un `DataSet,` MyDataSet, per riempire il set di dati con l'output della query FOR XML.  
   

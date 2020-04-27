@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185569"
 ---
 # <a name="basic-data-mining-tutorial"></a>Esercitazione di base sul data mining
@@ -51,11 +51,11 @@ ms.locfileid: "63185569"
  [Lezione 3: Aggiunta ed elaborazione di modelli](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  In questa lezione verranno illustrate le procedure per l'aggiunta di modelli a una struttura. I modelli creati verranno compilati con gli algoritmi seguenti:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Alberi delle decisioni  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [Lezione 4: esplorazione dei modelli di mailing diretto &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  In questa lezione verranno illustrate le procedure per l'esplorazione e l'interpretazione dei risultati di ogni modello mediante i visualizzatori.  
@@ -63,7 +63,7 @@ ms.locfileid: "63185569"
  [Lezione 5: Testing models &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  In questa lezione verranno illustrate le procedure per creare una copia di uno dei modelli di mailing diretto, aggiungere un filtro del modello di data mining per limitare i dati di training a un particolare set di clienti e valutare l'affidabilità del modello.  
   
- [Lezione 6: creazione e utilizzo di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lezione 6: Creazione e utilizzo di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  In questa lezione finale dell'esercitazione di base sul data mining si utilizzerà il modello per individuare i clienti che con maggiore probabilità acquisteranno una bicicletta. Verrà quindi eseguito il drill-through nei case sottostanti per ottenere informazioni di contatto.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -80,9 +80,9 @@ ms.locfileid: "63185569"
 > [!NOTE]  
 >  Quando si utilizza un'esercitazione, potrebbe risultare più semplice spostarsi tra i passaggi se si aggiungono i pulsanti **argomento successivo** e **argomento precedente** alla barra degli strumenti del Visualizzatore di documenti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Soluzioni di data mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Attività e procedure relative al modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services-Data mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services - Data mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226196"
 ---
 # <a name="managing-service-broker"></a>Gestione di Service Broker
@@ -40,7 +40,7 @@ ms.locfileid: "63226196"
   
 -   Gli oggetti <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> rappresentano una route [!INCLUDE[ssSB](../../../includes/sssb-md.md)] che contiene le informazioni sul percorso per il servizio e il database in cui è definito. Una route è necessaria per il recapito dei messaggi. Per impostazione predefinita, ogni database contiene una route che specifica il percorso come istanza corrente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
