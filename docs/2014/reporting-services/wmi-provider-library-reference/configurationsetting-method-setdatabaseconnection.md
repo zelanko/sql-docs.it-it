@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098095"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Metodo SetDatabaseConnection (MSReportServer_ConfigurationSetting WMI)
@@ -58,7 +58,7 @@ public void BackupEncryptionKey(string Server,
   
 -   2: servizio Windows  
   
- *Nome utente*  
+ *UserName*  
  Nome account utilizzato per la connessione al database del server di report.  
   
  *Password*  
@@ -86,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  Il metodo SetDatabaseConnection non concede autorizzazioni agli account specificati. È necessario chiamare il metodo [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) per ogni account che richiede l'accesso al database del server di report ed eseguire lo script risultante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

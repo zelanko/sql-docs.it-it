@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100786"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -32,14 +32,14 @@ ms.locfileid: "66100786"
   
  Mentre una pianificazione condivisa è in sospeso, tutte le operazioni che dovevano essere eseguite in tale intervallo di tempo possono essere ignorate. Quando una pianificazione condivisa viene ripresa, le operazioni di elaborazione dei report e delle sottoscrizioni vengono eseguite in corrispondenza del successivo orario pianificato, utilizzando come riferimento l'ora locale del server di report. Tramite le applicazioni di servizio SharePoint o il server di report in modalità nativa non vengono eseguite le operazioni pianificate che sarebbero state eseguite se la pianificazione non fosse stata sospesa.  
   
- Contenuto dell'argomento  
+ Contenuto dell'argomento:  
   
 -   [Sospendere e riprendere le pianificazioni condivise (modalità nativa)](#bkmk_native)  
   
 -   [Sospendere e riprendere le pianificazioni condivise (modalità SharePoint)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a>Sospendere e riprendere le pianificazioni condivise (modalità nativa)  
- Per sospendere e riprendere una pianificazione condivisa, utilizzare la pagina Pianificazioni in Gestione report. Non è possibile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]utilizzare; non fornisce opzioni per sospendere e riprendere le pianificazioni. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> Sospendere e riprendere le pianificazioni condivise (modalità nativa)  
+ Per sospendere e riprendere una pianificazione condivisa, utilizzare la pagina Pianificazioni in Gestione report. Non è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] perché non ha le opzioni di sospensione e ripresa delle pianificazioni. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Per sospendere o riprendere una pianificazione condivisa  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66100786"
   
 3.  Selezionare la pianificazione e fare clic su **Sospendi** o **Riprendi** nella barra multifunzione. Se una pianificazione è attualmente sospesa, nella colonna **Stato** verrà visualizzato **Sospeso**.  
   
-##  <a name="bkmk_sharepoint"></a>Sospendere e riprendere le pianificazioni condivise (modalità SharePoint)  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Sospendere e riprendere le pianificazioni condivise (modalità SharePoint)  
  Per sospende e riprendere una pianificazione condivisa, utilizzare la pagina Impostazioni sito o PowerShell. Le pianificazioni sono gestite per sito di SharePoint.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Per sospendere o riprendere una pianificazione condivisa  
@@ -66,6 +66,6 @@ ms.locfileid: "66100786"
  [Pianificazioni](schedules.md)   
  [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
  [Modificare i fusi orari e le impostazioni dell'orologio in un server di report](change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Manage a Running Process](manage-a-running-process.md)  
+ [Gestire un processo in esecuzione](manage-a-running-process.md)  
   
   

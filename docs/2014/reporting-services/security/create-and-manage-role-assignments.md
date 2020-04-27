@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102002"
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
@@ -62,12 +62,12 @@ ms.locfileid: "66102002"
 ## <a name="deleting-a-role-assignment"></a>Eliminazione di assegnazioni di ruolo  
  È possibile eliminare un'assegnazione di ruolo selezionando la casella di controllo accanto all'assegnazione che si vuole eliminare e quindi facendo clic su **Elimina**. È inoltre possibile eliminare assegnazioni di ruolo facendo clic su **Ripristina sicurezza padre**. Quando si fa clic su questo pulsante, le assegnazioni di ruolo esistenti per l'elemento vengono eliminate e al loro posto vengono utilizzate le assegnazioni di ruolo ereditate tramite un elemento padre.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)   
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   
  [Assegnazioni di ruolo](role-assignments.md)   
  [Definizioni di ruolo](role-definitions.md)   
- [Predefined Roles](role-definitions-predefined-roles.md)   
+ [Ruoli predefiniti](role-definitions-predefined-roles.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   
   

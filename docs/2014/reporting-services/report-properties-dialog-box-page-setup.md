@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104382"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Finestra di dialogo Proprietà report, Imposta pagina
@@ -39,16 +39,16 @@ ms.locfileid: "66104382"
  **Formato carta**  
  Selezionare una dimensione dall'elenco per inserire automaticamente le dimensioni nei controlli Larghezza e Altezza. In alternativa, selezionare **Dimensioni personalizzate** e quindi modificare i controlli Larghezza e Altezza in base alle dimensioni da utilizzare.  
   
- **Width**  
+ **Larghezza**  
  Visualizza la larghezza del formato della carta selezionato nell'elenco **Tipo carta** .  
   
- **Height**  
+ **Altezza**  
  Visualizza l'altezza del formato della carta selezionato nell'elenco **Tipo carta** .  
   
  **In alto**  
  Imposta la distanza tra la parte superiore del report e la parte superiore della prima riga del report.  
   
- **In basso**  
+ **Parte inferiore**  
  Imposta la distanza tra la parte inferiore del report e la parte inferiore dell'ultima riga del report.  
   
  **Sinistra**  
@@ -57,7 +57,7 @@ ms.locfileid: "66104382"
  **Ok**  
  Imposta la distanza tra il margine destro del report e il margine destro delle righe del report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   

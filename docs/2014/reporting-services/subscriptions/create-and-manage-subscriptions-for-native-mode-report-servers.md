@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100984"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Creare, modificare ed eliminare sottoscrizioni standard (Reporting Services in modalità nativa)
@@ -44,7 +44,7 @@ ms.locfileid: "66100984"
   
 -   [Per eliminare una sottoscrizione](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a>Per creare una sottoscrizione  
+##  <a name="to-create-a-subscription"></a><a name="bkmk_create_subscription"></a>Per creare una sottoscrizione  
  Per creare una sottoscrizione, scegliere lo strumento e l'approccio validi per la distribuzione del server di report:  
   
 -   Il contenuto in questo argomento spiega come creare sottoscrizioni in un server di report in modalità nativa utilizzando Gestione report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Dopo avere definito una sottoscrizione, è possibile accedervi in Gestione report tramite la pagina Sottoscrizioni personali oppure la scheda **Sottoscrizioni** di un report specifico.  
@@ -61,7 +61,7 @@ ms.locfileid: "66100984"
   
  In questo argomento non viene illustrato come creare una sottoscrizione guidata dai dati. Per istruzioni sulla creazione di una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) o la Guida online per la pagina Creazione di una sottoscrizione guidata dai dati in Gestione report.  
   
-###  <a name="bkmk_create_fileshare_subscription"></a>Per creare una sottoscrizione di condivisione file  
+###  <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a>Per creare una sottoscrizione di condivisione file  
   
 1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100984"
   
 8.  In Formato di rendering selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
-9. Nelle caselle di testo **nome utente** e **password** specificare le credenziali necessarie per accedere alla condivisione file utilizzando il formato * \<dominio>* \\ * \<nome utente>* per il nome utente.  
+9. Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>* \\ *\<nome utente>* per il nome utente.  
   
 10. Specificare le opzioni di sovrascrittura. Se si fa clic su **Non sovrascrivere il file se esiste una versione precedente**il recapito non verrà eseguito in presenza di un file esistente. Se si seleziona **Incrementa nomi dei file man mano che vengono aggiunte nuove versioni**, il server di report aggiunge un numero al nome del file per distinguerlo dai file esistenti con lo stesso nome.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100984"
   
  Il report viene recapitato come file statico. Se include funzionalità interattive, ad esempio collegamenti a righe e colonne aggiuntive, tali funzionalità non saranno disponibili.  
   
-###  <a name="bkmk_create_email_subscription"></a>Per creare una sottoscrizione tramite posta elettronica  
+###  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a>Per creare una sottoscrizione tramite posta elettronica  
   
 1.  Nella pagina **Contenuto** di Gestione report passare al report che si desidera sottoscrivere. Fare clic sul report per aprirlo.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66100984"
   
 9. Per i report con parametri, specificare i parametri da utilizzare per il report di questa sottoscrizione. I parametri specificati possono essere diversi da quelli utilizzati per l'esecuzione del report su richiesta o in altre operazioni pianificate.  
   
-##  <a name="bkmk_modify_subscription"></a>Per modificare una sottoscrizione  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a>Per modificare una sottoscrizione  
  Una sottoscrizione può essere modificata in qualsiasi momento. Se si modifica una sottoscrizione mentre viene elaborata, le impostazioni aggiornate vengono utilizzate solo se vengono salvate nel database del server di report prima che l'estensione per il recapito riceva i dati della sottoscrizione. In caso contrario, vengono utilizzate le impostazioni esistenti.  
   
  Per individuare una sottoscrizione, utilizzare la pagina **Sottoscrizioni personali** oppure visualizzare le definizioni della sottoscrizione associate a un report. Non è possibile individuare una sottoscrizione eseguendo ricerche dirette o altri tipi di ricerche, ad esempio in base al nome del proprietario, al trigger, alle informazioni sullo stato e così via.  
@@ -151,7 +151,7 @@ ms.locfileid: "66100984"
 > [!NOTE]  
 >  Un amministratore del server di report non può gestire da un'unica posizione tutte le sottoscrizioni individuali che sono utilizzate in un determinato server di report. Può tuttavia accedere a ogni sottoscrizione per modificarla o eliminarla.  
   
-##  <a name="bkmk_delete_subscription"></a>Per eliminare una sottoscrizione  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a>Per eliminare una sottoscrizione  
  Per eliminare una sottoscrizione  
   
 1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md).  
@@ -172,7 +172,7 @@ ms.locfileid: "66100984"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e autorizzazioni](../security/tasks-and-permissions.md)   
- [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   

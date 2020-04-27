@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096613"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifiche al formato di archiviazione per i tipi xs:dateTime, xs:date e xs:time
@@ -185,7 +185,7 @@ EXECUTE DateTimeInvestigation 1;
   
  Per utilizzare indici XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], dopo l'aggiornamento è necessario ricompilare gli indici XML o ritipizzare le colonne XML per tutte le colonne che utilizzano xs:date, xs:time o xs:dateTime.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100120"
 ---
 # <a name="report-builder-ssrs"></a>Generatore report (SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66100120"
   
  Generatore report e Progettazione report condividono molte caratteristiche. Per ulteriori informazioni sul Generatore report, vedere la [documentazione relativa a Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare l'accesso Generatore report](../report-server/configure-report-builder-access.md)   
  [Strumenti di Reporting Services](reporting-services-tools.md)   
  [Progettare report con Progettazione report &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  

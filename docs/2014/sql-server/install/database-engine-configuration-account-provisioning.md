@@ -11,27 +11,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095868"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Configurazione Motore di database - Provisioning account
   Utilizzare questa pagina per impostare la modalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiungere utenti o gruppi di Windows come amministratori del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Considerazioni sull'esecuzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="considerations-for-running-sscurrent"></a>Considerazioni sull'esecuzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene eseguito il provisioning del gruppo **BUILTIN\Administrators** come account di accesso nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] e i membri del gruppo Administrators locale possono accedere usando le credenziali di amministratore. L'utilizzo di autorizzazioni elevate non è una procedura consigliata. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non viene eseguito il provisioning del gruppo **BUILTIN\Administrators** come account di accesso. Di conseguenza, è consigliabile creare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni utente amministrativo e aggiungere tale account al ruolo predefinito del server sysadmin durate l'installazione di una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. È consigliabile eseguire questa operazione anche per gli account di Windows utilizzati per eseguire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, inclusi i processi dell'agente di replica.  
   
 ## <a name="options"></a>Opzioni  
- **Modalità di sicurezza** : selezionare autenticazione di Windows o autenticazione in modalità mista per l'installazione.  
+ **Modalità di sicurezza** : selezionare l'autenticazione di Windows o l'autenticazione mista per l'istallazione.  
   
- **Provisioning principale di Windows** : nelle versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di il gruppo locale Builtin\Administrator di Windows è stato inserito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel ruolo del server sysadmin, concedendo in tal modo agli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows l'accesso all'istanza di. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]il gruppo Builtin\Administrator non è disponibile nel ruolo del server sysadmin. Al contrario, è necessario eseguire in modo esplicito il provisioning degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione.  
+ **Provisioning entità Windows** : nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il gruppo locale Builtin\Administrator di Windows era incluso nel ruolo del server sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e consentiva agli amministratori di Windows di accedere in modo efficace all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]il gruppo Builtin\Administrator non è disponibile nel ruolo del server sysadmin. Al contrario, è necessario eseguire in modo esplicito il provisioning degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione.  
   
 > [!IMPORTANT]  
 >  È necessario eseguire il provisioning esplicito degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione. Se non si completa questo passaggio, non sarà possibile procedere con l'installazione.  
   
- **Specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] amministratori** : è necessario specificare almeno un'entità di Windows per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per l'esecuzione del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic sul pulsante **Utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Specifica amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: è necessario specificare almeno un'entità di Windows per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per l'esecuzione del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic sul pulsante **Utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Dopo avere modificato l'elenco, scegliere **OK**, quindi verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, fare clic su **Avanti**.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66095868"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- **Modalità di autenticazione di Windows**  
+ **Autenticazione di Windows**  
  Quando un utente si connette utilizzando un account utente di Windows, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il nome di account e la password vengono convalidati tramite il token dell'entità di Windows nel sistema operativo. Si tratta della modalità di autenticazione predefinita e garantisce maggiore protezione rispetto alla modalità mista. L'autenticazione di Windows, per la quale viene utilizzato il protocollo di sicurezza Kerberos, garantisce l'applicazione dei criteri password mediante convalida della complessità delle password, fornisce supporto per il blocco dell'account e supporta la scadenza delle password.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Non impostare mai una password sa vuota o vulnerabile.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Non impostare mai password vuote o vulnerabili.  
   
  **Modalità mista (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows o autenticazione di)**  
  Consente agli utenti di connettersi tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli utenti che utilizzano un account utente di Windows per la connessione possono utilizzare connessioni trusted convalidate da Windows.  
@@ -55,7 +55,7 @@ ms.locfileid: "66095868"
  Se è necessario selezionare l'autenticazione Modalità mista e utilizzare account di accesso SQL per le applicazioni legacy, sarà necessario impostare password complesse per tutti gli account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L'autenticazione viene fornita solo per compatibilità con le versioni precedenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile solo per la compatibilità con le versioni precedenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **Immettere la password**  
  Immettere e confermare l'account di accesso dell'amministratore di sistema (sa). Le password rappresentano la prima forma di difesa contro eventuali intrusi, pertanto l'impostazione di password complesse costituisce una misura di sicurezza fondamentale per la sicurezza del sistema. Non impostare mai password dell'account "sa" vuote o vulnerabili.  
@@ -63,7 +63,7 @@ ms.locfileid: "66095868"
 > [!NOTE]  
 >  Le password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono contenere da 1 a 128 caratteri, inclusa qualsiasi combinazione di lettere, simboli e numeri. Se si seleziona l'autenticazione Modalità mista, sarà necessario immettere una password dell'account sa complessa prima di passare alla pagina successiva dell'Installazione guidata.  
   
- **Linee guida per password complesse**  
+ **Linee guida per la creazione di password complesse**  
  Le password complesse non vengono decifrate facilmente, né da parte degli utenti né mediante l'utilizzo di programmi specifici. Le password complesse non prevedono l'utilizzo di termini o condizioni non consentite, quali:  
   
 -   Condizione di spazio vuoto o NULL  
@@ -101,7 +101,7 @@ ms.locfileid: "66095868"
   
  Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere l'argomento **Configurare account di servizio e autorizzazioni di Windows** nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103235"
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
@@ -55,10 +55,10 @@ ms.locfileid: "66103235"
   
  Quando si verifica questa condizione, il server di report disabilita la sottoscrizione alla successiva pianificazione di esecuzione. Per riattivare la sottoscrizione, aprire e quindi salvare la sottoscrizione. Quando si apre la sottoscrizione, il server di report aggiorna i valori dei parametri della sottoscrizione in modo che corrispondano a quelli specificati per lo snapshot. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
+ [Reporting Services concetti &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Procedura: aggiunta di uno snapshot alla cronologia del report](add-a-snapshot-to-report-history-report-manager.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

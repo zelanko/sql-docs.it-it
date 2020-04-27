@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff66ca0f644f862b7cdcfb534b55c4e8ebdd888
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104086"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
@@ -37,13 +37,13 @@ ms.locfileid: "66104086"
 |----------|-----------------|----------------------|  
 |1|Prima di installare Reporting Services nei nodi del server in un cluster per il bilanciamento del carico di rete, verificare i requisiti per la distribuzione con scalabilità orizzontale.|[Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentazione online di|  
 |2|Configurare il cluster per il bilanciamento del carico di rete e verificarne il corretto funzionamento.<br /><br /> Assicurarsi di eseguire il mapping di un nome dell'intestazione host all'IP del server virtuale del cluster per il bilanciamento del carico di rete. Il nome dell'intestazione host viene utilizzato nell'URL del server di report ed è più semplice da ricordare e digitare rispetto a un indirizzo IP.|Per ulteriori informazioni, vedere la documentazione di Windows Server relativa alla versione del sistema operativo Windows utilizzato.|  
-|3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Seguire i passaggi descritti in **Method 2: Specify host names** (Metodo 2: Specificare i nomi host) nell'articolo [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con la rettifica seguente. Il **passaggio 7** dell'articolo della Knowledge guida indica che "Esci dall'editor del registro di sistema, quindi riavvia il servizio IISAdmin". Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer> è un nome virtuale per il nome computer Windows "contoso", probabilmente è possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
+|3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Seguire i passaggi descritti in **Method 2: Specify host names** (Metodo 2: Specificare i nomi host) nell'articolo [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con la rettifica seguente. In base a quanto specificato nel**passaggio 7** dell'articolo della KB: uscire dall'editor del Registro di sistema e riavviare il servizio IISAdmin. Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer> è un nome virtuale per il nome computer Windows "contoso", probabilmente è possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
 |4|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità solo file in nodi che appartengono già a un cluster per il bilanciamento del carico di rete e configurare le istanze del server di report per la distribuzione con scalabilità orizzontale.<br /><br /> La scalabilità orizzontale configurata potrebbe non rispondere a richieste indirizzate all'IP del server virtuale. La configurazione della scalabilità orizzontale per l'utilizzo dell'IP del server virtuale viene effettuata in un passaggio successivo, dopo la configurazione della convalida dello stato di visualizzazione.|[Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configurare la convalida dello stato di visualizzazione.<br /><br /> Per ottenere risultati ottimali, eseguire questo passaggio dopo avere configurato la distribuzione con scalabilità orizzontale e prima di configurare le istanze del server di report per l'utilizzo dell'IP del server virtuale. Configurando innanzitutto la convalida dello stato di visualizzazione, è possibile evitare eccezioni a causa di errori di convalida dello stato quando gli utenti tentano di accedere a report interattivi.|[Come configurare la convalida dello stato di visualizzazione](#ViewState) in questo argomento.|  
 |6|Configurare `Hostname` e `UrlRoot` per l'utilizzo dell'IP del server virtuale del cluster per il bilanciamento del carico di rete.|[Come configurare Hostname e UrlRoot](#SpecifyingVirtualServerName) in questo argomento.|  
 |7|Verificare che sia possibile accedere ai server tramite il nome host specificato.|[Verificare l'accesso al server di report](#Verify) in questo argomento.|  
   
-##  <a name="ViewState"></a> Come configurare la convalida dello stato di visualizzazione  
+##  <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a>Come configurare la convalida dello stato di visualizzazione  
  Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il bilanciamento del carico di rete, è necessario configurare la convalida dello stato di visualizzazione in modo che gli utenti possano visualizzare report HTML interattivi. Questa operazione deve essere eseguita sia per il server di report che per Gestione report.  
   
  La convalida dello stato di visualizzazione è controllata da ASP.NET, è abilitata per impostazione predefinita e utilizza l'identità del servizio Web per eseguire la convalida. In uno scenario di cluster per il bilanciamento del carico di rete, tuttavia, sono presenti più istanze del servizio e identità del servizio Web eseguite in computer diversi. Poiché l'identità del servizio varia per ciascun nodo, non è possibile basarsi su una singola identità del processo per eseguire la convalida.  
@@ -66,7 +66,7 @@ ms.locfileid: "66104086"
   
 5.  Verificare che tutti i file Web. config nelle cartelle \Reporting Services\Report Manager contengano `machineKey` elementi <> identici `system.web` nella sezione <>.  
   
-##  <a name="SpecifyingVirtualServerName"></a> Come configurare Hostname e UrlRoot  
+##  <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a>Come configurare hostname e UrlRoot  
  Per configurare una distribuzione con scalabilità orizzontale del server di report in un cluster per il bilanciamento del carico di rete, è necessario definire un unico nome del server virtuale che fornisce un singolo punto di accesso al cluster di server. Successivamente, registrare il nome del server virtuale con Domain Name Server (DNS) nel proprio ambiente.  
   
  Dopo avere definito il nome del server virtuale, è possibile configurare le proprietà `Hostname` e `UrlRoot` nel file RSReportServer.config per includere tale nome nell'URL del server di report.  
@@ -95,7 +95,7 @@ ms.locfileid: "66104086"
   
 6.  Ripetere questi passaggi in ciascun file RSReportServer.config per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-##  <a name="Verify"></a> Verificare l'accesso al server di report  
+##  <a name="verify-report-server-access"></a><a name="Verify"></a>Verificare l'accesso al server di report  
  Verificare che sia possibile accedere alla distribuzione con scalabilità orizzontale tramite il nome del server virtuale, https://MyVirtualServerName/reportserver ad esempio https://MyVirtualServerName/reports)e.  
   
  È possibile determinare il nodo che elabora effettivamente i report esaminando i file di log del server di report o controllando il log di esecuzione di RS. La tabella del log di esecuzione contiene una colonna denominata **InstanceName** che indica l'istanza che ha elaborato una richiesta specifica. Per altre informazioni, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -113,8 +113,8 @@ ms.locfileid: "66104086"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Configurare un URL &#40;Configuration Manager SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Configuration Manager SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Gestire un server di report in modalità nativa di Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   
   

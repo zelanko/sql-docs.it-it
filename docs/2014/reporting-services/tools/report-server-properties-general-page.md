@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100005"
 ---
 # <a name="server-properties-general-page"></a>Proprietà server (pagina Generale)
@@ -30,7 +30,7 @@ ms.locfileid: "66100005"
  **Nome**  
  Consente di digitare il nome di un'applicazione che verrà visualizzato in Gestione report. Per impostazione predefinita, questo valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è. Il nome specificato compare solamente in Gestione report.  
   
- **Version**  
+ **Versione**  
  Questa proprietà è di sola lettura. Specifica la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uso.  
   
  **Edizione**  
@@ -45,17 +45,17 @@ ms.locfileid: "66100005"
  **Abilita una cartella Report personali per ogni utente**  
  Consente di rendere disponibile la cartella Report personali per gli utenti. Questa opzione è disponibile solo per i server di report in modalità nativa.  
   
- **Selezionare il ruolo da applicare a ogni cartella di Report personali**  
+ **Selezionare il ruolo da applicare a ogni cartella Report personali**  
  Consente di specificare una definizione di ruolo da utilizzare per la sicurezza della cartella Report personali. La definizione di ruolo identifica il set delle attività che sono supportate in ogni cartella Report personali.  
   
  **Consenti download del controllo di stampa client ActiveX**  
  Consente di impostare la proprietà di sistema `EnableClientPrinting` del server di report. Se si abilita la stampa su client, gli utenti con autorizzazioni di amministrazione nel computer locale possono eseguire il download di un controllo ActiveX firmato per la stampa dei report HTML. Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostazione delle proprietà del server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [Connettersi a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Abilitare e disabilitare Report personali](../report-server/enable-and-disable-my-reports.md)   
- [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Guida sensibile al contesto del server di report Management Studio](report-server-in-management-studio-f1-help.md)   
  [Proteggere i report personali](../security/secure-my-reports.md)  
   
   

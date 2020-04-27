@@ -19,15 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100581"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Caratteristiche supportate dei report di Access (SSRS)
-  Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
+  Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
   
 ## <a name="importing-access-reports"></a>Importazione di report di Access  
  Alcune query contengono codice specifico di Access. Il codice di Access non viene importato con il report. Inoltre, se una query contiene stringhe incorporate, il report potrebbe essere importato in modo non corretto. Per risolvere il problema, sostituire le stringhe con un codice con caratteri. Sostituire, ad esempio, il carattere virgola (,) con CHAR(34).  
@@ -39,8 +38,7 @@ ms.locfileid: "66100581"
  Se si importa un report che include una query con parametri, la query non verrà convertita durante l'importazione del report. Per importare la query insieme al report, sostituire temporaneamente i parametri della query nel report di Access con valori hardcoded, quindi sostituirli nuovamente con i parametri di query dopo l'importazione.  
   
 ## <a name="page-layout"></a>Layout di pagina  
- Il layout di pagina di Access è diverso rispetto a quello di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In Access gli elementi vengono organizzati in sezioni disposte verticalmente nella pagina. Queste sezioni possono includere l'intestazione e il piè di pagina del report, l'intestazione e il piè di pagina della pagina, gruppi e dettagli. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre un layout più flessibile. I raggruppamenti e il posizionamento dei dettagli vengono gestiti tramite aree dati ed è possibile posizionare più aree dati in qualsiasi punto nel corpo del report, anche in modo affiancato. Anche in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sezioni distinte per l'intestazione e il piè di pagina della pagina, simili a quelle di Access.  
+ Il layout di pagina di Access è diverso rispetto a quello di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In Access gli elementi vengono organizzati in sezioni disposte verticalmente nella pagina. Queste sezioni possono includere l'intestazione e il piè di pagina del report, l'intestazione e il piè di pagina della pagina, gruppi e dettagli. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre un layout più flessibile. I raggruppamenti e il posizionamento dei dettagli vengono gestiti tramite aree dati ed è possibile posizionare più aree dati in qualsiasi punto nel corpo del report, anche in modo affiancato. Anche in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sezioni distinte per l'intestazione e il piè di pagina della pagina, simili a quelle di Access.  
   
  Quando si importa un report da Access in Progettazione report, l'intestazione e il piè di pagina del report di Access vengono convertiti in intestazione e piè di pagina del report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Le sezioni dei gruppi e dei dettagli vengono convertite in un'area dati elenco. L'intestazione e il piè di pagina del report vengono inseriti nel corpo del report anziché in una sezione distinta. Ne consegue che gli elementi possono avere posizioni leggermente diverse rispetto al report di Access originale.  
   
@@ -48,8 +46,7 @@ ms.locfileid: "66100581"
 >  In alcuni report di Access, elementi del report che apparentemente sono adiacenti potrebbero in realtà essere sovrapposti. Quando si importa il report con Progettazione report, questa sovrapposizione non viene corretta e può dar luogo a risultati inattesi in fase di esecuzione del report.  
   
 ## <a name="data-sources"></a>Origini dati  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta origini dati OLE DB, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se i report vengono importati da un progetto di Access (file con estensione adp), la stringa di connessione per l'origine dei dati viene recuperata dalla stringa di connessione presente nel file con estensione adp. Nel caso di report importati da database di Access (file con estensione mdb o accdb), è possibile che la stringa di connessione punti al database di Access e che sia necessario correggerla dopo l'importazione dei report. Se l'origine dei dati del report di Access è una query, le informazioni della query vengono archiviate nel file RDL senza modifiche. Se invece l'origine dei dati è una tabella, durante il processo di conversione viene creata una query in base al nome della tabella e ai campi in essa contenuti.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta origini dati OLE DB, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se i report vengono importati da un progetto di Access (file con estensione adp), la stringa di connessione per l'origine dei dati viene recuperata dalla stringa di connessione presente nel file con estensione adp. Nel caso di report importati da database di Access (file con estensione mdb o accdb), è possibile che la stringa di connessione punti al database di Access e che sia necessario correggerla dopo l'importazione dei report. Se l'origine dei dati del report di Access è una query, le informazioni della query vengono archiviate nel file RDL senza modifiche. Se invece l'origine dei dati è una tabella, durante il processo di conversione viene creata una query in base al nome della tabella e ai campi in essa contenuti.  
   
 ## <a name="reports-with-custom-modules"></a>Report con moduli personalizzati  
  Se è presente un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] codice personalizzato all'interno di moduli, non viene convertito. Se Progettazione report rileva codice durante il processo di importazione, viene generato un avviso che viene visualizzato nella finestra di **elenco attività** .  
@@ -59,14 +56,14 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|Image|Etichetta|Grafico a linee|Rectangle|  
+|Image|Label|Grafico a linee|Rectangle|  
 |SubForm|SubReport<br /><br /> **Nota** Mentre un controllo del sottoreport viene convertito all'interno del report principale, il sottoreport stesso viene convertito separatamente.|TextBox||  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono supportati i seguenti controlli:  
   
 |||||  
 |-|-|-|-|  
-|BoundObjectFrame|CheckBox|Casella combinata|CommandButton|  
+|BoundObjectFrame|CheckBox|ComboBox|CommandButton|  
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
@@ -128,7 +125,7 @@ ms.locfileid: "66100581"
 |Chr$|CInt|CLng|CSng|  
 |CStr|CVar|CVDate|Format|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
-|Hex|Hex$|Nz|ott|  
+|Hex|Hex$|Nz|Oct|  
 |Oct$|Str|Str$|StrConv|  
 |Val||||  
   
@@ -159,10 +156,10 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|Data|Date$|DateAdd|DateDiff|  
+|Date|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|Giorno|  
 |Ora|Minuto|Month|MonthName|  
-|Now|Second|Tempo|Time$|  
+|Adesso|Second|Tempo|Time$|  
 |Timer|TimeSerial|TimeValue|Giorno della settimana|  
 |WeekdayName|Year|||  
   
@@ -221,7 +218,7 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|DoEvents|In|Input|Input$|  
+|DoEvents|In ingresso|Input|Input$|  
   
 #### <a name="inspection-functions"></a>Funzioni di ispezione  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportate le funzioni di ispezione seguenti:  
@@ -242,7 +239,7 @@ ms.locfileid: "66100581"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Correzione|Int|File di log|Rnd|  
+|Fix|Int|File di log|Rnd|  
 |Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
@@ -258,7 +255,7 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|Scegliere|IIf|Opzione||  
+|Choose|IIf|Opzione||  
   
 #### <a name="sql-aggregate-functions"></a>Funzioni di aggregazione SQL  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportate le funzioni aggregazione SQL seguenti:  
@@ -278,7 +275,7 @@ ms.locfileid: "66100581"
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|Replace|Right|Right$|  
-|RTrim|Spazio|Space$|StrComp|  
+|RTrim|Space|Space$|StrComp|  
 |StrConv|string|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   

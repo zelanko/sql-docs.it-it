@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099579"
 ---
 # <a name="server-properties-history-page"></a>Proprietà server (pagina Cronologia)
@@ -37,9 +37,9 @@ ms.locfileid: "66099579"
   
  Se si imposta tale limite in un momento successivo e il limite viene superato, la cronologia dei report nel server viene ridotta di conseguenza. Vengono eliminati per primi gli snapshot del report meno recenti. Se la cronologia è vuota o include un numero di snapshot inferiore al limite, vengono aggiunti nuovi snapshot del report. Quando viene raggiunto il limite, all'aggiunta di un nuovo snapshot del report viene eliminato lo snapshot meno recente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostazione delle proprietà del server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [Connettersi a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104285"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere la web part Visualizzatore report a una pagina Web (Reporting Services in modalità integrata SharePoint)
@@ -38,7 +38,7 @@ ms.locfileid: "66104285"
   
 2.  Nella pagina **Azioni sito**fare clic su **Modifica pagina**.  
   
-3.  Fare clic su **Aggiungi Web part**.  
+3.  Fare clic su **Aggiungi web part**.  
   
 4.  Nell'elenco delle categorie di web part selezionare la categoria **Varie** e quindi selezionare **Visualizzatore report di SQL Server Reporting Services**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66104285"
   
 9. Fare clic sul pulsante **Applica** , disponibile nella parte inferiore del riquadro Strumenti, e quindi scegliere **OK** per chiudere il riquadro.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Web part Visualizzatore report in un sito di SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizzare la Web part Visualizzatore report](../customize-the-report-viewer-web-part.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

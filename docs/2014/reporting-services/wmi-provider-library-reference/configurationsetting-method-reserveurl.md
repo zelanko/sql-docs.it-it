@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098135"
 ---
 # <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>Metodo ReserveURL (MSReportServer_ConfigurationSetting WMI)
@@ -42,7 +42,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL per la prenotazione.  
   
- *LCID*  
+ *lcid*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
  *Error (Errore) (Error (Errore)e)*  
@@ -62,7 +62,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Questo metodo causa l'esecuzione dell'operazione di riciclo pesante da parte di tutti i domini applicazione. Una volta completata l'operazione, i domini applicazione vengono riavviati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

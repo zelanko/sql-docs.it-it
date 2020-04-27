@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099339"
 ---
 # <a name="troubleshoot-report-builder"></a>Risoluzione dei problemi relativi a Generatore report
@@ -25,11 +25,11 @@ ms.locfileid: "66099339"
  Gli argomenti seguenti sono utili per risolvere problemi relativi ai report, a seconda se si è autore del report o amministratore del server di report.  
   
 ## <a name="report-authors"></a>Autori di report  
- [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Risolvere i problemi relativi alle parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Risolvere i problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Administrators  
  [Installazione, disinstallazione e supporto di Generatore report](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "66099339"
   
  Se non è ancora stata trovata una risposta, [inviare il feedback](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installazione, disinstallazione e supporto di Generatore report](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

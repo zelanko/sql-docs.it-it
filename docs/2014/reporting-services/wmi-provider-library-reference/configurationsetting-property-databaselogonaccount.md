@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097889"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserver_configurationsetting"></a>Proprietà DatabaseLogonAccount (MSReportServer_ConfigurationSetting WMI)
@@ -50,7 +50,7 @@ public string DatabaseLogonAccount;
  Questa proprietà viene ignorata se la proprietà [DatabaseLogonType](configurationsetting-property-databaselogontype.md) è impostata `2 (Service)`su.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2dd1ecf333c452e2f1e2710a7ad16782a1a3628
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100414"
 ---
 # <a name="delete-an-item-management-studio"></a>Eliminare un elemento (Management Studio)
-  Quando si è connessi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]server di report in, è possibile eliminare definizioni di ruolo e pianificazioni condivise. ma non è possibile eliminare report, modelli o altri elementi. Per eliminare contenuto del server di report, utilizzare Gestione report. In alternativa, se il server di report è configurato per la modalità integrata SharePoint, utilizzare le caratteristiche di gestione di elementi nella raccolta di SharePoint in cui è presente il contenuto.  
+  Se si è connessi a un'istanza del server di report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile eliminare definizioni di ruolo e pianificazioni condivise, ma non è possibile eliminare report, modelli o altri elementi. Per eliminare contenuto del server di report, utilizzare Gestione report. In alternativa, se il server di report è configurato per la modalità integrata SharePoint, utilizzare le caratteristiche di gestione di elementi nella raccolta di SharePoint in cui è presente il contenuto.  
   
 ### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>Per eliminare un elemento nello spazio dei nomi delle cartelle del server di report  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66100414"
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Elimina elementi del catalogo &#40;Management Studio&#41;](delete-catalog-items-management-studio.md)   
+ [Elimina elementi catalogo &#40;Management Studio&#41;](delete-catalog-items-management-studio.md)   
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

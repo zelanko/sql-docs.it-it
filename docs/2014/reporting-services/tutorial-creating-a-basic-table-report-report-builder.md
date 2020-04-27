@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93213609abbc3e274cc61207d02b3828f9b90d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099028"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
@@ -22,8 +22,8 @@ ms.locfileid: "66099028"
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
- In questa esercitazione si apprenderà come eseguire le operazioni seguenti:  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
+ In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 1.  [Creare un nuovo report dal Riquadro attività iniziale](#CreateTable)  
   
@@ -54,14 +54,14 @@ ms.locfileid: "66099028"
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a>1. creare un nuovo report da Introduzione  
+##  <a name="1-create-a-new-report-from-getting-started"></a><a name="CreateTable"></a>1. creare un nuovo report da Introduzione  
  Creare un report tabella dalla finestra di dialogo **Introduzione** . Sono disponibili due modalità: progettazione report e progettazione del set di dati condivisa. Nella modalità progettazione report si specificano i dati nel riquadro dei dati del report e il layout del report nell'area di progettazione. Nella modalità progettazione del set di dati condivisa, si creano query del set di dati da condividere con altri. In questa esercitazione si utilizzerà modalità progettazione report.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-     Verrà visualizzata la finestra di dialogo **Introduzione** .  
+     Verrà visualizzata la finestra di dialogo **Attività iniziali**.  
   
     > [!NOTE]  
     >  Se la finestra di dialogo **Introduzione** non viene visualizzata, dal pulsante **Generatore report** fare clic su **nuovo**.  
@@ -70,7 +70,7 @@ ms.locfileid: "66099028"
   
 3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice** .  
   
-##  <a name="DataConnection"></a>1a. Specificare una connessione dati in Creazione guidata tabella  
+##  <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. Specificare una connessione dati in Creazione guidata tabella  
  Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In genere, le informazioni di connessione e il tipo di credenziali da utilizzare vengono fornite dal proprietario dell'origine dati. Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report.  
   
  In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "66099028"
   
 1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
-2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
+2.  Fare clic su **New**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
 3.  In **nome**digitare **vendite prodotto** un nome per l'origine dati.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66099028"
   
 10. Fare clic su **Avanti**.  
   
-##  <a name="Query"></a>1b. Creare una query in Creazione guidata tabella  
+##  <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. Creare una query in Creazione guidata tabella  
  In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
   
 > [!NOTE]  
@@ -115,9 +115,9 @@ ms.locfileid: "66099028"
   
 #### <a name="to-create-a-query"></a>Per creare una query  
   
-1.  Nella pagina **Progetta query** viene aperta la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
+1.  Nella pagina **Progetta query** si apre la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
   
-     Fare clic su **Modifica come testo**. Nella finestra Progettazione query basata su testo viene visualizzato il riquadro della query e il riquadro dei risultati.  
+     Fare clic su **modifica come testo**. Nella finestra Progettazione query basata su testo viene visualizzato il riquadro della query e il riquadro dei risultati.  
   
 2.  Nella casella [!INCLUDE[tsql](../includes/tsql-md.md)] Query **incollare la query** seguente.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "66099028"
   
     ```  
   
-3.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
+3.  Sulla barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
   
      La query viene eseguita e viene visualizzato il set di risultati per il campi SalesDate, Subcategory, Product, Sales e Quantity.  
   
@@ -163,12 +163,12 @@ ms.locfileid: "66099028"
   
 4.  Fare clic su **Avanti**.  
   
-##  <a name="Groups"></a>1C. Organizzare dati in gruppi in Creazione guidata tabella  
+##  <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1C. Organizzare dati in gruppi in Creazione guidata tabella  
  Quando si selezionano dei campi da raggruppare, si progetta una tabella con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
   
-1.  Nella pagina **Disponi campi** trascinare Product in **Valori**.  
+1.  Nella pagina **Disponi campi** trascinare Product in **valori**.  
   
 2.  Trascinare Quantity in **Valori** e posizionarlo sotto Product.  
   
@@ -190,12 +190,12 @@ ms.locfileid: "66099028"
   
 6.  Fare clic su **Avanti**.  
   
-##  <a name="Subtotals"></a>1D. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
+##  <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1D. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
  Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare valori di aggregazione per i campi. È possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
   
-1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+1.  Nella pagina **scegliere il layout** , in **Opzioni**, verificare che sia selezionata l'opzione **Mostra subtotali e totali** complessivi.  
   
 2.  Verificare che l'opzione **Bloccato, subtotale sotto** sia selezionata.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66099028"
   
 4.  Fare clic su **Avanti**.  
   
-##  <a name="Style"></a>1e. Scegliere uno stile in Creazione guidata tabella  
+##  <a name="1e-choose-a-style-in-the-table-wizard"></a><a name="Style"></a>1e. Scegliere uno stile in Creazione guidata tabella  
  Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo.  
   
 #### <a name="to-specify-a-table-style"></a>Per specificare uno stile della tabella  
@@ -230,7 +230,7 @@ ms.locfileid: "66099028"
   
  La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
-##  <a name="FormatCurrency"></a>2. formattare i dati come valuta  
+##  <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. formattare i dati come valuta  
  Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
   
 #### <a name="to-format-a-currency-field"></a>Per formattare un campo di tipo valuta  
@@ -247,7 +247,7 @@ ms.locfileid: "66099028"
   
  I valori di riepilogo per Sales vengono visualizzati come valuta.  
   
-##  <a name="FormatDate"></a>3. formattare i dati come data  
+##  <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. formattare i dati come data  
  Per impostazione predefinita, nel campo SalesDate vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>Per formattare un campo relativo alla data utilizzando il formato predefinito  
@@ -258,7 +258,7 @@ ms.locfileid: "66099028"
   
 3.  Sulla barra multifunzione, nella scheda **Home** , nel gruppo **numero** , selezionare **Data**nell'elenco a discesa.  
   
-     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
+     Nella cella viene visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "66099028"
   
  Il valore SalesDate viene visualizzato con il nome anziché il numero del mese.  
   
-##  <a name="Width"></a>4. modificare la larghezza delle colonne  
+##  <a name="4-change-column-widths"></a><a name="Width"></a>4. modificare la larghezza delle colonne  
  Per impostazione predefinita, in ogni cella della tabella è contenuta una casella di testo. Una casella di testo si espande verso il basso per adattarsi al testo digitato quando la pagina viene sottoposta al rendering. Nel report visualizzabile, ogni riga si espande fino all'altezza della casella di testo visualizzabile più alta nella riga. L'altezza della riga nell'area di progettazione non ha alcun effetto sull'altezza della riga nel report visualizzabile.  
   
  Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larghezza della colonna per adattare su un'unica riga il contenuto previsto delle caselle di testo nella colonna.  
@@ -303,7 +303,7 @@ ms.locfileid: "66099028"
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Title"></a>5. aggiungere un titolo al report  
+##  <a name="5-add-a-report-title"></a><a name="Title"></a>5. aggiungere un titolo al report  
  Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
  Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -326,12 +326,12 @@ ms.locfileid: "66099028"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>6. salvare il report  
+##  <a name="6-save-the-report"></a><a name="Save"></a>6. salvare il report  
  Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Siti e server recenti**.  
   
@@ -341,21 +341,21 @@ ms.locfileid: "66099028"
   
 4.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
   
-5.  Fare clic su **Salva**.  
+5.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
   
 3.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
-##  <a name="Export"></a>7. esportare il report  
+##  <a name="7-export-the-report"></a><a name="Export"></a>7. esportare il report  
  I report possono essere esportati in formati differenti quali Microsoft Excel e CSV. Per ulteriori informazioni, vedere [esportazione di report &#40;Generatore report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
  In questa esercitazione, si esporterà il report in Excel e si imposterà una proprietà nel report per fornire un nome personalizzato per la scheda della cartella di lavoro.  
@@ -385,7 +385,7 @@ ms.locfileid: "66099028"
   
 5.  Verificare che il tipo di file sia **cartella di lavoro di Excel**.  
   
-6.  Fare clic su **Salva**.  
+6.  Fare clic su **Save**.  
   
 #### <a name="to-view-the-report-in-excel"></a>Per visualizzare il report in Excel  
   
@@ -396,7 +396,7 @@ ms.locfileid: "66099028"
 ## <a name="next-steps"></a>Passaggi successivi  
  La procedura dettagliata per la creazione di un report tabella semplice è terminata. Per altre informazioni sulle tabelle, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

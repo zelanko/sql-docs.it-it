@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099831"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66099831"
 > [!NOTE]  
 >  A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], l'utilità **rs** è supportata sia nei server di report configurati per la modalità integrata SharePoint che in quelli configurati in modalità nativa. Le versioni precedenti supportano solo le configurazioni in modalità nativa.  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Percorso file](#bkmk_filelocation)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66099831"
   
 -   [Autorizzazioni](#bkmk_permissions)  
   
--   [esempi](#bkmk_examples)  
+-   [Esempi](#bkmk_examples)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,10 +57,10 @@ ms.locfileid: "66099831"
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a>Percorso file  
- **RS. exe** si trova nel percorso **\Programmi\Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> Percorso del file  
+ **RS.exe** si trova in **\Programmi\Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
   
-##  <a name="bkmk_arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a>Argomenti  
  **-?**  
  (Facoltativo) Visualizza la sintassi degli argomenti **rs** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66099831"
  `-u`[*dominio*\\] *nome utente*  
  (Facoltativo) Consente di specificare l'account utente utilizzato per connettersi al server di report. Se si omettono `-u` e `-p`, verrà utilizzato l'account utente di Windows corrente.  
   
- `-p`*password* di  
+ `-p` *password*  
  (Obbligatorio se si specifica `-u`) Consente di specificare la password da utilizzare con l'argomento `-u`. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
   
  `-e`  
@@ -96,7 +96,7 @@ ms.locfileid: "66099831"
  (Facoltativo) Specifica che i comandi del file di script vengano eseguiti come batch. Se uno o più comandi hanno esito negativo, verrà eseguito il rollback dell'intero batch. Vi sono tuttavia comandi non eseguibili in batch. Tali comandi verranno eseguiti normalmente e verrà eseguito un rollback solo in caso di eccezioni generate e non gestite nell'ambito dello script. Se lo script gestisce un'eccezione e completa normalmente la routine `Main`, verrà eseguito il commit del batch. Se si omette questo parametro, i comandi verranno eseguiti senza la creazione di un batch. Per altre informazioni, vedere [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v`*GlobalVar (*  
- (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **-v**.  
+ (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **-v** .  
   
  L'argomento `-v` viene specificato nella riga di comando ed è utilizzato per impostare il valore per una variabile globale definita in fase di esecuzione nello script. Se, ad esempio, lo script contiene un variabile denominata *parentFolder*, è possibile specificare un nome per la cartella nella riga di comando:  
   
@@ -109,17 +109,17 @@ ms.locfileid: "66099831"
  **-t**  
  (Facoltativo) Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Autorizzazioni  
  Per eseguire questo strumento, è necessario disporre dell'autorizzazione per connettersi all'istanza del server di report in cui lo script è in esecuzione. È possibile eseguire script per apportare modifiche nel computer locale o in un computer remoto. Per apportare modifiche a un server di report installato in un computer remoto, specificare il computer remoto nell'argomento `-s`.  
   
-##  <a name="bkmk_examples"></a> Esempi  
+##  <a name="examples"></a><a name="bkmk_examples"></a> Esempi  
  Nell'esempio seguente viene illustrato come specificare il file script contenente lo script di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e i metodi del servizio Web che si desidera eseguire.  
   
 ```  
 rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- Per un esempio dettagliato, vedere [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+  Per un esempio dettagliato, vedere [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  Per ulteriori esempi, vedere [Eseguire un file script di Reporting Services](run-a-reporting-services-script-file.md)  
   
@@ -129,12 +129,12 @@ rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Lo script deve essere scritto in codice [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e archiviato in un file di testo Unicode o UTF-8 con estensione di file rss. Non è possibile eseguire il debug degli script con l'utilità **rs** . Per eseguire il debug di uno script, eseguire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]il codice all'interno di.  
   
 > [!TIP]  
->  Per un esempio dettagliato, vedere [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+>   Per un esempio dettagliato, vedere [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eseguire un file script di Reporting Services](run-a-reporting-services-script-file.md)   
  [Script per distribuzione e attività amministrative](script-deployment-and-administrative-tasks.md)   
  [Script con l'utilità rs. exe e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Utilità del prompt dei comandi del server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [Utilità della riga di comando del server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

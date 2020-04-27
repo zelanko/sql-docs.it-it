@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099924"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services di SQL Server Management Studio (SSRS)
@@ -44,8 +44,8 @@ ms.locfileid: "66099924"
   
 -   [Annulla processi server di report &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Guida sensibile al contesto del server di report Management Studio](report-server-in-management-studio-f1-help.md)   
  [Introduzione a SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

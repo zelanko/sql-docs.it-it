@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098288"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>Metodo ListReportServersInDatabase (MSReportServer_ConfigurationSetting WMI)
@@ -45,19 +45,19 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *Nomecomputer []*  
+ *MachineNames[]*  
  [out] Matrice che contiene i nomi di computer per le installazioni del server di report nel database.  
   
- *NomeIstanza []*  
+ *InstanceNames[]*  
  [out] Matrice che contiene i nomi delle istanze di ognuna delle installazioni del server di report nel database.  
   
  *InstallationIDs[]*  
  [out] Matrice che contiene gli ID di installazione di ogni installazione del server di report nel database.  
   
- *Inizializzazione []*  
+ *IsInitialized[]*  
  [out] Matrice che contiene lo stato di inizializzazione di ogni installazione del server di report nel database.  
   
- *Length*  
+ *Lunghezza*  
  [out] Lunghezza delle matrici restituite dal metodo. Tutte le matrici restituite hanno la stessa lunghezza.  
   
  *HRESULT*  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  ListReportServersInDatabase elenca le installazioni del server di report presenti nel database del server di report, indipendentemente dal fatto che tali installazioni accedano a informazioni protette e restituisce un set di matrici corrispondente in cui sono contenute le informazioni su ciascuna installazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

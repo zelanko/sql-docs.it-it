@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102320"
 ---
 # <a name="schedules-page-report-manager"></a>Pagina Pianificazioni (Gestione report)
@@ -46,22 +46,22 @@ ms.locfileid: "66102320"
  **Sospendi**  
  Fare clic per arrestare temporaneamente l'esecuzione di una pianificazione condivisa. La sospensione di una pianificazione impedisce l'esecuzione delle sottoscrizioni e di altri processi pianificati.  
   
- **Riprendi**  
+ **Riprendere**  
  Fare clic per riattivare una pianificazione condivisa. I processi di cui era pianificata l'esecuzione durante la sospensione della pianificazione non vengono eseguiti.  
   
- **Pianificare**  
+ **Pianificazione**  
  Mostra le pianificazioni condivise definite. Fare clic su una pianificazione condivisa per visualizzarne o modificarne le impostazioni.  
   
- **Creatore**  
+ **Autore**  
  Mostra il nome dell'utente che ha creato la pianificazione condivisa.  
   
  **Ultima esecuzione, Prossima esecuzione**  
  Mostra la data e ora dell'ultima esecuzione e della prossima esecuzione della pianificazione.  
   
- **Status**  
+ **Stato**  
  Indica se una pianificazione condivisa è sospesa o attiva.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

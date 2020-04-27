@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099084"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
@@ -22,7 +22,7 @@ ms.locfileid: "66099084"
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 1.  [Creare un report matrice e un set di dati dalla Creazione guidata tabella o matrice](#Setup)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099084"
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. creare un report matrice e un set di dati dalla creazione guidata tabella o matrice  
+##  <a name="1-create-a-matrix-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. creare un report matrice e un set di dati dalla creazione guidata tabella o matrice  
  Creare un report matrice, un'origine dati e un set di dati.  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ ms.locfileid: "66099084"
   
 3.  Nel riquadro destro fare clic su **Creazione guidata tabella o matrice**.  
   
-4.  Fare clic su **Crea**.  
+4.  Scegliere **Crea**.  
   
 5.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "66099084"
   
      Questa query non contiene parametri di query. Verranno aggiunti più avanti in questa esercitazione.  
   
-11. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita e sono incluse le colonne seguenti: StoreID, Subcategory, Quantity.  
+11. Sulla barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita e sono incluse le colonne seguenti: StoreID, Subcategory, Quantity.  
   
 12. Fare clic su **Avanti**.  
   
-##  <a name="CompleteWizard"></a>2. organizzare i dati, scegliere il layout e lo stile dalla creazione guidata tabella o matrice  
+##  <a name="2-organize-data-choose-layout-and-style-from-the-table-or-matrix-wizard"></a><a name="CompleteWizard"></a>2. organizzare i dati, scegliere il layout e lo stile dalla creazione guidata tabella o matrice  
  Utilizzare la procedura guidata per fornire una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -157,7 +157,7 @@ ms.locfileid: "66099084"
   
  In questo scenario, nelle intestazioni di colonna è visualizzato l'identificatore ma non il nome del punto vendita. Più avanti in questa esercitazione, verrà aggiunta un'espressione per cercare il nome del punto vendita in un set di dati che contiene la coppia identificatore/nome del punto vendita.  
   
-##  <a name="Query"></a>3. aggiungere un parametro di query per creare un parametro di report  
+##  <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. aggiungere un parametro di query per creare un parametro di report  
  Quando si aggiunge un parametro di query a una query, in Generatore report viene creato automaticamente un parametro di report a valore singolo con proprietà predefinite per nome, messaggio di richiesta e tipo di dati.  
   
 #### <a name="to-add-a-query-parameter"></a>Per aggiungere un parametro di query  
@@ -174,7 +174,7 @@ ms.locfileid: "66099084"
   
      La `WHERE` clausola limita i dati recuperati all'identificatore del punto vendita specificato dal parametro *@StoreID*di query.  
   
-4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID*.  
+4.  Sulla barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID*.  
   
 5.  In **Valore parametro**digitare **200**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66099084"
   
  Si noti che è ora presente un parametro del *@StoreID*report denominato. Per impostazione predefinita, il parametro ha il tipo di dati **Text**. Poiché l'identificatore del punto vendita è un intero, nella procedura descritta di seguito il tipo di dati verrà modificato in Integer.  
   
-##  <a name="ChangeDefaultProperties"></a>4. modificare il tipo di dati predefinito e altre proprietà per un parametro di report  
+##  <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. modificare il tipo di dati predefinito e altre proprietà per un parametro di report  
  Dopo aver creato un parametro di report, è possibile impostare i valori predefiniti per le proprietà.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Per modificare il tipo di dati predefinito per un parametro di report  
@@ -207,7 +207,7 @@ ms.locfileid: "66099084"
   
 7.  Nella barra degli strumenti del visualizzatore di report, accanto a Store ID, digitare **200**e quindi fare clic su **Visualizza report**.  
   
-##  <a name="AddDataset"></a>4a. Aggiungere un set di dati per fornire i valori disponibili e i nomi visualizzati  
+##  <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. Aggiungere un set di dati per fornire i valori disponibili e i nomi visualizzati  
  Per assicurarsi che un utente possa digitare solo valori validi per un parametro, è possibile creare un elenco a discesa di valori tra cui scegliere. I valori possono provenire da un set di dati o da un elenco che si specifica. I valori disponibili devono provenire da un set di dati che dispone di una query che non contiene un riferimento al parametro.  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Per creare un set di dati per i valori validi per un parametro  
@@ -237,7 +237,7 @@ ms.locfileid: "66099084"
   
      Nel riquadro Dati report sono visualizzati i campi StoreID e StoreName nel nodo del set di dati **Punti vendita** .  
   
-##  <a name="AvailableValues"></a>4B. Specificare i valori disponibili per creare un elenco a discesa di valori  
+##  <a name="4b-specify-available-values-to-create-a-drop-down-list-of-values"></a><a name="AvailableValues"></a>4B. Specificare i valori disponibili per creare un elenco a discesa di valori  
  Dopo aver creato un set di dati per fornire i valori disponibili, è necessario modificare le proprietà del report per specificare quale set di dati e quale campo utilizzare per popolare l'elenco a discesa di valori validi nella barra degli strumenti del visualizzatore di report.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
@@ -252,7 +252,7 @@ ms.locfileid: "66099084"
   
 5.  In **Campo etichette**fare clic su StoreName nell'elenco a discesa. Il campo etichette consente di specificare il nome visualizzato per il valore.  
   
-6.  Fare clic su **Generale**.  
+6.  Fare clic su **General**.  
   
 7.  In messaggio di richiesta digitare **Nome archivio?**  
   
@@ -268,7 +268,7 @@ ms.locfileid: "66099084"
   
  Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
-##  <a name="DefaultValues"></a>4C. Specificare i valori predefiniti così che il report possa essere eseguito automaticamente  
+##  <a name="4c-specify-default-values-so-the-report-runs-automatically"></a><a name="DefaultValues"></a>4C. Specificare i valori predefiniti così che il report possa essere eseguito automaticamente  
  È possibile specificare un valore predefinito per ciascun parametro in modo che il report venga eseguito automaticamente.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>Per specificare un valore predefinito da un set di dati  
@@ -305,7 +305,7 @@ ms.locfileid: "66099084"
   
  Per *@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso Catalog Store". Si tratta del nome visualizzato per l'identificatore del punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
-##  <a name="NameValue"></a>4D. Cercare un valore da un set di dati che disponga di coppie nome/valore  
+##  <a name="4d-look-up-a-value-from-a-dataset-that-has-namevalue-pairs"></a><a name="NameValue"></a>4D. Cercare un valore da un set di dati che disponga di coppie nome/valore  
  Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>Per cercare un valore in un set di dati  
@@ -332,7 +332,7 @@ ms.locfileid: "66099084"
   
  La casella di testo all'inizio di ogni pagina visualizza il nome del punto vendita anziché l'identificatore.  
   
-##  <a name="Expression"></a>5. visualizzare il valore del parametro selezionato nel report  
+##  <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. visualizzare il valore del parametro selezionato nel report  
  Quando un utente ha delle domande su un report, è di aiuto sapere quali valori di parametri sono stati scelti. È possibile mantenere i valori selezionati dall'utente per ogni parametro nel report. Un modo consiste nel visualizzare i parametri in una casella di testo nel piè di pagina della pagina.  
   
 #### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>Per visualizzare il valore del parametro selezionato e l'etichetta nel piè di pagina di una pagina  
@@ -353,7 +353,7 @@ ms.locfileid: "66099084"
   
 7.  Visualizzare l'anteprima del report.  
   
-##  <a name="Filter"></a>6. utilizzare il parametro del report in un filtro  
+##  <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. utilizzare il parametro del report in un filtro  
  I filtri consentono di controllare quali dati utilizzare in un report dopo averli recuperati da un'origine dati esterna. Per aiutare un utente a controllare i dati che desidera vedere, è possibile includere il parametro del report in un filtro per la matrice.  
   
 #### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>Per specificare un parametro in un filtro della matrice  
@@ -368,8 +368,7 @@ ms.locfileid: "66099084"
   
 5.  In **operatore**verificare che sia `equals` selezionata l'opzione (=).  
   
-6.  In **Value** (Valore) digitare `[@StoreID]`. 
-  `[@StoreID]` è la sintassi dell'espressione semplice che rappresenta `=Parameters!StoreID.Value`.  
+6.  In **Valore**digitare `[@StoreID]`. `[@StoreID]` è la sintassi dell'espressione semplice che rappresenta `=Parameters!StoreID.Value`.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -381,7 +380,7 @@ ms.locfileid: "66099084"
   
  La matrice visualizza dati che corrispondono al punto vendita che è stato selezionato.  
   
-##  <a name="Multivalued"></a>7. modificare il parametro del report per accettare più valori  
+##  <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. modificare il parametro del report per accettare più valori  
  Per modificare un parametro da singolo a multivalore, è necessario modificare la query e tutte le espressioni che contengono un riferimento a quel parametro, inclusi i filtri. Un parametro multivalore è una matrice di valori. In una query del set di dati, la sintassi della query deve verificare l'inclusione di un valore in un set di valori. In un'espressione di report, la sintassi dell'espressione deve accedere a una matrice di valori anziché a un valore singolo.  
   
 #### <a name="to-change-a-parameter-from-single-to-multivalued"></a>Per modificare un parametro da singolo a multivalore  
@@ -436,7 +435,7 @@ ms.locfileid: "66099084"
   
 19. Dall'elenco a discesa fare clic su **Seleziona tutto** per cancellare l'elenco, fare clic su "Contoso Catalog Store" e "Contoso Asia Online Store" e quindi scegliere **Visualizza report**.  
   
-##  <a name="Boolean"></a>8. aggiungere un parametro booleano per la visibilità condizionale  
+##  <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. aggiungere un parametro booleano per la visibilità condizionale  
   
 #### <a name="to-add-a-boolean-parameter"></a>Per aggiungere un parametro booleano  
   
@@ -460,7 +459,7 @@ ms.locfileid: "66099084"
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse nella casella di testo nel piè di pagina che visualizza i valori del parametro e quindi fare clic su **Proprietà casella di testo**.  
   
-2.  Fare clic su **visibilità**.  
+2.  Fare clic su **Visibilità**.  
   
 3.  Selezionare l'opzione **Mostra o nascondi in base a un'espressione**e quindi fare clic sul pulsante di espressione **Fx**.  
   
@@ -482,7 +481,7 @@ ms.locfileid: "66099084"
   
  Nella casella di testo nel piè di pagina vengono visualizzati tutti i nomi di punti vendita selezionati.  
   
-##  <a name="Title"></a>9. aggiungere un titolo al report  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. aggiungere un titolo al report  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
@@ -490,28 +489,28 @@ ms.locfileid: "66099084"
   
 2.  Digitare Vendite prodotto con parametri, quindi fare clic all'esterno della casella di testo.  
   
-##  <a name="Save"></a>10. salvare il report  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. salvare il report  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Siti e server recenti**.  
   
 3.  Selezionare o digitare il nome del server di report per il quale si dispone delle autorizzazioni di salvataggio dei report.  
   
-     **Viene visualizzato il messaggio connessione al server di report**. Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
+     Viene visualizzato il messaggio **Connessione al server di report**. Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
 4.  In **Nome**sostituire il nome predefinito con Report delle vendite con parametri.  
   
-5.  Fare clic su **Salva**.  
+5.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report. Il server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa operazione conclude la procedura dettagliata per l'aggiunta di un parametro al report. Per altre informazioni sui parametri, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

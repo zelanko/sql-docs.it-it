@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103925"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Abilitare e disabilitare la stampa sul lato client per Reporting Services
@@ -45,7 +45,7 @@ ms.locfileid: "66103925"
  Il controllo ActiveX **RSClientPrint** è firmato, ovvero contiene un certificato digitale valido da [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Abilitazione e disabilitazione della stampa sul lato client  
- Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità di stampa impostando la proprietà **** di sistema `false`del server di report EnableClientPrinting su. Questa impostazione disabilita la stampa sul lato client per tutti i report gestiti dal server. Per impostazione predefinita, **EnableClientPrinting** è impostato `true`su. È possibile disabilitare la stampa sul lato client nei modi seguenti:  
+ Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità di stampa impostando la proprietà **EnableClientPrinting** di sistema `false`del server di report EnableClientPrinting su. Questa impostazione disabilita la stampa sul lato client per tutti i report gestiti dal server. Per impostazione predefinita, **EnableClientPrinting** è impostato `true`su. È possibile disabilitare la stampa sul lato client nei modi seguenti:  
   
 -   Per un **server di report in modalità nativa**:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66103925"
   
     2.  Fare clic su **Gestisci applicazioni di servizio**.  
   
-    3.  Fare clic sul nome dell'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quindi su **Gestisci** nella barra multifunzione di SharePoint.  
+    3.  Fare clic sul nome dell' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione di servizio, quindi fare clic su **Gestisci** nella barra multifunzione di SharePoint.  
   
     4.  Fare clic su **Impostazioni sistema**.  
   

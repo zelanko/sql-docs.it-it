@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101545"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
@@ -53,7 +53,7 @@ ms.locfileid: "66101545"
   
  L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Nel caso delle operazioni di visualizzazione, l'errore è il seguente: "Server report: errore di SharePoint. ---> System.UnauthorizedAccessException: Accesso negato." Per le operazioni di pubblicazione, l'errore è: "Le autorizzazioni concesse all'utente '\<dominio>\\<utente\>' non sono sufficienti per eseguire questa operazione".  
   
-##  <a name="permissionReports"></a> Autorizzazioni per la visualizzazione e la gestione dei report  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Autorizzazioni per la visualizzazione e la gestione dei report  
  Le autorizzazioni relative alle definizioni dei report sono specificate tramite le autorizzazioni Elenco per la raccolta che contiene il report ma, se si desidera limitare l'accesso, è possibile impostare autorizzazioni per i singoli report. Nella tabella seguente è riportato un elenco di attività, indicando per ognuna le autorizzazioni che la supportano.  
   
 |Attività|Autorizzazione|  
@@ -71,7 +71,7 @@ ms.locfileid: "66101545"
 |Eliminazione di snapshot nella cronologia di un report ed eliminazione di versioni specifiche delle definizioni di report estratte e modificate nel corso del tempo.|Autorizzazione**Eliminazione versioni** per la raccolta che contiene il report per cui si intende eliminare la cronologia.|  
 |Visualizzazione di snapshot nella cronologia di un report e visualizzazione di versioni specifiche delle definizioni dei report estratte e modificate nel corso del tempo.|Autorizzazione**Visualizzazione versioni** per la raccolta che contiene il report.|  
   
-##  <a name="permissionReportBuilder"></a> Autorizzazioni per la creazione di report e utilizzo di Generatore report  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> Autorizzazioni per la creazione di report e utilizzo di Generatore report  
  Generatore report è uno strumento per la creazione di report che può essere usato per creare report ad hoc. Questo strumento usa modelli di report come origine dati per supportare l'esplorazione ad hoc dei dati. È possibile caricare un modello in Generatore report per creare un report, eseguirlo, esplorare i dati nel modello e, facoltativamente, salvare il report in una raccolta. Gli utenti che dispongono di autorizzazioni sufficienti potranno quindi aprire lo stesso report ed eseguire attività di esplorazione ad hoc dei dati.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "66101545"
   
  Le autorizzazioni per la creazione e l'utilizzo delle sottoscrizioni e della cronologia dei report e per l'impostazione delle opzioni di elaborazione di report o dati per un report di Generatore report sono identiche a quelle usate per eseguire le stesse azioni sui file delle definizioni di report standard.  
   
-##  <a name="permissionSharedSchedules"></a> Autorizzazioni per la creazione e la gestione di pianificazioni condivise  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> Autorizzazioni per la creazione e la gestione di pianificazioni condivise  
  Le pianificazioni condivise non sono documenti archiviati in una raccolta. Per tale motivo, per la creazione e la gestione di questo tipo di pianificazioni sono necessarie autorizzazioni a livello di sito. Non è possibile limitare l'accesso a pianificazioni condivise specifiche. Tutte le pianificazioni condivise create sono disponibili a tutti gli utenti che dispongono dell'autorizzazione Apertura a livello di sito.  
   
  Nella tabella seguente sono elencate le attività per la creazione, la gestione e l'utilizzo delle pianificazioni condivise con l'indicazione per ognuna delle autorizzazioni necessarie:  
@@ -102,7 +102,7 @@ ms.locfileid: "66101545"
 |Creazione, modifica o eliminazione di una pianificazione condivisa.|Autorizzazione**Gestione sito web** per il sito.|  
 |Selezione di una pianificazione condivisa per l'elaborazione delle sottoscrizioni o il recupero dei dati.|Autorizzazione**Apertura** per il sito che contiene la raccolta.|  
   
-##  <a name="permissionSubscriptions"></a> Autorizzazioni per la creazione e la gestione di sottoscrizioni  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> Autorizzazioni per la creazione e la gestione di sottoscrizioni  
  In SharePoint viene stabilita una dipendenza tra le sottoscrizioni e le autorizzazioni di visualizzazione. Non è possibile sottoscrivere un report che non si è autorizzati a visualizzare. Se si concedono autorizzazioni per la sottoscrizione di un report, le autorizzazioni di visualizzazione corrispondenti verranno concesse automaticamente.  
   
  Nella tabella seguente sono elencate alcune attività e le autorizzazioni per la creazione, la gestione e l'utilizzo delle sottoscrizioni:  
@@ -113,7 +113,7 @@ ms.locfileid: "66101545"
 |Selezione di una pianificazione condivisa da usare con la sottoscrizione.|Autorizzazione**Apertura** per il sito che contiene la raccolta.|  
 |Creazione, modifica o eliminazione di qualsiasi sottoscrizione nell'ambito di un sito.|Autorizzazione**Gestione avvisi** per il sito.|  
   
-##  <a name="permissionDataSources"></a> Autorizzazioni per la creazione e la gestione di origini dei dati condivise e modelli di report  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> Autorizzazioni per la creazione e la gestione di origini dei dati condivise e modelli di report  
  Il file di un'origine dati condivisa (con estensione rsds) contiene informazioni di connessione a un'origine dati che possono essere usate da più report e modelli. Per i report standard, l'utilizzo di un file rsds per specificare le informazioni per la connessione all'origine dei dati è facoltativo. Per i report basati su modelli, l'utilizzo di un file rsds è obbligatorio. I modelli di report usano sempre un file rsds per la connessione alle origini dati esterne.  
   
  Le origini dati condivise dispongono di proprietà che consentono di specificare i singoli utenti autorizzati a visualizzarle o a gestirle. Le autorizzazioni per la visualizzazione o la gestione delle origini dei dati condivise sono diverse dalle autorizzazioni di visualizzazione dei report. È possibile visualizzare un report che usa un file rsds anche se non si dispone dell'autorizzazione per la visualizzazione del file rsds stesso.  

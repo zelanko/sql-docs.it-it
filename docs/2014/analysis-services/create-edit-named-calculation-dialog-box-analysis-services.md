@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086849"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Finestra di dialogo Crea calcolo denominato (Analysis Services)
@@ -46,8 +46,8 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
  L'espressione può contenere riferimenti ad altre tabelle specificati mediante un'istruzione sub-SELECT. If the expression would require parentheses in a SELECT statement, the expression entered must be enclosed between parentheses.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Progettazione vista origine dati &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

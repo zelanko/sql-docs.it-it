@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099790"
 ---
 # <a name="schedule-properties-reports-page"></a>Proprietà pianificazione (pagina Report)
@@ -27,7 +27,7 @@ ms.locfileid: "66099790"
  Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, aprire la cartella **pianificazioni condivise** , fare clic con il pulsante destro del mouse su una pianificazione condivisa, scegliere **Proprietà**, quindi fare clic su **report**.  
   
 > [!NOTE]  
->  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ## <a name="options"></a>Opzioni  
  **Cartella**  
@@ -36,11 +36,11 @@ ms.locfileid: "66099790"
  **Report**  
  Consente di specificare il nome del report che utilizza la pianificazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   
  [Pianificazioni](../subscriptions/schedules.md)   
- [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   
- [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Guida sensibile al contesto del server di report Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Connettersi a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Configurare le proprietà generali per un report &#40;Gestione report&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

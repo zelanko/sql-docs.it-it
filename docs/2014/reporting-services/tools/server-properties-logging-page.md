@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099526"
 ---
 # <a name="server-properties-logging-page"></a>Proprietà  server (pagina Registrazione)
@@ -25,17 +25,17 @@ ms.locfileid: "66099526"
  Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, fare clic con il pulsante destro del mouse sul nome del server di report e scegliere **Proprietà**. Fare clic su **Registrazione** per aprire la pagina.  
   
 ## <a name="options"></a>Opzioni  
- **Abilitare la registrazione per l'esecuzione di report**  
+ **Attiva la registrazione per l'esecuzione di report**  
  Fare clic per creare e archiviare le informazioni sull'attività del report nel server. Se questa opzione è attivata, tramite il server di report verranno registrati i report utilizzati, la frequenza di elaborazione dei report, il tipo di operazione del report eseguita, il formato di output e l'utente che ha eseguito il report. Per ulteriori informazioni sui punti dati aggiuntivi acquisiti nel log, vedere [il log di esecuzione del server di report e la visualizzazione ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
- **Rimuovi le voci del log anteriori a questo numero di giorni**  
+ **Rimuovi le voci del log dopo il numero di giorni seguente**  
  Consente di specificare il numero di giorni trascorsi i quali le voci di log verranno rimosse dal log di esecuzione del report. Il valore predefinito è 60 giorni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostazione delle proprietà del server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [Connettersi a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Guida sensibile al contesto del server di report Management Studio](report-server-in-management-studio-f1-help.md)   
  [Log di esecuzione del server di report e la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
   

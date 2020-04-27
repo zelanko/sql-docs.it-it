@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098271"
 ---
 # <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>Metodo ListReservedURLs (MSReportServer_ConfigurationSetting WMI)
@@ -37,19 +37,19 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *Applicazione []*  
+ *Application[]*  
  [out] Applicazioni che dispongono di prenotazioni URL.  
   
- *UrlString []*  
+ *UrlString[]*  
  [out] URL riservati.  
   
- *Account []*  
+ *Account[]*  
  [out] Nomi account associati all'account per le prenotazioni URL.  
   
- *AccountSID []*  
+ *AccountSID[]*  
  [out] SID di account associati all'account per le prenotazioni URL.  
   
- *Length*  
+ *Lunghezza*  
  [out] Lunghezza delle matrici restituite dal metodo.  
   
  *HRESULT*  
@@ -61,7 +61,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

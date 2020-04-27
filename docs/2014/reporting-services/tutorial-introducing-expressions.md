@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098853"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
@@ -26,7 +26,7 @@ ms.locfileid: "66098853"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 1.  [Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice](#Setup)  
@@ -58,7 +58,7 @@ ms.locfileid: "66098853"
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. creare un report tabella e un set di dati dalla creazione guidata tabella o matrice  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. creare un report tabella e un set di dati dalla creazione guidata tabella o matrice  
  Creare un report tabella, un'origine dati e un set di dati. Durante la disposizione della tabella verranno inclusi solo pochi campi. Dopo aver completato la procedura guidata, si aggiungeranno manualmente colonne. La procedura guidata consente di disporre la tabella e di applicare uno stile facilmente.  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "66098853"
   
      Nella query vengono specificati nomi di colonne tra cui data di nascita, nome, cognome, stato o provincia, identificatore di paese/regione, sesso e acquisti da inizio anno.  
   
-10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 20 righe di dati e sono incluse le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Sulla barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 20 righe di dati e sono incluse le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
   
 11. Fare clic su **Avanti**.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66098853"
   
 17. Nella pagina **scegliere uno stile** fare clic su **Slate**, quindi fare clic su **fine**.  
   
-##  <a name="UpdateNames"></a>2. aggiornare i nomi predefiniti dell'origine dati e del set di dati  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. aggiornare i nomi predefiniti dell'origine dati e del set di dati  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>Per aggiornare il nome predefinito dell'origine dati  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098853"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. visualizzare il nome, l'iniziale e il cognome  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. visualizzare il nome, l'iniziale e il cognome  
  Usare la funzione **Left** e l'operatore di **concatenazione**(**&**) in un'espressione tramite cui viene restituito un nome con un'iniziale e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .  
   
 #### <a name="to-add-the-name-column"></a>Per aggiungere la colonna Name  
@@ -205,7 +205,7 @@ ms.locfileid: "66098853"
   
      Questa espressione consente di estrarre un carattere dal valore **FirstName** , a partire da sinistra.  
   
-9. Digitare **& "" &**  
+9. Digitare **&" "&**  
   
 10. Nell'elenco **Valori** fare doppio clic su **LastName**.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098853"
   
 12. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Gender"></a>4. utilizzare le immagini per visualizzare il sesso  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. utilizzare le immagini per visualizzare il sesso  
  Utilizzare immagini per visualizzare il sesso di una persona e identificare i valori sconosciuti relativi al sesso utilizzando una terza immagine. Si aggiungeranno al report tre immagini nascoste e una nuova colonna per visualizzare le immagini, quindi si stabilirà l'immagine che verrà visualizzata nella colonna in base al valore del campo Gender.  
   
  Per applicare un colore alla cella della tabella in cui è contenuta l'immagine durante la creazione di un report a barre, verrà aggiunto un rettangolo in cui verrà inserita successivamente l'immagine. È necessario utilizzare un rettangolo perché consente, a differenza di un'immagine, l'applicazione di un colore di sfondo.  
@@ -296,14 +296,14 @@ ms.locfileid: "66098853"
   
 14. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Lookup"></a>5. cercare il nome CountryRegion  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. cercare il nome CountryRegion  
  Creare il set di dati CountryRegion e usare la funzione **Lookup** per visualizzare il nome di un paese o di una regione anziché il relativo identificatore.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>Per creare un set di dati CountryRegion  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Nel riquadro Dati report fare clic su **Nuovo** e selezionare **Set di dati**.  
+2.  Nel riquadro dei dati del report fare clic su **nuovo** , quindi su **set**di dati.  
   
 3.  Fare clic su **Usare un set di dati incorporato nel report**.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "66098853"
   
 6.  Verificare che sia selezionato il tipo di query **Testo** e fare clic su **Progettazione query**.  
   
-7.  Fare clic su **modifica come testo**.  
+7.  Fare clic su **Modifica come testo**.  
   
 8.  Copiare e incollare la query seguente nel relativo riquadro:  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098853"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Scegliere **Esegui** (**!**) per eseguire la query.  
+9. Fare clic su **Esegui** (**!**) per eseguire la query.  
   
      I risultati query sono i nomi e gli identificatori di paesi.  
   
@@ -370,7 +370,7 @@ ms.locfileid: "66098853"
   
 11. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Count"></a>6. contare i giorni dall'ultimo acquisto  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. contare i giorni dall'ultimo acquisto  
  Aggiungere una colonna e quindi usare la funzione **Now** o la `ExecutionTime` variabile globale incorporata per calcolare il numero di giorni trascorsi dall'ultimo acquisto di una persona.  
   
 #### <a name="to-add-the-days-ago-column"></a>Per aggiungere la colonna Days Ago  
@@ -416,7 +416,7 @@ ms.locfileid: "66098853"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. utilizzare un indicatore per mostrare il confronto delle vendite  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. utilizzare un indicatore per mostrare il confronto delle vendite  
  Aggiungere una nuova colonna e usare un indicatore per indicare se gli acquisti da inizio anno (YTD) di una persona sono al di sopra o al di sotto degli acquisti YTD medi. La funzione **Round** consente di rimuovere i decimali dai valori.  
   
  Per la configurazione dell'indicatore e dei relativi stati sono necessari numerosi passaggi. Se si desidera, nella procedura "per configurare l'indicatore", è possibile ignorare e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **espressione** .  
@@ -521,7 +521,7 @@ ms.locfileid: "66098853"
   
 38. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="GreenBar"></a>8. rendere il report un report "barra verde"  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. rendere il report un report "barra verde"  
  Utilizzare un parametro per specificare il colore da applicare alle righe alternate nel report, rendendolo a barre.  
   
 #### <a name="to-add-a-parameter"></a>Per aggiungere un parametro  
@@ -542,7 +542,7 @@ ms.locfileid: "66098853"
   
 7.  Fare clic su **Aggiungi**.  
   
-8.  Nella casella **etichetta** digitare: **Yellow**  
+8.  Nella casella **Etichetta** digitare: **Yellow**  
   
 9. Nella casella **Valore** digitare **Yellow**  
   
@@ -634,11 +634,11 @@ ms.locfileid: "66098853"
   
 3.  Nell'elenco a discesa **Scegli colore** selezionare il colore delle barre che non sono bianche nel report.  
   
-4.  Fare clic su **Visualizza report**.  
+4.  Fare clic su **Visualizza rapporto**.  
   
      Viene eseguito il rendering del report e nelle righe alternate verrà visualizzato lo sfondo scelto.  
   
-##  <a name="DateFormat"></a>opzionale Formattare la colonna della data  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>opzionale Formattare la colonna della data  
  Formattare la colonna **Last Purchase** in cui sono contenute le date.  
   
 #### <a name="to-format-date-column"></a>Per formattare la colonna della data  
@@ -651,7 +651,7 @@ ms.locfileid: "66098853"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>opzionale Aggiungere un titolo al report  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>opzionale Aggiungere un titolo al report  
  Aggiungere un titolo al report.  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
@@ -672,14 +672,14 @@ ms.locfileid: "66098853"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>opzionale Salva il report  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>opzionale Salva il report  
  È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale. Per altre informazioni, vedere [Salvataggio di report &#40;Generatore report&#41;](report-builder/saving-reports-report-builder.md).  
   
  In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>Per salvare il report in un server di report  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Siti e server recenti**.  
   
@@ -689,19 +689,19 @@ ms.locfileid: "66098853"
   
 4.  In **Nome** sostituire il nome predefinito con **Sales Comparison Summary**.  
   
-5.  Fare clic su **Salva**.  
+5.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
 #### <a name="to-save-the-report-to-your-computer"></a>Per salvare il report nel computer  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.  
   
 3.  In **Nome** sostituire il nome predefinito con **Sales Comparison Summary**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101435"
 ---
 # <a name="select-the-data-source"></a>Selezione origine dati
@@ -32,7 +32,7 @@ ms.locfileid: "66101435"
  **Nome**  
  Consente di digitare un nome per la connessione all'origine dati. Tale nome deve essere univoco all'interno del report.  
   
- **Tipo**  
+ **Type**  
  Selezionare il tipo di origine dati in uso, ad esempio se si utilizza un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, scegliere. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **Stringa di connessione**  
@@ -45,11 +45,11 @@ ms.locfileid: "66101435"
  **Imposta come origine dati condivisa**  
  Selezionare questa opzione per archiviare l'origine dati nel progetto, anziché nel report, come origine dati condivisa. In questo modo, potrà essere utilizzata come origine dati per altri report nel progetto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services server di report](../../2014/reporting-services/reporting-services-report-server.md)   
- [RSReportDesigner - file di configurazione](report-server/rsreportdesigner-configuration-file.md)   
+ [File di configurazione RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101375"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Seleziona colore (Generatore report e SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66101375"
  **Selettore colori**  
  Scegliere una delle tre opzioni disponibili per specificare la modalità di selezione dei colori:  
   
--   **Selezione-cerchio colori** Scegliere un colore utilizzando i valori dei colori HSB (Hue/Saturation/Brightness).  
+-   **Selezione - Cerchio colori** Consente di scegliere un colore specificando i relativi valori HSB (Hue/Saturation/Brightness, tonalità/saturazione/luminosità).  
   
--   **Selezione-quadrato colori** Scegliere un colore usando i valori di colore rosso/verde/blu (RGB).  
+-   **Selezione - Quadrato colori** Consente di scegliere un colore specificando i relativi valori RGB (Red/Green/Blue, rosso/verde/blu).  
   
--   **Tavolozza-colori standard** Scegliere un colore da un elenco predefinito di valori dei colori.  
+-   **Tavolozza - Colori standard** Consente di scegliere un colore da un elenco predefinito di valori.  
   
  **Cerchio colori**  
  Utilizzare questa opzione per i colori HSB perché il mapping dei valori HSB viene eseguito su un sistema di coordinate cilindrico. La tonalità corrisponde al colore effettivo, la saturazione alla purezza del colore, la luminosità alla luminosità o alla oscurità relativa.  
@@ -53,13 +53,13 @@ ms.locfileid: "66101375"
   
  Il valore **Alfa** viene visualizzato per alcune proprietà quando un colore può includere un valore di trasparenza, ad esempio nel caso del riempimento della serie del grafico. Per le proprietà che non supportano la trasparenza, questo valore è disabilitato.  
   
- **Rosso**  
+ **Red**  
  Valore decimale relativo alla parte rossa del colore RGB. Utilizzare la casella di selezione per modificare il valore o digitare un valore compreso tra 0 e 255.  
   
- **Verde**  
+ **Green**  
  Valore decimale relativo alla parte verde del colore RGB. Utilizzare la casella di selezione per modificare il valore o digitare un valore compreso tra 0 e 255.  
   
- **Blu**  
+ **Blue**  
  Valore decimale relativo alla parte blu del colore RGB. Utilizzare la casella di selezione per modificare il valore o digitare un valore compreso tra 0 e 255.  
   
  **Alfa**  
@@ -77,7 +77,7 @@ ms.locfileid: "66101375"
  **Esempio di colore**  
  Visualizza il colore corrente nella parte sinistra del riquadro e mostra in modo interattivo il nuovo colore scelto nella parte destra. Se non è presente un colore predefinito, la parte sinistra del riquadro è bianca. Per la maggior parte delle proprietà RDL non è disponibile alcun colore predefinito.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   

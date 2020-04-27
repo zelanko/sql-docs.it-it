@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100335"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66100335"
      Per passare tra gli ultimi due stati visualizzati, fare doppio clic sulla barra del titolo del riquadro Dati report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riquadro dei dati del report](../report-data/report-data-pane.md)   
+ [Riquadro Dati report](../report-data/report-data-pane.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

@@ -17,19 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100608"
 ---
 # <a name="technical-reference-ssrs"></a>Guida di riferimento tecnico (SSRS)
   Trovare gli strumenti e la documentazione di riferimento di PowerShell per l' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uso [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]o l'amministrazione di in.  
   
- ![Icona cartella file di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **errori ed eventi**  
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Errori ed eventi**  
  [Causa e risoluzione degli errori di Reporting Services](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") Guida di **riferimento alle funzionalità**  
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Informazioni di riferimento sulle funzionalità**  
  [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)  
   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
@@ -42,18 +42,18 @@ ms.locfileid: "66100608"
   
  [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **utilità del prompt dei comandi del server di report**  
- [Utilità RS. exe &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Utilità del prompt dei comandi del server di report**  
+ [Utilità RS.exe &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
   
  [Utilità rsconfig &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
   
  [Utilità rskeymgmt &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Reporting Services libreria di classi del provider WMI**  
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Libreria di classi del provider WMI per Reporting Services**  
  [Riferimento della libreria del provider WMI Reporting Services &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Articoli wiki di TechNet su risoluzione Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209153)   
- [TechNet wiki articoli sulla about risoluzione Reporting Services modalità SharePoint](https://go.microsoft.com/fwlink/?LinkID=209158)  
+ [Articoli wiki di TechNet sulla risoluzione dei problemi di Reporting Services in modalità SharePoint](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

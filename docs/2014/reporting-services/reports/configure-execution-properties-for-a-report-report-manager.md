@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102707"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurare le proprietà di esecuzione per un report (Gestione report)
@@ -44,13 +44,13 @@ ms.locfileid: "66102707"
   
     -   Se si desidera creare immediatamente uno snapshot, selezionare **Crea uno snapshot del report quando viene scelto il pulsante Applica in questa pagina**.  
   
-3.  Fare clic su **Apply**.  
+3.  Fare clic su **Applica**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostare proprietà di elaborazione dei report](../report-server/set-report-processing-properties.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostare le proprietà di elaborazione dei report](../report-server/set-report-processing-properties.md)   
  [Aprire e chiudere un report &#40;Gestione report&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Pagina delle proprietà opzioni di elaborazione &#40;Gestione report&#41;](../processing-options-properties-page-report-manager.md)  
+ [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](../processing-options-properties-page-report-manager.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100264"
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
@@ -32,18 +32,18 @@ ms.locfileid: "66100264"
   
  Il riquadro di raggruppamento supporta le modalità seguenti:  
   
--   **Predefinita.** Utilizzare la modalità predefinita per aggiungere, modificare o eliminare gruppi. È possibile aggiungere gruppi padre, figlio e gruppi di dettagli trascinando campi dal riquadro dei dati del report e inserendoli nella gerarchia dei gruppi. Per aggiungere un gruppo adiacente, è necessario usare il collegamento **Aggiungi gruppo** . Per ulteriori informazioni, vedere [aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Valore predefinito.** Utilizzare la modalità predefinita per aggiungere, modificare o eliminare gruppi. È possibile aggiungere gruppi padre, figlio e gruppi di dettagli trascinando campi dal riquadro dei dati del report e inserendoli nella gerarchia dei gruppi. Per aggiungere un gruppo adiacente, è necessario usare il collegamento **Aggiungi gruppo** . Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Avanzate**. Usare la **Modalità avanzata** per visualizzare tutti i membri dei gruppi di righe e di colonne e per impostare le proprietà sui membri statici. Quando si creano gruppi o si aggiungono totali, vengono impostate automaticamente le proprietà che controllano il rendering delle righe e delle colonne in ogni pagina del report nell'area dati Tablix. Per regolare manualmente queste proprietà, è necessario impostarle sul membro Tablix. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Modalità predefinita  
  Quando è attiva la modalità predefinita, nei riquadri Gruppi di righe e Gruppi di colonne è riportata una visualizzazione gerarchica di tutti i gruppi padre, i gruppi figlio e i gruppi adiacenti. Un gruppo figlio viene visualizzato in posizione rientrata rispetto al gruppo padre. Un gruppo adiacente viene visualizzato allo stesso livello di rientro dei gruppi di pari livello. Nella figura seguente viene illustrata un'area dati Tablix con gruppi di righe nidificati e gruppi di colonne nidificati e adiacenti.  
   
- ![Tablix, gruppi di righe e di colonne nidificati e adiacenti](../media/rs-basictablixdesigngroupingpane.gif "Tablix, gruppi di righe e di colonne nidificati e adiacenti")  
+ ![Tablix, gruppi di righe e di colonne annidati e adiacenti](../media/rs-basictablixdesigngroupingpane.gif "Tablix, gruppi di righe e di colonne annidati e adiacenti")  
   
  Nel riquadro di raggruppamento vengono visualizzati i gruppi di righe e di colonne corrispondenti. Nella figura seguente sono stati selezionati il gruppo basato sulla sottocategoria nel riquadro Gruppi di righe e la cella di raggruppamento [Subcat] nell'area dati Tablix:  
   
- ![Riquadro di raggruppamento per gruppi di righe e di colonne nidificati](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne nidificati")  
+ ![Riquadro di raggruppamento per gruppi di righe e di colonne annidati](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne annidati")  
   
  Nel riquadro Gruppi di righe il gruppo basato sulla sottocategoria è un figlio del gruppo basato sulla categoria. Nel riquadro Gruppi di colonne il gruppo Country/Region è un figlio del gruppo Geography. Il gruppo Year e i gruppi Country/Region sono gruppi adiacenti.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100264"
   
 -   **(Statico)** Indica un membro statico senza cella di intestazione, noto come statico nascosto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098894"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
@@ -28,7 +28,7 @@ ms.locfileid: "66098894"
   
  Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per ulteriori informazioni sul download di questo report di esempio e di altri, vedere [Generatore report report di esempio](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
   
 ### <a name="set-up-the-report"></a>Impostazione del report  
  1. [Creare un report vuoto con un'origine dati e un set di dati](#CreateReport)  
@@ -53,7 +53,7 @@ ms.locfileid: "66098894"
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a>Creare un report vuoto con un'origine dati e un set di dati  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Creare un report vuoto con un'origine dati e un set di dati  
   
 #### <a name="to-create-a-blank-report"></a>Per creare un report vuoto  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66098894"
   
 #### <a name="to-create-a-dataset"></a>Per creare un set di dati  
   
-1.  Nel riquadro dei dati del report fare clic su **nuovo**, quindi su **set**di dati.  
+1.  Nel riquadro dei dati del report fare clic su **Nuovo**, quindi su **Set di dati**.  
   
 2.  Verificare che l'origine dati sia **TextDataSource**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66098894"
   
 4.  Verificare che il tipo di query **Testo** sia selezionato, quindi fare clic su **Progettazione query**.  
   
-5.  Fare clic su **modifica come testo**.  
+5.  Fare clic su **Modifica come testo**.  
   
 6.  Incollare la query seguente nel relativo riquadro:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "66098894"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>Aggiungere un campo al report Area di progettazione  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Aggiungere un campo al report Area di progettazione  
  Se si desidera visualizzare un campo del set di dati in un report, è probabile che si scelga innanzitutto di trascinarlo direttamente nell'area di progettazione. In questo esercizio viene indicato perché questo modo di procedere non è corretto e quale operazione è invece necessario eseguire.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Per aggiungere un campo al report (e ottenere il risultato sbagliato)  
@@ -189,7 +189,7 @@ ms.locfileid: "66098894"
   
 7.  Selezionare la casella di riepilogo e premere CANC.  
   
-##  <a name="AddTable"></a>Aggiungere una tabella al report Area di progettazione  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Aggiungere una tabella al report Area di progettazione  
  Creare questa tabella in modo da disporre di un elemento in cui inserire i collegamenti ipertestuali e il testo ruotato.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Per aggiungere una tabella al report  
@@ -220,7 +220,7 @@ ms.locfileid: "66098894"
   
 12. Fare clic su **Esegui**.  
   
-##  <a name="AddHyperlink"></a>Aggiungere un collegamento ipertestuale al report  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Aggiungere un collegamento ipertestuale al report  
  In questa sezione si aggiungerà un collegamento ipertestuale al testo incluso nella tabella creata nella sezione precedente.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>Per aggiungere un collegamento ipertestuale al report  
@@ -247,7 +247,7 @@ ms.locfileid: "66098894"
   
 10. Fare clic su un collegamento. Se il computer è connesso a Internet, in una finestra del browser verrà aperto un argomento della Guida di Generatore report.  
   
-##  <a name="RotateText"></a>Ruotare il testo nel report  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Ruotare il testo nel report  
  In questa sezione si ruoterà parte del testo incluso nella tabella creata nelle sezioni precedenti.  
   
 #### <a name="to-rotate-text"></a>Per ruotare il testo  
@@ -273,7 +273,7 @@ ms.locfileid: "66098894"
   
  Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso verso l'alto delle celle.  
   
-##  <a name="FormatHTML"></a>Visualizzazione del testo con formattazione HTML  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Visualizzazione del testo con formattazione HTML  
   
 #### <a name="to-display-text-formatted-as-html"></a>Per visualizzare testo formattato come HTML  
   
@@ -313,7 +313,7 @@ ms.locfileid: "66098894"
   
  Il testo nella casella di testo viene visualizzato come un'intestazione, un paragrafo e un elenco puntato.  
   
-##  <a name="FormatCurrency"></a>Formattare la valuta  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>Formattare la valuta  
   
 #### <a name="to-format-numbers-as-currency"></a>Per formattare i numeri come valuta  
   
@@ -331,14 +331,14 @@ ms.locfileid: "66098894"
   
  Nel report verranno visualizzati i dati formattati che rendono più facile la lettura.  
   
-##  <a name="Save"></a>Salva il report  
+##  <a name="save-the-report"></a><a name="Save"></a>Salva il report  
  È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale.  
   
  In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Siti e server recenti**.  
   
@@ -348,24 +348,24 @@ ms.locfileid: "66098894"
   
 4.  In **Nome**sostituire il nome predefinito con un nome a scelta.  
   
-5.  Fare clic su **Salva**.  
+5.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.  
   
 3.  In **Nome**sostituire il nome predefinito con un nome a scelta.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Sono disponibili diversi modi per formattare il testo in Generatore report [esercitazione: creazione di un report in formato libero &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene altri esempi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  

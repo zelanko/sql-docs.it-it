@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101136"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Specifica di credenziali in Generatore report
@@ -73,7 +73,7 @@ ms.locfileid: "66101136"
 ### <a name="no-credentials"></a>Connessioni senza credenziali  
  Le credenziali non sono richieste per questa origine dati. Per eseguire questo report nel server di report, è necessario configurare l'account di esecuzione automatica. Per ulteriori informazioni, vedere [configurare l'account di esecuzione automatica &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentazione di nella documentazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [online](https://go.microsoft.com/fwlink/?linkid=121312)di.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installazione, disinstallazione e Generatore report del supporto](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Finestra di dialogo Opzioni Generatore report, impostazioni &#40;Generatore report&#41;](report-builder/set-default-options-for-report-builder.md)   

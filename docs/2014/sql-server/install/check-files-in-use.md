@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096524"
 ---
 # <a name="check-files-in-use"></a>Controllo file in uso
@@ -46,7 +46,7 @@ ms.locfileid: "66096524"
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Processo|Indica il nome completo del processo che utilizza i file da aggiornare.|  
+|Process|Indica il nome completo del processo che utilizza i file da aggiornare.|  
 |Type|Indica il tipo di processo.|  
 |Account|Indica l'account con il quale viene eseguito il processo.|  
 |ID di processo|Indica l'ID del processo.|  

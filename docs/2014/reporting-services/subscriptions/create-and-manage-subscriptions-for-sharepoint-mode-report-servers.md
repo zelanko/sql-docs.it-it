@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101004"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
@@ -32,9 +32,9 @@ ms.locfileid: "66101004"
   
 -   **Raccolta documenti**: è possibile creare una sottoscrizione che recapita un documento basato sul report originale a una raccolta disponibile nello stesso sito di SharePoint del report originale. Non è possibile recapitare il documento a una raccolta disponibile in un altro server o in un altro sito della stessa raccolta siti. Per recapitare il documento, è necessario disporre dell'autorizzazione Aggiunta elementi per la raccolta a cui viene recapitato il report.  
   
--   **Cartella di file** : è possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
+-   **Cartella di file:** è possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
   
--   **Posta elettronica** : se il server di report è configurato in modo da usare l'estensione per il recapito tramite posta elettronica del server di report, è possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in uno dei formati di output disponibili) alla propria cartella Posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
+-   **Posta elettronica:** se il server di report è configurato in modo da utilizzare l'estensione del server di report per il recapito tramite posta elettronica, sarà possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in uno dei formati di output disponibili) alla propria cartella di posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
   
  **Contenuto dell'argomento:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101004"
   
 -   [Per eliminare una sottoscrizione](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisiti generali per le sottoscrizioni  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Requisiti generali per le sottoscrizioni  
  Per creare una sottoscrizione, è necessario che il report utilizzi credenziali archiviate ed è necessario disporre delle autorizzazioni per la visualizzazione del report e la creazione di avvisi.  
   
  Quando si crea una sottoscrizione, è possibile selezionare un formato di file di output. Non tutti i formati sono appropriati per tutti i report. Prima di selezionare un formato in una sottoscrizione, aprire il report e provare a esportarlo in vari formati, per verificare che venga visualizzato come previsto.  
@@ -66,7 +66,7 @@ ms.locfileid: "66101004"
   
  I formati di output selezionati per una sottoscrizione sono basati sulle estensioni per il rendering installate nel server di report. È pertanto possibile scegliere solo formati di output supportati dalle estensioni per il rendering del server di report.  
   
-###  <a name="bkmk_tosharepoint_library"></a> Per creare una sottoscrizione per recapitare un report a una raccolta di SharePoint  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> Per creare una sottoscrizione per recapitare un report a una raccolta di SharePoint  
   
 1.  Passare a una raccolta di SharePoint contenente il report.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101004"
   
 10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. La sezione dei parametri non è visibile in questa pagina se il report selezionato non contiene parametri. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> Per creare una sottoscrizione per il recapito a una cartella condivisa  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Per creare una sottoscrizione per il recapito a una cartella condivisa  
   
 1.  Passare a una raccolta di SharePoint contenente il report.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66101004"
   
 12. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> Per creare una sottoscrizione per il recapito tramite posta elettronica del server di report  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Per creare una sottoscrizione per il recapito tramite posta elettronica del server di report  
   
 1.  Passare a una raccolta di SharePoint contenente il report.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66101004"
   
 10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> Per visualizzare o modificare una sottoscrizione  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Per visualizzare o modificare una sottoscrizione  
   
 1.  Passare a una raccolta di SharePoint contenente il report.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66101004"
   
 3.  Ogni sottoscrizione è identificata dal tipo di recapito. Fare clic sul tipo di sottoscrizione per visualizzare e modificare le proprietà esistenti.  
   
-###  <a name="bkmk_to_delete_subscription"></a> Per eliminare una sottoscrizione  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> Per eliminare una sottoscrizione  
   
 1.  Passare a una raccolta di SharePoint contenente il report.  
   

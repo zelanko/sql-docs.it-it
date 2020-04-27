@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104585"
 ---
 # <a name="report-f1-help"></a>Guida sensibile al contesto del report
@@ -25,7 +25,7 @@ ms.locfileid: "66104585"
   
  Per accedere a questi argomenti dalla finestra di dialogo **Proprietà report** , fare clic su **?**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

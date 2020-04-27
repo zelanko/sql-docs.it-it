@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099444"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66099444"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL per un sito o un sito secondario di SharePoint Server  
  Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL il nome del sito si trova immediatamente dopo il nome del server, ad esempio http://*nomeserver/sito* o http://*nomeserver/sito/sitosecondario*.  
   
- In un' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] applicazione Web [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] o 2007, il sito e il sito secondario corrispondono spesso alle schede nel sito principale. Per trovare il nome del sito o del sito secondario, fare clic su **Home**e quindi su **Tutto il contenuto del sito**. Scorrere fino alla fine e cercare **Siti e aree di lavoro**. L'elenco dei siti si trova in questa sezione.  
+ In un'applicazione Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] il sito e il sito secondario corrispondono spesso alle schede nel sito principale. Per trovare il nome del sito o del sito secondario, fare clic su **Home**e quindi su **Tutto il contenuto del sito**. Scorrere fino alla fine e cercare **Siti e aree di lavoro**. L'elenco dei siti si trova in questa sezione.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL di una raccolta di SharePoint  
  Quando si distribuisce un report o un elemento correlato in una raccolta di SharePoint, è necessario utilizzare l'URL di quest'ultima. L'URL da utilizzare per una raccolta varia a seconda della versione di SharePoint in uso.  
@@ -102,7 +102,7 @@ ms.locfileid: "66099444"
 |Il report di esempio Company Sales nella cartella **Documents/Doc** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Il report di esempio Company Sales in un **Centro report** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a>Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
  Quando per pubblicare in una raccolta i report e i file correlati si utilizza uno strumento di creazione dei report, i file vengono convalidati prima di essere aggiunti. Se invece si caricano i report e i file correlati usando l'azione **Carica** in una raccolta di SharePoint, non viene eseguito alcun controllo di convalida. In questo caso, non sarà possibile sapere se il file è valido fino a quando non si accederà al report per gestirlo, modificarlo o eseguirlo.  
   
 > [!NOTE]  

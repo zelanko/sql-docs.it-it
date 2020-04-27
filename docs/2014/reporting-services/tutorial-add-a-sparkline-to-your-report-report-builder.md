@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099036"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
@@ -26,8 +26,8 @@ ms.locfileid: "66099036"
   
  Il video [procedura: creare un sparkline in una tabella (video Generatore report)](https://technet.microsoft.com/bi/ff871942.aspx) illustra come creare un report simile con i grafici sparkline.  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
- In questa esercitazione si apprenderà come eseguire le operazioni seguenti:  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
+ In questa esercitazione verranno illustrate le operazioni seguenti:  
   
  1. [Creare un report con una tabella](#CreateTable)  
   
@@ -53,13 +53,13 @@ ms.locfileid: "66099036"
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a>1. creare un report con una tabella  
+##  <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. creare un report con una tabella  
   
 #### <a name="to-create-a-report"></a>Per creare un report  
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-     Verrà visualizzata la finestra di dialogo **Introduzione** .  
+     Verrà visualizzata la finestra di dialogo **Attività iniziali**.  
   
     > [!NOTE]  
     >  Se la finestra di dialogo **Introduzione** non viene visualizzata, dal pulsante **Generatore report** fare clic su **nuovo**.  
@@ -73,7 +73,7 @@ ms.locfileid: "66099036"
     > [!NOTE]  
     >  Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se in **Connessioni a origini dati**è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-5.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
+5.  Fare clic su **New**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
 6.  In **Nome**digitare **Vendite prodotto**come nome per l'origine dati.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66099036"
   
 13. Fare clic su **Avanti**.  
   
-##  <a name="Query"></a>2. creare una query in creazione guidata tabella  
+##  <a name="2-create-a-query-in-the-table-wizard"></a><a name="Query"></a>2. creare una query in creazione guidata tabella  
  In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
   
 > [!NOTE]  
@@ -107,9 +107,9 @@ ms.locfileid: "66099036"
   
 #### <a name="to-create-a-query"></a>Per creare una query  
   
-1.  Nella pagina **Progetta query** viene aperta la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
+1.  Nella pagina **Progetta query** si apre la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
   
-2.  Fare clic su **Modifica come testo**. Nella finestra Progettazione query basata su testo viene visualizzato il riquadro della query e il riquadro dei risultati.  
+2.  Fare clic su **modifica come testo**. Nella finestra Progettazione query basata su testo viene visualizzato il riquadro della query e il riquadro dei risultati.  
   
 3.  Nella casella [!INCLUDE[tsql](../includes/tsql-md.md)] Query **incollare la query** seguente.  
   
@@ -146,15 +146,15 @@ ms.locfileid: "66099036"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Sulla barra degli strumenti Progettazione query fare clic su Esegui (**!**).  
+4.  Sulla barra degli strumenti di Progettazione query fare clic su Esegui (**!**).  
   
-     Viene eseguita la query e viene visualizzato il set di risultati per i campi **SalesDate**, **SubCategory**, **Product**, **Sales**e **Quantity**.  
+     La query viene eseguita e viene visualizzato il set di risultati per il campi **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
 5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Disponi campi** trascinare **Sales** in **Valori**.  
   
-     Le **vendite** vengono aggregate dalla funzione Sum. Il valore è [Sum(Sales)].  
+     Il campo**Sales** viene aggregato mediante la funzione Sum. Il valore è [Sum(Sales)].  
   
 7.  Trascinare **Product** in **Gruppi di righe**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66099036"
   
 9. Fare clic su **Avanti**.  
   
-10. Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+10. Nella pagina **scegliere il layout** , in **Opzioni**, verificare che sia selezionata l'opzione **Mostra subtotali e totali** complessivi.  
   
      Nel riquadro di anteprima della creazione guidata verrà visualizzata una tabella con tre righe. Quando si esegue il report, ogni riga viene visualizzata nel seguente modo:  
   
@@ -186,7 +186,7 @@ ms.locfileid: "66099036"
   
 15. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Sparkline"></a>3. aggiungere un sparkline  
+##  <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. aggiungere un sparkline  
   
 #### <a name="to-add-a-sparkline-chart-to-a-table"></a>Per aggiungere un grafico sparkline a una tabella  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66099036"
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
-##  <a name="AlignSparklines"></a>4. allineare i grafici sparkline verticalmente e orizzontalmente  
+##  <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. allineare i grafici sparkline verticalmente e orizzontalmente  
  I grafici sparkline sono difficili da leggere quando non utilizzano tutte le stesse misurazioni. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Per impostare l'allineamento per i grafici sparkline nella tabella  
@@ -243,8 +243,8 @@ ms.locfileid: "66099036"
   
  Si noti che tutte le barre risultano ora allineate con le barre nelle altre righe.  
   
-##  <a name="FormatCurrency"></a>5. (facoltativo) formattare i dati come valuta  
- Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riportano un numero generico. È possibile formattare tale numero come valuta. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
+##  <a name="5-optional-format-data-as-currency"></a><a name="FormatCurrency"></a>5. (facoltativo) formattare i dati come valuta  
+ Per impostazione predefinita, i dati di riepilogo per il campo **Sales** visualizzano un numero generico. È possibile formattare tale numero come valuta. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
   
 #### <a name="to-format-a-currency-field"></a>Per formattare un campo di tipo valuta  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66099036"
   
  I valori di riepilogo per **Sales** vengono visualizzati come valuta.  
   
-##  <a name="FormatDates"></a>6. (facoltativo) formattare i dati come date  
+##  <a name="6-optional-format-data-as-dates"></a><a name="FormatDates"></a>6. (facoltativo) formattare i dati come date  
  Per impostazione predefinita, il campo **SalesDate** Visualizza le informazioni su data e ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>Per formattare un campo relativo alla data utilizzando il formato predefinito  
@@ -271,13 +271,13 @@ ms.locfileid: "66099036"
   
 3.  Sulla barra multifunzione, nella scheda **Home** , nel gruppo **numero** , selezionare **Data**nell'elenco a discesa.  
   
-     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
+     Nella cella viene visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
  I valori **SalesDate** vengono visualizzati nel formato di data predefinito.  
   
-##  <a name="Width"></a>7. (facoltativo) modificare la larghezza delle colonne  
+##  <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (facoltativo) modificare la larghezza delle colonne  
  Per impostazione predefinita, in ogni cella della tabella è contenuta una casella di testo. Una casella di testo si espande verso il basso per adattarsi al testo digitato quando la pagina viene sottoposta al rendering. Nel report visualizzabile, ogni riga si espande fino all'altezza della casella di testo visualizzabile più alta nella riga. L'altezza della riga nell'area di progettazione non ha alcun effetto sull'altezza della riga nel report visualizzabile.  
   
  Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larghezza della colonna per adattare su un'unica riga il contenuto previsto delle caselle di testo nella colonna.  
@@ -294,7 +294,7 @@ ms.locfileid: "66099036"
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Title"></a>8. (facoltativo) aggiungere un titolo al report  
+##  <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (facoltativo) aggiungere un titolo al report  
  Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
  Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -317,12 +317,12 @@ ms.locfileid: "66099036"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>9. salvare il report  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. salvare il report  
  Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Siti e server recenti**.  
   
@@ -332,24 +332,24 @@ ms.locfileid: "66099036"
   
 4.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
   
-5.  Fare clic su **Salva**.  
+5.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
   
 3.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

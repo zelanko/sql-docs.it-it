@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098164"
 ---
 # <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>Metodo RemoveURL (MSReportServer_ConfigurationSetting WMI)
@@ -42,7 +42,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL per la prenotazione.  
   
- *LCID*  
+ *lcid*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
  *Error (Errore) (Error (Errore)e)*  
@@ -55,7 +55,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
 ## <a name="remarks"></a>Osservazioni  
- *UrlString* non include il nome della directory virtuale. a tale scopo, viene fornito il [metodo SETVIRTUALDIRECTORY &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-setvirtualdirectory.md) metodo.  
+ *UrlString* non include il nome della directory virtuale. A tale scopo è disponibile il [metodo SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-setvirtualdirectory.md).  
   
  Prima di chiamare il metodo [ReserveURL](configurationsetting-method-reserveurl.md) , è necessario specificare un valore per la proprietà di configurazione VirtualDirectory relativa al parametro *Applicazione* . Usare il [Metodo SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-setvirtualdirectory.md) per impostare la proprietà VirtualDirectory.  
   
@@ -64,7 +64,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Tramite questo metodo tutti i domini di applicazione non relativi alla configurazione eseguono un riciclo pesante e si arrestano durante questa operazione; una volta completata l'operazione, i domini di applicazione vengono riavviati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

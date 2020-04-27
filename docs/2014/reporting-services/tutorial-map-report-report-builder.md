@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098857"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
@@ -26,7 +26,7 @@ ms.locfileid: "66098857"
   
  In questa esercitazione verrà compilato un report mappa in cui sono visualizzate le posizioni di alcuni negozi nelle regioni dello stato di New York.  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 1.  [Creare una mappa con un livello poligono dalla Creazione guidata mappa](#Map)  
@@ -69,7 +69,7 @@ ms.locfileid: "66098857"
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Map"></a>1. creare una mappa con un livello poligono dalla creazione guidata mappa  
+##  <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1. creare una mappa con un livello poligono dalla creazione guidata mappa  
  Aggiungere una mappa al report dalla raccolta mappe. La mappa dispone di un livello in cui sono visualizzate le regioni dello stato di New York. La forma di ogni regione è data da un poligono basato su dati spaziali incorporati nella mappa dalla raccolta mappe.  
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Per aggiungere una mappa con l'apposita creazione guidata in un nuovo report  
@@ -85,7 +85,7 @@ ms.locfileid: "66098857"
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata mappa**.  
   
-4.  Fare clic su **Crea**.  
+4.  Scegliere **Crea**.  
   
 5.  **Scegliere un'origine dati spaziali** pagina verificare che sia selezionata l'opzione **raccolta mappe** .  
   
@@ -138,7 +138,7 @@ ms.locfileid: "66098857"
   
  La legenda della mappa e la scala dei colori non sono ancora visibili perché alle regioni non sono associati dati analitici. I dati analitici verranno aggiunti in seguito in questa esercitazione.  
   
-##  <a name="PointLayer"></a>2. aggiungere un livello punto mappa per visualizzare le posizioni dei negozi  
+##  <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2. aggiungere un livello punto mappa per visualizzare le posizioni dei negozi  
  Utilizzare la Creazione guidata livello mappa per aggiungere un livello punto in cui vengono visualizzate le posizioni dei negozi.  
   
 > [!NOTE]  
@@ -148,7 +148,7 @@ ms.locfileid: "66098857"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti fare clic sul pulsante **creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti fare clic sul pulsante **Creazione guidata nuovo livello**![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server**e fare clic su **Avanti**.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "66098857"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
+9. Sulla barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
   
      Il set di risultati comprende sette colonne: StoreKey, StoreName, SellingArea, City, County, Sales e SpatialLocation. Questi dati rappresentano un set di punti vendita nello Stato di New York che vendono beni di consumo. Ogni riga del set di risultati contiene un identificatore del negozio, il nome del negozio, l'area disponibile per l'esposizione dei prodotti, la città e la regione in cui si trova il negozio, il totale vendite e la posizione indicata con longitudine e latitudine. L'area di visualizzazione varia da 455 piedi quadrati a 1125 piedi quadrati.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "66098857"
   
  Sulla mappa vengono visualizzate le posizioni dei negozi nello Stato di New York. Il tipo di marcatore per ogni negozio è basato sull'area di visualizzazione. Cinque intervalli dell'area di visualizzazione sono stati calcolati automaticamente.  
   
-##  <a name="LineLayer"></a>3. aggiungere un livello linea mappa per visualizzare una route  
+##  <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3. aggiungere un livello linea mappa per visualizzare una route  
  Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in cui venga visualizzata un itinerario tra due negozi. In questa esercitazione il percorso viene creato da tre posizioni di negozi. In un'applicazione aziendale il percorso potrebbe essere l'itinerario migliore tra negozi.  
   
 #### <a name="to-add-a-line-layer-to-map"></a>Per aggiungere un livello linea a una mappa  
@@ -283,7 +283,7 @@ ms.locfileid: "66098857"
   
  Nella mappa viene visualizzato un nuovo livello linea con il tipo di origine dati spaziali **DataSet**. In questo esempio i dati spaziali provengono da un set di dati, tuttavia nessun dato analitico è associato alla riga.  
   
-##  <a name="TileLayer"></a>4. aggiungere uno sfondo a tessere mappa di Bing  
+##  <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4. aggiungere uno sfondo a tessere mappa di Bing  
  Aggiungere un livello mappa in cui sia visualizzato uno sfondo a tessere mappa di Bing.  
   
 #### <a name="to-add-a-virtual-earth-tile-background"></a>Per aggiungere uno sfondo a sezioni Virtual Earth  
@@ -305,7 +305,7 @@ ms.locfileid: "66098857"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Transparent"></a>5. rendere trasparente un livello  
+##  <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5. rendere trasparente un livello  
  Per rendere visibili gli elementi su un livello attraverso un altro, è possibile regolare l'ordine dei livelli e la trasparenza di ogni livello fino a ottenere l'effetto desiderato.  
   
 #### <a name="to-set-the-transparency-of-a-layer"></a>Per impostare la trasparenza di un livello  
@@ -316,7 +316,7 @@ ms.locfileid: "66098857"
   
 3.  Fare clic sulla freccia in giù in PolygonLayer1, quindi su **dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
-4.  Fare clic su **visibilità**.  
+4.  Fare clic su **Visibilità**.  
   
 5.  In **trasparenza (%)** Digitare **30**.  
   
@@ -324,12 +324,12 @@ ms.locfileid: "66098857"
   
  L'area di progettazione visualizza le regioni in modo semitrasparente.  
   
-##  <a name="Vary"></a>6. variare il colore della regione in base alle vendite  
+##  <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. variare il colore della regione in base alle vendite  
  Ogni regione del livello poligono dispone di un colore diverso perché l'elaboratore di report assegna automaticamente un valore di colore dall'apposita tavolozza in base al tema scelto nell'ultima pagina della creazione guidata mappa.  
   
  Nei passaggi seguenti specificare una regola colore per associare colori specifici a un intervallo di vendite di negozi per ogni regione. I colori rosso-giallo-verde indicano vendite elevate-medie-basse. Formattare la scala dei colori per mostrare la valuta. Visualizzare gli intervalli di vendite annuali in una nuova legenda. Per le regioni in cui non sono presenti negozi, non utilizzare alcun colore per mostrare che non ci sono dati associati.  
   
-###  <a name="Relationship"></a>6a. Compilare una relazione tra dati spaziali e dati analitici  
+###  <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. Compilare una relazione tra dati spaziali e dati analitici  
  Per variare le forme delle regioni per colore in base ai dati analitici, è innanzitutto necessario associare i dati analitici a quelli spaziali. In questa esercitazione verrà utilizzato il nome della regione su cui basare la corrispondenza.  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>Per compilare una relazione tra i dati spaziali e i dati analitici  
@@ -358,7 +358,7 @@ ms.locfileid: "66098857"
   
  Ogni regione che contiene un negozio è caratterizzata da un colore basato sulla tavolozza dei colori per lo stile scelto nella procedura guidata.  
   
-###  <a name="ColorRules"></a>6B. Specificare le regole colori per i poligoni  
+###  <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6B. Specificare le regole colori per i poligoni  
  Per creare una regola per variare il colore di ogni regione in base alle vendite dei negozi, è necessario specificare i valori di intervallo, il numero di divisioni all'interno dell'intervallo che si desidera visualizzare e i colori da utilizzare.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Per specificare le regole colori per tutti i poligoni a cui sono associati dati  
@@ -377,7 +377,7 @@ ms.locfileid: "66098857"
   
 7.  Impostare **Colore finale** su **Verde**.  
   
-     Il **rosso** rappresenta i valori di vendita Bassi, il **giallo** rappresenta i valori delle vendite medie e il **verde** rappresenta valori di vendite elevati. L'elaboratore di report calcola un intervallo di colori in base a questi valori e alle opzioni scelte nella pagina **Distribuzione** .  
+     **Rosso** rappresenta valori di vendite bassi, **Giallo** rappresenta valori di vendite medi e **Verde** rappresenta valori di vendite elevati. L'elaboratore di report calcola un intervallo di colori in base a questi valori e alle opzioni scelte nella pagina **Distribuzione** .  
   
 8.  Fare clic su **Distribuzione**.  
   
@@ -395,7 +395,7 @@ ms.locfileid: "66098857"
   
  La scala dei colori visualizza cinque colori: rosso, arancione, giallo, verde bottiglia chiaro e verde. Ogni colore rappresenta un intervallo di vendite che viene calcolato automaticamente in base alle vendite di ogni regione.  
   
-###  <a name="ColorScale"></a>6C. Formattare i dati nella scala dei colori come valuta  
+###  <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6C. Formattare i dati nella scala dei colori come valuta  
  Per impostazione predefinita, i dati presentano un formato generale. È possibile applicare formati personalizzati.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Per impostare il formato per la scala dei colori  
@@ -414,7 +414,7 @@ ms.locfileid: "66098857"
   
  La scala dei colori visualizza le vendite annuali nel formato della valuta per ogni intervallo.  
   
-###  <a name="NewLegend"></a>6D. Creare una nuova legenda  
+###  <a name="6d-create-a-new-legend"></a><a name="NewLegend"></a>6D. Creare una nuova legenda  
  Per impostazione predefinita, tutte le regole vengono visualizzate nella prima legenda. Per migliorare la visualizzazione per una mappa, è possibile aggiungere legende.  
   
  Per modificare la visualizzazione predefinita, è possibile eseguire due passaggi: creare una nuova legenda e quindi associare i risultati della regola per un livello mappa alla nuova legenda.  
@@ -437,7 +437,7 @@ ms.locfileid: "66098857"
   
  La legenda si espande per visualizzare il titolo.  
   
-###  <a name="Associate"></a>6e. Associare la legenda e le regole colori  
+###  <a name="6e-associate-legend-and-color-rules"></a><a name="Associate"></a>6e. Associare la legenda e le regole colori  
  Ogni legenda può visualizzare uno o più set di risultati della regola.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>Per associare una legenda alle regole colori  
@@ -462,7 +462,7 @@ ms.locfileid: "66098857"
   
  Le regioni a cui sono associati negozi e vendite vengono visualizzate in base alle regole colori. Le regioni a cui non sono associate vendite non presentano colori.  
   
-###  <a name="NoData"></a>6F. Modificare il colore per le regioni prive di dati  
+###  <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6F. Modificare il colore per le regioni prive di dati  
  È possibile impostare le opzioni di visualizzazione predefinite per tutti gli elementi della mappa su un livello. Le regole colori hanno la precedenza su queste opzioni di visualizzazione.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Per impostare le proprietà di visualizzazione per tutti gli elementi su un livello  
@@ -485,7 +485,7 @@ ms.locfileid: "66098857"
   
  Le regioni a cui non sono associati dati vengono visualizzate in blu. Solo le contee a cui sono associati dati analitici vengono visualizzate in **rosso** tramite colori **verdi** dalle regole colori specificate.  
   
-##  <a name="CustomPoint"></a>7. aggiungere un punto personalizzato  
+##  <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7. aggiungere un punto personalizzato  
  Per rappresentare un nuovo negozio che non è ancora stato compilato, specificare un punto e usare il tipo di marcatore **puntina da disegno** .  
   
 #### <a name="to-add-a-custom-point"></a>Per aggiungere un punto personalizzato  
@@ -534,7 +534,7 @@ ms.locfileid: "66098857"
   
  L'etichetta viene visualizzata sopra la posizione del negozio.  
   
-##  <a name="CenterView"></a>Centrare la visualizzazione mappa  
+##  <a name="center-the-map-view"></a><a name="CenterView"></a>Centrare la visualizzazione mappa  
  Modificare livello di allineamento al centro e zoom del viewport mappa.  
   
 #### <a name="to-change-the-viewport"></a>Per modificare il viewport  
@@ -555,7 +555,7 @@ ms.locfileid: "66098857"
   
  Nella visualizzazione della struttura la mappa nell'area di visualizzazione e la visualizzazione sono basate su dati di esempio. Nel report visualizzabile, la vista mappa è allineata al centro della vista specificata.  
   
-##  <a name="Title"></a>Aggiungere un titolo al report  
+##  <a name="add-a-report-title"></a><a name="Title"></a>Aggiungere un titolo al report  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
@@ -565,17 +565,17 @@ ms.locfileid: "66098857"
   
  Il titolo verrà visualizzato nella parte superiore del report. Quando non è definita un'intestazione di pagina, gli elementi nella parte superiore del corpo del report equivalgono a un'intestazione di report.  
   
-##  <a name="Save"></a>Salva il report  
+##  <a name="save-the-report"></a><a name="Save"></a>Salva il report  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Dal pulsante Generatore report fare clic su **Salva con nome**.  
+2.  Fare clic sul pulsante Generatore report , quindi su **Salva con nome**.  
   
 3.  In **Nome**digitare **Punti vendita di New York - vendite**.  
   
- Fare clic su **Salva**.  
+ Fare clic su **Save**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa operazione conclude la procedura dettagliata per l'aggiunta di una mappa al report.  
@@ -584,7 +584,7 @@ ms.locfileid: "66098857"
   
  Per altre esercitazioni, vedere [esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
  [Creazione guidata mappa e creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   

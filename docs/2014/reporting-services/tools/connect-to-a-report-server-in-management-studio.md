@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100435"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornisce Esplora oggetti, che consente di connettersi a qualsiasi server del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gruppo e di visualizzarne graficamente il contenuto. Per Reporting Services, è possibile utilizzare Esplora oggetti per effettuare le operazioni seguenti:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornisce Esplora oggetti, che consente di connettersi a qualsiasi server della famiglia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di visualizzarne graficamente il contenuto. Per Reporting Services, è possibile utilizzare Esplora oggetti per effettuare le operazioni seguenti:  
   
 -   Abilitare le funzionalità del server di report.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66100435"
   
 2.  Fare clic **Connetti** su per visualizzare l'elenco dei tipi di server, quindi selezionare **Reporting Services**.  
   
-3.  Nella finestra di dialogo **Connetti al server** immettere il nome dell'istanza del server di report. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è stato installato come istanza denominata, utilizzare questa sintassi per specificare il server: * \<ServerName>\\ [<\>nomeistanza]*.  
+3.  Nella finestra di dialogo **Connetti al server** immettere il nome dell'istanza del server di report. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<nomeserver>[\\<nomeistanza\>]* .  
   
 4.  Selezionare il tipo di autenticazione. Se si utilizza l'autenticazione di Windows, connettersi utilizzando le proprie credenziali. Se è stata selezionata l'autenticazione di base o quella basata su form, digitare l'account e la password.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100435"
   
 4.  In **Nome server**immettere un valore. Il valore da specificare varierà in base alla modalità del server:  
   
-    -   Per un server di report in modalità nativa, digitare il nome dell'istanza relativa. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è stato installato come istanza denominata, utilizzare questa sintassi per specificare il server: * \<ServerName>\\ [<\>nomeistanza]*.  
+    -   Per un server di report in modalità nativa, digitare il nome dell'istanza relativa. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<nomeserver>[\\<nomeistanza\>]* .  
   
     -   Per un server di report eseguito in modalità integrata SharePoint, il server cui connettersi è il sito di SharePoint cui il server di report è connesso. La connessione al sito di SharePoint è necessaria perché in questo modo è possibile visualizzare i livelli di autorizzazione che controllano l'accesso al contenuto e alle operazioni del server di report. È possibile specificare qualsiasi sito nella raccolta siti. Nell'esempio seguente viene illustrata la sintassi: http://mysharepointsite.  
   
@@ -102,14 +102,12 @@ ms.locfileid: "66100435"
   
 |Server di report di connessione|Attività|Autorizzazioni|  
 |----------------|-----------|-----------------|  
-|Server di report in modalità nativa, connesso come l'istanza predefinita o denominata:<br /><br /> 
-  \<nome server>\<_istanza><br /><br /> La connessione al server di report viene eseguita mediante il provider WMI del server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  
+|Server di report in modalità nativa, connesso come l'istanza predefinita o denominata:<br /><br /> \<nome server>\<_istanza><br /><br /> La connessione al server di report viene eseguita mediante il provider WMI del server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  
 |Server di report in modalità nativa, connesso come l'istanza predefinita o denominata tramite l'endpoint al servizio Web ReportServer:<br /><br /> http://\<nomeserver>/ReportServer<br /><br /> La specifica di un URL per server di report fornisce una modalità alternativa per connettersi al server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  
 |Server di report in modalità integrata SharePoint, connesso mediante il sito di SharePoint:<br /><br /> http://\<webserver>/\<SitoSharePoint>|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise definite per il sito cui si è connessi.<br /><br /> Visualizzazione dei livelli di autorizzazione definiti per il sito cui si è connessi.|Livello di autorizzazione Controllo completo sul sito di SharePoint cui si è connessi.|  
-|Server di report in modalità integrata SharePoint, connesso mediante il nome dell'istanza del server di report:<br /><br /> 
-  \<nome server>\<_istanza>|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.|Livello di autorizzazione Controllo completo sul sito di SharePoint integrato con il server di report.<br /><br /> Si noti che quando si esegue la connessione al server di report anziché al sito di SharePoint, il numero di attività che è possibile eseguire si riduce in modo significativo. Questa situazione si verifica perché il server di report può restituire solo dati dell'applicazione archiviati o gestiti nel database del server di report e non nella configurazione di SharePoint e in database del contenuto.|  
+|Server di report in modalità integrata SharePoint, connesso mediante il nome dell'istanza del server di report:<br /><br /> \<nome server>\<_istanza>|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.|Livello di autorizzazione Controllo completo sul sito di SharePoint integrato con il server di report.<br /><br /> Si noti che quando si esegue la connessione al server di report anziché al sito di SharePoint, il numero di attività che è possibile eseguire si riduce in modo significativo. Questa situazione si verifica perché il server di report può restituire solo dati dell'applicazione archiviati o gestiti nel database del server di report e non nella configurazione di SharePoint e in database del contenuto.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   

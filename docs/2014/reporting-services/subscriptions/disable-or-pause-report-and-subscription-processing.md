@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100919"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Sospendere l'elaborazione del report e della sottoscrizione
@@ -46,9 +46,9 @@ ms.locfileid: "66100919"
 ## <a name="pause-a-shared-schedule"></a>Sospensione di una pianificazione condivisa  
  Se una sottoscrizione o un report viene eseguito in base a una pianificazione condivisa, è possibile sospendere la pianificazione per impedire l'elaborazione del report o della sottoscrizione. Tutte le operazioni di elaborazione del report o della sottoscrizione eseguite in base alla pianificazione verranno posticipate fino a quando verrà ripresa la pianificazione. Per altre informazioni, vedere [sospendere e riprendere le pianificazioni condivise](schedules.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Reporting Services &#40;modalità nativa del server di report&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Pagina delle proprietà sicurezza, elementi &#40;Gestione report&#41;](../security-properties-page-items-report-manager.md)  
+ [Pagina delle proprietà sicurezza, Elementi &#40;Gestione report&#41;](../security-properties-page-items-report-manager.md)  
   
   

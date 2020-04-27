@@ -18,28 +18,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103535"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>Dimensioni massime per i modelli e i report pubblicati  
- Nel server di report le dimensioni dei report e dei modelli sono basate sulle dimensioni dei file di definizione del report, con estensione rdl, e del modello di report, con estensione smdl, pubblicati in un server di report. Tramite il server di report non vengono poste limitazioni alle dimensioni di un report o di un modello pubblicato. Tuttavia, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impone una dimensione massima per gli elementi inviati al server. Per impostazione predefinita, questo limite è di 4 MB. Se si carica o si pubblica in un server di report un file le cui dimensioni superano questo limite, viene generata un'eccezione HTTP. In questo caso, è possibile modificare l'impostazione predefinita aumentando il valore dell'elemento `maxRequestLength` nel file Machine.config.  
+ Nel server di report le dimensioni dei report e dei modelli sono basate sulle dimensioni dei file di definizione del report, con estensione rdl, e del modello di report, con estensione smdl, pubblicati in un server di report. Tramite il server di report non vengono poste limitazioni alle dimensioni di un report o di un modello pubblicato. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede comunque una dimensione massima per gli elementi inviati al server. Per impostazione predefinita, questo limite è di 4 MB. Se si carica o si pubblica in un server di report un file le cui dimensioni superano questo limite, viene generata un'eccezione HTTP. In questo caso, è possibile modificare l'impostazione predefinita aumentando il valore dell'elemento `maxRequestLength` nel file Machine.config.  
   
  Sebbene un modello di report possa avere dimensioni molto grandi, le definizioni dei report non superano quasi mai i 4 MB. In genere, un report ha dimensioni di alcuni kilobyte (KB). Se tuttavia sono presenti immagini incorporate, la codifica di tali immagini può determinare un aumento considerevole delle dimensioni della definizione del report e, di conseguenza, il superamento del limite predefinito di 4 MB.  
   
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede un limite massimo per i file inviati al fine di ridurre i rischi di attacchi Denial of Service contro il server. Aumentando il valore, vengono ridotte le capacità di sicurezza garantite da questa limitazione. È pertanto consigliabile aumentarlo solo se i vantaggi che questa modifica comporta bilanciano i maggiori rischi a cui viene esposto il sistema di sicurezza.  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede un limite massimo per i file inviati al fine di ridurre i rischi di attacchi Denial of Service contro il server. Aumentando il valore, vengono ridotte le capacità di sicurezza garantite da questa limitazione. È pertanto consigliabile aumentarlo solo se i vantaggi che questa modifica comporta bilanciano i maggiori rischi a cui viene esposto il sistema di sicurezza.  
   
  Si tenga presente che il valore impostato per l'elemento `maxRequestLength` deve essere maggiore dei limiti effettivi delle dimensioni che si desidera applicare. È necessario un valore più grande per tener conto dell'inevitabile aumento delle dimensioni della richiesta HTTP che si verifica dopo che tutti i parametri vengono incapsulati in una busta SOAP e a determinati parametri come quello relativo alla dimensione nei metodi <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> e <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> viene applicata la codifica Base64. Con la codifica Base64 le dimensioni dei dati originali vengono aumentate di circa il 33%. Di conseguenza, il valore specificato per l'elemento `maxRequestLength` deve essere di circa il 33% maggiore delle dimensioni effettive dell'elemento utilizzabile. Ad esempio, se si specifica un valore pari a 64 MB per `maxRequestLength`, è possibile prevedere realisticamente che le dimensioni massime dei file di report inviati al server di report saranno di circa 48 MB.  
   
 ## <a name="report-size-in-memory"></a>Dimensioni dei report in memoria  
- Quando si esegue un report, le dimensioni di quest'ultimo corrispondono alla quantità di dati restituiti nel report più le dimensioni del flusso di output. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è previsto un limite massimo per le dimensioni di un report visualizzabile. La memoria del sistema determina il limite superiore per le dimensioni (per impostazione predefinita, in caso di esecuzione il rendering di un report un server di report utilizza tutta la memoria configurata disponibile), ma è possibile specificare impostazioni di configurazione per impostare soglie di memoria e criteri della gestione della memoria. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md).  
+ Quando si esegue un report, le dimensioni di quest'ultimo corrispondono alla quantità di dati restituiti nel report più le dimensioni del flusso di output. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è previsto un limite massimo per le dimensioni di un report visualizzabile. La memoria del sistema determina il limite superiore per le dimensioni (per impostazione predefinita, in caso di esecuzione il rendering di un report un server di report utilizza tutta la memoria configurata disponibile), ma è possibile specificare impostazioni di configurazione per impostare soglie di memoria e criteri della gestione della memoria. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md).  
   
  Le dimensioni di qualsiasi report possono variare significativamente in base alla quantità di dati restituiti e al formato di rendering utilizzato. Le dimensioni di un report con parametri possono variare in base a come i valori dei parametri influiscono sui risultati della query. Il formato di output scelto per il report influisce sulle dimensioni del report in base a quanto indicato di seguito:  
   
@@ -81,8 +79,8 @@ EXEC sp_spaceused
   
  La quantità di snapshot archiviati in un database del server di report non è un fattore che influisce sulle prestazioni. È possibile archiviare un numero elevato di snapshot senza influenzare le prestazioni del server, nonché mantenere gli snapshot per un periodo illimitato. Tenere tuttavia presente che la cronologia del report può essere modificata. Se un amministratore del server di report riduce il limite per la cronologia del report, si potrebbero perdere snapshot presenti nella cronologia che si desiderava mantenere. Se si elimina il report, viene eliminata anche tutta la relativa cronologia.  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Impostare le proprietà di elaborazione dei report](set-report-processing-properties.md)   
  [Database del server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Elaborare report di grandi dimensioni](process-large-reports.md)  
   

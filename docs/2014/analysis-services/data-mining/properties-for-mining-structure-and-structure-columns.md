@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083054"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
@@ -42,14 +42,14 @@ ms.locfileid: "66083054"
 |**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training.<br /><br /> Nota: questa proprietà deve essere impostata su `KeepTrainingCases` per abilitare il drill-through e il set di supporti.|  
 |**Regole di confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
 |**Descrizione**|Descrive la struttura di data mining. È consigliabile che nella descrizione vengano specificati lo scopo e la composizione dei dati nella struttura.|  
-|**ErrorConfiguration (impostazione predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
+|**ErrorConfiguration (predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
 |**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
 |**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
 |**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
 |**ID**|Consente di visualizzare l'identificatore univoco della struttura di data mining.<br /><br /> Il nome assegnato alla struttura di data mining quando è stata creata viene utilizzato come ID. Se successivamente si modifica il nome digitando un nuovo valore per la proprietà `Name`, il nuovo nome viene utilizzato solo come alias. L'ID non viene modificato.|  
 |**Lingua**|Specifica la lingua delle didascalie della struttura di data mining.|  
 |`Name`|Specifica il nome o l'alias della struttura di data mining.<br /><br /> Se si modifica il valore della proprietà Name, il nuovo nome viene utilizzato solo come didascalia o alias. L'identificatore della struttura di data mining non viene modificato.|  
-|**Origine**|Visualizza il nome dell'origine dati e il tipo di origine dati.|  
+|**origine**|Visualizza il nome dell'origine dati e il tipo di origine dati.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Proprietà delle colonne della struttura di data mining  
   
@@ -67,13 +67,13 @@ ms.locfileid: "66083054"
 |**ModelingFlags**|Imposta parametri aggiuntivi disponibili tramite l'algoritmo.|  
 |`Name`|Nome della colonna.|  
 |**NameColumn**|Identifica la colonna che fornisce il nome dell'elemento padre.|  
-|**Origine**|Visualizza l'origine della colonna.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
+|**origine**|Visualizza l'origine della colonna.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
 |**SourceMeasureGroup**|Visualizza l'origine del gruppo di misure.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
-|**Tipo**|Tipo di dati del contenuto della colonna.|  
+|**Type**|Tipo di dati del contenuto della colonna.|  
   
  Per altre informazioni sull'impostazione o sulla modifica delle proprietà, vedere [attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare una struttura di data mining relazionale](create-a-relational-mining-structure.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  
   

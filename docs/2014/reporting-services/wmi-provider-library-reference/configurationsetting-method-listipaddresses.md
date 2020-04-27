@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098316"
 ---
 # <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>Metodo ListIPAddresses (MSReportServer_ConfigurationSetting WMI)
@@ -37,16 +37,16 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *IPAddress []*  
+ *IPAddress[]*  
  [out] Elenco degli indirizzi IP per il computer.  
   
  *IPVersion[]*  
  [out] Versione degli indirizzi IP.  
   
- *IsDhcpEnabled []*  
+ *IsDhcpEnabled[]*  
  [out] Indica se gli indirizzi IP sono abilitati a DHCP.  
   
- *Length*  
+ *Lunghezza*  
  [out] Lunghezza della matrice restituita dal metodo.  
   
  *HRESULT*  
@@ -56,12 +56,12 @@ public void ListIPAddresses (out string[] IPAddress,
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
 ## <a name="remarks"></a>Osservazioni  
- Le stringhe *IpVersion* sono V4, V6.  
+ Le stringhe*IPVersion* sono V4, V6.  
   
  Se *IsDhcpEnabled* è `True`, *IPAddress* è dinamico. Non deve essere utilizzato per le associazioni SSL.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099053"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
@@ -26,7 +26,7 @@ ms.locfileid: "66099053"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le procedure per:  
   
 1.  [Creare un grafico a torta da Creazione guidata grafico](#Chart)  
@@ -51,7 +51,7 @@ ms.locfileid: "66099053"
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. creare un grafico a torta da Creazione guidata grafico  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. creare un grafico a torta da Creazione guidata grafico  
  Dalla finestra di dialogo Riquadro attività iniziale utilizzare la Creazione guidata grafico per creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un grafico a torta.  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ ms.locfileid: "66099053"
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **scegliere un set di dati** fare clic su **Crea un set di dati**, quindi fare clic su **Avanti**.  
+4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**e fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "66099053"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati su cui si baserà il grafico.  
   
 9. Fare clic su **Avanti**.  
   
-##  <a name="ChartType"></a>2. scegliere il tipo di grafico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. scegliere il tipo di grafico  
  È possibile scegliere tra diversi tipi di grafico predefiniti.  
   
 #### <a name="to-add-a-pie-chart"></a>Per aggiungere un grafico a torta  
@@ -123,7 +123,7 @@ ms.locfileid: "66099053"
   
  Nel report viene visualizzato il grafico a torta con otto sezioni, una per ogni prodotto. Le dimensioni di ogni sezione rappresentano le vendite per quel prodotto. Tre delle sezioni sono piuttosto sottili.  
   
-##  <a name="Percentages"></a>3. visualizzare le percentuali in ogni sezione  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. visualizzare le percentuali in ogni sezione  
  Su ogni sezione della torta, è possibile visualizzare una percentuale per questa sezione rispetto alla torta intera.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>Per visualizzare le percentuali in ogni sezione del grafico a torta  
@@ -141,7 +141,7 @@ ms.locfileid: "66099053"
 5.  Opzionale Per specificare il numero di cifre decimali visualizzate nell' `#PERCENT{Pn}` etichetta, digitare dove *n* è il numero di posizioni decimali da visualizzare. Ad esempio, per non visualizzare posizioni decimali `#PERCENT{P0}`, digitare.  
   
     > [!NOTE]  
-    >  Il **formato numerico** nella finestra di dialogo **Proprietà etichetta serie** non ha effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
+    >  L'impostazione di**Formato numeri** nella finestra di dialogo **Proprietà etichetta serie** non produrrà alcun effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66099053"
   
  Nel report viene visualizzata la percentuale rispetto all'intero per ogni sezione del grafico a torta.  
   
-##  <a name="CombineSlices"></a>4. combinare le piccole sezioni in un'unica sezione  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. combinare le piccole sezioni in un'unica sezione  
  Tre delle sezioni della torta sono piuttosto sottili. È possibile combinare più sezioni piccole in un'unica sezione più grande che le rappresenta tutte.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>Per combinare le sezioni del grafico a torta inferiori al 5% in un'unica sezione  
@@ -172,7 +172,7 @@ ms.locfileid: "66099053"
   
  Nella legenda, la categoria "Other" ora esiste. La nuova sezione del grafico a torta combina tutte le sezioni inferiori al 5% in una sezione che costituisce il 6% della torta intera.  
   
-##  <a name="DrawingEffect"></a>5. personalizzare l'effetto di disegno  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. personalizzare l'effetto di disegno  
  In Creazione guidata grafico, lo stile predefinito per un grafico a torta è Oceano che rappresenta un effetto concavo. Tale effetto può essere modificato dopo aver completato la procedura guidata.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>Per aggiungere un effetto di disegno al grafico a torta  
@@ -196,7 +196,7 @@ ms.locfileid: "66099053"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. aggiungere un titolo al report  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. aggiungere un titolo al report  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66099053"
   
 2.  Digitare **Vendite di fotocamere e di cineprese**, premere INVIO e quindi digitare **Come percentuale delle vendite totali**. Verrà visualizzato quanto segue:  
   
-     **Vendite di fotocamere e cineprese**  
+     **Vendite di fotocamere e di cineprese**  
   
      **Come percentuale delle vendite totali**  
   
@@ -218,24 +218,24 @@ ms.locfileid: "66099053"
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Save"></a>7. salvare il report  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. salvare il report  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Dal pulsante Generatore report fare clic su **Salva con nome**.  
+2.  Fare clic sul pulsante Generatore report , quindi su **Salva con nome**.  
   
 3.  In **Nome**digitare **Grafico a torta - Vendite**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a torta al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

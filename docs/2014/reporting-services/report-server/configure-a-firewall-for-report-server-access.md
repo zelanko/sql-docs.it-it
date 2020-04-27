@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104157"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
@@ -45,7 +45,7 @@ ms.locfileid: "66104157"
   
 3.  Fare clic su **Regole connessioni in entrata**.  
   
-4.  Fare clic su **nuova regola** nella finestra **azioni** **.**  
+4.  Fare clic su **Nuova regola** nella finestra **Azioni****.**  
   
 5.  Fare clic su **Tipo di regola** in **Porta**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66104157"
   
 9. Fare clic su **rete personale (subnet)**, quindi fare clic su **OK**.  
   
-10. Scegliere **OK** per chiudere la finestra di dialogo.  
+10. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
 11. Riavviare il computer.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66104157"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Creazione di un database del server di report &#40;Configuration Manager SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gestire un server di report in modalità nativa di Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   

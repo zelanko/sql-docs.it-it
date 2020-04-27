@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100875"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -40,8 +40,8 @@ ms.locfileid: "66100875"
   
 -   [Creare e gestire le pianificazioni condivise (modalità nativa)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a>Panoramica della gestione di pianificazioni condivise  
- Per gestire le pianificazioni condivise per la modalità nativa, utilizzare la pagina Pianificazioni in Gestione report o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per la modalità SharePoint, utilizzare le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+##  <a name="overview-of-managing-shared-schedules"></a><a name="bkmk_overview"></a>Panoramica della gestione di pianificazioni condivise  
+ Per gestire le pianificazioni condivise per la modalità nativa, utilizzare la pagina Pianificazioni in Gestione report o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per la modalità SharePoint, utilizzare le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  È possibile visualizzare tutte le pianificazioni condivise definite per il server di report, sospenderle e riprenderle (solo in Gestione report) e selezionare le pianificazioni da modificare o eliminare. Nella pagina Pianificazioni condivise, per ogni pianificazione è disponibile un riepilogo delle informazioni seguenti: frequenza, proprietario, data di scadenza e stato.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66100875"
   
 -   Visualizzazione della pagina Report di una determinata pianificazione condivisa. In questa pagina vengono elencati tutti i report e i set di dati condivisi che utilizzano la pianificazione condivisa.  
   
--   Visualizzazione dei file dei log di esecuzione o dei log di traccia del report per verificare se i report sono stati eseguiti negli orari specificati nella pianificazione. Per ulteriori informazioni, vedere [Reporting Services file di log e origini](../report-server/reporting-services-log-files-and-sources.md).  
+-   Visualizzazione dei file dei log di esecuzione o dei log di traccia del report per verificare se i report sono stati eseguiti negli orari specificati nella pianificazione. Per altre informazioni, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint"></a>Creare e gestire pianificazioni condivise (modalità SharePoint)  
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>Creare e gestire pianificazioni condivise (modalità SharePoint)  
  Una pianificazione condivisa rappresenta una pianificazione multifunzionale che fornisce informazioni di pianificazione pronte per l'utilizzo a qualsiasi numero di report o sottoscrizioni. È possibile creare una pianificazione condivisa una sola volta e quindi farvi riferimento in una pagina di sottoscrizione o delle proprietà quando sono necessarie informazioni di pianificazione. Le pianificazioni condivise possono essere gestite, sospese e riprese a livello centralizzato. Per evitare l'esecuzione di un report o una sottoscrizione, è invece necessario modificare manualmente una pianificazione personalizzata.  
   
  Per creare, modificare o eliminare pianificazioni condivise in un sito di SharePoint, è necessario essere un amministratore del sito.  
@@ -102,7 +102,7 @@ ms.locfileid: "66100875"
   
 4.  Selezionare la pianificazione e fare clic su **Elimina**.  
   
-##  <a name="bkmk_native"></a>Creare e gestire pianificazioni condivise (modalità nativa)  
+##  <a name="create-and-manage-shared-schedules-native-mode"></a><a name="bkmk_native"></a>Creare e gestire pianificazioni condivise (modalità nativa)  
  Le pianificazioni condivise devono essere eliminate manualmente utilizzando la pagina Pianificazioni in Gestione report o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Se si elimina una pianificazione condivisa in uso, tutti i riferimenti a essa verranno sostituiti con pianificazioni in base al report.  
   
  I report e le pianificazioni specifiche della sottoscrizione vengono eliminati quando si elimina il report o la sottoscrizione o quando si sceglie un approccio diverso per eseguire il report o la sottoscrizione. Se ad esempio si sceglie **Esegui sempre il report con i dati più recenti** , verrà eliminata una pianificazione in base al report creata per eseguire un report come snapshot dell'esecuzione del report stesso.  
@@ -140,7 +140,7 @@ ms.locfileid: "66100875"
   
 6.  Selezionare **Ora**, **Giorno**, **Settimana**o **Mese**. Fare clic su **Singola occorrenza** per creare una pianificazione eseguita una sola volta. Dopo aver specificato le impostazioni di base della pianificazione, verranno visualizzate ulteriori opzioni.  
   
-7.  Selezionare eventualmente la data di inizio della pianificazione. Il valore predefinito è il giorno corrente. È possibile posticipare la data di inizio della pianificazione scegliendo una data successiva.  
+7.  Selezionare eventualmente la data di inizio della pianificazione. L'impostazione predefinita è il giorno corrente. È possibile posticipare la data di inizio della pianificazione scegliendo una data successiva.  
   
 8.  Selezionare facoltativamente una data di fine della pianificazione. L'esecuzione della pianificazione verrà arrestata da tale data, ma la pianificazione non verrà eliminata.  
   
@@ -159,8 +159,7 @@ ms.locfileid: "66100875"
   
  Se si elimina una pianificazione condivisa utilizzata da più report e sottoscrizioni, nel server di report vengono create singole pianificazioni per ogni report e sottoscrizione da cui è stata utilizzata in precedenza la pianificazione condivisa. Ogni nuova pianificazione conterrà la data, l'ora e il criterio di occorrenza specificati nella pianificazione condivisa. Si noti che in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è disponibile una funzionalità di gestione centrale delle singole pianificazioni. Se si elimina una pianificazione condivisa, sarà necessario gestire le informazioni sulla pianificazione per ogni elemento singolo.  
   
- Se non si è certi se viene utilizzata una pianificazione condivisa, eliminarla in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] invece. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] sono disponibili le stesse funzionalità di gestione delle pianificazioni condivise di Gestione report, ma è presente inoltre una pagina Report aggiuntiva contenente il nome di ogni report in cui viene utilizzata la pianificazione.  
+ Se non si è certi se viene utilizzata una pianificazione condivisa, eliminarla in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] invece. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] sono disponibili le stesse funzionalità di gestione delle pianificazioni condivise di Gestione report, ma è presente inoltre una pagina Report aggiuntiva contenente il nome di ogni report in cui viene utilizzata la pianificazione.  
   
 ### <a name="create-delete-or-modify-a-shared-schedule-management-studio"></a>Creare, eliminare o modificare una pianificazione condivisa (Management Studio)  
  In una pianificazione condivisa sono contenute le informazioni sulla pianificazione e sull'occorrenza che possono essere utilizzate da qualsiasi numero di sottoscrizioni e report pubblicati in esecuzione in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se il numero di report e sottoscrizioni in esecuzione contemporaneamente è elevato, è possibile creare una pianificazione condivisa per tali processi. Se si desidera modificare successivamente il criterio di occorrenza o la data di fine, è possibile apportare la modifica in un unico punto.  
@@ -179,7 +178,7 @@ ms.locfileid: "66100875"
   
 4.  Digitare un nome descrittivo per la pianificazione.  
   
-5.  Selezionare eventualmente la data di inizio della pianificazione. Il valore predefinito è il giorno corrente.  
+5.  Selezionare eventualmente la data di inizio della pianificazione. L'impostazione predefinita è il giorno corrente.  
   
 6.  Selezionare eventualmente la data di fine della pianificazione. L'esecuzione della pianificazione verrà arrestata da tale data, ma la pianificazione non verrà eliminata.  
   

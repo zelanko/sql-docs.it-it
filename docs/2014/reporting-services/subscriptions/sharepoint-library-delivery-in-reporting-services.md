@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100701"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
   In un server di report configurato per l'integrazione con SharePoint è disponibile un'estensione per il recapito che è possibile utili per inviare un report a una raccolta di SharePoint.  
   
- Per usare l'estensione per il recapito di SharePoint, è necessario creare una sottoscrizione da una pagina dell'applicazione in un sito di SharePoint, quindi selezionare **Raccolta documenti di SharePoint** come tipo di recapito. Non è possibile utilizzare l'estensione per il recapito di SharePoint per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] le sottoscrizioni create in o Gestione report.  
+ Per usare l'estensione per il recapito di SharePoint, è necessario creare una sottoscrizione da una pagina dell'applicazione in un sito di SharePoint, quindi selezionare **Raccolta documenti di SharePoint** come tipo di recapito. Non è possibile usare l'estensione per il recapito di SharePoint per sottoscrizioni create in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o in Gestione report.  
   
 > [!NOTE]  
 >  L'estensione per il recapito non supporta l'invio di report a un sito di SharePoint se il server di report viene eseguito in modalità nativa. Se si tenta di chiamare l'estensione per il recapito a livello di programmazione per un server di report in modalità nativa, quest'ultimo restituirà l'errore `rsDeliveryExtensionNotFound` e registrerà l'errore `rsOperationNotSupportedSharePointMode` nei suoi file di log.  
@@ -85,7 +85,7 @@ ms.locfileid: "66100701"
  Se si utilizza la funzionalità di copia automatica per copiare automaticamente l'ultima versione di un file in più percorsi, il file verrà copiato se l'opzione **Sovrascrivi** è abilitata. Se è stato usato **AutoIncrement** o **None**, il recapito avrà esito negativo e si verificherà l' `rsDeliveryError` errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

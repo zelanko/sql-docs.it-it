@@ -28,14 +28,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100814"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esegue il monitoraggio dello stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
   
  È possibile gestire sia i *processi utente* sia i *processi di sistema*.  
   
@@ -58,18 +58,18 @@ ms.locfileid: "66100814"
 > [!NOTE]  
 >  Per annullare un processo, in rare circostanze potrebbe essere necessario riavviare il server. Per la modalità SharePoint, potrebbe essere necessario riavviare il pool di applicazioni in cui viene ospitata l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../report-server/start-and-stop-the-report-server-service.md).  
   
- Contenuto dell'argomento  
+ Contenuto dell'argomento:  
   
 -   [Visualizzare e annullare i processi (modalità nativa)](#bkmk_native)  
   
 -   [Visualizzare e annullare i processi (modalità SharePoint)](#bkmk_sharepoint)  
   
--   [Gestione dei processi a livello di programmazione](#bkmk_programmatically)  
+-   [Gestione di processi a livello di programmazione](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a>Visualizzare e annullare i processi (modalità nativa)  
- È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> Visualizzare e annullare i processi (modalità nativa)  
+ È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
   
- È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
+ È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
   
  Non è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per elencare o annullare la generazione o l'elaborazione di modelli o sottoscrizioni guidate dai dati. In Reporting Services non è possibile annullare la generazione o l'elaborazione di modelli. Per annullare sottoscrizioni guidate dai dati, è possibile tuttavia utilizzare le istruzioni fornite in questo argomento.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66100814"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configurazione delle impostazioni di frequenza per il recupero dello stato di un processo  
  Un processo in esecuzione viene archiviato nel database temporaneo del server di report. Per controllare la frequenza con la quale il server di report esegue l'analisi dei processi in corso e l'intervallo trascorso il quale lo stato di un processo cambia da nuovo a in esecuzione, è possibile modificare le impostazioni di configurazione nel file RSReportServer.config. L'impostazione `RunningRequestsDbCycle` consente di specificare la frequenza con la quale il server di report esegue l'analisi dei processi in esecuzione. Per impostazione predefinita, le informazioni sullo stato vengono registrate ogni 60 secondi. L'impostazione `RunningRequestsAge` consente di specificare l'intervallo dopo il quale un processo passa da nuovo a in esecuzione.  
   
-##  <a name="bkmk_sharepoint"></a>Visualizzare e annullare i processi (modalità SharePoint)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Visualizzare e annullare i processi (modalità SharePoint)  
  La gestione di processi in una distribuzione della modalità SharePoint viene completata utilizzando Amministrazione centrale SharePoint, per ogni applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>Per gestire i processi in modalità SharePoint  
@@ -109,19 +109,19 @@ ms.locfileid: "66100814"
   
 2.  Trovare e fare clic sul nome dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aprire la pagina di gestione dell'applicazione.  
   
-3.  Fare clic su **Gestisci processi**  
+3.  Fare clic su **Gestione di processi**.  
   
 4.  Fare clic su **ID processo** per visualizzare i dettagli del processo.  
   
 5.  In alternativa, fare clic sulla casella per il processo e scegliere **Elimina** per annullare il processo. L'eliminazione del processo non comporta l'eliminazione della sottoscrizione.  
   
-##  <a name="bkmk_programmatically"></a>Gestione dei processi a livello di programmazione  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> Gestione di processi a livello di programmazione  
  I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Annulla processi server di report &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [Proprietà processo &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
- [Modificare un file di configurazione di Reporting Services &#40;RSreportserver. config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Monitoraggio delle prestazioni del server di report](../report-server/monitoring-report-server-performance.md)  

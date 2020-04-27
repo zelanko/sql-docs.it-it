@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098736"
 ---
 # <a name="view-page-reports-report-manager"></a>Pagina Visualizza, Report (Gestione report)
   La pagina Visualizza per i report consente di visualizzare un report. La prima volta che si apre un report in Gestione report, questo viene visualizzato in formato HTML. I report HTML includono una barra degli strumenti dei report visualizzata nella parte superiore del report, che consente di spostarsi tra le pagine del report, eseguire ricerche all'interno di un report oppure esportarlo in un diverso formato. Nella figura seguente viene illustrata la barra degli strumenti dei report.  
   
- ![Barra degli strumenti report](media/htmlviewer-toolbar.gif "Barra degli strumenti dei report")  
+ ![Barra degli strumenti dei report](media/htmlviewer-toolbar.gif "Barra degli strumenti dei report")  
 Barra degli strumenti dei report  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]è possibile configurare i report per l'esecuzione su richiesta o da uno snapshot dell'esecuzione del report. Se un report viene eseguito su richiesta, tutte le operazioni di elaborazione dei dati e del report vengono eseguite ogni volta che il report viene aperto. Se si visualizza un report configurato per l'esecuzione come snapshot dell'esecuzione del report, l'elaborazione dei dati avviene alla creazione del report.  
@@ -37,7 +37,7 @@ Barra degli strumenti dei report
 > [!NOTE]  
 >  Gli snapshot dell'esecuzione del report e alcuni formati di esportazione non sono disponibili in tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

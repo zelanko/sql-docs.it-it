@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35532f3889836aa1a84858fb547f2764b1d4a902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102685"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Esercitazioni su Reporting Services (SSRS)
   Questa sezione contiene le esercitazioni per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre sottoscrizioni guidate dai dati con cui è possibile personalizzare la distribuzione di un report in base all'elenco dinamico di sottoscrittori che riceveranno il report. Le sottoscrizioni guidate dai dati vengono in genere create e gestite da amministratori di server di report. Per creare sottoscrizioni guidate dai dati è necessario conoscere le modalità di compilazione delle query e delle origini dei dati contenenti i dati del Sottoscrittore. È inoltre necessario disporre di autorizzazioni elevate per un server di report.  
   
  [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "66102685"
  [Creare un report drill-through &#40;RDLC&#41; con parametri utilizzando ReportViewer &#40;Esercitazione su SSRS&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
  Eseguire la procedura descritta in questa esercitazione per creare un report drill-through con parametri e un filtro utilizzando il controllo ReportViewer.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Adventure Works per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
  [Reporting Services esempi su CodePlex (https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
  [TechNet WIKI: esempi SQL Server 2012 (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   

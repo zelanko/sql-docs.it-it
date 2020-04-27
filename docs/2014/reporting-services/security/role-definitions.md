@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101744"
 ---
 # <a name="role-definitions"></a>Definizioni dei ruoli
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per *definizione**del ruolo* si intende una raccolta denominata di attività che definiscono le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]una *definizione Role * ** è una raccolta denominata di attività che definiscono le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Utilizzo dei ruoli per autorizzare l'accesso al server di report  
  Un ruolo diventa operativo solo quando viene utilizzato in un'assegnazione di ruolo. Per altre informazioni sulla sicurezza tramite i ruoli, vedere [Assegnazioni di ruolo](role-assignments.md).  
@@ -32,8 +32,7 @@ ms.locfileid: "66101744"
  Le definizioni di ruolo possono essere a livello di elemento o a livello di sistema. Una *definizione di ruolo a livello di elemento* descrive le attività correlate a elementi archiviati e gestiti in un server di report, ad esempio report, cartella e modelli. La gestione di report, la visualizzazione di cartelle e la gestione di singole sottoscrizioni sono esempi di attività che è possibile includere nelle definizioni di ruolo a livello di elemento. Una *definizione di ruolo a livello di sistema* include le attività applicabili al sito nell'insieme. La visualizzazione delle proprietà del server di report è un esempio di attività che è possibile includere in questo ruolo di sistema.  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include ruoli predefiniti che corrispondono a livelli diversi di interazione dell'utente. Nell'elenco seguente sono riportati i ruoli predefiniti che è possibile utilizzare:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include ruoli predefiniti che corrispondono a livelli diversi di interazione dell'utente. Nell'elenco seguente sono riportati i ruoli predefiniti che è possibile utilizzare:  
   
 -   Gestione contenuto, Server di pubblicazione, Visualizzazione, Generatore report e Report personali sono definizioni di ruolo a livello di elemento che è possibile utilizzare quando si creano le assegnazioni di ruolo per l'accesso al contenuto del server di report.  
   
@@ -46,9 +45,9 @@ ms.locfileid: "66101744"
   
  Un ruolo deve avere un nome univoco. Per essere valida, la definizione deve contenere almeno un'attività. Per altre informazioni, vedere [Attività e autorizzazioni](tasks-and-permissions.md).  
   
- Per creare una definizione di ruolo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]usare. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+ Per creare una definizione di ruolo, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
- Dopo aver creato una definizione di ruolo, è possibile utilizzarla selezionandola in un'assegnazione di ruolo. Per ulteriori informazioni, vedere [concedere l'accesso utente a un server di Report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
+ Dopo aver creato una definizione di ruolo, è possibile utilizzarla selezionandola in un'assegnazione di ruolo. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="customize-or-delete-a-role-definition"></a>Personalizzare o eliminare una definizione di ruolo  
  I ruoli predefiniti possono essere modificati o sostituiti con ruoli personalizzati. Per modificare un ruolo, aggiungere o rimuovere attività dalla definizione di ruolo. Non è possibile rinominare un ruolo. Le eventuali modifiche apportate vengono applicate immediatamente a tutte le assegnazioni di ruolo che includono questa definizione.  

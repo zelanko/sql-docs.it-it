@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102168"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>configurazione dell'autenticazione di base nel server di report
@@ -27,7 +27,7 @@ ms.locfileid: "66102168"
   
  Prima di abilitare l'autenticazione di base, verificare che l'infrastruttura di sicurezza la supporti. Con l'autenticazione di base, il servizio Web ReportServer passa le credenziali all'autorità di sicurezza locale. Se nelle credenziali è specificato un account utente locale, l'utente viene autenticato dall'autorità di sicurezza locale nel computer del server di report e ottiene un token di sicurezza valido per le risorse locali. Le credenziali per gli account utente di dominio vengono inoltrate e autenticate da un controller di dominio. Il ticket risultante è valido per le risorse di rete.  
   
- La crittografia del canale, ad esempio Secure Sockets Layer (SSL), è necessaria se si desidera ridurre i rischi associati all'intercettazione delle credenziali durante il transito verso un controller di dominio nella rete. L'autenticazione di base trasmette il nome utente in testo non crittografato e la password con la codifica in base 64. Con l'aggiunta della crittografia del canale, il pacchetto diventa illeggibile. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md).  
+ La crittografia del canale, ad esempio Secure Sockets Layer (SSL), è necessaria se si desidera ridurre i rischi associati all'intercettazione delle credenziali durante il transito verso un controller di dominio nella rete. L'autenticazione di base trasmette il nome utente in testo non crittografato e la password con la codifica in base 64. Con l'aggiunta della crittografia del canale, il pacchetto diventa illeggibile. Per ulteriori informazioni, vedere [configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  Dopo aver abilitato l'autenticazione di base, tenere presente che gli utenti non possono selezionare l'opzione **sicurezza integrata di Windows** durante l'impostazione delle proprietà di connessione a un'origine dati esterna che fornisce i dati a un report. Nelle pagine di proprietà dell'origine dati l'opzione verrà visualizzata in grigio.  
   
@@ -86,9 +86,7 @@ ms.locfileid: "66102168"
   
 |Elemento|Obbligatoria|Valori validi|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sì<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|
-  `2` = accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> 
-  `3` = accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente in caso di connessione ad altri server della rete. Valore predefinito.<br /><br /> Nota: i valori 0 (per accesso interattivo) e 1 (per accesso batch) NON sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sì<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|`2` = accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> `3` = accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente in caso di connessione ad altri server della rete. Valore predefinito.<br /><br /> Nota: I valori 0 (per accesso interattivo) e 1 (per accesso batch) non sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Facoltativo|Specifica una partizione delle risorse che include le caratteristiche di autorizzazione e autenticazione utilizzate per controllare l'accesso alle risorse protette nell'organizzazione.|  
 |DefaultDomain|Facoltativo|Specifica il dominio utilizzato dal server per autenticare l'utente. Questo valore è facoltativo, ma se non viene specificato il server di report utilizzerà il nome del computer come dominio. Se il computer è un membro di dominio, tale dominio rappresenta il dominio predefinito. Se il server di report è stato installato in un controller di dominio, il dominio utilizzato è quello controllato dal computer.|  
   
@@ -139,7 +137,7 @@ ms.locfileid: "66102168"
   
      Se si include un file Web.config, la modalità di autenticazione deve essere impostata su `Windows`.  
   
-     `Identity impersonate`può essere `True` o `False`.  
+     `Identity impersonate` può essere `True` o `False`.  
   
     -   Impostarla su `False` se non si desidera che ASP.NET legga il token di sicurezza. La richiesta verrà eseguita nel contesto di sicurezza del servizio del server di report.  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103615"
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
@@ -71,7 +71,7 @@ ms.locfileid: "66103615"
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
- [Specificare le credenziali e le informazioni di connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Precaricare la cache &#40;Gestione report&#41;](preload-the-cache-report-manager.md)  
   

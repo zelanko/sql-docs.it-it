@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100303"
 ---
 # <a name="design-view"></a>Visualizzazione progettazione
@@ -50,7 +50,7 @@ ms.locfileid: "66100303"
 ## <a name="properties-pane"></a>Riquadro delle proprietà  
  Utilizzare il riquadro Proprietà per visualizzare nell'area di progettazione le proprietà dell'elemento del report selezionato o nel Riquadro di raggruppamento le proprietà del gruppo selezionato. In alternativa, è possibile fare clic con il pulsante destro del mouse su un gruppo o elemento del report selezionato, quindi scegliere **Proprietà** per aprire la finestra di dialogo **Proprietà** corrispondente per l'elemento del report o il gruppo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   

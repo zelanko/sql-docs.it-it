@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101092"
 ---
 # <a name="subscriptions-page-report-manager"></a>Pagina Sottoscrizioni (Gestione report)
@@ -71,14 +71,14 @@ ms.locfileid: "66101092"
  **Ultima esecuzione**  
  Mostra la data e ora dell'ultima elaborazione della sottoscrizione.  
   
- **Status**  
+ **Stato**  
  Mostra lo stato della sottoscrizione. In genere il valore dello stato corrisponde a Nuovo oppure alla data e ora dell'ultima esecuzione della sottoscrizione.  
   
  Il valore "Dati non validi" indica che la sottoscrizione include un puntatore a valori crittografati non più validi per le credenziali archiviate utilizzate per eseguire il report. I valori crittografati esistenti diventano inutilizzabili quando le chiavi simmetriche utilizzate per crittografare e decrittografare i dati vengono ricreate sul server di report.  
   
  Non è possibile elaborare una sottoscrizione se è stata disattivata. Per aggiornare la sottoscrizione e renderla valida, aprire e salvare la sottoscrizione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Creare, modificare ed eliminare sottoscrizioni standard &#40;Reporting Services in modalità nativa&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099130"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
@@ -30,7 +30,7 @@ ms.locfileid: "66099130"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 1.  [Creare un grafico da Creazione guidata grafico](#Chart)  
@@ -59,7 +59,7 @@ ms.locfileid: "66099130"
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. creare un report grafico da Creazione guidata grafico  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. creare un report grafico da Creazione guidata grafico  
  Nella finestra di dialogo **Introduzione** utilizzare la creazione guidata grafico per creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un istogramma.  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ ms.locfileid: "66099130"
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **Scegliere un set di dati**fare clic su **Crea un set di dati**, quindi scegliere **Avanti**.  
+4.  Nella **pagina scegliere un set di dati**fare clic su **Crea un set di dati**, quindi fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099130"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati su cui si baserà il grafico.  
   
 9. Fare clic su **Avanti**.  
   
-##  <a name="ChartType"></a>2. scegliere il tipo di grafico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. scegliere il tipo di grafico  
  È possibile scegliere tra diversi tipi di grafico predefiniti.  
   
 #### <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
@@ -137,7 +137,7 @@ ms.locfileid: "66099130"
   
 8.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Horizontal"></a>3. formattare l'asse orizzontale e assegnare un'etichetta  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. formattare l'asse orizzontale e assegnare un'etichetta  
  Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori in un formato generale che viene ridimensionato automaticamente in base alle dimensioni del grafico.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>Per formattare una data sull'asse orizzontale  
@@ -184,7 +184,7 @@ ms.locfileid: "66099130"
   
  Sul grafico le etichette vengono ruotate e visualizzate ogni tre giorni.  
   
-##  <a name="Legend"></a>4. spostare la legenda  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. spostare la legenda  
  La legenda viene creata automaticamente dai dati di categoria e serie.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>Per spostare la legenda al di sotto dell'area del grafico di un istogramma  
@@ -203,7 +203,7 @@ ms.locfileid: "66099130"
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="ChartTitle"></a>5. titolo del grafico  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. titolo del grafico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>Per modificare il titolo di un grafico al di sopra dell'area del grafico  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099130"
   
 3.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Vertical"></a>6. formattare l'asse verticale e assegnare un'etichetta  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. formattare l'asse verticale e assegnare un'etichetta  
  Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in un formato generale che viene ridimensionato automaticamente in base alle dimensioni del grafico.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>Per formattare i numeri come valuta sull'asse verticale  
@@ -242,7 +242,7 @@ ms.locfileid: "66099130"
   
 12. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Average"></a>7. aggiungere una media mobili  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. aggiungere una media mobili  
   
 #### <a name="to-add-a-moving-average"></a>Per aggiungere una media mobile  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099130"
   
  Nel grafico viene visualizzata una riga in cui è riportata la media mobile delle vendite totali per data, calcolata in base a un intervallo di quattro date.  
   
-##  <a name="Title"></a>8. aggiungere un titolo al report  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. aggiungere un titolo al report  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
@@ -290,22 +290,22 @@ ms.locfileid: "66099130"
   
 7.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Save"></a>9. salvare il report  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. salvare il report  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Dal pulsante Generatore report fare clic su **Salva con nome**.  
+2.  Fare clic sul pulsante Generatore report , quindi su **Salva con nome**.  
   
 3.  In **Nome**digitare **Istogramma ordini vendita**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

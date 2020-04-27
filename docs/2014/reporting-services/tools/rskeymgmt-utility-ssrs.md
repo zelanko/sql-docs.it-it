@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099806"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
@@ -75,9 +75,8 @@ ms.locfileid: "66099806"
  `-j`  
  Configura un'istanza remota del server di report in modo che condivida il database del server di report utilizzato dall'istanza locale del server di report.  
   
- **-r**  *InstallationID*  
- Consente di rimuovere le informazioni relative alla chiave simmetrica per un'istanza specifica del server di report, quindi di rimuovere il server di report da un'implementazione basata sulla scalabilità orizzontale. 
-  *installationID* è un valore GUID disponibile nel file RSReportserver.config.  
+ **-r**  *installationID*  
+ Consente di rimuovere le informazioni relative alla chiave simmetrica per un'istanza specifica del server di report, quindi di rimuovere il server di report da un'implementazione basata sulla scalabilità orizzontale. *installationID* è un valore GUID disponibile nel file RSReportserver.config.  
   
  `-f`  *file*  
  Consente di specificare il percorso completo del file in cui è archiviata una copia di backup delle chiavi simmetriche.  
@@ -104,7 +103,7 @@ ms.locfileid: "66099806"
  `-v`  *password*  
  (Obbligatorio per `-u`) Consente di specificare la password di un account amministratore nel computer remoto che si desidera unire in join alla distribuzione con scalabilità orizzontale.  
   
- **-t**  *Trace*  
+ **-t**  *trace*  
  Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -175,9 +174,9 @@ rskeymgmt -r <installationID>
   
  Per altre informazioni sulle chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services &#40;modalità nativa del server di report&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Configuration Manager SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilità del prompt dei comandi del server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

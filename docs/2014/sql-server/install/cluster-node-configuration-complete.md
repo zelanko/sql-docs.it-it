@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096449"
 ---
 # <a name="cluster-node-configuration-complete"></a>Configurazione nodi cluster (completa)
-  Utilizzare la pagina Configurazione nodi cluster (completa) per specificare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è stato preparato per clustering. Per installare o aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire il programma di installazione su ogni nodo del cluster di failover. Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente, è necessario eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo che deve essere aggiunto all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilizzare la pagina Configurazione nodi cluster (completa) per specificare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è stato preparato per clustering. Per installare o aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario eseguire il programma di installazione su ogni nodo del cluster di failover. Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente, è necessario eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo che deve essere aggiunto all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  Dalle caselle a discesa:  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102403"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Caricare un file o un report (Gestione report)
@@ -36,7 +36,7 @@ ms.locfileid: "66102403"
   
 1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
-2.  In Gestione report passare alla pagina **Contenuto** . quindi passare alla cartella in cui si desidera aggiungere un elemento.  
+2.  In Gestione report passare alla pagina **contenuto** . quindi passare alla cartella in cui si desidera aggiungere un elemento.  
   
 3.  Fare clic su **Carica file**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66102403"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Carica &#40;della pagina file Gestione report&#41;](../upload-file-page-report-manager.md)   

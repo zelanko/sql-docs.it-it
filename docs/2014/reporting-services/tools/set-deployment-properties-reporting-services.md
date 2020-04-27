@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099544"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
@@ -65,7 +65,7 @@ ms.locfileid: "66099544"
   
 10. Nella casella di testo **TargetServerURL** digitare l'URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report. Quando si pubblica in un server di report in esecuzione in modalità nativa, usare l'URL della directory virtuale del server di report, ad esempio http: *//server/serverdireport* o https: *//server/serverdireport*. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report.  
   
-     Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà usato il sito principale predefinito, ad esempio http://*nomeserver*, http://*nomeserver*/*sito* o http://*nomeserver*/*sito*/*sitosecondario*.  
+     Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica*un sito,* viene utilizzato il sito principale predefinito, ad esempio http://*nomeserver*, http://*nomeserver*/*sito o http://* *nomeserver*/*sito*/secondario.  
   
 ### <a name="to-set-configuration-manager-properties"></a>Per impostare le proprietà di Gestione configurazione  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66099544"
     > [!NOTE]  
     >  Se si seleziona la casella di controllo **Compila** , Progettazione report compila il progetto report ed esegue il controllo degli errori prima di visualizzare il report in anteprima o di pubblicarlo in un server di report. Se si seleziona la casella di controllo **Distribuisci** , Progettazione report pubblica i report nel server di report in base alle impostazioni delle proprietà di distribuzione. Se non si seleziona la casella di controllo **Distribuisci** , Progettazione report visualizza il report specificato nella proprietà **StartItem** in una finestra di anteprima locale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pubblicazione di origini dati e report](../reports/publishing-data-sources-and-reports.md)   
  [Visualizzazione in anteprima di report](../reports/previewing-reports.md)   
  [Guida sensibile al contesto Progettazione report](report-designer-f1-help.md)   

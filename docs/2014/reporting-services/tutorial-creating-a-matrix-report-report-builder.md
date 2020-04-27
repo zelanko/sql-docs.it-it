@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098914"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
@@ -24,7 +24,7 @@ ms.locfileid: "66098914"
   
  Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per ulteriori informazioni sul download di questo report di esempio e di altri, vedere [Generatore report report di esempio](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a>Cosa si apprenderà  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le procedure per:  
   
 1.  [Creare un report matrice e un set di dati tramite la Creazione guidata tabella o matrice](#CreateMatrix)  
@@ -52,7 +52,7 @@ ms.locfileid: "66098914"
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateMatrix"></a>1. creare un report matrice e un set di dati dalla creazione guidata tabella o matrice  
+##  <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. creare un report matrice e un set di dati dalla creazione guidata tabella o matrice  
  Nella finestra di dialogo **Introduzione** in Generatore report scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare i dati in una matrice.  
   
 > [!NOTE]  
@@ -116,7 +116,7 @@ ms.locfileid: "66098914"
   
 10. Fare clic su **Avanti**.  
   
-##  <a name="Groups"></a>2. organizzare i dati e scegliere il layout e lo stile dalla procedura guidata nuova tabella o matrice  
+##  <a name="2-organize-data-and-choose-layout-and-style-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. organizzare i dati e scegliere il layout e lo stile dalla procedura guidata nuova tabella o matrice  
  Utilizzare la procedura guidata per fornire una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della matrice.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>Per organizzare i dati in gruppi e scegliere un layout e uno stile  
@@ -147,7 +147,7 @@ ms.locfileid: "66098914"
   
 7.  Fare clic su **Avanti**.  
   
-8.  Nella pagina scegliere il layout, in **Opzioni**, verificare che sia selezionata l'opzione **Mostra subtotali e totali** complessivi.  
+8.  Nella pagina Scegliere il layout, in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
 9. Verificare che l'opzione **Bloccato, subtotale sotto** sia selezionata.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66098914"
   
  Per ogni prodotto venduto in una data specifica, nella matrice viene visualizzata la sottocategoria alla quale appartiene il prodotto, nonché il territorio delle vendite.  
   
-##  <a name="FormatData"></a>3. formattare i dati  
+##  <a name="3-format-data"></a><a name="FormatData"></a>3. formattare i dati  
  Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono visualizzati come numero generico e nel campo SalesDate vengono visualizzate le informazioni di data e ora. Formattare il campo Sales in modo che il numero venga visualizzato come valuta e formattare il campo SalesDate in modo che venga visualizzata solo la data. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
   
 #### <a name="to-format-fields"></a>Per formattare i campi  
@@ -182,13 +182,13 @@ ms.locfileid: "66098914"
   
 5.  Nel gruppo **numero** selezionare **Data**nell'elenco a discesa.  
   
-     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
+     Nella cella viene visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
  I valori di data verranno visualizzati solo come date mentre i valori delle vendite verranno visualizzati come valuta.  
   
-##  <a name="AdjacentGroup"></a>4. aggiungere un gruppo di colonne adiacente  
+##  <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. aggiungere un gruppo di colonne adiacente  
  È possibile annidare gruppi di righe e colonne nelle relazioni padre-figlio oppure gruppi di righe e colonne adiacenti nelle relazioni di pari livello.  
   
  Aggiungere un gruppo di colonne adiacente al gruppo di colonne Subcategory, copiare le celle per popolare il nuovo gruppo di colonne, quindi utilizzare un'espressione per creare il valore dell'intestazione del gruppo di colonne.  
@@ -232,7 +232,7 @@ ms.locfileid: "66098914"
 > [!NOTE]  
 >  Diversamente, nel report sarebbero state incluse le colonne per gli altri giorni della settimana. Ogni colonna presenta l'intestazione di colonna `Sales`, e i totali delle vendite per territorio.  
   
-##  <a name="Width"></a>5. modificare la larghezza delle colonne  
+##  <a name="5-change-column-widths"></a><a name="Width"></a>5. modificare la larghezza delle colonne  
  Al momento dell'esecuzione, un report contenente una matrice si espande in genere orizzontalmente e verticalmente. Il controllo di espansione orizzontale è particolarmente importante quando si intende esportare il report in un formato quale Microsoft Word o Adobe PDF utilizzato per i report stampati. Se il report si espande orizzontalmente su più pagine, sarà difficile interpretare il report stampato. Per contenere l'espansione orizzontale, è possibile ridimensionare le colonne alla larghezza minima necessaria per visualizzare i dati su una sola riga. È inoltre possibile rinominare le colonne in modo che i relativi titoli si adattino alla larghezza necessaria per visualizzare i dati.  
   
 #### <a name="to-rename-and-resize-the-columns"></a>Per rinominare e ridimensionare le colonne  
@@ -259,7 +259,7 @@ ms.locfileid: "66098914"
   
  Le colonne del report contenenti le quantità risulteranno ora denominate QTA e saranno più strette.  
   
-##  <a name="MergeCells"></a>6. unire le celle della matrice  
+##  <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. unire le celle della matrice  
  L'area dell'angolo si trova in corrispondenza dell'angolo superiore sinistro della matrice. Il numero di celle nell'area dell'angolo varia a seconda del numero di righe e di gruppi di colonne presenti nella matrice. La matrice creata in questa esercitazione dispone di quattro celle nell'area dell'angolo corrispondente. Le celle vengono disposte in due righe e due colonne, in modo da riflettere il livello delle gerarchie di gruppo di righe e colonne. Le quattro celle non vengono utilizzate in questo report e verranno unite in un'unica cella.  
   
 #### <a name="to-merge-matrix-cells"></a>Per unire le celle della matrice  
@@ -292,7 +292,7 @@ ms.locfileid: "66098914"
   
  La matrice nell'angolo superiore è costituita da un'unica cella e ha lo stesso colore delle celle del gruppo di righe e del gruppo di colonne.  
   
-##  <a name="HeaderTitle"></a>7. aggiungere un'intestazione e un titolo al report  
+##  <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. aggiungere un'intestazione e un titolo al report  
  Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione verrà rimossa la casella di testo nella parte superiore del report e verrà aggiunto un titolo all'intestazione.  
   
 #### <a name="to-add-a-report-header-and-report-title"></a>Per aggiungere un'intestazione e un titolo al report  
@@ -324,14 +324,14 @@ ms.locfileid: "66098914"
   
  Nel report visualizzato è incluso il titolo di un report nella relativa intestazione.  
   
-##  <a name="Save"></a>8. salvare il report  
+##  <a name="8-save-the-report"></a><a name="Save"></a>8. salvare il report  
  È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale.  
   
  In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Siti e server recenti**.  
   
@@ -341,21 +341,21 @@ ms.locfileid: "66098914"
   
 4.  In **Nome**sostituire il nome predefinito con **VenditePerTerritorioSottocategoria**.  
   
-5.  Fare clic su **Salva**.  
+5.  Fare clic su **Save**.  
   
  Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.  
   
 3.  In **Nome**sostituire il nome predefinito con **VenditePerTerritorioSottocategoria**.  
   
-4.  Fare clic su **Salva**.  
+4.  Fare clic su **Save**.  
   
-##  <a name="RotateTextBox"></a>9. (facoltativo) ruotare la casella di testo 270 gradi  
+##  <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (facoltativo) ruotare la casella di testo 270 gradi  
  Al momento dell'esecuzione, un report con matrici può espandersi orizzontalmente e verticalmente. La rotazione verticale, o di 270 gradi, delle caselle di testo consente di risparmiare spazio orizzontale. Il report visualizzabile risulterà quindi più stretto e nel caso venga esportato in un formato quale Microsoft Word si adatterà con maggiore facilità alle dimensioni della pagina stampata.  
   
  Il testo in una casella di testo può inoltre essere visualizzato in senso orizzontale e verticale (dall'alto in basso). Per altre informazioni, vedere [Caselle di testo &#40;Generatore report e SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md).  
@@ -381,7 +381,7 @@ ms.locfileid: "66098914"
 ## <a name="next-steps"></a>Passaggi successivi  
  L'esercitazione sulla creazione di un report matrice è terminata. Per ulteriori informazioni sulle matrici, vedere [tabelle, matrici ed elenchi &#40;Generatore report e ssrs&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [matrici &#40;Generatore report e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [aree dell'area dati tablix &#40;Generatore report e SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)e [celle, righe e colonne dell'area dati Tablix &#40;Generatore report&#41; e SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

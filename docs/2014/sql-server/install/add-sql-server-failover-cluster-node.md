@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33695a21d7cbee47bebedf5390bdaae5b7ceb78e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096845"
 ---
 # <a name="add-sql-server-failover-cluster-node"></a>Aggiunta di un nodo del cluster di failover di SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "66096845"
   
 2.  [Operazioni preliminari all'installazione del clustering di failover](../failover-clusters/install/before-installing-failover-clustering.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Regole di installazione](../../../2014/sql-server/install/install-rules.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102158"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Pagina delle proprietà sicurezza, Elementi (Gestione report)
@@ -35,7 +35,7 @@ ms.locfileid: "66102158"
   
 3.  Nel menu a discesa, eseguire uno dei passaggi seguenti:  
   
-    -   Fare clic su **Security**. Viene visualizzata la pagina delle proprietà Sicurezza per l'elemento.  
+    -   Fare clic su **Sicurezza**. Viene visualizzata la pagina delle proprietà Sicurezza per l'elemento.  
   
     -   Fare clic su **Gestisci** per aprire la pagina delle proprietà Generale per l'elemento. Quindi selezionare la scheda **Sicurezza** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66102158"
  **Elimina**  
  Selezionare la casella di controllo accanto al nome del gruppo o dell'utente che si desidera eliminare e fare clic su **Elimina**. Non è possibile eliminare l'ultima assegnazione di ruolo rimasta o un'assegnazione di ruolo predefinita, ad esempio "BUILTIN\Administrators", che rappresenta la base di riferimento per la sicurezza del server di report. L'eliminazione di un'assegnazione di ruolo non comporta l'eliminazione di account utente, account di gruppo o definizioni di ruolo.  
   
- **Nuova assegnazione di ruolo**  
+ **Nuova assegnazione ruolo**  
  Fare clic per visualizzare la pagina Nuova assegnazione ruolo nella quale è possibile creare assegnazioni di ruolo aggiuntive per l'elemento corrente. Per ulteriori informazioni, vedere la [pagina nuova assegnazione ruolo: modifica assegnazione ruolo &#40;Gestione report&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
  **Ripristina sicurezza padre**  
@@ -61,11 +61,11 @@ ms.locfileid: "66102158"
  **Ruoli**  
  Visualizza un elenco di una o più definizioni di ruolo che fanno parte di un'assegnazione di ruolo esistente. Se a un account utente o di gruppo vengono assegnati più ruoli, il gruppo o l'utente potrà eseguire tutte le attività incluse nei ruoli. Per visualizzare le attività associate a un ruolo, utilizzare SQL Server Management Studio per visualizzare le attività incluse in ogni definizione di ruolo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
- [Predefined Roles](security/role-definitions-predefined-roles.md)   
+ [Ruoli predefiniti](security/role-definitions-predefined-roles.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Assegnazioni di ruolo](security/role-assignments.md)   
- [Definizioni di ruolo](security/role-definitions.md)  
+ [Definizioni dei ruoli](security/role-definitions.md)  
   
   

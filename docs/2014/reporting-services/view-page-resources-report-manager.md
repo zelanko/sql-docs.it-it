@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcff47cf725fd5b9fd059e6a06b075be00c5e808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098698"
 ---
 # <a name="view-page-resources-report-manager"></a>Pagina Visualizza, Risorse (Gestione report)
@@ -22,7 +22,7 @@ ms.locfileid: "66098698"
   
  Oltre a visualizzare le risorse nella pagina Visualizza, è possibile impostare per la risorsa proprietà e opzioni di sicurezza. Per ulteriori informazioni, vedere [pagina delle proprietà generale, risorse &#40;Gestione report pagina delle proprietà&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md) e [sicurezza, elementi &#40;Gestione report&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
