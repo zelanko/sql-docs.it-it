@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089552"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>Proprietà modello di traccia (scheda Selezione eventi)
   Utilizzare la scheda **Selezione eventi** della finestra di dialogo **Proprietà modello di traccia** per visualizzare, modificare o specificare classi di evento e colonne di dati da includere in un modello di traccia di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
- Colonna **eventi**  
+ Colonna**Eventi**  
  Consente di specificare gli eventi che devono essere inseriti nella traccia selezionando o deselezionando la casella di controllo nella colonna di evento. Gli eventi sono organizzati in base alla categoria.  
   
  Se è stato selezionato **Basa il nuovo modello sul seguente modello esistente** nella scheda **Generale** , gli eventi vengono selezionati automaticamente in base al modello indicato. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "66089552"
  **Organizza colonne**  
  Consente di modificare l'ordine delle colonne nella traccia e di raggruppare i risultati in base a una o più colonne.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Filtrare gli eventi in una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   

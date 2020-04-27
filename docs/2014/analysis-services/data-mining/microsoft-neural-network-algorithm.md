@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083865"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
@@ -88,7 +88,7 @@ ms.locfileid: "66083865"
   
 -   Non supporta la creazione di dimensioni di data mining.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)   

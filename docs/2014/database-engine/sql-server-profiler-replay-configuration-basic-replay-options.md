@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089716"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - Configurazione riproduzione (Opzioni di base di riproduzione)
@@ -34,12 +34,10 @@ ms.locfileid: "66089716"
  Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un altro server.  
   
  **Salva nel file**  
- Consente di salvare i risultati di riproduzione in un file. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
+ Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
   
  **Salva nella tabella**  
- Consente di salvare i risultati di riproduzione in una tabella. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
+ Consente di salvare i risultati di riproduzione in una tabella. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
   
  **Numero di thread di riproduzione**  
  Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma la riproduzione viene eseguita in modo più veloce e simultaneo.  
@@ -53,7 +51,7 @@ ms.locfileid: "66089716"
  **Visualizza risultati di riproduzione**  
  Consente di visualizzare i risultati di riproduzione in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riprodurre una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Riprodurre un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Riprodurre le tracce](../tools/sql-server-profiler/replay-traces.md)  

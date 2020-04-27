@@ -27,10 +27,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085655"
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
@@ -45,21 +45,21 @@ ms.locfileid: "66085655"
  Nell'elenco seguente vengono descritti i tipi di contenuto utilizzati nel data mining e vengono identificati i tipi di dati che supportano ogni tipo di contenuto.  
   
 ## <a name="discrete"></a>Discrete  
- *Discrete* indica che la colonna contiene un numero finito di valori senza continuità tra i valori. Ad esempio, una colonna relativa al sesso è una tipica colonna attributo discreta, in quanto i dati rappresentano un numero specifico di categorie.  
+ Il tipo di contenuto*Discrete* indica che la colonna contiene un numero finito di valori senza continuità. Ad esempio, una colonna relativa al sesso è una tipica colonna attributo discreta, in quanto i dati rappresentano un numero specifico di categorie.  
   
  I valori di una colonna attributo discreta non possono implicare l'ordinamento, anche se si tratta di valori numerici. Anche se i valori utilizzati per la colonna discreta sono numerici, non è inoltre possibile calcolare valori frazionari. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti.  
   
  Il tipo di contenuto `Discrete` è supportato da tutti i tipi di dati di data mining.  
   
 ## <a name="continuous"></a>Continuo  
- *Continuous* indica che la colonna contiene valori che rappresentano dati numerici su una scala che consente valori provvisori. A differenza di una colonna discreta, che rappresenta dati numerabili finiti, una colonna continua rappresenta misure scalabili e i dati possono contenere un numero infinito di valori frazionari. Una colonna di temperature è un esempio di colonna attributo continua.  
+ Il tipo di contenuto*Continuous* indica che la colonna contiene valori che rappresentano dati numerici su una scala che consente valori provvisori. A differenza di una colonna discreta, che rappresenta dati numerabili finiti, una colonna continua rappresenta misure scalabili e i dati possono contenere un numero infinito di valori frazionari. Una colonna di temperature è un esempio di colonna attributo continua.  
   
  Quando una colonna contiene dati numerici continui e quando è noto il modo in cui i dati devono essere distribuiti, è possibile migliorare potenzialmente l'accuratezza dell'analisi specificando la distribuzione prevista dei valori. Poiché la distribuzione della colonna viene specificata a livello della struttura di data mining, l'impostazione si applica a tutti i modelli basati sulla struttura. Per altre informazioni, vedere [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md).  
   
  Il tipo di contenuto `Continuous` è supportato dai tipi di dati `Date`, `Double` e `Long`.  
   
 ## <a name="discretized"></a>Discretizzato  
- La *discretizzazione* è il processo di inserimento dei valori di un set continuo di dati in bucket in modo da avere un numero limitato di valori possibili. È possibile discretizzare solo dati numerici.  
+ Per*discretizzazione* si intende il processo di raggruppamento in bucket dei valori di un set di dati continuo in modo da limitare il numero di valori possibili. È possibile discretizzare solo dati numerici.  
   
  Di conseguenza, il tipo di contenuto *discretized* indica che la colonna contiene valori che rappresentano gruppi o bucket di valori derivati da una colonna continua. I bucket vengono considerati valori ordinati e discreti.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66085655"
 ## <a name="classified"></a>Classified  
  Oltre ai tipi di contenuto precedenti che sono di uso comune con tutti i modelli, per alcuni tipi di dati è possibile utilizzare le colonne classificate per definire i tipi di contenuto. Per altre informazioni sulle colonne classificate, vedere [Colonne classificate &#40;Data mining&#41;](classified-columns-data-mining.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Tipi di dati &#40;&#41;di data mining](data-types-data-mining.md)   
  [Tipi di dati &#40;&#41;DMX](/sql/dmx/data-types-dmx)   

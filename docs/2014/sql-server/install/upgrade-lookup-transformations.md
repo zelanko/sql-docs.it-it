@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091505"
 ---
 # <a name="upgrade-lookup-transformations"></a>Aggiornare le trasformazioni Ricerca
@@ -32,7 +32,7 @@ ms.locfileid: "66091505"
   
  Per ulteriori informazioni, vedere [Editor trasformazione ricerca &#40;&#41;pagina generale ](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Trasformazione Ricerca](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

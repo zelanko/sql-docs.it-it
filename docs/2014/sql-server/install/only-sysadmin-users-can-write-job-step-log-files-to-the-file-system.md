@@ -15,18 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093676"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Solo gli utenti sysadmin possono scrivere file di log dei passaggi del processo nel file system
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] scrive facoltativamente un log per ogni passaggio del processo.  
   
 ## <a name="component"></a>Componente  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agente  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Descrizione  
  In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System per i processi di proprietà dei membri del ruolo predefinito del server **sysadmin** . Se il proprietario del processo non è un membro del ruolo **sysadmin** e se l'account proxy è abilitato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere i log nel file System usando le credenziali dell'account proxy.  
@@ -38,7 +37,7 @@ ms.locfileid: "66093676"
   
  Per ulteriori informazioni, vedere gli argomenti "Creazione di processi", "Creazione di passaggi di processo" e "Gestione di più passaggi di processo" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Problemi di aggiornamento di SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

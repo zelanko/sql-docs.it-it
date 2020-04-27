@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089125"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opzioni (Editor di testo/XML - Pagina Schede)
@@ -35,7 +35,7 @@ ms.locfileid: "66089125"
  **Intelligenti**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito alla pressione di INVIO viene posizionata in base al contesto. Ad esempio, dopo una parentesi graffa di apertura ({) le righe incluse vengono rientrate automaticamente di una tabulazione aggiuntiva. La corrispondente parentesi graffa di chiusura (}) viene riallineata con quella di apertura.  
   
-## <a name="tabs"></a>Tabulazioni  
+## <a name="tabs"></a>Schede  
  **Dimensione tabulazione**  
  Consente di impostare la distanza in spazi tra le tabulazioni. Il valore predefinito è quattro spazi.  
   

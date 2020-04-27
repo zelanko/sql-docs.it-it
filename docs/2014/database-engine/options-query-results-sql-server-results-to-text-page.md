@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090017"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opzioni (risultati query-SQL Server-pagina risultati in formato testo)
-  Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di una query in formato testo. Le modifiche apportate a queste opzioni vengono [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applicate solo alle nuove query. Per modificare le opzioni relative alle query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **Testo** in **Risultati**.  
+  Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di una query in formato testo. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **query** oppure fare clic con il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pulsante destro del mouse nella finestra query e scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **Testo** in **Risultati**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Formato di output**  
@@ -35,25 +35,25 @@ ms.locfileid: "66090017"
  **Includi la query nel set di risultati**  
  Selezionare questa casella di controllo per includere il testo della query in esecuzione nel riquadro dei risultati prima dei risultati della query.  
   
- **Scorri come risultati ricevuti**  
+ **Scorri i risultati ricevuti**  
  Selezionare questa casella di controllo per mantenere visualizzati gli ultimi record restituiti alla fine del set di risultati. Deselezionare la casella per mantenere visualizzata la prima riga restituita.  
   
  **Allinea a destra i valori numerici**  
  Selezionare questa casella di controllo per allineare i valori numeri a destra nella colonna in modo da semplificare l'esame delle cifre con un numero di posizioni decimali predefinito.  
   
- **Elimina risultato dopo l'esecuzione della query**  
+ **Elimina risultati dopo l'esecuzione della query**  
  Selezionare questa casella di controllo per scartare i risultati della query dopo che vengono visualizzati nel riquadro dei risultati della finestra di query.  
   
  **Visualizza risultati in una scheda separata**  
  Selezionare questa casella di controllo per visualizzare il set di risultati in una nuova finestra del documento invece che nella parte inferiore della finestra della query.  
   
- **Passa alla scheda risultati dopo l'esecuzione della query**  
+ **Passa alla scheda dei risultati al termine della query**  
  Selezionare questa casella per impostare lo stato attivo dello schermo sul set di risultati.  
   
  **Numero massimo di caratteri visualizzati in ogni colonna**  
  Questo valore viene impostato in modo predefinito su 256. È possibile scegliere un valore superiore per visualizzare set di risultati di dimensioni maggiori senza troncamenti. Il valore massimo è 8192.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

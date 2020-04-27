@@ -13,21 +13,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089375"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opzioni (esecuzione query-SQL Server pagina ANSI)
   L'insieme di queste opzioni SET dello standard ANSI (ISO) definisce l'ambiente di elaborazione della query per l'intera durata della query dell'utente o dell'esecuzione di un trigger o di una stored procedure. Queste opzioni SET tuttavia non includono tutte le opzioni necessarie per la conformità allo standard ISO. Utilizzare questa pagina per specificare che [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eseguirà le query utilizzando tutte o una parte delle impostazioni specificate nello standard ISO. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **query** oppure fare clic con il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pulsante destro del mouse nella finestra query e scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **ANSI**in **Esecuzione**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **IMPOSTA ANSI_DEFAULTS**  
+ **SET ANSI_DEFAULTS**  
  Selezionare questa casella di controllo per selezionare tutte le impostazioni predefinite di ISO. Non tutte le opzioni di ISO sono selezionate per impostazione predefinita.  
   
  **SET QUOTED_IDENTIFIER**  
- Quando questa casella di controllo è selezionata, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] segue le regole di ISO relative agli identificatori delimitati da virgolette e alle stringhe letterali. Gli identificatori delimitati da virgolette possono essere parole chiave riservate di Transact-SQL e possono includere caratteri in genere non consentiti in base alle regole di sintassi per gli identificatori di Transact-SQL. Questa casella di controllo è selezionata per impostazione predefinita.  
+ Quando questa casella di controllo è selezionata, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] segue le regole ISO relative alle virgolette che delimitano gli identificatori e le stringhe letterali. Gli identificatori delimitati da virgolette possono essere parole chiave riservate di Transact-SQL e possono includere caratteri in genere non consentiti in base alle regole di sintassi per gli identificatori di Transact-SQL. Questa casella di controllo è selezionata per impostazione predefinita.  
   
  **SET ANSI_NULL_DFLT_ON**  
  Se questo valore è impostato, tutti i tipi di dati definiti dall'utente o le colonne non definite esplicitamente come NOT NULL da un'istruzione CREATE TABLE o ALTER TABLE verranno impostati in modo da consentire i valori Null. Questa casella di controllo è selezionata per impostazione predefinita.  
@@ -53,7 +53,7 @@ ms.locfileid: "66089375"
  **SET ANSI_NULLS**  
  -   Consente di specificare il funzionamento conforme allo standard ISO degli operatori di confronto uguale a (=) e diverso da (<>) quando questi vengono utilizzati con valori Null. Quando SET ANSI_NULLS è selezionata, tutti i confronti con un valore Null restituiscono UNKNOWN, in conformità allo standard ISO. Quando SET ANSI_NULLS non è selezionata, i confronti di tutti i dati con un valore Null restituiscono TRUE. Questa casella di controllo è selezionata per impostazione predefinita.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

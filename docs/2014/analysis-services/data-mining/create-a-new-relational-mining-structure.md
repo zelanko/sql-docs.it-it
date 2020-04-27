@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085392"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Creare una nuova struttura di data mining relazionale
@@ -59,7 +59,7 @@ ms.locfileid: "66085392"
   
 11. Nella pagina **Completamento procedura guidata** specificare un nome per la struttura di data mining e per il modello di data mining iniziale correlato di cui verrà eseguita la creazione, quindi fare clic su **Fine**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

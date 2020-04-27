@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086543"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Finestra di dialogo Opzioni di esplorazione dati (Analysis Services – Data Mining)

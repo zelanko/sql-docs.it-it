@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085728"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Scegliere la colonna da utilizzare per il test di un modello di data mining
@@ -54,7 +54,7 @@ ms.locfileid: "66085728"
   
 5.  Se si vuole determinare il livello di accuratezza per un modello, è necessario selezionare un risultato specifico da misurare nell'elenco **Valore stima** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md)   
  [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

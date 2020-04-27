@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086231"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>Aggiungere colonne a una struttura di data mining
@@ -44,7 +44,7 @@ ms.locfileid: "66086231"
 > [!NOTE]  
 >  Se si aggiunge una colonna già esistente, nella struttura verrà inclusa una copia e al nome verrà aggiunto "1". È possibile specificare un nome più descrittivo per la colonna copiata digitandolo nella proprietà **Nome** della colonna della struttura di data mining.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

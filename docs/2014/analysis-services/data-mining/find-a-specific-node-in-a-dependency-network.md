@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084381"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Trovare un nodo specifico in una rete di dipendenze
@@ -36,7 +36,7 @@ ms.locfileid: "66084381"
   
 3.  Selezionare il nodo corretto nell'elenco e quindi fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)  
   
   

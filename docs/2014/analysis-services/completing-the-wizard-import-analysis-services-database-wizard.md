@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087573"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>Completamento procedura guidata (Importazione guidata database di Analysis Services 9.0)
@@ -26,7 +26,7 @@ ms.locfileid: "66087573"
  **Corso**  
  Visualizza lo stato della procedura guidata durante l'importazione di ogni oggetto del database nel progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto dell'importazione guidata database Analysis Services](import-analysis-services-database-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

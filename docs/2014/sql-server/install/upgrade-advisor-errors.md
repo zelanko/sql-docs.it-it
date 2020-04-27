@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6c9f133af7b8054414f6867f41cee3022d68925
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091683"
 ---
 # <a name="upgrade-advisor-errors"></a>Errori di Preparazione aggiornamento
@@ -24,7 +24,7 @@ ms.locfileid: "66091683"
   
  È possibile ignorare qualsiasi problema elencato nel Visualizzatore report collegato a questo argomento.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

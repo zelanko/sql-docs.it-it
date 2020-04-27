@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094633"
 ---
 # <a name="install-distributed-replay-setup"></a>Installare i componenti Riesecuzione distribuita (programma di installazione)
@@ -52,19 +52,17 @@ ms.locfileid: "66094633"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Strumenti  
   
-     \-O  
+     \- OPPURE -  
   
-     
-  \<directory della funzionalità condivisa\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
+     \<directory della funzionalità condivisa\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
   
 -   In un sistema a 64 bit:  
   
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C:\Programmi\\ (x86) \120\Tools  
   
-     \-O  
+     \- OPPURE -  
   
-     
-  \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
+     \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
   
 ### <a name="to-install-distributed-replay-features"></a>Per installare le funzionalità di Riesecuzione distribuita  
   
@@ -74,7 +72,7 @@ ms.locfileid: "66094633"
   
 3.  Nella pagina **Product Key** selezionare un pulsante di opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versione di produzione del prodotto con una chiave PID. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
-4.  Nella pagina **condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettare i termini e le condizioni di licenza. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Nella pagina **Condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 5.  Nella pagina **File di supporto per l'installazione** fare clic su **Installa** per installare o aggiornare i file di supporto dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -88,7 +86,7 @@ ms.locfileid: "66094633"
   
     -   Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
   
-     **Importante**: quando si configura riesecuzione distribuita controller, è possibile specificare uno o più account utente che verranno usati per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -108,11 +106,11 @@ ms.locfileid: "66094633"
   
     2.  Nei computer a 64 bit il percorso di installazione predefinito è **c:\Programmi (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
-9. Al termine dell'operazione scegliere **Avanti**.  
+9. Una volta finito, fare clic su **Avanti**.  
   
 10. Nella pagina **Regole di installazione** viene convalidata la configurazione del computer tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una volta completato il processo di convalida, fare clic su **Avanti**.  
   
-11. Nella pagina **requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
+11. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
 12. Nella pagina **Segnalazione errori** specificare le informazioni che si desidera inviare a [!INCLUDE[msCoName](../../includes/msconame-md.md)] per contribuire a migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'opzione Segnalazione errori è abilitata.  
   
@@ -132,11 +130,11 @@ ms.locfileid: "66094633"
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per installare qualsiasi funzionalità di Riesecuzione distribuita, è necessario disporre di autorizzazioni di amministratore. Solo un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che dispone di autorizzazioni sysadmin può aggiungere gli account del servizio client al ruolo del server sysadmin del server di prova. Per alcune considerazioni relative alla sicurezza di Riesecuzione distribuita, vedere [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Riesecuzione distribuita](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Requisiti di Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088088"
 ---
 # <a name="choosing-a-model"></a>Scelta di un modello
@@ -104,7 +104,7 @@ ms.locfileid: "66088088"
 ## <a name="list-of-supported-algorithms"></a>Elenco degli algoritmi supportati  
  I seguenti algoritmi sono forniti per impostazione predefinita.  
   
-|Nome algoritmo|Descrizione|Usato in|  
+|Nome algoritmo|Descrizione|Campo di utilizzo|  
 |--------------------|-----------------|-------------|  
 |Microsoft Association Rules|Consente di compilare regole che descrivono gli elementi che hanno maggiore probabilità di comparire insieme in una transazione.|[Associazione guidata &#40;client di data mining per Excel&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Shopping Basket Analysis &#40;Table AnalysisTools per Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Consente di identificare in un set di dati le relazioni che non è possibile derivare in modo logico tramite l'osservazione casuale. L'algoritmo utilizza tecniche iterative per raggruppare i record in cluster con caratteristiche simili.|[Rilevare le categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Creazione guidata cluster &#40;componenti aggiuntivi Data mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  
@@ -116,7 +116,7 @@ ms.locfileid: "66088088"
 |Microsoft Sequence Clustering|Consente di identificare i cluster di eventi ordinati in modo analogo in una sequenza.<br /><br /> Offre una combinazione delle funzionalità di clustering e analisi delle sequenze.|Questo algoritmo è disponibile solo in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Tuttavia, nei componenti aggiuntivi Data mining per Office è possibile creare un modello che utilizza questo algoritmo creando una struttura, quindi aggiungendo manualmente un modello.<br /><br /> Per ulteriori informazioni, vedere la pagina relativa alla [modellazione avanzata &#40;componenti aggiuntivi Data mining per&#41;Excel ](advanced-modeling-data-mining-add-ins-for-excel.md).|  
 |Microsoft Time Series|Consente di analizzare dati temporali mediante un albero delle decisioni lineare.<br /><br /> È possibile utilizzare modelli per stimare valori futuri nelle serie temporali.|[Strumenti di analisi tabelle di previsione &#40;per Excel&#41;](forecast-table-analysis-tools-for-excel.md)<br /><br /> [Procedura guidata previsione &#40;componenti aggiuntivi Data mining per Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elementi inclusi nei componenti aggiuntivi Data mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  
   
   

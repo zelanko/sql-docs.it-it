@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086504"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmi di data mining (componenti aggiuntivi Data mining di SQL Server)
@@ -57,7 +57,7 @@ ms.locfileid: "66086504"
   
 -   Nel **client di data mining**, dopo l'avvio della procedura guidata, fare clic su **parametri**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [&#40;di query SQL Server componenti aggiuntivi Data mining&#41;](query-sql-server-data-mining-add-ins.md)   
  [Modellazione avanzata &#40;componenti aggiuntivi Data mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   

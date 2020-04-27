@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083634"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione lineare (Analysis Services - Data mining)
@@ -45,9 +45,9 @@ ms.locfileid: "66083634"
  Nome del modello.  
   
  ATTRIBUTE_NAME  
- **Nodo radice:** Vuoto  
+ **Nodo radice:** vuoto  
   
- **Nodo di regressione:** Nome dell'attributo stimabile.  
+ **Nodo di regressione:** nome dell'attributo stimabile.  
   
  NODE_NAME  
  Sempre uguale a NODE_UNIQUE_NAME.  
@@ -65,16 +65,16 @@ ms.locfileid: "66083634"
  NODE_CAPTION  
  Etichetta o didascalia associata al nodo. Questa proprietà viene utilizzata principalmente per scopi di visualizzazione.  
   
- **Nodo radice:** Vuoto  
+ **Nodo radice:** vuoto  
   
- **Nodo di regressione:** Tutti.  
+ **Nodo di regressione:** tutti.  
   
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
- **Nodo radice:** Indica il numero di nodi di regressione. Per ogni attributo stimabile del modello viene creato un nodo di regressione.  
+ **Nodo radice:** indica il numero di nodi di regressione. Per ogni attributo stimabile del modello viene creato un nodo di regressione.  
   
- **Nodo di regressione:** Sempre 0.  
+ **Nodo di regressione:** sempre 0.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo. Per tutti i nodi a livello di radice viene restituito NULL.  
@@ -82,9 +82,9 @@ ms.locfileid: "66083634"
  NODE_DESCRIPTION  
  Descrizione del nodo.  
   
- **Nodo radice:** Vuoto  
+ **Nodo radice:** vuoto  
   
- **Nodo di regressione:** Tutti.  
+ **Nodo di regressione:** tutti.  
   
  NODE_RULE  
  Non utilizzato per i modelli di regressione lineare.  
@@ -111,7 +111,7 @@ ms.locfileid: "66083634"
   
  **Nodo radice:** 0  
   
- **Nodo di regressione:** Tabella contenente gli elementi utilizzati per compilare la formula di regressione. Un nodo di regressione contiene i tipi di valore seguenti:  
+ **Nodo di regressione:** tabella che contiene gli elementi utilizzati per compilare la formula di regressione. Un nodo di regressione contiene i tipi di valore seguenti:  
   
 |VALUETYPE|  
 |---------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "66083634"
   
  **Nodo radice:** 0  
   
- **Nodo di regressione:** Conteggio dei case di training.  
+ **Nodo di regressione:** conteggio dei case di training.  
   
  MSOLAP_MODEL_COLUMN  
  Nome dell'attributo stimabile.  
@@ -145,10 +145,10 @@ ms.locfileid: "66083634"
   
  Inoltre, quando si crea un modello di albero delle decisioni che include un attributo stimabile continuo, in alcuni casi i nodi di regressione dell'albero condividono le proprietà di nodi dell'albero di regressione.  
   
-##  <a name="NodeDist_Regression"></a>Distribuzione dei nodi per gli attributi continui  
+##  <a name="node-distribution-for-continuous-attributes"></a><a name="NodeDist_Regression"></a>Distribuzione dei nodi per gli attributi continui  
  La maggior parte delle informazioni importanti in un nodo di regressione è contenuta nella tabella NODE_DISTRIBUTION. Nell'esempio seguente viene illustrato il layout della tabella NODE_DISTRIBUTION. In questo esempio la struttura di data mining Targeted Mailing è stata utilizzata per creare un modello di regressione lineare che esegue la stima del reddito dei clienti in base all'età. Il modello ha unicamente uno scopo illustrativo perché può essere compilato con facilità utilizzando la struttura di data mining e i dati di esempio esistenti di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORTO|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0,000457142857142857|0|1|  
 |Yearly Income|57220,8876687257|17484|0,999542857142857|1041275619,52776|3|  
@@ -162,8 +162,7 @@ ms.locfileid: "66083634"
 ### <a name="elements-of-the-regression-formula"></a>Elementi della formula di regressione  
  La tabella nidificata NODE_DISTRIBUTION contiene ogni elemento della formula di regressione in una riga separata. Le prime due righe di dati nei risultati dell'esempio contengono informazioni sull'attributo stimabile, **Yearly Income**, che modella la variabile dipendente. La colonna SUPPORT mostra il conteggio dei case in supporto dei due stati di questo attributo: il valore **Yearly Income** era **** disponibile oppure mancante.  
   
- La colonna VARIANCE indica la varianza calcolata dell'attributo stimabile. La *varianza* è una misura del modo in cui i valori sono distribuiti in un campione, in base a una distribuzione prevista. In questo caso la varianza viene calcolata considerando la media della deviazione al quadrato dal valore medio. La radice quadrata della varianza è nota anche come devianza standard. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non fornisce la varianza standard ma è possibile calcolarla facilmente.  
+ La colonna VARIANCE indica la varianza calcolata dell'attributo stimabile. La*varianza* è la misura della dispersione dei valori in un campione, in base a una distribuzione prevista. In questo caso la varianza viene calcolata considerando la media della deviazione al quadrato dal valore medio. La radice quadrata della varianza è nota anche come devianza standard. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non fornisce la varianza standard ma è possibile calcolarla facilmente.  
   
  Per ogni regressore vengono restituite tre righe. Contengono il coefficiente, il miglioramento del punteggio e le statistiche del regressore.  
   
@@ -187,7 +186,7 @@ ms.locfileid: "66083634"
   
  Di conseguenza, presupponendo che l'età media è circa 45 anni, l'intercetta (VALUETYPE = 11) per la formula di regressione indica il reddito medio.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm-technical-reference.md)   

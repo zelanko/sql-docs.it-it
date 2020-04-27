@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089613"
 ---
 # <a name="trace-file-properties-general-tab"></a>Proprietà file di traccia (scheda Generale)
@@ -33,10 +33,10 @@ ms.locfileid: "66089613"
  **Nome provider di traccia**  
  Visualizza il nome dell'istanza tracciata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Tipo di provider di traccia**  
+ **Tipo provider di traccia**  
  Visualizza il tipo di server che ha fornito la traccia.  
   
- **Versione**  
+ **version**  
  Visualizza la versione del server che ha fornito la traccia.  
   
  **Dimensioni file (KB)**  
@@ -45,10 +45,10 @@ ms.locfileid: "66089613"
  **Creato**  
  Data e ora di creazione del file di traccia.  
   
- **Data modifica**  
+ **Ultima modifica**  
  Data e ora di modifica del file di traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aprire un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

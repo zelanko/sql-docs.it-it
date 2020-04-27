@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088364"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form membro calcolato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Editor form membro calcolato** nella scheda **Calcoli** di Progettazione cubi consente di creare o modificare un membro calcolato.  
   
- **Nota** Questo riquadro viene visualizzato solo nella visualizzazione form.  
+ **Nota** Questo riquadro viene visualizzato solo nella visualizzazione Form.  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
@@ -37,7 +37,7 @@ ms.locfileid: "66088364"
  **Membro padre**  
  Consente di selezionare il membro sotto cui verrà visualizzato il membro calcolato.  
   
- **Nota** Questa opzione è disponibile se la **gerarchia padre** specifica una gerarchia diversa da Measures.  
+ **Nota** Questa opzione è disponibile se **Gerarchia padre** specifica una gerarchia diversa da MEASURES.  
   
  **Modificare**  
  Selezionare questa opzione per visualizzare la finestra di dialogo **Seleziona membro padre** e scegliere un membro per **Membro padre**. Per altre informazioni sulla finestra di dialogo **Seleziona membro padre**, vedere [Finestra di dialogo Seleziona membro padre &#40;Analysis Services - Dati multidimensionali&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "66088364"
   
  Per altre informazioni sulle stringhe di formato MDX, vedere [Contenuto di FORMAT_STRING &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).  
   
- **Visible**  
+ **Visibile**  
  Selezionare **True** per consentire la visualizzazione del membro calcolato alle applicazioni client.  
   
  **Comportamento non vuoto**  
@@ -108,7 +108,7 @@ ms.locfileid: "66088364"
   
  Fare clic sul pulsante di selezione del carattere per visualizzare la finestra di dialogo **Carattere** e inserire i valori di proprietà relativi a un carattere specificato nell'espressione MDX. Per altre informazioni sui valori delle proprietà, vedere [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Creazione di membri calcolati](multidimensional-models/create-calculated-members.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   

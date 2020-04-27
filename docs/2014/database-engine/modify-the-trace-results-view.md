@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089443"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificare la visualizzazione dei risultati della traccia
@@ -36,12 +36,12 @@ ms.locfileid: "66089443"
   
 8.  [Modificare le impostazioni di visualizzazione](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a>Aggiungi o Rimuovi colonne  
+##  <a name="add-or-remove-columns"></a><a name="AddRemoveColumns"></a>Aggiungi o Rimuovi colonne  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi **scegliere Scegli colonne**.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "66089443"
   
 5.  Fare clic su **OK**.  
   
-##  <a name="ChangeColumns"></a>Creare, modificare o eliminare colonne unite  
+##  <a name="create-edit-or-delete-merged-columns"></a><a name="ChangeColumns"></a>Creare, modificare o eliminare colonne unite  
   
 #### <a name="to-create-merged-columns"></a>Per creare colonne unite  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi fare clic su **Scegli colonne**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66089443"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi fare clic su **Scegli colonne**.  
   
@@ -98,33 +98,33 @@ ms.locfileid: "66089443"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi fare clic su **Scegli colonne**.  
   
 3.  Nella finestra di dialogo **Scegli colonne** selezionare il nome della colonna unita da eliminare, quindi scegliere **Elimina**.  
   
-##  <a name="SortResults"></a>Ordinare i risultati  
+##  <a name="sort-the-results"></a><a name="SortResults"></a>Ordinare i risultati  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>Per ordinare i risultati in ordine crescente o decrescente  
   
 -   Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
+    >   È possibile anche fare clic sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
   
 -   Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna che si desidera ordinare. Selezionare **Ordinamento crescente** o **Ordinamento decrescente** per ordinare le colonne rispettivamente in ordine crescente o decrescente.  
   
      In caso di raggruppamento di colonne, il relativo ordinamento comporta l'esecuzione della stessa operazione esclusivamente per i dati all'interno del gruppo.  
   
-##  <a name="GroupResults"></a>Raggruppare i risultati  
+##  <a name="group-results"></a><a name="GroupResults"></a>Raggruppare i risultati  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Per raggruppare i risultati per una sola colonna  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti eventi estesi.  
+    >   È possibile anche fare clic sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti Eventi estesi.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna che si desidera raggruppare, quindi scegliere **Raggruppa per questa colonna**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66089443"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
+    >   È possibile anche fare clic sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
   
 2.  Fare clic sul pulsante **Raggruppamento** sulla barra degli strumenti Eventi estesi.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66089443"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="AggregateResults"></a>Risultati aggregati  
+##  <a name="aggregate-results"></a><a name="AggregateResults"></a>Risultati aggregati  
  Eventi estesi supporta cinque funzioni di aggregazione:  
   
 -   SUM  
@@ -165,7 +165,7 @@ ms.locfileid: "66089443"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
+    >   È possibile anche fare clic sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
   
     > [!NOTE]  
     >  L'aggregazione viene eseguita su un gruppo, pertanto è necessario raggruppare i risultati prima di effettuare l'aggregazione.  
@@ -184,7 +184,7 @@ ms.locfileid: "66089443"
   
 7.  Fare clic su **OK**.  
   
-##  <a name="Filter"></a>Filtrare i risultati  
+##  <a name="filter-results"></a><a name="Filter"></a>Filtrare i risultati  
  È possibile applicare filtri per limitare i risultati della traccia visualizzati nella finestra di traccia. Nel filtro di visualizzazione sono inclusi un filtro temporale e un filtro avanzato. È possibile utilizzare il filtro temporale per filtrare i risultati della traccia in base al timestamp dell'evento e il filtro avanzato per costruire condizioni di filtro utilizzando i campi e le azioni dell'evento. Esiste una relazione AND logica tra i filtri temporale e avanzato.  
   
 #### <a name="to-create-a-filter"></a>Per creare un filtro  
@@ -192,7 +192,7 @@ ms.locfileid: "66089443"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia selezionare i risultati che si desidera filtrare, quindi nella barra degli strumenti Eventi estesi fare clic sul pulsante **Filtri** .  
   
@@ -210,12 +210,12 @@ ms.locfileid: "66089443"
   
 -   Se non è presente né l'azione né il campo, viene visualizzato NULL.  
   
-##  <a name="Search"></a>Cerca testo nelle colonne  
+##  <a name="search-for-text-in-columns"></a><a name="Search"></a>Cerca testo nelle colonne  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Fare clic sul pulsante **Trova** sulla barra degli strumenti Eventi estesi.  
   
@@ -239,11 +239,11 @@ ms.locfileid: "66089443"
   
     3.  **Cerca in alto**. Utilizzare questa opzione per eseguire la ricerca dalla posizione del cursore fino all'inizio dei risultati.  
   
-    4.  **Usare**. Utilizzare questa opzione per interpretare le espressioni regolari e i caratteri speciali immessi nella casella **Trova** . Tra i caratteri speciali sono inclusi i caratteri jolly (*) e (?) per rappresentare uno o più caratteri. Le espressioni regolari sono notazioni speciali utilizzate per definire i criteri del testo di ricerca.  
+    4.  **Usare**. Usare questa opzione per interpretare le espressioni regolari e i caratteri speciali immessi nella casella **trova** . Tra i caratteri speciali sono inclusi i caratteri jolly (*) e (?) per rappresentare uno o più caratteri. Le espressioni regolari sono notazioni speciali utilizzate per definire i criteri del testo di ricerca.  
   
 6.  Fare clic su **Trova successivo** per cercare il successivo testo immesso nella casella **Trova** .  
   
-##  <a name="ChangeDisplay"></a>Modificare le impostazioni di visualizzazione  
+##  <a name="change-the-display-settings"></a><a name="ChangeDisplay"></a>Modificare le impostazioni di visualizzazione  
  È possibile salvare le informazioni sulle colonne (ordine delle colonne, colonna di unione e larghezza delle colonne) e sul filtro di un risultato di traccia in un file di impostazioni di visualizzazione degli eventi estesi (con estensione viewsetting). Dopo aver salvato il file, è possibile applicarlo ai risultati della traccia per modificare la vista.  
   
 #### <a name="to-change-the-display-settings"></a>Per modificare le impostazioni di visualizzazione  
@@ -251,7 +251,7 @@ ms.locfileid: "66089443"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e quindi scegliere **Controlla i dati dinamici**.  
+    >   È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione e scegliere **Controlla i dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia, dal menu o sulla barra degli strumenti degli eventi estesi scegliere **Impostazioni di visualizzazione**.  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083508"
 ---
 # <a name="mining-model-properties"></a>Proprietà dei modelli di data mining
@@ -56,9 +56,9 @@ ms.locfileid: "66083508"
 |**Nome**|Imposta il nome della colonna del modello di data mining. È possibile digitare un nuovo nome per fornire un alias per la colonna del modello di data mining.|  
 |**ModelingFlags**|Imposta i flag specifici dell'algoritmo per la colonna.|  
 |**SourceColumnID**|Indica il nome della colonna della struttura di data mining su cui si basa la colonna del modello.<br /><br /> Questa proprietà è di sola lettura.|  
-|**Utilizzo**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
+|**Uso**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Colonne del modello di data mining](mining-model-columns.md)   
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   

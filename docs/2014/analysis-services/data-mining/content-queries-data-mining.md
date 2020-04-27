@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085644"
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
@@ -26,17 +26,17 @@ ms.locfileid: "66085644"
   
 -   [Query sulla struttura e sui dati del case](#bkmk_Structure)  
   
--   [Query sui modelli di modello](#bkmk_Patterns)  
+-   [Query sugli schemi del modello](#bkmk_Patterns)  
   
- [esempi](#bkmk_Examples)  
+ [Esempi](#bkmk_Examples)  
   
 -   [Query sul contenuto su un modello di associazione](#bkmk_Assoc)  
   
 -   [Query sul contenuto su un modello Decision Trees](#bkmk_DecTree)  
   
- [Utilizzo dei risultati della query](#bkmk_Results)  
+ [Utilizzo dei risultati delle query](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a>Query sul contenuto di base  
+##  <a name="basic-content-queries"></a><a name="bkmk_ContentQuery"></a>Query sul contenuto di base  
  È possibile creare query sul contenuto tramite il generatore delle query di stima, utilizzare i modelli di query sul contenuto DMX disponibili in SQL Server Management Studio o scrivere query direttamente in DMX. A differenza delle query di stima, non è necessario unire in join i dati esterni, pertanto le query sul contenuto sono facili da scrivere.  
   
  In questa sezione viene fornita una panoramica dei tipi di query sul contenuto che è possibile creare.  
@@ -45,7 +45,7 @@ ms.locfileid: "66085644"
   
 -   Le query sul modello possono restituire modelli, elenchi di attributi, formule e così via.  
   
-###  <a name="bkmk_Structure"></a>Query sulla struttura e sui dati del case  
+###  <a name="queries-on-structure-and-case-data"></a><a name="bkmk_Structure"></a> Query sulla struttura e sui dati del case  
  DMX supporta le query sui dati memorizzati nella cache utilizzati per compilare strutture e modelli di data mining. Per impostazione predefinita, questa cache viene creata quando si definisce la struttura di data mining e viene popolata quando si elabora la struttura o il modello.  
   
 > [!WARNING]  
@@ -73,22 +73,22 @@ ms.locfileid: "66085644"
   
  Utilizzare questa istruzione per recuperare tutti i valori di una colonna DISCRETE.  Non utilizzare questa istruzione per le colonne DISCRETIZED, ma utilizzare le funzioni `RangeMin` e `RangeMax`.  
   
- **Trovare i case utilizzati per eseguire il training di un modello o di una struttura**  
+ **Individuare i case utilizzati per il training di un modello o di una struttura**  
  `SELECT  FROM <mining structure.CASES WHERE IsTrainingCase()`  
   
  Utilizzare questa istruzione per ottenere il set di dati completo utilizzato per il training di un modello.  
   
- **Trovare i case utilizzati per il test di un modello o di una struttura**  
+ **Individuare i case utilizzati per il testing di un modello o di una struttura**  
  `SELECT  FROM <mining structure.CASES WHERE IsTestingCase()`  
   
  Utilizzare questa istruzione per ottenere i dati riservati per il testing dei modelli di data mining correlati a una struttura specifica.  
   
- **Drill-through da uno schema del modello specifico ai dati del case sottostanti**  
+ **Eseguire il drill-through da uno schema del modello specifico ai dati del case sottostanti**  
  `SELECT FROM <model>.CASESWHERE IsTrainingCase() AND IsInNode(<node>)`  
   
  Utilizzare questa istruzione per recuperare dati del case dettagliati da un modello sottoposto a training. È necessario specificare un determinato nodo, ad esempio è necessario conoscere l'ID del nodo del cluster, il ramo specifico di un albero delle decision, e così via. Inoltre, è necessario disporre delle autorizzazioni drill-through sul modello per eseguire questa query.  
   
-###  <a name="bkmk_Patterns"></a>Query su modelli di modello, statistiche e attributi  
+###  <a name="queries-on-model-patterns-statistics-and-attributes"></a><a name="bkmk_Patterns"></a>Query su modelli di modello, statistiche e attributi  
  Il contenuto di un modello di data mining è utile per molti scopi. Con una query sul contenuto del modello, è possibile:  
   
 -   Estrarre formule o probabilità per effettuare i calcoli.  
@@ -105,17 +105,17 @@ ms.locfileid: "66085644"
   
  Negli esempi seguenti vengono mostrati alcuni dei modelli comuni per la creazione di query sul contenuto del modello:  
   
- **Ottenere modelli dal modello**  
+ **Ottenere schemi dal modello**  
  `SELECT FROM <model>.CONTENT`  
   
  Utilizzare questa istruzione per recuperare informazioni dettagliate su nodi specifici del modello. A seconda del tipo di algoritmo, nel nodo possono essere contenute regole e formule, statistiche sul supporto e sulla varianza e così via.  
   
- **Recuperare gli attributi utilizzati in un modello sottoposto a training**  
+ **Recuperare attributi utilizzati in un modello sottoposto a training**  
  `CALL System.GetModelAttributes(<model>)`  
   
  Utilizzare questa stored procedure per recuperare l'elenco di attributi utilizzati da un modello. Queste informazioni sono utili per determinare gli attributi eliminati, ad esempio, in seguito alla selezione delle caratteristiche.  
   
- **Recuperare il contenuto archiviato in una dimensione data mining**  
+ **Recuperare il contenuto archiviato in una dimensione di data mining**  
  `SELECT FROM <model>.DIMENSIONCONTENT`  
   
  Utilizzare questa istruzione per recuperare i dati da una dimensione di data mining.  
@@ -129,12 +129,12 @@ ms.locfileid: "66085644"
   
  Consente di ottenere un documento XML che rappresenta il modello in formato PMML. Non sono supportati tutti i tipi di modello.  
   
-##  <a name="bkmk_Examples"></a> Esempi  
+##  <a name="examples"></a><a name="bkmk_Examples"></a> Esempi  
  Sebbene alcuni contenuti dei modelli siano standard nei diversi algoritmi, alcune parti del contenuto variano significativamente a seconda dell'algoritmo utilizzato per compilare il modello. Pertanto, quando si crea una query sul contenuto, è necessario identificare le informazione del modello che sono utili per il modello specifico in uso.  
   
  Alcuni esempi vengono forniti in questa sezione per illustrare come la scelta di algoritmo influisca sul tipo di informazioni archiviato nel modello. Per altre informazioni sul contenuto del modello di data mining e sul contenuto specifico per ogni tipo di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a>Esempio 1: query sul contenuto su un modello di associazione  
+###  <a name="example-1-content-query-on-an-association-model"></a><a name="bkmk_Assoc"></a> Esempio 1: Query sul contenuto su un modello di associazione  
  Tramite l'istruzione, `SELECT FROM <model>.CONTENT`, vengono restituiti tipi diversi di informazioni, a seconda del tipo di modello su cui si esegue una query. Per un modello di associazione, un'informazione chiave è il *tipo di nodo*. I nodi sono come contenitori per le informazioni nel contenuto del modello. In un modello di associazione, i nodi che rappresentano regole hanno un valore NODE_TYPE pari a 8, mentre i nodi che rappresentano i set di elementi hanno un valore NODE_TYPE pari a 7.  
   
  Pertanto, tramite la query seguente vengono restituiti i primi 10 set di elementi, classificati per supporto (ordinamento predefinito).  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Per altri esempi, vedere [Esempi di query sul modello di associazione](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a>Esempio 2: query sul contenuto su un modello Decision Trees  
+###  <a name="example-2-content-query-on-a-decision-trees-model"></a><a name="bkmk_DecTree"></a> Esempio 2: Query sul contenuto su un modello di alberi delle decisioni  
  Un modello di albero delle decisioni può essere utilizzato per la stima, nonché per la classificazione.  In questo esempio si presuppone l'utilizzo del modello per la stima di un risultato, ma si desidera scoprire anche quali fattori o regole possono essere utilizzate per classificare il risultato.  
   
  In un modello di albero delle decisioni, i nodi sono utilizzati per rappresentare sia alberi sia nodi foglia. Nella didascalia per ogni nodo è contenuta la descrizione del percorso fino al risultato. Pertanto, per tracciare il percorso per qualsiasi particolare risultato, è necessario identificare il nodo in cui è contenuto e ottenere i dettagli per tale nodo.  
@@ -190,12 +190,12 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Per altri esempi, vedere [Esempi di query sul modello di alberi delle decisioni](decision-trees-model-query-examples.md).  
   
-##  <a name="bkmk_Results"></a>Utilizzo dei risultati della query  
+##  <a name="working-with-the-query-results"></a><a name="bkmk_Results"></a>Utilizzo dei risultati della query  
  Come dimostrato negli esempi, tramite le query sul contenuto vengono restituiti soprattutto set di righe tabulari, tuttavia possono essere incluse anche informazioni sulle colonne nidificate. È possibile rendere bidimensionale il set di righe restituito, tuttavia, in questo modo, l'utilizzo dei risultati può risultare più complesso. Il contenuto del nodo NODE_DISTRIBUTION in particolare è nidificato, ma in esso sono contenute informazioni molto interessanti sul modello.  
   
  Per ulteriori informazioni sull'utilizzo di set di righe gerarchici, vedere la specifica OLE DB su MSDN.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Informazioni sull'istruzione DMX SELECT](/sql/dmx/understanding-the-dmx-select-statement)   
  [Query di data mining](data-mining-queries.md)  
   

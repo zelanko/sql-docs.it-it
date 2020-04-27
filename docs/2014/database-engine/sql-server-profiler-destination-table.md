@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088933"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - Tabella di destinazione
@@ -34,10 +34,10 @@ ms.locfileid: "66088933"
  **Proprietario**  
  Indica il proprietario della tabella di traccia. Questo campo viene popolato automaticamente con il valore **dbo**.  
   
- **Tabella**  
+ **tavolo**  
  Consente di specificare il nome della tabella in cui si desidera archiviare la traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Salvare i risultati della traccia in una tabella &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

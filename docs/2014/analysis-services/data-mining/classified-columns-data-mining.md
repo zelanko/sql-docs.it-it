@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085691"
 ---
 # <a name="classified-columns-data-mining"></a>Colonne classificate (Data mining)
@@ -40,7 +40,7 @@ ms.locfileid: "66085691"
   
  Nell'elenco seguente vengono descritti i tipi di contenuto supportati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per le colonne classificate.  
   
- **PROBABILITÀ**  
+ **PROBABILITY**  
  Il valore della colonna indica la probabilità del valore associato ed è un numero compreso tra 0 e 1.  
   
  **VARIANZA**  
@@ -58,9 +58,9 @@ ms.locfileid: "66085691"
  **SUPPORTO**  
  Il valore della colonna indica il peso o fattore di replica del case del valore associato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi di contenuto &#40;&#41;di data mining](content-types-data-mining.md)   
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati &#40;&#41;di data mining](data-types-data-mining.md)  
+ [Tipi di dati &#40;Data mining&#41;](data-types-data-mining.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084355"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>Filtrare un set di elementi in un modello Association Rules
@@ -34,7 +34,7 @@ ms.locfileid: "66084355"
   
  Il set di elementi verrà filtrato per visualizzare solo i set contenenti gli elementi selezionati. Nella casella non viene fatta distinzione tra maiuscole e minuscole. I filtri vengono archiviati in memoria affinché sia possibile selezionare un filtro già utilizzato nell'elenco.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)  
   
   

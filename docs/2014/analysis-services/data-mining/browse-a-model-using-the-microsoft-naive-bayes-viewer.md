@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086025"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes
@@ -37,18 +37,18 @@ ms.locfileid: "66086025"
 > [!NOTE]  
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sugli schemi individuati, utilizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Schede del Visualizzatore  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Schede del Visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Per l'esplorazione dei dati, nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes sono disponibili le schede seguenti:  
   
 -   [Rete di dipendenze](#BKMK_Dependency)  
   
 -   [Profili attributo](#BKMK_Profiles)  
   
--   [Caratteristiche degli attributi](#BKMK_Characteristics)  
+-   [Caratteristiche attributo](#BKMK_Characteristics)  
   
--   [Discriminazione degli attributi](#BKMK_Discrimination)  
+-   [Analisi discriminante attributi](#BKMK_Discrimination)  
   
-##  <a name="BKMK_Dependency"></a>Rete di dipendenze  
+##  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Rete di dipendenze  
  Nella scheda **Rete di dipendenze** vengono visualizzate le dipendenze tra gli attributi di input e gli attributi stimabili di un modello. Il dispositivo di scorrimento a sinistra del visualizzatore svolge la funzione di filtro correlato ai livelli di attendibilità delle dipendenze. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
  Quando si seleziona un nodo, nel visualizzatore vengono evidenziate le dipendenze specifiche del nodo. Se ad esempio si sceglie un nodo stimabile, nel visualizzatore verrà inoltre evidenziato ogni nodo che contribuisce alla stima del nodo stimabile.  
@@ -57,7 +57,7 @@ ms.locfileid: "66086025"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Profiles"></a>Profili attributo  
+##  <a name="attribute-profiles"></a><a name="BKMK_Profiles"></a> Profili attributo  
  Nella scheda **Profili attributo** viene visualizzata una griglia con istogrammi. Tale griglia consente di confrontare l'attributo stimabile selezionato nella casella **Stimabile** con tutti gli altri attributi del modello. Ogni colonna della scheda rappresenta uno stato dell'attributo stimabile. Se l'attributo stimabile include molti stati, è possibile modificare il numero di stati visualizzati nell'istogramma regolando le **Barre istogramma**. Se il numero scelto è inferiore al numero totale di stati dell'attributo, gli stati saranno elencati nell'ordine in cui vengono supportati, con gli stati rimanenti raccolti in un singolo bucket grigio.  
   
  Fare clic sulla casella di controllo **Mostra legenda** per visualizzare una legenda di data mining che consente di individuare le corrispondenze tra i colori dell'istogramma e gli stati di un attributo. Nella legenda di data mining viene visualizzata anche la distribuzione di case per ogni coppia attributo-valore selezionata.  
@@ -66,12 +66,12 @@ ms.locfileid: "66086025"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Characteristics"></a>Caratteristiche degli attributi  
+##  <a name="attribute-characteristics"></a><a name="BKMK_Characteristics"></a>Caratteristiche degli attributi  
  Per usare la scheda **Caratteristiche attributo** , è necessario selezionare un attributo stimabile dall'elenco **Attributo** e uno degli stati corrispondenti dall'elenco **Valore** . Quando si impostano tali variabili, nella scheda **Caratteristiche attributo** vengono visualizzati gli stati degli attributi associati al case dell'attributo selezionato. Gli attributi vengono ordinati in base alla priorità.  
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Discrimination"></a>Discriminazione degli attributi  
+##  <a name="attribute-discrimination"></a><a name="BKMK_Discrimination"></a>Discriminazione degli attributi  
  Per usare la scheda **Analisi discriminante attributi** , è necessario selezionare un attributo stimabile e due degli stati corrispondenti dagli elenchi **Attributo**, **Valore 1**e **Valore 2** . Nella griglia della scheda **Analisi discriminante attributi** verranno visualizzate colonne con le informazioni seguenti:  
   
  **Attributo**  
@@ -88,7 +88,7 @@ ms.locfileid: "66086025"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Strumenti di data mining](data-mining-tools.md)   

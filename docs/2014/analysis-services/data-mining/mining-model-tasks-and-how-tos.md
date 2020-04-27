@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083489"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Attività e procedure relative al modello di data mining
@@ -35,7 +35,7 @@ ms.locfileid: "66083489"
   
 -   [Modificare la discretizzazione di una colonna in un modello di data mining](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Visualizzare o modificare i flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
+-   [Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md)  
   
 -   [Specificare una colonna da utilizzare come regressore in un modello](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66083489"
   
 -   [Creare una dimensione di data mining](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)   
  [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
  [Concetti di data mining](data-mining-concepts.md)  

@@ -16,19 +16,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088466"
 ---
 # <a name="browsing-an-association-rules-model"></a>Esplorazione di un modello Association Rules
   Quando si apre un modello di associazione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore Association Rules [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in.  Il visualizzatore consente di visualizzare immediatamente gli elementi correlati l'uno con l'altro e le regole che è possibile utilizzare per la stima o creare indicazioni.  
   
-##  <a name="BKMK_ViewerTabs"></a>Esplorare il modello  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Esplorare il modello  
  Quando si apre un modello di data mining creato utilizzando l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Association Rules, nella finestra **Sfoglia** sono incluse le visualizzazioni seguenti, ciascuna progettata per consentire l'esplorazione di un aspetto diverso del modello:  
   
--   [Set](#BKMK_Itemsets)  
+-   [Set di elementi](#BKMK_Itemsets)  
   
 -   [Regole](#BKMK_Rules)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088466"
   
  Per provare un modello di associazione, è possibile utilizzare i dati di esempio nella scheda Associazione della cartella di lavoro dei dati di esempio e compilare un modello di associazione utilizzando tutte le impostazioni predefinite. È inoltre possibile creare un modello di Market Basket Analysis e aprirlo utilizzando **Sfoglia**.  
   
-###  <a name="BKMK_Itemsets"></a>Set  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Set  
  La scheda **set** di elementi è una posizione ideale per iniziare a esplorare un modello di associazione. In questa scheda viene mostrato un elenco degli elementi spesso trovati insieme dal modello.  
   
  ![Elenco di elementi in un modello di associazione](media/dm13-association-itemsets.gif "Elenco di elementi in un modello di associazione")  
@@ -83,7 +83,7 @@ ms.locfileid: "66088466"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Regole  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Regole  
  La scheda **regole** combina le informazioni sui set di elementi e il relativo valore.  
   
  ![Elenco di regole create da un modello di associazione](media/dm13-association-rules.gif "Elenco di regole create da un modello di associazione")  
@@ -114,7 +114,7 @@ ms.locfileid: "66088466"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Rete di dipendenze  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Rete di dipendenze  
  La scheda **rete di dipendenze** è una mappa visiva delle correlazioni tra gli elementi. Ogni ovale nel grafico (denominato *nodo*) rappresenta una coppia attributo-valore, ad esempio "gilet = existing" o "Age = 1-30".  Ogni riga che connette gli ovali (denominata *bordo*) rappresenta un tipo di correlazione.  
   
  ![Grafico della rete di dipendenze per un modello di associazione](media/dm13-association-dependencynetwork.gif "Grafico della rete di dipendenze per un modello di associazione")  
@@ -154,7 +154,7 @@ ms.locfileid: "66088466"
   
  Per ulteriori informazioni sulla configurazione di parametri avanzati, vedere [algoritmi di data mining &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

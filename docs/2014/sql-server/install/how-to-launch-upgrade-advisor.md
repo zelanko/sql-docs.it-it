@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094913"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Procedura: Avvio di Preparazione aggiornamento
@@ -29,9 +29,9 @@ ms.locfileid: "66094913"
   
 -   Per avviare Preparazione aggiornamento, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, fare **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** clic su, quindi su ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] preparazione aggiornamento**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esecuzione di preparazione aggiornamento &#40;interfaccia utente&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Procedure per preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083043"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Eseguire query sui parametri utilizzati per creare un modello di data mining
@@ -31,7 +31,7 @@ ms.locfileid: "66083043"
 2.  Fare clic con il pulsante destro del mouse sul nome dell'istanza, scegliere **Nuova query**, quindi **DMX**.  
   
     > [!NOTE]  
-    >  È anche possibile creare una query su un modello di data mining tramite il modello **MDX** .  
+    >   È anche possibile creare una query su un modello di data mining tramite il modello **MDX** .  
   
 3.  Se l'istanza contiene più database, selezionare quello che contiene il modello su cui eseguire la query dall'elenco **Database disponibili** nella barra degli strumenti.  
   
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alle query di data mining](data-mining-query-tasks-and-how-tos.md)   
  [Query di data mining](data-mining-queries.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087507"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurare l'aggiornamento dati o l'elaborazione di sole query dedicato (PowerPivot per SharePoint)
@@ -31,9 +31,9 @@ ms.locfileid: "66087507"
   
  [Modificare il numero dei processi di aggiornamento dati eseguibili in parallelo](#change)  
   
-##  <a name="config"></a>Configurare una modalità di elaborazione  
+##  <a name="configure-a-processing-mode"></a><a name="config"></a>Configurare una modalità di elaborazione  
   
-1.  In Impostazioni sistema di Amministrazione centrale fare clic su **Gestisci servizi nel server**.  
+1.  In Impostazioni sistema di amministrazione centrale fare clic **su Gestisci servizi nel server**.  
   
 2.  In Server, nella parte superiore della pagina, fare clic sulla freccia giù, quindi scegliere **Cambia server**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66087507"
   
 7.  Salvare le modifiche. Il server non consentirà di convalidare le voci finché non si verifica un evento di elaborazione. Se si immette un numero non valido per i processi simultanei, l'errore sarà rilevato e registrato quando viene elaborata la richiesta successiva.  
   
-##  <a name="change"></a>Modificare il numero di processi di aggiornamento dati che possono essere eseguiti in parallelo  
+##  <a name="change-the-number-of-data-refresh-jobs-that-can-run-in-parallel"></a><a name="change"></a>Modificare il numero di processi di aggiornamento dati che possono essere eseguiti in parallelo  
  Un processo di aggiornamento dei dati è un'attività pianificata aggiunta a una coda di elaborazione gestita e monitorata da un'applicazione di servizio PowerPivot. Un processo è costituito da informazioni sulla pianificazione per una o più origini dati in una cartella di lavoro PowerPivot. Un processo separato viene creato per ogni pianificazione definita. Se un proprietario della cartella di lavoro definisce una pianificazione per tutte le origini dati, sarà creato un solo processo per tutta l'operazione di aggiornamento dei dati. Se un proprietario della cartella di lavoro crea singole pianificazioni per le origini dati esterne, verranno creati più processi, i quali saranno eseguiti per effettuare un aggiornamento dei dati completo per tale cartella di lavoro.  
   
  È possibile aumentare il numero di processi di aggiornamento dei dati che possono essere eseguiti contemporaneamente se il sistema dispone della capacità di supportare il carico aggiuntivo.  
@@ -82,7 +82,7 @@ ms.locfileid: "66087507"
   
  Ogni processo di aggiornamento dei dati disporrà di caratteristiche di caricamento diverse a seconda del numero e delle dimensioni delle origini dati aggiornate. Il carico di elaborazione delle cartelle di lavoro che dispongono di una sola origine dati con un numero più piccolo di righe è molto più leggero rispetto a quello di una cartella di lavoro che dispone di numerose origini dati e di set di righe molto grandi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento di dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

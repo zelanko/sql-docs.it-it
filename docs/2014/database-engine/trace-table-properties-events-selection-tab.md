@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089536"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Proprietà tabella di traccia (scheda Selezione eventi)
   Utilizzare la scheda **Selezione eventi** nella finestra di dialogo **Proprietà tabella di traccia** per visualizzare le proprietà degli eventi e delle colonne di dati della traccia o per rimuovere eventi e colonne.  
   
- Per visualizzare questa finestra, aprire una tabella di traccia mediante [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , scegliere **Proprietà** dal menu **File**e quindi fare clic sulla scheda **Selezione eventi** .  
+ Per visualizzare questa finestra, aprire una tabella di traccia mediante [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , Scegliere **Proprietà**dal menu **file** e quindi fare clic sulla scheda **Selezione eventi** .  
   
 ## <a name="options"></a>Opzioni  
- Colonna **eventi**  
+ Colonna**Eventi**  
  Consente di visualizzare gli eventi inseriti nella traccia organizzati per categoria. È possibile selezionare gli eventi selezionando le rispettive caselle o colonne di dati. Se si seleziona la casella corrispondente all'evento, verranno selezionate tutte le colonne di dati disponibili per tale evento. Se si seleziona la colonna di dati corrispondente all'evento, quest'ultimo viene selezionato insieme a tutte le altre colonne necessarie. Se si sta visualizzando un file o una tabella di traccia, è possibile deselezionare le caselle di controllo relative agli eventi o alle colonne di dati per ridurre la quantità di dati visibili nella finestra di traccia, facilitandone in tal modo l'analisi. È inoltre possibile modificare i filtri colonna per ridurre la quantità di dati visibili nella finestra di traccia. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Altre colonne di dati  
@@ -47,7 +47,7 @@ ms.locfileid: "66089536"
  **Organizza colonne**  
  Dopo avere selezionato **Eventi** e le colonne di dati da inserire nella traccia, fare clic su **Organizza colonne** per forzare il riordinamento della colonna nella finestra dei risultati della traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

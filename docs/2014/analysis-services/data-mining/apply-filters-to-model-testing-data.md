@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086151"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
@@ -77,7 +77,7 @@ ms.locfileid: "66086151"
   
 8.  Usare le colonne **Operator**e **Value** per definire il modo in cui la colonna viene filtrata.  
   
-     **Nota** Digitare i valori senza usare le virgolette.  
+     **Note** Digitare i valori senza usare le virgolette.  
   
 9. Fare clic sulla casella di testo **And/Or** e selezionare un operatore logico per definire la modalità di combinazione di più condizioni.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66086151"
   
      La condizione di filtro viene applicata all'origine dati quando si crea il grafico di accuratezza.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md)   
  [Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md)  

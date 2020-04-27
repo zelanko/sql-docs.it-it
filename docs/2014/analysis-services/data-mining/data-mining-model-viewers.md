@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085051"
 ---
 # <a name="data-mining-model-viewers"></a>Visualizzatori modello di data mining
@@ -81,7 +81,7 @@ ms.locfileid: "66085051"
  [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  Vengono descritte le informazioni dettagliate disponibili nel visualizzatore generico per tutti i modelli di data mining e vengono forniti esempi su come interpretare le informazioni per ogni algoritmo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Data Mining Designer](data-mining-designer.md)  
   

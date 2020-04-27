@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089194"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Opzioni (Editor di testo - XML - pagina Generale)
@@ -40,7 +40,7 @@ ms.locfileid: "66089194"
  **A capo automatico**  
  Se questa casella di controllo è selezionata, le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor vengono visualizzate automaticamente nella riga successiva. Se si seleziona questa casella di controllo, viene abilitata automaticamente la casella di controllo **Mostra glifi per ritorno a capo automatico** .  
   
- **Mostra icona per ritorno a capo automatico**  
+ **Mostra icone per ritorno a capo automatico**  
  Se questa casella di controllo è selezionata, viene visualizzato un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva. Per non visualizzare questi indicatori, deselezionare la casella di controllo.  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ ms.locfileid: "66089194"
  **Consenti navigazione URL con clic singolo**  
  Se questa casella di controllo è selezionata, il cursore si trasforma in un puntatore a forma di mano quando viene posizionato su un URL nell'editor. È possibile fare clic sull'URL per visualizzare nel browser la pagina indicata.  
   
- **Barra di spostamento**  
+ **Barra di navigazione**  
  Questa casella di controllo non è disponibile.  
   
   

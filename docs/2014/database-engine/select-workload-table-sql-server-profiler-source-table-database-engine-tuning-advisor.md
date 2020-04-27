@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088875"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Tabella di origine SQL Server Profiler-Ottimizzazione guidata motore di database-selezionare la tabella del carico di lavoro
@@ -39,12 +39,12 @@ ms.locfileid: "66088875"
  **Proprietario**  
  Indica il proprietario della tabella di traccia. Questo campo viene popolato automaticamente con il valore **dbo**.  
   
- **Tabella**  
+ **tavolo**  
  Consente di specificare il nome della tabella di traccia dalla quale leggere la traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Salvare i risultati della traccia in una tabella &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Ottimizzazione guidata motore di database](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

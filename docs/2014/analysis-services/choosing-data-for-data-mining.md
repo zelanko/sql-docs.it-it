@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088028"
 ---
 # <a name="choosing-data-for-data-mining"></a>Scelta di dati per il data mining
@@ -38,7 +38,7 @@ ms.locfileid: "66088028"
   
  [Altri requisiti di dati](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>Scelta dei dati  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>Scelta dei dati  
  La selezione dei dati utilizzati per l'analisi è forse la parte più importante del processo di data mining, ancora più importante della scelta di un algoritmo. Ciò è dovuto al fatto che il data mining non è in genere basato su ipotesi, ma sui dati. Anziché selezionare e verificare le variabili preventivamente, come si farebbe con un modello statistico tradizionale, il data mining può accettare dati e individuare nuove correlazioni o non riuscire a individuare alcun modello. La qualità e la quantità dei dati possono avere un effetto significativo sui risultati.  
   
  Attenersi, in linea generale, alle regole seguenti:  
@@ -109,7 +109,7 @@ ms.locfileid: "66088028"
   
 -   Approssimare i valori a una media centrale o a un valore rappresentativo.  
   
-##  <a name="bkmk_CommonDataProblems"></a>Problemi comuni relativi ai dati  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>Problemi comuni relativi ai dati  
   
 ### <a name="excel-number-formats"></a>Formati numerici di Excel  
  Excel è uno strumento semplice da usare perché è perdonabile, ma è possibile inserire qualsiasi tipo di dati ovunque. Tuttavia, prima di iniziare a cercare modelli e ad analizzare le correlazioni, è necessario imporre ai dati una struttura o alcuni vincoli.  
@@ -145,7 +145,7 @@ ms.locfileid: "66088028"
   
  Se si incontrano difficoltà con le date e si desidera analizzarle utilizzando raggruppamenti basati sulla logica comune come mese o giorno, è possibile utilizzare le funzioni DATA in Excel per estrarre l'anno, il mese o il giorno in una colonna separata e utilizzare quindi la colonna per la classificazione.  
   
-##  <a name="bkmk_OtherRequirements"></a>Altri requisiti per i dati  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>Altri requisiti per i dati  
   
 ### <a name="requirements-by-algorithm-type"></a>Requisiti per tipo di algoritmo  
  Per creare un modello, alcuni algoritmi utilizzati nei componenti aggiuntivi richiedono tipi di dati o di contenuti specifici.  
@@ -200,7 +200,7 @@ ms.locfileid: "66088028"
   
  Il tipo di contenuto `Discretized` può essere utilizzato con i tipi di dati seguenti: `Date`, `Double` e `Long`.  
   
- **Chiave**  
+ **Codice**  
  La colonna identifica in modo univoco una riga.  
   
  In genere la colonna chiave è un identificatore numerico o di testo che non deve essere utilizzato per l'analisi, ma solo per la registrazione di record. Le eccezioni sono chiavi della serie temporale e chiavi della sequenza.  
@@ -219,7 +219,7 @@ ms.locfileid: "66088028"
   
  Questo tipo di contenuto è supportato dai tipi di dati `Double`, `Long` e `Date`.  
   
- **Tabella**  
+ **tavolo**  
  Anche questo tipo di contenuto viene utilizzato solo quando si ottengono dati da un'origine dati esterna definita come vista origine dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Ciò in pratica significa che ogni riga di dati contiene effettivamente una tabella dati annidata, con una o più colonne e una o più righe.  

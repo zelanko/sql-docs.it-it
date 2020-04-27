@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089246"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opzioni (Editor di testo - Tutte le lingue - pagina Generale)
@@ -45,7 +45,7 @@ ms.locfileid: "66089246"
  **A capo automatico**  
  Consente di visualizzare sulla riga successiva le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Mostra icona per ritorno a capo automatico** .  
   
- **Mostra icona per ritorno a capo automatico**  
+ **Mostra icone per ritorno a capo automatico**  
  Consente di visualizzare un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva.  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ ms.locfileid: "66089246"
  **Consenti navigazione URL con clic singolo**  
  Consente di trasformare il cursore nel simbolo di una mano quando si sofferma su un URL nell'editor. È possibile fare clic sull'URL per visualizzare nel browser la pagina indicata.  
   
- **Barra di spostamento**  
+ **Barra di navigazione**  
  Consente di visualizzare una barra di navigazione nella parte superiore dell'editor di codice. Usare gli elenchi a discesa **Oggetti** e **Procedure** per scegliere un determinato oggetto nel codice, selezionare una procedura e inserire un'istanza della procedura specificata. La barra di navigazione non è disponibile per tutti i tipi di codice.  
   
   

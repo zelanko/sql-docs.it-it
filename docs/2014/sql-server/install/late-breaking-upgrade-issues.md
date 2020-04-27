@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22cd26b7e389cb71408c1b3df87d48aa62244f9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094044"
 ---
 # <a name="late-breaking-upgrade-issues"></a>Problemi di aggiornamento più recenti
   Dopo il completamento della documentazione, è possibile che sia stata aggiunta o modificata logica di rilevamento. Se questo argomento è stato raggiunto dal Visualizzatore report di Preparazione aggiornamento o si desidera visualizzare elementi più recenti, consultare il file Leggimi installato con Preparazione aggiornamento per ulteriori informazioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

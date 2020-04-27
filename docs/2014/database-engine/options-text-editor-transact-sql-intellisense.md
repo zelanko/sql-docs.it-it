@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089814"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Opzioni (editor di testo-Transact-SQL-IntelliSense)
@@ -32,7 +32,7 @@ ms.locfileid: "66089814"
  Abilita le caratteristiche IntelliSense. Quando questa casella non è selezionata, le opzioni IntelliSense non sono disponibili. Questa casella di controllo è selezionata per impostazione predefinita.  
   
  **Sottolinea errori**  
- Identifica errori semantici e di sintassi delle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] nella finestra della query. Tutti gli errori e gli avvisi sono visualizzati in rosso. Errori e avvisi sono supportati solo per le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] per le quali è stato implementato IntelliSense. Questa casella di controllo è selezionata per impostazione predefinita.  
+ Identifica errori semantici e di sintassi nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] nella finestra Query. Tutti gli errori e gli avvisi sono visualizzati in rosso. Errori e avvisi sono supportati solo per le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] per le quali è stato implementato IntelliSense. Questa casella di controllo è selezionata per impostazione predefinita.  
   
  **Struttura istruzioni**  
  Abilita la modalità struttura quando viene aperto un file in modo da creare blocchi comprimibili del codice [!INCLUDE[tsql](../includes/tsql-md.md)]. Questa casella di controllo è selezionata per impostazione predefinita.  
@@ -43,7 +43,7 @@ ms.locfileid: "66089814"
  **Combinazione di maiuscole e minuscole per nomi di funzioni predefinite**  
  Specifica se i nomi delle funzioni [!INCLUDE[tsql](../includes/tsql-md.md)] predefinite inclusi negli elenchi di completamento usano lettere maiuscole, ad esempio DATEADD, o lettere minuscole, ad esempio dateadd. Selezionare l'opzione corrispondente alle convenzioni di scrittura del codice [!INCLUDE[tsql](../includes/tsql-md.md)] in uso.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Risoluzione dei problemi relativi a IntelliSense &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/troubleshooting-intellisense.md)  
   
   

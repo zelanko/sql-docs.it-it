@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087723"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>Completamento procedura guidata (Creazione guidata cubo)
@@ -29,7 +29,7 @@ ms.locfileid: "66087723"
  **Anteprima**  
  Consente di visualizzare la struttura del cubo che verrà creato al termine della procedura guidata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

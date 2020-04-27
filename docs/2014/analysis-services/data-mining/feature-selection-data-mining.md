@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084420"
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
@@ -62,7 +62,7 @@ ms.locfileid: "66084420"
   
  Il punteggio di *interesse* viene usato per classificare e ordinare gli attributi in colonne che contengono dati numerici continui non binari.  
   
- *L'entropia di Shannon* e due punteggi *Bayes* sono disponibili per le colonne contenenti dati discreti e discreti. Tuttavia, se nel modello sono contenute colonne continue, il punteggio di interesse verrà utilizzato per valutare tutte le colonne di input e assicurare la coerenza.  
+ L'*entropia di Shannon* e due punteggi *Bayes* sono disponibili per le colonne contenenti dati discreti e discretizzati. Tuttavia, se nel modello sono contenute colonne continue, il punteggio di interesse verrà utilizzato per valutare tutte le colonne di input e assicurare la coerenza.  
   
  Nella sezione seguente viene descritto ogni metodo relativo alla selezione delle caratteristiche.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66084420"
   
  Questo punteggio viene utilizzato per impostazione predefinita ogni volta che la colonna contiene dati numerici continui non binari.  
   
-#### <a name="shannons-entropy"></a>entropia di Shannon  
+#### <a name="shannons-entropy"></a>Entropia di Shannon  
  L'entropia di Shannon misura l'incertezza di una variabile casuale per un determinato risultato. Ad esempio, l'entropia del lancio di una moneta può essere rappresentata come funzione della probabilità che esca testa.  
   
  In Analysis Services viene utilizzata la formula seguente per il calcolo dell'entropia di Shannon:  
@@ -105,12 +105,12 @@ ms.locfileid: "66084420"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché l'algoritmo Microsoft Naive Bayes accetta solo attributi discreti o discretizzati, non può utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md).|  
-|Alberi delle decisioni|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo per implementare la caratteristica di selezione degli attributi predefinito oppure il metodo specificato quando è stato creato il modello.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md).|  
-|Neural Network|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Nell'algoritmo Microsoft Neural Network possono essere utilizzati sia i metodi Bayes sia quelli basati sull'entropia, purché nei dati siano contenute colonne continue.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md).|  
-|Regressione logistica|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Sebbene l'algoritmo Microsoft Logistic Regression sia basato sull'algoritmo Microsoft Neural Network, non è possibile personalizzare modelli di regressione logistica per controllare il comportamento della caratteristica di selezione degli attributi. Di conseguenza tale caratteristica viene impostata automaticamente sempre sul metodo più appropriato per l'attributo.<br /><br /> Se tutti gli attributi sono discreti o discretizzati, l'impostazione predefinita è BDEU.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md).|  
+|Naive Bayes|Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché l'algoritmo Microsoft Naive Bayes accetta solo attributi discreti o discretizzati, non può utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Alberi delle decisioni|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo per implementare la caratteristica di selezione degli attributi predefinito oppure il metodo specificato quando è stato creato il modello.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md).|  
+|Neural Network|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Nell'algoritmo Microsoft Neural Network possono essere utilizzati sia i metodi Bayes sia quelli basati sull'entropia, purché nei dati siano contenute colonne continue.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md).|  
+|Logistic Regression|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Sebbene l'algoritmo Microsoft Logistic Regression sia basato sull'algoritmo Microsoft Neural Network, non è possibile personalizzare modelli di regressione logistica per controllare il comportamento della caratteristica di selezione degli attributi. Di conseguenza tale caratteristica viene impostata automaticamente sempre sul metodo più appropriato per l'attributo.<br /><br /> Se tutti gli attributi sono discreti o discretizzati, l'impostazione predefinita è BDEU.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Clustering|Punteggio di interesse|L'algoritmo Microsoft Clustering può utilizzare dati discreti o discretizzati. Tuttavia, perché il punteggio di ogni attributo è calcolato come una distanza e viene rappresentato come un numero continuo, è necessario utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md).|  
-|Linear regression|Punteggio di interesse|L'algoritmo Microsoft Linear Regression può utilizzare solo il punteggio di interesse, poiché supporta solo colonne continue.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md).|  
+|Linear Regression|Punteggio di interesse|L'algoritmo Microsoft Linear Regression può utilizzare solo il punteggio di interesse, poiché supporta solo colonne continue.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md).|  
 |Regole di associazione<br /><br /> Sequence Clustering|Non usato|La caratteristica di selezione degli attributi non viene richiamata da questi algoritmi.<br /><br /> È tuttavia possibile controllare il comportamento dell'algoritmo e ridurre le dimensioni dei dati di input impostando i valori dei parametri MINIMUM_SUPPORT e MINIMUM_PROBABILIITY.<br /><br /> Per altre informazioni, vedere [Riferimento tecnico per l'algoritmo Microsoft Association Rules](microsoft-association-algorithm-technical-reference.md) e [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
 |Serie temporale|Non usato|La selezione delle caratteristiche non si applica ai modelli Time Series.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md).|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66084420"
   
  Oltre a questi metodi per la selezione delle caratteristiche, è possibile migliorare la capacità dell'algoritmo di identificare o promuovere attributi significativi impostando i *flag di modellazione* sul modello oppure i *flag di distribuzione* sulla struttura. Per altre informazioni su questi concetti, vedere [Flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md) e [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Personalizzare struttura e modelli di data mining](customize-mining-models-and-structure.md)  
   
   

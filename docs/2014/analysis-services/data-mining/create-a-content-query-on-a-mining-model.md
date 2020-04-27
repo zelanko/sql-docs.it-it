@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085576"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
@@ -77,7 +77,7 @@ ms.locfileid: "66085576"
     > [!NOTE]  
     >  Per visualizzare un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query nell'istanza corrente, utilizzare la query `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   

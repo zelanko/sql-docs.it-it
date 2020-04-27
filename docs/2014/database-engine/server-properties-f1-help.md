@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089843"
 ---
 # <a name="server-properties-f1-help"></a>Guida sensibile al contesto delle pagine Proprietà server
@@ -34,9 +34,9 @@ ms.locfileid: "66089843"
   
  [Pagina Proprietà Server &#40;processori&#41;](configure-windows/server-properties-processors-page.md)  
   
- [Proprietà Server &#40;pagina sicurezza&#41;](configure-windows/server-properties-security-page.md)  
+ [Proprietà server &#40;pagina Sicurezza&#41;](configure-windows/server-properties-security-page.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b0e292589a669155e8dc51da942cf1eca012537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082450"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>Guida sensibile al contesto della Creazione guidata origine dati (Analysis Services - Data mining)
@@ -38,7 +38,7 @@ ms.locfileid: "66082450"
   
 -   [Completamento della procedura guidata &#40;la creazione guidata origine dati&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-wizard-analysis-services.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

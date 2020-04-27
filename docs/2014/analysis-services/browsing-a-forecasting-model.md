@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088484"
 ---
 # <a name="browsing-a-forecasting-model"></a>Esplorazione di un modello di previsione
   Quando si apre un modello di previsione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al Visualizzatore modello Time Series in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le tendenze, confrontare le serie, creare stime e ottenere informazioni sul modello e sui dati sottostanti.  
   
-##  <a name="bkmk_Top"></a>Esplorare il modello  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Esplorare il modello  
  Il visualizzatore **Browse** per i modelli di previsione fornisce una visualizzazione del grafico che mostra le tendenze nel tempo e consente di creare stime e una vista modello, che rappresenta le serie temporali come albero delle decisioni o albero di regressione.  
   
 -   [Visualizzazione grafico](#bkmk_charts)  
@@ -35,7 +35,7 @@ ms.locfileid: "66088484"
   
  Per sperimentare un modello di previsione, è possibile utilizzare i dati di esempio nella scheda previsioni della cartella di lavoro dei dati di esempio e compilare un modello Time Series utilizzando la [procedura guidata previsione &#40;componenti aggiuntivi Data mining per excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) sulla barra multifunzione **Data** mining o gli [strumenti di analisi tabelle &#40;per Excel&#41;](forecast-table-analysis-tools-for-excel.md) nella barra multifunzione **analizza** .  
   
-###  <a name="bkmk_charts"></a>Grafico  
+###  <a name="chart"></a><a name="bkmk_charts"></a>Grafico  
  Nella scheda **grafico** viene visualizzata la tendenza nella serie di dati nel corso del tempo, insieme ai valori stimati. L'asse verticale del grafico rappresenta i valori della serie, mentre l'asse orizzontale rappresenta il tempo.  
   
 ##### <a name="explore-the-forecasting-chart"></a>Esplorare il grafico di previsione  
@@ -86,7 +86,7 @@ ms.locfileid: "66088484"
   
  [Esplorazione del modello](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>Modello  
+###  <a name="model"></a><a name="bkmk_Model"></a>Modello  
  Un modello di previsione può anche essere rappresentato come albero delle decisioni o, se la serie è principalmente lineare, modello di regressione.  
   
  Ad esempio, in questo modello esiste una differenza nella formula di regressione basata su una determinata condizione, pertanto l'albero si divide in due rami, ognuno con una formula di regressione diversa.  
@@ -109,7 +109,7 @@ ms.locfileid: "66088484"
   
  [Esplorazione del modello](#bkmk_Top)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088735"
 ---
 # <a name="trace-table-properties-general-tab"></a>Proprietà tabella di traccia (scheda Generale)
@@ -33,19 +33,19 @@ ms.locfileid: "66088735"
  **Nome provider di traccia**  
  Visualizza il nome dell'istanza tracciata di SQL Server.  
   
- **Tipo di provider di traccia**  
+ **Tipo provider di traccia**  
  Visualizza il tipo di server che ha fornito la traccia.  
   
- **Versione**  
+ **version**  
  Visualizza la versione del server che ha fornito la traccia.  
   
- **prime righe**  
+ **righe**  
  Visualizza il numero di righe della tabella di traccia.  
   
  **Dimensione dati (in pagine)**  
  Visualizza il numero di pagine di dati della tabella di traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

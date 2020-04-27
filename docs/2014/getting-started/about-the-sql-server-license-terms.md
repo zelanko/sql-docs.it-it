@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088625"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informazioni sulle condizioni di licenza di SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "66088625"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linguaggio|Abbreviazione per la lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
-|Inglese|ENU|1040|  
+|Inglese|ENU|1033|  
 |Giapponese|JPN|1041|  
 |Francese|FRA|1036|  
 |Italiano|ITA|1040|  
@@ -63,10 +63,10 @@ ms.locfileid: "66088625"
 |Portoghese (Brasile)|PTB|1046|  
 |Russo|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Opzioni di licenza  
+## <a name="ssnoversion-licensing-options"></a>Opzioni di gestione delle licenze per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Per ulteriori informazioni sulle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] opzioni relative ai prezzi e alle licenze, vederehttps://www.microsoft.com/sqlserver/sql-server-2014.aspx) la [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (sito Web).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Considerazioni sulla gestione delle licenze per SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   
  [Microsoft SQL Server informativa sulla privacy](../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Nota legale sulla documentazione](../../2014/getting-started/legal-notice-for-documentation.md)  

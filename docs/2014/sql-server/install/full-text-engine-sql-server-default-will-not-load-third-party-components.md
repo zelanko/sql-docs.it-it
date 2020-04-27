@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe7f1359b55f2a488a58c37b9f3045a31dbc0778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095162"
 ---
 # <a name="the-microsoft-full-text-engine-for-sql-server-will-not-load-unsigned-third-party-components-by-default"></a>Per impostazione predefinita, il motore di ricerca full-text Microsoft per SQL Server non carica componenti di terze parti non firmato
@@ -32,7 +32,7 @@ ms.locfileid: "66095162"
 ## <a name="corrective-action"></a>Azione correttiva  
  Per caricare un filtro di terze parti, è necessario impostare *load_os_resource* e disattivare *verify_signature* su tale istanza.  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

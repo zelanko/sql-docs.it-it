@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087192"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Connessione a un database di Teradata (SSAS)
@@ -45,7 +45,7 @@ ms.locfileid: "66087192"
  **Salva password**  
  Specificare se la password immessa nella casella **Password** è deve essere archiviata.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test connessione**  

@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085943"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees
@@ -36,7 +36,7 @@ ms.locfileid: "66085943"
 > [!NOTE]  
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a>Schede del Visualizzatore  
+##  <a name="viewer-tabs"></a><a name="BKMK_TabsPanes"></a>Schede del Visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees include le schede e i riquadri seguenti:  
   
 -   [Albero delle decisioni](#BKMK_DecisionTree)  
@@ -45,7 +45,7 @@ ms.locfileid: "66085943"
   
 -   [Legenda data mining](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a>Albero delle decisioni  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>Albero delle decisioni  
  Quando si compila un modello di albero delle decisioni, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero separato per ogni attributo stimabile. È possibile visualizzare un singolo albero selezionandolo dall'elenco **Albero** nella scheda **Albero delle decisioni** del visualizzatore.  
   
  Un albero delle decisioni è costituito da una serie di divisioni di cui la più importante, determinata dall'algoritmo, si trova a sinistra del visualizzatore nel nodo **Tutto** . Le altre divisioni si trovano a destra. La divisione nel nodo **Tutto** è la più importante in quanto contiene l'espressione condizionale più attendibile tra quelle che causano la divisione nel set di dati e, di conseguenza, ha causato la prima divisione.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085943"
   
  [Torna all'inizio](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a>Rete di dipendenze  
+###  <a name="dependency-network"></a><a name="BKMK_DependencyNetwork"></a>Rete di dipendenze  
  Nella scheda **Rete di dipendenze** vengono visualizzate le dipendenze tra gli attributi di input e gli attributi stimabili del modello. Il dispositivo di scorrimento a sinistra del visualizzatore svolge la funzione di filtro correlato ai livelli di attendibilità delle dipendenze. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
  Quando si seleziona un nodo, nel visualizzatore vengono evidenziate le dipendenze specifiche del nodo. Se ad esempio si sceglie un nodo stimabile, nel visualizzatore verrà inoltre evidenziato ogni nodo che contribuisce alla stima del nodo stimabile.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085943"
   
  [Torna all'inizio](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a>Legenda data mining  
+###  <a name="mining-legend"></a><a name="BKMK_MiningLegend"></a>Legenda data mining  
  Quando si seleziona un nodo nel modello di albero delle decisioni, in **Legenda data mining** vengono visualizzate le informazioni seguenti:  
   
 -   Il numero di case nel nodo, suddivisi in base agli stati dell'attributo stimabile  
@@ -103,7 +103,7 @@ ms.locfileid: "66085943"
   
  [Torna all'inizio](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   

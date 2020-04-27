@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093294"
 ---
 # <a name="ready-to-repair"></a>Inizio ripristino
-  La pagina Inizio ripristino fornisce un riepilogo del processo di ripristino dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  La pagina Inizio ripristino fornisce un riepilogo del processo di ripristino dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
  Nella pagina sono disponibili le opzioni seguenti:  
@@ -27,9 +27,9 @@ ms.locfileid: "66093294"
   
 -   Per modificare le impostazioni di installazione, fare clic su **Indietro**.  
   
--   Per uscire dal programma di installazione, fare clic su **Annulla**  
+-   Per uscire dal programma di installazione, fare clic su **Annulla** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

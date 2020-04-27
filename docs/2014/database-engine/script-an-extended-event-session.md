@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088912"
 ---
 # <a name="script-an-extended-event-session"></a>Creare uno script per una sessione Eventi estesi
@@ -50,7 +50,7 @@ ms.locfileid: "66088912"
   
 3.  Nella finestra di dialogo **Proprietà sessione** modificare la sessione eventi, quindi selezionare la posizione in cui si desidera creare lo script della sessione modificata dall'elenco a discesa **script** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
   
   

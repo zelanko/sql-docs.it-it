@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084830"
 ---
 # <a name="data-mining-tools"></a>Strumenti di data mining
@@ -29,12 +29,11 @@ ms.locfileid: "66084830"
   
      Nella procedura guidata è possibile scegliere i dati da utilizzare e applicare tecniche specifiche di data mining, ad esempio clustering, reti neurali o modellizzazione della serie temporale.  
   
--   I **visualizzatori di modelli** sono [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] disponibili [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sia in che in, per l'esplorazione dei modelli di data mining dopo la loro creazione.  È possibile esplorare modelli utilizzando visualizzatori personalizzati per ogni algoritmo o eseguire un'analisi più approfondita tramite il visualizzatore di contenuto del modello.  
+-   I**visualizzatori dei modelli** sono disponibili sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]per l'esplorazione dei modelli di data mining al termine della relativa creazione.  È possibile esplorare modelli utilizzando visualizzatori personalizzati per ogni algoritmo o eseguire un'analisi più approfondita tramite il visualizzatore di contenuto del modello.  
   
 -   Il **generatore delle query di stima** viene fornito sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per consentire la creazione di query di stima. È possibile testare inoltre l'accuratezza di modelli rispetto a un set di dati di controllo o dati esterni o utilizzare la convalida incrociata per valutare la qualità del set di dati.  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è l'interfaccia in cui è possibile gestire soluzioni di data mining esistenti distribuite in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile rielaborare strutture e modelli per aggiornare i dati in essi contenuti.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è l'interfaccia in cui è possibile gestire soluzioni di data mining esistenti distribuite in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile rielaborare strutture e modelli per aggiornare i dati in essi contenuti.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene strumenti che è possibile utilizzare per pulire i dati, automatizzare attività quali la creazione di stime e l'aggiornamento di modelli e la creazione di soluzioni di data mining di testo.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66084830"
 ## <a name="data-mining-wizard"></a>Creazione guidata modello di data mining  
  Utilizzare la Creazione guidata modello di data mining per iniziare la creazione di soluzioni di data mining. Questa procedura guidata è rapida e facile, consente di eseguire in modo semplificato il processo di creazione di una struttura di data mining e di un modello iniziale correlato e dispone di attività quali la selezione di un tipo di algoritmo e di un'origine dati e la definizione dei dati del case utilizzati per l'analisi.  
   
- **Per ulteriori informazioni:** [creazione guidata modello di data mining &#40;Analysis Services-Data mining&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **Per altre informazioni, vedere** [Creazione guidata modello di data mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  Dopo aver creato una struttura e un modello di data mining tramite la Creazione guidata modello di data mining, è possibile utilizzare Progettazione modelli di data mining da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per utilizzare modelli e strutture esistenti.  
@@ -67,8 +66,7 @@ ms.locfileid: "66084830"
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Al termine della creazione e distribuzione di modelli di data mining in un server, è possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per gestire il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui sono ospitati gli oggetti di data mining. È possibile continuare inoltre a eseguire attività in cui viene utilizzato il modello, ad esempio l'esplorazione dei modelli, l'elaborazione di nuovi dati e la creazione di stime.  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] contiene inoltre editor di query che è possibile usare per progettare ed eseguire query DMX (Data Mining Extensions) o per utilizzare oggetti di data mining tramite XMLA.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] contiene inoltre editor di query che è possibile usare per progettare ed eseguire query DMX (Data Mining Extensions) o per utilizzare oggetti di data mining tramite XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Attività di data mining e trasformazioni in Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in sono disponibili molti componenti che supportano data mining.  
@@ -89,9 +87,9 @@ ms.locfileid: "66084830"
   
 -   Utilizzare la regressione logistica per segmentare potenziali clienti in base ai rischi.  
   
- **Per ulteriori informazioni:** [progetti correlati per soluzioni di data mining](data-mining-solutions.md)  
+ **Per altre informazioni, vedere** [Progetti correlati per soluzioni di data mining](data-mining-solutions.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   

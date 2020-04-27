@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085346"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
@@ -31,9 +31,9 @@ ms.locfileid: "66085346"
   
 -   **Risultato**  
   
- La modalità **progettazione** consente di compilare una query di stima scegliendo dati di input, eseguendo il mapping dei dati al modello e aggiungendo quindi funzioni di stima in istruzioni compilate tramite la griglia. Nella griglia di progettazione sono presenti questi blocchi predefiniti:  
+ La modalità**Progettazione** consente di compilare una query di stima scegliendo dati di input, eseguendo il mapping dei dati al modello e aggiungendo quindi funzioni di stima in istruzioni compilate tramite la griglia. Nella griglia di progettazione sono presenti questi blocchi predefiniti:  
   
- **Origine**  
+ **origine**  
  Scegliere l'origine della nuova colonna. È possibile utilizzare le colonne del modello di data mining, le tabelle di input incluse nella vista origine dati, una funzione di stima o un'espressione personalizzata.  
   
  **Campo**  
@@ -51,12 +51,12 @@ ms.locfileid: "66085346"
  **E/o**  
  Crea la logica della query. Ad esempio (espr1 Or espr2) And espr3.  
   
- **Criteri/argomento**  
+ **Criteri/Argomento**  
  Specifica una condizione o espressione dell'utente per la colonna. È possibile trascinare colonne dalle tabelle alla cella.  
   
- La modalità **query** fornisce un editor di testo che consente di accedere direttamente al linguaggio DMX (Data Mining Extensions), insieme a una visualizzazione delle colonne dei dati e del modello di input. Quando si seleziona la modalità **Query** la griglia utilizzata per definire la query viene sostituita da un editor di testo di base. È possibile utilizzare tale editor per copiare e salvare le query composte o per incollare le query DMX esistenti e presenti negli Appunti ed eseguirle.  
+ La modalità**Query** fornisce un editor di testo che offre accesso diretto al linguaggio DMX (Data Mining Extensions), oltre a una vista dei dati di input e delle colonne del modello. Quando si seleziona la modalità **Query** la griglia utilizzata per definire la query viene sostituita da un editor di testo di base. È possibile utilizzare tale editor per copiare e salvare le query composte o per incollare le query DMX esistenti e presenti negli Appunti ed eseguirle.  
   
- **Visualizzazione risultati** esegue la query corrente e Visualizza i risultati in una griglia. Se i dati sottostanti sono stati modificati e si desidera eseguire nuovamente la query, fare clic sul pulsante Esegui sulla barra di stato.  
+ Nella vista**Risultato** viene eseguita la query corrente e vengono visualizzati i risultati in una griglia. Se i dati sottostanti sono stati modificati e si desidera eseguire nuovamente la query, fare clic sul pulsante Esegui sulla barra di stato.  
   
  È possibile progettare una query di data mining utilizzando una combinazione degli strumenti visivi e dell'editor di testo. Se si modifica la query tramite l'editor di testo e si torna quindi alla vista **Progettazione** , le modifiche apportate andranno perse e verrà ripristinata la query originale creata dal generatore di query di stima. In questo argomento viene illustrato l'utilizzo del generatore di query grafico.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66085346"
   
 8.  Eseguire la query facendo clic sul primo pulsante della barra degli strumenti della scheda **Stima modello di data mining** e quindi selezionando **Risultato**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di una query singleton in Progettazione modelli di data mining](create-a-singleton-query-in-the-data-mining-designer.md)   
  [Query di data mining](data-mining-queries.md)  
   

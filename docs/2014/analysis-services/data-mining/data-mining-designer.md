@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085104"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
@@ -39,7 +39,7 @@ ms.locfileid: "66085104"
 ## <a name="mining-structure-tab"></a>Scheda Struttura di data mining  
  Usare la scheda **Struttura di data mining** per aggiungere colonne e modificare le proprietà di una struttura di data mining esistente. Negli argomenti e nelle attività seguenti sono disponibili ulteriori informazioni sull'utilizzo delle strutture di data mining:  
   
- [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66085104"
   
  Per ulteriori informazioni su come utilizzare i modelli di data mining, vedere gli argomenti seguenti:  
   
- [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)  
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66085104"
   
  Per ulteriori informazioni sull'esecuzione di test e la convalida di modelli di data mining, vedere gli argomenti seguenti:  
   
- [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
- [Attività e procedure di test e convalida &#40;di data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Attività e procedure di test e convalida &#40;data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Scheda Stima modello di data mining  
  La scheda **Stima modello di data mining** include il generatore delle query di stima, che consente di creare query di stima DMX (Data Mining Extensions). La scheda contiene strumenti per l'impostazione dei modelli di data mining e delle tabelle di input, il mapping tra le colonne del modello di data mining e le colonne della tabella di input, l'aggiunta di funzioni a una query e l'impostazione di criteri per ogni colonna.  
@@ -83,7 +83,7 @@ ms.locfileid: "66085104"
   
  [Attività e procedure relative alle query di data mining](data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Soluzioni di data mining](data-mining-solutions.md)  
   
   

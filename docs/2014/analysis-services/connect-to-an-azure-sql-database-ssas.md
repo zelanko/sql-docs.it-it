@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087147"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Connessione a un database SQL di Azure (SSAS)
@@ -25,8 +25,7 @@ ms.locfileid: "66087147"
 > [!NOTE]  
 >  Per la connessione a un set di dati di Azure DataMarket, vedere [Connettersi a un report o a un feed di dati &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- 
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] è un database ospitato relazionale a cui è possibile connettersi tramite l'autenticazione di SQL Server. Per altre informazioni su [!INCLUDE[ssSDS](../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] è un database ospitato relazionale a cui è possibile connettersi tramite l'autenticazione di SQL Server. Per altre informazioni su [!INCLUDE[ssSDS](../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
 > [!NOTE]  
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  
@@ -47,12 +46,12 @@ ms.locfileid: "66087147"
  Specificare una password per la connessione al database.  
   
  **Salva password**  
- Specificare se archiviare la password immessa nella casella **Password** .  
+ Specificare se la password immessa nella casella **Password** è stata archiviata.  
   
  **Nome database**  
  Selezionare un database dall'elenco di database.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test connessione**  

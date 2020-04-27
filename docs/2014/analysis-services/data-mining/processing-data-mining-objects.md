@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083145"
 ---
 # <a name="processing-data-mining-objects"></a>Elaborazione di oggetti di data mining
-  Un oggetto di data mining è soltanto un contenitore vuoto finché non viene elaborato. L' *elaborazione* di un modello di data mining viene anche definita *Training*.  
+  Un oggetto di data mining è soltanto un contenitore vuoto finché non viene elaborato. L'*elaborazione* di un modello di data mining viene anche definita *training*.  
   
- **Elaborazione di strutture di data mining:** Una struttura di data mining ottiene i dati da un'origine dati esterna, come definito dalle associazioni delle colonne e dai metadati di utilizzo, e legge i dati. Questi dati vengono letti completamente e successivamente analizzati per estrarre diverse statistiche. In Analysis Services una rappresentazione compressa dei dati, ideale per l'analisi basata sugli algoritmi di data mining, viene archiviata in una cache locale. È possibile conservare questa cache oppure eliminarla dopo l'elaborazione dei modelli. Per impostazione predefinita, la cache viene archiviata. Per altre informazioni, vedere [Elaborare una struttura di data mining](process-a-mining-structure.md).  
+ **Elaborazione di strutture di data mining:** una struttura di data mining ottiene i dati da un'origine dati esterna, secondo quanto definito dalle associazioni delle colonne e dai metadati di utilizzo, dopodiché li legge. Questi dati vengono letti completamente e successivamente analizzati per estrarre diverse statistiche. In Analysis Services una rappresentazione compressa dei dati, ideale per l'analisi basata sugli algoritmi di data mining, viene archiviata in una cache locale. È possibile conservare questa cache oppure eliminarla dopo l'elaborazione dei modelli. Per impostazione predefinita, la cache viene archiviata. Per altre informazioni, vedere [Elaborare una struttura di data mining](process-a-mining-structure.md).  
   
- **Elaborazione di modelli di data mining:** Un modello di data mining è vuoto, contiene solo definizioni, fino a quando non viene elaborato. Per elaborare un modello di data mining, è necessario elaborare la struttura di data mining sulla quale è basato. Il modello di data mining ottiene i dati dalla cache della struttura di data mining, applica i filtri eventualmente creati sul modello, dopodiché passa il set di dati attraverso l'algoritmo per rilevare gli schemi. Al termine dell'elaborazione, il modello archivia solo i risultati dell'elaborazione, non i dati stessi. Per altre informazioni, vedere [Elaborare un modello di data mining](process-a-mining-model.md).  
+ **Elaborazione di modelli di data mining:** un modello di data mining contiene solo definizioni finché non viene elaborato. Per elaborare un modello di data mining, è necessario elaborare la struttura di data mining sulla quale è basato. Il modello di data mining ottiene i dati dalla cache della struttura di data mining, applica i filtri eventualmente creati sul modello, dopodiché passa il set di dati attraverso l'algoritmo per rilevare gli schemi. Al termine dell'elaborazione, il modello archivia solo i risultati dell'elaborazione, non i dati stessi. Per altre informazioni, vedere [Elaborare un modello di data mining](process-a-mining-model.md).  
   
  Nel diagramma seguente viene illustrato il flusso di dati al momento dell'elaborazione di una struttura di data mining e al momento dell'elaborazione di un modello di data mining.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "66083145"
   
  Per altre informazioni, vedere [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Query drill-through &#40;&#41;di data mining](drillthrough-queries-data-mining.md)   
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
- [Architettura logica &#40;Analysis Services-&#41;di data mining](logical-architecture-analysis-services-data-mining.md)  
+ [Architettura logica &#40;Analysis Services - Data mining&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

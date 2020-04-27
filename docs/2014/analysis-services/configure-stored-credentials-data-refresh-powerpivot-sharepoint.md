@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087462"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot (PowerPivot per SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "66087462"
   
  Se si verificano problemi durante la configurazione o l'utilizzo dell'aggiornamento dati, vedere la pagina relativa all' [aggiornamento dei dati PowerPivot](https://go.microsoft.com/fwlink/?LinkID=223279) in TechNet Wiki per le possibili soluzioni.  
   
-##  <a name="configAny"></a>Configurare qualsiasi account di Windows per l'aggiornamento dati  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>Configurare qualsiasi account di Windows per l'aggiornamento dati  
  Quando un utente di SharePoint definisce una pianificazione dell'aggiornamento dati, deve specificare l'identità utente con la quale verrà eseguito l'aggiornamento dati. Le possibilità includono la selezione dell'account di aggiornamento dati automatico PowerPivot, l'immissione dell'account utente di dominio di Windows o l'immissione di un altro account utente di Windows valido per l'aggiornamento dati. I passaggi riportati in questa sezione riguardano l'ultima opzione: immissione di un altro account utente di Windows.  
   
  È opportuno scegliere questo approccio quando si desidera avere un'alternativa all'utilizzo dell'account di aggiornamento dati PowerPivot automatico (disponibile a tutti gli utenti di PowerPivot in SharePoint) o delle credenziali del proprietario della cartella di lavoro. È ad esempio possibile rendere disponibile una serie di account di aggiornamento dati a diversi workgroup per agevolare le attività di controllo e gestione dell'aggiornamento dati al livello organizzativo.  
@@ -56,7 +56,7 @@ ms.locfileid: "66087462"
   
 ### <a name="step-1-create-a-target-application"></a>Passaggio 1: Creare un'applicazione di destinazione  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Fare clic su **servizio di archiviazione sicura**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66087462"
   
 10. Nella pagina **specificare i campi delle credenziali per l'applicazione di destinazione dell'archiviazione sicura** accettare i valori predefiniti. I tipi e i nomi dei campi devono essere Nome utente Windows e Password Windows.  
   
-11. Fare clic su Avanti.  
+11. Scegliere Avanti.  
   
 12. In Amministratori dell'applicazione di destinazione specificare gli account utente di dominio di Windows degli utenti di SharePoint che devono disporre dell'accesso di amministratore per le impostazioni dell'applicazione di destinazione, ad esempio la possibilità di aggiungere o rimuovere account dall'elenco Membri.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66087462"
   
 17. Fare clic su **OK**.  
   
-###  <a name="bkmk_grant"></a>Passaggio 2: concedere le autorizzazioni di collaborazione all'account  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Passaggio 2: concedere le autorizzazioni di collaborazione all'account  
  Prima di poter utilizzare le credenziali archiviate, è necessario assegnare all'account le autorizzazioni di collaborazione per tutte le cartelle di lavoro di PowerPivot per le quali viene utilizzato. Questo livello di autorizzazione è necessario per aprire la cartella di lavoro da una libreria, quindi per salvarla di nuovo nella libreria dopo aver aggiornato i dati.  
   
  L'assegnazione di autorizzazioni è un passaggio effettuato dall'amministratore della raccolta siti. Le autorizzazioni di SharePoint possono essere assegnate a livello della raccolta siti radice o a qualsiasi livello inferiore, inclusi singoli documenti ed elementi. La modalità di impostazione delle autorizzazioni varierà a seconda del relativo livello di granularità necessario. Nei passaggi seguenti verrà illustrato un approccio di concessione delle autorizzazioni.  
@@ -116,7 +116,7 @@ ms.locfileid: "66087462"
   
 5.  Selezionare **collaborazione**, quindi fare clic su **OK**.  
   
-###  <a name="bkmk_dbread"></a>Passaggio 3: concedere le autorizzazioni di lettura per accedere alle origini dati esterne utilizzate nell'aggiornamento dati  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>Passaggio 3: concedere le autorizzazioni di lettura per accedere alle origini dati esterne utilizzate nell'aggiornamento dati  
  Durante l'importazione di dati in una cartella di lavoro di PowerPivot, le connessioni a dati esterni spesso si basano su connessioni trusted o connessioni rappresentate in cui viene utilizzata l'identità dell'utente corrente per connettersi all'origine dati. Questi tipi di connessioni funzionano solo quando l'utente corrente dispone dell'autorizzazione di lettura per i dati che importa.  
   
  In uno scenario di aggiornamento dati, la stessa stringa di connessione utilizzata per importare i dati viene ora riutilizzata per aggiornare i dati. Se nella stringa di connessione si presuppone l'utente corrente, ad esempio è incluso Integrated_Security=SSPI, il servizio di sistema PowerPivot passerà l'identità utente specificata nell'applicazione di destinazione come utente corrente. Questa connessione potrà essere stabilita solo se l'account dispone delle autorizzazioni di lettura per l'origine dati esterna.  
@@ -125,7 +125,7 @@ ms.locfileid: "66087462"
   
  Un amministratore delle origini dati utilizzate nell'organizzazione può creare un account di accesso e assegnare le autorizzazioni necessarie. In caso contrario, è necessario contattare i proprietari dei dati e fornire le informazioni sull'account. Assicurarsi di specificare l'account utente di dominio di Windows di cui è possibile eseguire il mapping all'applicazione di destinazione. Si tratta dell'account specificato in "passaggio 1: creare un'applicazione di destinazione" in questo argomento.  
   
-###  <a name="bkmk_verify"></a>Passaggio 4: verificare la disponibilità dell'account nelle pagine di configurazione dell'aggiornamento dati  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>Passaggio 4: verificare la disponibilità dell'account nelle pagine di configurazione dell'aggiornamento dati  
   
 1.  Aprire una pagina di configurazione dell'aggiornamento dati per una cartella di lavoro pubblicata che contiene dati PowerPivot. Per istruzioni su come aprire la pagina, vedere [pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -139,14 +139,14 @@ ms.locfileid: "66087462"
   
  Per ulteriori informazioni sulla risoluzione dei problemi, vedere [risoluzione dei problemi relativi all'aggiornamento dati PowerPivot](https://go.microsoft.com/fwlink/p/?LinkID=223279) in TechNet wiki.  
   
-##  <a name="config3rd"></a>Configurare un account predefinito per l'accesso a origini dati esterne o di terze parti  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>Configurare un account predefinito per l'accesso a origini dati esterne o di terze parti  
  I server di database vengono spesso forniti con propri metodi di autenticazione. Se si dispone di una cartella di lavoro di PowerPivot che richiede credenziali di database per accedere a un'origine dati esterna durante un aggiornamento dati, è possibile creare un ID dell'applicazione di destinazione per le credenziali, quindi specificare l'applicazione di destinazione nella sezione Origini dati della pagina di aggiornamento dati pianificato.  
   
  Questo passaggio è necessario solo se si desidera fornire agli utenti un'opzione di override delle credenziali del database già incorporate nella cartella di lavoro di PowerPivot.  
   
  Questo passaggio funziona solo se la stringa di connessione include già un nome utente e una password. Si noti che solo raramente la stringa di connessione contiene credenziali, pertanto la possibilità di utilizzare questa opzione è alquanto limitata. Nella maggior parte dei casi, la stringa di connessione contiene unicamente ID utente e password se si utilizza l'autenticazione del database per la connessione all'origine dati. Per ulteriori informazioni su come controllare la stringa di connessione per verificare se include un ID utente e una password, vedere la sezione "concedere le autorizzazioni per creare pianificazioni e accedere ai dati esterni" nell' [aggiornamento dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Fare clic su **servizio di archiviazione sicura**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "66087462"
   
      È ad esempio possibile specificare il nome utente e la password di SQL Server per i nomi dei campi, quindi scegliere Nome utente e Password per i tipi dei campi.  
   
-11. Fare clic su Avanti.  
+11. Scegliere Avanti.  
   
 12. In Amministratori dell'applicazione di destinazione specificare gli account utente di dominio di Windows degli utenti di SharePoint che devono disporre dell'accesso di amministratore per le impostazioni dell'applicazione.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66087462"
   
 17. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [Aggiornamento di dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   

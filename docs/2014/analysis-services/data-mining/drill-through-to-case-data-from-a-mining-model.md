@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084605"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Eseguire il drill-through sui dati del case da un modello di data mining
@@ -32,12 +32,12 @@ ms.locfileid: "66084605"
 |Nome del visualizzatore|Nome del riquadro o della scheda|Selezione nodo|  
 |-----------------|----------------------|-----------------|  
 |**Visualizzatore Microsoft Decision Trees**|Scheda **albero delle decisioni**|Fare clic su un nodo dell'albero.<br /><br /> **Nota** Evitare di utilizzare il drill `All` -through sul nodo, perché la restituzione dei risultati potrebbe richiedere molto tempo.|  
-|**Visualizzatore Microsoft Clustering**|**Diagramma del cluster**|Fare clic su un nodo del cluster.|  
+|**Visualizzatore Microsoft Clustering**|**Diagramma dei cluster**|Fare clic su un nodo del cluster.|  
 |**Visualizzatore Microsoft Clustering**|**Profili cluster**|Fare clic in un punto qualsiasi della colonna del cluster.|  
 |**Visualizzatore Microsoft Association**|Scheda **regole**|Fare clic su una riga che contiene un set di regole.|  
-|**Visualizzatore Microsoft Association**|Scheda **set** di elementi|Fare clic su una riga che contiene un set di elementi.|  
+|**Visualizzatore Microsoft Association**|Scheda**Set di elementi**|Fare clic su una riga che contiene un set di elementi.|  
 |**Visualizzatore Microsoft Sequence Clustering**|Scheda **regole**|Fare clic su una riga che contiene un set di regole.|  
-|**Visualizzatore Microsoft Sequence Clustering**|Scheda **set** di elementi|Fare clic su una riga che contiene un set di elementi.|  
+|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Set di elementi**|Fare clic su una riga che contiene un set di elementi.|  
   
 > [!NOTE]  
 >  Con alcuni modelli non è consentito l'utilizzo del drill-through. La possibilità di eseguire il drill-through dipende dall'algoritmo utilizzato per creare il modello: Per un elenco dei tipi di modelli di data mining che supportano il drill-through, vedere [Query drill-through &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "66084605"
   
 6.  Per copiare i dati negli Appunti, fare clic con il pulsante destro del mouse su qualsiasi riga nella tabella e selezionare **Copia tutto**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Query drill-through &#40;&#41;di data mining](drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Query drill-through &#40;Data mining&#41;](drillthrough-queries-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083102"
 ---
 # <a name="process-a-mining-model"></a>Elaborare un modello di data mining
@@ -28,7 +28,7 @@ ms.locfileid: "66083102"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- Inoltre, è possibile utilizzare un comando di elaborazione XMLA. Per altre informazioni, vedere [Strumenti e approcci per l’elaborazione &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
+ Inoltre, è possibile utilizzare un comando di elaborazione XMLA. Per ulteriori informazioni, vedere [strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>Elaborare un singolo modello di data mining utilizzando SQL Server Data Tools  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66083102"
   
  Tramite questa procedura sono stati elaborati la struttura di data mining e tutti i modelli di data mining associati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)  
   
   

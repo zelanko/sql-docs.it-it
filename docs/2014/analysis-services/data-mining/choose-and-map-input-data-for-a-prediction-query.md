@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085852"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
@@ -117,7 +117,7 @@ ms.locfileid: "66085852"
   
      Se esiste già una relazione, viene eseguito il mapping automatico tra le colonne del modello di data mining e le colonne con lo stesso nome della tabella di input. È possibile modificare la relazione tra la tabella nidificata e la tabella del case facendo clic su **Modifica join**, che consente di aprire la finestra di dialogo **Crea relazione** .  
   
-## <a name="see-also"></a>Vedere anche  
- [Query di stima &#40;&#41;di data mining](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Query di stima &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
   
   

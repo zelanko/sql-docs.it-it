@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084820"
 ---
 # <a name="data-mining-ssas"></a>Data mining (SSAS)
@@ -51,13 +51,13 @@ ms.locfileid: "66084820"
   
 -   [Concetti di data mining](data-mining-concepts.md)  
   
--   [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)  
+-   [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)  
+-   [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
+-   [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
 -   [Query di data mining](data-mining-queries.md)  
   
@@ -67,6 +67,6 @@ ms.locfileid: "66084820"
   
 -   [Architettura di data mining](data-mining-architecture.md)  
   
--   [Panoramica della sicurezza &#40;&#41;di data mining](security-overview-data-mining.md)  
+-   [Panoramica della sicurezza &#40;data mining&#41;](security-overview-data-mining.md)  
   
   

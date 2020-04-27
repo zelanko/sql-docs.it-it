@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086061"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network
@@ -43,16 +43,16 @@ ms.locfileid: "66086061"
   
  Per visualizzare informazioni più dettagliate, ad esempio le equazioni che rappresentano ogni modello individuato, è possibile cambiare vista e utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Schede del Visualizzatore  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Schede del Visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Per l'esplorazione dei modelli di data mining della rete neurale, nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network sono disponibili le schede seguenti:  
   
 -   [Input](#BKMK_Inputs)  
   
 -   [Output](#BKMK_Outputs)  
   
--   [Variabili](#BKMK_Characteristics)  
+-   [variables](#BKMK_Characteristics)  
   
-###  <a name="BKMK_Inputs"></a>Input  
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Input  
  Usare la scheda **Input** per scegliere gli attributi e i valori che verranno usati come input dal modello. Per impostazione predefinita, il visualizzatore viene aperto con tutti gli attributi. In questa vista predefinita, il modello sceglie quali valori di attributo sono quelli più importanti da visualizzare.  
   
  Per selezionare un attributo di input, fare clic all'interno della colonna **Attributo** della griglia **Input** e selezionare un attributo nell'elenco a discesa. Nell'elenco sono inclusi solo gli attributi del modello.  
@@ -61,21 +61,21 @@ ms.locfileid: "66086061"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Outputs"></a>Uscite  
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Uscite  
  Usare la scheda **Output** per scegliere l'attributo risultante da esaminare. È possibile scegliere due stati del risultato qualsiasi da confrontare, presupponendo che le colonne siano state definite come attributi stimabili alla creazione del modello.  
   
  Per selezionare un attributo, usare l'elenco **OutputAttribute** . Successivamente, è possibile selezionare due stati associati all'attributo dagli elenchi **Valore 1** e **Valore 2** . Questi due stati dell'attributo di output verranno confrontati nel riquadro **Variabili** .  
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Variabili  
+###  <a name="variables"></a><a name="BKMK_Characteristics"></a>Variabili  
  La griglia della scheda **Variabili** contiene le colonne seguenti: **Attributo**, **Valore**, **Predilige [valore 1]** e **Predilige [valore 2]**. Per impostazione predefinita, le colonne vengono ordinate in base al valore di **Predilige [valore 1]**. Se si fa clic su un'intestazione di colonna, viene modificato l'ordinamento della colonna selezionata.  
   
  Una barra a destra dell'attributo indica lo stato dell'attributo di output prediletto dallo stato dell'attributo di input specificato. La dimensione della barra indica in quale misura lo stato di input è prediletto dallo stato di output.  
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088282"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -48,27 +48,27 @@ ms.locfileid: "66088282"
  Selezionare questa opzione per copiare negli Appunti l'elemento specificato in **Metadati** o **Funzioni** .  
   
 > [!NOTE]  
->  Questa opzione non viene visualizzata se si seleziona **modelli** .  
+>   Questa opzione non viene visualizzata se si seleziona **Modelli** .  
   
 > [!NOTE]  
->  Questa opzione è disabilitata se non è possibile copiare il membro selezionato, ad esempio la cartella **set** di una dimensione visualizzata in **metadati** o la cartella del gruppo di funzioni per una funzione visualizzata in **funzioni**.  
+>   Questa opzione è disabilitata se non è possibile copiare il membro selezionato, ad esempio la cartella **Set** di una dimensione visualizzata in **Metadati** o la cartella del gruppo di funzioni relativa alla funzione visualizzata in **Funzioni**.  
   
  **Filtra membri**  
  Selezionare questa opzione per visualizzare la finestra di dialogo **Filtra membri** e filtrare i membri visualizzati per l'elemento selezionato in **Metadati**. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se si seleziona **metadati** .  
+>   Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
   
 > [!NOTE]  
->  Questa opzione è abilitata solo se nei **metadati**è selezionato un livello per un attributo.  
+>   Questa opzione è attivata solo se si seleziona un livello per un attributo in **Metadati**.  
   
  **Aggiungi modello**  
  Selezionare questa opzione per aggiungere allo script del cubo un nuovo membro calcolato, set denominato o comando di script basato sul modello selezionato e visualizzare **Editor dello script**, **Editor form membro calcolato**o **Editor form set denominato** a seconda del comando (in visualizzazione Form) o scorrere il contenuto del riquadro **Editor dello script** fino alla posizione del comando nello script del cubo (in visualizzazione Script).  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se si seleziona **metadati** .  
+>   Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

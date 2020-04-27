@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082699"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Utilizzo di SQL Server Profiler per il monitoraggio di attività di data mining (Analysis Services - Data mining)
@@ -31,17 +31,17 @@ ms.locfileid: "66082699"
   
 |EventClass|EventSubclass|Descrizione|  
 |----------------|-------------------|-----------------|  
-|**Inizio query**<br /><br /> **Fine query**|**0-MDXQuery**|Contiene il testo di tutte le chiamate a stored procedure [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|**Inizio query**<br /><br /> **Fine query**|**1-DMXQuery**|Contiene il testo e i risultati di istruzioni DMX (Data Mining Extensions).|  
-|**Inizio report di stato**<br /><br /> **Fine report di stato**|**34-DataMiningProgress**|Fornisce informazioni sullo stato di avanzamento dell'algoritmo di data mining: durante la compilazione di un modello di clustering: ad esempio, il messaggio di stato segnala il cluster in corso di compilazione|  
+|**Inizio query**<br /><br /> **Fine query**|**0 - MDXQuery**|Contiene il testo di tutte le chiamate a stored procedure [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|**Inizio query**<br /><br /> **Fine query**|**1 - DMXQuery**|Contiene il testo e i risultati di istruzioni DMX (Data Mining Extensions).|  
+|**Progress Report Begin**<br /><br /> **Progress Report End**|**34 - DataMiningProgress**|Fornisce informazioni sullo stato di avanzamento dell'algoritmo di data mining: durante la compilazione di un modello di clustering: ad esempio, il messaggio di stato segnala il cluster in corso di compilazione|  
 |**Inizio query**<br /><br /> **Fine query**|EXECUTESQL|Contiene il testo della query Transact-SQL in esecuzione|  
 |**Inizio query**<br /><br /> **Fine query**|**2-SQLQuery**|Contiene il testo delle query sui set di righe dello schema nel formato di tabelle del sistema.|  
-|**INDIVIDUA inizio**<br /><br /> **Fine individuazione**|Multipli|Contiene il testo di chiamate di funzioni DMX o istruzioni DISCOVER, incapsulate in XMLA.|  
+|**INDIVIDUA inizio**<br /><br /> **DISCOVER End**|Multipli|Contiene il testo di chiamate di funzioni DMX o istruzioni DISCOVER, incapsulate in XMLA.|  
 |**Error (Errore) (Error (Errore)e)**|(nessuna)|Contiene il testo degli errori inviati dal server al client.<br /><br /> I messaggi di errore preceduti da **Errore (data mining):** o **Messaggio informativo (data mining):** sono generati in maniera specifica in risposta a richieste DMX. La sola visualizzazione di questi messaggi di errore non è tuttavia sufficiente, perché altri errori, quali quelli generati dal parser, potrebbero essere correlati al data mining senza questi prefissi.|  
   
  La visualizzazione delle istruzioni di comando nel registro di traccia consente di visualizzare anche la sintassi di istruzioni complesse inviate dal client al server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , comprese chiamate alle stored procedure di sistema. Queste informazioni possono essere utili per il debug oppure è possibile utilizzare le istruzioni valide come modello per la creazione di nuove query o modelli di stima. Per alcuni esempi di chiamate alle stored procedure acquisibili tramite traccia, vedere [Esempi di query sul modello di clustering](clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Monitorare un'istanza di Analysis Services](../instances/monitor-an-analysis-services-instance.md)   
  [Usare SQL Server eventi estesi &#40;&#41; XEvent per monitorare Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   

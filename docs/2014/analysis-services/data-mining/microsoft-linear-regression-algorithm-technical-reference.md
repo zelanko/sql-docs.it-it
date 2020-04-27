@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084055"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Linear Regression
@@ -36,8 +36,8 @@ ms.locfileid: "66084055"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Linear Regression|Punteggio di interesse|Default.<br /><br /> Gli altri metodi relativi alla caratteristica di selezione degli attributi disponibili con l'algoritmo Decision Trees si applicano solo alle variabili discrete e non sono pertanto validi per i modelli di regressione lineare.|  
-|Decision Trees|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
+|Linear Regression|Punteggio di interesse|Valore predefinito.<br /><br /> Gli altri metodi relativi alla caratteristica di selezione degli attributi disponibili con l'algoritmo Decision Trees si applicano solo alle variabili discrete e non sono pertanto validi per i modelli di regressione lineare.|  
+|Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
   
  I parametri dell'algoritmo che controllano la caratteristica di selezione degli attributi per un modello di albero delle decisioni sono MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66084055"
 > [!NOTE]  
 >  I tipi di contenuto `Cyclical` e `Ordered` sono supportati, ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di regressione lineare &#40;Analysis Services-Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084574"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Drill-through sulle strutture di data mining
-  Il *drill-through* indica la possibilità di eseguire query su un modello di data mining o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
+  Il termine*drill-through* fa riferimento alla possibilità di eseguire query su un modello o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due diverse opzioni per il drill-through dei dati del case. È possibile eseguire il drill-through dei dati utilizzati per compilare il modello di data mining o dei dati di origine nella struttura di data mining.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dispone di due diverse opzioni per il drill-through dei dati del case. È possibile eseguire il drill-through dei dati utilizzati per compilare il modello di data mining o dei dati di origine nella struttura di data mining.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Drill-through nei case del modello e drill-through nella struttura  
  Il drill-through nei **case del modello** è utile per trovare dettagli aggiuntivi su regole, schemi o cluster in un modello.  
@@ -39,7 +38,7 @@ ms.locfileid: "66084574"
   
 -   Il drill-through consiste nel recupero delle informazioni sui case di training memorizzati nella cache durante l'elaborazione della struttura di data mining. Pertanto, se i dati memorizzati nella cache vengono cancellati dopo l'elaborazione della struttura impostando la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su `ClearAfterProcessing`, il drill-through non funziona. Per abilitare il drill-through per le colonne della struttura, è necessario impostare la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su `KeepTrainingCases` e rielaborare la struttura.  
   
--   Verificare che la struttura di data mining e il modello di data [](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) mining dispongano della `True`proprietà AllowDrillThrough impostata su. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello.  
+-   Verificare che la struttura di data mining e il modello di data [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) mining dispongano della `True`proprietà AllowDrillThrough impostata su. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problemi di sicurezza correlati al drill-through  
  Le autorizzazioni di drill-through vengono impostate separatamente per la struttura e per il modello. L'autorizzazione del modello consente di eseguire il drill-through dal modello, anche se non si dispone di autorizzazioni sulla struttura. Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello usando la funzione [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
@@ -56,9 +55,9 @@ ms.locfileid: "66084574"
 |-|-|  
 |Utilizzo del drill-through per la struttura dai visualizzatori del modello di data mining|[Utilizzare il drill-through dai visualizzatori modello](use-drillthrough-from-the-model-viewers.md)|  
 |Per tipi di modelli specifici, vedere gli esempi di query drill-through.|[Query di data mining](data-mining-queries.md)|  
-|Ottenere informazioni sulle autorizzazioni applicabili a strutture e modelli di data mining specifici.|[Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Ottenere informazioni sulle autorizzazioni applicabili a strutture e modelli di data mining specifici.|[Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Drill-through sui modelli di data mining](drillthrough-on-mining-models.md)  
   
   

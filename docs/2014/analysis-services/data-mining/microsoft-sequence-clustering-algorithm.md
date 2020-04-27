@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083824"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo Microsoft Sequence Clustering
@@ -39,8 +39,7 @@ ms.locfileid: "66083824"
  Il [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sito web raccoglie informazioni sulle pagine visitate dagli utenti del sito e sull'ordine in cui vengono visitate le pagine. Poiché l'azienda accetta solo ordini online, i clienti devono accedere al sito. In questo modo, l'azienda ottiene informazioni di esplorazione per il profilo di ogni cliente. Tramite l'applicazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering a tali dati, l'azienda può individuare gruppi o cluster di clienti con schemi di acquisto o sequenze di selezioni simili. In seguito, l'azienda può utilizzare tali cluster per analizzare gli spostamenti degli utenti nel sito Web, identificare le pagine più strettamente correlate alla vendita di un prodotto specifico ed eseguire la stima delle pagine che con maggiore probabilità verranno visitate successivamente.  
   
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo ibrido che combina tecniche di clustering e l'analisi delle catene di Markov per identificare i cluster e le relative sequenze. Una delle caratteristiche distintive dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è l'utilizzo dei dati in sequenza. Questi dati rappresentano in genere una serie di eventi o transizioni tra stati in un set di dati, ad esempio una serie di acquisti di prodotti o di clic sul Web per un determinato utente. Per determinare le sequenze migliori da usare come input per il clustering, l'algoritmo esamina tutte le probabilità di transizione e misura le differenze, o distanze, tra tutte le sequenze possibili del set di dati. Dopo la creazione dell'elenco di sequenze candidate, l'algoritmo utilizza le informazioni sulla sequenza come input per il metodo EM di clustering.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo ibrido che combina tecniche di clustering e l'analisi delle catene di Markov per identificare i cluster e le relative sequenze. Una delle caratteristiche distintive dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è l'utilizzo dei dati in sequenza. Questi dati rappresentano in genere una serie di eventi o transizioni tra stati in un set di dati, ad esempio una serie di acquisti di prodotti o di clic sul Web per un determinato utente. Per determinare le sequenze migliori da usare come input per il clustering, l'algoritmo esamina tutte le probabilità di transizione e misura le differenze, o distanze, tra tutte le sequenze possibili del set di dati. Dopo la creazione dell'elenco di sequenze candidate, l'algoritmo utilizza le informazioni sulla sequenza come input per il metodo EM di clustering.  
   
  Per una descrizione dettagliata dell'implementazione, vedere [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md).  
   
@@ -49,11 +48,11 @@ ms.locfileid: "66083824"
   
  I requisiti per un modello Sequence Clustering sono i seguenti:  
   
--   **Una singola colonna chiave** Un modello Sequence Clustering richiede una chiave che identifica i record.  
+-   **Una colonna a chiave singola** Un modello Sequence Clustering richiede una chiave che identifica i record.  
   
--   **Una colonna sequenza** Per i dati di sequenza, il modello deve disporre di una tabella nidificata contenente una colonna ID sequenza. L'ID sequenza può essere qualsiasi tipo di dato ordinabile. Ad esempio, è possibile utilizzare un identificatore di pagina Web, un numero intero o una stringa di testo, purché la colonna identifichi gli eventi in una sequenza. Per ogni sequenza è consentito un unico identificatore di sequenza e per ogni modello è consentito un unico tipo di sequenza.  
+-   **Una colonna della sequenza** Per i dati in sequenza, il modello deve disporre di una tabella annidata contenente una colonna di ID sequenza. L'ID sequenza può essere qualsiasi tipo di dato ordinabile. Ad esempio, è possibile utilizzare un identificatore di pagina Web, un numero intero o una stringa di testo, purché la colonna identifichi gli eventi in una sequenza. Per ogni sequenza è consentito un unico identificatore di sequenza e per ogni modello è consentito un unico tipo di sequenza.  
   
--   **Attributi facoltativi non di sequenza** L'algoritmo supporta l'aggiunta di altri attributi che non sono correlati alla sequenziazione. Questi attributi possono includere le colonne nidificate.  
+-   **Attributi fuori sequenza facoltativi** L'algoritmo supporta l'aggiunta di altri attributi non correlati alle sequenze. Questi attributi possono includere le colonne nidificate.  
   
  Nell'esempio del sito Web di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] riportato in precedenza, un modello Sequence Clustering potrebbe includere informazioni sull'ordine come tabella del case, dati demografici sul cliente specifico per ogni ordine come attributi fuori sequenza e una tabella nidificata contenente la sequenza in cui il cliente ha esplorato il sito o ha inserito gli articoli nel carrello acquisti come informazioni sulla sequenza.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66083824"
   
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Esempi di query sul modello Sequence Clustering](clustering-model-query-examples.md)   

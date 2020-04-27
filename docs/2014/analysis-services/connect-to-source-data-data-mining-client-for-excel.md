@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087096"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connessione ai dati di origine (client di data mining per Excel)
@@ -28,12 +28,12 @@ ms.locfileid: "66087096"
   
  **Connessioni a origini dati esterne.** È inoltre possibile creare connessioni a dati esterni durante la compilazione di modelli o il salvataggio dei risultati. È ad esempio possibile creare un modello di data mining in un server, quindi eseguire una query di stima sul modello utilizzando i dati archiviati in un'altra istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], in una tabella dati di Excel o in un'origine dati esterna, ad esempio [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. Ogni volta che si accede a una nuova origine dati, viene chiesto di creare una connessione tramite una finestra di dialogo.  
   
-##  <a name="bkmk_prereq2"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> Prerequisiti  
  Per questa versione dei componenti aggiuntivi è necessario che l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sia SQL Server 2012. Se si desidera connettersi a una versione precedente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è disponibile una versione separata dei componenti aggiuntivi. Esistono versioni dei componenti aggiuntivi che supportano SQL Server 2005, SQL Server 2008 e SQL Server 2008 R2.  
   
  Per connettersi a un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è necessario disporre delle autorizzazioni per accedere al server di database. È necessario inoltre che le sessioni di data mining siano abilitate e che l'utente disponga delle autorizzazioni di lettura o lettura/scrittura per gli oggetti di database archiviati nel server.  
   
-##  <a name="bkmk_connect"></a>Creazione di connessioni al server di data mining  
+##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Creazione di connessioni al server di data mining  
  Il gruppo **connessioni** del client di data mining per Excel e gli strumenti di analisi tabelle per Excel forniscono gli strumenti per la gestione delle connessioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]a un'istanza di.  
   
 -   È possibile creare la connessione durante l'installazione del componente aggiuntivo o aggiungere una connessione in un secondo momento.  
@@ -66,7 +66,7 @@ ms.locfileid: "66087096"
   
 7.  Fare clic su **Test connessione** per verificare che il server e il database siano disponibili.  
   
-8.  Fare clic su **OK**, quindi su **Chiudi**.  
+8.  Fare clic su **OK** e quindi fare clic su **Chiudi**.  
   
 ### <a name="connections-using-a-web-service"></a>Connessioni tramite un servizio Web  
  Se si utilizza un'architettura thin client per consentire l'esplorazione di cubi e dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è inoltre possibile configurare una connessione a un server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tramite servizi Web. Per informazioni sulla definizione di un client basato sul Web, vedere la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -96,7 +96,7 @@ ms.locfileid: "66087096"
   
 4.  Se si seleziona **nuovo**, attenersi alla procedura descritta in precedenza per specificare un server e un nome di catalogo oppure per connettersi tramite un servizio Web.  
   
-##  <a name="bkmk_change"></a>Modifica delle connessioni  
+##  <a name="changing-connections"></a><a name="bkmk_change"></a>Modifica delle connessioni  
  È possibile creare più connessioni nello stesso foglio di lavoro, ma può essere attiva solo una connessione alla volta. Il nome della connessione corrente viene visualizzato nel pulsante **connessione** .  
   
  Nel client di data mining per Excel è inoltre possibile verificare la stringa di connessione e lo stato della connessione corrente facendo clic su **traccia** e quindi su **connessione corrente**.  
@@ -119,7 +119,7 @@ ms.locfileid: "66087096"
   
      \<unità: > \Users\\<il componente aggiuntivo\>data mining \AppData\Local\Microsoft\Data  
   
-##  <a name="bkmk_extconnections"></a>Connessione a origini dati esterne  
+##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Connessione a origini dati esterne  
  Mentre gli strumenti della barra multifunzione **analizza** funzionano esclusivamente con i dati in Excel, gli strumenti della barra multifunzione **data mining** consentono di connettersi direttamente alle origini dati esterne da utilizzare come input per il modello o per il campionamento.  
   
  Gli strumenti seguenti in questi componenti aggiuntivi supportano l'utilizzo di dati esterni per il data mining:  
@@ -162,7 +162,7 @@ ms.locfileid: "66087096"
   
 -   BINARY  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Traccia &#40;client di data mining per Excel&#41;](trace-data-mining-client-for-excel.md)  
   
   

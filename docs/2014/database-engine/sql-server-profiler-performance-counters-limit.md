@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e64c5cc39ed8634ef2ec74f8680c84f7b66b98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088815"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server Profiler - Limite contatori prestazioni
@@ -34,7 +34,7 @@ ms.locfileid: "66088815"
   
      Per selezionare tutti i contatori relativi a un oggetto prestazione, selezionare la casella adiacente all'oggetto in questione. Se si seleziona il nodo di livello più alto, che indica il computer, verranno selezionati tutti i contatori e gli oggetti prestazioni contenuti nel file di log delle prestazioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Correlare una traccia con i dati del log delle prestazioni di Windows &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Correlare una traccia e i dati dei registri di prestazioni di Windows &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
   
   

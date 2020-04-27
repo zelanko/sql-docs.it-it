@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089011"
 ---
 # <a name="query-options-results-grid-page"></a>Risultati di Opzioni query (pagina Griglia)
@@ -26,7 +26,7 @@ ms.locfileid: "66089011"
  **Includi la query nel set di risultati**  
  Restituisce il testo della query come parte del set di risultati.  
   
- **Includi intestazioni di colonna durante la copia o il salvataggio dei risultati**  
+ **Includi intestazioni di colonna nelle operazioni di copia o salvataggio dei risultati**  
  Consente di includere le intestazioni di colonna (titoli) durante la copia dei risultati negli Appunti o il salvataggio in un file. Deselezionare questa casella di controllo se si desidera che i risultati salvati o copiati contengano solo i dati senza le intestazioni di colonna.  
   
  **Elimina risultati dopo l'esecuzione**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089011"
  **Visualizza risultati in una scheda separata**  
  Consente di visualizzare il set dei risultati in una nuova finestra del documento anziché nella parte inferiore della finestra del documento della query.  
   
- **Passa alla scheda risultati dopo l'esecuzione della query**  
+ **Passa alla scheda dei risultati al termine della query**  
  Consente di impostare automaticamente lo stato attivo dello schermo sul set dei risultati.  
   
- **Numero massimo di caratteri recuperati**  
+ **Dimensioni massime caratteri recuperati**  
  **Dati non XML**:  
   
  Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella.  
@@ -48,9 +48,9 @@ ms.locfileid: "66089011"
   
  **Dati XML**:  
   
- Selezionare **1 MB**, **2 MB**o **5 MB**. Selezionare **illimitato** per recuperare tutti i caratteri.  
+ Consente di selezionare i valori **1 MB**, **2 MB**o **5 MB**. Selezionare **illimitato** per recuperare tutti i caratteri.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

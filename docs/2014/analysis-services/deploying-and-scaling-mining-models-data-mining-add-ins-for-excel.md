@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081932"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Distribuzione e scalabilità di modelli di data mining (componenti aggiuntivi Data mining per Excel)
@@ -53,7 +53,7 @@ ms.locfileid: "66081932"
   
  Per ulteriori informazioni, vedere [Manage models &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   

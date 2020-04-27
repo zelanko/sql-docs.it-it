@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082956"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Rimuovere colonne da una struttura di data mining
@@ -43,7 +43,7 @@ ms.locfileid: "66082956"
   
 4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

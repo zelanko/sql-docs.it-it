@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087302"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Connessione a un database di Microsoft Access (SSAS)
@@ -44,9 +44,9 @@ ms.locfileid: "66087302"
  Specificare una password per la connessione al database.  
   
  **Salva password**  
- Specificare se archiviare la password immessa nella casella **Password** .  
+ Specificare se la password immessa nella casella **Password** è stata archiviata.  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** .  
   
  **Test connessione**  

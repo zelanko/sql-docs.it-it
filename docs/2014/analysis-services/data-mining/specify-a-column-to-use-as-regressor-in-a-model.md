@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082905"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Specificare una colonna da utilizzare come regressore in un modello
@@ -59,10 +59,10 @@ ms.locfileid: "66082905"
   
      Nel visualizzatore il modello è rappresentato da un nodo singolo che contiene la formula di regressione. È possibile visualizzare la formula in **Legenda data mining**oppure è possibile usare le query per estrarre i coefficienti per la formula.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Query di data mining](data-mining-queries.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per i modelli di regressione lineare &#40;Analysis Services-Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

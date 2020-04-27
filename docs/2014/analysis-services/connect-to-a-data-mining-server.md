@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087350"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Connessione al server di data mining
@@ -113,7 +113,7 @@ ms.locfileid: "66087350"
   
 4.  Fare clic su Esporta modello di data mining per generare un file script in un percorso specificato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Connettersi ai dati di origine &#40;client di data mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
  [Utilità di configurazione del server &#40;componenti aggiuntivi Data mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   

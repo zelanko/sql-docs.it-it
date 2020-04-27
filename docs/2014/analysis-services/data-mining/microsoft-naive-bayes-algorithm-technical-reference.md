@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083895"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Naive Bayes
@@ -36,11 +36,11 @@ ms.locfileid: "66083895"
  Per una descrizione della modifica delle probabilità in tutti i modelli in modo da tenere conto dei potenziali valori mancanti, vedere [Valori mancanti &#40;Analysis Services - Data mining &#41;](missing-values-analysis-services-data-mining.md).  
   
 ### <a name="feature-selection"></a>Selezione caratteristiche  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes esegue la selezione automatica delle caratteristiche per limitare il numero di valori considerati quando si compila il modello. Per altre informazioni, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](feature-selection-data-mining.md).  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes esegue la selezione automatica delle caratteristiche per limitare il numero di valori considerati quando si compila il modello. Per altre informazioni, vedere [Selezione delle funzionalità &#40;Data mining&#41;](feature-selection-data-mining.md).  
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Naive Bayes accetta solo attributi discreti o discretizzati e non può pertanto utilizzare il punteggio di interesse.|  
+|Naive Bayes|Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Naive Bayes accetta solo attributi discreti o discretizzati e non può pertanto utilizzare il punteggio di interesse.|  
   
  L'algoritmo è progettato per ridurre il tempo di elaborazione e selezionare in modo efficiente gli attributi di massima importanza; è tuttavia possibile controllare i dati utilizzati dall'algoritmo impostando i parametri nel modo seguente:  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66083895"
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
  [Esempi di query sul modello Naive Bayes](naive-bayes-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli Naive Bayes &#40;Analysis Services-Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli Naïve Bayes &#40;Analysis Services - Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

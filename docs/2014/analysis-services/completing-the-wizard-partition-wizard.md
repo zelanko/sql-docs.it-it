@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087530"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Completamento procedura guidata (Creazione guidata partizione)
@@ -40,7 +40,7 @@ ms.locfileid: "66087530"
  **Distribuisci ed elabora adesso**  
  Consente di distribuire ed elaborare la partizione nell'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] specificata nella pagina **Posizioni di elaborazione e archiviazione** . Dopo aver scelto **Fine** in questa pagina, la partizione viene distribuita ed elaborata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

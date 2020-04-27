@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086357"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Aggiungere una tabella nidificata a una struttura di data mining
@@ -43,7 +43,7 @@ ms.locfileid: "66086357"
   
      Alla struttura di data mining verrà aggiunta una nuova colonna della tabella contenente la colonna chiave. Per informazioni su come aggiungere altre colonne, vedere [Aggiungere colonne a una struttura di data mining](add-columns-to-a-mining-structure.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

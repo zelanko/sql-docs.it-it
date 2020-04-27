@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087965"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice di classificazione (componenti aggiuntivi Data mining di SQL Server)
@@ -36,10 +36,10 @@ ms.locfileid: "66087965"
   
 ||Bronzo (valore effettivo)|Oro (valore effettivo)|Argento (valore effettivo)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94,45%**|15,18%|1,70%|  
-|Gold|2,72%|**84,82%**|0,00%|  
-|Silver|1,84%|0,00%|**93,80%**|  
-|*Corretto*|*95,45%*|*84,82%*|*98,30%*|  
+|Bronzo|**94,45%**|15,18%|1,70%|  
+|Oro|2,72%|**84,82%**|0,00%|  
+|Argento|1,84%|0,00%|**93,80%**|  
+|*Corretti*|*95,45%*|*84,82%*|*98,30%*|  
 |*Classificazioni non corrette*|*4,55%*|*15,18%*|*1,70%*|  
   
 -   In ogni colonna vengono visualizzati i valori effettivi del set di dati di testing.  
@@ -87,7 +87,7 @@ ms.locfileid: "66087965"
 ### <a name="known-issues"></a>Problemi noti  
  In SQL Server 2012 e SQL Server 2014, la possibilità di eseguire il mapping del set di dati di test interno al modello non funziona nello strumento **matrice di classificazione** . Tuttavia, è possibile specificare un set di dati esterno e selezionare il set di training come input per determinare l'errore nel set di dati originale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [Rilevare le categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  

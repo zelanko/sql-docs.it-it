@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085531"
 ---
 # <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
@@ -53,8 +53,7 @@ ms.locfileid: "66085531"
   
 1.  Nella scheda **Convalida incrociata** per **FoldCount**fare clic sulla freccia giù per selezionare un numero compreso tra 1 e 10. Il valore predefinito è 10.  
   
-     
-  **FoldCount** rappresenta il numero di partizioni che verranno create all'interno del set di dati originali. Se si imposta FoldCount su 1, il set di training verrà utilizzato senza partizionamento.  
+     **FoldCount** rappresenta il numero di partizioni che verranno create all'interno del set di dati originali. Se si imposta FoldCount su 1, il set di training verrà utilizzato senza partizionamento.  
   
 2.  Per **TargetAttribute**fare clic sulla freccia verso il basso e selezionare una colonna nell'elenco. Se si tratta di un modello di clustering, selezionare **#Cluster** per indicare che il modello non dispone di un modello stimabile. Si noti che il valore **#Cluster**è disponibile solo quando la struttura di data mining non supporta altri tipi di attributi stimabili.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085531"
 4.  Per **TargetState**è possibile digitare il valore dell'attributo stimabile di cui eseguire la modellazione. Se, ad esempio, per la colonna [Bike Buyer] sono possibili due valori, ovvero 1 (Sì) e 2 (No), è possibile immettere il valore 1 per valutare l'accuratezza del modello per il risultato desiderato.  
   
     > [!NOTE]  
-    >  Se non si immette alcun valore, l'opzione **TargetThreshold** non è disponibile e il modello viene valutato per tutti i valori possibili dell'attributo stimabile.  
+    >   Se non si immette alcun valore, l'opzione **TargetThreshold** non è disponibile e il modello viene valutato per tutti i valori possibili dell'attributo stimabile.  
   
 5.  Per **TargetThreshold**è possibile digitare un numero decimale compreso tra 0 e 1 per specificare la probabilità minima da applicare a una stima affinché questa venga ritenuta accurata.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66085531"
   
 4.  Incollare la selezione in una cartella di lavoro di Excel aperta. Se si utilizza l'opzione **Incolla** , il report viene incollato in Excel in formato HTML, mantenendo la formattazione di righe e colonne. Se si usano le opzioni **Incolla speciale** per testo o testo Unicode, il report viene incollato in formato delimitato da righe.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Misure nel report di convalida incrociata](measures-in-the-cross-validation-report.md)  
   
   

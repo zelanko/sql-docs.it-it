@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092753"
 ---
 # <a name="replication-upgrade-issues"></a>Problemi di aggiornamento della replica
@@ -25,11 +25,11 @@ ms.locfileid: "66092753"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [In seguito all'aggiornamento le sottoscrizioni ad aggiornamento in coda che utilizzano MSMQ verranno modificate in modo da utilizzare code di SQL Server](../../../2014/sql-server/install/upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md)  
+-   [Il seguito all'aggiornamento le sottoscrizioni ad aggiornamento in coda che usano Accodamento messaggi verranno modificate](../../../2014/sql-server/install/upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md)  
   
 -   [Altri problemi di aggiornamento della replica](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

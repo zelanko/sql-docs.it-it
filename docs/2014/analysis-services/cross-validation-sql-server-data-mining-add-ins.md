@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086645"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Convalida incrociata (componenti aggiuntivi Data mining di SQL Server)
@@ -135,7 +135,7 @@ ms.locfileid: "66086645"
   
  Nei modelli di clustering sono previsti due tipi di appartenenza al cluster, a seconda del metodo utilizzato per creare il modello. In alcuni modelli, basati sull'algoritmo K-medie, è previsto che un nuovo case appartenga a un solo cluster. Per impostazione predefinita, tuttavia, l'algoritmo Microsoft Clustering utilizza il metodo EM (Expectation Maximization) che presuppone che un nuovo case possa potenzialmente appartenere a qualsiasi cluster. In questi modelli pertanto un case può avere più valori `CaseLikelihood`, ma il valore indicato per impostazione predefinita corrisponde alla probabilità che il case appartenga al cluster che meglio corrisponde al nuovo case.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

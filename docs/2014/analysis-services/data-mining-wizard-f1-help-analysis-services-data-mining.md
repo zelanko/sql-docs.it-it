@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086304"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Guida sensibile al contesto della Creazione guidata modello di data mining (Analysis Services - Data mining)
@@ -56,7 +56,7 @@ ms.locfileid: "66086304"
   
  Dopo aver creato la struttura di data mining e un modello di data mining facoltativo, è possibile usare **Progettazione modelli di data mining** per modificare le proprietà.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Progettazione modelli di data mining](data-mining/data-mining-designer.md)   
  [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)   

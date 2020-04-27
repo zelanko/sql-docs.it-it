@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082606"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Finestra di dialogo Filtro dei set di dati o Filtro modello
@@ -31,7 +31,7 @@ ms.locfileid: "66082606"
 > [!TIP]  
 >  Per eseguire il test dell'accuratezza su un subset di dati di training originali, è possibile aggiungere la vista origine dati usata per definire il set di training come dati di test esterni e aggiungere quindi condizioni nella griglia **Filtro dei set di dati**.  
   
- **Per ulteriori informazioni:** [test e convalida &#40;data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Per altre informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opzioni  
  **Condizioni**  
@@ -40,7 +40,7 @@ ms.locfileid: "66082606"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**E/o**|Scegliere un operatore per eseguire il join di più condizioni.|  
-|**Colonna struttura di data mining**|Fare clic per selezionare un'origine dati, quindi fare clic sulle righe successive della griglia per aggiungere le colonne dall'origine dati.<br /><br /> La prima riga nella griglia specifica la vista origine dati. Dopo avere selezionato una vista origine dati, vengono visualizzate un'icona di tabella in **Colonna struttura di data mining** e la combinazione di tutti i criteri definiti per quell'origine dati nel campo **Valore** .<br /><br /> Dopo avere selezionato un'origine dati, nella casella **Colonna struttura di data mining** diventa disponibile un elenco a discesa di singole colonne dell'origine dati.|  
+|**Colonne struttura di data mining**|Fare clic per selezionare un'origine dati, quindi fare clic sulle righe successive della griglia per aggiungere le colonne dall'origine dati.<br /><br /> La prima riga nella griglia specifica la vista origine dati. Dopo avere selezionato una vista origine dati, vengono visualizzate un'icona di tabella in **Colonna struttura di data mining** e la combinazione di tutti i criteri definiti per quell'origine dati nel campo **Valore** .<br /><br /> Dopo avere selezionato un'origine dati, nella casella **Colonna struttura di data mining** diventa disponibile un elenco a discesa di singole colonne dell'origine dati.|  
 |**Operatore**|Selezionare un operatore dall'elenco.|  
 |**Valore**|Per le tabelle, nel campo **Valore** viene visualizzata la combinazione di tutti i filtri applicati all'origine dati. È anche possibile fare clic sul pulsante di compilazione **(...)** a destra della casella di testo per aprire la finestra di dialogo **filtro** e compilare una condizione.|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66082606"
  **Annulla modifiche query**  
  Consente di ripristinare la griglia allo stato precedente e annullare qualsiasi modifica apportata all'espressione di filtro.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)  
   

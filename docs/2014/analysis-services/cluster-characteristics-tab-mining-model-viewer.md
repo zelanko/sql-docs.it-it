@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087986"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Scheda Caratteristiche cluster (Visualizzatore modello di data mining)
   La scheda **Caratteristiche cluster** consente di esplorare le caratteristiche di un cluster in un modello di clustering o il set di tutti i case nel modello. Nel grafico viene mostrata l'importanza di ogni coppia attributo-valore come caratteristica tramite cui viene definito il cluster rispetto agli altri cluster.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -46,7 +46,7 @@ ms.locfileid: "66087986"
 |**Valori**|Vengono elencati i valori degli attributi correnti individuati nel cluster attualmente selezionato.|  
 |**Probabilità**|La barra indica l'attendibilità della coppia attributo-valore come caratteristica di distinzione di questo cluster. Se si posiziona il mouse sulla barra è possibile vedere il valore di probabilità rappresentato in percentuale. Con questa combinazione di attributo e valore in qualsiasi case particolare, tramite tale valore viene indicata la probabilità che il case appartenga a questo cluster.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

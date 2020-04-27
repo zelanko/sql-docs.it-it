@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084025"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
@@ -35,7 +35,7 @@ ms.locfileid: "66084025"
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   
--   [Contenuto del modello di data mining per i modelli di clustering &#40;Analysis Services-Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Esempi di query sul modello di clustering](clustering-model-query-examples.md)  
   
@@ -178,9 +178,9 @@ ms.locfileid: "66084025"
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Esempi di query sul modello di clustering](clustering-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di clustering &#40;Analysis Services-Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

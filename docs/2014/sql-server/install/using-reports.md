@@ -36,10 +36,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091227"
 ---
 # <a name="using-reports"></a>Utilizzo dei report
@@ -81,7 +81,7 @@ ms.locfileid: "66091227"
   
  Se si desidera condividere le informazioni con altri utenti, è possibile inviare il report XML. In alternativa, se si desidera utilizzare un'altra applicazione, è possibile esportare il report in un file con valori delimitati da virgole da utilizzare per creare un foglio di calcolo, un file di testo o un messaggio di posta elettronica.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedura: visualizzazione di un report di preparazione aggiornamento](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
  [Procedura: esportazione di report](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Procedura: filtrare i report](../../../2014/sql-server/install/how-to-filter-reports.md)   

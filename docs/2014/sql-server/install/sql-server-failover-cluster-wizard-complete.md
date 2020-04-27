@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 436882e02c2a752052536ae29619fb0990989175
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092003"
 ---
 # <a name="sql-server-failover-cluster-wizard---complete"></a>Creazione guidata cluster di failover di SQL Server (Completamento)
@@ -38,7 +38,7 @@ ms.locfileid: "66092003"
   
 2.  [Operazioni preliminari all'installazione del clustering di failover](../failover-clusters/install/before-installing-failover-clustering.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Regole di installazione](../../../2014/sql-server/install/install-rules.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084736"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Creazione guidata modello di data mining (Analysis Services - Data mining)
@@ -40,7 +40,7 @@ ms.locfileid: "66084736"
   
 -   Stabilire se sia necessario poter testare i modelli su un set di dati unificato. In tal caso, valutare l'utilizzo dell'opzione per riservare alcuni dati ai test. È possibile scegliere una percentuale e definire un limite in base a un numero specificato di righe.  
   
-##  <a name="BKMK_Using_DM_Wizard"></a>Avvio della creazione guidata modello di data mining  
+##  <a name="starting-the-data-mining-wizard"></a><a name="BKMK_Using_DM_Wizard"></a> Avvio della Creazione guidata modello di data mining  
  Per usare la Creazione guidata modello di data mining, è necessario avere aperto una soluzione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] che contenga almeno un progetto OLAP o di data mining.  
   
 -   Se la soluzione è pronta per il data mining, è possibile semplicemente fare clic con il pulsante destro del mouse sul nodo **Strutture di data mining** in Esplora soluzioni e selezionare **Nuova struttura di data mining** per avviare la procedura guidata.  
@@ -51,7 +51,7 @@ ms.locfileid: "66084736"
   
  In seguito si creerà la struttura di data mining e un modello di data mining associato. È inoltre possibile creare la struttura di data mining e aggiungere in seguito i modelli, ma in generale è più facile creare prima un modello di test.  
   
-###  <a name="BKMK_Relational"></a>Modelli di data mining relazionali e OLAP  
+###  <a name="relational-vs-olap-mining-models"></a><a name="BKMK_Relational"></a> Modelli di data mining relazionali e modelli di data mining di tipo OLAP  
  L'opzione successiva più importante consente di utilizzare un'origine dati relazionale o di basare il modello sui dati multidimensionali (OLAP).  
   
  A questo punto, la Creazione guidata modello di data mining può seguire due diversi percorsi a seconda che l'origine dati sia relazionale o in un cubo. Tutti gli altri elementi, ad eccezione del processo di selezione dati, sono uguali, ovvero la scelta dell'algoritmo, la possibilità di aggiungere un set di dati di dati di riferimento e così via, ma la selezione dei dati del cubo è un po' più complessa rispetto all'utilizzo di dati relazionali. (Sono inoltre disponibili opzioni aggiuntive se si crea un modello basato su un cubo.)  
@@ -70,7 +70,7 @@ ms.locfileid: "66084736"
 ### <a name="choosing-an-algorithm"></a>Scelta di un algoritmo  
  A questo punto, è necessario decidere quale algoritmo utilizzare per l'elaborazione dei dati. Questa decisione comporta delle difficoltà. Ogni algoritmo disponibile in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] presenta funzionalità diverse e produce risultati diversi, pertanto è possibile provare modelli diversi prima di determinare quale sia il più appropriato per i dati e il problema aziendale da risolvere. Per una spiegazione delle attività per le quali ogni algoritmo è più appropriato, vedere gli argomenti seguenti:  
   
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  Di nuovo, è possibile creare più modelli utilizzando algoritmi diversi o modificare i parametri in modo che gli algoritmi creino modelli diversi. La scelta dell'algoritmo non deve essere un ostacolo ed è consigliabile creare diversi modelli sugli stessi dati.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "66084736"
 ### <a name="additional-features"></a>Funzionalità aggiuntive  
  Per assistere nella scelta dei dati appropriati e nella configurazione delle origini dati, la Creazione guidata modello di data mining fornisce queste funzionalità aggiuntive:  
   
--   **Rilevamento automatico dei tipi di dati**: tramite la procedura guidata verranno esaminate l'univocità e la distribuzione dei valori delle colonne, quindi verrà suggerito il tipo di dati migliore e verrà suggerito un tipo di utilizzo per i dati. È possibile eseguire l'override di questi suggerimenti selezionando valori da un elenco.  
+-   **Auto-detection of data types**(Rilevamento automatico dei tipi di dati): tramite la procedura guidata verranno esaminate l'univocità e la distribuzione dei valori delle colonne, quindi verrà suggerito il tipo di dati più appropriato e un tipo di uso per i dati. È possibile eseguire l'override di questi suggerimenti selezionando valori da un elenco.  
   
--   **Suggerimenti per le variabili**: è possibile fare clic su una finestra di dialogo e avviare un analizzatore che calcoli le correlazioni tra le colonne incluse nel modello e determini se le colonne sono probabili predittori dell'attributo outcome, data la configurazione del modello fino a questo punto. È possibile ignorare questi suggerimenti digitando valori diversi.  
+-   **Suggestions for variables**(Suggerimenti per le variabili): è possibile fare clic su una finestra di dialogo e avviare un analizzatore che calcoli le correlazioni tra le colonne incluse nel modello e determini se le colonne consentono di stimare l'attributo del risultato, data la configurazione del modello. È possibile ignorare questi suggerimenti digitando valori diversi.  
   
--   **Selezione delle funzionalità**: la maggior parte degli algoritmi rileva automaticamente le colonne che rappresentano i predittori validi e le usano in modo preferenziale. Nelle colonne che contengono troppi valori viene applicata la *selezione delle funzionalità* per ridurre la cardinalità dei dati e aumentare le probabilità di trovare un modello significativo. È possibile influire sul comportamento di selezione delle funzionalità tramite parametri del modello.  
+-   **Selezione funzionalità**: la maggior parte degli algoritmi consente di rilevare automaticamente le colonne in grado di eseguire stime corrette e di usarle con priorità. Nelle colonne che contengono troppi valori viene applicata la *selezione delle funzionalità* per ridurre la cardinalità dei dati e aumentare le probabilità di trovare un modello significativo. È possibile influire sul comportamento di selezione delle funzionalità tramite parametri del modello.  
   
--   **Sezionamento automatico del cubo**: se il modello di data mining è basato su un'origine dati OLAP, la possibilità di sezionare il modello tramite attributi del cubo viene fornita automaticamente. È pratico per creare modelli basati su subset di dati del cubo.  
+-   **Automatic cube slicing**(Sezionamento automatico del cubo): se il modello di data mining è basato su un'origine dati OLAP, la possibilità di sezionare il modello tramite attributi del cubo è disponibile automaticamente. È pratico per creare modelli basati su subset di dati del cubo.  
   
 ### <a name="completing-the-wizard"></a>Completamento procedura guidata  
  Nell'ultimo passaggio della creazione guidata viene assegnato un nome alla struttura di data mining e al modello di data mining associato. A seconda del tipo di modello creato, è anche possibile che siano disponibili le opzioni seguenti:  
@@ -104,19 +104,19 @@ ms.locfileid: "66084736"
 ## <a name="related-content"></a>Contenuto correlato  
  Per ulteriori informazioni sulle decisioni è necessario prendere per la creazione di un modello di data mining, vedere i collegamenti seguenti:  
   
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Tipi di contenuto &#40;&#41;di data mining](content-types-data-mining.md)  
+ [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)  
   
- [Tipi di dati &#40;&#41;di data mining](data-types-data-mining.md)  
+ [Tipi di dati &#40;Data mining&#41;](data-types-data-mining.md)  
   
  [Selezione delle funzioni &#40;&#41;di data mining](feature-selection-data-mining.md)  
   
- [Valori mancanti &#40;Analysis Services-&#41;di data mining](missing-values-analysis-services-data-mining.md)  
+ [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Drill-through sui modelli di data mining](drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di data mining](data-mining-tools.md)   
  [Soluzioni di data mining](data-mining-solutions.md)  
   

@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085465"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Creare una query DMX in SQL Server Management Studio
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di funzionalità che consentono di creare query di stima, query sul contenuto e query di definizione dei dati su modelli e strutture di data mining.  
   
 -   Un generatore di query di stima grafico è disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]per semplificare il processo di scrittura delle query di stima e il mapping dei set di dati a un modello.  
@@ -37,10 +36,10 @@ ms.locfileid: "66085465"
   
  In questo argomento viene illustrato come compilare una query DMX tramite Visualizzatore metadati e l'editor di query DMX.  
   
-##  <a name="BKMK_Templates"></a>Modelli di query DMX  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a>Modelli di query DMX  
  I modelli per la creazione delle query DMX di base sono disponibili in Esplora modelli. La cartella **DMX** contiene modelli di data mining, divisi nelle categorie seguenti:  
   
--   **model content**  
+-   **Contenuto del modello**  
   
 -   **Gestione modelli**  
   
@@ -51,14 +50,13 @@ ms.locfileid: "66085465"
  È inoltre possibile creare modelli personalizzati, per query o comandi eseguiti frequentemente.  
   
 ## <a name="xmla-query-templates"></a>Modelli di query XMLA  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include anche modelli per le query XMLA.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include anche modelli per le query XMLA.  
   
  I tipi di query che è possibile eseguire tramite XMLA e DMX sono parzialmente sovrapposti. Ad esempio, è possibile creare alcune query contenuto del modello tramite DMX o i set di righe dello schema di data mining, ma i set di righe dello schema talvolta contengono informazioni non esposte nelle query contenuto DMX.  
   
  Sono inoltre presenti alcune differenze fondamentali nella modalità di gestione delle operazioni in DMX e in XMLA. Ad esempio, è possibile usare XMLA per eseguire operazioni amministrative, come il backup di un intero database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ma per eseguire il backup di un solo modello di data mining in DMX è disponibile un comando semplice, [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx), più indicato allo scopo.  
   
-##  <a name="BKMK_Building_Queries"></a>Compilare ed eseguire una query DMX  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a>Compilare ed eseguire una query DMX  
   
 #### <a name="open-a-new-dmx-query-window"></a>Aprire una nuova finestra Query DMX  
   
@@ -86,8 +84,8 @@ ms.locfileid: "66085465"
   
  [Creare una query sul contenuto di un modello di data mining](create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Interfacce di query di data mining](data-mining-query-tools.md)   
- [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

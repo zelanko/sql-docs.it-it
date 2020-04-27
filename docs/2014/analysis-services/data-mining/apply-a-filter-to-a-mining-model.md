@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086214"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
@@ -70,9 +70,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. Fare clic sulla riga successiva nella griglia.  
   
-     La condizione di filtro creata viene aggiunta automaticamente nella casella di testo Espressione. Ad esempio, usare `[Income] > '30000'`  
+     La condizione di filtro creata viene aggiunta automaticamente nella casella di testo Espressione. Ad esempio: `[Income] > '30000'`  
   
-10. Fare clic sulla casella di testo **and/or** nella riga successiva della griglia per aggiungere una condizione.  
+10. Fare clic nella casella di testo **AND/OR** nella riga successiva della griglia per aggiungere una condizione.  
   
      Ad esempio, per creare una condizione BETWEEN, selezionare `AND` nell'elenco a discesa di operandi logici.  
   
@@ -125,7 +125,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Se si modifica manualmente una parte di un'espressione di filtro, la griglia verrà disabilitata e da quel momento sarà necessario utilizzare l'espressione di filtro solo in modalità di modifica di testo. Per ripristinare la modalità di modifica della griglia, è necessario cancellare l'espressione di filtro e ricominciare.  
   
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](delete-a-filter-from-a-mining-model.md)  

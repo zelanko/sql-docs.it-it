@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083961"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
@@ -46,11 +46,11 @@ ms.locfileid: "66083961"
   
  I requisiti di un modello di regressione logistica sono i seguenti:  
   
- **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.  
+ **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.  
   
  **Colonne di input** Ogni modello deve contenere almeno una colonna di input che contiene i valori utilizzati come fattori di analisi. È possibile includere tutte le colonne di input desiderate, ma a seconda del numero di valori in ciascuna colonna, l'aggiunta di colonne supplementari può implicare un aumento del tempo necessario per il training del modello.  
   
- Almeno **una colonna stimabile** Il modello deve contenere almeno una colonna stimabile di qualsiasi tipo di dati, inclusi i dati numerici continui. I valori della colonna stimabile possono anche essere considerati come input per il modello oppure è possibile specificare che devono essere utilizzati solo per la stima. Le tabelle nidificate non sono consentite per le colonne stimabili, ma possono essere utilizzate come input.  
+ **Almeno una colonna stimabile** Il modello deve contenere almeno una colonna stimabile di qualsiasi tipo di dati, inclusi i dati numerici continui. I valori della colonna stimabile possono anche essere considerati come input per il modello oppure è possibile specificare che devono essere utilizzati solo per la stima. Le tabelle nidificate non sono consentite per le colonne stimabili, ma possono essere utilizzate come input.  
   
  Per informazioni più dettagliate sui tipi di contenuto e i tipi di dati supportati per i modelli di regressione logistica, vedere la sezione Requisiti di [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66083961"
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining per i modelli di regressione logistica &#40;Analysis Services-Data mining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Logistic regressione](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)  

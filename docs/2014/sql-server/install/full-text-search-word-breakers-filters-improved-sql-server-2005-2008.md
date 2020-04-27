@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094984"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>I word breaker e i filtri per la ricerca full-text sono stati migliorati in modo significativo in SQL Server 2005 e SQL Server 2008
@@ -28,7 +28,7 @@ ms.locfileid: "66094984"
   
  Per informazioni sui word breaker, vedere [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

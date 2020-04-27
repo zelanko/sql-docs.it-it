@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082841"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Utilizzare il drill-through dai visualizzatori modello
@@ -48,7 +48,7 @@ ms.locfileid: "66082841"
   
 ### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Utilizzare il drill-through nel Visualizzatore Microsoft Association Rules  
   
-1.  In Progettazione modello di data mining selezionare un modello di associazione e selezionare **Esplora modello** per aprire il modello nel **Visualizzare Microsoft Association Rules**. In SQL Server Management Studio fare clic con il pulsante destro del mouse sul modello e selezionare **Sfoglia** .  
+1.  In Progettazione modello di data mining selezionare un modello di associazione e selezionare **Esplora modello** per aprire il modello nel **Visualizzare Microsoft Association Rules**. In SQL Server Management Studio fare clic con il pulsante destro del mouse sul modello e selezionare **Sfoglia**  
   
 2.  Nella scheda **Regole** fare clic con il pulsante destro del mouse sulla riga di una regola. Nella scheda **Set di elementi** fare clic su una riga che contiene un set di elementi.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66082841"
   
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati negli Appunti. Se il modello contiene una colonna di una tabella nidificata, verrà incollato solo il nome della colonna della tabella nidificata. Per recuperare i valori dei dati all'interno della colonna della tabella nidificata per ogni case, è necessario creare una query sul contenuto del modello.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Drill-through sui modelli di data mining](drillthrough-on-mining-models.md)   
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  

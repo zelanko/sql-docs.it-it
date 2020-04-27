@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085456"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
@@ -97,11 +97,11 @@ ms.locfileid: "66085456"
   
     -   **Dimensione**: scegliere una dimensione correlata dall'elenco a discesa.  
   
-    -   **Gerarchia**: selezionare il livello della gerarchia della dimensione a cui si desidera applicare il filtro. Ad esempio, se si seziona in base alla dimensione [Geography], è necessario scegliere un livello di gerarchia come [Region Country Name].  
+    -   **Gerarchia**: selezionare il livello della gerarchia di dimensione al quale si desidera applicare il filtro. Ad esempio, se si seziona in base alla dimensione [Geography], è necessario scegliere un livello di gerarchia come [Region Country Name].  
   
     -   **Operatore**: scegliere un operatore dall'elenco.  
   
-    -   **Espressione filtro**: digitare un valore o un'espressione da utilizzare come condizione di filtro oppure utilizzare l'elenco a discesa per selezionare un valore dall'elenco dei membri al livello specificato della gerarchia.  
+    -   **Espressione filtro**: digitare un valore o un'espressione da usare come condizione di filtro oppure usare l'elenco a discesa per selezionare un valore dall'elenco dei membri al livello specificato della gerarchia.  
   
          Ad esempio, se si è selezionato [Geography] come dimensione e [Region Country Name] come livello della gerarchia, l'elenco a discesa contiene tutti i paesi validi che è possibile usare come condizione di filtro. È possibile effettuare più selezioni. Di conseguenza, i dati nella struttura di data mining saranno limitati ai dati del cubo da queste aree geografiche.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "66085456"
   
     -   Algoritmo Microsoft Association Rules  
   
-     **Crea dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un nome di tipo per la dimensione del modello di data mining. Quando si utilizza questa opzione, viene creata una nuova dimensione all'interno del cubo originale utilizzato per compilare la struttura di data mining. È possibile utilizzare questa dimensione per eseguire il drill-down ed effettuare ulteriori analisi. Poiché si trova all'interno del cubo, viene automaticamente eseguito il mapping della dimensione alla dimensione dei dati del case.  
+     **Crea dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un tipo per la dimensione del modello di data mining. Quando si utilizza questa opzione, viene creata una nuova dimensione all'interno del cubo originale utilizzato per compilare la struttura di data mining. È possibile utilizzare questa dimensione per eseguire il drill-down ed effettuare ulteriori analisi. Poiché si trova all'interno del cubo, viene automaticamente eseguito il mapping della dimensione alla dimensione dei dati del case.  
   
-     **Crea cubo utilizzando la dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
+     **Crea il cubo utilizzando la dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086822"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crea struttura di data mining (componenti aggiuntivi Data mining di SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "66086822"
     >   
     >  Per ulteriori informazioni, vedere la sezione relativa ai tipi di contenuto nella [scelta dei dati per il data mining](choosing-data-for-data-mining.md).  
   
-     Scegliere **OK** per chiudere la finestra di dialogo.  
+     Fare clic su **OK** per chiudere la finestra di dialogo.  
   
 6.  Fare clic su **Avanti**.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "66086822"
 |**Divisione dei dati in set di training e in set di testing**|Un valore consigliato per training e set di testing è il 70% per il training e il 30% per il testing; Tuttavia, se si dispone di una grande quantità di dati, è possibile specificare un numero massimo di righe per il test.|  
 |Finestra di dialogo Fine|Le opzioni per il drill-through sono disponibili in alcuni tipi di modello e sono molto utili se sono state incluse colonne di dettagli nella struttura di data mining. Ad esempio, se si crea un modello di clustering, è possibile includere dettagli quali il nome o l'indirizzo di posta elettronica per il drill-through ma non l'analisi, per semplificare l'operazione per contattare i clienti in un determinato cluster.|  
   
-###  <a name="Bkmk_strctcolumn"></a>Impostazione dell'utilizzo delle colonne nella procedura guidata crea struttura di data mining  
+###  <a name="setting-column-usage-in-the-create-mining-structure-wizard"></a><a name="Bkmk_strctcolumn"></a>Impostazione dell'utilizzo delle colonne nella procedura guidata crea struttura di data mining  
  Quando si crea una nuova struttura di data mining, è possibile specificare quali colonne dell'origine dati devono essere incluse nella struttura e come verranno utilizzate tali colonne. Tenere presente che una struttura di data mining può supportare più modelli di data mining.  
   
 |Valori|Descrizione|  
 |------------|-----------------|  
 |**Includere**|Consente di specificare che la colonna contiene dati utilizzabili per l'analisi o per la stima.|  
-|**Chiave**|Consente di specificare che nella colonna è contenuto un ID transazione, un ID serie o un'altra chiave necessaria per l'elaborazione.<br /><br /> Tutti gli algoritmi richiedono una colonna Chiave. Con alcuni algoritmi è tuttavia consentita una sola chiave, mentre con altri sono consentite più chiavi.<br /><br /> Se la colonna contiene una chiave ma non è necessaria per l'elaborazione, selezionare **non utilizzare**.|  
+|**Codice**|Consente di specificare che nella colonna è contenuto un ID transazione, un ID serie o un'altra chiave necessaria per l'elaborazione.<br /><br /> Tutti gli algoritmi richiedono una colonna Chiave. Con alcuni algoritmi è tuttavia consentita una sola chiave, mentre con altri sono consentite più chiavi.<br /><br /> Se la colonna contiene una chiave ma non è necessaria per l'elaborazione, selezionare **non utilizzare**.|  
 |**Chiave temporale**|Consente di specificare che la colonna contiene una data o un altro valore numerico utilizzabile per identificare in modo univoco gli elementi di una serie temporale.|  
 |**Non usare**|Consente di specificare che la colonna deve essere ignorata. I dati contenuti nella colonna non verranno elaborati.|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66086822"
 ### <a name="requirements"></a>Requisiti  
  Per creare una struttura di data mining, è necessario disporre di una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È necessaria una connessione anche se si utilizzano strutture temporanee. Per ulteriori informazioni su come creare o modificare una connessione, vedere [connettersi ai dati di origine &#40;client di data mining per&#41;Excel ](connect-to-source-data-data-mining-client-for-excel.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

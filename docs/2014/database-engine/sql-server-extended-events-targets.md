@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088865"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
@@ -31,7 +31,7 @@ ms.locfileid: "66088865"
   
      Conta tutti gli eventi specificati che si verificano durante una sessione di eventi estesi. Consente di ottenere informazioni sulle funzionalità del carico di lavoro senza aggiungere l'overhead di un'intera raccolta di eventi. Si tratta di una destinazione sincrona.  
   
--   [File di evento](../../2014/database-engine/event-file-target.md)  
+-   [File di eventi](../../2014/database-engine/event-file-target.md)  
   
      Consente di scrivere l'output della sessione eventi restituito dai buffer di memoria completi su disco. Si tratta di una destinazione asincrona.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66088865"
   
      Consente di mantenere i dati degli eventi in memoria secondo una modalità FIFO o secondo una modalità FIFO basata sul tipo di evento. Si tratta di una destinazione asincrona.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
  [SQL Server pacchetti di eventi estesi](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [Sessioni Eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server sessioni eventi estesi](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

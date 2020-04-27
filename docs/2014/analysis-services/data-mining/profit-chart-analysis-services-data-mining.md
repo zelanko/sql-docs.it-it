@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083086"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Grafico profitti (Analysis Services - Data mining)
@@ -62,9 +62,9 @@ ms.locfileid: "66083086"
     |Impostazione|valore|Commenti|  
     |-------------|-----------|--------------|  
     |**Popolazione**|20.000|Impostare il valore per la popolazione target totale<br /><br /> Il database può contenere molti clienti, ma per risparmiare sulle spese di mailing è possibile scegliere di individuare come destinatari solo i primi 20.000 clienti aventi maggiore probabilità di rispondere. È possibile ottenere questo elenco eseguendo una query di stima e ordinando i dati in base alla probabilità restituita dal modello predittivo.|  
-    |**Costo fisso**|500|Immettere il costo una tantum per la configurazione di una campagna di mailing diretto per 20.000 persone. Nel costo possono essere incluse le spese di stampa o le spese di configurazione di una campagna di posta elettronica.|  
-    |**Costo individuale**|3|Immettere il costo unitario per la campagna di mailing diretto<br /><br /> Questa quantità verrà moltiplicata per un numero minore o uguale a 20.000, a seconda del numero di clienti stimati dal modello come buone possibilità.|  
-    |**Ricavi per singolo utente**|400|Immettere un valore che rappresenta la quantità di profitto o reddito che può essere previsto da un risultato positivo In questo caso, si presuppone che la distribuzione di un catalogo comportano l'acquisto di accessori o biciclette con media $400.<br /><br /> Questo importo verrà utilizzato per prevedere il profitto complessivo associato ai case con probabilità elevata.|  
+    |**Costi fissi**|500|Immettere il costo una tantum per la configurazione di una campagna di mailing diretto per 20.000 persone. Nel costo possono essere incluse le spese di stampa o le spese di configurazione di una campagna di posta elettronica.|  
+    |**Costi singolo contatto**|3|Immettere il costo unitario per la campagna di mailing diretto<br /><br /> Questa quantità verrà moltiplicata per un numero minore o uguale a 20.000, a seconda del numero di clienti stimati dal modello come buone possibilità.|  
+    |**Ricavi per singolo contatto**|400|Immettere un valore che rappresenta la quantità di profitto o reddito che può essere previsto da un risultato positivo In questo caso, si presuppone che la distribuzione di un catalogo comportano l'acquisto di accessori o biciclette con media $400.<br /><br /> Questo importo verrà utilizzato per prevedere il profitto complessivo associato ai case con probabilità elevata.|  
   
 7.  Dopo avere impostato i parametri obbligatori, fare clic su **OK**.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "66083086"
   
 |Argomenti|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione &#40;Analysis Services-&#41;di data mining](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services-&#41;di data mining](scatter-plot-analysis-services-data-mining.md)|  
-|Viene descritta la convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services-&#41;di data mining](cross-validation-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;di data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Viene descritta la convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)   
- [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

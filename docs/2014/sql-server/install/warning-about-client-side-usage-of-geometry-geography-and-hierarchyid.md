@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091085"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avviso relativo all'utilizzo sul lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID
@@ -82,7 +82,7 @@ ms.locfileid: "66091085"
   
 -   È possibile risolvere questo problema nella stringa di connessione specificando il valore "SQL Server 2012" per l'attributo "Type System Version" per forzare il caricamento della versione 11.0 dell'assembly da parte di SqlClient. Questo attributo della stringa di connessione è disponibile unicamente in .NET 4.5 e versioni successive.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md
 )  

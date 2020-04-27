@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084724"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminare un filtro da un modello di data mining
@@ -58,9 +58,9 @@ ms.locfileid: "66084724"
   
 3.  Premere il tasto BACKSPACE o CANC.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
- [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

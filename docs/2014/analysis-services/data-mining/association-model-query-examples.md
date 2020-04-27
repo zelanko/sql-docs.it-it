@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086119"
 ---
 # <a name="association-model-query-examples"></a>Esempi di query sul modello di associazione
@@ -30,7 +30,7 @@ ms.locfileid: "66086119"
   
  **Query sul contenuto**  
   
- [Recupero dei dati dei metadati del modello tramite DMX](#bkmk_Query1)  
+ [Recupero di dati dei metadati del modello tramite DMX](#bkmk_Query1)  
   
  [Recupero di metadati dal set di righe dello schema](#bkmk_Query2)  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66086119"
   
  [Determinazione della confidenza per i set di elementi correlati](#bkmk_Query7)  
   
-##  <a name="bkmk_top2"></a>Ricerca di informazioni sul modello  
+##  <a name="finding-information-about-the-model"></a><a name="bkmk_top2"></a> Ricerca di informazioni sul modello  
  In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. È possibile creare query sul set di righe dello schema del modello di data mining tramite istruzioni Data Mining Extensions (DMX) oppure utilizzando stored procedure [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è anche possibile eseguire query sui set di righe dello schema direttamente come tabelle di sistema, utilizzando una sintassi simile a SQL.  
   
-###  <a name="bkmk_Query1"></a>Esempio di query 1: recupero di metadati del modello tramite DMX  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a>Esempio di query 1: recupero di metadati del modello tramite DMX  
  Con la query seguente vengono restituiti i metadati relativi al modello di associazione `Association`, ad esempio il nome del modello, il database in cui è archiviato e il numero di nodi figlio del modello. Questa query utilizza una query contenuto DMX per recuperare i metadati dal nodo padre del modello:  
   
 ```  
@@ -77,7 +77,7 @@ WHERE NODE_TYPE = 1
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a>Esempio di query 2: recupero di metadati aggiuntivi dal set di righe dello schema  
+###  <a name="sample-query-2-getting-additional-metadata-from-the-schema-rowset"></a><a name="bkmk_Query2"></a> Esempio di query 2: Recupero di metadati aggiuntivi dal set di righe dello schema  
  Se si esegue una query sul set di righe dello schema di data mining, è possibile trovare le stesse informazioni restituite in una query contenuto DMX. Tuttavia, il set di righe dello schema fornisce alcune colonne aggiuntive, ad esempio la data dell'ultima elaborazione del modello, la struttura di data mining e il nome della colonna utilizzata come attributo stimabile.  
   
 ```  
@@ -100,7 +100,7 @@ WHERE MODEL_NAME = 'Association'
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query3"></a>Esempio di query 3: recupero dei parametri originali per il modello  
+###  <a name="sample-query-3-retrieving-original-parameters-for-model"></a><a name="bkmk_Query3"></a> Esempio di query 3: Recupero dei parametri originali per il modello  
  Con la query seguente viene restituita una singola colonna contenente i dettagli sulle impostazioni dei parametri utilizzate durante la creazione del modello.  
   
 ```  
@@ -118,7 +118,7 @@ WHERE MODEL_NAME = 'Association'
 ## <a name="finding-information-about-rules-and-itemsets"></a>Ricerca di informazioni su regole e set di elementi  
  Un modello di associazione viene utilizzato in genere per individuare informazioni sui set di elementi frequenti e per estrarre dettagli su regole e set di elementi specifici. Ad esempio, è possibile che si desideri estrarre un elenco di regole classificate come particolarmente interessanti o creare un elenco dei set di elementi più comuni. Tali informazioni vengono recuperate tramite una query sul contenuto DMX. È anche possibile esplorare queste informazioni usando il **Visualizzatore Microsoft Association Rules**.  
   
-###  <a name="bkmk_Query4"></a>Esempio di query 4: recupero di un elenco di set di elementi e prodotti  
+###  <a name="sample-query-4-retrieving-list-of-itemsets-and-products"></a><a name="bkmk_Query4"></a> Esempio di query 4: Recupero di un elenco di set di elementi e prodotti  
  Con la query seguente vengono recuperati tutti i set di elementi, insieme a una tabella nidificata in cui sono elencati i prodotti inclusi in ognuno di essi. La colonna NODE_NAME contiene l'ID univoco del set di elementi all'interno del modello, mentre NODE_CAPTION fornisce una descrizione di testo degli elementi. In questo esempio la tabella nidificata è bidimensionale, in modo che il set di elementi che contiene due prodotti genera due righe nei risultati. È possibile omettere la parola chiave FLATTENED se il client supporta dati gerarchici.  
   
 ```  
@@ -141,7 +141,7 @@ WHERE NODE_TYPE = 7
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a>Esempio di query 5: restituzione di primi 10 set di elementi  
+###  <a name="sample-query-5-returning-top-10-itemsets"></a><a name="bkmk_Query5"></a> Esempio di query 5: Recupero dei primi 10 set di elementi  
  In questo esempio viene illustrato come utilizzare alcune delle funzioni di raggruppamento e ordinamento disponibili per impostazione predefinita tramite DMX. La query restituisce i primi 10 set di elementi ordinati per supporto per ogni nodo. Si noti che non è necessario raggruppare in modo esplicito i risultati, come avviene invece in Transact-SQL; tuttavia, è possibile utilizzare un'unica funzione di aggregazione in ogni query.  
   
 ```  
@@ -161,11 +161,11 @@ WHERE NODE_TYPE = 7
  [Torna all'inizio](#bkmk_top2)  
   
 ## <a name="making-predictions-using-the-model"></a>Esecuzione di stime tramite il modello  
- Un modello di regole di associazione viene spesso utilizzato per generare indicazioni basate sulle correlazioni individuate nei set di elementi. Pertanto, quando si crea una query di stima basata su un modello di regole di associazione, si utilizzano in genere le regole nel modello per fare supposizioni basate sui nuovi dati.  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx) è la funzione che restituisce indicazioni e dispone di diversi argomenti che è possibile utilizzare per personalizzare i risultati della query.  
+ Un modello di regole di associazione viene spesso utilizzato per generare indicazioni basate sulle correlazioni individuate nei set di elementi. Pertanto, quando si crea una query di stima basata su un modello di regole di associazione, si utilizzano in genere le regole nel modello per fare supposizioni basate sui nuovi dati.  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx) è la funzione che restituisce indicazioni e dispone di diversi argomenti utilizzabili per personalizzare i risultati della query.  
   
  Le query su un modello di associazione possono anche risultare utili, ad esempio, per restituire la confidenza di varie regole e di vari set di elementi, in modo da confrontare l'efficacia di diverse strategie di cross-selling. Negli esempi seguenti viene illustrato come creare tali query.  
   
-###  <a name="bkmk_Query6"></a>Esempio di query 6: stima degli elementi associati  
+###  <a name="sample-query-6-predicting-associated-items"></a><a name="bkmk_Query6"></a> Esempio di query 6: Stima degli elementi associati  
  Questo esempio illustra il modello di associazione creato in [Esercitazione intermedia sul data mining &#40;Analysis Services - Data mining&#41;](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Viene illustrato come creare una query di stima che indica quali prodotti consigliare a un cliente che ha acquistato un determinato prodotto. Questo tipo di query, in cui i valori vengono forniti al modello in un'istruzione `SELECT...UNION`, è denominata query singleton. Poiché la colonna del modello stimabile che corrisponde ai nuovi valori è una tabella nidificata, è necessario utilizzare una clausola `SELECT` per eseguire il mapping del nuovo valore alla colonna della tabella nidificata, `[Model]`, e un'altra clausola `SELECT` per eseguire il mapping della colonna della tabella nidificata alla colonna a livello di case, `[v Assoc Seq Line Items]`. L'aggiunta della parola chiave INCLUDE-STATISTICS alla query consente di vedere la probabilità e il supporto per le indicazioni.  
   
 ```  
@@ -188,7 +188,7 @@ AS t
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a>Esempio di query 7: determinazione della confidenza per i set di elementi correlati  
+###  <a name="sample-query-7-determining-confidence-for-related-itemsets"></a><a name="bkmk_Query7"></a> Esempio di query 7: Determinazione della confidenza per i set di elementi correlati  
  Mentre le regole sono utili per generare indicazioni, i set di elementi sono più interessanti per un'analisi più approfondita dei modelli nel set di dati. Se ad esempio le indicazioni restituiti con la query dell'esempio precedente non sono soddisfacenti, è possibile esaminare altri set di elementi che contengono il Prodotto A per valutare in modo più efficace se il Prodotto A è un accessorio che i clienti tendono ad acquistare con tutti i tipi di prodotti o se è strettamente correlato all'acquisto di determinati prodotti. Il modo più semplice per esplorare queste relazioni consiste nel filtrare i set di elementi nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association. Tuttavia, è possibile recuperare le stesse informazioni con una query.  
   
  Con la query di esempio seguente vengono restituiti tutti i set di elementi che includono l'articolo Water Bottle, incluso il singolo articolo Water Bottle.  
@@ -225,7 +225,7 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |Funzione di stima|Uso|  
-|[&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel grafico della rete neurale.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel grafico della rete neurale.|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se il nodo specificato contiene o meno il case corrente.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Viene stimata l'appartenenza a un set di dati associativo.|  
@@ -235,9 +235,9 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Viene restituito il valore di supporto per uno stato specificato.|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Viene restituita la varianza per il valore stimato.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Association](microsoft-association-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association](microsoft-association-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per i modelli di associazione &#40;Analysis Services-Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

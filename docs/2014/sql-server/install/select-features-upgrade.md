@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092362"
 ---
 # <a name="select-features-upgrade"></a>Seleziona funzionalità (aggiornamento)
@@ -24,9 +24,9 @@ ms.locfileid: "66092362"
   
  Non è possibile modificare le caratteristiche da aggiornare in questa versione. Per aggiungere caratteristiche a questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], completare il processo di aggiornamento, riavviare l'installazione e fare clic su **Nuova installazione o aggiunta di caratteristiche a un'installazione esistente** nel Centro installazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
- [Utilizzare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [Usare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

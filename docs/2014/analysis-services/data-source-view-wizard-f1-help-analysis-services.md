@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082511"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Guida sensibile al contesto della Creazione guidata vista origine dati (Analysis Services)
@@ -50,7 +50,7 @@ ms.locfileid: "66082511"
   
 -   [Completamento della procedura guidata &#40;la creazione guidata vista origine dati&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

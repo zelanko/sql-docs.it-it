@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082104"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definizione nuove misure (Creazione guidata cubo)
   La pagina **Definizione nuove misure** consente di definire nuove misure per un cubo creato senza utilizzare un'origine dei dati.  
   
 > [!NOTE]  
->  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **genera tabelle nell'origine dati** nella pagina **Selezione metodo di creazione** .  
+>  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Genera tabelle nell'origine dati** nella pagina **Seleziona metodo di creazione** .  
   
 ## <a name="select-measures-from-template-options"></a>Opzioni di Selezionare le misure dal modello  
   
 > [!NOTE]  
->  Le opzioni elencate in questa sezione verranno visualizzate solo se è stato selezionato un modello da **modello** nella pagina **Seleziona metodo di creazione** .  
+>  Le opzioni elencate in questa sezione vengono visualizzate solo se è stata selezionata l'opzione **Modello** nella pagina **Seleziona metodo di creazione** .  
   
  **Selezionare le misure dal modello**  
  Consente di visualizzare le misure del modello di cubo da includere nel cubo.  
@@ -63,7 +63,7 @@ ms.locfileid: "66082104"
 ## <a name="add-new-measures-options"></a>Opzioni di Aggiungi nuove misure  
   
 > [!NOTE]  
->  Le opzioni elencate in questa sezione vengono visualizzate sempre nella pagina **definizione nuove misure** .  
+>  Le opzioni elencate in questa sezione vengono visualizzate sempre nella pagina **Definizione nuove misure** .  
   
  **Aggiungi nuove misure**  
  Consente di visualizzare e di definire misure aggiuntive da includere nel cubo.  
@@ -93,7 +93,7 @@ ms.locfileid: "66082104"
   
  Per rimuovere una nuova misura dal cubo, fare clic sul pulsante **X** relativo a tale misura.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata cubo](cube-wizard-f1-help.md)   
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   

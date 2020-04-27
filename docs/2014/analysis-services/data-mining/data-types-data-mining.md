@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084796"
 ---
 # <a name="data-types-data-mining"></a>Tipi di dati (data mining)
@@ -28,8 +28,7 @@ ms.locfileid: "66084796"
   
  Se ad esempio in una colonna sono presenti dati numerici, è possibile scegliere di gestirli come tipi di dati numerici o di testo. Se si sceglie il tipo di dati numerico, è possibile impostare numerosi tipi di contenuto diversi, ovvero discretizzare i numeri o gestirli come valori continui. Per un elenco di tutti i tipi di contenuto, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta i tipi di dati riportati di seguito per le colonne della struttura di data mining:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta i tipi di dati riportati di seguito per le colonne della struttura di data mining:  
   
 |Tipo di dati|Tipi di contenuto supportati|  
 |---------------|-----------------------------|  
@@ -48,7 +47,7 @@ ms.locfileid: "66084796"
 ## <a name="changing-a-data-type"></a>Modifica di un tipo di dati  
  Se si modifica il tipo di dati di una colonna, è necessario rielaborare sempre la struttura di data mining e qualsiasi modello di data mining basato su tale struttura. Se si modifica il tipo di dati, in alcuni casi tale colonna non può più essere utilizzata in un modello particolare. In una situazione di questo tipo in Analysis Services verrà generato un errore quando si rielabora il modello oppure verrà rielaborato il modello senza la colonna specifica.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi di contenuto &#40;&#41;di data mining](content-types-data-mining.md)   
  [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   

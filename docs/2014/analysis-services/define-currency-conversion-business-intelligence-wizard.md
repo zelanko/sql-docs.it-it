@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082147"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Definizione conversione valuta (Configurazione guidata funzionalità di Business Intelligence)
@@ -50,7 +50,7 @@ ms.locfileid: "66082147"
  **Script di conversione valuta esistente**  
  Consente di selezionare la sezione dello script MDX esistente che contiene la funzionalità di conversione valuta precedentemente definita da sovrascrivere o a cui accodare il nuovo script.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095875"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configurazione del Motore di database – Istanze utente
@@ -30,7 +30,7 @@ ms.locfileid: "66095875"
  L'istanza utente, nota anche come istanza figlio o client, è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generata dall'istanza padre (l'istanza primaria eseguita come servizio, ad esempio [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) per conto di un utente. L'istanza utente viene eseguita come processo utente nel contesto di sicurezza di tale utente. L'istanza utente è isolata dall'istanza padre e da qualsiasi altra istanza che viene eseguita nel computer. Questa caratteristica è nota anche come RANU (Run As Normal User).  
   
 > [!NOTE]  
->  Gli account di accesso di cui viene eseguito il provisioning come membri del ruolo predefinito del server **sysadmin** durante l'installazione vengono sottoposti a provisioning come amministratori nel database modello. Gli account rimarranno membri del ruolo predefinito del server **sysadmin** nell'istanza utente, a meno che non vengano rimossi  
+>  Per gli account di accesso di cui è stato eseguito il provisioning come membri del ruolo predefinito del server **sysadmin** in fase di configurazione, viene effettuato il provisioning come amministratori nel database dei modelli. Gli account rimarranno membri del ruolo predefinito del server **sysadmin** nell'istanza utente, a meno che non vengano rimossi  
   
  Aggiungi utente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Per impostazione predefinita, questa opzione non è abilitata. Per aggiungere l'utente dell'installazione corrente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare la casella di controllo.  

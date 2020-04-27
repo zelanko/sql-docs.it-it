@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083383"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Strutture di data mining (Analysis Services – Data mining)
@@ -35,11 +35,11 @@ ms.locfileid: "66083383"
   
  La struttura di data mining nel diagramma è basata su un'origine dati che contiene più tabelle o viste, unite in join nel campo CustomerID. Una tabella contiene informazioni sui clienti, ad esempio l'area geografica, l'età, il reddito e il sesso, mentre la tabella nidificata correlata contiene più righe di informazioni aggiuntive su ogni cliente, ad esempio i prodotti che il cliente ha acquistato. Nel diagramma viene evidenziato che è possibile compilare più modelli in una struttura di data mining e che i modelli possono utilizzare colonne diverse della struttura.  
   
- **Modello 1** Utilizza CustomerID, Income, Age, Region e filtra i dati nell'area.  
+ **Modello 1** Vengono utilizzati CustomerID, Income, Age, Region e filtrati i dati in base a Region.  
   
- **Modello 2** Utilizza CustomerID, Income, Age, Region e filtra i dati in età.  
+ **Modello 2** Vengono utilizzati CustomerID, Income, Age, Region e filtrati i dati in base ad Age.  
   
- **Modello 3** USA CustomerID, Age, Gender e la tabella nidificata, senza filtro.  
+ **Modello 3** Vengono utilizzati CustomerID, Age, Gender e la tabella nidificata, senza filtro.  
   
  Poiché i modelli utilizzano colonne diverse per l'input e poiché due dei modelli limitano ulteriormente i dati utilizzati nel modello applicando un filtro, i modelli potrebbero produrre risultati molto diversi anche se basati sugli stessi dati. Si noti che la colonna CustomerID è obbligatoria in tutti i modelli poiché è l'unica colonna disponibile che può essere utilizzata come chiave del case.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083383"
   
 -   Elaborare la struttura.  
   
- Questi passaggi vengono descritti più dettagliatamente nelle sezioni seguenti.  
+ Questi passaggi vengono descritti in modo più dettagliato nelle sezioni seguenti.  
   
 ### <a name="data-sources-for-mining-structures"></a>Origini dati per le strutture di data mining  
  Quando si definisce una struttura di data mining, si utilizzano colonne disponibili in una vista origine dati esistente. Una vista origine dati è un oggetto condiviso che consente di combinare più origini dati e di utilizzarle come un'unica origine. Le origini dati originali non sono visibili nelle applicazioni client; inoltre è possibile utilizzare le proprietà della vista origine dati per modificare i tipi di dati, creare le aggregazioni o le colonne alias.  
@@ -120,8 +120,8 @@ ms.locfileid: "66083383"
 |Eseguire una query sulle proprietà e sui dati della struttura di data mining o modificarli|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
 |Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati utilizzata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](process-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetti di database &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)  
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

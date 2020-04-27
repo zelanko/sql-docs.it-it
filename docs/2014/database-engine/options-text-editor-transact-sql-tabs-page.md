@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089141"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Opzioni (editor di testo-Transact-SQL-pagina tabulazioni)
@@ -37,7 +37,7 @@ ms.locfileid: "66089141"
  **Intelligenti**  
  Questa opzione non è disponibile.  
   
-## <a name="tabs"></a>Tabulazioni  
+## <a name="tabs"></a>Schede  
  **Dimensione tabulazione**  
  Consente di impostare la distanza in spazi tra le tabulazioni. Il valore predefinito è quattro spazi.  
   

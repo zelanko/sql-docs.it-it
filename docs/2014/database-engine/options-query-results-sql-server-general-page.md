@@ -17,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089332"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opzioni (risultati query-SQL Server-pagina generale)
-  Utilizzare questa pagina per specificare le impostazioni predefinite del riquadro Risultati query. Per visualizzare le impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Risultati query**, selezionare **SQL Server** e quindi fare clic su **Generale**. Le modifiche apportate a queste opzioni vengono [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applicate solo alle nuove query. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**.  
+  Utilizzare questa pagina per specificare le impostazioni predefinite del riquadro Risultati query. Per visualizzare le impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Risultati query**, selezionare **SQL Server** e quindi fare clic su **Generale**. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Destinazione predefinita per i risultati**  
@@ -36,7 +36,7 @@ ms.locfileid: "66089332"
  **Emetti segnale acustico predefinito di Windows al completamento di un batch di query**  
  Consente di impostare l'emissione di un segnale acustico al termine dell'esecuzione di un batch di query.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

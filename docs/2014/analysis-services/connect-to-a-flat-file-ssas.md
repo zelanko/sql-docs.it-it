@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087354"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Connessione a un file flat (SSAS)
@@ -49,7 +49,7 @@ ms.locfileid: "66087354"
 |Due punti (:)|Le colonne sono separate da due punti (:).|  
 |Barra verticale (&#124;)|Le colonne sono separate da una barra verticale (&#124;).|  
   
- **Funzionalità avanzate**  
+ **Avanzate**  
  Specificare la codifica e le opzioni delle impostazioni locali per il file flat.  
   
  **Utilizza la prima riga per le intestazioni di colonna**  

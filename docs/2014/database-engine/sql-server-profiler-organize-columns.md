@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089763"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - Organizza colonne
@@ -28,7 +28,7 @@ ms.locfileid: "66089763"
   
  Quando si raggruppano o aggregano gli eventi nell'area di visualizzazione della finestra di traccia, le colonne selezionate per il raggruppamento o l'aggregazione rimangono fisse nella finestra di visualizzazione, ma è possibile scorrere a destra o a sinistra per visualizzare tutte le altre colonne di dati.  
   
- Per accedere a questa finestra di dialogo, aprire una tabella o un file di traccia esistente e quindi scegliere **Proprietà** dal menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **di** . Nella finestra di dialogo **Proprietà traccia** selezionare la scheda **Selezione eventi** e quindi fare clic su **Organizza colonne**. È inoltre possibile fare clic su **Organizza colonne** nella scheda **Selezione eventi** durante la creazione di una nuova traccia.  
+ Per accedere a questa finestra di dialogo, aprire una tabella o un file di traccia esistente e quindi scegliere **Proprietà** dal menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** di . Nella finestra di dialogo **Proprietà traccia** selezionare la scheda **Selezione eventi** e quindi fare clic su **Organizza colonne**. È inoltre possibile fare clic su **Organizza colonne** nella scheda **Selezione eventi** durante la creazione di una nuova traccia.  
   
 ## <a name="options"></a>Opzioni  
  **Gruppi**  
@@ -47,7 +47,7 @@ ms.locfileid: "66089763"
  **Giù**  
  Dopo aver selezionato una colonna di dati, fare clic su **Giù** per spostare le colonne di dati all'esterno di **Gruppi**. Facendo clic su **Giù** , è inoltre possibile riorganizzare la visualizzazione delle colonne nella finestra di traccia.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Creare una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   

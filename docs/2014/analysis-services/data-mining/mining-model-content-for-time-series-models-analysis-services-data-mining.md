@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083524"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
@@ -101,11 +101,11 @@ ms.locfileid: "66083524"
  NODE_UNIQUE_NAME  
  Nome univoco del nodo. Il nodo padre del modello è sempre denominato **TS**.  
   
- **ARTxp:** Ogni nodo è rappresentato da TS seguito da un valore numerico esadecimale. L'ordine dei nodi non è importante.  
+ **ARTXP:** ogni nodo è rappresentato da TS seguito da un valore numerico esadecimale. L'ordine dei nodi non è importante.  
   
  Ad esempio, i nodi ARTXP direttamente sotto l'albero TS potrebbero essere numerati come segue: TS00000001-TS0000000b.  
   
- **ARIMA:** Ogni nodo in un albero ARIMA è rappresentato da TA seguito da un valore numerico esadecimale. I nodi figlio contengono il nome univoco del nodo padre seguito da un altro numero esadecimale che indica la sequenza all'interno del nodo.  
+ **ARIMA:** ogni nodo di un albero ARIMA è rappresentato da TA seguito da un valore numerico esadecimale. I nodi figlio contengono il nome univoco del nodo padre seguito da un altro numero esadecimale che indica la sequenza all'interno del nodo.  
   
  Tutti gli alberi ARIMA sono strutturati allo stesso modo. Ogni radice contiene i nodi e la convenzione di denominazione indicati nella tabella seguente:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66083524"
 |16 (Albero Time Series)|Radice dell'albero ARTXP che corrisponde a un attributo e a una serie stimabili.|  
 |15 (Time Series)|Nodo foglia nell'albero ARTXP.|  
   
- **ARIMA**  
+ **ARIMA:**  
   
 |ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
@@ -142,9 +142,9 @@ ms.locfileid: "66083524"
   
  Questa proprietà viene utilizzata principalmente per scopi di visualizzazione.  
   
- **ARTxp:** Contiene la condizione di divisione per il nodo, visualizzata come combinazione di attributo e intervallo di valori.  
+ **ARTXP:** è contenuta la condizione di divisione per il nodo, visualizzata come combinazione di attributo e intervallo di valori.  
   
- **ARIMA:** Contiene la forma abbreviata dell'equazione ARIMA.  
+ **ARIMA:** contiene la forma abbreviata dell'equazione ARIMA.  
   
  Per ulteriori informazioni sul formato dell'equazione ARIMA, vedere [Legenda data mining per la formula ARIMA](#bkmk_ARIMA_2).  
   
@@ -157,33 +157,33 @@ ms.locfileid: "66083524"
  NODE_DESCRIPTION  
  Descrizione in formato testo delle regole, delle divisioni o delle formule nel nodo corrente.  
   
- **ARTxp:** Per ulteriori informazioni, vedere informazioni [sull'albero ARTxp](#bkmk_ARTXP_1).  
+ **ARTXP:** per ulteriori informazioni, vedere [Informazioni sull'albero ARTXP](#bkmk_ARTXP_1).  
   
- **ARIMA:** Per ulteriori informazioni, vedere informazioni [sull'albero ARIMA](#bkmk_ARIMA_1).  
+ **ARIMA:** per ulteriori informazioni, vedere [Informazioni sull'albero ARIMA](#bkmk_ARIMA_1).  
   
  NODE_RULE  
  Descrizione XML delle regole, delle divisioni o delle formule nel nodo corrente.  
   
- **ARTxp:** Il NODE_RULE corrisponde in genere al NODE_CAPTION.  
+ **ARTXP:** NODE_RULE corrisponde in genere a NODE_CAPTION.  
   
- **ARIMA:** Per ulteriori informazioni, vedere informazioni [sull'albero ARIMA](#bkmk_ARIMA_1).  
+ **ARIMA:** per ulteriori informazioni, vedere [Informazioni sull'albero ARIMA](#bkmk_ARIMA_1).  
   
  MARGINAL_RULE  
  Descrizione XML della divisione o del contenuto specifico del nodo.  
   
- **ARTxp:** Il MARGINAL_RULE corrisponde in genere al NODE_DESCRIPTION.  
+ **ARTXP:** MARGINAL_RULE corrisponde in genere a NODE_DESCRIPTION.  
   
- **ARIMA:** Sempre vuoto; in alternativa, usare NODE_RULE.  
+ **ARIMA:** sempre vuoto; usare invece NODE_RULE.  
   
  NODE_PROBABILITY  
- **ARTxp:** Per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo radice del modello.  
+ **ARTXP:** per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo radice del modello.  
   
- **ARIMA:** Sempre 0.  
+ **ARIMA:** sempre 0.  
   
  MARGINAL_PROBABILITY  
- **ARTxp:** Per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo padre diretto.  
+ **ARTXP:** per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo padre diretto.  
   
- **ARIMA:** Sempre 0.  
+ **ARIMA:** sempre 0.  
   
  NODE_DISTRIBUTION  
  Tabella contenente l'istogramma delle probabilità del nodo. In un modello Time Series, questa tabella nidificata contiene tutti i componenti richiesti per assemblare la formula di regressione effettiva.  
@@ -197,11 +197,11 @@ ms.locfileid: "66083524"
  NODE_SUPPORT  
  Numero di case che supportano il nodo.  
   
- **ARTxp:** Per il nodo **(tutti)** indica il numero totale di intervalli di tempo inclusi nel ramo.  
+ **ARTXP:** per il nodo **(Tutti)** , indica il numero totale di periodi temporali inclusi nel ramo.  
   
  Nei nodi finali, indica il numero di intervalli di tempo inclusi nell'intervallo descritto da NODE_CAPTION. Il numero di periodi temporali nei nodi terminali viene sempre sommato al valore di NODE_SUPPORT del nodo **(Tutti)** del ramo.  
   
- **ARIMA:** Conteggio dei case che supportano la struttura periodica corrente. Il valore del supporto viene ripetuto in tutti i nodi della struttura periodica corrente.  
+ **ARIMA:** conteggio dei case che supportano la struttura periodica corrente. Il valore del supporto viene ripetuto in tutti i nodi della struttura periodica corrente.  
   
  MSOLAP_MODEL_COLUMN  
  Attributo stimabile della serie di dati rappresentata nel nodo. Stesso valore di ATTRIBUTE_NAME.  
@@ -209,18 +209,18 @@ ms.locfileid: "66083524"
  MSOLAP_NODE_SCORE  
  Valore numerico che consente di caratterizzare il valore delle informazioni dell'albero o della divisione.  
   
- **ARTxp:** Il valore è sempre 0,0 per i nodi senza divisione. Per i nodi che contengono una divisione, il valore rappresenta il punteggio di interesse della divisione.  
+ **ARTXP:** il valore è sempre 0,0 per i nodi senza divisione. Per i nodi che contengono una divisione, il valore rappresenta il punteggio di interesse della divisione.  
   
  Per altre informazioni sui metodi di valutazione, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](feature-selection-data-mining.md).  
   
- **ARIMA:**  Punteggio BIC (Bayes Information Criterion) del modello ARIMA. Lo stesso punteggio viene impostato su tutti i nodi ARIMA correlati all'equazione.  
+ **ARIMA:**  punteggio BIC (Bayesian Information Criterion) del modello ARIMA. Lo stesso punteggio viene impostato su tutti i nodi ARIMA correlati all'equazione.  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTxp:**  Stesse informazioni del NODE_DESCRIPTION.  
+ **ARTXP:**  stesse informazioni di NODE_DESCRIPTION.  
   
- **ARIMA:** Stesse informazioni del NODE_CAPTION: ovvero la forma abbreviata dell'equazione ARIMA.  
+ **ARIMA:** stesse informazioni di NODE_CAPTION, ovvero la forma abbreviata dell'equazione ARIMA.  
   
-##  <a name="bkmk_ARTXP_1"></a>Informazioni sull'albero ARTXP  
+##  <a name="understanding-the-artxp-tree"></a><a name="bkmk_ARTXP_1"></a>Informazioni sull'albero ARTXP  
  Il modello ARTXP consente di separare chiaramente le aree dei dati lineari dalle aree dei dati divisi in altri fattori. Dove le modifiche nell'attributo stimabile possono essere rappresentate direttamente come una funzione delle variabili indipendenti, viene calcolata una formula di regressione per rappresentare la relazione.  
   
  Ad esempio, se è presente una correlazione diretta tra periodo di tempo e vendite per la maggior parte della serie di dati, ciascuna serie è compresa all'interno di un albero Time Series (NODE_TYPE = 16) che non dispone di nodi figlio per ciascuna serie di dati, ma solo un'equazione di regressione. Tuttavia, se la relazione non è lineare, un albero Time Series ARTXP consente di dividere in base alle condizioni in nodi figlio, come un modello di albero delle decisioni. Visualizzando il contenuto del modello in **Microsoft Generic Content Tree Viewer** , è possibile visualizzare i punti in cui si verificano le divisioni e il relativo impatto sulla linea di tendenza.  
@@ -229,13 +229,13 @@ ms.locfileid: "66083524"
   
 -   La linea di tendenza [Amount] per l'area Pacifico si divide sulla chiave temporale. Una divisione sulla chiave temporale indica una modifica nella tendenza in un determinato momento. La linea di tendenza è lineare solo fino a un certo punto, quindi la curva assume una forma diversa. Ad esempio, una serie temporale continua fino al 6 agosto 2002 e un'altra comincia dopo tale data.  
   
--   La linea di tendenza [Amount] per l'area relativa al Nord America si divide in un'altra variabile. In questo caso, la tendenza per il Nord America si divide in base al valore dello stesso modello nell'area dell'Europa. In altre parole, l'algoritmo rileva che quando il valore dell'area dell'Europa viene modificato, anche il valore dell'area del Nord America A viene modificato.  
+-   La linea di tendenza [Amount] per l'area relativa al America del Nord si divide in un'altra variabile. In questo caso, la tendenza per il America del Nord si divide in base al valore dello stesso modello nell'area dell'Europa. In altre parole, l'algoritmo rileva che quando il valore dell'area dell'Europa viene modificato, anche il valore dell'area del America del Nord A viene modificato.  
   
 -   La linea di tendenza dell'area dell'Europa si divide in base a se stessa.  
   
  Significato di ciascuna divisione L'interpretazione delle informazioni fornite dal contenuto del modello richiede una conoscenza approfondita dei dati e del relativo significato nel contesto aziendale.  
   
--   L'apparente collegamento tra le tendenze nelle aree del Nord America e dell'Europa potrebbe significare semplicemente che la serie di dati dell'Europa dispone di maggiore entropia, facendo apparire più debole la tendenza dell'area del Nord America. Oppure, potrebbe non esserci una differenza significativa nel punteggio delle due aree e la correlazione potrebbe essere accidentale, basata semplicemente sul fatto che il calcolo dell'area dell'Europa è avvenuto prima del calcolo dell'area del Nord America. È tuttavia possibile rivedere i dati per verificare se la correlazione è false oppure determinare l'eventuale coinvolgimento di altri fattori.  
+-   L'apparente collegamento tra le tendenze nelle aree del America del Nord e dell'Europa potrebbe significare semplicemente che la serie di dati dell'Europa dispone di maggiore entropia, facendo apparire più debole la tendenza dell'area del America del Nord. Oppure, potrebbe non esserci una differenza significativa nel punteggio delle due aree e la correlazione potrebbe essere accidentale, basata semplicemente sul fatto che il calcolo dell'area dell'Europa è avvenuto prima del calcolo dell'area del America del Nord. È tuttavia possibile rivedere i dati per verificare se la correlazione è false oppure determinare l'eventuale coinvolgimento di altri fattori.  
   
 -   La divisione sulla chiave temporale indica una modifica statisticamente significativa nel gradiente della linea. Ciò potrebbe essere causato da fattori matematici, quali il supporto di ciascun intervallo o i calcoli di entropia richiesti dalla divisione. Pertanto, la divisione potrebbe non essere importante per il significato del modello nel mondo reale. Tuttavia, quando si rivede il periodo di tempo indicato nella divisione, si potrebbero trovare correlazioni interessanti non rappresentate nei dati, come promozioni di vendite o altri eventi che iniziano in quel periodo e che possono aver influito sui dati.  
   
@@ -246,12 +246,12 @@ ms.locfileid: "66083524"
 ### <a name="elements-of-the-artxp-time-series-formula"></a>Elementi della formula Time Series ARTXP  
  Per visualizzare la formula completa per un albero o un ramo ARTXP, è consigliabile utilizzare **Legenda data mining** in [Visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md), in cui vengono presentate tutte le costanti in un formato leggibile.  
   
--   [Visualizzazione della formula per un modello Time Series &#40;data mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Visualizzare la formula per un modello Time Series &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Nella sezione seguente viene presentato un esempio di equazione e vengono spiegati i termini di base.  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>Legenda data mining per la formula ARTXP  
- Nell'esempio seguente viene illustrata la formula ARTXP per una parte del modello, come visualizzata nella **Legenda data mining**. Per visualizzare questa formula, aprire il modello [Forecasting] creato nell'esercitazione di base sul data mining nel Visualizzatore Microsoft Time Series, fare clic sulla scheda **Modello** e selezionare l'albero per la serie di dati R250: Europe.  
+ Nell'esempio seguente viene illustrata la formula ARTXP per una parte del modello, come visualizzata nella **Legenda data mining**. Per visualizzare questa formula, aprire il modello [Forecasting] creato nell'esercitazione di base sul data mining nel Visualizzatore Microsoft Time Series, fare clic sulla scheda **Modello** e selezionare l'albero per la serie di dati R250 Europe.  
   
  Per visualizzare l'equazione utilizzata per questo esempio, fare clic sul nodo che rappresenta la serie di date a partire da o dopo il 7/5/2003.  
   
@@ -265,14 +265,14 @@ ms.locfileid: "66083524"
   
  In questo caso, il valore 21,322 rappresenta il valore stimato per Quantity come funzione degli elementi seguenti dell'equazione.  
   
- Ad esempio, un elemento è Quantity (R250 America del Nord,-7). Questa notazione indica la quantità per l'area del Nord America in corrispondenza di t-7 oppure sette intervalli di tempo prima dell'intervallo di tempo corrente. Il valore della serie di dati viene moltiplicato per il coefficiente -0,293. Il coefficiente per ogni elemento deriva dal processo di training ed è basato sulle tendenze nei dati.  
+ Ad esempio, un elemento è Quantity (R250 America del Nord,-7). Questa notazione indica la quantità per l'area del America del Nord in corrispondenza di t-7 oppure sette intervalli di tempo prima dell'intervallo di tempo corrente. Il valore della serie di dati viene moltiplicato per il coefficiente -0,293. Il coefficiente per ogni elemento deriva dal processo di training ed è basato sulle tendenze nei dati.  
   
  L'equazione presenta più elementi poiché è stato calcolato che la quantità del modello R250 nell'area relativa all'Europa dipende dai valori di altre serie di dati.  
   
 #### <a name="model-content-for-an-artxp-formula"></a>Contenuto del modello per una formula ARTXP  
  Nella tabella seguente vengono mostrate le stesse informazioni per la formula, usando il contenuto del nodo correlato come visualizzato in [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORTO|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Quantity(R250 Europe,y-intercept)|21,3223433563772|11|0|1,65508795539661|11 (Intercetta)|  
 |Quantity(R250 Europe,-1)|0,0691694140876526|0|0|0|7 (Coefficiente)|  
@@ -308,7 +308,7 @@ FROM Forecasting.CONTENT
 WHERE NODE_TYPE = 15  
 ```  
   
-##  <a name="bkmk_ARIMA_1"></a>Informazioni sull'albero ARIMA  
+##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> Informazioni sull'albero ARIMA  
  Ogni struttura in un modello ARIMA corrisponde a una *periodicità* o a una *struttura periodica*. Una struttura periodica è uno schema di dati ripetuto in tutta la serie di dati. Sono consentite variazioni secondarie entro limiti statistici. La periodicità viene misurata secondo le unità di tempo predefinite utilizzate nei dati di training. Ad esempio, se i dati di training forniscono dati di vendita per ogni giorno, l'unità di tempo predefinita è un giorno e tutte le strutture periodiche vengono definite come un numero specifico di giorni.  
   
  Ogni periodo rilevato dall'algoritmo ottiene il proprio nodo della struttura. Ad esempio, se si analizzano i dati di vendita giornalieri, potrebbero essere rilevate strutture periodiche che rappresentano le settimane. In questo caso, l'algoritmo creerà due strutture periodiche nel modello finito: una per il periodo giornaliero predefinito, indicata come {1}e una per le settimane, indicata da. {7}  
@@ -326,7 +326,7 @@ WHERE NODE_TYPE = 27
 |MODEL_NAME|ATTRIBUTE_NAME|NODE_NAME|NODE_TYPE|NODE_CAPTION|  
 |-----------------|---------------------|----------------|----------------|-------------------|  
 |Previsione|M200 Europe:Quantity|TA00000000|27|ARIMA (1,0,1)|  
-|Previsione|M200 North America:Quantity|TA00000001|27|ARIMA (1,0,4) X (1,1,4)(6)|  
+|Previsione|M200 America del Nord:Quantity|TA00000001|27|ARIMA (1,0,4) X (1,1,4)(6)|  
 |Previsione|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
 |Previsione|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
 |Previsione|R250 Europe:Quantity|TA00000003|27|ARIMA (1,0,7)|  
@@ -341,7 +341,7 @@ WHERE NODE_TYPE = 27
   
  Ad esempio, la forma abbreviata dell'equazione ARIMA per la serie M200 Europa indica che è stato rilevato solo il ciclo predefinito o giornaliero. La forma abbreviata dell'equazione viene fornita nella colonna NODE_CAPTION.  
   
- Tuttavia, nella serie M200 North America è stata rilevata una struttura periodica aggiuntiva. Nel nodo TA00000001 sono inclusi due nodi figlio, uno con l'equazione (1,0,4) e uno con l'equazione (1,1,4)(6). Tali equazioni sono concatenate e presentate nel nodo padre.  
+ Tuttavia, nella serie M200 America del Nord è stata rilevata una struttura periodica aggiuntiva. Nel nodo TA00000001 sono inclusi due nodi figlio, uno con l'equazione (1,0,4) e uno con l'equazione (1,1,4)(6). Tali equazioni sono concatenate e presentate nel nodo padre.  
   
  Per ogni struttura periodica, il contenuto del modello fornisce anche l' *ordine* e la *media mobile* come nodi figlio. Ad esempio, la query seguente consente di recuperare i nodi figlio di uno dei nodi elencati nell'esempio precedente. È necessario includere la colonna PARENT_UNIQUE_NAME tra parentesi quadre per distinguerla dalla parola chiave riservata con lo stesso nome.  
   
@@ -365,22 +365,22 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 |MODEL_NAME|ATTRIBUTE_NAME|NODE_UNIQUE_NAME|NODE_TYPE|NODE_CAPTION|  
 |-----------------|---------------------|------------------------|----------------|-------------------|  
-|Previsione|M200 North America:Quantity|TA00000001000000010|29|ARIMA {1,0.961832044807041}|  
-|Previsione|M200 North America:Quantity|TA00000001000000011|30|ARIMA {1,-3.51073103693271E-02,2.15731642954099,-0.220314343327742,-1.33151478258758}|  
-|Previsione|M200 North America:Quantity|TA00000001000000000|29|ARIMA {1,0.643565911081657}|  
-|Previsione|M200 North America:Quantity|TA00000001000000001|30|ARIMA {1,1.45035399809581E-02,-4.40489283927752E-02,-0.19203901352577,0.242202497643993}|  
+|Previsione|M200 America del Nord:Quantity|TA00000001000000010|29|ARIMA {1,0.961832044807041}|  
+|Previsione|M200 America del Nord:Quantity|TA00000001000000011|30|ARIMA {1,-3.51073103693271E-02,2.15731642954099,-0.220314343327742,-1.33151478258758}|  
+|Previsione|M200 America del Nord:Quantity|TA00000001000000000|29|ARIMA {1,0.643565911081657}|  
+|Previsione|M200 America del Nord:Quantity|TA00000001000000001|30|ARIMA {1,1.45035399809581E-02,-4.40489283927752E-02,-0.19203901352577,0.242202497643993}|  
   
  In questi esempi viene illustrato che ogni ulteriore drill-down dell'albero ARIMA consente di rivelare maggiori dettagli, ma le informazioni importanti sono combinate e vengono presentate anche nel nodo padre.  
   
 ### <a name="time-series-formula-for-arima"></a>Formula Time Series per ARIMA  
  Per visualizzare la formula completa per qualsiasi nodo ARIMA, è consigliabile utilizzare **Legenda data mining** in [Visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md), in cui vengono presentati l'ordine autoregressivo, le medie mobili e altri elementi dell'equazione già composti in un formato coerente.  
   
--   [Visualizzazione della formula per un modello Time Series &#40;data mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Visualizzare la formula per un modello Time Series &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  In questa sezione viene presentato un esempio di equazione e vengono spiegati i termini di base.  
   
-####  <a name="bkmk_ARIMA_2"></a>Legenda data mining per la formula ARIMA  
- Nell'esempio seguente viene illustrata la formula ARIMA per una parte del modello, come visualizzata nella Legenda data mining. Per visualizzare questa formula, aprire il modello **Previsione** usando **Visualizzatore Microsoft Time Series**, fare clic sulla scheda **Modello** , selezionare l'albero per la serie di dati **R250: Europe** , quindi fare clic sul nodo che rappresenta la serie di date relativa al 5/7/2003 o a una data successiva. La legenda data mining consente di comporre tutte le costanti in un formato leggibile, mostrato nell'esempio:  
+####  <a name="mining-legend-for-arima-formula"></a><a name="bkmk_ARIMA_2"></a> Legenda data mining per la formula ARIMA  
+ Nell'esempio seguente viene illustrata la formula ARIMA per una parte del modello, come visualizzata nella Legenda data mining. Per visualizzare questa formula, aprire il modello **Previsione** usando **Visualizzatore Microsoft Time Series**, fare clic sulla scheda **Modello** , selezionare l'albero per la serie di dati **R250 Europe** , quindi fare clic sul nodo che rappresenta la serie di date relativa al 5/7/2003 o a una data successiva. La legenda data mining consente di comporre tutte le costanti in un formato leggibile, mostrato nell'esempio:  
   
  Equazione ARIMA:  
   
@@ -396,11 +396,11 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Un modello ARIMA per una serie di dati contiene l'equazione periodica di base in quattro formati diversi, selezionabili a seconda dell'applicazione.  
   
- **NODE_CAPTION:** Consente di visualizzare il formato abbreviato dell'equazione. Il formato abbreviato indica la quantità di strutture periodiche rappresentate e dei relativi coefficienti. Se, ad esempio, il formato abbreviato dell'equazione è {4,0,6}, il nodo rappresenta una struttura periodica con 6 coefficienti. Se il formato abbreviato è {2,0,8} simile {1,0,0}a x (4), il nodo contiene due strutture periodiche.  
+ **NODE_CAPTION:** visualizza il formato abbreviato dell'equazione. Il formato abbreviato indica la quantità di strutture periodiche rappresentate e dei relativi coefficienti. Se, ad esempio, il formato abbreviato dell'equazione è {4,0,6}, il nodo rappresenta una struttura periodica con 6 coefficienti. Se il formato abbreviato è {2,0,8} simile {1,0,0}a x (4), il nodo contiene due strutture periodiche.  
   
- **Descrizione nodo:** Consente di visualizzare il formato esteso dell'equazione, che rappresenta anche il formato dell'equazione visualizzata in **Legenda data mining**. La forma estesa dell'equazione è simile alla forma breve, con l'eccezione che i valori effettivi dei coefficienti vengono visualizzati anziché contati.  
+ **NODE DESCRIPTION:** viene visualizzato il formato esteso dell'equazione, corrispondente al formato dell'equazione visualizzata in **Legenda data mining**. La forma estesa dell'equazione è simile alla forma breve, con l'eccezione che i valori effettivi dei coefficienti vengono visualizzati anziché contati.  
   
- **NODE_RULE:** Visualizza una rappresentazione XML dell'equazione. A seconda del tipo di nodo, la rappresentazione XML può includere una o più strutture periodiche. Nella tabella seguente viene illustrato come viene eseguito il rollup dei nodi XML a livelli più elevati del modello ARIMA.  
+ **NODE_RULE:** visualizza una rappresentazione XML dell'equazione. A seconda del tipo di nodo, la rappresentazione XML può includere una o più strutture periodiche. Nella tabella seguente viene illustrato come viene eseguito il rollup dei nodi XML a livelli più elevati del modello ARIMA.  
   
 |Tipo di nodo|Contenuto XML|  
 |---------------|-----------------|  
@@ -409,12 +409,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (Autoregressione ARIMA)|Elenca i termini di una singola struttura periodica.|  
 |30 (Media mobile ARIMA)|Elenca i coefficienti di una singola struttura periodica.|  
   
- **NODE_DISTRIBUTION:** Visualizza i termini dell'equazione in una tabella nidificata, su cui è possibile eseguire una query per ottenere termini specifici. La tabella di distribuzione del nodo segue la stessa struttura gerarchica delle regole XML: nel nodo radice della serie ARIMA (NODE_TYPE = 27) sono contenuti il valore di intersezione e le periodicità dell'equazione completa, che può includere più periodicità, mentre nei nodi figlio sono contenute solo informazioni specifiche su una certa struttura periodica o sui nodi figlio di tale struttura periodica.  
+ **NODE_DISTRIBUTION:** visualizza i termini dell'equazione in una tabella annidata su cui è possibile eseguire query per ottenere termini specifici. La tabella di distribuzione del nodo segue la stessa struttura gerarchica delle regole XML: nel nodo radice della serie ARIMA (NODE_TYPE = 27) sono contenuti il valore di intersezione e le periodicità dell'equazione completa, che può includere più periodicità, mentre nei nodi figlio sono contenute solo informazioni specifiche su una certa struttura periodica o sui nodi figlio di tale struttura periodica.  
   
 |Tipo di nodo|Attributo|Tipo di valore|  
 |---------------|---------------|----------------|  
 |27 (radice ARIMA)|Intercetta<br /><br /> Periodicità|11|  
-|28 (Struttura periodica ARIMA)|Periodicità<br /><br /> Ordine autoregressivo<br /><br /> ordine delle differenze<br /><br /> Ordine media mobile|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
+|28 (Struttura periodica ARIMA)|Periodicità<br /><br /> Ordine autoregressivo<br /><br /> Ordine delle differenze<br /><br /> Ordine media mobile|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (Autoregressione ARIMA)|Coefficiente<br /><br /> (complemento del coefficiente)|7|  
 |30 (Media mobile ARIMA)|Valore a t<br /><br /> Valore a t-1<br /><br /> ...<br /><br /> Valore a t-n|7|  
   
@@ -440,7 +440,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ## <a name="remarks"></a>Osservazioni  
  Il recupero di informazioni da un albero ARTXP potrebbe risultare difficile, poiché le informazioni di ciascuna divisione si trovano in un punto diverso dell'albero. Pertanto, con un modello ARTXP è necessario ottenere tutte le parti, quindi procedere alla ricostruzione della formula completa. Il recupero di un'equazione da un modello ARIMA è più facile, poiché la formula è stata resa disponibile in tutto l'albero. Per altre informazioni su come creare una query per recuperare queste informazioni, vedere [Esempi di query sul modello di serie temporale](time-series-model-query-examples.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Time Series](microsoft-time-series-algorithm.md)   
  [Esempi di query sul modello Time Series](time-series-model-query-examples.md)   

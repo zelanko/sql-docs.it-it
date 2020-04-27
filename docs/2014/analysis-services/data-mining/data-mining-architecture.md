@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085076"
 ---
 # <a name="data-mining-architecture"></a>Architettura di data mining
@@ -28,22 +28,22 @@ ms.locfileid: "66085076"
   
  [Percorso di archiviazione dei database](../multidimensional-models/database-storage-location.md)  
   
- [Passare a un database Analysis Services tra le modalità ReadOnly e ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Per altre informazioni sulla modalità in cui è possibile implementare di data mining nella soluzione di Business Intelligence, vedere la sezione relativa alle guide alle soluzioni di MSDN Library.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Architettura logica &#40;Analysis Services-&#41;di data mining](logical-architecture-analysis-services-data-mining.md)  
+ [Architettura logica &#40;Analysis Services - Data mining&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Architettura fisica &#40;Analysis Services-&#41;di data mining](physical-architecture-analysis-services-data-mining.md)  
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [Servizi di data mining e origini dati](data-mining-services-and-data-sources.md)  
   
  [Gestione degli oggetti e delle soluzioni di data mining](management-of-data-mining-solutions-and-objects.md)  
   
- [Panoramica della sicurezza &#40;&#41;di data mining](security-overview-data-mining.md)  
+ [Panoramica della sicurezza &#40;data mining&#41;](security-overview-data-mining.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Programmazione di modelli multidimensionali](../multidimensional-models/multidimensional-model-programming.md)   
  [Programmazione di data mining](../dev-guide/data-mining-programming.md)  
   

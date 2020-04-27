@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084953"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Attività e procedure relative alle query di data mining
@@ -57,8 +57,8 @@ ms.locfileid: "66084953"
  [Creare una query di data mining usando XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Viene illustrato come creare una query sul contenuto del modello di data mining utilizzando i modelli XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento al linguaggio di query ed espressioni &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Stored procedure di data mining &#40;Analysis Services-&#41;di data mining](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Stored procedure di data mining &#40;Analysis Services - Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

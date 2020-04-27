@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086583"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Struttura cubo (Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -33,7 +33,7 @@ ms.locfileid: "66086583"
 |**Dimensioni**|Utilizzare il riquadro **Dimensioni** per includere e modificare dimensioni cubo per il cubo selezionato. Per altre informazioni su questo riquadro, vedere [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Vista origine dati**|Utilizzare il riquadro **Vista origine dati** per visualizzare e modificare la vista origine dati associata al cubo selezionato. Per altre informazioni su questo riquadro, vedere [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Architettura logica &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Configura proprietà misura](multidimensional-models/configure-measure-properties.md)   

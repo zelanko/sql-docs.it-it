@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082183"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definizione associazioni valute locali (Configurazione guidata funzionalità di Business Intelligence)
@@ -35,7 +35,7 @@ ms.locfileid: "66082183"
  Consente di selezionare l'attributo di valuta nella dimensione di tipo Valuta i cui membri rappresentano gli identificatori di valuta per le valute locali. Un attributo di valuta è uno la `Type` cui proprietà è impostata su *Currency*.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile se non è selezionata l'opzione **identificatori nella tabella dei fatti** .  
+>   Questa opzione non è disponibile se non è stata selezionata l'opzione **Identificatori nella tabella dei fatti** .  
   
  **Attributi nella tabella delle dimensioni**  
  Consente di specificare un attributo da una dimensione correlata al gruppo di misure che contiene gli identificatori di valuta per le valute locali.  
@@ -46,9 +46,9 @@ ms.locfileid: "66082183"
  Consente di selezionare l'attributo all'interno di una dimensione i cui membri fanno riferimento agli identificatori di valuta per la valuta locale.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile se l'opzione **attributi nella tabella delle dimensioni** non è selezionata.  
+>   Questa opzione non è disponibile se non è stata selezionata l'opzione **Attributi nella tabella delle dimensioni** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088580"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -47,8 +47,8 @@ ms.locfileid: "66088580"
 |[Compatibilità con le versioni precedenti &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] esistenti.|  
 |[Compatibilità con le versioni precedenti della replica](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche del [!INCLUDE[ssDE](../includes/ssde-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni di replica esistenti.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installare SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
- [Eseguire l'aggiornamento a SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
+ [Aggiornamento a SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   
   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081982"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definizione periodi di tempo (Creazione guidata dimensione)
   Utilizzare la pagina **Definizione periodi di tempo** per definire le informazioni sull'anno di calendario e le frequenze temporali da includere nella dimensione temporale o nella dimensione temporale del server.  
   
 > [!NOTE]  
->  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **dimensione temporale del server** nella pagina **Selezione tipo di dimensione** oppure se è stata selezionata l'opzione **Compila la dimensione senza utilizzare un'origine dei dati** nella pagina Selezione **metodo di compilazione** e **dimensione temporale** selezionata nella pagina **Selezione tipo di dimensione** .  
+>   Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Dimensione temporale del server** nella pagina **Selezione tipo di dimensione** oppure se sono state selezionate le opzioni **Compila dimensione senza utilizzare un'origine dei dati** nella pagina **Selezione metodo di compilazione** e **Dimensione temporale** nella pagina **Selezione tipo di dimensione** .  
   
 > [!IMPORTANT]  
 >  questa pagina consente di definire l'anno di calendario di una dimensione temporale. Per definire un anno fiscale, di produzione, di report o ISO 8601 per la dimensione temporale, usare la pagina **Selezione calendari** .  
@@ -47,7 +47,7 @@ ms.locfileid: "66081982"
  **Lingua per i nomi dei membri della dimensione temporale**  
  Consente di selezionare la lingua per i membri della dimensione temporale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   

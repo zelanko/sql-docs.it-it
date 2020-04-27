@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085313"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Creare una query singleton in Progettazione modelli di data mining
@@ -69,17 +69,17 @@ AS [t]
   
 7.  Fare clic su **Criteri/Argomento** nella riga **PredictProbability** e digitare il nome della colonna da stimare e facoltativamente un valore specifico da stimare.  
   
-     Ad esempio, immettere `[Bike Buyer], 1`.  
+     Ad esempio digitare `[Bike Buyer], 1`.  
   
 8.  Fare clic sulla casella **Alias** nella riga **PredictProbability** e digitare un nome per fare riferimento alla nuova colonna.  
   
-     Ad esempio, immettere `ProbableBuyer`.  
+     Ad esempio digitare `ProbableBuyer`.  
   
 9. Fare clic su **Passa alla visualizzazione dei risultati della query** sulla barra degli strumenti della scheda **Stima modello di data mining** .  
   
      Verrà visualizzata una nuova schermata con il risultato della query. Per visualizzare l'istruzione DMX appena creata, fare clic su **SQL**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Query di stima &#40;&#41;di data mining](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Query di stima &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
   
   

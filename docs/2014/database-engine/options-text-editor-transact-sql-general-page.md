@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089166"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opzioni (editor di testo-Transact-SQL-pagina generale)
@@ -44,7 +44,7 @@ ms.locfileid: "66089166"
  **A capo automatico**  
  Se questa casella di controllo è selezionata, le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor vengono visualizzate automaticamente nella riga successiva. Selezionando questa casella di controllo, la casella di controllo **Mostra icone per ritorno a capo automatico** viene abilitata e la casella di controllo **Attiva spazio virtuale** viene disabilitata.  
   
- **Mostra icona per ritorno a capo automatico**  
+ **Mostra icone per ritorno a capo automatico**  
  Se questa casella di controllo è selezionata, viene visualizzato un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva.  
   
  **Applica comandi Taglia o Copia a righe vuote in assenza di selezione**  
@@ -66,7 +66,7 @@ ms.locfileid: "66089166"
  **Consenti navigazione URL con clic singolo**  
  Se questa casella di controllo è selezionata, il cursore si trasforma in un puntatore a forma di mano quando viene posizionato su un URL nell'editor. È possibile fare clic sull'URL per visualizzare nel browser la pagina indicata.  
   
- **Barra di spostamento**  
+ **Barra di navigazione**  
  Questa casella di controllo non è disponibile.  
   
   

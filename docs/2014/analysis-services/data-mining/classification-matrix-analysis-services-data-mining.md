@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085785"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice di classificazione (Analysis Services - Data mining)
@@ -78,12 +78,12 @@ ms.locfileid: "66085785"
   
 |Argomenti|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico profitti &#40;Analysis Services-&#41;di data mining](profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services-&#41;di data mining](scatter-plot-analysis-services-data-mining.md)|  
-|Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services-&#41;di data mining](cross-validation-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;di data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Vedi anche  
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

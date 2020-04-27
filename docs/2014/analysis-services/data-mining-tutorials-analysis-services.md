@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086327"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Esercitazioni sul data mining (Analysis Services)
@@ -47,22 +47,22 @@ ms.locfileid: "66086327"
      I concetti avanzati analizzati in queste lezioni includono l'utilizzo di tabelle nidificate, stime incrociate, viste origine dati e query denominate personalizzate e filtro nelle query di data mining. Verrà inoltre acquisita la capacità di utilizzare gli strumenti di query di stima disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="reference"></a>Informazioni di riferimento  
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Strumenti di data mining](data-mining/data-mining-tools.md)  
   
- [Architettura logica &#40;Analysis Services-&#41;di data mining](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Architettura logica &#40;Analysis Services - Data mining&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Architettura logica &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Architettura logica &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  [Progetti di data mining](data-mining/data-mining-projects.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Soluzioni di data mining](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server risorse di data mining](https://go.microsoft.com/fwlink/?LinkId=97965)   
- [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services-Data mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services - Data mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

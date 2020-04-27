@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092228"
 ---
 # <a name="setup-role"></a>Impostazione ruolo
@@ -38,13 +38,13 @@ ms.locfileid: "66092228"
  **Tutte le funzionalità con valori predefiniti**  
  Scegliere questo ruolo per installare tutte le funzionalità disponibili per questa versione. Si noti che PowerPivot per SharePoint è escluso da questo ruolo. È necessario utilizzare il ruolo di installazione PowerPivot per SharePoint per installare tale funzionalità.  
   
- Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per l'avvio tramite l'account **NT AUTHORITY\NETWORK SERVICE** . Per l'utente corrente viene eseguito il provisioning come membro del ruolo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin** di **. È possibile eseguire l'override dei valori impostati con questa opzione specificando i parametri della riga di comando aggiuntivi.  
+ Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per l'avvio tramite l'account **NT AUTHORITY\NETWORK SERVICE** . Per l'utente corrente viene eseguito il provisioning come membro del ruolo **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile eseguire l'override dei valori impostati con questa opzione specificando i parametri della riga di comando aggiuntivi.  
   
  Quando il sistema operativo non è un controller di dominio, per impostazione predefinita nel motore di database e in Reporting Services verrà utilizzato l'account NTAUTHORITY\NETWORK SERVICE, in Integration Services l'account NTAUTHORITY\NETWORK SERVICE e nell'Utilità di avvio del daemon filtri full-text di SQL l'account NTAUTHORITY\LOCAL SERVICE.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Installazione di PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
  [Requisiti hardware e software (PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
- [Selezione caratteristiche](../../../2014/sql-server/install/feature-selection.md)  
+ [Selezione delle funzioni](../../../2014/sql-server/install/feature-selection.md)  
   
   

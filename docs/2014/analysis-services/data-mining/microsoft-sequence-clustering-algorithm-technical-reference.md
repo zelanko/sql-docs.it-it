@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083840"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
@@ -142,9 +142,9 @@ ms.locfileid: "66083840"
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta il drill-through, l'utilizzo di modelli di data mining OLAP e l'utilizzo di dimensioni di data mining.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
  [Esempi di query sul modello Sequence Clustering](clustering-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli Sequence Clustering &#40;Analysis Services-Data mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

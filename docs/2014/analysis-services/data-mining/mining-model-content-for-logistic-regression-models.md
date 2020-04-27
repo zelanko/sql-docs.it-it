@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083620"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione logistica (Analysis Services - Data mining)
@@ -167,7 +167,7 @@ ms.locfileid: "66083620"
  MSOLAP_NODE_SHORT_CAPTION  
  Nei modelli di regressione logistica è sempre vuoto.  
   
-##  <a name="bkmk_NodeIDs"></a>Utilizzo dei nomi e degli ID dei nodi  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Utilizzo dei nomi e degli ID dei nodi  
  La denominazione dei nodi in un modello di regressione logistica fornisce informazioni aggiuntive sulle relazioni tra i nodi nel modello. Nella tabella seguente vengono illustrate le convenzioni per gli ID assegnati ai nodi in ogni livello.  
   
 |Tipo di nodo|Convenzione per ID del nodo|  
@@ -183,7 +183,7 @@ ms.locfileid: "66083620"
   
  È possibile utilizzare questi ID per determinare il modo in cui gli attributi di output sono correlati ad attributi di livello di input specifici, visualizzando la tabella NODE_DISTRIBUTION del nodo di output. Ogni riga della tabella contiene un ID che punta a un nodo dell'attributo di input specifico. La tabella NODE_DISTRIBUTION contiene inoltre il coefficiente per tale coppia di input/output.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo di regressione logistica Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)   

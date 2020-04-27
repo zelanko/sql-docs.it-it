@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092434"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Esecuzione di Preparazione aggiornamento (prompt dei comandi)
@@ -54,18 +54,18 @@ where <server_info> is any combination of the following:
  Specifica il nome del computer da analizzare, che può essere il computer locale, ovvero il valore predefinito, oppure un computer remoto.  
   
  **-** _Instance_name_ dell'istanza  
- Specifica il nome dell'istanza da analizzare. Non esiste alcun valore predefinito. Se non si specifica questo parametro il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è MSSQLSERVER. Per un'istanza denominata, utilizzare il nome dell'istanza.  
+ Specifica il nome dell'istanza da analizzare. Non esistono valori predefiniti. Se non si specifica questo parametro il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è MSSQLSERVER. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
  **-ASInstance**  _AS_instance_name_  
- Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da analizzare. Non esiste alcun valore predefinito. Se non si specifica questo valore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è MSSQLServerOLAPService. Per un'istanza denominata, utilizzare il nome dell'istanza.  
+ Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da analizzare. Non esistono valori predefiniti. Se non si specifica questo valore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è MSSQLServerOLAPService. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
  **-RSInstance**  _RS_instance_name_  
- Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da analizzare. Non esiste alcun valore predefinito. Se non si specifica questo valore, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è ReportServer. Per un'istanza denominata, utilizzare il nome dell'istanza.  
+ Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da analizzare. Non esistono valori predefiniti. Se non si specifica questo valore, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è ReportServer. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
  **-SQLUser** _login_ID_  
  Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questo valore corrisponde all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrà utilizzato da Preparazione aggiornamento per stabilire la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si specifica un account di accesso, per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione di Windows.  
   
- **-Password sqlpassword** __  
+ **-Password sqlpassword** _password_  
  Se si utilizza l'argomento **-SQLUser** , utilizzare questo argomento per specificare la password per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
   
  **-CSV**  
@@ -77,7 +77,7 @@ where <server_info> is any combination of the following:
 |valore|Descrizione|  
 |-----------|-----------------|  
 |0|Analisi riuscita, nessun problema di aggiornamento rilevato.|  
-|intero positivo|Analisi riuscita, problemi di aggiornamento rilevati.|  
+|numero intero positivo|Analisi riuscita, problemi di aggiornamento rilevati.|  
 |numero intero negativo|Analisi non riuscita.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -124,25 +124,25 @@ where <server_info> is any combination of the following:
 |Tag|Definizione|Occorrenza|  
 |---------|----------------|----------------|  
 |`Configuration`|Elemento padre per il file di configurazione di Preparazione aggiornamento.|Obbligatorio una volta per ogni file di configurazione.|  
-|`Server`|Nome del server da analizzare.|Facoltativo una volta per ogni file di configurazione. L'impostazione predefinita è il computer locale.|  
+|`Server`|Nome del server da analizzare.|Facoltativo una volta per ogni file di configurazione. Il valore predefinito è il computer locale.|  
 |`Instance`|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] da analizzare.|Facoltativo una volta per ogni file di configurazione. Il valore predefinito è l'istanza predefinita.<br /><br /> Obbligatorio una volta per ogni file di configurazione, se nel server è presente un elemento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un elemento `IntegrationServices`.|  
 |`Components`|Contiene elementi che specificano quali componenti analizzare.|Obbligatorio una volta per ogni file di configurazione.|  
 |`SQLServer`|Contiene le impostazioni dell'analisi per un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, i database [!INCLUDE[ssDE](../../includes/ssde-md.md)] non verranno analizzati.|  
 |Elemento `Databases` per `SQLServer`|Contiene un elenco di database da analizzare.|Facoltativo una volta per ogni elemento di `SQLServer`. Se questo elemento non è presente, verranno analizzati tutti i database dell'istanza.|  
-|Elemento `Database` per `SQLServer`|Specifica il nome di un database da analizzare.|Obbligatorio una o più volte se l'elemento `Databases` è presente. Se un elemento `Database` contiene il valore "*", verranno analizzati tutti i database dell'istanza. Non esiste alcun valore predefinito.|  
+|Elemento `Database` per `SQLServer`|Specifica il nome di un database da analizzare.|Obbligatorio una o più volte se l'elemento `Databases` è presente. Se un elemento `Database` contiene il valore "*", verranno analizzati tutti i database dell'istanza. Non esistono valori predefiniti.|  
 |`TraceFiles`|Contiene un elenco di file di traccia da analizzare.|Facoltativo una volta per ogni elemento di `SQLServer`.|  
-|`TraceFile`|Specifica il percorso e il nome di un file di traccia da analizzare.|Obbligatorio una o più volte se l'elemento `TraceFiles` è presente. Non esiste alcun valore predefinito.|  
+|`TraceFile`|Specifica il percorso e il nome di un file di traccia da analizzare.|Obbligatorio una o più volte se l'elemento `TraceFiles` è presente. Non esistono valori predefiniti.|  
 |`BatchFiles`|Contiene un elenco di file batch da analizzare.|Facoltativo una volta per ogni elemento di `SQLServer`.|  
-|`BatchFile`|Specifica un file batch da analizzare. Possono essere più di uno.|Obbligatorio una o più volte se l'elemento `BatchFiles` è presente. Non esiste alcun valore predefinito.|  
+|`BatchFile`|Specifica un file batch da analizzare. Possono essere più di uno.|Obbligatorio una o più volte se l'elemento `BatchFiles` è presente. Non esistono valori predefiniti.|  
 |`BatchSeparator`|Specifica il separatore batch utilizzato nei file batch di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Facoltativo una volta per ogni elemento di `SQLServer`. Il valore predefinito è GO.|  
 |`AnalysisServices`|Contiene le impostazioni dell'analisi per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, i database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non verranno analizzati.|  
-|`ASInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obbligatorio una volta per ogni elemento di `AnalysisServices`. Non esiste alcun valore predefinito.|  
+|`ASInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obbligatorio una volta per ogni elemento di `AnalysisServices`. Non esistono valori predefiniti.|  
 |Elemento `Databases` per `Analysis Services`|Contiene un elenco di database da analizzare.|Facoltativo una volta per ogni elemento di `AnalysisServices`. Se questo elemento non è presente, verranno analizzati tutti i database dell'istanza.|  
-|Elemento `Database` per `AnalysisServices`|Specifica il nome di un database da analizzare.|Obbligatorio una o più volte se l'elemento `Databases` è presente. Se un elemento `Database` contiene il valore "*", verranno analizzati tutti i database dell'istanza. Non esiste alcun valore predefinito.|  
+|Elemento `Database` per `AnalysisServices`|Specifica il nome di un database da analizzare.|Obbligatorio una o più volte se l'elemento `Databases` è presente. Se un elemento `Database` contiene il valore "*", verranno analizzati tutti i database dell'istanza. Non esistono valori predefiniti.|  
 |`ReportingServices`|Specifica di eseguire l'analisi su [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene analizzato.|  
-|`RSInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obbligatorio una volta per ogni elemento di `ReportingServices`. Non esiste alcun valore predefinito.|  
+|`RSInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obbligatorio una volta per ogni elemento di `ReportingServices`. Non esistono valori predefiniti.|  
 |`IntegrationServices`|Contiene le impostazioni dell'analisi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene analizzato.|  
-|`PackagePath`|Specifica il percorso di un set di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facoltativo una volta per ogni elemento di `IntegrationServices`. Se questo elemento non è presente, l'analisi verrà effettuata sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre i pacchetti archiviati esternamente non verranno analizzati. Non esiste alcun valore predefinito.|  
+|`PackagePath`|Specifica il percorso di un set di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facoltativo una volta per ogni elemento di `IntegrationServices`. Se questo elemento non è presente, l'analisi verrà effettuata sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre i pacchetti archiviati esternamente non verranno analizzati. Non esistono valori predefiniti.|  
   
 ## <a name="examples"></a>Esempi  
   
@@ -160,7 +160,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. Eseguire Preparazione aggiornamento utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>C. Eseguire Preparazione aggiornamento utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nell'esempio seguente viene illustrato come eseguire Preparazione aggiornamento dal prompt dei comandi utilizzando un file di configurazione. Vengono specificati un nome utente e una password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -168,7 +168,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
     -SqlUser "MyUserName" -SqlPassword "QweRTy-55"  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Esecuzione di preparazione aggiornamento &#40;interfaccia utente&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  

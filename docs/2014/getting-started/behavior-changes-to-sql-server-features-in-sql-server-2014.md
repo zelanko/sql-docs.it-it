@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69918a47cf32a389355d76b7ca3b0f781c2e3536
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089506"
 ---
 # <a name="behavior-changes-to-sql-server-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità di SQL Server in SQL Server 2014
@@ -22,7 +22,7 @@ ms.locfileid: "66089506"
   
  Attualmente, non sono presenti modifiche del comportamento documentate.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

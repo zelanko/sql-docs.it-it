@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091223"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Verificare che l'aumento di dimensioni automatico sia attivato per tutti i file di dati e di log durante il processo di aggiornamento
@@ -87,13 +87,13 @@ MODIFY FILE
   
  L'incremento predefinito per l'aumento delle dimensioni dei file di dati è di 1 MB. L'impostazione predefinita del file di log è 10%. Per l'impostazione dell'incremento FILEGROWTH, è consigliabile applicare le linee guida generali seguenti:  
   
-|Dimensioni complete|Incremento FILEGROWTH|  
+|Dimensione del file|Incremento FILEGROWTH|  
 |---------------|--------------------------|  
 |0-50 MB|10 MB|  
 |100-200 MB|20MB|  
 |500MB o più|10%|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083666"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md). È importante ricordare che l'algoritmo Microsoft Decision Trees è un algoritmo ibrido che consente di creare modelli con funzioni molto diverse: un albero delle decisioni può rappresentare associazioni, regole o persino regressione lineare. La struttura dell'albero è sostanzialmente la stessa, ma la modalità di interpretazione delle informazioni dipenderà dallo scopo per il quale è stato creato il modello.  
   
-##  <a name="bkmk_Top"></a>Informazioni sulla struttura di un modello Decision Trees  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>Informazioni sulla struttura di un modello Decision Trees  
  Un modello di albero delle decisioni dispone di un singolo nodo padre che rappresenta il modello e i relativi metadati. Sotto il nodo padre sono presenti alberi indipendenti che rappresentano gli attributi stimabili selezionati. Se ad esempio il modello di albero delle decisioni viene configurato per stimare se un cliente acquisterà un prodotto e fornire input relativi a genere e reddito, il modello creerà un singolo albero per l'attributo relativo agli acquisti, con molti rami riferiti alle condizioni correlate al genere e al reddito.  
   
  Se in seguito si aggiunge un attributo stimabile separato riferito alla partecipazione a un concorso a premi per clienti, l'algoritmo creerà due alberi separati sotto il nodo padre. Un albero contiene l'analisi relativa agli acquisti e un altro contiene l'analisi per il concorso a premi per clienti.  Se l'algoritmo Decision Trees viene utilizzato per creare un modello di associazione, viene creato un albero separato per ogni prodotto stimato, in cui saranno contenute tutte le altre combinazioni di prodotti che contribuiscono alla selezione dell'attributo di destinazione.  
@@ -47,7 +47,7 @@ ms.locfileid: "66083666"
 > [!NOTE]  
 >  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente scelto un metodo per l'inserimento in bucket di attributi continui; è tuttavia possibile controllare il modo in cui i valori continui negli input vengono discretizzati impostando il tipo di contenuto della colonna della struttura di data mining su `Discretized` e impostando successivamente la proprietà <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
   
-##  <a name="bkmk_ModelContent"></a>Contenuto del modello per un modello Decision Trees  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> Contenuto di un modello di albero delle decisioni  
  In questa sezione vengono forniti dettagli ed esempi specifici delle colonne del contenuto dei modelli di data mining particolarmente importanti per i modelli di albero delle decisioni. Per informazioni sulle colonne generiche del set di righe dello schema e per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -92,7 +92,7 @@ ms.locfileid: "66083666"
   
  **Nodo padre** Indica il numero di attributi stimabili modellati. Viene creato un albero per ogni attributo stimabile.  
   
- **Nodo della struttura ad albero** Il nodo **tutti** per ogni albero indica il numero di valori utilizzati per l'attributo di destinazione.  
+ **Nodo albero** Il nodo **Tutti** di ogni albero indica quanti valori sono stati utilizzati per l'attributo di destinazione.  
   
 -   Se l'attributo di destinazione è discreto, il valore è uguale al numero di valori distinct più 1 per lo stato `Missing`.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66083666"
   
  **Nodo radice del modello** Questa tabella è vuota.  
   
- **Nodo (tutti)** Contiene un riepilogo del modello nel suo complesso.  
+ **Nodo (Tutti)** Contiene un riepilogo del modello nel suo complesso.  
   
  **Nodo interno** Contiene statistiche aggregate per i relativi nodi foglia.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66083666"
   
  Se l'attributo stimabile è un numero continuo, l'algoritmo tenta di creare una formula di regressione che modella la relazione tra l'attributo stimabile e gli input.  
   
-###  <a name="NodeCaption"></a>Didascalia del nodo e descrizione del nodo  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>Didascalia del nodo e descrizione del nodo  
  In un modello di albero delle decisioni la didascalia del nodo e la descrizione del nodo contengono informazioni simili. Tuttavia, la descrizione del nodo è più completa e contiene un numero maggiore di informazioni man mano che ci si avvicina ai nodi foglia. Sia la didascalia sia la descrizione sono stringhe localizzate.  
   
 |||  
@@ -192,7 +192,7 @@ ms.locfileid: "66083666"
 |**NODE_CAPTION**|Visualizza l'attributo che distingue quel particolare nodo relativo al nodo padre. La didascalia del nodo definisce un sottosegmento del popolamento in base alla condizione di divisione. Se, ad esempio, la divisione era in [Age] ed era una divisione a tre vie, le didascalie dei nodi dei tre nodi figlio potrebbero essere "[Age] < 40", "40 <= [Age] \< 50", "[age] >= 50".|  
 |**NODE_DESCRIPTION**|Contiene un elenco completo degli attributi che distinguono quel nodo dagli altri, a cominciare dal nodo padre del modello. Ad esempio, Product name = Apple e Color = Red.|  
   
-###  <a name="NodeRule"></a>Regola del nodo e regola marginale  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> Regola del nodo e regola marginale  
  Le colonne NODE_RULE e MARGINAL_RULE contengono le stesse informazioni delle colonne NODE_CAPTION e NODE_DESCRIPTION, ma rappresentano le informazioni come frammenti XML. La regola del nodo è una versione XML del percorso completo, mentre la regola marginale indica la divisione più recente.  
   
  L'attributo rappresentato dal frammento XML può essere semplice o complesso. Un attributo semplice contiene il nome della colonna del modello e il valore dell'attributo. Se la colonna del modello contiene una tabella nidificata, l'attributo di tale tabella è rappresentato come una concatenazione del nome della tabella, del valore della chiave e dell'attributo.  
@@ -200,7 +200,7 @@ ms.locfileid: "66083666"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la versione 2,0 dello standard PMML, con le estensioni per supportare l'utilizzo della tabella nidificata. Se i dati contengono tabelle nidificate e viene generata una versione PMML del modello, tutti gli elementi del modello che includono i predicati sono contrassegnati come un'estensione.  
   
-###  <a name="bkmk_NodeDist_Discrete"></a>Distribuzione del nodo per attributi discreti  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Distribuzione del nodo per attributi discreti  
  In un modello di albero delle decisioni la tabella NODE_DISTRIBUTION contiene statistiche utili. Tuttavia, il tipo di statistiche varia a seconda che nell'albero venga stimato un attributo discreto o continuo. In questa sezione viene descritto il significato delle statistiche di distribuzione del nodo per attributi discreti.  
   
 #### <a name="attribute-name-and-attribute-value"></a>Nome e valore dell'attributo  
@@ -231,8 +231,7 @@ ms.locfileid: "66083666"
   
  Probabilità = (supporto per lo stato + supporto per lo stato precedente) / (supporto del nodo più supporto del nodo precedente)  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate le probabilità per ogni nodo per confrontare la probabilità archiviata con la probabilità precedente allo scopo di determinare se il percorso dal nodo padre al nodo figlio indica un'inferenza sostanziale.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate le probabilità per ogni nodo per confrontare la probabilità archiviata con la probabilità precedente allo scopo di determinare se il percorso dal nodo padre al nodo figlio indica un'inferenza sostanziale.  
   
  Quando si eseguono stime, la probabilità della distribuzione deve essere bilanciata con la probabilità del nodo, allo scopo di regolare le probabilità. Ad esempio, se in una divisione dell'albero i case vengono separati con un rapporto di 9000/1000, l'albero è molto sbilanciato. Di conseguenza, una stima proveniente dal ramo di piccole dimensioni non presenterà lo stesso peso di una stima proveniente da un ramo con molti case.  
   
@@ -253,7 +252,7 @@ ms.locfileid: "66083666"
   
  Se il modello include un attributo stimabile continuo, l'albero potrebbe anche contenere tipi di valore univoci per le formule di regressione. Per un elenco dei tipi di valore usati negli alberi di regressione, vedere [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-###  <a name="NodeScore"></a>Punteggio del nodo  
+###  <a name="node-score"></a><a name="NodeScore"></a> Punteggio del nodo  
  Il punteggio del nodo rappresenta informazioni leggermente diverse in corrispondenza di ogni livello dell'albero. In generale, il punteggio è un valore numerico che indica la qualità con cui è stata realizzata una divisione sulla condizione. Il valore viene rappresentato come un valore Double. Un valore più elevato indica una quantità maggiore.  
   
  Per definizione, il nodo del modello e tutti i nodi foglia presentano un punteggio del nodo pari a 0.  
@@ -267,7 +266,7 @@ ms.locfileid: "66083666"
 > [!NOTE]  
 >  Se si crea un modello di albero delle decisioni che include attributi stimabili continui e discreti, verranno visualizzati punteggi completamente diversi nei nodi (Tutti) che rappresentano ogni tipo di albero. Ogni modello deve essere considerato in modo indipendente e i metodi utilizzati per il calcolo del punteggio di regressione sono completamente diversi da quelli utilizzati per il calcolo del punteggio di classificazione. Non è possibile confrontare i valori del punteggio del nodo.  
   
-##  <a name="bkmk_RegressionNodes"></a>Nodi di regressione in un modello di albero delle decisioni  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>Nodi di regressione in un modello di albero delle decisioni  
  Se un modello di albero delle decisioni contiene un attributo stimabile con dati numerici continui, l'algoritmo Microsoft Decision Trees cerca di individuare aree nei dati in cui la relazione tra lo stato stimato e le variabili di input è lineare. Se l'algoritmo trova una relazione lineare, crea un albero speciale (NODE_TYPE = 25) che rappresenta una regressione lineare. Questi nodi dell'albero di regressione sono più complessi dei nodi che rappresentano valori discreti.  
   
  In generale, una regressione esegue il mapping delle modifiche nella variabile dipendente continua (variabile stimabile) come una funzione delle modifiche negli input. Se la variabile dipendente dispone di input continui e la relazione tra l'input e il valore stimato è sufficientemente stabile per essere calcolata come un grafico a linee, il nodo per la regressione contiene una formula.  
@@ -282,7 +281,7 @@ ms.locfileid: "66083666"
   
  Per altre informazioni sui nodi di regressione, vedere [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
  [Query di data mining](data-mining-queries.md)   

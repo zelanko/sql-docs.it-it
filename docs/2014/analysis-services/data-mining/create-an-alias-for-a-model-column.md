@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085321"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Creare un alias per una colonna di un modello
@@ -36,7 +36,7 @@ ms.locfileid: "66085321"
   
 2.  Nella finestra **Proprietà** sul lato destro dello schermo fare clic sulla cella accanto alla proprietà Name ed eliminare il valore corrente. Digitare un nuovo nome per la colonna.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Proprietà dei modelli di data mining](mining-model-properties.md)  
   

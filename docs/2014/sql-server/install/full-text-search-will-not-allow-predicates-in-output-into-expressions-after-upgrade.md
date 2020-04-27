@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095012"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>Dopo l'aggiornamento, nella ricerca full-text non saranno consentiti i predicati nell'espressione OUTPUT INTO
@@ -23,7 +23,7 @@ ms.locfileid: "66095012"
 ## <a name="description"></a>Descrizione  
  Per ulteriori informazioni sulla clausola OUTPUT, vedere [clausola output &#40;&#41;Transact-SQL ](/sql/t-sql/queries/output-clause-transact-sql).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Problemi di aggiornamento della ricerca full-text](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   

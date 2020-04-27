@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094239"
 ---
 # <a name="integration-services-parameters"></a>Parametri di Integration Services
@@ -24,7 +24,7 @@ ms.locfileid: "66094239"
   
 ## <a name="options"></a>Opzioni  
  **Analizza pacchetti SSIS nel computer**  
- Selezionare questa opzione per analizzare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel computer. Per impostazione predefinita, questa opzione è selezionata.  
+ Selezionare questa opzione per analizzare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel computer. Questa opzione è selezionata per impostazione predefinita.  
   
  **Analizza file pacchetti SSIS**  
  Selezionare questa opzione per analizzare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel file system.  
@@ -32,7 +32,7 @@ ms.locfileid: "66094239"
  **Percorso pacchetti SSIS**  
  Individuare il percorso UNC o locale in cui sono memorizzati i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Non è necessario includere i nomi di file. Se il percorso immesso non è accessibile, non è possibile fare clic su **Avanti**. Per impostazione predefinita, il percorso è vuoto. Questo campo è abilitato solo quando si seleziona **Analizza file di pacchetto SSIS**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Guida di riferimento all'interfaccia utente di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

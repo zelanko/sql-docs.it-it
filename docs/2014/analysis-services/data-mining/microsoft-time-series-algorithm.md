@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083772"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
@@ -80,9 +80,9 @@ ms.locfileid: "66083772"
   
  I requisiti per un modello della serie temporale sono i seguenti:  
   
--   **Una singola colonna chiave temporale** Ogni modello deve contenere una colonna numerica o di data utilizzata come serie di case, che definisce gli intervalli di tempo che il modello utilizzerà. Il tipo di dati per la colonna chiave temporale può essere un tipo di dati del datetime o un tipo di dati numerici. Tuttavia, la colonna deve contenere valori continui e i valori devono essere univoci per ogni serie. Impossibile archiviare le serie di casi per un modello della serie temporale in due colonne, ad esempio una colonna annua e una colonna mensile.  
+-   **Una singola colonna chiave temporale** Ogni modello deve contenere una colonna numerica o data usata come serie di case che definisce gli intervalli di tempo che il modello utilizzerà. Il tipo di dati per la colonna chiave temporale può essere un tipo di dati del datetime o un tipo di dati numerici. Tuttavia, la colonna deve contenere valori continui e i valori devono essere univoci per ogni serie. Impossibile archiviare le serie di casi per un modello della serie temporale in due colonne, ad esempio una colonna annua e una colonna mensile.  
   
--   **Una colonna stimabile** Ogni modello deve contenere almeno una colonna stimabile attorno alla quale l'algoritmo compilerà il modello Time Series. Il tipo di dati della colonna stimabile deve avere valori continui. Ad esempio, è possibile stimare la modifica degli attributi numerici nel tempo, ad esempio reddito, vendite o temperatura. Tuttavia, non è possibile utilizzare una colonna contenente valori discreti, ad esempio stato di acquisto o livello di istruzione, come colonna stimabile.  
+-   **Una colonna stimabile** Ogni modello deve contenere almeno una colonna stimabile che verrà usata dall'algoritmo per compilare il modello della serie temporale. Il tipo di dati della colonna stimabile deve avere valori continui. Ad esempio, è possibile stimare la modifica degli attributi numerici nel tempo, ad esempio reddito, vendite o temperatura. Tuttavia, non è possibile utilizzare una colonna contenente valori discreti, ad esempio stato di acquisto o livello di istruzione, come colonna stimabile.  
   
 -   **Una colonna chiave della serie facoltativa** Ogni modello può avere una colonna chiave aggiuntiva contenente valori univoci che identificano una serie. La colonna chiave della serie facoltativa deve contenere valori univoci. Ad esempio, un solo modello può contenere vendite per molti modelli del prodotto, a condizione che esista un solo record per ogni nome di prodotto di ogni intervallo di tempo.  
   
@@ -152,11 +152,11 @@ ms.locfileid: "66083772"
   
 -   Supporta il drill-through.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzare un modello utilizzando il Visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   
  [Esempi di query sul modello Time Series](time-series-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli Time Series &#40;Analysis Services-Data mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

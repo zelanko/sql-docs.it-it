@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088511"
 ---
 # <a name="sql-server-backward-compatibility"></a>Compatibilità con le versioni precedenti di SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "66088511"
 |[Modifiche di rilievo nelle funzionalità di SQL Server in SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Modifiche che potrebbero richiedere modifiche alle applicazioni. In questo argomento vengono analizzate la configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e le funzionalità del programma di installazione.|  
 |[Differenze di funzionamento delle funzionalità di SQL Server in SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Modifiche del comportamento delle caratteristiche di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in questa versione. In questo argomento vengono analizzate la configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e le funzionalità del programma di installazione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

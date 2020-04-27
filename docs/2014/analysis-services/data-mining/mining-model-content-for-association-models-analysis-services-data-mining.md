@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083693"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
@@ -35,7 +35,7 @@ ms.locfileid: "66083693"
   
  Anche ogni regola è contenuta nel proprio nodo (NODE_TYPE = 8). Una *regola* descrive un modello generale per la modalità di associazione degli elementi. È simile a un'istruzione IF-THEN. Il lato sinistro della regola indica una condizione o un set di condizioni esistente. Il lato destro indica l'elemento del set di dati solitamente associato alle condizioni riportate a sinistra.  
   
- **Nota** Se si desidera estrarre le regole o i set di elementi, è possibile utilizzare una query per restituire solo i tipi di nodo desiderati. Per altre informazioni, vedere [Esempi di query sul modello di associazione](association-model-query-examples.md).  
+ **Nota** Se si vuole estrarre le regole o i set di elementi, è possibile usare una query che restituisca solo i tipi di nodo desiderati. Per altre informazioni, vedere [Esempi di query sul modello di associazione](association-model-query-examples.md).  
   
 ## <a name="model-content-for-an-association-model"></a>Contenuto di un modello di associazione  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining pertinenti per i modelli di associazione.  
@@ -63,15 +63,15 @@ ms.locfileid: "66083693"
 |ID tipo di nodo|Type|  
 |------------------|----------|  
 |1 (Model)|Radice o nodo padre.|  
-|7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o<br /><br /> `Gender = Male`.|  
+|7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> oppure<br /><br /> `Gender = Male`.|  
 |8 (Rule)|Regola che definisce la modalità di correlazione tra gli elementi.<br /><br /> Esempio:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
  Etichetta o didascalia associata al nodo.  
   
- **Nodo set di elementi** Elenco delimitato da virgole di elementi.  
+ **Nodo di set di elementi** Elenco di elementi delimitati da virgole.  
   
- **Nodo regola** Contiene i lati sinistro e destro della regola.  
+ **Nodo di regola** Contiene i lati sinistro e destro della regola.  
   
  CHILDREN_CARDINALITY  
  Indica il numero di figli del nodo corrente.  
@@ -81,34 +81,34 @@ ms.locfileid: "66083693"
 > [!NOTE]  
 >  Per ottenere una suddivisione del conteggio relativo a set di elementi e regole, vedere NODE_DESCRIPTION per il nodo radice del modello.  
   
- **Nodo set di elementi o regola** Sempre 0.  
+ **Nodo di set di elementi o di regola** Sempre 0.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo.  
   
  **Nodo padre** Sempre NULL.  
   
- **Nodo set di elementi o regola** Sempre 0.  
+ **Nodo di set di elementi o di regola** Sempre 0.  
   
  NODE_DESCRIPTION  
  Descrizione semplice del contenuto del nodo.  
   
  **Nodo padre** Include un elenco delimitato da virgole delle informazioni seguenti sul modello:  
   
-|Elemento|Descrizione|  
+|Item|Descrizione|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Conteggio di tutti i set di elementi nel modello.|  
 |RULE_COUNT|Conteggio di tutte le regole nel modello.|  
-|MIN_SUPPORT|Supporto minimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso dal valore impostato per il parametro di *_SUPPORT minimo* .|  
-|MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso dal valore impostato per il parametro *MAXIMUM_SUPPORT* .|  
+|MIN_SUPPORT|Supporto minimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MINIMUM_SUPPORT* .|  
+|MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Il valore 0 indica che lo stato `Missing` viene considerato come un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
-|MAX_ITEMSET_SIZE|Indica la dimensione del set di elementi più grande individuato.<br /><br /> **Nota** Questo valore è vincolato dal valore impostato per il parametro *MAX_ITEMSET_SIZE* al momento della creazione del modello. Non può mai superare tale valore, ma può essere minore. Il valore predefinito è 3.|  
-|MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0,400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* al momento della creazione del modello.|  
-|MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esiste alcun parametro per limitare la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT* .|  
+|MAX_ITEMSET_SIZE|Indica la dimensione del set di elementi più grande individuato.<br /><br /> **Nota** Questo valore è vincolato dal valore impostato per il parametro *MAX_ITEMSET_SIZE* durante la creazione del modello. Non può mai superare tale valore, ma può essere minore. Il valore predefinito è 3.|  
+|MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0,400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
+|MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esistono parametri che vincolano la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT* .|  
 |MIN_LIFT|Livello minimo di accuratezza fornito dal modello per un set di elementi.<br /><br /> Esempio: 0,4309369632511<br /><br /> Nota: conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
 |MAX_LIFT|Livello massimo di accuratezza fornito dal modello per ogni set di elementi.<br /><br /> Esempio: 1,95758227647523 **Nota** Conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
   
- **Nodo set di elementi** I nodi di set di elementi contengono un elenco di elementi, visualizzato come stringa di testo delimitato da virgole.  
+ **Nodo di set di elementi** I nodi di set di elementi contengono un elenco di elementi, visualizzato come stringa di testo delimitato da virgole.  
   
  Esempio:  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66083693"
   
  Significa che i pneumatici Touring e le bottiglie di acqua sono stati acquistati insieme.  
   
- **Nodo regola** I nodi della regola contengono un lato sinistro e destro della regola, separati da una freccia.  
+ **Nodo di regola** I nodi di regola contengono i lati sinistro e destro della regola, separati da una freccia.  
   
  Esempio: `Touring Tire = Existing, Water Bottle = Existing -> Cycling cap = Existing`  
   
@@ -127,9 +127,9 @@ ms.locfileid: "66083693"
   
  **Nodo padre** Vuoto.  
   
- **Nodo set di elementi** Vuoto.  
+ **Nodo di set di elementi** Vuoto.  
   
- **Nodo regola** Il frammento XML include informazioni utili aggiuntive sulla regola, ad esempio il supporto, la confidenza e il numero di elementi, nonché l'ID del nodo che rappresenta il lato sinistro della regola.  
+ **Nodo di regola** Il frammento XML include informazioni utili aggiuntive sulla regola, come supporto, confidenza e numero di elementi, insieme all'ID del nodo che rappresenta il lato sinistro della regola.  
   
  MARGINAL_RULE  
  Vuoto.  
@@ -139,9 +139,9 @@ ms.locfileid: "66083693"
   
  **Nodo padre** Sempre 0.  
   
- **Nodo set di elementi** Probabilità del set di elementi.  
+ **Nodo di set di elementi** Probabilità del set di elementi.  
   
- **Nodo regola** Valore di confidenza per la regola.  
+ **Nodo di regola** Valore di confidenza per la regola.  
   
  MARGINAL_PROBABILITY  
  Uguale a NODE_PROBABILITY.  
@@ -151,9 +151,9 @@ ms.locfileid: "66083693"
   
  **Nodo padre** Vuoto.  
   
- **Nodo set di elementi** Elenca ogni elemento del set di elementi insieme a un valore di probabilità e supporto. Se ad esempio il set di elementi contiene due prodotti, viene riportato il nome di ogni prodotto insieme al conteggio dei case che lo includono.  
+ **Nodo di set di elementi** Elenca ogni elemento del set di elementi insieme a un valore di probabilità e di supporto. Se ad esempio il set di elementi contiene due prodotti, viene riportato il nome di ogni prodotto insieme al conteggio dei case che lo includono.  
   
- **Nodo regola** Contiene due righe. Nella prima riga è indicato l'attributo del lato destro della regola, ovvero l'elemento stimato, insieme a un punteggio di confidenza.  
+ **Nodo di regola** Contiene due righe. Nella prima riga è indicato l'attributo del lato destro della regola, ovvero l'elemento stimato, insieme a un punteggio di confidenza.  
   
  La seconda riga è univoca per i modelli di associazione. Contiene un puntatore al set di elementi sul lato destro della regola. Il puntatore è rappresentato nella colonna ATTRIBUTE_VALUE come ID del set di elementi che contiene solo l'elemento di destra.  
   
@@ -166,25 +166,25 @@ ms.locfileid: "66083693"
   
  **Nodo padre** Numero di case nel modello.  
   
- **Nodo set di elementi** Numero di case che contengono tutti gli elementi nel set di elementi.  
+ **Nodo di set di elementi** Numero di case che contengono tutti gli elementi del set di elementi.  
   
- **Nodo regola** Numero di case che contengono tutti gli elementi inclusi nella regola.  
+ **Nodo di regola** Numero di case che contengono tutti gli elementi inclusi nella regola.  
   
  MSOLAP_MODEL_COLUMN  
  Contiene informazioni diverse a seconda che il nodo sia un set di elementi o una regola.  
   
  **Nodo padre** Vuoto.  
   
- **Nodo set di elementi** Vuoto.  
+ **Nodo di set di elementi** Vuoto.  
   
- **Nodo regola** ID del set di elementi che contiene gli elementi nel lato sinistro della regola. Ad esempio, se la regola è `If {A,B} Then {C}`, questa colonna contiene l'ID del set di elementi che include solo `{A,B}`.  
+ **Nodo di regola** ID del set di elementi che contiene gli elementi nel lato sinistro della regola. Ad esempio, se la regola è `If {A,B} Then {C}`, questa colonna contiene l'ID del set di elementi che include solo `{A,B}`.  
   
  MSOLAP_NODE_SCORE  
  **Nodo padre** Vuoto.  
   
- **Nodo set di elementi** Punteggio di importanza per il set di elementi.  
+ **Nodo di set di elementi** Punteggio di priorità per il set di elementi.  
   
- **Nodo regola** Punteggio di importanza per la regola.  
+ **Nodo di regola** Punteggio di priorità per la regola.  
   
 > [!NOTE]  
 >  La priorità viene calcolata in modo diverso per i set di elementi e le regole. Per altre informazioni, vedere [Riferimento tecnico per l'algoritmo Microsoft Association Rules](microsoft-association-algorithm-technical-reference.md).  
@@ -192,7 +192,7 @@ ms.locfileid: "66083693"
  MSOLAP_NODE_SHORT_CAPTION  
  Vuoto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Association](microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)  

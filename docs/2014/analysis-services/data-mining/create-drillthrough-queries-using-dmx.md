@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085234"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Creare query drill-through tramite DMX
@@ -43,7 +43,7 @@ WHERE [Model Region] = 'M200 Pacific'
   
  In questo esempio viene utilizzato un alias per rinominare la colonna della struttura. Se non si assegna un alias alla colonna della struttura, la colonna viene restituita con il nome 'Expression'. Si tratta del comportamento predefinito per tutte le colonne senza nome.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Query drill-through &#40;&#41;di data mining](drillthrough-queries-data-mining.md)   
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  
   

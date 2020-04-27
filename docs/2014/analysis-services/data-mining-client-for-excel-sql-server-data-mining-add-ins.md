@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086426"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Client di data mining per Excel (componenti aggiuntivi Data mining di SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "66086426"
   
      Il client di data mining fornisce strumenti standard del settore per testare i modelli, inclusi i grafici di accuratezza e la convalida incrociata. Le procedure guidate vengono fornite per semplificare il test della validità del set di dati e della relativa accuratezza. La procedura guidata Query consente di compilare le query per utilizzare i modelli per la stima e l'assegnazione dei punteggi.  
   
--   [Visualizza modelli](#bkmk_ViewModels)  
+-   [Visualizzazione di modelli](#bkmk_ViewModels)  
   
      I grafici generati dalla maggior parte degli strumenti possono essere salvati direttamente in Excel. Per esplorare i modelli, utilizzare i [modelli di esplorazione in Excel &#40;SQL Server componenti aggiuntivi Data Mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md) strumento.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66086426"
   
      Il client di data mining per Excel mantiene una connessione attiva al server, pertanto è possibile salvare il modello di data mining nel server per utilizzarlo per ulteriori prove o per distribuirlo in un server di produzione per una maggiore scalabilità.  
   
-##  <a name="bkmk_Data"></a>Usare i dati  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>Usare i dati  
  Il gruppo **Preparazione dati** contiene le procedure guidate seguenti che consentono di analizzare e pulire i dati in preparazione alle attività di data mining. La maggior parte delle procedure guidate consente di separare i dati in set di training e di testing.  
   
  [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "66086426"
  [Calcolo stime &#40;strumenti di analisi tabelle per Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  La procedura guidata **Modifica etichette** consente di creare nuove etichette per i dati per semplificare la comprensione dei risultati dell'analisi. È ad esempio possibile rinominare un intervallo di dati con un nome più descrittivo oppure scegliere un valore rappresentativo nell'elenco.  
   
-##  <a name="bkmk_Model"></a>Compilazione di modelli e analisi  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>Compilazione di modelli e analisi  
  Le opzioni disponibili nella sezione **Modellazione dati** della barra degli strumenti consentono di derivare modelli dai dati, raggruppare le righe di dati in base ad attributi specifici oppure esplorare le associazioni. Le procedure guidate su questa barra multifunzione degli strumenti sono basate sui potenti algoritmi di data mining disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Diversamente da strumenti simili inclusi in Strumenti di analisi tabelle per Excel, queste procedure guidate consentono di personalizzare il comportamento dell'algoritmo e di utilizzare un'ampia gamma di origini dati.  
   
  [Procedura guidata classificazione &#40;componenti aggiuntivi Data mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -101,7 +101,7 @@ ms.locfileid: "66086426"
  [Modellazione avanzata &#40;componenti aggiuntivi Data mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  Se si ha già familiarità con il data mining, è possibile utilizzare le opzioni di modellazione dati **Avanzate** per creare strutture dei dati personalizzate e compilare modelli utilizzando le personalizzazioni non incluse negli altri strumenti e procedure guidate.  
   
-##  <a name="bkmk_Validate"></a>Test, query e convalida di modelli  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>Test, query e convalida di modelli  
  Utilizzare le procedure guidate sulla barra degli strumenti **Accuratezza e convalida** per utilizzare test standard del settore per la convalida dell'accuratezza dei modelli e per la valutazione dell'affidabilità del set di dati per la creazione di modelli.  
   
  [Analizzare i fattori di influenza chiave &#40;strumenti di analisi tabelle per Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "66086426"
  [Editor avanzato query di data mining](advanced-data-mining-query-editor.md)  
  Per gli utenti esperti, questo strumento fornisce un'interfaccia di trascinamento a DMX. È possibile creare facilmente query di stima o nuovi modelli senza preoccuparsi della sintassi.  
   
-##  <a name="bkmk_ViewModels"></a>Visualizza modelli  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>Visualizza modelli  
  I modelli creati vengono automaticamente aperti per l'esplorazione. Tuttavia, è possibile esplorare i modelli nel server e generare nuove visualizzazioni. Utilizzare [Forme di Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md) per esportare i diagrammi di modello in un'area di disegno personalizzabile.  
   
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "66086426"
  [Documentazione di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  Questa procedura guidata consente di creare report che forniscono un riepilogo statistico del set di dati e dei metadati relativi al modello, per semplificare l'analisi e l'interpretazione.  
   
-##  <a name="bkmk_UsageMgmt"></a>Gestire, documentare e distribuire  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>Gestire, documentare e distribuire  
  Questi strumenti consentono di connettersi a un server di data mining nonché di gestire ed esportare modelli e di monitorare l'attività di data mining.  
   
  [Gestire i modelli &#40;SQL Server componenti aggiuntivi Data mining&#41;](manage-models-sql-server-data-mining-add-ins.md)  
@@ -150,12 +150,12 @@ ms.locfileid: "66086426"
  **Per iniziare**  
  Fare clic sul pulsante **Riquadro attività iniziale** per avviare la configurazione guidata che consente di eseguire in modo semplificato il processo di creazione di una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]e di ottenere le autorizzazioni necessarie per il data mining.  
   
- **Guida**  
+ **?**  
  Il menu a discesa **?** fornisce collegamenti alla Guida, a siti Web e a una configurazione guidata per il completamento dell'installazione e l'avvio del data mining.  
   
  Nella pagina della Guida sono inoltre presenti collegamenti a risorse online, inclusa la Guida per il componente aggiuntivo, e ulteriori video, demo ed esempi.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)   
  [Risoluzione dei problemi relativi ai diagrammi di data mining di Visio &#40;componenti aggiuntivi Data mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   

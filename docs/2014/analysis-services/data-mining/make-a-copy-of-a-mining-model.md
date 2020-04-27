@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084217"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Eseguire una copia di un modello di data mining
@@ -53,11 +53,11 @@ ms.locfileid: "66084217"
   
      Per altre informazioni sull'uso delle finestre di dialogo Editor filtri, vedere [Applicare un filtro a un modello di data mining](apply-a-filter-to-a-mining-model.md).  
   
-4.  Nella casella **** di `AlgorithmParameters` testo della finestra Proprietà fare clic su parametri per l' **algoritmo**e modificare i parametri dell'algoritmo, se lo si desidera.  
+4.  Nella casella **Properties** di `AlgorithmParameters` testo della finestra Proprietà fare clic su parametri per l' **algoritmo**e modificare i parametri dell'algoritmo, se lo si desidera.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](delete-a-filter-from-a-mining-model.md)  

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087903"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Scheda Analisi discriminante tra cluster (Visualizzatore modello di data mining)
   Usare la scheda **Analisi discriminante tra cluster** per confrontare due cluster esistenti in un modello di clustering. È possibile vedere la modalità di rappresentazione di combinazioni diverse di attributi e valori all'interno dei cluster.  
   
- **Per ulteriori informazioni:** [algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -45,12 +45,12 @@ ms.locfileid: "66087903"
   
 |||  
 |-|-|  
-|**Variabili**|Un attributo nel modello di data mining.|  
+|**variables**|Un attributo nel modello di data mining.|  
 |**Valori**|Un valore dell'attributo selezionato in **Variabili**.|  
 |**Predilige \<il cluster 1>**|Il grafico a barre a sinistra rappresenta la probabilità che la coppia attributo-valore selezionata sia rappresentativa del cluster selezionato in **Cluster 1**. È possibile posizionare il mouse sulla barra per vedere il valore rappresentato in percentuale. Si noti che, anche se il valore è zero, non significa che il valore dell'attributo è necessariamente mancante dal cluster, solo che la distribuzione predilige fortemente un cluster rispetto all'altro.|  
 |**Predilige \<il cluster 2>**|Il grafico a barre a destra rappresenta la probabilità che la coppia attributo-valore selezionata sia rappresentativa del cluster selezionato in **Cluster 2**.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

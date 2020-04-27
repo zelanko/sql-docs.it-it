@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095092"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opzioni di aggiornamento della ricerca full-text
@@ -41,7 +41,7 @@ ms.locfileid: "66095092"
  **Ricompilare**  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere molto tempo. Dopo l'aggiornamento, inoltre, potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
- **Reimpostazione**  
+ **Reimposta**  
  I cataloghi full-text vengono ripristinati. Quando si esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file dei cataloghi full-text vengono rimossi, ma i metadati per i cataloghi full-text e gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
  Tutte queste opzioni di aggiornamento consentono ai database aggiornati di sfruttare appieno i miglioramenti delle prestazioni full-text.  

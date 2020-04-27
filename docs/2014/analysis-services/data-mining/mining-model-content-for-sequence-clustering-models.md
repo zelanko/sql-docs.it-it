@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083570"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering (Analysis Services - Data mining)
@@ -71,11 +71,11 @@ ms.locfileid: "66083570"
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
- **Radice del modello** Il valore Cardinality è uguale al numero di cluster più uno. Per altre informazioni, vedere [Cardinalità](#bkmk_cardinality).  
+ **Nodo radice del modello** Il valore di cardinalità corrisponde al numero di cluster più uno. Per altre informazioni, vedere [Cardinalità](#bkmk_cardinality).  
   
- **Nodi cluster** La cardinalità è sempre 1, perché ogni cluster dispone di un singolo nodo figlio che contiene l'elenco delle sequenze nel cluster.  
+ **Nodi del cluster** Il valore di cardinalità è sempre pari a 1, poiché ogni cluster dispone di un unico nodo figlio che contiene l'elenco delle sequenze nel cluster.  
   
- **Nodi sequenza** La cardinalità indica il numero di transizioni incluse nel cluster. Ad esempio, la cardinalità del nodo di sequenza per il nodo radice del modello indica il numero di transizioni trovate nell'intero modello.  
+ **Nodi di sequenza** La cardinalità indica il numero di transizioni incluse in quel cluster. Ad esempio, la cardinalità del nodo di sequenza per il nodo radice del modello indica il numero di transizioni trovate nell'intero modello.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo.  
@@ -92,20 +92,20 @@ ms.locfileid: "66083570"
  Sempre vuoto.  
   
  NODE_PROBABILITY  
- **Radice del modello** Sempre 0.  
+ **Nodo radice del modello** Sempre 0.  
   
- **Nodi cluster** Probabilità adattata del cluster nel modello. La somma delle probabilità adattate non dà 1, perché il metodo di clustering utilizzato nel clustering delle sequenze consente l'appartenenza parziale a più cluster.  
+ **Nodi del cluster** La probabilità adattata del cluster nel modello. La somma delle probabilità adattate non dà 1, perché il metodo di clustering utilizzato nel clustering delle sequenze consente l'appartenenza parziale a più cluster.  
   
- **Nodi sequenza** Sempre 0.  
+ **Nodi di sequenza** Sempre 0.  
   
  **Nodi di transizione** Sempre 0.  
   
  MARGINAL_PROBABILITY  
- **Radice del modello** Sempre 0.  
+ **Nodo radice del modello** Sempre 0.  
   
- **Nodi cluster** Lo stesso valore di NODE_PROBABILITY.  
+ **Nodi del cluster** Lo stesso valore di NODE_PROBABILITY.  
   
- **Nodi sequenza** Sempre 0.  
+ **Nodi di sequenza** Sempre 0.  
   
  **Nodi di transizione** Sempre 0.  
   
@@ -115,11 +115,11 @@ ms.locfileid: "66083570"
  NODE_SUPPORT  
  Numero di transizioni che supportano il nodo. Pertanto, se sono presenti 30 esempi della sequenza "Prodotto A seguito da Prodotto B" nei dati di training, il supporto totale è 30.  
   
- **Radice del modello** Numero totale di transizioni nel modello.  
+ **Nodo radice del modello** Numero totale di transizioni nel modello.  
   
- **Nodi cluster** Supporto non elaborato per il cluster, ovvero il numero di case di training che contribuiscono ai case al cluster.  
+ **Nodi del cluster** Supporto non elaborato per il cluster che indica il numero di case di training che forniscono case al cluster.  
   
- **Nodi sequenza** Sempre 0.  
+ **Nodi di sequenza** Sempre 0.  
   
  **Nodi di transizione** Percentuale di case nel cluster che rappresentano una transizione specifica. Può essere 0 o un valore positivo. Viene calcolato moltiplicando il supporto non elaborato del nodo del cluster per la probabilità del cluster.  
   
@@ -151,14 +151,14 @@ ms.locfileid: "66083570"
 |Nodi di sequenza per singoli cluster|Più nodi con transizioni per sequenze solo in quel cluster|Esattamente le stesse informazioni dei nodi del cluster.|  
 |Transizioni|Nessun elemento figlio|Elenca le transizioni per il primo stato correlato.<br /><br /> Il supporto è un valore di supporto adattato che indica i case che prendono parte a ogni transizione. La probabilità è un valore di probabilità adattato, rappresentato come percentuale.|  
   
-###  <a name="bkmk_NODEDIST"></a>Tabella NODE_DISTRIBUTION  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>Tabella NODE_DISTRIBUTION  
  Nella tabella NODE_DISTRIBUTION vengono fornite informazioni dettagliate sulla probabilità e sul supporto per le transizioni e le sequenze di un cluster specifico.  
   
  Viene sempre aggiunta una riga alla tabella delle transizioni per rappresentare i valori `Missing` possibili. Per informazioni sul significato del `Missing` valore e sul modo in cui influiscono sui calcoli, vedere [valori mancanti &#40;Analysis Services-&#41;di data mining ](missing-values-analysis-services-data-mining.md).  
   
  I calcoli relativi a supporto e probabilità variano a seconda che il calcolo venga applicato ai case di training o al modello finito. Questo perché il metodo di clustering predefinito, Expectation Maximization (EM), presuppone che qualsiasi case possa appartenere a più di un cluster. Quando si calcola il supporto per i case nel modello, è possibile utilizzare conteggi non elaborati e probabilità non elaborate. Tuttavia, le probabilità di una particolare sequenza in un cluster devono essere ponderate dalla somma di ogni possibile combinazione di sequenze e cluster.  
   
-###  <a name="bkmk_cardinality"></a>Cardinalità  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a>Cardinalità  
  In un modello di clustering la cardinalità del nodo padre indica in genere il numero di cluster presenti nel modello. Tuttavia, un modello Sequence Clustering dispone di due tipi di nodo al livello del cluster: un tipo di nodo contiene cluster, l'altro contiene un elenco delle sequenze per il modello nel suo complesso.  
   
  Per conoscere il numero di cluster nel modello, sottrarre uno dal valore NODE_CARDINALITY per il nodo (All). Ad esempio, se il modello ha creato 9 cluster, la cardinalità del nodo radice del modello sarà 10. Questo perché il modello contiene 9 nodi del cluster, ognuno con il proprio nodo di sequenza, più un nodo di sequenza aggiuntivo identificato come cluster 10 che rappresenta le sequenze per il modello.  
@@ -260,7 +260,7 @@ ORDER BY Count(*) DESC
   
  Per ottenere l'elenco dei percorsi osservati eseguendo una query sul contenuto del modello e per analizzare altri esempi di query su un modello Sequence Clustering, vedere [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)  

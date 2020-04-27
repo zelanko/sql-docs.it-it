@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088981"
 ---
 # <a name="query-options-results-text-page"></a>Opzioni query - Risultati (pagina Testo)
@@ -31,25 +31,25 @@ ms.locfileid: "66088981"
  **Includi intestazioni di colonna nel set di risultati**  
  Deselezionare questa casella di controllo se non si desidera applicare un titolo alle colonne.  
   
- **Scorri come risultati ricevuti**  
+ **Scorri i risultati ricevuti**  
  Selezionare questa casella di controllo per mantenere visualizzati gli ultimi record restituiti nella parte inferiore. Deselezionare la casella per mantenere visualizzata la prima riga restituita.  
   
  **Allinea a destra i valori numerici**  
  Selezionare questa casella di controllo per allineare i valori numeri a destra nella colonna in modo da semplificare l'esame delle cifre con un numero di posizioni decimali predefinito.  
   
- **Elimina risultato dopo l'esecuzione della query**  
+ **Elimina risultati dopo l'esecuzione della query**  
  Libera la memoria eliminando i risultati della query dopo che sono stati visualizzati.  
   
  **Visualizza risultati in una scheda separata**  
  Selezionare questa casella di controllo per visualizzare il set di risultati in una nuova finestra del documento invece che nella parte inferiore della finestra della query.  
   
- **Passa alla scheda risultati dopo l'esecuzione della query**  
+ **Passa alla scheda dei risultati al termine della query**  
  Selezionare questa casella per impostare lo stato attivo dello schermo sul set di risultati.  
   
  **Numero massimo di caratteri visualizzati in ogni colonna**  
  Questo valore viene impostato in modo predefinito su 256. È possibile scegliere un valore superiore per visualizzare set di risultati di dimensioni maggiori senza troncamenti.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Salvataggio di un set di risultati in formato testo con le intestazioni  

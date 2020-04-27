@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086935"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Creare finestre di dialogo Relazione tra attributi e Modifica relazione tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "66086935"
   
  **Per visualizzare la finestra di dialogo Crea relazione tra attributi**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni e quindi fare clic sulla scheda **Relazione tra attributi** .  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni, quindi fare clic sulla scheda **Relazione tra attributi** .  
   
 2.  Sulla barra degli strumenti, fare clic sull'icona Nuova relazione tra attributi.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66086935"
   
  **Per visualizzare la finestra di dialogo Modifica relazione tra attributi**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni e quindi fare clic sulla scheda **Relazione tra attributi** .  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni, quindi fare clic sulla scheda **Relazione tra attributi** .  
   
 2.  Nel diagramma delle relazioni tra attributi o nell'elenco **Relazione fra attributi** fare clic con il pulsante destro del mouse su una relazione fra attributi, quindi fare clic su **Modifica relazione tra attributi**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66086935"
  **Tipo di relazione**  
  Specifica il tipo di relazione da creare, **Flessibile (può cambiare nel tempo)** o **Rigida (non cambia nel tempo)**.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Relazioni tra attributi &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

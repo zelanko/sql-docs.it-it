@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093951"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>Modificare le applicazioni in modo da prevedere valori bigint da sysperfinfo.cntr_value
@@ -32,7 +32,7 @@ ms.locfileid: "66093951"
 > [!NOTE]  
 >  sysperfinfo è una vista di compatibilità. Utilizzare invece la vista a gestione dinamica sys. dm_os_performance_counter.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

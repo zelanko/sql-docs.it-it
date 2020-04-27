@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083676"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di clustering (Analysis Services - Data mining)
@@ -37,7 +37,7 @@ ms.locfileid: "66083676"
   
  Il nodo padre contiene statistiche utili che descrivono la distribuzione effettiva di tutti i case di training. Queste statistiche si trovano nella colonna della tabella nidificata, NODE_DISTRIBUTION. Ad esempio, nella tabella seguente sono illustrate diverse righe della tabella NODE_DISTRIBUTION che descrivono la distribuzione di dati demografici dei clienti per il modello di clustering `TM_Clustering`creato nell' [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORTO|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (Mancante)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (Continuo)|  
@@ -91,21 +91,21 @@ ms.locfileid: "66083676"
   
  **Nodo padre** Indica il numero di cluster nel modello.  
   
- **Nodi cluster** Sempre 0.  
+ **Nodi del cluster** Sempre 0.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo.  
   
- **Nodo padre** Sempre NULL  
+ **Nodo padre** Sempre NULL.  
   
- **Nodi cluster** In genere 000.  
+ **Nodi del cluster** Solitamente 000.  
   
  NODE_DESCRIPTION  
  Descrizione del nodo.  
   
- **Nodo padre** Sempre **(tutti)**.  
+ **Nodo padre** Sempre **(All)**.  
   
- **Nodi cluster** Elenco delimitato da virgole degli attributi primari che distinguono il cluster dagli altri cluster.  
+ **Nodi del cluster** Elenco delimitato da virgole degli attributi principali che distinguono il cluster dagli altri.  
   
  NODE_RULE  
  Opzione non utilizzata per i modelli di clustering.  
@@ -116,7 +116,7 @@ ms.locfileid: "66083676"
  NODE_PROBABILITY  
  Probabilità associata a questo nodo. **Nodo padre** Sempre 1.  
   
- **Nodi cluster** La probabilità rappresenta la probabilità composta degli attributi, con alcune modifiche a seconda dell'algoritmo utilizzato per creare il modello di clustering.  
+ **Nodi del cluster** La probabilità rappresenta la probabilità composta degli attributi, con alcuni adattamenti a seconda dell'algoritmo usato per creare il modello di clustering.  
   
  MARGINAL_PROBABILITY  
  Probabilità di raggiungere il nodo dal nodo padre. In un modello di clustering la probabilità marginale corrisponde sempre alla probabilità del nodo.  
@@ -124,16 +124,16 @@ ms.locfileid: "66083676"
  NODE_DISTRIBUTION  
  Tabella contenente l'istogramma delle probabilità del nodo.  
   
- **Nodo padre** Vedere l'introduzione a questo argomento.  
+ **Nodo padre** Vedere l'introduzione di questo argomento.  
   
- **Nodi cluster** Rappresenta la distribuzione di attributi e valori per i case inclusi nel cluster.  
+ **Nodi del cluster** Rappresenta la distribuzione di attributi e valori per i case inclusi nel cluster.  
   
  NODE_SUPPORT  
  Numero di case che supportano il nodo. **Nodo padre** Indica il numero di case di training per l'intero modello.  
   
- **Nodi cluster** Indica le dimensioni del cluster come numero di case.  
+ **Nodi del cluster** Indica la dimensione del cluster come numero di case.  
   
- **Nota** Se il modello usa il clustering K-means, ogni case può appartenere a un solo cluster. Se invece il modello utilizza il clustering EM, ogni case può appartenere a cluster diversi e gli viene assegnata una distanza ponderata per ogni cluster cui appartiene. Pertanto, per i modelli EM la somma del supporto per un singolo cluster è maggiore del supporto per il modello complessivo.  
+ **Nota** Se il modello usa il clustering K-medie, ogni case può appartenere a un unico cluster. Se invece il modello utilizza il clustering EM, ogni case può appartenere a cluster diversi e gli viene assegnata una distanza ponderata per ogni cluster cui appartiene. Pertanto, per i modelli EM la somma del supporto per un singolo cluster è maggiore del supporto per il modello complessivo.  
   
  MSOLAP_MODEL_COLUMN  
  Opzione non utilizzata per i modelli di clustering.  
@@ -141,25 +141,24 @@ ms.locfileid: "66083676"
  MSOLAP_NODE_SCORE  
  Visualizza un punteggio associato al nodo.  
   
- **Nodo padre** Punteggio BIC (Bayes Information Criterion) per il modello di clustering.  
+ **Nodo padre** Punteggio BIC (Bayesian Information Criterion) per il modello di clustering.  
   
- **Nodi cluster** Sempre 0.  
+ **Nodi del cluster** Sempre 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Etichetta utilizzata a scopo di visualizzazione. Questa didascalia non può essere modificata.  
   
  **Nodo padre** Tipo di modello: modello di cluster  
   
- **Nodi cluster** Nome del cluster. Esempio: Cluster 1.  
+ **Nodi del cluster** Nome del cluster. Esempio: Cluster 1.  
   
 ## <a name="remarks"></a>Osservazioni  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per la creazione di un modello di clustering. Se non si conosce il metodo impiegato per creare il modello in uso, è possibile recuperare a livello di programmazione i metadati del modello, utilizzando un client ADOMD o AMO oppure eseguendo una query sul set di righe dello schema di data mining. Per altre informazioni, vedere [Eseguire query sui parametri usati per creare un modello di data mining](query-the-parameters-used-to-create-a-mining-model.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per la creazione di un modello di clustering. Se non si conosce il metodo impiegato per creare il modello in uso, è possibile recuperare a livello di programmazione i metadati del modello, utilizzando un client ADOMD o AMO oppure eseguendo una query sul set di righe dello schema di data mining. Per altre informazioni, vedere [Eseguire query sui parametri usati per creare un modello di data mining](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La struttura e il contenuto del modello rimangono invariati, indipendentemente dal metodo di clustering o dai parametri utilizzati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   

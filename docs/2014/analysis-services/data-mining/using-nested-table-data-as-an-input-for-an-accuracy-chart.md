@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082724"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza
@@ -41,7 +41,7 @@ ms.locfileid: "66082724"
   
 2.  Selezionare la scheda **Grafico di accuratezza modello di data mining** , quindi selezionare la scheda **Selezione input** .  
   
-3.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **specifica un set di dati diverso**.  
+3.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **Specifica un set di dati diverso**.  
   
 4.  Fare clic sul pulsante Sfoglia **(...)** per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66082724"
   
      Se è necessario modificare la relazione tra la tabella nidificata e la tabella del case, fare clic su **Modifica join** per aprire la finestra di dialogo **Crea relazione** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md)   
  [Applicare filtri ai dati di test del modello](apply-filters-to-model-testing-data.md)  
   

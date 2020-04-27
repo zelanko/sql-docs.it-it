@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094895"
 ---
 # <a name="how-to-export-reports"></a>Procedura: Esportazione di report
@@ -37,11 +37,11 @@ ms.locfileid: "66094895"
   
 4.  Nella finestra di dialogo **Esporta file di report** , digitare un nome di file, scegliere una destinazione, quindi fare clic su **OK**. Il file viene salvato in formato CSV (valori delimitati da virgole). È possibile utilizzare Microsoft Excel o applicazioni simili per aprire il file. Se si desidera un altro formato per i dati, è possibile copiare le informazioni da Excel in Microsoft Word o in altre applicazioni.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedura: avvio di preparazione aggiornamento](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [Procedura: esecuzione dell'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Procedure per preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

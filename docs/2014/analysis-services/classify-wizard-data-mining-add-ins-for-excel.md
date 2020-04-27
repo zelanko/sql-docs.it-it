@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087925"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Classificazione (componenti aggiuntivi Data mining per Excel)
@@ -81,7 +81,7 @@ ms.locfileid: "66087925"
 ### <a name="requirements"></a>Requisiti  
  Per utilizzare la procedura guidata **classificazione** , è necessario essere connessi a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un database di. Per informazioni su come creare una connessione, vedere [connettersi ai dati di origine &#40;client di data mining per&#41;Excel ](connect-to-source-data-data-mining-client-for-excel.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

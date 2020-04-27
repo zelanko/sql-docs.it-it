@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088134"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>Scelta della modalità di importazione dei dati (SSAS)
@@ -27,7 +27,7 @@ ms.locfileid: "66088134"
  Scegliere questa opzione se si desidera importare i dati selezionandoli da un elenco.  
   
 > [!NOTE]  
->  Questa opzione è disponibile solo quando l'origine dati selezionata espone informazioni sullo schema supportate dall' **importazione guidata tabella** .  
+>  Questa opzione è disponibile solo quando l'origine dati selezionata espone informazioni sullo schema supportate dall' **Importazione guidata tabella** .  
   
  **Scrivi una query SQL per specificare i dati da importare**  
  Selezionare questa opzione se si desidera importare i dati utilizzando una query SQL. La query SQL consente di modificare i dati importati. È ad esempio possibile unire dati di tabelle diverse o selezionare solo le righe che soddisfano determinati criteri.  

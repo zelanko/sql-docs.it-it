@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083593"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
@@ -191,7 +191,7 @@ ms.locfileid: "66083593"
 ## <a name="remarks"></a>Osservazioni  
  Lo scopo del training di un modello di rete neurale consiste nel determinare i pesi associati a ogni transizione da un input a un punto medio e da un punto medio a un endpoint. Di conseguenza, il livello di input del modello esiste principalmente per archiviare i valori effettivi utilizzati per la compilazione del modello. Nel livello nascosto vengono archiviati i pesi calcolati e vengono forniti nuovamente i puntatori agli attributi di input. Nel livello di output vengono archiviati i valori stimabili e vengono forniti nuovamente i puntatori ai punti medi nel livello nascosto.  
   
-##  <a name="bkmk_NodeIDs"></a>Utilizzo dei nomi e degli ID dei nodi  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Utilizzo dei nomi e degli ID dei nodi  
  La denominazione dei nodi in un modello di rete neurale fornisce informazioni aggiuntive sul tipo di nodo, per rendere più semplice la correlazione tra il livello nascosto e il livello di input e tra il livello di output e il livello nascosto. Nella tabella seguente viene illustrata la convenzione per gli ID assegnati ai nodi in ogni livello.  
   
 |Tipo di nodo|Convenzione per ID del nodo|  
@@ -210,17 +210,17 @@ ms.locfileid: "66083593"
   
  Analogamente, è possibile determinare quali livelli nascosti sono correlati a un attributo di output visualizzando la tabella NODE_DISTRIBUTION nel nodo di output (NODE_TYPE = 23). Ogni riga della tabella NODE_DISTRIBUTION contiene l'ID di un nodo di livello nascosto, insieme al coefficiente correlato.  
   
-##  <a name="bkmk_NodeDistTable"></a>Interpretazione delle informazioni nella tabella NODE_DISTRIBUTION  
+##  <a name="interpreting-the-information-in-the-node_distribution-table"></a><a name="bkmk_NodeDistTable"></a> Interpretazione delle informazioni nella tabella NODE_DISTRIBUTION  
  In alcuni nodi la tabella NODE_DISTRIBUTION può essere vuota. Tuttavia, per nodi di input, nodi del livello nascosto e nodi di output, nella tabella NODE_DISTRIBUTION vengono archiviate informazioni importanti e interessanti sul modello. Per agevolare l'interpretazione di queste informazioni, la tabella NODE_DISTRIBUTION contiene una colonna VALUETYPE per ogni riga che indica se il valore nella colonna ATTRIBUTE_VALUE è discreto (4), discretizzato (5) o continuo (3).  
   
 ### <a name="input-nodes"></a>Nodi di input  
  Il livello di input contiene un nodo per ogni valore dell'attributo utilizzato nel modello.  
   
- **Attributo discreto:** Nel nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo discreto:** nel nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
- **Attributo numerico discretizzazione:** Il nodo di input archivia il nome dell'attributo e il valore, che può essere un intervallo o un valore specifico. Tutti valori vengono rappresentati tramite espressioni, ad esempio '77,4 – 87,4' < 64,0' per il valore [Time Per Issue]. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo numerico discretizzato:** nel nodo di input vengono archiviati il nome dell'attributo e il valore, che può essere costituito da un intervallo o da un valore specifico. Tutti valori vengono rappresentati tramite espressioni, ad esempio '77,4 – 87,4' < 64,0' per il valore [Time Per Issue]. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
- **Attributo continuo:** Nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo continuo:** nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
 ### <a name="hidden-layer-nodes"></a>Nodi del livello nascosto  
  Il livello nascosto contiene un numero variabile di nodi. In ogni nodo, la tabella NODE_DISTRIBUTION contiene mapping dal livello nascosto ai nodi nel livello di input. La colonna ATTRIBUTE_NAME contiene un ID del nodo che corrisponde a un nodo nel livello di input. La colonna ATTRIBUTE_VALUE contiene il peso associato a tale combinazione di un nodo di input e di un nodo del livello nascosto. L'ultima riga nella tabella contiene un coefficiente che rappresenta il peso di tale nodo nascosto nel livello nascosto.  
@@ -230,13 +230,13 @@ ms.locfileid: "66083593"
   
  La tabella NODE_DISTRIBUTION contiene le informazioni aggiuntive seguenti, a seconda del tipo di attributo:  
   
- **Attributo discreto:** Le due righe finali della tabella NODE_DISTRIBUTION contengono un coefficiente per il nodo nel suo complesso e il valore corrente dell'attributo.  
+ **Attributo discreto:** le due righe finali della tabella NODE_DISTRIBUTION contengono un coefficiente per il nodo nel suo complesso e il valore corrente dell'attributo.  
   
- **Attributo numerico discretizzazione:** Identico agli attributi discreti, ad eccezione del fatto che il valore dell'attributo è un intervallo di valori.  
+ **Attributo numerico discretizzato:** identico agli attributi discreti, ad eccezione del fatto che il valore dell'attributo è un intervallo di valori.  
   
- **Attributo continuo:** Le due righe finali della tabella NODE_DISTRIBUTION contengono la media dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
+ **Attributo continuo:** le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)  

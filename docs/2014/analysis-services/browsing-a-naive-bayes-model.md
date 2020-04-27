@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088475"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Esplorazione di un modello Naïve Bayes
@@ -24,18 +24,18 @@ ms.locfileid: "66088475"
   
 -   [Profili attributo](#bkmk_AttProf)  
   
--   [Caratteristiche degli attributi](#bkmk_AttChar)  
+-   [Caratteristiche attributo](#bkmk_AttChar)  
   
--   [Discriminazione degli attributi](#bkmk_AttDisc)  
+-   [Analisi discriminante attributi](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>Esplorare il modello  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Esplorare il modello  
  Lo scopo del visualizzatore è consentire di esplorare l'interazione tra gli attributi di input e output (input e variabili dipendenti) che sono stati individuati dal modello [!INCLUDE[msCoName](../includes/msconame-md.md)] Naïve Bayes.  
   
  Se si desidera provare il Visualizzatore Naive Bayes, utilizzare la [procedura guidata classificazione &#40;componenti aggiuntivi Data mining per&#41;](classify-wizard-data-mining-add-ins-for-excel.md) guidata di Excel sulla barra multifunzione data mining, fare clic sull'opzione **Avanzate** e modificare l'algoritmo in modo da utilizzare l'algoritmo Naive Bayes.  
   
  Per questi esempi, sono stati usati i dati di origine nella cartella di lavoro di esempio e la colonna **Yearly Income**è stata raggruppata in cinque gruppi di reddito, da **molto bassa** a **molto alta**. Nel modello Naïve Bayes sono stati quindi analizzati i fattori correlati a ogni categoria di reddito.  
   
-###  <a name="bkmk_DepNet"></a>Rete di dipendenze  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>Rete di dipendenze  
  La prima finestra che verrà usata è la **rete di dipendenze**. Vengono visualizzati immediatamente gli input strettamente correlati al risultato selezionato.  
   
  ![Rete di dipendenze in Visualizzatore Naive Bayes](media/dm13-nb.gif "Rete di dipendenze in Visualizzatore Naive Bayes")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088475"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>Profili attributo  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a> Profili attributo  
  Le finestre **Profili attributo** offrono un'indicazione visiva del modo in cui tutte le altre variabili sono correlate ai singoli risultati.  
   
 ##### <a name="explore-the-profiles"></a>Esplorazione del profili  
@@ -73,7 +73,7 @@ ms.locfileid: "66088475"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>Caratteristiche degli attributi  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a>Caratteristiche degli attributi  
  La vista **Caratteristiche attributo** è utile per l'analisi approfondita di una determinata variabile di risultato e dei fattori che contribuiscono.  
   
  ![Caratteristiche attributi in Visualizzatore Naive Bayes](media/dm13-nb-viewer.gif "Caratteristiche attributi in Visualizzatore Naive Bayes")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088475"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>Discriminazione degli attributi  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a>Discriminazione degli attributi  
  La visualizzazione analisi **discriminante attributi** consente di confrontare due risultati o un risultato rispetto a tutti gli altri risultati.  
   
  ![Discriminante attributi in Visualizzatore Naive Bayes](media/dm13-nb-attdisc.gif "Discriminante attributi in Visualizzatore Naive Bayes")  
@@ -111,7 +111,7 @@ ms.locfileid: "66088475"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

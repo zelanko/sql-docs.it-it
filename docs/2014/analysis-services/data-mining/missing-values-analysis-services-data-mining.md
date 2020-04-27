@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083362"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
@@ -108,12 +108,12 @@ ms.locfileid: "66083362"
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare i flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)|  
+|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md)|  
 |Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)|  
 |Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
   

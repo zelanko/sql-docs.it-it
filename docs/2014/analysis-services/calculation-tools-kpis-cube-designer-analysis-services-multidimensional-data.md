@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088264"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -51,27 +51,27 @@ ms.locfileid: "66088264"
  Selezionare questa opzione per copiare negli Appunti l'elemento specificato in **Metadati** o **Funzioni** .  
   
 > [!NOTE]  
->  Questa opzione non viene visualizzata se si seleziona **modelli** .  
+>   Questa opzione non viene visualizzata se si seleziona **Modelli** .  
   
 > [!NOTE]  
->  Questa opzione è disabilitata se non è possibile copiare il membro selezionato, ad esempio la cartella **set** di una dimensione visualizzata in **metadati** o la cartella del gruppo di funzioni per una funzione visualizzata in **funzioni**.  
+>   Questa opzione è disabilitata se non è possibile copiare il membro selezionato, ad esempio la cartella **Set** di una dimensione visualizzata in **Metadati** o la cartella del gruppo di funzioni relativa alla funzione visualizzata in **Funzioni**.  
   
  **Filtra membri**  
  Selezionare questa opzione per visualizzare la finestra di dialogo **Filtra membri** e filtrare i membri visualizzati per l'elemento selezionato in **Metadati**. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se si seleziona **metadati** .  
+>   Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
   
 > [!NOTE]  
->  Questa opzione è abilitata solo se nei **metadati**è selezionato un livello per un attributo.  
+>   Questa opzione è attivata solo se si seleziona un livello per un attributo in **Metadati**.  
   
  **Aggiungi modello**  
  Selezionare questa opzione per aggiungere un nuovo membro calcolato, set denominato o comando script in base al modello selezionato nello script del cubo e visualizzare il riquadro **Editor form KPI** in visualizzazione Form.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se si seleziona **metadati** .  
+>   Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

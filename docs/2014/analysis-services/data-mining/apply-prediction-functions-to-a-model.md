@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086134"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
@@ -68,7 +68,7 @@ ms.locfileid: "66086134"
     |||  
     |-|-|  
     |**\<Nome modello>**|Selezionare questa opzione per includere i valori del modello di data mining nell'output. È possibile aggiungere unicamente colonne stimabili.<br /><br /> Quando si aggiunge una colonna dal modello, il risultato restituito è l'elenco non distinto di valori in quella colonna.<br /><br /> Le colonne che si aggiungono tramite questa opzione sono incluse nella parte SELECT dell'istruzione DMX risultante.|  
-    |**Funzione di stima**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Gli elementi dell'elenco preceduti da $ (AdjustedProbability $) rappresentano le colonne della tabella nidificata che viene restituita quando si utilizza la funzione, `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
+    |**Prediction Function**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Gli elementi dell'elenco preceduti da $ (AdjustedProbability $) rappresentano le colonne della tabella nidificata che viene restituita quando si utilizza la funzione, `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
     |**Espressione personalizzata**|Selezionare questa opzione per digitare un'espressione personalizzata e quindi assegnare un alias all'output.<br /><br /> L'espressione personalizzata viene aggiunta alla parte SELECT della query di stima DMX risultante.<br /><br /> Questa opzione è utile se si desidera aggiungere del testo per l'output con ogni riga, per chiamare funzioni VB o stored procedure personalizzate.<br /><br /> Per informazioni sull'uso di funzioni VBA e di Excel da DMX, vedere [Funzioni VBA in MDX e DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Dopo avere aggiunto ogni funzione o espressione, passare alla vista DMX per vedere come la funzione viene aggiunta all'interno dell'istruzione DMX.  
@@ -118,13 +118,13 @@ ms.locfileid: "66086134"
   
      Nella tabella seguente vengono illustrati i risultati previsti:  
   
-    |Bike Buyer|$Cluster|SUPPORTO|CEILING|  
+    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
  Se si desidera aggiungere altre clausole altrove nell'istruzione, ad esempio se si desidera aggiungere una clausola WHERE, non è possibile aggiungerla utilizzando la griglia; per prima cosa, è necessario passare alla visualizzazione DMX.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Query di data mining](data-mining-queries.md)  
   
   

@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089076"
 ---
 # <a name="query-options-execution-ansi-page"></a>Esecuzione di Opzioni query (pagina ANSI)
   Utilizzare questa pagina per specificare che [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eseguirà le query utilizzando tutte o una parte delle impostazioni specificate nello standard ISO (ANSI).  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **IMPOSTA ANSI_DEFAULTS**  
+ **SET ANSI_DEFAULTS**  
  Consente di selezionare tutte le impostazioni ISO predefinite. Per impostazione predefinita, la casella non è disponibile perché solo alcune impostazioni ISO sono configurate.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -46,14 +46,14 @@ ms.locfileid: "66089076"
   
 -   Se questa casella di controllo è selezionata e le funzioni di aggregazione, ad esempio SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP o COUNT, includono valori Null, viene generato un messaggio di avviso. Se l'opzione è impostata su **OFF**, non viene generato alcun messaggio di avviso.  
   
--   Quando questa casella di controllo è deselezionata, viene eseguito il rollback dell'istruzione e visualizzato un messaggio di errore a seguito di errori di divisione per zero e di overflow aritmetico. Quando è impostata su OFF, a seguito di errori di divisione per zero e di overflow aritmetico vengono restituiti valori Null. Un errore di divisione per zero o di overflow aritmetico si verifica se viene eseguita un'operazione INSERT o UPDATE in una colonna di tipo character, Unicode o binary in cui la lunghezza di un nuovo valore supera le dimensioni massime della colonna. Se l'opzione **SET ANSI_WARNINGS** è impostata su ON, l'operazione INSERT o UPDATE viene annullata, come specificato dallo standard ISO. Nelle colonne di testo vengono ignorati gli spazi vuoti finali, mentre nelle colonne binarie vengono ignorati i valori finali Null. Quando l'opzione è impostata su OFF, i dati vengono troncati in base alle dimensioni della colonna e l'istruzione ha esito positivo.  
+-   Quando questa casella di controllo è deselezionata, viene eseguito il rollback dell'istruzione e visualizzato un messaggio di errore a seguito di errori di divisione per zero e di overflow aritmetico. Quando è impostata su OFF, a seguito di errori di divisione per zero e di overflow aritmetico vengono restituiti valori Null. Un errore di divisione per zero o di overflow aritmetico si verifica se viene eseguita un'operazione INSERT o UPDATE in una colonna di tipo character, Unicode o binary in cui la lunghezza di un nuovo valore supera le dimensioni massime della colonna. Se l' **impostazione ANSI_WARNINGS è impostata** su on, l'operazione INSERT o Update viene annullata come specificato dallo standard ISO. Nelle colonne di testo vengono ignorati gli spazi vuoti finali, mentre nelle colonne binarie vengono ignorati i valori finali Null. Quando l'opzione è impostata su OFF, i dati vengono troncati in base alle dimensioni della colonna e l'istruzione ha esito positivo.  
   
  Questa opzione è selezionata per impostazione predefinita.  
   
  **SET ANSI_NULLS**  
  Consente di specificare il funzionamento conforme allo standard ISO degli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) quando questi vengono utilizzati con valori Null. Quando **SET ANSI_NULLS** è selezionata, tutti i confronti con un valore Null restituiscono UNKNOWN, in conformità allo standard ISO. Quando l'opzione **SET ANSI_NULLS** non è selezionata, i confronti di tutti i dati con un valore Null restituiscono TRUE, se il valore dei dati è NULL. Questa opzione è selezionata per impostazione predefinita.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

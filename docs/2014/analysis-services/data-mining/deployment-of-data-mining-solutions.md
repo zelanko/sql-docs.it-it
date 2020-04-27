@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084716"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Distribuzione di soluzioni di data mining
@@ -34,7 +34,7 @@ ms.locfileid: "66084716"
   
  In questa sezione vengono fornite informazioni dettagliate sulle opzioni di distribuzione.  
   
- [Requisiti per la distribuzione di soluzioni di data mining](#bkmk_Reqs)  
+ [Requisiti per la distribuzione delle soluzioni di data mining](#bkmk_Reqs)  
   
  [Distribuzione di una soluzione relazionale](#bkmk_RelationalSltn)  
   
@@ -47,28 +47,28 @@ ms.locfileid: "66084716"
   
  [Esportare e importare gli oggetti di data mining](export-and-import-data-mining-objects.md)  
   
-##  <a name="bkmk_Reqs"></a>Requisiti per la distribuzione di soluzioni di data mining  
+##  <a name="requirements-for-deployment-of-data-mining-solutions"></a><a name="bkmk_Reqs"></a>Requisiti per la distribuzione di soluzioni di data mining  
  L'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a cui si distribuisce la soluzione deve essere in esecuzione in una modalità che supporta oggetti multidimensionali e oggetti di data mining; non è infatti possibile distribuire oggetti di data mining a un'istanza che ospita modelli tabulari o dati PowerPivot.  
   
  Pertanto, quando si crea una soluzione di data mining in Visual Studio, assicurarsi di usare il modello **Progetto multidimensionale e di data mining di Analysis Services**.  
   
  Quando si distribuisce la soluzione, gli oggetti utilizzati per il data mining vengono creati nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificata, in un database con lo stesso nome del file della soluzione.  
   
-###  <a name="bkmk_RelationalSltn"></a>Distribuzione di una soluzione relazionale  
+###  <a name="deploying-a-relational-solution"></a><a name="bkmk_RelationalSltn"></a>Distribuzione di una soluzione relazionale  
  Quando si distribuisce una soluzione di data mining relazionale, gli oggetti di data mining obbligatori vengono creati all'interno di un nuovo database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e gli oggetti vengono elaborati per impostazione predefinita. Tramite la proprietà di configurazione **Opzione di elaborazione**è possibile modificare le opzioni di elaborazione. Per altre informazioni, vedere [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
  Per impostazione predefinita, solo le modifiche incrementali vengono distribuite ogni volta. In altre parole, è possibile modificare un modello di data mining e alla successiva distribuzione del progetto solo quel modello di data mining verrà aggiornato. Tuttavia, se più client modificano il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile che si verifichino degli errori. Per modificare la modalità di distribuzione predefinita in modo che l'intero database venga aggiornato alla distribuzione della soluzione, modificare la proprietà **Modalità distribuzione**  
   
  In una soluzione di data mining relazionale, gli unici oggetti che devono essere distribuiti sono la definizione dell'origine dati, eventuali viste origine dati utilizzate, le strutture di data mining e tutti i modelli di data mining dipendenti.  
   
-###  <a name="bkmk_MDSltn"></a>Distribuzione di una soluzione multidimensionale  
+###  <a name="deploying-a-multidimensional-solution"></a><a name="bkmk_MDSltn"></a>Distribuzione di una soluzione multidimensionale  
  Quando si distribuisce una soluzione di data mining multidimensionale, questa soluzione crea gli oggetti di data mining all'interno dello stesso database del cubo di origine.  
   
  Quando si elabora un modello o una struttura di data mining, è necessario elaborare anche il cubo di origine. Per questo motivo, la distribuzione di una soluzione che utilizza modelli di data mining OLAP può prendere più tempo rispetto alle soluzioni di data mining relazionali.  
   
  In genere, gli oggetti di data mining utilizzano anche le stesse origini dati e le stesse viste origine dati utilizzate per il cubo. Tuttavia, è possibile aggiungere origini dati e viste origine dati destinate in modo specifico al data mining. Ad esempio, un cubo in genere non contiene dati su clienti potenziali o dati esterni non utilizzati negli oggetti multidimensionali.  
   
-##  <a name="bkmk_Resources"></a>Risorse correlate  
+##  <a name="related-resources"></a><a name="bkmk_Resources"></a>Risorse correlate  
  [Spostamento di oggetti di data mining](moving-data-mining-objects.md)  
   
  Se il modello è basato unicamente su dati relazionali, l'esportazione e l'importazione di oggetti tramite DMX è il modo più semplice per spostare i modelli.  
@@ -77,13 +77,13 @@ ms.locfileid: "66084716"
   
  Quando i modelli utilizzano un cubo come origine dati, fare riferimento a questo argomento per ottenere ulteriori informazioni sullo spostamento dei modelli e dei dati del cubo di supporto.  
   
- [Distribuzione di progetti Analysis Services &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Vengono fornite informazioni generali sulla distribuzione di progetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e vengono descritte le proprietà che è possibile impostare come parte della configurazione del progetto.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Elaborazione di oggetti del modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Interfacce di query di data mining](data-mining-query-tools.md)   
- [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

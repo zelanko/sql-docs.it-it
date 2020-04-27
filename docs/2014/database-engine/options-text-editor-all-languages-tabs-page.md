@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089910"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opzioni (Editor di testo - Tutte le lingue - pagina Schede)
@@ -38,7 +38,7 @@ ms.locfileid: "66089910"
  **Intelligenti**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito alla pressione di INVIO viene posizionata in base al contesto.  
   
-## <a name="tabs"></a>Tabulazioni  
+## <a name="tabs"></a>Schede  
  **Dimensione tabulazione**  
  Consente di impostare la distanza in spazi tra le tabulazioni. Il valore predefinito è quattro spazi.  
   

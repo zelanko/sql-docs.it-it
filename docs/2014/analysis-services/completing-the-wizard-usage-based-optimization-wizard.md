@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087555"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Completamento procedura guidata (Ottimizzazione guidata basata sulle statistiche di utilizzo)
@@ -35,7 +35,7 @@ ms.locfileid: "66087555"
  **Elabora partizioni immediatamente**  
  Consente di elaborare le partizioni selezionate al termine della procedura guidata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

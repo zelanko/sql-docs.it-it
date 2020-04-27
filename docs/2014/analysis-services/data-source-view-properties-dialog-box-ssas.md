@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082495"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Finestra di dialogo Proprietà vista origine dati (SSAS)
@@ -29,7 +29,7 @@ ms.locfileid: "66082495"
 |**Nome**|Consente di visualizzare il nome della vista origine dati.|  
 |**ID**|Consente di visualizzare l'identificatore della vista origine dati.|  
 |**Descrizione**|Consente di visualizzare la descrizione della vista origine dati.|  
-|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione della vista origine dati.|  
+|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione della vista origine dati.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati per la vista origine dati.|  
 |**Origine dati primaria**|Consente di visualizzare il nome dell'origine dei dati primaria associata alla vista origine dati.|  
   

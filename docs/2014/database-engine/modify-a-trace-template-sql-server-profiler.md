@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090002"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modificare un modello di traccia (SQL Profiler)
@@ -30,7 +30,7 @@ ms.locfileid: "66090002"
   
 2.  Nella scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** è possibile modificare il tipo di server e il nome del modello oppure scegliere di usare un modello predefinito per il tipo di server.  
   
-3.  Nella scheda **Selezione eventi**usare il controllo griglia per aggiungere o rimuovere eventi e colonne di dati dal file di traccia, nel modo seguente.  
+3.  Nella scheda **Selezione eventi**utilizzare il controllo griglia per aggiungere o rimuovere eventi e colonne di dati dal file di traccia, come indicato di seguito.  
   
     -   Per aggiungere un evento, espandere la categoria di eventi appropriata nella colonna **Eventi** e quindi selezionare il nome dell'evento.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66090002"
   
 4.  Fare clic su **Salva**oppure su **Salva con nome**per salvare il modello di traccia con un altro nome.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivare un modello da un file di traccia o da una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

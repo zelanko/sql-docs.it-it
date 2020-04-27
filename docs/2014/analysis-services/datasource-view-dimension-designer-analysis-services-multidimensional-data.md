@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082352"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vista origine dati (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -57,13 +57,13 @@ ms.locfileid: "66082352"
  Selezionare questa opzione per disporre gli oggetti in un modello diagonale.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è selezionata l'opzione **passa a layout rettangolare** .  
+>  Questa opzione viene visualizzata solo se è selezionata l'opzione **Passa a layout rettangolare** .  
   
  **Passa a layout rettangolare**  
  Selezionare questa opzione per disporre gli oggetti in un modello rettangolare.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è selezionata l'opzione **passa a layout diagonale** .  
+>  Questa opzione viene visualizzata solo se è selezionata l'opzione **Passa a layout diagonale** .  
   
  **Modifica vista origine dati**  
  Consente di visualizzare **Progettazione vista origine dati** per la vista origine dati associata alla dimensione. Per altre informazioni su **Progettazione vista origine dati**, vedere [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "66082352"
  **Nascondi tabella**  
  Consente di rimuovere la tabella dal riquadro.  
   
- **Esplorazione dati**  
+ **Esplorare i dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella selezionata.  
   
  **Modifica vista origine dati**  
@@ -112,7 +112,7 @@ ms.locfileid: "66082352"
  **Nuovo attributo da colonna**  
  Consente di visualizzare nel riquadro le tabelle correlate a quella selezionata nella vista origine dati.  
   
- **Esplorazione dati**  
+ **Esplorare i dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella contenente la colonna selezionata.  
   
  **Modifica vista origine dati**  
@@ -125,12 +125,12 @@ ms.locfileid: "66082352"
  Le opzioni elencate nella tabella seguente sono disponibili nel menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse su una relazione nel riquadro **Vista origine dati** .  
   
  **Modifica vista origine dati**  
- Consente di visualizzare lo strumento **Progettazione vista origine dati** per la vista origine dati contenente la relazione selezionata. Per altre informazioni su **Progettazione vista origine dati**, vedere [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Consente di visualizzare **Progettazione vista origine dati** per la vista origine dati che contiene la relazione selezionata. Per altre informazioni su **Progettazione vista origine dati**, vedere [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Proprietà**  
  Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla relazione selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Struttura dimensione &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
  [Attributi &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   

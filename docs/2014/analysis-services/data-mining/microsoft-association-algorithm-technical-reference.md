@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084124"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
@@ -42,11 +42,11 @@ ms.locfileid: "66084124"
  È inoltre possibile creare modelli di associazione per gli attributi numerici. Se gli attributi sono continui, i numeri possono essere *discretizzati* o raggruppati in bucket. I valori discretizzati possono quindi essere gestiti come valori booleani o come coppie attributo-valore.  
   
 ### <a name="support-probability-and-importance"></a>Supporto, probabilità e priorità  
- *Supporto*, che talvolta è indicato come *Frequency*, indica il numero di case che contengono l'elemento o la combinazione di elementi di destinazione. Nel modello è possibile includere solo gli elementi che hanno almeno la quantità specificata di supporto.  
+ Il*supporto*, definito a volte *frequenza*, indica il numero di case che contengono l'elemento o la combinazione di elementi di destinazione. Nel modello è possibile includere solo gli elementi che hanno almeno la quantità specificata di supporto.  
   
  Per *set di elementi frequente* si intende una raccolta di elementi in cui anche la combinazione di elementi dispone di supporto superiore alla soglia definita dal parametro MINIMUM_SUPPORT. Se ad esempio il set di elementi è {A,B,C} e il valore MINIMUM_SUPPORT è 10, ogni singolo elemento A, B e C e la combinazione di elementi {A,B,C} devono trovarsi in almeno 10 case per essere inclusi nel modello.  
   
- **Nota** È inoltre possibile controllare il numero di set di elementi in un modello di data mining specificando la lunghezza massima di un set di elementi, dove length indica il numero di elementi.  
+ **Nota** È anche possibile controllare il numero di set di elementi in un modello di data mining specificando la lunghezza massima di un set di elementi, dove per lunghezza si intende il numero di elementi.  
   
  Per impostazione predefinita, il supporto di qualsiasi elemento o set di elementi specifico rappresenta un conteggio dei case che contengono l'elemento o gli elementi. Tuttavia, è anche possibile esprimere MINIMUM_SUPPORT come percentuale del totale dei case del set di dati, digitando il numero come valore decimale minore di 1. Se ad esempio si specifica un valore MINIMUM_SUPPORT pari a 0,03, significa che almeno il 3% del totale dei case del set di dati deve contenere l'elemento o il set di elementi ai fini dell'inclusione nel modello. È necessario eseguire prove con il modello per determinare se è preferibile utilizzare un conteggio o una percentuale.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "66084124"
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Algoritmo Microsoft Association](microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di associazione &#40;Analysis Services-Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

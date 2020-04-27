@@ -13,10 +13,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089322"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Opzioni (risultati query-Analysis Server-pagina generale)
@@ -29,7 +29,7 @@ ms.locfileid: "66089322"
  **Emetti segnale acustico predefinito di Windows al completamento di un batch di query**  
  Consente di impostare l'emissione di un segnale acustico al termine dell'esecuzione di un batch di query.  
   
- **Ripristina impostazioni predefinite**  
+ **Ripristina predefiniti**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

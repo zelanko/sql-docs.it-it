@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086781"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea relazione o Modifica relazione (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66086781"
 -   Fare clic con il pulsante destro del mouse su una relazione nel riquadro **Diagramma** di **Data Source View Designer** (Progettazione vista origine dati) e selezionare **Modifica relazione**.  
   
 > [!NOTE]  
->  È possibile creare relazioni in **Progettazione vista origine dati** che non esistono nell'origine dei dati sottostante e rimuovere le relazioni create tramite **Progettazione vista origine dati** dalle relazioni di chiave esterna esistenti nell'origine dei dati sottostante.  
+>  In **Data Source View Designer** (Progettazione vista origine dati) è possibile creare relazioni che non esistono nell'origine dei dati sottostante e rimuovere le relazioni create tramite **Data Source View Designer** (Progettazione vista origine dati) dalle relazioni di chiave esterna esistenti nell'origine dei dati sottostante.  
   
 ## <a name="options"></a>Opzioni  
  **Tabella di origine (chiave esterna)**  
@@ -52,8 +52,8 @@ ms.locfileid: "66086781"
  **Descrizione**  
  Consente di digitare una descrizione facoltativa per la relazione.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Progettazione vista origine dati &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

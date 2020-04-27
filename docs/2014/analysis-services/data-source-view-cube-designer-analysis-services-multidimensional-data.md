@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082533"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista origine dati (scheda Struttura cubo, Progettazione cubo) (Analysis Services - Dati multidimensionali)
@@ -57,13 +57,13 @@ ms.locfileid: "66082533"
  Selezionare questa opzione per disporre gli oggetti in un modello diagonale.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è selezionata l'opzione **passa a layout rettangolare** .  
+>  Questa opzione viene visualizzata solo se è selezionata l'opzione **Passa a layout rettangolare** .  
   
  **Passa a layout rettangolare**  
  Selezionare questa opzione per disporre gli oggetti in un modello rettangolare.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è selezionata l'opzione **passa a layout diagonale** .  
+>  Questa opzione viene visualizzata solo se è selezionata l'opzione **Passa a layout diagonale** .  
   
  **Modifica vista origine dati**  
  Consente di visualizzare lo strumento Progettazione vista origine dati per la vista origine dati associata all'oggetto. Per altre informazioni su Progettazione vista origine dati, vedere [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "66082533"
  **Nascondi tabella**  
  Consente di rimuovere la tabella dal riquadro.  
   
- **Esplorazione dati**  
+ **Esplorare i dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella selezionata.  
   
  **Modifica vista origine dati**  
@@ -107,7 +107,7 @@ ms.locfileid: "66082533"
  Consente di definire un nuovo gruppo di misure nel riquadro **Misure** in base alla tabella selezionata.  
   
 > [!NOTE]  
->  Questa opzione è abilitata solo se a una tabella non è ancora fatto riferimento da un gruppo di misure nel riquadro **misure** .  
+>  Questa opzione è disponibile solo se non è ancora presente un gruppo di misure nel riquadro **Misure** che fa riferimento alla tabella.  
   
  **Proprietà**  
  Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per la tabella selezionata.  
@@ -118,7 +118,7 @@ ms.locfileid: "66082533"
  **Nuova misura da colonna**  
  Consente di definire una nuova misura nel riquadro **Misure** in base alla colonna selezionata.  
   
- **Esplorazione dati**  
+ **Esplorare i dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella contenente la colonna selezionata.  
   
  **Modifica vista origine dati**  
@@ -136,7 +136,7 @@ ms.locfileid: "66082533"
  **Proprietà**  
  Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla relazione selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Misure &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

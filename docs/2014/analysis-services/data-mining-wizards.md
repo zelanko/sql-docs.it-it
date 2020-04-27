@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086311"
 ---
 # <a name="data-mining-wizards"></a>Procedure guidate di data mining
@@ -37,7 +37,7 @@ ms.locfileid: "66086311"
   
  Per informazioni sulle procedure guidate che consentono di progettare e usare dati multidimensionali, vedere [Procedure guidate di Analysis Services &#40;Dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Strumenti di data mining](data-mining/data-mining-tools.md)   
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Creare una struttura di data mining OLAP](data-mining/create-an-olap-mining-structure.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085409"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
@@ -110,8 +110,8 @@ ms.locfileid: "66085409"
      **Ricavi per singolo utente**  
      Importo dei ricavi associati a ogni vendita effettuata.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](lift-chart-analysis-services-data-mining.md)   
- [Matrice di classificazione &#40;Analysis Services-&#41;di data mining](classification-matrix-analysis-services-data-mining.md)  
+ [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

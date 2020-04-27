@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086786"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crea set di testing (Creazione guidata modello di data mining)
@@ -34,7 +34,7 @@ ms.locfileid: "66086786"
   
 -   Non è possibile partizionare i dati se si sta tentando di stimare un valore archiviato in una tabella nidificata.  
   
- **Per ulteriori informazioni:** [test e convalida &#40;&#41;di data mining ](data-mining/testing-and-validation-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md), [esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Per altre informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md), [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md), [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opzioni  
  **Percentuale di dati per il testing**  
@@ -47,7 +47,7 @@ ms.locfileid: "66086786"
   
  Il valore predefinito è NULL. Ciò significa che non sono presenti limiti.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggerisci colonne correlate &#40;creazione guidata modello di data mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)   

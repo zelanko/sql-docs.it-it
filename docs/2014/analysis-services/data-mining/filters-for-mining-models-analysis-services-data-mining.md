@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084432"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
@@ -62,8 +62,7 @@ ms.locfileid: "66084432"
   
  Se, ad esempio, la tabella del case è riferita ai clienti e nella tabella nidificata vengono indicati i prodotti acquistati da un cliente, è possibile creare un filtro per i clienti che hanno acquistato determinati articoli usando la sintassi seguente nel filtro della tabella nidificata: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- È anche creare un filtro in base all'esistenza di un determinato valore utilizzando le parole chiave `EXISTS` o `NOT EXISTS` e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. 
-  `EXISTS SELECT(<subquery>)` restituisce `true` se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
+ È anche creare un filtro in base all'esistenza di un determinato valore utilizzando le parole chiave `EXISTS` o `NOT EXISTS` e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` restituisce `true` se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
   
  È possibile combinare condizioni nella tabella del case con le condizioni nella tabella nidificata. Ad esempio, nella sintassi seguente è inclusa una condizione nella tabella del case (`Age > 30` ), una sottoquery nella tabella nidificata (`EXISTS (SELECT * FROM Products)`) e più condizioni nella tabella nidificata (`WHERE ProductName='Milk'  AND Quantity>2`)).  
   
@@ -121,8 +120,8 @@ ms.locfileid: "66084432"
   
  Per informazioni sull'uso di filtri dei modelli quando si esegue il test di un modello di data mining, vedere [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sintassi del filtro del modello ed esempi &#40;Analysis Services-&#41;di data mining](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

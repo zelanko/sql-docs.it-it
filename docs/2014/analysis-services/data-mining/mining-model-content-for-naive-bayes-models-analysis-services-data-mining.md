@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083653"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Naive Bayes (Analysis Services - Data mining)
@@ -49,7 +49,7 @@ ms.locfileid: "66083653"
  ATTRIBUTE_NAME  
  Nomi degli attributi che corrispondono a questo nodo.  
   
- **Radice del modello** Nome dell'attributo stimabile.  
+ **Nodo radice del modello** Nome dell'attributo stimabile.  
   
  **Statistiche marginali** Non applicabile  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66083653"
   
  **Attributo di input** Nome dell'attributo di input.  
   
- **Stato attributo di input** Nome dell'attributo di input. Per ottenere lo stato, utilizzare MSOLAP_NODE_SHORT_CAPTION.  
+ **Stato attributo di input** Nome del solo attributo di input. Per ottenere lo stato, utilizzare MSOLAP_NODE_SHORT_CAPTION.  
   
  NODE_NAME  
  Il nome del nodo.  
@@ -82,7 +82,7 @@ ms.locfileid: "66083653"
  NODE_CAPTION  
  Etichetta o didascalia associata al nodo. Questa proprietà viene utilizzata principalmente per scopi di visualizzazione.  
   
- **Radice del modello** vuota  
+ **Nodo radice del modello** vuoto  
   
  **Statistiche marginali** vuote  
   
@@ -92,20 +92,20 @@ ms.locfileid: "66083653"
   
  Bike Buyer -> Age  
   
- **Stato attributo di input** Nome dell'attributo stimabile e dell'attributo di input corrente, più il valore dell'input. ad esempio  
+ **Stato attributo di input** Nome dell'attributo stimabile e dell'attributo di input corrente, più valore di input. ad esempio  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  Numero di nodi figlio del nodo.  
   
- **Radice del modello** Numero di attributi stimabili nel modello più 1 per il nodo delle statistiche marginali.  
+ **Nodo radice del modello** Conteggio degli attributi stimabili nel modello più 1 per il nodo delle statistiche marginali.  
   
- **Statistiche marginali** Per definizione non ha elementi figlio.  
+ **Statistiche marginali** Per definizione non dispongono di nodi figlio.  
   
  **Attributo stimabile**  Conteggio degli attributi di input correlati all'attributo stimabile corrente.  
   
- **Attributo di input** Conteggio dei valori discreti o discretizzazione per l'attributo di input corrente.  
+ **Attributo di input** Conteggio dei valori discreti o discretizzati per l'attributo di input corrente.  
   
  **Stato attributo di input** Sempre 0.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66083653"
  NODE_PROBABILITY  
  Probabilità associata a questo nodo.  
   
- **Radice del modello** Sempre 0.  
+ **Nodo radice del modello** Sempre 0.  
   
  **Statistiche marginali** Sempre 0.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66083653"
  NODE_SUPPORT  
  Numero di case che supportano il nodo.  
   
- **Radice del modello** Conteggio di tutti i case nei dati di training.  
+ **Nodo radice del modello** Conteggio di tutti i case nei dati di training.  
   
  **Statistiche marginali** Sempre 0.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66083653"
  MSOLAP_NODE_SCORE  
  Rappresenta l'importanza dell'attributo o del valore all'interno del modello.  
   
- **Radice del modello** Sempre 0.  
+ **Nodo radice del modello** Sempre 0.  
   
  **Statistiche marginali** Sempre 0.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "66083653"
   
  **Attributo di input** Nome dell'attributo di input.  
   
- **Stato attributo di input** Valore o valore discretizzazione dell'attributo di input.  
+ **Stato attributo di input** Valore o valore discretizzato dell'attributo di input.  
   
-##  <a name="bkmk_nodenames"></a>Utilizzo dei nomi e degli ID dei nodi  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>Utilizzo dei nomi e degli ID dei nodi  
  La denominazione dei nodi in un modello Naive Bayes fornisce informazioni aggiuntive sul tipo di nodo, per rendere più facile la comprensione delle relazioni tra le informazioni nel modello. Nella tabella seguente viene illustrata la convenzione per gli ID assegnati a diversi tipi di nodo.  
   
 |Tipo di nodo|Convenzione per ID del nodo|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0,457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0,542495996|  
   
-##  <a name="bkmk_nodedist"></a>Tabella NODE_DISTRIBUTION  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>Tabella NODE_DISTRIBUTION  
  La colonna della tabella nidificata, NODE_DISTRIBUTION, contiene in genere le statistiche sulla distribuzione dei valori nel nodo. In un modello Naive Bayes questa tabella viene popolata solo per i nodi seguenti:  
   
 |Tipo di nodo|Contenuto della tabella nidificata|  
@@ -257,7 +257,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Risultati previsti:  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0,472934117|4|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  In questi risultati il valore della colonna SUPPORT suggerisce il conteggio di clienti con lo stato civile specificato che hanno acquistato una bicicletta. La colonna PROBABILITY contiene la probabilità di ogni valore dell'attributo, calcolato solo per questo nodo. Per definizioni generali dei termini usati nella tabella NODE_DISTRIBUTION, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_margstats"></a>Informazioni nel nodo delle statistiche marginali  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> Informazioni nel nodo delle statistiche marginali  
  In un modello Naive Bayes la tabella nidificata per il nodo delle statistiche marginali contiene la distribuzione di valori per l'intero set di dati di training. Ad esempio, la tabella seguente contiene un elenco parziale delle statistiche della tabella NODE_DISTRIBUTION nidificata per il modello, `TM_NaiveBayes`:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORTO|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0,507263784|0|4|  
@@ -287,7 +287,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Un valore `Missing` (VALUE_TYPE = 1) viene aggiunto a ogni attributo di input e di output per rappresentare i valori potenziali che non erano presenti nei dati di training. È necessario prestare attenzione alla distinzione tra "mancante" riferito a una stringa e il valore `Missing` predefinito. Per altre informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
  [Query di data mining](data-mining-queries.md)   
