@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103340"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner - file di configurazione
@@ -62,13 +62,8 @@ ms.locfileid: "66103340"
 |`SessionTimeoutMinutes`|Indica il periodo di validità del cookie di una sessione. Il valore predefinito è 3 minuti.|  
 |`PolicyLevel`|Indica il file di configurazione dei criteri di sicurezza. Il valore valido è rspreviewpolicy. config. Per ulteriori informazioni, vedere [utilizzo di Reporting Services file dei criteri di sicurezza](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Se viene impostata su `True`, Progettazione report archivia i dati in un file di cache nel computer locale. I valori validi sono `True` (valore predefinito) e `False`. Per altre informazioni, vedere [anteprima dei report](../reports/previewing-reports.md).|  
-|`Render`|Enumera le estensioni per il rendering che Progettazione report può utilizzare per la visualizzazione in anteprima dei report. Il set di estensioni per il rendering disponibili per la visualizzazione in anteprima deve essere uguale al set di estensioni installate con il server di report.<br /><br /> 
-  `Name` indica il nome dell'estensione per il rendering. Se si decide di chiamare un'estensione per il rendering tramite il codice, utilizzare questo valore.<br /><br /> 
-  `Type` indica il nome completo della classe dell'estensione e il nome della libreria, separati da virgola.<br /><br /> 
-  `Visible` indica se il nome viene visualizzato o meno nelle interfacce utente. Il valore può essere `True` (valore predefinito) o `False`. Se si imposta `True`, il nome viene visualizzato nelle interfacce utente.|  
-|`Data`|Enumera le estensioni per l'elaborazione dati che Progettazione report può utilizzare per le connessioni alle origini dei dati dei report. Il set di estensioni per l'elaborazione dati utilizzate in Progettazione report può essere uguale al set di estensioni installate con il server di report. Se si aggiungono o rimuovono estensioni personalizzate, vedere [distribuzione di un'estensione per l'elaborazione dati](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> 
-  `Name` indica il nome dell'estensione per l'elaborazione dati.<br /><br /> 
-  `Type` indica il nome completo della classe dell'estensione e il nome della libreria, separati da virgola.|  
+|`Render`|Enumera le estensioni per il rendering che Progettazione report può utilizzare per la visualizzazione in anteprima dei report. Il set di estensioni per il rendering disponibili per la visualizzazione in anteprima deve essere uguale al set di estensioni installate con il server di report.<br /><br /> `Name` indica il nome dell'estensione per il rendering. Se si decide di chiamare un'estensione per il rendering tramite il codice, utilizzare questo valore.<br /><br /> `Type` indica il nome completo della classe dell'estensione e il nome della libreria, separati da virgola.<br /><br /> `Visible` indica se il nome viene visualizzato o meno nelle interfacce utente. Il valore può essere `True` (valore predefinito) o `False`. Se si imposta `True`, il nome viene visualizzato nelle interfacce utente.|  
+|`Data`|Enumera le estensioni per l'elaborazione dati che Progettazione report può utilizzare per le connessioni alle origini dei dati dei report. Il set di estensioni per l'elaborazione dati utilizzate in Progettazione report può essere uguale al set di estensioni installate con il server di report. Se si aggiungono o rimuovono estensioni personalizzate, vedere [distribuzione di un'estensione per l'elaborazione dati](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` indica il nome dell'estensione per l'elaborazione dati.<br /><br /> `Type` indica il nome completo della classe dell'estensione e il nome della libreria, separati da virgola.|  
 |`Designer`|Enumera i generatori di query disponibili per Progettazione report. I generatori di query presentano un'interfaccia utente che semplifica la creazione di query per il recupero dei dati da utilizzare nei report. I generatori di query possono variare a seconda dell'estensione per l'elaborazione dati. Per impostazione predefinita, in Reporting Services è disponibile un'interfaccia utente uguale per tutte le estensioni per l'elaborazione dati incluse nel prodotto. Se, tuttavia, si utilizzano estensioni per l'elaborazione dati personalizzate o di terze parti, le interfacce utente dei generatori di query potrebbero essere diverse.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Specifica il periodo di attesa dell'avvio del servizio di elaborazione dell'anteprima prima che venga visualizzato un messaggio di errore. Il valore predefinito è 15 secondi.|  
   

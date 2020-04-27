@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108135"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Pagina Nuova sottoscrizione o Modifica sottoscrizione (Gestione report)
@@ -65,7 +65,7 @@ ms.locfileid: "66108135"
  **Immettere i valori dei parametri**  
  Utilizzare questa opzione per la sottoscrizione di un report con parametri. Questa opzione è disponibile solo per i report con parametri. Quando si crea una sottoscrizione a un report con parametri è possibile specificare i valori dei parametri utilizzati per creare la versione del report recapitata tramite la sottoscrizione. Ad esempio, è possibile specificare un codice area per selezionare i dati di vendita di un'area specifica. Se non si specifica un valore verrà utilizzato il valore predefinito.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Configurare un server di report per il recapito tramite posta elettronica &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   

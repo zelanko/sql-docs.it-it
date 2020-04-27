@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef049b4ded6408e651d5ec2c3db99c10bf7c27b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108771"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Installazione della modalità SharePoint di Reporting Services (SharePoint 2010 e SharePoint 2013)
@@ -46,19 +46,19 @@ ms.locfileid: "66108771"
   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [Dove trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Aggiungere un ulteriore server di report a una farm &#40;la scalabilità orizzontale di SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Aggiungere un ulteriore server di report a una farm &#40;con scalabilità orizzontale SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Aggiungere un ulteriore front-end Web di Reporting Services a una farm](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configurare la posta elettronica per un'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
  [Attestazioni per il servizio token Windows &#40;C2WTS&#41; e Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Architettura e flusso di lavoro degli avvisi dati](../reporting-services-data-alerts.md#AlertingWF)   
  [Gestione avvisi dati per gli amministratori di avvisi](../data-alert-manager-for-alerting-administrators.md)  
   

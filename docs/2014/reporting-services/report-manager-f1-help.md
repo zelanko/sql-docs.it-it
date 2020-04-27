@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104470"
 ---
 # <a name="report-manager-f1-help"></a>Guida sensibile al contesto di Gestione report
@@ -102,7 +102,7 @@ ms.locfileid: "66104470"
   
  Per ulteriori informazioni su Gestione report e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in MSDN.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Guida di riferimento alle funzionalità (Reporting Services)](feature-reference-reporting-services.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   

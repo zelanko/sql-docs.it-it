@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481198"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opzioni (Risultati delle query e pagina Servizi di dipendenza)
@@ -28,13 +28,13 @@ ms.locfileid: "65481198"
   
 2.  [Configurare le opzioni](#options)  
   
-##  <a name="open_dialog"></a>Aprire la finestra di dialogo Opzioni (pagina risultati query/servizi di dipendenza)  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Aprire la finestra di dialogo Opzioni (pagina risultati query/servizi di dipendenza)  
   
 1.  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]fare clic su **Opzioni** nel menu **strumenti** .  
   
 2.  Espandere **Risultati query** e fare clic su **Servizi di dipendenza**.  
   
-##  <a name="options"></a> Configurare le opzioni  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurare le opzioni  
   
 ### <a name="options"></a>Opzioni  
  **Server Servizi di dipendenza**  

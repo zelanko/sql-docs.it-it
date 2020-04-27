@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108500"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lezione 2: Definire una connessione dati e una tabella di dati per il report padre
@@ -28,11 +28,11 @@ ms.locfileid: "66108500"
   
      Verrà aggiunto un nuovo file XSD **DataSet1.xsd** al progetto e verrà aperto Progettazione DataSet.  
   
-3.  Dalla finestra casella degli strumenti trascinare un controllo **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** nell'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
+3.  Dalla finestra della casella degli strumenti trascinare un controllo **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** nell'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
   
 4.  Nella pagina **scegliere la connessione dati** fare clic su **nuova connessione**.  
   
-5.  Se si tratta della prima creazione di un'origine dati in Visual Studio, viene visualizzata la pagina **Scegli origine dati**. Nella casella **Origine dati** selezionare **Microsoft SQL Server**.  
+5.  Se è la prima volta che si crea un'origine dati in Visual Studio, verrà visualizzata la pagina **Scegli origine dati** . Nella casella **Origine dati** selezionare **Microsoft SQL Server**.  
   
 6.  Nella finestra di dialogo **Aggiungi connessione** effettuare i passaggi seguenti:  
   

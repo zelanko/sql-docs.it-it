@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106419"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Raccolte predefinite nelle espressioni (Generatore report e SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106419"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a>Informazioni sulle raccolte predefinite  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Informazioni sulle raccolte predefinite  
  Nella tabella seguente sono elencate le raccolte predefinite disponibili quando si scrive un'espressione. Ogni riga include il nome a livello di programmazione della raccolta, con distinzione tra maiuscole e minuscole, l'indicazione se è possibile utilizzare la finestra di dialogo Espressione per aggiungere un riferimento alla raccolta in modo interattivo, un esempio e una descrizione in cui è specificato quando vengono inizializzati i valori della raccolta e sono quindi disponibili per l'uso.  
   
 |Raccolta predefinita|Categoria nella finestra di dialogo Espressione|Esempio|Descrizione|  
@@ -39,18 +39,18 @@ ms.locfileid: "66106419"
 |`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|Rappresenta la raccolta di variabili del report e variabili di gruppo. Per altre informazioni, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |`ReportItems`|Non visualizzata|`=ReportItems("Textbox1").Value`|Rappresenta la raccolta di caselle di testo per un elemento del report. Questa raccolta può essere utilizzata per riepilogare gli elementi nella pagina da includere in un'intestazione o in un piè di pagina. Per altre informazioni, vedere [Riferimenti alla raccolta ReportItems &#40;Generatore report e SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a>Uso della sintassi delle raccolte in un'espressione  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Utilizzo della sintassi delle raccolte in un'espressione  
  Per fare riferimento a una raccolta da un'espressione, utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] la sintassi standard per un elemento in una raccolta. Nella tabella seguente sono illustrati alcuni esempi di sintassi di raccolta.  
   
 |Sintassi|Esempio|  
 |------------|-------------|  
 |*Raccolta! ObjectName. Property*|`=Fields!Sales.Value`|  
 |*Raccolta! ObjectName ("Property")*|`=Fields!Sales("Value")`|  
-|*Raccolta ("ObjectName"). Proprietà*|`=Fields("Sales").Value`|  
-|*Raccolta ("Member")*|`=User("Language")`|  
+|*Collection("ObjectName").Property*|`=Fields("Sales").Value`|  
+|*Collection("Member")*|`=User("Language")`|  
 |*Raccolta. Member*|`=User.Language`|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

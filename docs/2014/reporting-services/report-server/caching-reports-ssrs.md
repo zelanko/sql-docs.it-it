@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104104"
 ---
 # <a name="caching-reports-ssrs"></a>Memorizzazione dei report nella cache (SSRS)
@@ -69,13 +69,13 @@ ms.locfileid: "66104104"
   
  Se per qualsiasi motivo non è possibile eseguire il rendering del report da un'istanza memorizzata nella cache (ad esempio se i valori dei parametri specificati da un utente sono diversi da quelli utilizzati per creare il report memorizzato nella cache) il report viene eseguito nuovamente dal server di report.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Precaricare la cache &#40;Gestione report&#41;](preload-the-cache-report-manager.md)   
  [Pianificazioni](../subscriptions/schedules.md)   
  [Memorizzare nella cache i set di impostazioni &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
- [Opzioni di aggiornamento della cache &#40;Gestione report&#41;](../cache-refresh-options-report-manager.md)  
+ [Opzioni di aggiornamento cache &#40;Gestione report&#41;](../cache-refresh-options-report-manager.md)  
   
   

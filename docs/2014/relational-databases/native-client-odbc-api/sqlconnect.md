@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5292d3141d6ae520a333827796ca8fc6005be15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067667"
 ---
 # <a name="sqlconnect"></a>SQLConnect
@@ -25,8 +25,8 @@ ms.locfileid: "63067667"
 ## <a name="sqlconnect-support-for-high-availability-disaster-recovery"></a>Supporto di SQLConnect per il ripristino di emergenza a disponibilità elevata  
  Per altre informazioni sull'uso di **SQLConnect** per connettersi a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] un cluster, vedere [SQL Server Native client supporto per la disponibilità elevata e il ripristino di emergenza](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzione SQLConnect](https://go.microsoft.com/fwlink/?LinkId=101541)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

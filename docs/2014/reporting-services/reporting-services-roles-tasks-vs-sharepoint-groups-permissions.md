@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102804"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint
@@ -30,47 +30,47 @@ ms.locfileid: "66102804"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modalità nativa|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modalità nativa|  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Confrontare strumenti di autorizzazione e terminologia](#bkmk_compare_tools_terms)  
   
 -   [Confrontare ruoli in modalità nativa e gruppi di SharePoint](#bkmk_compare_roles_groups)  
   
--   [Confronto tra le attività in modalità nativa e le autorizzazioni di SharePoint](#bkmk_compare_tasks_permissions)  
+-   [Confrontare attività in modalità nativa e autorizzazioni di SharePoint](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a>Confrontare strumenti di autorizzazione e terminologia  
- **Modalità nativa:** Gli [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oggetti di autorizzazione (ruoli e attività) in modalità nativa vengono [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] creati in e configurati per i singoli utenti in Gestione report.  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> Confrontare strumenti di autorizzazione e terminologia  
+ **Modalità nativa:** gli oggetti di autorizzazione (ruoli e attività) in modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vengono creati in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e configurati per i singoli utenti in Gestione report.  
   
- **Modalità SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint vengono utilizzate le funzionalità di autorizzazione di SharePoint. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
+ **Modalità SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] la modalità SharePoint usa le funzionalità di autorizzazione di SharePoint. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
   
  Nella tabella seguente vengono confrontati gli oggetti e i concetti correlati all'autorizzazione tra la modalità SharePoint e nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modalità nativa|SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modalità nativa|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Ruolo:** Ad esempio "Gestione contenuto".|**Gruppo:** Ad esempio, il gruppo "visualizzatori" predefinito.|  
-|---|**Gruppo livello di autorizzazione:** Ad esempio "solo visualizzazione" per il gruppo "visualizzatori".|  
-|**Attività:** ad esempio "gestione di report".|**Autorizzazioni:** Ad esempio, all'interno del gruppo "solo visualizzazione" sono presenti autorizzazioni correlate all'elenco degli elementi della visualizzazione, delle versioni di visualizzazione e della visualizzazione delle pagine dell'applicazione.|  
+|**Ruolo:** ad esempio "Gestione contenuto".|**Gruppo:** ad esempio il gruppo predefinito "Visualizzatori".|  
+|---|**Gruppo livelli di autorizzazione:** ad esempio "Solo visualizzazione" per il gruppo "Visualizzatori".|  
+|**Attività**: ad esempio "Gestione di report".|**Autorizzazioni:** ad esempio il gruppo "Solo visualizzazione" include le autorizzazioni correlate per visualizzazione elementi, visualizzazione versioni e visualizzazione pagine dell'applicazione.|  
   
  Per ulteriori informazioni sulle autorizzazioni di SharePoint, vedere [autorizzazioni utente e livelli di autorizzazione in SharePoint Server](/sharepoint/sites/user-permissions-and-permission-levels) e [determinare i livelli di autorizzazione e i gruppi in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
-##  <a name="bkmk_compare_roles_groups"></a>Confrontare ruoli in modalità nativa e gruppi di SharePoint  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> Confrontare ruoli in modalità nativa e gruppi di SharePoint  
  Nella tabella seguente vengono confrontate le definizioni di ruolo predefinito in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa con i gruppi di SharePoint standard. Se i gruppi di SharePoint non corrispondono al ruolo specifico desiderato, è possibile creare un gruppo personalizzato e assegnarvi livelli di autorizzazione in SharePoint.  
   
- **Nota**: i gruppi di SharePoint predefiniti disponibili dipendono dal modello di sito utilizzato per creare il sito di SharePoint.  
+ **Nota**: i gruppi di SharePoint predefiniti disponibili dipendono dal modello di sito usato per creare il sito di SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Ruolo|Gruppi di SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Ruolo|Gruppi di SharePoint|  
 |--------------------------------------|-----------------------|  
-|**Browser**<br /><br /> Visualizza|Utilizzare il gruppo **Visitatori** per concedere le autorizzazioni necessarie per visualizzare i report. Il gruppo **Visitatori** dispone di autorizzazioni a livello di lettura che consentono ai membri di un gruppo di visualizzare pagine, elementi di elenco e documenti.|  
+|**Browser**<br /><br /> Visualizzazione|Utilizzare il gruppo **Visitatori** per concedere le autorizzazioni necessarie per visualizzare i report. Il gruppo **Visitatori** dispone di autorizzazioni a livello di lettura che consentono ai membri di un gruppo di visualizzare pagine, elementi di elenco e documenti.|  
 |**Gestione contenuto**<br /><br /> Autorizzazioni complete per tutti gli elementi e le operazioni a livello di elemento, incluse le autorizzazioni per l'impostazione della sicurezza.|Utilizzare il gruppo **Proprietari** per concedere controllo completo sulla gestione degli elementi del server di report in un sito di SharePoint. Il gruppo **Proprietari** dispone di autorizzazioni di controllo completo che consentono di apportare modifiche al contenuto, alle pagine o alle funzionalità del sito. È consigliabile che l'accesso con controllo completo sia limitato agli amministratori del sito.|  
-|**Report personali**|Nessun gruppo equivalente. **Report personali** non è supportato per un server di report eseguito in modalità SharePoint. Se si desidera utilizzare funzionalità equivalenti, è possibile utilizzare quelle di Sito personale in [!INCLUDE[winSPServ](../includes/winspserv-md.md)] .|  
+|**Report personali**|Nessun gruppo equivalente. **Report personali** non è supportato nei server di report eseguiti in modalità SharePoint. Se si desidera utilizzare funzionalità equivalenti, è possibile utilizzare quelle di Sito personale in [!INCLUDE[winSPServ](../includes/winspserv-md.md)] .|  
 |**Autore**<br /><br /> Consente di aggiungere, aggiornare, visualizzare ed eliminare report, modelli di report, origini dei dati condivise e risorse.|Utilizzare il gruppo **Membri** per concedere le autorizzazioni necessarie per aggiungere e modificare elementi e aggiornare i riferimenti a elementi dipendenti in un sito di SharePoint. Il gruppo **Membri** dispone delle autorizzazioni di livello Collaborazione, che consentono ai membri del gruppo di visualizzare le pagine, aggiungere e aggiornare elementi, nonché inviare richieste di approvazione delle modifiche.|  
 |**Generatore report**<br /><br /> Consente di visualizzare report, gestire in autonomia sottoscrizioni individuali e aprire report in Generatore report.|Non sono disponibili livelli di autorizzazione o gruppi di SharePoint predefiniti già predisposti equivalenti alla definizione di report di Generatore report. Per impostazione predefinita, gli utenti che appartengono al gruppo **Membri** o al gruppo **Proprietari** dispongono dell'autorizzazione per utilizzare Generatore report. Se si desidera rendere Generatore report disponibile a più utenti, è necessario creare impostazioni di sicurezza personalizzate in grado di offrire un livello di autorizzazione analogo a quello del ruolo Generatore report. Per altre informazioni, vedere [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
-|-|Utilizzare il gruppo **Visualizzatori** per concedere le autorizzazioni necessarie per visualizzare i report visualizzabili. Tramite il gruppo **Visualizzatori** non è possibile scaricare né visualizzare il contenuto degli elementi del report.<br /><br /> **Nota:** A partire da SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]2012, il gruppo **visualizzatori** non dispone delle autorizzazioni per la creazione di sottoscrizioni.|  
-|**Utente sistema** e **amministratore sistema**|Questi ruoli non sono necessari per un server di report eseguito in modalità SharePoint. **Utente sistema** e **amministratore sistema** corrispondono a autorizzazioni a livello di applicazione Web o farm di SharePoint. Il server di report non include alcuna funzionalità per la quale siano necessarie autorizzazioni a tale livello.|  
+|-|Utilizzare il gruppo **Visualizzatori** per concedere le autorizzazioni necessarie per visualizzare i report visualizzabili. Tramite il gruppo **Visualizzatori** non è possibile scaricare né visualizzare il contenuto degli elementi del report.<br /><br /> **Nota:** a partire da SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], il gruppo **Visualizzatori** non dispone di autorizzazioni per la creazione di sottoscrizioni.|  
+|**Utente sistema** e **Amministratore sistema**|Questi ruoli non sono necessari per un server di report eseguito in modalità SharePoint. **Utente sistema** e **Amministratore sistema** corrispondono a autorizzazioni a livello di applicazione Web o farm di SharePoint. Il server di report non include alcuna funzionalità per la quale siano necessarie autorizzazioni a tale livello.|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a>Confronto tra le attività in modalità nativa e le autorizzazioni di SharePoint  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> Confrontare attività in modalità nativa e autorizzazioni di SharePoint  
  Nella tabella seguente vengono confrontate le attività in modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con le autorizzazioni di SharePoint. Nella colonna **Tipo** è indicato se l'attività in modalità nativa è correlata a un ruolo di sistema o a un ruolo ed elementi standard. Tramite i ruoli di sistema è possibile gestire le autorizzazioni a livello di sistema, ad esempio le pianificazioni condivise.  
   
 |Attività in modalità nativa|Tipo di ruolo|Autorizzazione di SharePoint equivalente|  
@@ -103,7 +103,7 @@ ms.locfileid: "66102804"
 |Visualizzazione di pianificazioni condivise|Sistema|Apertura elementi.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definizioni di ruolo](security/role-definitions.md)   

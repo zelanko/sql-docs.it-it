@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104653"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
@@ -42,8 +42,8 @@ ms.locfileid: "66104653"
 |----------|-----------------|  
 |![Handle di riga con 3 linee parallele per la riga di dettaglio](../media/rs-icontablix-detailsrow.gif "Handle di riga con 3 linee parallele per la riga di dettaglio")|Solo il gruppo di dettagli nella gerarchia dei gruppi di righe|  
 |![Handle di riga con riga di dettaglio e un gruppo esterno](../media/rs-icontablix-groupwithdetails.gif "Handle di riga con riga di dettaglio e un gruppo esterno")|Un gruppo esterno e il gruppo di dettagli figlio|  
-|![Due parentesi parallele che indicano gruppi nidificati](../media/rs-icontablix-nestedgroupnodetails.gif "Due parentesi parallele che indicano gruppi nidificati")|Un gruppo esterno, un gruppo interno. Nessun gruppo di dettagli|  
-|![2 parentesi quadre & 3 righe in pila per i dettagli & annidati](../media/rs-icontablix-nestedgroupwithdetails.gif "2 parentesi e 3 linee in pila per un gruppo nidificato di dettagli")|Un gruppo esterno, un gruppo interno e il gruppo di dettagli figlio|  
+|![Due parentesi parallele che indicano gruppi annidati](../media/rs-icontablix-nestedgroupnodetails.gif "Due parentesi parallele che indicano gruppi annidati")|Un gruppo esterno, un gruppo interno. Nessun gruppo di dettagli|  
+|![2 parentesi e 3 linee in pila per un gruppo annidato di dettagli](../media/rs-icontablix-nestedgroupwithdetails.gif "2 parentesi e 3 linee in pila per un gruppo annidato di dettagli")|Un gruppo esterno, un gruppo interno e il gruppo di dettagli figlio|  
 |![Un gruppo esterno con riga di piè di pagina e un gruppo interno](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Un gruppo esterno con riga di piè di pagina e un gruppo interno")|Un gruppo esterno con una riga di piè di pagina per i totali e un gruppo interno|  
 |![Parentesi del gruppo esterno, parentesi del gruppo interno, dettagli](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "Parentesi del gruppo esterno, parentesi del gruppo interno, dettagli")|Un gruppo esterno con una riga di piè di pagina per i totali, un gruppo interno con una riga piè di pagina per i totali e una riga dettagli|  
 |![Intestazione e piè di pagina padre e gruppo figlio](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "Intestazione e piè di pagina padre e gruppo figlio")|Un gruppo esterno con un'intestazione per le etichette e un piè di pagina per i totali e un gruppo interno. Nessun gruppo di dettagli|  
@@ -57,7 +57,7 @@ ms.locfileid: "66104653"
   
 -   Indicatori di gruppo che mostrano tutte le appartenenze a gruppi per una cella selezionata.  
   
- ![Tabella con gruppi di righe di dettaglio e nidificate](../media/rs-tablixrowgroupvisualcues.gif "Tabella con gruppi di righe di dettaglio e nidificate")  
+ ![Tabella con gruppi di righe di dettaglio e annidate](../media/rs-tablixrowgroupvisualcues.gif "Tabella con gruppi di righe di dettaglio e annidate")  
   
 ### <a name="total-rows"></a>Righe del totale  
  Dopo avere aggiunto gruppi di righe e colonne, è possibile aggiungere una riga per visualizzare i totali per le colonne e una colonna per visualizzare i totali per le righe. Nella figura seguente viene illustrata una matrice con entrambi i gruppi di righe e colonne, oltre a una riga del totale e una colonna del totale.  
@@ -67,7 +67,7 @@ ms.locfileid: "66104653"
 ### <a name="grouping-pane"></a>Riquadro di raggruppamento  
  Nel riquadro di raggruppamento sono visualizzati i gruppi di righe e colonne per l'area dati Tablix attualmente selezionata nell'area di progettazione. Nella figura seguente viene illustrato il riquadro di raggruppamento per questa area dati Tablix.  
   
- ![Riquadro di raggruppamento per gruppi di righe e di colonne nidificati](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne nidificati")  
+ ![Riquadro di raggruppamento per gruppi di righe e di colonne annidati](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne annidati")  
   
  Il riquadro Gruppi di righe mostra il gruppo padre Category e il gruppo figlio Subcat. Il riquadro Gruppi di colonne mostra il gruppo padre Geography e il gruppo figlio CountryRegion, nonché il gruppo Year, ovvero un gruppo adiacente a Geography. Quando si seleziona il gruppo Subcat nel riquadro Gruppi di righe, il colore della barra del gruppo assume una sfumatura di arancione più scuro e la cella del membro del gruppo di righe corrispondente viene selezionata nell'area di progettazione.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66104653"
   
  È possibile dividere una cella precedentemente unita. Le celle possono essere divise orizzontalmente nelle colonne o verticalmente tra le righe. Per dividere una cella in un blocco di celle, dividere prima la cella in orizzontale, quindi in verticale, ripetendo l'operazione più volte fino al raggiungimento del risultato desiderato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

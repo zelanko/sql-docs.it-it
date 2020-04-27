@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108571"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -34,7 +34,7 @@ ms.locfileid: "66108571"
   
 -   [Verificare un'installazione in modalità nativa](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a> Verifica dell'installazione in modalità SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Verifica dell'installazione in modalità SharePoint  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Per verificare il servizio Reporting Services  
   
@@ -82,14 +82,14 @@ ms.locfileid: "66108571"
   
 2.  Scaricare il database di esempio Adventure Works e i report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da CodePlex. Per ulteriori informazioni, vedere la pagina relativa agli [esempi di report di AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a> Verificare un'installazione in modalità nativa  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a>Verificare un'installazione in modalità nativa  
  Quando si installa un server di report in modalità nativa utilizzando la configurazione predefinita, verranno eseguite l'installazione e la distribuzione del server. Per verificare se la distribuzione del server di report viene completata, è sufficiente eseguire alcuni semplici test. A tale scopo occorre disporre dei privilegi di amministratore locale. Per consentire l'esecuzione dei test da parte di altri utenti, è necessario configurare l'accesso di tali utenti al server di report.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Per verificare che il server di report sia installato e in esecuzione  
   
 1.  Eseguire lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report installata. Nella pagina URL servizio Web è disponibile un collegamento al servizio Web ReportServer. Fare clic sul collegamento per verificare che sia possibile accedere al server. Se il database del server di report non è configurato, eseguire questa operazione prima di fare clic sul collegamento.  
   
-2.  Aprire l'applicazione console Servizi e verificare che il servizio del server di report sia in esecuzione. Per visualizzare lo stato del servizio del server di report, fare clic sul menu **Start**, scegliere **Pannello di controllo**, fare doppio clic su **Strumenti di amministrazione**, quindi su **Servizi**. Attendere che venga visualizzato l'elenco dei servizi e scorrerlo fino a **Report Server (MSSQLSERVER)** . Verificare che lo stato sia **Avviato**.  
+2.  Aprire l'applicazione console Servizi e verificare che il servizio del server di report sia in esecuzione. Per visualizzare lo stato del servizio del server di report, fare clic sul menu **Start**, scegliere **Pannello di controllo**, fare doppio clic su **Strumenti di amministrazione**, quindi su **Servizi**. Attendere che venga visualizzato l'elenco dei servizi e scorrerlo fino a **Report Server (MSSQLSERVER)**. Verificare che lo stato sia **Avviato**.  
   
 3.  Aprire un browser e immettere l'URL del server di report nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per il server di report durante l'installazione. Per impostazione predefinita, la directory virtuale del server di report è denominata **ReportServer**. Per verificare l'installazione del server di report, è possibile utilizzare l'URL seguente: http://*\<nome computer>*/ReportServer*\<_instance nome>*. L'URL sarà diverso se il server di report è stato installato come istanza denominata. Per altre informazioni sul formato dell'URL, vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Se si è un amministratore locale in Windows Vista o Windows Server 2008, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -111,8 +111,8 @@ ms.locfileid: "66108571"
   
 2.  Se si sono installati esempi di report, aprire i file di progetto dei report di esempio e pubblicare i report in un server di report.  
   
-## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi di installazione di Reporting Services](troubleshoot-a-reporting-services-installation.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Risolvere i problemi relativi a un'installazione di Reporting Services](troubleshoot-a-reporting-services-installation.md)   
  [Causa e risoluzione degli errori di Reporting Services](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109104"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Pagina delle proprietà Generale, Modelli (Gestione report)
@@ -54,7 +54,7 @@ ms.locfileid: "66109104"
  **Spostamento**  
  Fare clic per spostare un modello nella gerarchia di cartelle del server di report. Verrà visualizzata la pagina di spostamento degli elementi nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso. Per ulteriori informazioni, vedere la [pagina di spostamento degli elementi &#40;Gestione report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Salvare**  
+ **Salva**  
  Fare clic per salvare una copia di sola lettura della definizione del modello. In base alle associazioni di file definite nel computer, il file verrà aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un'altra applicazione. Nella maggior parte dei casi, il modello viene aperto come file XML.  
   
  La copia aperta è identica alla definizione del modello originale pubblicata inizialmente nel server di report. Le eventuali proprietà impostate nel modello dopo la pubblicazione, ad esempio le proprietà dell'origine dati, non sono incluse nel file aperto.  
@@ -69,7 +69,7 @@ ms.locfileid: "66109104"
  **Rigenera modello**  
  Fare clic per rigenerare un modello predefinito che sostituisce la versione corrente. Questa opzione viene visualizzata dopo la generazione del modello. Il modello generato è basato sull'origine dati condivisa. Non è possibile personalizzare il modello prima di generarlo. Dopo la generazione è tuttavia possibile fare clic su **Modifica** per aprire la definizione del modello, salvarla nel file system, quindi aggiungerla a un progetto in Progettazione modelli. Dopo avere personalizzato il modello, è possibile caricarlo nel server di report come nuovo elemento oppure fare clic su **Aggiorna** in questa pagina per sostituire il modello generato con la versione modificata in Progettazione modelli.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Associare un report o un modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Guida sensibile al contesto del server di report in Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   

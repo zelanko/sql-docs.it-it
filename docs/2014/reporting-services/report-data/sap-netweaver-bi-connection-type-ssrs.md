@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107105"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66107105"
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="support"></a>Versioni supportate  
+##  <a name="supported-versions"></a><a name="support"></a>Versioni supportate  
  Il provider di dati è stato sviluppato e verificato per SAP BW 3.5 e 7.0.  
   
 -   Pacchetto di supporto 20 per SAP BW 3.5 e 7.0  
@@ -37,7 +37,7 @@ ms.locfileid: "66107105"
   
 -   SAP Duet 1.0  
   
-##  <a name="Connection"></a>Stringa di connessione  
+##  <a name="connection-string"></a><a name="Connection"></a>Stringa di connessione  
  Contattare l'amministratore del database per ottenere le informazioni di connessione e le credenziali da utilizzare per connettersi all'origine dati. Nella stringa di connessione di esempio seguente viene specificata un'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] in un server usando la porta 8000 e XMLA (XML for Analysis Services) in Internet tramite SOAP:  
   
 ```  
@@ -48,7 +48,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Credentials"></a>Credenziali  
+##  <a name="credentials"></a><a name="Credentials"></a>Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Query"></a>Query  
+##  <a name="queries"></a><a name="Query"></a>Query  
  È possibile utilizzare la finestra Progettazione query con interfaccia grafica in modalità progettazione o query per compilare una query MDX (Multidimensional Expression) visualizzando le strutture di dati sottostanti nell'origine dati. In fase di progettazione è possibile eseguire in modo interattivo una query dalla finestra Progettazione query, per visualizzare i relativi risultati. La query compilata definisce i campi del set di dati. In fase di esecuzione i dati effettivi vengono restituiti dall'origine dei dati. Utilizzare la finestra Progettazione query con interfaccia grafica per eseguire le operazioni seguenti:  
   
 -   In modalità progettazione trascinare dimensioni, membri, proprietà dei membri e cifre chiave dall'origine dei dati al riquadro Dati per compilare una query MDX (Multidimensional Expression). Trascinare i membri calcolati dal riquadro Membri calcolati al riquadro Dati per definire ulteriori campi del set di dati.  
@@ -70,7 +70,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Extended"></a>Proprietà di campo estese  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Proprietà di campo estese  
  L'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] supporta le proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto a `Value` e `IsMissing` definite per un campo del set di dati dall'estensione per l'elaborazione dei dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
   
 ### <a name="working-with-field-properties"></a>Utilizzo delle proprietà di campo  
@@ -85,7 +85,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Per fare riferimento alle proprietà estese predefinite in un'espressione, utilizzare uno dei due tipi di sintassi seguenti:  
   
--   *Campi! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
 -   *Campi! FieldName ("PropertyName")*  
   
@@ -98,7 +98,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ### <a name="predefined-field-properties"></a>Proprietà di campo predefinite  
  Nella tabella seguente è riportato un elenco delle proprietà di campo predefinite che è possibile usare per un'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] .  
   
-|**Proprietà**|**Tipo**|**Descrizione o valore previsto**|  
+|**Proprietà**|**Type**|**Descrizione o valore previsto**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Specifica il valore dei dati del campo.|  
 |`IsMissing`|`Boolean`|Indica se il campo è stato trovato nel set di dati risultante.|  
@@ -114,14 +114,14 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  Osservazioni su <a name="Remarks"></a>  
+##  <a name="remarks"></a>Osservazioni su <a name="Remarks"></a>  
  Non tutte le modalità di recapito report sono supportate da questo provider di dati. Il recapito di report tramite sottoscrizioni guidate dai dati non è supportato per questa estensione per l'elaborazione dati. Per altre informazioni, vedere [Usare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
  Per altre informazioni, vedere l'articolo relativo all' [utilizzo di SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -132,7 +132,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Related"></a>Sezioni correlate  
+##  <a name="related-sections"></a><a name="Related"></a>Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
  [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)  
@@ -147,14 +147,14 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
  
   
-## <a name="see-also"></a>Vedere anche  
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedi anche  
+ [Parametri del report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

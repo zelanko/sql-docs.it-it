@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108101"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà segnaposto, Generale (Generatore report e SSRS)
   Utilizzare la finestra di dialogo **Proprietà segnaposto** per modificare il valore, la descrizione comando e le opzioni di markup di un segnaposto in una casella di testo.  
   
 ## <a name="options"></a>Opzioni  
- **Etichetta**  
+ **Label**  
  Digitare un'etichetta per il segnaposto. Tale etichetta verrà visualizzata solo nell'area di progettazione.  
   
  **Valore**  
@@ -36,17 +36,17 @@ ms.locfileid: "66108101"
  **Tipo di markup**  
  Selezionare un'opzione per indicare come verrà visualizzato il segnaposto.  
   
--   **Testo normale** Visualizza il segnaposto come testo semplice. Il testo in formato HTML verrà gestito come testo letterale.  
+-   **Testo normale** Il segnaposto viene visualizzato come testo normale. Il testo in formato HTML verrà gestito come testo letterale.  
   
--   **HTML**  Visualizzare il segnaposto come HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML.  
+-   **HTML**  Il segnaposto viene visualizzato in formato HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Aggiungere codice HTML a un report &#40;Generatore report e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Caselle di testo &#40;Generatore report e SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importazione di codice HTML a un report &#40;Generatore report e SSRS &#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

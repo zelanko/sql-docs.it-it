@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103593"
 ---
 # <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
@@ -117,13 +117,13 @@ ms.locfileid: "66103593"
   
     -   Per impostare la scadenza della copia memorizzata nella cache in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Per impostare una pianificazione per la scadenza del report, fare clic su **Configura**oppure selezionare una pianificazione condivisa.  
   
-18. Fare clic su **Apply**.  
+18. Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
+ [Impostare le proprietà di elaborazione dei report](set-report-processing-properties.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

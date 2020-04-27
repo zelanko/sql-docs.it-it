@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127152"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Imposta il valore di un parametro restituito di chiamata a una stored procedure remota. Questa funzione è stata sostituita dalla funzione **srv_paramsetoutput**.  
   
@@ -77,14 +76,14 @@ len
   
 |Nuovi tipi di dati|Lunghezza dei dati restituiti|  
 |--------------------|------------------------|  
-|`BITN`|**Null:** *Len* = 0, dati = IG, RET = 0<br /><br /> **Zero:** N/A<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
-|`BIGVARCHAR`|**Null:** *Len* = 0, dati = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = valido, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
-|`BIGCHAR`|**Null:** *Len* = 0, dati = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = valido, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
-|`BIGBINARY`|**Null:** *Len* = 0, dati = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = valido, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
-|`BIGVARBINARY`|**Null:** *Len* = 0, dati = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = valido, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
-|NCHAR|**Null:** *Len* = 0, dati = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = valido, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
-|NVARCHAR|**Null:** *Len* = 0, dati = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = valido, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
-|`NTEXT`|**Null:** *Len* = IG, data = IG, RET = 0<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = IG, data = IG, RET = 0<br /><br /> 255: *Len* = IG, data = IG, RET = 0 ** \<**|  
+|`BITN`|**NULL:** *len* = 0, data = IG, RET = 0<br /><br /> **ZERO:** N/D<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/A|  
+|`BIGVARCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`BIGCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`BIGBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`BIGVARBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|NCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|NVARCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`NTEXT`|**NULL:** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = IG, data = IG, RET = 0<br /><br /> 255: *Len* = IG, data = IG, RET = 0 ** \<**|  
 |RET = valore restituito di srv_paramset||  
 |IG = il valore verrà ignorato||  
 |valid = qualsiasi puntatore valido ai dati||  
@@ -101,7 +100,7 @@ len
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedere anche  
- [srv_paramsetoutput &#40;API stored procedure estesa&#41;](srv-paramsetoutput-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Vedi anche  
+ [srv_paramsetoutput &#40;API Stored procedure estesa&#41;](srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   
