@@ -19,10 +19,10 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083587"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrazione guidata (AccessToSQL)
@@ -60,7 +60,7 @@ Nella pagina Seleziona oggetti da migrare è possibile selezionare gli oggetti d
   
 1.  Espandere **Access-metabase**, quindi espandere **database**.  
   
-2.  Eseguire almeno una fra le seguenti operazioni:  
+2.  Effettuare una o più delle seguenti operazioni:  
   
     -   Per convertire tutti i database, selezionare la casella di controllo accanto a **database**.  
   

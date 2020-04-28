@@ -18,10 +18,10 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053094"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
@@ -76,7 +76,7 @@ sp_describe_cursor_tables
 |table owner|**sysname**|ID utente del proprietario della tabella.|  
 |Table_name|**sysname**|Nome dell'oggetto o della tabella di base. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cursori del server restituiscono sempre l'oggetto specificato dall'utente e non le tabelle di base.|  
 |Optimizer_hints|**smallint**|Mappa di bit composta da uno o più dei valori seguenti:<br /><br /> 1 = Blocco a livello di riga (ROWLOCK)<br /><br /> 4 = Blocco a livello di pagina (PAGELOCK)<br /><br /> 8 = Blocco a livello di tabella (TABLOCK)<br /><br /> 16 = Blocco esclusivo a livello di tabella (TABLOCKX)<br /><br /> 32 = Blocco di aggiornamento (UPDLOCK)<br /><br /> 64 = Nessun blocco (NOLOCK)<br /><br /> 128 = Opzione recupero rapido prime n righe (FASTFIRSTROW)<br /><br /> 4096 = Semantica di lettura ripetibile se utilizzata con DECLARE CURSOR (HOLDLOCK)<br /><br /> Se si specificano più opzioni, il sistema utilizza l'opzione più restrittiva. La stored procedure sp_describe_cursor_tables, tuttavia, visualizza i flag specificati nella query.|  
-|lock_type|**smallint**|Tipo di blocco di scorrimento richiesto in modo esplicito o implicito per ogni tabella di base sottostante del cursore. Il valore può essere uno dei seguenti:<br /><br /> 0 = Nessuno<br /><br /> 1 = Condiviso<br /><br /> 3 = Aggiornamento|  
+|lock_type|**smallint**|Tipo di blocco di scorrimento richiesto in modo esplicito o implicito per ogni tabella di base sottostante del cursore. I possibili valori sono i seguenti:<br /><br /> 0 = Nessuno<br /><br /> 1 = Condiviso<br /><br /> 3 = Aggiornamento|  
 |server_name|**sysname, Nullable**|Nome del server collegato contenente la tabella. NULL se si utilizza OPENQUERY o OPENROWSET.|  
 |Objectid|**int**|ID di oggetto della tabella. 0 se si utilizza OPENQUERY o OPENROWSET.|  
 |dbid|**int**|ID del database contenente la tabella specificata. 0 se si utilizza OPENQUERY o OPENROWSET.|  

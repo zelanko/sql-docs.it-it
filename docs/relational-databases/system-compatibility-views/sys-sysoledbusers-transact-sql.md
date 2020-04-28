@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076529"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "68076529"
 |**rmtsrvid**|**smallint**|ID di sicurezza (SID) del server.|  
 |**rmtloginame**|**nvarchar (** 128 **)**|Nome dell'account di accesso remoto a cui **LoginSid** esegue il mapping per **rmtservid**collegati.|  
 |**rmtpassword**|**nvarchar (** 128 **)**|Restituisce NULL.|  
-|**LoginSid**|**varbinary (** 85 **)**|SID dell'account di accesso locale su cui eseguire il mapping.|  
-|**stato**|**smallint**|Se uguale a 1, per il mapping è necessario utilizzare le credenziali dell'utente.|  
+|**LoginSid**|**varbinary(** 85 **)**|SID dell'account di accesso locale su cui eseguire il mapping.|  
+|**Stato**|**smallint**|Se uguale a 1, per il mapping è necessario utilizzare le credenziali dell'utente.|  
 |**changedate**|**datetime**|Data dell'ultima modifica delle informazioni sul mapping.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

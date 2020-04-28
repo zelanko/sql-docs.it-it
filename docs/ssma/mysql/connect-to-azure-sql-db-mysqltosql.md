@@ -10,10 +10,10 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103239"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Connettersi al database SQL di Azure (MySQLToSQL)
@@ -22,7 +22,7 @@ Utilizzare la finestra di dialogo Connetti a SQL Azure per connettersi al databa
 Per accedere a questa finestra di dialogo, scegliere **Connetti a SQL Azure**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a SQL Azure.**  
   
 ## <a name="options"></a>Opzioni  
-**Nome server**  
+**Nome del server**  
   
 Selezionare o immettere il nome del server per la connessione a SQL Azure.  
   
@@ -41,7 +41,7 @@ Immettere il nome utente che SSMA utilizzerà per connettersi al database di SQL
   
 Immettere il nome utente e la password  
   
-**Crittografare**  
+**Encrypt**  
   
 SSMA consiglia la connessione crittografata a SQL Azure.  
   

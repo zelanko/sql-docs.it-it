@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078518"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
@@ -45,12 +45,12 @@ ms.locfileid: "68078518"
 |ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> ** \* Importante \* \* ** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Nome della funzione.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Restituisce PROCEDURE per le stored procedure e FUNCTION per le funzioni.|  
-|MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|MODULE_SCHEMA|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|MODULE_NAME|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|UDT_NAME|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
+|MODULE_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|MODULE_SCHEMA|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|MODULE_NAME|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|UDT_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|UDT_SCHEMA|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|UDT_NAME|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
 |DATA_TYPE|**nvarchar (** 128 **)**|Tipo di dati del valore restituito dalla funzione. Restituisce **Table** se una funzione con valori di tabella.|  
 |CHARACTER_MAXIMUM_LENGTH|**int**|Lunghezza massima, espressa in caratteri, se viene restituito un tipo di dati character.<br /><br /> -1 per i dati di tipo **XML** e per valori di grandi dimensioni.|  
 |CHARACTER_OCTET_LENGTH|**int**|Lunghezza massima, espressa in byte, se viene restituito un tipo di dati character.<br /><br /> -1 per i dati di tipo **XML** e per valori di grandi dimensioni.|  
@@ -64,25 +64,25 @@ ms.locfileid: "68078518"
 |NUMERIC_PRECISION_RADIX|**smallint**|Radice di precisione numerica del valore restituito. Per i tipi di dati non numerici viene restituito NULL.|  
 |NUMERIC_SCALE|**smallint**|Scala del valore restituito. Per i tipi di dati non numerici viene restituito NULL.|  
 |DATETIME_PRECISION|**smallint**|Precisione frazionaria di un secondo se il valore restituito è di tipo **DateTime**. In caso contrario, viene restituito NULL.|  
-|INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL. Riservato a un uso futuro.|  
-|INTERVAL_PRECISION|**smallint**|NULL. Riservato a un uso futuro.|  
-|TYPE_UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|TYPE_UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|TYPE_UDT_NAME|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|SCOPE_CATALOG|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|SCOPE_SCHEMA|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|SCOPE_NAME|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|MAXIMUM_CARDINALITY|**bigint**|NULL. Riservato a un uso futuro.|  
-|DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
+|INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL Riservato per utilizzi futuri.|  
+|INTERVAL_PRECISION|**smallint**|NULL Riservato per utilizzi futuri.|  
+|TYPE_UDT_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|TYPE_UDT_SCHEMA|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|TYPE_UDT_NAME|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|SCOPE_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|SCOPE_SCHEMA|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|SCOPE_NAME|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|MAXIMUM_CARDINALITY|**bigint**|NULL Riservato per utilizzi futuri.|  
+|DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Restituisce SQL per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ed EXTERNAL per le funzioni scritte esternamente.<br /><br /> Le funzioni sono sempre di tipo SQL.|  
 |ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Restituisce i primi 4000 caratteri del testo di definizione della funzione o della stored procedure se la funzione o la stored procedure non è crittografata. In caso contrario, viene restituito NULL.<br /><br /> Per assicurarsi di ottenere la definizione completa, eseguire una query sulla funzione [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) o sulla colonna di definizione della vista del catalogo [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .|  
-|EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
-|EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Riservato a un uso futuro.|  
-|PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Riservato a un uso futuro.|  
+|EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
+|EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL Riservato per utilizzi futuri.|  
+|PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL Riservato per utilizzi futuri.|  
 |IS_DETERMINISTIC|**nvarchar (** 10 **)**|Restituisce YES se la routine è deterministica.<br /><br /> Restituisce NO se la routine non è deterministica.<br /><br /> Restituisce sempre NO per le stored procedure.|  
 |SQL_DATA_ACCESS|**nvarchar (** 30 **)**|Restituisce uno dei valori seguenti:<br /><br /> NONE = La funzione non contiene SQL.<br /><br /> CONTAINS = È possibile che la funzione contenga SQL<br /><br /> READS = È possibile che la funzione legga dati SQL.<br /><br /> MODIFIES = È possibile che la funzione modifichi dati SQL.<br /><br /> Restituisce READS per tutte le funzioni e MODIFIES per tutte le stored procedure.|  
 |IS_NULL_CALL|**nvarchar (** 10 **)**|Specifica se la routine deve essere chiamata quando uno degli argomenti è NULL.|  
-|SQL_PATH|**nvarchar (** 128 **)**|NULL. Riservato a un uso futuro.|  
+|SQL_PATH|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
 |SCHEMA_LEVEL_ROUTINE|**nvarchar (** 10 **)**|Restituisce YES per le funzioni valutate a livello di schema e NO negli altri casi.<br /><br /> Restituisce sempre YES.|  
 |MAX_DYNAMIC_RESULT_SETS|**smallint**|Numero massimo di set di risultati dinamici restituiti dalla routine.<br /><br /> Restituisce 0 per le funzioni.|  
 |IS_USER_DEFINED_CAST|**nvarchar (** 10 **)**|Restituisce YES per le funzioni cast definite dall'utente e NO negli altri casi.<br /><br /> Restituisce sempre NO.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68078518"
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. Procedures &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   

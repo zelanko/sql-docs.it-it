@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067830"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68067830"
 |**begin_lsn**|**nvarchar (64)**|Numero di sequenza del file di log (LSN) corrispondente al record di log iniziale per la transazione.|  
 |**commit_lsn**|**nvarchar (64)**|LSN del record di log del commit per la transazione.|  
 |**dbid**|**smallint**|ID del database.|  
-|**rows**|**int**|ID del comando replicato nella transazione.|  
+|**righe**|**int**|ID del comando replicato nella transazione.|  
 |**xdesid**|**nvarchar (64)**|ID della transazione.|  
 |**artcache_table_address**|**varbinary (8)**|Indirizzo in memoria dell'ultima struttura della tabella di articoli nella cache utilizzata per la transazione.|  
 |**Server**|**nvarchar (514)**|Nome del server.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067830"
  Vengono restituite informazioni solo per gli oggetti di database replicati o per le tabelle abilitate per l'acquisizione dei dati delle modifiche caricati nella cache dell'articolo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative alla replica &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Viste a gestione dinamica correlate a Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

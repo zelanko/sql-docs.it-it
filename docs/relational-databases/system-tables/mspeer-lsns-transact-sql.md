@@ -18,10 +18,10 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085768"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68085768"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|Identifica un LSN peer-to-peer.|  
+|**id**|**int**|Identifica un LSN peer-to-peer.|  
 |**last_updated**|**datetime**|Data e ora in cui è stato eseguito l'ultimo **aggiornamento della riga** .|  
 |**Creatore**|**sysname**|Nome del server di pubblicazione che ha avviato la transazione.|  
 |**originator_db**|**sysname**|Nome del database in cui è stata avviata la transazione.|  

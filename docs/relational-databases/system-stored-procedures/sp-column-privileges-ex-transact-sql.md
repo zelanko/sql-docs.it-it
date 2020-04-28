@@ -18,10 +18,10 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070365"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
@@ -62,7 +62,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **table_name** restituita. Questo campo restituisce sempre un valore.|  
-|**CONCEDENTE**|**sysname**|Nome utente del database che ha concesso le autorizzazioni per questo **column_name** all'utente **autorizzato**indicato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identica alla **TABLE_OWNER**. Questo campo restituisce sempre un valore.<br /><br /> La colonna di **concessione** può essere il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database ha concesso le autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione Grant.|  
+|**GRANTOR**|**sysname**|Nome utente del database che ha concesso le autorizzazioni per questo **column_name** all'utente **autorizzato**indicato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identica alla **TABLE_OWNER**. Questo campo restituisce sempre un valore.<br /><br /> La colonna di **concessione** può essere il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database ha concesso le autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione Grant.|  
 |**GRANTEE**|**sysname**|Nome utente del database a cui sono state concesse le autorizzazioni per questo **column_name** dall'utente **autorizzato**indicato. Questo campo restituisce sempre un valore.|  
 |**PRIVILEGE**|**varchar (** 32 **)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> SELECT = l' **utente GRANTEE** può recuperare dati per le colonne.<br /><br /> INSERT = l' **utente GRANTEE** può fornire dati per la colonna quando vengono inserite nuove righe (dall' **utente autorizzato**) nella tabella.<br /><br /> UPDATE = l' **utente GRANTEE** può modificare i dati esistenti nella colonna.<br /><br /> REFERENCEs = l' **utente GRANTEE** può fare riferimento a una colonna di una tabella esterna in una relazione di chiave primaria/chiave esterna. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se l' **utente autorizzato** ha la possibilità di concedere autorizzazioni ad altri utenti (spesso denominate autorizzazione "Grant with Grant"). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, corrisponde a un'origine dei dati per la quale questo tipo di assegnazione delle autorizzazioni non è consentito.|  

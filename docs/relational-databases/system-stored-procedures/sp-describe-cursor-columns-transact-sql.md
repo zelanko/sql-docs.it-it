@@ -18,10 +18,10 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053119"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
@@ -85,7 +85,7 @@ sp_describe_cursor_columns
 |order_direction|**varchar (1)**(Nullable)|A = La colonna è inclusa nella chiave di ordinamento e l'ordine è crescente.<br /><br /> D = La colonna è inclusa nella chiave di ordinamento e l'ordine è decrescente.<br /><br /> NULL = La colonna non partecipa all'ordinamento.|  
 |hidden_column|**smallint**|0 = La colonna è inclusa nell'elenco di selezione.<br /><br /> 1 = Riservato per utilizzi futuri.|  
 |columnid|**int**|ID della colonna di base. Se la colonna del set di risultati è stata creata in base a un'espressione, columnid è -1.|  
-|objectId|**int**|ID dell'oggetto o della tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, objectid è -1.|  
+|objectid|**int**|ID dell'oggetto o della tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, objectid è -1.|  
 |dbid|**int**|ID del database contenente la tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, dbid è -1.|  
 |dbname|**sysname**<br /><br /> (ammette valori Null)|Nome del database contenente la tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, dbname è NULL.|  
   

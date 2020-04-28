@@ -10,10 +10,10 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060165"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Impostazioni progetto (mapping dei tipi) (DB2ToSQL)
@@ -47,7 +47,7 @@ Fare clic per modificare il tipo di dati selezionato nell'elenco mapping.
 **Rimuovi**  
 Fare clic per rimuovere il mapping dei tipi di dati selezionati dall'elenco mapping.  
   
-**Ripristina impostazioni predefinite**  
+**Ripristina predefiniti**  
 Fare clic per reimpostare l'elenco dei mapping dei tipi sui valori predefiniti di SSMA.  
   
 ## <a name="default-type-mappings"></a>Mapping dei tipi predefiniti  
@@ -62,7 +62,7 @@ La tabella seguente contiene il mapping del tipo di dati predefinito per gli arg
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|INT|  
-|BLOB|varbinary(max)|  
+|blob|varbinary(max)|  
 |boolean|bit|  
 |char|ntext|  
 |char varying|ntext|  
@@ -94,9 +94,9 @@ La tabella seguente contiene il mapping del tipo di dati predefinito per gli arg
 |raw|varbinary(max)|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
-|signtype|smallint|  
-|smallint|smallint|  
-|string|ntext|  
+|signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
+|stringa|ntext|  
 |timestamp|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario|datetimeoffset|  
@@ -117,7 +117,7 @@ La tabella seguente contiene il mapping dei tipi predefinito per le colonne.
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|BLOB|varbinary(max)|  
+|blob|varbinary(max)|  
 |char|char|  
 |carattere variabile [\*.. \*]|varchar [\*]|  
 |Char [\*.. \*]|Char [\*]|  
@@ -164,7 +164,7 @@ La tabella seguente contiene il mapping dei tipi predefinito per le colonne.
 |non elaborato\*[.. \*]|varbinary [\*]|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
-|smallint|smallint|  
+|SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario locale [\*.. \*]|DateTimeOffset [\*]|  
@@ -246,8 +246,8 @@ La tabella seguente contiene il mapping dei tipi predefinito per le variabili lo
 |non elaborato [8001.\*.]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |stringa [\*.. 8000]|varchar [\*]|  
 |stringa [8001..\*]|ntext|  
 |timestamp|datetime2|  

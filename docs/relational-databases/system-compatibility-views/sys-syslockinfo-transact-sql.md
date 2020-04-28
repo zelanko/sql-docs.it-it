@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053345"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "68053345"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar (32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
-|**rsc_bin**|**binario (16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna è inclusa per gli strumenti che conoscono il formato della risorsa di blocco per la generazione di una risorsa di blocco formattata e per l'esecuzione di self join in **syslockinfo**.|  
-|**rsc_valblk**|**binario (16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
+|**rsc_text**|**nchar(32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
+|**rsc_bin**|**binary(16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna è inclusa per gli strumenti che conoscono il formato della risorsa di blocco per la generazione di una risorsa di blocco formattata e per l'esecuzione di self join in **syslockinfo**.|  
+|**rsc_valblk**|**binary(16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
 |**rsc_dbid**|**smallint**|ID di database associato alla risorsa.|  
 |**rsc_indid**|**smallint**|ID di indice associato alla risorsa, se appropriato.|  
 |**rsc_objid**|**int**|ID di oggetto associato alla risorsa, se appropriato.|  
@@ -64,6 +64,6 @@ ms.locfileid: "68053345"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

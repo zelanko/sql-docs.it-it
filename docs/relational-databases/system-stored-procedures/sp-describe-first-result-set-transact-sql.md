@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053056"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
@@ -66,13 +66,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indica che la colonna è una colonna aggiuntiva aggiunta per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int NOT NULL**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna verrà specificata come 1.|  
-|**nome**|**sysname NULL**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, contiene NULL.|  
+|**name**|**sysname NULL**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, contiene NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
 |**system_type_id**|**int NOT NULL**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contiene il nome e gli argomenti, ad esempio lunghezza, precisione e scala, specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
 |**max_length**|**smallint non NULL**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '**.|  
 |**precisione**|**tinyint non NULL**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**scala**|**tinyint non NULL**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
+|**scale**|**tinyint non NULL**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**collation_name**|**sysname NULL**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
 |**user_type_id**|**int NULL**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**user_type_database**|**sysname NULL**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -99,10 +99,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|Posizione della colonna nell'elenco ORDER BY. Restituisce NULL se la colonna non compare nell'elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco.|  
 |**order_by_list_length**|**smallint NULL**|Lunghezza dell'elenco ORDER BY. Restituisce NULL se non è presente alcun elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco. Si noti che questo valore sarà lo stesso per tutte le righe restituite da **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Se ordinal_in_order_by_list non è NULL, la colonna **order_by_is_descending** indica la direzione della clausola ORDER BY per questa colonna. In caso contrario, viene restituito NULL.|  
-|**tds_type_id**|**int NOT NULL**|Solo per uso interno.|  
-|**tds_length**|**int NOT NULL**|Solo per uso interno.|  
-|**tds_collation_id**|**int NULL**|Solo per uso interno.|  
-|**tds_collation_sort_id**|**tinyint NULL**|Solo per uso interno.|  
+|**tds_type_id**|**int NOT NULL**|Per uso interno.|  
+|**tds_length**|**int NOT NULL**|Per uso interno.|  
+|**tds_collation_id**|**int NULL**|Per uso interno.|  
+|**tds_collation_sort_id**|**tinyint NULL**|Per uso interno.|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_describe_first_result_set** garantisce che se la procedura restituisce i primi metadati del set di risultati per (un ipotetico) batch a e se tale batch (a) viene eseguito successivamente, il batch (1) genera un errore in fase di ottimizzazione, (2) genera un errore di run-time, (3) non restituisce alcun set di risultati oppure (4) restituisce un primo set di risultati con gli stessi metadati descritti da **sp_describe_first_result_set**.  
@@ -158,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Esempi tipici  
   
-#### <a name="a-simple-example"></a>R. Esempio semplice  
+#### <a name="a-simple-example"></a>A. Esempio semplice  
  Nell'esempio seguente viene descritto il set di risultati restituito da una singola query.  
   
 ```  

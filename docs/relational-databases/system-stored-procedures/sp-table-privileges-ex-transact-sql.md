@@ -18,10 +18,10 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096174"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
@@ -63,7 +63,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
-|**CONCEDENTE**|**sysname**|Nome utente del database che ha concesso le autorizzazioni per questo **table_name** all' **utente autorizzato**specificato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identica alla **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, è possibile che la colonna di concessione sia il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database ha concesso l'autorizzazione utilizzando la clausola WITH GRANT OPTION dell'istruzione Grant.|  
+|**GRANTOR**|**sysname**|Nome utente del database che ha concesso le autorizzazioni per questo **table_name** all' **utente autorizzato**specificato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identica alla **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, è possibile che la colonna di concessione sia il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database ha concesso l'autorizzazione utilizzando la clausola WITH GRANT OPTION dell'istruzione Grant.|  
 |**GRANTEE**|**sysname**|Nome utente del database a cui sono state concesse le autorizzazioni per questo **table_name** dall' **utente autorizzato**indicato. Questo campo restituisce sempre un valore.|  
 |**PRIVILEGE**|**varchar (** 32 **)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> SELECT = l' **utente GRANTEE** può recuperare i dati per una o più colonne.<br /><br /> INSERT = l' **utente GRANTEE** può fornire dati per le nuove righe di una o più colonne.<br /><br /> UPDATE = l' **utente GRANTEE** può modificare i dati esistenti per una o più colonne.<br /><br /> DELETE = l' **utente GRANTEE** può rimuovere righe dalla tabella.<br /><br /> REFERENCEs = l' **utente GRANTEE** può fare riferimento a una colonna di una tabella esterna in una relazione di chiave primaria/chiave esterna. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione fornito all' **utente autorizzato** da un privilegio di tabella specifico dipende dall'origine dati. Ad esempio, l'autorizzazione UPDATE potrebbe consentire all' **utente autorizzato** di aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per le quali l' **utente autorizzato** dispone dell'autorizzazione Update per un'altra origine dati.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se l' **utente autorizzato** è autorizzato a concedere autorizzazioni ad altri utenti. Questa autorizzazione spesso viene denominata "autorizzazione per la concessione di autorizzazioni". I possibili valori sono YES, NO e NULL. Il valore sconosciuto, o NULL, indica un'origine dei dati per la quale l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
@@ -86,7 +86,7 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_column_privileges_ex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure per query distribuite &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

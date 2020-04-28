@@ -16,10 +16,10 @@ ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099833"
 ---
 # <a name="functions-on-string-values---concat"></a>Funzioni su valori stringa - concat
@@ -49,7 +49,7 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database di esempio AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>R. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
  Per un modello di prodotto specifico, questa query restituisce una stringa creata concatenando il periodo di validità e la descrizione della garanzia. Nel documento di descrizione del catalogo, l' `Warranty` elemento <> è costituito da `WarrantyPeriod` <> e `Description` <> elementi figlio.  
   
 ```  

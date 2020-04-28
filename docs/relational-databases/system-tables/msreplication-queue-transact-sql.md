@@ -18,10 +18,10 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68080011"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68080011"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**tranid**|**sysname**|ID di transazione utilizzato per l'esecuzione del comando in coda.|  
-|**data**|**varbinary (8000)**|Flusso di byte compresso in cui sono archiviate informazioni sul comando in coda.|  
+|**data**|**varbinary(8000)**|Flusso di byte compresso in cui sono archiviate informazioni sul comando in coda.|  
 |**datalen**|**int**|Lunghezza dei dati in byte.|  
 |**CommandType**|**int**|Tipo di comando che viene inserito in coda:<br /><br /> 1 = Comando utente nella transazione.<br /><br /> 2 = Comando di sincronizzazione della sottoscrizione.|  
 |**insertdate**|**datetime**|Data dell'inserimento.|  

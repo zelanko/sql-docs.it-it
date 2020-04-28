@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054902"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -54,12 +54,12 @@ sp_help_jobs_in_schedule
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo.|  
-|**originating_server**|**nvarchar (30)**|Nome del server di provenienza del processo.|  
-|**nome**|**sysname**|Nome del processo.|  
+|**originating_server**|**nvarchar(30)**|Nome del server di provenienza del processo.|  
+|**name**|**sysname**|Nome del processo.|  
 |**abilitato**|**tinyint**|Indica se il processo è abilitato per l'esecuzione.|  
 |**Descrizione**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
-|**Categoria**|**sysname**|Categoria del processo.|  
+|**category**|**sysname**|Categoria del processo.|  
 |**proprietario**|**sysname**|Proprietario del processo.|  
 |**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** = mai<br /><br /> **1** = in caso di esito positivo di un processo<br /><br /> **2** = quando il processo ha esito negativo<br /><br /> **3** = ogni volta che il processo viene completato (indipendentemente dal risultato del processo)|  
 |**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo. I valori possibili sono identici a quelli per **notify_level_eventlog**.|  
@@ -71,7 +71,7 @@ sp_help_jobs_in_schedule
 |**delete_level**|**int**|Maschera di bit che indica le condizioni per l'eliminazione di un processo al termine del processo. I valori possibili sono identici a quelli per **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Data di creazione del processo.|  
 |**date_modified**|**datetime**|Data dell'ultima modifica del processo.|  
-|**numero_versione**|**int**|Versione del processo (aggiornata automaticamente ogni volta che viene modificato il processo).|  
+|**version_number**|**int**|Versione del processo aggiornata automaticamente in corrispondenza di ogni modifica del processo.|  
 |**last_run_date**|**int**|Data dell'ultimo avvio dell'esecuzione del processo.|  
 |**last_run_time**|**int**|Ora dell'ultimo avvio dell'esecuzione del processo.|  
 |**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non riuscito<br /><br /> **1** = operazione completata<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
@@ -84,13 +84,13 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Numero di passaggi del processo.|  
 |**has_schedule**|**int**|Numero di pianificazioni del processo.|  
 |**has_target**|**int**|Numero di server di destinazione del processo.|  
-|**tipo**|**int**|Tipo del processo:<br /><br /> **1** = processo locale.<br /><br /> **2** = processo multiserver.<br /><br /> **0** = il processo non dispone di server di destinazione.|  
+|**type**|**int**|Tipo del processo:<br /><br /> **1** = processo locale.<br /><br /> **2** = processo multiserver.<br /><br /> **0** = il processo non dispone di server di destinazione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa stored procedure visualizza le informazioni sui processi associati alla pianificazione specificata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   

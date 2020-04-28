@@ -18,10 +18,10 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094836"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094836"
 |history_id|**bigint**|Identificatore dell'evento di cronologia. Ogni evento della cronologia rappresenta un tentativo di esecuzione dei criteri. Poiché una condizione può disporre di molte espressioni e molte destinazioni, un identificatore history_id può creare molti record di dettaglio. Utilizzare la colonna history_id per unire in join questa visualizzazione alla visualizzazione [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
 |target_query_expression|**nvarchar(max)**|Destinazione del criterio e della vista syspolicy_policy_execution_history.|  
 |execution_date|**datetime**|Data e ora in cui è stato creato il record di dettaglio.|  
-|risultato|**bit**|Esito positivo o negativo della valutazione di questa destinazione e dell'espressione della condizione:<br /><br /> 0 (esito positivo) o 1 (esito negativo)|  
+|result|**bit**|Esito positivo o negativo della valutazione di questa destinazione e dell'espressione della condizione:<br /><br /> 0 (esito positivo) o 1 (esito negativo)|  
 |result_detail|**nvarchar(max)**|Messaggio del risultato. Disponibile solo se fornito dal facet.|  
 |exception_message|**nvarchar(max)**|Messaggio generato da un'eventuale eccezione.|  
 |exception|**nvarchar(max)**|Descrizione dell'eventuale eccezione.|  
@@ -69,7 +69,7 @@ WHERE PolHistDet.result = 0 ;
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Viste della gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Amministrare i server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

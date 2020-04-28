@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083390"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
@@ -25,7 +25,7 @@ Per accedere a questa finestra di dialogo, scegliere **Connetti a Sybase**dal me
 **Provider**  
 Selezionare uno dei provider installati nel computer per la connessione al Server Sybase.  
   
-**Mode**  
+**Modalità**  
 Selezionare la modalità di connessione standard o avanzata. In modalità standard, immettere o selezionare i valori per nome server, porta, nome utente e password. In modalità avanzata è possibile specificare una stringa di connessione.  
   
 **Nome server**  
@@ -71,7 +71,7 @@ Le stringhe di connessione sono costituite da coppie di nome e valore del parame
     |-----------|-----------------------------|  
     |Nome del driver|driver|  
     |Server Name|Server|  
-    |User Name|UID|  
+    |Nome utente|UID|  
     |Password|Pwd|  
     |Numero della porta|Porta|  
   
@@ -84,7 +84,7 @@ Le stringhe di connessione sono costituite da coppie di nome e valore del parame
     |Impostazione|Parametro Sybase 12.5/15|  
     |-----------|-----------------------------|  
     |Server Name|Server|  
-    |User Name|UID|  
+    |Nome utente|UID|  
     |Password|Pwd|  
     |Numero della porta|Porta|  
   

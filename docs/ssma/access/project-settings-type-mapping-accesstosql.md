@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066666"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (mapping dei tipi) (AccessToSQL)
@@ -50,13 +50,13 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**uniqueidentifier**|  
+|**GUID**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**lungo**|**int**|  
+|**long**|**int**|  
 |**LongBinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**Memo** : per l'accesso 97|**ntext**|  
-|**singolo**|**reale**|  
+|**single**|**real**|  
 |**testo [\*.. \*]**|**nvarchar [\*]**|  
 |**testo [\*.. ] \*** -per Access 97|**varchar [\*]**|  
   
@@ -69,10 +69,10 @@ Fare clic per modificare un tipo di dati nell'elenco mapping.
 **Rimuovi**  
 Fare clic per rimuovere il mapping dei tipi di dati selezionati dall'elenco mapping.  
   
-**Ripristina impostazioni predefinite**  
+**Ripristina predefiniti**  
 Fare clic per reimpostare tutti i mapping dei tipi di dati sulle impostazioni predefinite SSMA.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Mapping dei tipi di dati di origine e di destinazione](mapping-source-and-target-data-types-accesstosql.md)  
+[Mapping dei tipi di dati origine e destinazione](mapping-source-and-target-data-types-accesstosql.md)  
 [Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060199"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060199"
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta contenente l'allegato.|  
 |**filename**|**nvarchar (520)**|Nome di file dell'allegato. Quando **attach_query_result** è 1 e **query_attachment_filename** è null, posta elettronica database crea un nome file arbitrario.|  
 |**Filesize**|**int**|Dimensioni in byte dell'allegato.|  
-|**attachment**|**varbinary(max)**|Il contenuto dell'allegato.|  
+|**allegato**|**varbinary(max)**|Contenuto dell'allegato.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   

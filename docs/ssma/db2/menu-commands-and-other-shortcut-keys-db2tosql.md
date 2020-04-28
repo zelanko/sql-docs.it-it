@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074155"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandi di menu e altri tasti di scelta rapida (DB2ToSQL)
@@ -54,7 +54,7 @@ Per accedere al menu modifica, il tasto di scelta rapida utilizzato è ALT + E. 
 |Trova precedente.|ALT + E + F + P o CTRL + MAIUSC + F3|  
 |Trova successivo|ALT + E + F + N o CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Comandi del menu Visualizza  
+## <a name="view-menu-commands"></a>comandi del menu Visualizza  
 Per accedere al menu Visualizza, il tasto di scelta rapida utilizzato è ALT + V. Nella tabella seguente vengono descritti i tasti di scelta rapida usati per accedere alle voci di menu nel menu Visualizza.  
   
 |PER ESEGUIRE QUESTA OPERAZIONE|Premere|  
@@ -87,7 +87,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Visualizzare la finestra di dialogo Impostazioni progetto.|ALT + T + P|  
 |Visualizza la finestra di dialogo Impostazioni progetto predefinite.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Comandi di menu della Guida  
+## <a name="help-menu-commands"></a>comandi del menu ?  
 Per accedere al menu?, il tasto di scelta rapida utilizzato è ALT + H. Nella tabella seguente vengono descritti i tasti di scelta rapida usati per accedere alle voci di menu nel menu Guida.  
   
 |PER ESEGUIRE QUESTA OPERAZIONE|Premere|  

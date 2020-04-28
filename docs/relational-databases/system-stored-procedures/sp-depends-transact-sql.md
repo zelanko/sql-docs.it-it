@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053106"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -68,9 +68,9 @@ sp_depends [ @objname = ] '<object>'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**nvarchar (257** **)**|Nome dell'elemento a cui è associata una dipendenza.|  
-|**tipo**|**nvarchar (16)**|Tipo di elemento.|  
+|**type**|**nvarchar (16)**|Tipo di elemento.|  
 |**Aggiornato**|**nvarchar (7)**|Specifica se l'elemento è aggiornato.|  
-|**selezionato**|**nvarchar (8)**|Specifica se l'elemento viene utilizzato in un'istruzione SELECT.|  
+|**selezionato**|**nvarchar(8)**|Specifica se l'elemento viene utilizzato in un'istruzione SELECT.|  
 |**colonna**|**sysname**|Colonna o parametro in cui esiste la dipendenza.|  
   
  Il set di risultati seguente Mostra gli oggetti che dipendono dall' * \<oggetto>*.  
@@ -78,7 +78,7 @@ sp_depends [ @objname = ] '<object>'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**nvarchar (257** **)**|Nome dell'elemento a cui è associata una dipendenza.|  
-|**tipo**|**nvarchar (16)**|Tipo di elemento.|  
+|**type**|**nvarchar (16)**|Tipo di elemento.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
@@ -105,7 +105,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sql_dependencies &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

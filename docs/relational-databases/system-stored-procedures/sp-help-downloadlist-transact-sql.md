@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055188"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -58,8 +58,8 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**DIFETTO**|Operazione del server che richiede al server di destinazione di escludere dal servizio **SQLServerAgent** master.|  
-|**DELETE**|Operazione del processo che rimuove un intero processo.|  
-|**INSERT**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
+|**ELIMINARE**|Operazione del processo che rimuove un intero processo.|  
+|**INSERIRE**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
 |**RE-ENLIST**|Operazione del server con cui viene attivato il rinvio delle informazioni di integrazione del server di destinazione, tra cui l'intervallo di polling e il fuso orario per il dominio multiserver. Il server di destinazione Riscarica anche i dettagli **MSXOperator** .|  
 |**SET-POLL**|Operazione del server con cui viene impostato l'intervallo di tempo in secondi per il polling del dominio multiserver eseguito dai server di destinazione. Se specificato, il *valore* viene interpretato come il valore dell'intervallo necessario e può essere un valore compreso tra **10** e **28.800**.|  
 |**INIZIARE**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Numero di identificazione univoco integer dell'istruzione.|  
-|**source_server**|**nvarchar (30)**|Nome di computer del server da cui viene inviata l'istruzione. Nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0, questo è sempre il nome computer del server master (MSX).|  
+|**source_server**|**nvarchar(30)**|Nome di computer del server da cui viene inviata l'istruzione. Nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0, questo è sempre il nome computer del server master (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Codice di operazione dell'istruzione.|  
 |**object_name**|**sysname**|Oggetto su cui viene eseguita l'istruzione.|  
 |**object_id**|**uniqueidentifier**|Numero di identificazione dell'oggetto interessato dall'istruzione (**job_id** per un oggetto processo o 0x00 per un oggetto server) o un valore di dati specifico per l' **operation_code**.|  
-|**target_server**|**nvarchar (30)**|Server di destinazione in cui deve essere eseguito il download dell'istruzione.|  
+|**target_server**|**nvarchar(30)**|Server di destinazione in cui deve essere eseguito il download dell'istruzione.|  
 |**error_message**|**nvarchar(1024)**|Eventuale messaggio di errore inviato dal server di destinazione se si verifica un problema durante l'elaborazione dell'istruzione.<br /><br /> Nota: tutti i messaggi di errore bloccano tutti gli altri download dal server di destinazione.|  
 |**date_posted**|**datetime**|Data di inserimento dell'istruzione nella tabella.|  
 |**date_downloaded**|**datetime**|Data di download dell'istruzione nel server di destinazione.|  
-|**stato**|**tinyint**|Stato del processo:<br /><br /> **0** = non ancora scaricato<br /><br /> **1** = il download è stato completato.|  
+|**Stato**|**tinyint**|Stato del processo:<br /><br /> **0** = non ancora scaricato<br /><br /> **1** = il download è stato completato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'esecuzione di questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  

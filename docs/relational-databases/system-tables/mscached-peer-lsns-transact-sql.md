@@ -18,10 +18,10 @@ ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078147"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68078147"
 |**originator_db**|**sysname**|Nome del database di pubblicazione di origine.|  
 |**originator_publication_id**|**int**|Identifica la pubblicazione di origine.|  
 |**originator_db_version**|**int**|Identifica il numero di versione del database di origine.|  
-|**originator_lsn**|**varbinary (16)**|LSN della transazione di origine.|  
+|**originator_lsn**|**varbinary(16)**|LSN della transazione di origine.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Gli LSN vengono utilizzati solo immediatamente dopo l'inserimento e non hanno un significato permanente nel sistema.  

@@ -9,16 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070948"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Guida di riferimento alle funzioni DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta molte funzioni del linguaggio DMX (Data Mining Extensions). Le funzioni consentono di espandere i risultati di una query di stima in modo da includere informazioni che descrivono ulteriormente la stima. Tramite le funzioni è inoltre possibile ottenere un maggiore controllo sulla modalità con cui vengono restituiti i risultati della stima. Nella tabella seguente vengono forniti i collegamenti alle risorse che illustrano come utilizzare le funzioni in DMX.  
   
 |Funzione|Descrizione|  
@@ -34,15 +33,15 @@ ms.locfileid: "68070948"
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Restituisce una tabella che contiene le ultime righe di n elementi dell'espressione di tabella in ordine crescente in base all'espressione di rango.|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dall'ultima, che consente di ottenere la percentuale restituita da un'espressione specificata, in ordine di rango crescente in base a un'espressione di rango.|  
 |[BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dall'ultima, che consente di ottenere la somma restituita da un'espressione specificata, in ordine di rango crescente in base a un'espressione di rango.|  
-|[&#40;&#41;DMX del cluster](../dmx/cluster-dmx.md)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
+|[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
 |[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Restituisce la probabilità che il case di input appartenga al cluster.|  
 |[Esistente &#40;DMX&#41;](../dmx/exists-dmx.md)|Restituisce true se il set di risultati restituito dall'istruzione SELECT specificata contiene almeno una riga.|  
-|[&#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indica se il nodo corrente discende dal nodo specificato.|  
+|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indica se il nodo corrente discende dal nodo specificato.|  
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case specificato.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indica se un case appartiene al set di test case.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indica se un case appartiene al set di case di training.|  
-|[Ritardo &#40;DMX&#41;](../dmx/lag-dmx.md)|Restituisce l'intervallo di tempo tra la data del case corrente e l'ultima data presente nei dati.|  
-|[Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)|Esegue una stima su una colonna specificata.|  
+|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Restituisce l'intervallo di tempo tra la data del case corrente e l'ultima data presente nei dati.|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|Esegue una stima su una colonna specificata.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Restituisce la probabilità adattata della colonna stimabile specificata.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Consente di stimare l'appartenenza associativa in una colonna.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Restituisce la probabilità che un case di input risulti adatto al modello esistente. Questa funzione può essere utilizzata solo con i modelli di clustering.|  

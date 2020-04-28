@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089152"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-SQL)
@@ -26,11 +26,11 @@ ms.locfileid: "68089152"
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|Identificatore univoco della query a cui appartiene questa distribuzione di query SQL.<br /><br /> request_id, step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Identificatore univoco della query a cui appartiene questa distribuzione di query SQL.<br /><br /> request_id, step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Indice del passaggio della query di cui fa parte la distribuzione.<br /><br /> request_id, step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere step_index in [sys. dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |pdw_node_id|**int**|Identificatore univoco del nodo in cui viene eseguita la distribuzione di query.|Vedere node_id in [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**int**|Identificatore univoco della distribuzione in cui viene eseguita la distribuzione di query.<br /><br /> request_id, step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere distribution_id in [sys. pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). Impostare su-1 per le richieste eseguite nell'ambito del nodo, non nell'ambito di distribuzione.|  
-|status|**nvarchar (32)**|Stato corrente della distribuzione della query.|In sospeso, in esecuzione, non riuscito, annullato, completo, interrotto, CancelSubmitted|  
+|status|**nvarchar(32)**|Stato corrente della distribuzione della query.|In sospeso, in esecuzione, non riuscito, annullato, completo, interrotto, CancelSubmitted|  
 |error_id|**nvarchar (36)**|Identificatore univoco dell'errore associato a questa distribuzione di query, se disponibile.|Vedere error_id in [sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Impostare su NULL se non si è verificato alcun errore.|  
 |start_time|**datetime**|Ora di inizio dell'esecuzione della distribuzione delle query.|Minore o uguale all'ora corrente e maggiore o uguale a start_time del passaggio della query a cui appartiene questa distribuzione di query|  
 |end_time|**datetime**|Ora di completamento dell'esecuzione della distribuzione delle query, è stata annullata o non riuscita.|Maggiore o uguale all'ora di inizio oppure è impostato su NULL se la distribuzione delle query è in corso o in coda.|  

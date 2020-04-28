@@ -20,10 +20,10 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066679"
 ---
 # <a name="syssp_flush_log-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
@@ -46,13 +46,13 @@ sys.sp_flush_log
 ```  
   
 #### <a name="parameters"></a>Parametri  
- No.  
+ Nessuno.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Un codice restituito pari a 1 indica esito positivo.  Qualsiasi altro valore indica esito negativo.  
   
 ## <a name="result-sets"></a>Set di risultati  
- No.  
+ Nessuno.  
   
 ## <a name="sample-code"></a>Codice di esempio  
   

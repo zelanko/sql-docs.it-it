@@ -20,10 +20,10 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090270"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
@@ -43,13 +43,13 @@ ms.locfileid: "68090270"
 
  |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (60)**|Nome dell'oggetto . il nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
-|object_type|**nvarchar (60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> evento<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Non ammette i valori Null.|  
+|name|**nvarchar(60)**|Nome dell'oggetto . il nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
+|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto che espone questa azione. C'è una relazione molti-a-uno con sys.dm_xe_packages.package_id. Non ammette i valori Null.|  
 |description|**nvarchar(256)**|Descrizione dell'azione. la descrizione viene impostata dall'autore del pacchetto. Non ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità dell'oggetto. Ammette i valori Null.|  
 |capabilities_desc|**nvarchar(256)**|Elenca tutte le funzionalità dell'oggetto. Ammette i valori Null.<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> -<br />                                **Privato**. Unico oggetto disponibile per uso interno e a cui non è possibile accedere tramite CREATE/ALTER EVENT SESSION DDL. In questa categoria rientrano le destinazioni e gli eventi di controllo oltre a un esiguo numero di oggetti utilizzati internamente.<br /><br /> ===============<br /><br /> **Funzionalità degli eventi**<br /><br /> -<br />                                **No_block**. L'evento si trova in un percorso di codice critico che non può essere bloccato per alcun motivo. Gli eventi con questa funzionalità non possono essere aggiunti ad alcuna sessione eventi che specifica NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> -<br />                                **Process_whole_buffers**. La destinazione utilizza un buffer di eventi alla volta, anziché evento per evento.<br /><br /> -<br />                        **Singleton**. In un processo può essere presente una sola istanza della destinazione. Sebbene più sessioni eventi possano fare riferimento alla stessa destinazione singleton, in realtà è presente una sola istanza e tale istanza visualizzerà ogni evento univoco solo una volta. Questo è importante se la destinazione viene aggiunta a più sessioni che raccolgono tutte lo stesso evento.<br /><br /> -<br />                                **Sincrono**. La destinazione viene eseguita sul thread che ha generato l'evento, prima che il controllo venga restituito alla riga di codice chiamante.|  
-|type_name|**nvarchar (60)**|Nome per oggetti pred_source e pred_compare. Ammette i valori Null.|  
+|type_name|**nvarchar(60)**|Nome per oggetti pred_source e pred_compare. Ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID per il pacchetto che espone il tipo sul quale questo oggetto opera. Ammette i valori Null.|  
 |type_size|**int**|Dimensione del tipo di dati espressa in byte. Solo per tipi di oggetti validi. Ammette i valori Null.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68090270"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|Molti-a-uno|  
   

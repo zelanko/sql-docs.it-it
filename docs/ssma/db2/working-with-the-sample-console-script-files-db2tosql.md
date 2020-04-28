@@ -10,10 +10,10 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086170"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Uso dei file script della console di esempio (DB2ToSQL)
@@ -52,7 +52,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     Per ulteriori informazioni sulla generazione di report, vedere [generazione di report &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-    **Note**  
+    **Note:**  
   
     Verificare che l'argomento della riga di comando file valore variabile venga passato all'applicazione console e che VariableValueFileSample. XML venga aggiornato con i valori specificati dall'utente.  
   

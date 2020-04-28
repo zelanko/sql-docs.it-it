@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068060"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68068060"
 |**language_id**|**smallint**|ID della lingua. Per ulteriori informazioni, vedere [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Formato della data. Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Primo valore di data. Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**stato**|**varbinary (2)**|Campo della maschera di maschera che indica il tipo di query o il contesto in cui è stata eseguita la query. <br />Il valore della colonna può essere una combinazione di più flag (espressa in formato esadecimale):<br /><br /> 0x0-query regolare (nessun flag specifico)<br /><br /> 0x1-query eseguita tramite una delle stored procedure delle API del cursore<br /><br /> 0x2-query per la notifica<br /><br /> 0x4-query interna<br /><br /> 0x8-query con parametri automatico senza parametrizzazione universale<br /><br /> 0x10-query di aggiornamento recupero cursori<br /><br /> 0x20-query utilizzata nelle richieste di aggiornamento del cursore<br /><br /> 0x40-il set di risultati iniziale viene restituito all'apertura di un cursore (recupero automatico del cursore)<br /><br /> 0x80-query crittografata<br /><br /> 0x100-query nel contesto del predicato di sicurezza a livello di riga|  
+|**Stato**|**varbinary (2)**|Campo della maschera di maschera che indica il tipo di query o il contesto in cui è stata eseguita la query. <br />Il valore della colonna può essere una combinazione di più flag (espressa in formato esadecimale):<br /><br /> 0x0-query regolare (nessun flag specifico)<br /><br /> 0x1-query eseguita tramite una delle stored procedure delle API del cursore<br /><br /> 0x2-query per la notifica<br /><br /> 0x4-query interna<br /><br /> 0x8-query con parametri automatico senza parametrizzazione universale<br /><br /> 0x10-query di aggiornamento recupero cursori<br /><br /> 0x20-query utilizzata nelle richieste di aggiornamento del cursore<br /><br /> 0x40-il set di risultati iniziale viene restituito all'apertura di un cursore (recupero automatico del cursore)<br /><br /> 0x80-query crittografata<br /><br /> 0x100-query nel contesto del predicato di sicurezza a livello di riga|  
 |**required_cursor_options**|**int**|Opzioni di cursore specificate dall'utente, ad esempio il tipo di cursore.|  
 |**acceptable_cursor_options**|**int**|Opzioni di cursore che potrebbero essere convertite in modo implicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per supportare l'esecuzione dell'istruzione.|  
 |**merge_action_type**|**smallint**|Tipo di piano di esecuzione del trigger utilizzato come risultato di un'istruzione **merge** .<br /><br /> 0 indica un piano non trigger, un piano di trigger che non viene eseguito come risultato di un'istruzione **merge** o un piano di trigger che viene eseguito come risultato di un'istruzione **merge** che specifica solo un'azione **Delete** .<br /><br /> 1 indica un piano di trigger di **inserimento** che viene eseguito come risultato di un'istruzione **merge** .<br /><br /> 2 indica un piano di trigger di **aggiornamento** che viene eseguito come risultato di un'istruzione **merge** .<br /><br /> 3 indica un piano di trigger **Delete** che viene eseguito come risultato di un'istruzione **merge** contenente un'azione di **inserimento** o **aggiornamento** corrispondente.<br /><br /> <br /><br /> Per i trigger annidati eseguiti da azioni di propagazione, questo valore è l'azione dell'istruzione **merge** che ha causato l'esecuzione di Cascade.|  
@@ -58,9 +58,9 @@ ms.locfileid: "68068060"
  [sys. query_store_runtime_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [Monitoraggio delle prestazioni tramite il Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Stored procedure di Query Store &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

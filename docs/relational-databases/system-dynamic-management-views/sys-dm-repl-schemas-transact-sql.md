@@ -18,10 +18,10 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088577"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68088577"
 |**idSch**|**bigint**|ID dello schema di tabella.|  
 |**tabschema**|**nvarchar (510)**|Nome dello schema di tabella.|  
 |**ccTabschema**|**smallint**|Lunghezza in caratteri dello schema di tabella.|  
-|**tabname**|**nvarchar (510)**|Nome della tabella pubblicata.|  
+|**TabName**|**nvarchar (510)**|Nome della tabella pubblicata.|  
 |**ccTabname**|**smallint**|Lunghezza in caratteri del nome della tabella pubblicata.|  
 |**rowsetid_delete**|**bigint**|ID della riga eliminata.|  
 |**rowsetid_insert**|**bigint**|ID della riga inserita.|  
@@ -87,7 +87,7 @@ ms.locfileid: "68088577"
  Vengono restituite informazioni solo per gli oggetti di database replicati caricati nella cache dell'articolo di replica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative alla replica &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

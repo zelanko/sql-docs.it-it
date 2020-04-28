@@ -21,10 +21,10 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067784"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68067784"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  @db_name  
  Nome del database. Il @db_name parametro è di **tipo sysname**. Se una stringa vuota o un valore NULL viene passato a questo parametro, vengono restituite le informazioni su tutti i database nell'istanza di SQL Server.  
   
@@ -62,7 +62,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |Encryptor_type|NCHAR(15)|Restituisce l'impostazione del componente di crittografia: certificato o chiave asimmetrica.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|Nome del certificato o della chiave asimmetrica.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database **db_backupoperator** con autorizzazioni **ALTER ANY CREDENTIAL** . All'utente non devono essere negate le autorizzazioni **View any Definition** .  

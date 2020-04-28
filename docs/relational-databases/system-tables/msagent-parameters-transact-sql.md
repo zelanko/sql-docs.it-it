@@ -18,10 +18,10 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095697"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68095697"
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|ID del profilo dalla tabella **MSagent_profiles** .|  
 |**parameter_name**|**sysname**|Nome del parametro.|  
-|**valore**|**nvarchar(255)**|Valore del parametro.|  
+|**value**|**nvarchar(255)**|Valore del parametro.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -20,10 +20,10 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090281"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
@@ -42,10 +42,10 @@ ms.locfileid: "68090281"
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene l'oggetto. Non ammette i valori Null.|  
 |type_name|**nvarchar(256)**|Nome del tipo per questa colonna. Non ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene il tipo di dati della colonna. Non ammette i valori Null.|  
-|column_type|**nvarchar (60)**|Indica il modo in cui viene utilizzata la colonna. Non ammette i valori Null. column_type può essere uno dei seguenti:<br /><br /> readonly. La colonna contiene un valore statico che non può essere modificato.<br /><br /> dati. La colonna contiene dati runtime esposti dall'oggetto.<br /><br /> customizable. La colonna contiene un valore che può essere modificato.<br /><br /> Nota: la modifica di questo valore può modificare il comportamento dell'oggetto.|  
+|column_type|**nvarchar(60)**|Indica il modo in cui viene utilizzata la colonna. Non ammette i valori Null. column_type può essere uno dei seguenti:<br /><br /> readonly. La colonna contiene un valore statico che non può essere modificato.<br /><br /> data. La colonna contiene dati runtime esposti dall'oggetto.<br /><br /> customizable. La colonna contiene un valore che può essere modificato.<br /><br /> Nota: la modifica di questo valore può modificare il comportamento dell'oggetto.|  
 |column_value|**nvarchar(256)**|Visualizza valori statici associati alla colonna dell'oggetto. Ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità della colonna. Ammette i valori Null.|  
-|capabilities_desc|**nvarchar(256)**|Descrizione delle funzionalità della colonna dell'oggetto. I valori validi sono i seguenti:<br /><br /> Obbligatorio. Il valore deve essere impostato in caso di associazione dell'oggetto padre a una sessione dell'evento.<br /><br /> Ammette i valori Null.|  
+|capabilities_desc|**nvarchar(256)**|Descrizione delle funzionalità della colonna dell'oggetto. I valori validi sono i seguenti:<br /><br /> Mandatory. Il valore deve essere impostato in caso di associazione dell'oggetto padre a una sessione dell'evento.<br /><br /> Ammette i valori Null.|  
 |description|**nvarchar (3072)**|Descrizione della colonna dell'oggetto. Ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -53,7 +53,7 @@ ms.locfileid: "68090281"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  

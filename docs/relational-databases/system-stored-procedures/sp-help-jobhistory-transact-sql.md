@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054936"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -77,12 +77,12 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Failed|  
-|**1**|Succeeded|  
+|**0**|Operazione non riuscita|  
+|**1**|Operazione completata|  
 |**2**|Nuovo tentativo (solo passaggio)|  
 |**3**|Cancellati|  
 |**4**|Messaggio di esecuzione in corso|  
-|**5**|Unknown|  
+|**5**|Sconosciuto|  
   
 `[ @minimum_retries = ] minimum_retries`Il numero minimo di volte in cui un processo deve ritentare l'esecuzione. *minimum_retries* è di **tipo int**e il valore predefinito è null.  
   
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|Nome del passaggio (è NULL per la cronologia dei processi).|  
 |**sql_message_id**|**int**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], numero di errore [!INCLUDE[tsql](../../includes/tsql-md.md)] più recente restituito durante l'esecuzione del comando.|  
 |**sql_severity**|**int**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], gravità di errore [!INCLUDE[tsql](../../includes/tsql-md.md)] più elevata restituita durante l'esecuzione del comando.|  
-|**Messaggio**|**nvarchar(1024)**|Messaggio della cronologia dei processi o dei passaggi.|  
+|**message**|**nvarchar(1024)**|Messaggio della cronologia relativo al processo o al passaggio.|  
 |**run_status**|**int**|Risultato del processo o del passaggio.|  
 |**run_date**|**int**|Data di inizio dell'esecuzione del processo o del passaggio.|  
 |**run_time**|**int**|Ora di inizio dell'esecuzione del processo o del passaggio.|  
@@ -116,13 +116,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Operatore che ha ricevuto la notifica relativa al processo tramite un messaggio di rete (è NULL per la cronologia dei passaggi).|  
 |**operator_paged**|**nvarchar (20)**|Operatore che ha ricevuto la notifica relativa al processo tramite cercapersone (è NULL per la cronologia dei passaggi).|  
 |**retries_attempted**|**int**|Numero di tentativi di esecuzione del passaggio (è sempre 0 per la cronologia dei processi).|  
-|**Server**|**nvarchar (30)**|Server in cui viene eseguito il processo o il passaggio. È sempre (**locale**).|  
+|**Server**|**nvarchar(30)**|Server in cui viene eseguito il processo o il passaggio. È sempre (**locale**).|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_help_jobhistory** restituisce un report con la cronologia dei processi pianificati specificati. Se non viene specificato alcun parametro, il report include la cronologia di tutti i processi pianificati.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   

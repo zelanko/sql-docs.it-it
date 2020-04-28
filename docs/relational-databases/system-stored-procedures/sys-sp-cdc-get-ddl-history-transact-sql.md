@@ -22,10 +22,10 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083731"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
@@ -58,7 +58,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |capture_instance|**sysname**|Nome dell'istanza di acquisizione.|  
 |required_column_update|**bit**|Indica che la modifica DDL ha richiesto una colonna della tabella delle modifiche che deve essere modificata per riflettere una modifica del tipo di dati apportata alla colonna di origine.|  
 |ddl_command|**nvarchar(max)**|Istruzione DDL applicata alla tabella di origine.|  
-|ddl_lsn|**binario (10)**|Numero di sequenza del file di log (LSN) associato alla modifica DDL.|  
+|ddl_lsn|**binary(10)**|Numero di sequenza del file di log (LSN) associato alla modifica DDL.|  
 |ddl_time|**datetime**|Ora associata alla modifica DDL.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -85,6 +85,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

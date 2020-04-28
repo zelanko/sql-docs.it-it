@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085080"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -51,12 +51,12 @@ sp_help_targetserver
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numero di identificazione del server.|  
-|**server_name**|**nvarchar (30)**|Nome del server.|  
-|**percorso**|**nvarchar(200)**|Posizione del server specificato.|  
+|**server_name**|**nvarchar(30)**|Nome del server.|  
+|**location**|**nvarchar(200)**|Posizione del server specificato.|  
 |**time_zone_adjustment**|**int**|Regolazione del fuso orario, in ore, rispetto all'ora di Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data di integrazione del server specificato.|  
 |**last_poll_date**|**datetime**|Data dell'ultimo polling del server per l'individuazione dei processi.|  
-|**stato**|**int**|Stato del server specificato.|  
+|**Stato**|**int**|Stato del server specificato.|  
 |**unread_instructions**|**int**|Indica se il server include istruzioni non lette. Se tutte le righe sono state scaricate, questa colonna è **0**.|  
 |**local_time**|**datetime**|Data e ora locali del server di destinazione, basata sull'ora locale del server di destinazione rilevata durante l'ultimo polling del server master.|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|Utente di Microsoft Windows che ha eseguito l'integrazione del server di destinazione.|  

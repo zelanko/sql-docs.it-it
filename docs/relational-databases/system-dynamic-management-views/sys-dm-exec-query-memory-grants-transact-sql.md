@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097701"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -57,8 +57,8 @@ ms.locfileid: "68097701"
 |**wait_order**|**int**|Ordine sequenziale delle query in attesa all'interno del **queue_id** specificato. Questo valore può essere modificato per una determinata query se altre query ottengono la concessione di memoria o il timeout. NULL se la memoria è già stata concessa.|  
 |**is_next_candidate**|**bit**|Candidato alla concessione di memoria successiva.<br /><br /> 1 = Sì<br /><br /> 0 = No<br /><br /> NULL = Memoria già concessa|  
 |**wait_time_ms**|**bigint**|Periodo di attesa espresso in millisecondi. È NULL se la memoria è già stata concessa.|  
-|**plan_handle**|**varbinary (64)**|Identificatore del piano di query. Utilizzare **sys.dm_exec_query_plan** per estrarre il piano XML effettivo.|  
-|**sql_handle**|**varbinary (64)**|Identificatore del testo [!INCLUDE[tsql](../../includes/tsql-md.md)] della query. Utilizzare **sys.dm_exec_sql_text** per ottenere il testo [!INCLUDE[tsql](../../includes/tsql-md.md)] effettivo.|  
+|**plan_handle**|**varbinary(64)**|Identificatore del piano di query. Utilizzare **sys.dm_exec_query_plan** per estrarre il piano XML effettivo.|  
+|**sql_handle**|**varbinary(64)**|Identificatore del testo [!INCLUDE[tsql](../../includes/tsql-md.md)] della query. Utilizzare **sys.dm_exec_sql_text** per ottenere il testo [!INCLUDE[tsql](../../includes/tsql-md.md)] effettivo.|  
 |**group_id**|**int**|ID per il gruppo del carico di lavoro nel quale viene eseguita la query.|  
 |**pool_id**|**int**|ID del pool di risorse a cui appartiene il gruppo del carico di lavoro.|  
 |**is_small**|**tinyint**|Se il valore è 1, questa concessione utilizza il semaforo piccolo di risorsa. Se il valore è 0, viene utilizzato un semaforo normale.|  
@@ -84,7 +84,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è richiesta l'autorizz
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup> in questo scenario il tipo di attesa viene in genere RESOURCE_SEMAPHORE. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
+    <sup>1</sup> In questo scenario il tipo di attesa è in genere RESOURCE_SEMAPHORE. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
 -   Cache di ricerca per le query con concessioni di memoria tramite [sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) e [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   

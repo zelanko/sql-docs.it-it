@@ -16,10 +16,10 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097678"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -74,9 +74,9 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|I record con conflitti vengono archiviati nel server perdente a livello di risoluzione dei conflitti. La modifica di questa proprietà richiede la reinizializzazione dei Sottoscrittori esistenti.|  
 |**compress_snapshot**|**true**|Lo snapshot in una cartella snapshot alternativa viene compresso nel formato CAB. Non è possibile comprimere lo snapshot all'interno della cartella snapshot predefinita. Se si modifica questa proprietà, è necessario un nuovo snapshot.|  
 ||**false**|Per impostazione predefinita, lo snapshot non viene compresso. Se si modifica questa proprietà, è necessario un nuovo snapshot.|  
-|**conflict_logging**|**publisher**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
-||**subscriber**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori *.*|  
-||**both**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
+|**conflict_logging**|**pubblicazione**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
+||**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori *.*|  
+||**sia**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
 |**conflict_retention**||Valore **int** che specifica il periodo di memorizzazione, espresso in giorni, per cui vengono conservati i conflitti. Impostando *conflict_retention* su **0** significa che non è necessaria alcuna pulizia dei conflitti.|  
 |**Descrizione**||Descrizione della pubblicazione.|  
 |**dynamic_filters**|**true**|La pubblicazione viene filtrata in base a una clausola dinamica.|  
@@ -110,10 +110,10 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|I file di snapshot vengono archiviati nella posizione alternativa specificata da *alt_snapshot_folder*. Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.|  
 |**snapshot_ready**|**true**|Lo snapshot della pubblicazione è disponibile.|  
 ||**false**|Lo snapshot della pubblicazione non è disponibile.|  
-|**stato**|**Active**|La pubblicazione è in uno stato attivo.|  
+|**Stato**|**active**|La pubblicazione è in uno stato attivo.|  
 ||**inattivo**|La pubblicazione è in uno stato inattivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **BCP nativo**|L'output del programma di copia bulk in modalità nativa di tutte le tabelle viene utilizzato per lo snapshot iniziale.|  
-||**character**<br /><br /> o **carattere BCP**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**carattere**<br /><br /> o **carattere BCP**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Nota: dopo aver usato partition_groups, se si ripristina l'uso di **SetupBelongs**e si imposta **use_partition_groups = false** in **changemergearticle**, questo potrebbe non essere riflesso correttamente dopo che è stato creato uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa a questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
 ||**false**|La pubblicazione non utilizza partizioni pre-calcolate.|  
 |**validate_subscriber_info**||Elenca le funzioni utilizzate per recuperare le informazioni relative al Sottoscrittore. Convalida quindi i criteri di applicazione dei filtri dinamici utilizzati per il Sottoscrittore per verificare che le informazioni vengano partizionate in modo coerente.|  

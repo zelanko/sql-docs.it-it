@@ -18,10 +18,10 @@ ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094775"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (vista di sistema) (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "68094775"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Descrizione**|**nvarchar(255)**|Voce descrittiva per la pubblicazione.|  
-|**nome**|**sysname**|Nome univoco associato alla pubblicazione.|  
+|**name**|**sysname**|Nome univoco associato alla pubblicazione.|  
 |**pubid**|**int**|Colonna Identity che include un ID univoco per la pubblicazione.|  
 |**repl_freq**|**tinyint**|Frequenza della replica:<br /><br /> **0** = basato sulla transazione (transazionale).<br /><br /> **1** = aggiornamento tabella pianificato (snapshot).|  
-|**stato**|**tinyint**|Stato della pubblicazione:<br /><br /> **0** = inattivo.<br /><br /> **1** = attivo.|  
+|**Stato**|**tinyint**|Stato della pubblicazione:<br /><br /> **0** = inattivo.<br /><br /> **1** = attivo.|  
 |**sync_method**|**tinyint**|Metodo di sincronizzazione:<br /><br /> **0** = utilità per la copia bulk nativa (BCP).<br /><br /> **1** = bcp di tipo carattere.<br /><br /> **3** = simultanea, ovvero viene utilizzata l'utilità bcp nativa, ma durante lo snapshot le tabelle non vengono bloccate.<br /><br /> **4** = concurrent_c, che significa che viene utilizzata l'utilità bcp di tipo carattere, ma durante lo snapshot le tabelle non vengono bloccate.|  
-|**snapshot_jobid**|**binario (16)**|Identifica il processo di agente pianificato per la generazione dello snapshot iniziale.|  
+|**snapshot_jobid**|**binary(16)**|Identifica il processo di agente pianificato per la generazione dello snapshot iniziale.|  
 |**independent_agent**|**bit**|Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo.<br /><br /> **0** = la pubblicazione utilizza un agente di distribuzione condiviso e ogni coppia database del server di pubblicazione/database del Sottoscrittore dispone di un solo agente condiviso.<br /><br /> **1** = è presente una agente di distribuzione autonoma per questa pubblicazione.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati ogni volta che viene eseguita la agente di snapshot, dove **1** indica che vengono creati ogni volta che viene eseguito l'agente.|  
 |**enabled_for_internet**|**bit**|Indica se i file di sincronizzazione per la pubblicazione sono esposti a Internet tramite FTP (file Transfer Protocol) e altri servizi, dove **1** indica che è possibile accedervi da Internet.|  
@@ -66,18 +66,18 @@ ms.locfileid: "68094775"
 |**conflict_policy**|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = il conflitto viene vinto dal server di pubblicazione.<br /><br /> **2** = il conflitto viene vinto dal Sottoscrittore.<br /><br /> **3** = la sottoscrizione viene reinizializzata.|  
 |**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = MSMQ, che utilizza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **2** =. SQL, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilizzo di Accodamento messaggi è stato deprecato e non è più supportato.|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un valore GUID valido indica che la pubblicazione è pubblicata in Active Directory e il GUID è l'objectGUID dell'oggetto pubblicazione di Active Directory corrispondente. Se è NULL, la pubblicazione non è pubblicata in Active Directory.<br /><br /> Nota: la pubblicazione in Active Directory non è più supportata.|  
-|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indica se i Sottoscrittori possono inizializzare una sottoscrizione della pubblicazione da un backup anziché da uno snapshot iniziale. **1** indica che le sottoscrizioni possono essere inizializzate da un backup e **0** indica che non è possibile. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binario (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indica se per la pubblicazione è supportata la replica dello schema.<br /><br /> **1** = le istruzioni DDL eseguite nel server di pubblicazione vengono replicate.<br /><br /> **0** = indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**Opzioni**|**int**|Mappa di bit che specifica le opzioni di pubblicazione aggiuntive. I possibili valori bit per bit sono i seguenti:<br /><br /> **0x1** : abilitata per la replica peer-to-peer.<br /><br /> **0x2** : consente di pubblicare solo le modifiche locali per la replica peer-to-peer.<br /><br /> **0x4** : abilitata per i[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.<br /><br /> **0x8** : abilitata per il rilevamento dei conflitti peer-to-peer.|  
+|**options**|**int**|Mappa di bit che specifica le opzioni di pubblicazione aggiuntive. I possibili valori bit per bit sono i seguenti:<br /><br /> **0x1** : abilitata per la replica peer-to-peer.<br /><br /> **0x2** : consente di pubblicare solo le modifiche locali per la replica peer-to-peer.<br /><br /> **0x4** : abilitata per i[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.<br /><br /> **0x8** : abilitata per il rilevamento dei conflitti peer-to-peer.|  
 |**originator_id**|**smallint**|Identifica ogni nodo in una topologia di replica peer-to-peer per consentire il rilevamento dei conflitti. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

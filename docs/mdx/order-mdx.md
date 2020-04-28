@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055685"
 ---
 # <a name="order-mdx"></a>Order (MDX)
@@ -174,7 +174,7 @@ FROM [Adventure Works]
   
 ```  
   
- Sull'asse delle righe è possibile vedere che i Sales Territory Groups sono stati ordinati in ordine decrescente per Quantità della tassa nel modo seguente: North America, Europe, Pacific, NA. Osservare ora cosa accade se si Crossjoin il set di gruppi di territorio di vendita con il set di sottocategorie di prodotto e si applica la funzione **Order** nello stesso modo, come indicato di seguito:  
+ Sull'asse delle righe è possibile vedere che i Sales Territory Groups sono stati ordinati in ordine decrescente per Quantità della tassa nel modo seguente: America del Nord, Europa, Pacifico, NA. Osservare ora cosa accade se si Crossjoin il set di gruppi di territorio di vendita con il set di sottocategorie di prodotto e si applica la funzione **Order** nello stesso modo, come indicato di seguito:  
   
 ```  
   
@@ -190,7 +190,7 @@ FROM [Adventure Works]
   
 ```  
   
- Mentre il set Product Subcategories è stato ordinato in modo gerarchico decrescente, gli elementi Sales Territory Groups attualmente non sono ordinati e vengono visualizzati nello stesso ordine in cui sono presenti nella gerarchia, ovvero Europe, NA, North America e Pacific. Questa situazione si verifica perché solo l'ultima gerarchia del set di tuple, ovvero Product Subcategories, è ordinata. Per riprodurre il comportamento di Analysis Services 2000, utilizzare una serie di funzioni di **generazione** annidate per ordinare ogni set prima di Crossjoin, ad esempio:  
+ Mentre il set Product Subcategories è stato ordinato in modo gerarchico decrescente, gli elementi Sales Territory Groups attualmente non sono ordinati e vengono visualizzati nello stesso ordine in cui sono presenti nella gerarchia, ovvero Europa, NA, America del Nord e Pacific. Questa situazione si verifica perché solo l'ultima gerarchia del set di tuple, ovvero Product Subcategories, è ordinata. Per riprodurre il comportamento di Analysis Services 2000, utilizzare una serie di funzioni di **generazione** annidate per ordinare ogni set prima di Crossjoin, ad esempio:  
   
 ```  
   
@@ -211,6 +211,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

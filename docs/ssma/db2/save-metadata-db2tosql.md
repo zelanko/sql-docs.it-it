@@ -10,10 +10,10 @@ ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060102"
 ---
 # <a name="save-metadata-db2tosql"></a>Salva metadati (DB2ToSQL)
@@ -25,7 +25,7 @@ Per accedere alla finestra di dialogo **Salva metadati** , salvare il progetto. 
 **Nome**  
 Nome di ogni database nel progetto.  
   
-**Status**  
+**Stato**  
 Indica se i metadati vengono caricati nel progetto SSMA o se i metadati risultano mancanti.  
   
 SSMA carica i metadati nel progetto, se necessario. I metadati vengono caricati automaticamente quando si esplorano i metadati e si convertono gli schemi.  
@@ -33,10 +33,10 @@ SSMA carica i metadati nel progetto, se necessario. I metadati vengono caricati 
 **Seleziona tutto**  
 Seleziona tutti i database elencati.  
   
-**Cancella**  
+**Deselezionare**  
 Deseleziona la casella di controllo per tutti i database con metadati mancanti. Non è possibile deselezionare la casella di controllo se i metadati sono stati caricati.  
   
-**Salvare**  
+**Salva**  
 Salva il progetto, caricando i metadati per i database selezionati che contengono metadati mancanti.  
   
 **Annulla**  

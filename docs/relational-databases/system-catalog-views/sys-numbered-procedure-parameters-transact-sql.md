@@ -20,10 +20,10 @@ ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102342"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
@@ -41,13 +41,13 @@ ms.locfileid: "68102342"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
 |**procedure_number**|**smallint**|Numero della procedura nell'oggetto, maggiore o uguale a 2.|  
-|**nome**|**sysname**|Nome del parametro. È univoco all'interno **procedure_number**.|  
+|**name**|**sysname**|Nome del parametro. È univoco all'interno **procedure_number**.|  
 |**parameter_id**|**int**|ID del parametro. È univoco all'interno del **procedure_number**.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro|  
 |**user_type_id**|**int**|ID del tipo di parametro, come definito dall'utente.|  
 |**max_length**|**smallint**|Lunghezza massima del parametro in byte.<br /><br /> -1 = Il tipo di dati della colonna è varchar(max), nvarchar(max) o varbinary(max).|  
 |**precisione**|**tinyint**|Precisione del parametro se numerica. In caso contrario 0.|  
-|**scala**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
+|**scale**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
 |**is_output**|**bit**|1 = Il parametro è un parametro di output o restituito. In caso contrario 0|  
 |**is_cursor_ref**|**bit**|1 = Il parametro è un parametro di riferimento a un cursore.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68102342"
 >  I parametri XML e CLR non sono supportati per le stored procedure numerate.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

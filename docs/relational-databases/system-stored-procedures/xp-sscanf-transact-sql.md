@@ -18,10 +18,10 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091905"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
@@ -39,16 +39,16 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **stringa**  
+ **string**  
  Stringa di caratteri da cui leggere i valori dell'argomento.  
   
  OUTPUT  
  Quando specificato, inserisce il valore dell' *argomento* nel parametro di output.  
   
- *formato*  
+ *format*  
  È una stringa di caratteri formattata simile a quella supportata dalla funzione **sscanf** del linguaggio C. Attualmente è supportato solo l'argomento di formato %.  
   
- *argomento*  
+ *argument*  
  Variabile **varchar** impostata sul valore dell'argomento di *formato* corrispondente.  
   
  *n*  
@@ -83,7 +83,7 @@ products10.tmp        random
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sprintf &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096035"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -61,7 +61,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 `[ @tracefile = ] 'trace_file'`Specifica il percorso e il nome file in cui verrà scritta la traccia. *trace_file* è di **tipo nvarchar (245)** e non prevede alcun valore predefinito. *trace_file* può essere una directory locale (ad esempio n'c:\MSSQL\Trace\traccia.trc ') o un percorso UNC per una condivisione o un percorso (n\\\\ *' nomeserver*\\*ShareName*\\*directory*\Trace.trc ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aggiungerà un'estensione **TRC** a tutti i nomi dei file di traccia. Se si specificano l'opzione ** TRACE_FILE_ROLLOVER e un max_file_size [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in viene creato un nuovo file di traccia quando le dimensioni massime del file di traccia originale aumentano. Il nuovo file ha lo stesso nome del file originale, ma viene aggiunto _*n* per indicare la sequenza, a partire da **1**. Se, ad esempio, il primo file di traccia è denominato **filename. trc**, il secondo file di traccia è denominato **filename_1. trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aggiungerà un'estensione **TRC** a tutti i nomi dei file di traccia. Se si specificano l'opzione *max_file_size* TRACE_FILE_ROLLOVER e un max_file_size [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in viene creato un nuovo file di traccia quando le dimensioni massime del file di traccia originale aumentano. Il nuovo file ha lo stesso nome del file originale, ma viene aggiunto _*n* per indicare la sequenza, a partire da **1**. Se, ad esempio, il primo file di traccia è denominato **filename. trc**, il secondo file di traccia è denominato **filename_1. trc**.  
   
  Se si utilizza l'opzione TRACE_FILE_ROLLOVER, si consiglia di non utilizzare caratteri di sottolineatura nel nome del file di traccia originale. Se vengono utilizzati caratteri di sottolineatura, si verifica il comportamento seguente:  
   
@@ -97,7 +97,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |1|Errore sconosciuto.|  
 |10|Opzioni non valide. Restituito quando le opzioni specificate sono incompatibili.|  
 |12|Creazione del file non riuscita.|  
-|13|memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
+|13|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
 |14|Ora di arresto non valida. Restituito quando l'ora specificata è già trascorsa.|  
 |15|Parametri non validi. Restituito quando l'utente specifica parametri incompatibili.|  
   
@@ -148,9 +148,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

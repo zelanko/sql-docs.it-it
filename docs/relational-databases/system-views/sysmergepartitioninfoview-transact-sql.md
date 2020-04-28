@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094817"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68094817"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome dell'articolo.|  
-|**tipo**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **0x0A** = tabella.<br /><br /> **0x20** = solo schema di procedura.<br /><br /> **0x40** = solo schema della vista o solo schema della vista indicizzata.<br /><br /> **0x80** = solo schema di funzione.|  
-|**ObjID**|**int**|Identificatore dell'oggetto pubblicato.|  
+|**type**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **0x0A** = tabella.<br /><br /> **0x20** = solo schema di procedura.<br /><br /> **0x40** = solo schema della vista o solo schema della vista indicizzata.<br /><br /> **0x80** = solo schema di funzione.|  
+|**objid**|**int**|Identificatore dell'oggetto pubblicato.|  
 |**sync_objid**|**int**|ID di oggetto della vista che rappresenta il set di dati sincronizzato.|  
 |**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non è una vista; utilizzare tutti gli oggetti di base.<br /><br /> **1** = visualizzazione permanente.<br /><br /> **2** = visualizzazione temporanea.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68094817"
 |**pubid**|**uniqueidentifier**|ID della pubblicazione a cui appartiene l'articolo corrente.|  
 |**Nickname**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
 |**column_tracking**|**int**|Indica se viene implementato il rilevamento a livello di colonna per l'articolo.|  
-|**stato**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per la pubblicazione della tabella verrà eseguito alla successiva esecuzione del agente di snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per la pubblicazione della tabella è stato eseguito.|  
+|**Stato**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per la pubblicazione della tabella verrà eseguito alla successiva esecuzione del agente di snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per la pubblicazione della tabella è stato eseguito.|  
 |**conflict_table**|**sysname**|Nome della tabella locale che include i record in conflitto per l'articolo corrente. Lo scopo di questa tabella è esclusivamente informativo. Il contenuto può essere modificato o eliminato da routine di risoluzione dei conflitti personalizzate oppure direttamente dall'amministratore.|  
 |**creation_script**|**nvarchar(255)**|Script per la creazione dell'articolo.|  
 |**conflict_script**|**nvarchar(255)**|Script dei conflitti dell'articolo.|  
@@ -59,11 +59,11 @@ ms.locfileid: "68094817"
 |**resolver_clsid**|**nvarchar(50)**|ID del sistema di risoluzione dei conflitti personalizzato. Per un gestore della logica di business questo valore è NULL.|  
 |**subset_filterclause**|**nvarchar (1000)**|Clausola di filtro per l'articolo.|  
 |**missing_col_count**|**int**|Numero di colonne pubblicate mancanti nell'articolo.|  
-|**missing_cols**|**varbinary (128)**|Mappa di bit che descrive le colonne mancanti nell'articolo.|  
-|**excluded_cols**|**varbinary (128)**|Mappa di bit delle colonne escluse dall'articolo.|  
+|**missing_cols**|**varbinary(128)**|Mappa di bit che descrive le colonne mancanti nell'articolo.|  
+|**excluded_cols**|**varbinary(128)**|Mappa di bit delle colonne escluse dall'articolo.|  
 |**excluded_col_count**|**int**|Numero di colonne escluse dall'articolo.|  
-|**colonne**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|Mappa di bit che descrive le colonne eliminate dall'articolo.|  
+|**colonne**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|Mappa di bit che descrive le colonne eliminate dall'articolo.|  
 |**resolver_info**|**nvarchar(255)**|Archivio per informazioni aggiuntive necessarie per il sistema di risoluzione dei conflitti personalizzato.|  
 |**view_sel_proc**|**nvarchar (290)**|Nome di una stored procedure utilizzata dall'agente di merge per il popolamento iniziale di un articolo in una pubblicazione filtrata in modo dinamico e per l'enumerazione delle righe modificate in qualsiasi pubblicazione filtrata.|  
 |**gen_cur**|**bigint**|Genera il numero di modifica locale per la tabella di base di un articolo.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68094817"
 |**upload_options**|**tinyint**|Specifica se è possibile apportare modifiche nel Sottoscrittore o caricare modifiche dal Sottoscrittore. I possibili valori sono i seguenti.<br /><br /> **0** = non sono previste restrizioni per gli aggiornamenti eseguiti nel Sottoscrittore. tutte le modifiche vengono caricate nel server di pubblicazione.<br /><br /> **1** = le modifiche sono consentite nel Sottoscrittore, ma non vengono caricate nel server di pubblicazione.<br /><br /> **2** = le modifiche non sono consentite nel Sottoscrittore.|  
 |**published_in_tran_pub**|**bit**|Indica che un articolo in una pubblicazione di tipo merge viene pubblicato anche in una pubblicazione transazionale.<br /><br /> **0** = l'articolo non è pubblicato in un articolo transazionale.<br /><br /> **1** = l'articolo è pubblicato anche in un articolo transazionale.|  
 |**leggero**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|ID della vista della tabella prima degli aggiornamenti.|  
 |**delete_tracking**|**bit**|Specifica se le eliminazioni vengono replicate.<br /><br /> **0** = le eliminazioni non vengono replicate.<br /><br /> **1** = le eliminazioni vengono replicate, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Quando il valore di *delete_tracking* è **0**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.<br /><br /> Nota: un valore pari a **0** comporta la non convergenza.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68094817"
 |**logical_record_level_conflict_detection**|**bit**|Indica se è necessario rilevare i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = viene utilizzato il rilevamento dei conflitti a livello di riga o di colonna.<br /><br /> **1** = viene utilizzato il rilevamento dei conflitti tra record logici, in cui una modifica in una riga del server di pubblicazione e la modifica in una riga distinta lo stesso record logico nel Sottoscrittore viene gestita come un conflitto.<br /><br /> Se questo valore è 1, è possibile utilizzare solo la risoluzione dei conflitti a livello di record logico.|  
 |**logical_record_level_conflict_resolution**|**bit**|Indica se è necessario risolvere i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = viene utilizzata la risoluzione a livello di riga o di colonna.<br /><br /> **1** = in caso di conflitto, l'intero record logico del vincitore sovrascrive l'intero record logico sul lato perduto.<br /><br /> È possibile utilizzare il valore 1 sia con il rilevamento a livello di record logico che con il rilevamento a livello di riga o colonna.|  
 |**partition_options**|**tinyint**|Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. Il *partition_options* può essere uno dei valori seguenti.<br /><br /> **0** = il filtro per l'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero una partizione "sovrapposta".<br /><br /> **1** = le partizioni sono sovrapposte e gli aggiornamenti DML eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.<br /><br /> **2** = il filtro per l'articolo restituisce partizioni non sovrapposte, ma più sottoscrittori possono ricevere la stessa partizione.<br /><br /> **3** = il filtro per l'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.|  
-|**nome**|**sysname**|Nome di una partizione.|  
+|**name**|**sysname**|Nome di una partizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire le partizioni per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

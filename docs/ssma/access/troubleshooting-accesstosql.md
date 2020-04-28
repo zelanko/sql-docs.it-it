@@ -10,10 +10,10 @@ ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051469"
 ---
 # <a name="troubleshooting-accesstosql"></a>Risoluzione dei problemi (AccessToSQL)
@@ -25,7 +25,7 @@ Gli errori di risolvibili possono essere correlati a:
   
 2.  Procedura  
   
-3.  Visualizza  
+3.  Visualizzazione  
   
 4.  Trigger  
   

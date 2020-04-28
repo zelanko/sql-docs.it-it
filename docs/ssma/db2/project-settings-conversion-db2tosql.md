@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084553"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni progetto (conversione) (DB2ToSQL)
@@ -167,7 +167,7 @@ La tabella seguente illustra il modo in cui SSMA converte le modalità di blocco
 |CONDIVISIONE DI RIGA|ROWLOCK, HOLDLOCK|  
 |RIGA ESCLUSIVA|ROWLOCK, XLOCK, HOLDLOCK|  
 |AGGIORNAMENTO CONDIVISIONE = CONDIVISIONE RIGHE|ROWLOCK, HOLDLOCK|  
-|Condividi|TABLOCK, HOLDLOCK|  
+|CONDIVIDI|TABLOCK, HOLDLOCK|  
 |CONDIVIDI RIGA ESCLUSIVA|TABLOCK, XLOCK, HOLDLOCK|  
 |ESCLUSIVO|TABLOCKX, HOLDLOCK|  
   
@@ -371,7 +371,7 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 ### <a name="use-isnull-in-replace-function-calls"></a>USA ISNULL nelle chiamate di funzione REPLACE  
 L'istruzione ISNULL viene utilizzata nelle chiamate di funzione REPLACE per emulare il comportamento di DB2. Per questa impostazione sono presenti le opzioni seguenti:  
   
--   SÌ  
+-   YES  
   
 -   NO  
   
@@ -384,7 +384,7 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 ### <a name="use-isnull-in-concat-function-calls"></a>USA ISNULL nelle chiamate di funzione CONCAt  
 L'istruzione ISNULL viene usata nelle chiamate di funzione CONCAt per emulare il comportamento di DB2. Per questa impostazione sono presenti le opzioni seguenti:  
   
--   SÌ  
+-   YES  
   
 -   NO  
   

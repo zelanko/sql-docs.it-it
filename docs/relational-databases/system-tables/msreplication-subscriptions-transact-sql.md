@@ -18,10 +18,10 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079990"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
@@ -31,19 +31,19 @@ ms.locfileid: "68079990"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> 0 = push<br /><br /> 1 = pull<br /><br /> 2 = anonima|  
 |**distribution_agent**|**sysname**|Nome dell'agente di distribuzione.|  
-|**Time**|**smalldatetime**|Ora dell'ultimo aggiornamento eseguito dall'agente di distribuzione.|  
+|**Tempo**|**smalldatetime**|Ora dell'ultimo aggiornamento eseguito dall'agente di distribuzione.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione della sottoscrizione.|  
-|**transaction_timestamp**|**varbinary (16)**|Solo per uso interno.|  
+|**transaction_timestamp**|**varbinary(16)**|Solo per uso interno.|  
 |**update_mode**|**tinyint**|Tipo di aggiornamento.|  
-|**agent_id**|**binario (16)**|ID dell'agente.|  
-|**subscription_guid**|**binario (16)**|Identificatore globale della versione della sottoscrizione associata alla pubblicazione.|  
-|**subid**|**binario (16)**|Identificatore globale di una sottoscrizione anonima.|  
+|**agent_id**|**binary(16)**|ID dell'agente.|  
+|**subscription_guid**|**binary(16)**|Identificatore globale della versione della sottoscrizione associata alla pubblicazione.|  
+|**subid**|**binary(16)**|Identificatore globale di una sottoscrizione anonima.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o aggiornati a ogni esecuzione dell'agente snapshot.|  
   
 ## <a name="see-also"></a>Vedere anche  

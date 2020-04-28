@@ -18,10 +18,10 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072651"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072651"
 |**publisher_db**|**nvarchar(128)**|Nome del database di pubblicazione.|  
 |**pubblicazione**|**nvarchar(128)**|Nome della pubblicazione.|  
 |**articolo**|**nvarchar(128)**|Nome dell'articolo.|  
-|**subscriber**|**nvarchar(128)**|Nome del Sottoscrittore.|  
+|**Sottoscrittore**|**nvarchar(128)**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**nvarchar(128)**|Nome del database di sottoscrizione.|  
 |**is_pub_range**|**bit**|Indica se l'intervallo di valori Identity è assegnato a un server di pubblicazione.|  
 |**ranges_allocated**|**tinyint**|Numero di intervalli di valori Identity assegnati.|  

@@ -19,10 +19,10 @@ ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097845"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -49,9 +49,9 @@ dm_exec_cursors (session_id | 0 )
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID della sessione che include il cursore.|  
 |**cursor_id**|**int**|ID dell'oggetto cursore.|  
-|**nome**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
-|**Proprietà**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Il valore restituito in questa colonna, ad esempio, potrebbe essere "TSQL &#124; Dynamic &#124; ottimistica &#124; globale (0)".|  
-|**sql_handle**|**varbinary (64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
+|**name**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
+|**properties**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Il valore restituito in questa colonna, ad esempio, potrebbe essere "TSQL &#124; Dynamic &#124; ottimistica &#124; globale (0)".|  
+|**sql_handle**|**varbinary(64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
 |**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_end_offset**e la funzione a gestione dinamica [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**statement_end_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_start_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo la ricompilazione.|  
@@ -64,8 +64,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|Per i cursori FAST_FORWARD e DYNAMIC, restituisce 0 se il cursore non è aperto o se è posizionato prima della riga iniziale. In caso contrario, restituisce -1.<br /><br /> Per i cursori STATIC e KEYSET, restituisce 0 se il cursore non è aperto e -1 se il cursore è posizionato oltre l'ultima riga.<br /><br /> In caso contrario, restituisce il numero di riga in cui è posizionato.|  
 |**ansi_position**|**int**|Posizione del cursore all'interno del buffer di recupero.|  
 |**worker_time**|**bigint**|Tempo impiegato, in microsecondi, dai thread worker che eseguono il cursore.|  
-|**legge**|**bigint**|Numero di letture eseguite dal cursore.|  
-|**scrive**|**bigint**|Numero di scritture eseguite dal cursore.|  
+|**reads**|**bigint**|Numero di letture eseguite dal cursore.|  
+|**writes**|**bigint**|Numero di scritture eseguite dal cursore.|  
 |**dormant_duration**|**bigint**|Millisecondi trascorsi a partire dall'avvio dell'ultima query (apertura o recupero) sul cursore.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -81,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sul tipo di cursore e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Type|Descrizione|  
+|Type|Description|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
 |Dinamico|Il cursore è stato dichiarato come Dynamic.|  
@@ -100,7 +100,7 @@ dm_exec_cursors (session_id | 0 )
   
 |Scope|Descrizione|  
 |-----------|-----------------|  
-|Locale|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
+|Local|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
 |Global|Specifica che l'ambito del cursore è globale rispetto alla connessione.|  
   
 ## <a name="examples"></a>Esempi  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   

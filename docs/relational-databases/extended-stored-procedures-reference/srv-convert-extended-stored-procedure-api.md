@@ -20,18 +20,17 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064138"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Consente di modificare i dati da un tipo all'altro.  
   
@@ -67,7 +66,7 @@ destlen
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene tutte le informazioni di controllo utilizzate dall'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client. Se specificato, l'handle *srvproc* viene passato alla funzione di gestione degli errori dell'API Stored procedure estesa quando si verifica un errore.  
   
- *srcType*  
+ *srctype*  
  Indica il tipo a cui appartengono i dati da convertire. Questo parametro può appartenere a qualsiasi tipo di dati dell'API Stored procedure estesa.  
   
  *src*  
@@ -76,7 +75,7 @@ destlen
  *srclen*  
  Specifica la lunghezza, espressa in byte, dei dati da convertire. Se *srclen* è 0, **srv_convert** inserisce un valore Null nella variabile di destinazione. A meno che non sia 0, questo parametro viene ignorato per i tipi di dati a lunghezza fissa e in tal caso si presuppone che i dati di origine siano NULL. Per i dati appartenenti al tipo SRVCHAR, una lunghezza di -1 indica che la stringa ha una terminazione Null.  
   
- *destType*  
+ *desttype*  
  Indica il tipo di dati in cui convertire l'origine. Questo parametro può appartenere a qualsiasi tipo di dati dell'API Stored procedure estesa.  
   
  *dest*  
@@ -116,6 +115,6 @@ destlen
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_setutype &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_willconvert &#40;API Stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

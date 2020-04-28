@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060550"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -46,20 +46,20 @@ ms.locfileid: "68060550"
 |**system_type_id**|**tinyint non NULL**|ID del tipo di sistema per il tipo di dati dell'oggetto di sequenza.|  
 |**user_type_id**|**int NOT NULL**|ID del tipo di dati per l'oggetto sequenza, come definito dall'utente.|  
 |**precisione**|**tinyint non NULL**|Precisione massima del tipo di dati.|  
-|**scala**|**tinyint non NULL**|Scala massima del tipo. La scala viene restituita insieme alla precisione per fornire agli utenti metadati completi. La scala è sempre 0 per gli oggetti sequenza perché sono consentiti solo i tipi integer.|  
+|**scale**|**tinyint non NULL**|Scala massima del tipo. La scala viene restituita insieme alla precisione per fornire agli utenti metadati completi. La scala è sempre 0 per gli oggetti sequenza perché sono consentiti solo i tipi integer.|  
 |**current_value**|**sql_variant non NULL**|Valore finale obbligato, Ovvero il valore restituito dall'esecuzione più recente della funzione NEXT VALUE FOR o l'ultimo valore dell'esecuzione della procedura **sp_sequence_get_range** . Restituisce il valore START WITH se la sequenza non è mai stata utilizzata.|  
 |**is_exhausted**|**bit NOT NULL**|0 indica che è possibile generare più valori dalla sequenza. 1 indica che l'oggetto sequenza ha raggiunto il parametro MAXVALUE e che la sequenza non è impostata su CYCLE. La funzione NEXT VALUE FOR restituisce un errore finché la sequenza non viene riavviata tramite ALTER SEQUENCE.|  
 |**last_used_value**|**sql_variant NULL**|Restituisce l'ultimo valore generato dalla funzione [Next Value for](../../t-sql/functions/next-value-for-transact-sql.md) . Si applica a SQL Server 2017 e versioni successive.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e nelle versioni successive, la visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e nelle versioni successive, la visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [Crea sequenza &#40;&#41;Transact-SQL](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [VALORE successivo per &#40;&#41;Transact-SQL](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

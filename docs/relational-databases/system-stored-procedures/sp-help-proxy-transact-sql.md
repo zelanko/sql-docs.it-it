@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085281"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -62,8 +62,8 @@ sp_help_proxy
 |QueueReader|Agente di lettura coda repliche|  
 |ANALYSISQUERY|Comando di Analysis Services|  
 |ANALYSISCOMMAND|Query di Analysis Services|  
-|Dts|Esecuzione di pacchetti SSIS|  
-|PowerShell|Script PowerShell|  
+|Dts|Esecuzione pacchetti SSIS|  
+|PowerShell|Script di PowerShell|  
   
 `[ @name = ] 'name'`Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per cui elencare i proxy. Il nome è di **tipo nvarchar (256)** e il valore predefinito è null. Quando si specifica *Name* , è necessario specificare anche *subsystem_name* .  
   
@@ -75,11 +75,11 @@ sp_help_proxy
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
-|**nome**|**sysname**|Nome del proxy.|  
+|**name**|**sysname**|Nome del proxy.|  
 |**credential_identity**|**sysname**|Nome utente e del dominio Microsoft Windows per le credenziali associate al proxy.|  
 |**abilitato**|**tinyint**|Indica se il proxy è attivato. { **0** = non abilitato, **1** = abilitato}|  
 |**Descrizione**|**nvarchar(1024)**|Descrizione del proxy.|  
-|**user_sid**|**varbinary(85)**|ID di sicurezza (SID) di Windows dell'utente di Windows per questo proxy.|  
+|**user_sid**|**varbinary (85)**|ID di sicurezza (SID) di Windows dell'utente di Windows per questo proxy.|  
 |**credential_id**|**int**|Identificatore per le credenziali associate a questo proxy.|  
 |**credential_identity_exists**|**int**|Indica se credential_identity esiste. { 0 = non esiste, 1 = esiste }|  
   
@@ -89,7 +89,7 @@ sp_help_proxy
  Per determinare quali proxy possono essere utilizzati da un account di accesso per un determinato sottosistema, specificare *Name* e *subsystem_name*. Quando vengono forniti questi argomenti, **sp_help_proxy** elenca i proxy a cui l'account di accesso specificato può accedere e che possono essere utilizzati per il sottosistema specificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
  Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   

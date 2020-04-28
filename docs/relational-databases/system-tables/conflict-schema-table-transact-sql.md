@@ -18,10 +18,10 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084773"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;Table&gt; (Transact-SQL)
@@ -39,8 +39,8 @@ ms.locfileid: "68084773"
 |__$conflict_type|**int**|Tipo di conflitto. I valori possibili sono i seguenti:<br /><br /> 1: Aggiornamento non riuscito perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 2: Aggiornamento non riuscito perché la riga locale è stata già eliminata.<br /><br /> 3: Eliminazione non riuscita perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 4: Eliminazione non riuscita perché la riga locale è stata già eliminata.<br /><br /> 5: Inserimento non riuscito perché la riga locale è stata già inserita oppure è stata inserita e quindi aggiornata.|  
 |__$is_winner|**bit**|Indica se la riga presente in questa tabella è la riga confermata, ovvero se è stata applicata al nodo locale.|  
 |__$pre_version|**varbinary (32)**|Versione del database in cui ha avuto origine la modifica in conflitto.|  
-|__$reason_code|**int**|Codice di risoluzione del conflitto. Può avere uno dei valori seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per ulteriori informazioni, vedere **_ _ $ reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. Può avere uno dei valori seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
+|__$reason_code|**int**|Codice di risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per ulteriori informazioni, vedere **_ _ $ reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**. Le dimensioni variano in base al contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
 |__$inserted_date|**datetime**|Data e ora in cui la riga in conflitto è stata inserita in questa tabella.|  
 |__$row_id|**timestamp**|Versione della riga associata alla riga che ha causato il conflitto.|  

@@ -18,10 +18,10 @@ ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 16753620fa4185d3f488db340aeb4858c28f6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066763"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
@@ -49,7 +49,7 @@ sp_help_log_shipping_secondary_primary
  0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Il **set di risultati** contiene le colonne **secondary_id**, **primary_server**, **primary_database**, **backup_source_directory**, **backup_destination_directory** **, file_retention_period, copy_job_id** **restore_job_id**monitor_server **** **monitor_server_security_mode log_shipping_secondary** **.**  
+ Il **set di risultati** contiene le colonne **secondary_id**, **primary_server**, **primary_database**, **backup_source_directory**, **backup_destination_directory** **, file_retention_period, copy_job_id** **restore_job_id**monitor_server **monitor_server** **monitor_server_security_mode log_shipping_secondary** **.**  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_help_log_shipping_secondary_primary** deve essere eseguito dal database **Master** nel server secondario.  
@@ -58,7 +58,7 @@ sp_help_log_shipping_secondary_primary
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

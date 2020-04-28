@@ -18,10 +18,10 @@ ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084758"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
@@ -35,12 +35,12 @@ ms.locfileid: "68084758"
 |**sequence_id**|**int**|Consente di identificare un passaggio all'interno di un'azione.|  
 |**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere unita in join alla colonna **Instance_Id** in [dbo. sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuzione<br /><br /> **1** = creazione<br /><br /> **2** = Rinomina<br /><br /> **3** = scollegamento<br /><br /> **4** = Elimina|  
-|**action_type_name**|**varchar (19)**|Nome del tipo di azione:<br /><br /> **distribuire**<br /><br /> **creare**<br /><br /> **rinominare**<br /><br /> **Scollegare**<br /><br /> **eliminare**|  
+|**action_type_name**|**varchar (19)**|Nome del tipo di azione:<br /><br /> **distribuire**<br /><br /> **creare**<br /><br /> **rename**<br /><br /> **Scollegare**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = dacpac<br /><br /> **1** = account di accesso<br /><br /> **2** = database|  
-|**dac_object_type_name**|**varchar (8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **dacpac** = istanza DAC<br /><br /> **accesso**<br /><br /> **database**|  
+|**dac_object_type_name**|**varchar (8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **dacpac** = istanza DAC<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = esito positivo<br /><br /> **2** = esito negativo|  
 |**action_status_name**|**varchar (11)**|Stato corrente dell'azione:<br /><br /> **in sospeso**<br /><br /> **successo**<br /><br /> **esito negativo**|  
-|**Obbligatoria**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
+|**Obbligatorio**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
 |**dac_object_name_pretran**|**sysname**|Nome dell'oggetto prima dell'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**dac_object_name_posttran**|**sysname**|Nome dell'oggetto dopo l'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] che implementa un'azione in un database o account di accesso.|  
@@ -74,7 +74,7 @@ WHERE instance_id NOT IN
  L'eliminazione delle righe per le applicazioni livello dati attive non influisce sulle operazioni di applicazione livello dati; l'unico effetto è che non sarà possibile registrare la cronologia completa dell'applicazione livello dati.  
   
 > [!NOTE]  
->  Attualmente non è disponibile alcun meccanismo per l' **** eliminazione di sysdac_history_internal [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]righe in.  
+>  Attualmente non è disponibile alcun meccanismo per l' **sysdac_history_internal** eliminazione di sysdac_history_internal [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]righe in.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin. L'accesso in sola lettura a questa vista è disponibile per tutti gli utenti che dispongono delle autorizzazioni per connettersi al database master.  

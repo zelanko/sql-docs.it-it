@@ -10,10 +10,10 @@ ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060087"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Rimozione di SSMA per i componenti DB2 (DB2ToSQL)
@@ -24,7 +24,7 @@ Al termine della migrazione dei database da DB2 a [!INCLUDE[ssNoVersion](../../i
   
 **Per disinstallare SSMA**  
   
-1.  Nel Pannello di controllo aprire **Installazione applicazioni**.  
+1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
 2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] Selezionare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per DB2**, quindi fare clic su **Rimuovi**.  
   

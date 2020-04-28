@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090049"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -64,9 +64,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificatore univoco del passaggio.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
-|**sottosistema**|**nvarchar (40)**|Sottosistema in cui eseguire il comando del passaggio.|  
+|**sottosistema**|**nvarchar(40)**|Sottosistema in cui eseguire il comando del passaggio.|  
 |**comando**|**nvarchar(max)**|Comando eseguito nel passaggio.|  
-|**Bandiere**|**int**|Maschera di bit dei valori che controllano il funzionamento del passaggio.|  
+|**flags**|**int**|Maschera di bit dei valori che controllano il funzionamento del passaggio.|  
 |**cmdexec_success_code**|**int**|Per un passaggio **CmdExec** , questo è il codice di uscita del processo di un comando riuscito.|  
 |**on_success_action**|**tinyint**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = termina il processo segnalato correttamente.<br /><br /> **2** = chiude l'errore di segnalazione dei processi.<br /><br /> **3** = Vai al passaggio successivo.<br /><br /> **4** = Vai al passaggio.|  
 |**on_success_step_id**|**int**|Se **on_success_action** è 4, indica il passaggio successivo da eseguire.|  
@@ -90,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **sp_help_jobstep** si trova nel database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   

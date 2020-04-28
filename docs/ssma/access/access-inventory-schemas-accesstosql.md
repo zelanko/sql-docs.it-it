@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068951"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Accedere agli schemi di inventario (AccessToSQL)
@@ -143,7 +143,7 @@ I metadati della query vengono esportati nella tabella **SSMA_Access_InventoryQu
 |**QueryType**|**nvarchar(4000)**|Specifica il tipo di query, ad esempio **Select** o **seoperation**.|  
 |**ExternalSource**|**nvarchar(4000)**|Se la query fa riferimento a un'origine dati esterna, si tratta della stringa di connessione utilizzata dalla query.|  
   
-## <a name="forms"></a>Form  
+## <a name="forms"></a>Moduli  
 I metadati del modulo vengono esportati nella tabella **SSMA_Access_InventoryForms** . Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Descrizione|  

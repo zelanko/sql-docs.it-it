@@ -18,10 +18,10 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096018"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
@@ -58,7 +58,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**0**|Nessun errore.|  
 |**1**|Errore sconosciuto.|  
 |**3**|L'evento specificato non è valido, in quanto non esiste oppure non è appropriato per la stored procedure.|  
-|**13**|memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
+|**13**|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_trace_generateevent** esegue molte delle azioni eseguite in precedenza dal **xp_trace_\* ** stored procedure estese. Utilizzare **sp_trace_generateevent** anziché **xp_trace_generate_event**.  
@@ -96,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

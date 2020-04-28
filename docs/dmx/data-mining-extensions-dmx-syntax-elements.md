@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070855"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementi della sintassi DMX (Data Mining Extensions)
@@ -24,7 +24,7 @@ ms.locfileid: "68070855"
  [Identificatori &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
  Oggetti che identificano ad esempio colonne o modelli e strutture di data mining.  
   
- [Tipi di dati &#40;&#41;DMX](../dmx/data-types-dmx.md)  
+ [Tipi di dati &#40;DMX&#41;](../dmx/data-types-dmx.md)  
  Definiscono i tipi di dati contenuti in una colonna di un modello di data mining.  
   
  [Espressioni &#40;DMX&#41;](../dmx/expressions-dmx.md)  
@@ -37,8 +37,7 @@ ms.locfileid: "68070855"
  Espressioni che accettano zero, uno o più valori di input e restituiscono tabelle o valori scalari.  
   
  [Commenti &#40;DMX&#41;](../dmx/comments-dmx.md)  
- Elementi di testo che è possibile inserire in script o istruzioni DMX per illustrare lo scopo di un'istruzione. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non esegue commenti.  
+ Elementi di testo che è possibile inserire in script o istruzioni DMX per illustrare lo scopo di un'istruzione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non esegue commenti.  
   
  [Parole chiave riservate &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)  
  Parole riservate di DMX che non possono essere utilizzate come nomi di oggetti in un database.  

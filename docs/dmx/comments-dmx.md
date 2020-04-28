@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071048"
 ---
 # <a name="comments-dmx"></a>Commenti (DMX)
@@ -24,19 +24,15 @@ ms.locfileid: "68071048"
   
  Di seguito sono riportate le linee guida di base per la scrittura dei commenti:  
   
--   In un commento è possibile utilizzare caratteri alfanumerici o simboli. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora tutti i caratteri all'interno di un commento.  
+-   In un commento è possibile utilizzare caratteri alfanumerici o simboli. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora tutti i caratteri all'interno di un commento.  
   
 -   Per i commenti di uno script o istruzione non è prevista una lunghezza massima. Un commento può essere formato da una o più righe.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta gli indicatori di commento seguenti:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta gli indicatori di commento seguenti:  
   
--   **(barre doppie).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra la barra doppia e la fine della riga come commento. Per creare commenti su più righe, specificare la barra doppia all'inizio di ogni riga di commento. Per ulteriori informazioni su questo carattere di commento, vedere la [barra doppia &#40;commento&#41; &#40;&#41;DMX ](../dmx/double-slash-comment-dmx.md).  
+-   **(barre doppie).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra la barra doppia e la fine della riga come commento. Per creare commenti su più righe, specificare la barra doppia all'inizio di ogni riga di commento. Per ulteriori informazioni su questo carattere di commento, vedere la [barra doppia &#40;commento&#41; &#40;&#41;DMX ](../dmx/double-slash-comment-dmx.md).  
   
--   **--(trattini doppi).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra il trattino doppio e la fine della riga come commento. Per creare commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per ulteriori informazioni su questo carattere di commento, vedere [&#40;commento&#41; &#40;riepilogo&#41; DMX](../dmx/comment-dmx-summary.md).  
+-   **--(trattini doppi).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra il trattino doppio e la fine della riga come commento. Per creare commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per ulteriori informazioni su questo carattere di commento, vedere [&#40;commento&#41; &#40;riepilogo&#41; DMX](../dmx/comment-dmx-summary.md).  
   
 -   **/\*... \*/(coppie di caratteri barra-asterisco).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta, o anche per scrivere commenti in un codice eseguibile. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]valuta tutti gli elementi dalla coppia di caratteri di apertura (/*) alla coppia di caratteri\*di chiusura (/) come parte del commento. Per creare un commento su più righe, iniziare il commento con la coppia di caratteri di apertura del commento\*(/) e terminare il commento con la coppia di caratteri di chiusura\*del commento (/). Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per ulteriori informazioni su questo carattere di commento, vedere la pagina relativa al [Commento a Slash Star &#40;&#41; &#40;&#41;DMX ](../dmx/slash-star-comment-dmx.md).  
   

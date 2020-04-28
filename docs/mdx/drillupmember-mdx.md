@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049195"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
@@ -43,7 +43,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
 >  Il drill-up di un membro verrà eseguito solo se il membro è seguito immediatamente da un elemento figlio o un discendente. L'ordine dei membri nel set è importante per le famiglie di\* funzioni drill\* -down e drillup. Prendere in considerazione l'uso della funzione **Hierarchize** per ordinare i membri del primo set in modo appropriato.  
   
 ## <a name="example"></a>Esempio  
- I tre esempi seguenti sono identici a eccezione del secondo set. Nel primo esempio, il secondo set è United States. Di conseguenza, Colorado viene escluso dal set di risultati. È un discendente di United States.  
+ I tre esempi seguenti sono identici a eccezione del secondo set. Nel primo esempio, il secondo set è Stati Uniti. Di conseguenza, Colorado viene escluso dal set di risultati. È un discendente di Stati Uniti.  
   
 ```  
 SELECT DrillUpMember (   
@@ -58,7 +58,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- Il secondo esempio mostra l'importanza dell'ordine dei membri. Poiché **DrillupMember** esegue il drill-up solo dei membri immediatamente seguiti dai discendenti del primo set, non esegue il drill-up sul membro Canada. Canada è separato dal relativi discendenti da United States e Colorado. Se si riordinano i membri in modo che Canada sia direttamente sopra Alberta, Alberta e Brunswick verranno esclusi dal set di righe.  
+ Il secondo esempio mostra l'importanza dell'ordine dei membri. Poiché **DrillupMember** esegue il drill-up solo dei membri immediatamente seguiti dai discendenti del primo set, non esegue il drill-up sul membro Canada. Canada è separato dal relativi discendenti da Stati Uniti e Colorado. Se si riordinano i membri in modo che Canada sia direttamente sopra Alberta, Alberta e Brunswick verranno esclusi dal set di righe.  
   
 ```  
 SELECT DrillUpMember (   
@@ -94,6 +94,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056376"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
@@ -47,11 +47,11 @@ sp_post_msx_operation
 ## <a name="arguments"></a>Argomenti  
 `[ @operation = ] 'operation'`Tipo di operazione per l'operazione pubblicata. *Operation*è di tipo **varchar (64)** e non prevede alcun valore predefinito. Le operazioni valide dipendono dalla *object_type*.  
   
-|Tipo di oggetto|Operazione|  
+|Tipo oggetto|Operazione|  
 |-----------------|---------------|  
-|**PROCESSO**|INSERT<br /><br /> UPDATE<br /><br /> Elimina<br /><br /> START<br /><br /> STOP|  
+|**PROCESSO**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> Elimina|  
+|**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
 `[ @object_type = ] 'object'`Tipo di oggetto per il quale pubblicare un'operazione. I tipi validi sono **Job**, **Server**e **Schedule**. l' *oggetto* è di tipo **varchar (64)** e il valore predefinito è **Job**.  
   
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`Nome del server di destinazione per cui si applica l'operazione specificata. Se *job_id* viene specificato, ma non viene specificato *target_server* , le operazioni vengono inviate per tutti i server di processo del processo. *target_server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
   
-`[ @value = ] value`Intervallo di polling, in secondi. *value* è di **tipo int**e il valore predefinito è null. Specificare questo parametro solo se *Operation* è **set-poll**.  
+`[ @value = ] value`Intervallo di polling, in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *Operation* è **set-poll**.  
   
 `[ @schedule_uid = ] schedule_uid`Identificatore univoco per la pianificazione a cui si applica l'operazione. *schedule_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   

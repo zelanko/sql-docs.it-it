@@ -18,10 +18,10 @@ ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68062998"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68062998"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|Solo per uso interno.|  
-|**valore**|**bit**|Solo per uso interno.|  
+|**value**|**bit**|Solo per uso interno.|  
 |**major_version**|**int**|Solo per uso interno.|  
 |**minor_version**|**int**|Solo per uso interno.|  
 |**Revisione**|**int**|Solo per uso interno.|  

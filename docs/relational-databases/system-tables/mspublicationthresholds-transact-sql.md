@@ -18,10 +18,10 @@ ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088521"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68088521"
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|Identifica la pubblicazione per cui è stata impostato un valore soglia.|  
 |**metric_id**|**int**|Identifica una misurazione delle prestazioni di replica monitorata come definito nella tabella di sistema [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) .|  
-|**valore**|**sql_variant**|Valore soglia della misurazione da monitorare.|  
+|**value**|**sql_variant**|Valore soglia della misurazione da monitorare.|  
 |**shouldalert**|**bit**|Il valore **1** indica che deve essere generato un avviso quando la metrica supera la soglia definita.|  
 |**IsEnabled**|**bit**|Il valore **1** indica che il monitoraggio è abilitato per questa misurazione delle prestazioni di replica.|  
   

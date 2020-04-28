@@ -13,10 +13,10 @@ ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eea7709c67eab0dc9fe1890135f9ae03225cdff2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068088"
 ---
 # <a name="sysperiods-transact-sql"></a>sys. periods (Transact-SQL)
@@ -28,18 +28,18 @@ ms.locfileid: "68068088"
 |-------------------|---------------|-----------------|  
 |name|**sysname**|Nome del periodo|  
 |period_type|**tinyint**|Valore numerico che rappresenta il tipo di periodo:<br /><br /> 1 = periodo di tempo di sistema|  
-|period_type_desc|**nvarchar (60)**|Descrizione testuale del tipo di colonna:<br /><br /> SYSTEM_TIME_PERIOD|  
+|period_type_desc|**nvarchar(60)**|Descrizione testuale del tipo di colonna:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|ID della tabella contenente la colonna period_type|  
 |start_column_id|**int**|ID della colonna che definisce il limite del periodo inferiore|  
 |end_column_id|**int**|ID della colonna che definisce il limite del periodo superiore|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. all_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. system_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

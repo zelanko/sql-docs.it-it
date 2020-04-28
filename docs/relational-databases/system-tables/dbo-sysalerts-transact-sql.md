@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084681"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084681"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID dell'avviso.|  
-|**nome**|**sysname**|Nome dell'avviso.|  
+|**id**|**int**|ID dell'avviso.|  
+|**name**|**sysname**|Nome dell'avviso.|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Riservato a un uso futuro.|  
-|**event_id**|**int**|Riservato a un uso futuro.|  
+|**event_category_id**|**int**|Riservato per utilizzi futuri.|  
+|**event_id**|**int**|Riservato per utilizzi futuri.|  
 |**message_id**|**int**|ID messaggio definito dall'utente o riferimento al messaggio **sysmessages** che attiva questo avviso.|  
-|**gravità**|**int**|Livello di gravità che attiva l'avviso.|  
+|**severity**|**int**|Livello di gravità che attiva l'avviso.|  
 |**abilitato**|**tinyint**|Stato dell'avviso:<br /><br /> **0** = disabilitato.<br /><br /> **1** = abilitata.|  
 |**delay_between_responses**|**int**|Intervallo espresso in secondi tra due notifiche dell'avviso.|  
 |**last_occurrence_date**|**int**|Data dell'ultima occorrenza dell'avviso.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084681"
 |**count_reset_time**|**int**|Il conteggio dell'ora del giorno verrà reimpostato su **0**.|  
 |**job_id**|**uniqueidentifier**|ID dell'attività eseguita quando si verifica l'avviso.|  
 |**has_notification**|**int**|Numero di operatori che ricevono una notifica tramite posta elettronica quando si verifica un avviso.|  
-|**Bandiere**|**int**|Riservato.|  
+|**flags**|**int**|Riservato.|  
 |**performance_condition**|**nvarchar(512)**|Riservato.|  
 |**category_id**|**int**|Riservato.|  
   

@@ -21,10 +21,10 @@ ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053440"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
@@ -37,35 +37,35 @@ ms.locfileid: "68053440"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID della tabella alla quale appartiene l'indice.|  
-|**stato**|**int**|Informazioni sullo stato del sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prima**|**binario (6)**|Puntatore alla prima pagina o alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
+|**id**|**int**|ID della tabella alla quale appartiene l'indice.|  
+|**Stato**|**int**|Informazioni sullo stato del sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**prima**|**binary(6)**|Puntatore alla prima pagina o alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
 |**indid**|**smallint**|ID dell'indice:<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> >1 = indice non cluster|  
-|**radice**|**binario (6)**|Per **indid** >= 1, **root** è il puntatore alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
+|**radice**|**binary(6)**|Per **indid** >= 1, **root** è il puntatore alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
 |**minlen**|**smallint**|Dimensioni minime di una riga.|  
 |**keycnt**|**smallint**|Numero di chiavi.|  
 |**GroupID**|**smallint**|ID del filegroup in cui l'oggetto è stato creato.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
 |**dpages**|**int**|Per **indid** = 0 o **indid** = 1, **dpages** è il conteggio delle pagine di dati utilizzate.<br /><br /> Per **indid** > 1, **dpages** è il numero di pagine di indice utilizzate.<br /><br /> 0 = l'indice viene partizionato quando **indid** > 1.<br /><br /> 0 = la tabella viene partizionata quando **indid** è 0 o 1.<br /><br /> Non restituisce risultati precisi se si verifica un overflow della riga.|  
 |**riservati**|**int**|Per **indid** = 0 o **indid** = 1, **reserved** è il numero di pagine allocate per tutti gli indici e i dati della tabella.<br /><br /> Per **indid** > 1, **riservato** è il numero di pagine allocate per l'indice.<br /><br /> 0 = l'indice viene partizionato quando **indid** > 1.<br /><br /> 0 = la tabella viene partizionata quando **indid** è 0 o 1.<br /><br /> Non restituisce risultati precisi se si verifica un overflow della riga.|  
-|**utilizzato**|**int**|Per **indid** = 0 o **indid** = 1, **used** è il conteggio delle pagine totali utilizzate per tutti i dati di indice e di tabella.<br /><br /> Per **indid** > 1, **usato** è il numero di pagine utilizzate per l'indice.<br /><br /> 0 = l'indice viene partizionato quando **indid** > 1.<br /><br /> 0 = la tabella viene partizionata quando **indid** è 0 o 1.<br /><br /> Non restituisce risultati precisi se si verifica un overflow della riga.|  
+|**used**|**int**|Per **indid** = 0 o **indid** = 1, **used** è il conteggio delle pagine totali utilizzate per tutti i dati di indice e di tabella.<br /><br /> Per **indid** > 1, **usato** è il numero di pagine utilizzate per l'indice.<br /><br /> 0 = l'indice viene partizionato quando **indid** > 1.<br /><br /> 0 = la tabella viene partizionata quando **indid** è 0 o 1.<br /><br /> Non restituisce risultati precisi se si verifica un overflow della riga.|  
 |**rowcnt**|**bigint**|Conteggio delle righe a livello di dati basato su **indid** = 0 e **indid** = 1.<br /><br /> 0 = l'indice viene partizionato quando **indid** > 1.<br /><br /> 0 = la tabella viene partizionata quando **indid** è 0 o 1.|  
 |**rowmodctr**|**int**|Conta il numero totale di righe inserite, eliminate o aggiornate a partire dall'ultimo aggiornamento delle statistiche per la tabella.<br /><br /> 0 = l'indice viene partizionato quando **indid** > 1.<br /><br /> 0 = la tabella viene partizionata quando **indid** è 0 o 1.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, **rowmodctr** non è completamente compatibile con le versioni precedenti. Per altre informazioni, vedere la sezione Osservazioni.|  
-|**Reserved3**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Reserved4**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved3**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved4**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xmaxlen**|**smallint**|Dimensioni massime di una riga.|  
 |**maxirow**|**smallint**|Dimensioni massime di una riga di indice non foglia.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, **maxirow** non è completamente compatibile con le versioni precedenti.|  
 |**OrigFillFactor**|**tinyint**|Valore del fattore di riempimento originale utilizzato durante la creazione dell'indice. Questo valore non viene mantenuto. Può tuttavia risultare utile se è necessario ricreare un indice e non si ricorda il fattore di riempimento utilizzato.|  
 |**StatVersion**|**tinyint**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Reserved2**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**FirstIAM**|**binario (6)**|NULL = l'indice viene partizionato.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved2**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**FirstIAM**|**binary(6)**|NULL = l'indice viene partizionato.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|Flag di implementazione dell'indice.<br /><br /> Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Utilizzata per vincolare le granularità dei blocchi considerati per un indice. Per ridurre al minimo il costo di blocco, è possibile ad esempio impostare una tabella di ricerca essenzialmente di sola lettura per l'esecuzione del blocco solo a livello di tabella.|  
 |**pgmodctr**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**chiavi**|**varbinary (816)**|Elenco degli ID delle colonne che costituiscono la chiave dell'indice.<br /><br /> Restituisce NULL.<br /><br /> Per visualizzare le colonne chiave dell'indice, utilizzare [sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
-|**nome**|**sysname**|Nome dell'indice o della statistica. Restituisce NULL quando **indid** = 0. Modificare l'applicazione in uso in modo da eseguire la ricerca di un nome di heap NULL.|  
-|**statblob**|**immagine**|BLOB (Binary Large Object) per statistiche.<br /><br /> Restituisce NULL.|  
-|**MAXLEN**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**rows**|**int**|Conteggio delle righe a livello di dati basato su **indid** = 0 e **indid** = 1 e il valore viene ripetuto per **indid** >1.|  
+|**chiavi**|**varbinary(816)**|Elenco degli ID delle colonne che costituiscono la chiave dell'indice.<br /><br /> Restituisce NULL.<br /><br /> Per visualizzare le colonne chiave dell'indice, utilizzare [sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**name**|**sysname**|Nome dell'indice o della statistica. Restituisce NULL quando **indid** = 0. Modificare l'applicazione in uso in modo da eseguire la ricerca di un nome di heap NULL.|  
+|**statblob**|**image**|BLOB (Binary Large Object) per statistiche.<br /><br /> Restituisce NULL.|  
+|**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**righe**|**int**|Conteggio delle righe a livello di dati basato su **indid** = 0 e **indid** = 1 e il valore viene ripetuto per **indid** >1.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Le colonne definite come riservate non devono essere utilizzate.  
@@ -85,7 +85,7 @@ ms.locfileid: "68053440"
 -   Determinare il momento dell'aggiornamento delle statistiche utilizzando informazioni a livello di applicazione. Ad esempio, ogni volta che il valore massimo di una colonna **Identity** viene modificato di più di 10.000 o ogni volta che viene eseguita un'operazione di inserimento bulk.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

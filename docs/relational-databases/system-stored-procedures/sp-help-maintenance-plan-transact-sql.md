@@ -18,10 +18,10 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096197"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
@@ -72,7 +72,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|**database_name**|Nome di tutti i database associati al piano di manutenzione. *database_name* è di **tipo sysname**.|  
+|**database_name**|Nome di tutti i database associati al piano di manutenzione. *database_name* è di tipo **sysname**.|  
   
 ### <a name="job-table"></a>Tabella relativa ai processi  
   
