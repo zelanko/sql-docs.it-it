@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175570"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Traccia (client di data mining per Excel)
   ![Pulsante Traccia](media/misc-trace.gif "Pulsante Traccia")
 
- La finestra di dialogo **traccia** consente di monitorare le istruzioni inviate all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzata per data mining. Dopo aver creato una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutte le interazioni tra il client e il server vengono registrate nel riquadro di analisi, incluse le istruzioni che consentono di creare strutture, aggiungere modelli di data mining ed eseguire stime, nonché alcuni messaggi restituiti dal server. ****
+ La finestra di dialogo **traccia** consente di monitorare le istruzioni inviate all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzata per data mining. Dopo aver creato una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutte le interazioni tra il client e il server vengono registrate nel riquadro di analisi, incluse le istruzioni che consentono di creare strutture, aggiungere modelli di data mining ed eseguire stime, nonché alcuni messaggi restituiti dal server. **Tracer**
 
  A seconda dell'azione richiesta, l'istruzione potrebbe essere una query di modifica o di definizione dati DMX (Data Mining Extensions), un pacchetto ASSL (Analysis Services Scripting Language) o una chiamata a una stored procedure di Analysis Services. Non vengono tuttavia visualizzati i risultati numerici e i valori dei dati effettivi.
 

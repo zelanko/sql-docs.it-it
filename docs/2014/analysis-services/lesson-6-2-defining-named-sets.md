@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175270"
 ---
 # <a name="defining-named-sets"></a>Definizione dei set denominati
@@ -75,7 +75,7 @@ ms.locfileid: "78175270"
 
 8.  Aprire Progettazione dimensioni per la dimensione **Reseller** e quindi fare clic su **Number of Employees** nel riquadro **Attributi** .
 
-9. Nella Finestra Proprietà `DiscretizationMethod` impostare la proprietà su **Automatic**, quindi modificare la `DiscretizationBucketCount` proprietà in. `5` Per ulteriori informazioni, vedere [membri attributo gruppo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. Nella Finestra Proprietà `DiscretizationMethod` impostare la proprietà su **Automatic**, quindi modificare la `DiscretizationBucketCount` proprietà in. `5` Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175270"
      ![Riquadro Filtro contenente due set denominati](../../2014/tutorials/media/l6-named-set-05.gif "Riquadro Filtro contenente due set denominati")
 
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione
- [Lezione 7: definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>Vedere anche
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md) [creare set denominati](multidimensional-models/create-named-sets.md)

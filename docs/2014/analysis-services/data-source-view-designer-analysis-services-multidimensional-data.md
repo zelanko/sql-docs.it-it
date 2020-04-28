@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175167"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Progettazione vista origine dati (Analysis Services - Dati multidimensionali)
@@ -48,7 +48,7 @@ ms.locfileid: "78175167"
 |Rinominare colonne o tabelle oppure creare nuove colonne calcolate. Ad esempio, concatenare un nome e un cognome in una nuova colonna per il nome completo.|[Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|
 |Aggiungere manualmente relazioni tra tabelle.|[Definire relazioni logiche in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|
 |Creare una query denominata per definire un nuovo oggetto basato su una query T-SQL.|[Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|
-|Esplorare i dati sottostanti per visualizzare i valori di dati effettivi rappresentati dagli oggetti del modello.<br /><br /> L'esplorazione dei dati consente di controllare visivamente e copiare i dati restituiti dalla query o dalla tabella dimensionale sottostante. L'esplorazione dei dati utilizza per impostazione predefinita la prima metodologia di campionamento di conteggio, con un conteggio di esempio di 5000, ma è possibile revisionare queste impostazioni.|[Esplorazione dei dati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
+|Esplorare i dati sottostanti per visualizzare i valori di dati effettivi rappresentati dagli oggetti del modello.<br /><br /> L'esplorazione dei dati consente di controllare visivamente e copiare i dati restituiti dalla query o dalla tabella dimensionale sottostante. L'esplorazione dei dati utilizza per impostazione predefinita la prima metodologia di campionamento di conteggio, con un conteggio di esempio di 5000, ma è possibile revisionare queste impostazioni.|[Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
 |Creare un diagramma di tutte o parte delle tabelle e relazioni in una vista origine dati.|[Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
 
 ## <a name="see-also"></a>Vedere anche

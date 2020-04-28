@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc23747a13ee2e5b126b7e57ba7121878d05643d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176471"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
@@ -90,7 +90,7 @@ ms.locfileid: "78176471"
 
 -   [Impostazione del valore di un vincolo di precedenza tramite il menu di scelta rapida](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)
 
--   [Connettere attività e contenitori tramite un vincolo di precedenza predefinito](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)
+-   [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)
 
      In questo argomento sono fornite informazioni sulla modalità di impostazione del comportamento predefinito dei vincoli di precedenza e sulla modalità di connessione di file eseguibili tramite i vincoli di precedenza predefiniti.
 

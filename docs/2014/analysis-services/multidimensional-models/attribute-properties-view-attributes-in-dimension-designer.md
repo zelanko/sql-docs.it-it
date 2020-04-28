@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb12bd6499796ff7f2cfb09ccd4c176914c8117
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175806"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Visualizzare attributi in Progettazione dimensioni
@@ -30,7 +30,7 @@ ms.locfileid: "78175806"
 |------------------------|-----------------|
 |**Elenco**|Consente di visualizzare gli attributi in formato di elenco.<br /><br /> Fare clic con il pulsante destro del mouse su un attributo per eliminarlo dall'elenco, rinominarlo oppure modificarne l'utilizzo.<br /><br /> Utilizzare questa visualizzazione per compilare gerarchie. Le informazioni sugli attributi e le proprietà membro non sono visibili.|
 |**Albero**|Consente di visualizzare gli attributi in formato di albero, con la dimensione come nodo di livello principale dell'albero. Utilizzare questa visualizzazione per visualizzare e creare proprietà membro. Può inoltre essere utilizzata per compilare gerarchie. Espandere un attributo per visualizzarne le relazioni tra attributi o per creare una nuova relazione tra attributi, eseguendo le operazioni seguenti:<br /><br /> Fare clic sulla dimensione, su un attributo o su una proprietà membro per visualizzarne le proprietà nella finestra **Proprietà** .<br /><br /> Fare clic con il pulsante destro del mouse su una proprietà membro o su un attributo per eliminarlo dall'elenco, rinominarlo oppure modificarne l'utilizzo.|
-|**Griglia**|Consente di visualizzare gli attributi in formato di griglia. Fare clic su qualsiasi riga della griglia per visualizzare le proprietà dell'attributo.  Utilizzare questa visualizzazione per creare e configurare attributi. Nella griglia vengono visualizzate le colonne seguenti:<br /><br /> **Nome**: Mostra il valore della proprietà **Name** . Digitare un diverso nome per modificare l'impostazione.<br /><br /> **Usage**: specifica se si tratta di un attributo Regular, Key, Parent o AccountType. Fare clic su un valore in questa colonna per selezionare un'impostazione diversa.<br /><br /> **Tipo**: specifica la categoria di Business Intelligence per l'attributo. Fare clic sulla cella per selezionare un'impostazione diversa.<br /><br /> **Chiave Column**: Mostra il tipo di dati OLE DB per la proprietà chiave **Column** sull'attributo. Questa colonna non può essere modificata.<br /><br /> **Nome colonna**: indica se l'impostazione della proprietà **NameColumn** nell'attributo è la stessa colonna dell'impostazione per la proprietà della **colonna** . Questa colonna non può essere modificata.|
+|**Grid**|Consente di visualizzare gli attributi in formato di griglia. Fare clic su qualsiasi riga della griglia per visualizzare le proprietà dell'attributo.  Utilizzare questa visualizzazione per creare e configurare attributi. Nella griglia vengono visualizzate le colonne seguenti:<br /><br /> **Nome**: Mostra il valore della proprietà **Name** . Digitare un diverso nome per modificare l'impostazione.<br /><br /> **Usage**: specifica se si tratta di un attributo Regular, Key, Parent o AccountType. Fare clic su un valore in questa colonna per selezionare un'impostazione diversa.<br /><br /> **Tipo**: specifica la categoria di Business Intelligence per l'attributo. Fare clic sulla cella per selezionare un'impostazione diversa.<br /><br /> **Chiave Column**: Mostra il tipo di dati OLE DB per la proprietà chiave **Column** sull'attributo. Questa colonna non può essere modificata.<br /><br /> **Nome colonna**: indica se l'impostazione della proprietà **NameColumn** nell'attributo è la stessa colonna dell'impostazione per la proprietà della **colonna** . Questa colonna non può essere modificata.|
 
  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]gli attributi vengono contrassegnati in base al relativo utilizzo tramite le icone illustrate nella tabella seguente.
 

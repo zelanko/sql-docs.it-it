@@ -10,10 +10,10 @@ ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909711"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Nuove funzionalità di GUI in SSMA per DB2 (DB2ToSQL)
@@ -47,7 +47,7 @@ Per aprire la finestra di dialogo Gestisci layout, scegliere layout dal menu Vis
 ## <a name="bookmarks"></a>Segnalibri  
 Questa funzionalità consente di impostare uno o più segnalibri nel codice di origine o di destinazione, di trovare rapidamente un segnalibro usando i collegamenti, di gestire i segnalibri con una finestra di dialogo intuitiva.  
   
-### <a name="toggle-bookmark"></a>Imposta/Nascondi segnalibro  
+### <a name="toggle-bookmark"></a>Attiva/Disattiva segnalibro  
 È possibile impostare o rimuovere un segnalibro nei modi seguenti:  
   
 -   Pulsante di attivazione/disattivazione del pulsante nella parte superiore della finestra SQL di origine o di destinazione  
@@ -72,7 +72,7 @@ Questa funzionalità consente di impostare uno o più segnalibri nel codice di o
   
 -   Usare i pulsanti Rimuovi o Rimuovi tutto nella finestra di dialogo Gestisci segnalibri  
   
-### <a name="manage-bookmarks"></a>Gestisci segnalibri  
+### <a name="manage-bookmarks"></a>Gestire i segnalibri  
 Per aprire la finestra di dialogo Gestisci segnalibri, nel menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.  
   
 ## <a name="object-history"></a>Cronologia oggetti  

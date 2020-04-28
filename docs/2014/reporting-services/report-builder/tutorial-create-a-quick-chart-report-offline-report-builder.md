@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5cd666ec589737d83717e9b435a260bd2a0d0ef6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176895"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
@@ -26,10 +26,10 @@ ms.locfileid: "78176895"
 
  !["Primo grafico a torta" nella visualizzazione Esegui](../media/rs-my1stpierunview.gif "Primo grafico a torta in Run View")
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
  Se si utilizzano dati XML o una query [!INCLUDE[tsql](../../../includes/tsql-md.md)], è necessario avere accesso a Generatore report di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. È possibile eseguire la versione autonoma o la versione ClickOnce disponibile in Gestione report o in un sito di SharePoint. Per le versioni ClickOnce, l'unica differenza riguarda il primo passaggio, ovvero l'apertura di Generatore report. Per ulteriori informazioni, vedere [installazione, disinstallazione e supporto Generatore report](../install-uninstall-and-report-builder-support.md).
 
-##  <a name="TwoWays"></a> Due modi per eseguire questa esercitazione
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a>Due modi per eseguire questa esercitazione
 
 -   [Creare il grafico a torta con dati XML](#CreatePieChartXML)
 
@@ -50,11 +50,11 @@ ms.locfileid: "78176895"
  [Creare il grafico a torta con una query Transact-SQL contenente dati](#CreatePieQueryData)
 
 ## <a name="also-in-this-article"></a>Ulteriore contenuto dell'articolo
- [Dopo l'esecuzione della procedura guidata](#AfterWizard)
+ [Al termine della procedura guidata](#AfterWizard)
 
  [Passaggi successivi](#WhatsNext)
 
-##  <a name="CreatePieChartXML"></a>Creazione del grafico a torta con dati XML
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a>Creazione del grafico a torta con dati XML
 
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>Per creare il grafico a torta con dati XML
 
@@ -110,7 +110,7 @@ ms.locfileid: "78176895"
     </Query>
     ```
 
-11. (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.
+11. (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati su cui si baserà il grafico.
 
 12. Fare clic su **Avanti**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "78176895"
 
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)
 
-##  <a name="CreatePieQueryData"></a>Creazione del grafico a torta con [!INCLUDE[tsql](../../../includes/tsql-md.md)] una query
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Creazione del grafico a torta con una query [!INCLUDE[tsql](../../../includes/tsql-md.md)]
 
 #### <a name="to-create-the-pie-chart-with-a-tsql-query-that-contains-data"></a>Per creare il grafico a torta con una query [!INCLUDE[tsql](../../../includes/tsql-md.md)] contenente dati
 
@@ -161,7 +161,7 @@ ms.locfileid: "78176895"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName 
     ```
 
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.
+8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati su cui si baserà il grafico.
 
 9. Fare clic su **Avanti**.
 
@@ -183,7 +183,7 @@ ms.locfileid: "78176895"
 
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)
 
-##  <a name="AfterWizard"></a> Al termine della procedura guidata
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a>Dopo l'esecuzione della procedura guidata
  Dopo aver terminato la creazione del report del grafico a torta, è possibile modificarlo nel modo desiderato. Nella scheda **Esegui** della barra multifunzione fare clic su **Progettazione**per continuare a modificarlo.
 
 ### <a name="make-the-chart-bigger"></a>Ingrandire il grafico
@@ -202,14 +202,13 @@ ms.locfileid: "78176895"
 
 3.  Digitare `#PERCENT{P0}` per l'opzione **dati etichetta** .
 
-     Il testo `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. 
-  `#PERCENT` è una parola chiave che esegue un calcolo o una funzione. Ne sono disponibili anche diverse altre.
+     Il testo `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. `#PERCENT` è una parola chiave che esegue un calcolo o una funzione. Ne sono disponibili anche diverse altre.
 
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).
 
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)
 
-##  <a name="WhatsNext"></a>Passaggi successivi
+##  <a name="whats-next"></a><a name="WhatsNext"></a>Passaggi successivi
  Al termine della creazione del primo report in Generatore report, è possibile provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire Generatore report, è necessario disporre dell'autorizzazione per accedere alle origini dati, ad esempio i database, con una *stringa di connessione*che connette effettivamente all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.
 
  Per eseguire le altre esercitazioni, è necessario disporre del nome di un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.

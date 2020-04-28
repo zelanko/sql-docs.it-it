@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761905"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema della piattaforma Analytics
@@ -35,7 +35,7 @@ Per configurare WSUS, è necessario:
   
 -   Conosce l'indirizzo IP del server proxy se l'appliance utilizzerà un server proxy per accedere al server upstream o Microsoft Update.  
   
--   Nella maggior parte dei casi WSUS deve accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo, è possibile configurare il DNS del sistema della piattaforma di analisi per supportare un server d'utilità di un nome esterno che consentirà agli host e alle macchine virtuali di sistema della piattaforma di analisi di usare server DNS esterni per risolvere i nomi all'esterno del Appliance. Per altre informazioni, vedere [usare un server di trasmissione DNS per risolvere i nomi DNS non Appliance &#40;&#41;del sistema della piattaforma di analisi ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Nella maggior parte dei casi WSUS deve accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo, è possibile configurare il DNS del sistema della piattaforma di analisi per supportare un server di un server d'utilità esterno che consentirà agli host e alle macchine virtuali di sistema della piattaforma di analisi di usare server DNS esterni per risolvere i nomi all'esterno dell'appliance. Per altre informazioni, vedere [usare un server di trasmissione DNS per risolvere i nomi DNS non Appliance &#40;&#41;del sistema della piattaforma di analisi ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Per configurare Windows Server Update Services (WSUS)  
   
@@ -113,7 +113,7 @@ Per configurare WSUS, è necessario:
   
     1.  Nella pagina **Specifica server proxy** della configurazione guidata selezionare la casella di controllo **Usa un server proxy** per la sincronizzazione, quindi digitare l'indirizzo IP del server proxy (non il nome) e il numero di porta (porta 80 per impostazione predefinita) nelle caselle corrispondenti.  
   
-    2.  Se si desidera utilizzare le credenziali di un utente specifico per la connessione al server proxy, selezionare la casella di controllo **Usa credenziali utente per la connessione al server proxy** e quindi immettere il nome utente, il domino e la password dell'utente nelle caselle corrispondenti. Se si desidera abilitare l'autenticazione di base per l'utente che si connette al server proxy, selezionare la casella **di controllo Consenti autenticazione di base (password inviata in testo non crittografato)** .  
+    2.  Se si desidera utilizzare le credenziali di un utente specifico per la connessione al server proxy, selezionare la casella di controllo **Usa credenziali utente per la connessione al server proxy** e quindi immettere il nome utente, il domino e la password dell'utente nelle caselle corrispondenti. Se si desidera abilitare l'autenticazione di base per l'utente si connette al server proxy, selezionare il **Consenti autenticazione di base (password inviata in testo non crittografato)** casella di controllo.  
   
         ![WSUS - Credenziali proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
@@ -172,7 +172,7 @@ Per configurare WSUS, è necessario:
   
     Fare clic su **Fine**.  
   
-## <a name="bkmk_WSUSGroup"></a>Raggruppare i server appliance in WSUS  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>Raggruppare i server appliance in WSUS  
 Dopo aver configurato WSUS per il sistema di piattaforma di analisi, il passaggio successivo consiste nel raggruppare i server appliance. Con l'aggiunta di tutti i server appliance a un gruppo, WSUS sarà in grado di applicare gli aggiornamenti software a tutti i server nell'appliance.  
   
 > [!NOTE]  

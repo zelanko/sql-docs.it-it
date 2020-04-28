@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925594"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
@@ -164,14 +164,14 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
   
  Definito anche come *costante enumerata*. Vedere anche *Constant*.  
   
- evento  
+ event  
  Azione riconosciuta da un oggetto, per la quale è possibile scrivere codice per rispondere. Gli eventi possono essere generati dall'esecuzione del comando, dal completamento delle transazioni, dall'esplorazione del recordset e dagli aggiornamenti dei dati, tra le altre azioni. Vedere anche *gestore eventi*.  
   
  gestore dell'evento  
  Un gestore eventi è il codice eseguito quando si verifica un evento. Vedere anche l'evento.  
   
 ## <a name="h"></a>H  
- handler  
+ gestore  
  Routine che gestisce una condizione o un'operazione comune e relativamente semplice, ad esempio il ripristino degli errori o la gestione dei dati.  
   
  Recordset gerarchico  
@@ -190,7 +190,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Una o più colonne di una tabella che identificano in modo univoco una riga; utilizzato spesso per indicizzare una tabella.  
   
 ## <a name="m"></a>M  
- marshalling  
+ marshaling  
  Il processo di creazione di pacchetti, invio e annullamento del packaging dei parametri del metodo di interfaccia tra i limiti del thread o del processo.  
   
  livello intermedio  

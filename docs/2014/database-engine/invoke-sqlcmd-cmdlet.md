@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928029"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Cmdlet Invoke-Sqlcmd
-  **Invoke-Sqlcmd** è un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet che esegue script che contengono istruzioni dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **SQLCMD** .  
+  **Invoke-Sqlcmd** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che esegue script contenenti istruzioni provenienti dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **sqlcmd**.  
   
 ## <a name="using-invoke-sqlcmd"></a>Utilizzo di Invoke-Sqlcmd  
  Il cmdlet **Invoke-Sqlcmd** consente di eseguire file di script **sqlcmd** in un ambiente Windows PowerShell. Molte delle operazioni consentite da **sqlcmd** possono essere eseguite anche tramite il cmdlet **Invoke-Sqlcmd**.  
@@ -89,13 +89,13 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  Tramite Invoke-Sqlcmd viene visualizzato un avviso quando viene utilizzato il contesto del database per il percorso. È possibile utilizzare il parametro -SuppressProviderContextWarning per disattivare il messaggio di avviso. Il parametro -IgnoreProviderContext può essere utilizzato per indicare a Invoke-Sqlcmd di utilizzare sempre il database predefinito per l'accesso.  
   
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Confronto tra Invoke-Sqlcmd e l'utilità sqlcmd  
- **Invoke-Sqlcmd** può essere usato per eseguire molti degli script che possono essere eseguiti tramite l'utilità **SQLCMD** . Il cmdlet **Invoke-Sqlcmd** viene tuttavia eseguito in un ambiente Windows PowerShell diverso dall'ambiente del prompt dei comandi in cui viene eseguito **sqlcmd** . Il comportamento di **Invoke-Sqlcmd** è stato modificato per l'uso in un ambiente Windows PowerShell.  
+ Il cmdlet**Invoke-Sqlcmd** può essere usato per eseguire molti degli script eseguibili tramite l'utilità **sqlcmd** . Il cmdlet **Invoke-Sqlcmd** viene tuttavia eseguito in un ambiente Windows PowerShell diverso dall'ambiente del prompt dei comandi in cui viene eseguito **sqlcmd** . Il comportamento di **Invoke-Sqlcmd** è stato modificato per l'uso in un ambiente Windows PowerShell.  
   
  Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
   
- **Invoke-Sqlcmd** non Inizializza l'ambiente o le variabili di scripting **SQLCMD** , ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
+ Il cmdlet**Invoke-Sqlcmd** non inizializza l'ambiente o le variabili di scripting di **sqlcmd** , ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
   
- **Invoke-Sqlcmd** non Visualizza i messaggi, ad esempio l'output di istruzioni Print, a meno che non si specifichi il parametro comune di Windows PowerShell **-verbose** . Ad esempio:  
+ Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Ad esempio:  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -108,11 +108,10 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Nome server e istanza.|-S|-ServerInstance|  
 |Database iniziale da utilizzare.|-d|-Database|  
 |Esegue la query specificata ed esce.|-Q|-Query|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Password di autenticazione.|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
 |Definizione della variabile.|-v|-Variable|  
-|Intervallo di timeout della query.|-t|-QueryTimeout|  
+|Intervallo di timeout della query.|-T|-QueryTimeout|  
 |Arresta l'esecuzione in caso di errore|-b|-AbortOnError|  
 |Connessione amministrativa dedicata.|-A|-DedicatedAdministratorConnection|  
 |Disabilita i comandi interattivi, gli script di avvio e le variabili di ambiente.|-X|-DisableCommands|  
@@ -129,20 +128,20 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Visualizza gli errori|Nessun parametro|-OutputSqlErrors|  
 |Esegue l'output dei messaggi in stderr.|-r|Nessun parametro|  
 |Utilizza le impostazioni locali del client|-R|Nessun parametro|  
-|Esegue la query specificata e rimane in esecuzione.|-q|Nessun parametro|  
+|Esegue la query specificata e rimane in esecuzione.|-Q|Nessun parametro|  
 |Tabella codici da utilizzare per i dati di output.|-f|Nessun parametro|  
 |Modifica una password e rimane in esecuzione|-Z|Nessun parametro|  
 |Dimensioni pacchetto|-a|Nessun parametro|  
-|Separatore delle colonne|-s|Nessun parametro|  
-|Controlla le intestazioni di output|-h|Nessun parametro|  
+|Separatore delle colonne|-S|Nessun parametro|  
+|Controlla le intestazioni di output|-H|Nessun parametro|  
 |Specifica i caratteri di controllo|-k|Nessun parametro|  
-|Larghezza visualizzazione lunghezza fissa|-Y|Nessun parametro|  
-|Larghezza visualizzazione lunghezza variabile|-Y|Nessun parametro|  
-|Echo input|-e|Nessun parametro|  
+|Larghezza visualizzazione lunghezza fissa|-y|Nessun parametro|  
+|Larghezza visualizzazione lunghezza variabile|-y|Nessun parametro|  
+|Echo input|-E|Nessun parametro|  
 |Abilita gli identificatori delimitati|-I|Nessun parametro|  
 |Rimuove gli spazi finali|-w|Nessun parametro|  
 |Elenca le istanze|-l|Nessun parametro|  
-|Imposta il formato dell'output come Unicode|-u|Nessun parametro|  
+|Imposta il formato dell'output come Unicode|-U|Nessun parametro|  
 |Stampa statistiche|-p|Nessun parametro|  
 |Fine comando|-c|Nessun parametro|  
 |Stabilisce la connessione utilizzando l'autenticazione di Windows|-E|Nessun parametro|  

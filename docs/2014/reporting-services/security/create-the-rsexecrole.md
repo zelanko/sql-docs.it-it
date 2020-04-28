@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177105"
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
@@ -64,7 +64,7 @@ ms.locfileid: "78177105"
 
 8.  In **nome ruolo**Digitare `RSExecRole`.
 
-9. In **proprietario**digitare **dbo**.
+9. In **Proprietario**digitare **DBO**.
 
 10. Fare clic su **Entità a sicurezza diretta**.
 
@@ -117,7 +117,7 @@ ms.locfileid: "78177105"
 
 8.  Fare clic su **Entità a sicurezza diretta**.
 
-9. Scegliere **Aggiungi**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.
+9. Fare clic su **Aggiungi**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.
 
 10. Fare clic su **OK**.
 

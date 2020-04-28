@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a92d967e0b37f1143c9fd37a0d5ee8154ac21db
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177121"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modificare l'estensione per il recapito predefinita di Reporting Services
@@ -112,4 +112,4 @@ ms.locfileid: "78177121"
     ```
 
 ## <a name="see-also"></a>Vedere anche
- File di [configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md) recapito [della condivisione file file di configurazione RSReportServer in Reporting Services](file-share-delivery-in-reporting-services.md) [recapito tramite posta elettronica Reporting Services](e-mail-delivery-in-reporting-services.md) [configurare un server di report per il recapito tramite posta elettronica &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) [](../report-server/rsreportserver-config-configuration-file.md)
+ File di [configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md) recapito [della condivisione file file di configurazione RSReportServer in Reporting Services](file-share-delivery-in-reporting-services.md) [recapito tramite posta elettronica Reporting Services](e-mail-delivery-in-reporting-services.md) [configurare un server di report per il recapito tramite posta elettronica &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)

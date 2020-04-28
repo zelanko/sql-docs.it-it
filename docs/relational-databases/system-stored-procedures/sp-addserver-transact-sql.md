@@ -21,10 +21,10 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172216"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>Argomenti
-`[ @server = ] 'server'`Nome del server. I nomi di server devono essere univoci e conformi alle regole per i nomi di computer di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Gli spazi non sono consentiti. il *Server* è di **tipo sysname**e non prevede alcun valore predefinito.
+`[ @server = ] 'server'`Nome del server. I nomi di server devono essere univoci e conformi alle regole per i nomi di computer di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Gli spazi non sono consentiti. *server* è di tipo **sysname**e non prevede alcun valore predefinito.
 
  Se in un computer sono installate più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un'istanza funziona come se si trovasse in un server distinto. Specificare un'istanza denominata facendo riferimento al *Server* come *nomeserver\nomeistanza*.
 
@@ -64,7 +64,7 @@ sp_addserver [ @server = ] 'server' ,
 
  Impossibile utilizzare **sp_addserver** all'interno di una transazione definita dall'utente.
 
- L'utilizzo di **sp_addserver** per l'aggiunta di un server remoto non è più disponibile. In alternativa, usare [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .
+ L'utilizzo di **sp_addserver** per l'aggiunta di un server remoto non è più disponibile. Usare [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) in alternativa.
 
 ## <a name="permissions"></a>Autorizzazioni
  È richiesta l'appartenenza al ruolo predefinito del server **setupadmin** .

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175990"
 ---
 # <a name="data-import-master-data-services"></a>Importazione dati (Master Data Services)
@@ -69,11 +69,11 @@ ms.locfileid: "78175990"
 ## <a name="staging-tables-and-stored-procedures"></a>Tabelle e stored procedure di gestione temporanea
  Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] include i tipi di tabelle di staging seguenti che è possibile popolare con i dati personali.
 
--   [&#40;Master Data Services della tabella di staging del membro foglia&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [Tabella di staging membri consolidata &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [Tabella di staging delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  Per ogni entità del modello esiste una tabella di staging. Il nome della tabella indica l'entità corrispondente e il tipo di entità, ad esempio membro foglia. La figura seguente mostra le tabelle di staging per le entità currency, customer e product.
 
@@ -104,6 +104,6 @@ ms.locfileid: "78175990"
 
 -   [Convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)
 
--   [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
+-   [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
 
 

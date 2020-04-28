@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175224"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce un set di modelli che aiutano a creare rapidamente script XMLA, query MDX o DMX oppure indicatori KPI in un cubo o in un modello tabulare, a generare script per operazioni di backup e ripristino, nonché a eseguire numerose altre attività. I modelli si trovano in **Esplora modelli** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
  In questo argomento è incluso un elenco dei modelli per i modelli multidimensionali e tabulari e vengono forniti esempi di come compilare una query MDX e un'istruzione XMLA tramite Visualizzatore metadati ed Esplora modelli.
@@ -31,13 +30,13 @@ ms.locfileid: "78175224"
 
  [Creare uno script XMLA da un modello](#bkmk_backup)
 
- [Generare una query del set di righe dello schema utilizzando un modello XMLA](#bkmk_schemarowset)
+ [Generare una query sul set di righe dello schema utilizzando un modello XMLA](#bkmk_schemarowset)
 
- [Riferimento al modello di Analysis Services](#bkmk_Ref)
+ [Guida di riferimento ai modelli di Analysis Services](#bkmk_Ref)
 
  In questo argomento non vengono analizzati i modelli DMX. Per esempi su come creare query di data mining con i modelli, vedere [Creare una query DMX in SQL Server Management Studio](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) o [Creare una query di stima singleton da un modello](../data-mining/create-a-singleton-prediction-query-from-a-template.md).
 
-##  <a name="bkmk_usingTE"></a>Aprire un modello di Analysis Services
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a>Aprire un modello di Analysis Services
  Tutti i modelli per le query del motore di database e le query e i comandi di Analysis Services sono disponibili in Esplora modelli.
 
  Per aprire **Esplora modelli**scegliere la voce corrispondente dal menu **Visualizza** . Fare quindi clic sull'icona del cubo per visualizzare un elenco dei modelli disponibili per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
@@ -56,7 +55,7 @@ ms.locfileid: "78175224"
 
      Passare alla scheda **Messaggi** per visualizzare il numero di record restituiti, errori, istruzioni di query ed eventuali altri messaggi associati all'esecuzione della query. Se, ad esempio, si esegue un'istruzione DAX su un modello che è in esecuzione in modalità DirectQuery, è possibile visualizzare l'istruzione Transact-SQL generata dal motore di analisi in memoria xVelocity (VertiPaq).
 
-##  <a name="BKMK_Building_Queries"></a>Compilare ed eseguire una query MDX su un modello tabulare utilizzando un modello
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a>Compilare ed eseguire una query MDX su un modello tabulare utilizzando un modello
  In questo esempio viene illustrato come creare una query MDX in SQL Server Management Studio utilizzando un database modello tabulare come origine dati. Per ripetere questo esempio nel computer, è possibile [scaricare il progetto di esempio di modello tabulare AdventureWorks](https://go.microsoft.com/fwlink/?LinkId=231183).
 
 > [!WARNING]
@@ -80,7 +79,7 @@ ms.locfileid: "78175224"
 
 4.  È possibile eseguire la query così come è, ma sarà probabilmente necessario apportare alcune modifiche, ad esempio aggiungendo una funzione per restituire membri specifici. Inserire `.members` , ad esempio, dopo **[Product Category]. [ Nome della categoria di prodotto]**. Per altre informazioni, vedere [Uso delle espressioni di membro](/sql/mdx/using-member-expressions).
 
-##  <a name="bkmk_backup"></a>Creare uno script XMLA da un modello
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a>Creare uno script XMLA da un modello
  I modelli di comandi XMLA forniti in Esplora modelli possono essere usati per creare script per il monitoraggio e l'aggiornamento di oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , indipendentemente dal fatto che l'istanza sia in modalità multidimensionale e di data mining oppure tabulare. I modelli **XMLA** includono esempi per i tipi di script seguenti:
 
 -   Backup, ripristino e sincronizzazione delle operazioni
@@ -108,7 +107,7 @@ ms.locfileid: "78175224"
 
 5.  Fare doppio clic sul testo all'interno \<dell'elemento file>. Digitare il nome del file di backup, inclusa l'estensione abf. Se non si utilizza il percorso di backup predefinito, specificare il percorso completo del file. Per altre informazioni, vedere [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
 
-##  <a name="bkmk_schemarowset"></a>Generare una query del set di righe dello schema utilizzando un modello XMLA
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>Generare una query del set di righe dello schema utilizzando un modello XMLA
  In **Esplora modelli** è incluso un solo modello per le query sul set di righe dello schema. Per utilizzare questo modello, è necessario avere familiarità con i requisiti del singolo set di righe dello schema che si desidera utilizzare, inclusi eventuali elementi necessari, nonché le colonne che possono essere utilizzate come restrizioni. Per altre informazioni, vedere [Set di righe dello schema di Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).
 
  Si noti che numerosi set di righe dello schema sono stati esposti anche come DMV (viste a gestione dinamica), per semplicità. Utilizzando la DMV corrispondente, è possibile eseguire query sul set di righe dello schema utilizzando una sintassi analoga a quella di Transact-SQL. Tramite le query seguenti vengono ad esempio restituiti gli stessi risultati, ma uno è in formato XML e uno è in un formato tabulare. Per altre informazioni sulle DMV, vedere [Usare DMV per monitorare Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).
@@ -163,7 +162,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Riferimento al modello di Analysis Services
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a>Riferimento al modello di Analysis Services
  I modelli seguenti vengono forniti per l'utilizzo con i database di Analysis Services e gli oggetti all'interno del database, inclusi modelli e strutture di data mining, cubi e modelli tabulari:
 
 |Category|Modello di elementi|Descrizione|
@@ -217,12 +216,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Schema Rowsets|Individuazione dei set di righe dello schema|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_SCHEMA_ROWSETS.|
 |XMLA\Server Status|Connessioni|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_CONNECTIONS.|
 ||Processi|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|
-||Località|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_LOCATIONS, specificando il percorso dei file di backup.|
+||Percorsi|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_LOCATIONS, specificando il percorso dei file di backup.|
 ||Locks|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_LOCKS.|
 ||Memory Grant|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_MEMORYGRANT.|
 ||Contatori delle prestazioni|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_PERFORMANCE_COUNTERS.|
 ||Sessioni|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_SESSIONS.|
-||Tracce|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_TRACES.|
+||Traces|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_TRACES.|
 ||Transazioni|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_TRANSACTIONS.|
 
 ## <a name="see-also"></a>Vedere anche

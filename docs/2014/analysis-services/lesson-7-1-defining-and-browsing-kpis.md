@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175250"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definizione ed esplorazione dei KPI
@@ -140,7 +140,7 @@ ms.locfileid: "78175250"
 
      I misuratori di stato e di tendenza vengono visualizzati nel riquadro **Visualizzatore KPI** per le vendite rivenditore basate sui valori del membro predefinito di ogni dimensione, unitamente al valore relativo al valore e all'obiettivo. Il membro predefinito di ogni dimensione è il membro Totale del livello Totale, perché non sono stati definiti altri membri di altre dimensioni come membro predefinito.
 
-3.  Nel riquadro Filtro selezionare **Sales Territory** nell'elenco **Dimensione** , selezionare **Sales Territories** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , selezionare la casella di controllo **North America** nell'elenco **Espressione filtro** e fare clic su **OK**.
+3.  Nel riquadro Filtro selezionare **Sales Territory** nell'elenco **Dimensione** , selezionare **Sales Territories** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , selezionare la casella di controllo **America del Nord** nell'elenco **Espressione filtro** e fare clic su **OK**.
 
 4.  Nella riga successiva del riquadro **Filtro** selezionare **Date** nell'elenco **Dimensione** , selezionare **Calendar Date** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , selezionare la casella di controllo **Q3 CY 2007** nell'elenco **Espressione filtro** e fare clic su **OK**.
 
@@ -265,7 +265,7 @@ ms.locfileid: "78175250"
 
 3.  Nel riquadro **Filtro** selezionare **Product** nell'elenco **Dimensione** , selezionare **Category** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , quindi selezionare **Bikes** nell'elenco **Espressione filtro** e infine fare clic su **OK**.
 
-     Verrà visualizzato il margine di profitto lordo per le biciclette vendute dai rivenditori in Nord America nel terzo trimestre dell'anno di calendario 2007.
+     Verrà visualizzato il margine di profitto lordo per le biciclette vendute dai rivenditori in America del Nord nel terzo trimestre dell'anno di calendario 2007.
 
 ## <a name="next-lesson"></a>Lezione successiva
  [Lezione 8: Definizione di azioni](lesson-8-defining-actions.md)

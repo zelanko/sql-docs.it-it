@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9fea6ae71046de3cf1a6b4dc765b1a2a19e149
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173581"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa (Gestione configurazione SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "78173581"
 
  I server di report in modalità SharePoint utilizzano l'infrastruttura di prodotti SharePoint per la scalabilità orizzontale. La scalabilità orizzontale della modalità SharePoint viene eseguita aggiungendo più server di report in modalità SharePoint alla farm di SharePoint. Per informazioni sulla scalabilità orizzontale in modalità SharePoint, vedere [Aggiungere un ulteriore server di report a una farm &#40;con scalabilità orizzontale SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).
 
- **Le distribuzioni con scalabilità orizzontale sono costituite da:**
+ **Le distribuzioni con scalabilità orizzontale sono costitute dagli elementi seguenti:**
 
 -   Due o più istanze del server di report che condividono un unico database del server di report.
 
@@ -37,7 +37,7 @@ ms.locfileid: "78173581"
 
  Sebbene Reporting Services non partecipi ai cluster di Microsoft Cluster Services, è tuttavia possibile creare il database del server di report in un'istanza del Motore di database che appartiene a un cluster di failover.
 
- **Per pianificare, installare e configurare una distribuzione con scalabilità orizzontale, attenersi alla procedura seguente:**
+ **Per pianificare, installare e configurare una distribuzione con scalabilità orizzontale, effettuare le operazioni seguenti:**
 
 -   Per istruzioni su come installare le istanze del server di report, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vedere [installare SQL Server 2014 dall'installazione guidata &#40;&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) di installazione nella documentazione online.
 
@@ -59,8 +59,7 @@ ms.locfileid: "78173581"
 
 1.  Installare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer che ospiterà i database del server di report. Installare almeno il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-2.  Se necessario, abilitare il server di report per le connessioni remote. In alcune versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni TCP/IP e Named Pipes remote non sono abilitate per impostazione predefinita. Per verificare se le connessioni remote sono consentite, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizzare le impostazioni di configurazione di rete dell'istanza di destinazione. Se l'istanza remota è anche un'istanza denominata, verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia abilitato e in esecuzione nel server di destinazione. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fornisce il numero di porta usato per la connessione all'istanza denominata.
+2.  Se necessario, abilitare il server di report per le connessioni remote. In alcune versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni TCP/IP e Named Pipes remote non sono abilitate per impostazione predefinita. Per verificare se le connessioni remote sono consentite, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizzare le impostazioni di configurazione di rete dell'istanza di destinazione. Se l'istanza remota è anche un'istanza denominata, verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia abilitato e in esecuzione nel server di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fornisce il numero di porta usato per la connessione all'istanza denominata.
 
 ### <a name="to-install-the-first-report-server-instance"></a>Per installare la prima istanza del server di report
 
@@ -106,20 +105,20 @@ ms.locfileid: "78173581"
 
 2.  Fare clic su **Distribuzione con scalabilità orizzontale** per aprire la pagina Distribuzione con scalabilità orizzontale. Verranno visualizzate due voci, una per ciascuna istanza del server di report connessa al database del server di report. La prima istanza del server di report risulterà già unita. Il secondo server di report sarà identificato come "In attesa dell'unione". Se non viene visualizzata alcuna voce simile per la distribuzione, verificare di essere connessi al primo server di report già configurato e inizializzato per l'utilizzo del database del server di report.
 
-     ![Screenshot parziale della pagina distribuzione con scalabilità orizzontale](../../../2014/sql-server/install/media/scaloutscreen.gif "Screenshot parziale della pagina Distribuzione con scalabilità orizzontale")
+     ![Screenshot parziale della pagina Distribuzione con scalabilità orizzontale](../../../2014/sql-server/install/media/scaloutscreen.gif "Screenshot parziale della pagina Distribuzione con scalabilità orizzontale")
 
 3.  Nella pagina distribuzione con scalabilità orizzontale selezionare l'istanza del server di report in attesa di partecipare alla distribuzione e fare clic su **Aggiungi server**.
 
     > [!NOTE]
     >  **Problema:** Quando si tenta di unire un'istanza del server di report Reporting Services alla distribuzione con scalabilità orizzontale, è possibile che si verifichino messaggi di errore simili a "accesso negato".
     > 
-    >  **Soluzione alternativa:** Eseguire il backup [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] della chiave di crittografia dalla [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prima istanza di e ripristinare la chiave nel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] secondo server di report. Successivamente, tentare di aggiungere il secondo server alla distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+    >  **Soluzione alternativa:** eseguire il backup della chiave di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla prima istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e ripristinare la chiave nel secondo server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Successivamente, tentare di aggiungere il secondo server alla distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
 4.  A questo punto dovrebbe essere possibile verificare che entrambe le istanze del server di report siano operative. Per verificare la seconda istanza, è possibile utilizzare lo strumento di configurazione di Reporting Services per connettersi al server di report e fare clic su URL servizio Web o URL Gestione report.
 
  Se si prevede di eseguire i server di report in un cluster di report con carico bilanciato, sono necessarie ulteriori operazioni di configurazione. Per altre informazioni, vedere [Configurare un server di report in un cluster per il bilanciamento del carico di rete](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Configurare un account del servizio &#40;Configuration Manager ssrs&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurare un URL &#40;SSRS](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) Configuration Manager&#41;[creare un database del server di report in modalità nativa &#40;SSRS Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)&#41;configurare gli URL del server di report &#40;[SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurare una connessione del database del server di report &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [gestire un report Server di report in modalità nativa dei servizi](../report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Configurare un account del servizio &#40;Configuration Manager ssrs&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurare un URL &#40;SSRS](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) Configuration Manager&#41;[creare un database del server di report in modalità nativa &#40;SSRS Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)&#41;configurare gli URL del server di report &#40;SSRS Configuration Manager [&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurare una connessione del database del server di report &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [gestire un server di report in modalità nativa](../report-server/manage-a-reporting-services-native-mode-report-server.md)
 
 

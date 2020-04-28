@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175805"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizzatori modello di data mining (Progettazione modelli di data mining)
@@ -27,11 +27,11 @@ ms.locfileid: "78175805"
  Per una procedura dettagliata sull'utilizzo di ogni visualizzatore, vedere [Visualizzatori modello di Data Mining](data-mining/data-mining-model-viewers.md).
 
 ## <a name="common-options"></a>Opzioni comuni
- **Aggiorna contenuto Visualizzatore** Ricaricare il modello di data mining nel visualizzatore.
+ **Aggiorna contenuto visualizzatore** Consente di ricaricare il modello di data mining nel visualizzatore.
 
- **Modello di data mining** Consente di scegliere un modello di data mining da visualizzare contenuto nella struttura di data mining corrente. Il modello di data mining verrà prima aperto nel visualizzatore personalizzato associato.
+ **Modello di data mining** Fare clic su un modello di data mining da visualizzare contenuto nella struttura di data mining corrente. Il modello di data mining verrà prima aperto nel visualizzatore personalizzato associato.
 
- **Visualizzatore** di Consente di scegliere un visualizzatore da utilizzare per esplorare il modello di data mining selezionato. In questo elenco sono inclusi i [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] visualizzatori forniti da per ogni modello [!INCLUDE[msCoName](../includes/msconame-md.md)] di data mining, il Visualizzatore contenuto di data mining e gli eventuali visualizzatori plug-in.
+ **Visualizzatore** Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. In questo elenco sono inclusi i [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] visualizzatori forniti da per ogni modello [!INCLUDE[msCoName](../includes/msconame-md.md)] di data mining, il Visualizzatore contenuto di data mining e gli eventuali visualizzatori plug-in.
 
  Nel diagramma seguente vengono mostrati il visualizzatore personalizzato e quello generico per lo stesso modello.
 

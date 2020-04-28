@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb1a0a862d3e6bf2a1d4e4361e2151c6ee4bf843
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176851"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controllo delle intestazioni di riga e di colonna (Generatore report e SSRS)
@@ -38,15 +38,15 @@ ms.locfileid: "78176851"
 ## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>Informazioni su righe e colonne in un'area dati Tablix
  Una tabella o una matrice rappresenta un modello per l'area dati Tablix sottostante. In un'area dati Tablix possono essere incluse quattro aree, ovvero l'area dei gruppi di righe che controlla le righe che si espandono verso il basso in un report, l'area dei gruppi di colonne che controlla le colonne che si espandono orizzontalmente in un report, il corpo in cui vengono visualizzati i dati e l'angolo. Per sapere dove impostare le proprietà che consentono di controllare la ripetizione o il blocco delle intestazioni, è importante capire che un'area dati Tablix può essere rappresentata in due modi diversi:
 
--   **Nella definizione del report** Ogni riga o colonna in una definizione dell'area dati Tablix è un membro Tablix di un gruppo di righe o di colonne specifico. Un membro Tablix può essere statico o dinamico. Un membro Tablix statico contiene etichette o subtotali e viene ripetuto una volta per ogni gruppo. Un membro Tablix dinamico contiene valori di gruppo e viene ripetuto una volta per ogni valore univoco di un gruppo, anche noto come istanza di gruppo.
+-   **Nella definizione del report** Ogni riga o colonna in una definizione dell'area dati Tablix è un membro Tablix di uno specifico gruppo di righe o di colonne. Un membro Tablix può essere statico o dinamico. Un membro Tablix statico contiene etichette o subtotali e viene ripetuto una volta per ogni gruppo. Un membro Tablix dinamico contiene valori di gruppo e viene ripetuto una volta per ogni valore univoco di un gruppo, anche noto come istanza di gruppo.
 
--   Nell' **area di progettazione** Nell'area di progettazione le linee tratteggiate dividono un'area dati Tablix in quattro aree. Ogni cella in un'area dell'area dati Tablix è organizzata in righe e colonne. Le righe e le colonne sono associate a gruppi, incluso il gruppo dettagli. Per un'area dati Tablix selezionata, handle di riga e di colonna e barre di evidenziazione indicano l'appartenenza al gruppo. Le celle contenute nell'area dei gruppi di righe o di colonne rappresentano intestazioni di gruppo per i membri Tablix. È possibile associare una singola riga o colonna a più gruppi.
+-   **Nell'area di progettazione** Nell'area di progettazione linee punteggiate dividono un'area dati Tablix in quattro aree. Ogni cella in un'area dell'area dati Tablix è organizzata in righe e colonne. Le righe e le colonne sono associate a gruppi, incluso il gruppo dettagli. Per un'area dati Tablix selezionata, handle di riga e di colonna e barre di evidenziazione indicano l'appartenenza al gruppo. Le celle contenute nell'area dei gruppi di righe o di colonne rappresentano intestazioni di gruppo per i membri Tablix. È possibile associare una singola riga o colonna a più gruppi.
 
      Per altre informazioni, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) e [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).
 
  Per le aree dati Tablix contenenti aree dei gruppi di righe o di colonne, è possibile controllare le righe e le colonne associate impostando le proprietà nell'area dati Tablix. In tutti gli altri casi, è possibile controllare le righe e le colonne impostandone le proprietà nel riquadro Proprietà del membro Tablix selezionato. Per istruzioni dettagliate, vedere [Visualizzare le intestazioni di riga e colonna in più pagine &#40;Generatore report e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) e [Mantenere visibili le intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).
 
-##  <a name="Top"></a> Esempi
+##  <a name="examples"></a><a name="Top"></a> Esempi
  Gli esempi più comuni di aree dati Tablix si riferiscono a una matrice, a una tabella senza gruppi, a una tabella con un gruppo di righe e un'intestazione del gruppo di righe e a una tabella con un gruppo di righe, ma nessuna intestazione del gruppo di righe. Per stabilire come ripetere o bloccare le intestazioni, è necessario determinare se le righe o le colonne che si desidera controllare sono associate a un'intestazione di gruppo nell'area dei gruppi di righe o dei gruppi di colonne.
 
  Nelle sezioni seguenti vengono illustrati esempi di layout comuni per un'area dati Tablix:
@@ -57,9 +57,9 @@ ms.locfileid: "78176851"
 
 -   [Tabella con gruppi di righe e un'area dei gruppi di righe](#TableRowGroupsGroupHeader)
 
--   [Tabella con gruppi di righe ma senza area dei gruppi di righe](#TableRowGroupsNoGroupHeader)
+-   [Tabella con gruppi di righe, ma senza un'area dei gruppi di righe](#TableRowGroupsNoGroupHeader)
 
-###  <a name="Matrix"></a> Matrice
+###  <a name="matrix"></a><a name="Matrix"></a>Matrice
  Per impostazione predefinita, in una matrice semplice sono inclusi un gruppo di righe e un gruppo di colonne. Nella figura seguente è illustrata una matrice con un gruppo di righe basato su Categoria e un gruppo di colonne basato su Geografia:
 
  ![Matrice, riga Category e gruppo di colonne Geography](../media/rs-basicmatrixdesign.gif "Matrice, riga Category e gruppo di colonne Geography")
@@ -74,7 +74,7 @@ ms.locfileid: "78176851"
 
  [Torna all'inizio](#Top)
 
-###  <a name="TableNoGroups"></a>Tabella senza gruppi di righe
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a>Tabella senza gruppi di righe
  Per impostazione predefinita, in una tabella semplice senza gruppi è incluso il gruppo dettagli. Nella figura seguente è illustrata una tabella con la categoria, il numero di ordine e i dati di vendita visualizzati:
 
  ![Progettazione, tabella con una riga statica e una riga dinamica](../media/rs-tableheaderstaticdesign.gif "Progettazione, tabella con una riga statica e una riga dinamica")
@@ -95,7 +95,7 @@ ms.locfileid: "78176851"
 
  [Torna all'inizio](#Top)
 
-###  <a name="TableRowGroupsGroupHeader"></a>Tabella con gruppi di righe e un'area dei gruppi di righe
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a>Tabella con gruppi di righe e un'area dei gruppi di righe
  Se si aggiunge un gruppo di righe a una tabella semplice, viene aggiunta un'area dei gruppi di righe alla tabella nell'area di progettazione. Nella figura seguente è illustrata una tabella con un gruppo di righe basato su Categoria:
 
  ![Progettazione, tabella con un gruppo di righe e dettagli](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Progettazione, tabella con un gruppo di righe e dettagli")
@@ -116,7 +116,7 @@ ms.locfileid: "78176851"
 
  [Torna all'inizio](#Top)
 
-###  <a name="TableRowGroupsNoGroupHeader"></a>Tabella con gruppi di righe e senza area dei gruppi di righe
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a>Tabella con gruppi di righe e senza area dei gruppi di righe
  Esistono diverse modalità per includere gruppi di righe in una tabella senza un'area dei gruppi di righe. Di seguito sono descritte due delle modalità possibili:
 
 -   Iniziare con una tabella contenente gruppi di righe e un'area dei gruppi di righe ed eliminare le colonne dell'area dei gruppi di righe. Eliminare solo le colonne e non i gruppi. È ad esempio possibile controllare il formato della tabella impostandolo come griglia semplice.
@@ -137,9 +137,9 @@ ms.locfileid: "78176851"
 
  Nella modalità avanzata, tuttavia, in questa struttura di layout è riportato un set di membri Tablix differente. Nella figura seguente viene illustrato il riquadro di raggruppamento per questa tabella nella modalità avanzata:
 
- ![Gruppi di righe, modalità avanzata, senza intestazione gruppo](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata, senza intestazione gruppo")
+ ![Gruppi di righe, modalità avanzata, senza intestazione gruppo.](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata, senza intestazione gruppo.")
 
- Nel riquadro Gruppi di righe vengono elencati i membri Tablix seguenti: (**Statico**), (Categoria), (**Statico**) e (**Dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix superiore (**statico**) e impostare le proprietà nel riquadro proprietà.
+ Nel riquadro Gruppi di righe vengono elencati i membri Tablix seguenti: (**Statico**), (Categoria), (**Statico**) e (**Dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix (**Statico**) superiore e impostare le proprietà nel riquadro Proprietà.
 
  [Torna all'inizio](#Top)
 

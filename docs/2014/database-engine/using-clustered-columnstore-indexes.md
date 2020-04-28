@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175360"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilizzo di indici columnstore cluster
@@ -38,7 +38,7 @@ ms.locfileid: "78175360"
 
 -   [Riorganizzare un indice columnstore cluster](#reorganize)
 
-##  <a name="create"></a>Creare un indice columnstore cluster
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>Creare un indice columnstore cluster
  Per creare un indice columnstore cluster, creare innanzitutto una tabella rowstore come un heap o un indice cluster e quindi usare l'istruzione [Create Clustered columnstore index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) per convertire la tabella in un indice columnstore cluster. Se si desidera che l'indice columnstore cluster abbia lo stesso nome dell'indice cluster, utilizzare l'opzione DROP_EXISTING.
 
  In questo esempio viene creata una tabella come heap, che viene poi convertita in un indice columnstore cluster denominato cci_Simple. In questo modo viene modificata l'archiviazione dell'intera tabella da rowstore a columnstore.
@@ -56,10 +56,10 @@ GO
 
  Per altri esempi, vedere la sezione Esempi in [creare un indice columnstore cluster &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
-##  <a name="drop"></a>Eliminare un indice columnstore cluster
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>Eliminare un indice columnstore cluster
  Utilizzare l'istruzione [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql) per eliminare un indice columnstore cluster. Questa operazione consente di eliminare l'indice e convertire la tabella columnstore nell'heap di un rowstore.
 
-##  <a name="load"></a>Caricare i dati in un indice columnstore cluster
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>Caricare i dati in un indice columnstore cluster
  È possibile aggiungere dati a un indice columnstore cluster esistente utilizzando uno dei metodi di caricamento standard.  Ad esempio, lo strumento di caricamento bulk bcp, Integration Services e INSERT... SELECT consente di caricare tutti i dati in un indice columnstore cluster.
 
  Gli indici columnstore cluster utilizzano il deltastore per impedire la frammentazione dei segmenti di colonna nel columnstore.
@@ -83,9 +83,9 @@ GO
 |Righe per il caricamento bulk|Righe aggiunte al columnstore|Righe aggiunte al deltastore|
 |-----------------------|-----------------------------------|----------------------------------|
 |102.000|0|102.000|
-|145.000|145.000<br /><br /> Dimensioni rowgroup: 145.000.|0|
-|1.048.577|1,048,576<br /><br /> Dimensioni rowgroup: 1.048.576.|1|
-|2.252.152|2.252.152<br /><br /> Dimensioni rowgroup: 1.048.576, 1.048.576, 155.000.|0|
+|145.000|145.000<br /><br /> Dimensioni rowgroup: 145.000|0|
+|1\.048.577|1,048,576<br /><br /> Dimensioni rowgroup: 1.048.576.|1|
+|2\.252.152|2\.252.152<br /><br /> Dimensioni rowgroup: 1.048.576, 1.048.576, 155.000.|0|
 
  Nell'esempio seguente vengono illustrati i risultati del caricamento di 1.048.577 righe in una partizione. I risultati mostrano che esiste un rowgroup COMPRESSED nel columnstore (come segmenti di colonna compressi) e 1 riga nel deltastore.
 
@@ -97,7 +97,7 @@ SELECT * FROM sys.column_store_row_groups
 
 
 
-##  <a name="change"></a>Modificare i dati in un indice columnstore cluster
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>Modificare i dati in un indice columnstore cluster
  Gli indici columnstore cluster supportano le operazione DML di inserimento, aggiornamento ed eliminazione.
 
  Per inserire una riga, utilizzare [insert &#40;&#41;Transact-SQL](/sql/t-sql/statements/insert-transact-sql) . La riga viene aggiunta al deltastore.
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 
 -   Se la riga è nel deltastore, viene aggiornata nel deltastore in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-##  <a name="rebuild"></a>Ricompilare un indice columnstore cluster
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>Ricompilare un indice columnstore cluster
  Usare [Create Clustered columnstore index &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) o [alter index &#40;transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) per eseguire una ricompilazione completa di un indice columnstore cluster esistente. Inoltre, è possibile utilizzare ALTER INDEX... RICOMPILA per ricompilare una partizione specifica.
 
 ### <a name="rebuild-process"></a>Processo di ricompilazione
@@ -145,7 +145,7 @@ SELECT * FROM sys.column_store_row_groups
 
      In questo modo viene garantita l'archiviazione di tutti i dati nel columnstore. Se si verificano più caricamenti contemporaneamente, ogni partizione potrebbe avere più deltastore. La ricompilazione sposterà tutte le righe del deltastore nel columnstore.
 
-##  <a name="reorganize"></a>Riorganizzare un indice columnstore cluster
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>Riorganizzare un indice columnstore cluster
  La riorganizzazione di un indice columnstore cluster sposta tutti i rowgroup CLOSED nel columnstore. Per eseguire un'operazione REORGANIZE, usare [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)con l'opzione REORGANIZE.
 
  La riorganizzazione non è necessaria per spostare i rowgroup CLOSED nel columnstore. Tramite il processo tuple-mover verranno infine trovati e spostati tutti i rowgroup CLOSED. Tuple-mover è un processo a thread singolo e potrebbe non consentire uno spostamento sufficientemente rapido dei rowgroup per il carico di lavoro.

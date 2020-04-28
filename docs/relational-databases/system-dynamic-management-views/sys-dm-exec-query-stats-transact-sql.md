@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429015"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -39,11 +39,11 @@ Restituisce dati statistici aggregati sulle prestazioni dei piani di query memor
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query.<br /><br /> **sql_handle**, insieme a **statement_start_offset** e **statement_end_offset**, può essere utilizzato per recuperare il testo SQL della query chiamando la funzione a gestione dinamica **sys. dm_exec_sql_text** .|  
+|**sql_handle**|**varbinary(64)**  |Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query.<br /><br /> È possibile utilizzare **sql_handle**, insieme a **statement_start_offset** e **statement_end_offset**, per recuperare il testo SQL della query chiamando la funzione a gestione dinamica **sys.dm_exec_sql_text**.|  
 |**statement_start_offset**|**int**|Indica, in byte e a partire da 0, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente.|  
 |**statement_end_offset**|**int**|Indica, in byte e a partire da 0, la posizione finale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. Per le versioni [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]precedenti a, il valore-1 indica la fine del batch. I commenti finali non sono più inclusi.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo una ricompilazione.|  
-|**plan_handle**|**varbinary (64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch eseguito e il relativo piano risiede nella cache dei piani oppure è attualmente in esecuzione. È possibile passare questo valore alla funzione a gestione dinamica [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) per ottenere il piano di query.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**plan_handle**|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch eseguito e il relativo piano risiede nella cache dei piani oppure è attualmente in esecuzione. È possibile passare questo valore alla funzione a gestione dinamica [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) per ottenere il piano di query.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**creation_time**|**datetime**|Ora di compilazione del piano.|  
 |**last_execution_time**|**datetime**|Ora dell'ultimo avvio dell'esecuzione del piano.|  
 |**execution_count**|**bigint**|Numero di esecuzioni del piano a partire dall'ultima compilazione.|  
@@ -77,7 +77,7 @@ Restituisce dati statistici aggregati sulle prestazioni dei piani di query memor
 |**last_rows**|**bigint**|Numero di righe restituite durante l'ultima esecuzione della query. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**min_rows**|**bigint**|Numero minimo di righe restituite dalla query durante un'esecuzione. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**max_rows**|**bigint**|Numero massimo di righe restituite dalla query durante un'esecuzione. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
-|**statement_sql_handle**|**varbinary (64)**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Popolato con valori non NULL solo se Query Store è attivato e raccoglie le statistiche per la query specifica.|  
+|**statement_sql_handle**|**varbinary(64)**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Popolato con valori non NULL solo se Query Store è attivato e raccoglie le statistiche per la query specifica.|  
 |**statement_context_id**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Popolato con valori non NULL solo se Query Store è attivato e raccoglie le statistiche per la query specifica.|  
 |**total_dop**|**bigint**|Somma totale del grado di parallelismo utilizzato dal piano dopo la compilazione. Sarà sempre 0 per l'esecuzione di una query su una tabella ottimizzata per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
 |**last_dop**|**bigint**|Grado di parallelismo quando il piano è stato eseguito l'ultima volta. Sarà sempre 0 per l'esecuzione di una query su una tabella ottimizzata per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  

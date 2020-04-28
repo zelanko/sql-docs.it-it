@@ -18,10 +18,10 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e55b45cf43e34982033d941ad9626f75afdec554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688229"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -99,8 +99,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Indica che tutti gli hint esistenti specificati nella clausola OPTION della query non vengono applicati alla query. Per ulteriori informazioni, vedere [clausola OPTION &#40;&#41;Transact-SQL ](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ## <a name="remarks"></a>Osservazioni  
- Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ** \@** , ad esempio, si specifica Name =, è necessario specificare anche ** \@stmt =** , ** \@Type =** e così via. Analogamente, se ** \@nome =** viene omesso e viene specificato solo il valore del parametro, è necessario omettere anche i nomi dei parametri rimanenti e solo i relativi valori specificati. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
+ Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ** \@** , ad esempio, si specifica Name =, è necessario specificare anche ** \@stmt =** , ** \@Type =** e così via. Analogamente, se ** \@nome =** viene omesso e viene specificato solo il valore del parametro, è necessario omettere anche i nomi dei parametri rimanenti e solo i relativi valori specificati. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
   
  È possibile creare più guide di piano OBJECT o SQL per la stessa query e batch o modulo. Tuttavia è possibile abilitare una sola guida di piano alla volta.  
   
@@ -136,8 +135,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora i caratteri di ritorno a capo, avanzamento riga e gli spazi all'interno della prima query. Nella seconda query la sequenza `WHERE b = 10` viene interpretata in modo diverso da `WHERE a = 10`. Nella corrispondenza viene sempre fatta distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati, anche quando la distinzione tra maiuscole e minuscole non è significativa per le regole di confronto del database, tranne il caso delle parole chiave, dove la distinzione tra maiuscole e minuscole non è significativa. La forma abbreviata delle parole chiave non è rilevante nella corrispondenza. Ad esempio, le parole chiave `EXECUTE`, `EXEC` e `execute` vengono considerate equivalenti.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora i caratteri di ritorno a capo, avanzamento riga e gli spazi all'interno della prima query. Nella seconda query la sequenza `WHERE b = 10` viene interpretata in modo diverso da `WHERE a = 10`. Nella corrispondenza viene sempre fatta distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati, anche quando la distinzione tra maiuscole e minuscole non è significativa per le regole di confronto del database, tranne il caso delle parole chiave, dove la distinzione tra maiuscole e minuscole non è significativa. La forma abbreviata delle parole chiave non è rilevante nella corrispondenza. Ad esempio, le parole chiave `EXECUTE`, `EXEC` e `execute` vengono considerate equivalenti.  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effetto della Guida di piano sulla cache dei piani  
  La creazione di una guida di piano su un modulo rimuove il piano di query per il dato modulo dalla cache dei piani. La creazione di una guida di piano di tipo OBJECT o SQL su un batch rimuove il piano di query per un batch con lo stesso valore hash. La creazione di una guida di piano di tipo TEMPLATE rimuove tutti i batch a istruzione singola dalla cache dei piani all'interno del database.  
@@ -331,9 +329,9 @@ GO
  [sp_control_plan_guide &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys. plan_guides &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys. dm_exec_cached_plans &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys. fn_validate_plan_guide &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   

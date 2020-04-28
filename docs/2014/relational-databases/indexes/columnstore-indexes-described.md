@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175942"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -39,11 +39,10 @@ ms.locfileid: "78175942"
 
 -   [Attività e argomenti correlati](#related)
 
-##  <a name="basics"></a> Nozioni di base
- Un *indice columnstore* è una tecnologia per l'archiviazione, il recupero e la gestione dei dati tramite un formato di dati a colonne, denominato columnstore. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli indici columnstore sia cluster sia non cluster. Entrambi utilizzano la stessa tecnologia columnstore in memoria, ma presentano differenze nello scopo e nelle funzionalità supportate.
+##  <a name="basics"></a><a name="basics"></a>Basi
+ L' *columnstore index* è una tecnologia per l'archiviazione, il recupero e la gestione dei dati utilizzando un formato di dati in colonna, detto columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli indici columnstore sia cluster sia non cluster. Entrambi utilizzano la stessa tecnologia columnstore in memoria, ma presentano differenze nello scopo e nelle funzionalità supportate.
 
-###  <a name="benefits"></a>Vantaggi
+###  <a name="benefits"></a><a name="benefits"></a>Vantaggi
  Gli indici columnstore sono ottimali per la maggior parte delle query di sola lettura che eseguono analisi su grandi set di dati. Spesso, si tratta di query per carichi di lavoro di data warehousing. Gli indici columnstore consentono di migliorare notevolmente le prestazioni delle query che utilizzano scansioni complete delle tabelle e non sono particolarmente adatti per le query eseguite per cercare un valore specifico nei dati.
 
  Vantaggi dell'indice columnstore:
@@ -63,7 +62,7 @@ ms.locfileid: "78175942"
 
 ||
 |-|
-|**Si applica a** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]da a.|
+|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|
 
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un indice columnstore cluster:
 
@@ -83,7 +82,7 @@ ms.locfileid: "78175942"
 
 ||
 |-|
-|**Si applica a** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]da a.|
+|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|
 
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un indice columnstore non cluster:
 
@@ -99,11 +98,10 @@ ms.locfileid: "78175942"
 
 -   Non archivia fisicamente le colonne in base a un ordinamento. Archivia i dati per migliorare la compressione e le prestazioni. Non è obbligatorio preordinare i dati prima di creare l'indice columnstore, ma questa operazione può migliorare la compressione columnstore.
 
-###  <a name="Concepts"></a>Concetti e termini chiave
+###  <a name="key-concepts-and-terms"></a><a name="Concepts"></a>Concetti e termini chiave
  I seguenti concetti e termini chiave sono associati agli indici columnstore.
 
- indice columnstore: un *indice columnstore* è una tecnologia per l'archiviazione, il recupero e la gestione dei dati tramite un formato di dati a colonne, denominato columnstore. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli indici columnstore sia cluster sia non cluster. Entrambi utilizzano la stessa tecnologia columnstore in memoria, ma presentano differenze nello scopo e nelle funzionalità supportate.
+ indice columnstore: un *indice columnstore* è una tecnologia per l'archiviazione, il recupero e la gestione dei dati tramite un formato di dati a colonne, denominato columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli indici columnstore sia cluster sia non cluster. Entrambi utilizzano la stessa tecnologia columnstore in memoria, ma presentano differenze nello scopo e nelle funzionalità supportate.
 
  columnstore un *columnstore* è costituito da dati organizzati logicamente in una tabella con righe e colonne e archiviati fisicamente in un formato di dati a livello di colonna.
 
@@ -141,9 +139,9 @@ ms.locfileid: "78175942"
 
  Quando il deltastore raggiunge il numero massimo di righe, viene chiuso. Un processo tuple-move controlla i gruppi di righe chiusi. Quando trova il rowgroup chiuso, lo comprime e lo archivia nel columnstore.
 
-##  <a name="dataload"></a>Caricamento dei dati
+##  <a name="loading-data"></a><a name="dataload"></a>Caricamento dei dati
 
-###  <a name="dataload_nci"></a>Caricamento di dati in un indice columnstore non cluster
+###  <a name="loading-data-into-a-nonclustered-columnstore-index"></a><a name="dataload_nci"></a>Caricamento di dati in un indice columnstore non cluster
  Per caricare i dati in un indice columnstore non cluster, caricare innanzitutto i dati in una tabella rowstore tradizionale archiviata come indice cluster o heap, quindi creare l'indice columnstore non cluster con [create columnstore index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
  ![Caricamento dati in un indice columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Caricamento dati in un indice columnstore")
@@ -152,7 +150,7 @@ ms.locfileid: "78175942"
 
  Per ulteriori informazioni, vedere [Using Nonclustered Columnstore Indexes](indexes.md).
 
-###  <a name="dataload_cci"></a>Caricamento di dati in un indice columnstore cluster
+###  <a name="loading-data-into-a-clustered-columnstore-index"></a><a name="dataload_cci"></a>Caricamento di dati in un indice columnstore cluster
  ![Caricamento in un indice cluster columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Caricamento in un indice cluster columnstore")
 
  Come illustrato nel diagramma, per caricare i dati in un indice columnstore cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:
@@ -177,7 +175,7 @@ ms.locfileid: "78175942"
 
  Per ulteriori informazioni sulle attività e i processi deltastore, vedere [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).
 
-##  <a name="performance"></a>Suggerimenti sulle prestazioni
+##  <a name="performance-tips"></a><a name="performance"></a>Suggerimenti sulle prestazioni
 
 ### <a name="plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>Pianificare una quantità di memoria sufficiente per creare indici columnstore in parallelo
  Per impostazione predefinita, la creazione di un indice columnstore è un'operazione parallela, a meno che la memoria non sia vincolata. La creazione dell'indice in parallelo richiede più memoria rispetto alla creazione dell'indice in modo seriale. Se si dispone di un'ampia quantità di memoria, la creazione di un indice columnstore richiede un tempo di circa 1,5 volte superiore rispetto alla compilazione di un albero B nelle stesse colonne.
@@ -186,12 +184,12 @@ ms.locfileid: "78175942"
 
  Se la tabella dispone di più di un milione di righe, ma SQL Server non ha a disposizione memoria sufficiente per creare l'indice utilizzando MAXDOP, SQL Server ridurrà automaticamente MAXDOP secondo le esigenze per adattarsi alla memoria disponibile.  In alcuni casi, è necessario ridurre il grado di parallelismo a uno per compilare l'indice nella memoria vincolata.
 
-##  <a name="related"></a>Attività e argomenti correlati
+##  <a name="related-tasks-and-topics"></a><a name="related"></a>Attività e argomenti correlati
 
 ### <a name="nonclustered-columnstore-indexes"></a>Indici columnstore non cluster
  Per le attività comuni, vedere [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).
 
--   [CREARE un indice COLUMNStore &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-columnstore-index-transact-sql)
+-   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)
 
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) con REBUILD.
 
@@ -219,12 +217,12 @@ ms.locfileid: "78175942"
 
 -   [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)
 
--   [sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)
+-   [sys.partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)
 
--   [sys. column_store_segments &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)
+-   [sys.column_store_segments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)
 
--   [sys. column_store_dictionaries &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)
+-   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)
 
--   [sys. column_store_row_groups &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)
+-   [sys.column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)
 
 

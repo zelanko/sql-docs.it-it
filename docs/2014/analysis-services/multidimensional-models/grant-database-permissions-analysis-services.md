@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175733"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Concedere le autorizzazioni per il database (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "78175733"
 
  Esistono tre tipi di autorizzazioni specificate a livello di database.
 
- **Controllo completo (amministratore)** : il controllo completo è un'autorizzazione onnicomprensiva che consente di fornire ampi poteri su un database Analysis Services, ad esempio la possibilità di eseguire query o elaborare qualsiasi oggetto all'interno del database e di gestire la sicurezza dei ruoli. L'autorizzazione Controllo completo consente di eseguire le stesse funzioni di un amministratore di database. Quando si seleziona `Full Control`, vengono selezionate anche le autorizzazioni `Process Database` e `Read Definition` che non è possibile rimuovere.
+ **Controllo completo (amministratore)** : si tratta di un'autorizzazione omnicomprensiva che conferisce ampi poteri in un database di Analysis Services come, ad esempio, la possibilità di elaborare o eseguire query su qualsiasi oggetto all'interno del database e di gestire la sicurezza dei ruoli. L'autorizzazione Controllo completo consente di eseguire le stesse funzioni di un amministratore di database. Quando si seleziona `Full Control`, vengono selezionate anche le autorizzazioni `Process Database` e `Read Definition` che non è possibile rimuovere.
 
 > [!NOTE]
 >  Agli amministratori del server (membri del ruolo di amministratore del server) viene assegnata implicitamente l'autorizzazione Controllo completo per ogni database del server.

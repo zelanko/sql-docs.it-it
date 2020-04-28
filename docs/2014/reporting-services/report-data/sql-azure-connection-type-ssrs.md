@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2c3d3e75117996f088cff96b2b7a8d4cd504127
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176901"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è un database relazionale ospitato e basato sul cloud, creato con le tecnologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è un database relazionale basato su cloud e ospitato basato sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologie. Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Questa estensione per i dati supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.
 
@@ -31,7 +31,7 @@ ms.locfileid: "78176901"
 
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).
 
-##  <a name="Connection"></a> Stringa di connessione
+##  <a name="connection-string"></a><a name="Connection"></a>Stringa di connessione
  Quando ci si connette a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si esegue la connessione a un oggetto di database nel cloud. Proprio come i database in loco, il database di hosting potrebbe disporre di più schemi aventi più tabelle, viste e stored procedure. L'oggetto di database viene specificato in Progettazione query. Se non si specifica un database nella stringa di connessione, la connessione viene eseguita al database predefinito assegnato dall'amministratore.
 
  Contattare l'amministratore del database per ottenere le informazioni di connessione e le credenziali da utilizzare per connettersi all'origine dati. Nella seguente stringa di connessione di esempio viene specificato un database di hosting di esempio denominato AdventureWorks.
@@ -44,7 +44,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).
 
-##  <a name="Credentials"></a> Credenziali
+##  <a name="credentials"></a><a name="Credentials"></a>Credenziali
  L'autenticazione di Windows (sicurezza integrata) non è supportata. Se si tenta di connettersi a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] utilizzando l'autenticazione di Windows, si verificherà un errore. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supporta solo l'autenticazione di SQL Server (nome utente e password) e gli utenti devono fornire le proprie credenziali (account di accesso e password) ogni volta che si connettono a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Le credenziali devono essere sufficienti per accedere al database. A seconda della query, potrebbe essere necessario utilizzare altre autorizzazioni, ad esempio le autorizzazioni per eseguire stored procedure e accedere a tabelle e viste. Il proprietario dell'origine dati esterna deve configurare le credenziali sufficienti a fornire l'accesso in sola lettura agli oggetti di database di cui si necessita.
@@ -59,7 +59,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  
 
-##  <a name="Query"></a> Query
+##  <a name="queries"></a><a name="Query"></a>Query
  Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. Se la query restituisce più set di risultati, nel report viene elaborato solo il primo set di risultati. Anche se esistono alcune differenze tra i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i [!INCLUDE[ssSDS](../../includes/sssds-md.md)], quali ad esempio le dimensioni di database supportate, scrivere query per [!INCLUDE[ssSDS](../../includes/sssds-md.md)]è simile allo scrivere query per database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alcune istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio BACKUP, non sono supportate in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ma non sono quelle che si utilizzano nelle query del report. Per altre informazioni, vedere [Tipo di connessione SQL Server &#40;SSRS&#41;](sql-server-connection-type-ssrs.md).
 
  Per impostazione predefinita, se si crea una nuova query o si apre una query esistente che può essere rappresentata nella finestra Progettazione query con interfaccia grafica, è disponibile la progettazione query relazionale. È possibile specificare una query nei modi seguenti:
@@ -78,9 +78,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](relational-query-designer-user-interface-report-builder.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](text-based-query-designer-user-interface-report-builder.md).
 
- La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella Documentazione online[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ di ](https://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com.
+ La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di  sul sito msdn.microsoft.com.
 
-###  <a name="QueryText"></a> Utilizzo di query di tipo Text
+###  <a name="using-query-type-text"></a><a name="QueryText"></a>Utilizzo del testo del tipo di query
  Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire i dati in un set di dati. La query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:
 
 ```
@@ -96,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant' 
 ```
 
- Fare clic sul pulsante **Esegui** ( **!** ) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.
+ Fare clic sul pulsante **Esegui** (**!**) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.
 
  Per parametrizzare questa query, aggiungere un parametro di query. Modificare ad esempio la clausola WHERE nella stringa seguente:
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-###  <a name="QueryStoredProcedure"></a> Utilizzo di query di tipo StoredProcedure
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a>Utilizzo del tipo di query StoredProcedure
  È possibile specificare una stored procedure per una query del set di dati in uno dei seguenti modi:
 
 -   Nella finestra di dialogo **Proprietà set di dati** , impostare l'opzione **Stored procedure** . Scegliere dall'elenco a discesa di stored procedure e funzioni con valori di tabella.
@@ -127,7 +127,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-##  <a name="Parameters"></a> Parametri
+##  <a name="parameters"></a><a name="Parameters"></a> Parametri
  Quando il testo della query contiene variabili di query o stored procedure con parametri di input, vengono generati automaticamente i parametri di query corrispondenti per il set di dati e i parametri di report per il report. Il testo della query non deve includere l'istruzione DECLARE per ogni variabile della query.
 
  La query SQL seguente, ad esempio, crea un parametro di report denominato `EmpID`:
@@ -142,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Remarks"></a> Osservazioni
+##  <a name="remarks"></a>Osservazioni su <a name="Remarks"></a>
 
 ###### <a name="alternate-data-extensions"></a>Estensioni per i dati alternative
  È possibile recuperare i dati anche da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un tipo di origine dati ODBC. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata.
@@ -150,11 +150,11 @@ WHERE EmployeeID = (@EmpID)
  Per altre informazioni, vedere [Tipo di connessione ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md).
 
 ###### <a name="platform-and-version-information"></a>Informazioni sulla piattaforma e sulla versione
- Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella documentazione online[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ di ](https://go.microsoft.com/fwlink/?linkid=121312).
+ Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di .
 
 
 
-##  <a name="HowTo"></a> Procedure
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.
 
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -165,7 +165,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Related"></a> Sezioni correlate
+##  <a name="related-sections"></a><a name="Related"></a>Sezioni correlate
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le procedure per definire, personalizzare e utilizzare parti di un report correlate ai dati.
 
  [Aggiungere dati a un Report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md) Viene fornita una panoramica sull'accesso ai dati per il report.
@@ -176,7 +176,7 @@ WHERE EmployeeID = (@EmpID)
 
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md) Fornisce informazioni sulla raccolta di campi del set di dati generata dalla query.
 
- Le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella documentazione [online](https://go.microsoft.com/fwlink/?linkid=121312)di.
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di .
 Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.
 
 

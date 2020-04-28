@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175859"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Rilevamento e risoluzione dei conflitti nei record logici
   In questo argomento vengono illustrate le varie combinazioni di metodi possibili per il rilevamento e la risoluzione dei conflitti nell'utilizzo di record logici. Nella replica di merge si verificano conflitti quando più di un nodo modifica gli stessi dati oppure quando, durante la replica di modifiche, si riscontrano determinati tipi di errori, ad esempio la violazione di un vincolo. Per ulteriori informazioni sul rilevamento e sulla risoluzione dei conflitti, vedere [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).
 
- Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [specifica del livello di risoluzione e rilevamento dei conflitti per articoli di Merge](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
+ Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [Specifica del livello di rilevamento e risoluzione dei conflitti per gli articoli di merge](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
 
 ## <a name="conflict-detection"></a>Rilevamento dei conflitti
  La modalità con cui vengono rilevati i conflitti per i record logici è determinata da due proprietà degli articoli: **column_tracking** e **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive supportano anche rilevamento a livello di record logico.
@@ -105,6 +105,6 @@ ms.locfileid: "78175859"
  ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../media/logical-records-08.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")
 
 ## <a name="see-also"></a>Vedere anche
- [Raggruppare modifiche alle righe correlate con record logici](group-changes-to-related-rows-with-logical-records.md)
+ [Raggruppare le modifiche apportate alle righe correlate con record logici](group-changes-to-related-rows-with-logical-records.md)
 
 

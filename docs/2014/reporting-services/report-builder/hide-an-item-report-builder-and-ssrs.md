@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176882"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Nascondere un elemento (Generatore report e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176882"
     > [!NOTE]
     >  Per selezionare un'intera tabella o un'area dati matrice, fare clic nell'area dati per selezionarla, fare clic con il pulsante destro del mouse su una riga, una colonna oppure sul punto di controllo in angolo e quindi scegliere **Proprietà Tablix**.
 
-2.  Fare clic su **Visibilità**.
+2.  Fare clic su **visibilità.**
 
 3.  In **Quando il report viene eseguito inizialmente**specificare se nascondere l'elemento la prima volta che il report viene visualizzato:
 
@@ -51,7 +51,7 @@ ms.locfileid: "78176882"
         >  Quando si specifica un'espressione per la visibilità, viene impostata la proprietà Hidden dell'elemento di report, come mostrato nell'immagine seguente. L'espressione valutata consente di mostrare l'elemento di report quando il valore è False e di nasconderlo quando il valore è True. 
         > ![Finestra di dialogo Properties_Visibility e proprietà Hidden](../media/hiddenproperty-propertiesvisibility.png "Finestra di dialogo Properties_Visibility e proprietà Hidden")
 
-4.  Fare due volte clic su **OK** .
+4.  Fare clic su **OK** due volte.
 
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>Per nascondere le righe statiche di una tabella, matrice o elenco
 

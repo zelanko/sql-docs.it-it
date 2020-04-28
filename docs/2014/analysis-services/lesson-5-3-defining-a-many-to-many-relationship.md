@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175290"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definizione di una relazione molti-a-molti
-  Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia relativa ai database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.
+  Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.
 
  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile definire una relazione molti-a-molti tra una dimensione e un gruppo di misure specificando una tabella dei fatti intermedia unita in join alla tabella delle dimensioni. Una tabella dei fatti intermedia viene a sua volta unita in join a una tabella delle dimensioni intermedia alla quale è associata la tabella dei fatti. Le relazioni molti-a-molti che intercorrono tra la tabella dei fatti intermedia, le tabelle delle dimensioni nella relazione e la dimensione intermedia determinano la creazione delle relazioni molti-a-molti tra i membri della dimensione primaria e il gruppo di misure specificato dalla relazione. Per definire relazioni molti-a-molti tra una dimensione e un gruppo di misure tramite un gruppo di misure intermedio, quest'ultimo deve condividere una o più dimensioni con il gruppo di misure originale.
 
@@ -91,7 +91,7 @@ ms.locfileid: "78175290"
 
 ## <a name="defining-the-many-to-many-dimension"></a>Definizione della dimensione molti-a-molti
 
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **dimensioni**, quindi scegliere **nuova dimensione**.
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Dimensioni**e quindi scegliere **Nuova dimensione**.
 
 2.  Nella pagina iniziale di **Creazione guidata dimensione** fare clic su **Avanti**.
 

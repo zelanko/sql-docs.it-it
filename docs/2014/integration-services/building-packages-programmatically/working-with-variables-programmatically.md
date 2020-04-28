@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176542"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
@@ -158,7 +158,7 @@ End Module
  Si noti che tutte le variabili che hanno come ambito lo spazio dei nomi **System** sono disponibili per il pacchetto. Per altre informazioni, vedere [Variabili di sistema](../system-variables.md).
 
 ## <a name="namespaces"></a>Spazi dei nomi
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornisce due spazi dei nomi predefiniti in cui risiedono le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabili; Spazi dei nomi di **utente** e di **sistema** . Per impostazione predefinita, tutte le variabili personalizzate create dallo sviluppatore vengono aggiunte allo spazio dei nomi **User**. Le variabili di sistema risiedono nello spazio dei nomi **System**. È possibile creare altri spazi dei nomi diversi da **User** in cui includere variabili personalizzate, nonché modificare il nome dello spazio dei nomi **User**, ma non è possibile aggiungere o modificare variabili nello spazio dei nomi **System**, né assegnare variabili di sistema a uno spazio dei nomi diverso.
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) sono disponibili due spazi dei nomi predefiniti in cui risiedono le variabili, ovvero gli spazi dei nomi **User** e **System**. Per impostazione predefinita, tutte le variabili personalizzate create dallo sviluppatore vengono aggiunte allo spazio dei nomi **User**. Le variabili di sistema risiedono nello spazio dei nomi **System**. È possibile creare altri spazi dei nomi diversi da **User** in cui includere variabili personalizzate, nonché modificare il nome dello spazio dei nomi **User**, ma non è possibile aggiungere o modificare variabili nello spazio dei nomi **System**, né assegnare variabili di sistema a uno spazio dei nomi diverso.
 
  Le variabili di sistema disponibili variano a seconda del tipo di contenitore. Per un elenco delle variabili di sistema disponibili per pacchetti, contenitori, attività e gestori di eventi, vedere [Variabili di sistema](../system-variables.md).
 
@@ -228,7 +228,7 @@ End Module
 ## <a name="configuration-files"></a>File di configurazione
  Se un file di configurazione include una variabile personalizzata, la variabile può essere aggiornata in fase di esecuzione. Questo significa che quando il pacchetto viene eseguito, il valore della variabile che si trovava originariamente nel pacchetto viene sostituito con un nuovo valore del file di configurazione. Questa tecnica di sostituzione risulta utile quando un pacchetto viene distribuito in più server che richiedono valori di variabili diversi. Ad esempio, una variabile può specificare il numero di volte in cui un contenitore **Ciclo Foreach** ripete il flusso di lavoro o elencare i destinatari a cui un gestore di eventi invia un messaggio di posta elettronica quando viene generato un errore oppure modificare il numero di errori che possono verificarsi prima che l'esecuzione del pacchetto abbia esito negativo. Queste variabili vengono fornite dinamicamente nei file di configurazione per ogni ambiente. Pertanto, nei file di configurazione sono consentite solo variabili di lettura/scrittura. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../create-package-configurations.md).
 
-![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
 
 ## <a name="see-also"></a>Vedere anche
  [Integration Services &#40;variabili di&#41; SSIS](../integration-services-ssis-variables.md) [utilizzano variabili nei pacchetti](../use-variables-in-packages.md)

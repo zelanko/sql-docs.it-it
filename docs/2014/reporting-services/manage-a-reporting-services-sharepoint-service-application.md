@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4024ae380a1ab6513f8bc055680d8848e97fbf6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173307"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Le applicazioni di servizio vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.
 
  In questo argomento vengono illustrate le informazioni seguenti:
 
@@ -45,7 +45,7 @@ ms.locfileid: "78173307"
 
  Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).
 
-##  <a name="bkmk_openpages"></a>Per aprire le pagine di gestione delle applicazioni di servizio
+##  <a name="to-open-service-application-management-pages"></a><a name="bkmk_openpages"></a>Per aprire le pagine di gestione delle applicazioni di servizio
  Per aprire le pagine di gestione di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:
 
 1.  Nel gruppo Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.
@@ -54,7 +54,7 @@ ms.locfileid: "78173307"
 
 3.  In alternativa, è possibile fare clic accanto al nome oppure sulla colonna **Tipo** per l'applicazione di servizio in modo da selezionare l'intera riga, quindi fare clic su **Gestisci** sulla barra multifunzione di SharePoint.
 
-##  <a name="bkmk_systemsettings"></a>Pagina Impostazioni sistema
+##  <a name="system-settings-page"></a><a name="bkmk_systemsettings"></a>Pagina Impostazioni sistema
  La pagina Impostazioni sistema consente di configurare il comportamento e l'esperienza utente dell'applicazione di servizio, inclusi diversi timeout.
 
 -   [Impostazioni report](#bkmk_report_settings_section)
@@ -67,7 +67,7 @@ ms.locfileid: "78173307"
 
 -   [Impostazioni client](#bkmk_client_settings_section)
 
-###  <a name="bkmk_report_settings_section"></a>Impostazioni report
+###  <a name="report-settings"></a><a name="bkmk_report_settings_section"></a>Impostazioni report
 
 |Impostazione|Commenti|
 |-------------|--------------|
@@ -78,7 +78,7 @@ ms.locfileid: "78173307"
 |Durata parametri memorizzati|Il valore predefinito è 180.|
 |Soglia parametri memorizzati|Il valore predefinito è 1500 giorni.|
 
-###  <a name="bkmk_session_settings_section"></a>Impostazioni sessione
+###  <a name="session-settings"></a><a name="bkmk_session_settings_section"></a>Impostazioni sessione
 
 |Impostazione|Commenti|
 |-------------|--------------|
@@ -86,17 +86,16 @@ ms.locfileid: "78173307"
 |Usa cookie di sessione|Il valore predefinito è TRUE.|
 |Timeout report RDLX|Il valore predefinito è 1800 secondi.|
 
-###  <a name="bkmk_logging_settings_section"></a>Impostazioni di sistema per la registrazione
+###  <a name="system-settings-for-logging"></a><a name="bkmk_logging_settings_section"></a>Impostazioni di sistema per la registrazione
 
 |Impostazione|Commenti|
 |-------------|--------------|
 |Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. . I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per ulteriori informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|
 |Giorni di mantenimento del log di esecuzione|Il valore predefinito è 60 giorni.|
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
 
-###  <a name="bkmk_security_settings_section"></a>Impostazioni di sicurezza
+###  <a name="security-settings"></a><a name="bkmk_security_settings_section"></a>Impostazioni di sicurezza
 
 |Impostazione|Commenti|
 |-------------|--------------|
@@ -105,7 +104,7 @@ ms.locfileid: "78173307"
 |Abilita errori remoti|Il valore predefinito è FALSE.|
 |Abilita errori dettagliati test connessione|Il valore predefinito è TRUE.|
 
-###  <a name="bkmk_client_settings_section"></a>Impostazioni client
+###  <a name="client-settings"></a><a name="bkmk_client_settings_section"></a>Impostazioni client
 
 |Impostazione|Commenti|
 |-------------|--------------|
@@ -115,12 +114,12 @@ ms.locfileid: "78173307"
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|
 |Modifica limite cache di sessione|Il valore predefinito è 5.|
 
-##  <a name="bkmk_managejobs"></a>Gestisci processi
+##  <a name="manage-jobs"></a><a name="bkmk_managejobs"></a>Gestisci processi
  È possibile visualizzare ed eliminare i processi in esecuzione, ad esempio i processi creati dalle sottoscrizioni del report e da quelle guidate dai dati. La pagina non viene utilizzata per gestire le sottoscrizioni, bensì i processi attivati da una sottoscrizione. Ad esempio, tramite una sottoscrizione pianificata per essere eseguita una volta ogni ora verrà generato un processo una volta ogni ora che verrà visualizzato nella pagina **Gestione processi** .
 
- ![gestire i processi in esecuzione](media/ssrs-manage-jobs.gif "gestione dei processi in esecuzione")
+ ![Gestire i processi in esecuzione](media/ssrs-manage-jobs.gif "Gestire i processi in esecuzione")
 
-##  <a name="bkmk_keymgt"></a>Gestione delle chiavi
+##  <a name="key-management"></a><a name="bkmk_keymgt"></a>Gestione delle chiavi
  Nella tabella seguente sono riepilogate le pagine Gestione chiavi
 
 > [!IMPORTANT]
@@ -133,7 +132,7 @@ ms.locfileid: "78173307"
 |Cambia chiave di crittografia|Questa operazione comporta la creazione di una chiave nuova e l'esecuzione di una nuova operazione di crittografia del contenuto crittografato. Se si dispone di grandi quantità di contenuto, questa operazione può richiedere diverse ore.<br /><br /> Al termine dell'operazione di modifica della chiave di crittografia, è consigliabile eseguire un backup della nuova chiave.|
 |Elimina contenuto crittografato|Il contenuto eliminato non può essere recuperato.<br /><br /> ** \* Importante \* \* ** L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata. e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.|
 
-##  <a name="bkmk_executionaccount"></a>Account di esecuzione
+##  <a name="execution-account"></a><a name="bkmk_executionaccount"></a>Account di esecuzione
  Utilizzare questa pagina per configurare un account da utilizzare per l'esecuzione automatica. L'account verrà utilizzato in circostanze particolari, ovvero quando non sono disponibili altre origini di credenziali, in particolare:
 
 -   Quando il server di report si connette a un'origine dei dati per cui non sono necessarie credenziali. Tra gli esempi di origini dati che potrebbero non necessitare di credenziali rientrano i documenti XML e alcune applicazioni di database client.
@@ -157,25 +156,25 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
  Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)(Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).
 
 ### <a name="options"></a>Opzioni
- **Specificare un account di esecuzione** Selezionare questa impostazione per specificare un account.
+ **Specifica account di esecuzione** Selezionare questa opzione per specificare un account.
 
- **Account** di Immettere un account utente di dominio di Windows. Usare questo formato: * \<dominio>\\<account\>utente*.
+ **Account** Immettere un account utente di dominio di Windows. Usare questo formato: * \<dominio>\\<account\>utente*.
 
- **Password** di Digitare la password.
+ **Password** Digitare la password.
 
- **Conferma password** Digitare nuovamente la password.
+ **Conferma password** Immettere nuovamente la password.
 
-##  <a name="bkmk_email"></a>Impostazioni posta elettronica
+##  <a name="e-mail-settings"></a><a name="bkmk_email"></a>Impostazioni posta elettronica
  Utilizzare questa pagina per specificare le impostazioni SMTP (Simple Mail Transport Protocol) che consentono il recapito tramite posta elettronica dal server di report. È possibile utilizzare l'estensione per il recapito tramite posta elettronica del server di report per distribuire report o notifiche di elaborazione dei report utilizzando sottoscrizioni tramite posta elettronica. L'estensione per il recapito tramite posta elettronica del server di report richiede un server SMTP e un indirizzo di posta elettronica da utilizzare nel campo Da.
 
 ### <a name="options"></a>Opzioni
  **Usa server SMTP** Specifica che il messaggio di posta elettronica del server di report viene instradato tramite un server SMTP.
 
- **Server SMTP in uscita** Specificare il server o il gateway SMTP da utilizzare. È possibile utilizzare un server locale o un server SMTP nella rete.
+ **Server SMTP in uscita** Consente di specificare il server o il gateway SMTP da utilizzare. È possibile utilizzare un server locale o un server SMTP nella rete.
 
  **Indirizzo mittente** Specifica l'indirizzo di posta elettronica da utilizzare nel campo da di un messaggio di posta elettronica generato. È necessario specificare un account utente che abbia l'autorizzazione per l'invio di posta elettronica dal server SMTP.
 
-##  <a name="bkmk_provisionsubscriptions"></a>Provisioning di sottoscrizioni e avvisi
+##  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provisionsubscriptions"></a>Provisioning di sottoscrizioni e avvisi
  Utilizzare questa pagina per verificare se SQL Server Agent è in esecuzione ed effettuare il provisioning dell'accesso per consentire l'utilizzo di SQL Server Agent da parte di Reporting Services. SQL Server Agent è necessario per gli avvisi dati, le pianificazioni e le sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . [Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)
 
 ## <a name="proxy-association"></a>Associazione del proxy

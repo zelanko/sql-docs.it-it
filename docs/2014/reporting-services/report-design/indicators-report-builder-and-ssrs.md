@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f56a7fc3d4d5d24143d2c83709e9674e1b2fd43d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176831"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicatori (Generatore report e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "78176831"
 
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili set e icone di indicatori predefiniti che possono essere utilizzati senza apportarvi modifiche oppure personalizzati in base alle proprie esigenze.
 
- Per altre informazioni sull'utilizzo degli indicatori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
+ Per altre informazioni sull'uso degli indicatori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
 
 > [!NOTE]
 >  È possibile pubblicare indicatori separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "78176831"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="ComparingIndicatorsToGauges"></a> Confronto tra indicatori e misuratori
+##  <a name="comparing-indicators-to-gauges"></a><a name="ComparingIndicatorsToGauges"></a> Confronto tra indicatori e misuratori
  Anche se sembrano molto diversi, gli indicatori sono semplici misuratori. Sia negli indicatori sia nei misuratori viene visualizzato un solo valore di dati. La differenza principale consiste nel fatto che i misuratori dispongono di elementi quali frame e indicatori di misura, mentre gli indicatori dispongono solo di stati, icone e (facoltativamente) etichette. Gli stati degli indicatori sono simili agli intervalli dei misuratori.
 
  Come i misuratori, gli indicatori vengono posizionati in un pannello del misuratore. Se si vuole configurare un indicatore tramite la finestra di dialogo **Proprietà indicatori** o il riquadro delle proprietà, è necessario selezionare l'indicatore invece del pannello. In caso contrario, le opzioni disponibili vengono applicate alle opzioni del pannello del misuratore e non è possibile configurare l'indicatore. Nell'immagine seguente viene mostrato un indicatore selezionato nel relativo pannello del misuratore.
@@ -61,7 +61,7 @@ ms.locfileid: "78176831"
  A seconda della modalità con la quale si desidera raffigurare il valore di dati, i misuratori potrebbero essere più appropriati degli indicatori. Per altre informazioni, vedere [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md).
 
 
-##  <a name="ChoosingIndicatorTypes"></a> Scelta del tipo di indicatore da utilizzare
+##  <a name="choosing-the-indicator-type-to-use"></a><a name="ChoosingIndicatorTypes"></a> Scelta del tipo di indicatore da utilizzare
  L'utilizzo del set di indicatori appropriato è fondamentale per comunicare immediatamente il significato dei dati, se questi ultimi si trovano in una riga di dettagli o in un gruppo di righe o di colonne di una tabella o matrice oppure da soli nel corpo del report o nel dashboard. I set di indicatori incorporati dispongono di almeno tre icone che possono variare in base alla forma, al colore o a entrambi. Tramite ogni icona viene comunicato uno stato dei dati diverso.
 
  Nella tabella seguente vengono elencati i set di indicatori predefiniti e descritti alcuni utilizzi comuni.
@@ -76,7 +76,7 @@ ms.locfileid: "78176831"
  Dopo aver scelto un set di indicatori, è possibile personalizzare l'aspetto di ogni icona dell'indicatore del set impostando le proprietà nelle finestre di dialogo per gli indicatori o nel riquadro delle proprietà. Per configurare gli indicatori è possibile utilizzare i colori, le icone, nonché le dimensioni o le espressioni predefiniti.
 
 
-##  <a name="CustomizingIndicators"></a> Personalizzazione degli indicatori
+##  <a name="customizing-indicators"></a><a name="CustomizingIndicators"></a> Personalizzazione degli indicatori
  Gli indicatori possono essere personalizzati in base alle proprie esigenze. I set di indicatori e ogni relativa icona possono essere modificati nei modi seguenti:
 
 -   Modificando i colori delle icone degli indicatori. Ad esempio, si può desiderare che la combinazione di colori di un set di indicatori sia monocromatica o che vengano utilizzati colori diversi da quelli predefiniti.
@@ -92,10 +92,10 @@ ms.locfileid: "78176831"
  Per altre informazioni, vedere [Modificare le icone degli indicatori e dei set di indicatori &#40;Generatore report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).
 
 
-##  <a name="UsingIndicatorsInTablesMatrices"></a> Utilizzo degli indicatori in tabelle e matrici
+##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a> Utilizzo degli indicatori in tabelle e matrici
  La semplicità delle forme degli indicatori li rendono ideali per l'utilizzo in tabelle e matrici. Gli indicatori sono validi anche in dimensioni ridotte. Questo aspetto li rende utili nelle righe di dettaglio o di gruppo dei report.
 
- Il diagramma seguente illustra un report con una tabella che usa il set di indicatori direzionale, **4 frecce (colorate)** , per indicare le vendite. Le icone dell'indicatore nel report sono configurate per utilizzare sfumature di blu anziché i colori predefiniti rosso, giallo e verde.
+ Il diagramma seguente illustra un report con una tabella che usa il set di indicatori direzionale, **4 frecce (colorate)**, per indicare le vendite. Le icone dell'indicatore nel report sono configurate per utilizzare sfumature di blu anziché i colori predefiniti rosso, giallo e verde.
 
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")
 
@@ -112,7 +112,7 @@ ms.locfileid: "78176831"
  Negli indicatori viene utilizzato un solo valore. Se è necessario visualizzare più valori di dati, utilizzare un grafico sparkline o una barra dei dati anziché un indicatore. Pur consentendo di rappresentare più valori di dati, sono semplici, facili da capire in formati di piccole dimensioni e funzionano bene in tabelle e matrici. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).
 
 
-##  <a name="SizingIndicatators"></a> Ridimensionamento degli indicatori per migliorare l'impatto visivo
+##  <a name="sizing-indicators-to-maximize-visual-impact"></a><a name="SizingIndicatators"></a> Ridimensionamento degli indicatori per migliorare l'impatto visivo
  Per migliorare l'impatto visivo degli indicatori, oltre al colore, alla direzione e alla forma è possibile utilizzare anche le dimensioni. Immaginare un report in cui vengono utilizzati gli indicatori per mostrare la soddisfazione dei clienti relativamente a tipi diversi di biciclette. L'icona utilizzata dall'indicatore può essere configurata in modo che le dimensioni varino a seconda della soddisfazione dei clienti. Maggiore è la soddisfazione, più grande sarà l'icona visualizzata nel report. Nell'immagine seguente viene mostrato un report di vendite di biciclette e le dimensioni dell'icona riflettono l'importo delle vendite.
 
  Le espressioni vengono utilizzate per impostare dinamicamente le dimensioni delle stelle in base ai valori di campo utilizzati dall'indicatore. Per altre informazioni, vedere [Specificare le dimensioni di un indicatore tramite un'espressione &#40;Generatore report e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).
@@ -120,7 +120,7 @@ ms.locfileid: "78176831"
  Per altre informazioni sulla scrittura e l'uso delle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md).
 
 
-##  <a name="IncludingIndicatorsInGauges"></a> Inserimento degli indicatori e dei misuratori nei pannelli del misuratore
+##  <a name="including-indicators-and-gauges-in-gauge-panels"></a><a name="IncludingIndicatorsInGauges"></a> Inserimento degli indicatori e dei misuratori nei pannelli del misuratore
  Gli indicatori vengono sempre posizionati in un pannello del misuratore. Il pannello del misuratore è un contenitore di livello superiore in cui possono essere inclusi uno o più misuratori e indicatori di stato. Nel pannello del misuratore possono essere presenti misuratori o indicatori figlio o adiacenti. Se si utilizza un indicatore come elemento figlio di un misuratore, è possibile visualizzare ulteriormente i dati mostrando lo stato del valore di dati visualizzato nel misuratore. Ad esempio, in un indicatore all'interno di un misuratore può essere visualizzato un cerchio verde per indicare che il valore nel misuratore di destinazione è compreso nel 33% superiore dell'intervallo di valori. Utilizzando, affiancati, un misuratore e un indicatore, i dati possono essere rappresentati in modi diversi. In entrambi i casi, nell'indicatore e nel misuratore possono essere utilizzati campi dei dati uguali o diversi.
 
  Nel diagramma seguente viene mostrato un indicatore affiancato e all'interno di un misuratore.
@@ -132,7 +132,7 @@ ms.locfileid: "78176831"
  Per altre informazioni sull'uso dei misuratori, vedere [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md).
 
 
-##  <a name="SequenceIndicatorStates"></a> Sequenza di stati indicatore
+##  <a name="sequence-of-indicator-states"></a><a name="SequenceIndicatorStates"></a> Sequenza di stati indicatore
  La sequenza degli stati indicatore nella scheda **Valore e stati** della finestra di dialogo **Proprietà indicatore** determina quale icona dell'indicatore viene visualizzata per un valore di dati quando i valori iniziali e finali degli stati indicatore si sovrappongono.
 
  Ciò potrebbe verificarsi se si utilizza l'unità di misura di stato percentuale o numerica. È più probabile che si verifichi quando si utilizza l'unità di misura numerica perché si forniscono valori specifici per questa misurazione. È anche più probabile che si verifichi in caso di arrotondamento dei valori dei dati del report, poiché ciò tende a rendere i valori meno discreti.
@@ -184,7 +184,7 @@ ms.locfileid: "78176831"
  In breve, la valutazione viene avviata e nella parte superiore dell'elenco dell'indicatore di stato e nel report viene visualizzata l'icona dell'indicatore associata al primo stato dell'indicatore che dispone di un intervallo di valori contenente i dati. Modificando la sequenza degli stati dell'indicatore è possibile pertanto influire sulla visualizzazione dei valori dei dati.
 
 
-##  <a name="HowTo"></a> Procedure
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure
  In questa sezione vengono elencate le procedure in cui viene illustrato come aggiungere, modificare ed eliminare gli indicatori, come configurare e personalizzare gli indicatori, nonché come utilizzare gli indicatori nei misuratori.
 
 -   [Aggiungere o eliminare un indicatore &#40;Generatore report e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)

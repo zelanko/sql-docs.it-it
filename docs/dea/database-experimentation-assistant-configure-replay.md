@@ -13,17 +13,17 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761535"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurare Riesecuzione distribuita per Database Experimentation Assistant
 
 Database Experimentation Assistant (DEA) utilizza gli strumenti di Riesecuzione distribuita dell'installazione SQL Server per riprodurre una traccia acquisita su un ambiente di testing aggiornato. È consigliabile eseguire un'esecuzione dei test utilizzando un piccolo file di traccia prima di eseguire una riproduzione completa per garantire la riproduzione corretta delle query.
 
-## <a name="distributed-replay-requirements"></a>Requisiti di Riesecuzione distribuita
+## <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
 
 - Per creare file IRF nel computer del controller Riesecuzione distribuita è necessario un ulteriore 78% di spazio su disco rigido.
 - 200 MB o 512 MB sono le dimensioni ideali per il rollover della traccia da usare per acquisire le tracce di produzione o prestazioni.

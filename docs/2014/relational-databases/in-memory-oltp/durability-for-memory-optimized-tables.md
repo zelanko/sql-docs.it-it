@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175950"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
@@ -79,13 +79,12 @@ ms.locfileid: "78175950"
 
  Nell'esempio seguente il filegroup della tabella ottimizzata per la memoria dispone di quattro coppie di file di dati e differenziali in corrispondenza del timestamp 500, che contengono i dati delle transazioni precedenti. Ad esempio, le righe del primo file di dati corrispondono alle transazioni con timestamp maggiore di 100 e minore di o uguale a 200; in alternativa sono rappresentate come (100, 200]. La percentuale di completamento del secondo e terzo file di dati è inferiore al 50% dopo aver considerato le righe contrassegnate come eliminate. L'operazione di unione combina le due coppie di file di checkpoint e crea una nuova coppia di file di checkpoint contenente le transazioni con timestamp maggiore di 200 e minore o uguale a 400, ovvero l'intervallo combinato di queste due coppie di file di checkpoint. È presente un'altra coppia di file di checkpoint con intervallo (500, 600] e il file differenziale non vuoto per l'intervallo della transazione (200, 400] indica che l'operazione di unione può essere eseguita contemporaneamente all'attività transazionale, inclusa l'eliminazione di più righe dalle coppie di file di checkpoint di origine.
 
- ![Nel diagramma viene visualizzato il gruppo di file della tabella con ottimizzazione per la memoria](../../database-engine/media/storagediagram-hekaton.png "Nel diagramma viene visualizzato il gruppo di file della tabella con ottimizzazione per la memoria")
+ ![Il diagramma mostra il gruppo di file della tabella con ottimizzazione per la memoria](../../database-engine/media/storagediagram-hekaton.png "Il diagramma mostra il gruppo di file della tabella con ottimizzazione per la memoria")
 
  Un thread in background valuta tutte le coppie di file di checkpoint chiuse utilizzando un criterio di unione, quindi avvia una o più richieste di unione per le coppie di file di checkpoint qualificate. Queste richieste di unione vengono elaborate dal thread del checkpoint offline. La valutazione dei criteri di unione viene eseguita periodicamente, anche quando un checkpoint viene chiuso.
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Criteri di Unione
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa i criteri di unione seguenti:
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Criteri di unione
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa i criteri di unione seguenti:
 
 -   Un'unione è pianificata se 2 o più coppie di file di checkpoint consecutive possono essere consolidate, dopo aver tenuto conto delle righe eliminate, in modo che le righe risultanti rientrino in una coppia di file di checkpoint di dimensioni ideali. Le dimensioni ideali di una coppia di file di checkpoint vengono determinate come indicato di seguito:
 
@@ -115,6 +114,6 @@ ms.locfileid: "78175950"
  È possibile forzare manualmente il checkpoint seguito dal backup del log per velocizzare il processo di Garbage Collection, ma questa operazione aggiungerà 5 coppie di file di checkpoint vuoti (5 coppie di file di dati/differenziali con un file di dati di 128 MB ciascuno). Negli scenari di produzione, i checkpoint e i backup del log automatici eseguiti come parte della strategia di backup effettuano la transazione delle coppie di file di checkpoint attraverso queste fasi senza richiedere alcun intervento manuale. La conseguenza del processo di Garbage Collection è il fatto che i database con tabelle ottimizzate per la memoria possono avere dimensioni di archiviazione maggiori rispetto alle dimensioni in memoria. Non è inusuale che le coppie di file di checkpoint abbiano dimensioni quattro volte maggiori di quelle delle tabelle ottimizzate per la memoria durevoli in memoria.
 
 ## <a name="see-also"></a>Vedere anche
- [Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)
+ [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)
 
 

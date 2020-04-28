@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320778"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -62,8 +62,8 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|ID della misurazione delle prestazioni di replica. I possibili valori sono i seguenti:<br /><br /> **1expiration** : monitora la scadenza imminente delle sottoscrizioni di pubblicazioni transazionali.<br /><br /> **2latency** : esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.<br /><br /> **4mergeexpiration** : monitora la scadenza imminente delle sottoscrizioni di pubblicazioni di tipo merge.<br /><br /> **5mergeslowrunduration** : esegue il monitoraggio della durata delle sincronizzazioni di tipo merge su connessioni remote a larghezza di banda ridotta.<br /><br /> **6mergefastrunduration** : esegue il monitoraggio della durata delle sincronizzazioni di tipo merge su connessioni LAN a larghezza di banda elevata.<br /><br /> **7mergefastrunspeed** : esegue il monitoraggio della velocità di sincronizzazione delle sincronizzazioni di tipo merge su connessioni LAN a larghezza di banda elevata.<br /><br /> **8mergeslowrunspeed** : esegue il monitoraggio della velocità di sincronizzazione delle sincronizzazioni di tipo merge su connessioni remote a larghezza di banda ridotta.|  
-|**titolo**|**sysname**|Nome della misurazione delle prestazioni di replica.|  
-|**valore**|**int**|Valore soglia della misurazione delle prestazioni.|  
+|**title**|**sysname**|Nome della misurazione delle prestazioni di replica.|  
+|**value**|**int**|Valore soglia della misurazione delle prestazioni.|  
 |**shouldalert**|**bit**|Indica se deve essere generato un avviso quando la metrica supera la soglia definita per la pubblicazione. il valore **1** indica che deve essere generato un avviso.|  
 |**IsEnabled**|**bit**|Indica se il monitoraggio è abilitato per questa misurazione delle prestazioni di replica per questa pubblicazione. il valore **1** indica che il monitoraggio è abilitato.|  
   
@@ -77,6 +77,6 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione possono eseguire **sp_replmonitorhelppublicationthresholds**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

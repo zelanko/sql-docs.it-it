@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed61dbba038068b8584d8d73893e48adb832683b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176493"
 ---
 # <a name="create-connection-managers"></a>Creazione di gestioni connessioni
@@ -39,7 +39,7 @@ ms.locfileid: "78176493"
 
  Nella figura seguente viene illustrata l'area **Gestioni connessioni** della scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)].
 
- ![Schermata della finestra di progettazione del flusso di controllo con pacchetto](media/samplecontrolflow.gif "Schermata della finestra di progettazione del flusso di controllo con pacchetto")
+ ![Screenshot della finestra di progettazione del flusso di controllo con pacchetto](media/samplecontrolflow.gif "Screenshot della finestra di progettazione del flusso di controllo con pacchetto")
 
 #### <a name="to-add-configure-or-delete-a-connection-manager-in-ssis-designer"></a>Per aggiungere, configurare o eliminare una gestione connessione in Progettazione SSIS
 
@@ -55,6 +55,6 @@ ms.locfileid: "78176493"
  Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su `true`, il runtime trova e utilizza il provider a 64 bit; Se Run64BitRuntime è `false`, il runtime trova e utilizza il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare per i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Integration Services &#40;SSIS&#41; e ambienti Studio](integration-services-ssis-development-and-management-tools.md).
 
 ## <a name="see-also"></a>Vedere anche
- Flusso di dati [flusso di controllo](control-flow/control-flow.md) [](data-flow/data-flow.md) [Integration Services &#40;i gestori eventi&#41; SSIS](integration-services-ssis-event-handlers.md)
+ Flusso di dati [flusso di controllo](control-flow/control-flow.md) [Data Flow](data-flow/data-flow.md) [Integration Services &#40;i gestori eventi&#41; SSIS](integration-services-ssis-event-handlers.md)
 
 

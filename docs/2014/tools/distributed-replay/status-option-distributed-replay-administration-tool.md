@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171940"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opzione status (strumento di amministrazione Distributed Replay)
@@ -50,7 +50,7 @@ dreplay status -m localhost -f 60
 ## <a name="permissions"></a>Autorizzazioni
  È necessario eseguire lo strumento di amministrazione come utente interattivo, scegliendo tra utente locale e account utente di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.
 
- Per altre informazioni, vedere [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md).
+ Per altre informazioni, vedere [Sicurezza di Distributed Replay](distributed-replay-security.md).
 
 ## <a name="see-also"></a>Vedere anche
  [SQL Server riesecuzione distribuita](sql-server-distributed-replay.md) [debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)

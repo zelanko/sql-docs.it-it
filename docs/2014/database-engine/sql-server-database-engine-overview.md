@@ -14,16 +14,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77f7fdb2689d910d6fe9534a5f1f65e1c381b351
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175450"
 ---
 # <a name="sql-server-database-engine"></a>Motore di database di SQL Server
-  
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] assicura l'accesso controllato e l'elaborazione rapida delle transazioni per soddisfare i requisiti delle più complesse applicazioni aziendali di gestione dei dati.
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. [!INCLUDE[ssDE](../includes/ssde-md.md)] assicura l'accesso controllato e l'elaborazione rapida delle transazioni per soddisfare i requisiti delle più complesse applicazioni aziendali di gestione dei dati.
 
  Utilizzare [!INCLUDE[ssDE](../includes/ssde-md.md)] per creare database relazionali per i dati relativi all'elaborazione delle transazioni online o all'elaborazione analitica online, inclusa la creazione di tabelle per l'archiviazione di dati e oggetti di database, ad esempio indici, viste e stored procedure per la visualizzazione, la gestione e la protezione dei dati. È possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per gestire gli oggetti di database e [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per acquisire gli eventi del server.
 
@@ -42,6 +40,6 @@ ms.locfileid: "78175450"
  ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [riferimento XQuery](/sql/xquery/xquery-language-reference-sql-server)
 
 ## <a name="see-also"></a>Vedere anche
- [Centro risorse SQL Server](https://go.microsoft.com/fwlink/?LinkId=219676)
+ [Centro risorse di SQL Server](https://go.microsoft.com/fwlink/?LinkId=219676)
 
 

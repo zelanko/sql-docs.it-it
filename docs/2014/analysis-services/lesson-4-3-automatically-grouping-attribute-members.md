@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175340"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Raggruppamento automatico dei membri degli attributi
@@ -26,7 +26,7 @@ ms.locfileid: "78175340"
 
  I **cluster** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creano gruppi eseguendo il clustering unidimensionale sui valori di input usando il metodo di clustering K-means con le distribuzioni di Gauss. Questa opzione è valida solo per le colonne numeriche.
 
- Dopo avere specificato un metodo di raggruppamento è necessario specificare il numero di gruppi usando la proprietà **DiscretizationBucketCount** . Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ Dopo avere specificato un metodo di raggruppamento è necessario specificare il numero di gruppi usando la proprietà **DiscretizationBucketCount** . Per ulteriori informazioni, vedere [membri attributo gruppo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
  Nelle attività di questo argomento si abiliteranno diversi tipi di raggruppamento per gli elementi seguenti: i valori dei redditi annuali della dimensione **Customer** , il numero di ore di permesso per malattia della dimensione **Employees** e il numero di ore di ferie della dimensione **Employees** . Seguiranno quindi l'elaborazione e l'esplorazione del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial per visualizzare l'effetto dei gruppi di membri. Infine, si modificheranno le proprietà dei gruppi di membri per vedere l'effetto della modifica del tipo di raggruppamento.
 
@@ -124,6 +124,6 @@ ms.locfileid: "78175340"
  [Come nascondere e disabilitare le gerarchie degli attributi](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>Vedere anche
- [Membri attributo gruppo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

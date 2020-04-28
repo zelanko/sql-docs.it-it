@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 5cefc88469ac3c98f3bb944c0e490f1ce7e88472
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172385"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gestione report (modalità nativa SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "78172385"
 
 -   [Descrizioni delle icone](#bkmk_icon_descriptions)
 
-##  <a name="bkmk_whatis_report_manager"></a>Che cos'è Gestione report?
+##  <a name="what-is-report-manager"></a><a name="bkmk_whatis_report_manager"></a>Che cos'è Gestione report?
  È possibile utilizzare Gestione report per eseguire le attività seguenti:
 
 -   Visualizzare, ricercare, stampare e sottoscrivere report.
@@ -61,7 +61,7 @@ ms.locfileid: "78172385"
 
  Se si utilizza [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o Windows Server 2008, è necessario configurare Gestione report per l'amministrazione locale. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
-##  <a name="bkmk_start_report_manager"></a>Avviare e utilizzare Gestione report
+##  <a name="start-and-use-report-manager"></a><a name="bkmk_start_report_manager"></a>Avviare e utilizzare Gestione report
  Gestione report è un'applicazione Web che si apre digitando l'apposito URL nella barra degli indirizzi di una finestra del browser. Quando si avvia Gestione report, le pagine, le opzioni e i collegamenti visualizzati variano in base alle autorizzazioni di cui si dispone sul server di report. Per eseguire un'attività, è necessario essere assegnato a un ruolo che include l'attività. Gli utenti assegnati a un ruolo con autorizzazioni complete hanno accesso a tutti i menu e le pagine disponibili per la gestione di un server di report. Un utente assegnato a un ruolo autorizzato a visualizzare ed eseguire i report, invece, potrà visualizzare solo le pagine e i menu correlati a queste attività specifiche. Per ogni utente è possibile impostare assegnazioni di ruolo diverse per server di report diversi o anche per le varie cartelle e i vari report archiviati in un singolo server di report.
 
  Per altre informazioni sui ruoli, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](security/granting-permissions-on-a-native-mode-report-server.md).
@@ -86,19 +86,19 @@ ms.locfileid: "78172385"
 
  Non esistono molti modi per personalizzare Gestione report. Ad esempio, è possibile modificare il titolo dell'applicazione nella pagina Impostazioni sito. Gli sviluppatori Web possono modificare i fogli di stile che contengono le informazioni sullo stile utilizzate da Gestione report. Poiché Gestione report non è progettato specificamente per supportare la personalizzazione, è necessario testare accuratamente tutte le modifiche apportate. Se Gestione report non soddisfa le proprie esigenze, è possibile sviluppare un visualizzatore di report personalizzato oppure configurare web part di SharePoint per individuare e visualizzare i report in un sito di SharePoint. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](report-server/configure-web-portal.md).
 
-##  <a name="bkmk_icon_descriptions"></a>Descrizioni delle icone
+##  <a name="icon-descriptions"></a><a name="bkmk_icon_descriptions"></a>Descrizioni delle icone
  Nella tabella seguente vengono descritte le icone utilizzate in Gestione report. Per ulteriori informazioni sulle icone visualizzate nella barra degli strumenti dei report, vedere [Visualizzatore HTML e barra degli strumenti dei report](html-viewer-and-the-report-toolbar.md).
 
 |Icona|Descrizione|Azione|
 |----------|-----------------|------------|
-|![Icona del report](media/hlp-16doc.gif "Icona Rapporto")|Report|Fare clic sul nome o sull'icona del report per aprire il report. Il report viene aperto in una finestra separata.|
+|![Icona di report](media/hlp-16doc.gif "Icona di report")|Report|Fare clic sul nome o sull'icona del report per aprire il report. Il report viene aperto in una finestra separata.|
 |![Icona modello](media/model-icon.gif "Icona di modello")|Modello di report|Fare clic sull'icona del modello di report per aprire la pagina delle proprietà del modello.|
 |![Icona di report collegato](media/hlp-16linked.gif "Icona di report collegato")|Report collegato|Fare clic sull'icona o sul nome del report collegato per aprirlo. Il report viene aperto in una finestra separata.|
-|![Icona di cartella](media/hlp-16folder.gif "Icona di cartella")|Cartella|Fare clic sull'icona o sul nome della cartella per aprirla.|
+|![Icona Cartella](media/hlp-16folder.gif "Icona Cartella")|Cartella|Fare clic sull'icona o sul nome della cartella per aprirla.|
 |![Icona di sottoscrizione](media/hlp-16subscription.gif "Icona di sottoscrizione")|Subscription|Fare clic sull'icona o sulla descrizione della sottoscrizione per modificarla.|
 |![Icona della sottoscrizione guidata dai dati](media/hlp-16subscriptiondd.gif "Icona della sottoscrizione guidata dai dati")|Sottoscrizione guidata dai dati|Fare clic sull'icona o sulla descrizione della sottoscrizione guidata dai dati per modificarla.|
-|![icona di risorsa generica](media/hlp-16file.gif "Icona di risorsa generica")|Risorsa|Fare clic sull'icona o sul nome della risorsa per aprirla. La risorsa viene aperta in una finestra separata.|
-|![Icona dell'origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dei dati condivisa|Fare clic sull'icona di un'origine dei dati condivisa per aprire le pagine delle proprietà, l'elenco dei report e l'elenco delle sottoscrizioni per l'origine dei dati.|
+|![Icona di risorsa generica](media/hlp-16file.gif "Icona di risorsa generica")|Risorsa|Fare clic sull'icona o sul nome della risorsa per aprirla. La risorsa viene aperta in una finestra separata.|
+|![Icona Origine dati condivisa](media/hlp-16datasource.png "Icona Origine dati condivisa")|Origine dei dati condivisa|Fare clic sull'icona di un'origine dei dati condivisa per aprire le pagine delle proprietà, l'elenco dei report e l'elenco delle sottoscrizioni per l'origine dei dati.|
 |![Icona della pagina delle proprietà](media/hlp-16prop.gif "Icona della pagina delle proprietà")|Pagina delle proprietà|Fare clic sull'icona della pagina delle proprietà per accedere a pagine aggiuntive per l'impostazione di proprietà e opzioni di sicurezza.|
 
 ## <a name="see-also"></a>Vedere anche

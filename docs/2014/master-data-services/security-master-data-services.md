@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 05f5390323efcf38c4f0d91f71613b5a2c3161a7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176607"
 ---
 # <a name="security-master-data-services"></a>Sicurezza (Master Data Services)
@@ -22,8 +22,7 @@ ms.locfileid: "78176607"
 
  È possibile utilizzare anche la sicurezza per creare un amministratore di un modello specifico e un'area funzionale (ad esempio, per consentire a qualcuno di creare versioni del modello Customer o per dare la possibilità di impostare autorizzazioni di sicurezza).
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è basata su utenti e gruppi locali o del dominio Active Directory. La sicurezza MDS consente all'utente di utilizzare un livello di dettaglio granulare durante l'individuazione dei dati ai quali un utente può accedere. A causa della granularità, la sicurezza può diventare facilmente complicata ed è necessario prestare attenzione durante l'utilizzo di utenti e gruppi sovrapposti. Per altre informazioni, vedere [Autorizzazioni utenti e gruppi sovrapposte &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è basata su utenti e gruppi locali o del dominio Active Directory. La sicurezza MDS consente all'utente di utilizzare un livello di dettaglio granulare durante l'individuazione dei dati ai quali un utente può accedere. A causa della granularità, la sicurezza può diventare facilmente complicata ed è necessario prestare attenzione durante l'utilizzo di utenti e gruppi sovrapposti. Per altre informazioni, vedere [Autorizzazioni utenti e gruppi sovrapposte &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).
 
  È possibile assegnare l'accesso di sicurezza nell'area funzionale **Autorizzazioni utenti e gruppi** dell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o tramite il servizio Web.
 
@@ -37,9 +36,9 @@ ms.locfileid: "78176607"
 ## <a name="how-to-set-security"></a>Impostazione della sicurezza
  Per concedere ad un utente o gruppo l'autorizzazione di accesso a dati o a funzionalità in MDS, è necessario assegnare:
 
--   [Accesso all'area funzionale](../../2014/master-data-services/functional-area-permissions-master-data-services.md), che determina quale delle cinque aree funzionali dell'interfaccia utente a cui un utente può accedere.
+-   L'[accesso all'area funzionale](../../2014/master-data-services/functional-area-permissions-master-data-services.md), che determina a quali delle cinque aree funzionali dell'interfaccia utente un utente può accedere.
 
--   [Autorizzazioni per oggetti modello](../../2014/master-data-services/model-object-permissions-master-data-services.md), che determinano gli attributi a cui un utente può accedere e il tipo di accesso (lettura o aggiornamento) che l'utente ha per tali attributi.
+-   [Autorizzazioni per oggetti modello](../../2014/master-data-services/model-object-permissions-master-data-services.md)che determinano gli attributi ai quali un utente può accedere e il tipo di accesso (lettura o aggiornamento) che l'utente possiede su quegli attributi.
 
 -   Facoltativamente, le [autorizzazioni per i membri della gerarchia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)che determinano i membri ai quali un utente può accedere e il tipo di accesso (lettura o aggiornamento) che l'utente possiede su quei membri.
 

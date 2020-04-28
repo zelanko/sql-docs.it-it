@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175640"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (PowerPivot per SharePoint)
@@ -39,13 +39,12 @@ ms.locfileid: "78175640"
 
  [Aggiungere il tipo di contenuto del feed di dati a qualsiasi libreria](#addtolib)
 
-##  <a name="prereq"></a> Prerequisiti
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L'integrazione della funzionalità PowerPivot deve essere attiva per i siti per cui si intende creare la libreria di feed di dati. Se il tipo di modello di libreria di feed di dati non è disponibile, la causa più probabile è il mancato rispetto di questo prerequisito. Per ulteriori informazioni, vedere [attivazione dell'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).
+##  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L'integrazione della funzionalità PowerPivot deve essere attiva per i siti per cui si intende creare la libreria di feed di dati. Se il tipo di modello di libreria di feed di dati non è disponibile, la causa più probabile è il mancato rispetto di questo prerequisito. Per ulteriori informazioni, vedere [attivazione dell'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).
 
  Per creare la libreria è necessario essere proprietari del sito.
 
-##  <a name="createlib"></a>Creare una nuova libreria di feed di dati
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a>Creare una nuova libreria di feed di dati
  La creazione di una libreria di feed di dati è il primo passaggio per abilitare i feed di dati per le cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Poiché tramite una libreria di feed di dati vengono fornite pagine dell'applicazione e di gestione per i documenti di servizio dati, è necessario disporre di questa libreria prima di creare un nuovo documento.
 
  Una libreria di feed di dati si basa su un modello predefinito e su un *tipo di contenuto del documento di servizio dati* preconfigurato che consente di definire le proprietà e i comportamenti per un documento di servizio dati.
@@ -64,7 +63,7 @@ ms.locfileid: "78175640"
 
  Dopo avere creato una libreria, è possibile utilizzarla per creare documenti di servizio dati. Per altre informazioni, vedere [usare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).
 
-##  <a name="addtolib"></a>Aggiungere il tipo di contenuto del feed di dati a qualsiasi libreria
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a>Aggiungere il tipo di contenuto del feed di dati a qualsiasi libreria
  Se non si desidera creare una libreria di feed di dati dedicata, ma si desidera creare e gestire documenti di servizio dati da un sito di SharePoint, è possibile aggiungere e configurare manualmente il tipo di contenuto del documento di servizio dati per qualsiasi libreria che si utilizzerà per condividere i file del documento di servizio dati (con estensione atomsvc).
 
  È necessario disporre almeno dell'autorizzazione Gestione elenchi per aggiungere e configurare un tipo di contenuto. Questa autorizzazione viene compilata nel livello di autorizzazione Progettazione e superiore.

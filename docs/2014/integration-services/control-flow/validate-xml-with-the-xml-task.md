@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176501"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -116,9 +116,9 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  Ecco il risultato in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] della seconda query di esempio illustrata nel testo precedente.
 
- ![Errori XML di query su gruppo in Management Studio](../media/queryforxmlerrors.jpg "Query per raggruppare gli errori XML in Management Studio")
+ ![Errori XML di query su gruppo in Management Studio](../media/queryforxmlerrors.jpg "Errori XML di query su gruppo in Management Studio")
 
 ## <a name="see-also"></a>Vedere anche
- [](xml-task.md) [Editor attività xml attività XML &#40;pagina generale&#41;](../xml-task-editor-general-page.md)
+ [XML Task](xml-task.md) [Editor attività xml attività XML &#40;pagina generale&#41;](../xml-task-editor-general-page.md)
 
 

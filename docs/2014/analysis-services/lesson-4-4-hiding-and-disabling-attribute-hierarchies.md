@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175320"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Come nascondere e disabilitare le gerarchie degli attributi
@@ -49,25 +49,25 @@ ms.locfileid: "78175320"
 
 2.  Verificare che le seguenti gerarchie degli attributi vengano visualizzate nell'elenco **Gerarchia** :
 
-    -   **Tariffa di base**
+    -   **Base Rate**
 
-    -   **Data di nascita**
+    -   **Birth Date**
 
     -   **ID di accesso**
 
-    -   **SSN responsabile**
+    -   **Manager SSN**
 
     -   **SSN**
 
 3.  Passare alla scheda **Struttura dimensione** , quindi selezionare gli attributi seguenti nel riquadro **Attributi** . Per selezionare più misure, fare clic su ognuna di esse tenendo premuto CTRL:
 
-    -   **Tariffa di base**
+    -   **Base Rate**
 
-    -   **Data di nascita**
+    -   **Birth Date**
 
     -   **ID di accesso**
 
-    -   **SSN responsabile**
+    -   **Manager SSN**
 
     -   **SSN**
 
@@ -93,13 +93,13 @@ ms.locfileid: "78175320"
 
     -   **Nome completo**
 
-    -   **Cap**
+    -   **Postal Code**
 
 3.  Passare alla scheda **Struttura dimensione** e quindi selezionare gli attributi nel riquadro **Attributi** utilizzando CTRL per selezionare più attributi contemporaneamente.
 
     -   **Nome completo**
 
-    -   **Cap**
+    -   **Postal Code**
 
 4.  Nella finestra Proprietà impostare il valore della proprietà **AttributeHierarchyVisible** su **False** per gli attributi selezionati.
 

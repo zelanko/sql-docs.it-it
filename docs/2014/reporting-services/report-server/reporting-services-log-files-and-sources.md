@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3908c39fc6deba57bf8f0e277918e5b8167f4a77
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177187"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>File di log e origini di Reporting Services
@@ -40,7 +40,7 @@ ms.locfileid: "78177187"
 |[Registro applicazioni di Windows](windows-application-log.md)|Il registro applicazioni di Microsoft Windows contiene informazioni sugli eventi del server di report.|
 |Log delle prestazioni di Windows|I log delle prestazioni di Windows contengono dati sulle prestazioni del server di report. L'utente può creare registri di prestazioni e scegliere i contatori in base ai dati che desidera raccogliere. Per altre informazioni, vedere [Monitoraggio delle prestazioni del server di report](monitoring-report-server-performance.md).|
 |File di log del programma di installazione|File di log vengono inoltre creati durante l'installazione. Se il programma di installazione non viene completato oppure se viene completato ma vengono visualizzati avvisi o altri messaggi, è possibile esaminare i file di log per risolvere il problema. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|
-|log di IIS|File di log creati da Microsoft Internet Information Services (IIS). Per ulteriori informazioni, vedere [come abilitare la registrazione in Internet Information Services (IIS)](https://support.microsoft.com/kb/313437).|
+|Log IIS|File di log creati da Microsoft Internet Information Services (IIS). Per ulteriori informazioni, vedere [come abilitare la registrazione in Internet Information Services (IIS)](https://support.microsoft.com/kb/313437).|
 |Video|Visualizzare un breve video che illustra l'uso di Microsoft Power Query per visualizzare i file di log di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .<br /><br /> ![visualizzare un video sui log di Power Query e SSRS](../media/generic-video-thumbnail.png "visualizzare un video sui log di Power Query e SSRS")|
 
 ## <a name="see-also"></a>Vedere anche

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176070"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "78176070"
 
  ![Membri consolidati MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Membri consolidati MDS")
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
  Per eseguire questa procedura:
 
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .
@@ -45,7 +45,7 @@ ms.locfileid: "78176070"
 
 5.  Sopra la griglia, selezionare l'opzione **Membri consolidati** o **Tutti i membri consolidati nella gerarchia** .
 
-6.  Scegliere **Aggiungi**.
+6.  Fare clic su **Aggiungi**.
 
 7.  Nel riquadro sulla destra, completare i campi.
 

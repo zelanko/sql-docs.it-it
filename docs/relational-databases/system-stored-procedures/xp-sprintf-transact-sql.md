@@ -18,10 +18,10 @@ ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75831761"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
@@ -40,16 +40,16 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *stringa*  
+ *string*  
  Variabile **varchar** che riceve l'output.  
   
  OUTPUT  
  Se si specifica questo argomento, il valore della variabile viene inserito nel parametro di output.  
   
- *formato*  
+ *format*  
  È una stringa di caratteri di formato con segnaposto per i valori di *argomento* , simile a quello supportato dalla funzione **sprintf** del linguaggio C. Attualmente è supportato solo l'argomento di formato %.  
   
- *argomento*  
+ *argument*  
  Stringa di caratteri che rappresenta il valore dell'argomento di formato corrispondente.  
   
  *n*  
@@ -67,7 +67,7 @@ xp_sprintf { string OUTPUT , format }
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   

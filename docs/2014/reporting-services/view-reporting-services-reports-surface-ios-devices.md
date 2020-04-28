@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174850"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Visualizzare i report Reporting Services su dispositivi Microsoft Surface e Apple iOS
@@ -47,16 +47,16 @@ ms.locfileid: "78174850"
 
 2.  Aprire il report effettuando una delle operazioni seguenti.
 
-    -   **Inizia dalla posta elettronica:** Da un messaggio di posta elettronica creato da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] una sottoscrizione di, toccare l'URL del report. Il report verrà aperto nel browser.
+    -   **Avvio dalla posta elettronica:** in un messaggio di posta elettronica creato da una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , toccare l'URL del report. Il report verrà aperto nel browser.
 
-    -   **Avvio dal server di report:** Esplorare la directory nel server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] di report, quindi toccare il nome del report per aprirlo.
+    -   **Avvio dal server di report:** passare alla directory nel server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quindi toccare il nome del report per aprirlo.
 
-    -   **Iniziare da una raccolta documenti di SharePoint:** Passare a una raccolta documenti di SharePoint che [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contiene report, quindi toccare il nome del report. È possibile visualizzare e interagire con il report.
+    -   **Avvio da una raccolta documenti di SharePoint:** selezionare una raccolta documenti di SharePoint in cui sono contenuti i report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quindi toccare il nome del report. È possibile visualizzare e interagire con il report.
 
         > [!IMPORTANT]
-        >  Per l'iPad, verificare che la proprietà **esplorazione privata** per Safari sia spenta.
+        >   Per l'iPad, verificare che la proprietà relativa all'esplorazione privata per Safari sia disabilitata **.**
 
-    -   **Web part di SharePoint:** Se la Web part è stata aggiunta a una pagina di SharePoint, è possibile [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] visualizzare i report.
+    -   **Web part di SharePoint:** se la Web part è stata aggiunta a una pagina di SharePoint, è possibile visualizzare i report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .
 
 3.  Sul dispositivo Microsoft Surface è inoltre possibile aprire il report utilizzando Gestione report. Sfogliare la directory in Gestione report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quindi toccare il nome del report per aprirlo.
 
@@ -105,7 +105,7 @@ ms.locfileid: "78174850"
 
         -   Se si Visualizza il report in un iPad, è possibile esportare il report come file TIFF o PDF.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticazione
  L'autenticazione RSWindowsNTLM e l'autenticazione RSWindowsBasic possono essere utilizzate con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa e con iPad.
 
  In genere, è consigliabile non utilizzare RSWindowsBasic in ambienti non https, poiché questo tipo di autenticazione non offre riservatezza per le credenziali trasmesse.

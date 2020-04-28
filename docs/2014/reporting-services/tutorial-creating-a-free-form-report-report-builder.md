@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaa5729c47c66e40b62cddc6bfcef1ba2ec84bdf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175021"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
@@ -22,8 +22,8 @@ ms.locfileid: "78175021"
 
  Il report creato in questa esercitazione si basa su dati di vendita di esempio inclusi nell'esercitazione. Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Come base per il report in formato libero si utilizzerà l'area dati elenco e si aggiungerà quindi un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.
 
-##  <a name="BackToTop"></a>Cosa si apprenderà
- In questa esercitazione si apprenderà come eseguire le operazioni seguenti:
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Cosa si apprenderà
+ In questa esercitazione verranno illustrate le operazioni seguenti:
 
 -   [Creare un report vuoto, un'origine dati e un set di dati](#BlankReport)
 
@@ -50,7 +50,7 @@ ms.locfileid: "78175021"
 ## <a name="requirements"></a>Requisiti
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).
 
-##  <a name="BlankReport"></a>1. creare un report vuoto, un'origine dati e un set di dati
+##  <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. creare un report vuoto, un'origine dati e un set di dati
 
 > [!NOTE]
 >  Per evitare che nel report sia necessaria un'origine dati esterna, nella query di questa esercitazione sono inclusi i valori dei dati. L'uso di questo tipo di dati interni è molto utile ai fini dell'apprendimento, ma tale approccio rende la query piuttosto lunga. .
@@ -84,7 +84,7 @@ ms.locfileid: "78175021"
 
 #### <a name="to-create-a-new-dataset"></a>Per creare un nuovo set di dati
 
-1.  Nel riquadro dei dati del report fare clic su **nuovo**, quindi su **set**di dati.
+1.  Nel riquadro dei dati del report fare clic su **Nuovo**, quindi su **Set di dati**.
 
 2.  Nella `Name` casella digitare: **ListDataset.**
 
@@ -92,7 +92,7 @@ ms.locfileid: "78175021"
 
 4.  Verificare che il tipo di query **Testo** sia selezionato, quindi fare clic su **Progettazione query**.
 
-5.  Fare clic su **modifica come testo**.
+5.  Fare clic su **Modifica come testo**.
 
 6.  Copiare e incollare la query seguente nel relativo riquadro:
 
@@ -137,9 +137,8 @@ ms.locfileid: "78175021"
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="List"></a>2. aggiungere e configurare un elenco
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce tre modelli di area dati, ovvero tabella, matrice ed elenco. Questi modelli sono tutti basati su un area dati Tablix.
+##  <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. aggiungere e configurare un elenco
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce tre modelli di area dati, ovvero tabella, matrice ed elenco. Questi modelli sono tutti basati su un area dati Tablix.
 
  In questa esercitazione si userà un elenco per visualizzare le informazioni sulle vendite per i territori di vendita in un report simile a un notiziario. Le informazioni vengono raggruppate per territorio. Si aggiungerà un nuovo gruppo di righe per il raggruppamento dei dati per territorio e si eliminerà quindi il gruppo di righe Dettagli incorporato. Il modello di elenco è ideale per la creazione di report in formato libero. Per ulteriori informazioni, vedere la pagina relativa agli [elenchi &#40;Generatore report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).
 
@@ -194,7 +193,7 @@ ms.locfileid: "78175021"
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="Graphics"></a>3. aggiungere elementi grafici
+##  <a name="3-add-graphics"></a><a name="Graphics"></a>3. aggiungere elementi grafici
  Uno dei vantaggi offerti da un'area dati elenco consiste nella possibilità di aggiungere elementi del report, quali rettangoli e caselle di testo, in qualsiasi posizione, anziché essere limitati a un layout tabulare. L'aggiunta di un elemento grafico, ad esempio un rettangolo colorato, conferirà al report un aspetto più gradevole.
 
 #### <a name="to-add-graphic-elements-to-the-report"></a>Per aggiungere elementi grafici al report
@@ -215,7 +214,7 @@ ms.locfileid: "78175021"
 
  Nella parte sinistra del report è ora presente un elemento grafico verticale costituito da un rettangolo di colore grigio scuro.
 
-##  <a name="Text"></a>4. aggiungere testo in formato libero
+##  <a name="4-add-free-form-text"></a><a name="Text"></a>4. aggiungere testo in formato libero
  Una casella di testo contiene testo statico ripetuto in ogni pagina del report, nonché campi dati.
 
 #### <a name="to-add-text-to-the-report"></a>Per aggiungere testo al report
@@ -320,7 +319,7 @@ ms.locfileid: "78175021"
 
  ![Anteprima della newsletter](../../2014/tutorials/media/tutorial-newsletters.png "Anteprima della newsletter")
 
-##  <a name="Table"></a>5. aggiungere una tabella per visualizzare i dettagli delle vendite
+##  <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. aggiungere una tabella per visualizzare i dettagli delle vendite
  Utilizzare la procedura guidata Nuova tabella o matrice per aggiungere una tabella al report in formato libero. Dopo avere completato la procedura guidata, si aggiungerà manualmente una riga per i totali.
 
 #### <a name="to-add-a-table"></a>Per aggiungere una tabella
@@ -362,7 +361,7 @@ ms.locfileid: "78175021"
 
  ![Totali vendite nel report](../../2014/tutorials/media/tutorial-reportsalestotals.png "Totali vendite nel report")
 
-##  <a name="Format"></a>6. formattare i dati
+##  <a name="6-format-data"></a><a name="Format"></a>6. formattare i dati
  Formattare solo i dati numerici come valuta e le date come giorno e ora.
 
 #### <a name="to-format-fields-table"></a>Per formattare la tabella dei campi
@@ -381,14 +380,14 @@ ms.locfileid: "78175021"
 
  ![Formatta totali vendite nel report](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "Formatta totali vendite nel report")
 
-##  <a name="Save"></a>7. salvare il report
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. salvare il report
  È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale. È anche possibile esportare il report in diversi formati, ad esempio Word e PDF, eseguendo il report e scegliendo il formato dal menu **Esporta** .
 
  In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.
 
 #### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report
 
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.
 
 2.  Fare clic su **Siti e server recenti**.
 
@@ -404,7 +403,7 @@ ms.locfileid: "78175021"
 
 #### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer
 
-1.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.
+1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.
 
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.
 
@@ -412,7 +411,7 @@ ms.locfileid: "78175021"
 
 4.  Fare clic su **Salva**.
 
-##  <a name="Line"></a>8. (facoltativo) aggiungere una linea per separare le aree del report
+##  <a name="8-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>8. (facoltativo) aggiungere una linea per separare le aree del report
  Aggiungere una linea per separare l'area editoriale da quella dei dettagli del report.
 
 #### <a name="to-add-a-line"></a>Per aggiungere una linea
@@ -431,7 +430,7 @@ ms.locfileid: "78175021"
 
      ![Aggiungi riga al report](../../2014/tutorials/media/tutorial-reportwithline.png "Aggiungi riga al report")
 
-##  <a name="Visualization"></a>9. (facoltativo) aggiungere la visualizzazione dei dati di riepilogo
+##  <a name="9-optional-add-summary-data-visualization"></a><a name="Visualization"></a>9. (facoltativo) aggiungere la visualizzazione dei dati di riepilogo
  I rettangoli consentono di controllare la modalità di rendering del report. Posizionare un grafico a torta e un istogramma all'interno di un rettangolo per essere certi che il rendering del report venga eseguito nel modo desiderato.
 
 #### <a name="to-add-a-rectangle"></a>Per aggiungere un rettangolo
@@ -476,7 +475,7 @@ ms.locfileid: "78175021"
 
 1.  In **Visualizzazioni dati** nella scheda **Inserisci** della barra multifunzione fare clic su **Grafico** , quindi su **Creazione guidata grafico**.
 
-2.  Nella pagina **scegliere un set di dati** fare clic su **ListDataset**, quindi su **Avanti**.
+2.  Nella pagina **Scegliere un set di dati** fare clic su **ListDataset**, quindi su **Avanti**.
 
 3.  Fare clic su **Colonna**, quindi su **Avanti**.
 

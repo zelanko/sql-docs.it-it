@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176681"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-  
   `CompoundCurve` è una raccolta di zero o più istanze `CircularString` o `LineString` continue di tipo geometry o geography.
 
 > [!IMPORTANT]
@@ -42,7 +41,7 @@ ms.locfileid: "78176681"
 
 1.  Tutte le istanze contenute nell'istanza `CompoundCurve` sono istanze di segmenti di arco circolare accettate. Per altre informazioni sulle istanze di segmenti di arco circolare accettate, vedere [LineString](linestring.md) e [CircularString](circularstring.md).
 
-2.  Tutti i segmenti di arco circolare nell'istanza `CompoundCurve` sono connessi. Il primo punto per ogni segmento di arco circolare successivo è uguale all'ultimo punto del segmento di arco circolare precedente.
+2.  Tutti i segmenti di arco circolare nell'istanza `CompoundCurve` sono connessi. Il primo punto di ogni segmento di arco circolare successivo è uguale all'ultimo punto del segmento di arco circolare precedente.
 
     > [!NOTE]
     >  Sono incluse le coordinate Z e M. È quindi necessario che tutte e quattro le coordinate X, Y, Z e M siano uguali.
@@ -80,8 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- 
-  `@g3` è valida perché l'istanza `CircularString` è valida. Per ulteriori informazioni sulla validità dell' `CircularString` istanza, vedere [CircularString](circularstring.md).
+ `@g3` è valida perché l'istanza `CircularString` è valida. Per ulteriori informazioni sulla validità dell' `CircularString` istanza, vedere [CircularString](circularstring.md).
 
  Nell'esempio seguente vengono illustrate le istanze `CompoundCurve` non valide.
 
@@ -92,10 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` non è valida perché la seconda istanza non è un'istanza LineString valida. 
-  `@g2` non è valida perché l'istanza `LineString` non è valida. 
-  `@g3` non è valida perché l'istanza `CircularString` non è valida. Per ulteriori informazioni sulle istanze `CircularString` di `LineString` e valide, vedere [CircularString](circularstring.md) e [LineString](linestring.md).
+ `@g1` non è valida perché la seconda istanza non è un'istanza LineString valida. `@g2` non è valida perché l'istanza `LineString` non è valida. `@g3` non è valida perché l'istanza `CircularString` non è valida. Per ulteriori informazioni sulle istanze `CircularString` di `LineString` e valide, vedere [CircularString](circularstring.md) e [LineString](linestring.md).
 
 ## <a name="examples"></a>Esempi
 

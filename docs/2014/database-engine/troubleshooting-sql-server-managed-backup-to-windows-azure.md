@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929441"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Azure
@@ -33,8 +33,7 @@ ms.locfileid: "76929441"
   
 1.  Abilitare la notifica tramite posta elettronica per iniziare a ricevere messaggi di posta elettronica per errori e avvisi.  
   
-     In alternativa, è anche possibile eseguire periodicamente `smart_admin.fn_get_health_status` per controllare gli errori e i conteggi aggregati. Ad esempio, `number_of_invalid_credential_errors` rappresenta il numero di volte in cui il backup intelligente ha tentato di eseguire un backup ma è stato restituito un errore di credenziali non valide. 
-  `Number_of_backup_loops` e `number_of_retention_loops` non sono errori; ma indicano il numero di volte in cui il thread di backup e il thread di memorizzazione hanno analizzato l'elenco di database. In genere, @begin_time quando @end_time e non vengono specificati, la funzione Visualizza le informazioni degli ultimi 30 minuti, quindi in genere è necessario visualizzare i valori diversi da zero per queste due colonne. Se vengono visualizzati valori pari a zero, significa che si è verificato un overload del sistema o che il sistema non risponde. Per ulteriori informazioni, vedere la sezione **risoluzione dei problemi di sistema** più avanti in questo argomento.  
+     In alternativa, è anche possibile eseguire periodicamente `smart_admin.fn_get_health_status` per controllare gli errori e i conteggi aggregati. Ad esempio, `number_of_invalid_credential_errors` rappresenta il numero di volte in cui il backup intelligente ha tentato di eseguire un backup ma è stato restituito un errore di credenziali non valide. `Number_of_backup_loops` e `number_of_retention_loops` non sono errori; ma indicano il numero di volte in cui il thread di backup e il thread di memorizzazione hanno analizzato l'elenco di database. In genere, @begin_time quando @end_time e non vengono specificati, la funzione Visualizza le informazioni degli ultimi 30 minuti, quindi in genere è necessario visualizzare i valori diversi da zero per queste due colonne. Se vengono visualizzati valori pari a zero, significa che si è verificato un overload del sistema o che il sistema non risponde. Per ulteriori informazioni, vedere la sezione **risoluzione dei problemi di sistema** più avanti in questo argomento.  
   
 2.  Esaminare i registri eventi estesi per ulteriori dettagli sugli errori e altri eventi associati.  
   
@@ -59,8 +58,7 @@ ms.locfileid: "76929441"
   
      Errore: "non è stato possibile accedere all'URL di archiviazione... Specificare una credenziale SQL valida... ": è possibile che venga visualizzato questo e altri errori simili che fanno riferimento a credenziali SQL.  In questi casi, esaminare il nome delle credenziali SQL fornite, nonché le informazioni archiviate nelle credenziali SQL, ovvero il nome dell'account di archiviazione e la chiave di accesso alle archiviazioni e verificare che siano correnti e valide.  
   
-     Errore: "... Impossibile configurare il database... Poiché si tratta di un database di sistema, questo errore viene visualizzato se si tenta di abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di sistema.  
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non supporta i backup per i database di sistema.  Per configurare il backup di un database di sistema, utilizzare altre tecnologie di backup di SQL Server, ad esempio i piani di manutenzione.  
+     Errore: "... Impossibile configurare il database... Poiché si tratta di un database di sistema, questo errore viene visualizzato se si tenta di abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di sistema.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non supporta i backup per i database di sistema.  Per configurare il backup di un database di sistema, utilizzare altre tecnologie di backup di SQL Server, ad esempio i piani di manutenzione.  
   
      Errore: "... Fornire un periodo di conservazione.... ": è possibile che vengano visualizzati errori relativi al periodo di conservazione se non è stato specificato un periodo di conservazione per il database o l'istanza quando si configurano questi valori per la prima volta. È inoltre possibile visualizzare un errore se si immette un valore diverso da un numero compreso tra 1 e 30. Il valore consentito per il periodo di memorizzazione è un numero compreso tra 1 e 30.  
   

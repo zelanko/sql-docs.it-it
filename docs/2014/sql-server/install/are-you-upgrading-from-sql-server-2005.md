@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656578"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Aggiornamento da SQL Server 2005
@@ -39,7 +39,7 @@ ms.locfileid: "75656578"
 |Opzione di archiviazione relazionale|Vantaggi|Altri fattori da considerare|  
 |-------------------------------|--------------|-------------------------------|  
 |**SQL Server locale**<br /><br /> Prendere in considerazione questa opzione per le applicazioni di database di qualsiasi tipo, dai sistemi transazionali ai data warehouse.<br /><br /> Per ulteriori informazioni, vedere [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|Si ha un maggiore controllo sulle funzionalità e la scalabilità perché vengono gestiti sia l'hardware che il software.<br /><br /> Se si sta eseguendo l'aggiornamento da SQL Server 2005, questo è l'ambiente più simile.|L'investimento iniziale è elevato ed è necessaria una gestione continua perché è necessario acquistare, mantenere e gestire il proprio hardware e software.|  
-|**SQL Server ospitate in macchine virtuali di Azure**<br /><br /> Prendere in considerazione questa opzione se si hanno le esigenze seguenti.<br />-Vantaggi della migrazione a un ambiente ospitato.<br />-Controllo sull'ambiente operativo.<br />-Set di funzionalità familiare di SQL Server.<br /><br /> Per altre informazioni, vedere [SQL Server in Panoramica di macchine virtuali di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Per informazioni sulla migrazione, vedere [Eseguire la migrazione di un database di SQL Server a SQL Server in una macchina virtuale di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|È possibile eseguire rapidamente la distribuzione da una libreria di immagini della macchina virtuale.<br /><br /> Viene fornito il set di funzionalità completo di SQL Server.<br /><br /> Si risparmiano i costi per l'hardware e il software del server. Si paga per ora in base all'utilizzo.|È necessario configurare e gestire sia SQL Server che il software del sistema operativo.|  
+|**SQL Server ospitato in macchine virtuali di Azure**<br /><br /> Prendere in considerazione questa opzione se si hanno le esigenze seguenti.<br />-Vantaggi della migrazione a un ambiente ospitato.<br />-Controllo sull'ambiente operativo.<br />-Set di funzionalità familiare di SQL Server.<br /><br /> Per altre informazioni, vedere [SQL Server in Panoramica di macchine virtuali di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Per informazioni sulla migrazione, vedere [Eseguire la migrazione di un database di SQL Server a SQL Server in una macchina virtuale di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|È possibile eseguire rapidamente la distribuzione da una libreria di immagini della macchina virtuale.<br /><br /> Viene fornito il set di funzionalità completo di SQL Server.<br /><br /> Si risparmiano i costi per l'hardware e il software del server. Si paga per ora in base all'utilizzo.|È necessario configurare e gestire sia SQL Server che il software del sistema operativo.|  
 |**Servizio di database ospitato nel database SQL di Azure**<br /><br /> Prendere in considerazione questa opzione se si preferisce una soluzione a basso costo che necessita di poca manutenzione.<br /><br /> Questa opzione è particolarmente adatta per le app che non richiedono una capacità costante o che devono fornire un accesso esterno.<br /><br /> Per altre informazioni, vedere [database SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Per informazioni sulla migrazione, vedere [migrazione di un database di SQL Server al database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|La distribuzione è rapida e la scalabilità verticale semplice.<br /><br /> Si paga per ora in base all'utilizzo.<br /><br /> Il costo del servizio include anche la disponibilità elevata e i backup automatici, oltre all'archiviazione.|Il database SQL di Azure non offre alcune delle funzionalità di SQL Server non applicabili a un ambiente cloud ospitato. Per altre informazioni, vedere [Differenze di Transact-SQL del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Anche le dimensioni massime del database SQL di Azure sono di 500 GB, invece dei 524 PB di SQL Server.|  
   
  Per alcuni dati e applicazioni si può valutare anche una soluzione non relazionale o NoSQL.  
@@ -57,11 +57,11 @@ ms.locfileid: "75656578"
   
 -   Per informazioni su come pianificare l'aggiornamento, vedere la serie seguente di post di blog del team di SQL Server.  
   
-    -   [Pianificazione di un aggiornamento efficiente da SQL Server 2005: passaggio 1 di 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Pianificazione di un aggiornamento efficiente da SQL Server 2005: Passaggio 1 di 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [Pianificazione di un aggiornamento efficiente da SQL Server 2005: passaggio 2 di 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Pianificazione di un aggiornamento efficiente da SQL Server 2005: Passaggio 2 di 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [Pianificazione di un aggiornamento efficiente da SQL Server 2005: passaggio 3 di 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Pianificazione di un aggiornamento efficiente da SQL Server 2005: Passaggio 3 di 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   Esaminare i requisiti e le considerazioni in [pianificazione di un'installazione di SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md), inclusi i [requisiti hardware e software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   

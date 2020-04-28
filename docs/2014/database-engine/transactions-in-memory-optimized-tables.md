@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175411"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
@@ -82,7 +82,7 @@ Durata di una transazione che accede a tabelle ottimizzate per la memoria.
 
  Questo errore elimina la transazione, anche se XACT_ABORT è impostata su OFF, pertanto verrà eseguito il rollback della transazione al termine della sessione utente. Non è possibile eseguire il commit delle transazioni eliminate e tali transazioni supportano solo le operazioni di lettura che non scrivono nel log e non accedono alle tabelle ottimizzate per la memoria.
 
-#####  <a name="cd"></a>Dipendenze di commit
+#####  <a name="commit-dependencies"></a><a name="cd"></a>Dipendenze di commit
  Durante l'elaborazione regolare, una transazione è in grado di leggere le righe scritte da altre transazioni che si trovano nella fase di convalida o di commit, ma per le quali il commit non è ancora stato eseguito. Le righe sono visibili perché l'ora di fine logica delle transazioni è stata assegnata all'avvio della fase di convalida.
 
  Se una transazione legge tali righe di cui non è stato eseguito il commit, acquisirà una dipendenza di commit da tale transazione, con due implicazioni principali:

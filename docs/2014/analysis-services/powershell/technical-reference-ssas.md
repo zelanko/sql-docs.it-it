@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0f8ac81762fac418eb1009626038e6b0708476f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175620"
 ---
 # <a name="technical-reference-ssas"></a>Guida di riferimento tecnico (SSAS)
   Individuare gli strumenti, i linguaggi e la documentazione di riferimento di PowerShell per l'utilizzo o l'amministrazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
- ![Icona della cartella file piccola](../../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **** stored [procedure di riferimento per le stored procedure di data mining &#40;Analysis Services-Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)
+ ![Icona della cartella file piccola](../../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Stored Procedure Reference** stored [procedure di riferimento per le stored procedure di data mining &#40;Analysis Services-Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)
 
  ![Icona della cartella file piccola](../../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **errore ed errori di riferimento evento** [e riferimento a eventi &#40;PowerPivot per SharePoint&#41;](../power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md)
 
@@ -36,7 +36,7 @@ ms.locfileid: "78175620"
 
  [Informazioni di riferimento sulle espressioni di analisi dei dati &#40;&#41; DAX](/dax/data-analysis-expressions-dax-reference)
 
- [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)
 
  ![Icona della cartella file piccola icona](../../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **dell'** interfaccia utente riferimento all' [interfaccia utente &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)
 

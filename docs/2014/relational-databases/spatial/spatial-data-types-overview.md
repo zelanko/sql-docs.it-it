@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176651"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
@@ -29,7 +29,7 @@ ms.locfileid: "78176651"
 > [!IMPORTANT]
 >  Per una descrizione dettagliata e alcuni esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui i miglioramenti apportati ai tipi di dati spaziali, scaricare il white paper [Nuove funzionalità spaziali di SQL Server, nome in codice "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407).
 
-##  <a name="objects"></a>Oggetti dati spaziali
+##  <a name="spatial-data-objects"></a><a name="objects"></a>Oggetti dati spaziali
  I tipi di dati `geometry` e `geography` supportano sedici oggetti dati spaziali o tipi di istanza. Solo per undici di questi tipi di istanza, tuttavia, è possibile *creare istanze*. È possibile creare e usare queste istanze (o crearne un'istanza) in un database. Queste istanze derivano determinate proprietà dai relativi tipi di dati padre che li `Points`distinguono come, **LineStrings, istanze CircularString** `CompoundCurves`,, `Polygons` `CurvePolygons` o `geometry` come `geography` più istanze o `GeometryCollection`in un oggetto. Il tipo `Geography` dispone di un tipo di istanza aggiuntivo, `FullGlobe`.
 
  Nella figura seguente viene illustrata la gerarchia `geometry` sulla quale si basano i tipi di dati `geometry` e `geography`. I tipi istanziabile di `geometry` e `geography` sono indicati in blu.
@@ -65,7 +65,7 @@ ms.locfileid: "78176651"
 -   [GeometryCollection](../spatial/geometrycollection.md)
 
 
-##  <a name="differences"></a>Differenze tra i tipi di dati geometry e geography
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Differenze tra i tipi di dati geometry e geography
  I due tipi di dati spaziali si comportano spesso in modo simile, ma esistono alcune differenze fondamentali nel modo in cui i dati vengono archiviati e modificati.
 
 ### <a name="how-connecting-edges-are-defined"></a>Definizione dei bordi di collegamento
@@ -92,20 +92,19 @@ ms.locfileid: "78176651"
 
 -   I `geography` metodi con tipo di dati che richiedono l'input `geography` di due istanze, ad esempio STIntersection (), STUnion (), STDifference () e STSymDifference (), restituiranno null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.
 
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]`FullGlobe` è un tipo speciale di Polygon che copre l'intero globo. 
-  `FullGlobe` dispone di un'area, ma non ha bordi o vertici.
+ In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]`FullGlobe` è un tipo speciale di Polygon che copre l'intero globo. `FullGlobe` dispone di un'area, ma non ha bordi o vertici.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anelli interni ed esterni non rilevanti nel tipo di dati geography
  In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è molto utile [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` per il tipo di dati. qualsiasi anello di un poligono può essere considerato come l'anello esterno.
 
  Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di seguito:
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 1- Architettura comune)
 
--   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 2 - Opzioni SQL)
+-   [Specifiche OGC, accesso semplificato alle funzionalità-parte 2-opzioni SQL](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
-##  <a name="circular"></a>Segmenti di arco circolare
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segmenti di arco circolare
  Tre tipi di cui è possibile creare istanze possono accettare segmenti di arco circolare: `CircularString`, `CompoundCurve` e `CurvePolygon`.  Un segmento di arco circolare è definito da tre punti in un piano bidimensionale. Il terzo punto non può corrispondere al primo punto.
 
  Nelle figure A e B vengono illustrati segmenti di arco circolare tipici. Si noti come ognuno dei tre punti giace sul perimetro di un cerchio.

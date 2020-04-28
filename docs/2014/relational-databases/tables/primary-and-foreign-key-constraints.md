@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176815"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
@@ -33,7 +33,7 @@ ms.locfileid: "78176815"
 
  [Attività correlate](../tables/primary-and-foreign-key-constraints.md#Tasks)
 
-##  <a name="PKeys"></a> Vincoli di chiave primaria
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> Vincoli di chiave primaria
  Una tabella include in genere una colonna o una combinazione di colonne i cui valori identificano in modo univoco ogni riga della tabella. Queste colonne sono denominate chiave primaria e garantiscono l'integrità di entità della tabella. Poiché i vincoli di chiave primaria garantiscono l'univocità dei dati, vengono spesso definiti per la colonna Identity.
 
  Quando si specifica un vincolo di chiave primaria per una tabella, [!INCLUDE[ssDE](../../includes/ssde-md.md)] assicura l'univocità dei dati creando automaticamente un indice univoco per le colonne chiave primaria. Questo indice consente inoltre di accedere rapidamente ai dati quando si utilizza la chiave primaria nelle query. Se un vincolo di chiave primaria viene definito per più colonne, possono essere presenti valori duplicati nella stessa colonna, ma ogni combinazione di valori di tutte le colonne nella definizione del vincolo di chiave primaria deve essere univoca.
@@ -54,7 +54,7 @@ ms.locfileid: "78176815"
 
 -   Se si definisce una chiave primaria in una colonna di tipo CLR definito dall'utente, è necessario che l'implementazione del tipo supporti l'ordinamento binario.
 
-##  <a name="FKeys"></a> Foreign Key Constraints
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints
  Per chiave esterna si intende una colonna o combinazione di colonne utilizzata per stabilire e applicare un collegamento tra i dati di due tabelle per controllare i dati che possono essere archiviati nella tabella della chiave esterna. In un riferimento a una chiave esterna viene creato un collegamento tra tabelle quando le colonne contenenti il valore della chiave primaria per una tabella vengono utilizzate come riferimento dalle colonne di un'altra tabella. Questa colonna diventa una chiave esterna nella seconda tabella.
 
  Nella tabella **Sales.SalesOrderHeader** , ad esempio, è incluso un collegamento di chiave esterna alla tabella **Sales.SalesPerson** , in quanto esiste una relazione logica tra gli ordini di vendita e i venditori. La colonna **SalesPersonID** della tabella **SalesOrderHeader** corrisponde alla colonna chiave primaria della tabella **SalesPerson** . La colonna **SalesPersonID** della tabella **SalesOrderHeader** rappresenta la chiave esterna alla tabella **SalesPerson** . Creando questa relazione di chiave esterna, non è possibile inserire un valore per **SalesPersonID** nella tabella **SalesOrderHeader** se non esiste già nella tabella **SalesPerson** .
@@ -103,19 +103,19 @@ ms.locfileid: "78176815"
 
 -   Una tabella in cui è presente un trigger INSTEAD OF non può inoltre includere un clausola REFERENCES che specifica un'operazione di propagazione. Un trigger AFTER in una tabella di destinazione di un'operazione di propagazione può tuttavia eseguire un'istruzione INSERT, UPDATE o DELETE su un'altra tabella o vista che attiva un trigger INSTEAD OF definito nell'oggetto specifico.
 
-##  <a name="Tasks"></a> Attività correlate
+##  <a name="related-tasks"></a><a name="Tasks"></a> Attività correlate
  Nella tabella seguente vengono elencate le attività comuni associate a vincoli di chiave primaria e di chiave esterna.
 
 |Attività|Argomento|
 |----------|-----------|
 |Viene descritto come creare una chiave primaria.|[Creazione di chiavi primarie](../tables/create-primary-keys.md)|
 |Si descrive come eliminare una chiave primaria.|[Eliminazione di chiavi primarie](../tables/delete-primary-keys.md)|
-|Si descrive come modificare una chiave primaria.|[Modifica di chiavi primarie](../tables/modify-primary-keys.md)|
+|Si descrive come modificare una chiave primaria.|[Modificare chiavi primarie](../tables/modify-primary-keys.md)|
 |Si descrive come creare relazioni di chiave esterna|[Creare relazioni di chiave esterna](../tables/create-foreign-key-relationships.md)|
 |Si descrive come modificare relazioni di chiave esterna.|[Modifica di relazioni di chiave esterna](../tables/modify-foreign-key-relationships.md)|
-|Si descrive come eliminare relazioni di chiave esterna.|[Eliminazione di relazioni di chiave esterna](../tables/delete-foreign-key-relationships.md)|
-|Viene descritto come visualizzare le proprietà di chiave esterna.|[Visualizzare Proprietà di chiave esterna](../tables/view-foreign-key-properties.md)|
+|Si descrive come eliminare relazioni di chiave esterna.|[Eliminare relazioni di chiave esterna](../tables/delete-foreign-key-relationships.md)|
+|Viene descritto come visualizzare le proprietà di chiave esterna.|[Visualizzare proprietà di chiave esterna](../tables/view-foreign-key-properties.md)|
 |Viene descritto come disabilitare vincoli di chiave esterna per la replica.|[Disabilitare i vincoli di chiave esterna per la replica](../tables/disable-foreign-key-constraints-for-replication.md)|
-|Viene descritto come disabilitare un vincolo di chiave esterna durante l'istruzione INSERT o UPDATE.|[Disabilitazione di vincoli di chiave esterna con le istruzioni INSERT e UPDATE](../tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|
+|Viene descritto come disabilitare un vincolo di chiave esterna durante l'istruzione INSERT o UPDATE.|[Disabilitare i vincoli di chiave esterna con le istruzioni INSERT e UPDATE](../tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|
 
 

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175720"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
@@ -43,16 +43,13 @@ ms.locfileid: "78175720"
  Oggetti Cube ogni oggetto di database contiene uno o più oggetti Cube. Un cubo è definito dalle relative misure e dimensioni. Le misure e le dimensioni di un cubo derivano dalle tabelle e dalle viste della vista origine dati su cui il cubo si basa o che viene generata dalle definizioni delle misure e delle dimensioni.
 
 ## <a name="object-inheritance"></a>Ereditarietà degli oggetti
- Il modello a oggetti ASSL contiene molti gruppi di elementi ripetuti. Il gruppo di elementi "`Dimensions` contain `Hierarchies`", ad esempio, definisce la gerarchia di dimensione di un elemento. 
-  `Cubes` e `MeasureGroups` contengono entrambi il gruppo di elementi "`Dimensions` contain `Hierarchies`".
+ Il modello a oggetti ASSL contiene molti gruppi di elementi ripetuti. Il gruppo di elementi "`Dimensions` contain `Hierarchies`", ad esempio, definisce la gerarchia di dimensione di un elemento. `Cubes` e `MeasureGroups` contengono entrambi il gruppo di elementi "`Dimensions` contain `Hierarchies`".
 
- Se non viene sottoposto a override in modo esplicito, un elemento eredita i dettagli di tali gruppi di elementi ripetuti dal livello più elevato. 
-  `Translations` per `CubeDimension` corrisponde ad esempio a `Translations` del relativo elemento predecessore `Cube`.
+ Se non viene sottoposto a override in modo esplicito, un elemento eredita i dettagli di tali gruppi di elementi ripetuti dal livello più elevato. `Translations` per `CubeDimension` corrisponde ad esempio a `Translations` del relativo elemento predecessore `Cube`.
 
  Per eseguire in modo esplicito l'override delle proprietà ereditate da un oggetto di livello superiore, non è necessario che un oggetto ripeta in modo esplicito l'intera struttura e le proprietà dell'oggetto di livello superiore. Un oggetto deve dichiarare in modo esplicito solo le proprietà di cui desidera eseguire l'override. Un oggetto `CubeDimension` può ad esempio elencare solo le proprietà `Hierarchies` da disabilitare in `Cube`, per le quali è necessario modificare la visibilità o per le quali non sono stati specificati alcuni dettagli di `Level` a livello di `Dimension`.
 
- Alcune proprietà specificate per un oggetto forniscono i valori predefiniti per la stessa proprietà in un oggetto figlio o discendente. 
-  `Cube.StorageMode` fornisce ad esempio il valore predefinito per `Partition.StorageMode`. Per i valori predefiniti ereditati, in ASSL vengono applicate le regole per i valori predefiniti ereditati:
+ Alcune proprietà specificate per un oggetto forniscono i valori predefiniti per la stessa proprietà in un oggetto figlio o discendente. `Cube.StorageMode` fornisce ad esempio il valore predefinito per `Partition.StorageMode`. Per i valori predefiniti ereditati, in ASSL vengono applicate le regole per i valori predefiniti ereditati:
 
 -   Quando la proprietà per l'oggetto figlio è Null in XML, il valore ereditato viene utilizzato per impostazione predefinita. Se tuttavia si esegue una query relativa al valore nel server, viene restituito il valore Null dell'elemento XML.
 
@@ -101,7 +98,7 @@ ms.locfileid: "78175720"
 |Livello Route Category nella dimensione Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|
 |Attributo Route nella dimensione Route|air,sea,road,rail|RouteDimensionTable|Route|Sea|
 |Attributo Hemisphere nella dimensione Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Attributo Continent nella dimensione Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europa|
+|Attributo Continent nella dimensione Source|Africa,Asia,AustraliaEuropa,N. America,S. America|SourceDimensionTable|Continent|Europa|
 |Attributo Half nella dimensione Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|
 |Attributo Quarter nella dimensione Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|
 
@@ -124,6 +121,6 @@ ms.locfileid: "78175720"
  Nell'esempio illustrato di seguito viene utilizzata una sola tabella dei fatti. Quando un cubo utilizza più tabelle dei fatti, le misure di ogni tabella dei fatti vengono organizzate in gruppi di misure, ognuno dei quali è correlato a un set di dimensioni specifico mediante le relazioni tra dimensioni definite. Queste relazioni vengono definite specificando le tabelle della vista origine dati coinvolte e il livello di granularità della relazione. **Argomento correlato:**[relazioni tra dimensioni](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Database modello multidimensionale &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
+ [Database modelli multidimensionali &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
 
 

@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176721"
 ---
 # <a name="circularstring"></a>CircularString
-  
   `CircularString` è una raccolta di zero o più segmenti di arco circolare continui. Un segmento di arco circolare è un segmento curvo definito da tre punti su un piano bidimensionale. Il primo punto non può corrispondere al terzo punto. Se tutti e tre i punti di un segmento di arco circolare sono collineari, il segmento di arco verrà gestito come un segmento di linea.
 
 > [!IMPORTANT]
@@ -159,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Cenni preliminari sui tipi di dati spaziali](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;geography data type&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;geometry data type&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;geometry data type&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [STIsValid &#40;geography data type&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [STLength &#40;geometry data](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) Type&#41;STStartPoint [&#40;geometry data type&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) STEndPoint &#40;geometry data type [&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [STPointN &#40;Geometry](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) Data Type&#41;[STNumPoints &#40;Geometry](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) Data Type&#41;[STIsRing &#40;Tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [STPointOnSurface &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [Cenni preliminari sui tipi di dati spaziali](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;geography data type&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;Geometry Data Type&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;geometry data type](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)&#41;STIsValid &#40;[geography data type&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) STLength &#40;Geometry [Data Type&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) Data Type&#41;STEndPoint &#40;Geometry Data Type [&#41;STPointN](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [&#40;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) Geometry Data Type&#41;STNumPoints &#40;Geometry Data Type [&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) [STIsRing &#40;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) Geometry Data Type&#41;[STIsClosed &#40;Geometry](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) data [Type&#41;](linestring.md) [STPointOnSurface &#40;Geometry](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)
 
 

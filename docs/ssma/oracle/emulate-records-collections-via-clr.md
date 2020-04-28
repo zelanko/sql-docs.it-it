@@ -8,10 +8,10 @@ ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
 ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76762815"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Emulazione di record e raccolte tramite UDT CLR
@@ -238,7 +238,7 @@ SSMA usa i seguenti metodi UDT per emulare i metodi predefiniti delle raccolte P
 Metodi di raccolta Oracle | `CollectionIndexInt`e `CollectionIndexString` equivalente
 --- | ---
 COUNT | `Count returns int`
-Elimina | `RemoveAll() returns <UDT_type>`
+DELETE | `RemoveAll() returns <UDT_type>`
 Elimina (n) | `Remove(@index int) returns <UDT_type>`
 Elimina (m, n) | `RemoveRange(@indexFrom int, @indexTo int) returns <UDT_type>`
 EXISTS | `ContainsElement(@index int) returns bit`
@@ -340,4 +340,4 @@ SELECT
 
 ## <a name="select-into-record"></a>Record SELECT INTO
 
-Quando il risultato della query Oracle viene salvato in una variabile di record PL/SQL, sono disponibili due opzioni, a seconda dell'impostazione di SSMA **per Convert record come elenco di variabili separate** (disponibili nel menu **strumenti** , **Impostazioni progetto**, quindi **** -> **conversione**generale). Se il valore di questa impostazione è **Sì** (impostazione predefinita), SSMA non crea un'istanza del tipo di record. Suddivide invece il record nei campi costitutivi creando una variabile Transact-SQL separata per ogni campo di record. Se l'impostazione è **No**, viene creata un'istanza del record e a ogni campo viene assegnato un `Set` valore tramite i metodi.
+Quando il risultato della query Oracle viene salvato in una variabile di record PL/SQL, sono disponibili due opzioni, a seconda dell'impostazione di SSMA **per Convert record come elenco di variabili separate** (disponibili nel menu **strumenti** , **Impostazioni progetto**, quindi **General** -> **conversione**generale). Se il valore di questa impostazione è **Sì** (impostazione predefinita), SSMA non crea un'istanza del tipo di record. Suddivide invece il record nei campi costitutivi creando una variabile Transact-SQL separata per ogni campo di record. Se l'impostazione è **No**, viene creata un'istanza del record e a ogni campo viene assegnato un `Set` valore tramite i metodi.

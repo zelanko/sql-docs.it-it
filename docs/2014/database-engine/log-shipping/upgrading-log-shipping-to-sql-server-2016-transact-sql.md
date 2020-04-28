@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175420"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aggiornare il log shipping a SQL Server 2014 (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "78175420"
 >  La[compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) è stata introdotta in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. In una configurazione per il log shipping aggiornata viene usata l'opzione di configurazione a livello di server **backup compression default** per controllare se la compressione dei backup viene usata per i file di backup del log delle transazioni. Il comportamento della compressione dei backup relativa ai backup del log può essere specificato per ogni configurazione per il log shipping. Per altre informazioni, vedere [Configurare il log shipping &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).
 
 
-##  <a name="ProtectData"></a>Proteggi i dati prima dell'aggiornamento
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> Protezione dei dati prima dell'aggiornamento
  Prima di eseguire un aggiornamento del log shipping, è consigliabile proteggere i dati.
 
  **Per proteggere i dati**
@@ -37,12 +37,12 @@ ms.locfileid: "78175420"
 
 2.  Eseguire il comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) in ciascun database primario.
 
-##  <a name="UpgradeMonitor"></a>Aggiornamento dell'istanza del server di monitoraggio
+##  <a name="upgrading-the-monitor-server-instance"></a><a name="UpgradeMonitor"></a>Aggiornamento dell'istanza del server di monitoraggio
  L'istanza del server di monitoraggio, se presente, può essere aggiornata in qualsiasi momento.
 
  Durante l'aggiornamento del server di monitoraggio, la configurazione per il log shipping continua a funzionare, ma lo stato relativo non viene registrato nelle tabelle sul monitor e non verrà attivato alcun avviso configurato. Dopo l'aggiornamento, è possibile eseguire la stored procedure di sistema [sp_refresh_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql) per aggiornare le informazioni contenute nelle tabelle di monitoraggio.
 
-##  <a name="UpgradeSingleSecondary"></a>Aggiornamento delle configurazioni per il log shipping con un unico server secondario
+##  <a name="upgrading-log-shipping-configurations-with-a-single-secondary-server"></a><a name="UpgradeSingleSecondary"></a>Aggiornamento delle configurazioni per il log shipping con un unico server secondario
  Il processo di aggiornamento descritto in questa sezione prevede l'utilizzo di una configurazione costituita dal server primario e da un unico server secondario. Tale configurazione è rappresentata nella figura seguente, in cui vengono illustrate un'istanza del server primario, A, e un'unica istanza del server secondario, B.
 
  ![Un server secondario e nessun server di monitoraggio](../media/ls-2-wayconfig-nomonitor.gif "Un server secondario e nessun server di monitoraggio")
@@ -50,7 +50,7 @@ ms.locfileid: "78175420"
  Per informazioni sull'aggiornamento di più server secondari, vedere [Aggiornamento di più istanze del server secondario](#MultipleSecondaries)più avanti in questo argomento.
  
 
-###  <a name="UpgradeSecondary"></a>Aggiornamento dell'istanza del server secondario
+###  <a name="upgrading-the-secondary-server-instance"></a><a name="UpgradeSecondary"></a>Aggiornamento dell'istanza del server secondario
  Il processo di aggiornamento prevede innanzitutto l'aggiornamento delle istanze del server secondario di una configurazione per il log shipping di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prima di aggiornare l'istanza del server primario. È sempre necessario aggiornare prima l'istanza del server secondario per evitare che il log shipping funzioni in modo non corretto poiché un backup creato in una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere ripristinato in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Il log shipping non viene interrotto durante tutto il processo di aggiornamento poiché tramite i server secondari aggiornati si continuano a ripristinare i backup del log dal server primario [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva. Il processo di aggiornamento delle istanze del server secondario dipende in parte dalla presenza di più server secondari nella configurazione per il log shipping. Per ulteriori informazioni, vedere [Aggiornamento di più istanze del server secondario](#MultipleSecondaries)più avanti in questo argomento.
@@ -65,7 +65,7 @@ ms.locfileid: "78175420"
 > [!IMPORTANT]
 >  L'opzione RESTORE WITH STANDBY non è supportata per i database che richiedono aggiornamenti. Se un database secondario aggiornato è stato configurato tramite RESTORE WITH STANDBY, non sarà più possibile ripristinare i log delle transazioni dopo l'aggiornamento. Per riprendere il log shipping sul database secondario, sarà necessario configurarlo nuovamente sul server di standby. Per ulteriori informazioni sull'opzione STANDBY, vedere [argomenti di ripristino &#40;&#41;Transact-SQL ](/sql/t-sql/statements/restore-statements-arguments-transact-sql).
 
-###  <a name="UpgradePrimary"></a>Aggiornamento dell'istanza del server primario
+###  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> Aggiornamento dell'istanza del server primario
  Quando si pianifica un aggiornamento, un aspetto significativo da considerare è la quantità di tempo in cui il database non risulterà disponibile. Nello scenario di aggiornamento più semplice il database non è disponibile durante l'aggiornamento del server primario (scenario 1 riportato di seguito).
 
  A fronte di una maggiore complessità del processo di aggiornamento, è possibile aumentare la disponibilità del database eseguendo il failover del server primario [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva su un server secondario [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prima di aggiornare il server primario originale (scenario 2 riportato di seguito). Sono disponibili due scenari di failover diversi. È possibile tornare al server primario originale e mantenere la configurazione per il log shipping originale oppure è possibile rimuovere la configurazione per il log shipping originale prima di aggiornare il server primario originale e creare in un secondo momento una nuova configurazione utilizzando il nuovo server primario. In questa sezione vengono descritti entrambi gli scenari.
@@ -74,7 +74,7 @@ ms.locfileid: "78175420"
 >  Prima di aggiornare l'istanza del server primario, è necessario accertarsi di avere aggiornato l'istanza del server secondario. Per ulteriori informazioni, vedere [Aggiornamento dell'istanza del server secondario](#UpgradeSecondary)in precedenza in questo argomento.
 
 
-####  <a name="Scenario1"></a>Scenario 1: aggiornamento dell'istanza del server primario senza failover
+####  <a name="scenario-1-upgrade-primary-server-instance-without-failover"></a><a name="Scenario1"></a>Scenario 1: aggiornamento dell'istanza del server primario senza failover
  Questo scenario è quello più semplice, ma provoca un tempo di inattività maggiore rispetto all'utilizzo del failover. L'istanza del server primario viene semplicemente aggiornata e il database non è disponibile durante l'aggiornamento.
 
  Dopo che il server è stato aggiornato, viene attivata automaticamente la modalità online per il database determinandone pertanto l'aggiornamento. Dopo che il database è stato aggiornato, viene ripresa l'esecuzione dei processi per il log shipping.
@@ -88,7 +88,7 @@ ms.locfileid: "78175420"
 >  Se si intende disporre dell'istanza del server secondario come nuova istanza del server primario, è necessario rimuovere la configurazione per il log shipping. Il log shipping dovrà essere riconfigurato dal nuovo server primario nel nuovo server secondario dopo l'aggiornamento dell'istanza del server primario originale. Per ulteriori informazioni, vedere [Remove Log Shipping &#40;SQL Server&#41;](remove-log-shipping-sql-server.md).
 
 
-#####  <a name="Procedure1"></a>Procedura 1: eseguire un failover controllato sul server secondario
+#####  <a name="procedure-1-perform-a-controlled-failover-to-the-secondary-server"></a><a name="Procedure1"></a>Procedura 1: eseguire un failover controllato sul server secondario
  Failover controllato sul server secondario:
 
 1.  Eseguire manualmente un [backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) della parte finale del log delle transazioni nel database primario SPECIFICAndo WITH NORECOVERY. Tale backup acquisisce qualsiasi record di log di cui non è stato eseguito il backup e attiva la modalità offline per il database. Si noti che mentre il database è offline, il processo di backup del log shipping non riuscirà.
@@ -130,17 +130,17 @@ ms.locfileid: "78175420"
 
     5.  Verificare che lo spazio disponibile sul log delle transazioni del database secondario non si esaurisca mentre il database è online. Per evitare che si verifichi questa situazione, potrebbe essere necessario eseguire un backup del log. In questo caso è consigliabile eseguire il backup in un percorso condiviso, ovvero una *condivisione di backup*, in modo che i backup siano disponibili per eseguire il ripristino nell'altra istanza del server.
 
-#####  <a name="Procedure2"></a>Procedura 2: aggiornare l'istanza del server primario originale a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#####  <a name="procedure-2-upgrade-the-original-primary-server-instance-to-sscurrent"></a><a name="Procedure2"></a>Procedura 2: aggiornare l'istanza del server primario originale a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
  Dopo aver aggiornato l'istanza del server primario originale a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], per il database sarà ancora attivata la modalità offline e il formato.
 
-#####  <a name="Procedure3"></a>Procedura 3: impostare il log shipping in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#####  <a name="procedure-3-set-up-log-shipping-on-sscurrent"></a><a name="Procedure3"></a>Procedura 3: impostare il log shipping in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
  La parte rimanente del processo di aggiornamento dipende dalla presenza della configurazione per il log shipping, come indicato di seguito:
 
 -   Se è stata mantenuta la configurazione per il log shipping di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]o versione successiva, tornare all'istanza del server primario originale. Per ulteriori informazioni, vedere [Per tornare all'istanza del server primario originale](#SwitchToOrigPrimary)più avanti in questa sezione.
 
 -   Se la configurazione per il log shipping è stata rimossa prima dell'esecuzione del failover, creare una nuova configurazione per il log shipping in cui l'istanza del server secondario originale costituisce la nuova istanza del server primario. Per ulteriori informazioni, vedere [Per mantenere l'istanza precedente del server secondario come nuova istanza del server primario](#KeepOldSecondaryAsNewPrimary)più avanti in questa sezione.
 
-######  <a name="SwitchToOrigPrimary"></a>Per tornare all'istanza del server primario originale
+######  <a name="to-switch-back-to-the-original-primary-server-instance"></a><a name="SwitchToOrigPrimary"></a>Per tornare all'istanza del server primario originale
 
 1.  Nel server primario provvisorio (server B) eseguire il backup della parte finale del log utilizzando WITH NORECOVERY per crearlo e per attivare la modalità offline per il database. La parte finale del log viene denominata `Switchback_AW_20080315.trn`, ad esempio:
 
@@ -159,7 +159,7 @@ ms.locfileid: "78175420"
 
  Dopo che il database è online, verrà ripresa la configurazione per il log shipping originale.
 
-######  <a name="KeepOldSecondaryAsNewPrimary"></a>Per conservare l'istanza precedente del server secondario come nuova istanza del server primario
+######  <a name="to-keep-the-old-secondary-server-instance-as-the-new-primary-server-instance"></a><a name="KeepOldSecondaryAsNewPrimary"></a>Per conservare l'istanza precedente del server secondario come nuova istanza del server primario
  Definire una nuova configurazione per il log shipping utilizzando l'istanza precedente del server secondario, B, come server primario e l'istanza precedente del server primario, A, come nuovo server secondario nel modo indicato di seguito:
 
 > [!IMPORTANT]
@@ -181,9 +181,9 @@ ms.locfileid: "78175420"
 5.  Eseguire il failover del database reindirizzando i client dal server primario originale (server A) al server secondario online (server B).
 
     > [!IMPORTANT]
-    >  Quando si esegue il failover sul nuovo database primario, è necessario verificare che tutti i relativi metadati siano coerenti con quelli del database primario originale. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  Quando si esegue il failover sul nuovo database primario, è necessario verificare che tutti i relativi metadati siano coerenti con quelli del database primario originale. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
-##  <a name="MultipleSecondaries"></a>Aggiornamento di più istanze del server secondario
+##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Aggiornamento di più istanze del server secondario
  Tale configurazione è rappresentata nella figura seguente, in cui vengono illustrate un'istanza del server primario, A, e due istanze del server secondario, B e C.
 
  ![Due server secondari e nessun server di monitoraggio](../media/ls-3-wayconfig-nomonitor.gif "Due server secondari e nessun server di monitoraggio")
@@ -216,7 +216,7 @@ ms.locfileid: "78175420"
 
 9. Ripristinare il log delle transazioni dal server primario provvisorio (server B) al database primario originale (nel server A) tramite WITH RECOVERY.
 
-##  <a name="Redeploying"></a>Ridistribuzione del log shipping
+##  <a name="redeploying-log-shipping"></a><a name="Redeploying"></a>Ridistribuzione del log shipping
  Se non si desidera eseguire la migrazione della configurazione per il log shipping tramite una delle procedure illustrate in precedenza, è possibile ridistribuire il log shipping reinizializzando il database secondario con un backup e ripristino completi del database primario. Questa operazione è consigliabile nel caso di un database di piccole dimensioni oppure se non è essenziale garantire un livello di disponibilità elevato durante il processo di aggiornamento.
 
  Per informazioni sull'abilitazione di log shipping, vedere [configurare il log shipping &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).

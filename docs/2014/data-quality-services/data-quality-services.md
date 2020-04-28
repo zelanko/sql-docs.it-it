@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 09d57d0b1b0ac00cbad6f4d8dab1e2afad790d37
-ms.sourcegitcommit: c30a2def43c86860aeec69d3e3029f2296544b13
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175520"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.
 
  DQS è costituito da un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e un [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], entrambi installati come parte di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] è una funzionalità dell'istanza di SQL Server costituita da tre cataloghi di SQL Server con capacità funzionali e di archiviazione per la qualità dei dati. Il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è una funzionalità condivisa di SQL Server utilizzabile da utenti aziendali, Information Worker e professionisti IT per eseguire analisi assistite da computer sulla qualità dei dati in uso e gestire tale qualità in modo interattivo. È possibile eseguire processi relativi alla qualità dei dati anche tramite [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] e la funzionalità di qualità dei dati Master Data Services (MDS), entrambi basati su DQS.

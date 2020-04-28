@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177239"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Attività 6: Aggiunta dell'origine Excel al flusso di dati
@@ -40,7 +40,7 @@ ms.locfileid: "78177239"
 
 8.  Fare clic su **Anteprima** per visualizzare in anteprima i dati nel file di Excel.
 
-9. Scegliere **OK** per chiudere la finestra di dialogo.
+9. Fare clic su **OK** per chiudere la finestra di dialogo.
 
 10. Trascinare la trasformazione **pulizia DQS** in **altre trasformazioni** nella **casella degli strumenti SSIS** nella scheda **flusso di dati** in **Leggi dati fornitore dal file di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Per ulteriori informazioni, vedere l'argomento [trasformazione della pulizia DQS](https://msdn.microsoft.com/library/ee677619.aspx) .
 

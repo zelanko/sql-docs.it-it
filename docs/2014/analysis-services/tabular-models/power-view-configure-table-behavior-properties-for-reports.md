@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175590"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurare le proprietà Comportamento tabella per i report Power View (SSAS tabulare)
   Se si usa un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà del comportamento delle tabelle che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.
 
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] differisce dalle altre applicazioni di creazione report in quanto raggruppa automaticamente gli elementi durante la progettazione del report, tenendo conto di quali colonne sono state inserite nell'elenco dei campi del report rispetto al formato di presentazione usato. Nella maggior parte dei casi, il raggruppamento predefinito produce un risultato ottimale. Per alcune tabelle, tuttavia, principalmente quelle che contengono dati di dettaglio, il comportamento di raggruppamento predefinito prevede talvolta il raggruppamento di righe che non dovrebbero essere raggruppate. Per queste tabelle, è possibile impostare proprietà per modificare la modalità di valutazione dei gruppi.
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] differisce dalle altre applicazioni di creazione report in quanto raggruppa automaticamente gli elementi durante la progettazione del report, tenendo conto di quali colonne sono state inserite nell'elenco dei campi del report rispetto al formato di presentazione usato. Nella maggior parte dei casi, il raggruppamento predefinito produce un risultato ottimale. Per alcune tabelle, tuttavia, principalmente quelle che contengono dati di dettaglio, il comportamento di raggruppamento predefinito prevede talvolta il raggruppamento di righe che non dovrebbero essere raggruppate. Per queste tabelle, è possibile impostare proprietà per modificare la modalità di valutazione dei gruppi.
 
  È consigliabile impostare le proprietà del comportamento per le tabelle in cui le singole righe sono di interesse primario, ad esempio record dipendente o cliente. Al contrario, le tabelle che non traggono alcun beneficio da queste proprietà sono le tabelle di ricerca, ad esempio tabelle data, tabelle di categorie di prodotti o tabelle reparti che contengono un numero relativamente piccolo di righe e colonne o le tabelle di riepilogo che contengono righe che hanno un qualche interesse solo se riepilogate, ad esempio dati demografici riportati per sesso, età o località geografica. Per le tabelle di ricerca e di riepilogo, il comportamento di raggruppamento predefinito produce il risultato migliore.
 
@@ -32,13 +31,13 @@ ms.locfileid: "78175590"
 
  Di seguito sono elencate le proprietà del comportamento delle tabelle:
 
--   **Identificatore di riga** : specifica una colonna che contiene solo valori univoci, consentendo l'utilizzo di tale colonna come chiave di raggruppamento interna.
+-   **Identificatore di riga** : specifica una colonna che contiene solo valori univoci, consentendo l'uso di tale colonna come una chiave di raggruppamento interna.
 
--   **Mantieni righe univoche** : specifica quali colonne forniscono valori che devono essere considerati come univoci anche se duplicati, ad esempio nome e cognome del dipendente, nei casi in cui due o più dipendenti condividono lo stesso nome.
+-   **Mantieni righe univoche** : specifica quali colonne forniscono valori che devono essere considerati come univoci anche se duplicati, ad esempio nome e cognome del dipendente, nei casi in cui due o più dipendenti abbiano lo stesso nome.
 
--   **Etichetta predefinita** : specifica quale colonna fornisce un nome visualizzato per rappresentare i dati della riga, ad esempio il nome del dipendente in un record dipendente.
+-   **Etichetta predefinita** : specifica quale colonna fornisce un nome visualizzato per rappresentare i dati della riga, ad esempio nome del dipendente in un record dipendente.
 
--   **Immagine predefinita** : specifica quale colonna fornisce un'immagine che rappresenta i dati della riga, ad esempio un ID foto in un record dipendente.
+-   **Immagine predefinita** : specifica quale colonna fornisce un'immagine per rappresentare i dati della riga, ad esempio un ID foto in un record dipendente.
 
 > [!NOTE]
 >  Fare riferimento alla sezione seguente relativa alle ottimizzazioni dei layout rispetto a un determinato formato di presentazione:  [Ottimizzazione per layout specifici](#bkmk_optimizeforlayout).
@@ -87,7 +86,7 @@ ms.locfileid: "78175590"
 > [!NOTE]
 >  Le immagini possono provenire da indirizzi URL o da un file di immagine in un server Web o da dati binari incorporati nella cartella di lavoro. Se l'immagine è basata su un URL, assicurarsi di impostare la colonna come un tipo di immagine in modo che [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] possa recuperarla anziché visualizzare l'URL come dati di testo nel report.
 
-##  <a name="bkmk_optimizeforlayout"></a>Ottimizzazione per layout specifici
+##  <a name="optimizing-for-specific-layouts"></a><a name="bkmk_optimizeforlayout"></a> Ottimizzazione per layout specifici
  In questa sezione vengono descritti gli effetti derivanti dall'impostazione delle proprietà del comportamento delle tabelle rispetto a un determinato formato di presentazione e alle caratteristiche dei dati. Se ad esempio si tenta di ottimizzare il layout di un report matrice, è possibile utilizzare queste informazioni per comprendere come migliorare la presentazione di una matrice utilizzando le proprietà del comportamento delle tabelle nel modello.
 
 ### <a name="images-are-missing"></a>Immagini mancanti
@@ -117,7 +116,7 @@ ms.locfileid: "78175590"
 
  ![Layout di matrice raggruppato per identificatore di riga](../media/ssas-rptprop-matrixrowid.gif "Layout di matrice raggruppato per identificatore di riga")
 
- **Dopo: raggruppamento per identificatore di riga**
+ **Dopo: raggruppamento basato sull'identificatore di riga**
 
  ![Layout di matrice raggruppato per identificatore di riga](../media/ssas-rptprop-matrixrowid.gif "Layout di matrice raggruppato per identificatore di riga")
 
@@ -130,7 +129,7 @@ ms.locfileid: "78175590"
 
  ![Grafico basato su raggruppamento predefinito a livello di campo](../media/ssas-rptprop-chartfieldgroup.gif "Grafico basato su raggruppamento predefinito a livello di campo")
 
- **Dopo: raggruppamento per identificatore di riga (l'identificatore di riga diventa l'asse)**
+ **Dopo: raggruppamento basato sull'identificatore di riga (l'identificatore di riga diventa l'asse)**
 
  ![Grafico basato su raggruppamento per ID di riga](../media/ssas-rptprop-chartrowid.gif "Grafico basato su raggruppamento per ID di riga")
 

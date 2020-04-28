@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a8cd7ddaac1138599701e4ccfe14c3cb0b84656
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173947"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
@@ -48,7 +48,7 @@ ms.locfileid: "78173947"
 
 4.  Facoltativamente, selezionare un feed di dati diverso nell'elenco a discesa **Nome dati report** .
 
-     Se non viene generato alcun feed di dati dal report, non è possibile creare una definizione di avviso per tale report. Il layout del report determina il contenuto di ogni feed di dati. Per ulteriori informazioni, vedere [generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
+     Se non viene generato alcun feed di dati dal report, non è possibile creare una definizione di avviso per tale report. Il layout del report determina il contenuto di ogni feed di dati. Per altre informazioni, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
 
 5.  Facoltativamente, nella casella di testo **Nome avviso** aggiornare il nome predefinito per renderlo più significativo.
 
@@ -70,15 +70,15 @@ ms.locfileid: "78173947"
 
 10. Digitare il valore di confronto.
 
-11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)**.
+11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)** .
 
-     I puntini di sospensione **(...)** vengono visualizzati nella riga contenente la prima clausola.
+     I puntini di sospensione **(...)** vengono visualizzati sulla riga contenente la prima clausola.
 
      Una clausola OR viene aggiunta nella parte inferiore e all'interno della regola AND.
 
 12. Facoltativamente, fare clic sulla freccia rivolta verso il basso, selezionare **Modalità selezione campo**, quindi selezionare una colonna nell'elenco.
 
-     Si noterà che i puntini di sospensione **(...)** su cui si fa clic per aggiungere clausole OR non sono più disponibili.
+     Si noterà che i puntini di sospensione **(...)** su cui si fa clic per aggiungere clausole OR sono scomparsi.
 
 13. Facoltativamente, fare di nuovo clic su **Aggiungi regola** per aggiungere altre regole.
 

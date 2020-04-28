@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 56418adbefec0dc996fd83ce70415e86ec9509a3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171661"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master
@@ -56,7 +56,7 @@ ms.locfileid: "78171661"
     |NY|New York|
     |OH|Ohio|
     |OK|Oklahoma|
-    |o|Oregon|
+    |OR|Oregon|
     |PA|Pennsylvania|
     |SC|South Carolina|
     |KS|Kansas|

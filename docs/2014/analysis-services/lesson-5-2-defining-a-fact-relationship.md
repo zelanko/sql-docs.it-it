@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175280"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
@@ -37,7 +37,7 @@ ms.locfileid: "78175280"
 
 ## <a name="defining-the-internet-sales-orders-fact-dimension"></a>Definizione della dimensione dei fatti Internet Sales Orders
 
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **dimensioni**, quindi scegliere **nuova dimensione**.
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Dimensioni**e quindi scegliere **Nuova dimensione**.
 
 2.  Nella pagina iniziale di **Creazione guidata dimensione** fare clic su **Avanti**.
 

@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: acb218e5d6377e8926d22aa66de0aded9a1fb0a8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177051"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Informazioni sul provider WMI per eventi del server
@@ -52,8 +52,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO
 ```
 
- In questo esempio, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` è un identificatore [!INCLUDE[tsql](../../includes/tsql-md.md)] costituito dal prefisso `SQLWEP_` e un GUID. 
-  `SQLWEP` crea un nuovo GUID per ogni identificatore. Il valore `A7E5521A-1CA6-4741-865D-826F804E5135` nella `TO SERVICE` clausola è il GUID che identifica l'istanza di Service Broker nel database **msdb** .
+ In questo esempio, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` è un identificatore [!INCLUDE[tsql](../../includes/tsql-md.md)] costituito dal prefisso `SQLWEP_` e un GUID. `SQLWEP` crea un nuovo GUID per ogni identificatore. Il valore `A7E5521A-1CA6-4741-865D-826F804E5135` nella `TO SERVICE` clausola è il GUID che identifica l'istanza di Service Broker nel database **msdb** .
 
  Per ulteriori informazioni su come utilizzare WQL, vedere Utilizzo di [WQL con il provider WMI per eventi del server](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).
 

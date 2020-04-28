@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176461"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Esercitazione SSIS: Distribuzione di pacchetti
@@ -50,8 +50,7 @@ ms.locfileid: "78176461"
 
  **Computer di origine.** È necessario che nel computer in cui verrà creato il pacchetto di distribuzione siano installati i componenti seguenti:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database AdventureWorks. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. È possibile scaricare il database di esempio da [codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database AdventureWorks. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. È possibile scaricare il database di esempio da [codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
 
 -   È necessario disporre delle autorizzazioni per creare ed eliminare tabelle in AdventureWorks.
 
@@ -61,8 +60,7 @@ ms.locfileid: "78176461"
 
  **Computer di destinazione.** È necessario che nel computer in cui verranno distribuiti i pacchetti siano installati i componenti seguenti:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database AdventureWorks.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database AdventureWorks.
 
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
@@ -83,5 +81,5 @@ ms.locfileid: "78176461"
 
  [Lezione 3: installazione dei pacchetti](../integration-services/lesson-3-install-ssis-package.md) In questa lezione si procederà alla copia del pacchetto di distribuzione nel computer di destinazione, all'installazione dei pacchetti e quindi all'esecuzione dei pacchetti.
 
-![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
+![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 644fa33aa0a9fd8bd51521270cfb89636ac63791
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173200"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "78173200"
      ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")
 
     > [!NOTE]
-    >  Se il riquadro **Nuovo report o set di dati** non viene visualizzato, dal pulsante Generatore report fare clic su **Nuovo**.
+    >   Se tale riquadro non viene visualizzato, **** nel pulsante Generatore report fare clic su **Nuovo**.
 
 2.  Nel riquadro sinistro, sotto **Crea un set di dati**, fare clic su **Set di dati condiviso**.
 
@@ -56,7 +56,7 @@ ms.locfileid: "78173200"
 
 4.  In Progettazione query specificare i campi da includere nel set di dati.
 
-5.  Scegliere **Esegui** ( **!** ) per eseguire la query.
+5.  Fare clic su **Esegui** (**!**) per eseguire la query.
 
 6.  Sul pulsante **Generatore report** fare clic su **Salva** o su **Salva con nome** per salvare il set di dati condiviso nel server di report.
 

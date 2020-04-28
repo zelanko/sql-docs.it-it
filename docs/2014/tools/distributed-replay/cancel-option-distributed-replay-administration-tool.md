@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177327"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Opzione cancel (strumento di amministrazione Distributed Replay)
@@ -50,7 +50,7 @@ dreplay cancel -m localhost -q
 ## <a name="permissions"></a>Autorizzazioni
  È necessario eseguire lo strumento di amministrazione come utente interattivo, scegliendo tra utente locale e account utente di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.
 
- Per altre informazioni, vedere [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md).
+ Per altre informazioni, vedere [Sicurezza di Distributed Replay](distributed-replay-security.md).
 
 ## <a name="see-also"></a>Vedere anche
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)

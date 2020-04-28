@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7561d448253a7d87d87c7f5cdd02668e15ffaa4a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172772"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>Matrici (Generatore report e SSRS)
@@ -22,14 +22,14 @@ ms.locfileid: "78172772"
 
  Al termine della progettazione iniziale, è possibile continuare a sviluppare una matrice per migliorare la visualizzazione per l'utente. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).
 
- Per un'introduzione rapida alle matrici, vedere [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../tutorial-creating-a-matrix-report-report-builder.md).
+ Per una rapida introduzione alle matrici, vedere [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../tutorial-creating-a-matrix-report-report-builder.md).
 
  Nei report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi diversi report in cui vengono usate matrici. Per informazioni sulle matrici, esplorare la definizione di un report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingMatrix"></a> Aggiunta di una matrice al report
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a>Aggiunta di una matrice al report
  Aggiungere una matrice all'area di progettazione dalla scheda Inserisci sulla barra multifunzione. È possibile aggiungere una matrice tramite la Creazione guidata tabella o matrice in cui è inclusa la creazione di una connessione all'origine dati e di un set di dati, nonché la configurazione della tabella o l'aggiunta di una matrice basata sul modello di matrice.
 
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "78172772"
 
  La matrice iniziale è un modello basato sull'area dati Tablix. È possibile continuare a sviluppare la struttura della matrice aggiungendo gruppi di righe o gruppi di colonne nidificati o adiacenti o persino aggiungendo righe di dettaglio. Per altre informazioni, vedere [Esplorazione della flessibilità di un'area dati Tablix &#40;Generatore report e SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="AddingParentGroupChild"></a> Aggiunta di un gruppo padre o figlio a una matrice
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> Aggiunta di un gruppo padre o figlio a una matrice
  Per aggiungere un gruppo basato su un singolo campo del set di dati, trascinare il campo dal riquadro dei dati del report nell'area Gruppi di righe o Gruppi di colonne appropriata del riquadro Raggruppamento. Rilasciare il campo nella gerarchia di gruppi per impostarne la relazione con i gruppi esistenti. Rilasciarlo al di sopra di un gruppo esistente per creare un gruppo padre o al di sotto di un gruppo esistente per creare un gruppo figlio.
 
  Quando si rilascia un campo nel riquadro **Raggruppamento** , si verifica quanto segue:
@@ -80,8 +80,8 @@ ms.locfileid: "78172772"
 
  Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.
 
-##  <a name="AddingAdjacentGroup"></a> Aggiunta di un gruppo adiacente a una matrice
- Per aggiungere un gruppo adiacente basato su un singolo campo del set di dati, usare il menu di scelta rapida nel riquadro Raggruppamento. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Nella figura seguente è mostrato un gruppo basato sulla geografia e un gruppo adiacente basato sull'anno.
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> Aggiunta di un gruppo adiacente a una matrice
+ Per aggiungere un gruppo adiacente basato su un singolo campo del set di dati, usare il menu di scelta rapida nel riquadro Raggruppamento. Per ulteriori informazioni, vedere [aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Nella figura seguente è mostrato un gruppo basato sulla geografia e un gruppo adiacente basato sull'anno.
 
  ![Gruppi di colonne adiacenti per Geography e Year](../media/rs-basicmatrixadjacentgroupsdesign.gif "Gruppi di colonne adiacenti per Geography e Year")
 

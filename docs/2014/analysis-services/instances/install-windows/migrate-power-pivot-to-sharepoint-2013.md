@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175240"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Eseguire la migrazione di PowerPivot a SharePoint 2013
@@ -35,17 +35,17 @@ ms.locfileid: "78175240"
 
  **Contenuto dell'argomento:**
 
--   [1) preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013)
+-   [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013)
 
--   [2) eseguire il backup, la copia e il ripristino dei database](#bkmk_backup_restore)
+-   [2) Eseguire il backup, la copia e il ripristino dei database](#bkmk_backup_restore)
 
--   [3) preparare le applicazioni Web e montare i database del contenuto](#bkmk_prepare_mount_databases)
+-   [3) Preparare le applicazioni Web e montare i database del contenuto](#bkmk_prepare_mount_databases)
 
 -   [4) Aggiornare le pianificazioni di PowerPivot](#bkmk_upgrade_powerpivot_schedules)
 
 -   [Risorse aggiuntive](#bkmk_additional_resources)
 
-##  <a name="bkmk_prepare_sharepoint2013"></a>1) preparare la farm di SharePoint 2013
+##  <a name="1-prepare-the-sharepoint-2013-farm"></a><a name="bkmk_prepare_sharepoint2013"></a>1) preparare la farm di SharePoint 2013
 
 1.  > [!TIP]
     >  Controllare il metodo di autenticazione per cui sono configurate le applicazioni Web esistenti. Le applicazioni Web SharePoint 2013 sono impostate in modo predefinito sull'autenticazione basata sulle attestazioni. Per le applicazioni Web SharePoint 2010 configurate per l'autenticazione in modalità classica sono richiesti passaggi aggiuntivi per eseguire la migrazione dei database da SharePoint 2010 a SharePoint 2013. Se le applicazioni Web sono configurate per l'autenticazione in modalità classica, controllare la documentazione di SharePoint 2013.
@@ -58,20 +58,20 @@ ms.locfileid: "78175240"
 
 5.  In Amministrazione centrale SharePoint 2013 configurare l'applicazione di servizio per Excel Services per l'utilizzo del server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint creato nel passaggio precedente. Per ulteriori informazioni, vedere la sezione "configurare l'integrazione di base Analysis Services SharePoint" dell' [installazione di PowerPivot per SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
 
-##  <a name="bkmk_backup_restore"></a>2) eseguire il backup, la copia e il ripristino dei database
+##  <a name="2-backup-copy-restore-the-databases"></a><a name="bkmk_backup_restore"></a>2) eseguire il backup, la copia e il ripristino dei database
  Il processo di aggiornamento del database di SharePoint è una sequenza di passaggi per eseguire il backup, la copia e il ripristino dei database dell'applicazione di servizio e del contenuto correlati a PowerPivot nella farm di SharePoint 2013.
 
-1.  **Impostare il database in sola lettura:** In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database e scegliere **Proprietà**. Nella pagina **Opzioni** impostare la proprietà **Database di sola lettura** su **True**.
+1.  **Impostare il database in sola lettura:** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database e scegliere **Proprietà**. Nella pagina **Opzioni** impostare la proprietà **Database di sola lettura** su **True**.
 
-2.  **Backup:** Eseguire il backup di ogni database del contenuto e database dell'applicazione di servizio di cui si desidera eseguire la migrazione alla farm di SharePoint 2013. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database, fare clic su **Attività**e scegliere **Backup**.
+2.  **Eseguire il backup:** eseguire il backup di ogni database del contenuto e database dell'applicazione di servizio di cui si desidera eseguire la migrazione alla farm di SharePoint 2013. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del database, fare clic su **Attività**e scegliere **Backup**.
 
 3.  Copiare i file di backup del database (con estensione bak) nel server di destinazione desiderato.
 
-4.  **Ripristino:** Ripristinare i database nella destinazione [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Questo passaggio può essere completato utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].
+4.  **Eseguire il ripristino:** ripristinare i database nel [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]di destinazione. Questo passaggio può essere completato utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].
 
-5.  **Imposta database su lettura/scrittura:** Impostare il **database di sola lettura** su **false**.
+5.  **Impostare il database in lettura/scrittura:** impostare **Database di sola lettura** su **False**.
 
-##  <a name="bkmk_prepare_mount_databases"></a>3) preparare le applicazioni Web e montare i database del contenuto
+##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) preparare le applicazioni Web e montare i database del contenuto
  Per una spiegazione più dettagliata delle procedure riportate di seguito, vedere [aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
 
 1.  **Portare i database offline:**
@@ -98,7 +98,7 @@ ms.locfileid: "78175240"
 
      Per ulteriori informazioni, vedere [collegamento o scollegamento di database del contenuto (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).
 
-     **Stato al completamento del passaggio:**  Al termine dell'operazione di montaggio, gli utenti possono visualizzare i file presenti nel database del contenuto precedente. Di conseguenza, essi possono visualizzare e aprire le cartelle di lavoro nella raccolta documenti.
+     **Stato al completamento del passaggio:**  al termine dell'operazione di montaggio, gli utenti possono visualizzare i file disponibili nel database del contenuto precedente. Di conseguenza, essi possono visualizzare e aprire le cartelle di lavoro nella raccolta documenti.
 
     > [!TIP]
     >  È possibile creare, a questo punto del processo di migrazione, nuove pianificazioni per le cartelle di lavoro migrate. Tuttavia, le pianificazioni vengono create nel nuovo database dell'applicazione di servizio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e non nel database copiato dalla farm SharePoint precedente. Pertanto, in esso non sarà contenuta alcuna pianificazione precedente. Dopo aver completato i passaggi seguenti per utilizzare il database precedente ed eseguire la migrazione delle pianificazioni precedenti, le nuove pianificazioni non saranno disponibili.
@@ -106,14 +106,14 @@ ms.locfileid: "78175240"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Risolvere eventuali problemi durante il tentativo di montaggio di database
  In questa sezione vengono riepilogati i possibili problemi riscontrati durante il montaggio del database.
 
-1.  **Errori di autenticazione:** Se vengono visualizzati errori relativi all'autenticazione, controllare la modalità di autenticazione utilizzata dalle applicazioni Web di origine. L'errore potrebbe essere causato da una mancata corrispondenza dell'autenticazione tra l'applicazione Web SharePoint 2013 e l'applicazione Web SharePoint 2010. Per ulteriori informazioni, vedere [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013) .
+1.  **Errori di autenticazione:** se vengono visualizzati errori relativi all'autenticazione, controllare la modalità di autenticazione utilizzata nelle applicazioni Web di origine. L'errore potrebbe essere causato da una mancata corrispondenza dell'autenticazione tra l'applicazione Web SharePoint 2013 e l'applicazione Web SharePoint 2010. Per ulteriori informazioni, vedere [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013) .
 
-2.  **File PowerPivot. files mancanti:** Se vengono visualizzati errori correlati a PowerPivot. dll mancanti, **spPowerPivot. msi** non è stato installato o lo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] strumento di configurazione non è stato utilizzato per configurare PowerPivot.
+2.  **File PowerPivot.File mancanti:** se vengono visualizzati errori relativi alla mancanza di file con estensione dll di PowerPivot, il file **spPowerPivot.msi** non è stato installato oppure [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] non è stato configurato con il relativo strumento di configurazione.
 
-##  <a name="bkmk_upgrade_powerpivot_schedules"></a>4) aggiornare le pianificazioni di PowerPivot
+##  <a name="4-upgrade-powerpivot-schedules"></a><a name="bkmk_upgrade_powerpivot_schedules"></a>4) aggiornare le pianificazioni di PowerPivot
  In questa sezione vengono illustrati i dettagli e le opzioni per eseguire la migrazione delle pianificazioni di PowerPivot. La migrazione di una pianificazione è un processo in due passaggi. In primo luogo, configurare l'applicazione di servizio PowerPivot per l'utilizzo del database dell'applicazione di servizio sottoposto a migrazione. In secondo luogo, scegliere una delle due opzioni per la migrazione della pianificazione.
 
- **Configurare l'applicazione di servizio per l'utilizzo del database dell'applicazione del servizio migrato.**
+ **Configurare l'applicazione di servizio per l'utilizzo del database dell'applicazione di servizio sottoposto a migrazione.**
 
  In Amministrazione centrale SharePoint configurare l'applicazione di servizio PowerPivot per l'utilizzo del database dell'applicazione di servizio precedente copiato. Tramite il servizio PowerPivot viene aggiornato il database dell'applicazione di servizio in base al nuovo schema.
 
@@ -127,7 +127,7 @@ ms.locfileid: "78175240"
 
  Configurare l'applicazione di servizio PowerPivot per l'esecuzione della migrazione di pianificazioni di aggiornamenti.
 
--   **Migrare pianificazioni opzione1: amministratore della farm di SharePoint**
+-   **Opzione 1. Eseguire la migrazione di pianificazioni: Amministratore della farm di SharePoint**
 
     1.  Nella gestione di SharePoint 2013 eseguire il `Set-PowerPivotServiceApplication` cmdlet con l' `-StartMigratingRefreshSchedules` opzione per abilitare la migrazione della pianificazione su richiesta automatica ![contenuto correlato di PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell"). Nello script di Windows PowerShell seguente si presuppone la presenza di un'unica applicazione di servizio PowerPivot.
 
@@ -145,7 +145,7 @@ ms.locfileid: "78175240"
         foreach ($app in $apps){ Get-PowerPivotServiceApplication $app | Format-Table -Property displayname, id, StartMigratingRefreshSchedules }
         ```
 
-     **Eseguire la migrazione delle pianificazioni opzione2: l'utente aggiorna ogni cartella di lavoro**
+     **Opzione 2. Eseguire la migrazione di pianificazioni: Aggiornamento di ogni cartella di lavoro da parte dell'utente**
 
     1.  Un'altra opzione per eseguire la migrazione delle pianificazioni consiste nell'abilitare l'aggiornamento delle pianificazioni per ogni cartella di lavoro. Passare alla raccolta documenti contenente le cartelle di lavoro.
 
@@ -163,7 +163,7 @@ ms.locfileid: "78175240"
 
 -   Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
-##  <a name="bkmk_additional_resources"></a>Risorse aggiuntive
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Risorse aggiuntive
 
 > [!NOTE]
 >  Per ulteriori informazioni sull'aggiornamento del collegamento di un database SharePoint e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , vedere gli argomenti seguenti:

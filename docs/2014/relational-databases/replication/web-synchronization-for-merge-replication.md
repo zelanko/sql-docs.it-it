@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cf6a58c50922b412b76576ee2a7fd44cdf9e32a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176701"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronizzazione Web per la replica di tipo merge
@@ -47,7 +47,7 @@ ms.locfileid: "78176701"
 
  ![Componenti e flusso di dati per la sincronizzazione Web](media/web-sync01.gif "Componenti e flusso di dati per la sincronizzazione Web")
 
- La sincronizzazione tramite il Web è disponibile solo per le sottoscrizioni pull e pertanto un agente di merge verrà sempre eseguito sul Sottoscrittore. Tale agente può essere l'agente di merge standard, il controllo ActiveX dell'agente di merge o un'applicazione che consente la sincronizzazione tramite gli oggetti RMO (Replication Management Objects). Per specificare la posizione del computer che esegue IIS, usare il parametro **-InternetUrl** per l'agente di merge.
+ La sincronizzazione tramite il Web è disponibile solo per le sottoscrizioni pull e pertanto un agente di merge verrà sempre eseguito sul Sottoscrittore. Tale agente può essere l'agente di merge standard, il controllo ActiveX dell'agente di merge o un'applicazione che consente la sincronizzazione tramite gli oggetti RMO (Replication Management Objects). Per specificare il percorso del computer che esegue IIS, utilizzare il parametro **-InternetUrl** per l'agente di merge.
 
  Il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll) viene configurato sul computer che esegue IIS ed è responsabile della gestione dei messaggi inviati al server dal server di pubblicazione e dai Sottoscrittori. Ogni nodo nella topologia gestisce il flusso di dati XML mediante replrec.dll, ovvero Riconciliatore replica di tipo merge (Merge Replication Reconciler).
 

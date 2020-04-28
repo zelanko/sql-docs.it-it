@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbfb8cf446cb95e5930ccb8178312e82db774ec3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176961"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
@@ -32,28 +32,28 @@ ms.locfileid: "78176961"
 
 -   [Panoramica del processo di aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
 
--   [Aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Aggiornare i database da SharePoint 2010 a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).
 
 -   [Spostare i database del contenuto in SharePoint 2013](https://technet.microsoft.com/library/cc262792.aspx).
 
  
 
-##  <a name="bkmk_prior_versions"></a>Eseguire la migrazione da Reporting Services versioni in modalità SharePoint precedenti al SQL Server 2012
+##  <a name="migrate-from-reporting-services-sharepoint-mode-versions-prior-to-sql-server-2012"></a><a name="bkmk_prior_versions"></a> Migrazione da versioni della modalità SharePoint di Reporting Services precedenti a SQL Server 2012
  L'architettura della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modificata in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluso lo schema del database dell'applicazione di servizio. Se si desidera eseguire la migrazione [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] alla modalità SharePoint di da una versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]precedente a, creare innanzitutto il nuovo ambiente SharePoint installando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint e la modalità SharePoint di. Per ulteriori informazioni, vedere [Reporting Services installazione in modalità SharePoint &#40;sharepoint 2010 e sharepoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).
 
  Quando il nuovo ambiente SharePoint è in esecuzione, è possibile scegliere tra una migrazione solo del contenuto o una migrazione completa a livello di database che include i database del contenuto.
 
-###  <a name="bkmk_content_only_migration"></a>Migrazione solo del contenuto
- **Migrazione di Reporting Services solo contenuto:** Se si desidera copiare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenuto in una nuova farm, è necessario utilizzare strumenti come **RS. exe** per copiare il contenuto nella nuova installazione di SharePoint. Per altre informazioni sulle migrazioni solo del contenuto, vedere quanto riportato di seguito:
+###  <a name="content-only-migration"></a><a name="bkmk_content_only_migration"></a> Migrazione solo del contenuto
+ **Migrazione solo del contenuto di Reporting Services:** se è necessario copiare il contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una nuova farm, sarà necessario utilizzare strumenti come **rs.exe** per copiare il contenuto nella nuova installazione di SharePoint. Per altre informazioni sulle migrazioni solo del contenuto, vedere quanto riportato di seguito:
 
 -   ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Script RSS:** Gli script possono eseguire la migrazione del contenuto e delle risorse tra i server di report in modalità nativa e SharePoint. Per altre informazioni, vedere [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) e [Script di Reporting Services RS.exe che esegue la migrazione del contenuto da un server di report a un altro](https://azuresql.codeplex.com/releases/view/115207).
 
--   **Strumento di migrazione Reporting Services:** Lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560).
+-   **Strumento di migrazione di Reporting Services:** lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560).
 
-###  <a name="bkmk_full_migration"></a>Migrazione completa
- **Migrazione completa:** Se si esegue la migrazione dei database del contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint insieme ai database del catalogo di a una nuova farm, è possibile seguire una serie di opzioni di backup e ripristino riepilogate in questo argomento. In alcuni casi per la fase di ripristino sarà necessario usare uno strumento diverso da quello usato per la fase di backup. È ad esempio possibile utilizzare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per eseguire il backup delle chiavi di crittografia da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] una versione precedente di, ma è necessario utilizzare Amministrazione centrale SharePoint o PowerShell per ripristinare le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] chiavi di crittografia in un'installazione in modalità SharePoint.
+###  <a name="full-migration"></a><a name="bkmk_full_migration"></a> Migrazione completa
+ **Migrazione completa:** se si desidera eseguire la migrazione dei database del contenuto di SharePoint insieme ai database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nuova farm, è possibile ricorrere a una serie di opzioni di backup e ripristino riepilogate nel presente argomento. In alcuni casi per la fase di ripristino sarà necessario usare uno strumento diverso da quello usato per la fase di backup. È ad esempio possibile utilizzare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per eseguire il backup delle chiavi di crittografia da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] una versione precedente di, ma è necessario utilizzare Amministrazione centrale SharePoint o PowerShell per ripristinare le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] chiavi di crittografia in un'installazione in modalità SharePoint.
 
-####  <a name="bkmk_databases"></a>Database che si vedranno nella migrazione completata
+####  <a name="databases-you-will-see-in-the-completed-migration"></a><a name="bkmk_databases"></a> Database che saranno visibili nella migrazione completata
  Nella tabella seguente vengono descritti i database di SQL Server correlati a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si avranno a disposizione dopo avere eseguito correttamente la migrazione dell'installazione di SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :
 
 |Database|Nome di esempio||
@@ -64,19 +64,19 @@ ms.locfileid: "78176961"
 
  **(\*)** I nomi degli esempi illustrati nella tabella seguono la convenzione di denominazione utilizzata da SSRS quando si crea una nuova applicazione del servizio SSRS. Se si esegue la migrazione da un server diverso, i tempDB e il catalogo manterranno i nomi dall'installazione originale.
 
-####  <a name="bkmk_backup_operations"></a>Operazioni di backup
+####  <a name="backup-operations"></a><a name="bkmk_backup_operations"></a> Operazioni di backup
  In questa sezione vengono descritti i tipi di informazioni necessari per eseguire la migrazione e gli strumenti o il processo da usare per completare il backup.
 
  ![Diagramma di base di una migrazione SharePoint per SSRS](../../../2014/sql-server/install/media/rs-sharepoint-migration.gif "Diagramma di base di una migrazione SharePoint per SSRS")
 
 ||Oggetti|Metodo|Note|
 |-|-------------|------------|-----------|
-|**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]chiavi di crittografia.|**RSKEYMGMT. exe** o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Gli strumenti indicati possono essere utilizzati per il backup ma per l'operazione di ripristino saranno necessarie le pagine di gestione dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure PowerShell.|
+|**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|**Rskeymgmt.exe** o Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vedere [eseguire il backup e il ripristino delle chiavi di crittografia Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Gli strumenti indicati possono essere utilizzati per il backup ma per l'operazione di ripristino saranno necessarie le pagine di gestione dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure PowerShell.|
 |**2**|Database del contenuto di SharePoint.||Creare il database e scollegarlo.<br /><br /> Vedere la sezione "Aggiornamento basato sul collegamento di database" nella pagina [Determinare il metodo di aggiornamento (SharePoint Server 2010) https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx).|
 |**3**|Database di SQL Server corrispondente al database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Backup e ripristino del database di SQL Server<br /><br /> o<br /><br /> Scollegamento e collegamento di un database di SQL Server.||
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]file di configurazione.|Semplice copia di file.|È sufficiente copiare rsreportserver.config se sono state apportate personalizzazioni a tale file. Esempio di percorso predefinito dei file: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config per l'applicazione ASP.NET del server di report.<br /><br /> Machine.config per ASP.NET.|
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Semplice copia di file.|È sufficiente copiare rsreportserver.config se sono state apportate personalizzazioni a tale file. Esempio di percorso predefinito dei file: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config per l'applicazione ASP.NET del server di report.<br /><br /> Machine.config per ASP.NET.|
 
-####  <a name="bkmk_restore_operations"></a>Operazioni di ripristino
+####  <a name="restore-operations"></a><a name="bkmk_restore_operations"></a>Operazioni di ripristino
  Questa sezione descrive i tipi di informazioni necessari per eseguire la migrazione e gli strumenti o processi da usare per completare il ripristino. È possibile che gli strumenti da usare per il ripristino siano diversi da quelli che si sono usati per il backup.
 
  Prima di completare i passaggi del ripristino, è necessario installare e configurare la nuova farm SharePoint e la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni su un'installazione di base [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] della modalità SharePoint, vedere [Reporting Services installazione in modalità sharepoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).
@@ -87,14 +87,14 @@ ms.locfileid: "78176961"
 |**2**|Ripristinare il database SQL che rappresenta il database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Backup e ripristino del database SQL.<br /><br /> **o**<br /><br /> Collegamento e scollegamento di un database di SQL Server.|Quando il database viene usato per la prima volta, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene aggiornato lo schema del database in base alle esigenze, in modo che funzioni correttamente con l'ambiente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|
 |**3**|Creare una nuova applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Amministrazione centrale SharePoint.|Quando si crea la nuova applicazione di servizio, configurarla per usare il database del server di report che si è copiato.<br /><br /> Per ulteriori informazioni sull'utilizzo di amministrazione centrale SharePoint, vedere la sezione "passaggio 3: creare un'applicazione di servizio Reporting Services" in [installare Reporting Services modalità SharePoint per sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).<br /><br /> Per alcuni esempi sull'uso di PowerShell, vedere la sezione "Per creare un'applicazione di servizio Reporting Services usando PowerShell" in [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|
 |**4**|Ripristinare i file di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Semplice copia di file.|Esempio di percorso predefinito dei file: C:\Programmi\File comuni\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting.|
-|**5**|Ripristinare le chiavi di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Ripristinare il file di backup delle chiavi usando la pagina "SystemSettings" dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> **o**<br /><br /> PowerShell.|Vedere la sezione relativa alla gestione delle chiavi nell'argomento [gestire un Reporting Services applicazione di servizio SharePoint](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).|
+|**5**|Ripristinare le chiavi di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Ripristinare il file di backup delle chiavi usando la pagina "SystemSettings" dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> **o**<br /><br /> PowerShell.|Vedere la sezione "Gestione chiavi" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).|
 
-#####  <a name="bkmk_additional_configuration"></a>Configurazione aggiuntiva
+#####  <a name="additional-configuration"></a><a name="bkmk_additional_configuration"></a>Configurazione aggiuntiva
  A seconda di come è stato configurato l'ambiente SharePoint precedente, potrebbe essere necessario completare uno o più dei passaggi seguenti:
 
 1.  Configurare l'autenticazione NTLM per un'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
 
-##  <a name="bkmk_migrate_from_ctp"></a>Eseguire la migrazione da una distribuzione di SQL Server 2012
+##  <a name="migrate-from-a-sql-server-2012-deployment"></a><a name="bkmk_migrate_from_ctp"></a>Eseguire la migrazione da una distribuzione di SQL Server 2012
  In una farm multiserver, molto probabilmente gli utenti avranno i database del contenuto e del catalogo su computer diversi, nel qual caso sarà sufficiente aggiungere alla farm di SharePoint un nuovo server con il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato, quindi rimuovere il server obsoleto. Non è necessario copiare alcun database.
 
 ### <a name="backup-operations"></a>Operazioni di backup
@@ -119,7 +119,7 @@ ms.locfileid: "78176961"
 
 4.  Per altre informazioni, vedere [Ripristinare le applicazioni di servizio in SharePoint 2013](https://technet.microsoft.com/library/ee428305.aspx).
 
-##  <a name="bkmk_additional_resources"></a> Risorse aggiuntive
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Risorse aggiuntive
 
 -   [Introduzione agli aggiornamenti a SharePoint 2013 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx).
 

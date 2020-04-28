@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176661"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
@@ -24,9 +24,9 @@ ms.locfileid: "78176661"
 > [!IMPORTANT]
 >  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluse le funzionalità che incidono sugli indici spaziali, scaricare il white paper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nuove funzionalità spaziali in SQL Server 2012).
 
-##  <a name="about"></a> Informazioni sugli indici spaziali
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Informazioni sugli indici spaziali
 
-###  <a name="decompose"></a> Scomposizione dello spazio indicizzato in una gerarchia di griglie
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Scomposizione dello spazio indicizzato in una gerarchia di griglie
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gli indici spaziali vengono compilati utilizzando alberi B, pertanto gli indici devono rappresentare i dati spaziali bidimensionali nell'ordine lineare degli alberi B. Pertanto, prima della lettura di dati in un indice spaziale, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di implementare una scomposizione gerarchica uniforme dello spazio. Il processo di creazione dell'indice *scompone* lo spazio in una *gerarchia di griglie*a quattro livelli. Questi livelli vengono indicati come *livello 1* (il livello principale), *livello 2*, *livello 3*e *livello 4*.
 
  Ogni livello successivo scompone ulteriormente il livello precedente, pertanto ogni cella di livello superiore contiene una griglia completa al livello successivo. Su un livello specificato, tutte le griglie hanno lo stesso numero di celle lungo entrambi gli assi (ad esempio, 4x4 o 8x8) e le celle hanno tutte la stessa dimensione.
@@ -60,7 +60,7 @@ ms.locfileid: "78176661"
 > [!NOTE]
 >  Le densità della griglia di un indice spaziale sono visibili nelle colonne level_1_grid, level_2_grid, level_3_grid e level_4_grid della vista del catalogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quando il livello di compatibilità del database è impostato su 100 o su un valore inferiore. Le `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` opzioni dello schema a mosaico non popolano queste colonne. sys. spatial_index_tessellations vista del catalogo `NULL` dispone di valori per queste colonne quando si utilizzano le opzioni di griglia automatica.
 
-###  <a name="tessellation"></a>Tassellatura
+###  <a name="tessellation"></a><a name="tessellation"></a>Tassellatura
  Dopo la scomposizione di uno spazio indicizzato in una gerarchia di griglie, l'indice spaziale legge i dati dalla colonna spaziale, riga per riga. Al termine della lettura dei dati per un oggetto spaziale (o istanza), l'indice spaziale esegue un *processo di suddivisione a mosaico* per l'oggetto. Il processo di suddivisione a mosaico adatta l'oggetto alla gerarchia di griglie associandolo a un set di celle della griglia interessate dall'oggetto stesso (*celle interessate*). Partendo dal livello 1 della gerarchia di griglie, la suddivisione a mosaico procede *prima in profondità* attraverso il livello. Potenzialmente, il processo può continuare per tutti i quattro livelli, uno dopo l'altro.
 
  L'output del processo a mosaico è un set di celle interessate registrate nell'indice spaziale per l'oggetto. Riferendosi a queste celle registrate, l'indice spaziale può trovare l'oggetto nello spazio in relazione ad altri oggetti nella colonna spaziale che sono archiviati anche nell'indice.
@@ -110,7 +110,7 @@ ms.locfileid: "78176661"
 
  ![Ottimizzazione della cella più in basso](../../database-engine/media/spndx-opt-deepest-cell.gif "Ottimizzazione della cella più in basso")
 
-###  <a name="schemes"></a>Schemi a mosaico
+###  <a name="tessellation-schemes"></a><a name="schemes"></a>Schemi a mosaico
  Il comportamento di un indice spaziale dipende parzialmente dal relativo *schema a mosaico*. Lo schema a mosaico è specifico per il tipo di dati. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gli indici spaziali supportano due schemi a mosaico:
 
 -   *Mosaico della griglia di geometria*, ovvero lo schema per `geometry` il tipo di dati.
@@ -129,7 +129,7 @@ ms.locfileid: "78176661"
 ##### <a name="the-bounding-box"></a>Riquadro
  I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di delimitazione è definito da quattro coordinate `(` _, x-min_**,**_y-min_ `)` e `(` _x-max_**,**_y-max_`)`, che vengono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:
 
--   *x-min* è la coordinata x dell'angolo inferiore sinistro del rettangolo di delimitazione.
+-   *x-min* è la coordinata x dell'angolo inferiore sinistro del rettangolo di selezione.
 
 -   *y-min* è la coordinata y dell'angolo inferiore sinistro.
 
@@ -146,7 +146,7 @@ ms.locfileid: "78176661"
 
  Nella figura seguente vengono mostrati i punti definiti `(`dalle coordinate _x-min_**,**_y-min_ `)` e `(` _x-max_**,**_y-max_ `)` del rettangolo di delimitazione. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.
 
- ![Rettangolo di delimitazione che mostra le coordinate e la cella 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.")
+ ![Rettangolo di selezione contenente le coordinate e la cella 0](../../database-engine/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.").
 
  Un riquadro corrisponde ad alcune parti dei dati spaziali di un'applicazione. In base all'applicazione, il riquadro dell'indice può contenere tutti o solo una parte dei dati archiviati nella colonna spaziale. Solo le operazioni calcolate su oggetti che sono completamente inseriti nel riquadro traggono vantaggio dall'indice spaziale. Pertanto, per ottenere il massimo vantaggio da un indice spaziale in una colonna `geometry`, è necessario specificare un riquadro che contenga tutti o la maggior parte degli oggetti.
 
@@ -174,11 +174,11 @@ ms.locfileid: "78176661"
 
  Una volta che lo spazio è stato proiettato sul piano, questo viene scomposto in una gerarchia di griglie a quattro livelli. Livelli diversi possono utilizzare densità della griglia differenti. Nell'illustrazione seguente viene mostrato il piano dopo essere stato scomposto in una griglia a 1 livello 4x4. Ai fini dell'illustrazione, i livelli inferiori della gerarchia di griglie sono omessi. In effetti, il piano è completamente scomposto in una gerarchia di griglie a quattro livelli. Al termine del processo di scomposizione, i dati geografici vengono letti, riga per riga, dalla colonna relativa e il processo a mosaico viene eseguito per ogni oggetto.
 
- ![Griglia geografica di livello 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Griglia di geografia di livello 1")
+ ![Griglia di geografia di livello 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Griglia di geografia di livello 1")
 
-##  <a name="methods"></a>Metodi supportati dagli indici spaziali
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a>Metodi supportati dagli indici spaziali
 
-###  <a name="geometry"></a>Metodi Geometry supportati dagli indici spaziali
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>Metodi Geometry supportati dagli indici spaziali
  In alcuni casi, gli indici spaziali supportano i metodi geometry orientati ai set seguenti: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE o JOIN ON di una query e devono verificarsi all'interno di un predicato del seguente form generale:
 
  *Geometry1*. *method_name*(*Geometry2*)*comparison_operator * * valid_number*
@@ -187,23 +187,23 @@ ms.locfileid: "78176661"
 
  Gli indici spaziali supportano i seguenti form di predicato:
 
--   *Geometry1*. [STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) < *numero*
 
--   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) <= *numero*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *numero*
 
--   *Geometry1*. [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1*. [STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(Geometry2) = 1*
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *Geometry1*. [STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *Geometry1*. [STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>Metodi geography supportati dagli indici spaziali
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>Metodi geography supportati dagli indici spaziali
  In alcuni casi, gli indici spaziali supportano i metodi geography orientati ai set seguenti: STIntersects(),STEquals() e STDistance(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:
 
  *geography1*. *method_name*(*geography2*)*comparison_operator * * valid_number*
@@ -212,13 +212,13 @@ ms.locfileid: "78176661"
 
  Gli indici spaziali supportano i seguenti form di predicato:
 
--   *geography1*. [STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*. [STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) < *numero*
 
--   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *numero*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *numero*
 
 ### <a name="queries-that-use-spatial-indexes"></a>Query con indici spaziali
  Gli indici spaziali sono supportati solo nelle query che prevedono un operatore spaziale indicizzato nella clausola `WHERE`. Ad esempio, la sintassi seguente:

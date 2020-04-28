@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca5a4561c4b3f55044eb63068036105d878f150c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175080"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Contatori delle prestazioni per gli oggetti prestazioni di ReportServer:Service e ReportServerSharePoint:Service
@@ -41,7 +41,7 @@ ms.locfileid: "78175080"
 
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modalità SharePoint | Modalità nativa.
 
-##  <a name="bkmk_ReportServer"></a> Contatori delle prestazioni di ReportServer:Service (server di report in modalità nativa)
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> Contatori delle prestazioni di ReportServer:Service (server di report in modalità nativa)
  Nell'oggetto prestazioni `ReportServer:Service` è inclusa una raccolta di contatori per tenere traccia degli eventi correlati a HTTP e degli eventi correlati alla memoria per un'istanza del server di report. Questo oggetto prestazione viene visualizzato una volta per ogni istanza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel computer ed è possibile aggiungere o rimuovere contatori nell'oggetto prestazione per ogni istanza. I contatori per l'istanza predefinita vengono visualizzati nel formato `ReportServer:Service`. I contatori per le istanze denominate `ReportServer$<`vengono visualizzati nel formato *instance_name*`>:Service`.
 
  L' `ReportServer:Service` oggetto prestazione era una novità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]di e fornisce un subset di contatori inclusi con Internet Information Services (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nelle versioni precedenti di. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Questi nuovi contatori sono specifici di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]e consentono di tenere traccia di eventi correlati a HTTP per il server di report, quali richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori per tenere traccia di eventi di gestione della memoria.
@@ -78,10 +78,10 @@ ms.locfileid: "78175080"
 |`Requests/sec`|Numero di richieste elaborate al secondo. Questo valore rappresenta la velocità di trasferimento corrente dell'applicazione.|
 |`Tasks Queued`|Numero di attività in attesa che un thread diventi disponibile per l'elaborazione. Ogni richiesta inviata al server di report corrisponde a una o più attività. Questo contatore rappresenta solo il numero di attività pronte per l'elaborazione e non include il numero di attività attualmente in esecuzione.|
 
-##  <a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint: Service (server di report in modalità SharePoint)
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (server di report in modalità SharePoint)
  L' `ReportServerSharePoint:Service` oggetto prestazione è stato aggiunto [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]in.
 
- ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Tramite il seguente script di Windows PowerShell viene restituito l'elenco di contatori delle prestazioni per CounterSetName
+ ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Il seguente script di Windows PowerShell restituisce l'elenco di contatori delle prestazioni per CounterSetName
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths
@@ -93,8 +93,8 @@ ms.locfileid: "78175080"
 |`Memory Shrink Amount`|
 |`Memory Shrink Notifications/Sec`|
 
-##  <a name="bkmk_powershell"></a>Usare i cmdlet di PowerShell per restituire gli elenchi
- ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Tramite il seguente script di Windows PowerShell viene restituito l'elenco di contatori delle prestazioni per CounterSetName "ReportServerSharePoint: Service":
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>Usare i cmdlet di PowerShell per restituire gli elenchi
+ ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Lo script di Windows PowerShell seguente restituirà l'elenco dei contatori delle prestazioni per CounterSetName "ReportServerSharePoint:Service":
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths

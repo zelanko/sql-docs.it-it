@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176110"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
@@ -41,7 +41,7 @@ ms.locfileid: "78176110"
 
  Nella figura seguente vengono illustrate le finestre Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e **Casella degli strumenti** .
 
- ![Screenshot di Progettazione SSIS e della casella degli strumenti](media/denali-designerandtoolbox.gif "Schermata di Progettazione SSIS e della casella degli strumenti")
+ ![Screenshot di Progettazione SSIS e della casella degli strumenti](media/denali-designerandtoolbox.gif "Screenshot di Progettazione SSIS e della casella degli strumenti")
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ulteriori finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili finestre e finestre di dialogo che consentono di configurare l'ambiente di sviluppo e usare i pacchetti. Per altre informazioni, vedere [Interfaccia utente di Integration Services](integration-services-user-interface.md).
 
@@ -90,14 +90,13 @@ ms.locfileid: "78176110"
  Per altre informazioni, vedere [Visualizzazione di oggetti di pacchetto](view-package-objects.md).
 
 #### <a name="progressexecution-result-tab"></a>Scheda Stato o Risultati esecuzione
- Durante l'esecuzione di un pacchetto nella scheda **Stato** viene mostrato lo stato di esecuzione del pacchetto. Al termine dell'esecuzione i risultati rimangono disponibili nella scheda **Risultati esecuzione**.
+ Durante l'esecuzione di un pacchetto nella scheda **Stato** viene mostrato lo stato di esecuzione del pacchetto. Al termine dell'esecuzione i risultati rimangono disponibili nella scheda **Risultati esecuzione** .
 
 > [!NOTE]
 >  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** .
 
 ##### <a name="connection-managers-area"></a>Area Gestioni connessioni
- Le gestioni connessioni usate da un pacchetto vengono aggiunte e modificate nell'area **Gestioni connessioni** . 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include le gestioni connessioni per stabilire la connessione a una varietà di origini dati quali file di testo, database OLE DB e provider .NET.
+ Le gestioni connessioni usate da un pacchetto vengono aggiunte e modificate nell'area **Gestioni connessioni** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include le gestioni connessioni per stabilire la connessione a una varietà di origini dati quali file di testo, database OLE DB e provider .NET.
 
  Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](../../2014/integration-services/create-connection-managers.md).
 

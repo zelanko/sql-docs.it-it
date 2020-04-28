@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175510"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Pulire i dati mediante le informazioni dei dati di riferimento (esterni)
@@ -41,15 +41,15 @@ ms.locfileid: "78175510"
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-###  <a name="Prerequisites"></a> Prerequisiti
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti
  È necessario avere eseguito il mapping dei domini richiesti in una Knowledge Base DQS al servizio dati di riferimento appropriato. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si vogliono pulire dati di origine che contengono indirizzi US, ad esempio, è necessario eseguire il mapping dei domini a un provider del servizio dati di riferimento che fornisce dati di alta qualità per gli indirizzi US. Per ulteriori informazioni, vedere [la pagina relativa alla connessione di un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).
 
-###  <a name="Security"></a> Sicurezza
+###  <a name="security"></a><a name="Security"></a> Sicurezza
 
-####  <a name="Permissions"></a> Autorizzazioni
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
  Per eseguire la pulizia dei dati è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.
 
-##  <a name="Cleanse"></a>Pulire i dati tramite la Knowledge base dei dati di riferimento
+##  <a name="cleanse-your-data-using-reference-data-knowledge"></a><a name="Cleanse"></a> Pulire i dati mediante le informazioni dei dati di riferimento
  Si continuerà con lo stesso esempio di uso dei domini di cui è stato eseguito il mapping nell'argomento precedente, di [associazione di un dominio o di un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), con il servizio Melissa Data in Azure Marketplace. Vengono utilizzati gli stessi domini per pulire alcuni indirizzi US di esempio. I passaggi per pulire i dati sono uguali a quelli descritti in [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Eventuali differenze verranno indicate durante il processo, laddove necessario.
 
 1.  Creare un progetto Data Quality e selezionare l'attività **Pulizia** . Vedere [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).

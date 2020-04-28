@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175350"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilizzo di indici columnstore non cluster
@@ -30,12 +30,12 @@ ms.locfileid: "78175350"
 
 -   [Modificare i dati in un indice columnstore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>Creare un indice columnstore non cluster
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>Creare un indice columnstore non cluster
  Per caricare i dati in un indice columnstore non cluster, caricare innanzitutto i dati in una tabella rowstore tradizionale archiviata come heap o indice cluster e quindi usare [create columnstore index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) per creare un indice columnstore.
 
  ![Caricamento dati in un indice columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Caricamento dati in un indice columnstore")
 
-##  <a name="change"></a>Modificare i dati in un indice columnstore non cluster
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>Modificare i dati in un indice columnstore non cluster
  Dopo aver creato un indice columnstore non cluster in una tabella, non è possibile modificare i dati direttamente nella tabella. Se si esegue una query con INSERT, UPDATE, DELETE o MERGE viene restituito un messaggio di errore. Per aggiungere o modificare i dati nella tabella, è possibile effettuare una delle operazioni seguenti:
 
 -   Disabilitare l'indice columnstore. È possibile aggiornare i dati nella tabella. Se si disabilita l'indice columnstore, è possibile ricompilare l'indice columnstore al termine dell'aggiornamento dei dati. Ad esempio:

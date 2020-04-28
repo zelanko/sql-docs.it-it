@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9697d5a53b2aac0d951445206adc4c4f30e5385
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177083"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
@@ -47,12 +47,12 @@ ms.locfileid: "78177083"
 
  ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")
 
-##  <a name="bkmk_StagesSummary"></a>Fasi dell'elaborazione del report
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Fasi dell'elaborazione del report
  Quando si crea un report, si definisce un file di definizione del report (con estensione rdl) in formato XML. Questo file contiene tutte le informazioni necessarie per permettere all'elaboratore di report di combinare i dati e il layout del report. Quando si visualizza un report, il processo percorre le fasi seguenti:
 
 -   **Compilazione.** Si valutano le espressioni nella definizione del report e il formato intermedio compilato viene archiviato internamente sul server di report.
 
--   **Elaborazione.** Vengono eseguite le query del set di dati e si combina il formato intermedio con dati e layout.
+-   **Processo.** Vengono eseguite le query del set di dati e si combina il formato intermedio con dati e layout.
 
 -   **Rendering.** Il report elaborato viene inviato a un'estensione per il rendering per determinare la quantità di informazioni che si adatta a ogni pagina e creare il report impaginato.
 
@@ -126,7 +126,7 @@ ms.locfileid: "78177083"
 
 -   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per altre informazioni, vedere [Pianificazione per il supporto browser per Reporting Services e Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md), [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md) e [Accesso con URL &#41;SSRS&#40;](../url-access-ssrs.md).
 
--   **Recapito.**  Configurare una sottoscrizione per recapitare i report ai lettori tramite posta elettronica o in una cartella di file condivisa.  Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
+-   **Consegna.**  Configurare una sottoscrizione per recapitare i report ai lettori tramite posta elettronica o in una cartella di file condivisa.  Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
 
 -   **Esportazione.**  Dalla barra degli strumenti del visualizzatore di report, un lettore di report può esportare un report in un formato di file diverso. I formati del file di esportazione possono essere configurati dall'amministratore del server di report. Per altre informazioni, vedere [Esportazione di report &#40;Generatore report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)
 
@@ -139,7 +139,7 @@ ms.locfileid: "78177083"
 
 -   **Origini dati.** Le origini dati condivise e quelle incorporate vengono gestite in modo indipendente dalla definizione del report.
 
--   **Set di dati.**  I set di dati condivisi vengono gestiti in modo indipendente dalla definizione del report.
+-   **Set.**  I set di dati condivisi vengono gestiti in modo indipendente dalla definizione del report.
 
 -   **Parametri.**  I parametri vengono gestiti in modo indipendente dalla definizione del report. Dopo che i parametri vengono modificati sul server di report, i client della creazione report non possono sovrascrivere le modifiche apportate nel server.
 
@@ -147,13 +147,13 @@ ms.locfileid: "78177083"
 
 -   **Report memorizzati nella cache.**  La pianificazione dell'esecuzione di report di grandi dimensioni negli orari di minore attività consente di ridurre l'impatto dell'elaborazione sul server di report durante l'orario di lavoro principale.
 
--   **Snapshot.**  Utilizzare snapshot del report quando si desidera offrire risultati coerenti per più utenti che devono utilizzare gli stessi set di dati. Con dati volatili, un report su richiesta può generare risultati diversi anche a differenza di pochi minuti. Uno snapshot del report, invece, consente di eseguire confronti validi con altri report o strumenti analitici contenenti dati riferiti allo stesso momento nel tempo.
+-   **Istantanee.**  Utilizzare snapshot del report quando si desidera offrire risultati coerenti per più utenti che devono utilizzare gli stessi set di dati. Con dati volatili, un report su richiesta può generare risultati diversi anche a differenza di pochi minuti. Uno snapshot del report, invece, consente di eseguire confronti validi con altri report o strumenti analitici contenenti dati riferiti allo stesso momento nel tempo.
 
--   **Cronologia dei report.** Tramite la creazione di una serie di snapshot del report, è possibile compilare una cronologia che mostri le modifiche dei dati del report nel tempo.
+-   **Cronologia del report.** Tramite la creazione di una serie di snapshot del report, è possibile compilare una cronologia che mostri le modifiche dei dati del report nel tempo.
 
  Per altre informazioni sulle prestazioni, vedere [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](../report-server/performance-snapshots-caching-reporting-services.md).
 
-##  <a name="bkmk_SecureReportsSummary"></a>Proteggere i report
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Proteggere i report
  Per proteggere un report:
 
 -   Dall'amministratore del server di report, identificare l'autorizzazione e il sistema di autenticazione utilizzati per l'installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Per impostazione predefinita, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] si usano autenticazione di Windows, sicurezza integrata e assegnazione di ruolo per consentire di controllare l'accesso ai report pubblicati. Per altre informazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Sicurezza e protezione di Reporting Services](../security/reporting-services-security-and-protection.md).
@@ -164,7 +164,7 @@ ms.locfileid: "78177083"
 ## <a name="upgrade-reports"></a>Upgrade Reports
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta varie versioni di definizioni dei report, server di report e siti di SharePoint. Per aggiornare un report:
 
--   Aggiornare un'installazione del server di report I report compilati archiviati nel server di report vengono aggiornati automaticamente al primo utilizzo. La definizione del report (.rdl) non viene modificata. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
+-   Aggiornare un'installazione del server di report I report compilati archiviati nel server di report vengono aggiornati automaticamente al primo utilizzo. La definizione del report (.rdl) non viene modificata. Per altre informazioni, vedere [Upgrade and migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
 
 -   Aprire un report in un ambiente di creazione di report. La definizione del report viene aggiornata nella maggior parte delle circostanze. Per altre informazioni, vedere [Aggiornare i report](../install-windows/upgrade-reports.md) e [Distribuzione e supporto della versione di SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).
 

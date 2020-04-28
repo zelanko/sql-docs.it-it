@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà DefinedSize (VC Documenti Microsoft
+title: Esempio di proprietà DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939579"
 ---
 # <a name="definedsize-property-example-vc"></a>Esempio della proprietà DefinedSize (VC++)
-In questo esempio viene illustrata la proprietà [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) di un oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md). Il codice ridefinirà le dimensioni della colonna FirstName della tabella **Employees** del database *Northwind.* Viene quindi visualizzata la modifica dei valori del [campo](../../../ado/reference/ado-api/field-object.md) FirstName di un [oggetto Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base alla tabella **Employees.** Si noti che per impostazione predefinita, il campo FirstName viene riempito con spazi dopo aver ridefinito la proprietà **DefinedSize.**  
+In questo esempio viene illustrata la proprietà [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md). Il codice ridefinirà le dimensioni della colonna FirstName della tabella **Employees** del database *Northwind* . Viene quindi visualizzata la modifica apportata ai valori del [campo](../../../ado/reference/ado-api/field-object.md) FirstName di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato sulla tabella **Employees** . Si noti che per impostazione predefinita, il campo FirstName viene riempito con spazi dopo la ridefinizione della proprietà **DefinedSize** .  
   
 ```  
 // BeginDefinedSizeCpp.cpp  

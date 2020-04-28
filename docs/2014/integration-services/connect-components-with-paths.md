@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176486"
 ---
 # <a name="connect-components-with-paths"></a>Connessione di componenti con i percorsi
@@ -46,7 +46,7 @@ ms.locfileid: "78176486"
 
 ### <a name="to-view-path-metadata"></a>Per visualizzare i metadati di un percorso
 
--   [Aggiunta di un visualizzatore dati a un flusso di dati](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)
+-   [Aggiungere un visualizzatore dati a un flusso di dati](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)
 
 ## <a name="see-also"></a>Vedere anche
  [Flusso](data-flow/data-flow.md) di dati dell' [attività flusso](control-flow/data-flow-task.md) di dati [trasformare i dati con le trasformazioni](data-flow/transformations/transform-data-with-transformations.md) [gestione degli errori nei dati](data-flow/error-handling-in-data.md)

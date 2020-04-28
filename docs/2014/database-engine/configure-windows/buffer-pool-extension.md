@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175432"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
@@ -73,9 +73,9 @@ ms.locfileid: "78175432"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Informazioni restituite sull'estensione del pool di buffer
  È possibile utilizzare le viste a gestione dinamica (DMV) seguenti per visualizzare la configurazione dell'estensione del pool di buffer e le informazioni sulle pagine di dati restituite nell'estensione.
 
--   [sys. dm_os_buffer_pool_extension_configuration &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [sys. dm_os_buffer_descriptors &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  I contatori delle prestazioni sono disponibili nell'oggetto di Gestione buffer di SQL Server per tenere traccia delle pagine di dati nel file di estensione del pool di buffer. Per ulteriori informazioni, vedere l'argomento relativo ai [contatori delle prestazioni dell'estensione del pool di buffer](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).
 
@@ -95,7 +95,7 @@ ms.locfileid: "78175432"
 |**Descrizione dell'attività**|**Argomento**|
 |Abilitare e configurare l'estensione del pool di buffer.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |Modificare la configurazione dell'estensione del pool di buffer.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|Visualizzare la configurazione dell'estensione del pool di buffer.|[sys. dm_os_buffer_pool_extension_configuration &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|Eseguire il monitoraggio dell'estensione del pool di buffer.|[sys. dm_os_buffer_descriptors &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contatori delle prestazioni](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|Visualizzare la configurazione dell'estensione del pool di buffer.|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|Eseguire il monitoraggio dell'estensione del pool di buffer.|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contatori delle prestazioni](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

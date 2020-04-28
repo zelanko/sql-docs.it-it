@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177341"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opzione preprocess (strumento di amministrazione Distributed Replay)
@@ -96,7 +96,7 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
 ## <a name="permissions"></a>Autorizzazioni
  È necessario eseguire lo strumento di amministrazione come utente interattivo, scegliendo tra utente locale e account utente di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.
 
- Per altre informazioni, vedere [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md).
+ Per altre informazioni, vedere [Sicurezza di Distributed Replay](distributed-replay-security.md).
 
 ## <a name="see-also"></a>Vedere anche
  [Preparare i dati di traccia di Input](prepare-the-input-trace-data.md) [SQL Server riesecuzione distribuita](sql-server-distributed-replay.md) [configurare riesecuzione distribuita](configure-distributed-replay.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e1e2d9cf44435ad61d81ae1f63e4e616c5e673c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177203"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
@@ -36,7 +36,7 @@ ms.locfileid: "78177203"
 
 -   [Percorso del log di traccia](#bkmk_trace)
 
-##  <a name="bkmk_general"></a> Indicazioni generali per il log ULS
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> Indicazioni generali per il log ULS
  Nella tabella seguente sono elencate le categorie e i livelli degli eventi consigliati per il monitoraggio di un ambiente [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Quando un evento viene registrato, in ogni voce sono inclusi l'ora di registrazione dell'evento, il nome del processo e l'ID del thread.
 
 |Category|Level|Descrizione|
@@ -47,7 +47,7 @@ ms.locfileid: "78177203"
 |Topologia|Dettagliato|Registra informazioni sull'utente corrente|
 |web part|Dettagliato|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|
 
-##  <a name="bkmk_turnon"></a> Per abilitare e disabilitare gli eventi di Reporting Services nella categoria Reporting Services
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> Per abilitare e disabilitare gli eventi di Reporting Services nella categoria Reporting Services
 
 1.  Da Amministrazione centrale SharePoint
 
@@ -66,7 +66,7 @@ ms.locfileid: "78177203"
 > [!NOTE]
 >  L'opzione **Evento meno critico da includere nel registro eventi** non è supportata da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. L'opzione verrà ignorata.
 
-##  <a name="bkmk_recommended"></a> Configurazione consigliata
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> Configurazione consigliata
  Le opzioni di registrazione seguenti sono consigliate come configurazione standard:
 
 -   **Redirector HTTP**
@@ -81,7 +81,7 @@ ms.locfileid: "78177203"
 Get-SPDiagnosticConfig
 ```
 
-##  <a name="bkmk_readentries"></a> Lettura delle voci di log
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> Lettura delle voci di log
  Le voci di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel log vengono formattate come indicato di seguito.
 
 1.  **Prodotto:SQL Server Reporting Services**
@@ -90,7 +90,7 @@ Get-SPDiagnosticConfig
 
 3.  **Categoria:** gli eventi correlati a o comunicati da un componente front-end Web non contengono l'indicazione "server di report". Ad esempio, "Proxy applicazione del servizio" Runtime avvisi server di report". Le voci relative al front-end Web contengono un valore CorrelationID, mentre le voci relative al server no.
 
-##  <a name="bkmk_list"></a> Elenco di eventi di SQL Server Reporting Services
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Elenco di eventi di SQL Server Reporting Services
  Nella tabella seguente sono elencati gli eventi nella categoria SQL Server Reporting Services:
 
 |Nome area|Descrizione o voci di esempio|
@@ -125,7 +125,7 @@ Get-SPDiagnosticConfig
 |Provider del server di report||
 |Rendering del server di report||
 |Anteprima report del server di report||
-|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: Versione di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|
+|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|
 |Processi in esecuzione del server di report||
 |Richieste in esecuzione del server di report||
 |Pianificazione del server di report||
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |Proxy applicazione del servizio||
 |Servizio condiviso|Voci di esempio:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Accesso MediumGranting ai database di contenuto.<br /><br /> Istanze MediumProvisioning per ReportingWebServiceApplication<br /><br /> Modifica dell'account del servizio MediumProcessing per ReportingWebServiceApplication<br /><br /> Autorizzazioni per database MediumSetting.|
 
-##  <a name="bkmk_powershell"></a> Visualizzare un file di log con PowerShell
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> Visualizzare un file di log con PowerShell
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")È possibile usare PowerShell per restituire un elenco di eventi correlati a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un file di log ULS. Digitare il comando seguente dalla shell di gestione SharePoint 2010 per ottenere un elenco filtrato di righe del file di log ULS, UESQL11SPOINT-20110606-1530.log, contenenti "**sql server reporting services**":
 
 ```powershell
@@ -149,6 +149,6 @@ Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
 
  Per altre informazioni sull'uso di PowerShell per visualizzare dati del log, vedere [Visualizzare i log diagnostici (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)
 
-##  <a name="bkmk_trace"></a>Percorso registro di traccia
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a>Percorso registro di traccia
  I file dei log di traccia si trovano in genere nella cartella **c:\Programmi\Common files\Microsoft Shared\Web Server Extensions\14\logs** , ma è possibile verificare o modificare il percorso dalla pagina **Registrazione diagnostica** in Amministrazione centrale SharePoint.
 

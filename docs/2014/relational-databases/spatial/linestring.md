@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176671"
 ---
 # <a name="linestring"></a>LineString
-  
   `LineString` indica un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.
 
 ## <a name="linestring-instances"></a>Istanze LineString

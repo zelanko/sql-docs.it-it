@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fe4f8527bf23ac1af36b6661f2d8f98350a96e7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176361"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Utilizzo di tipi di dati nel flusso di dati
@@ -155,7 +155,7 @@ ms.locfileid: "78176361"
 > [!NOTE]
 >  Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> non restituisce un valore per il tipo di dati DT_DBTIMESTAMPOFFSET e si verifica <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException>. È necessario convertire il tipo di dati DT_DBTIMESTAMPOFFSET in uno dei tipi di dati data/ora di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] di cui è possibile eseguire il mapping a un tipo di dati gestito. Per un elenco di tipi di dati data/ora di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] di cui è possibile eseguire il mapping a un tipo di dati gestito, vedere la tabella della sezione precedente, "Mapping tra tipi di dati di Integration Services e tipi di dati gestiti". Per altre informazioni sulla conversione dei tipi di dati, vedere [Tipi di dati di Integration Services](../../data-flow/integration-services-data-types.md).
 
-![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
 
 ## <a name="see-also"></a>Vedere anche
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> 

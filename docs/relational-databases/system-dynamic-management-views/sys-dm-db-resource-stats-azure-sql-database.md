@@ -20,16 +20,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175152"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il consumo di CPU, I/O e memoria per un database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È presente una riga ogni 15 secondi, anche se non c'è attività di database. I dati cronologici vengono conservati per circa un'ora.  
+  Restituisce il consumo di CPU, I/O e memoria per un database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È presente una riga per ogni 15 secondi, anche se non esiste alcuna attività nel database. I dati cronologici vengono conservati per circa un'ora.  
   
 |Colonne|Tipo di dati|Descrizione|  
 |-------------|---------------|-----------------|  

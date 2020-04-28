@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175983"
 ---
 # <a name="data-collection"></a>Raccolta di dati
@@ -36,7 +36,7 @@ ms.locfileid: "78175983"
 ## <a name="data-collector-concepts"></a>Concetti sull'agente di raccolta dati
  L'agente di raccolta dati è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e fa ampio uso di entrambi. Pertanto, prima di utilizzare l'agente di raccolta dati è necessario comprendere alcuni concetti relativi a ognuno di questi componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent viene utilizzato per pianificare ed eseguire i processi di raccolta. È necessario comprendere i seguenti concetti:
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene usato per pianificare ed eseguire i processi di raccolta. È necessario comprendere i seguenti concetti:
 
 -   Processo
 
@@ -50,11 +50,11 @@ ms.locfileid: "78175983"
 
  Per altre informazioni, vedere [Automatizzazione delle attività amministrative &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).
 
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)]) viene usato per eseguire pacchetti che raccolgono dati da singoli provider di dati. È necessario conoscere i seguenti strumenti e concetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] .
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) viene usato per eseguire pacchetti che raccolgono dati da singoli provider di dati. È necessario conoscere i seguenti strumenti e concetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] .
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]pacchetto
+-   Pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]configurazione pacchetto
+-   Configurazione pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
  Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).
 

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176819"
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
@@ -37,18 +37,18 @@ ms.locfileid: "78176819"
 
      [Transact-SQL](#TsqlProcedure)
 
-##  <a name="BeforeYouBegin"></a> Prima di iniziare
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
-###  <a name="Security"></a> Sicurezza
+###  <a name="security"></a><a name="Security"></a> Sicurezza
 
-####  <a name="Permissions"></a> Autorizzazioni
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
  Sono richieste l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.
 
  Se tutte le colonne nell'istruzione CREATE TABLE sono definite come tipo CLR definito dall'utente, è necessario che l'utente sia il proprietario del tipo o disponga dell'autorizzazione REFERENCES.
 
  Se a una colonna nell'istruzione CREATE TABLE è associata una raccolta di XML Schema, è necessario che l'utente sia il proprietario della raccolta di XML Schema o disponga dell'autorizzazione REFERENCES.
 
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
 
 #### <a name="to-create-a-table-with-table-designer"></a>Per creare una tabella con Progettazione tabelle
 
@@ -78,13 +78,13 @@ ms.locfileid: "78176819"
 
      Per ulteriori informazioni sugli schemi, vedere [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).
 
-9. Scegliere **Salva** *nome tabella*dal menu **file** .
+9. Scegliere **Salva** *nometabella* dal menu **File**.
 
 10. Nella finestra di dialogo **Scegli nome** digitare un nome per la tabella, quindi fare clic su **OK**.
 
 11. Per visualizzare la nuova tabella, in **Esplora oggetti**espandere il nodo **Tabelle** e premere **F5** per aggiornare l'elenco di oggetti. La nuova tabella viene visualizzata nell'elenco di tabelle.
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
 
 #### <a name="to-create-a-table-in-the-query-editor"></a>Per creare una tabella nell'editor di query
 

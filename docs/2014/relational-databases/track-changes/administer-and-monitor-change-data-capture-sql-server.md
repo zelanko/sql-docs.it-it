@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929190"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
   In questo argomento viene descritto come amministrare ed eseguire il monitoraggio dell'acquisizione dati delle modifiche.  
   
-##  <a name="Capture"></a>Processo di acquisizione  
+##  <a name="capture-job"></a><a name="Capture"></a> Processo di acquisizione  
  Il processo di acquisizione viene avviato tramite l'esecuzione della stored procedure senza parametri `sp_MScdc_capture_job`. Questa stored procedure estrae prima i valori configurati per *maxtrans*, *maxscans*, *continuous*e *pollinginterval* necessari per il processo di acquisizione da msdb.dbo.cdc_jobs. Tali valori configurati vengono quindi passati come parametri alla stored procedure `sp_cdc_scan`, utilizzata per richiamare `sp_replcmds` per l'esecuzione dell'analisi del log.  
   
 ### <a name="capture-job-parameters"></a>Parametri del processo di acquisizione  
@@ -61,7 +61,7 @@ ms.locfileid: "76929190"
 ### <a name="capture-job-customization"></a>Personalizzazione del processo di acquisizione  
  Per il processo di acquisizione è possibile applicare logica aggiuntiva per determinare se una nuova analisi debba iniziare immediatamente o se venga imposta una sospensione prima di avviare una nuova analisi anziché basarsi su un intervallo di polling fisso. La scelta può essere basata solo sull'ora del giorno, applicando eventualmente sospensioni prolungate durante i periodi di attività massima, e prevedere anche il passaggio a un intervallo di polling pari a zero alla fine del giorno quando è importante completare l'elaborazione giornaliera e preparare le esecuzioni notturne. Può inoltre essere necessario monitorare lo stato del processo di acquisizione per determinare il momento in cui tutte le transazioni di cui è stato eseguito il commit entro mezzanotte sono state sottoposte ad analisi e inserite nelle tabelle delle modifiche. Ciò consente il completamento del processo di acquisizione, che verrà riavviato in base a una pianificazione giornaliera. Sostituendo la chiamata di `sp_cdc_scan` da parte del passaggio del processo recapitato con una chiamata a un wrapper scritto dall'utente per `sp_cdc_scan`, è possibile ottenere un comportamento notevolmente personalizzato con un minimo sforzo aggiuntivo.  
   
-##  <a name="Cleanup"></a>Processo di pulizia  
+##  <a name="cleanup-job"></a><a name="Cleanup"></a> Processo di pulizia  
  In questa sezione vengono fornite informazioni sul funzionamento del processo di pulizia di Change Data Capture.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Struttura del processo di pulizia  
@@ -77,8 +77,8 @@ ms.locfileid: "76929190"
 ### <a name="cleanup-job-customization"></a>Personalizzazione del processo di pulizia  
  Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Poiché le procedure di pulizia sottostanti sono basate su `lsn` anziché sul tempo, è possibile usare qualsiasi strategia per determinare il valore `lsn` minimo da mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Benché la strategia predefinita applichi lo stesso valore `lsn` per pulire tutte le tabelle delle modifiche dei database è inoltre possibile chiamare la procedura di pulizia sottostante anche per eseguire la pulizia a livello di istanza di acquisizione.  
   
-##  <a name="Monitor"></a>Monitorare il processo Change Data Capture  
- Il monitoraggio del processo Change Data Capture consente di determinare se le modifiche vengono scritte correttamente e con una latenza ragionevole nelle tabelle delle modifiche. L'esecuzione il monitoraggio può consentire anche di identificare gli errori che si potrebbero verificare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sono incluse due viste a gestione dinamica che consentono di monitorare Change Data Capture: [sys. dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys. dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
+##  <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Monitoraggio del processo Change Data Capture  
+ Il monitoraggio del processo Change Data Capture consente di determinare se le modifiche vengono scritte correttamente e con una latenza ragionevole nelle tabelle delle modifiche. L'esecuzione il monitoraggio può consentire anche di identificare gli errori che si potrebbero verificare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse due DMV per monitorare Change Data Capture: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identificazione di sessioni con set di risultati vuoti  
  Ogni riga in sys.dm_cdc_log_scan_sessions rappresenta una sessione di analisi del log, ad eccezione della riga con ID 0. Una sessione di analisi del log è equivalente a un'esecuzione di [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). Durante una sessione, l'analisi può restituire modifiche o un risultato vuoto. Se il set di risultati è vuoto, la colonna empty_scan_count in sys.dm_cdc_log_scan_sessions è impostata su 1. Se si ottengono set di risultati vuoti consecutivi, ad esempio nel caso in cui il processo di acquisizione viene eseguito in modo continuo, il valore di empty_scan_count nell'ultima riga esistente viene incrementato. Se ad esempio sys.dm_cdc_log_scan_sessions contiene già 10 righe per analisi che hanno restituito modifiche e in una riga sono presenti cinque risultati vuoti, la vista contiene 11 righe. L'ultima riga presenta il valore 5 nella colonna empty_scan_count. Per determinare le sessioni per cui l'analisi è risultata vuota, eseguire la query seguente:  
@@ -160,9 +160,9 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 4.  Nel data warehouse configurato nel passaggio 1 trovare la tabella custom_snapshots.cdc_log_scan_data. In questa tabella viene fornito uno snapshot cronologico di dati dalle sessioni di analisi del log. Questi dati possono essere utilizzati per analizzare nel corso del tempo latenza, velocità effettiva e altri indicatori di prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Rilevare le modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   
- [Usare i dati delle modifiche &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
+ [Usare Change Data &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
   
   

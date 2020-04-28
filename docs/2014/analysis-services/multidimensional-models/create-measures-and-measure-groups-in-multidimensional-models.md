@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175770"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Creare misure e gruppi di misure nei modelli multidimensionali
@@ -28,11 +28,11 @@ ms.locfileid: "78175770"
 
 -   [Componenti di una misura](#bkmk_comps)
 
--   [Modellazione di misure e gruppi di misure su fatti e tabelle dei fatti](#bkmk_modeling)
+-   [Modellazione misure e gruppi di misure su fatti e delle tabelle dei fatti](#bkmk_modeling)
 
 -   [Granularità di un gruppo di misure](#bkmk_grain)
 
-##  <a name="bkmk_create"></a>Approcci per la creazione di misure
+##  <a name="approaches-for-creating-measures"></a><a name="bkmk_create"></a>Approcci per la creazione di misure
  Una misura può essere un elemento statico del cubo, creata in fase di progettazione, sempre presente ogni volta che si accede al cubo. È anche possibile definire una misura come *membro calcolato* usando un'espressione MDX per specificare un valore calcolato per una misura in base ad altre misure del cubo. Un membro calcolato può essere limitato a sessione o un utente.
 
  Per creare una misura o un gruppo di misure, usare uno di questi approcci:
@@ -44,7 +44,7 @@ ms.locfileid: "78175770"
 |membro calcolato|Membri calcolati aggiungono funzionalità di analisi e la flessibilità di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché è possibile controllare come e quando vengono creati. In alcuni casi è sufficiente una misura temporaneamente, per la durata di una sessione utente o in Management Studio come parte di un'indagine.<br /><br /> In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire la scheda calcoli per creare un nuovo membro calcolato.<br /><br /> Scegliere questo approccio quando basare una misura su un'espressione MDX. Per altre informazioni, vedere gli argomenti seguenti: [Compilazione di misure in MDX](mdx/mdx-building-measures.md), [Calcoli](../multidimensional-models-olap-logical-cube-objects/calculations.md), [Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md) e [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|
 |MDX o XMLA|In SQL Server Management Studio, è possibile eseguire MDX o XMLA per modificare un database per includere una nuova misura calcolata. Questo approccio è utile per test ad hoc dei dati, dopo la soluzione viene distribuita a un server. Vedere [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md).|
 
-##  <a name="bkmk_comps"></a>Componenti di una misura
+##  <a name="components-of-a-measure"></a><a name="bkmk_comps"></a>Componenti di una misura
  Una misura è un oggetto con proprietà. Oltre al nome, una misura deve disporre di un tipo di aggregazione e una colonna di origine o un'espressione utilizzata per caricare la misura con dati. È possibile modificare la definizione della misura impostandone le proprietà.
 
 |||
@@ -53,7 +53,7 @@ ms.locfileid: "78175770"
 |**aggregazione**|Per impostazione predefinita, le misure vengono sommate in ogni dimensione. La proprietà `AggregateFunction` consente tuttavia di modificare tale comportamento. Vedere [Use Aggregate Functions](use-aggregate-functions.md) per un elenco.|
 |**Proprietà**|Vedere [Configure Measure Properties](configure-measure-properties.md) per le descrizioni di proprietà aggiuntive.|
 
-##  <a name="bkmk_modeling"></a>Modellazione di misure e gruppi di misure su fatti e tabelle dei fatti
+##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Modellazione di misure e gruppi di misure su fatti e tabelle dei fatti
  Prima di eseguire una procedura guidata, è utile per comprendere i principi di modellazione dietro la definizione della misura.
 
  Misure e gruppi di misure sono gli oggetti multidimensionali che rappresentano i fatti e delle tabelle dei fatti in un data warehouse esterno. Nella maggior parte dei casi, misure e gruppi di misure basa sugli oggetti in una vista origine dati, che a sua volta, vengono creati dal data warehouse sottostante.
@@ -75,7 +75,7 @@ ms.locfileid: "78175770"
 > [!NOTE]
 >  Non tutte le misure derivano direttamente da un valore archiviato in una colonna della tabella dei fatti. Ad esempio, la misura **Sales Person Count** definita nel gruppo di misure **Sales Quota** del cubo di esempio Adventure Works si basa in realtà sul conteggio di valori univoci, o Distinct Count, nella colonna **EmployeeKey** della tabella dei fatti **FactSalesQuota** .
 
-##  <a name="bkmk_grain"></a>Granularità di un gruppo di misure
+##  <a name="granularity-of-a-measure-group"></a><a name="bkmk_grain"></a>Granularità di un gruppo di misure
  Gruppi di misure hanno un livello di dettaglio associato indica il livello di dettaglio supportato da una tabella dei fatti. La granularità viene impostata tramite la relazione di chiave esterna a una dimensione.
 
  Ad esempio, la tabella dei fatti **FactSalesQuota** ha una relazione di chiave esterna con la tabella **DimEmployee** , ogni record nella tabella **FactSalesQuota** si riferisce a un solo dipendente, pertanto il gruppo di misure, da un punto di vista della dimensione Employee, ha una granularità a livello di singolo dipendente.

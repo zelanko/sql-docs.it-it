@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db2e2fb2a174e73cfbe139c3ee15529af72e5b7b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176040"
 ---
 # <a name="master-data-services"></a>Master Data Services
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) è la soluzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la gestione dei dati master. Nella gestione dei dati master vengono descritti gli sforzi fatti da un'organizzazione per individuare e definire elenchi non transazionali di dati, con l'obiettivo della compilazione di elenchi principali gestibili. In un progetto di gestione dei dati master in genere è inclusa una valutazione e la ristrutturazione dei processi aziendali interni insieme all'implementazione della tecnologia di gestione dei dati master. Il risultato di una soluzione di gestione dei dati master riuscita sono dei dati affidabili, centralizzati che possono essere analizzati e dar luogo a decisioni aziendali ottimali.
 
  Con la formazione corretta, la maggior parte degli utenti in ambito aziendale deve essere in grado di implementare una soluzione [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Inoltre, è possibile utilizzare MDS per gestire qualsiasi dominio. Questa soluzione, infatti, non è specifica per la gestione di elenchi di clienti, prodotti o account. Quando MDS viene installato per la prima volta, non include la struttura per nessun dominio. per definire i domini necessari, è necessario creare i modelli.
@@ -27,11 +26,9 @@ ms.locfileid: "78176040"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]include i componenti e gli strumenti seguenti:
 
--   
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uno strumento che consente di creare e configurare database e applicazioni Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uno strumento che consente di creare e configurare database e applicazioni Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
 
--   
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], un'applicazione Web che consente di effettuare attività amministrative (quali la creazione di un modello o di una regola business) e alla quale gli utenti accedono per aggiornare i dati.
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], un'applicazione Web che consente di effettuare attività amministrative (quali la creazione di un modello o di una regola business) e alla quale gli utenti accedono per aggiornare i dati.
 
 -   MDSModelDeploy.exe, uno strumento che consente di creare pacchetti degli oggetti modello e dei dati in modo da poter distribuirli in altri ambienti.
 

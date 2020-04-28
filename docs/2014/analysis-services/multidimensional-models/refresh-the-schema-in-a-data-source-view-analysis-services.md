@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175710"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aggiornare lo schema in una vista origine dati (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "78175710"
 
  [Aggiornare una vista origine dati in SQL Server Data Tools](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>Modifiche supportate nell'aggiornamento
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>Modifiche supportate nell'aggiornamento
  Nell'aggiornamento della vista origine dati sono incluse le azioni seguenti:
 
 -   Eliminazione di tabelle, colonne e relazioni
@@ -43,7 +43,7 @@ ms.locfileid: "78175710"
 
  L'aggiornamento non implica mai l'aggiunta di nuove tabelle a una vista origine dati. Se si desidera aggiungere una nuova tabella, è necessario effettuare tale operazione manualmente. Per altre informazioni, vedere [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).
 
-##  <a name="bkmk_DSVrefresh"></a>Aggiornare una vista origine dati in SQL Server Data Tools
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>Aggiornare una vista origine dati in SQL Server Data Tools
  Per aggiornare una vista origine dati, fare doppio clic su di essa in Esplora soluzioni di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e quindi fare clic sul pulsante Aggiorna vista origine dati o scegliere **Aggiorna** dal menu Vista origine dati.
 
  Durante l'aggiornamento, in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengono eseguite query su tutte le origini dati relazionali sottostanti per determinare se sono state apportate modifiche nelle tabelle o nelle viste incluse nella vista origine dati. Se è possibile stabilire connessioni a tutte le origini dati sottostanti e sono state apportate modifiche, queste verranno visualizzate nella finestra di dialogo **Aggiorna vista origine dati** .

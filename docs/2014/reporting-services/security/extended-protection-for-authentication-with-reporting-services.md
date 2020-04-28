@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177084"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "78177084"
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e applica la protezione estesa abilitata nel sistema operativo. Se il sistema operativo non supporta la protezione estesa o la funzionalità non è stata abilitata nel sistema operativo, l'autenticazione eseguita dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] avrà esito negativo. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] La protezione estesa richiede inoltre un certificato SSL. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md)
 
 > [!IMPORTANT]
->  Per impostazione predefinita [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione `rsreportserver.config` o utilizzando le API di WMI che consentono di aggiornare il file di configurazione. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]non fornisce un'interfaccia utente per la modifica o la visualizzazione delle impostazioni di protezione estesa. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.
+>  Per impostazione predefinita [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione `rsreportserver.config` o utilizzando le API di WMI che consentono di aggiornare il file di configurazione. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non fornisce un'interfaccia utente per la modifica o la visualizzazione delle impostazioni relative alla protezione estesa. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.
 
  I problemi comuni che si verificano a causa della modifica delle impostazioni relative alla protezione estesa o alla configurazione non corretta delle impostazioni non vengono esposti con messaggi o finestre di dialogo di errore. I problemi correlati alla configurazione e alla compatibilità della protezione estesa causano problemi di autenticazione ed errori nei log di traccia di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .
 
@@ -53,7 +53,7 @@ ms.locfileid: "78177084"
 
 -   Il valore predefinito per l'impostazione `RSWindowsExtendedProtectionScenario` è `Proxy`.
 
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Preparazione aggiornamento non verifica se il sistema operativo o l'installazione corrente di dispone [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] del supporto per la protezione estesa abilitato.
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor non verifica se il sistema operativo o l'installazione corrente di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dispone del supporto di protezione estesa abilitato.
 
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Elementi non coperti dalla protezione estesa di Reporting Services
  Le aree e gli scenari funzionali seguenti non sono supportati dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :
@@ -84,7 +84,7 @@ ms.locfileid: "78177084"
 |Comunicazione HTTP.<br /><br /> Il server di report imporrà l'associazione di canale dal client al proxy e l'associazione al servizio dal client al server di report.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Applicazione client<br /><br /> 2) Server di report<br /><br /> 3) Proxy|Il canale SSL al proxy è disponibile, pertanto l'associazione di canale al proxy può essere imposta.<br /><br /> Anche l'associazione al servizio può essere imposta.<br /><br /> Il nome del proxy deve essere noto al server di report e a tale scopo l'amministratore del server di report deve creare una prenotazione di URL per il proxy con un'intestazione host oppure configurare il nome del proxy nella voce `BackConnectionHostNames` del Registro di sistema di Windows.<br /><br /> Impostare `RSWindowsExtendedProtectionLevel` su `Allow` o `Require`.<br /><br /> Impostare `RSWindowsExtendedProtectionScenario` su `Proxy`.|
 |Comunicazione HTTPS indiretta con un proxy sicuro. Il server di report imporrà l'associazione di canale dal client al proxy e l'associazione al servizio dal client al server di report.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Applicazione client<br /><br /> 2) Server di report<br /><br /> 3) Proxy|Il canale SSL al proxy è disponibile, pertanto l'associazione di canale al proxy può essere imposta.<br /><br /> Anche l'associazione al servizio può essere imposta.<br /><br /> Il nome del proxy deve essere noto al server di report e a tale scopo l'amministratore del server di report deve creare una prenotazione di URL per il proxy con un'intestazione host oppure configurare il nome del proxy nella voce `BackConnectionHostNames` del Registro di sistema di Windows.<br /><br /> Impostare `RSWindowsExtendedProtectionLevel` su `Allow` o `Require`.<br /><br /> Impostare `RSWindowsExtendedProtectionScenario` su `Proxy`.|
 
-### <a name="gateway"></a>gateway
+### <a name="gateway"></a>Gateway
  In questo scenario vengono descritte applicazioni client che si connettono a un dispositivo o a un software che esegue SSL e autentica l'utente. Il dispositivo o il software rappresenta quindi il contesto utente o un contesto utente diverso prima di inviare una richiesta al server di report.
 
 |Scenario|Diagramma dello scenario|Modalità di protezione|
@@ -107,13 +107,13 @@ ms.locfileid: "78177084"
 
  Quando la convalida delle impostazioni di configurazione ha esito negativo, i tipi di autenticazione `RSWindowsNTLM`, `RSWindowsKerberos` e `RSWindowsNegotiate` vengono disabilitati nel server di report.
 
-###  <a name="ConfigurationSettings"></a>Impostazioni di configurazione per la protezione estesa di Reporting Services
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Impostazioni di configurazione per la protezione estesa di Reporting Services
  Nella tabella seguente vengono fornite le informazioni sulle impostazioni di configurazione incluse nel file `rsreportserver.config` per la protezione estesa.
 
 |Impostazione|Descrizione|
 |-------------|-----------------|
 |`RSWindowsExtendedProtectionLevel`|Specifica il grado di imposizione della protezione estesa. I valori validi sono `Off`, `Allow` e `Require`.<br /><br /> Il valore predefinito è `Off`.<br /><br /> Il valore `Off` specifica che non viene eseguita alcuna verifica dell'associazione di canale o dell'associazione al servizio.<br /><br /> Il valore `Allow` indica il supporto della protezione estesa senza tuttavia richiederlo. Il valore Allow specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa. La modalità di imposizione della protezione è determinata dall'impostazione `RsWindowsExtendedProtectionScenario`.<br /><br /> L'autenticazione sarà consentita per le applicazioni client in esecuzione nei sistemi operativi che non supportano la protezione estesa.<br /><br /> Il valore `Require` specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa.<br /><br /> L'autenticazione **non** sarà consentita per le applicazioni in esecuzione su sistemi operativi che non supportano la protezione estesa.|
-|`RsWindowsExtendedProtectionScenario`|Specifica le forme di protezione estesa da convalidare, cioè l'associazione di canale, l'associazione al servizio o entrambe. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: questa impostazione viene ignorata `RsWindowsExtendedProtectionLevel` se è impostato `OFF`su.|
+|`RsWindowsExtendedProtectionScenario`|Specifica i formati di protezione estesa che vengono convalidati: associazione di canale, associazione a servizio o entrambe. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> \- L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> \- L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> \- Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> \- L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> \- L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: questa impostazione viene ignorata `RsWindowsExtendedProtectionLevel` se è impostato `OFF`su.|
 
  Voci di esempio nel file di configurazione `rsreportserver.config`:
 
@@ -125,8 +125,7 @@ ms.locfileid: "78177084"
 ```
 
 ## <a name="service-binding-and-included-spns"></a>Associazione al servizio e nomi SPN inclusi
- L'associazione al servizio utilizza nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa le informazioni sulla prenotazione di URL esistenti per compilare un elenco di nomi SPN considerati validi. L'utilizzo delle informazioni sulla prenotazione di URL per la convalida dei nomi SPN e delle prenotazioni di URL consente agli amministratori di sistema di gestire entrambi gli elementi da un'unica posizione.
+ L'associazione al servizio utilizza nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa le informazioni sulla prenotazione di URL esistenti per compilare un elenco di nomi SPN considerati validi. L'utilizzo delle informazioni sulla prenotazione di URL per la convalida dei nomi SPN e delle prenotazioni di URL consente agli amministratori di sistema di gestire entrambi gli elementi da un'unica posizione.
 
  L'elenco di nomi SPN validi viene aggiornato all'avvio del server di report, al momento della modifica delle impostazioni di configurazione per la protezione estesa o quando viene riciclato il dominio applicazione.
 

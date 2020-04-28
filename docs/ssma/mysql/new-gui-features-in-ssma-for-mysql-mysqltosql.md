@@ -10,10 +10,10 @@ ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909681"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Nuove funzionalità dell'interfaccia utente grafica in SSMA per MySQL (MySQLToSQL)
@@ -47,7 +47,7 @@ Per aprire la finestra di dialogo Gestisci layout, scegliere layout dal menu Vis
 ## <a name="bookmarks"></a>Segnalibri  
 Questa funzionalità consente di impostare uno o più segnalibri nel codice di origine o di destinazione, di trovare rapidamente un segnalibro usando i collegamenti, di gestire i segnalibri con una finestra di dialogo intuitiva.  
   
-### <a name="toggle-bookmark"></a>Imposta/Nascondi segnalibro  
+### <a name="toggle-bookmark"></a>Attiva/Disattiva segnalibro  
 È possibile impostare o rimuovere un segnalibro nei modi seguenti:  
   
 -   Pulsante di attivazione/disattivazione del pulsante nella parte superiore della finestra SQL di origine o di destinazione  
@@ -72,7 +72,7 @@ Questa funzionalità consente di impostare uno o più segnalibri nel codice di o
   
 -   Usare i pulsanti Rimuovi o Rimuovi tutto nella finestra di dialogo Gestisci segnalibri  
   
-### <a name="manage-bookmarks"></a>Gestisci segnalibri  
+### <a name="manage-bookmarks"></a>Gestire i segnalibri  
 Per aprire la finestra di dialogo Gestisci segnalibri, nel menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.  
   
 ## <a name="object-history"></a>Cronologia oggetti  

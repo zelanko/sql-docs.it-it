@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176281"
 ---
 # <a name="coding-a-custom-task"></a>Scrittura del codice di un'attività personalizzata
@@ -55,8 +55,7 @@ ms.locfileid: "78176281"
 -   Prima dell'esecuzione dell'attività, il codice del metodo `Validate` viene chiamato anche da <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> e <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> annulla l'esecuzione in caso di errori di convalida.
 
 #### <a name="user-interface-considerations-during-validation"></a>Considerazioni sull'interfaccia utente durante la convalida
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> include un'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> come parametro per il metodo `Validate`. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contiene i metodi chiamati dall'attività per generare eventi nel motore di runtime. I metodi <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> vengono chiamati quando si verifica una condizione di avviso o di errore durante la convalida. Entrambi i metodi di avviso richiedono gli stessi parametri, che includono un codice di errore, un componente di origine, una descrizione, un file della Guida e informazioni di contesto della Guida. Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] utilizza queste informazioni per visualizzare indicatori visivi nell'area di progettazione. Gli indicatori visivi forniti dalla finestra di progettazione includono l'icona di un punto esclamativo visualizzata accanto all'attività nell'area di progettazione. Tale icona indica all'utente che l'attività richiede procedure aggiuntive di configurazione prima che l'esecuzione possa continuare.
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> include un'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> come parametro per il metodo `Validate`. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contiene i metodi chiamati dall'attività per generare eventi nel motore di runtime. I metodi <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> vengono chiamati quando si verifica una condizione di avviso o di errore durante la convalida. Entrambi i metodi di avviso richiedono gli stessi parametri, che includono un codice di errore, un componente di origine, una descrizione, un file della Guida e informazioni di contesto della Guida. Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] utilizza queste informazioni per visualizzare indicatori visivi nell'area di progettazione. Gli indicatori visivi forniti dalla finestra di progettazione includono l'icona di un punto esclamativo visualizzata accanto all'attività nell'area di progettazione. Tale icona indica all'utente che l'attività richiede procedure aggiuntive di configurazione prima che l'esecuzione possa continuare.
 
  L'icona del punto esclamativo visualizza inoltre una descrizione comando contenente un messaggio di errore. Il messaggio di errore viene fornito dall'attività nel parametro di descrizione dell'evento. I messaggi di errore vengono anche visualizzati nel riquadro **Elenco attività** di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], che offre all'utente una posizione centrale da cui visualizzare tutti gli errori di convalida.
 
@@ -286,7 +285,7 @@ Public Class SampleTask
 End Class
 ```
 
-![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
 
 ## <a name="see-also"></a>Vedere anche
  [Creazione di un'attività personalizzata](creating-a-custom-task.md) che [codifica un'attività](coding-a-custom-task.md) personalizzata [sviluppo di un'interfaccia utente per un'attività personalizzata](developing-a-user-interface-for-a-custom-task.md)

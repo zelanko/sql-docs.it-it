@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971396"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concessione di autorizzazioni in un server di report in modalità nativa
@@ -69,11 +69,11 @@ ms.locfileid: "76971396"
 |Gestione report: consente di assegnare utenti e gruppi a ruoli.|[Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Predefined Roles](role-definitions-predefined-roles.md)   
+ [Ruoli predefiniti](role-definitions-predefined-roles.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticazione con il server di report](authentication-with-the-report-server.md)   
  (create-and-manage-role-assignments.md)   
- [Sicurezza e protezione di Reporting Services](reporting-services-security-and-protection.md)   
+ [Sicurezza e protezione Reporting Services](reporting-services-security-and-protection.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

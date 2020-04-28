@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30f21dc69f4607f04a68fe0b099d1fd65dbdfc1f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172255"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurare la memoria disponibile per applicazioni del server di report
@@ -54,11 +54,9 @@ ms.locfileid: "78172255"
 ## <a name="configuration-settings-for-memory-management"></a>Impostazioni di configurazione per la gestione della memoria
  Le impostazioni di configurazione che controllano l'allocazione di memoria per il server di report sono `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` e `MemoryThreshold`.
 
--   
-  `WorkingSetMaximum` e `WorkingSetMinimum` definiscono l'intervallo di memoria disponibile. È possibile configurare queste impostazioni per specificare un intervallo di memoria disponibile per le applicazioni del server di report. Questa operazione può essere utile se si ospitano più applicazioni nello stesso computer e si determina che il server di report utilizza una quantità non proporzionata di risorse di sistema rispetto alle altre applicazioni.
+-   `WorkingSetMaximum` e `WorkingSetMinimum` definiscono l'intervallo di memoria disponibile. È possibile configurare queste impostazioni per specificare un intervallo di memoria disponibile per le applicazioni del server di report. Questa operazione può essere utile se si ospitano più applicazioni nello stesso computer e si determina che il server di report utilizza una quantità non proporzionata di risorse di sistema rispetto alle altre applicazioni.
 
--   
-  `MemorySafetyMargin` e `MemoryThreshold` consentono di impostare i limiti per i livelli basso, medio e alto di utilizzo della memoria. Per ogni stato, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vengono eseguite azioni correttive per garantire che l'elaborazione del report e le altre richieste siano gestire in modo appropriato rispetto alla quantità di memoria disponibile nel computer. È possibile specificare impostazioni di configurazione per stabilire il limite tra i livelli basso, medio e alto di utilizzo della memoria.
+-   `MemorySafetyMargin` e `MemoryThreshold` consentono di impostare i limiti per i livelli basso, medio e alto di utilizzo della memoria. Per ogni stato, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vengono eseguite azioni correttive per garantire che l'elaborazione del report e le altre richieste siano gestire in modo appropriato rispetto alla quantità di memoria disponibile nel computer. È possibile specificare impostazioni di configurazione per stabilire il limite tra i livelli basso, medio e alto di utilizzo della memoria.
 
      Sebbene sia possibile modificare le impostazioni di configurazione, questa operazione non migliorerà le prestazioni di elaborazione del report. La modifica delle impostazioni di configurazione è utile solo se le richieste vengono rilasciate prima che siano completate. Il modo migliore per ottimizzare le prestazioni del server consiste nel distribuire il server di report o le relative applicazioni singole in computer dedicati.
 
@@ -89,10 +87,9 @@ ms.locfileid: "78172255"
 ```
 
 #### <a name="about-aspnet-memory-configuration-settings"></a>Informazioni sulle impostazioni di configurazione della memoria ASP.NET
- Sebbene il servizio Web ReportServer e Gestione report siano applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], nessuna applicazione risponde alle impostazioni di configurazione della memoria specificate nella sezione `processModel` di machine.config per le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] eseguite in modalità compatibilità IIS 5.0. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.
+ Sebbene il servizio Web ReportServer e Gestione report siano applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], nessuna applicazione risponde alle impostazioni di configurazione della memoria specificate nella sezione `processModel` di machine.config per le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] eseguite in modalità compatibilità IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.
 
 ## <a name="see-also"></a>Vedere anche
- [](rsreportserver-config-configuration-file.md) [File di](rsreportserver-config-configuration-file.md) configurazione RSReportServer file di configurazione RSReportServer [modificare un file di configurazione Reporting Services &#40;RSReportServer. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) [i domini applicazione per le applicazioni del server di report](application-domains-for-report-server-applications.md)
+ [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) [File di](rsreportserver-config-configuration-file.md) configurazione RSReportServer file di configurazione RSReportServer [modificare un file di configurazione Reporting Services &#40;RSReportServer. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) [i domini applicazione per le applicazioni del server di report](application-domains-for-report-server-applications.md)
 
 

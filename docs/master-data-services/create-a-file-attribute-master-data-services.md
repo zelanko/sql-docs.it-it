@@ -14,10 +14,10 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175156"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Creare un attributo di file (Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "78175156"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo di file per popolare i valori di attributo con i file.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
  Per eseguire questa procedura:
 
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .
 
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
 
--   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
+-   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
 ## <a name="attribute-information"></a>Informazioni sugli attributi
  Per ogni indice creato, viene aggiunta alla griglia una riga con sette colonne. La tabella seguente descrive le colonne.
@@ -52,11 +52,11 @@ ms.locfileid: "78175156"
 
 -   **Creato da**: nome dell'utente che ha creato l'attributo.
 
--   Il **: data e ora di creazione**dell'attributo.
+-   **Il**: data e ora di creazione dell'attributo.
 
 -   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato l'attributo.
 
--   **Il: data**e ora dell'ultimo aggiornamento dell'attributo.
+-   **Il**: data e ora dell'ultimo aggiornamento dell'attributo.
 
 ### <a name="to-create-a-file-attribute"></a>Per creare un attributo di file
 
@@ -76,7 +76,7 @@ ms.locfileid: "78175156"
 
     -   Se l'attributo è per le raccolte, selezionare **Raccolta** nella casella di riepilogo **Tipo di membro** .
 
-6.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco di parole che non vanno usate come nomi di attributo, vedere [Parole riservate &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).
+6.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco di parole che non devono essere usate come nomi di attributo, vedere [parole riservate &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).
 
 7.  Facoltativamente, digitare un nome visualizzato e specificare una descrizione per l'attributo nella casella **Descrizione** .
 

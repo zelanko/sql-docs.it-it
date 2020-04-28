@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b7d478761a1051114e0189c7fd11eddafcef086b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172341"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Installare PowerPivot per SharePoint 2010
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è una raccolta di servizi di livello intermedio e di back-end che forniscono l'accesso ai dati PowerPivot in una farm di SharePoint 2010. Se l'organizzazione utilizza l'applicazione client, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel 2010, per creare cartelle di lavoro che contengono dati analitici, è necessario disporre di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] per accedere a tali dati in un ambiente server. In questo argomento viene illustrato il processo di installazione di base e vengono forniti collegamenti ad argomenti aggiuntivi di supporto alla configurazione di PowerPivot.
 
 ||
@@ -29,7 +28,7 @@ ms.locfileid: "78172341"
 
  Per istruzioni su come installare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nello stesso server, vedere elenco di controllo per la [distribuzione: Reporting Services, Power View e PowerPivot per SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 1.  Per eseguire il programma di installazione di SQL Server, è necessario essere un amministratore locale.
 
@@ -51,7 +50,7 @@ ms.locfileid: "78172341"
 
     -   [Guida per l'utilizzo delle funzionalità di Business Intelligence di SQL Server in una farm di SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)
 
-##  <a name="InstallSQL"></a>Passaggio 1: installare PowerPivot per SharePoint
+##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>Passaggio 1: installare PowerPivot per SharePoint
  In questo passaggio viene eseguito il programma di installazione di SQL Server per installare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In un passaggio successivo, il server verrà configurato come attività successiva all'installazione.
 
 1.  Inserire il supporto di installazione o aprire una cartella che contiene i file di installazione per SQL Server, quindi fare doppio clic su **Setup. exe**.
@@ -116,7 +115,7 @@ ms.locfileid: "78172341"
 > [!TIP]
 >  Se è necessario risolvere i problemi relativi all'installazione di SQL Server, vedere [visualizzare e leggere SQL Server file di log del programma di installazione](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
-##  <a name="bkmk_config"></a>Passaggio 2: configurare il server
+##  <a name="step-2-configure-the-server"></a><a name="bkmk_config"></a>Passaggio 2: configurare il server
 
 > [!IMPORTANT]
 >  Prima di configurare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o una farm di SharePoint che utilizza un server di database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è necessario che SharePoint 2010 SP2 sia installato. Se non è stato ancora installato un Service Pack, eseguire adesso questa operazione prima di iniziare a configurare il server.
@@ -131,7 +130,7 @@ ms.locfileid: "78172341"
 
  **Connessione all'istanza del motore di database.** Dopo l'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], è possibile aggiungere un'istanza del motore di database all'installazione mediante il programma di installazione di SQL Server. Se si sta configurando una nuova farm ed è necessario un server di database per eseguire la configurazione della farm e i database del contenuto, è possibile che sia stata aggiunta un'istanza di motore di database all'installazione. Se il motore di database è stato aggiunto, è stato installato come un'istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Quando è necessario specificare una connessione a questa istanza (ad esempio nella configurazione guidata della farm se si utilizza tale procedura guidata per configurare la farm), ricordare di immettere il nome del database nel formato seguente: <`servername`> \PowerPivot.
 
-##  <a name="bkmk_redist"></a>Passaggio 3: installare i provider di OLE DB Analysis Services nei server applicazioni di Excel Services
+##  <a name="step-3-install-analysis-services-ole-db-providers-on-excel-services-application-servers"></a><a name="bkmk_redist"></a>Passaggio 3: installare i provider di OLE DB Analysis Services nei server applicazioni di Excel Services
  Se i servizi di calcolo Excel e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eseguiti in server applicazioni diversi, sono necessari ulteriori passaggi di installazione. Nei server applicazioni in cui vengono eseguiti i servizi di calcolo Excel installare la versione appropriata del provider OLE DB (MSOLAP) di Analysis Services.
 
 -   La versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di MSOLAP è inclusa nel programma di installazione di SQL Server, pertanto l'installazione esplicita della versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di MSOLAP è necessaria solo se il server applicazioni non è PowerPivot.
@@ -143,7 +142,7 @@ ms.locfileid: "78172341"
 
  Per ulteriori informazioni sull'installazione del provider, inclusi i passaggi di verifica, vedere [Install the provider OLE DB Analysis Services on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)
 
-##  <a name="bkmk_verify"></a>Passaggio 4: verificare l'installazione
+##  <a name="step-4-verify-the-installation"></a><a name="bkmk_verify"></a>Passaggio 4: verificare l'installazione
  In quest'ultimo passaggio, si verificherà la completa funzionalità di SharePoint 2010 e di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Per istruzioni, vedere [verificare un'installazione di PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).
 
 ## <a name="see-also"></a>Vedere anche

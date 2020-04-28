@@ -15,10 +15,10 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177391"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Creare un attributo basato su dominio (Master Data Services)
@@ -27,16 +27,16 @@ ms.locfileid: "78177391"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo basato su dominio per popolare i valori di un attributo con i membri di un'entità.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
  Per eseguire questa procedura:
 
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .
 
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
 
--   È necessario che un'entità esista perché venga utilizzata come origine dei valori di attributo. Ad esempio per creare un attributo basato su dominio che si basa sull'entità Color, è necessario prima creare l'entità Color. Per altre informazioni, vedere [creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
+-   È necessario che un'entità esista perché venga utilizzata come origine dei valori di attributo. Ad esempio per creare un attributo basato su dominio che si basa sull'entità Color, è necessario prima creare l'entità Color. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
--   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
+-   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
 ## <a name="attribute-information"></a>Informazioni sugli attributi
  Per ogni indice creato, viene aggiunta alla griglia una riga con sette colonne. La tabella seguente descrive le colonne.
@@ -55,11 +55,11 @@ ms.locfileid: "78177391"
 
 -   **Creato da**: nome dell'utente che ha creato l'attributo.
 
--   Il **: data e ora di creazione**dell'attributo.
+-   **Il**: data e ora di creazione dell'attributo.
 
 -   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato l'attributo.
 
--   **Il: data**e ora dell'ultimo aggiornamento dell'attributo.
+-   **Il**: data e ora dell'ultimo aggiornamento dell'attributo.
 
 ### <a name="to-create-a-domain-based-attribute"></a>Per creare un attributo basato su dominio
 
@@ -79,7 +79,7 @@ ms.locfileid: "78177391"
 
     -   Se l'attributo è per le raccolte, selezionare **Raccolta** nella casella di riepilogo **Tipo di membro** .
 
-6.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco di parole che non devono essere usate come nomi di attributo, vedere [parole riservate &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)
+6.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco di parole che non vanno usate come nomi di attributo, vedere [Parole riservate &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)
 
 7.  Facoltativamente, digitare un nome di visualizzazione e specificare una descrizione nella casella **Descrizione** .
 
@@ -89,13 +89,13 @@ ms.locfileid: "78177391"
 
 10. Nell'elenco **Entità** scegliere l'entità da usare per popolare i valori dell'attributo. 
 
-11. **Facoltativo, per gli attributi basati su dominio per i membri foglia.** Selezionare un attributo padre di filtro per vincolare i valori consentiti per l'attributo basato su dominio.
+11. **Facoltativo, per attributi basati su dominio per i membri foglia.** Selezionare un attributo padre di filtro per vincolare i valori consentiti per l'attributo basato su dominio.
 
      L'attributo padre di filtro deve essere un altro attributo basato su dominio per un membro foglia, all'interno della stessa entità. Deve essere presente una gerarchia derivata, con un livello che definisce la relazione padre-figlio tra le entità di dominio dei due attributi.
 
      Per informazioni sull'applicazione di vincoli ai valori consentiti, vedere [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Come filtrare gli elenchi a discesa di attributi basati sul dominio) nel blog Master Data Services.
 
-12. **Opzionale.** Selezionare **Enable change tracking** per tenere traccia delle modifiche a gruppi di attributi. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
+12. **Facoltativa.** Selezionare **Enable change tracking** per tenere traccia delle modifiche a gruppi di attributi. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
 13. Fare clic su **Salva**.
 

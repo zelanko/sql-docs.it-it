@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173330"
 ---
 # <a name="report-data-pane-report-builder"></a>Riquadro dei dati del report (Generatore report)
@@ -36,6 +36,6 @@ ms.locfileid: "78173330"
  **Set di impostazioni** Rappresenta i dati recuperati da un'origine dati eseguendo un comando, ad esempio una [!INCLUDE[tsql](../includes/tsql-md.md)] query che recupera i dati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Un set di dati è il nodo padre per la raccolta di campi specificati dalla query e include anche i campi calcolati. Generatore report supporta le Progettazione query che consentono di specificare una query. Per ulteriori informazioni, vedere [aggiungere dati a un Report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Raccolta di campi del set di dati &#40;Generatore report e ssrs&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md) [Generatore report guida per le finestre di dialogo, i riquadri e il riquadro di raggruppamento delle procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md) [](report-design/grouping-pane-report-builder.md) &#40;Generatore report&#41;la [ricerca, la visualizzazione e la gestione dei report &#40;Generatore report e SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+ [Raccolta di campi del set di dati &#40;Generatore report e ssrs&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md) [Generatore report guida per le finestre di dialogo, i riquadri e il riquadro di raggruppamento delle procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md) [Grouping Pane &#40;Report Builder&#41;](report-design/grouping-pane-report-builder.md) &#40;Generatore report&#41;la [ricerca, la visualizzazione e la gestione dei report &#40;Generatore report e SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
 
 

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176181"
 ---
 # <a name="integration-services-ssis-projects"></a>Progetti di Integration Services (SSIS)
@@ -48,8 +48,8 @@ ms.locfileid: "78176181"
 
 |Cartella|Descrizione|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]Pacchetti|Contiene i pacchetti. Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|
-|Miscellaneous|Sono contenuti file diversi dai file di pacchetto.|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Pacchetti|Contiene i pacchetti. Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|
+|Varie|Sono contenuti file diversi dai file di pacchetto.|
 
 ### <a name="files-in-integration-services-projects"></a>File dei progetti di Integration Services
  Quando si aggiunge un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuovo o esistente a una soluzione, tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] vengono creati file di progetto con estensione dtproj, dtproj.user e database.

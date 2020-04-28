@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bce1d4935caaa718b2d7366f3c7d7c092e1cf235
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177089"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -52,15 +52,15 @@ ms.locfileid: "78177089"
 
 -   [Parti di una sottoscrizione](#bkmk_parts_of_subscription)
 
--   [Modalità di elaborazione delle sottoscrizioni](#bkmk_subscription_processing)
+-   [Procedura di elaborazione delle sottoscrizioni](#bkmk_subscription_processing)
 
--   [Modalità di elaborazione delle sottoscrizioni](#bkmk_subscription_processing)
+-   [Procedura di elaborazione delle sottoscrizioni](#bkmk_subscription_processing)
 
- **Argomenti in questa sezione:**
+ **Contenuto della sezione:**
 
--   [Recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md) Descrive la configurazione e l'operazione di recapito tramite posta elettronica del server di report
+-   [Recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md) Descrive la configurazione e il funzionamento del recapito tramite posta elettronica gestito dal server di report.
 
--   [Recapito tramite condivisione file in Reporting Services](file-share-delivery-in-reporting-services.md) Descrive la configurazione e l'operazione di recapito tramite condivisione file del server di report.
+-   [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) Descrive la configurazione e il funzionamento del recapito tramite condivisione file gestito dal server di report.
 
 -   [SharePoint Library Delivery in Reporting Services](sharepoint-library-delivery-in-reporting-services.md) Descrive il recapito della sottoscrizione a una raccolta di SharePoint.
 
@@ -74,9 +74,8 @@ ms.locfileid: "78177089"
 
 -   [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](manage-subscription-owners-and-run-subscription-powershell.md)
 
-##  <a name="bkmk_subscription_scenarios"></a>Scenari di sottoscrizione e recapito
- È possibile configurare le opzioni di recapito per ogni sottoscrizione e le opzioni disponibili sono determinate dall'estensione di recapito scelta. Un'estensione per il recapito è un modulo che supporta alcune modalità di distribuzione. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include alcune estensioni di recapito e terze parti potrebbero mettere a disposizione estensioni aggiuntive.
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a>Scenari di sottoscrizione e recapito
+ È possibile configurare le opzioni di recapito per ogni sottoscrizione e le opzioni disponibili sono determinate dall'estensione di recapito scelta. Un'estensione per il recapito è un modulo che supporta alcune modalità di distribuzione. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include alcune estensioni di recapito e terze parti potrebbero mettere a disposizione estensioni aggiuntive.
 
  Uno sviluppatore può creare estensioni per il recapito personalizzate per supportare scenari aggiuntivi. Per altre informazioni, vedere [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).
 
@@ -89,31 +88,30 @@ ms.locfileid: "78177089"
 |Cache di pre-caricamento|Se sono disponibili più istanze di un report con parametri o di un gran numero di utenti che visualizzano report, è possibile precaricare i report nella cache per ridurre il tempo di elaborazione necessario per visualizzare il report.|
 |Report guidati dai dati|Utilizzare le sottoscrizioni guidate dai dati per personalizzare in fase di esecuzione l'output del report, le opzioni di recapito e le impostazioni dei parametri del report. La sottoscrizione utilizza una query per ottenere in fase di esecuzione i valori di input da un'origine dati. È possibile utilizzare le sottoscrizioni guidate dai dati per eseguire un'operazione di merge della posta elettronica che invia un report a un elenco di sottoscrittori determinato al momento dell'elaborazione della sottoscrizione.|
 
-##  <a name="bkmk_standard_and_datadriven"></a>Sottoscrizioni standard e guidate dai dati
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]supporta due tipi di sottoscrizioni: **standard** e **basato sui dati**. Le sottoscrizioni standard vengono create e gestite da singoli utenti. Una sottoscrizione standard è costituita da valori statici, che non possono essere modificati durante l'elaborazione della sottoscrizione. Per ogni sottoscrizione standard esiste un solo set di opzioni di presentazione del report, opzioni di recapito e parametri del report.
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a>Sottoscrizioni standard e guidate dai dati
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta due tipi di sottoscrizione, vale a dire **standard** e **guidata dai dati**. Le sottoscrizioni standard vengono create e gestite da singoli utenti. Una sottoscrizione standard è costituita da valori statici, che non possono essere modificati durante l'elaborazione della sottoscrizione. Per ogni sottoscrizione standard esiste un solo set di opzioni di presentazione del report, opzioni di recapito e parametri del report.
 
  Le sottoscrizioni guidate dai dati ottengono informazioni sulla sottoscrizione in fase di esecuzione eseguendo una query su un'origine dati esterna che fornisce valori utilizzati per specificare un destinatario, parametri del report o formato dell'applicazione. È possibile utilizzare le sottoscrizioni guidate dai dati se si dispone di un elenco di destinatari molto esteso o si desidera modificare l'output del report per ogni destinatario. Per utilizzare le sottoscrizioni guidate dai dati è necessario essere in grado di compilare query e sapere come vengono utilizzati i parametri. Le sottoscrizioni guidate dai dati vengono in genere create e gestite dagli amministratori dei server di report. Per altre informazioni, vedere gli argomenti seguenti:
 
 -   [Sottoscrizioni guidate dai dati](data-driven-subscriptions.md)
 
--   [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)
+-   [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)
 
-##  <a name="bkmk_subscription_requirements"></a>Requisiti della sottoscrizione
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a>Requisiti della sottoscrizione
  Per poter creare una sottoscrizione di un report, è innanzitutto necessario che siano soddisfatti i requisiti seguenti:
 
 |Requisito|Descrizione|
 |-----------------|-----------------|
 |Autorizzazioni|È necessario poter accedere al report. Per poter sottoscrivere un report, è necessario disporre delle autorizzazioni necessarie per visualizzarlo.<br /><br /> L'assegnazione di ruolo deve includere l'attività Gestione di sottoscrizioni individuali.|
-|Credenziali archiviate.|Per creare una sottoscrizione, è necessario che per il report siano usate credenziali archiviate oppure nessuna credenziale per poter recuperare i dati in fase di esecuzione. Non è possibile sottoscrivere un report configurato per utilizzare credenziali rappresentate o delegate dell'utente corrente per connettersi a un'origine dati esterna. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [specificare le credenziali e le informazioni di connessione per le origini dati dei report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> e si dispone delle autorizzazioni necessarie per visualizzare il report e creare sottoscrizioni individuali. **Eventi pianificati e il recapito del report** devono essere abilitati nel server di report. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md).|
+|Credenziali archiviate.|Per creare una sottoscrizione, è necessario che per il report siano usate credenziali archiviate oppure nessuna credenziale per poter recuperare i dati in fase di esecuzione. Non è possibile sottoscrivere un report configurato per utilizzare credenziali rappresentate o delegate dell'utente corrente per connettersi a un'origine dati esterna. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> e si dispone delle autorizzazioni necessarie per visualizzare il report e creare sottoscrizioni individuali. È necessario che l'opzione**Eventi pianificati e recapito report** sia abilitata sul server di report. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md).|
 |Valori dipendenti dall'utente in un report|Per le sole sottoscrizioni standard è possibile creare sottoscrizioni a report in cui le informazioni sull'account utente sono incluse in un filtro o sono disponibili sotto forma di testo visualizzato nel report. Nel report il nome dell'account utente viene specificato tramite un'espressione `User!UserID` che corrisponde all'utente corrente. Quando si crea una sottoscrizione, l'autore della sottoscrizione viene considerato come utente corrente.|
 |Nessuna sicurezza degli elementi del modello|Non è possibile sottoscrivere un report di Generatore report che utilizza come origine dei dati un modello contenente impostazioni di sicurezza degli elementi del modello. La restrizione riguarda solo i report che utilizzano la sicurezza degli elementi del modello.|
 |Valori dei parametri|Se il report utilizza parametri, è necessario specificare un valore di parametro con il report stesso oppure nella sottoscrizione che viene definita. Se nel report sono stati specificati valori predefiniti, è possibile impostare il valore di parametro per utilizzare l'impostazione predefinita.|
 
-##  <a name="bkmk_delivery_extensions"></a>Estensioni per il recapito
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a>Estensioni per il recapito
  Le sottoscrizioni vengono elaborate sul server di report e distribuite mediante estensioni per il recapito distribuite sul server. Per impostazione predefinita, è possibile creare sottoscrizioni che inviano report a una cartella condivisa oppure a un indirizzo di posta elettronica. È possibile inviare un report a una raccolta di SharePoint se il server di report è configurato per la modalità integrata SharePoint.
 
- Al momento della creazione di una sottoscrizione, gli utenti hanno la possibilità di scegliere una delle estensioni per il recapito disponibili che determinano la modalità di recapito del report. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili le estensioni per il recapito seguenti.
+ Al momento della creazione di una sottoscrizione, gli utenti hanno la possibilità di scegliere una delle estensioni per il recapito disponibili che determinano la modalità di recapito del report. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili le estensioni per il recapito seguenti.
 
 |Estensione per il recapito|Descrizione|
 |------------------------|-----------------|
@@ -125,7 +123,7 @@ ms.locfileid: "78177089"
 > [!NOTE]
 >  Il recapito di report è una parte estendibile dell'architettura di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Altri fornitori possono creare estensioni per il recapito personalizzate per inviare report a posizioni o dispositivi diversi. Per ulteriori informazioni sulle estensioni per il recapito personalizzate, vedere [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).
 
-##  <a name="bkmk_parts_of_subscription"></a>Parti di una sottoscrizione
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a>Parti di una sottoscrizione
  La definizione di una sottoscrizione è costituita dagli elementi seguenti:
 
 -   Un puntatore a un report che può essere eseguito in modo automatico, ovvero un report che utilizza credenziali archiviate o che non ne utilizza alcuna.
@@ -136,7 +134,7 @@ ms.locfileid: "78177089"
 
 -   Le condizioni per l'elaborazione della sottoscrizione, che vengono espresse come evento.
 
-     In genere, le condizioni per l'esecuzione di un report si basano sul tempo. Se ad esempio si desidera eseguire un particolare report ogni martedì alle 15.00 UTC più o meno. e il report è configurato per l'esecuzione come snapshot, è possibile specificare che la sottoscrizione deve essere eseguita tutte le volte in cui lo snapshot viene aggiornato.
+     In genere, le condizioni per l'esecuzione di un report si basano sul tempo. Se ad esempio si desidera eseguire un particolare report ogni martedì alle 15.00 (ora UTC) e il report è configurato per l'esecuzione come snapshot, è possibile specificare che la sottoscrizione deve essere eseguita tutte le volte in cui lo snapshot viene aggiornato.
 
 -   I parametri utilizzati durante l'esecuzione del report.
 
@@ -144,9 +142,8 @@ ms.locfileid: "78177089"
 
  Le informazioni relative alle sottoscrizioni vengono archiviate con ogni report in un database del server di report. Non è possibile gestire le sottoscrizioni separatamente dal report al quale sono associate. Si noti che non è possibile integrare le sottoscrizioni con descrizioni o altro tipo di testo personalizzato né con altri elementi. Le sottoscrizioni possono contenere solo gli elementi elencati in precedenza.
 
-##  <a name="bkmk_subscription_processing"></a>Modalità di elaborazione delle sottoscrizioni
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include il componente Elaborazione pianificazione e recapito che offre funzionalità per la pianificazione e il recapito di report agli utenti. Il server di report risponde a eventi di cui esegue costantemente il monitoraggio. Quando viene generato un evento che corrisponde alle condizioni definite per una sottoscrizione, il server di report accede alle impostazioni della sottoscrizione per determinare come elaborare e recapitare il report. Il server di report richiede l'estensione per il recapito specificata nella sottoscrizione. Quando l'estensione per il recapito è in esecuzione, il server di report estrae le informazioni relative al recapito dalla sottoscrizione e le passa per l'elaborazione all'estensione per il recapito.
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> Procedura di elaborazione delle sottoscrizioni
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include il componente Elaborazione pianificazione e recapito che offre funzionalità per la pianificazione e il recapito di report agli utenti. Il server di report risponde a eventi di cui esegue costantemente il monitoraggio. Quando viene generato un evento che corrisponde alle condizioni definite per una sottoscrizione, il server di report accede alle impostazioni della sottoscrizione per determinare come elaborare e recapitare il report. Il server di report richiede l'estensione per il recapito specificata nella sottoscrizione. Quando l'estensione per il recapito è in esecuzione, il server di report estrae le informazioni relative al recapito dalla sottoscrizione e le passa per l'elaborazione all'estensione per il recapito.
 
  L'estensione per il recapito esegue il rendering del report nel formato definito nella sottoscrizione e recapita il report o la notifica alla destinazione specificata. Se un report non può essere recapitato, viene registrata una voce specifica nel file di log del server di report. Se si desidera che siano supportate operazioni di riesecuzione dei tentativi, è possibile configurare il server di report in modo che tenti di rieseguire il recapito se il primo tentativo non riesce.
 

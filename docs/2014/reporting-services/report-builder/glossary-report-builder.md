@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 761abc52c7ef0ba974540ff0b87a57773a4badc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918084"
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
@@ -37,7 +37,7 @@ ms.locfileid: "76918084"
 |database dell'applicazione|Database in cui vengono archiviati i dati utente e di sistema relativi a una singola applicazione.|  
 |argomento|Valore che consente di specificare informazioni per un'azione, un evento, un metodo, una proprietà, una funzione o una procedura.|  
 |assembly|Modulo di applicazione gestita contenente metadati della classe e codice gestito come un oggetto in SQL Server, in base al quale in SQL Server è possibile creare funzioni CLR, stored procedure, trigger, funzioni di aggregazione e tipi definiti dall'utente.|  
-|authentication|Processo di verifica dell'identità di un utente, un computer, un processo o altra entità tramite la convalida delle credenziali fornite dall'entità. Forme comuni di credenziali sono le firme digitali, le smart card, i dati biometrici e una combinazione di nome utente e password.|  
+|autenticazione|Processo di verifica dell'identità di un utente, un computer, un processo o altra entità tramite la convalida delle credenziali fornite dall'entità. Forme comuni di credenziali sono le firme digitali, le smart card, i dati biometrici e una combinazione di nome utente e password.|  
 |authorization|1. Operazione di verifica delle autorizzazioni e dei diritti di accesso concessi a un utente. 2. Processo che consente di concedere a una persona, un processo del computer o un dispositivo l'accesso a informazioni, servizi o funzionalità specifiche.|  
 |asse|Linee verticale e orizzontale in un grafico utilizzate per indicare la posizione di un punto.|  
 |intervallo dell'asse|Numero di unità tra segni di graduazione principali su un asse del grafico. L'intervallo viene calcolato automaticamente, ma può essere impostato manualmente.|  
@@ -72,7 +72,7 @@ ms.locfileid: "76918084"
 |Tipo CLR definito dall'utente|Tipo di dati definito dall'utente creato in base a un assembly di SQL Server la cui implementazione viene definita in un assembly creato in Common Language Runtime di .NET Framework.|  
 |sicurezza da accesso di codice|Meccanismo incluso in Common Language Runtime in cui al codice gestito vengono concesse autorizzazioni tramite criteri di sicurezza. Tali autorizzazioni vengono successivamente applicate, contribuendo a limitare le operazioni che il codice sarà autorizzato a eseguire.|  
 |collation|Set di regole che determina il modo in cui i dati vengono confrontati, ordinati e presentati.|  
-|raccolta|1. Oggetto contenente un set di altri oggetti. 2. In Master Data Services, raggruppamento gerarchico di membri di gerarchie esplicite e altre raccolte.|  
+|collection|1. Oggetto contenente un set di altri oggetti. 2. In Master Data Services, raggruppamento gerarchico di membri di gerarchie esplicite e altre raccolte.|  
 |regole colore|Algoritmo che assegna automaticamente colori a ogni elemento di una mappa in un livello mappa.|  
 |scala dei colori|Tipo di legenda di mappa utilizzato per interpretare i colori rappresentati in una mappa.|  
 |Common Language Runtime (CLR)|Motore alla base dell'esecuzione del codice gestito. Il runtime fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza dall'accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling.|  
@@ -95,9 +95,9 @@ ms.locfileid: "76918084"
 |estensione per l'elaborazione dati|Componente di Reporting Services che viene utilizzato per recuperare i dati del report da un'origine dati esterna.|  
 |provider di dati|Livello di software che gestisce la comunicazione tra estensioni per i dati e software personalizzato specifico per ogni tipo di origine dati esterna. A seconda dell'origine dati specifica, Microsoft e altri fornitori di terze parti offrono più provider di dati.|  
 |area dati|Elemento del report che consente di visualizzare righe ripetute di dati in una tabella, una matrice o un grafico da un set di dati sottostante.|  
-|Origine dati|1. In ADO e OLE DB, posizione di un'origine di dati esposti da un provider OLE DB. 2. Origine dati di un oggetto, ad esempio un cubo o una dimensione. Si riferisce inoltre alla specifica delle informazioni necessarie per accedere ai dati di origine. A volte fa riferimento a un oggetto con ClassType clsDataSource. <br />3. In Reporting Services, tipo di origine dati, stringa di connessione e credenziali specificate che possono essere salvate separatamente in un server di report e condivise tra progetti o incorporate in un file di definizione del report (con estensione rdl).|  
+|origine dati|1. In ADO e OLE DB, posizione di un'origine di dati esposti da un provider OLE DB. 2. Origine dati di un oggetto, ad esempio un cubo o una dimensione. Si riferisce inoltre alla specifica delle informazioni necessarie per accedere ai dati di origine. A volte fa riferimento a un oggetto con ClassType clsDataSource. <br />3. In Reporting Services, tipo di origine dati, stringa di connessione e credenziali specificate che possono essere salvate separatamente in un server di report e condivise tra progetti o incorporate in un file di definizione del report (con estensione rdl).|  
 |nome origine dati|In un report, nome dell'oggetto origine dati.|  
-|tipo di dati|Attributo che specifica il tipo di informazioni che può essere archiviato in una colonna, un parametro o una variabile.|  
+|Tipo di dati|Attributo che specifica il tipo di informazioni che può essere archiviato in una colonna, un parametro o una variabile.|  
 |data warehouse|Database appositamente strutturato per l'esecuzione di query e analisi.|  
 |database|Raccolta di informazioni, tabelle e altri oggetti organizzati e presentati per scopi specifici, ad esempio la ricerca, l'ordinamento e la ricombinazione dei dati.|  
 |catalogo del database|Parte di un database che contiene la definizione di tutti i relativi oggetti, nonché la definizione del database stesso.|  
@@ -144,7 +144,7 @@ ms.locfileid: "76918084"
 |carattere di escape|Carattere utilizzato per indicare che un altro carattere in un'espressione viene interpretato letteralmente e non come operatore.|  
 |file ESRI con estensione shp|Specifica aperta sviluppata dall'Environmental Systems Research Institute, Inc. (ESRI) per i dati spaziali.|  
 |file di forma ESRI|Specifica aperta sviluppata dall'Environmental Systems Research Institute, Inc. (ESRI) per i dati spaziali.|  
-|evento|Qualsiasi occorrenza significativa nel sistema o applicazione per cui è necessario inviare una notifica agli utenti oppure voce da aggiungere a un log.|  
+|event|Qualsiasi occorrenza significativa nel sistema o applicazione per cui è necessario inviare una notifica agli utenti oppure voce da aggiungere a un log.|  
 |gestore dell'evento|1. Routine software eseguita in risposta a un evento. 2. In Integration Services, un flusso di controllo eseguito in risposta a un evento di runtime.|  
 |expression|1. In SQL, combinazione di simboli e operatori che restituisce un unico valore di dati. 2. In Integration Services, combinazione di valori letterali, costanti, funzioni e operatori che restituiscono un unico valore di dati.|  
 |campo|1. Area di una finestra o di un record in cui viene archiviato un singolo valore di dati.  2. In Generatore report, i campi di un set di dati rappresentano dati numerici o non numerici di una connessione dati. Possono essere inclusi, ad esempio, importi di vendita, vendite totali, nomi dei clienti, identificatori di database, URL, immagini e dati spaziali. Un report può includere tre tipi di campi, ovvero i campi del set di dati, i campi calcolati del set di dati e i campi predefiniti.|  
@@ -229,7 +229,7 @@ ms.locfileid: "76918084"
 |annidamento|Inserimento di un'area dati all'interno di un'altra area dati, ad esempio di un grafico sparkline all'interno di una tabella. Le aree dati annidate sono basate sullo stesso set di dati del report, mentre l'ambito per i dati nell'area dati del report viene automaticamente definito dalla relativa posizione nell'area dati padre.|  
 |NULL|Voce senza un valore assegnato in modo esplicito.|  
 |espressione numerica|Qualsiasi espressione che restituisce un numero.|  
-|object|Uno dei componenti di un database, ad esempio una tabella, un indice o una stored procedure.|  
+|oggetto|Uno dei componenti di un database, ad esempio una tabella, un indice o una stored procedure.|  
 |identificatore di oggetto|1. Nome univoco assegnato a un oggetto. 2. In Servizio metadati, identificatore univoco creato in base a un identificatore univoco globale (GUID) e un identificatore interno.|  
 |Origine dati ODBC|1. Posizione di un set di dati cui è possibile accedere tramite un driver ODBC. 2. Definizione archiviata che contiene tutte le informazioni di connessione necessarie a un'applicazione ODBC per stabilire una connessione all'origine dati.|  
 |Driver ODBC|Libreria di collegamento dinamico (DLL, Dynamic Link Library) che un'applicazione ODBC compatibile, ad esempio Excel, può utilizzare per accedere a un'origine dati ODBC.|  
@@ -243,7 +243,7 @@ ms.locfileid: "76918084"
 |operator|Segno o simbolo che specifica il tipo di calcolo da eseguire in un'espressione. Sono disponibili operatori matematici, di confronto, logici e di riferimento.|  
 |aggregazione esterna|Funzione di aggregazione che specifica come parametro di ambito un'altra funzione di aggregazione.|  
 |riempimento|1. Stringa aggiunta in genere quando l'ultimo blocco di testo normale è breve. 2. Spazio stabilito in una cella per creare o mantenere una dimensione specifica.|  
-|Page|In Generatore report, per pagina si intende la pagina cartacea fisica. Il formato carta specificato per il report controlla la modalità di rendering del report stesso.|  
+|pagina|In Generatore report, per pagina si intende la pagina cartacea fisica. Il formato carta specificato per il report controlla la modalità di rendering del report stesso.|  
 |tavolozza|Set di valori predefiniti o definiti dall'utente per i colori utilizzati in grafici, mappe e misuratori.|  
 |parametro|Raccolta globale predefinita in un report che consente agli utenti di impostare valori che possono modificare i dati e l'aspetto del report e connettere report correlati. I parametri del report vengono creati automaticamente da parametri di query e parametri di set di dati, e manualmente da autori del report.|  
 |report con parametri|Report pubblicato che accetta valori di input tramite parametri.|  
@@ -300,7 +300,7 @@ ms.locfileid: "76918084"
 |snapshot del report|Report statico che contiene i dati acquisiti in un momento specifico.|  
 |pianificazione in base al report|Pianificazione definita in linea con un report.|  
 |controlli ReportViewer|Controllo server Web e controllo Windows Form che assicurano funzionalità incorporate per l'elaborazione di report in applicazioni ASP.NET e Windows Form.|  
-|resource|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  
+|risorse|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  
 |set di risultati|Set di righe restituite da un'istruzione SELECT.|  
 |ruolo|1. Utente o gruppo a cui viene concesso un set di autorizzazioni specifiche.  <br />2. In Analysis Services, un ruolo utilizza gli account di sicurezza di Windows per limitare l'ambito di accesso e le autorizzazioni per l'accesso a database, cubi, dimensioni e modelli di data mining.  <br />3. In una sessione di mirroring del database, il server principale e il server mirror eseguono ruoli principali e mirror complementari. Facoltativamente, il ruolo del server di controllo del mirroring viene eseguito da una terza istanza di server.|  
 |assegnazione di ruolo|Criteri di sicurezza che definiscono gli utenti e i gruppi autorizzati ad accedere a elementi specifici e a eseguire determinate operazioni.|  
@@ -312,7 +312,7 @@ ms.locfileid: "76918084"
 |scalare|Campo a valore singolo, opposto a un'aggregazione.|  
 |aggregazione scalare|Funzione di aggregazione, ad esempio MIN(), MAX() o AVG(), che viene specificata nell'elenco di colonne dell'istruzione SELECT contenente solo funzioni di aggregazione.|  
 |schema|Nello standard SQL-92, raccolta di oggetti di database di proprietà di un singolo utente che formano un unico spazio dei nomi. Uno spazio dei nomi è un set di oggetti che non può avere nomi duplicati.|  
-|scope|Termine utilizzato in più contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering oppure il set di elementi del report che possono essere visualizzati o nascosti in base a un elemento Toggle.|  
+|ambito|Termine utilizzato in più contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering oppure il set di elementi del report che possono essere visualizzati o nascosti in base a un elemento Toggle.|  
 |script|Raccolta di istruzioni Transact-SQL utilizzate per eseguire un'operazione.|  
 |entità a protezione diretta|Entità che possono essere protette con le autorizzazioni.|  
 |Secure Sockets Layer (SSL)|Standard aperto proposto per stabilire un canale di comunicazione sicuro in modo da impedire l'intercettazione di informazioni critiche, ad esempio i numeri della carta di credito. Tale standard consente principalmente di eseguire transazioni finanziare elettroniche sicure sul Web, sebbene sia progettato anche per essere utilizzato in altri servizi Internet.|  
@@ -337,12 +337,12 @@ ms.locfileid: "76918084"
 |dati spaziali|Dati che specificano le posizioni degli oggetti su una superficie piana o curva. I dati spaziali possono essere punti, linee o poligoni.|  
 |tipi di dati spaziali|Specificano i dati che rappresentano informazioni geometriche (planari) o geografiche (geodetiche).|  
 |SQL|Vedere: Structured Query Language (SQL)|  
-|Query SQL|Istruzione SQL, ad esempio SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
+|query SQL|Istruzione SQL, ad esempio SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
 |Autenticazione di SQL Server|Meccanismo per convalidare un tentativo di connessione a un'istanza di SQL Server specificando un ID e una password per l'accesso a SQL Server.|  
 |accesso di SQL Server|Account archiviato in SQL Server che consente agli utenti di connettersi a SQL Server.|  
 |Istruzione SQL|Comando SQL o Transact-SQL, ad esempio SELECT o DELETE, che esegue un'azione sui dati.|  
 |stringa di connessione statica|Set di valori che il report utilizza sempre per stabilire la connessione alla stessa origine dati ogni volta che viene eseguito.|  
-|string|Tipo di dati che contiene lettere, numeri e la maggior parte dei caratteri. I numeri in un campo stringa, ovvero un campo con dati di tipo stringa, non sono disponibili per calcoli numerici. Per eseguire calcoli numerici, è necessario utilizzare un tipo di dati numerico, ad esempio Integer o float. Per un parametro, il tipo di dati stringa equivale al tipo di dati testo.|  
+|stringa|Tipo di dati che contiene lettere, numeri e la maggior parte dei caratteri. I numeri in un campo stringa, ovvero un campo con dati di tipo stringa, non sono disponibili per calcoli numerici. Per eseguire calcoli numerici, è necessario utilizzare un tipo di dati numerico, ad esempio Integer o float. Per un parametro, il tipo di dati stringa equivale al tipo di dati testo.|  
 |funzioni per i valori stringa|Funzioni che eseguono operazioni su stringhe di caratteri o binarie.|  
 |Structured Query Language (SQL)|Linguaggio utilizzato per inserire, recuperare, modificare ed eliminare i dati in un database relazionale, appositamente progettato per le query di database.|  
 |sottoreport|Controllo incorporato all'interno del corpo di un report padre. A livello concettuale, un sottoreport è analogo a un frame in una pagina Web in cui è presente contenuto di altre pagine Web. Il rendering del sottoreport viene eseguito all'interno del report padre che lo contiene. Entrambi i report vengono elaborati e visualizzati simultaneamente.|  

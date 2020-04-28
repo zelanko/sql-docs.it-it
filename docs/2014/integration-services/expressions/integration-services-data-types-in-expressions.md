@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176431"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
@@ -38,7 +38,7 @@ ms.locfileid: "78176431"
 
  Nella figura seguente viene illustrato il tipo di risultato delle conversioni implicite delle operazioni BINARY. L'intersezione di colonna e riga in questa tabella è il tipo di risultato di un'operazione binaria con operandi di tipo sinistra (Da) e destra (A).
 
- ![Conversione implicita del tipo di dati tra tipi di dati](../media/mw-dts-impl-conver-02.gif "Conversione implicita del tipo di dati tra tipi di dati")
+ ![Conversione implicita tra tipi di dati](../media/mw-dts-impl-conver-02.gif "Conversione implicita tra tipi di dati")
 
  L'intersezione tra un valore intero con segno e un valore intero senza segno è un valore intero con segno potenzialmente maggiore di entrambi gli argomenti.
 
@@ -101,7 +101,7 @@ ms.locfileid: "78176431"
  I risultati di molte operazioni e funzioni hanno un tipo di dati predeterminato, che può essere il tipo di dati dell'argomento o il tipo di dati a cui l'analizzatore di espressioni esegue il cast del risultato. Il risultato di un operatore OR logico (||), ad esempio, è sempre un valore booleano, mentre il risultato della funzione ABS è il tipo di dati numeric dell'argomento e il risultato di una moltiplicazione è il più piccolo tipo di dati numeric in grado di contenere il risultato senza causare una perdita di dati. Per altre informazioni sui tipi di dati dei risultati, vedere [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md).
 
 ## <a name="related-tasks"></a>Attività correlate
- [Usare un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)
+ [Utilizzo di un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)
 
 ## <a name="related-content"></a>Contenuto correlato
 

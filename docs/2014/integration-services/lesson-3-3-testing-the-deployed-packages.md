@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176140"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Passaggio 3: Test dei pacchetti distribuiti
@@ -22,8 +22,7 @@ ms.locfileid: "78176140"
 
  In altre esercitazioni di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vengono eseguiti i pacchetti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], usando l'opzione **Avvia debug** del menu **Debug** . In questa esercitazione i pacchetti verranno eseguiti in modo diverso.
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre diversi strumenti che è possibile utilizzare per eseguire pacchetti nell'ambiente di test e in quello di produzione, ovvero l'utilità del prompt dei comandi `dtexec` e l'Utilità di esecuzione pacchetti. Quest'ultima è uno strumento grafico compilato in base a `dtexec`. Entrambi gli strumenti eseguono il pacchetto immediatamente. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include inoltre un sottosistema di SQL Server Agent progettato appositamente per pianificare l'esecuzione di pacchetti nell'ambito di un processo di SQL Server Agent.
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre diversi strumenti che è possibile utilizzare per eseguire pacchetti nell'ambiente di test e in quello di produzione, ovvero l'utilità del prompt dei comandi `dtexec` e l'Utilità di esecuzione pacchetti. Quest'ultima è uno strumento grafico compilato in base a `dtexec`. Entrambi gli strumenti eseguono il pacchetto immediatamente. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include inoltre un sottosistema di SQL Server Agent progettato appositamente per pianificare l'esecuzione di pacchetti nell'ambito di un processo di SQL Server Agent.
 
  Per eseguire i pacchetti distribuiti verrà utilizzata l'Utilità di esecuzione pacchetti. I pacchetti verranno utilizzati nello stato in cui sono e non sarà pertanto necessario aggiornare informazioni in nessuna delle pagine della finestra di dialogo. I pacchetti verranno eseguiti dalla pagina Generale, ovvero la prima dell'Utilità di esecuzione pacchetti. Se si desidera, è possibile fare clic sulle altre pagine per esaminare le informazioni in esse contenute relative a ogni pacchetto.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78176140"
 
      La query restituirà 21 righe di dati. I risultati sono costituiti dalle righe del file di dati XML, orders.xml. Ogni riga è un riepilogo per paese/area geografica, ovvero la riga elenca il nome di un paese/area geografica, il numero di ordine per ogni paese/area geografica e le date degli ordini più recenti e meno recenti.
 
-![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
+![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.
 
 ## <a name="see-also"></a>Vedere anche
  [Utilità dtexec](packages/dtexec-utility.md)
