@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289689"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in parallelo data warehouse
 Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per SQL Server PDW.
 
-## <a name="BackupRestoreBasics"></a>Nozioni di base sulle autorizzazioni motore di database
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>Nozioni di base sulle autorizzazioni motore di database
 Motore di database autorizzazioni per SQL Server PDW vengono gestite a livello di server tramite gli account di accesso e a livello di database tramite gli utenti del database e i ruoli del database definiti dall'utente.
 
 **Account di accesso** Gli account di accesso sono account utente singoli per accedere al SQL Server PDW. SQL Server PDW supporta gli account di accesso che utilizzano l'autenticazione di Windows e l'autenticazione SQL Server.  Gli account di accesso con autenticazione di Windows possono essere utenti di Windows o gruppi di Windows di qualsiasi dominio ritenuto attendibile da SQL Server PDW. Gli account di accesso con autenticazione SQL Server vengono definiti e autenticati da SQL Server PDW e devono essere creati specificando una password.
@@ -52,7 +52,7 @@ Gli account di accesso sono oggetti a livello di server e possono essere elencat
 
 Gli utenti e i ruoli del database sono oggetti a livello di database e possono essere elencati visualizzando [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Alle entità di database è possibile concedere solo autorizzazioni a livello di database.
 
-## <a name="BackupTypes"></a>Autorizzazioni predefinite
+## <a name="default-permissions"></a><a name="BackupTypes"></a>Autorizzazioni predefinite
 L'elenco seguente descrive le autorizzazioni predefinite:
 
 -   Quando viene creato un account di accesso tramite l'istruzione **Create Login** , l'account di accesso riceve l'autorizzazione **Connect SQL** che consente all'account di accesso di connettersi al SQL Server PDW.
@@ -80,7 +80,7 @@ Tutti i nuovi account di accesso di appliance appartengono automaticamente al ru
 
 -   Il ruolo del server PUBLIC non può ereditare le autorizzazioni implicite. È necessario concedere in modo esplicito tutte le autorizzazioni concesse al ruolo PUBLIC.
 
-## <a name="BackupProc"></a>Determinazione delle autorizzazioni
+## <a name="determining-permissions"></a><a name="BackupProc"></a>Determinazione delle autorizzazioni
 Il fatto che un account di accesso disponga o meno dell'autorizzazione per eseguire un'azione specifica dipende dalle autorizzazioni concesse o negate per l'accesso, l'utente e i ruoli di cui l'utente è membro. Le autorizzazioni a livello di server, ad esempio **Crea account di accesso** e **Visualizza stato del server**, sono disponibili per le entità a livello di server (account di accesso). Le autorizzazioni a livello di database, ad esempio la **selezione** di una tabella o l' **esecuzione** di una procedura, sono disponibili per le entità a livello di database (utenti e ruoli del database).
 
 ### <a name="implicit-and-explicit-permissions"></a>Autorizzazioni implicite ed esplicite
@@ -165,7 +165,7 @@ Per ricercare le autorizzazioni di un utente, controllare quanto segue.
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>Procedure consigliate per le autorizzazioni del database
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>Procedure consigliate per le autorizzazioni del database
 
 -   Concedere le autorizzazioni a un livello più granulare pratico. La concessione delle autorizzazioni a livello di tabella o di visualizzazione potrebbe diventare non gestibile. Tuttavia, la concessione di autorizzazioni a livello di database potrebbe essere troppo permissiva. Se il database è progettato con schemi per definire i limiti di lavoro, è possibile che l'autorizzazione concessa allo schema sia un compromesso appropriato tra il livello di tabella e il livello del database.
 

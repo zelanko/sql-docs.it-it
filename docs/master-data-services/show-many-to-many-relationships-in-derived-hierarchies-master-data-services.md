@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289889"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
@@ -72,11 +72,10 @@ ms.locfileid: "79289889"
   
  I livelli M2M possono essere nascosti, esattamente come gli altri livelli di una gerarchia derivata.  
    
-### <a name="M2MSample"></a>Relazione M2M nel modello di esempio  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> Relazione molti-a-molti (M2M) nel modello di esempio  
 Per una dimostrazione di una relazione molti-a-molti, visualizzare la gerarchia derivata Region Climate del modello di esempio Customer incluso in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Come mostra l'immagine seguente, il nome del livello che modella questa relazione è ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mappato attraverso RegionClimate.Region)**. 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra le regioni raggruppate in base ai tipi di clima a cui sono associate. Questa è una relazione molti-a-molti poiché include regioni (membri figlio) associate a più climi (membri padre). Ad esempio, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** è associata a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
+Come mostra l'immagine seguente, il nome del livello che modella questa relazione è ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mappato attraverso RegionClimate.Region)**. ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra le regioni raggruppate in base ai tipi di clima a cui sono associate. Questa è una relazione molti-a-molti poiché include regioni (membri figlio) associate a più climi (membri padre). Ad esempio, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacifico}** è associata a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -91,7 +90,7 @@ Per istruzioni sulla distribuzione del modello di esempio Customer e di altri mo
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>Sicurezza del membro  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> Sicurezza dei membri  
  Una gerarchia che consente la duplicazione dei membri (consente che un membro abbia più di un elemento padre) non può essere usata per assegnare autorizzazioni di sicurezza ai membri. Ad esempio:  
   
 -   Una gerarchia derivata ricorsiva (RDH) che non effettua l'ancoraggio delle ricorsioni null (ciascun membro al livello ricorsivo appare sia sotto la radice sia sotto il suo elemento padre ricorsivo).  

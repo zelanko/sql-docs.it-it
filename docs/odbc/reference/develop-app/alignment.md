@@ -1,5 +1,5 @@
 ---
-title: Proprietà Alignment . Documenti Microsoft
+title: Allineamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 205cc3ff95dd60db215150f46ae894fbb99bd9ff
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288606"
 ---
 # <a name="alignment"></a>Alignment
-I problemi di allineamento in un'applicazione ODBC non sono in genere diversi da quelli presenti in qualsiasi altra applicazione. Ovvero, la maggior parte delle applicazioni ODBC hanno pochi o nessun problema con l'allineamento. Le sanzioni per non allineare gli indirizzi variano con l'hardware e il sistema operativo e potrebbero essere minori come una leggera riduzione delle prestazioni o gravi come un errore di run-time fatale. Pertanto, le applicazioni ODBC e le applicazioni ODBC portabili in particolare, devono fare attenzione ad allineare i dati correttamente.  
+I problemi di allineamento in un'applicazione ODBC non sono in genere diversi da quelli presenti in altre applicazioni. Ovvero, la maggior parte delle applicazioni ODBC presenta pochi o nessun problema di allineamento. Le sanzioni per la mancata allineatura degli indirizzi variano a seconda dell'hardware e del sistema operativo e potrebbero essere meno lievi come una lieve riduzione delle prestazioni o come un errore irreversibile in fase di esecuzione. Pertanto, le applicazioni ODBC e le applicazioni ODBC portabili, in particolare, devono prestare attenzione a allineare correttamente i dati.  
   
- Un esempio di quando le applicazioni ODBC riscontrano problemi di allineamento è quando allocano un blocco di memoria di grandi dimensioni e associano parti diverse di tale memoria alle colonne in un set di risultati. Ciò si verifica con maggiore probabilità quando un'applicazione generica deve determinare la forma di un set di risultati in fase di esecuzione e allocare e associare la memoria di conseguenza.  
+ Un esempio di quando le applicazioni ODBC rilevano problemi di allineamento si verifica quando allocano un blocco di memoria di grandi dimensioni e associano parti diverse di tale memoria alle colonne di un set di risultati. Questa situazione si verifica con maggiore probabilità quando un'applicazione generica deve determinare la forma di un set di risultati in fase di esecuzione e allocare e associare la memoria di conseguenza.  
   
- Si supponga, ad esempio, che un'applicazione esegua un'istruzione **SELECT** immessa dall'utente e recuperi i risultati da questa istruzione. Poiché la forma di questo set di risultati non è nota quando viene scritto il programma, l'applicazione deve determinare il tipo di ogni colonna dopo la creazione del set di risultati e associare la memoria di conseguenza. Il modo più semplice per eseguire questa operazione consiste nell'allocare un blocco di memoria di grandi dimensioni e associare indirizzi diversi in tale blocco a ogni colonna. Per accedere ai dati in una colonna, l'applicazione esegue il cast della memoria associata a tale colonna.  
+ Si supponga, ad esempio, che un'applicazione esegua un'istruzione **Select** immessa dall'utente e recuperi i risultati restituiti da questa istruzione. Poiché la forma di questo set di risultati non è nota quando viene scritto il programma, l'applicazione deve determinare il tipo di ogni colonna dopo che il set di risultati è stato creato e associare di conseguenza la memoria. Il modo più semplice per eseguire questa operazione consiste nell'allocare un blocco di memoria di grandi dimensioni e associare indirizzi diversi in tale blocco a ogni colonna. Per accedere ai dati in una colonna, l'applicazione esegue il cast della memoria associata a tale colonna.  
   
- Nel diagramma seguente viene illustrato un set di risultati di esempio e come un blocco di memoria potrebbe essere associato utilizzando il tipo di dati C predefinito per ogni tipo di dati SQL. Ogni "X" rappresenta un singolo byte di memoria. (Questo esempio mostra solo i buffer di dati associati alle colonne. Questo viene fatto per semplicità. Nel codice effettivo, anche i buffer di lunghezza/indicatore devono essere allineati.)  
+ Il diagramma seguente illustra un set di risultati di esempio e il modo in cui un blocco di memoria può essere associato usando il tipo di dati C predefinito per ogni tipo di dati SQL. Ogni "X" rappresenta un singolo byte di memoria. In questo esempio vengono mostrati solo i buffer di dati associati alle colonne. Questa operazione viene eseguita per semplicità. Nel codice effettivo, i buffer di lunghezza/indicatore devono anche essere allineati.  
   
- ![Associazione tramite l'impostazione del tipo di dati SQL come predefinito per il tipo di dati C](../../../odbc/reference/develop-app/media/pr24.gif "pr24 (informazioni in base alle proprietà del")  
+ ![Associazione tramite l'impostazione del tipo di dati SQL come predefinito per il tipo di dati C](../../../odbc/reference/develop-app/media/pr24.gif "PR24")  
   
- Supponendo che gli indirizzi associati siano archiviati nella matrice *Address,* l'applicazione utilizza le espressioni seguenti per accedere alla memoria associata a ogni colonna:  
+ Supponendo che gli indirizzi associati siano archiviati nella matrice di *indirizzi* , l'applicazione usa le espressioni seguenti per accedere alla memoria associata a ogni colonna:  
   
 ```  
 (SQLCHAR *)       Address[0]  
@@ -38,12 +38,12 @@ I problemi di allineamento in un'applicazione ODBC non sono in genere diversi da
 (SQLINTEGER *)    Address[2]  
 ```  
   
- Si noti che gli indirizzi associati alla seconda e alla terza colonna iniziano con i byte dispari e che l'indirizzo associato alla terza colonna non è divisibile per quattro, ovvero la dimensione di un File SDWORD. Su alcune macchine, questo non sarà un problema; su altri, causerà una leggera penalizzazione delle prestazioni; su altri ancora, causerà un errore di run-time fatale. Una soluzione migliore potrebbe essere quella di allineare ogni indirizzo associato sul suo limite di allineamento naturale. Supponendo che questo sia 1 per un UCHAR, 2 per un SWORD e 4 per un SDWORD, questo darebbe il risultato mostrato nella figura seguente, dove una "X" rappresenta un byte di memoria che viene utilizzato e una "O" rappresenta un byte di memoria che è inutilizzato.  
+ Si noti che gli indirizzi associati alla seconda e terza colonna iniziano in byte dispari e che l'indirizzo associato alla terza colonna non è divisibile per quattro, ovvero la dimensione di un SDWORD. In alcuni computer, non si tratta di un problema; in altri casi, si verificherà una lieve riduzione delle prestazioni. in altri ancora, verrà generato un errore irreversibile in fase di esecuzione. Una soluzione migliore consiste nell'allineare ogni indirizzo associato al limite di allineamento naturale. Supponendo che sia 1 per UCHAR, 2 per una spada e 4 per un SDWORD, questo darebbe il risultato illustrato nella figura seguente, in cui una "X" rappresenta un byte di memoria usato e un "O" rappresenta un byte di memoria inutilizzato.  
   
- ![Associazione tramite limite di allineamento naturale](../../../odbc/reference/develop-app/media/pr25.gif "pr25 (informazioni in stato di pr25")  
+ ![Associazione tramite limite di allineamento naturale](../../../odbc/reference/develop-app/media/pr25.gif "PR25")  
   
- Sebbene questa soluzione non utilizzi tutta la memoria dell'applicazione, non riscontra problemi di allineamento. Sfortunatamente, è necessaria una discreta quantità di codice per implementare questa soluzione, poiché ogni colonna deve essere allineata singolarmente in base al tipo. Una soluzione più semplice consiste nell'allineare tutte le colonne sulla dimensione del limite di allineamento più grande, ovvero 4 nell'esempio illustrato nella figura seguente.  
+ Sebbene questa soluzione non utilizzi tutta la memoria dell'applicazione, non si verificano problemi di allineamento. Sfortunatamente, richiede una notevole quantità di codice per implementare questa soluzione, perché ogni colonna deve essere allineata singolarmente in base al tipo. Una soluzione più semplice consiste nell'allineare tutte le colonne sulle dimensioni del limite di allineamento più grande, ovvero 4 nell'esempio illustrato nella figura seguente.  
   
- ![Associazione tramite limite di allineamento massimo](../../../odbc/reference/develop-app/media/pr26.gif "pr26 (informazioni in inglese)")  
+ ![Associazione tramite limite di allineamento massimo](../../../odbc/reference/develop-app/media/pr26.gif "PR26")  
   
- Anche se questa soluzione lascia fori più grandi, il codice per implementarlo è relativamente semplice e veloce. Nella maggior parte dei casi, questo compensa la penalità pagata in memoria inutilizzata. Per un esempio in cui viene utilizzato questo metodo, vedere [Utilizzo di SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+ Sebbene questa soluzione lasci più buchi, il codice per implementarlo è relativamente semplice e veloce. Nella maggior parte dei casi, questo compensa la penalità pagata nella memoria inutilizzata. Per un esempio che usa questo metodo, vedere [uso di SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).

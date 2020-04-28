@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un'istruzione (ODBC) . Documenti Microsoft
+title: Utilizzare un'istruzione (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 62c422e0fb5c5afe481b2d11a477523ca1466df3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284371"
 ---
 # <a name="use-a-statement-odbc"></a>Utilizzare un'istruzione (ODBC)
@@ -73,6 +73,6 @@ ms.locfileid: "81284371"
 8.  Chiamare [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con *HandleType* impostato su SQL_HANDLE_STMT per liberare l'handle di istruzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query procedure relative agli argomenti &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Procedure relative all'esecuzione di query &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

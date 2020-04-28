@@ -1,5 +1,5 @@
 ---
-title: Allocazione e liberazione dei descrittori Documenti Microsoft
+title: Allocazione e liberazione di descrittori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 692c339af26b96aef3ffe4ba20f592c49b05d85e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288319"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>Allocazione e rilascio di descrittori
-I descrittori vengono allocati in modo implicito o esplicito, come descritto nelle sezioni seguenti.  
+I descrittori sono allocati in modo implicito o esplicito, come descritto nelle sezioni riportate di seguito.  
   
 -   [Descrittori allocati in modo implicito](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
   

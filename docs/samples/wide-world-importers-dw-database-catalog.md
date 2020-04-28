@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112439"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo di database WideWorldImportersDW
@@ -63,9 +63,9 @@ In WideWorldImportersDW sono presenti le tabelle dei fatti seguenti. La descrizi
 |-----------------------------|---------------------|---------------------|
 |JSON|`Sales.Orders` e `Sales.OrderLines`|Addetti alle vendite, produttività di selezione e Packer e tempo di selezione degli ordini. Inoltre, le situazioni di stock ridotte portano a back Orders.|
 |Sale|`Sales.Invoices` e `Sales.InvoiceLines`|Date di vendita, date di consegna, redditività nel tempo, redditività per venditore.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Tempo reale previsto rispetto ai lead|
+|Acquisto|`Purchasing.PurchaseOrderLines`|Tempo reale previsto rispetto ai lead|
 |Transazione|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Misurazione delle date del problema rispetto alle date finali e agli importi.|
-|Spostamento|`Warehouse.StockTransactions`|Spostamenti nel tempo.|
+|Movement|`Warehouse.StockTransactions`|Spostamenti nel tempo.|
 |Holding azionaria|`Warehouse.StockItemHoldings`|Livelli e valore delle scorte in mano.|
 
 ## <a name="stored-procedures"></a>Stored procedure

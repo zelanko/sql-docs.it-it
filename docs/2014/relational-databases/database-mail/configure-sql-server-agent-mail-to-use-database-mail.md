@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289209"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
@@ -33,24 +33,24 @@ ms.locfileid: "79289209"
   
 -   [Attività di completamento](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   Abilitare Posta elettronica database.  
   
 -   Creare un account di Posta elettronica database per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da utilizzare.  
   
--   Creare un profilo di Posta elettronica database per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare e aggiungere l'utente a **DatabaseMailUserRole** nel database **msdb** .  
+-   Creare un profilo di Posta elettronica database per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da utilizzare e aggiungere l'utente a **DatabaseMailUserRole** nel database **msdb** .  
   
 -   Impostare il profilo come predefinito per il database **msdb** .  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare gli account dei profili ed eseguire le stored procedure è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per configurare SQL Server Agent Mail per l'utilizzo di Posta elettronica database**  
   
 -   In Esplora oggetti espandere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -67,7 +67,7 @@ ms.locfileid: "79289209"
   
 -   Riavviare SQL Server Agent.  
   
-##  <a name="Follow_Up"></a> Attività di completamento  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a>Attività di completamento  
  Le attività seguenti sono necessarie per completare la configurazione dell'agent per inviare avvisi e notifiche.  
   
 -   [Avvisi](../../ssms/agent/alerts.md)  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289529"
 ---
 # <a name="specify-merge-replication-properties"></a>Specificare le proprietà della replica di tipo merge
@@ -33,7 +33,7 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
 -   Se si specifica che un articolo è di tipo solo download dopo l'inizializzazione delle sottoscrizioni, tutte le sottoscrizioni client a cui è stato inviato l'articolo devono essere reinizializzate. Non è necessario reinizializzare le sottoscrizioni server. Per altre informazioni sugli effetti delle modifiche delle proprietà, vedere [Modifica delle proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 ### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio  
- Specificare che un articolo è di tipo solo download nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>**. Questa finestra di dialogo è disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
+ Specificare che un articolo è di tipo solo download nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>**. Questa finestra di dialogo è disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>Per specificare che un articolo è di tipo solo download nella pagina Articoli  
   
@@ -72,11 +72,11 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
         > [!NOTE]  
         >  Se la tabella di origine di un articolo è già inclusa in un'altra pubblicazione, il comportamento del solo download deve coincidere per entrambi gli articoli.  
  
-## <a name="interactive-conflict-resolution">Risoluzione interattiva dei conflitti</a>
+## <a name=""></a><a name="interactive-conflict-resolution">Risoluzione interattiva dei conflitti</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la replica fornisce un sistema di risoluzione interattivo che consente di risolvere i conflitti manualmente durante la sincronizzazione su [!INCLUDE[msCoName](../../../includes/msconame-md.md)] richiesta in Gestione sincronizzazione Microsoft Windows. Dopo l'abilitazione della risoluzione interattiva, risolvere interattivamente i conflitti durante la sincronizzazione utilizzando il sistema di risoluzione interattivo. Il sistema di risoluzione interattivo è disponibile tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Per altre informazioni, vedere [Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows &#40;Gestione sincronizzazione Microsoft Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Se si esegue una sincronizzazione all'esterno di Gestione sincronizzazione Microsoft Windows, ad esempio una sincronizzazione pianificata o su richiesta in SQL Server Management Studio o Monitoraggio replica, i conflitti vengono risolti automaticamente senza l'intervento dell'utente, utilizzando la risoluzione dei conflitti predefinita specificata per l'articolo. Per altre informazioni, vedere [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
@@ -84,7 +84,7 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Abilitare la risoluzione interattiva dei conflitti per un articolo  
   
-1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).    
+1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).    
 2.  Fare clic su **Proprietà articolo**, quindi su **Imposta proprietà dell'articolo di tabella evidenziato** o su **Imposta proprietà di tutti gli articoli di tabelle**.    
 3.  Nella pagina **Proprietà articolo - \<Articolo>** o **Proprietà di tutti gli articoli - \<Tipo articolo>** fare clic sulla scheda **Sistema di risoluzione**.    
 4.  Selezionare **Consenti la risoluzione interattiva dei conflitti nel Sottoscrittore durante la sincronizzazione su richiesta**.    
@@ -122,17 +122,17 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
   
 
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Se si modifica il livello di rilevamento in seguito all'inizializzazione delle sottoscrizioni, sarà necessario reinizializzarle. Per altre informazioni sugli effetti delle modifiche delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](../publish/change-publication-and-article-properties.md).    
 -   Con il rilevamento a livello di riga e di colonna, la risoluzione dei conflitti viene sempre eseguita a livello di riga, ovvero la riga che prevale sovrascrive quella perdente. La replica di tipo merge consente inoltre di specificare che i conflitti vengano rilevati e risolti a livello di record logico. Queste opzioni tuttavia non sono disponibili in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Per informazioni sulla relativa impostazione dalle stored procedure di replica, vedere [Definizione di una relazione tra record logici degli articoli di tabelle di merge](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
-###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Specificare il rilevamento a livello di riga o colonna per gli articoli di merge nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo**, disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+ Specificare il rilevamento a livello di riga o colonna per gli articoli di merge nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo**, disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="specify-row--or-column-level-tracking"></a>Specificare il rilevamento a livello di riga o di colonna  
   
-1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .    
+1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.    
 2.  Fare clic su **Proprietà articolo**, quindi su **Imposta proprietà dell'articolo di tabella evidenziato** o su **Imposta proprietà di tutti gli articoli di tabelle**.   
 3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo \<Articolo>** selezionare uno dei valori seguenti per la proprietà **Livello rilevamento**: **Rilevamento a livello di riga** o **Rilevamento a livello di colonna**.    
 4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
@@ -211,9 +211,9 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 
 ## <a name="see-also"></a>Vedere anche  
  [Ottimizzare le prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
- [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Rilevamento e risoluzione dei conflitti nei record logici](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Definire una relazione tra record logici tra gli articoli di tabelle di merge](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Rilevare e risolvere i conflitti di replica di tipo merge](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](define-an-article.md)   
- [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md)  
+ [Definire un articolo](define-an-article.md)   
+ [Visualizzazione e modifica delle proprietà degli articoli](view-and-modify-article-properties.md)  

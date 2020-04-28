@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289379"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
@@ -62,17 +62,17 @@ ms.locfileid: "79289379"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   L'ambito di una funzione e di uno schema di partizione è limitato al database in cui sono stati creati. All'interno del database le funzioni di partizione si trovano in uno spazio dei nomi separato rispetto ad altre funzioni.  
   
 -   Se in qualsiasi riga all'interno di una funzione di partizione sono disponibili colonne di partizionamento con valori Null, queste righe vengono allocate alla partizione più a sinistra. Tuttavia, se è specificato NULL come valore limite ed è indicato RIGHT, la partizione più a sinistra rimane vuota e i valori NULL vengono collocati nella seconda partizione.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  La creazione di una tabella partizionata richiede l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella. La creazione di un indice partizionato richiede l'autorizzazione ALTER per la tabella o la vista in cui viene creato l'indice. Per la creazione di una tabella o un indice partizionato è richiesta una delle seguenti autorizzazioni aggiuntive:  
   
 -   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
@@ -81,7 +81,7 @@ ms.locfileid: "79289379"
   
 -   Autorizzazione CONTROL SERVER o ALTER ANY DATABASE per il server del database in cui vengono creati la funzione e lo schema di partizione.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Per creare uno o più filegroup, i file corrispondenti e una tabella attenersi ai passaggi della procedura riportata di seguito. Gli oggetti della procedura descritta di seguito verranno utilizzati come riferimento quando si crea la tabella partizionata.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Per creare nuovi filegroup per una tabella partizionata  
@@ -201,7 +201,7 @@ ms.locfileid: "79289379"
   
                 -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita il giorno 15 del mese a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio: domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
@@ -258,7 +258,7 @@ ms.locfileid: "79289379"
   
  Creazione guidata partizione crea la funzione e lo schema di partizione, quindi applica il partizionamento alla tabella specificata. Per verificare il partizionamento della tabella, in Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella e scegliere **Proprietà**. Fare clic sulla pagina **Archiviazione** . Nella pagina vengono visualizzate informazioni come il nome della funzione e dello schema di partizione e il numero di partizioni.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   

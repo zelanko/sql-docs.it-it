@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289699"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Concedere autorizzazioni T-SQL per data warehouse parallele
@@ -146,7 +146,7 @@ Per concedere a un utente l'autorizzazione a controllare tutti i database nel di
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Concedere le autorizzazioni per la gestione di account di accesso, utenti e ruoli del database
 In questa sezione viene descritto come concedere autorizzazioni per la gestione di account di accesso, utenti di database e ruoli del database.  
   
-### <a name="PermsAdminConsole"></a>Concedere le autorizzazioni per gestire gli account di accesso  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>Concedere le autorizzazioni per gestire gli account di accesso  
 **Aggiunta o gestione di account di accesso**  
   
 Nelle istruzioni SQL seguenti viene creato un account di accesso denominato KimAbercrombie in grado di creare nuovi account di accesso utilizzando l'istruzione [Create Login](../t-sql/statements/create-login-transact-sql.md) e modificare gli account di accesso esistenti utilizzando l'istruzione [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) .  
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Concedere le autorizzazioni per il monitoraggio dell'appliance
 Il dispositivo SQL Server PDW può essere monitorato tramite la console di amministrazione o SQL Server PDW viste di sistema. Gli account di accesso richiedono l'autorizzazione di **visualizzazione** a livello di server per il monitoraggio dell'appliance. Per gli account di accesso è necessaria l'autorizzazione **ALTER ANY Connection** per terminare le connessioni tramite la console di amministrazione o il comando **Kill** . Per informazioni sulle autorizzazioni necessarie per usare la console di amministrazione, vedere [concedere le autorizzazioni per usare la console di amministrazione &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Concedere l'autorizzazione per monitorare l'appliance usando le viste di sistema  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Concedere l'autorizzazione per monitorare l'appliance usando le viste di sistema  
 Nelle istruzioni SQL seguenti viene creato un account `monitor_login` di accesso denominato e viene concessa l'autorizzazione `monitor_login` **View Server state** per l'account di accesso.  
   
 ```sql  
@@ -246,7 +246,7 @@ GO
 Per creare account di accesso amministratore, vedere ruoli predefiniti del [Server](pdw-permissions.md#fixed-server-roles).  
   
 ## <a name="see-also"></a>Vedere anche
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
+[CREA ACCOUNT DI ACCESSO](../t-sql/statements/create-login-transact-sql.md)  
 [CREA UTENTE](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+[Carica](load-overview.md)  

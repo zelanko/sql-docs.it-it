@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289679"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configurazione di PolyBase e sicurezza per Hadoop
@@ -30,7 +30,7 @@ Questo articolo fornisce un riferimento per le varie impostazioni di configurazi
 > ``` 
 > Per le modifiche ai file XML è necessario riavviare il servizio per essere efficace.
 
-## <a id="rpcprotection"></a> Impostazione Hadoop.RPC.Protection
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Impostazione Hadoop.RPC.Protection
 
 Un modo comune per proteggere la comunicazione in un cluster Hadoop è modificare la configurazione di hadoop.rpc.protection impostandola su "Privacy" o "Integrity". Per impostazione predefinita, PolyBase presuppone che la configurazione sia impostata su "Authenticate". Per eseguire l'override di questa impostazione predefinita, aggiungere la proprietà seguente al file core-site.xml. La modifica di questa configurazione consente il trasferimento sicuro dei dati tra i nodi Hadoop nonché la connessione SSL a SQL Server.
 
@@ -42,7 +42,7 @@ Un modo comune per proteggere la comunicazione in un cluster Hadoop è modificar
    </property> 
 ```
 
-## <a id="kerberossettings"></a>Configurazione di Kerberos  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Configurazione di Kerberos  
 
 Si noti che se PolyBase esegue l'autenticazione in un cluster protetto con Kerberos, il parametro hadoop.rpc.protection deve essere impostato su 'Authenticate' per impostazione predefinita. La comunicazione dei dati tra i nodi Hadoop rimane non crittografata. Per usare le impostazioni 'Privacy' o 'Integrity' per hadoop.rpc.protection, aggiornare il file core-site.xml sul server PolyBase. Per altre informazioni, vedere la sezione precedente [Connessione a un cluster Hadoop con l'impostazione hadoop.rpc.protection](#rpcprotection).
 
@@ -114,7 +114,7 @@ Per connettersi a un cluster Hadoop protetto con Kerberos usando il KDC MIT, son
 
 4. Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
-## <a id="encryptionzone"></a>Impostazione della zona di crittografia Hadoop
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Impostazione della zona di crittografia Hadoop
 Se si usa la zona di crittografia Hadoop, modificare Core-site. XML e HDFS-site. XML come segue. Fornire l'indirizzo IP in cui è in esecuzione il servizio KMS con il numero di porta corrispondente. La porta predefinita per il servizio di gestione delle chiavi in CDH è 16000.
 
 **core-site.xml**

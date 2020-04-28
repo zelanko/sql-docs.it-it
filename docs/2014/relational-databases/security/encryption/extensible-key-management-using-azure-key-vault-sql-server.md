@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289449"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
@@ -42,30 +42,28 @@ ms.locfileid: "79289449"
 
 -   [Esempio C: Crittografia a livello di colonna tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi](#ExampleC)
 
-##  <a name="Uses"></a>Utilizzi di EKM
+##  <a name="uses-of-ekm"></a><a name="Uses"></a>Utilizzi di EKM
  Un'organizzazione può usare la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per proteggere i dati sensibili. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]la crittografia include [Transparent Data Encryption &#40;&#41;](transparent-data-encryption.md)Transparent Data Encryption, [crittografia a livello di colonna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) e crittografia dei [backup](../../backup-restore/backup-encryption.md). In tutti questi casi, i dati vengono crittografati tramite una chiave DEK simmetrica. Per proteggerla ulteriormente, tale chiave viene crittografata con una gerarchia di chiavi archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In alternativa, l'architettura del provider EKM consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di proteggere le chiavi DEK tramite una chiave asimmetrica archiviata all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un provider del servizio di crittografia esterno. L'utilizzo dell'architettura del provider EKM aggiunge un ulteriore livello di sicurezza consentendo alle organizzazioni di separare la gestione delle chiavi e dei dati.
 
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector per l'insieme di credenziali delle chiavi di Azure consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di sfruttare il servizio dell'insieme di credenziali delle chiavi scalabile, ad alte prestazioni e a disponibilità elevata come provider EKM per la protezione delle chiavi di crittografia. Il servizio dell'insieme di credenziali delle chiavi può essere usato con le installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle macchine virtuali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e per i server locali. Il servizio dell'insieme di credenziali delle chiavi consente inoltre di usare i moduli di protezione hardware (HSM) controllati e monitorati rigorosamente per un livello di protezione maggiore per le chiavi di crittografia asimmetriche. Per altre informazioni sull'insieme di credenziali delle chiavi, vedere [Insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521401).
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector per l'insieme di credenziali delle chiavi di Azure consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di sfruttare il servizio dell'insieme di credenziali delle chiavi scalabile, ad alte prestazioni e a disponibilità elevata come provider EKM per la protezione delle chiavi di crittografia. Il servizio dell'insieme di credenziali delle chiavi può essere usato con le installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle macchine virtuali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e per i server locali. Il servizio dell'insieme di credenziali delle chiavi consente inoltre di usare i moduli di protezione hardware (HSM) controllati e monitorati rigorosamente per un livello di protezione maggiore per le chiavi di crittografia asimmetriche. Per altre informazioni sull'insieme di credenziali delle chiavi, vedere [Insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521401).
 
  L'immagine seguente illustra il flusso di processo di EKM con l'insieme di credenziali delle chiavi. I numeri dei passaggi del processo nell'immagine non sono concepiti per corrispondere ai numeri dei passaggi della configurazione riportati di seguito.
 
- ![EKM di SQL Server con l'insieme di credenziali delle chiave di Azure](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM di SQL Server con l'insieme di credenziali delle chiave di Azure")
+ ![EKM di SQL Server con Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM di SQL Server con Azure Key Vault")
 
-##  <a name="Step1"></a>Passaggio 1: configurare la Key Vault per l'uso da parte di SQL Server
+##  <a name="step-1-set-up-the-key-vault-for-use-by-sql-server"></a><a name="Step1"></a>Passaggio 1: configurare la Key Vault per l'uso da parte di SQL Server
  Completare i passaggi seguenti per configurare un insieme di credenziali delle chiavi da usare con il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] per la protezione delle chiavi di crittografia. È possibile che per l'organizzazione sia già in uso un insieme di credenziali. Se non esiste un insieme di credenziali, l'amministratore di Azure incaricato della gestione delle chiavi di crittografia può creare un insieme di credenziali, generare una chiave asimmetrica nell'insieme di credenziali e quindi autorizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usare la chiave. Per acquisire familiarità con il servizio dell'insieme di credenziali delle chiavi, consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)e il riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) .
 
 > [!IMPORTANT]
 >  Se sono disponibili più sottoscrizioni di Azure, è necessario usare la sottoscrizione contenente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-1.  **Creare un insieme di credenziali:** Creare un insieme di credenziali seguendo le istruzioni riportate nella sezione **creare un** insieme di credenziali delle chiavi di [Introduzione a Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Registrare il nome dell'insieme di credenziali. Questo argomento usa **ContosoKeyVault** come nome dell'insieme di credenziali delle chiavi.
+1.  **Creare un insieme di credenziali:** creare un insieme di credenziali seguendo le istruzioni presenti nella sezione **Creare un insieme di credenziali delle chiavi** dell'articolo [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402). Registrare il nome dell'insieme di credenziali. Questo argomento usa **ContosoKeyVault** come nome dell'insieme di credenziali delle chiavi.
 
-2.  **Generare una chiave asimmetrica nell'insieme di credenziali:** La chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per proteggere le chiavi di crittografia. Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali, la parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni crittografiche che usano la chiave asimmetrica vengono delegate all'insieme di credenziali delle chiavi di Azure e sono protette dalla sicurezza dell'insieme di credenziali delle chiavi.
+2.  **Generare una chiave asimmetrica nell'insieme di credenziali:** la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali, la parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni crittografiche che usano la chiave asimmetrica vengono delegate all'insieme di credenziali delle chiavi di Azure e sono protette dalla sicurezza dell'insieme di credenziali delle chiavi.
 
      Esistono diversi modi per generare una chiave asimmetrica e archiviarla nell'insieme di credenziali. È possibile generare una chiave esternamente e importarla nell'insieme di credenziali come file con estensione pfx oppure creare la chiave direttamente nell'insieme di credenziali mediante le API dell'insieme di credenziali delle chiavi.
 
-     
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector richiede che le chiavi asimmetriche siano di tipo RSA a 2048 bit e il nome della chiave può usare solo i caratteri "a-z", "A-Z", "0-9" e "-". In questo documento il nome della chiave asimmetrica viene definito **ContosoMasterKey**. Sostituire questo nome con il nome univoco da usare per la chiave.
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector richiede che le chiavi asimmetriche siano di tipo RSA a 2048 bit e il nome della chiave può usare solo i caratteri "a-z", "A-Z", "0-9" e "-". In questo documento il nome della chiave asimmetrica viene definito **ContosoMasterKey**. Sostituire questo nome con il nome univoco da usare per la chiave.
 
     > [!IMPORTANT]
     >  L'importazione della chiave asimmetrica è consigliata per gli scenari di produzione in quanto consente all'amministratore di depositare la chiave in un sistema di deposito delle chiavi. Se la chiave asimmetrica viene creata nell'insieme di credenziali, non potrà essere depositata perché la chiave privata non può mai lasciare l'insieme di credenziali. È consigliabile depositare le chiavi usate per proteggere i dati critici. Se si perde una chiave asimmetrica, non sarà più possibile recuperare i dati.
@@ -75,7 +73,7 @@ ms.locfileid: "79289449"
 
      Per altre informazioni su come importare una chiave nell'insieme di credenziali delle chiavi o creare una chiave nell'insieme di credenziali delle chiavi (non consigliato per un ambiente di produzione), vedere la sezione **Aggiungere una chiave o un segreto nell'insieme di credenziali delle chiavi** in [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402).
 
-3.  **Ottenere Azure Active Directory entità servizio da usare per SQL Server:** Quando l'organizzazione si iscrive a un servizio cloud Microsoft, ottiene un Azure Active Directory. Creare le **entità servizio** nell'istanza di Azure Active Directory per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (per l'autenticazione in Azure Active Directory) per l'accesso all'insieme di credenziali delle chiavi.
+3.  **Ottenere le entità servizio di Azure Active Directory da usare per SQL Server:** quando l'organizzazione esegue la registrazione per un servizio cloud Microsoft, ottiene un'istanza di Azure Active Directory. Creare le **entità servizio** nell'istanza di Azure Active Directory per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (per l'autenticazione in Azure Active Directory) per l'accesso all'insieme di credenziali delle chiavi.
 
     -   Un' **entità servizio** sarà necessaria per consentire a un amministratore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di accedere all'insieme di credenziali per configurare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modo da usare la crittografia.
 
@@ -85,7 +83,7 @@ ms.locfileid: "79289449"
 
     -   **Entità servizio** per un account di accesso **sysadmin** : **CLIENTID_sysadmin_login** e **SECRET_sysadmin_login**
 
-    -   **Entità servizio** per [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** e **SECRET_DBEngine**.
+    -   **Entità servizio** per il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** e **SECRET_DBEngine**.
 
 4.  **Concedere le autorizzazioni per le entità servizio per accedere al Key Vault:** Per le entità **CLIENTID_sysadmin_login** e **CLIENTID_DBEngineService** sono necessarie le **autorizzazioni Get**, **List**, **wrapKey**e **unwrapKey** nell'insieme di credenziali delle chiavi. Se si intende creare chiavi tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario concedere anche l'autorizzazione **create** nell'insieme di credenziali delle chiavi.
 
@@ -96,29 +94,28 @@ ms.locfileid: "79289449"
 
      Collegamenti alla documentazione dell'insieme di credenziali delle chiavi di Azure
 
-    -   [Cos'è l'insieme di credenziali chiave di Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)
+    -   [Informazioni sull'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521401)
 
-    -   [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)
+    -   [Inizia a usare Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
 
     -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault)
 
-##  <a name="Step2"></a>Passaggio 2: installare il Connettore SQL Server
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector viene scaricato e installato dall'amministratore del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile scaricare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector dalla pagina [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Cercare **SQL Server Connector per l'insieme di credenziali delle chiavi di Microsoft Azure**, esaminare i dettagli, i requisiti di sistema e le istruzioni di installazione e scegliere di scaricare il connettore e avviare l'installazione con il pulsante **Scarica**. Esaminare la licenza e accettarne le condizioni, quindi continuare.
+##  <a name="step-2-install-the-sql-server-connector"></a><a name="Step2"></a>Passaggio 2: installare il Connettore SQL Server
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector viene scaricato e installato dall'amministratore del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile scaricare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector dalla pagina [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Cercare **SQL Server Connector per l'insieme di credenziali delle chiavi di Microsoft Azure**, esaminare i dettagli, i requisiti di sistema e le istruzioni di installazione e scegliere di scaricare il connettore e avviare l'installazione con il pulsante **Scarica**. Esaminare la licenza e accettarne le condizioni, quindi continuare.
 
  Per impostazione predefinita, il connettore viene installato in **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Questo percorso può essere modificato durante l'installazione. Se si modifica il percorso, apportare la modifica negli script riportati di seguito.
 
  Dopo aver completato l'installazione, nel computer vengono installati gli elementi seguenti:
 
--   **Microsoft. AzureKeyVaultService. EKM. dll**: si tratta della dll del provider di crittografia EKM che deve essere registrata con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante l'istruzione CREATE Cryptographic Provider.
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: si tratta della DLL del provider di crittografia EKM che deve essere registrata con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante l'istruzione CREATE CRYPTOGRAPHIC PROVIDER.
 
--   **Azure Key Vault connettore SQL Server**: si tratta di un servizio di Windows che consente al provider di crittografia EKM di comunicare con l'insieme di credenziali delle chiavi.
+-   **SQL Server Connector per l'insieme di credenziali delle chiavi di Azure**: si tratta di un servizio di Windows che consente al provider di crittografia EKM di comunicare con l'insieme di credenziali delle chiavi.
 
  L'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector consente anche di scaricare facoltativamente gli script di esempio per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
-##  <a name="Step3"></a>Passaggio 3: configurare SQL Server per l'uso di un provider EKM per il Key Vault
+##  <a name="step-3-configure-sql-server-to-use-an-ekm-provider-for-the-key-vault"></a><a name="Step3"></a>Passaggio 3: configurare SQL Server per l'uso di un provider EKM per il Key Vault
 
-###  <a name="Permissions"></a> Autorizzazioni
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
  Per completare l'intero processo è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** . Le azioni specifiche richiedono le autorizzazioni seguenti:
 
 -   Per creare un provider di crittografia è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** .
@@ -131,7 +128,7 @@ ms.locfileid: "79289449"
 
 -   Per creare una chiave asimmetrica, è necessaria l'autorizzazione CREATE ASYMMETRIC KEY.
 
-###  <a name="TsqlProcedure"></a>Per configurare SQL Server per l'utilizzo di un provider di crittografia
+###  <a name="to-configure-sql-server-to-use-a-cryptographic-provider"></a><a name="TsqlProcedure"></a>Per configurare SQL Server per l'utilizzo di un provider di crittografia
 
 1.  Configurare il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] per usare EKM e registrare (creare) il provider di crittografia con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -199,7 +196,7 @@ ms.locfileid: "79289449"
     ```
 
 > [!TIP]
->  Gli utenti che ricevono l'errore **Non è stato possibile esportare la chiave pubblica dal provider. Codice di errore del provider: 2053.** devono verificare le autorizzazioni **get**, **list**, **wrapKey**e **unwrapKey** nell'insieme di credenziali delle chiavi.
+>  Gli utenti che ricevono l'errore **Non è stato possibile esportare la chiave pubblica dal provider. Codice di errore del provider: 2053.** devono verificare le autorizzazioni **get**, **list**, **wrapKey**e **unwrapKey** nell'insieme di credenziali della chiave.
 
  Per altre informazioni, vedere gli argomenti seguenti:
 
@@ -217,7 +214,7 @@ ms.locfileid: "79289449"
 
 ## <a name="examples"></a>Esempi
 
-###  <a name="ExampleA"></a>Esempio A: Transparent Data Encryption usando una chiave asimmetrica della Key Vault
+###  <a name="example-a-transparent-data-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleA"></a>Esempio A: Transparent Data Encryption usando una chiave asimmetrica della Key Vault
  Dopo aver completato i passaggi precedenti, creare le credenziali e un account di accesso e quindi creare una chiave di crittografia del database protetta dalla chiave asimmetrica nell'insieme di credenziali delle chiavi. Usare la chiave di crittografia del database per crittografare un database con TDE.
 
  Per crittografare un database è necessaria l'autorizzazione CONTROL per il database.
@@ -282,7 +279,7 @@ ms.locfileid: "79289449"
 
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)
 
-###  <a name="ExampleB"></a>Esempio B: crittografia dei backup tramite una chiave asimmetrica dalla Key Vault
+###  <a name="example-b-encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleB"></a>Esempio B: crittografia dei backup tramite una chiave asimmetrica dalla Key Vault
  I backup crittografati sono supportati a partire da [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. L'esempio seguente crea e ripristina un backup crittografato di una chiave DEK protetta dalla chiave asimmetrica nell'insieme di credenziali delle chiavi.
 
 ```sql
@@ -304,7 +301,7 @@ GO
 
  Per ulteriori informazioni sulle opzioni di backup, vedere [backup &#40;&#41;Transact-SQL ](/sql/t-sql/statements/backup-transact-sql).
 
-###  <a name="ExampleC"></a>Esempio C: crittografia a livello di colonna tramite una chiave asimmetrica dalla Key Vault
+###  <a name="example-c-column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleC"></a>Esempio C: crittografia a livello di colonna tramite una chiave asimmetrica dalla Key Vault
  L'esempio seguente crea una chiave simmetrica protetta dalla chiave asimmetrica nell'insieme di credenziali delle chiavi. La chiave simmetrica viene quindi usata per crittografare i dati nel database.
 
  Questo esempio usa la chiave asimmetrica CONTOSO_KEY archiviata nell'insieme di credenziali delle chiavi importato o creato in precedenza, come sopra descritto nella [sezione 3 del passaggio 3](#Step3) . Per usare questa chiave asimmetrica nel database `ContosoDatabase` , è necessario eseguire nuovamente l'istruzione CREATE ASYMMETRIC KEY in modo da fornire al database `ContosoDatabase` un riferimento alla chiave.

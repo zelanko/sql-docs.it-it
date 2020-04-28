@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289439"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint (SharePoint 2010 e SharePoint 2013)
@@ -28,25 +28,25 @@ ms.locfileid: "79289439"
 
 -   [Prerequisiti](#bkmk_prereq)
 
--   [Che cosa comporta l'installazione del componente aggiuntivo?](#bkmk_whatinstalled)
+-   [Informazioni sull'installazione del componente aggiuntivo](#bkmk_whatinstalled)
 
 -   [Panoramica dei metodi di installazione](#bkmk_3ways_to_install)
 
 -   [Installare il componente aggiuntivo utilizzando il file di installazione rsSharePoint. msi](#bkmk_install_rssharepoint)
 
-    -   [Installazione di solo file](#bkmk_files_only_installation)
+    -   [Installazione di tipo "solo file"](#bkmk_files_only_installation)
 
--   [Come rimuovere il componente aggiuntivo Reporting Services](#bkmk_remove_addin)
+-   [Procedura: Rimozione del componente aggiuntivo di Reporting Services](#bkmk_remove_addin)
 
--   [Come ripristinare rsSharepoint. msi dalla riga di comando](#bkmk_repair)
+-   [Procedura: Ripristino di rssharepoint.msi dalla riga di comando](#bkmk_repair)
 
 -   [File di log del programma di installazione](#bkmk_logfiles)
 
 -   [Aggiornamento](#bkmk_upgrade)
 
--   [RsCustomAction. exe](#bkmk_rscustomaction)
+-   [rsCustomAction.exe](#bkmk_rscustomaction)
 
-##  <a name="bkmk_prereq"></a> Prerequisiti
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Prerequisiti
  L'installazione del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rappresenta uno dei diversi passaggi necessari per l'integrazione di un server di report in un'istanza di un prodotto SharePoint. Per altre informazioni sul set di requisiti completo per l'utilizzo della modalità SharePoint, vedere [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Per ulteriori informazioni sull'installazione e la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]configurazione di, vedere [Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).
 
 -   Se si integra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm di SharePoint in cui sono presenti più applicazioni front-end Web, installare il componente aggiuntivo in ogni computer nella farm in cui è presente un server front-end Web. Eseguire questa operazione solo per i front-end Web che verranno utilizzati per accedere al contenuto del server di report.
@@ -59,7 +59,7 @@ ms.locfileid: "79289439"
 
 -   Per i diagrammi di distribuzioni di esempio con il componente aggiuntivo, vedere [topologie di distribuzione per SQL Server le funzionalità di business intelligence in SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
 
-##  <a name="bkmk_whatinstalled"></a>Che cosa comporta l'installazione del componente aggiuntivo?
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a>Che cosa comporta l'installazione del componente aggiuntivo?
  Il processo di installazione del componente aggiuntivo è costituito da due fasi. Entrambe vengono completate automaticamente al termine di un'installazione standard:
 
 -   La prima fase consiste nell'installazione dei file nelle cartelle appropriate. Si tratta di cartelle standard per le distribuzioni di SharePoint. Uno dei file installati è rsCustomAction.exe.
@@ -86,17 +86,17 @@ ms.locfileid: "79289439"
 
  Lo strumento di preparazione prodotti SharePoint 20103 **non** installa il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componente aggiuntivo per prodotti SharePoint.
 
-##  <a name="bkmk_3ways_to_install"></a>Panoramica dei metodi di installazione
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> Panoramica sui metodi di installazione
  Il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componente aggiuntivo per prodotti SharePoint può essere installato utilizzando uno dei due metodi seguenti:
 
 -   **Installazione guidata:** ![si noti](../../../2014/reporting-services/media/rs-fyinote.png "nota") [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]che il componente aggiuntivo può essere installato mediante l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata di. Scegliere **Componente aggiuntivo Reporting Services per prodotti SharePoint** nella pagina **Selezione funzionalità** della procedura guidata.
 
--   **rsSharepoint. msi:** Il componente aggiuntivo può essere installato direttamente dal supporto di installazione o scaricato e installato. Il file rsSharepoint.msi supporta sia l'installazione tramite interfaccia utente grafica che quella da riga di comando. È necessario eseguire il file con estensione msi con privilegi di amministratore aprendo innanzitutto una finestra del prompt dei comandi con autorizzazioni elevate ed eseguendo quindi rsSharepoint.msi dalla riga di comando. Per altre informazioni, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+-   **rsSharepoint.msi:** il file del componente aggiuntivo può essere installato direttamente dal supporto di installazione o scaricato e installato. Il file rsSharepoint.msi supporta sia l'installazione tramite interfaccia utente grafica che quella da riga di comando. È necessario eseguire il file con estensione msi con privilegi di amministratore aprendo innanzitutto una finestra del prompt dei comandi con autorizzazioni elevate ed eseguendo quindi rsSharepoint.msi dalla riga di comando. Per altre informazioni, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
     > [!NOTE]
     >  Se si usa l'opzione **/q** per un'installazione da riga di comando invisibile all'utente, il contratto di licenza con l'utente finale non viene visualizzato. Indipendentemente dal metodo di installazione, l'utilizzo di questo software è governato da un contratto di licenza e l'utente è tenuto a rispettarlo.
 
-##  <a name="bkmk_install_rssharepoint"></a>Installare il componente aggiuntivo utilizzando il file di installazione rsSharePoint. msi
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> Installare il componente aggiuntivo utilizzando il file di installazione rsSharePoint.msi
  In questa sezione vengono fornite informazioni relative all'installazione diretta di rssharepoint.msi, mediante l'installazione guidata msi o un'installazione da riga di comando. Se il componente aggiuntivo è stato installato utilizzando l'installazione guidata di SQL Server, non è necessario effettuare i passaggi riportati di seguito.
 
  È possibile visualizzare un elenco completo di opzioni della riga di comando eseguendo il comando seguente:
@@ -117,7 +117,7 @@ Rssharepoint.msi /?
 
 3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. . Per ulteriori informazioni sull'installazione e sulla [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurazione della modalità SharePoint di, vedere [Install Reporting Services SharePoint mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
 
-###  <a name="bkmk_files_only_installation"></a>Installazione di solo file
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a>Installazione di solo file
  Per installare i file ignorando la fase di installazione delle azioni personalizzate, eseguire rssharepoint.msi dalla riga di comando con l'opzione SKIPCA:
 
 1.  Aprire un prompt dei comandi **con autorizzazioni di amministratore**.
@@ -139,7 +139,7 @@ Rssharepoint.msi /?
 
     1.  Passare alla cartella in cui è incluso il file `rsCustomAction.exe`. Questo file viene copiato nel computer dal programma di installazione di tipo " solo file " del componente aggiuntivo. `rsCustomAction.exe`si trova nella directory **% Temp%** . Per passare al file, al prompt dei comandi digitare:
 
-         **CD% Temp%**.
+         **CD %temp%**.
 
          Il file si trova in: **\Users\\<nome utente\>\AppData\Local\Temp**
 
@@ -152,7 +152,7 @@ Rssharepoint.msi /?
     3.  La quantità di tempo necessaria per rendere effettive le modifiche varia a seconda dell'ambiente server. È inoltre possibile eseguire **iisreset** per forzare un aggiornamento più rapido.
 
 ### <a name="quiet-installation-for-scripting"></a>Installazione non interattiva per lo scripting
- È possibile usare le opzioni **/q** o **/quiet** per un'installazione non interattiva durante la quale non verranno visualizzati avvisi o finestre di dialogo. L'installazione non interattiva è utile se si desidera creare uno script dell'installazione del componente aggiuntivo.
+ È possibile utilizzare le opzioni **/q** o **/quiet** per un'installazione "non interattiva" in cui non vengono visualizzate finestre di dialogo o avvisi. L'installazione non interattiva è utile se si desidera creare uno script dell'installazione del componente aggiuntivo.
 
 > [!NOTE]
 >  Se si usa l'opzione **/q** per un'installazione da riga di comando invisibile all'utente, il contratto di licenza con l'utente finale non viene visualizzato. Indipendentemente dal metodo di installazione, l'utilizzo di questo software è governato da un contratto di licenza e l'utente è tenuto a rispettarlo.
@@ -167,7 +167,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q
     ```
 
-##  <a name="bkmk_remove_addin"></a>Come rimuovere il componente aggiuntivo Reporting Services
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a>Come rimuovere il componente aggiuntivo Reporting Services
  È possibile disinstallare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint dal Pannello di controllo o dalla riga di comando di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.
 
 1.  Se si utilizza il Pannello di controllo verrà eseguita una disinstallazione completa dei file nel computer corrente **E** verranno rimossi l'oggetto e le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla farm di SharePoint. Quando l'oggetto e le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono rimossi, non sarà più possibile verificare e aggiornare i report.
@@ -237,7 +237,7 @@ Rssharepoint.msi /?
 
  I passaggi precedenti presuppongono il completamento di un'installazione del file con estensione msi con SkipCA=1 e la disponibilità del file rscusstomaction.exe. Per altre informazioni, vedere la sezione relativa all'installazione di tipo "solo file".
 
-##  <a name="bkmk_repair"></a>Come ripristinare rsSharepoint. msi dalla riga di comando
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a>Come ripristinare rsSharepoint. msi dalla riga di comando
  Per ripristinare o disinstallare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizzando la riga di comando, completare i passaggi seguenti:
 
 1.  Aprire un prompt dei comandi **con autorizzazioni di amministratore**.
@@ -248,7 +248,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi
     ```
 
-##  <a name="bkmk_logfiles"></a>File di log del programma di installazione
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a>File di log del programma di installazione
  Durante l'esecuzione, il programma di installazione consente di registrare le informazioni in un file di log nella cartella **%temp%** per l'utente che ha installato il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio **c:\Users\\<nomeutente\>\AppData\Local\Temp**. Il nome del file è **RS_SP_\<numero>.log**, ad esempio **RS_SP_0.log**. Tutti gli errori nel log iniziano con la stringa "SSRSCustomActionError".
 
 > [!NOTE]
@@ -278,11 +278,11 @@ Rssharepoint.msi /?
     Get-Content -Path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"
     ```
 
-2.  L'output sarà simile al seguente:
+2.  Il risultato sarà simile al seguente:
 
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.
 
-##  <a name="bkmk_upgrade"></a>Aggiornamento
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a>Aggiornamento
  Se si dispone di un'installazione esistente del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è possibile eseguire l'aggiornamento alla versione corrente. Durante l'installazione del componente aggiuntivo verrà rilevata la versione esistente e verrà richiesto di confermare l'aggiornamento. Il messaggio sarà simile al seguente:
 
  **Nel sistema è stata rilevata una versione precedente di questo prodotto. Aggiornare l'installazione esistente?**
@@ -291,7 +291,7 @@ Rssharepoint.msi /?
 
  Il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è specifico dell'istanza. In un computer è possibile installare una sola istanza del componente aggiuntivo. Non è consentita l'esecuzione side-by-side di versioni differenti con la versione corrente.
 
-##  <a name="bkmk_rscustomaction"></a>RsCustomAction. exe
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a>RsCustomAction. exe
  Nella tabella seguente vengono riepilogate le opzioni di rscustomaction.exe:
 
 |Opzione|Descrizione|

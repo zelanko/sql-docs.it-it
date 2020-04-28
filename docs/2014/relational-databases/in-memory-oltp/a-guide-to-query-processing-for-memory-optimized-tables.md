@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112247"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
@@ -260,7 +260,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|Elimina|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Questo operatore viene utilizzato sia per le funzioni intrinseche che per le conversioni dei tipi. Non tutte le funzioni e conversioni dei tipi sono supportate nelle stored procedure compilate in modo nativo.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Join a cicli annidati|Nested Loops è l'unico operatore di join supportato nelle stored procedure compilate in modo nativo. In tutti i piani che contengono join viene utilizzato l'operatore Nested Loops, anche se il piano per la stessa query eseguita come codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato contiene un hash join o un merge join.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |Ordina|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono mantenute statistiche a livello di colonna per le tabelle ottimizzate per la memoria. Inoltre, viene mantenuto il conteggio effettivo delle righe della tabella. Tuttavia, diversamente dalle tabelle basate su disco, le statistiche per le tabelle ottimizzate per la memoria non vengono aggiornate automaticamente. Pertanto, le statistiche devono essere aggiornate manualmente dopo aver effettuato modifiche significative nelle tabelle. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  
+ [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
   
   

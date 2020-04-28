@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
 ms.openlocfilehash: 0201d8dbf20557b9fc8b7e5856b0e64c85902759
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80502101"
 ---
-<Token>**APPLIES TO:** ![](media/yes-icon.png)Sì SQL Server 2017 e versioni successive ![Sì Database](media/yes-icon.png)SQL di Azure (solo istanza gestita) ![](media/no-icon.png)No Azure SQL Data Warehouse ![No](media/no-icon.png)Parallel Data Warehouse</Token>
+<Token>**Si applica a:** ![Sì](media/yes-icon.png)SQL Server 2017 e ![versioni](media/yes-icon.png)successive sì database SQL di Azure ( ![solo](media/no-icon.png)istanza gestita ![)](media/no-icon.png)no Azure SQL data warehouse nessuna data warehouse parallela</Token>

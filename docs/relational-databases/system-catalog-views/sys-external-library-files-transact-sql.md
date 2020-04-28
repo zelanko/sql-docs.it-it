@@ -1,5 +1,5 @@
 ---
-title: metodo sys.external_library_files (Transact-SQL) Documenti Microsoft
+title: sys. external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2f1bbdc3936dc6295b9ecc51b937e50cae20670
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80664235"
 ---
 # <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
@@ -32,10 +32,10 @@ Elenca una riga per ogni file che costituisce una libreria esterna.
 
 |Nome colonna |Tipo di dati |Descrizione|
 |------|------|-----|
-|external_library_id | INT |ID dell'oggetto libreria esterno. |
-|content |varbinary(max) |Contenuto dell'elemento del file della libreria esterna. |
+|external_library_id | INT |ID dell'oggetto libreria esterna. |
+|content |varbinary(max) |Contenuto dell'elemento del file di libreria esterno. |
 |Piattaforma |TINYINT |ID della piattaforma host in cui è installato SQL Server. |
-|platform_desc | nvarchar(60) |Nome della piattaforma host. I valori validi sono 'WINDOWS', 'LINUX'. |
+|platform_desc | nvarchar(60) |Nome della piattaforma host. I valori validi sono ' WINDOWS ',' LINUX '. |
 
 ### <a name="see-also"></a>Vedere anche  
 

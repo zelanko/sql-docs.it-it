@@ -18,10 +18,10 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289949"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
@@ -50,7 +50,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|Tipo di coda. I valori possibili sono **mail** e **status**.|  
 |**length**|**int**|Numero di elementi di posta nella coda specificata.|  
-|**stato**|**nvarchar (64)**|Stato del server di monitoraggio. I valori possibili sono **inattivi** (la coda è inattiva), **notificata** (la ricezione della coda è stata notificata) e **RECEIVES_OCCURRING** (la coda sta ricevendo).|  
+|**state**|**nvarchar (64)**|Stato del server di monitoraggio. I valori possibili sono **inattivi** (la coda è inattiva), **notificata** (la ricezione della coda è stata notificata) e **RECEIVES_OCCURRING** (la coda sta ricevendo).|  
 |**last_empty_rowset_time**|**DATETIME**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
 |**last_activated_time**|**DATETIME**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
   

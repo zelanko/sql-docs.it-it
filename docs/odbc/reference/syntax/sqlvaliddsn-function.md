@@ -1,5 +1,5 @@
 ---
-title: 'Funzione SQLValidDSN : Documenti Microsoft'
+title: Funzione SQLValidDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6dfafca22d0b04f2147b1af24b53e787493efe67
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286971"
 ---
 # <a name="sqlvaliddsn-function"></a>Funzione SQLValidDSN
 **Conformità**  
- Versione introdotta: ODBC 2.0  
+ Versione introdotta: ODBC 2,0  
   
  **Riepilogo**  
  **SQLValidDSN** controlla la lunghezza e la validità del nome dell'origine dati prima che il nome venga aggiunto alle informazioni di sistema.  
@@ -43,21 +43,21 @@ BOOL SQLValidDSN(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszDSN*  
- [Ingresso] Nome dell'origine dati da verificare.  
+ Input Nome dell'origine dati da controllare.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  La funzione restituisce TRUE se il nome dell'origine dati è valido. Restituisce FALSE se il nome dell'origine dati non è valido o la chiamata di funzione non è riuscita.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLValidDSN** restituisce FALSE, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Un * \*pfErrorCode* viene restituito solo se la chiamata di funzione non è riuscita, non se FALSE è stato restituito perché il nome dell'origine dati non è valido. Nella tabella seguente * \** sono elencati i valori pfErrorCode che possono essere restituiti da **SQLInstallerError** e ognuno di essi illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLValidDSN** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Un * \*pfErrorCode* viene restituito solo se la chiamata di funzione ha esito negativo, non se è stato restituito false perché il nome dell'origine dati non è valido. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
-|*\*pfErrorCode (codice pfErrorCode)*|Errore|Descrizione|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non si è verificato alcun errore specifico del programma di installazione.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa della mancanza di memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa di memoria insufficiente.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLValidDSN** viene chiamato dal [configDSN](../../../odbc/reference/syntax/configdsn-function.md) di un driver per controllare la lunghezza del nome dell'origine dati e la validità dei singoli caratteri nel nome dell'origine dati. Controlla se la lunghezza del nome è maggiore di SQL_MAX_DSN_LENGTH, come definito in Sqlext.h. La lunghezza del nome dell'origine dati viene controllata anche da [SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md). **SQLValidDSN** controlla se uno dei seguenti caratteri non validi sono inclusi nel nome dell'origine dati:  
+ **SQLValidDSN** viene chiamato dal [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) di un driver per verificare la lunghezza del nome dell'origine dati e la validità dei singoli caratteri nel nome dell'origine dati. Controlla se la lunghezza del nome è maggiore di SQL_MAX_DSN_LENGTH, come definito in sqlext. h. La lunghezza del nome dell'origine dati viene controllata anche da [SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md). **SQLValidDSN** controlla se nel nome dell'origine dati è incluso uno dei seguenti caratteri non validi:  
   
  [ ] { } ( ) , ; ? * = ! \@ \  
   
@@ -67,4 +67,4 @@ BOOL SQLValidDSN(
 |---------------------------|---------|  
 |Aggiunta, modifica o rimozione di un'origine dati|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (nella DLL di installazione)|  
 |Aggiunta, modifica o rimozione di un'origine dati|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Scrittura di un nome di origine dati nelle informazioni di sistemaWriting a data source name to the system information|[Istruzione SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|Scrittura di un nome di origine dati nelle informazioni di sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

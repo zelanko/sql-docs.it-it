@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289519"
 ---
 # <a name="identity-and-access-control-replication"></a>Controllo di identità e accesso (replica)
@@ -41,11 +41,11 @@ ms.locfileid: "79289519"
  L'applicazione di filtri ai dati pubblicati consente di limitare l'accesso ai dati e di specificare i dati da rendere disponibili nel Sottoscrittore. È possibile, ad esempio, filtrare la tabella **Customer** in modo che i partner aziendali ricevano solo le informazioni relative ai clienti per cui nella colonna **ShareInfo** è impostato il valore "yes". Nella replica di tipo merge è necessario tenere in considerazione alcuni aspetti relativi alla sicurezza se si utilizza un filtro con parametri che include HOST_NAME(). Per ulteriori informazioni, vedere la sezione relativa all'utilizzo dei filtri con HOST_NAME() in [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Gestione degli account di accesso e delle password nella replica
-  Specificare gli account di accesso e le password per gli agenti di replica durante la configurazione della replica. Dopo aver configurato la replica, è possibile modificare gli account di accesso e le password. Per altre informazioni, vedere [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). Se si modifica la password per un account usato da un agente di replica, eseguire [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
+  Specificare gli account di accesso e le password per gli agenti di replica durante la configurazione della replica. Dopo aver configurato la replica, è possibile modificare gli account di accesso e le password. Per altre informazioni, vedere [visualizzare e modificare le impostazioni di sicurezza della replica](view-and-modify-replication-security-settings.md). Se si modifica la password per un account usato da un agente di replica, eseguire [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di sicurezza dell'agente di replica](replication-agent-security-model.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Procedure consigliate per la sicurezza della replica](replication-security-best-practices.md)   
  [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)   
  [Attenuazione di minacce e vulnerabilità della replica](threat-and-vulnerability-mitigation-replication.md)   
 

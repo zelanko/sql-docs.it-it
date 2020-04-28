@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448338"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -60,7 +60,7 @@ sp_change_users_login [ @Action = ] 'action'
  Nome di un utente nel database corrente. *User* è di **tipo sysname**e il valore predefinito è null.  
   
  [ @LoginName= ] '*login*'  
- Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di **tipo sysname**e il valore predefinito è null.  
+ Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
  [ @Password= ] '*password*'  
  Password assegnata a un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato specificando **Auto_Fix**. Se un account di accesso corrispondente esiste già, viene eseguito il mapping dell'utente e dell'account di accesso e la *password* viene ignorata. Se un account di accesso corrispondente non esiste, sp_change_users_login crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuovo account di accesso e assegna la *password* come password per il nuovo account di accesso. *password* è di **tipo sysname**e non può essere null.  
@@ -75,7 +75,7 @@ sp_change_users_login [ @Action = ] 'action'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Nome dell'utente del database.|  
-|UserSID|**varbinary(85)**|ID di sicurezza (SID) dell'utente.|  
+|UserSID|**varbinary (85)**|ID di sicurezza (SID) dell'utente.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare sp_change_users_login per collegare un utente di database nel database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di accesso di un utente è stato modificato, utilizzare sp_change_users_login per collegare l'utente al nuovo account di accesso senza perdere le autorizzazioni corrispondenti. Il nuovo *account di accesso* non può essere SA e l' *utente* non può essere dbo, guest o un utente INFORMATION_SCHEMA.  
@@ -124,10 +124,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [Crea account di accesso &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

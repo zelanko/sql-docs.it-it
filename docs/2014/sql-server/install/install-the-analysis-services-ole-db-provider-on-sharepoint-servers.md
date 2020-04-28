@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112172"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installazione del provider OLE DB di Analysis Services nei server di SharePoint
@@ -30,7 +30,7 @@ ms.locfileid: "79112172"
     >  Queste scenari non si escludono a vicenda. Per l'hosting di versioni di cartelle di lavoro in una farm in cui sono inclusi server applicazioni che eseguono Excel Services senza un'istanza di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sarà necessaria l'installazione delle versioni meno recenti e di quelle più recenti del provider di dati in ogni computer Excel Services.  
   
   
-##  <a name="bkmk_vers"></a>Versioni del provider di OLE DB che supportano l'accesso ai dati PowerPivot  
+##  <a name="versions-of-the-ole-db-provider-supporting-powerpivot-data-access"></a><a name="bkmk_vers"></a>Versioni del provider di OLE DB che supportano l'accesso ai dati PowerPivot  
  In una farm di SharePoint possono essere incluse più versioni del provider OLE DB per Analysis Services, anche le versioni precedenti che non supportano l'accesso ai dati PowerPivot.  
   
  Per impostazione predefinita, con SharePoint 2010 viene installata la versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] del provider. Anche se è identificata come MSOLAP.4 (stesso numero di versione utilizzato per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), questa versione non consente l'accesso ai dati PowerPivot. Per la riuscita delle connessioni, è necessario disporre della versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del provider.  
@@ -46,7 +46,7 @@ ms.locfileid: "79112172"
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|MSOLAP120.dll nel file system<br /><br /> 12.0.20000 o successiva nei dettagli della versione del file|Utilizzare per modelli di dati diversi dai modelli di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|  
   
   
-##  <a name="bkmk_why"></a>Perché è necessario installare il provider di OLE DB  
+##  <a name="why-you-need-to-install-the-ole-db-provider"></a><a name="bkmk_why"></a>Perché è necessario installare il provider di OLE DB  
  In due scenari è richiesta l'installazione manuale del provider OLE DB nei server della farm.  
   
  **Lo scenario più comune** si verifica quando si dispone di versioni precedenti e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] più recenti delle cartelle di lavoro salvate nelle raccolte documenti della farm. Se gli analisti dell'organizzazione usano la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel e salvano le cartelle di lavoro in un'installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], la cartella di lavoro precedente non funziona. La relativa stringa di connessione farà riferimento a una versione precedente del provider, che non si troverà sul server a meno che non venga installata. L'installazione di entrambe le versioni consentirà l'accesso ai dati per le cartelle di lavoro di PowerPivot create con versioni precedenti e più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Il programma di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non prevede l'installazione della versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider. È pertanto necessario installarla manualmente se si utilizzano cartelle di lavoro di una versione precedente.  
@@ -54,7 +54,7 @@ ms.locfileid: "79112172"
  **Il secondo scenario** si verifica quando si dispone di un server in una farm di SharePoint in cui viene eseguito [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]Excel Services, ma non. In questo caso, è necessario aggiornare manualmente il server applicazioni in cui viene eseguito Excel Services per poter utilizzare una versione più recente del provider. Ciò è necessario per la connessione a un'istanza di PowerPivot per SharePoint. Se Excel Services utilizza una versione meno recente del provider, la richiesta di connessione non riuscirà. Si noti che il provider deve essere installato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il pacchetto di installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) per assicurarsi che tutti i componenti necessari per il supporto di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] siano installati.  
   
   
-##  <a name="bkmk_sql11"></a>Installare il provider di OLE DB SQL Server 2012 in un server Excel Services utilizzando SQL Server installazione  
+##  <a name="install-the-sql-server-2012-ole-db-provider-on-an-excel-services-server-by-using-sql-server-setup"></a><a name="bkmk_sql11"></a>Installare il provider di OLE DB SQL Server 2012 in un server Excel Services utilizzando SQL Server installazione  
  Utilizzare le istruzioni seguenti per aggiungere il provider OLE DB e altri componenti di connettività client ai server SharePoint in cui non è ancora installato, quali i server applicazioni in cui viene eseguito Excel Services, ma nei quali non è installato PowerPivot per SharePoint nello stesso hardware.  
   
  Utilizzare queste istruzioni per installare il provider di OLE DB Analysis Services corrente e per aggiungere **Microsoft. AnalysisServices. XMLA. dll** all'assembly globale.  
@@ -106,7 +106,7 @@ ms.locfileid: "79112172"
 5.  Nella cartella Windows\assembly, verificare che venga elencato Microsoft.AnalysisServices.Xmla.dll, versione 11.0.0.0.  
   
   
-##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>Usare il pacchetto di installazione di PowerPivot per SharePoint (spspPowerPivot. msi) per installare il provider di OLE DB SQL Server 2012  
+##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>Usare il pacchetto di installazione di PowerPivot per SharePoint (spspPowerPivot. msi) per installare il provider di OLE DB SQL Server 2012  
  Installare il [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Provider di OLE DB in e il server Excel Services utilizzando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] il pacchetto di installazione di **(spspPowerPivot. msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] .  
@@ -122,7 +122,7 @@ ms.locfileid: "79112172"
 5.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
   
-##  <a name="bkmk_kj"></a>Installare il provider OLE DB 2008 SQL Server R2 per ospitare le cartelle di lavoro della versione precedente  
+##  <a name="install-the-sql-server-2008-r2-ole-db-provider-to-host-earlier-version-workbooks"></a><a name="bkmk_kj"></a>Installare il provider OLE DB 2008 SQL Server R2 per ospitare le cartelle di lavoro della versione precedente  
  Utilizzare le istruzioni seguenti per installare la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider MSOLAP.4 e registrare il file Microsoft.AnalysisServices.ChannelTransport.dll. ChannelTransport è un sottocomponente del provider OLE DB di Analysis Services. Con la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider è possibile leggere il Registro di sistema in caso di utilizzo di ChannelTransport per stabilire una connessione. La registrazione di questo file è un passaggio post-installazione obbligatorio solo per le connessioni gestite dal provider [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] in un server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Passaggio 1: Scaricare e installare la libreria client  
@@ -159,6 +159,6 @@ ms.locfileid: "79112172"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79090580"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "79090580"
 |**schedule_id**|**int**|ID della pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore univoco della pianificazione dei processi. Questo valore viene utilizzato per identificare una pianificazione per i processi distribuiti.|  
 |**originating_server_id**|**int**|ID del server master di provenienza della pianificazione dei processi.|  
-|**nome**|**sysname (nvarchar (128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
-|**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo a cui appartiene la pianificazione del processo.|  
-|**Enabled**|**int**|Stato della pianificazione dei processi:<br /><br /> **0** = non abilitato.<br /><br /> **1** = abilitata.<br /><br /> Quando la pianificazione non è abilitata, non verrà eseguito alcun processo su questa pianificazione.|  
+|**name**|**sysname (nvarchar (128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
+|**owner_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo a cui appartiene la pianificazione del processo.|  
+|**abilitato**|**int**|Stato della pianificazione dei processi:<br /><br /> **0** = non abilitato.<br /><br /> **1** = abilitata.<br /><br /> Quando la pianificazione non è abilitata, non verrà eseguito alcun processo su questa pianificazione.|  
 |**freq_type**|**int**|Frequenza di esecuzione di un processo per questa pianificazione.<br /><br /> **1** = solo una volta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo a **freq_interval**<br /><br /> **64** = viene eseguito all'avvio del servizio SQL Server Agent<br /><br /> **128** = viene eseguito quando il computer è inattivo|  
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Dipende dal valore di **freq_type**. Il valore predefinito è **0**, che indica che **freq_interval** è inutilizzato. Per i valori possibili e i relativi effetti, vedere la tabella seguente.|  
 |**freq_subday_type**|**int**|Unità per la **freq_subday_interval**. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> **1** : all'ora specificata<br /><br /> **2** : secondi<br /><br /> **4** : minuti<br /><br /> **8** : ore|  
 |**freq_subday_interval**|**int**|Numero di periodi di **freq_subday_type** tra le esecuzioni del processo.|  
-|**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_type** è **32** (mensile relativo). Può avere uno dei valori seguenti:<br /><br /> **0** = **freq_relative_interval** non è utilizzato<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
+|**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_type** è **32** (mensile relativo). I possibili valori sono i seguenti:<br /><br /> **0** = **freq_relative_interval** non è utilizzato<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
 |**freq_recurrence_**<br /><br /> **Factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate di un processo. **freq_recurrence_factor** viene utilizzato solo se **freq_type** è **8**, **16**o **32**. Se questa colonna contiene **0**, **freq_recurrence_factor** non è utilizzata.|  
 |**active_start_date**|**int**|Data dalla quale è possibile avviare l'esecuzione del processo. La data è nel formato AAAAMMGG. NULL indica la data odierna.|  
 |**active_end_date**|**int**|Data dalla quale è possibile arrestare l'esecuzione del processo. La data è nel formato AAAAMMGG.|  
@@ -52,7 +52,7 @@ ms.locfileid: "79090580"
 |**active_end_time**|**int**|Tempo che intercorre tra **active_start_date** e **active_end_date** interruzione dell'esecuzione del processo. L'ora è nel formato HHMMSS, a 24 ore.|  
 |**date_created**|**datetime**|Data e ora di creazione della pianificazione.|  
 |**date_modified**|**datetime**|Data e ora dell'ultima modifica della pianificazione.|  
-|**numero_versione**|**int**|Numero di versione corrente della pianificazione. Se, ad esempio, una pianificazione è stata modificata 10 volte, il **version_number** è 10.|  
+|**version_number**|**int**|Numero di versione corrente della pianificazione. Se, ad esempio, una pianificazione è stata modificata 10 volte, il **version_number** è 10.|  
   
 |Valore di freq_type|Effetto su freq_interval|  
 |-------------------------|------------------------------|  

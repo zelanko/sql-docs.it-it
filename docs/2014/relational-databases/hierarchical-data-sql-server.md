@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289189"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
@@ -41,7 +41,7 @@ ms.locfileid: "79289189"
   
  Usare [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) come tipo di dati per creare tabelle con una struttura gerarchica o per descrivere la struttura gerarchica dei dati archiviati in un altro percorso. Usare le [funzioni hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) di [!INCLUDE[tsql](../includes/tsql-md.md)] per eseguire query e gestire i dati gerarchici.  
   
-##  <a name="keyprops"></a> Proprietà chiave di hierarchyid  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Proprietà chiave di hierarchyid  
  Un valore del tipo di dati `hierarchyid` rappresenta una posizione in un albero gerarchico. I valori per `hierarchyid` hanno le proprietà descritte di seguito:  
   
 -   Estremamente compresso  
@@ -57,7 +57,7 @@ ms.locfileid: "79289189"
      Usando il metodo [GetDescendant](/sql/t-sql/data-types/getdescendant-database-engine) , è sempre possibile generare un elemento di pari livello a destra o a sinistra di un nodo oppure tra due elementi di pari livello. La proprietà del confronto è gestita quando un numero arbitrario di nodi viene inserito o eliminato dalla gerarchia. La maggior parte degli inserimenti e delle eliminazioni mantiene la proprietà di compattezza. Tuttavia, gli inserimenti tra due nodi produrranno i valori hierarchyid con una rappresentazione leggermente meno compatta.  
   
   
-##  <a name="limits"></a> Limitazioni di hierarchyid  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> Limitazioni di hierarchyid  
  Il `hierarchyid` tipo di dati presenta le limitazioni seguenti:  
   
 -   Una colonna di tipo `hierarchyid` non rappresenta automaticamente un albero. È compito dell'applicazione generare e assegnare i valori `hierarchyid` in maniera tale che la relazione desiderata tra le righe sia riflessa nei valori. In alcune applicazioni potrebbe essere presente una colonna di tipo `hierarchyid` in cui viene indicato il percorso in una gerarchia definita in un'altra tabella.  
@@ -67,15 +67,14 @@ ms.locfileid: "79289189"
 -   Le relazioni gerarchiche rappresentate dai valori `hierarchyid` non sono applicate come una relazione della chiave esterna. È possibile e qualche volta appropriato avere una relazione gerarchica dove A ha un figlio B, A viene eliminato e lascia a B una relazione con un record inesistente. Se questo comportamento è inaccettabile, tramite l'applicazione deve essere eseguita una query per i discendenti prima di eliminare gli elementi padre.  
   
   
-##  <a name="alternatives"></a> Quando utilizzare le alternative a hierarchyid  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> Quando utilizzare le alternative a hierarchyid  
  Di seguito sono riportate due alternative a `hierarchyid` per la rappresentazione di dati gerarchici:  
   
 -   Elemento padre/figlio  
   
 -   XML  
   
- 
-  `hierarchyid` è generalmente superiore a queste alternative. Tuttavia, esistono determinate situazioni illustrate in dettaglio di seguito in cui le alternative sono superiori.  
+ `hierarchyid` è generalmente superiore a queste alternative. Tuttavia, esistono determinate situazioni illustrate in dettaglio di seguito in cui le alternative sono superiori.  
   
 ### <a name="parentchild"></a>Elemento padre/figlio  
  Quando si utilizza l'approccio dell'elemento padre/figlio, ogni riga contiene un riferimento all'elemento padre. La tabella seguente definisce una tabella tipica utilizzata per contenere le righe padre e figlio in una relazione padre/figlio:  
@@ -145,7 +144,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> Strategie di indicizzazione per i dati gerarchici  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> Strategie di indicizzazione per i dati gerarchici  
  Sono disponibili due strategie per indicizzare i dati gerarchici:  
   
 -   **Depth-first**  
@@ -160,7 +159,7 @@ GO
   
      In un indice breadth-first tutti gli elementi figlio diretti di un nodo vengono posizionati insieme. Pertanto, gli indici breadth-first sono in grado di fornire risposte alle query sugli elementi figlio immediati, ad esempio "Trova tutti i dipendenti che riportano direttamente a questo responsabile".  
   
- La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Creazione di indici  
@@ -263,13 +262,13 @@ INSERT SimpleDemo
 VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="tasks"></a> Attività correlate  
   
-###  <a name="migrating"></a> Migrazione dalla relazione elemento padre/figlio a hierarchyid  
- La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite `hierarchyid` consiste nell'utilizzare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione della tabella elemento padre/figlio, vedere la lezione 1 di [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> Migrazione dalla relazione elemento padre/figlio a hierarchyid  
+ La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite `hierarchyid` consiste nell'utilizzare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
-###  <a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
  Tramite un'applicazione si può facilmente assicurare che una colonna `hierarchyid` rappresenti un albero, anche se ciò non accade necessariamente.  
   
 -   Durante la generazione di nuovi valori, eseguire una delle operazioni seguenti:  
@@ -371,7 +370,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> Applicazione di un albero  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> Applicazione di un albero  
  Negli esempi riportati in precedenza si illustra la possibilità di gestione di un albero da parte di un'applicazione. Per applicare un albero tramite vincoli, è possibile creare una colonna calcolata in cui viene definito l'elemento padre di ogni nodo con un vincolo di chiave esterna relativo all'ID della chiave primaria.  
   
 ```  
@@ -389,7 +388,7 @@ GO
  Questo metodo dell'applicazione di una relazione è preferito quando per il codice considerato non affidabile per la gestione dell'albero gerarchico è disponibile un accesso DML diretto alla tabella. Tuttavia, questo metodo potrebbe ridurre le prestazioni poiché è necessario controllare il vincolo in ogni operazione DML.  
   
   
-###  <a name="findclr"></a> Individuazione di predecessori tramite CLR  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> Individuazione di predecessori tramite CLR  
  Un'operazione comune che interessa due nodi in una gerarchia è la ricerca del predecessore comune minore. Questo può essere scritto in [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR, perché il `hierarchyid` tipo è disponibile in entrambi. Si consiglia di usare CLR poiché le prestazioni sono più rapide.  
   
  Utilizzare il codice CLR seguente per elencare i predecessori e cercare il predecessore comune minore:  
@@ -436,7 +435,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> Elenco dei predecessori  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> Elenco dei predecessori  
  La creazione di un elenco dei predecessori di un nodo è un'operazione comune che consente, ad esempio, di mostrare le posizioni di un'organizzazione. A questo scopo, è possibile usare una funzione con valori di tabella tramite la classe **HierarchyId_Operations** definita in precedenza:  
   
  Utilizzo di [!INCLUDE[tsql](../includes/tsql-md.md)]:  
@@ -465,7 +464,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> Ricerca del predecessore comune minore  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> Ricerca del predecessore comune minore  
  Usando la classe **HierarchyId_Operations** definita in precedenza, creare la funzione [!INCLUDE[tsql](../includes/tsql-md.md)] seguente per cercare il predecessore comune minore che interessa due nodi di una gerarchia:  
   
 ```  
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  Il nodo risultante è /1/1/  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> Spostamento di sottoalberi  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Spostamento di sottoalberi  
  Un'altra operazione comune è lo spostamento di sottoalberi. La procedura seguente prende il sottoalbero **@oldMgr** di e lo rende ( **@oldMgr**incluso) un sottoalbero di **@newMgr**.  
   
 ```  
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai metodi per il tipo di dati hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

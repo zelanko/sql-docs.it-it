@@ -1,5 +1,5 @@
 ---
-title: Pianificare la progettazione dei report e la distribuzione di report (Reporting Services 2014) Documenti Microsoft
+title: Pianificare la progettazione e la distribuzione di report (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3047dba3e54d384f2f52733e8cf49308b793190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380822"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Pianificare la progettazione e la distribuzione di report (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce diversi approcci per la creazione e la distribuzione di report. Utilizzare questo argomento per la pianificazione di un ambiente di creazione di report e un server di report che interagiscono. In questo argomento viene fornita una panoramica del supporto delle definizioni di report mediante i componenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definizione di report è un file XML scritto in linguaggio RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Ogni definizione di report è conforme a una versione di schema specifica elencata all'inizio del file.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in sono disponibili diversi approcci per la creazione e la distribuzione dei report. Utilizzare questo argomento per la pianificazione di un ambiente di creazione di report e un server di report che interagiscono. In questo argomento viene fornita una panoramica del supporto delle definizioni di report mediante i componenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definizione di report è un file XML scritto in linguaggio RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Ogni definizione di report è conforme a una versione di schema specifica elencata all'inizio del file.  
   
  I file RDL vengono creati in Progettazione report nei progetti di [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] e in Generatore report 3.0. I file RDLC vengono creati tramite i controlli ReportViewer inclusi in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
  In questo argomento  
   
--   [Versioni dello schema RDLRDL Schema Versions](#bkmk_rdl_schema_versions)  
+-   [Versioni dello schema RDL](#bkmk_rdl_schema_versions)  
   
--   [Report Server and RDL Schema Support](#bkmk_report_server_rdl_schema_support)  
+-   [Server di report e supporto dello schema RDL](#bkmk_report_server_rdl_schema_support)  
   
--   [Supporto per la creazione e la distribuzione di reportReport Authoring and Deployment Support](#bkmk_report_authoring_and_deployment)  
+-   [Supporto per la creazione e la distribuzione di report](#bkmk_report_authoring_and_deployment)  
   
--   [Controlli di ReportViewer](#bkmk_reportviewer)  
+-   [Controlli ReportViewer](#bkmk_reportviewer)  
   
 ##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Versioni dello schema RDL  
  Nella tabella seguente viene fornito un elenco delle versioni dello schema disponibili e delle relative abbreviazioni utilizzate nella parte restante dell'argomento:  
@@ -108,7 +108,7 @@ ms.locfileid: "80380822"
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Oppure<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Oppure<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- Per altre informazioni, vedere gli argomenti seguenti:   
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Conversione di file RDLC in file RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -117,8 +117,8 @@ ms.locfileid: "80380822"
 -   [Aggiunta e configurazione dei controlli ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Report, parti di report e definizioni di report &#40;Generatore report e sSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Reporting Services Tools](tools/reporting-services-tools.md)   
+ [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Strumenti di Reporting Services](tools/reporting-services-tools.md)   
  [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
   

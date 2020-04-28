@@ -1,5 +1,5 @@
 ---
-title: Sequenza e QName (XQuery) . Documenti Microsoft
+title: Sequence e QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380782"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenza e QName (XQuery)
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Ogni identificatore di una query XQuery è un QName, che è composto da un prefisso dello spazio dei nomi e da un nome locale. In questa implementazione, i nomi delle variabili in XQuery sono rappresentati da QName e non possono avere un prefisso.  
   
- Si consideri l'esempio seguente in cui viene specificata una query su una variabile xml non tipizzata:Consider the following example in which a query is specified against an untyped **xml** variable:  
+ Si consideri l'esempio seguente in cui viene specificata una query su una variabile **XML** non tipizzata:  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  Nell'espressione (`/Root/a`), `Root` e `a` sono QName.  
   
- Nell'esempio seguente viene specificata una query su una colonna **xml** tipizzata. La query scorre \<tutti gli elementi> passaggio nella prima posizione del centro di lavoro.  
+ Nell'esempio seguente viene specificata una query su una colonna **XML** tipizzata. La query esegue l'iterazione \<di tutti i passaggi> gli elementi nella prima posizione WorkCenter.  
   
 ```  
 SELECT Instructions.query('  
@@ -143,10 +143,10 @@ WHERE ProductModelID=7;
 |Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(nessun prefisso)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Ogni database creato include la raccolta di schemi XML **sys.** Questi schemi sono riservati e pertanto è possibile accedervi da qualsiasi altra raccolta di XML Schema creata dall'utente.  
+ Ogni database creato ha la raccolta **sys** XML Schema. Questi schemi sono riservati e pertanto è possibile accedervi da qualsiasi altra raccolta di XML Schema creata dall'utente.  
   
 > [!NOTE]  
->  Questa implementazione non `local` supporta il prefisso come http://www.w3.org/2004/07/xquery-local-functionsdescritto nella specifica XQuery in .  
+>  Questa implementazione non supporta il `local` prefisso, come descritto nella specifica XQuery in. http://www.w3.org/2004/07/xquery-local-functions  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)  

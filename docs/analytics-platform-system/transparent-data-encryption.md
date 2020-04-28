@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289749"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
@@ -37,7 +37,7 @@ Nella figura seguente viene illustrata la gerarchia delle chiavi per la crittogr
   
 ![Visualizza la gerarchia](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Uso della crittografia trasparente dei dati  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Uso della crittografia trasparente dei dati  
 Per usare TDE, eseguire le operazioni seguenti: I primi tre passaggi vengono eseguiti solo una volta, quando si prepara SQL Server PDW per il supporto di Transparent Data Encryption.  
   
 1.  Creare una chiave master nel database master.  
@@ -122,7 +122,7 @@ Nella tabella seguente sono inclusi collegamenti e spiegazioni delle funzioni e 
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Consente di creare una chiave usata per crittografare un database.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Consente di modificare la chiave usata per crittografare un database.|  
-|[ELIMINA CHIAVE DI CRITTOGRAFIA DEL DATABASE](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Consente di rimuovere la chiave usata per crittografare un database.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Consente di rimuovere la chiave usata per crittografare un database.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Descrive l'opzione **ALTER DATABASE** , usata per abilitare TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Viste del catalogo e viste a gestione dinamica  
@@ -202,7 +202,7 @@ SQL Server PDW gestisce un set di log destinati alla risoluzione dei problemi. S
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption e database di sistema tempdb  
 Il database di sistema tempdb viene crittografato quando la crittografia viene abilitata utilizzando [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md). Questa operazione è necessaria prima che qualsiasi database possa utilizzare Transparent Data Encryption. Questo potrebbe avere un effetto sulle prestazioni per i database non crittografati nella stessa istanza di SQL Server PDW.  
   
-## <a name="key-management"></a>Gestione della chiave  
+## <a name="key-management"></a>Gestione chiavi  
 La chiave di crittografia del database è protetta dai certificati archiviati nel database master. Questi certificati sono protetti dalla chiave master del database (DMK) del database master. Per poter essere usata per Transparent Data Encryption, è necessario che la DMK sia protetta dalla chiave master del servizio (SMK).  
   
 Il sistema può accedere alle chiavi senza richiedere l'intervento dell'uomo (ad esempio, fornire una password). Se il certificato non è disponibile, il sistema restituirà un errore che indica che non è possibile decrittografare la chiave di crittografia finché non è disponibile il certificato appropriato.  
@@ -279,7 +279,7 @@ I collegamenti seguenti contengono informazioni generali sul modo in cui SQL Ser
   
 ## <a name="see-also"></a>Vedere anche  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREA CHIAVE MASTER](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

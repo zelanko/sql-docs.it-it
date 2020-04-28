@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289139"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
@@ -26,20 +26,20 @@ ms.locfileid: "79289139"
   
 -   [Posizione e tipi di log](#bkmk_location)  
   
--   [Informazioni generali sulle impostazioni di configurazione del file di log](#bkmk_general)  
+-   [Informazioni generali sulle impostazioni di configurazione dei file di log](#bkmk_general)  
   
 -   [File di log del servizio MSMDSRV](#bkmk_msmdsrv)  
   
 -   [Log di query](#bkmk_querylog)  
   
--   [File di minidump (con estensione MDMP)](#bkmk_mdmp)  
+-   [File di minidump (con estensione mdmp)](#bkmk_mdmp)  
   
 -   [Suggerimenti e procedure consigliate](#bkmk_tips)  
   
 > [!NOTE]  
 >  Per informazioni sulla registrazione, potrebbe essere utile interessarsi alle operazioni di traccia che mostrano i percorsi di elaborazione e di esecuzione delle query. Oggetti di traccia per analisi ad hoc e prolungate (come il controllo dell'accesso ai cubi) e consigli sull'uso ottimale dell'Utilità Traccia eventi, di SQL Server Profiler e di xEvents sono disponibili accedendo ai collegamenti forniti nella pagina: [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md).  
   
-##  <a name="bkmk_location"></a>Posizione e tipi di log  
+##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>Posizione e tipi di log  
  Analysis Services fornisce i log descritti di seguito.  
   
 |Posizione o nome del file|Type|Utilizzo|Attivato per impostazione predefinita|  
@@ -50,14 +50,14 @@ ms.locfileid: "79289139"
   
  Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Suggerimenti per la raccolta dati iniziale forniti dal supporto tecnico Microsoft).  
   
-##  <a name="bkmk_general"></a>Informazioni generali sulle impostazioni di configurazione del file di log  
+##  <a name="general-information-on-log-file-configuration-settings"></a><a name="bkmk_general"></a>Informazioni generali sulle impostazioni di configurazione del file di log  
  È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Per istruzioni su come modificare il file, vedere [configurare le proprietà del server in Analysis Services](../server-properties/server-properties-in-analysis-services.md) .  
   
  Dove possibile, è consigliabile impostare le proprietà di registrazione nella pagina delle proprietà del server di Management Studio. Anche se in alcuni casi sarà necessario modificare il file msmdsrv.ini direttamente per configurare le impostazioni che non sono visibili negli strumenti di amministrazione.  
   
  ![Sezione del file di configurazione con le impostazioni di log](../media/ssas-logfilesettings.png "Sezione del file di configurazione con le impostazioni di log")  
   
-##  <a name="bkmk_msmdsrv"></a>File di log del servizio MSMDSRV  
+##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a> File di log del servizio MSMDSRV  
  Analysis Services registra le operazioni del server nel file msmdsrv.log, uno per ogni istanza, che si trova in \Programmi\Microsoft SQL Server\\<istanza\>\Olap\Log.  
   
  Questo file di log viene svuotato a ogni riavvio del servizio. Nelle versioni precedenti, gli amministratori a volte riavviavano il servizio al solo scopo di svuotare il file di log prima che diventasse talmente grande da non poter essere usato. Ciò non è più necessario. Le impostazioni di configurazione introdotte in SQL Server 2012 SP2 e versioni successive consentono di controllare le dimensioni del file di log e la relativa cronologia:  
@@ -96,7 +96,7 @@ ms.locfileid: "79289139"
   
 6.  Riavviare il servizio.  
   
-##  <a name="bkmk_querylog"></a>Log di query  
+##  <a name="query-logs"></a><a name="bkmk_querylog"></a>Log di query  
  Log di query è in realtà un nome improprio, perché l'attività di query MDX o DAX degli utenti non viene registrata. Raccoglie invece i dati sulle query generate da Analysis Services, che verranno usati successivamente come input di dati nell'Ottimizzazione guidata basata sulle statistiche di utilizzo. I dati raccolti nel log di query non vengono usati per l'analisi diretta. In particolare, i set di dati vengono descritti in matrici di bit, con uno zero o un uno che indica le parti del set di dati incluso nella query. Questi dati saranno usati per la procedura guidata.  
   
  Per il monitoraggio delle query e la risoluzione dei problemi, molti sviluppatori e amministratori usano uno strumento della community, **ASTrace**, per monitorare le query. È anche possibile usare SQL Server Profiler, XEvent o una traccia di Analysis Services. Per i collegamenti correlati alle tracce, vedere [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md) .  
@@ -125,7 +125,7 @@ ms.locfileid: "79289139"
   
  Per altre informazioni sulla configurazione del log di query, vedere [Configuring the Analysis Services Query Log](https://technet.microsoft.com/library/Cc917676) (Configurazione del log di query di Analysis Services). Anche se il documento non è recente, la configurazione del log di query non è stata modificata nelle versioni recenti e le informazioni in esso contenute sono ancora valide.  
   
-##  <a name="bkmk_mdmp"></a>File di minidump (con estensione MDMP)  
+##  <a name="mini-dump-mdmp-files"></a><a name="bkmk_mdmp"></a>File di minidump (con estensione MDMP)  
  I file di dump acquisiscono i dati usati per l'analisi di eventi straordinari. Analysis Services genera automaticamente dei minidump (con estensione mdmp) in risposta a un arresto anomalo del server, a un'eccezione e ad alcuni errori di configurazione. La funzionalità è abilitata ma non invia automaticamente le segnalazioni di arresti anomali.  
   
  Le segnalazioni di arresti anomali vengono configurate tramite la sezione Eccezioni nel file msmdsrv.ini. Queste impostazioni controllano la generazione dei file di dump di memoria. Il frammento di codice seguente mostra i valori predefiniti:  
@@ -160,18 +160,17 @@ ms.locfileid: "79289139"
   
  `CrashReportsFolder`è il percorso dei file di dump. Per impostazione predefinita, il file con estensione mdmp e i record di log associati vengono archiviati nella cartella \Olap\Log.  
   
- 
-  `SQLDumperFlagsOn` viene usata per generare un dump completo. Per impostazione predefinita, i dump completi non sono abilitati. È possibile impostare questa proprietà su `0x34`.  
+ `SQLDumperFlagsOn` viene usata per generare un dump completo. Per impostazione predefinita, i dump completi non sono abilitati. È possibile impostare questa proprietà su `0x34`.  
   
  Per altre informazioni generiche, vedere i collegamenti seguenti:  
   
--   [Analisi più approfondite SQL Server tramite minidump](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Analisi dei minidump di SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
 -   [Come creare un file di dump in modalità utente](https://support.microsoft.com/kb/931673)  
   
--   [Come utilizzare l'utilità Sqldumper. exe per generare un file dump in SQL Server](https://support.microsoft.com/kb/917825)  
+-   [Come usare l'utilità Sqldumper.exe per generare un file di dump in SQL Server](https://support.microsoft.com/kb/917825)  
   
-##  <a name="bkmk_tips"></a>Suggerimenti e procedure consigliate  
+##  <a name="tips-and-best-practices"></a><a name="bkmk_tips"></a>Suggerimenti e procedure consigliate  
  Questa sezione è un riepilogo dei suggerimenti indicati in questo articolo.  
   
 -   Configurare il file msmdsrv.log per controllare le dimensioni e il numero di file di log msmdsrv. Le impostazioni non vengono abilitate per impostazione predefinita, pertanto assicurarsi di aggiungerle come passaggio di post-installazione. Vedere [File di log del servizio MSMDSRV](#bkmk_msmdsrv) in questo argomento.  

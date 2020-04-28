@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896807"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
@@ -82,7 +82,7 @@ Al termine della valutazione, usare il [servizio migrazione del database di Azur
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v 4.0
 
-La versione 4.0 di Data Migration Assistant introduce la funzionalità di consigli per lo SKU del database SQL di Azure, che consente agli utenti di identificare la SKU minima consigliata del database SQL di Azure in base ai contatori delle prestazioni raccolti dai computer che ospitano il database. Questa funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning di tutti i database in Azure in blocco.
+La versione 4.0 di Data Migration Assistant introduce la funzionalità di consigli per lo SKU del database SQL di Azure, che consente agli utenti di identificare la SKU minima consigliata del database SQL di Azure in base ai contatori delle prestazioni raccolti dai computer che ospitano i database. Questa funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning di tutti i database in Azure in blocco.
 
 > [!NOTE]
 > Questa funzionalità è attualmente disponibile solo tramite l'interfaccia della riga di comando (CLI).
@@ -177,11 +177,11 @@ La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
 
 - Individuazione di problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. I risultati vengono descritti come problemi di compatibilità e sono suddivisi in categorie nelle aree seguenti:
   - Modifiche di rilievo
-  - Modifiche del comportamento
+  - Modifiche funzionali
   - Funzionalità deprecate
 - Individuazione di nuove funzionalità nella piattaforma SQL Server di destinazione di cui il database può trarre vantaggio dopo un aggiornamento. I risultati sono descritti come raccomandazioni sulle funzionalità e sono suddivisi in categorie nelle aree seguenti:
   - Prestazioni
-  - Security
+  - Sicurezza
   - Archiviazione
 - Esperienza utente moderna per eseguire valutazioni.
 

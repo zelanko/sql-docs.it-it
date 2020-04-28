@@ -1,5 +1,5 @@
 ---
-title: 'Funzione SQLWriteFileDSN : Documenti Microsoft'
+title: Funzione SQLWriteFileDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e781f1be79e0079f33b3d0800c665f5f5e9fda4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286891"
 ---
 # <a name="sqlwritefiledsn-function"></a>Funzione SQLWriteFileDSN
 **Conformità**  
- Versione introdotta: ODBC 3.0  
+ Versione introdotta: ODBC 3,0  
   
  **Riepilogo**  
- **SQLWriteFileDSN** scrive informazioni in un DSN su file.  
+ **SQLWriteFileDSN** scrive le informazioni in un DSN di file.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,39 +45,39 @@ BOOL SQLWriteFileDSN(
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *lpszNomefileName (nome file)*  
- [Ingresso] Puntatore al nome del DSN su file. Un'estensione DSN viene aggiunta a tutti i nomi di file che non hanno già un'estensione DSN.  
+ *lpszFileName*  
+ Input Puntatore al nome del DSN del file. Viene aggiunta un'estensione DSN a tutti i nomi di file che non dispongono già di un'estensione DSN.  
   
- *NomeAppz*  
- [Ingresso] Puntatore al nome dell'applicazione. Si tratta di "ODBC" per la sezione ODBC.  
+ *lpszAppName*  
+ Input Puntatore al nome dell'applicazione. Si tratta di "ODBC" per la sezione ODBC.  
   
- *lpszKeyName (nome di chiave di lavoro)*  
- [Ingresso] Puntatore al nome della chiave da leggere. Vedere "Commenti" per le parole chiave riservate.  
+ *lpszKeyName*  
+ Input Puntatore al nome della chiave da leggere. Vedere "Commenti" per le parole chiave riservate.  
   
- *lpszString (stringhe)*  
- [Uscita] Punta alla stringa associata alla chiave da scrivere. La lunghezza massima della stringa a cui fa riferimento questo argomento è 32.767 byte.  
+ *lpszString*  
+ Output Punta alla stringa associata alla chiave da scrivere. La lunghezza massima della stringa a cui punta questo argomento è 32.767 byte.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se ha esito positivo, FALSE se ha esito negativo.  
+ La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLWriteFileDSN** restituisce FALSE, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Nella tabella seguente * \** sono elencati i valori pfErrorCode che possono essere restituiti da **SQLInstallerError** e ognuno di essi illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLWriteFileDSN** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
-|*\*pfErrorCode (codice pfErrorCode)*|Errore|Descrizione|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non si è verificato alcun errore specifico del programma di installazione.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
 |ODBC_ERROR_INVALID_PATH|Percorso di installazione non valido|Il percorso del nome file specificato nell'argomento *lpszFileName* non è valido.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *lpszAppName*, *lpszKeyName*o *lpszString* era NULL.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *lpszAppName*, *lpszKeyName*o *lpszString* è null.|  
   
 ## <a name="comments"></a>Commenti  
- ODBC riserva il nome di sezione [ODBC] in cui archiviare le informazioni di connessione. Le parole chiave riservate per questa sezione sono le stesse riservate per una stringa di connessione in **SQLDriverConnect**. (Per altre informazioni, vedere la descrizione della funzione [SQLDriverConnect.)](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+ ODBC riserva il nome della sezione [ODBC] in cui archiviare le informazioni di connessione. Le parole chiave riservate per questa sezione sono le stesse riservate per una stringa di connessione in **SQLDriverConnect**. Per ulteriori informazioni, vedere la descrizione della funzione [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) .  
   
- Le applicazioni possono utilizzare queste parole chiave riservate per scrivere informazioni direttamente in un DSN su file. Se un'applicazione desidera creare o modificare la stringa di connessione senza DSN associata a un DSN su file, può chiamare **SQLWriteFileDSN** per una qualsiasi delle parole chiave della stringa di connessione riservate nella sezione [ODBC].  
+ Le applicazioni possono utilizzare queste parole chiave riservate per scrivere informazioni direttamente in un DSN di file. Se un'applicazione vuole creare o modificare la stringa di connessione senza DSN associata al DSN di un file, può chiamare **SQLWriteFileDSN** per qualsiasi parola chiave della stringa di connessione riservata nella sezione [ODBC].  
   
- Se l'argomento *lpszString* è un puntatore null, la parola chiave a cui fa riferimento l'argomento *lpszKeyName* verrà eliminata dal file DSN. Se gli argomenti *lpszString* e *lpszKeyName* sono entrambi puntatori null, la sezione a cui fa riferimento l'argomento *lpszAppName* verrà eliminata dal file DSN.  
+ Se l'argomento *lpszString* è un puntatore null, la parola chiave a cui fa riferimento l'argomento *lpszKeyName* verrà eliminata dal file con estensione DSN. Se gli argomenti *lpszString* e *lpszKeyName* sono entrambi puntatori null, la sezione a cui punta l'argomento *lpszAppName* verrà eliminata dal file con estensione DSN.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Lettura di informazioni da DSN su file|[SQLReadFileDSN (Informazioni in lingua inglese)](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|
+|Lettura di informazioni da file DSN|[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|

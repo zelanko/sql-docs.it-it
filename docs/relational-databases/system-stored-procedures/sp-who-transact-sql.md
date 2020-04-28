@@ -18,10 +18,10 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78866481"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
@@ -57,15 +57,14 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|**spid**|**smallint**|ID sessione.|  
+|**SPID**|**smallint**|ID di sessione.|  
 |**ecid**|**smallint**|ID del contesto di esecuzione di un determinato thread associato a un ID di sessione specifico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, dove 0 rappresenta sempre il thread principale o padre e {1, 2, 3,... *n*} rappresenta i sottothread.|  
-|**Stato**|**nchar (30)**|Stato del processo. I valori possibili sono:<br /><br /> **inattivo**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **in esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> eseguire il **rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **Spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
+|**Stato**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **inattivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **in esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> eseguire il **rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
 |**loginame**|**nchar (128)**|Nome dell'account di accesso associato a un particolare processo.|  
-|**nome host**|**nchar (128)**|Nome host o di computer per ogni processo.|  
+|**hostname**|**nchar (128)**|Nome host o di computer per ogni processo.|  
 |**blk**|**char (5)**|ID di sessione del processo di blocco, se esistente. In caso contrario, il valore di questa colonna è zero.<br /><br /> Quando una transazione associata a un ID di sessione specificato viene bloccata da una transazione distribuita orfana, questa colonna restituirà il valore -2 per tale transazione.|  
 |**dbname**|**nchar (128)**|Database utilizzato dal processo.|  
-|**cmd**|**nchar (16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], processo interno [!INCLUDE[ssDE](../../includes/ssde-md.md)] e così via) in esecuzione per il processo. In SQL Server 2019, il tipo di dati è stato modificato in **nchar (26)**.|  
+|**cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], processo interno [!INCLUDE[ssDE](../../includes/ssde-md.md)] e così via) in esecuzione per il processo. In SQL Server 2019, il tipo di dati è stato modificato in **nchar (26)**.|  
 |**request_id**|**int**|ID per le richieste in esecuzione in una sessione specifica.|  
   
  In caso di elaborazione parallela, vengono creati thread secondari per l'ID di sessione specifico. Il thread principale è indicato da `spid = <xxx>` e `ecid =0`. Gli altri sottothread hanno lo stesso `spid = <xxx>`, ma con **ECID** > 0.  
@@ -121,7 +120,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

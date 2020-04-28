@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288941"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
@@ -34,13 +34,13 @@ Contiene una riga per ogni configurazione.
 |Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|ID dell'opzione di configurazione.|
-|**nome**|**nvarchar (60)**|Nome dell'opzione di configurazione. Per informazioni sulle possibili configurazioni, vedere [ALTER database scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**name**|**nvarchar(60)**|Nome dell'opzione di configurazione. Per informazioni sulle possibili configurazioni, vedere [ALTER database scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |**value**|**SqlVariant**|Valore impostato per questa opzione di configurazione per la replica primaria.|
 |**value_for_secondary**|**SqlVariant**|Valore impostato per questa opzione di configurazione per le repliche secondarie.|
 |**is_value_default**|**bit** |Specifica se il valore impostato è il valore predefinito.|
 |**dw_compatibility_level**|**int**|Livello di compatibilità (anteprima) del database.  Valore predefinito = 0 (automatico)|
 
-## <a name="Permissions"></a> Autorizzazioni
+## <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 È richiesta l'appartenenza al ruolo **public** .
 

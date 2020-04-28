@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3dba46f4d0e2ecdebda13fe3fe9412219c2a755
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448478"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "79448478"
 |**\<colonne ereditate>**|--|Eredita da **sys. server_principals**.|  
 |**is_policy_checked**|**bit**|I criteri password vengono controllati.|  
 |**is_expiration_checked**|**bit**|La scadenza delle password viene controllata.|  
-|**password_hash**|**varbinary (256)**|Hash della password dell'account di accesso di SQL. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.|  
+|**password_hash**|**varbinary(256)**|Hash della password dell'account di accesso di SQL. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.|  
   
  Per un elenco delle colonne ereditate da questa vista, vedere [sys. server_principals &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Le colonne `owning_principal_id` e `is_fixed_role` non vengono ereditate da sys. server_principals.
   
@@ -49,10 +49,10 @@ ms.locfileid: "79448478"
 ## <a name="permissions"></a>Autorizzazioni  
  Con qualsiasi account di accesso con autenticazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile visualizzare il relativo nome di account di accesso e l'account di accesso sa. Per visualizzare altri account di accesso, è richiesta l'autorizzazione ALTER ANY LOGIN o un'autorizzazione per l'account di accesso.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Criteri password](../../relational-databases/security/password-policy.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

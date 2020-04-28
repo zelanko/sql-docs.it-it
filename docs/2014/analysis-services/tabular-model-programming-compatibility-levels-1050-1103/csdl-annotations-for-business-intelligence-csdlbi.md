@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525452"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotazioni CSDL per Business Intelligence (CSDLBI)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la presentazione della definizione di un modello tabulare in un formato XML denominato Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI).  
   
  In questo argomento viene fornita una panoramica di CSDLBI e viene descritto come utilizzarlo con i modelli di dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "79525452"
   
 -   [Soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Distribuzione di soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Connessione BI Semantic Model di PowerPivot &#40;. BISM&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

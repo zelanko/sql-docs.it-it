@@ -1,7 +1,7 @@
 ---
-title: xp_cmdshell (Transact-SQL) Documenti Microsoft
+title: xp_cmdshell (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 12/01/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ce32fc31373077418e77d31ce064d60e23f1b24
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 27fd489c9076be08a814f3ea0c27ad92f1f07fa7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402695"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -40,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Argomenti  
  **'** *command_string* **'**  
- Stringa che contiene un comando da passare al sistema operativo. *command_string* è **varchar(8000)** o **nvarchar(4000)**, senza alcun valore predefinito. *command_string* non può contenere più di un set di virgolette doppie. Se nei percorsi di file o nei nomi di programma a cui si fa riferimento in *command_string,* è necessaria una singola coppia di virgolette. In caso di problemi nell'utilizzo di spazi incorporati nelle stringhe, valutare l'utilizzo di nomi di file in formato FAT 8.3 come soluzione alternativa.  
+ Stringa che contiene un comando da passare al sistema operativo. *command_string* è di tipo **varchar (8000)** o **nvarchar (4000)** e non prevede alcun valore predefinito. *command_string* non può contenere più di un set di virgolette doppie. È necessaria una sola coppia di virgolette se sono presenti spazi nei percorsi di file o nei nomi di programma a cui viene fatto riferimento in *command_string*. In caso di problemi nell'utilizzo di spazi incorporati nelle stringhe, valutare l'utilizzo di nomi di file in formato FAT 8.3 come soluzione alternativa.  
   
  **no_output**  
  Parametro facoltativo che indica che non è richiesta la restituzione di output al client.  
@@ -56,24 +56,24 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- Le righe vengono restituite in una colonna **nvarchar(255).** Se viene utilizzata l'opzione **no_output,** verrà restituito solo quanto segue:  
+ Le righe vengono restituite in una colonna **nvarchar (255)** . Se viene utilizzata l'opzione **no_output** , verranno restituiti solo gli elementi seguenti:  
   
 ```  
 The command(s) completed successfully.  
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Il processo di Windows generato da **xp_cmdshell** ha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli stessi diritti di sicurezza dell'account del servizio.  
+ Il processo di Windows generato da **xp_cmdshell** dispone degli stessi diritti di sicurezza dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio.  
   
  **xp_cmdshell** funziona in modo sincrono. ovvero il controllo viene restituito al chiamante solo dopo il completamento del comando della shell.  
   
- **xp_cmdshell** possono essere abilitate e disabilitate utilizzando la gestione basata su criteri o eseguendo **sp_configure**. Per ulteriori informazioni, consultate [Configurazione superficie di](../../relational-databases/security/surface-area-configuration.md) attacco e Opzione di configurazione xp_cmdshell [Server](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ **xp_cmdshell** può essere abilitata e disabilitata utilizzando la gestione basata su criteri o eseguendo **sp_configure**. Per ulteriori informazioni, vedere [Configurazione superficie](../../relational-databases/security/surface-area-configuration.md) di attacco e [xp_cmdshell opzione di configurazione del server](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 > [!IMPORTANT]
->  Se **xp_cmdshell** viene eseguito all'interno di un batch e restituisce un errore, il batch avrà esito negativo.
+>  Se **xp_cmdshell** viene eseguito all'interno di un batch e restituisce un errore, il batch avrà esito negativo. Questa è una differenza funzionale Nelle versioni precedenti del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch continuerà a essere eseguito.  
   
 ## <a name="xp_cmdshell-proxy-account"></a>Account proxy per xp_cmdshell  
- Quando viene chiamato da un utente che non è membro del ruolo predefinito del server **sysadmin** , **xp_cmdshell** si connette a Windows utilizzando il nome account e la password archiviati nella credenziale denominata **"#xp_cmdshell_proxy_account "**. Se questa credenziale proxy non esiste, **xp_cmdshell** avrà esito negativo.  
+ Quando viene chiamato da un utente che non è membro del ruolo predefinito del server **sysadmin** , **xp_cmdshell** si connette a Windows utilizzando il nome account e la password archiviati nella credenziale denominata **# #xp_cmdshell_proxy_account # #**. Se la credenziale proxy non esiste, **xp_cmdshell** avrà esito negativo.  
   
  È possibile creare le credenziali dell'account proxy eseguendo **sp_xp_cmdshell_proxy_account**. Questa stored procedure accetta un nome utente e una password di Windows come argomenti. Il comando seguente, ad esempio, crea una credenziale proxy per l'utente di dominio di Windows `SHIPPING\KobeR` con la password di Windows `sdfh%dkc93vcMt0`.  
   
@@ -81,25 +81,25 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- Per ulteriori informazioni, vedere [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ Per ulteriori informazioni, vedere [sp_xp_cmdshell_proxy_account &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Poiché gli utenti malintenzionati a volte tentano di elevare i propri privilegi utilizzando **xp_cmdshell**, **xp_cmdshell** è disabilitato per impostazione predefinita. Utilizzare **sp_configure** o **la gestione basata su criteri** per abilitarla. Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ Poiché gli utenti malintenzionati a volte tentano di elevare i propri privilegi tramite **xp_cmdshell**, **xp_cmdshell** è disabilitato per impostazione predefinita. Usare **sp_configure** o la **gestione basata su criteri** per abilitarla. Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- Quando viene abilitata per la prima volta, **xp_cmdshell** richiede l'autorizzazione CONTROL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SERVER per l'esecuzione e il processo di Windows creato da **xp_cmdshell** ha lo stesso contesto di sicurezza dell'account del servizio. L'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio ha spesso più autorizzazioni di quelle necessarie per il lavoro eseguito dal processo creato da **xp_cmdshell**. Per migliorare la sicurezza, l'accesso **ai xp_cmdshell** deve essere limitato agli utenti con privilegi elevati.  
+ Quando è abilitata per la prima volta, **xp_cmdshell** richiede l'autorizzazione Control Server per l'esecuzione e il processo di Windows creato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xp_cmdshell** ha lo stesso contesto di sicurezza dell'account del servizio. L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio ha spesso più autorizzazioni di quelle necessarie per il lavoro eseguito dal processo creato da **xp_cmdshell**. Per migliorare la sicurezza, l'accesso alle **xp_cmdshell** deve essere limitato agli utenti con privilegi elevati.  
   
- Per consentire agli utenti **xp_cmdshell**non amministratori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare xp_cmdshell e consentire la creazione di processi figlio con il token di sicurezza di un account con privilegi inferiori, attenersi alla seguente procedura:  
+ Per consentire a non amministratori di utilizzare **xp_cmdshell**e consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a di creare processi figlio con il token di sicurezza di un account con privilegi di meno, attenersi alla seguente procedura:  
   
 1.  Creare e personalizzare un account utente locale di Windows o un account di dominio con i privilegi minimi richiesti dai processi.  
   
-2.  Utilizzare la procedura di sistema **sp_xp_cmdshell_proxy_account** per configurare **xp_cmdshell** per l'utilizzo di tale account con privilegi minimi.  
+2.  Utilizzare la procedura di sistema **sp_xp_cmdshell_proxy_account** per configurare **xp_cmdshell** per l'utilizzo dell'account con privilegi minimi.  
   
     > [!NOTE]  
-    >  È inoltre possibile configurare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] questo account proxy utilizzando facendo clic con il pulsante destro del mouse su **Proprietà** nel nome del server in Esplora oggetti e nella sezione Protezione della scheda **Protezione.** **Server proxy account**  
+    >  È anche possibile configurare questo account proxy usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] facendo clic con il pulsante destro del mouse su **Proprietà** sul nome del server in Esplora oggetti e cercando la scheda **sicurezza** per la sezione **account proxy server** .  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilizzando il database `GRANT exec ON xp_cmdshell TO N'<some_user>';` master, eseguire l'istruzione per dare agli utenti specifici non amministratori di**sistema** la possibilità di eseguire **xp_cmdshell**. L'utente specificato deve esistere nel database master.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilizzando il database master, eseguire l' `GRANT exec ON xp_cmdshell TO N'<some_user>';` istruzione per fornire a utenti specifici non**sysadmin** la possibilità di eseguire **xp_cmdshell**. L'utente specificato deve esistere nel database master.  
   
- Ora gli utenti non amministratori possono avviare i processi del sistema operativo con **xp_cmdshell** e tali processi vengono eseguiti con le autorizzazioni dell'account proxy configurato. Gli utenti con autorizzazione CONTROL SERVER (membri del ruolo predefinito del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server **sysadmin)** continueranno a ricevere le autorizzazioni dell'account del servizio per i processi figlio avviati da **xp_cmdshell**.  
+ Ora gli utenti non amministratori possono avviare i processi del sistema operativo con **xp_cmdshell** e questi processi vengono eseguiti con le autorizzazioni dell'account proxy configurato. Gli utenti che dispongono dell'autorizzazione CONTROL SERVER (membri del ruolo predefinito del server **sysadmin** ) continueranno a ricevere le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorizzazioni dell'account del servizio per i processi figlio avviati dal **xp_cmdshell**.  
   
  Per determinare l'account di Windows utilizzato da **xp_cmdshell** all'avvio dei processi del sistema operativo, eseguire l'istruzione seguente:  
   
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="c-using-return-status"></a>C. Restituzione del codice di stato  
- Nell'esempio seguente, `xp_cmdshell` la stored procedure estesa suggerisce anche lo stato di restituzione. Il valore restituito viene archiviato nella variabile `@result`.  
+ Nell'esempio seguente, il `xp_cmdshell` stored procedure esteso suggerisce anche lo stato restituito. Il valore restituito viene archiviato nella variabile `@result`.  
   
 ```  
 DECLARE @result int;  
@@ -171,9 +171,9 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure estese generali &#40;&#41;Transact-SQLGeneral Extended Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [Opzione di configurazione di xp_cmdshell Server](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [Configurazione superficie](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40;transact-sqlSql&#41;SQL](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
+ [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)   
+ [sp_xp_cmdshell_proxy_account &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

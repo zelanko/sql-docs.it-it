@@ -1,5 +1,5 @@
 ---
-title: Documentazione per gli strumenti e i componenti aggiuntivi di SQL Server 2014SQL Server 2014 Documenti Microsoft
+title: Documentazione per gli strumenti e i componenti aggiuntivi di SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2020
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402573"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentazione per gli strumenti e i componenti aggiuntivi di SQL Server 2014

@@ -1,5 +1,5 @@
 ---
-title: Messaggi di errore (driver ODBC per Oracle) Documenti Microsoft
+title: Messaggi di errore (driver ODBC per Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7098b43bd9b1c2bbe4008fa0d44e5562d00443d8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286451"
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>Messaggi di errore (driver ODBC per Oracle)
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Quando si verifica un errore, il Driver Microsoft ODBC per Oracle restituisce il SQLSTATE (un codice di errore ODBC) e un messaggio di errore. Il driver deriva queste informazioni sia dagli errori rilevati dal driver che dagli errori restituiti da Oracle Server.  
+ Quando si verifica un errore, il driver ODBC di Microsoft per Oracle restituisce SQLSTATE (un codice di errore ODBC) e un messaggio di errore. Il driver deriva queste informazioni sia dagli errori rilevati dal driver che dagli errori restituiti dal server Oracle.  
   
- In questa sezione è incluso il seguente argomento:  
+ Questa sezione include l'argomento seguente:  
   
 -   [Messaggi restituiti dal driver ODBC per Oracle](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)

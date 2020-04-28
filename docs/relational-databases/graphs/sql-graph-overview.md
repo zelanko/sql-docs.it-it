@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428152"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Elaborazione di grafi con SQL Server e il database SQL di Azure
@@ -28,7 +28,7 @@ ms.locfileid: "79428152"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre funzionalità di database a grafo per modellare relazioni molti-a-molti. Le relazioni tra grafi sono integrate in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevono i vantaggi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] derivanti dall'utilizzo di come sistema di gestione di database di base.
 
 
-## <a name="what-is-a-graph-database"></a>Che cos'è un database a grafo?  
+## <a name="what-is-a-graph-database"></a>Cos'è un database a grafo?  
 Un database a grafo è una raccolta di nodi (o vertici) e archi (o relazioni). Un nodo rappresenta un'entità (ad esempio, una persona o un'organizzazione) e un arco rappresenta una relazione tra i due nodi che collega (ad esempio, mi piace o amici). Sia i nodi che i bordi possono avere proprietà associate. Ecco alcune funzionalità che rendono univoco un database a grafo:  
 -    Gli archi o relazioni sono entità di prima classe in un Database a grafo e possono avere attributi o proprietà associate ad essi. 
 -    Un singolo arco può collegare in modo flessibile più nodi in un Database a grafo.
@@ -47,7 +47,7 @@ Si sta iniziando ad aggiungere estensioni di grafo a SQL Server per semplificare
 
 
 ### <a name="create-graph-objects"></a>Creare oggetti Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]le estensioni consentiranno agli utenti di creare tabelle node o Edge. Sia i nodi che i bordi possono avere proprietà associate. Poiché i nodi e i bordi vengono archiviati come tabelle, tutte le operazioni supportate nelle tabelle relazionali sono supportate nella tabella Node o Edge. Di seguito è fornito un esempio:   
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]le estensioni consentiranno agli utenti di creare tabelle node o Edge. Sia i nodi che i bordi possono avere proprietà associate. Poiché i nodi e i bordi vengono archiviati come tabelle, tutte le operazioni supportate nelle tabelle relazionali sono supportate nella tabella Node o Edge. Esempio:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

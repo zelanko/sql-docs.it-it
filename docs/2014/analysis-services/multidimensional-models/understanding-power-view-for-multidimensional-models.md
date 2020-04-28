@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525462"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
@@ -24,7 +24,7 @@ ms.locfileid: "79525462"
   
  Power View è un thin web client che viene avviato nel browser da un file RSDS (Report Data Source) condiviso in una raccolta SharePoint. L'origine dati report funge da ponte tra il client e l'origine dati back-end. L'origine dati back-end può essere una cartella di lavoro di PowerPivot in SharePoint, un modello tabulare in un server di Analysis Services eseguito in modalità tabulare o un modello multidimensionale in un server di Analysis Services eseguito in modalità multidimensionale. I report di Power View possono essere salvati in una raccolta SharePoint e condivisi con altri membri dell'organizzazione.  
   
- **Power View per l'architettura dei modelli multidimensionali**  
+ **Architettura di Power View per modelli multidimensionali**  
   
  ![Power View per l'architettura dei modelli multidimensionali](../media/daxmd-architecture.gif "Power View per l'architettura dei modelli multidimensionali")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "79525462"
   
 -   Componente aggiuntivo SQL Server 2014 Reporting Services per Microsoft SharePoint Server 2010 o 2013 Enterprise Edition  
   
- **Requisiti client**  
+ **Requisiti del client**  
   
 -   La funzionalità client di Power View richiede Microsoft Silverlight 5. Per ulteriori informazioni, vedere [Planning for Reporting Services e Power View Browser Support &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "79525462"
   
  I gruppi di misure in un cubo multidimensionale sono visibili nell'elenco campi di Power View come tabelle con il segno sigma (∑).  
   
- **Gruppi di misure nell'elenco dei campi Power View**  
+ **Gruppi di misure nell'elenco campi di Power View**  
   
  ![Elenco dei campi in Power View](../media/daxmd-powerviewfieldlist.gif "Elenco dei campi in Power View")  
   
@@ -99,14 +99,14 @@ ms.locfileid: "79525462"
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensioni, attributi e gerarchie  
  Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi dimensione la cui proprietà AttributeHierarchyEnabled è impostata su false, ad esempio l'attributo Birth Date nella dimensione Customer o la proprietà AttributeHierarchyVisible impostata su false, non sono visibili nell'elenco campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  
   
- **Dimensione, attributi e gerarchie nell'elenco dei campi SQL Server Data Tools (SSDT) e Power View**  
+ **Dimensione, attributi e gerarchie in SQL Server Data Tools (SSDT) e nell'elenco campi di Power View**  
   
  ![Dimensioni in SSDT e nell'elenco dei campi di Power View](../media/daxmd-ssdt-dimensions.gif "Dimensioni in SSDT e nell'elenco dei campi di Power View")  
   
 ### <a name="dimension-attribute-type"></a>Tipo di attributo dimensione  
  I modelli multidimensionali supportano l'associazione degli attributi dimensione a tipi di attributi dimensione specifici. Nell'immagine riportata di seguito viene illustrata la dimensione Geography ai cui attributi dimensione City, State-Province, Country e Postal Code sono associati tipi geography. Questi sono esposti nei metadati tabulari. Power View riconosce i metadati che consentono agli utenti di creare viste mappa. Questo è indicato dall'icona mappa accanto alle colonne City, Country, Postal Code e State-Province nella tabella Geography nell'elenco campi di Power View.  
   
- **Tipi geography dell'attributo della dimensione in SSDT e nell'elenco dei campi Power View**  
+ **Tipi geography dell'attributo dimensione in SSDT e nell'elenco campi di Power View**  
   
  ![Tipi geography dell'attributo della dimensione](../media/daxmd-ssdt-attribute-geog-types.gif "Tipi geography dell'attributo della dimensione")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "79525462"
   
  Nell'immagine seguente viene illustrato un report Power View per un cubo contenente membri calcolati per l'intelligence del tempo nell'attributo della dimensione "calcoli della data fiscale" nella dimensione Date.  
   
- **Power View report con membri calcolati**  
+ **Report di Power View con membri calcolati**  
   
  ![Membri calcolati in Power View](../media/daxmd-calcmembersinpowerview.gif "Membri calcolati in Power View")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "79525462"
 ## <a name="images"></a>Immagini  
  Tramite Power View è possibile eseguire il rendering delle immagini. Nei modelli multidimensionali uno dei modi in cui fornire immagini a Power View consiste nell'esporre le colonne che contengono gli URL (Uniform Resource Locator) delle immagini. Con questa versione, Analysis Services consente di contrassegnare gli attributi dimensione come tipi ImageURL. Questo tipo di dati viene fornito a Power View nei metadati tabulari. Da Power View sarà quindi possibile scaricare e visualizzare le immagini specificate negli URL all'interno delle visualizzazioni.  
   
- **Tipo di attributo della dimensione ImageURL in SSDT**  
+ **Tipo di attributo dimensione ImageURL in SSDT**  
   
  ![Proprietà dell'attributo della dimensione](../media/daxmd-dimattribute-properties.gif "Proprietà dell'attributo della dimensione")  
   
@@ -193,7 +193,7 @@ ms.locfileid: "79525462"
   
  I metadati multidimensionali sono rappresentati come spazio dei nomi del modello tabulare in un documento CSDLBI o CSDL in uscita, quando una richiesta DISCOVER_CSDL_METADATA viene inviata all'istanza di Analysis Services.  
   
- **Richiesta di DISCOVER_CSDL_METADATA di esempio**  
+ **Richiesta DISCOVER_CSDL_METADATA di esempio**  
   
 ```  
 <Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -230,7 +230,7 @@ ms.locfileid: "79525462"
 ## <a name="client-help-on-officecom"></a>Guida del client su Office.com  
  Negli articoli seguenti, disponibili su Office.com, vengono fornite ulteriori informazioni sulla modalità di visualizzazione degli oggetti del modello multidimensionale in Power View e sulla creazione di un report di esempio:  
   
- [Informazioni sugli oggetti del modello multidimensionale in Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Oggetti del modello multidimensionale in Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Esplorare il modello multidimensionale Adventure Works usando Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
+ [Esplorare il modello multidimensionale di Adventure Works tramite Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

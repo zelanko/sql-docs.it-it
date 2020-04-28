@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380792"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dei dati, è possibile creare la query del set di dati includendo un elemento `Query` XML o un percorso di elemento. Un `Query` codice XML inizia con un ** \<** tag Query>e include spazi dei nomi ed elementi XML che variano a seconda dell'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dei dati, è possibile creare la query del set di dati includendo un elemento `Query` XML o un percorso di elemento. Un XML `Query` inizia con una ** \<query>** tag e include spazi dei nomi ed elementi XML che variano a seconda dell'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).  
   
  È possibile creare un'origine dei dati XML per i tipi di dati XML seguenti:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "80380792"
 |Elemento Query XML|Campi risultanti nel set di dati|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Valore A: `https://schemas.microsoft.com/..`.<br /><br /> Valore B: `https://schemas.microsoft.com/..`.<br /><br /> Valore C: `https://schemas.microsoft.com/.`..|  
-|\<xmldp:Query xmlns:xmldphttps://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" " xmlns:ns "https://schemas.microsoft.com/..". " ". ><br /><br /> \<xmldp:PercorsoElemento>{}radice /ns:Elemento2/Nodo\</xmldp:PercorsoElemento><br /><br /> \</xmldp:> di query|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<XmlDP: query xmlns: XmlDP = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: NS = "https://schemas.microsoft.com/..." ><br /><br /> \<XmlDP: ElementPath>root {}/NS: element2/Node\</XmlDP: ElementPath><br /><br /> \</XmlDP: query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
  È possibile copiare il codice XML seguente e salvarlo in un URL disponibile per Progettazione report, per l'uso come origine dati XML, ad esempio, http://localhost/DPNamespace.xml.  
@@ -109,7 +109,7 @@ ms.locfileid: "80380792"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di connessione XML &#40;&#41;SSRS](xml-connection-type-ssrs.md)   
+ [Tipo di connessione XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

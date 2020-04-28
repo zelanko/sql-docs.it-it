@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289909"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -35,7 +35,7 @@ Restituisce informazioni relative a tutte le attese di latch organizzate per cla
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar (120)**|Nome della classe di latch.|  
+|latch_class|**nvarchar(120)**|Nome della classe di latch.|  
 |waiting_requests_count|**bigint**|Numero di attese di latch nella classe specifica. Questo contatore viene incrementato all'inizio di un'attesa di latch.|  
 |wait_time_ms|**bigint**|Tempo totale di attesa dei latch, espresso in millisecondi, nella classe specifica.<br /><br /> **Nota:** Questa colonna viene aggiornata ogni cinque minuti durante un'attesa di latch e al termine di un'attesa del latch.|  
 |max_wait_time_ms|**bigint**|Tempo massimo che un oggetto memoria ha atteso il latch specifico. Un valore insolitamente elevato può indicare un deadlock interno.|  
@@ -60,7 +60,7 @@ GO
 > [!NOTE]  
 >  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato, le statistiche non sono persistenti. Tutti i dati sono cumulativi a partire dall'ultima reimpostazione delle statistiche oppure dall'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="latches"></a>Fermi  
+## <a name="latches"></a><a name="latches"></a>Fermi  
  Un latch è un oggetto di sincronizzazione Lightweight interno simile a un blocco utilizzato da vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti. Un latch viene utilizzato principalmente per sincronizzare le pagine del database durante operazioni quali il buffer o l'accesso ai file. Ogni latch è associato a un'unica unità di allocazione. 
   
  Un'attesa di latch si verifica quando non è possibile concedere immediatamente una richiesta di latch perché il latch è mantenuto attivo da un altro thread con una modalità in conflitto. A differenza dei blocchi, i latch vengono rilasciati subito dopo l'operazione, anche nel caso di operazioni di scrittura.  

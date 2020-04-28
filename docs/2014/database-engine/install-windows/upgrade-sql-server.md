@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217137"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Eseguire l'aggiornamento a SQL Server 2014
@@ -27,9 +27,9 @@ ms.locfileid: "79217137"
   
 -   [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md)  
   
--   [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+-   [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
--   [Utilizzare l'utilità Riesecuzione distribuita per preparare gli aggiornamenti](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
+-   [Usare l'utilità Riesecuzione distribuita per preparare gli aggiornamenti](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
   
 -   [Aggiornare Analysis Services](upgrade-analysis-services.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "79217137"
 ## <a name="see-also"></a>Vedere anche  
  [motore di database di aggiornamento](upgrade-database-engine.md)   
  [Analysis Services di aggiornamento](upgrade-analysis-services.md)   
- [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Aggiornare ed eseguire la migrazione Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Integration Services di aggiornamento](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Aggiornare i database replicati](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Master Data Services di aggiornamento](upgrade-master-data-services.md)   

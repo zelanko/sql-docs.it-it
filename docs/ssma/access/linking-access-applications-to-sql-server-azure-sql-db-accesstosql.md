@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112069"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Collegamento di applicazioni di accesso a SQL Server-database SQL di Azure (AccessToSQL)
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>La funzionalità Hyperlink viene persa dopo la migrazione dei dati  
 **Motivo:** Dopo la migrazione dei dati, i collegamenti ipertestuali nelle colonne perdono la loro funzionalità e diventano semplici colonne **nvarchar (max)** .  
   
-**Risoluzione:** Nessuno.  
+**Soluzione:** nessuna.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Alcuni tipi di dati SQL Server non sono supportati da Access  
 **Motivo:** Se successivamente si aggiornano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le tabelle o SQL Azure in modo che contengano tipi di dati non supportati da Access, non è possibile aprire la tabella in Access.  

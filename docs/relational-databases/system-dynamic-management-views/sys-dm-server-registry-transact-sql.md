@@ -1,5 +1,5 @@
 ---
-title: metodo sys.dm_server_registry (Transact-SQL) Documenti Microsoft
+title: sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80530819"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "80530819"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome della chiave del Registro di sistema Ammette i valori Null.|  
-|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nella colonna **Nome** dell'Editor del Registro di sistema. Ammette i valori Null.|  
-|value_data|**sql_variant**|Valore dei dati della chiave. Questo è il valore visualizzato nella colonna **Dati** dell'Editor del Registro di sistema per una determinata voce. Ammette i valori Null.|  
+|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nella colonna **nome** dell'editor del registro di sistema. Ammette i valori Null.|  
+|value_data|**sql_variant**|Valore dei dati della chiave. Si tratta del valore visualizzato nella colonna di **dati** dell'editor del registro di sistema per una determinata voce. Ammette i valori Null.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [dm_server_services&#41;Transact-SQLdisql &#40;di sistema](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys. dm_server_services &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112414"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso delle funzionalità e delle funzionalità di SQL Server
@@ -44,7 +44,7 @@ WideWorldImporters è progettato per illustrare molte delle principali funzional
 |Colonne calcolate salvate in un indice|Colonne calcolate salvate in un indice utilizzate in SupplierTransactions e CustomerTransactions.|
 |Vincoli CHECK|Un vincolo check relativamente complesso è in `Sales.SpecialDeals`. In questo modo si garantisce che siano configurati solo uno dei DiscountAmount, DiscountPercentage e PrezzoUnitario.|
 |Vincoli UNIQUE|Una costruzione molti-a-molti (e vincoli UNIQUE) viene configurata per `Warehouse.StockItemStockGroups`.|
-|Partizionamento delle tabelle|(Versione completa del database) Le tabelle `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions` sono entrambe partizionate per anno utilizzando la funzione `PF_TransactionDate` di partizione e lo schema `PS_TransactionDate`di partizione. Il partizionamento viene utilizzato per migliorare la gestibilità delle tabelle di grandi dimensioni.|
+|Partizionamento di tabelle|(Versione completa del database) Le tabelle `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions` sono entrambe partizionate per anno utilizzando la funzione `PF_TransactionDate` di partizione e lo schema `PS_TransactionDate`di partizione. Il partizionamento viene utilizzato per migliorare la gestibilità delle tabelle di grandi dimensioni.|
 |Elaborazione elenco|Viene fornito un tipo `Website.OrderIDList` di tabella di esempio. Viene utilizzato da una procedura `Website.InvoiceCustomerOrders`di esempio. La procedura usa le espressioni di tabella comuni (CTE), TRY/CATCH, JSON_MODIFY, XACT_ABORT, NOCOUNT, THROW e XACT_STATE per illustrare la possibilità di elaborare un elenco di ordini anziché un solo ordine, per ridurre al minimo i round trip dall'applicazione al motore di database.|
 |Compressione GZip|Nella visualizzazione `Warehouse.VehicleTemperature` la tabella include i dati completi del sensore. Tuttavia, quando questi dati Risaleno a più di alcuni mesi, viene compresso per conservare spazio. La funzione COMPRESS usa la compressione GZip.<br/><br/>La vista `Website.VehicleTemperatures` usa la funzione Decompress durante il recupero dei dati compressi in precedenza.|
 |Archivio query|Query Store è abilitato nel database. Dopo aver eseguito alcune query, seguire questa procedura:<br/><br/>1. Aprire il database in Management Studio.<br/>2. Aprire il Query Store del nodo, che si trova nel database.<br/>3. Aprire il report *prime query per consumo di risorse*. Vedere le esecuzioni di query e visualizzare i piani per le query appena eseguite.|

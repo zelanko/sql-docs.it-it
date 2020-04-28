@@ -1,5 +1,5 @@
 ---
-title: Associazione di matrici di parametri . Documenti Microsoft
+title: Associazioni di matrici di parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 73cfcde89e89edb87a4955cf0854c66a01d81e6f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283421"
 ---
 # <a name="binding-arrays-of-parameters"></a>Associazione delle matrici di parametri
-Le applicazioni che utilizzano matrici di parametri associano le matrici ai parametri nell'istruzione SQL. Esistono due stili di rilegatura:There are two binding styles:  
+Le applicazioni che utilizzano matrici di parametri associano le matrici ai parametri nell'istruzione SQL. Sono disponibili due stili di associazione:  
   
--   Associare una matrice a ogni parametro. Ogni struttura di dati (matrice) contiene tutti i dati per un singolo parametro. Questa operazione è denominata *associazione per colonna* perché associa una colonna di valori per un singolo parametro.  
+-   Associare una matrice a ogni parametro. Ogni struttura di dati (matrice) contiene tutti i dati per un singolo parametro. Questa operazione viene definita *associazione per colonna* perché associa una colonna di valori per un singolo parametro.  
   
--   Definire una struttura per contenere i dati dei parametri per un intero set di parametri e associare una matrice di queste strutture. Ogni struttura di dati contiene i dati per una singola istruzione SQL. Questa operazione viene definita *associazione per riga* perché associa una riga di parametri.  
+-   Definire una struttura per conservare i dati del parametro per un intero set di parametri e associare una matrice di queste strutture. Ogni struttura di dati contiene i dati per una singola istruzione SQL. Questa operazione viene definita *associazione per riga* perché associa una riga di parametri.  
   
- Come quando l'applicazione associa singole variabili ai parametri, chiama **SQLBindParameter** per associare le matrici ai parametri. L'unica differenza è che gli indirizzi passati sono gli indirizzi di matrice, non gli indirizzi a variabile singola. L'applicazione imposta l'attributo di istruzione SQL_ATTR_PARAM_BIND_TYPE per specificare se utilizza l'associazione per colonna (impostazione predefinita) o per riga. Se utilizzare l'associazione per colonna o per riga è in gran parte una questione di preferenza dell'applicazione. A seconda di come il processore accede alla memoria, l'associazione per riga potrebbe essere più veloce. Tuttavia, la differenza è probabilmente trascurabile, ad eccezione di un numero molto elevato di righe di parametri.  
+ Quando l'applicazione associa variabili singole a parametri, chiama **SQLBindParameter** per associare le matrici ai parametri. L'unica differenza consiste nel fatto che gli indirizzi passati sono indirizzi di matrice, non indirizzi a singola variabile. L'applicazione imposta l'attributo dell'istruzione SQL_ATTR_PARAM_BIND_TYPE per specificare se utilizza l'associazione per colonna (impostazione predefinita) o per riga. La possibilità di utilizzare l'associazione per colonna o per riga è in gran parte una questione di preferenza dell'applicazione. A seconda del modo in cui il processore accede alla memoria, l'associazione a livello di riga potrebbe essere più veloce. Tuttavia, la differenza è probabilmente irrilevante ad eccezione di un numero molto elevato di righe di parametri.  
   
 ## <a name="column-wise-binding"></a>Associazione per colonna  
- Quando si usa l'associazione per colonna, un'applicazione associa una o due matrici a ogni parametro per il quale devono essere forniti dati. La prima matrice contiene i valori dei dati e la seconda matrice contiene buffer di lunghezza/indicatore. Ogni matrice contiene tutti gli elementi quanti sono i valori per il parametro.  
+ Quando si utilizza l'associazione per colonna, un'applicazione associa una o due matrici a ogni parametro per il quale devono essere forniti i dati. La prima matrice include i valori dei dati e la seconda matrice include i buffer di lunghezza/indicatore. Ogni matrice contiene tutti gli elementi quanti sono i valori per il parametro.  
   
- L'associazione per colonna è l'impostazione predefinita. L'applicazione può anche passare dall'associazione per riga all'associazione per colonna impostando l'attributo di istruzione SQL_ATTR_PARAM_BIND_TYPE. Nella figura seguente viene illustrato il funzionamento dell'associazione per colonna.  
+ L'associazione per colonna è il valore predefinito. L'applicazione può anche passare da un'associazione per riga a un'associazione a livello di colonna impostando l'attributo dell'istruzione SQL_ATTR_PARAM_BIND_TYPE. Nella figura seguente viene illustrato il funzionamento dell'associazione per colonna.  
   
- ![Mostra il funzionamento della colonna&#45;associazione per saggio](../../../odbc/reference/develop-app/media/pr31.gif "pr31 (informazioni in base al t")  
+ ![Illustra il funzionamento dell'associazione&#45;per la colonna](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- Ad esempio, il codice seguente associa matrici a 10 elementi ai parametri per le colonne PartID, Description e Price ed esegue un'istruzione per inserire 10 righe. Utilizza l'associazione per colonna.  
+ Il codice seguente, ad esempio, associa le matrici di 10 elementi a parametri per le colonne PartId, Description e Price ed esegue un'istruzione per inserire 10 righe. Usa l'associazione per colonna.  
   
 ```  
 #define DESC_LEN 51  
@@ -118,19 +118,19 @@ for (i = 0; i < ParamsProcessed; i++) {
 ```  
   
 ## <a name="row-wise-binding"></a>Associazione per riga  
- Quando si usa l'associazione per riga, un'applicazione definisce una struttura per ogni set di parametri. La struttura contiene uno o due elementi per ogni parametro. Il primo elemento contiene il valore del parametro e il secondo elemento contiene il buffer di lunghezza/indicatore. L'applicazione alloca quindi una matrice di queste strutture, che contiene tutti gli elementi quanti sono i valori per ogni parametro.  
+ Quando si utilizza l'associazione per riga, un'applicazione definisce una struttura per ogni set di parametri. La struttura contiene uno o due elementi per ogni parametro. Il primo elemento include il valore del parametro e il secondo elemento include il buffer di lunghezza/indicatore. L'applicazione quindi alloca una matrice di queste strutture, che contiene tutti gli elementi quanti sono i valori per ogni parametro.  
   
- L'applicazione dichiara la dimensione della struttura al driver con l'attributo di istruzione SQL_ATTR_PARAM_BIND_TYPE. L'applicazione associa gli indirizzi dei parametri nella prima struttura della matrice. Pertanto, il conducente può calcolare l'indirizzo dei dati per una particolare riga e colonna come  
+ L'applicazione dichiara la dimensione della struttura al driver con l'attributo dell'istruzione SQL_ATTR_PARAM_BIND_TYPE. L'applicazione associa gli indirizzi dei parametri nella prima struttura della matrice. Pertanto, il driver può calcolare l'indirizzo dei dati per una riga e una colonna particolari come  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- dove le righe sono numerate da 1 alla dimensione del set di parametri. L'offset, se definito, è il valore a cui punta l'attributo dell'istruzione SQL_ATTR_PARAM_BIND_OFFSET_PTR. Nella figura seguente viene illustrato il funzionamento dell'associazione per riga. I parametri possono essere posizionati nella struttura in qualsiasi ordine, ma vengono visualizzati in ordine sequenziale per maggiore chiarezza.  
+ dove le righe sono numerate da 1 alla dimensione del set di parametri. L'offset, se definito, è il valore a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_PARAM_BIND_OFFSET_PTR. Nella figura seguente viene illustrato il funzionamento dell'associazione per riga. I parametri possono essere posizionati nella struttura in qualsiasi ordine, ma sono visualizzati in ordine sequenziale per maggiore chiarezza.  
   
- ![Mostra come funziona l'associazione per&#45;riga](../../../odbc/reference/develop-app/media/pr32.gif "pr32 (informazioni in cui è stato eper")  
+ ![Illustra il funzionamento dell'associazione di riga&#45;Wise](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- Il codice seguente crea una struttura con elementi per i valori da archiviare nelle colonne PartID, Description e Price. Alloca quindi una matrice a 10 elementi di queste strutture e la associa ai parametri per le colonne PartID, Description e Price, utilizzando l'associazione per riga. Viene quindi eseguita un'istruzione per inserire 10 righe.  
+ Il codice seguente crea una struttura con elementi per i valori da archiviare nelle colonne PartId, Description e price. Viene quindi allocata una matrice di 10 elementi di queste strutture e viene associata a parametri per le colonne PartId, Description e Price, utilizzando l'associazione per riga. Viene quindi eseguita un'istruzione per inserire 10 righe.  
   
 ```  
 #define DESC_LEN 51  

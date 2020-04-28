@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112228"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server obsolete in SQL Server 2014
@@ -35,8 +35,7 @@ ms.locfileid: "79112228"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Funzionalità obsolete in SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Supporto della piattaforma a 64 bit in Reporting Services  
- A partire da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], il componente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più server basati su Itanium che eseguono Windows Server 2003 o Windows Server 2003 R2. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua a supportare gli altri sistemi operativi a 64 bit, ad esempio Windows Server°2008 per sistemi basati su Itanium e Windows Server°2008°R2 per sistemi basati su Itanium. Per eseguire l'aggiornamento a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] da un'installazione di [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in un'edizione del sistema basata su Itanium di Windows Server 2003 o Windows Server 2003 R2, è necessario prima aggiornare il sistema operativo.  
+ A partire da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], il componente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più server basati su Itanium che eseguono Windows Server 2003 o Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua a supportare gli altri sistemi operativi a 64 bit, ad esempio Windows Server°2008 per sistemi basati su Itanium e Windows Server°2008°R2 per sistemi basati su Itanium. Per eseguire l'aggiornamento a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] da un'installazione di [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in un'edizione del sistema basata su Itanium di Windows Server 2003 o Windows Server 2003 R2, è necessario prima aggiornare il sistema operativo.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Funzionalità obsolete in SQL Server 2008  
   
@@ -49,11 +48,11 @@ ms.locfileid: "79112228"
 ### <a name="surface-area-configuration-tool"></a>strumento Configurazione superficie di attacco  
  Lo strumento Configurazione superficie di attacco non è più disponibile per [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nella tabella seguente vengono illustrati gli elementi che è possibile utilizzare per configurare impostazioni, opzioni e funzionalità di componenti nella versione corrente.  
   
-|Impostazioni di sostituzione e funzionalità del componente|Come configurare|  
+|Impostazioni di sostituzione e funzionalità del componente|Modalità di configurazione|  
 |-------------------------------------------------|----------------------|  
 |Protocolli, opzioni di connessione e di avvio|Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]funzionalità|Utilizzare la gestione basata su criteri, le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oppure sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]funzionalità|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|Funzionalità di [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilizzare la gestione basata su criteri, le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oppure sp_Configure.|  
+|Funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - proprietà EnableIntegratedSecurity|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]- "Eventi pianificati e recapito report" e "Accesso HTTP e servizi Web"|Modificare il file di configurazione RSReportServer.config.|  
 |Opzioni della riga di comando|Supporto non disponibile in questa versione.|  

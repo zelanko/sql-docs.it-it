@@ -1,5 +1,5 @@
 ---
-title: sys.external_libraries (Transact-SQL) Documenti Microsoft
+title: sys. external_libraries (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b1bfc00b403fa76f692db78593ed4c0e6b53ce8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80664428"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Supporta la gestione delle librerie di pacchetti correlate a runtime esterni, ad esempio R, Python e Java.
+Supporta la gestione di librerie di pacchetti correlate a runtime esterni, ad esempio R, Python e Java.
 
 > [!NOTE]
 > In SQL Server 2017 sono supportati il linguaggio R e la piattaforma Windows. R, Python e Java nelle piattaforme Windows e Linux sono supportati in SQL Server 2019 e versioni successive.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-La vista del catalogo sys.external_libraries elenca una riga per ogni libreria esterna caricata nel database.
+La vista del catalogo sys. external_libraries elenca una riga per ogni libreria esterna che è stata caricata nel database.
 
 |Nome colonna |Tipo di dati | Descrizione|
 |------|------|------|
-|external_library_id |INT | ID dell'oggetto libreria esterno. |
+|external_library_id |INT | ID dell'oggetto libreria esterna. |
 |name |sysname |Nome della libreria esterna. È univoco all'interno del database per proprietario.|
-|principal_id |INT |ID dell'entità proprietaria della libreria esterna. |
-|Linguaggio | sysname | Nome della lingua o del runtime che supporta la libreria esterna. I valori validi sono 'R', 'Python' e 'Java'. Ulteriori runtime potrebbero essere aggiunti in futuro.|
-|scope |INT |0 per l'ambito pubblico; 1 per ambito privato |  
-|scope_desc |varchar(7) |Indica se il pacchetto è pubblico o privato|
+|principal_id |INT |ID dell'entità a cui appartiene la libreria esterna. |
+|Linguaggio | sysname | Nome della lingua o del runtime che supporta la libreria esterna. I valori validi sono ' R ',' Python ' è Java '. In futuro potrebbero essere aggiunti altri Runtime.|
+|ambito |INT |0 per ambito pubblico; 1 per ambito privato |  
+|scope_desc |varchar (7) |Indica se il pacchetto è pubblico o privato.|
 
 ## <a name="see-also"></a>Vedere anche  
 

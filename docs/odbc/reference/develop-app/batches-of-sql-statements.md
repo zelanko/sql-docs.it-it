@@ -1,5 +1,5 @@
 ---
-title: Batch di istruzioni SQL Documenti Microsoft
+title: Batch di istruzioni SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d68ea1c13655ca7c57ba076823f461a4b2e22055
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283511"
 ---
 # <a name="batches-of-sql-statements"></a>Batch di istruzioni SQL
-Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singola istruzione SQL che ha lo stesso effetto di un gruppo di due o più istruzioni SQL. In alcune implementazioni, l'intera istruzione batch viene eseguita prima che siano disponibili i risultati. Questo è spesso più efficiente rispetto all'invio di istruzioni separatamente, perché il traffico di rete può spesso essere ridotto e l'origine dati può talvolta ottimizzare l'esecuzione di un batch di istruzioni SQL. In altre implementazioni, la chiamata **sqlMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch. ODBC supporta i seguenti tipi di batch:  
+Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singola istruzione SQL che ha lo stesso effetto di un gruppo di due o più istruzioni SQL. In alcune implementazioni, l'intera istruzione batch viene eseguita prima che tutti i risultati siano disponibili. Questa operazione è spesso più efficiente rispetto all'invio di istruzioni separatamente, perché il traffico di rete può spesso essere ridotto e l'origine dati può talvolta ottimizzare l'esecuzione di un batch di istruzioni SQL. In altre implementazioni, la chiamata di **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch. ODBC supporta i tipi di batch seguenti:  
   
--   **Batch esplicitiExplicit Batches** Un *batch esplicito* è due o più istruzioni SQL separate da punto e virgola (;). Ad esempio, il batch di istruzioni SQL seguente apre un nuovo ordine cliente. Ciò richiede l'inserimento di righe in entrambe le tabelle Orders e Lines. Si noti che non è presente alcun punto e virgola dopo l'ultima istruzione.  
+-   **Batch espliciti** Un *batch esplicito* è due o più istruzioni SQL separate da punti e virgola (;). Il batch di istruzioni SQL seguente, ad esempio, apre un nuovo ordine di vendita. A tale scopo, è necessario inserire righe in entrambe le tabelle Orders e Lines. Si noti che non è presente un punto e virgola dopo l'ultima istruzione.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -39,7 +39,7 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procedure** Se una routine contiene più di un'istruzione SQL, viene considerata un batch di istruzioni SQL. Ad esempio, l'istruzione specifica di SQL Server seguente crea una procedura che restituisce un set di risultati contenente informazioni su un cliente e un set di risultati che elenca tutti gli ordini cliente aperti per tale cliente:  
+-   **Procedure** Se una stored procedure contiene più di un'istruzione SQL, viene considerata un batch di istruzioni SQL. Ad esempio, l'istruzione specifica SQL Server seguente crea una routine che restituisce un set di risultati contenente informazioni su un cliente e un set di risultati che elenca tutti gli ordini di vendita aperti per il cliente:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -48,18 +48,18 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     L'istruzione **CREATE PROCEDURE** non è un batch di istruzioni SQL. Tuttavia, la procedura creata è un batch di istruzioni SQL. Nessun punto e virgola separa le due istruzioni **SELECT** perché l'istruzione **CREATE PROCEDURE** è specifica di SQL Server e SQL Server non richiede punti e virgola per separare più istruzioni in un'istruzione **CREATE PROCEDURE.**  
+     L'istruzione **create procedure** non è un batch di istruzioni SQL. Tuttavia, la procedura creata è un batch di istruzioni SQL. Nessun punto e virgola separa le due istruzioni **Select** perché l'istruzione **create procedure** è specifica di SQL Server e SQL Server non richiede punti e virgola per separare più istruzioni in un'istruzione **create procedure** .  
   
--   **Matrici di parametri** Le matrici di parametri possono essere utilizzate con un'istruzione SQL con parametri come un modo efficace per eseguire operazioni bulk. Ad esempio, le matrici di parametri possono essere utilizzate con la seguente istruzione **INSERT** per inserire più righe nella tabella Lines durante l'esecuzione di una sola istruzione SQL:  
+-   **Matrici di parametri** Le matrici di parametri possono essere utilizzate con un'istruzione SQL con parametri come metodo efficace per eseguire operazioni bulk. È ad esempio possibile utilizzare matrici di parametri con l'istruzione **Insert** seguente per inserire più righe nella tabella Lines durante l'esecuzione di una sola istruzione SQL:  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     Se un'origine dati non supporta matrici di parametri, il driver può emularli eseguendo l'istruzione SQL una volta per ogni set di parametri. Per ulteriori informazioni, vedere [Parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md) e matrici di valori di [parametro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)più avanti in questa sezione.  
+     Se un'origine dati non supporta matrici di parametri, il driver potrà emularle eseguendo l'istruzione SQL una volta per ogni set di parametri. Per ulteriori informazioni, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md) e [matrici di valori di parametri](../../../odbc/reference/develop-app/arrays-of-parameter-values.md), più avanti in questa sezione.  
   
- I diversi tipi di lotti non possono essere miscelati in modo interoperabile. Ovvero, come un'applicazione determina il risultato dell'esecuzione di un batch esplicito che include le chiamate di procedura, un batch esplicito che utilizza matrici di parametri e una chiamata di procedura che utilizza matrici di parametri è specifico del driver.  
+ I diversi tipi di batch non possono essere combinati in modo interoperativo. Ovvero il modo in cui un'applicazione determina il risultato dell'esecuzione di un batch esplicito che include le chiamate di routine, un batch esplicito che usa matrici di parametri e una chiamata di procedura che usa matrici di parametri è specifica del driver.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

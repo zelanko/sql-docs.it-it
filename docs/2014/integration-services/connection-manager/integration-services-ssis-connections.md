@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112165"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
@@ -74,11 +74,11 @@ ms.locfileid: "79112165"
 |DQS|Consente di connettersi a un server Data Quality Services e a un database Data Quality Services nel server.|[Gestione connessione DQS Cleansing](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Consente di connettersi a un file della cartella di lavoro di Excel.|[Gestione connessione Excel](excel-connection-manager.md)|  
 |FILE|Consente di connettersi a un file o a una cartella.|[gestione connessione file](file-connection-manager.md)|  
-|FLATFILE|Consente di connettersi ai dati contenuti in un singolo file flat.|[Gestione connessione file flat](flat-file-connection-manager.md)|  
+|FLATFILE|Consente di connettersi ai dati contenuti in un singolo file flat.|[Flat File Connection Manager](flat-file-connection-manager.md)|  
 |FTP|Consente di connettersi a un server FTP.|[gestione connessione FTP](ftp-connection-manager.md)|  
 |HTTP|Consente di connettersi a un server Web.|[gestione connessione HTTP](http-connection-manager.md)|  
 |MSMQ|Consente di connettersi a una coda di messaggi.|[gestione connessione MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Consente di connettersi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto di.|[Gestione connessione Analysis Services](analysis-services-connection-manager.md)|  
+|MSOLAP100|Consente di connettersi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto di.|[Analysis Services - gestione connessione](analysis-services-connection-manager.md)|  
 |MULTIFILE|Consente di connettersi a più file e cartelle.|[gestione connessione per più file](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Consente di connettersi a più file e cartelle di dati.|[gestione connessione per più file flat](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Consente di connettersi a un'origine dei dati tramite un provider OLE DB.|[gestione connessione OLE DB](ole-db-connection-manager.md)|  
@@ -118,6 +118,6 @@ ms.locfileid: "79112165"
   
 -   Articolo tecnico relativo all' [estrazione e al caricamento dei dati SharePoint in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826)sul sito Web msdn.microsoft.com.  
   
--   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696) (Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
+-   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
   
   

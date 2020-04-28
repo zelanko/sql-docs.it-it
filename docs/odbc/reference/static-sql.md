@@ -1,5 +1,5 @@
 ---
-title: Proprietà SQL statica . Documenti Microsoft
+title: SQL statico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 55710d8ea734cba86ae5e4daa725f75e94e65a64
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81279903"
 ---
 # <a name="static-sql"></a>SQL statico
-Il codice SQL incorporato illustrato [nell'esempio Embedded SQL](../../odbc/reference/embedded-sql-example.md) è noto come SQL statico. Si chiama SQL statico perché le istruzioni SQL nel programma sono statiche; vale a dire, non cambiano ogni volta che il programma viene eseguito. Come descritto nella sezione precedente, queste istruzioni vengono compilate quando viene compilato il resto del programma.  
+L'oggetto SQL incorporato illustrato nell' [esempio SQL incorporato](../../odbc/reference/embedded-sql-example.md) è noto come SQL statico. Viene chiamato SQL statico perché le istruzioni SQL nel programma sono statiche. ovvero non cambiano ogni volta che viene eseguito il programma. Come descritto nella sezione precedente, queste istruzioni vengono compilate quando viene compilato il resto del programma.  
   
- SQL statico funziona bene in molte situazioni e può essere utilizzato in qualsiasi applicazione per cui l'accesso ai dati può essere determinato in fase di progettazione del programma. Ad esempio, un programma di inserimento degli ordini utilizza sempre la stessa istruzione per inserire un nuovo ordine e un sistema di prenotazione aerea utilizza sempre la stessa istruzione per modificare lo stato di un posto da disponibile a riservato. Ognuna di queste istruzioni sarebbe generalizzata attraverso l'uso di variabili host; In un ordine cliente possono essere inseriti valori diversi e possono essere prenotate postazioni diverse. Poiché tali istruzioni possono essere hardcoded nel programma, tali programmi hanno il vantaggio che le istruzioni devono essere analizzate, convalidate e ottimizzate solo una volta, in fase di compilazione. Questo si traduce in codice relativamente veloce.
+ SQL statico funziona correttamente in molte situazioni e può essere usato in qualsiasi applicazione per la quale l'accesso ai dati può essere determinato in fase di progettazione del programma. Un programma di immissione degli ordini, ad esempio, USA sempre la stessa istruzione per inserire un nuovo ordine e un sistema di prenotazione delle compagnie aeree Usa sempre la stessa istruzione per modificare lo stato di una postazione da disponibile a riservata. Ognuna di queste istruzioni verrebbe generalizzata tramite l'utilizzo di variabili host. è possibile inserire valori diversi in un ordine di vendita ed è possibile riservare sedi diverse. Poiché tali istruzioni possono essere hardcoded nel programma, tali programmi hanno il vantaggio che le istruzioni devono essere analizzate, convalidate e ottimizzate una sola volta in fase di compilazione. Questo comporta un codice relativamente rapido.

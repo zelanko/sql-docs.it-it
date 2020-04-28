@@ -1,5 +1,5 @@
 ---
-title: Interfaccia di programmazione Standard Documenti Microsoft
+title: Interfaccia di programmazione standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c7767f113d0f70569ce253f0200cd35cb83915a4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81279997"
 ---
 # <a name="standard-programming-interface"></a>Interfaccia di programmazione standard
-L'interfaccia di programmazione è forse il candidato più ovvio per la standardizzazione. Infatti, quando ODBC era in fase di sviluppo, ANSI e ISO già fornito standard per i moduli SQL e SQL incorporati. Sebbene non esistesseno standard per una CLI di database, il gruppo di accesso SQL - un consorzio industriale di fornitori di database - stava valutando se crearne uno; parti di ODBC in seguito divenne la base per il loro lavoro.  
+L'interfaccia di programmazione è probabilmente il candidato più ovvio per la standardizzazione. Infatti, durante lo sviluppo di ODBC, ANSI e ISO hanno già fornito gli standard per i moduli SQL e SQL incorporati. Sebbene non esistano standard per un'interfaccia della riga di comando del database, il gruppo di accesso SQL, un consorzio di settore di fornitori di database, stava valutando se crearne uno. in seguito, le parti di ODBC diventeranno la base del proprio lavoro.  
   
- Uno dei requisiti per ODBC era che un singolo file binario dell'applicazione doveva funzionare con più DBS. È per questo motivo che ODBC non utilizza SQL incorporato o linguaggi di modulo. Anche se il linguaggio nei linguaggi SQL e modulo incorporati è standardizzato, ognuno è legato ai precompilatori specifici di DBMS. Pertanto, le applicazioni devono essere ricompilate per ogni DBMS e i file binari risultanti funzionano solo con un singolo DBMS. Mentre questo è accettabile per le applicazioni a basso volume che si trovano nel mondo dei minicomputer e dei mainframe, è inaccettabile nel mondo dei personal computer. In primo luogo, è un incubo logistico fornire più versioni di software ad alto volume e ridotto ai clienti; in secondo luogo, le applicazioni per personal computer spesso devono accedere a più DBS contemporaneamente.  
+ Uno dei requisiti per ODBC era che un singolo file binario dell'applicazione doveva funzionare con più DBMS. Per questo motivo, ODBC non utilizza le lingue incorporate di moduli o SQL. Sebbene il linguaggio nei linguaggi SQL e modulo incorporati sia standardizzato, ognuno è associato a compilatori specifici del sistema DBMS. Pertanto, le applicazioni devono essere ricompilate per ogni DBMS e i file binari risultanti funzionano solo con un singolo sistema DBMS. Sebbene sia accettabile per le applicazioni con volumi limitati presenti in minicomputer e nei mondi mainframe, è inaccettabile nel mondo personal computer. In primo luogo, si tratta di un incubo logistico per la distribuzione di più versioni di software a elevato volume e compattato ai clienti; in secondo luogo, le applicazioni personal computer spesso devono accedere a più DBMS simultaneamente.  
   
- D'altra parte, un'interfaccia a livello di chiamata può essere implementata tramite librerie, o driver di database, che risiedono su ogni computer locale; è necessario un driver diverso per ogni DBMS. Poiché i sistemi operativi moderni possono caricare tali librerie (ad esempio librerie a collegamento dinamico in Microsoft® sistema operativo Windows®) in fase di esecuzione, una singola applicazione può accedere ai dati da DBS diversi senza ricompilazione e può anche accedere ai dati da più database contemporaneamente. Man mano che diventano disponibili nuovi driver di database, gli utenti possono semplicemente installarli nei propri computer senza dover modificare, ricompilare o ricollegare le applicazioni di database. Inoltre, un'interfaccia a livello di chiamata era un buon candidato per ODBC perché Windows - la piattaforma per cui ODBC è stato originariamente sviluppato - già fatto ampio uso di tali librerie.
+ D'altra parte, un'interfaccia a livello di chiamata può essere implementata tramite le librerie o i driver del database che risiedono in ogni computer locale; per ogni DBMS è necessario un driver diverso. Poiché i sistemi operativi moderni possono caricare tali librerie, ad esempio le librerie a collegamento dinamico sul sistema operativo Microsoft® Windows®, in fase di esecuzione, una singola applicazione può accedere ai dati da DBMS diversi senza ricompilarli e può accedere anche a dati da più database contemporaneamente. Man mano che diventano disponibili nuovi driver di database, gli utenti possono semplicemente installarli nei propri computer senza dover modificare, ricompilare o ricollegare le applicazioni di database. Inoltre, un'interfaccia a livello di chiamata era un buon candidato per ODBC perché Windows, la piattaforma per cui ODBC è stato originariamente sviluppato, ha già utilizzato in modo estensivo tali librerie.

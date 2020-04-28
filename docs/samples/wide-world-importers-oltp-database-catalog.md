@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112409"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo di database WideWorldImporters
@@ -69,7 +69,7 @@ Dettagli dei parametri e delle persone (utenti e contatti), insieme alle tabelle
 |-----------------------------|---------------------|
 |SystemParameters|Contiene parametri configurabili a livello di sistema.|
 |Persone|Contiene i nomi utente, le informazioni di contatto, per tutti gli utenti che usano l'applicazione e per gli utenti che hanno a che fare con le organizzazioni del cliente. Sono inclusi il personale, i clienti, i fornitori e altri contatti. Per gli utenti a cui è stata concessa l'autorizzazione a utilizzare il sistema o il sito Web, le informazioni includono i dettagli di accesso.|
-|Città|Nel sistema sono archiviati molti indirizzi, per gli utenti, per gli indirizzi di recapito dell'organizzazione cliente, per gli indirizzi di ritiro dei fornitori e così via. Ogni volta che viene archiviato un indirizzo, in questa tabella è presente un riferimento a una città. Esiste anche una posizione spaziale per ogni città.|
+|Cities|Nel sistema sono archiviati molti indirizzi, per gli utenti, per gli indirizzi di recapito dell'organizzazione cliente, per gli indirizzi di ritiro dei fornitori e così via. Ogni volta che viene archiviato un indirizzo, in questa tabella è presente un riferimento a una città. Esiste anche una posizione spaziale per ogni città.|
 |StateProvinces|Le città fanno parte di Stati o province. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni stato o provincia.|
 |Paesi|Stati o province fanno parte di paesi. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni paese.|
 |DeliveryMethods|Opzioni per la distribuzione di articoli di stock, ad esempio Truck/Van, post, pickup, Courier e così via.|
@@ -100,7 +100,7 @@ Dettagli relativi a clienti, venditori e vendite di articoli azionari.
 |BuyingGroups|Le organizzazioni del cliente possono far parte di gruppi che impiegano una maggiore potenza di acquisto|
 |CustomerTransactions|Tutte le transazioni finanziarie correlate ai clienti (fatture, pagamenti)|
 |SpecialDeals|Prezzo speciale. Questo può includere prezzi fissi, sconto in dollari o percentuale di sconto.|
-|Ordini|Dettagli degli ordini dei clienti|
+|Orders|Dettagli degli ordini dei clienti|
 |OrderLines|Righe di dettaglio dagli ordini dei clienti|
 |Fatture|Dettagli delle fatture dei clienti|
 |InvoiceLines|Righe di dettaglio dalle fatture dei clienti|
@@ -116,7 +116,7 @@ Dettagli degli articoli azionari, delle relative operazioni di mantenimento e de
 |StockGroups|Gruppi per la categorizzazione di elementi azionari (ad esempio, novità, giocattoli, novità commestibili e così via)|
 |StockItemStockGroups|Quali elementi azionari sono in cui i gruppi azionari (molti a molti)|
 |Colori|Gli elementi azionari possono (facoltativamente) avere colori|
-|Elemento packagetypes|Modi in cui è possibile confezionare gli elementi azionari, ad esempio box, carton, pallet, kg e così via.|
+|PackageTypes|Modi in cui è possibile confezionare gli elementi azionari, ad esempio box, carton, pallet, kg e così via.|
 |StockItemTransactions|Transazioni che coprono tutti i movimenti di tutti gli elementi azionari (ricevuta, vendita, scrittura)|
 |VehicleTemperatures|Temperature registrate regolarmente per i refrigeratori dei veicoli|
 |ColdRoomTemperatures|Temperature registrate regolarmente dei chiller della stanza fredda|

@@ -17,18 +17,16 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280858"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installazione di Analysis Services in modalità Multidimensionale e Data Mining
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre funzionalità di elaborazione analitica in linea (OLAP) e di data mining per applicazioni di Business Intelligence. In questa versione, il supporto per i database OLAP e i modelli di data mining è [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponibile quando si installa in *modalità multidimensionale*. La modalità multidimensionale è una delle tre modalità del server in cui viene eseguito [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si tratta della modalità predefinita. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i valori predefiniti, si ottiene un'istanza che esegue database multidimensionali e modelli di data mining.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una funzionalità per istanze multiple, ovvero è possibile installare più di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un unico computer oppure eseguire una nuova istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side con una versione precedente. La modalità del server è specifica di un'istanza. L'utilizzo di altre modalità richiede l'installazione di altre istanze del server.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una funzionalità per istanze multiple, ovvero è possibile installare più di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un unico computer oppure eseguire una nuova istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side con una versione precedente. La modalità del server è specifica di un'istanza. L'utilizzo di altre modalità richiede l'installazione di altre istanze del server.  
   
  È possibile installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da solo o con altri componenti. Se si installa solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le seguenti funzionalità vengono installate quando si seleziona **Analysis Services** nella pagina Selezione funzionalità dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata di:  
   
@@ -41,13 +39,11 @@ ms.locfileid: "78280858"
 ## <a name="choosing-additional-features"></a>Scelta di ulteriori funzionalità  
  Per soluzioni OLAP e di data warehouse di Analysis Services è richiesta l'installazione di componenti aggiuntivi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai fini dello sviluppo, della distribuzione e dell'amministrazione dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le funzionalità aggiuntive seguenti rappresentano opzioni disponibili per molti scenari utente tipici:  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilizzato per creare e visualizzare modelli di data mining e strutture di dati di Analysis Services.  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilizzato per creare e visualizzare modelli di data mining e strutture di dati di Analysis Services.  
   
 -   Componenti per connettività degli strumenti client, utilizzati per la comunicazione tra client e server, incluse le librerie di rete per DB-Library, ODBC e OLE DB.  
   
--   
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un set di oggetti grafici e programmabili per lo spostamento, la copia e la trasformazione dei dati.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un set di oggetti grafici e programmabili per lo spostamento, la copia e la trasformazione dei dati.  
   
 -   Strumenti di gestione, tra cui Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e Monitoraggio replica.  
   
@@ -66,7 +62,7 @@ ms.locfileid: "78280858"
   
  [Installare Analysis Services in modalità Tabella](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
- [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
  [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   

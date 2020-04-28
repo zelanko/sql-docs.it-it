@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bf324f4e24337503c97e10734f38713ae0f172e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380732"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Creare un attributo di collegamento (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "80380732"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [Amministratori &#40;&#41;Master Data Services ](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "80380732"
   
 7.  Nella pagina **Aggiungi attributo** selezionare l'opzione **Formato libero** .  
   
-8.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco delle parole che non devono essere utilizzate come nomi di attributo, vedere [Parole riservate &#40;&#41;Master Data Services ](../../2014/master-data-services/reserved-words-master-data-services.md).  
+8.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco di parole che non devono essere usate come nomi di attributo, vedere [parole riservate &#40;Master Data Services&#41;](../../2014/master-data-services/reserved-words-master-data-services.md).  
   
 9. Nella casella **Larghezza in pixel visualizzazione** digitare la larghezza della colonna attributo da visualizzare nella griglia **Esplora** .  
   
@@ -72,9 +72,9 @@ ms.locfileid: "80380732"
 14. Nella pagina **Gestione entità** , fare clic su **Salva entità**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi &#40;&#41;di Master Data ServicesAttributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Modificare un nome di attributo &#40;&#41;Master Data Services](change-an-attribute-name-and-data-type-master-data-services.md)   
- [Creare un attributo basato su dominio &#40;&#41;Master Data ServicesCreate a Domain-Based Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Modificare il nome di un attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Creare un attributo di file &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

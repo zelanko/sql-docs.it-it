@@ -1,5 +1,5 @@
 ---
-title: Sequenze di escape di data, ora e timestamp Documenti Microsoft
+title: Sequenze di escape di data, ora e timestamp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284343"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Sequenze di escape data, ora e timestamp
-ODBC definisce le sequenze di escape per i valori letterali di data, ora e timestamp. La sintassi di queste sequenze di escape è la seguente:The syntax of these escape sequences is as follows:  
+ODBC definisce sequenze di escape per i valori letterali data, ora e timestamp. La sintassi di queste sequenze di escape è la seguente:  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC definisce le sequenze di escape per i valori letterali di data, ora e times
 {ts 'value'}  
 ```  
   
- Nella notazione BNF, la sintassi è la seguente:  
+ Nella notazione BNF la sintassi è la seguente:  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Le sequenze di escape letterali di data, ora e timestamp sono supportate se i tipi di dati data, ora e timestamp sono supportati dall'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se questi tipi di dati sono supportati.
+ Le sequenze di escape dei valori letterali data, ora e timestamp sono supportate se i tipi di dati data, ora e timestamp sono supportati dall'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se questi tipi di dati sono supportati.

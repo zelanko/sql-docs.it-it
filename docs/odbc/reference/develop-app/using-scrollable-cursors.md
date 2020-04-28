@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei cursori scorrevoli . Documenti Microsoft
+title: Utilizzo di cursori scorrevoli | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81289132"
 ---
 # <a name="using-scrollable-cursors"></a>Utilizzo di cursori scorrevoli
-L'uso di un cursore scorrevole richiede questi tre passaggi:Using a scrollable cursor requires these three steps:  
+L'utilizzo di un cursore scorrevole richiede tre passaggi:  
   
 1.  Determinare le funzionalità del cursore.  
   
-2.  Impostare il cursore.  
+2.  Configurare il cursore.  
   
-3.  Scorrere e recuperare le righe.  
+3.  Scorrere e recuperare righe.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

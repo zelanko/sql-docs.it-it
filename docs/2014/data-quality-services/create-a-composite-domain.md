@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289319"
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
@@ -27,17 +27,17 @@ ms.locfileid: "79289319"
   
  Dopo aver creato un dominio composito, è possibile modificarne le proprietà, allegarvi un servizio dati di riferimento, creare regole tra domini o relazioni di valori. A tale scopo, selezionare il dominio composito nell'elenco **Dominio** della pagina **Gestione dominio** , quindi selezionare la scheda appropriata.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Per creare un dominio composito, è necessario avere creato e aperto una Knowledge Base e almeno due singoli domini da aggiungere al dominio composito.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare un dominio composito.  
   
-##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Creazione di un dominio composito nell'attività di individuazione delle informazioni  
+##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a>Creazione di un dominio composito nell'attività di individuazione delle informazioni  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "79289319"
   
 7.  Fare clic sull'icona **Crea un dominio composito** .  
   
-##  <a name="DomainManagementActivity"></a>Creazione di un dominio composito nell'attività di gestione del dominio  
+##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>Creazione di un dominio composito nell'attività di gestione del dominio  
   
 1.  Nella home page di del client Data Quality Services, fare clic su **Apri Knowledge Base** , quindi selezionare una Knowledge Base o fare clic su **Nuova Knowledge Base** e immettere le proprietà per la nuova Knowledge Base.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "79289319"
   
 7.  Fare clic su **OK**.  
   
-##  <a name="CompositeDomainProperties"></a>Impostare le proprietà del dominio composito  
+##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>Impostare le proprietà del dominio composito  
   
 1.  Nella finestra di dialogo **Crea un dominio composito** immettere un nome univoco per la Knowledge Base e una descrizione di un massimo di 256 caratteri.  
   
@@ -79,20 +79,20 @@ ms.locfileid: "79289319"
   
 4.  Selezionare una delle opzioni seguenti come **Metodo di analisi**:  
   
-    -   **Dati di riferimento**: analizza i valori del campo in base al modo in cui i dati vengono formattati dal servizio dati di riferimento (RDS). Data Quality Services invia i valori nel dominio composito al servizio dati di riferimento e quest'ultimo restituisce i dati corretti e analizzati in base al dominio nel dominio composito.  
+    -   **Dati di riferimento**: analizza i valori del campo in base a come i dati vengono formattati dal servizio dati di riferimento. Data Quality Services invia i valori nel dominio composito al servizio dati di riferimento e quest'ultimo restituisce i dati corretti e analizzati in base al dominio nel dominio composito.  
   
     -   **In ordine**: analizza i valori del campo in base all'ordine dei domini nel dominio composito. Il primo valore verrà incluso nel primo dominio, il secondo valore nel secondo e così via.  
   
-    -   **Delimitatori**: analizza i valori del campo in base al delimitatore selezionato dai pulsanti di opzione visualizzati quando si seleziona delimitatori. Il valore può essere **Tabulazione**, **Punto e virgola**, **Virgola**, **Spazio**o **Altro**. Se il valore è **Altro**, immettere il valore che servirà come delimitatore.  
+    -   **Delimitatori**: analizza i valori del campo in base al delimitatore selezionato dai pulsanti di opzione visualizzati quando viene selezionata l'opzione Delimitatori. Il valore può essere **Tabulazione**, **Punto e virgola**, **Virgola**, **Spazio**o **Altro**. Se il valore è **Altro**, immettere il valore che servirà come delimitatore.  
   
 5.  Se è stato selezionato **Delimitatori** per il metodo di analisi, è inoltre possibile selezionare **Usa analisi Knowledge Base**. Per altre informazioni, vedere [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di un dominio composito  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>Completamento: fasi successive alla creazione di un dominio composito  
  Dopo avere creato un dominio composito, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="KnowledgeBaseParsing"></a>Analisi basata sulle informazioni  
+##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a>Analisi basata sulle informazioni  
  Data Quality Services consente di analizzare i dati in base alle informazioni e non solo in base al delimitatore o all'ordine. L'analisi basata sulle informazioni viene utilizzata quando viene eseguito il mapping di dati di origine complessi a un dominio composito e non si utilizzano servizi dati di riferimento. È possibile utilizzare l'analisi basata sulle informazioni per analizzare i dati dall'origine dati nei singoli domini interessati. Con l'analisi basata sulle informazioni, DQS tenterà in primo luogo di utilizzare le informazioni per analizzare dati complessi nei singoli domini. Se possibile, verranno identificate parti della stringa in uno o più domini e la stringa verrà analizzata nei vari domini. Si supponga ad esempio di disporre di un valore complesso denominato "John B. Doe" in un campo di nome completo rappresentato da un dominio composito Full Name. Se DQS identifica "John" come nel dominio Nome e "Doe" come nel dominio Cognome, verrà aggiunto "B". al dominio Secondo nome in base alle informazioni del dominio.  
   
  È possibile utilizzare l'analisi basata sulle informazioni solo se si seleziona anche l'analisi basata su delimitatore. L'analisi basata sulle informazioni non sostituisce l'analisi basata su delimitatore, ma la rende più efficace. Solo nel caso in cui non esistano informazioni per tale tipo di esecuzione DQS utilizzerà un delimitatore per eseguire l'analisi. In alcune circostanze, DQS può effettuare alcune analisi mediante analisi basata sulle informazioni e altre mediante analisi basata su delimitatore.  
