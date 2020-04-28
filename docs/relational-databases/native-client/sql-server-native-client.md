@@ -11,25 +11,25 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d175942c9d636221868ca12743e6dac79bb2ddcb
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388710"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SNAC, o SQL Server Native Client, è un termine che è stato utilizzato in modo intercambiabile per fare riferimento ai driver ODBC e OLE DB per SQL Server.
+SNAC, o SQL Server Native Client, è un termine che è stato usato in modo intercambiabile per fare riferimento ai driver ODBC e OLE DB per SQL Server.
 
 > [!IMPORTANT] 
-> SQL Server Native Client (SQLNCLI) rimane deprecato e non è consigliabile utilizzarlo per le nuove attività di sviluppo. Usare invece il nuovo [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
+> Il SQL Server Native Client (SQLNCLI) rimane deprecato e non è consigliabile utilizzarlo per un nuovo lavoro di sviluppo. Usare invece il nuovo [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
 
 > [!NOTE]
-> Per ulteriori informazioni e per scaricare i driver SNAC o ODBC, vedere il post di [blog sul ciclo di vita di SNAC .](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)
-> Per ulteriori informazioni sul driver ODBC per SQL Server, vedere [Driver Microsoft ODBC per SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
+> Per ulteriori informazioni e per scaricare i driver SNAC o ODBC, vedere il [post di Blog](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)relativo al ciclo di vita di snac.
+> Per ulteriori informazioni sul driver ODBC per SQL Server, vedere [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Native Client rilasciate con , l'ultima versione disponibile di SQL Server Native Client:
+ Informazioni sulle funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native Client rilasciate con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'ultima versione disponibile di SQL Server Native Client:
 
 -   [Supporto SQL Server Native Client per il database locale](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -41,24 +41,24 @@ SNAC, o SQL Server Native Client, è un termine che è stato utilizzato in modo 
 
 -   [Accesso alle informazioni di diagnostica nel registro eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Native Client supporta tre funzionalità che sono state aggiunte a ODBC standard in Windows 7 SDK:  
+ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta tre funzionalità che sono state aggiunte a ODBC standard in Windows 7 SDK:  
 
 -   Esecuzione asincrona nelle operazioni correlate alla connessione. Per ulteriori informazioni, vedere [esecuzione asincrona](https://go.microsoft.com/fwlink/?LinkID=191493).  
 
 -   Estendibilità del tipo di dati C. Per ulteriori informazioni, vedere [tipi di dati C in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
-     Per supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa funzionalità in Native Client, SQLGetDescField può restituire **SQL_C_SS_TIME2** (per i tipi **di ora)** o **SQL_C_SS_TIMESTAMPOFFSET** (per **datetimeoffset**) anziché **SQL_C_BINARY**, se l'applicazione utilizza ODBC 3.8. Per ulteriori informazioni, vedere [Supporto dei tipi di dati per miglioramenti](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)di data e ora ODBC .  
+     Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, SQLGetDescField può restituire **SQL_C_SS_TIME2** (per i tipi di **ora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (per **DateTimeOffset**) anziché **SQL_C_BINARY**, se l'applicazione usa ODBC 3,8. Per ulteriori informazioni, vedere [supporto del tipo di dati per i miglioramenti di data e ora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   Chiamata di **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per ulteriori informazioni, vedere Recupero di parametri di [output tramite SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di output tramite SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 
  Negli argomenti seguenti vengono descritte le modifiche nel comportamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
--   Quando si chiama **ICommandWithParameters::SetParameterInfo**, il valore passato al parametro *pwszName* deve essere un identificatore valido. Per ulteriori informazioni, vedere [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).  
+-   Quando si chiama **ICommandWithParameters::** SetValue, il valore passato al parametro *pwszName* deve essere un identificatore valido. Per ulteriori informazioni, vedere [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).  
 
--   **SQLDescribeParam** restituirà in modo coerente un valore conforme alla specifica ODBC. Per ulteriori informazioni, vedere [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md).  
+-   **SQLDescribeParam** restituirà in modo coerente un valore conforme a specifiche ODBC. Per ulteriori informazioni, vedere [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md).  
 
 -   [Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
 ## <a name="see-also"></a>Vedere anche  
-[Installare SQL Server Native ClientInstall SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+[Installa SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

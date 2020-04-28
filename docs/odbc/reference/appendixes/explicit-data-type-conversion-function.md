@@ -1,5 +1,5 @@
 ---
-title: Funzione di conversione del tipo di dati esplicito . Documenti Microsoft
+title: Funzione di conversione del tipo di dati esplicita | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306992"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Funzione di conversione esplicita del tipo di dati
-La conversione esplicita del tipo di dati viene specificata in termini di definizioni dei tipi di dati SQL.  
+La conversione esplicita del tipo di dati viene specificata in termini di definizioni del tipo di dati SQL.  
   
- La sintassi ODBC per la funzione di conversione esplicita del tipo di dati non limita le conversioni. La validità di conversioni specifiche di un tipo di dati in un altro tipo di dati verrà determinata da ogni implementazione specifica del driver. Il driver, come converte la sintassi ODBC nella sintassi nativa, rifiutare quelle conversioni che, anche se valido nella sintassi ODBC, non sono supportati dall'origine dati. La funzione ODBC **SQLGetInfo**, con le opzioni di conversione (ad esempio SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH e così via), consente di informazioni sulle conversioni supportate dall'origine dati.  
+ La sintassi ODBC per la funzione di conversione esplicita del tipo di dati non limita le conversioni. La validità delle conversioni specifiche di un tipo di dati in un altro tipo di dati sarà determinata da ogni implementazione specifica del driver. Poiché il driver converte la sintassi ODBC nella sintassi nativa, rifiuterà le conversioni che, sebbene valide nella sintassi ODBC, non sono supportate dall'origine dati. La funzione ODBC **SQLGetInfo**, con le opzioni di conversione (ad esempio SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH e così via), fornisce un modo per richiedere informazioni sulle conversioni supportate dall'origine dati.  
   
- Il formato della funzione **CONVERT** è:  
+ Il formato della funzione **Convert** è:  
   
- **CONVERT(** _value_exp_, _data_type_**)**  
+ **Convert (** _value_exp_, _data_type_**)**  
   
- La funzione restituisce il valore specificato da *value_exp* convertito *nell'data_type*specificato , dove *data_type* è una delle seguenti parole chiave:  
+ La funzione restituisce il valore specificato da *value_exp* convertito nel *data_type*specificato, dove *data_type* è una delle parole chiave seguenti:  
   
 |||  
 |-|-|  
@@ -54,21 +54,21 @@ La conversione esplicita del tipo di dati viene specificata in termini di defini
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- La sintassi ODBC per la funzione di conversione esplicita del tipo di dati non supporta la specifica del formato di conversione. Se la specifica di formati espliciti è supportata dall'origine dati sottostante, un driver deve specificare un valore predefinito o implementare la specifica di formato.  
+ La sintassi ODBC per la funzione di conversione esplicita del tipo di dati non supporta la specifica del formato di conversione. Se la specifica dei formati espliciti è supportata dall'origine dati sottostante, è necessario che un driver specifichi un valore predefinito o implementi la specifica di formato.  
   
- L'argomento *value_exp* può essere un nome di colonna, il risultato di un'altra funzione scalare o un valore letterale numerico o stringa. Ad esempio:  
+ L'argomento *value_exp* può essere un nome di colonna, il risultato di un'altra funzione scalare o un valore letterale stringa o numerico. Ad esempio:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- converte l'output della funzione scalare CURDATE in una stringa di caratteri.  
+ Converte l'output della funzione scalare CURDe in una stringa di caratteri.  
   
- Poiché ODBC non impone un tipo di dati per i valori restituiti da funzioni scalari (poiché le funzioni sono spesso specifiche dell'origine dati), le applicazioni devono utilizzare la funzione scalare CONVERT quando possibile per forzare la conversione del tipo di dati.  
+ Poiché ODBC non impone un tipo di dati per i valori restituiti dalle funzioni scalari (poiché le funzioni sono spesso specifiche dell'origine dati), le applicazioni devono utilizzare la funzione CONVERT Scalar, quando possibile, per forzare la conversione del tipo di dati.  
   
- Nei due esempi seguenti viene illustrato l'utilizzo della funzione **CONVERT.** Questi esempi presuppongono l'esistenza di una tabella denominata EMPLOYEES, con una colonna EMPNO di tipo SQL_SMALLINT e una colonna EMPNAME di tipo SQL_CHAR.  
+ Nei due esempi seguenti viene illustrato l'utilizzo della funzione **Convert** . In questi esempi si presuppone l'esistenza di una tabella denominata EMPLOYEEs, con una colonna EMPNO di tipo SQL_SMALLINT e una colonna EMPNAME di tipo SQL_CHAR.  
   
- Se un'applicazione specifica la seguente istruzione SQL:  
+ Se un'applicazione specifica l'istruzione SQL seguente:  
   
 ```  
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
@@ -86,7 +86,7 @@ SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
     ```  
   
- Se un'applicazione specifica la seguente istruzione SQL:  
+ Se un'applicazione specifica l'istruzione SQL seguente:  
   
 ```  
 SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}  

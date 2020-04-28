@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388329"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query basata su testo (Generatore report)
@@ -56,7 +56,7 @@ ms.locfileid: "81388329"
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|
 
 #### <a name="example"></a>Esempio
- La query seguente restituisce l'elenco dei cognomi [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]dalla tabella di database `ContactType` `Person` **2008** per lo schema.
+ La query seguente restituisce l'elenco dei cognomi dalla [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]tabella del database `ContactType` **2008** per lo `Person` schema.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|
 
 #### <a name="example"></a>Esempio
- La query seguente [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]chiama la stored `uspGetWhereUsedProductID`procedure **2008** . Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del prodotto.
+ La query seguente chiama il [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** stored procedure `uspGetWhereUsedProductID`2008. Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del prodotto.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  Quando si seleziona **Tipo di comando TableDirect**, la finestra Progettazione query basata su testo mostra due riquadri, il riquadro Query e il riquadro Risultati. Quando si immette una tabella e si fa clic sul pulsante **Esegui** , vengono restituite tutte le colonne della tabella.
 
 #### <a name="example"></a>Esempio
- Per un tipo di origine dati OLE DB, la query del [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]set di dati seguente restituisce un set di risultati per tutti i tipi di contatto nel database **2008.**
+ Per un tipo di origine dati OLE DB, la query del set di dati seguente restituisce un set di risultati per [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]tutti i tipi di contatto nel database **2008** .
 
  `Person.ContactType`
 
  L'immissione del nome della tabella Person.ContactType, è equivalente alla creazione dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] di `SELECT * FROM Person.ContactType`.
 
 ## <a name="see-also"></a>Vedere anche
- [Interfaccia utente di Progettazione query relazionale &#40;Generatore di report&#41;](relational-query-designer-user-interface-report-builder.md) [Progettazione query &#40;&#41;Generatore reportRelational](../query-designers-report-builder.md) Query Designer User Interface &#40;Report Builder&#41;Query Designers &#40;Report Builder&#41;
+ [Interfaccia utente di progettazione query relazionale &#40;Generatore report](relational-query-designer-user-interface-report-builder.md) [progettazione query&#41;&#40;Generatore report&#41;](../query-designers-report-builder.md)
 
 

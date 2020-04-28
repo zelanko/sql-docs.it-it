@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fffae7ea51d75f54cb87a17c433df935de3139b7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388249"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Compilazione di applicazioni con SQL Server Native Client
@@ -56,8 +56,8 @@ ms.locfileid: "81388249"
  Viene illustrato come connettersi a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Argomenti relativi alle procedure ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Procedure per l'utilizzo di OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Programmazione SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Procedure per ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [Procedure per OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

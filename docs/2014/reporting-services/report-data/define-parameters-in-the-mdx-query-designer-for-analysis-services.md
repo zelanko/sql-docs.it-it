@@ -1,5 +1,5 @@
 ---
-title: Definizione di parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS) Documenti Microsoft
+title: Definire i parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388539"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "81388539"
      Per visualizzare il set di dati dei valori disponibili per il parametro del report, fare clic con il pulsante destro del mouse su un'area vuota nel riquadro Dati report e selezionare **Mostra set di dati nascosti**. Nel riquadro dei dati del report verranno visualizzati tutti i set di dati contenuti nel report.
 
 ## <a name="see-also"></a>Vedere anche
- [Tipo di connessione di Analysis Services per l'interfaccia](analysis-services-connection-type-for-mdx-ssrs.md) utente di Progettazione query MDX &#40;SSRS&#41;[Analysis Services](analysis-services-mdx-query-designer-user-interface.md)
+ [Tipo di connessione Analysis Services per mdx &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services interfaccia utente di progettazione query MDX](analysis-services-mdx-query-designer-user-interface.md)
 
 

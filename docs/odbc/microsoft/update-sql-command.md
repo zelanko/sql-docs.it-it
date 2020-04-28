@@ -1,5 +1,5 @@
 ---
-title: AGGIORNAMENTO - Comando SQL Documenti Microsoft
+title: Comando UPDATE-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 818811c18ed52cef5bdb1c4d97f947bb86e67422
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307642"
 ---
 # <a name="update---sql-command"></a>UPDATE (comando SQL)
 Aggiorna i record in una tabella con nuovi valori.  
   
- Il driver ODBC di Visual FoxPro supporta la sintassi nativa del linguaggio Visual FoxPro per questo comando. Per informazioni specifiche del driver, vedere **Osservazioni del driver**.  
+ Il driver ODBC Visual FoxPro supporta la sintassi nativa del linguaggio Visual FoxPro per questo comando. Per informazioni specifiche del driver, vedere **Note sul driver**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,27 +35,27 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- AGGIORNAMENTO [ *NomeDatabase1!*] *NomeTabella1*  
- Specifica la tabella in cui i record vengono aggiornati con nuovi valori.  
+ AGGIORNAMENTO [ *DatabaseName1!*] *TableName1*  
+ Specifica la tabella in cui i record vengono aggiornati con i nuovi valori.  
   
- *NomeDatabase1!* specifica il nome di un database diverso da quello specificato con l'origine dati contenente la tabella. È necessario includere il nome del database contenente la tabella se il database non è quello corrente. Includere il delimitatore punto esclamativo (!) dopo il nome del database e prima del nome della tabella.  
+ *DatabaseName1!* Specifica il nome di un database diverso dal database specificato con l'origine dati che contiene la tabella. Se il database non è quello corrente, è necessario includere il nome del database che contiene la tabella. Includere il delimitatore punto esclamativo (!) dopo il nome del database e prima del nome della tabella.  
   
  SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
- Specifica le colonne aggiornate e i nuovi valori. Se si oma la clausola WHERE, ogni riga della colonna viene aggiornata con lo stesso valore.  
+ Specifica le colonne aggiornate e i relativi nuovi valori. Se si omette la clausola WHERE, ogni riga della colonna viene aggiornata con lo stesso valore.  
   
- WHERE *FilterCondition1*[E &#124; OPPURE *FilterCondition2*...]  
- Specifica i record che vengono aggiornati con nuovi valori.  
+ DOVE *FilterCondition1*[e &#124; o *FilterCondition2*...]  
+ Specifica i record aggiornati con i nuovi valori.  
   
- *FilterCondition* specifica i criteri che i record devono soddisfare per essere aggiornati con nuovi valori. È possibile includere tutte le condizioni di filtro desiderate, collegandole con l'operatore AND o OR. È inoltre possibile utilizzare l'operatore NOT per invertire il valore di un'espressione logica oppure **EMPTY**( ) per verificare la presenza di un campo vuoto.  
+ *FilterCondition* specifica i criteri che i record devono soddisfare per essere aggiornati con nuovi valori. È possibile includere tutte le condizioni di filtro desiderate, connetterle con l'operatore AND o OR. È inoltre possibile utilizzare l'operatore NOT per invertire il valore di un'espressione logica oppure è possibile utilizzare **empty**() per verificare la presenza di un campo vuoto.  
   
 ## <a name="remarks"></a>Osservazioni  
- AGGIORNAMENTO: SQL può aggiornare solo i record in una singola tabella.  
+ UPDATE-SQL può aggiornare solo i record in una singola tabella.  
   
- A differenza di REPLACE, UPDATE: SQL utilizza il blocco dei record durante l'aggiornamento di più record nelle tabelle aperte per l'accesso condiviso. In questo modo si riduce la contesa dei record in situazioni multiutente, ma è possibile ridurre le prestazioni. Per ottenere le massime prestazioni, aprire la tabella per l'utilizzo esclusivo o utilizzare **FLOCK**( ) per bloccare la tabella.  
+ Diversamente da REPLACE, UPDATE-SQL usa il blocco dei record quando si aggiornano più record nelle tabelle aperte per l'accesso condiviso. In questo modo si riduce la contesa di record in situazioni multiutente, ma è possibile ridurre le prestazioni. Per ottenere le prestazioni massime, aprire la tabella per l'utilizzo esclusivo oppure utilizzare **Flock**() per bloccare la tabella.  
   
-## <a name="driver-remarks"></a>Osservazioni del conducente  
- Quando l'applicazione invia l'istruzione SQL ODBC UPDATE all'origine dati, il driver ODBC di Visual FoxPro converte il comando nel comando di Visual FoxProUPDATE senza conversione.  
+## <a name="driver-remarks"></a>Osservazioni del driver  
+ Quando l'applicazione invia l'aggiornamento dell'istruzione SQL ODBC all'origine dati, il driver ODBC Visual FoxPro converte il comando nel comando Visual FoxProUPDATE senza conversione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DELETE - Comando SQL](../../odbc/microsoft/delete-sql-command.md)   
+ [Comando DELETE-SQL](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT (comando SQL)](../../odbc/microsoft/insert-sql-command.md)

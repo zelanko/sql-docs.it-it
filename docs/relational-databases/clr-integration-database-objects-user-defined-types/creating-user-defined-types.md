@@ -1,6 +1,6 @@
 ---
-title: Creazione di un tipo definito dall'utente Documenti Microsoft
-description: Per creare un tipo definito dall'utente da installare in SQL ServerSQL Server, creare innanzitutto una classe in un linguaggio di programmazione .NET Framework, conforme alle specifiche per la creazione di tipi definiti dall'utente.
+title: Creazione di un tipo definito dall'utente | Microsoft Docs
+description: Per creare un tipo definito dall'utente da installare in SQL Server, creare prima di tutto una classe in un linguaggio di programmazione .NET Framework, che è conforme alle specifiche per la creazione di tipi definiti dall'utente.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486955"
 ---
 # <a name="creating-user-defined-types"></a>Creazione di tipi definiti dall'utente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
   
- L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. CLR può essere abilitato **sp_configure** utilizzando la sp_configure stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] di sistema, come illustrato nelle istruzioni seguenti:The CLR can be enabled by using the sp_configure system stored procedure, as shown in the following statements:  
+ L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. Per abilitare CLR, è possibile usare l' **sp_configure** stored procedure di sistema, come illustrato nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -41,9 +41,9 @@ Reconfigure
  Vengono illustrate le tecniche di codifica coinvolte nella creazione di tipi definiti dall'utente.  
   
 ## <a name="example"></a>Esempio  
- Il listato di codice seguente definisce il tipo definito dall'utente Point, descritto in dettaglio in [Codifica dei tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Nel listato di codice seguente viene definito il tipo definito dall'utente Point, descritto in dettaglio in [codifica dei tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere Esempi del Motore di database di [SQL Server.For](https://msftengprodsamples.codeplex.com/)instructions on installing these samples, see SQL Server Database Engine Samples .  
+ È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [SQL Server motore di database Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   

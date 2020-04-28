@@ -1,5 +1,5 @@
 ---
-title: Elaborazione delle istruzioni SELECT FOR UPDATE Documenti Microsoft
+title: Elaborazione della selezione per le istruzioni UPDATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 904028cd7b3798fcac8f9e5afa6186fae3e9fa29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308012"
 ---
 # <a name="processing-select-for-update-statements"></a>Elaborazione di istruzioni SELECT FOR UPDATE
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità del cursore del driver.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- Per garantire la massima interoperabilità, le applicazioni devono generare set di risultati che verranno aggiornati con un'istruzione di aggiornamento posizionato eseguendo un'istruzione **SELECT FOR UPDATE.** Anche se la libreria di cursori non lo richiede, è richiesta dalla maggior parte delle origini dati che supportano istruzioni di aggiornamento posizionate.  
+ Per garantire la massima interoperabilità, le applicazioni devono generare set di risultati che verranno aggiornati con un'istruzione UPDATE posizionata eseguendo un'istruzione **Select for Update** . Sebbene la libreria di cursori non lo richieda, è richiesta dalla maggior parte delle origini dati che supportano le istruzioni UPDATE posizionate.  
   
- La libreria di cursori ignora le colonne nella clausola **FOR UPDATE** di un'istruzione SELECT **FOR UPDATE.** rimuove questa clausola prima di passare l'istruzione al driver. Nella libreria di cursori, l'attributo di istruzione SQL_ATTR_CONCURRENCY, insieme alle restrizioni indicate nella sezione precedente, controlla se le colonne in un set di risultati possono essere aggiornate.
+ La libreria di cursori ignora le colonne nella clausola **for Update** di un'istruzione **Select for Update** . Questa clausola viene rimossa prima di passare l'istruzione al driver. Nella libreria di cursori, l'attributo SQL_ATTR_CONCURRENCY Statement, insieme alle restrizioni indicate nella sezione precedente, determina se è possibile aggiornare le colonne di un set di risultati.

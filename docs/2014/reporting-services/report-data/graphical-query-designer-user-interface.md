@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388543"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaccia utente della finestra Progettazione query con interfaccia grafica
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query che consentano di recuperare i dati da un database relazionale per un set di dati del report in Progettazione report. Usare la finestra Progettazione query con interfaccia grafica per compilare in modo interattivo una query e visualizzare i risultati per origine dati di tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Usare la finestra Progettazione query basata su testo per specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi di una query complessa o del comando, nonché query basate su espressioni. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](../text-based-query-designer-user-interface.md). Per ulteriori informazioni sull'utilizzo di tipi di origini dati specifici, vedere Aggiungere dati a un Generatore report &#40;generatore di [report e&#41;SSRS ](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query che consentano di recuperare i dati da un database relazionale per un set di dati del report in Progettazione report. Usare la finestra Progettazione query con interfaccia grafica per compilare in modo interattivo una query e visualizzare i risultati per origine dati di tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Usare la finestra Progettazione query basata su testo per specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi di una query complessa o del comando, nonché query basate su espressioni. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](../text-based-query-designer-user-interface.md). Per ulteriori informazioni sull'utilizzo di tipi di origini dati specifici, vedere [aggiungere dati a un Report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>Vedere anche
- Strumenti di [progettazione di query in Progettazione report SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md) [Aggiungi dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md) tipo di connessione Sql Server &#40;&#41;tipo di connessione [OLE](sql-server-connection-type-ssrs.md) DB&#41;[SSRS &#40;&#41;Aggiungi](ole-db-connection-type-ssrs.md) dati a un Report &#40;Generatore report e [SSRS&#41;](report-datasets-ssrs.md) Tipo di connessione Oracle &#40;[SSRS&#41;](oracle-connection-type-ssrs.md) LE query di progettazione dei file di configurazione [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) e visualizza gli [argomenti di &#40;Visual Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [Strumenti per la progettazione di query in Progettazione report SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [aggiungere dati a un report &#40;Generatore report e SSRS&#41;tipo di](report-datasets-ssrs.md) [connessione SQL Server SSRS &#40;](sql-server-connection-type-ssrs.md) [&#41;tipo di connessione OLE DB ssrs &#40;](ole-db-connection-type-ssrs.md) [aggiungere dati a un report&#41;&#40;e SSRS Generatore report](report-datasets-ssrs.md) [tipo di connessione Oracle&#41;SSRS &#40;](oracle-connection-type-ssrs.md) [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) di progettazione del file di configurazione per le [query e le visualizzazioni procedure&#41;Visual Database Tools](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) &#40;
 
 

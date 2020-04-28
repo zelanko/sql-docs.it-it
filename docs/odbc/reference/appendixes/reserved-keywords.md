@@ -1,5 +1,5 @@
 ---
-title: Parole chiave riservate Documenti Microsoft
+title: Parole chiave riservate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307992"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
-Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non vincolano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con i driver che supportano la grammatica SQL di base, le applicazioni devono evitare di utilizzare una di queste parole chiave. Il valore**di definizione** SQL_ODBC_KEYWORDS contiene un elenco separato da virgole di queste parole chiave.  
+Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non vincolano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con i driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare una di queste parole chiave. Il valore #**define** SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
   
 |||  
 |-|-|  

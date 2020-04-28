@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307421"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -77,7 +77,7 @@ HRESULT BCPColFmt(
  Indice del campo nel file di dati dell'utente.  
   
  *eUserDataType*[in]  
- Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili sono elencati nel file di intestazione Native Client (sqlncli.h) con BCP_TYPE_XXX formato, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file quando l'argomento **eUserDataType** è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di intestazione di Native Client (sqlncli. h) con BCP_TYPE_XXX formato, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file quando l'argomento **eUserDataType** è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Se la colonna di origine non è decimal o numeric, vengono utilizzate la precisione e la scala predefinite.  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider, per informazioni dettagliate utilizzare l'interfaccia [ISQLServerErrorInfo.A](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) provider specific error occurred, for detailed information use the ISQLServerErrorInfo interface.  
+ Si è verificato un errore specifico del provider. per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) prima della chiamata a questo metodo.  
@@ -129,7 +129,7 @@ HRESULT BCPColFmt(
  Errore di memoria insufficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [IBCPSession &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurazione di un contenitore per loop Documenti Microsoft
+title: Configurare un contenitore ciclo for | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486999"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurazione di un contenitore Ciclo For
@@ -43,8 +43,8 @@ ms.locfileid: "81486999"
 7.  Fare clic su **OK** per chiudere la finestra **Editor ciclo For**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenitore For Loop](control-flow/for-loop-container.md)   
- [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)   
+ [Contenitore ciclo for](control-flow/for-loop-container.md)   
+ [Integration Services &#40;espressioni di&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
  [utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)  
   
   

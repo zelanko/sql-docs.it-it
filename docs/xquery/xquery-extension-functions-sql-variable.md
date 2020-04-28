@@ -1,6 +1,6 @@
 ---
-title: Funzione sql:variable() (XQuery) Documenti Microsoft
-description: Informazioni su come usare la funzione di estensione XQuery sql:variable() per esporre una variabile che contiene un valore relazionale SQL all'interno di un'espressione XQuery.
+title: 'Funzione SQL: Variable () (XQuery) | Microsoft Docs'
+description: "Informazioni su come utilizzare la funzione di estensione XQuery SQL: Variable () per esporre una variabile che contiene un valore relazionale SQL all'interno di un'espressione XQuery."
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388609"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Funzioni per estensioni XQuery - sql:variable()
@@ -36,26 +36,26 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Come descritto nell'argomento Associazione di [dati relazionali all'interno di XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), è possibile utilizzare questa funzione quando si utilizzano metodi di tipo di dati [XML](../t-sql/xml/xml-data-type-methods.md) per esporre un valore relazionale all'interno di XQuery.  
+ Come descritto nell'argomento [associazione di dati relazionali all'interno di codice XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), è possibile utilizzare questa funzione quando si utilizzano [i metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md) per esporre un valore relazionale all'interno di XQuery.  
   
- Ad esempio, il [metodo query()](../t-sql/xml/query-method-xml-data-type.md) viene utilizzato per specificare una query su un'istanza XML archiviata in una colonna o in una variabile con tipo di dati **xml.** A volte è necessario creare query in grado di utilizzare anche valori contenuti in un parametro o in una variabile [!INCLUDE[tsql](../includes/tsql-md.md)], per mettere insieme dati relazionali e XML. A tale scopo, utilizzare la funzione **sql:variable.**  
+ Il [metodo query ()](../t-sql/xml/query-method-xml-data-type.md) , ad esempio, viene utilizzato per specificare una query su un'istanza XML archiviata in una variabile o in una colonna con tipo di dati **XML** . A volte è necessario creare query in grado di utilizzare anche valori contenuti in un parametro o in una variabile [!INCLUDE[tsql](../includes/tsql-md.md)], per mettere insieme dati relazionali e XML. A tale scopo, usare la funzione **SQL: Variable** .  
   
  Il valore SQL verrà mappato a un valore XQuery corrispondente e il relativo tipo sarà un tipo di base XQuery equivalente al tipo SQL corrispondente.  
   
- È possibile fare riferimento solo a un'istanza **xml** nel contesto dell'espressione di origine di un'istruzione di inserimento XML-DML. in caso contrario, non è possibile fare riferimento a valori di tipo **xml** o di un tipo definito dall'utente CLR (Common Language Runtime).  
+ È possibile fare riferimento a un'istanza **XML** solo nel contesto dell'espressione di origine di un'istruzione XML-DML insert. in caso contrario, non è possibile fare riferimento a valori di tipo **XML** o di un tipo di Common Language Runtime (CLR) definito dall'utente.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>R. Utilizzo della funzione sql:variable() per convertire in XML il valore di una variabile Transact-SQL  
  Nell'esempio seguente viene costruita un'istanza XML costituita da:  
   
--   Un valore (`ProductID`) ottenuto da una colonna non XML. La [funzione sql:column()](../xquery/xquery-extension-functions-sql-column.md) viene utilizzata per associare questo valore nel codice XML.  
+-   Un valore (`ProductID`) ottenuto da una colonna non XML. La [funzione SQL: Column ()](../xquery/xquery-extension-functions-sql-column.md) viene utilizzata per associare questo valore nel codice XML.  
   
 -   Un valore (`ListPrice`) ottenuto da una colonna non XML di un'altra tabella. La funzione `sql:column()` viene utilizzata anche in questo caso per associare tale valore nell'istanza XML.  
   
 -   Un valore (`DiscountPrice`) ottenuto da una variabile [!INCLUDE[tsql](../includes/tsql-md.md)]. Il metodo `sql:variable()` viene utilizzato per associare tale valore nell'istanza XML.  
   
--   Un valore`ProductModelName`( ) da una colonna di tipo **xml,** per rendere la query più interessante.  
+-   Valore (`ProductModelName`) da una colonna di tipo **XML** , per rendere la query più interessante.  
   
  Query:  
   
@@ -83,7 +83,7 @@ WHERE ProductID=771
   
 -   Gli elementi XQuery utilizzati nel metodo `query()` costruiscono l'istanza XML.  
   
--   La `namespace` parola chiave viene utilizzata per definire un prefisso dello spazio dei nomi nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Tale prefisso viene creato perché il valore dell'attributo `ProductModelName` viene recuperato dalla colonna di tipo xml `CatalogDescription xml`, a cui è associato uno schema.  
+-   La `namespace` parola chiave viene usata per definire un prefisso dello spazio dei nomi nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Tale prefisso viene creato perché il valore dell'attributo `ProductModelName` viene recuperato dalla colonna di tipo xml `CatalogDescription xml`, a cui è associato uno schema.  
   
  Risultato:  
   
@@ -94,11 +94,11 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server XQuery Extension Functions](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
- [Confronto tra XML tipizzato e XML non tipizzato](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [&#41;di SQL Server di data XMLXML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Creare istanze di dati XMLCreate Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Metodi del tipo di dati xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Funzioni di estensione di SQL Server XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Confronto dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [&#40;di dati XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Creare istanze di dati XML](../relational-databases/xml/create-instances-of-xml-data.md)   
+ [Metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md)   
  [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

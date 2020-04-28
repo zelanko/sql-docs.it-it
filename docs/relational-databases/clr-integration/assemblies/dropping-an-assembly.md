@@ -1,6 +1,6 @@
 ---
-title: Eliminazione di un assieme Documenti Microsoft
-description: È possibile eliminare o eliminare un assembly in SQL ServerSQL Server quando non è più necessario. Utilizzare DROP ASSEMBLY per rimuovere un assieme e i file associati.
+title: Eliminazione di un assembly | Microsoft Docs
+description: È possibile eliminare o eliminare un assembly in SQL Server quando non è più necessario. Utilizzare DROP ASSEMBLY per rimuovere un assembly e i file associati.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48fca2d5a255193800fed39e9869e1be231229a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485590"
 ---
 # <a name="dropping-an-assembly"></a>Eliminazione di un assembly
@@ -44,7 +44,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funzioni, stored procedure o trigger che utilizzano variabili o parametri del tipo definito dall'utente (UDT), creati nel database con la clausola WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Ricerca di dipendenze di tipi definiti dall'utente (UDT)  
- È necessario innanzitutto eliminare tutti gli oggetti dipendenti, quindi eseguire l'istruzione DROP TYPE. La [!INCLUDE[tsql](../../../includes/tsql-md.md)] query seguente individua tutte le colonne e i parametri che utilizzano un tipo definito dall'utente nel database **AdventureWorks.**  
+ È necessario innanzitutto eliminare tutti gli oggetti dipendenti, quindi eseguire l'istruzione DROP TYPE. Nella query [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente vengono individuate tutte le colonne e i parametri che utilizzano un tipo definito dall'utente nel database **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  
@@ -65,12 +65,12 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione degli assembly di integrazione CLRManaging CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Modifica di un assieme](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Creazione di un assieme](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-&#41;SQL](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [ISTRUZIONE DROP FUNCTION &#40;Transact-&#41;SQL](../../../t-sql/statements/drop-function-transact-sql.md)   
- [ISTRUZIONE &#40;Transact-&#41;SQL DROP PROCEDURE](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [Gestione degli assembly di integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Modifica di un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [Creazione di un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
+ [DROP AGGREGAte &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: 'Oggetto SqlDataRecord : Documenti Microsoft'
-description: Nell'integrazione CLR di SQL ServerSQL Server le stored procedure possono utilizzare la classe SqlDataRecord per inviare set di risultati personalizzati al client.
+title: Oggetto SqlDataRecord | Microsoft Docs
+description: In SQL Server integrazione con CLR, le stored procedure possono utilizzare la classe SqlDataRecord per inviare set di risultati personalizzati al client.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487509"
 ---
 # <a name="sqldatarecord-object"></a>Oggetto SqlDataRecord
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'oggetto **SqlDataRecord** rappresenta una singola riga di dati, insieme ai metadati correlati.  
   
- Le stored procedure gestite possono essere inviate ai set di risultati client che non provengono da **un oggetto SqlDataReader**. La classe **SqlDataRecord** , insieme ai metodi **SendResultsStart**, **SendResultsRow**e **SendResultsEnd** dell'oggetto **SqlPipe** , consente alle stored procedure di inviare set di risultati personalizzati al client.  
+ Le stored procedure gestite possono inviare al client set di risultati che non sono da un oggetto **SqlDataReader**. La classe **SqlDataRecord** , insieme ai **metodi SendResultsStart**, **SendResultsRow**e **SendResultsEnd** dell'oggetto **SqlPipe** , consente alle stored procedure di inviare set di risultati personalizzati al client.  
   
- Per ulteriori informazioni, vedere la documentazione di riferimento della classe **Microsoft.SqlServer.Server.SqlDataRecord** nella documentazione di .NET Framework SDK.  
+ Per ulteriori informazioni, vedere la documentazione di riferimento della classe **Microsoft. SqlServer. Server. SqlDataRecord** nella documentazione di .NET Framework SDK.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un nuovo record relativo a un dipendente, che viene successivamente restituito al chiamante.  

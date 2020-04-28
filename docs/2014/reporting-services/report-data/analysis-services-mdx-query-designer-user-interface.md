@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388709"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaccia utente di Progettazione query MDX di Analysis Services
@@ -61,7 +61,7 @@ ms.locfileid: "81388709"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra degli strumenti di Progettazione query MDX in modalità progettazione
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query MDX utilizzando l'interfaccia grafica. Nella tabella seguente vengono elencati i pulsanti con le relative funzioni.
 
-|Pulsante|Descrizione|
+|Button|Descrizione|
 |------------|-----------------|
 |**Modifica come testo**|Non abilitato per questo tipo di origine dati.|
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
@@ -115,6 +115,6 @@ ms.locfileid: "81388709"
 -   **Mostra aggregazioni** (![Pulsante Mostra aggregazioni](../../analysis-services/media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni"))
 
 ## <a name="see-also"></a>Vedere anche
- [Definire i parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e tipo di connessione [di SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Analysis Services per D&#41;MX &#40;gruppo di connessione [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) file di configurazione [Analysis Services per i&#41;MDX &#40;SSRS](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)
+ [Definire i parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [Analysis Services tipo di connessione per DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [file di configurazione RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services tipo di connessione per MDX &#40;SSRS](analysis-services-connection-type-for-mdx-ssrs.md)&#41;
 
 

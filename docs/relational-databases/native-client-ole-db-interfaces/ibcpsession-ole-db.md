@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 653bd8aad3a10a3929b7ced76e28e4d570733ad3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307346"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  L'interfaccia **IBCPSession** espone il supporto per le operazioni di copia bulk basate su file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'interfaccia **IBCPSession** viene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esposta nel provider OLE DB Native Client allo stesso livello delle sessioni. Nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB native Client, gli oggetti origine dati sono factory per gli oggetti Session e le operazioni di copia di massa vengono specificate nella proprietà di connessione SSPROP_ENABLEBULKCOPY. Inoltre, la proprietà SSPROP_ENABLEFASTLOAD deve essere impostata su True.  
+  L'interfaccia **IBCPSession** espone il supporto per le operazioni di copia bulk basate su file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'interfaccia **IBCPSession** viene esposta nel provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB di Native client nello stesso livello delle sessioni. Nel provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di OLE DB di Native Client gli oggetti origine dati sono Factory per gli oggetti sessione e le operazioni di copia bulk vengono specificate nella proprietà di connessione SSPROP_ENABLEBULKCOPY. Inoltre, la proprietà SSPROP_ENABLEFASTLOAD deve essere impostata su True.  
   
  La chiamata al metodo **IDBCreateSession::CreateSession** comporterà quindi la creazione di un oggetto **BulkCopySession**. Tutti i metodi di copia bulk basati su file esposti tramite l'oggetto **IBCPSession** possono essere quindi chiamati con firme molto simili sull'interfaccia **IBCPSession** di questo oggetto **IBCPSession**.  
   
 > [!NOTE]  
->  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta le operazioni di copia di massa basate sulla memoria tramite l'interfaccia [IRowsetFastLoad.](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
+>  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta operazioni di copia bulk basate sulla memoria tramite l'interfaccia [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) .  
   
- Per ulteriori informazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'utilizzo del provider OLE DB Native Client per le operazioni di copia bulk, vedere Esecuzione di operazioni di [copia di massa](../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
+ Per ulteriori informazioni sull'utilizzo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client per le operazioni di copia bulk, vedere [esecuzione di operazioni di copia bulk](../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
  Per un esempio che illustra come usare l'interfaccia **IBCPSession**, vedere [IBCPSession::BCPDone &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
   

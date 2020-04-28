@@ -1,5 +1,5 @@
 ---
-title: Install o Uninstall the PowerPivot for SharePoint Add-in (SharePoint 2013) Documenti Microsoft
+title: Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint (SharePoint 2013) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16174728ac57b0a6380f1780eb550f85e2191d39
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387841"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint (SharePoint 2013)
@@ -22,9 +22,9 @@ ms.locfileid: "81387841"
 
 -   Il componente aggiuntivo non è necessario per le distribuzioni di SharePoint 2010.
 
--   Il componente aggiuntivo non è necessario in una distribuzione a server singolo che prevede SharePoint 2013 e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. I componenti installati con il componente aggiuntivo vengono inclusi quando si installa un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Per i diagrammi di distribuzioni di esempio con il componente aggiuntivo, vedere Topologie di distribuzione per le funzionalità di Business Intelligence di [SQL Server in SharePoint.](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)
+-   Il componente aggiuntivo non è necessario in una distribuzione a server singolo che prevede SharePoint 2013 e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. I componenti installati con il componente aggiuntivo vengono inclusi quando si installa un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Per i diagrammi di distribuzioni di esempio con il componente aggiuntivo, vedere [topologie di distribuzione per SQL Server le funzionalità di business intelligence in SharePoint](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
 
- **Nota:** in questo argomento vengono fornite informazioni sull'installazione dei file di soluzione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e dello strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013. Dopo l'installazione, vedere l'argomento seguente per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive, [Configure PowerPivot and Deploy Solutions &#40;SharePoint 2013&#41;. ](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)
+ **Nota:** in questo argomento vengono fornite informazioni sull'installazione dei file di soluzione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e dello strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013. Al termine dell'installazione, vedere l'argomento seguente per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive, [configurare PowerPivot e distribuire soluzioni &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013).
 
  Per informazioni su come scaricare **spPowerPivot.msi**, vedere la pagina relativa a [Microsoft® SQL Server® 2014 PowerPivot® per Microsoft SharePoint®](https://go.microsoft.com/fwlink/?LinkID=324854).
 
@@ -32,7 +32,7 @@ ms.locfileid: "81387841"
 
 -   [Background](#bkmk_background)
 
--   [Dove installare spPowerPivot.msi?](#bkmk_where_to_install)
+-   [Dove installare spPowerPivot. msi?](#bkmk_where_to_install)
 
 -   [Requisiti e prerequisiti](#bkmk_prereq)
 
@@ -84,10 +84,10 @@ ms.locfileid: "81387841"
 
 -   **Autorizzazioni:** per installare [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)], è necessario che l'utente corrente sia un amministratore nel computer e un membro del gruppo di amministratori farm di SharePoint.
 
--   Per ulteriori [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] informazioni sui requisiti e sui prerequisiti, visitare I requisiti hardware e software per il server [Analysis Services in modalità SharePoint &#40;&#41;di SQL Server 2014. ](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)
+-   Per ulteriori informazioni sui [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] requisiti e i prerequisiti, vedere la pagina relativa ai [requisiti hardware e software per Analysis Services server in modalità SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).
 
 ##  <a name="to-install-powerpivot-for-sharepoint"></a><a name="bkmk_install"></a>Per installare PowerPivot per SharePoint
- Il pacchetto di installazione **spPowerpivot.msi** supporta sia la modalità interfaccia utente grafica sia quella da riga di comando. Per entrambi i metodi di installazione è richiesta l'esecuzione del file con estensione msi con privilegi di amministratore. Dopo l'installazione, vedere l'argomento seguente per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive, [Configure PowerPivot and Deploy Solutions &#40;SharePoint 2013&#41;. ](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)
+ Il pacchetto di installazione **spPowerpivot.msi** supporta sia la modalità interfaccia utente grafica sia quella da riga di comando. Per entrambi i metodi di installazione è richiesta l'esecuzione del file con estensione msi con privilegi di amministratore. Al termine dell'installazione, vedere l'argomento seguente per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive, [configurare PowerPivot e distribuire soluzioni &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013).
 
 ### <a name="user-interface-installation"></a>Installazione tramite l'interfaccia utente
  Per installare [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] con l'interfaccia utente grafica, completare i passaggi seguenti:
@@ -96,27 +96,27 @@ ms.locfileid: "81387841"
 
 2.  Nella pagina iniziale fare clic su **Avanti**.
 
-3.  Rivedere e accettare il contratto di licenza, quindi fare clic su **Avanti**.
+3.  Esaminare e accettare il contratto di licenza, quindi fare clic su **Avanti**.
 
-4.  Nella pagina **Selezione funzionalità,** tutte le funzioni sono selezionate per impostazione predefinita.
+4.  Nella pagina **Selezione funzionalità** tutte le funzionalità sono selezionate per impostazione predefinita.
 
 5.  Fare clic su **Avanti**.
 
-6.  Fare clic su **Installa** per completare l'installazione.
+6.  Per terminare l'installazione, fare clic su **Installa** per installare.
 
 ### <a name="command-line-installation"></a>Installazione dalla riga di comando
  Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative, quindi eseguire il file **spPowerPivot.msi**. Ad esempio:
 
  `Msiexec.exe /i SpPowerPivot.msi`.
 
- Per creare un log dell'installazione, utilizzare le opzioni di registrazione standard MsiExec. Nell'esempio seguente viene creato il file di registro "Install_Log.txt" utilizzando l'opzione di registrazione dettagliata "v".
+ Per creare un log dell'installazione, utilizzare le opzioni di registrazione standard MsiExec. Nell'esempio seguente viene creato il file di log "Install_Log. txt" tramite l'opzione di registrazione dettagliata "v".
 
 ```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 ```
 
 ### <a name="quiet-command-line-installation-for-scripting"></a>Installazione dalla riga di comando non interattiva per lo scripting
- È possibile utilizzare le opzioni **/q** o **/quiet** per un'installazione "quiet" che non visualizzerà finestre di dialogo o avvisi. L'installazione non interattiva è utile se si desidera creare uno script dell'installazione del componente aggiuntivo.
+ È possibile utilizzare le opzioni **/q** o **/quiet** per un'installazione "non interattiva" in cui non vengono visualizzate finestre di dialogo o avvisi. L'installazione non interattiva è utile se si desidera creare uno script dell'installazione del componente aggiuntivo.
 
 > [!IMPORTANT]
 >  Se si usa l'opzione **/q** per un'installazione da riga di comando invisibile all'utente, il contratto di licenza con l'utente finale non viene visualizzato. Indipendentemente dal metodo di installazione, l'utilizzo di questo software è governato da un contratto di licenza e l'utente è tenuto a rispettarlo.
@@ -148,7 +148,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 |SQL_AMO|Provider AMO|
 |SQLAS_SP_Common|Componenti comuni di Analysis Services per SharePoint 2013|
 
-##  <a name="deploy-the-sharepoint-solution-files-with-the-powerpivot-for-sharepoint-2013-configuration-tool"></a><a name="bkmk_deploy_solution"></a>Distribuire i file di soluzione di SharePoint con lo strumento di configurazione PowerPivot per SharePoint 2013
+##  <a name="deploy-the-sharepoint-solution-files-with-the-powerpivot-for-sharepoint-2013-configuration-tool"></a><a name="bkmk_deploy_solution"></a>Distribuire i file della soluzione di SharePoint con lo strumento di configurazione PowerPivot per SharePoint 2013
  Tre dei file copiati nel disco rigido tramite spPowerPivot.msi sono file di soluzione di SharePoint. L'ambito di un file della soluzione è il livello applicazione Web mentre quello degli altri file è il livello farm. I file sono i seguenti:
 
 -   `PowerPivotFarmSolution.wsp`
@@ -165,11 +165,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 
 ### <a name="to-start-the-configuration-tool"></a>Per avviare lo strumento di configurazione 
 
- Nella schermata Start di Windows digitare "power" e nei risultati della ricerca app fare clic su **Configurazione PowerPivot per SharePoint 2013**. I risultati della ricerca possono includere due collegamenti perché con l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati separatamente gli strumenti di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2010 e SharePoint 2013. Assicurarsi di avviare [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint 2013.
+ Dalla schermata iniziale di Windows digitare "Power" e nei risultati di ricerca per le app fare clic su **configurazione di PowerPivot per SharePoint 2013**. I risultati della ricerca possono includere due collegamenti perché con l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati separatamente gli strumenti di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2010 e SharePoint 2013. Assicurarsi di avviare [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint 2013.
 
- ![due strumenti di configurazione powerpivot](../../media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione powerpivot")
+ ![due strumenti di configurazione PowerPivot](../../media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione PowerPivot")
 
- **O**
+ **Oppure**
 
 1.  Andare a **Start**, **Tutti i programmi**.
 

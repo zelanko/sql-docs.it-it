@@ -1,5 +1,5 @@
 ---
-title: 'Attività 2 (facoltativo): Creazione di una vista sottoscrizioni MDS utilizzando Master Data Manager Documenti Microsoft'
+title: 'Attività 2 (facoltativo): creazione di una vista sottoscrizioni MDS con Gestione dati master | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc923792adc3fefb5ebaab9e225169648394c71f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81484711"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Attività 2 (facoltativa): Creazione di viste sottoscrizioni MDS tramite Gestione dati master
-  In questa attività viene creata una vista sottoscrizioni per esporre l'entità **Fornitore** nel modello **Fornitori** ad altre applicazioni. Questa vista non viene utilizzata nella versione corrente dell'esercitazione.  
+  In questa attività viene creata una vista sottoscrizioni per esporre l'entità **Supplier** nel modello **Suppliers** ad altre applicazioni. Questa vista non viene utilizzata nella versione corrente dell'esercitazione.  
   
-1.  Passare alla pagina principale di`http://localhost/MDS`Master Data **Manager** ( ) facendo clic su SQL Server **2012 Master Data Services** nella parte superiore.  
+1.  Passare alla pagina principale di **Gestione dati master** (`http://localhost/MDS`) facendo clic **SQL Server Master Data Services 2012** nella parte superiore.  
   
 2.  Fare clic su **Gestione integrazione**.  
   
@@ -28,23 +28,23 @@ ms.locfileid: "81484711"
   
      ![Pulsante Aggiungi nuova vista sottoscrizione](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "Pulsante Aggiungi nuova vista sottoscrizione")  
   
-4.  Per creare una vista sottoscrizioni, fare clic sull'icona **(più)** sulla barra degli strumenti.  
+4.  Fare clic sull'icona **+ (segno più)** sulla barra degli strumenti per creare una vista sottoscrizioni.  
   
-5.  Nel riquadro **Crea vista sottoscrizioni** digitare **Fornitori** per **Nome vista sottoscrizioni**.  
+5.  Nel riquadro **Crea vista sottoscrizioni** digitare **Suppliers** per **nome vista**sottoscrizioni.  
   
-6.  Selezionare **Fornitori** per **Modello**.  
+6.  Selezionare **Suppliers** per **modello**.  
   
-7.  Selezionare **VERSION_1** per **Versione**.  
+7.  Selezionare **VERSION_1** per **versione**.  
   
-8.  Selezionare **Fornitore** per **Entità**.  
+8.  Selezionare **Supplier** per **Entity**.  
   
-9. Selezionare **Membri foglia** per **Formato**.  
+9. Selezionare **membri foglia** per **formato**.  
   
      ![Pulsante Salva vista sottoscrizione](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Pulsante Salva vista sottoscrizione")  
   
-10. Fare clic su **Salva** sulla barra degli strumenti per salvare la vista sottoscrizioni. Questa azione consente di creare una vista in SQL Server denominata **Suppliers**. Per verificarla, utilizzare SQL Server Management Studio (SSMS).  
+10. Fare clic su **Salva** sulla barra degli strumenti per salvare la vista sottoscrizioni. Questa azione consente di creare una vista in SQL Server **Suppliers**. Per verificarla, utilizzare SQL Server Management Studio (SSMS).  
   
 ## <a name="next-step"></a>passaggio successivo  
- [Attività 3 &#40;&#41; facoltative: Revisione delle visualizzazioni sottoscrizioniTask 3 to Optional&#41;: Reviewing the Subscription Views](task-3-optional-reviewing-the-subscription-views.md)  
+ [Attività 3 &#40;&#41; facoltativo: Revisione delle viste sottoscrizioni](task-3-optional-reviewing-the-subscription-views.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Esecuzione di un Updategram tramite ADO (SQLXML)Executing an Updategram by Using ADO (SQLXML)
-description: Informazioni su come stabilire una connessione a un'istanza di Microsoft SQL Server ed eseguire un'operazione di updategram.by utilizzando ADO (SQLXML 4.0).
+title: Esecuzione di un updategram tramite ADO (SQLXML)
+description: Informazioni su come stabilire una connessione a un'istanza di Microsoft SQL Server ed eseguire un updategram.by utilizzando ADO (SQLXML 4,0).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388731"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Esecuzione di un updategram mediante ADO (SQLXML 4.0)
@@ -29,13 +29,13 @@ ms.locfileid: "81388731"
   
  In questa applicazione di esempio:  
   
--   Oggetto **conn** (**ADODB. Connection**) stabilisce una connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un'istanza in esecuzione di in un computer server specifico.  
+-   Oggetto **conn** (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di in un computer server specifico.  
   
--   L'oggetto **cmd** (**ADODB.Command**) viene eseguito sulla connessione stabilita.  
+-   L'oggetto **cmd** (**ADODB. Command**) viene eseguito sulla connessione stabilita.  
   
 -   Il sottolinguaggio del comando viene impostato su DBGUID_MSSQLXML.  
   
--   L'updategram viene copiato nel flusso di comando (**strmIn**).  
+-   L'updategram viene copiato nel flusso di comandi (**strmIn**).  
   
 -   Il flusso di output del comando è impostato sull'oggetto **StrmOut** (**ADODB. Stream**) per ricevere i dati restituiti.  
   
@@ -185,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passaggio di parametri  
- Nelle applicazioni Visual Basic fornite precedentemente i parametri non vengono passati. In questa applicazione, i valori **ContactID** e **MiddleName** vengono passati come input con parametri all'updategram.  
+ Nelle applicazioni Visual Basic fornite precedentemente i parametri non vengono passati. In questa applicazione i valori **ContactID** e **MiddleName** vengono passati come input con parametri all'updategram.  
   
 ```vb  
 Private Sub Form_Load()  

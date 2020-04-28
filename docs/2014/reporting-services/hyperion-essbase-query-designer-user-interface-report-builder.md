@@ -1,5 +1,5 @@
 ---
-title: Interfaccia utente di Progettazione query di Hyperion Essbase (Generatore report) Documenti Microsoft
+title: Interfaccia utente di progettazione query Hyperion Essbase (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b0b620ec15bc160ddbbbd18a75c56737960745d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388507"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query Hyperion Essbase (Generatore report)
@@ -52,7 +52,7 @@ ms.locfileid: "81388507"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica in modalità progettazione
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query MDX utilizzando l'interfaccia grafica. Nella tabella seguente vengono illustrati i pulsanti e ne vengono descritte le funzioni.
 
-|Pulsante|Descrizione|
+|Button|Descrizione|
 |------------|-----------------|
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Non è disponibile per questo tipo di origine dati.|
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system.|

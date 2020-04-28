@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487012"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
@@ -113,7 +113,7 @@ ms.locfileid: "81487012"
   
 1.  Impostare la proprietà WriteOption su **CreateOnce** o **CreateAlways**ed eseguire un'iterazione del ciclo. Il file viene creato e viene garantita così la corrispondenza tra i metadati dei dati accodati e il file.  
   
-2.  Reimpostare la proprietà WriteOption su **Append** e `False`impostare la proprietà ValidateExternalMetadata su .  
+2.  Reimpostare la proprietà WriteOption su **Append** e impostare la proprietà ValidateExternalMetadata `False`su.  
   
  Se si usa l'opzione **TruncateAppend** invece di **Append** , le righe aggiunte in qualsiasi iterazione precedente verranno troncate e quindi verranno accodate nuove righe. Per usare l'opzione **TruncateAppend** , è anche necessario che i dati corrispondano al formato del file.  
   

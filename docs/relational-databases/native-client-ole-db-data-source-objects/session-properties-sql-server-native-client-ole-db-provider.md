@@ -1,5 +1,5 @@
 ---
-title: Proprietà sessione OLE DB
+title: Proprietà della sessione OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388591"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>Proprietà sessione - Provider OLE DB di SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client interpreta le proprietà di sessione OLE DB come indicato di seguito.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client interpreta OLE DB proprietà della sessione come indicato di seguito.  
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta tutti i livelli di isolamento delle transazioni di commit automatico, ad eccezione del livello di caos DBPROPVAL_TI_CHAOS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta tutti i livelli di isolamento delle transazioni con autocommit, ad eccezione del livello Chaos DBPROPVAL_TI_CHAOS.|  
 |||
 
- Nell'insieme di proprietà specifiche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del provider DBPROPSET_SQLSERVERSESSION, il provider OLE DB Native Client definisce la seguente proprietà di sessione aggiuntiva.  
+ Nel set di proprietà specifico del provider DBPROPSET_SQLSERVERSESSION il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client definisce la seguente proprietà di sessione aggiuntiva.  
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  

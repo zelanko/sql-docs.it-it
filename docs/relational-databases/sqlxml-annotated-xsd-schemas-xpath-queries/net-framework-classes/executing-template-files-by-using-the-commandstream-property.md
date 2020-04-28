@@ -1,6 +1,6 @@
 ---
-title: Eseguire i file modello con la proprietà CommandStreamRun template files with the CommandStream Property
-description: Informazioni su come eseguire file modello costituiti da query SQL o XPath utilizzando la proprietà CommandStream dell'oggetto SqlXmlCommand.
+title: Eseguire i file modello con la proprietà CommandStream
+description: Informazioni su come eseguire file modello costituiti da query SQL o XPath usando la proprietà CommandStream dell'oggetto SqlXmlCommand.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,17 +18,17 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388362"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Esecuzione di file modello tramite la proprietà CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In questo esempio viene illustrato come specificare i file di modello costituiti da query SQL o XPath utilizzando la proprietà CommandStream dell'oggetto SqlXmlCommand. In questa applicazione, un oggetto FileStream viene aperto per un file di comando e il flusso di file viene assegnato come CommandStream che viene eseguito.  
+  Questo esempio illustra il modo in cui è possibile specificare i file modello costituiti da query SQL o XPath usando la proprietà CommandStream dell'oggetto SqlXmlCommand. In questa applicazione viene aperto un FileStreamobject per un file di comando e il flusso di file viene assegnato come CommandStream eseguito.  
   
- Nell'esempio seguente la proprietà CommandType viene specificata come SqlXmlCommandType.Template (non come TemplateFile).  
+ Nell'esempio seguente la proprietà CommandType viene specificata come SqlXmlCommandType. template (non come TemplateFile).  
   
  Di seguito è riportato il modello XML di esempio:  
   

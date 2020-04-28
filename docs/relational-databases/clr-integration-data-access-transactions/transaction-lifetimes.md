@@ -1,6 +1,6 @@
 ---
-title: Durata delle transazioni Documenti Microsoft
-description: Informazioni sulle durate delle transazioni nell'integrazione CLR di SQL Server.Learn about transaction lifetimes in SQL Server CLR integration. Le transazioni avviate nelle stored procedure Transact-SQLTransact-SQL sono diverse da quelle avviate nel codice gestito.
+title: Durate delle transazioni | Microsoft Docs
+description: Informazioni sulle durate delle transazioni in SQL Server l'integrazione con CLR. Le transazioni avviate nelle stored procedure Transact-SQL sono diverse da quelle avviate nel codice gestito.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1fed737c644ebb241a5761fffd2409c2556d28ea
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487505"
 ---
 # <a name="transaction-lifetimes"></a>Durata delle transazioni
@@ -30,7 +30,7 @@ ms.locfileid: "81487505"
   
 -   Un tentativo di esecuzione del commit di una transazione non avviato nella stessa procedura provoca un errore di runtime.  
   
--   Un tentativo di eseguire il rollback di una transazione non avviata nella stessa procedura causa il blocco della transazione (impedendo l'esizione di qualsiasi altra operazione che esegue l'effetto collaterale). La transazione viene interrotta fino a quando il codice CLR non abbandona l'ambito. Si noti che questo comportamento può risultare utile quando si rileva un errore all'interno della procedura e si desidera verificare che venga terminata l'intera transazione.  
+-   Il tentativo di eseguire il rollback di una transazione non avviata nella stessa procedura comporta l'interruzione della risposta da parte della transazione, evitando che si verifichino altre operazioni di effetto collaterale. La transazione viene interrotta fino a quando il codice CLR non abbandona l'ambito. Si noti che questo comportamento può risultare utile quando si rileva un errore all'interno della procedura e si desidera verificare che venga terminata l'intera transazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Integrazione con CLR e transazioni](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

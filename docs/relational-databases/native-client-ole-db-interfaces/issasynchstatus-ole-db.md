@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2c6bc2d66be0b89a62b5b1c678a955891cc06c4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306729"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **ISSAsynchStatus** espone il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto per le operazioni asincrone. Si tratta di un'interfaccia facoltativa che eredita dall'interfaccia OLE DB principale **IDBAsynchStatus**. Oltre ai metodi **Abort** e **GetStatus** ereditati da **IDBAsynchStatus**, **ISSAsynchStatus** fornisce un nuovo metodo, utilizzato per attendere il completamento dell'operazione asincrona o il verificarsi di un timeout.  
+  **ISSAsynchStatus** espone il supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le operazioni asincrone. Si tratta di un'interfaccia facoltativa che eredita dall'interfaccia di base OLE DB **IDBAsynchStatus**. Oltre ai metodi **Abort** e **GetStatus** ereditati da **IDBAsynchStatus**, **ISSAsynchStatus** fornisce un nuovo metodo, utilizzato per attendere il completamento dell'operazione asincrona o il verificarsi di un timeout.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "81306729"
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interfacce &#40;&#41;OLE DB](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [Interfacce &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [Esecuzione di operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

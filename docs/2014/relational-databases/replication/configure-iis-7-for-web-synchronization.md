@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486990"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurare IIS 7 per la sincronizzazione Web
@@ -54,7 +54,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 4.  Registrare replisapi.dll:  
   
-    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** `cmd`immettere e quindi fare clic su **OK**.  
+    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd`, quindi fare clic su **OK**.  
   
     2.  Nella directory creata nel passaggio 1 eseguire il comando riportato di seguito:  
   
@@ -64,9 +64,9 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 6.  Creare una directory virtuale in IIS. È consigliabile creare la directory virtuale nel sito Web creato nel passaggio 4 ed eseguirne il mapping alla directory creata nel passaggio 1. È consigliabile applicare le massime restrizioni nell'assegnazione delle autorizzazioni per questa directory. È necessario selezionare almeno autorizzazioni **Lettura** ed **Esecuzione** .  
   
-    1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
+    1.  In **Gestione Internet Information Services (IIS)** , nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
   
-    2.  In **Alias** `SQLReplication`immettere .  
+    2.  In **alias**immettere `SQLReplication`.  
   
     3.  In **Percorso fisico** immettere **\<unità>:\Inetpub\SQLReplication\\** e quindi fare clic su **OK**.  
   
@@ -78,7 +78,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     3.  Nel riquadro **Azioni** fare clic su **Aggiungi mapping moduli**.  
   
-    4.  In **Request** Percorso richiesta `replisapi.dll`immettere .  
+    4.  In percorso **richiesta** immettere `replisapi.dll`.  
   
     5.  Nell'elenco a discesa **Modulo** selezionare **IsapiModule**.  
   
@@ -155,11 +155,11 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 ###### <a name="to-test-the-certificate"></a>Per testare il certificato  
   
-1.  In **Gestione Internet Information Services (IIS)** fare clic su Sito Web **predefinito.**  
+1.  In **Gestione Internet Information Services (IIS)** fare clic su **Sito Web predefinito.**  
   
-2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)**.  
+2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)** .  
   
-3.  Verrà aperto Internet Explorer e verrà visualizzato il messaggio "Si è verificato un problema con il certificato di sicurezza del sito Web". Questo avviso suggerisce che il certificato associato non è stato rilasciato da una CA riconosciuta e potrebbe non essere attendibile. Si tratta di un avviso previsto, pertanto fare clic su **Continuare con il sito Web (scelta non consigliata)**.  
+3.  Verrà aperto Internet Explorer e verrà visualizzato il messaggio "Si è verificato un problema con il certificato di sicurezza del sito Web". Questo avviso suggerisce che il certificato associato non è stato rilasciato da una CA riconosciuta e potrebbe non essere attendibile. Si tratta di un avviso previsto, pertanto fare clic su **Continuare con il sito Web (scelta non consigliata)** .  
   
 4.  Se viene visualizzata la richiesta **Connetti a localhost**, immettere un nome utente e una password per continuare. Dovrebbe venire visualizzata la pagina predefinita del sito Web.  
   
@@ -188,7 +188,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 1.  Creare un account locale nel computer che esegue IIS:  
   
-    1.  Aprire **Server Manager**. Dal menu Start fare clic con il pulsante destro del mouse su **Computer**e scegliere **Gestisci**.  
+    1.  Aprire **Gestione server**. Dal menu Start fare clic con il pulsante destro del mouse su **Computer**e scegliere **Gestisci**.  
   
     2.  In **Gestione server**espandere **Configurazione**, quindi **Utenti e gruppi locali**.  
   
@@ -196,7 +196,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     4.  Immettere un nome utente e una password complessa. Deselezionare **Cambiamento obbligatorio password all'accesso successivo**.  
   
-    5.  Fare clic su **Crea** e quindi su **Chiudi**.  
+    5.  Fare clic su **Crea**e quindi su **Chiudi**.  
   
 2.  Aggiungere l'account al gruppo IIS_IUSRS:  
   
@@ -226,9 +226,9 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     6.  Selezionare gli utenti o i gruppi che non necessitano dell'accesso alla directory, quindi fare clic su **Rimuovi**e su **OK**.  
   
-4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)**:  
+4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)** :  
   
-    1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** espandere il nodo del server locale.  
+    1.  In **Gestione Internet Information Services (IIS)** , nel riquadro **Connessioni** espandere il nodo del server locale.  
   
     2.  Fare clic con il pulsante destro del mouse su **Pool di applicazioni**, quindi scegliere **Aggiungi pool di applicazioni**.  
   

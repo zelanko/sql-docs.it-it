@@ -1,6 +1,6 @@
 ---
-title: Integrazione e transazioni di CLR Documenti Microsoft
-description: Lo spazio dei nomi System.Transactions fornisce un framework di transazioni completamente integrato con l'integrazione CLR di ADO.NET e SQL Server.
+title: Integrazione e transazioni CLR | Microsoft Docs
+description: Lo spazio dei nomi System. Transactions fornisce un Framework di transazione completamente integrato con ADO.NET e SQL Server l'integrazione con CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487484"
 ---
 # <a name="clr-integration-and-transactions"></a>Integrazione con CLR e transazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Lo spazio dei nomi **System.Transactions** fornisce un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] framework di transazioni completamente integrato con l'integrazione di ADO.NET e Common Language Runtime (CLR). **System.Transactions** e ADO.NET collaborano per estendere e semplificare l'utilizzo delle transazioni locali e distribuite nelle applicazioni gestite.  
+  Lo spazio dei nomi **System. Transactions** fornisce un Framework di transazione completamente integrato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con ADO.NET e l'integrazione con Common Language Runtime (CLR). **System. Transactions** e ADO.NET collaborano per estendere e semplificare l'utilizzo di transazioni locali e distribuite nelle applicazioni gestite.  
   
 > [!NOTE]  
 >  Una procedura CLR definita dall'utente non può stabilire una connessione allo stesso server nel quale viene eseguita, ovvero una connessione loopback, ed essere integrata nella stessa transazione. Un eventuale tentativo di connessione verrà bloccato e il controllo non verrà restituito alla procedura definita dall'utente. Verrà pertanto generato un errore di timeout (messaggio 1206) nella procedura definita dall'utente.  
@@ -41,7 +41,7 @@ ms.locfileid: "81487484"
  Viene illustrato come accedere a una transazione attualmente in esecuzione in-process in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Utilizzo di System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- Viene descritto come utilizzare l'API (Application Programming Interface) **System.Transactions** nell'applicazione gestita.  
+ Viene descritto come usare l'Application Programming Interface **System. Transactions** (API) nell'applicazione gestita.  
   
  [Durata delle transazioni](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Viene illustrata la differenza in termini di durata tra le transazioni avviate in stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] e quelle avviate in applicazioni CLR.  

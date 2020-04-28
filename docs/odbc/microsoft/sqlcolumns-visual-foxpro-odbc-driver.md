@@ -1,5 +1,5 @@
 ---
-title: SQLColumns (Driver ODBC di Visual FoxPro) . Documenti Microsoft
+title: SQLColumns (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0efd76ab1407734a60dfbfbf5df733bdedef4bfb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307852"
 ---
 # <a name="sqlcolumns-visual-foxpro-odbc-driver"></a>SQLColumns (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento sono contenute informazioni specifiche del driver ODBC di Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Completo  
+ Supporto: completo  
   
- Conformità API ODBC: livello 1ODBC API Conformance: Level 1  
+ Conformità API ODBC: livello 1  
   
- Per una tabella, crea un set di risultati che è l'elenco di colonne per la tabella o le tabelle specificate.  
+ Per una tabella, in viene creato un set di risultati che rappresenta l'elenco di colonne per la tabella o le tabelle specificate.  
   
- Per ulteriori informazioni, vedere [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) in *ODBC Programmer's Reference*.
+ Per ulteriori informazioni, vedere [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) in *ODBC Programmer ' s Reference*.
