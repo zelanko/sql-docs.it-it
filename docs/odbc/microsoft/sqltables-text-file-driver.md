@@ -1,5 +1,5 @@
 ---
-title: SQLTables (Driver dei file di testo) Documenti Microsoft
+title: SQLTables (driver file di testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 938ceba5da25d176628d5c1d9875383d977e3aec
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299331"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables (driver file di testo)
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni specifiche del driver di file di testo. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver del file di testo. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Argomento|Commenti|  
 |--------------|--------------|  
-|*szTableOwner*|L'unico argomento valido per *szTableOwner* è NULL perché nessuno dei driver supporta i nomi dei proprietari. Con *szTableOwner* impostato su NULL, vengono restituite tutte le tabelle. NULL viene restituito nella colonna TABLE_OWNER.|  
-|*SzTableQualifier (qualificatore di szTable)*|Nella colonna TABLE_QUALIFIER, **SQLTables** restituirà il percorso di una directory.|  
-|*SzTableType (Tipo di SzTableType)*|"TABLE" è l'unico tipo di tabella supportato.<br /><br /> Quando viene utilizzato il driver di testo, l'elenco dei file restituito da **SQLTables** è determinato dalle estensioni di file nella casella **elenco estensioni** nella finestra di dialogo **Impostazione di testo ODBC** .|
+|*szTableOwner*|L'unico argomento valido per *szTableOwner* è null perché nessuno dei driver supporta i nomi di proprietario. Con *szTableOwner* impostato su null, vengono restituite tutte le tabelle. Nella colonna TABLE_OWNER viene restituito NULL.|  
+|*szTableQualifier*|Nella colonna TABLE_QUALIFIER **SQLTables** restituirà il percorso di una directory.|  
+|*SzTableType*|"TABLE" è l'unico tipo di tabella supportato.<br /><br /> Quando si utilizza il driver di testo, l'elenco dei file restituiti da **SQLTables** è determinato dalle estensioni di file nella casella di **Riepilogo estensioni** della finestra di dialogo di **configurazione del testo ODBC** .|

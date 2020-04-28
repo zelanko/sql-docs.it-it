@@ -1,5 +1,5 @@
 ---
-title: Nome dell'entità servizio nelle connessioniService Principal Name in connections
+title: Nome dell'entità servizio nelle connessioni
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303807"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
@@ -35,7 +35,7 @@ ms.locfileid: "81303807"
 >  Un nome SPN specificato da un'applicazione client viene usato solo quando viene stabilita una connessione con sicurezza integrata di Windows.  
   
 > [!TIP]  
->  **Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos per è uno strumento di diagnostica che consente di risolvere i problemi di connettività correlati a Kerberos con . [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  Kerberos Configuration Manager per è uno strumento di diagnostica che consente di risolvere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] problemi di connettività correlati a Kerberos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** con. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Per altre informazioni su Kerberos, vedere gli articoli seguenti:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "81303807"
  Poiché il nuovo comportamento di connessione viene implementato dal client, non è specifico di una determinata versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Server collegati e delega  
- Quando vengono creati server collegati, [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) il ** \@** parametro provstr di sp_addlinkedserver può essere utilizzato per specificare i nomi SPN server e partner di failover. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client e consente di stabilire in modo più semplice e affidabile connessioni che usano l'autenticazione Kerberos.  
+ Quando vengono creati server collegati, è ** \@** possibile usare il parametro provstr di [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) per specificare i nomi SPN del server e del partner di failover. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client e consente di stabilire in modo più semplice e affidabile connessioni che usano l'autenticazione Kerberos.  
   
  La delega con server collegati richiede l'autenticazione Kerberos.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "81303807"
   
 |Sintassi|Descrizione|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|Nome SPN predefinito generato dal provider per un'istanza predefinita quando si utilizza un protocollo diverso da TCP.<br /><br /> *fqdn* è un nome di dominio completo.|  
-|MSSQLSvc/*fqdn*:*porta*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP.<br /><br /> *porta* è un numero di porta TCP.|  
-|MSSQLSvc/*fqdn*:*NomeIstanza*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP.<br /><br /> *InstanceName* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*FQDN*|Nome SPN predefinito generato dal provider per un'istanza predefinita quando si utilizza un protocollo diverso da TCP.<br /><br /> *FQDN* è un nome di dominio completo.|  
+|MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP.<br /><br /> *port* è un numero di porta TCP.|  
+|MSSQLSvc/*FQDN*:*NomeIstanza*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP.<br /><br /> *InstanceName* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nome SPN di cui viene eseguito il mapping ad account del computer predefiniti registrati automaticamente in Windows.|  
-|*Nome utente*@*Dominio*|Specifica diretta di un account di dominio.<br /><br /> *Username* è un nome di account utente di Windows.<br /><br /> *Domain* è un nome di dominio di Windows o un nome di dominio completo.|  
-|*MachineName*$@*Dominio* NomeComputer|Specifica diretta di un account del computer.<br /><br /> Se il server a cui si stabilisce la connessione viene eseguito usando l'account di sistema locale o del servizio di rete, per ottenere l'autenticazione Kerberos **ServerSPN** può usare il formato *MachineName*$@*Domain* .|  
-|*KDCKey*/*Nome computer* KDCKey|Nome SPN specificato dall'utente.<br /><br /> *KDCKey* è una stringa alfanumerica conforme alle regole relative alle chiavi KDC.|  
+|*Dominio nome utente*@*Domain*|Specifica diretta di un account di dominio.<br /><br /> *Username* è un nome di account utente di Windows.<br /><br /> *Domain* è un nome di dominio di Windows o un nome di dominio completo.|  
+|*MachineName*$@*Dominio* MachineName|Specifica diretta di un account del computer.<br /><br /> Se il server a cui si stabilisce la connessione viene eseguito usando l'account di sistema locale o del servizio di rete, per ottenere l'autenticazione Kerberos **ServerSPN** può usare il formato *MachineName*$@*Domain* .|  
+|*KDCKey*/*machineName*|Nome SPN specificato dall'utente.<br /><br /> *KDCKey* è una stringa alfanumerica conforme alle regole relative alle chiavi KDC.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintassi ODBC e OLE DB con supporto di nomi SPN  
  Per informazioni specifiche della sintassi, vedere gli argomenti seguenti:  

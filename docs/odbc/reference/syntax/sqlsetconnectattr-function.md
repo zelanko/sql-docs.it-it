@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConnectAttr function [ODBC]
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8424462ddde4f99196e26d633fddfa5bb2ed6ee9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67910378"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301937"
 ---
 # <a name="sqlsetconnectattr-function"></a>Pagina relativa alla funzione SQLSetConnectAttr
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Summary**  
+ **Riepilogo**  
  **SQLSetConnectAttr** imposta gli attributi che governano gli aspetti delle connessioni.  
   
 > [!NOTE]
@@ -130,27 +130,27 @@ SQLRETURN SQLSetConnectAttr(
 |Attributo|Impostare prima o dopo la connessione?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
-|SQL_ATTR_ASYNC_DBC_EVENT|È possibile usare il|  
+|SQL_ATTR_ASYNC_DBC_EVENT|Prima o dopo|  
 |SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|[4]|  
-|SQL_ATTR_ASYNC_DBC_PCALLBACK|È possibile usare il|  
-|SQL_ATTR_ASYNC_DBC_PCONTEXT|È possibile usare il|  
+|SQL_ATTR_ASYNC_DBC_PCALLBACK|Prima o dopo|  
+|SQL_ATTR_ASYNC_DBC_PCONTEXT|Prima o dopo|  
 |SQL_ATTR_ASYNC_ENABLE|[2]|  
-|SQL_ATTR_AUTO_IPD|È possibile usare il|  
+|SQL_ATTR_AUTO_IPD|Prima o dopo|  
 |SQL_ATTR_AUTOCOMMIT|[5]|  
-|SQL_ATTR_CONNECTION_DEAD|Dopo|  
-|SQL_ATTR_CONNECTION_TIMEOUT|È possibile usare il|  
+|SQL_ATTR_CONNECTION_DEAD|After|  
+|SQL_ATTR_CONNECTION_TIMEOUT|Prima o dopo|  
 |SQL_ATTR_CURRENT_CATALOG|[1]|  
-|SQL_ATTR_DBC_INFO_TOKEN|Dopo|  
-|SQL_ATTR_ENLIST_IN_DTC|Dopo|  
+|SQL_ATTR_DBC_INFO_TOKEN|After|  
+|SQL_ATTR_ENLIST_IN_DTC|After|  
 |SQL_ATTR_LOGIN_TIMEOUT|Prima|  
-|SQL_ATTR_METADATA_ID|È possibile usare il|  
+|SQL_ATTR_METADATA_ID|Prima o dopo|  
 |SQL_ATTR_ODBC_CURSORS|Prima|  
 |SQL_ATTR_PACKET_SIZE|Prima|  
-|SQL_ATTR_QUIET_MODE|È possibile usare il|  
-|SQL_ATTR_TRACE|È possibile usare il|  
-|SQL_ATTR_TRACEFILE|È possibile usare il|  
-|SQL_ATTR_TRANSLATE_LIB|Dopo|  
-|SQL_ATTR_TRANSLATE_OPTION|Dopo|  
+|SQL_ATTR_QUIET_MODE|Prima o dopo|  
+|SQL_ATTR_TRACE|Prima o dopo|  
+|SQL_ATTR_TRACEFILE|Prima o dopo|  
+|SQL_ATTR_TRANSLATE_LIB|After|  
+|SQL_ATTR_TRANSLATE_OPTION|After|  
 |SQL_ATTR_TXN_ISOLATION|[3]|  
   
  [1] SQL_ATTR_ACCESS_MODE e SQL_ATTR_CURRENT_CATALOG possono essere impostate prima o dopo la connessione, a seconda del driver. Tuttavia, le applicazioni interoperative le impostano prima della connessione perché alcuni driver non supportano la modifica di questi elementi dopo la connessione.  

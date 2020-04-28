@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60da6e10349c94f491f711a00136949f2e886c9a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302246"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Ottenere un cursore FAST_FORWARD
@@ -25,10 +25,10 @@ ms.locfileid: "81302246"
 
   Per ottenere un cursore forward-only di sola lettura, impostare le proprietà del set di righe DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE su VARIANT_TRUE.  
   
- In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Dopo aver impostato le proprietà, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing.Vendor** nel database **AdventureWorks.**  
+ In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Una volta impostate le proprietà, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing. Vendor** del database **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>Per ottenere un cursore FAST_FORWARD  
   

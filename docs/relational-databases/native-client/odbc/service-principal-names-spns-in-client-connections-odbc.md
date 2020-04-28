@@ -1,5 +1,5 @@
 ---
-title: Nomi delle entità servizio (SPN) nel client ODBCService Principal Names (SPNs) in ODBC Client
+title: Nomi dell'entità servizio (SPN) nel client ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3f83b227a6f67c5700ff07a0cd9dbc78065adf9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303689"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Nomi SPN (Service Principal Name) nelle connessioni client (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In questo argomento vengono descritti gli attributi e le funzioni ODBC che supportano i nomi SPN (Service Principal Name, nome dell'entità servizio) nelle applicazioni client. Per ulteriori informazioni sui nomi SPN nelle applicazioni client, vedere [Nome dell'entità servizio &#40;SPN&#41; Supporto delle connessioni client](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) e Ottenere [l'autenticazione Kerberos reciproca](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
+  In questo argomento vengono descritti gli attributi e le funzioni ODBC che supportano i nomi SPN (Service Principal Name, nome dell'entità servizio) nelle applicazioni client. Per ulteriori informazioni sui nomi SPN nelle applicazioni client, vedere [nome dell'entità servizio &#40;spn&#41; supporto nelle connessioni client](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) e [ottenere l'autenticazione Kerberos reciproca](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>Parole chiave per le stringhe di connessione  
  Le parole chiave per le stringhe di connessione seguenti consentono la specifica di un nome SPN nelle applicazioni client.  
   
-|Parola chiave|Valore|  
+|Parola chiave|valore|  
 |-------------|-----------|  
-|**ServerSPN (SPN serverSPN)**|Nome SPN del server. Il valore predefinito è una stringa vuota. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tale stringa causa l'utilizzo del nome SPN predefinito generato dal driver.|  
+|**ServerSPN**|Nome SPN del server. Il valore predefinito è una stringa vuota. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tale stringa causa l'utilizzo del nome SPN predefinito generato dal driver.|  
 |**FailoverPartnerSPN**|Nome SPN del partner di failover. Il valore predefinito è una stringa vuota. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tale stringa causa l'utilizzo del nome SPN predefinito generato dal driver.|  
   
 ## <a name="connection-attributes"></a>Attributi di connessione  

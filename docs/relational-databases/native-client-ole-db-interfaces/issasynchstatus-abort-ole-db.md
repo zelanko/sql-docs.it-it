@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303919"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -39,7 +39,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>Argomenti  
  *hChapter*[in]  
- Handle del capitolo per il quale interrompere l'operazione. Se l'oggetto chiamato non è un oggetto set di righe o l'operazione non si applica a un capitolo, il chiamante deve impostare *hChapter* su DB_NULL_HCHAPTER.  
+ Handle del capitolo per il quale interrompere l'operazione. Se l'oggetto chiamato non è un oggetto set di righe o l'operazione non è valida per un capitolo, il chiamante deve impostare *hChapter* su DB_NULL_HCHAPTER.  
   
  *eOperation*[in]  
  Operazione da interrompere. Deve corrispondere al valore seguente:  
@@ -63,11 +63,11 @@ HRESULT Abort(
  Il parametro *hChapter* non è DB_NULL_HCHAPTER o *eOperation* non è DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize::Initialize** non è stato chiamato o non è stato completato.  
+ **ISSAsynchStatus:: Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize:: Initialize** non è stato chiamato oppure non è stato completato.  
   
- **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati in cui **IDBInitialize::Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduto. L'oggetto origine dati è ancora non inizializzato.  
+ **ISSAsynchStatus:: Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o si è verificato un timeout. L'oggetto origine dati non è ancora inizializzato.  
   
- **ISSAsynchStatus::Abort** è stato chiamato su un set di righe in cui è stato chiamato in precedenza **ITransaction::Commit** o **ITransaction::Abort** e il set di righe non è sopravvissuto al commit o all'interruzione ed è in uno stato di zombie.  
+ **ISSAsynchStatus:: Abort** è stato chiamato su un set di righe su cui è stato precedentemente chiamato **ITransaction:: commit** o **ITransaction:: Abort** e il set di righe non è sopravvissuto al commit o all'interruzione ed è in uno stato non valido.  
   
  **ISSAsynchStatus::Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   

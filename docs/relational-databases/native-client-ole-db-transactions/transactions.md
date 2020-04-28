@@ -16,20 +16,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8779b68d6ab1070514f8ef6685ef378437d09539
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302532"
 ---
 # <a name="transactions"></a>Transazioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa il supporto delle transazioni locali. Il consumer può utilizzare transazioni distribuite o coordinate tramite Microsoft Distributed Transaction Coordinator (MS DTC). Per i consumer che richiedono il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controllo delle transazioni che si estende su più sessioni, il provider OLE DB Native Client può unire le transazioni avviate e gestite da MS DTC.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client implementa il supporto per le transazioni locali. Il consumer può utilizzare transazioni distribuite o coordinate tramite Microsoft Distributed Transaction Coordinator (MS DTC). Per i consumer che richiedono il controllo delle transazioni che si estende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su più sessioni, il provider di OLE DB di Native client può unire in join le transazioni avviate e gestite da MS DTC.  
   
- Per impostazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinita, il provider OLE DB Native Client utilizza una modalità di transazione autocommit, in cui ogni azione discreta in una sessione consumer comprende una transazione completa rispetto a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modalità autocommit del provider OLE DB Native Client è locale e le transazioni di autocommit non si estendono mai più di una singola sessione.  
+ Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider di OLE DB di Native client utilizza una modalità di transazione con autocommit, in cui ogni azione discreta in una sessione del consumer comprende una transazione completa su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modalità autocommit del provider OLE DB di Native Client è locale e le transazioni autocommit non si estendono mai più di una singola sessione.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone l'interfaccia **ITransactionLocal** , consentendo al consumer di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in modo esplicito e implicito le transazioni su una singola connessione a un'istanza di . Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client non supporta le transazioni locali annidate.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone l'interfaccia **ITransactionLocal** , consentendo al consumer di utilizzare in modo esplicito e implicito le transazioni di avvio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in una singola connessione a un'istanza di. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta le transazioni locali nidificate.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

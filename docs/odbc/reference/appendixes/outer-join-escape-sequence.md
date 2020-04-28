@@ -1,5 +1,5 @@
 ---
-title: Sequenza di fuga Outer Join Documenti Microsoft
+title: Sequenza di escape outer join | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,38 +15,38 @@ ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303612"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequenza di escape outer join
-ODBC utilizza sequenze di escape per outer join. La sintassi di questa sequenza di escape è la seguente:The syntax of this escape sequence is as follows:  
+ODBC utilizza sequenze di escape per outer join. La sintassi di questa sequenza di escape è la seguente:  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Nella notazione BNF, la sintassi è la seguente:  
+ Nella notazione BNF la sintassi è la seguente:  
   
- *ODBC-outer-join-escape* ::  
+ *ODBC-outer join-Escape* :: =  
   
- *ODBC-esc-initiator* oj *outer-join ODBC-esc-terminator*  
+ *ODBC-ESC-initiator* GU *outer join ODBC-ESC-Terminator*  
   
- *outer-join* :: : *nome-tabella* [*nome-correlazione*] - SINISTRA &#124; DESTRA &#124; FULL  
+ *outer join* :: = *nome-tabella* [*nome-correlazione*] {Left &#124; right &#124; Full}  
   
- OUTER JOIN :*nome-tabella* [*nome-correlazione*] &#124; *outer-join*- ON  
+ OUTER JOIN {*nome-tabella* [*nome-correlazione*] &#124; *outer join*} in  
   
- *ricerca-*  
+ *ricerca*  
   
- *Condizione*  
+ *condizione*  
   
- *nome-correlazione* :: : *nome definito dall'utente*  
+ *Correlation-Name* :: = *nome-definito dall'utente*  
   
- *ODBC-esc-initiator* ::  
+ *ODBC-ESC-initiator* :: = {  
   
- *Carattere di terminazione ODBC-esc::: *  
+ *ODBC-ESC-Terminator* :: =}  
   
- Per determinare quali parti di questa istruzione sono supportate, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_OJ_CAPABILITIES. Per gli outer join, *search-condition* deve contenere solo la condizione di join tra i *nomi di tabella*specificati.
+ Per determinare quali parti dell'istruzione sono supportate, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_OJ_CAPABILITIES. Per gli outer join, la *condizione di ricerca* deve contenere solo la condizione di join tra i nomi di *tabella*specificati.

@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLSetConnectInfo . Documenti Microsoft
+title: Funzione SQLSetConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301852"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Funzione SQLSetConnectInfo
 **Conformità**  
- Versione introdotta: ODBC 3.81 Standards Compliance: ODBC  
+ Versione introdotta: ODBC 3,81 Standard Compliance: ODBC  
   
  **Riepilogo**  
- **SQLSetConnectInfo** viene utilizzato per impostare l'origine dati, l'ID utente e la password nel token di informazioni di connessione per la chiamata [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) di un'applicazione.  
+ **SQLSetConnectInfo** viene usato per impostare l'origine dati, l'ID utente e la password nel token di informazioni di connessione per la chiamata [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) di un'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,42 +42,42 @@ SQLRETURN  SQLSetConnectInfo(
   
 ## <a name="arguments"></a>Argomenti  
  *TokenHandle*  
- [Ingresso] Handle di token.  
+ Input Handle del token.  
   
  *ServerName*  
- [Ingresso] Nome dell'origine dati. I dati potrebbero trovarsi sullo stesso computer del programma o su un altro computer da qualche parte in una rete. Per informazioni sulla scelta di un'origine dati da parte di un'applicazione, vedere [Scelta di un'origine dati o](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)di un driver .  
+ Input Nome dell'origine dati. I dati potrebbero trovarsi nello stesso computer del programma o in un altro computer in una rete. Per informazioni sul modo in cui un'applicazione sceglie un'origine dati, vedere scelta di un' [origine dati o](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)di un driver.  
   
  *NameLength1*  
- [Ingresso] Lunghezza di :*NomeServer* in caratteri.  
+ Input Lunghezza di **ServerName* in caratteri.  
   
  *Nome utente*  
- [Ingresso] Identificatore utente.  
+ Input Identificatore utente.  
   
  *NameLength2*  
- [Ingresso] Lunghezza di :*UserName* in caratteri.  
+ Input Lunghezza di **username* in caratteri.  
   
  *autenticazione*  
- [Ingresso] Stringa di autenticazione (in genere la password).  
+ Input Stringa di autenticazione (in genere la password).  
   
  *NameLength3*  
- [Ingresso] Lunghezza*dell'autenticazione* in caratteri.  
+ Input Lunghezza di **autenticazione* in caratteri.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Uguale a [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) per gli errori di convalida dell'input, ad eccezione del fatto che Gestione Driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e un **handle** di *hDbcInfoToken*.  
+ Uguale a [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) per gli errori di convalida dell'input, con la differenza che Gestione driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e un **handle** di *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Osservazioni  
- Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, Gestione Driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, gestione driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, Gestione Driver otterrà le informazioni di diagnostica da *hDbcInfoToken*e restituirà SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione driver otterrà le informazioni di diagnostica da *hDbcInfoToken*e restituirà SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni in grado di riconoscere i driver deve implementare questa funzione.  
+ Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni compatibile con il driver deve implementare questa funzione.  
   
- Includere sqlspi.h per lo sviluppo di driver ODBC.  
+ Includere sqlspi. h per lo sviluppo di driver ODBC.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sviluppo di un driver ODBCDeveloping an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pool di connessioni in grado di riconoscere i driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Sviluppo di un driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Pool di connessioni compatibile con il driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Sviluppo del rilevamento di pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

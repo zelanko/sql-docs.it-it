@@ -24,10 +24,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06e4964dcab38087119343ab2fbc900f29d60d14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303152"
 ---
 # <a name="working-with-snapshot-isolation"></a>Utilizzo dell'isolamento dello snapshot
@@ -38,7 +38,7 @@ ms.locfileid: "81303152"
  Le transazioni avviate con l'isolamento dello snapshot leggono uno snapshot del database che risale all'avvio della transazione. Uno dei possibili risultati è che, se aperti nel contesto di una transazione snapshot, i cursori server keyset statici e dinamici si comporteranno come cursori statici aperti in transazioni serializzabili. Tuttavia, quando i cursori vengono aperti con il livello di isolamento dello snapshot, non vengono acquisiti blocchi. In questo modo viene ridotto il numero di blocchi nel server.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client include miglioramenti che [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]sfruttano l'isolamento dello snapshot introdotto in . Tra questi miglioramenti figurano le modifiche ai set di proprietà DBPROPSET_DATASOURCEINFO e DBPROPSET_SESSION.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client include miglioramenti che sfruttano l'isolamento dello snapshot introdotto [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in. Tra questi miglioramenti figurano le modifiche ai set di proprietà DBPROPSET_DATASOURCEINFO e DBPROPSET_SESSION.  
   
 ### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  Il set di proprietà DBPROPSET_DATASOURCEINFO è stato modificato per indicare che il livello di isolamento dello snapshot è supportato dall'aggiunta del valore DBPROPVAL_TI_SNAPSHOT utilizzato nella proprietà DBPROP_SUPPORTEDTXNISOLEVELS. Questo nuovo valore indica che il livello di isolamento dello snapshot è supportato indipendentemente dall'abilitazione del controllo delle versioni nel database. Di seguito viene presentato un elenco dei valori DBPROP_SUPPORTEDTXNISOLEVELS:  
@@ -60,15 +60,15 @@ ms.locfileid: "81303152"
  Per altre informazioni sul supporto dell'isolamento dello snapshot nelle transazioni, vedere [Supporto delle transazioni locali](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client fornisce il supporto per l'isolamento dello snapshot attraverso i miglioramenti apportati alle funzioni [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetInfo.](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client fornisce supporto per l'isolamento dello snapshot, sebbene siano stati apportati miglioramenti alle funzioni [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) .  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  La funzione **SQLSetConnectAttr** supporta ora l'utilizzo dell'attributo SQL_COPT_SS_TXN_ISOLATION. Impostando SQL_COPT_SS_TXN_ISOLATION su SQL_TXN_SS_SNAPSHOT si indica che la transazione si verificherà con il livello di isolamento dello snapshot.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- La funzione [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) supporta ora il valore SQL_TXN_SS_SNAPSHOT che è stato aggiunto al tipo di informazioni SQL_TXN_ISOLATION_OPTION.  
+ La funzione [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) supporta ora il valore SQL_TXN_SS_SNAPSHOT aggiunto al tipo di informazioni di SQL_TXN_ISOLATION_OPTION.  
   
- Per informazioni sul modo in cui l'isolamento dello snapshot è supportato nelle transazioni, vedere [Cursor Transaction Isolation Level](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
+ Per informazioni sul supporto dell'isolamento dello snapshot nelle transazioni, vedere [livello di isolamento delle transazioni del cursore](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   

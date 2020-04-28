@@ -1,5 +1,5 @@
 ---
-title: Driver di database desktop di Microsoft ODBC - Documenti Microsoft
+title: Driver di database per desktop ODBC Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,31 +18,31 @@ ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302982"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Driver di database desktop ODBC Microsoft
-ODBC è un'API che utilizza SQL (Structured Query Language) come linguaggio di accesso al database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBS) con lo stesso codice sorgente ODBC che viene incorporato direttamente nel codice sorgente di un'applicazione. Con i driver di Database desktop Microsoft ODBC, un utente di un'applicazione abilitata per ODBC può aprire, eseguire query e aggiornare un database desktop tramite l'interfaccia ODBC.  
+ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di accesso al database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBMS) con lo stesso codice sorgente ODBC incorporato direttamente nel codice sorgente di un'applicazione. Con i driver di database di Microsoft ODBC desktop, un utente di un'applicazione abilitata per ODBC può aprire, eseguire query e aggiornare un database desktop tramite l'interfaccia ODBC.  
   
- I driver di database desktop Microsoft ODBC sono un insieme di driver ODBC basati su Microsoft Jet. Mentre i driver di database desktop Microsoft ODBC 2.0 includono driver a 16 bit e a 32 bit, le versioni 3.0 e successive includono solo driver a 32 bit che funzionano in Windows 95 o versioni successive, Windows NT Workstation o Server versione 4.0, Windows 2000 Professional o Windows 2000 Server. Questi driver forniscono l'accesso ai seguenti tipi di origini dati:  
+ I driver di database di Microsoft ODBC desktop sono un set di driver ODBC basato su Microsoft Jet. Mentre i driver di database Microsoft ODBC Desktop 2,0 includono driver sia a 16 bit che a 32 bit, le versioni 3,0 e successive includono solo driver a 32 bit che funzionano in Windows 95 o versioni successive, workstation Windows NT o Server versione 4,0, Windows 2000 Professional o Windows 2000 Server. Questi driver forniscono accesso ai tipi di origini dati seguenti:  
   
 -   Microsoft Access  
   
 -   Microsoft Excel  
   
--   Paradosso  
+-   Paradox  
   
--   Dbase  
+-   dBASE  
   
 -   Testo  
   
- Vedere [Driver ODBC di Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) per la documentazione dettagliata sul driver ODBC di Microsoft Visual FoxPro®.  
+ Per la documentazione dettagliata sul driver ODBC di Microsoft Visual FoxPro®, vedere [driver ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) .  
   
 > [!NOTE]  
->  L'accesso ad altre origini dati, ad esempio Lotus 1-2-3, Microsoft Exchange e HTML, è abilitato dai driver ISAM (IISAM) installabili. Per ulteriori informazioni su questi driver, vedere "Accesso a dati esterni" in *Microsoft Jet Database Engine Programmer's Reference*. Odbc Desktop Database Drivers 4.0 non supportano i formati di dati Btrieve ed EMS.  
+>  L'accesso ad altre origini dati, ad esempio Lotus 1-2-3, Microsoft Exchange e HTML, è abilitato da driver ISAM installabili (IISAM). Per ulteriori informazioni su questi driver, vedere l'argomento relativo all'accesso ai dati esterni in *Microsoft Jet motore di database Programmer ' s Reference*. I driver di database desktop ODBC 4,0 non supportano i formati di dati Btrieve e EMS.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -50,7 +50,7 @@ ODBC è un'API che utilizza SQL (Structured Query Language) come linguaggio di a
   
 -   [Cronologia dei driver di database desktop](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
--   [Servizio Supporto Tecnico Clienti Microsoft](../../odbc/microsoft/product-support.md)  
+-   [Supporto del prodotto](../../odbc/microsoft/product-support.md)  
   
 -   [Implementazione dei driver di database desktop](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   

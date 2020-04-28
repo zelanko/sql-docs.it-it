@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLInstallTranslatorEx . Documenti Microsoft
+title: Funzione SQLInstallTranslatorEx | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5cf52c26bf9e4a26f13a27a0e763fbaa30bd18ec
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302092"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Funzione SQLInstallTranslatorEx
 **Conformità**  
- Versione introdotta: ODBC 3.0  
+ Versione introdotta: ODBC 3,0  
   
  **Riepilogo**  
- **SQLInstallTranslatorEx** aggiunge informazioni su un traduttore alla sezione Odbcinst.ini delle informazioni di sistema (HKEY_LOCAL_MACHINE . inI-ODBC Translators (chiave del Registro di sistema) ).  
+ **SQLInstallTranslatorEx** aggiunge informazioni su un convertitore alla sezione Odbcinst. ini delle informazioni di sistema (HKEY_LOCAL_MACHINE \software\odbc\odbcinst. Chiave del registro di sistema INI\ODBC Translator).  
   
- La funzionalità di **SQLInstallTranslatorEx** è accessibile anche con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ È anche possibile accedere alle funzionalità di **SQLInstallTranslatorEx** con [ODBCCONF. File EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,71 +51,71 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszTranslator*  
- [Ingresso] Deve contenere un elenco doppiamente con terminazione null di coppie parola chiave-valore che descrivono il traduttore. Per ulteriori informazioni sulla sintassi delle coppie parola chiave-valore, consultate [Sottochiavi delle specifiche del traduttore](../../../odbc/reference/install/translator-specification-subkeys.md).  
+ Input Questo deve contenere un elenco con terminazione doppia per coppie parola chiave/valore che descrivono il traduttore. Per ulteriori informazioni sulla sintassi delle coppie parola chiave/valore, vedere la pagina relativa alle [sottochiavi di specifica del traduttore](../../../odbc/reference/install/translator-specification-subkeys.md).  
   
- Le parole chiave **Translator** e **Setup** devono essere incluse nella stringa *lpszTranslator.* La DLL di conversione è elencata con la parola chiave **Translator** e la DLL di installazione del convertitore viene elencata con la parola chiave **Setup.** Ogni coppia viene terminata con un byte NULL e l'intero elenco viene terminato con un byte NULL. (Ovvero, due byte NULL segnano la fine dell'elenco.) Il formato di *lpszTranslator* è il seguente:  
+ Le parole chiave **Translator** e **Setup** devono essere incluse nella stringa *lpszTranslator* . La DLL di traduzione viene elencata con la parola chiave **Translator** e la dll di installazione del convertitore viene elencata con la parola chiave **Setup** . Ogni coppia viene terminata con un byte NULL e l'intero elenco viene terminato con un byte NULL. Ovvero due byte NULL contrassegnano la fine dell'elenco. Il formato di *lpszTranslator* è il seguente:  
   
- *Traduttore-nomefile DLL*0 [Setup-Nome-DLL-0]*setup-DLL-filename*  
+ \0Translator =*Translator-dll-filename*\ 0 [Setup =*Setup-dll-filename*\ 0] \ 0  
   
- *lpszPathIn (informazioni in questo stati in due)*  
- [Ingresso] Percorso completo del punto in cui deve essere installato il traduttore o un puntatore null. Se *lpszPath* è un puntatore null, i traduttori verranno installati nella directory di sistema.  
+ *lpszPathIn*  
+ Input Percorso completo della posizione in cui deve essere installato il convertitore o puntatore null. Se *lpszPath* è un puntatore null, i convertitori verranno installati nella directory di sistema.  
   
- *lpszPathOut (informazioni in base a un'autorizzazione a*  
- [Uscita] Percorso della directory di destinazione in cui deve essere installato il traduttore. Se il traduttore non è mai stato installato, *lpszPathOut* è uguale a *lpszPathIn*. Se esiste un'installazione precedente del traduttore, *lpszPathOut* è il percorso dell'installazione precedente.  
+ *lpszPathOut*  
+ Output Percorso della directory di destinazione in cui deve essere installato il traduttore. Se il convertitore non è mai stato installato, *lpszPathOut* è uguale a *lpszPathIn*. Se è presente un'installazione precedente del traduttore, *lpszPathOut* è il percorso dell'installazione precedente.  
   
  *cbPathOutMax*  
- [Ingresso] Lunghezza di *lpszPathOut.*  
+ Input Lunghezza di *lpszPathOut.*  
   
- *pcbPathOut (informazioni in questo modo in stato di insta*  
- [Uscita] Numero totale di byte disponibili da restituire in *lpszPathOut*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbPathOutMax*, il percorso di output in *lpszPathOut* viene troncato a *pcbPathOutMax* meno il carattere di terminazione null. L'argomento *pcbPathOut* può essere un puntatore null.  
+ *pcbPathOut*  
+ Output Numero totale di byte disponibili da restituire in *lpszPathOut*. Se il numero di byte disponibili per restituire è maggiore o uguale a *cbPathOutMax*, il percorso di output in *lpszPathOut* viene troncato in *pcbPathOutMax* meno il carattere di terminazione null. L'argomento *pcbPathOut* può essere un puntatore null.  
   
- *fRichiesta*  
- [Ingresso] Tipo di richiesta. *fRequest* deve contenere uno dei seguenti valori:  
+ *fRequest*  
+ Input Tipo di richiesta. *fRequest* deve contenere uno dei valori seguenti:  
   
- ODBC_INSTALL_INQUIRY: Informarsi su dove può essere installato un traduttore.  
+ ODBC_INSTALL_INQUIRY: informazioni sulla posizione in cui è possibile installare un convertitore.  
   
  ODBC_INSTALL_COMPLETE: completare la richiesta di installazione.  
   
- *lpdwUsageCount (conteggio informazioni in lingua lingua instato)*  
- [Uscita] Conteggio di utilizzo del traduttore dopo la chiamata a questa funzione.  
+ *lpdwUsageCount*  
+ Output Conteggio di utilizzo del traduttore dopo la chiamata a questa funzione.  
   
- Le applicazioni non devono impostare il conteggio di utilizzo. ODBC manterrà questo conteggio.  
+ Le applicazioni non devono impostare il conteggio dell'utilizzo. Il conteggio verrà mantenuto da ODBC.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se ha esito positivo, FALSE se ha esito negativo.  
+ La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLInstallTranslatorEx** restituisce FALSE, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Nella tabella seguente * \** sono elencati i valori pfErrorCode che possono essere restituiti da **SQLInstallerError** e ognuno di essi illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLInstallTranslatorEx** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
-|*\*pfErrorCode (codice pfErrorCode)*|Errore|Descrizione|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non si è verificato alcun errore specifico del programma di installazione.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza buffer non valida|L'argomento *lpszPathOut* non è sufficientemente grande per contenere il percorso di output. Il buffer contiene il percorso troncato.<br /><br /> L'argomento *cbPathOutMax* era 0 e l'argomento *fRequest* è stato ODBC_INSTALL_COMPLETE.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valida|L'argomento *lpszPathOut* non è sufficientemente grande da contenere il percorso di output. Il buffer contiene il percorso troncato.<br /><br /> L'argomento *cbPathOutMax* è 0 e l'argomento *fRequest* è stato ODBC_INSTALL_COMPLETE.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *fRequest* non è uno dei seguenti:<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave-valore non valide|L'argomento *lpszTranslator* contiene un errore di sintassi.|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave/valore non valide|L'argomento *lpszTranslator* contiene un errore di sintassi.|  
 |ODBC_ERROR_INVALID_PATH|Percorso di installazione non valido|L'argomento *lpszPathIn* contiene un percorso non valido.|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequenza di parametri non valida|L'argomento *lpszTranslator* non contiene un elenco di coppie parola chiave-valore.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Impossibile incrementare o diminuire il conteggio di utilizzo dei componenti del Registro di sistema|Il programma di installazione non è riuscito a incrementare il conteggio di utilizzo del convertitore.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequenza di parametri non valida|L'argomento *lpszTranslator* non contiene un elenco di coppie parola chiave/valore.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il numero di utilizzo del componente del registro|Il programma di installazione non è riuscito a incrementare il conteggio di utilizzo del traduttore.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLInstallTranslatorEx** fornisce un meccanismo per installare solo il traduttore. Questa funzione non copia effettivamente alcun file. Il programma chiamante è responsabile della copia dei file del traduttore.  
+ **SQLInstallTranslatorEx** fornisce un meccanismo per installare solo il traduttore. Questa funzione non copia effettivamente alcun file. Il programma chiamante è responsabile della copia dei file di conversione.  
   
- **SQLInstallTranslatorEx** incrementa di 1 il conteggio di utilizzo del componente per il convertitore installato. Se esiste già una versione del traduttore ma il conteggio di utilizzo del componente per il traduttore non esiste, il nuovo valore del conteggio di utilizzo del componente è impostato su 2.  
+ **SQLInstallTranslatorEx** incrementa di 1 il conteggio di utilizzo del componente per il traduttore installato. Se una versione del traduttore esiste già, ma il conteggio di utilizzo del componente per il traduttore non esiste, il nuovo valore di conteggio utilizzo componenti viene impostato su 2.  
   
- Il programma di installazione dell'applicazione è responsabile della copia fisica del file del traduttore e della gestione del conteggio di utilizzo dei file. Se il file del convertitore non è stato installato in precedenza, il programma di installazione dell'applicazione deve copiare il file o i file e creare il conteggio di utilizzo dei file o dei file. Se il file è stato installato in precedenza, il programma di installazione incrementa semplicemente il conteggio di utilizzo del file.  
+ Il programma di installazione dell'applicazione è responsabile della copia fisica del file di traduzione e della gestione del numero di utilizzo del file. Se il file di conversione non è stato installato in precedenza, il programma di installazione dell'applicazione deve copiare il file o i file e creare il conteggio di utilizzo di file o file. Se il file è stato precedentemente installato, il programma di installazione incrementa semplicemente il numero di utilizzo del file.  
   
- Se una versione precedente del traduttore è stata installata in precedenza dall'applicazione, il traduttore deve essere disinstallato e quindi reinstallato, in modo che il conteggio dell'utilizzo del componente del traduttore sia valido. **SQLRemoveTranslator** deve essere chiamato per diminuire il conteggio di utilizzo del componente e quindi **SQLInstallTranslatorEx** deve essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione deve sostituire il vecchio file o i file con il nuovo file. Il conteggio di utilizzo del file rimarrà invariato e le altre applicazioni che hanno utilizzato il file della versione precedente utilizzeranno ora la versione più recente.  
+ Se una versione precedente del traduttore è stata precedentemente installata dall'applicazione, è necessario disinstallare e reinstallare il convertitore, in modo che il conteggio di utilizzo del componente di conversione sia valido. **SQLRemoveTranslator** deve essere chiamato per decrementare il numero di utilizzo del componente, quindi è necessario chiamare **SQLInstallTranslatorEx** per incrementare il conteggio di utilizzo dei componenti. Il programma di installazione dell'applicazione deve sostituire il file o i file obsoleti con il nuovo file. Il conteggio di utilizzo file rimarrà invariato e altre applicazioni che utilizzano il file della versione precedente utilizzeranno ora la versione più recente.  
   
- La lunghezza del percorso in *lpszPathOut* in **SQLInstallTranslatorEx** consente un processo di installazione a due fasi, pertanto un'applicazione può determinare quale *cbPathOutMax* deve essere chiamando **SQLInstallTranslatorEx** con *una richiesta di* ODBC_INSTALL_INQUIRY modalità. Verrà restituito il numero totale di byte disponibili nel buffer *pcbPathOut.* **SQLInstallTranslatorEx** può quindi essere chiamato con *una richiesta* di ODBC_INSTALL_COMPLETE e l'argomento *cbPathOutMax* impostato sul valore nel buffer *pcbPathOut,* più il carattere di terminazione null.  
+ La lunghezza del percorso in *lpszPathOut* in **SQLInstallTranslatorEx** consente un processo di installazione in due fasi, in modo che un'applicazione possa determinare quale *cbPathOutMax* deve essere chiamando **SQLInstallTranslatorEx** con una *fRequest* di modalità ODBC_INSTALL_INQUIRY. Verrà restituito il numero totale di byte disponibili nel buffer *pcbPathOut* . **SQLInstallTranslatorEx** può quindi essere chiamato con un *fRequest* di ODBC_INSTALL_COMPLETE e l'argomento *cbPathOutMax* impostato sul valore nel buffer *pcbPathOut* , oltre al carattere di terminazione null.  
   
- Se si sceglie di non utilizzare il modello a due fasi per **SQLInstallTranslatorEx**, è necessario impostare *cbPathOutMax*, che definisce la dimensione dell'archiviazione per il percorso della directory di destinazione, sul valore _MAX_PATH, come definito in Stdlib.h, per impedire il troncamento.  
+ Se si sceglie di non usare il modello a due fasi per **SQLInstallTranslatorEx**, è necessario impostare *cbPathOutMax*, che definisce le dimensioni della risorsa di archiviazione per il percorso della directory di destinazione, sul valore _MAX_PATH, come definito in STDLIB. h, per evitare il troncamento.  
   
- Quando *fRequest* è ODBC_INSTALL_COMPLETE, **SQLInstallTranslatorEx** non consente a *lpszPathOut* di essere NULL (o *cbPathOutMax* 0). Se *fRequest* è ODBC_INSTALL_COMPLETE, VIENE restituito FALSE quando il numero di byte disponibili da restituire è maggiore o uguale a *cbPathOutMax*, con il risultato che si verifica il troncamento.  
+ Quando *fRequest* è ODBC_INSTALL_COMPLETE, **SQLInstallTranslatorEx** non consente a *lpszPathOut* di essere null (o *cbPathOutMax* è 0). Se *fRequest* è ODBC_INSTALL_COMPLETE, viene restituito false quando il numero di byte disponibili per restituire è maggiore o uguale a *cbPathOutMax*, con il risultato che si verifica il troncamento.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Restituzione di un'opzione di conversione predefinita|[Traduttore di configurazione](../../../odbc/reference/syntax/configtranslator-function.md)|  
-|Selezione dei traduttori|[SQLGetTranslator (Traduttore)](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
-|Rimozione dei traduttori|[SQLRemoveTranslator (TraduttorediSQLRemoveTranslator)](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+|Restituzione di un'opzione di conversione predefinita|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
+|Selezione di traduttori|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
+|Rimozione di traduttori|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|

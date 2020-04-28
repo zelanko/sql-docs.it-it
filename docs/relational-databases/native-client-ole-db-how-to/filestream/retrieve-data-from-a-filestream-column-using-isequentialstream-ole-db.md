@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM tramite ISequentialStream (OLE DB)
+title: FILESTREAM con ISequentialStream (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca29a19aeae6631606559b6aee00b83b7f138f8a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302248"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81302248"
 
   In questo esempio viene illustrato come utilizzare un'interfaccia ISequentialStream in un'interfaccia ICommandText per recuperare un record singolo da una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla funzionalità filestream , vedere [Supporto FILESTREAM &#40;&#41;OLE DB ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Esempio  
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  

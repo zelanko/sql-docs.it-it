@@ -1,5 +1,5 @@
 ---
-title: Dettagli di implementazione dell'API ODBC - Documenti Microsoft
+title: Dettagli di implementazione dell'API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 880c38483b3896f95ccfde4f8237d6d0acbf8e3c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302716"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
@@ -30,7 +30,7 @@ ms.locfileid: "81302716"
   
  Nella guida di riferimento al driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non sono documentate tutte le chiamate alle funzioni di ODBC. Vengono infatti prese in esame solo le funzioni che, se utilizzate con il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, presentano comportamenti o parametri specifici del driver.  
   
- Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51. Per un riferimento completo di ODBC 3.51, scaricare Microsoft Data Access Components SDK dal [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)oppure visualizzare ODBC [Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51. Per un riferimento completo di ODBC 3,51, scaricare Microsoft Data Access Components SDK da [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)oppure visualizzare la documentazione online di [ODBC Programmer ' s Reference](https://go.microsoft.com/fwlink/?LinkId=45250) .  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
