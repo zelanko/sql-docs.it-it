@@ -1,6 +1,6 @@
 ---
-title: Proprietà dell'assieme (pagina Generale) Documenti Microsoft
-description: È possibile visualizzare o modificare le proprietà di un assembly ospitato in SQL ServerSQL Server.You can view or modify properties for an assembly hosted on SQL ServerSQL Server. Questi includono il nome e il proprietario dell'assembly, il set di autorizzazioni e altre proprietà.
+title: Proprietà assembly (pagina generale) | Microsoft Docs
+description: È possibile visualizzare o modificare le proprietà di un assembly ospitato in SQL Server. Sono inclusi il nome e il proprietario dell'assembly, il set di autorizzazioni e altre proprietà.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488020"
 ---
 # <a name="assemblies---properties"></a>Assembly - Proprietà
@@ -31,22 +31,22 @@ ms.locfileid: "81488020"
  Consente di digitare o selezionare nell'elenco il nome del proprietario o il nome dello schema.  
   
  **Set di autorizzazioni**  
- Consente di impostare il livello di sicurezza per l'assembly. Sono disponibili tre livelli di sicurezza: **Sicuro**, **Accesso esterno**e Accesso **non sicuro.**  
+ Consente di impostare il livello di sicurezza per l'assembly. Sono disponibili tre livelli di sicurezza: accesso **sicuro**, **esterno**e non **sicuro** .  
   
  **Percorso dell'assembly**  
  Consente di digitare il percorso del file di assembly.  
   
  **Sfoglia**  
- Spostarsi sull'assembly che si desidera aggiungere. Fare clic su **Sfoglia** se non si desidera digitare il percorso del file di assieme.  
+ Spostarsi sull'assembly che si desidera aggiungere. Fare clic su **Sfoglia** se non si desidera digitare il percorso del file di assembly.  
   
 ## <a name="additional-properties-grid"></a>Griglia Proprietà aggiuntive  
- **Data di creazione**  
+ **Data creazione**  
  Visualizza la data di creazione/registrazione dell'assembly.  
   
  **Nome sicuro**  
- Visualizza **True** se l'assembly è stato firmato digitalmente, **False** se non è stato firmato digitalmente.  
+ Restituisce **true** se l'assembly è stato firmato digitalmente, **false** se non è stato firmato digitalmente.  
   
- **Version**  
+ **Versione**  
  Visualizza il numero di versione dell'assembly.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087161"
 ---
 # <a name="excel-destination"></a>Destinazione Excel
@@ -48,7 +48,7 @@ ms.locfileid: "82087161"
   
      Per informazioni su come evitare di includere la virgoletta singola, vedere il post di blog seguente relativo all' [aggiunta della virgoletta singola a tutte le stringhe quando i dati sono trasformati in Excel tramite il componente per flusso di dati di destinazione di Excel in un pacchetto SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), su msdn.com.  
   
--   **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, l'istruzione CREATE TABLE deve utilizzare LONGTEXT (o uno dei relativi sinonimi) come tipo di dati della colonna memo.  
+-   **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, l'istruzione CREATE TABLE deve utilizzare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna di tipo Memo.  
   
 -   **Tipi di dati**. Il driver per Excel riconosce solo un set limitato di tipi di dati. Tutte le colonne numeriche vengono interpretate come valori double (DT_R8) e tutte le colonne di tipo stringa (con tipo di dati diverso da memo) vengono interpretate come stringhe Unicode di 255 caratteri (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esegue il mapping dei tipi di dati di Excel nel modo seguente:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82087161"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine Excel](excel-source.md)   
- [Integration Services &#40;variabili di&#41; SSIS](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;variabili&#41; SSIS](../integration-services-ssis-variables.md)   
  [Flusso di dati](data-flow.md)   
  [Uso di file di Excel con l'attività Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

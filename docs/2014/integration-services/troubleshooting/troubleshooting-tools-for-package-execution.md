@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087061"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
@@ -52,13 +52,13 @@ ms.locfileid: "82087061"
   
 -   **Aggiunta di informazioni descrittive agli output degli errori**. Per semplificare l'analisi dell'output degli errori, oltre ai due identificatori numerici specificati dall'output stesso è possibile aggiungere informazioni descrittive.  
   
-     **Aggiungere la descrizione dell'errore**. Utilizzando un componente script, è possibile analizzare in modo semplice la descrizione dell'errore. Per ulteriori informazioni, vedere [Miglioramento di un output degli errori per il componente script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Aggiungere la descrizione dell'errore**. Utilizzando un componente script, è possibile analizzare in modo semplice la descrizione dell'errore. Per ulteriori informazioni, vedere [miglioramento di un output degli errori per il componente script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Aggiungere il nome della colonna di errore**. Per informazioni sul nome della colonna corrispondente all'ID di colonna salvato dall'output degli errori non è sufficiente il componente script, ma sono necessarie ulteriori operazioni. Ogni ID di colonna in un flusso di dati è univoco all'interno dell'attività Flusso di dati ed è persistente nel pacchetto in fase di progettazione. L'approccio seguente consente di aggiungere il nome di colonna all'output degli errori. 
+     **Aggiungere il nome della colonna Error**. Per informazioni sul nome della colonna corrispondente all'ID di colonna salvato dall'output degli errori non è sufficiente il componente script, ma sono necessarie ulteriori operazioni. Ogni ID di colonna in un flusso di dati è univoco all'interno dell'attività Flusso di dati ed è persistente nel pacchetto in fase di progettazione. L'approccio seguente consente di aggiungere il nome di colonna all'output degli errori. 
   
     1.  **Creare una tabella di ricerca di nomi di colonna**. Creare un'applicazione separata in cui viene utilizzata l'API di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire un'iterazione su ogni pacchetto salvato, ogni flusso di dati nel pacchetto, ogni oggetto nel flusso di dati e ogni input e output nell'oggetto del flusso di dati. Nell'applicazione l'ID di colonna e il nome di ogni colonna devono essere persistenti nella tabella di ricerca, insieme all'ID dell'attività Flusso di dati padre e a quello del pacchetto.  
   
-    2.  **Aggiungere il nome della colonna all'output.** Aggiungere all'output degli errori una trasformazione Ricerca che consenta di eseguire una ricerca del nome della colonna nella tabella di ricerca creata al passaggio precedente. Per la ricerca è possibile utilizzare l'ID di colonna nell'output degli errori, l'ID di pacchetto, disponibile nella variabile di sistema System::PackageID, e l'ID dell'attività Flusso di dati, disponibile nella variabile di sistema System::TaskID.  
+    2.  **Aggiungere il nome della colonna all'output**. Aggiungere all'output degli errori una trasformazione Ricerca che consenta di eseguire una ricerca del nome della colonna nella tabella di ricerca creata al passaggio precedente. Per la ricerca è possibile utilizzare l'ID di colonna nell'output degli errori, l'ID di pacchetto, disponibile nella variabile di sistema System::PackageID, e l'ID dell'attività Flusso di dati, disponibile nella variabile di sistema System::TaskID.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i report delle operazioni  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili report delle operazioni standard per facilitare il monitoraggio dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con i report relativi ai pacchetti è possibile visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
@@ -66,7 +66,7 @@ ms.locfileid: "82087061"
  Per altre informazioni, vedere [Risoluzione dei problemi relativi ai report per l'esecuzione del pacchetto](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite viste SSISDB  
- Sono disponibili diverse viste di database SSISDB su cui è possibile eseguire una query per monitorare l'esecuzione dei pacchetti e altre informazioni sulle operazioni. Per ulteriori informazioni, vedere [Monitoraggio per esecuzioni di pacchetti e altre operazioni](../performance/monitor-running-packages-and-other-operations.md).  
+ Sono disponibili diverse viste di database SSISDB su cui è possibile eseguire una query per monitorare l'esecuzione dei pacchetti e altre informazioni sulle operazioni. Per ulteriori informazioni, vedere [monitoraggio per le esecuzioni di pacchetti e altre operazioni](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite la registrazione  
  Abilitando la registrazione è possibile tenere traccia di ciò che avviene durante l'esecuzione dei pacchetti. I provider di log consentono di acquisire informazioni sugli eventi specificati da utilizzare per un'analisi successiva e di salvare tali informazioni in una tabella di database, in un file flat, in un file XML o in un altro formato di output supportato.  

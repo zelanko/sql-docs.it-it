@@ -15,10 +15,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5ce830c3fcd5661a01ecc0ad3ad84bed420be2e0
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82107988"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
@@ -171,7 +171,7 @@ Senza la gestione automatica degli indici, un utente o un amministratore di data
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]semplifica questo processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]analizza il carico di lavoro, identifica le query che possono essere eseguite più velocemente con un nuovo indice e identifica gli indici inutilizzati o duplicati. Per altre informazioni sull'identificazione degli indici che devono essere modificati, vedere [Find index recommendations in Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal) (Trovare raccomandazioni per gli indici nel portale di Azure).
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys. database_automatic_tuning_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys. dm_db_tuning_recommendations &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   

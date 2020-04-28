@@ -1,6 +1,6 @@
 ---
-title: Progettazione di assiemi Documenti Microsoft
-description: In questo articolo vengono descritti i fattori da considerare quando si progetta un assembly da ospitare in SQL Server, tra cui la creazione di pacchetti, la gestione e le restrizioni sugli assembly.
+title: Progettazione di assembly | Microsoft Docs
+description: Questo articolo descrive i fattori da tenere in considerazione quando si progetta un assembly da ospitare in SQL Server, tra cui la creazione di pacchetti, la gestione e le restrizioni per gli assembly.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488051"
 ---
 # <a name="assemblies---designing"></a>Assembly - Progettazione
@@ -35,7 +35,7 @@ ms.locfileid: "81488051"
   
  Quando si assembla codice in assembly, è opportuno prendere in considerazione i fattori seguenti:  
   
--   I tipi CLR definiti dall'utente e gli indici che dipendono da funzioni CLR definite dall'utente possono provocare la presenza di dati persistenti nel database che dipende dall'assembly. Modificare il codice di un assembly risulta spesso più complesso quando nel database sono presenti dati persistenti che dipendono dall'assembly. È pertanto preferibile separare il codice sul quale si basano le dipendenze dei dati persistenti, ad esempio i tipi definiti dall'utente e gli indici che utilizzano funzioni definite dall'utente, dal codice che non contiene questo tipo di dipendenze. Per ulteriori informazioni, vedere [Implementazione di assembly](../../relational-databases/clr-integration/assemblies-implementing.md) e [ALTER ASSEMBLY &#40;transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   I tipi CLR definiti dall'utente e gli indici che dipendono da funzioni CLR definite dall'utente possono provocare la presenza di dati persistenti nel database che dipende dall'assembly. Modificare il codice di un assembly risulta spesso più complesso quando nel database sono presenti dati persistenti che dipendono dall'assembly. È pertanto preferibile separare il codice sul quale si basano le dipendenze dei dati persistenti, ad esempio i tipi definiti dall'utente e gli indici che utilizzano funzioni definite dall'utente, dal codice che non contiene questo tipo di dipendenze. Per ulteriori informazioni, vedere [implementazione di assembly](../../relational-databases/clr-integration/assemblies-implementing.md) e [ALTER assembly &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Se una parte di codice gestito richiede un'autorizzazione di livello superiore, è opportuno inserirla in un assembly separato.  
   
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API .NET Framework non consentite  
- Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API annotata con uno degli **HostProtectionAttributes** non consentiti non può essere chiamata da assembly SAFE e EXTERNAL_ACCESS.  
+ Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API annotate con uno dei **HostProtectionAttributes** non consentiti non possono essere chiamate da assembly SAFE e EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -118,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Assembly &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assembly &#40;motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

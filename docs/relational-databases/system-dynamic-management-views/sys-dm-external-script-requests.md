@@ -1,5 +1,5 @@
 ---
-title: proprietà sys.dm_external_script_requests . Documenti Microsoft
+title: sys. dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488200"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
@@ -32,11 +32,11 @@ Restituisce una riga per ogni account di lavoro attivo che esegue uno script est
   
 > [!NOTE] 
 >  
-> Questa vista a gestione dinamica (DMV) è disponibile solo se è stata installata e abilitata la funzionalità che supporta l'esecuzione di script esterni. Per altre informazioni, vedere [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e Machine Learning Services [(R, Python) in SQL Server 2017 e versioni successive.](../../machine-learning/sql-server-machine-learning-services.md)  
+> Questa vista a gestione dinamica (DMV) è disponibile solo se è stata installata e abilitata la funzionalità che supporta l'esecuzione di script esterni. Per altre informazioni, vedere [r Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e [Machine Learning Services (r, Python) in SQL Server 2017 e versioni successive](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**unique identifier**|ID del processo che ha inviato la richiesta di script esterni. Corrisponde all'ID del processo ricevuto da[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**unique identifier**|ID del processo che ha inviato la richiesta di script esterni. Corrisponde all'ID processo ricevuto da[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |Linguaggio|**nvarchar**|Parola chiave che rappresenta un linguaggio di scripting supportato. |  
 |degree_of_parallelism|**int**|Numero che indica il numero di processi paralleli che sono stati creati. Questo valore potrebbe essere diverso dal numero di processi paralleli che sono stati richiesti.|  
 |external_user_name|**nvarchar**|Account di lavoro di Windows con cui è stato eseguito lo script.|  
@@ -52,7 +52,7 @@ Restituisce una riga per ogni account di lavoro attivo che esegue uno script est
 
 Questa vista può essere filtrata usando l'identificatore del linguaggio di scripting.
 
-La vista restituisce anche l'account di lavoro con cui viene eseguito lo script. Per informazioni sugli account di lavoro utilizzati dagli script esterni, vedere la sezione Identità utilizzate nell'elaborazione (SQLRUserGroup) in Panoramica della sicurezza per il framework di [estensibilità in Sql Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
+La vista restituisce anche l'account di lavoro con cui viene eseguito lo script. Per informazioni sugli account di lavoro usati dagli script esterni, vedere la sezione identità usate nell'elaborazione (SQLRUserGroup) in [Panoramica della sicurezza per il Framework di estendibilità in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
 
 Il GUID restituito nel campo **external_script_request_id** rappresenta anche il nome file della directory protetta in cui vengono archiviati i file temporanei. Ogni account di lavoro come MSSQLSERVER01 rappresenta un singolo account di accesso SQL o un utente di Windows e potrebbe essere usato per eseguire più richieste di script. Per impostazione predefinita, la pulizia di questi file temporanei viene eseguita dopo il completamento dello script richiesto.
  
@@ -81,9 +81,9 @@ external_script_request_id  |Linguaggio  |degree_of_parallelism  |external_user_
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQLDynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
-[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) dm_external_script_execution_stats di sistema  
+[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

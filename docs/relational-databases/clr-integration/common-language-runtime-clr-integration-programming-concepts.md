@@ -1,6 +1,6 @@
 ---
-title: Common Language Runtime (CLR) Programming
-description: In questo articolo vengono fornite risorse per l'utilizzo dell'integrazione CLR con SQL Server, che consente di scrivere moduli lato server utilizzando qualsiasi linguaggio .NET Framework.
+title: Programmazione Common Language Runtime (CLR)
+description: Questo articolo fornisce le risorse per l'uso dell'integrazione CLR con SQL Server, che consente di scrivere moduli lato server usando qualsiasi linguaggio .NET Framework.
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c44e777e78e9d2a6ded97e5bff2ec61e4c7f8391
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488130"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concetti relativi alla programmazione dell'integrazione con CLR (Common Language Runtime)
@@ -30,20 +30,20 @@ ms.locfileid: "81488130"
  Lo spazio dei nomi Microsoft.SqlServer.Server include la funzionalità principali per la programmazione CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo spazio dei nomi Microsoft.SqlServer.Server, tuttavia, viene trattato nella documentazione di .NET Framework SDK. Questa documentazione non è inclusa nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato .NET Framework, ma non .NET Framework SDK. Se SDK non è installato nel computer né incluso nella raccolta della documentazione online, i collegamenti al contenuto SDK presenti in questa sezione non funzionano. Installare .NET Framework SDK, Una volta installato, aggiungere l'SDK alla raccolta della documentazione in linea e al sommario seguendo le istruzioni in [Installazione di .NET Framework SDK.](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+>  Per impostazione predefinita, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato .NET Framework, ma non .NET Framework SDK. Se SDK non è installato nel computer né incluso nella raccolta della documentazione online, i collegamenti al contenuto SDK presenti in questa sezione non funzionano. Installare .NET Framework SDK, Al termine dell'installazione, aggiungere l'SDK alla raccolta della documentazione online e al sommario seguendo le istruzioni riportate in [installazione di .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
 > [!NOTE]  
->  Le funzionalità CLR, ad esempio le funzioni utente CLR, non sono supportate per il database SQL di Azure.CLR functionality, such as CLR user functions, are *not* supported for Azure SQL Database.  
+>  Le funzionalità CLR, ad esempio le funzioni utente CLR, *non* sono supportate per il database SQL di Azure.  
   
  Nella tabella seguente vengono elencati gli argomenti disponibili in questa sezione.  
   
- [Cenni preliminari sull'integrazione&#41; di CLR &#40;Common Language Runtime](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Panoramica dell'integrazione di Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  Viene fornita una breve panoramica di CLR e vengono descritti i motivi e le modalità dell'utilizzo di questa tecnologia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vengono inoltre descritti i vantaggi dell'utilizzo di CLR per creare oggetti di database.  
   
  [Assembly &#40;Motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  Viene descritto come usare gli assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per distribuire funzioni, stored procedure, trigger, aggregazioni definite dall'utente e tipi definiti dall'utente scritti usando uno dei linguaggi di codice gestito di Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework e non [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [Compilazione di oggetti di database con l'integrazione di common Language Runtime &#40;&#41; CLRBuilding Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Compilazione di oggetti di database con Common Language Runtime &#40;integrazione&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Vengono descritti i tipi di oggetti che è possibile compilare usando CLR e vengono esaminati i requisiti per la compilazione di oggetti di database CLR.  
   
  [Accesso ai dati da oggetti di database CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "81488130"
  Vengono descritti gli scenari di utilizzo e gli esempi di codice che usano oggetti CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Assembly &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assembly &#40;motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Installazione di .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

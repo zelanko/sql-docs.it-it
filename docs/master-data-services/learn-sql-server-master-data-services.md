@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487875"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Informazioni su SQL Server Master Data Services
@@ -26,8 +26,8 @@ ms.locfileid: "81487875"
   
   
 ## <a name="training"></a>Formazione  
-* Per esplorare le nuove [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]caratteristiche e funzionalità introdotte in , provare un [laboratorio con autonomi](https://www.microsoft.com/handsonlabs/selfpacedlabs) (è necessario eseguire l'accesso con l'account Microsoft).  
-* Per sviluppare [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] una soluzione per archiviare e gestire elenchi master di [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]dati geografici, utilizzare il componente aggiuntivo per Excel e , provare un [laboratorio autogestito](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
+* Per esplorare le nuove funzionalità e le nuove funzionalità [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]introdotte in, provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs) (è necessario eseguire l'accesso con il account Microsoft).  
+* Per sviluppare una [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluzione per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
   
 ## <a name="videos"></a>Video  
 * Per scoprire le nuove funzionalità nella versione [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**guardare questo video**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
