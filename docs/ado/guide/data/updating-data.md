@@ -14,10 +14,10 @@ ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd3b72e897b8ae12441c7cf28d1995eb45318d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923697"
 ---
 # <a name="updating-data"></a>Aggiornamento dei dati
@@ -35,4 +35,4 @@ Il comportamento e le funzionalità degli aggiornamenti dipendono in gran parte 
   
 -   [Modalità batch](../../../ado/guide/data/batch-mode.md)  
   
--   [Elaborazione di transazioni](../../../ado/guide/data/transaction-processing.md)
+-   [Elaborazione delle transazioni](../../../ado/guide/data/transaction-processing.md)

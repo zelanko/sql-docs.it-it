@@ -13,10 +13,10 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930671"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Stream
@@ -31,7 +31,7 @@ ms.locfileid: "67930671"
   
  [Position (proprietà)](../../../ado/reference/ado-api/position-property-ado.md)  
   
- [Proprietà Size (Stream - ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
+ [Proprietà Size (flusso ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
  [Proprietà State](../../../ado/reference/ado-api/state-property-ado.md)  
   
@@ -48,9 +48,9 @@ ms.locfileid: "67930671"
   
  [Metodo LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
- [Metodo Open (Stream - ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
- [Metodo Read](../../../ado/reference/ado-api/read-method.md)  
+ [Read (metodo)](../../../ado/reference/ado-api/read-method.md)  
   
  [Metodo ReadText](../../../ado/reference/ado-api/readtext-method.md)  
   
@@ -62,11 +62,11 @@ ms.locfileid: "67930671"
   
  [Metodo Stat](../../../ado/reference/ado-api/stat-method.md)  
   
- [Metodo Write](../../../ado/reference/ado-api/write-method.md)  
+ [Write (metodo)](../../../ado/reference/ado-api/write-method.md)  
   
  [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,10 +16,10 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923869"
 ---
 # <a name="transaction-processing"></a>Elaborazione di transazioni
@@ -44,4 +44,4 @@ Una *transazione* delimita l'inizio e la fine di una serie di operazioni di acce
  Utilizzare la proprietà **IsolationLevel** per impostare il livello di isolamento di una transazione in un oggetto **Connection** . L'impostazione non ha effetto fino alla successiva chiamata del metodo [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Se il livello di isolamento richiesto non è disponibile, il provider può restituire il livello di isolamento successivo. Per ulteriori informazioni sui valori validi, vedere la proprietà **IsolationLevel** nella Guida di riferimento per programmatori ADO.  
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  
- Per i provider che supportano le transazioni nidificate, la chiamata al metodo **BeginTrans** all'interno di una transazione aperta avvia una nuova transazione nidificata. Il valore restituito indica il livello di annidamento: un valore restituito pari a "1" indica che è stata aperta una transazione di primo livello, ovvero che la transazione non è annidata all'interno di un'altra transazione, "2" indica che è stata aperta una transazione di secondo livello ( transazione nidificata all'interno di una transazione di primo livello e così via. La chiamata a **CommitTrans** o **RollbackTrans** interessa solo la transazione aperta più di recente; prima di poter risolvere le transazioni di livello superiore, è necessario chiudere o eseguire il rollback della transazione corrente.
+ Per i provider che supportano le transazioni nidificate, la chiamata al metodo **BeginTrans** all'interno di una transazione aperta avvia una nuova transazione nidificata. Il valore restituito indica il livello di annidamento: un valore restituito pari a "1" indica che è stata aperta una transazione di primo livello, ovvero che la transazione non è annidata all'interno di un'altra transazione, "2" indica che è stata aperta una transazione di secondo livello (una transazione nidificata all'interno di una transazione di primo livello) e così via. La chiamata a **CommitTrans** o **RollbackTrans** interessa solo la transazione aperta più di recente; prima di poter risolvere le transazioni di livello superiore, è necessario chiudere o eseguire il rollback della transazione corrente.

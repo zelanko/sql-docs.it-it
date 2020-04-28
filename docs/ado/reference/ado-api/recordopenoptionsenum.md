@@ -16,10 +16,10 @@ ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931422"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
@@ -31,11 +31,11 @@ Specifica le opzioni per l'apertura di un [record](../../../ado/reference/ado-ap
 |**adDelayFetchStream**|0x4000|Indica al provider che non è necessario recuperare inizialmente il flusso predefinito associato al **record** . Il comportamento predefinito, indicato dall'assenza di questo flag, consiste nel recuperare il flusso predefinito associato all'oggetto **record** .|  
 |**adOpenAsync**|0x1000|Indica che l'oggetto **record** viene aperto in modalità asincrona.|  
 |**adOpenExecuteCommand**|0x10000|Indica che la stringa di origine contiene il testo del comando da eseguire. Questo valore è equivalente all'opzione **adCmdText** in **Recordset. Open**.|  
-|**adOpenRecordUnspecified**|-1|Default. Indica che non è specificata alcuna opzione.|  
+|**adOpenRecordUnspecified**|-1|Valore predefinito. Indica che non è stata specificata alcuna opzione.|  
 |**adOpenOutput**|0x800000|Indica che se l'origine punta a un nodo che contiene uno script eseguibile, ad esempio. Pagina ASP), il **record** aperto conterrà i risultati dello script eseguito. Questo valore è valido solo con record non di raccolta.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
  Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Open (Record - ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Metodo Open (record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)

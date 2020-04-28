@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927030"
 ---
 # <a name="ado-security-design-features"></a>Funzionalità di progettazione della sicurezza ADO
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  Il messaggio precedente consente all'utente di prendere decisioni più informate e di procedere di conseguenza.
 
 > [!NOTE]
->  Per i siti non attendibili, ovvero i siti non elencati nell'elenco di zone dei siti attendibili, se anche il provider è non attendibile (come illustrato in precedenza in questa sezione), l'utente potrebbe visualizzare due avvisi di sicurezza in una riga, un avviso sul provider unsafe e un secondo avviso sul tentativo di usare la propria identità. Se l'utente fa clic su OK per il primo avviso, verranno eseguite le impostazioni di Internet Explorer e il codice di comportamento della risposta descritti nella tabella precedente.
+>  Per i siti non attendibili, ovvero i siti non elencati nell'elenco di zone dei siti attendibili, se anche il provider non è attendibile, come illustrato in precedenza in questa sezione, l'utente potrebbe visualizzare due avvisi di sicurezza in una riga, un avviso sul provider unsafe e un secondo avviso sul tentativo di usare la propria identità. Se l'utente fa clic su OK per il primo avviso, verranno eseguite le impostazioni di Internet Explorer e il codice di comportamento della risposta descritti nella tabella precedente.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Controllo dell'eventuale restituzione del testo della password nelle stringhe di connessione ADO
  Quando si tenta di ottenere il valore della proprietà [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) su un oggetto **connessione** ADO, si verificano gli eventi seguenti:

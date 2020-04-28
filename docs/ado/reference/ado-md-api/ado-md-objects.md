@@ -14,10 +14,10 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930578"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
@@ -26,7 +26,7 @@ ms.locfileid: "67930578"
 |-|-|  
 |[Asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Rappresenta un asse posizionale o di filtro di un oggetto Cell, contenente i membri selezionati di una o più dimensioni.|  
 |[Catalogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene informazioni di schema multidimensionali, ovvero cubi e dimensioni sottostanti, gerarchie, livelli e membri, specifiche di un provider di dati multidimensionali (MDP).|  
-|[Cell (Cella)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione tra le coordinate dell'asse, contenute in un oggetto Cell.|  
+|[Cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione tra le coordinate dell'asse, contenute in un oggetto Cell.|  
 |[Celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. Si tratta di una raccolta di celle selezionate da cubi o altri celle.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale che contiene una o più gerarchie di membri.|  

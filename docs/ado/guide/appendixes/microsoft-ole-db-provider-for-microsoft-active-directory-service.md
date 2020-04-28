@@ -16,10 +16,10 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926671"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
@@ -63,8 +63,8 @@ ADSDSOObject
 |-----------|-----------------|  
 |*Radice*|Indica l'oggetto **ADsPath** da cui iniziare la ricerca (ovvero la radice della ricerca).|  
 |*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
-|*Attributes*|Indica un elenco delimitato da virgole di attributi da restituire.|  
-|*Scope*|Facoltativa. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei valori seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
+|*Attributi*|Indica un elenco delimitato da virgole di attributi da restituire.|  
+|*Ambito*|Facoltativa. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
   
  Ad esempio:  
   
@@ -108,9 +108,9 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|  
-|[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|  
-|[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|  
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|  
+|[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|  
+|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|  
   
  **Disponibilità dei metodi Recordset ADO standard:**  
   
@@ -120,8 +120,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Sì|  
+|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|  
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|  
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|  
@@ -133,7 +133,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Apri](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|  
 |[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|Sì|  
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|  
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|  
 |[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|No|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   

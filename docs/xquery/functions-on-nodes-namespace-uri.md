@@ -16,10 +16,10 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929947"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni su nodi - namespace-uri
@@ -51,7 +51,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>R. Recupero dell'URI dello spazio dei nomi di un nodo specifico  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Recupero dell'URI dello spazio dei nomi di un nodo specifico  
  La query seguente viene eseguita su un'istanza XML non tipizzata. L'espressione di query `namespace-uri(/ROOT[1])` recupera la parte relativa all'URI dello spazio dei nomi del nodo specificato.  
   
 ```  

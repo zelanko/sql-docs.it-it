@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926426"
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione ADO in Visual C++
@@ -37,7 +37,7 @@ Il riferimento all'API ADO descrive la funzionalità di ADO Application Programm
 ## <a name="using-the-import-compiler-directive"></a>Uso della direttiva del compilatore #import  
  La direttiva del compilatore **#import** Visual C++ semplifica l'utilizzo delle proprietà e dei metodi ADO. La direttiva accetta il nome di un file contenente una libreria dei tipi, ad esempio ADO. dll (msado15. dll), e genera file di intestazione contenenti le dichiarazioni typedef, i puntatori intelligenti per le interfacce e le costanti enumerate. Ogni interfaccia è incapsulata, o di cui è stato eseguito il wrapper, in una classe.  
   
- Per ogni operazione all'interno di una classe (ovvero una chiamata a un metodo o una proprietà), è presente una dichiarazione per chiamare direttamente l'operazione (ovvero il formato "non elaborato" dell'operazione) e una dichiarazione per chiamare l'operazione non elaborata e generare un errore COM se l'esecuzione dell'operazione non riesce. essfully. Se l'operazione è una proprietà, in genere esiste una direttiva del compilatore che crea una sintassi alternativa per l'operazione con sintassi come Visual Basic.  
+ Per ogni operazione all'interno di una classe (ovvero una chiamata a un metodo o una proprietà), è presente una dichiarazione per chiamare direttamente l'operazione (ovvero il formato "non elaborato" dell'operazione) e una dichiarazione per chiamare l'operazione non elaborata e generare un errore COM se l'esecuzione dell'operazione non riesce correttamente. Se l'operazione è una proprietà, in genere esiste una direttiva del compilatore che crea una sintassi alternativa per l'operazione con sintassi come Visual Basic.  
   
  Le operazioni che recuperano il valore di una proprietà hanno nomi nel formato, **Get**_Property_. Le operazioni che impostano il valore di una proprietà hanno nomi del form, **put**_Property_. Le operazioni che impostano il valore di una proprietà con un puntatore a un oggetto ADO hanno nomi nel formato **PutRef**_Proprietà_.  
   

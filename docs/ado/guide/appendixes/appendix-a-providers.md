@@ -17,10 +17,10 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926975"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Appendice A: provider di dati e servizi
@@ -46,7 +46,7 @@ Questa sezione illustra tre tipi di provider: provider di dati, provider di serv
 |Servizio Active Directory|[Provider Microsoft OLE DB per Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Database Microsoft Jet|[Provider di OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
-|database Oracle|[Provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
+|database Oracle|[Provider OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Pubblicazione su Internet|[Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |Origini dati semplici|[Provider semplice Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
@@ -73,4 +73,4 @@ Questa sezione illustra tre tipi di provider: provider di dati, provider di serv
  Per ogni provider elencato qui, se le applicazioni consentono agli utenti di immettere istruzioni SQL come comandi del provider, è sempre necessario convalidare l'input dell'utente e vigilare su possibili attacchi di hacker usando istruzioni SQL potenzialmente `DROP TABLE t1`pericolose, ad esempio, come parte dell'input utente.
 
 ## <a name="see-also"></a>Vedere anche
- [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [provider Microsoft OLE DB per Internet pubblicazione](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [del provider Microsoft OLE DB per Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) provider [microsoft OLE DB per microsoft Indexing Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) provider [Microsoft OLE DB per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) provider Microsoft OLE DB [per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) provider [Microsoft OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Recordset Metodo di aggiornamento Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [](../../../ado/reference/rds-api/refresh-method-rds.md)
+ Oggetto [comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [provider Microsoft OLE DB per Internet pubblicazione](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [del provider Microsoft OLE DB per Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) provider [microsoft OLE DB per Microsoft indexing Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) provider [Microsoft OLE DB provider per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) provider [Microsoft OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Recordset Object (ADO](../../../ado/reference/ado-api/recordset-object-ado.md) ) metodo di [aggiornamento (RDS](../../../ado/reference/rds-api/refresh-method-rds.md) )

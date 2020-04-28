@@ -13,10 +13,10 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921875"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
@@ -51,15 +51,15 @@ In ogni sezione di questo articolo viene descritto un componente di ADO.
 ## <a name="documentation"></a>Documentazione  
  [Problemi di progettazione della sicurezza ADO](../ado/guide/ado-security-design-issues.md)  
   
- [Manuale del programmatore ADO](../ado/guide/ado-programmer-s-guide.md)  
+ [Manuale del programmatore di ADO](../ado/guide/ado-programmer-s-guide.md)  
   
  Introduzione all'utilizzo di ADO, RDS, ADO MD e ADOX.  
   
- [Informazioni di riferimento per programmatori ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Guida di riferimento per programmatori ADO](../ado/reference/ado-programmer-s-reference.md)  
   
  In questa sezione della documentazione di ADO sono contenuti argomenti per ogni oggetto ADO, RDS, ADO MD e ADOX, raccolta, proprietà, proprietà dinamica, metodo, evento ed enumerazione.  
   
- [Glossario di ADO](../ado/ado-glossary.md)  
+ [Glossario ADO](../ado/ado-glossary.md)  
   
 ## <a name="support"></a>Supporto  
  Per assistenza gratuita sui problemi ADO, provare a pubblicare il newsgroup ADO public. Questo newsgroup è monitorato dai professionisti del servizio supporto tecnico clienti Microsoft che coprono ADO e da altri sviluppatori ADO esperti.  

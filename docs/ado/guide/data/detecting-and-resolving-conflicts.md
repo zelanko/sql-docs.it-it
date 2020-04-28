@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925568"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
@@ -30,7 +30,7 @@ Se si sta lavorando con il recordset in modalità immediata, è possibile che si
   
  Quando si chiama BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che alcune origini dati presentano limitazioni sui tipi di colonne che è possibile utilizzare in una clausola WHERE.  
   
- Chiamare quindi il metodo Resync sul recordset con il set di argomenti AffectRecords uguale a adAffectGroup e il set di argomenti ResyncValues uguale a adResyncUnderlyingValues. Il metodo Resync aggiorna i dati nell'oggetto recordset corrente dal database sottostante. Utilizzando adAffectGroup, si garantisce che solo i record visibili con l'impostazione del filtro corrente, ovvero solo i record in conflitto, vengano risincronizzati con il database. Questo potrebbe rendere una differenza significativa nelle prestazioni se si sta utilizzando un recordset di grandi dimensioni. Impostando l'argomento ResyncValues su adResyncUnderlyingValues quando si chiama la risincronizzazione, si garantisce che la proprietà UnderlyingValue conterrà il valore (in conflitto) del database, che la proprietà Value manterrà il valore immesso dall'utente e che la proprietà OriginalValue conterrà il valore originale per il campo (il valore che aveva prima che venisse eseguita l'ultima chiamata UpdateBatch completata). È quindi possibile usare questi valori per risolvere il conflitto a livello di codice o richiedere all'utente di selezionare il valore che verrà usato.  
+ Chiamare quindi il metodo Resync sul recordset con il set di argomenti AffectRecords uguale a adAffectGroup e il set di argomenti ResyncValues uguale a adResyncUnderlyingValues. Il metodo Resync aggiorna i dati nell'oggetto recordset corrente dal database sottostante. Utilizzando adAffectGroup, si garantisce che solo i record visibili con l'impostazione del filtro corrente, ovvero solo i record in conflitto, vengano risincronizzati con il database. Questo potrebbe rendere una differenza significativa nelle prestazioni se si sta utilizzando un recordset di grandi dimensioni. Impostando l'argomento ResyncValues su adResyncUnderlyingValues quando si chiama la risincronizzazione, si garantisce che la proprietà UnderlyingValue conterrà il valore (in conflitto) del database, che la proprietà Value manterrà il valore immesso dall'utente e che la proprietà OriginalValue conterrà il valore originale per il campo (il valore che aveva prima dell'ultima chiamata UpdateBatch riuscita). È quindi possibile usare questi valori per risolvere il conflitto a livello di codice o richiedere all'utente di selezionare il valore che verrà usato.  
   
  Questa tecnica è illustrata nell'esempio di codice seguente. Nell'esempio viene creato in modo artificiale un conflitto utilizzando un recordset separato per modificare un valore nella tabella sottostante prima della chiamata a UpdateBatch.  
   

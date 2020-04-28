@@ -13,10 +13,10 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923139"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
@@ -30,7 +30,7 @@ Un *celle* è il risultato di una query sui dati multidimensionali. È costituit
   
  Un cubo, ad esempio, ha le sei dimensioni seguenti (si noti che questo schema del cubo è leggermente diverso dall'esempio fornito in [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Venditore  
+-   Addetto/a alle vendite  
   
 -   Geografia (gerarchia naturale)-continenti, Paesi, Stati e così via  
   
@@ -40,7 +40,7 @@ Un *celle* è il risultato di una query sui dati multidimensionali. È costituit
   
 -   Measures-Sales, PercentChange, BudgetedSales  
   
--   Prodotti  
+-   Products  
   
  Il seguente insieme di celle rappresenta le vendite per 1991 per tutti i prodotti:  
   

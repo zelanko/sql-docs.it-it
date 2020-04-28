@@ -16,10 +16,10 @@ ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931140"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
@@ -27,7 +27,7 @@ Specifica se un file deve essere creato o sovrascritto durante il salvataggio da
   
 |Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adSaveCreateNotExist**|1|Default. Crea un nuovo file se il file specificato dal parametro *filename* non esiste già.|  
+|**adSaveCreateNotExist**|1|Valore predefinito. Crea un nuovo file se il file specificato dal parametro *filename* non esiste già.|  
 |**adSaveCreateOverWrite**|2|Sovrascrive il file con i dati dell'oggetto **flusso** attualmente aperto, se il file specificato dal parametro *filename* esiste già. Se il file specificato dal parametro *filename* non esiste, viene creato un nuovo file.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  

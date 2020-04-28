@@ -15,10 +15,10 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926641"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Panoramica di Microsoft OLE DB provider per Microsoft Jet
@@ -178,7 +178,7 @@ Microsoft.Jet.OLEDB.4.0
 |Termine tabella|DBPROP_TABLETERM|
 |DDL transazione|DBPROP_SUPPORTEDTXNDDL|
 |ID utente|DBPROP_AUTH_USERID|
-|User Name|DBPROP_USERNAME|
+|Nome utente|DBPROP_USERNAME|
 |Handle finestra|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Proprietà dinamiche del recordset

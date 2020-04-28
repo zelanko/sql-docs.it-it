@@ -17,10 +17,10 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932897"
 ---
 # <a name="execute-method-ado-connection"></a>Metodo Execute (Connection - ADO)
@@ -47,7 +47,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *Opzioni*  
  Facoltativa. Valore **Long** che indica la modalità di valutazione dell'argomento CommandText da parte del provider. Può essere una maschera di maschera di uno o più valori [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
- **Nota** Usare il **** valore ExecuteOptionEnum **adExecuteNoRecords** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni da trasferire da Visual Basic 6,0.  
+ **Nota** Usare il **ExecuteOptionEnum** valore ExecuteOptionEnum **adExecuteNoRecords** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni da trasferire da Visual Basic 6,0.  
   
  Non utilizzare **adExecuteStream** con il metodo **Execute** di un oggetto **Connection** .  
   

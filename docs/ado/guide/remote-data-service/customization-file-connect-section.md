@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922801"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
@@ -57,7 +57,7 @@ connectionString
 |----------|-----------------|  
 |**Connettere**|Stringa letterale che indica che si tratta di una voce della stringa di connessione.|  
 |**_connectionString_**|Stringa che sostituisce l'intera stringa di connessione del client.|  
-|**Accedere**|Stringa letterale che indica che si tratta di una voce di accesso.|  
+|**Accesso**|Stringa letterale che indica che si tratta di una voce di accesso.|  
 |**_accessRight_**|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** : l'utente non può accedere all'origine dati.<br />-   **ReadOnly** -l'utente può leggere l'origine dati.<br />-   **ReadWrite** -l'utente può leggere o scrivere nell'origine dati.|  
   
  Se si desidera consentire qualsiasi connessione (in effetti, disabilitando il comportamento predefinito del gestore), impostare la voce di accesso nella sezione **Connetti predefinito** su `Access=ReadWrite`ed eliminare o impostare come commento qualsiasi altra sezione dell' _identificatore_ di **connessione** .  

@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926627"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Panoramica di provider Microsoft OLE DB per Oracle
@@ -65,10 +65,10 @@ MSDAORA
 |Parametro|Descrizione|
 |---------------|-----------------|
 |**Handle finestra**|Indica l'handle della finestra da utilizzare per richiedere ulteriori informazioni.|
-|**Identificatore delle impostazioni locali**|Indica un numero univoco a 32 bit, ad esempio 1033, che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano il modo in cui le date e le ore vengono formattate, gli elementi vengono ordinati alfabeticamente, le stringhe vengono confrontate e così via.|
+|**Locale Identifier**|Indica un numero univoco a 32 bit, ad esempio 1033, che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano il modo in cui le date e le ore vengono formattate, gli elementi vengono ordinati alfabeticamente, le stringhe vengono confrontate e così via.|
 |**Servizi di OLE DB**|Indica una maschera di maschera che specifica OLE DB servizi da abilitare o disabilitare.|
 |**Prompt**|Indica se richiedere all'utente quando viene stabilita una connessione.|
-|**Extended Properties**|Stringa contenente informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifiche del provider che non possono essere descritte tramite il meccanismo della proprietà.|
+|**Proprietà estese**|Stringa contenente informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifiche del provider che non possono essere descritte tramite il meccanismo della proprietà.|
 
 ## <a name="see-also"></a>Vedere anche
  Proprietà [ConnectionString (](../../../ado/reference/ado-api/connectionstring-property-ado.md) ADO) [provider Property](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

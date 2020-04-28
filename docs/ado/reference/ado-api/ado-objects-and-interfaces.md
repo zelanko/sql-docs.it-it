@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920903"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfacce e oggetti ADO
@@ -39,7 +39,7 @@ Le relazioni tra questi oggetti sono rappresentate nel [modello a oggetti ADO](.
 |[Parametro](../../../ado/reference/ado-api/parameter-object.md)|Rappresenta un parametro o un argomento associato a un oggetto **Command** basato su una query con parametri o stored procedure.<br /><br /> L'oggetto **Parameter** non è sicuro per lo scripting.|  
 |[Proprietà](../../../ado/reference/ado-api/property-object-ado.md)|Rappresenta una caratteristica dinamica di un oggetto ADO definito dal provider.|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|Rappresenta una riga di un **Recordset**o una directory o un file in un file System. L'oggetto **record** è sicuro per lo scripting.|  
-|[recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Rappresenta il set di record di una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, l'oggetto **Recordset** fa riferimento solo a un singolo record all'interno del set come record corrente.<br /><br /> L'oggetto **Recordset** è sicuro per lo scripting.|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Rappresenta il set di record di una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, l'oggetto **Recordset** fa riferimento solo a un singolo record all'interno del set come record corrente.<br /><br /> L'oggetto **Recordset** è sicuro per lo scripting.|  
 |[Flusso](../../../ado/reference/ado-api/stream-object-ado.md)|Rappresenta un flusso di dati binario.<br /><br /> L'oggetto **flusso** è sicuro per lo scripting.|  
   
 ## <a name="see-also"></a>Vedere anche  

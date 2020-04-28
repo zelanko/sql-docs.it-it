@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929399"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Impostazioni progetto (migrazione) (AccessToSQL)
@@ -38,7 +38,7 @@ Specifica se SSMA deve verificare i vincoli quando aggiunge dati alle tabelle.
   
 -   **Modalità completa**: false  
   
-**Attiva trigger**  
+**Attive trigger**  
 Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle tabelle.  
   
 -   **Modalità predefinita**: false  
@@ -47,7 +47,7 @@ Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati [!
   
 -   **Modalità completa**: false  
   
-**Mantieni identità**  
+**Mantieni valori Identity**  
 Specifica se SSMA conserva i valori Identity di accesso quando aggiunge dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questo valore è false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna i valori Identity.  
   
 -   **Modalità predefinita**: true  
@@ -56,7 +56,7 @@ Specifica se SSMA conserva i valori Identity di accesso quando aggiunge dati a [
   
 -   **Modalità completa**: false  
   
-**Mantieni valori null**  
+**Mantieni valori Null**  
 Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indipendentemente dai valori predefiniti specificati in. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   **Modalità predefinita**: true  

@@ -16,10 +16,10 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926459"
 ---
 # <a name="visual-c-extensions"></a>Estensioni Visual C++
@@ -112,16 +112,16 @@ Update(CADORecordBinding *binding)
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Classe*|Classe in cui sono definite le voci di associazione e le variabili C/C++.|
+|*Class*|Classe in cui sono definite le voci di associazione e le variabili C/C++.|
 |*Ordinal*|Numero ordinale, conteggio da uno, del campo **Recordset** corrispondente alla variabile C/C++.|
 |*DataType*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Se necessario, il valore del campo **Recordset** verrà convertito in questo tipo di dati.|
 |*Buffer*|Nome della variabile C/C++ in cui verrà archiviato il campo del **Recordset** .|
 |*Dimensione*|Dimensione massima, in byte, del *buffer*. Se il *buffer* contiene una stringa a lunghezza variabile, consentire lo spazio per uno zero di terminazione.|
-|*Status*|Nome di una variabile che indicherà se il contenuto del *buffer* è valido e se la conversione del campo nel *tipo* di dati è stata eseguita correttamente.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, il che significa che la conversione è stata eseguita correttamente. e **adFldNull**, che indica che il valore del campo è una variante di tipo VT_NULL e non è semplicemente vuota.<br /><br /> I valori possibili per *lo stato* sono elencati nella tabella seguente, "valori di stato".|
-|*Modifica*|Flag booleano; Se TRUE, indica che ADO è autorizzato ad aggiornare il campo **Recordset** corrispondente con il valore contenuto nel *buffer*.<br /><br /> Impostare il parametro booleano *Modify* su true per abilitare ADO per aggiornare il campo associato e false se si desidera esaminare il campo senza modificarlo.|
-|*Precision*|Numero di cifre che possono essere rappresentate in una variabile numerica.|
-|*Scalabilità*|Numero di posizioni decimali in una variabile numerica.|
-|*Length*|Nome di una variabile a quattro byte che conterrà la lunghezza effettiva dei dati nel *buffer*.|
+|*Stato*|Nome di una variabile che indicherà se il contenuto del *buffer* è valido e se la conversione del campo nel *tipo* di dati è stata eseguita correttamente.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, il che significa che la conversione è stata eseguita correttamente. e **adFldNull**, che indica che il valore del campo è una variante di tipo VT_NULL e non è semplicemente vuota.<br /><br /> I valori possibili per *lo stato* sono elencati nella tabella seguente, "valori di stato".|
+|*Modificare*|Flag booleano; Se TRUE, indica che ADO è autorizzato ad aggiornare il campo **Recordset** corrispondente con il valore contenuto nel *buffer*.<br /><br /> Impostare il parametro booleano *Modify* su true per abilitare ADO per aggiornare il campo associato e false se si desidera esaminare il campo senza modificarlo.|
+|*Precisione*|Numero di cifre che possono essere rappresentate in una variabile numerica.|
+|*Ridimensionare*|Numero di posizioni decimali in una variabile numerica.|
+|*Lunghezza*|Nome di una variabile a quattro byte che conterrà la lunghezza effettiva dei dati nel *buffer*.|
 
 ## <a name="status-values"></a>Valori di stato
  Il valore della variabile di *stato* indica se un campo è stato copiato correttamente in una variabile.

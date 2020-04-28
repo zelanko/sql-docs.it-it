@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926668"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Panoramica di Microsoft OLE DB provider per il servizio di indicizzazione Microsoft
@@ -48,7 +48,7 @@ MSIDXS
 |-------------|-----------------|
 |**Provider**|Specifica il provider di OLE DB per il servizio di indicizzazione Microsoft. Si tratta in genere dell'unica parola chiave specificata nella stringa di connessione.|
 |**Origine dati**|Specifica il nome del catalogo del servizio di indicizzazione. Se questa parola chiave non è specificata, viene utilizzato il catalogo di sistema predefinito.|
-|**Identificatore delle impostazioni locali**|Specifica un numero univoco a 32 bit (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Se questa parola chiave non è specificata, viene utilizzato l'identificatore delle impostazioni locali di sistema predefinito.|
+|**Locale Identifier**|Specifica un numero univoco a 32 bit (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Se questa parola chiave non è specificata, viene utilizzato l'identificatore delle impostazioni locali di sistema predefinito.|
 
 ## <a name="command-text"></a>Testo comando
  La sintassi di query SQL del servizio di indicizzazione è costituita dalle estensioni all'istruzione SQL-92 **Select** e dalle clausole **from** e **where** . I risultati della query vengono restituiti tramite OLE DB set di righe, che possono essere utilizzati da ADO e modificati come oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
@@ -85,9 +85,9 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|
-|[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|
-|[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
+|[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|
+|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
 
  \*I segnalibri devono essere abilitati nel provider affinché questa funzionalità sia presente nel **Recordset**.
 
@@ -99,8 +99,8 @@ MSIDXS
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Sì|
+|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|
@@ -109,7 +109,7 @@ MSIDXS
 |[Apri](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|
 |[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|Sì|
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|
 |[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|No|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 

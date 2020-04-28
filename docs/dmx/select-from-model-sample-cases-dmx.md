@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928313"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selezionare da &lt;modello&gt;. SAMPLE_CASES (DMX)
@@ -43,7 +43,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *Elenco condizioni*  
  Facoltativa. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
+ *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -63,6 +63,6 @@ WHERE IsInNode('000000003')
  [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

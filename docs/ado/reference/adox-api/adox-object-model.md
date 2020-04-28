@@ -13,10 +13,10 @@ ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928533"
 ---
 # <a name="adox-object-model"></a>Modello a oggetti ADOX
@@ -34,4 +34,4 @@ Il diagramma seguente illustra il modo in cui gli oggetti sono rappresentati e c
  [Metodi ADOX](../../../ado/reference/adox-api/adox-methods.md)   
  [Oggetti ADOX](../../../ado/reference/adox-api/adox-objects.md)   
  [Proprietà di ADOX](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [Estensioni ADO per Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -13,10 +13,10 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923412"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
@@ -48,7 +48,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
   
  Il metodo **Find** limita la ricerca al contenuto di un campo. Il metodo **Seek** richiede un indice e presenta anche altre limitazioni. Se è necessario eseguire la ricerca in più campi che non sono la base di un indice o se il provider non supporta gli indici, è possibile limitare i risultati utilizzando la proprietà **Filter** dell'oggetto **Recordset** .  
   
-### <a name="find"></a>Trovare  
+### <a name="find"></a>Find  
  Il metodo **Find** esegue la ricerca di un **Recordset** per la riga che soddisfa un criterio specificato. Facoltativamente, è possibile specificare la direzione della ricerca, la riga iniziale e l'offset dalla riga iniziale. Se il criterio viene raggiunto, la posizione della riga corrente viene impostata sul record trovato; in caso contrario, la posizione viene impostata sull'estremità (o inizio) del **Recordset**, a seconda della direzione di ricerca.  
   
  Per il criterio è possibile specificare solo un nome di colonna singola. In altre parole, questo metodo non supporta le ricerche multicolonna.  

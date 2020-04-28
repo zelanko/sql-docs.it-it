@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923468"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funzioni di Visual Basic, Applications Edition
@@ -32,16 +32,16 @@ Le funzioni di Visual Basic, Applications Edition seguenti possono essere utiliz
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Data|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Giorno|DDB|  
-|Errore|Error$|Exp|Correzione|Format|Format$|  
+|Errore|Error$|Exp|Fix|Format|Format$|  
 |FV|Hex|Hex$|Ora|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
 |LeftB|Left$|LeftB $|Len|File di log|LTrim|  
 |LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
-|Now|NPer|NPV|ott|Oct$|Pmt|  
+|Adesso|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Tariffa|RGB|Right|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
-|Second|Sgn|Sin|SLN|Spazio|Space$|  
+|Second|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|string|  
 |String$|SYD|Tan|Tempo|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  

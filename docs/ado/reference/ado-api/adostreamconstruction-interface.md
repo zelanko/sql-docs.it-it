@@ -16,10 +16,10 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920781"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
@@ -32,10 +32,10 @@ L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggett
 |[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
   
 ## <a name="methods"></a>Metodi  
- No.  
+ Nessuno.  
   
-## <a name="events"></a>Eventi  
- No.  
+## <a name="events"></a>Events  
+ Nessuno.  
   
 ## <a name="remarks"></a>Osservazioni  
  Dato un oggetto OLE DB **IStream** (`pStream`), la costruzione di un oggetto **flusso** ADO (`adoStr`) equivale alle tre operazioni di base seguenti:  
@@ -73,4 +73,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
+ [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)

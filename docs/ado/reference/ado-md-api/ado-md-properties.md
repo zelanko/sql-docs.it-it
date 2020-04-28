@@ -14,10 +14,10 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930559"
 ---
 # <a name="ado-md-properties"></a>Proprietà ADO MD
@@ -25,17 +25,17 @@ ms.locfileid: "67930559"
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a quale oggetto della **connessione** ADO appartiene attualmente il Cell o il catalogo corrente.|  
-|[Sottotitolo](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica la didascalia di testo da utilizzare per la visualizzazione di un oggetto **livello** o **membro** .|  
+|[Didascalia](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica la didascalia di testo da utilizzare per la visualizzazione di un oggetto **livello** o **membro** .|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica il numero di membri per i quali l'oggetto **membro** corrente è l'elemento padre in una gerarchia.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Restituisce una raccolta di **membri** per cui il **membro** corrente è l'elemento padre nella gerarchia.|  
-|[Conteggio](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
-|[Profondità](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
+|[Numero](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[Livello nidificazione](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
 |[Descrizione](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Restituisce una spiegazione del testo dell'oggetto corrente.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica il numero di dimensioni su un asse.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica se nessuno degli elementi figlio segue immediatamente il membro sull'asse.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica le informazioni sul filtro per il cellt corrente.|  
-|[Elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Recupera una cella da un oggetto Cell usando le coordinate.|  
-|[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Restituisce un membro specifico di una raccolta in base al nome o al numero ordinale.|  
+|[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Recupera una cella da un oggetto Cell usando le coordinate.|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Restituisce un membro specifico di una raccolta in base al nome o al numero ordinale.|  
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Indica la visualizzazione formattata di un valore di cella.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Indica il numero di livelli tra la radice della gerarchia e un membro.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indica il nome del livello di un membro.|  
@@ -44,9 +44,9 @@ ms.locfileid: "67930559"
 |[Ordinale (posizione)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica in modo univoco una posizione lungo un asse.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica il membro padre del membro corrente in una gerarchia.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica se l'elemento padre di questo membro di posizione è lo stesso dell'elemento padre del membro immediatamente precedente.|  
-|[Origine](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica l'origine dei dati nel celle.|  
-|[Stato](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica lo stato corrente del cellt.|  
-|[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica il tipo del membro corrente.|  
+|[origine](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica l'origine dei dati nel celle.|  
+|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica lo stato corrente del cellt.|  
+|[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica il tipo del membro corrente.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nome non ambiguo per l'oggetto corrente.|  
 |[Valore](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica il valore della cella corrente.|  
   

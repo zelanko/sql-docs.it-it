@@ -16,10 +16,10 @@ ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932237"
 ---
 # <a name="maxrecords-property-ado"></a>Proprietà MaxRecords (ADO)
@@ -38,4 +38,4 @@ Indica il numero massimo di record da restituire a un [Recordset](../../../ado/r
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà MaxRecords (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
- [Esempio della proprietà MaxRecords (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   
+ [Esempio di proprietà MaxRecords (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   

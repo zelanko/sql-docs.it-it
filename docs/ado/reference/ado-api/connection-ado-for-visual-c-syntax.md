@@ -16,10 +16,10 @@ ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919548"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (sintassi ADO per Visual C++)
@@ -62,7 +62,7 @@ get_Version(BSTR *pbstr)
 get_Errors(ADOErrors **ppvObject)  
 ```  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
   
 ```  
 BeginTransComplete(LONG TransactionLevel, ADOError *pError, EventStatusEnum *adStatus, _ADOConnection *pConnection)  

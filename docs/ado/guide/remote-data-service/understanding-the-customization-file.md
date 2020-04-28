@@ -13,10 +13,10 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921966"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
@@ -43,8 +43,8 @@ identifier
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|**connettersi**|Stringa letterale che modifica una stringa di connessione.|  
-|**sql**|Stringa letterale che modifica una stringa di comando.|  
+|**connect**|Stringa letterale che modifica una stringa di connessione.|  
+|**SQL**|Stringa letterale che modifica una stringa di comando.|  
 |**UserList**|Stringa letterale che modifica i diritti di accesso di un utente specifico.|  
 |**log**|Stringa letterale che specifica un file di log che registra errori operativi.|  
 |**predefinita**|Stringa letterale utilizzata se non viene specificato o trovato alcun identificatore.|  

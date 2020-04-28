@@ -13,10 +13,10 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927046"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Guida per programmatori ADO per l'utilizzo di oggetti ADO
@@ -26,12 +26,12 @@ In questa documentazione viene fornita una panoramica su come utilizzare gli ogg
 
 -   [Introduzione](../../ado/guide/ado-introduction.md)
 
--   [ActiveX Data Objects (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ADO (ActiveX Data Objects)](../../ado/guide/data/activex-data-objects-ado.md)
 
 -   [Servizi Desktop remoto (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO (Multidimensional) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 
--   [ADO Extensions for Data Definition Language and Security (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+-   [Estensioni ADO per Data Definition Language and Security (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
 -   [Appendici](../../ado/guide/appendixes/ado-appendixes.md)

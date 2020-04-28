@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924543"
 ---
 # <a name="provider-errors"></a>Errori del provider
@@ -70,7 +70,7 @@ End Function
 |**HelpContext, fileguida**|Si riferisce all'argomento della guida e al file della guida che contengono una descrizione dell'errore che si è verificato.|  
 |**NativeError**|Numero di errore specifico del provider.|  
 |**Numero**|Valore long integer che rappresenta il numero (elencato in **ErrorValueEnum**) dell'errore che si è verificato.|  
-|**Origine**|Indica il nome dell'oggetto o dell'applicazione che ha generato un errore.|  
+|**origine**|Indica il nome dell'oggetto o dell'applicazione che ha generato un errore.|  
 |**SQLState**|Codice di errore di cinque caratteri restituito dal provider durante il processo di un'istruzione SQL.|  
   
  L'oggetto **errore** ADO è molto simile all'oggetto Visual Basic **Err** standard. Le relative proprietà descrivono l'errore che si è verificato. Oltre al numero dell'errore, si ricevono anche due informazioni correlate. La proprietà **NativeError** contiene un numero di errore specifico per il provider in uso. Nell'esempio precedente, il provider è il provider di OLE DB Microsoft per SQL Server, quindi **NativeError** conterrà errori specifici per SQL Server. La proprietà **SQLSTATE** include un codice di cinque lettere che descrive un errore in un'istruzione SQL.  

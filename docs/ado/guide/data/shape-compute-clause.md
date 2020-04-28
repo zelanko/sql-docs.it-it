@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924148"
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE di Shape
@@ -79,12 +79,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |State|city|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
-|o|Medford|200.000|  
-|o|Portland|400.000|  
+|OR|Medford|200.000|  
+|OR|Portland|400.000|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
 |WA|Tacoma|500.000|  
-|o|Corvallis|300.000|  
+|OR|Corvallis|300.000|  
   
  A questo punto, eseguire il comando Shape:  
   
@@ -108,7 +108,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,3 milioni|Riferimento a child1|CA|  
 |1,2 milioni|Riferimento a child2|WA|  
-|1,1 milioni|Riferimento a child3|o|  
+|1,1 milioni|Riferimento a child3|OR|  
   
 ## <a name="child1"></a>Child1  
   
@@ -128,9 +128,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |State|city|Popolazione|  
 |-----------|----------|----------------|  
-|o|Medford|200.000|  
-|o|Portland|400.000|  
-|o|Corvallis|300.000|  
+|OR|Medford|200.000|  
+|OR|Portland|400.000|  
+|OR|Corvallis|300.000|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

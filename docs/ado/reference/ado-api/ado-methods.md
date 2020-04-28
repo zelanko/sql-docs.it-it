@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920920"
 ---
 # <a name="ado-methods"></a>Metodi ADO
@@ -25,15 +25,15 @@ ms.locfileid: "67920920"
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuovo record per un oggetto **Recordset** aggiornabile.|  
-|[Accoda](../../../ado/reference/ado-api/append-method-ado.md)|Accoda un oggetto a una raccolta. Se la raccolta è **Fields**, è possibile creare un nuovo oggetto **campo** prima che venga aggiunto alla raccolta.|  
+|[Aggiungere](../../../ado/reference/ado-api/append-method-ado.md)|Accoda un oggetto a una raccolta. Se la raccolta è **Fields**, è possibile creare un nuovo oggetto **campo** prima che venga aggiunto alla raccolta.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Accoda i dati a un **campo**di dati di testo o binario di grandi dimensioni o a un oggetto **Parameter** .|  
 |[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gestisce l'elaborazione delle transazioni all'interno di un oggetto **connessione** come indicato di seguito:<br /><br /> **BeginTrans** : inizia una nuova transazione.<br /><br /> **CommitTrans** -Salva le modifiche e termina la transazione corrente. Potrebbe inoltre avviare una nuova transazione.<br /><br /> **RollbackTrans** : Annulla tutte le modifiche e termina la transazione corrente. Potrebbe inoltre avviare una nuova transazione.|  
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annulla un aggiornamento batch in sospeso.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto **Recordset** oppure alla raccolta **Fields** di un oggetto **record** , prima di chiamare il metodo **Update** .|  
-|[Cancella](../../../ado/reference/ado-api/clear-method-ado.md)|Rimuove tutti gli oggetti **Error** dalla raccolta **Errors** .|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un oggetto **Recordset** duplicato da un oggetto **Recordset** esistente. Facoltativamente, specifica che il clone deve essere di sola lettura.|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Chiude un oggetto aperto e tutti gli oggetti dipendenti.|  
+|[Deselezionare](../../../ado/reference/ado-api/clear-method-ado.md)|Rimuove tutti gli oggetti **Error** dalla raccolta **Errors** .|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Crea un oggetto **Recordset** duplicato da un oggetto **Recordset** esistente. Facoltativamente, specifica che il clone deve essere di sola lettura.|  
+|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Chiude un oggetto aperto e tutti gli oggetti dipendenti.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Confronta due segnalibri e restituisce un'indicazione dei valori relativi.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un file o una directory e il relativo contenuto in un'altra posizione.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Copia il numero specificato di caratteri o byte (a seconda del **tipo**) nel **flusso** in un altro oggetto **flusso** .|  
@@ -68,13 +68,13 @@ ms.locfileid: "67920920"
 |[Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md)|Aggiorna gli oggetti di una raccolta in modo da riflettere gli oggetti disponibili e specifici del provider.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Aggiorna i dati in un oggetto **Recordset** eseguendo nuovamente la query su cui è basato l'oggetto.|  
 |[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|Aggiorna i dati nell'oggetto **Recordset** corrente o nella raccolta di **campi** di un oggetto **record** dal database sottostante.|  
-|[Salvare](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un oggetto file o **flusso** .|  
+|[Salva](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un oggetto file o **flusso** .|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Salva il contenuto binario di un **flusso** in un file.|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|Esegue una ricerca nell'indice di un **Recordset** per individuare rapidamente la riga che corrisponde ai valori specificati e imposta la posizione della riga corrente su quella riga.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Imposta la posizione che rappresenta la fine del flusso.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora un'intera riga durante la lettura di un flusso di testo.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Ottiene informazioni statistiche su un flusso aperto.|  
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto **Recordset** specificato supporta un particolare tipo di funzionalità.|  
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto **Recordset** specificato supporta un particolare tipo di funzionalità.|  
 |[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|Salva le modifiche apportate alla riga corrente di un oggetto **Recordset** o alla raccolta di **campi** di un oggetto **record** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Scrive tutti gli aggiornamenti batch in sospeso sul disco.|  
 |[Scrittura](../../../ado/reference/ado-api/write-method.md)|Scrive dati binari in un oggetto **flusso** .|  

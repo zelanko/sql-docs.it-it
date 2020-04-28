@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926611"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Panoramica del provider Microsoft OLE DB per SQL Server
@@ -66,7 +66,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Trusted_Connection|Indica la modalità di autenticazione utente. Questo può essere impostato su **Yes** o **No**. Il valore predefinito è **No**. Se questa proprietà è impostata su **Sì**, SQLOLEDB usa la modalità di autenticazione di Microsoft Windows NT per autorizzare l'accesso utente al database SQL Server specificato dai valori della proprietà **location** e [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Se questa proprietà è impostata su **No**, SQLOLEDB utilizza la modalità mista per autorizzare l'accesso utente al database SQL Server. Il SQL Server account di accesso e la password sono specificati nelle proprietà **ID utente** e **password** .|
 |Lingua corrente|Indica un nome di lingua SQL Server. Identifica la lingua utilizzata per la selezione e la formattazione dei messaggi di sistema. Il linguaggio deve essere installato nel SQL Server. in caso contrario, l'apertura della connessione avrà esito negativo.|
 |Indirizzo di rete|Indica l'indirizzo di rete dell'SQL Server specificato dalla proprietà **location** .|
-|Network Library|Indica il nome della libreria di rete (DLL) utilizzata per comunicare con il SQL Server. Il nome non deve include il percorso o l'estensione di file DLL. Il valore predefinito è fornito dalla configurazione del client SQL Server.|
+|Libreria di rete|Indica il nome della libreria di rete (DLL) utilizzata per comunicare con il SQL Server. Il nome non deve include il percorso o l'estensione di file DLL. Il valore predefinito è fornito dalla configurazione del client SQL Server.|
 |Usare la procedura per la preparazione|Determina se SQL Server crea stored procedure temporanee quando i comandi vengono preparati (mediante la proprietà **preparata** ).|
 |Conversione automatica|Indica se i caratteri OEM/ANSI vengono convertiti. Questa proprietà può essere impostata su **true** o **false**. Il valore predefinito è **True**. Se questa proprietà è impostata su **true**, SQLOLEDB esegue la conversione di caratteri OEM/ANSI quando le stringhe di caratteri multibyte vengono recuperate da o inviate a, il SQL Server. Se questa proprietà è impostata su **false**, SQLOLEDB non esegue la conversione di caratteri OEM/ANSI nei dati stringa di caratteri multibyte.|
 |Packet Size|Indica una dimensione del pacchetto di rete in byte. Il valore della proprietà dimensioni pacchetto deve essere compreso tra 512 e 32767. Le dimensioni predefinite del pacchetto di rete SQLOLEDB sono pari a 4096.|
@@ -200,7 +200,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Termine tabella|DBPROP_TABLETERM|
 |DDL transazione|DBPROP_SUPPORTEDTXNDDL|
 |ID utente|DBPROP_AUTH_USERID|
-|User Name|DBPROP_USERNAME|
+|Nome utente|DBPROP_USERNAME|
 |Handle finestra|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Proprietà dinamiche del recordset

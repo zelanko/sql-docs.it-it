@@ -13,10 +13,10 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927131"
 ---
 # <a name="ado-overview-and-benefits"></a>Panoramica e vantaggi di ADO
@@ -28,7 +28,7 @@ ActiveX Data Objects (ADO) è un'interfaccia di alto livello e facile da usare p
 
 -   [Cronologia di ADO](../../ado/guide/ado-history.md)
 
--   [Prerequisiti per l'uso della documentazione di ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [Prerequisiti per l'uso della documentazione ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
 -   [Riferimenti alle librerie ADO](../../ado/guide/referencing-the-ado-libraries.md)
 

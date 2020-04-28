@@ -14,14 +14,14 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924022"
 ---
 # <a name="streams-and-persistence"></a>Flussi e persistenza
-L' [](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto recordset [Salva](../../../ado/reference/ado-api/save-method.md) il metodo archivia o rende *permanente*un **Recordset** in un file e il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) ripristina il **Recordset** da tale file.  
+L' [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto recordset [Salva](../../../ado/reference/ado-api/save-method.md) il metodo archivia o rende *permanente*un **Recordset** in un file e il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) ripristina il **Recordset** da tale file.  
   
  Con ADO 2,7 o versioni successive, i metodi Save e **Open** possono **salvare** in modo permanente un **Recordset** anche in un oggetto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) . Questa funzionalità è particolarmente utile quando si utilizzano Remote Data Service (RDS) e Active Server Pages (ASP).  
   

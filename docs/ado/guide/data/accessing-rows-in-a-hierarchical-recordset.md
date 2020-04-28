@@ -14,10 +14,10 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926353"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accesso alle righe in un recordset gerarchico (esempio)
@@ -68,4 +68,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Cenni preliminari sulla data shaping (ADO) Cenni preliminari sulla](../../../ado/guide/data/data-shaping-overview.md) [](../../../ado/reference/ado-api/field-object.md) [](../../../ado/reference/ado-api/fields-collection-ado.md) [grammatica di forma formale](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service per OLE DB (provider di servizi ADO](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) ) [Recordset oggetti (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [provider necessari per i comandi di](../../../ado/guide/data/required-providers-for-data-shaping.md) forma della [clausola APPEND](../../../ado/guide/data/shape-append-clause.md) [della](../../../ado/guide/data/shape-commands-in-general.md) forma data shaping nella clausola di [calcolo di forma](../../../ado/guide/data/shape-compute-clause.md) generale [Visual Basic, Applications Edition funzioni](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Cenni preliminari sulla data shaping (ADO) Cenni preliminari sulla](../../../ado/guide/data/data-shaping-overview.md) [Field Object](../../../ado/reference/ado-api/field-object.md) [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [grammatica di forma formale](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service per OLE DB (provider di servizi ADO](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) ) [Recordset oggetti (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [provider necessari per i comandi di](../../../ado/guide/data/required-providers-for-data-shaping.md) forma della [clausola APPEND](../../../ado/guide/data/shape-append-clause.md) [della](../../../ado/guide/data/shape-commands-in-general.md) forma data shaping nella clausola di [calcolo di forma](../../../ado/guide/data/shape-compute-clause.md) generale [Visual Basic, Applications Edition funzioni](../../../ado/guide/data/visual-basic-for-applications-functions.md)

@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921089"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
@@ -90,7 +90,7 @@ I provider di dati, i provider di servizi e i componenti del servizio possono ag
 |Termine tabella|DBPROP_TABLETERM|  
 |DDL transazione|DBPROP_SUPPORTEDTXNDDL|  
 |ID utente|DBPROP_AUTH_USERID|  
-|User Name|DBPROP_USERNAME|  
+|Nome utente|DBPROP_USERNAME|  
 |Handle finestra|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Proprietà dinamiche del recordset  

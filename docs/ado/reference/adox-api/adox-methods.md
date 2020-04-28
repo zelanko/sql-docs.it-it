@@ -14,10 +14,10 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928543"
 ---
 # <a name="adox-methods"></a>Metodi ADOX
@@ -33,7 +33,7 @@ ms.locfileid: "67928543"
 |[Accoda (utenti)](../../../ado/reference/adox-api/append-method-adox-users.md)|Aggiunge un nuovo oggetto **utente** alla raccolta **Users** .|  
 |[Accoda (visualizzazioni)](../../../ado/reference/adox-api/append-method-adox-views.md)|Aggiunge un nuovo oggetto **visualizzazione** alla raccolta **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifica la password per un account utente.|  
-|[Creare](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
+|[Crea](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
 |[Elimina](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Rimuove un oggetto da una raccolta.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Restituisce il proprietario di un oggetto in un catalogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Restituisce le autorizzazioni per un gruppo o un utente in un oggetto.|  
@@ -42,4 +42,4 @@ ms.locfileid: "67928543"
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sull'API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [Estensioni ADO per Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

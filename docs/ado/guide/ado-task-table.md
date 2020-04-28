@@ -14,10 +14,10 @@ ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927020"
 ---
 # <a name="ado-programming-task-table"></a>Tabella delle attività di programmazione ADO
@@ -36,7 +36,7 @@ Nella tabella seguente sono elencate le attività di programmazione contenute ne
 |Aggiunta di nuovi dati|[Aggiunta di record](../../ado/guide/data/adding-records.md)|
 |Eliminazione o rimozione di dati|[Eliminazione di record con il metodo Delete](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
 |Invio di modifiche all'origine dati|[Aggiornamento dei dati](../../ado/guide/data/updating-data.md)|
-|Inizio, commit ed esecuzione del rollback delle transazioni|[Elaborazione di transazioni](../../ado/guide/data/transaction-processing.md)|
+|Inizio, commit ed esecuzione del rollback delle transazioni|[Elaborazione delle transazioni](../../ado/guide/data/transaction-processing.md)|
 |Salvataggio di record in un file (XML o binario)|[Persistenza dei dati](../../ado/guide/data/persisting-data.md)|
 |Gestione degli errori|[Errori ADO](../../ado/guide/data/ado-errors.md)|
 |Gestione di eventi, programmazione asincrona|[Riepilogo dei gestori eventi ADO](../../ado/guide/data/ado-event-handler-summary.md)|

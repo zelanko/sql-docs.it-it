@@ -14,10 +14,10 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928602"
 ---
 # <a name="adox-collections"></a>Raccolte ADOX
@@ -37,4 +37,4 @@ ms.locfileid: "67928602"
  [Informazioni di riferimento sull'API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Modello a oggetti ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Oggetti ADOX](../../../ado/reference/adox-api/adox-objects.md)   
- [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [Estensioni ADO per Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

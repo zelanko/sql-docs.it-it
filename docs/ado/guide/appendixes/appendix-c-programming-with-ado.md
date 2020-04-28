@@ -13,16 +13,16 @@ ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926878"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Appendice C: programmazione con ADO in ambienti di sviluppo
 ADO è un componente dell'interfaccia di automazione COM che può essere utilizzato con molti linguaggi di programmazione, tra cui Microsoft Visual Basic, VBScript, JScript e Visual C++. Viene installata una versione di ADO con ognuno di questi strumenti e altre applicazioni, ad esempio Microsoft Office e Microsoft SQL Server.
 
- La libreria per ADO è msado15. dll e il prefisso ProgID (Program ID) è "ADODB". Ad esempio, per fare riferimento in modo esplicito [](../../../ado/reference/ado-api/recordset-object-ado.md)a un recordset `ADODB.Recordset`ADO, utilizzare.
+ La libreria per ADO è msado15. dll e il prefisso ProgID (Program ID) è "ADODB". Ad esempio, per fare riferimento in modo esplicito [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)a un recordset `ADODB.Recordset`ADO, utilizzare.
 
  Per ulteriori informazioni sulla programmazione con ADO in diversi ambienti di sviluppo, vedere gli argomenti seguenti:
 

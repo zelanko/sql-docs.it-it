@@ -16,10 +16,10 @@ ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919681"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
@@ -33,7 +33,7 @@ Specifica la modalità di interpretazione di un argomento di comando.
 |**adCmdText**|1|Restituisce [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) come definizione testuale di un comando o di una chiamata stored procedure.|  
 |**adCmdTable**|2|Restituisce **CommandText** come nome di tabella le cui colonne vengono tutte restituite da una query SQL generata internamente.|  
 |**adCmdStoredProc**|4|Restituisce **CommandText** come nome stored procedure.|  
-|**adCmdUnknown**|8|Default. Indica che il tipo di comando nella proprietà **CommandText** non è noto.<br /><br /> Quando il tipo di comando non è noto, ADO effettuerà diversi tentativi di interpretare **CommandText**.<br /><br /> -   **CommandText** viene interpretato come definizione testuale di un comando o di una chiamata stored procedure. Questo comportamento è identico a quello di **adCmdText**.<br />-   **CommandText** è il nome di un stored procedure. Questo comportamento è identico a quello di **adCmdStoredProc**.<br />-   **CommandText** viene interpretato come il nome di una tabella. Tutte le colonne vengono restituite da una query SQL generata internamente. Questo comportamento è identico a quello di **adCmdTable**.|  
+|**adCmdUnknown**|8|Valore predefinito. Indica che il tipo di comando nella proprietà **CommandText** non è noto.<br /><br /> Quando il tipo di comando non è noto, ADO effettuerà diversi tentativi di interpretare **CommandText**.<br /><br /> -   **CommandText** viene interpretato come definizione testuale di un comando o di una chiamata stored procedure. Questo comportamento è identico a quello di **adCmdText**.<br />-   **CommandText** è il nome di un stored procedure. Questo comportamento è identico a quello di **adCmdStoredProc**.<br />-   **CommandText** viene interpretato come il nome di una tabella. Tutte le colonne vengono restituite da una query SQL generata internamente. Questo comportamento è identico a quello di **adCmdTable**.|  
 |**adCmdFile**|256|Restituisce **CommandText** come nome file di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)archiviato in modo permanente. Utilizzato con **Recordset.** [Apre](../../../ado/reference/ado-api/open-method-ado-recordset.md) o [esegue](../../../ado/reference/ado-api/requery-method.md) nuovamente la query.|  
 |**adCmdTableDirect**|512|Restituisce **CommandText** come nome di tabella le cui colonne vengono restituite. Utilizzato con **Recordset. Open** o solo la **riesecuzione della query** . Per utilizzare il metodo [Seek](../../../ado/reference/ado-api/seek-method.md) , il **Recordset** deve essere aperto con **adCmdTableDirect**.<br /><br /> Questo valore non può essere combinato con il valore di [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) **adAsyncExecute**.|  
   
@@ -55,5 +55,5 @@ Specifica la modalità di interpretazione di un argomento di comando.
 |||  
 |-|-|  
 |[Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Metodo Execute (Command - ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Metodo Execute (Connection - ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Metodo Open (Recordset - ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Metodo Execute (Connection - ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[Metodo Requery](../../../ado/reference/ado-api/requery-method.md)||

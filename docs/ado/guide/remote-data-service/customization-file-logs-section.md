@@ -14,10 +14,10 @@ ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922781"
 ---
 # <a name="customization-file-logs-section"></a>Sezione Logs del file di personalizzazione

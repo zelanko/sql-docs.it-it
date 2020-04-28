@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928335"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;Model&gt; (DMX)
@@ -42,7 +42,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *Elenco condizioni*  
  Facoltativa. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
+ *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -67,6 +67,6 @@ FROM Forecasting
  [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

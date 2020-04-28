@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926630"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Panoramica di Microsoft OLE DB provider per ODBC
@@ -190,9 +190,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
-|[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 
  Le proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) sono di sola scrittura quando ADO viene utilizzato con la versione 1,0 del provider Microsoft OLE DB per ODBC.
 
@@ -204,8 +204,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sì|Sì|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|No|No|Sì|Sì|
+|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|Sì|Sì|Sì|
@@ -217,7 +217,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Apri](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
 |[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|No|No|Sì|Sì|
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
 |[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
 
@@ -294,7 +294,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Termine tabella|DBPROP_TABLETERM|
 |DDL transazione|DBPROP_SUPPORTEDTXNDDL|
 |ID utente|DBPROP_AUTH_USERID|
-|User Name|DBPROP_USERNAME|
+|Nome utente|DBPROP_USERNAME|
 |Handle finestra|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Proprietà dinamiche del recordset

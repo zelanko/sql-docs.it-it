@@ -15,10 +15,10 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925228"
 ---
 # <a name="handling-ado-events"></a>Gestione degli eventi ADO
@@ -43,7 +43,7 @@ Il modello di eventi ADO supporta determinate operazioni ADO sincrone e asincron
   
 -   [Interazione tra i gestori eventi](../../../ado/guide/data/how-event-handlers-work-together.md)  
   
--   [Creazione di istanze di eventi ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
+-   [Creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

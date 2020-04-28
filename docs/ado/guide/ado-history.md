@@ -13,10 +13,10 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927161"
 ---
 # <a name="ado-features-for-each-release"></a>Funzionalità ADO per ogni versione
@@ -40,7 +40,7 @@ Questi metodi ora verificano che gli handle di file puntino solo ai file fisici.
  **Recordset. ActiveCommand**  _restituisce un errore quando viene richiamato da una pagina HTML/ASP._
 In questo modo si impedisce che l'oggetto **comando** venga usato in modo improprio.
 
- _Il numero di_**Recordset**_restituiti da un comando Shape annidato_****_ha un limite superiore._        
+ _Il numero di_**Recordset**_restituiti da un comando Shape annidato_**Shape**_ha un limite superiore._        
 Un comando Shape annidato ora restituisce un massimo di 512 **Recordset**. Ciò significa che non è più possibile annidare un comando **Shape** a una profondità. Al contrario, la profondità massima del livello è 512, se ogni comando restituisce un singolo **Recordset**(figlio). Se, a qualsiasi livello, un comando **Shape** restituisce più **Recordset**, il livello massimo di profondità sarà inferiore a 512.
 
 ## <a name="ado-27"></a>ADO 2,7
@@ -53,13 +53,13 @@ Un comando Shape annidato ora restituisce un massimo di 512 **Recordset**. Ciò 
 
  *Flussi di comandi* L'oggetto **Command** supporta i comandi in formato flusso come alternativa all'utilizzo della proprietà **CommandText** . La [Proprietà CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) può essere utilizzata per specificare modelli o updategram XML come input del **comando** con il provider di Microsoft OLE DB per SQL Server.
 
- Dialetto proprietà **dialetto**__ [è una](../../ado/reference/ado-api/dialect-property.md) nuova proprietà che definisce la sintassi e le regole generali utilizzate dal provider per analizzare la stringa o il flusso.  
+ Dialetto proprietà **dialetto**_property_ [è una](../../ado/reference/ado-api/dialect-property.md) nuova proprietà che definisce la sintassi e le regole generali utilizzate dal provider per analizzare la stringa o il flusso.  
 
  _Metodo_ **Command. Execute**il [metodo Execute](../../ado/reference/ado-api/execute-method-ado-command.md) dell'oggetto **comando** ADO è stato migliorato in modo da usare i flussi per l'input e l'output.  
 
  *Campo statusvalues* Se si verifica un errore DB_E_ERRORSOCCURRED durante la modifica di un **campo** di un **Recordset**, ADO compilerà la proprietà **Field. status** con le informazioni di stato appropriate, in modo che l'utente disponga di ulteriori informazioni su ciò che si è verificato. Vedere [proprietà Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- La proprietà **namedParameters**__ [namedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) è una nuova proprietà dell'oggetto **Command** che indica che il provider deve utilizzare parametri denominati.  
+ La proprietà **namedParameters**_property_ [namedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) è una nuova proprietà dell'oggetto **Command** che indica che il provider deve utilizzare parametri denominati.  
 
  *Set di risultati nei flussi* ADO può restituire i set di risultati da un'origine dati in un **flusso**, anziché un oggetto **Recordset** . Utilizzando la versione più recente del provider di Microsoft OLE DB per SQL Server, è possibile ottenere risultati XML dal provider eseguendo una query "for XML". Un **flusso** che riceve il set di risultati può essere aperto con un comando "for XML" come origine. Vedere [recupero di set di risultati nei flussi](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 

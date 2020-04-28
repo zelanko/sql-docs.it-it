@@ -21,10 +21,10 @@ ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930930"
 ---
 # <a name="source-property-ado-record"></a>Proprietà Source (Record - ADO)
@@ -52,4 +52,4 @@ Indica l'origine dati o l'oggetto rappresentato dal [record](../../../ado/refere
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Proprietà Source (Recordset - ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Proprietà Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

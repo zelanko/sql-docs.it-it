@@ -13,10 +13,10 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925800"
 ---
 # <a name="comments-on-hellodata"></a>Commenti su HelloData
@@ -27,7 +27,7 @@ L'applicazione HelloData è in grado di eseguire le operazioni di base di una ti
   
  Assegnare un gestore errori usando un'istruzione Visual Basic **OnError** . Per ulteriori informazioni sulla gestione degli errori in ADO, vedere [gestione degli errori](../../../ado/guide/data/error-handling.md). Viene creato un nuovo oggetto **connessione** e la proprietà **CursorLocation** è impostata su **adUseClient** perché nell'esempio HelloData viene creato un *Recordset disconnesso*. Ciò significa che non appena i dati sono stati recuperati dall'origine dati, la connessione fisica con l'origine dati è interruppe, ma è comunque possibile utilizzare i dati memorizzati nella cache in locale nell'oggetto **Recordset** .  
   
- Una volta aperta la connessione, assegnare una stringa SQL a una variabile (crediti). Quindi, creare un'istanza di un **** nuovo oggetto recordset `m_oRecordset1`,. Nella riga di codice successiva aprire il **Recordset** sulla **connessione**esistente, passando `sSQL` come origine del **Recordset**. Si aiuta ADO a determinare che la stringa SQL passata come origine per il **Recordset** è una definizione testuale di un comando passando **adCmdText** nell'argomento finale al metodo **Open del recordset** . Questa riga imposta anche **LockType** e **CursorType** associati al **Recordset**.  
+ Una volta aperta la connessione, assegnare una stringa SQL a una variabile (crediti). Quindi, creare un'istanza di un **Recordset** nuovo oggetto recordset `m_oRecordset1`,. Nella riga di codice successiva aprire il **Recordset** sulla **connessione**esistente, passando `sSQL` come origine del **Recordset**. Si aiuta ADO a determinare che la stringa SQL passata come origine per il **Recordset** è una definizione testuale di un comando passando **adCmdText** nell'argomento finale al metodo **Open del recordset** . Questa riga imposta anche **LockType** e **CursorType** associati al **Recordset**.  
   
  La riga di codice successiva imposta la proprietà **MarshalOptions** su **adMarshalModifiedOnly**. **MarshalOptions** indica i record di cui deve essere effettuato il marshalling al livello intermedio (o al server Web). Per ulteriori informazioni sul marshalling, vedere la documentazione COM. Quando si usa **adMarshalModifiedOnly** con un cursore sul lato client ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo i record modificati sul client vengono riscritti nel livello intermedio. L'impostazione di **MarshalOptions** su **adMarshalModifiedOnly** può migliorare le prestazioni perché viene effettuato il marshalling di un numero minore di righe  
   
