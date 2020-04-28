@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252165"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Supporto del tipo di dati xml in SQLXML 4.0
@@ -36,7 +36,7 @@ ms.locfileid: "75252165"
   
 ## <a name="guidelines-and-limitations"></a>Linee guida e limitazioni  
   
--   xsd: non è possibile eseguire il mapping di **** **qualsiasi>a una colonna che include un tipo di dati \<** XML. Il supporto in SQLXML per questo scenario viene fornito tramite l'annotazione **SQL: overflow-field** . Un'altra soluzione alternativa consiste nel eseguire il mapping di un campo con tipo di dati **XML** come elemento di **xsd: anyType**. Questa soluzione alternativa viene illustrata nell'esempio "Mapping di un elemento XML a una colonna con tipo di dati XML" citato nella tabella precedente.  
+-   xsd: non è possibile eseguire il mapping di **xml** **qualsiasi>a una colonna che include un tipo di dati \<** XML. Il supporto in SQLXML per questo scenario viene fornito tramite l'annotazione **SQL: overflow-field** . Un'altra soluzione alternativa consiste nel eseguire il mapping di un campo con tipo di dati **XML** come elemento di **xsd: anyType**. Questa soluzione alternativa viene illustrata nell'esempio "Mapping di un elemento XML a una colonna con tipo di dati XML" citato nella tabella precedente.  
   
 -   La query XPath nel contenuto delle colonne con tipo di dati **XML** non è supportata.  
   

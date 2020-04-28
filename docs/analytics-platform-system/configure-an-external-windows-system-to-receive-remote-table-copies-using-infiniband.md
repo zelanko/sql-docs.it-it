@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401311"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configurare un sistema Windows esterno per ricevere copie della tabella remota tramite InfiniBand-Parallel data warehouse
@@ -33,7 +33,7 @@ Prima di configurare il sistema Windows esterno, è necessario:
   
 3.  Acquistare cavi InfiniBand e una scheda di rete InfiniBand dal fornitore hardware del dispositivo. Si consiglia di acquistare una scheda di rete con due porte per la tolleranza di errore durante la ricezione dei dati esportati. È consigliabile usare una scheda di rete a due porte, ma non è un requisito.  
   
-## <a name="HowToWindows"></a>Configurare un sistema Windows esterno per la ricezione di copie di tabella remota  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>Configurare un sistema Windows esterno per la ricezione di copie di tabella remota  
 Per configurare il sistema Windows esterno, attenersi alla procedura seguente:  
   
 1.  Installare la scheda di rete InfiniBand nel sistema Windows.  

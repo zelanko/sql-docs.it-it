@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243177"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utilizzo dell'utilità sqlcmd
@@ -31,7 +31,7 @@ ms.locfileid: "75243177"
   
 -   Gli utenti inviano un processo `sqlcmd` specificando una singola istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] da eseguire o facendo in modo che l'utilità punti a un file di testo contenente istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] da eseguire. L'output viene in genere indirizzato a un file di testo, ma può essere anche visualizzato al prompt dei comandi.  
   
--   [Modalità SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) nell' [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor di query.  
+-   [Modalità SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   Oggetti SMO (SQL Server Management Objects)  
   
@@ -109,15 +109,14 @@ ms.locfileid: "75243177"
   
  Quando il comando viene eseguito senza file di input o query, `sqlcmd` si connette all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi visualizza una nuova riga con il valore `1>` seguito da un carattere di sottolineatura intermittente denominato prompt di `sqlcmd`. Il valore `1` indica che si tratta della prima riga di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], mentre il prompt di `sqlcmd` è il punto in cui inizia l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] quando la si digita.  
   
- Al prompt di `sqlcmd` è possibile digitare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e comandi di `sqlcmd`, ad esempio `GO` e `EXIT`. Ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene inserita in un buffer denominato cache dell'istruzione. Dopo aver digitato il comando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e premuto di INVIO, queste istruzioni vengono inviate a `GO`. Per uscire `sqlcmd`, digitare `EXIT` o `QUIT` all'inizio di una nuova riga.  
+ Al prompt di `sqlcmd` è possibile digitare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e comandi di `sqlcmd`, ad esempio `GO` e `EXIT`. Ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene inserita in un buffer denominato cache dell'istruzione. Dopo aver digitato il comando `GO` e premuto di INVIO, queste istruzioni vengono inviate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per uscire `sqlcmd`, digitare `EXIT` o `QUIT` all'inizio di una nuova riga.  
   
  Per cancellare il contenuto della cache delle istruzioni, digitare `:RESET`. La `^C` digitazione causa `sqlcmd` l'uscita. È inoltre possibile utilizzare `^C` per arrestare l'esecuzione della cache delle istruzioni dopo l'esecuzione di un comando `GO`.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]le istruzioni immesse in una sessione interattiva possono essere modificate immettendo il comando **: ed** e il `sqlcmd` prompt. Verrà aperto l'editor. Dopo aver modificato l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] e chiuso l'editor, l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] modificata verrà visualizzata nella finestra di comando. Immettere `GO` per eseguire l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione modificata.  
   
 ## <a name="quoted-strings"></a>Stringhe tra virgolette  
- I caratteri racchiusi tra virgolette vengono utilizzati senza alcuna pre-elaborazione aggiuntiva, fatta eccezione per il fatto che è possibile inserire virgolette in una stringa immettendo due virgolette consecutive. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta questa sequenza di caratteri come virgoletta. La traduzione avviene tuttavia nel server. Le variabili di scripting non vengono espanse se sono incluse all'interno di una stringa.  
+ I caratteri racchiusi tra virgolette vengono utilizzati senza alcuna pre-elaborazione aggiuntiva, fatta eccezione per il fatto che è possibile inserire virgolette in una stringa immettendo due virgolette consecutive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta questa sequenza di caratteri come virgoletta. La traduzione avviene tuttavia nel server. Le variabili di scripting non vengono espanse se sono incluse all'interno di una stringa.  
   
  Ad esempio:  
   
@@ -132,8 +131,7 @@ ms.locfileid: "75243177"
  `Length: 5" 7'`  
   
 ## <a name="strings-that-span-multiple-lines"></a>Stringhe che si estendono su più righe  
- 
-  `sqlcmd` supporta script con stringhe che si estendono su più righe. Ad esempio, l'istruzione `SELECT` seguente si estende su più righe ma rappresenta una stringa singola eseguita quando si preme INVIO dopo aver digitato `GO`.  
+ `sqlcmd` supporta script con stringhe che si estendono su più righe. Ad esempio, l'istruzione `SELECT` seguente si estende su più righe ma rappresenta una stringa singola eseguita quando si preme INVIO dopo aver digitato `GO`.  
   
  `SELECT First line`  
   
@@ -172,8 +170,7 @@ ms.locfileid: "75243177"
   
  `1> _`  
   
- La pressione di INVIO dopo aver immesso `USE AdventureWorks2012` segnala all'utilità `sqlcmd` di iniziare una nuova riga. Premendo INVIO, dopo avere digitato `GO,` viene segnalato a `sqlcmd` di inviare l'istruzione `USE AdventureWorks2012` all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  `sqlcmd` restituisce quindi un messaggio per indicare che l'istruzione `USE` è stata completata correttamente e visualizza un nuovo prompt di `1>` per indicare che è possibile immettere un nuovo comando o istruzione.  
+ La pressione di INVIO dopo aver immesso `USE AdventureWorks2012` segnala all'utilità `sqlcmd` di iniziare una nuova riga. Premendo INVIO, dopo avere digitato `GO,` viene segnalato a `sqlcmd` di inviare l'istruzione `USE AdventureWorks2012` all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sqlcmd` restituisce quindi un messaggio per indicare che l'istruzione `USE` è stata completata correttamente e visualizza un nuovo prompt di `1>` per indicare che è possibile immettere un nuovo comando o istruzione.  
   
  Nell'esempio seguente viene illustrato il contenuto della finestra del prompt dei comandi quando si digita un'istruzione `SELECT` , un comando `GO` per eseguire l'istruzione `SELECT`e un comando `EXIT` per uscire da `sqlcmd`:  
   
@@ -313,7 +310,7 @@ ms.locfileid: "75243177"
   
  `SET NOCOUNT OFF`  
   
- Al prompt di `sqlcmd` , immettere il codice seguente:  
+ Al prompt di `sqlcmd` digitare il comando seguente:  
   
  `C:\sqlcmd`  
   
@@ -338,7 +335,7 @@ ms.locfileid: "75243177"
   
  `BACKUP DATABASE [$(db)] TO DISK='$(bakfile)';`  
   
- Al prompt di `sqlcmd` , immettere il codice seguente:  
+ Al prompt di `sqlcmd` digitare il comando seguente:  
   
  `C:\ >sqlcmd`  
   

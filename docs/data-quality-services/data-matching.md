@@ -10,10 +10,10 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251752"
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
@@ -40,14 +40,14 @@ ms.locfileid: "75251752"
   
  ![Processo di corrispondenza in DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processo di corrispondenza in DQS")  
   
-##  <a name="How"></a>Come eseguire la corrispondenza dei dati  
+##  <a name="how-to-perform-data-matching"></a><a name="How"></a> Come eseguire la corrispondenza di dati  
  Come per altri processi correlati qualità dei dati in DQS, l'individuazione di corrispondenze tra dati viene eseguita compilando una Knowledge Base ed eseguendo un'attività corrispondente in un progetto di qualità dei dati osservando i passaggi seguenti:  
   
 1.  Creare criteri di corrispondenza nella Knowledge Base  
   
 2.  Eseguire un processo di deduplicazione in un'attività corrispondente che è parte di un progetto di qualità dei dati.  
   
-###  <a name="Policy"></a>Compilazione di criteri di corrispondenza  
+###  <a name="building-a-matching-policy"></a><a name="Policy"></a> Compilazione di criteri di corrispondenza  
  Preparare la Knowledge Base per l'esecuzione degli abbinamenti creando criteri di corrispondenza nella Knowledge Base stessa, così da definire la modalità con cui DQS assegna le probabilità di corrispondenza. I criteri di corrispondenza sono costituiti da una o più le regole di corrispondenza che identificano i domini che verranno utilizzati da DQS per la valutazione della corrispondenza tra due record e specificano l'importanza da assegnare a ciascun valore di dominio nella valutazione della corrispondenza stessa. Specificare nelle regole se i valori di dominio devono essere una corrispondenza esatta o se possono essere solo simili e specificare il livello di similitudine. Specificare inoltre se una corrispondenza di dominio è un prerequisito.  
   
  L'attività dei criteri di corrispondenza nella procedura guidata Gestione Knowledge Base analizza i dati di esempio applicando ogni regola di corrispondenza per confrontare record per volta in tutto l'intervallo di record. I record i cui punteggi di corrispondenza sono maggiori di un minimo specificato vengono raggruppati in cluster nei risultati di corrispondenza. Questi risultati di corrispondenza non vengono aggiunti alla Knowledge Base, vengono bensì utilizzati al fine di ottimizzare le regole di corrispondenza. La creazione di criteri di corrispondenza può essere un processo iterativo nel quale si modificano le regole di corrispondenza in base ai risultati di corrispondenza o a statistiche di profiling.  
@@ -61,7 +61,7 @@ ms.locfileid: "75251752"
   
  Al momento della creazione, ogni regola di corrispondenza viene salvata nella Knowledge Base. Tuttavia, una Knowledge Base può essere disponibile per l'uso in un progetto Data Quality solo quando viene pubblicata. Inoltre, fino al momento della pubblicazione della Knowledge Base, le regole di corrispondenza presenti in quest'ultima non possono essere modificate da un utente diverso da quello che l'ha creata.  
   
-###  <a name="Project"></a>Esecuzione di un progetto corrispondente  
+###  <a name="running-a-matching-project"></a><a name="Project"></a> Esecuzione di un progetto corrispondente  
  DQS esegue la deduplicazione dei dati confrontando ogni riga nei dati di origine con tutte le altre righe, utilizzando i criteri di corrispondenza definiti nella Knowledge Base e producendo una probabilità che le righe presentino una corrispondenza. Ciò è possibile in un progetto Data Quality dotato di un tipo di corrispondenza. L'individuazione delle corrispondenze è uno dei passaggi principali in un progetto Data Quality. È opportuno eseguirlo dopo la pulizia dei dati, in modo che il confronto possa avere luogo tra dati privi di errori. Prima di eseguire un processo di corrispondenza, è possibile esportare i risultati del progetto di pulizia in una tabella dati o in un file csv, quindi creare un progetto corrispondente nel quale si esegue il mapping dei risultati della pulizia ai domini del progetto corrispondente.  
   
  Un progetto di corrispondenza dei dati è costituito da un processo computerizzato e da un processo interattivo. Il progetto corrispondente applica le regole di corrispondenza nei criteri di corrispondenza all'origine dati da valutare. Tale processo consente di valutare le probabilità che due righe coincidano tramite un punteggio di corrispondenza. Verranno considerati corrispondenti solo i record con probabilità di corrispondenza maggiori di un valore impostato dall'amministratore dei dati nei criteri di corrispondenza.  

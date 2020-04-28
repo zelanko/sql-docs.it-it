@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75225393"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scenari di globalizzazione per Analysis Services multidimensionale
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] archivia e gestisce dati e metadati multilingue nei modelli di dati tabulari e multidimensionali. L'archiviazione dei dati è in formato Unicode (UTF-16) nei set di caratteri che usano la codifica Unicode. Se in un modello di dati si caricano dati ANSI, i caratteri vengono archiviati usando elementi di codice Unicode equivalenti.  
   
  Le implicazioni del supporto Unicode consentono a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di archiviare i dati in una qualsiasi lingua supportata dai sistemi operativi client e server Windows, permettendo la lettura, la scrittura, l'ordinamento e il confronto dei dati in qualsiasi set di caratteri usato in un computer Windows. Le applicazioni client BI che utilizzano i dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono rappresentare i dati nella lingua scelta dall'utente, supponendo che i dati esistano in tale lingua nel modello.  
@@ -55,9 +54,8 @@ ms.locfileid: "75225393"
   
 -   Gli ambienti di sviluppo e di produzione sono posizionati geograficamente in diversi paesi. È sempre più comune sviluppare una soluzione in un paese e quindi distribuirla in un altro. È essenziale sapere impostare le proprietà della lingua e delle regole di confronto se occorre preparare una soluzione sviluppata in una lingua, per distribuirla in un server che usa un altro Language Pack. L'impostazione di queste proprietà consente di eseguire l'override delle impostazioni predefinite ereditate che vengono recuperate dal sistema host originale. Per altre informazioni, vedere la sezione [Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) per informazioni dettagliate sull'impostazione delle proprietà.  
   
-##  <a name="bkmk_features"></a>Funzionalità per la creazione di una soluzione multidimensionale globalizzata  
- 
-  [!INCLUDE[applies](../includes/applies-md.md)] solo modelli di dati multidimensionali  
+##  <a name="features-for-building-a-globalized-multidimensional-solution"></a><a name="bkmk_features"></a>Funzionalità per la creazione di una soluzione multidimensionale globalizzata  
+ [!INCLUDE[applies](../includes/applies-md.md)] solo modelli di dati multidimensionali  
   
  A livello di client, le applicazioni globalizzate che utilizzano o gestiscono dati multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono usare le funzionalità multilingue e multiculturali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
@@ -74,7 +72,7 @@ ms.locfileid: "75225393"
 |[Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Specifica la lingua predefinita e le regole di confronto di Windows per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le scelte influiscono sui dati e metadati gestiti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md)|Definisce le traduzioni per un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e per gli oggetti contenuti nel database. Questo argomento illustra come [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] risolve le richieste di dati e metadati tradotti da parte delle applicazioni client.|  
 |[Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Definisce una conversione di valuta usando la Configurazione guidata funzionalità di Business Intelligence.|  
-|[Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Analizza diverse procedure di progettazione e codifica che consentono di evitare i problemi correlati ai dati multilingue.|  
+|[Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Analizza diverse procedure di progettazione e codifica che consentono di evitare i problemi correlati ai dati multilingue.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Internazionalizzazione per le applicazioni Windows](/windows/desktop/Intl/international-support)   

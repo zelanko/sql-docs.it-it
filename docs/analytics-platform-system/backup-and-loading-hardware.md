@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401366"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Panoramica dell'hardware di backup e caricamento-data warehouse parallele
@@ -25,7 +25,7 @@ Per distribuire una soluzione di data warehousing end-to-end in un sistema di pi
 Per eseguire il backup di un database PDW, sono necessari uno o più server di backup. È possibile utilizzare l'hardware esistente o acquistare nuovo hardware. Per altre informazioni, vedere [acquisire e configurare un server di backup](acquire-and-configure-backup-server.md). Queste istruzioni includono un [foglio](backup-capacity-planning-worksheet.md) di disegno per la pianificazione della capacità del server di backup che consente di pianificare la soluzione corretta per il backup.  
   
 ## <a name="acquire-and-configure-loading-servers"></a>Acquisire e configurare i server di caricamento  
-![Processo di caricamento](media/loading-process.png "Processo di caricamento")  
+![Caricamento del processo](media/loading-process.png "Processo di caricamento")  
   
 Per caricare i dati, sono necessari uno o più server di caricamento. È possibile utilizzare il proprio ETL o altri server esistenti oppure è possibile acquistare nuovi server. Per altre informazioni, vedere [acquisire e configurare un server di caricamento](acquire-and-configure-loading-server.md). Queste istruzioni includono un [foglio](loading-server-capacity-planning-worksheet.md) di disegno per la pianificazione della capacità del server per facilitare la pianificazione della soluzione corretta per il caricamento.  
   

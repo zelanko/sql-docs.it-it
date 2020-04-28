@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241796"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importazione dei valori di un progetto di pulizia in un dominio
@@ -24,20 +24,20 @@ ms.locfileid: "75241796"
 
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), è possibile importare informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un processo di pulizia Data Quality o in un pacchetto di Integration Services contenente il componente di pulizia di DQS in un dominio. Ciò garantisce che le informazioni attendibili non vadano perse e che la Knowledge Base venga continuamente migliorata.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   Per importare valori di un progetto di pulizia in un dominio, il dominio deve essere stato utilizzato nel progetto di pulizia in Client Data Quality o nel pacchetto di Integration Services contenente un componente di pulizia di DQS.  
   
 -   Il progetto di pulizia in Client Data Quality o nel pacchetto di Integration Services contenente il componente di pulizia di DQS deve essere stato completato correttamente.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per importare in un dominio informazioni sulla qualità dei dati raccolta durante il processo di pulizia, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Import"></a>Importa valori progetto pulizia  
+##  <a name="import-cleansing-project-values"></a><a name="Import"></a> Importazione dei valori di un progetto di pulizia  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75241796"
 4.  Fare clic sulla scheda **Valori di dominio** , fare clic sull'icona **Importa valori** nella barra delle icone, quindi fare clic su **Importa valori progetto**. Viene visualizzata la finestra di dialogo **Importa valori progetto** con un elenco di progetti Data Quality e pacchetti di Integration Services che sono stati puliti utilizzando il dominio.  
   
     > [!NOTE]  
-    >  Se non è stato creato alcun progetto utilizzando il dominio o uno dei domini collegati, oppure se il progetto non è stato completato, l'opzione **Importa valori progetto** non sarà disponibile.  
+    >   Se non è stato creato alcun progetto utilizzando il dominio o uno dei domini collegati, oppure se il progetto non è stato completato, l'opzione **Importa valori progetto** non sarà disponibile.  
   
 5.  Nella finestra di dialogo **Importa valori progetto** :  
   
@@ -71,12 +71,12 @@ ms.locfileid: "75241796"
 10. Fare clic su **Fine**.  
   
     > [!NOTE]  
-    >  Per ulteriori informazioni sull'utilizzo di valori nella scheda **Valori di dominio** , vedere [Change Domain Values](../data-quality-services/change-domain-values.md).  
+    >   Per ulteriori informazioni sull'utilizzo di valori nella scheda **Valori di dominio** , vedere [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a>Completamento: dopo l'importazione di valori di progetto in un dominio  
+##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a> Completamento: Dopo avere importato i valori di progetto in un dominio  
  Dopo avere importato le informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un dominio, è possibile eseguire attività di gestione relative ai domini sul dominio e sui relativi valori. Per altre informazioni, vedere [Gestione di un dominio](../data-quality-services/managing-a-domain.md).  
   
-##  <a name="Values"></a>Valori che verranno importati  
+##  <a name="values-that-will-be-imported"></a><a name="Values"></a> Valori che verranno importati  
  I valori seguenti verranno importati da un progetto in un dominio:  
   
 -   Solo i valori stringa vengono importati nel dominio.  
@@ -95,7 +95,7 @@ ms.locfileid: "75241796"
   
 -   Una correzione effettuata come risultato di una relazione basata su termine in un dominio, viene importata come valore corretto (non come errore).  
   
-##  <a name="ValuesNot"></a>Valori che non verranno importati  
+##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a> Valori che non verranno importati  
  I valori seguenti non verranno importati da un progetto in un dominio:  
   
 -   I valori dalle schede **Suggeriti** e **Non validi** nella pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** non vengono importati.  

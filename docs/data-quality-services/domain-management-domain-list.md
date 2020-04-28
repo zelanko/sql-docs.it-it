@@ -1,5 +1,5 @@
 ---
-title: 'Gestione dominio: elenco domini'
+title: 'Gestione dominio: Elenco di domini'
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,13 +12,13 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251659"
 ---
-# <a name="domain-management-domain-list"></a>Gestione dominio: elenco domini
+# <a name="domain-management-domain-list"></a>Gestione dominio: Elenco di domini
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "75251659"
  **Creazione di un dominio**  
  Consente di creare un nuovo dominio nella Knowledge Base. Con questo comando viene visualizzata la finestra di dialogo **Crea dominio** . Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio o facendo clic sull'icona sopra l'elenco di domini. Per altre informazioni, vedere [Creazione di un dominio](../data-quality-services/create-a-domain.md).  
   
- **Crea una copia del dominio selezionato**  
+ **Crea copia del dominio selezionato**  
  Consente di creare una copia esatta del dominio selezionato e di aggiungerla alla Knowledge Base. Il nome sarà il nome del dominio dal quale è stata creata la copia più " - Copy" aggiunto al nome. Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio e quindi facendo clic su **Crea copia**o facendo clic sull'icona sopra l'elenco di domini. Non è disponibile per un dominio composito.  
   
  **Importa dominio da file di dati**  
@@ -50,7 +50,7 @@ ms.locfileid: "75251659"
   
  Un dominio collegato dispone degli stessi valori del dominio al quale è stato collegato. Solo il nome e le proprietà del dominio sono diversi. Se si modificano una regola di dominio, un valore di dominio, un collegamento ai dati di riferimento o una relazione basata su termini nel dominio a cui è stato effettuato il collegamento, si modificheranno anche la regola di dominio, il valore di dominio, il collegamento ai dati di riferimento o la relazione basata su termini nel dominio collegato. Inoltre, se si modifica un valore nel dominio collegato, la modifica sarà apportata anche nel dominio a cui è stato effettuato il collegamento.  
   
- **Esporta Knowledge base**  
+ **Esporta Knowledge Base**  
  Consente di esportare l'intera Knowledge Base in un file DQS. Con questo comando viene visualizzata la finestra di dialogo **Esporta in file di dati** . Questo comando è disponibile facendo clic sull'icona **Esporta dati Knowledge Base** all'inizio della pagina o in **Esporta** nel menu di scelta rapida dei domini nel riquadro dell'elenco di domini. Per altre informazioni, vedere [Esportazione di una Knowledge Base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  **Esporta dominio**  

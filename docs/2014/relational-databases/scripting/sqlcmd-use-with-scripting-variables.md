@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243171"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utilizzo di sqlcmd con variabili di scripting
@@ -44,9 +44,9 @@ ms.locfileid: "75243171"
   
 3.  Shell dei comandi (**SET X=Y**) impostata al prompt dei comandi prima dell'avvio di **sqlcmd**  
   
-4.  **sqlcmd-v** X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **: Setvar** X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
 >  Per visualizzare le variabili di ambiente, nel **Pannello di controllo**aprire **Sistema**quindi fare clic sulla scheda **Avanzate** .  
@@ -64,8 +64,7 @@ ms.locfileid: "75243171"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.`BusinessEntityID `< 5;`  
   
  È quindi possibile specificare il nome della colonna che si desidera restituire utilizzando l'opzione `-v` :  
   
@@ -103,7 +102,7 @@ ms.locfileid: "75243171"
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
  Le variabili definite con **sqlcmd** sono note come variabili di scripting. Nella tabella seguente sono elencate le variabili di scripting di **sqlcmd** .  
   
-|Variabile|Opzione correlata|L/S|Predefinito|  
+|Variabile|Opzione correlata|L/S|Impostazione predefinita|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -111,14 +110,14 @@ ms.locfileid: "75243171"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/S|"8" (secondi)|  
-|SQLCMDSTATTIMEOUT|-t|L/S|"0" = attesa illimitata|  
-|SQLCMDHEADERS|-h|L/S|"0"|  
-|SQLCMDCOLSEP|-s|L/S|" "|  
+|SQLCMDSTATTIMEOUT|-T|L/S|"0" = attesa illimitata|  
+|SQLCMDHEADERS|-H|L/S|"0"|  
+|SQLCMDCOLSEP|-S|L/S|" "|  
 |SQLCMDCOLWIDTH|-w|L/S|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/S|"0"|  
-|SQLCMDMAXVARTYPEWIDTH|-Y|L/S|"256"|  
-|SQLCMDMAXFIXEDTYPEWIDTH|-Y|L/S|"0" = numero illimitato|  
+|SQLCMDMAXVARTYPEWIDTH|-y|L/S|"256"|  
+|SQLCMDMAXFIXEDTYPEWIDTH|-y|L/S|"0" = numero illimitato|  
 |SQLCMDEDITOR||L/S|"edit.com"|  
 |SQLCMDINI||R|""|  
   
@@ -344,6 +343,6 @@ ms.locfileid: "75243171"
 ## <a name="see-also"></a>Vedere anche  
  [Usare l'utilità sqlcmd](sqlcmd-use-the-utility.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
- [Riferimento all'utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

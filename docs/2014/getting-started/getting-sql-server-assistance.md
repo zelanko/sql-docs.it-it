@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683608"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "74683608"
   
  Se non si trovano le informazioni desiderate, è possibile inserire domande nei forum e nei newsgroup della community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Documentazione online di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-books-online"></a>Documentazione online di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono inclusi i concetti e le procedure necessari per utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ed è disponibile del materiale di riferimento per i linguaggi e le interfacce di programmazione per l'archiviazione, il recupero, la creazione di report e la modifica dei dati mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  È possibile accedere alla documentazione online nei modi seguenti:  
@@ -91,7 +91,7 @@ ms.locfileid: "74683608"
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Informazioni di prevendita per la valutazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come strumento per l'archiviazione dei dati e per soluzioni di Business Intelligence.|  
 |[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Repository in cui è possibile eseguire la ricerca di articoli relativi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] scritti dai tecnici del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- I prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] dispongono di un ciclo di vita del supporto che ne definisce il periodo di disponibilità per ciascuna versione. Nel sito relativo al supporto tecnico [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile una pagina in cui viene definito il ciclo di vita del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Nella pagina sono presenti collegamenti ad altre pagine che specificano la disponibilità del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per altre informazioni, vedere [ciclo](https://go.microsoft.com/fwlink/?LinkId=98306)di vita supporto tecnico Microsoft.  
+ I prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] dispongono di un ciclo di vita del supporto che ne definisce il periodo di disponibilità per ciascuna versione. Nel sito relativo al supporto tecnico [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile una pagina in cui viene definito il ciclo di vita del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Nella pagina sono presenti collegamenti ad altre pagine che specificano la disponibilità del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per altre informazioni, vedere il sito Web [Ciclo di vita del supporto Microsoft](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare la documentazione del prodotto per SQL Server](../2014-toc/index.yml)  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243162"
 ---
 # <a name="step-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
@@ -51,9 +51,9 @@ ms.locfileid: "75243162"
   
 |Azione|Procedura|  
 |------------|---------------|  
-|Eseguire tutte le istruzioni dall'istruzione corrente al successivo punto di interruzione|Scegliere **continua**dal menu **debug** .<br /><br /> Sulla barra degli strumenti **debug** fare clic sul pulsante **continue (continua** ).|  
+|Eseguire tutte le istruzioni dall'istruzione corrente al successivo punto di interruzione|Scegliere **Continua** dal menu **Debug**.<br /><br /> Sulla barra degli strumenti **debug** fare clic sul pulsante **continue (continua** ).|  
 |Eseguire la successiva istruzione o il successivo modulo.|Scegliere **Esegui istruzione**dal menu **debug** .<br /><br /> Sulla barra degli strumenti **debug** fare clic sul pulsante **Esegui istruzione** .<br /><br /> Premere F11.|  
-|Passare alla successiva istruzione o al successivo modulo.|Scegliere **Esegui istruzione/** routine dal menu **debug** .<br /><br /> Sulla barra degli strumenti **debug** fare clic sul pulsante **Esegui istruzione/** routine.<br /><br /> Premere F10.|  
+|Passare alla successiva istruzione o al successivo modulo.|Scegliere **Esegui istruzione/routine** dal menu **Debug**.<br /><br /> Sulla barra degli strumenti **debug** fare clic sul pulsante **Esegui istruzione/** routine.<br /><br /> Premere F10.|  
 |Uscire da un modulo|Dal menu **debug** scegliere **Esci da istruzione/uscita**.<br /><br /> Sulla barra degli strumenti **debug** fare clic sul pulsante Esci **da istruzione/uscita** .<br /><br /> Premere MAIUSC+F11.|  
 |Eseguire il codice fino alla posizione corrente del cursore|Fare clic con il pulsante destro del mouse nella finestra dell'editor di query, quindi fare clic su **Esegui fino al cursore**.<br /><br /> Premere CTRL+F10.|  
   

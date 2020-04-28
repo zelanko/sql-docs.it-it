@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242062"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Esercitazioni di SQL Server 2014
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono introdotte numerose nuove tecnologie e funzionalità.  
   
  In futuro verranno fornite ulteriori esercitazioni. Nel frattempo, è possibile continuare ad apprendere dalle esercitazioni di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] . In alcuni casi si potrebbero riscontrare differenze minori tra l'interfaccia utente di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e potrebbero esservi differenze minime nei prerequisiti per l'esercitazione. Se in un'esercitazione viene utilizzato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , è necessario scaricare e usare la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
@@ -43,7 +42,7 @@ ms.locfileid: "75242062"
   
 |Tecnologia|Descrizione|  
 |----------------|-----------------|  
-|[Analysis Services esercitazioni &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
+|[Esercitazioni su Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
 |[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
 |[Esercitazioni su Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Esercitazioni del motore di database](../relational-databases/database-engine-tutorials.md)|Viene illustrato come connettersi a un'istanza del motore di database e, successivamente, compilare ed eseguire istruzioni Transact-SQL.|  

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957125"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
@@ -68,15 +68,15 @@ ms.locfileid: "74957125"
  Viene illustrata la modalità di utilizzo dei sistemi di gestione delle chiavi di terze parti con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Eseguire il backup della chiave master del servizio](back-up-the-service-master-key.md)  
+ [Backup della chiave master del servizio](back-up-the-service-master-key.md)  
   
  [Ripristino della chiave master del servizio](restore-the-service-master-key.md)  
   
- [Creazione della chiave master di un database](create-a-database-master-key.md)  
+ [Creare una chiave master del database](create-a-database-master-key.md)  
   
- [Backup della chiave master di un database](back-up-a-database-master-key.md)  
+ [Eseguire il backup di una chiave master del database](back-up-a-database-master-key.md)  
   
- [Ripristino di una chiave master del database](restore-a-database-master-key.md)  
+ [Ripristinare una chiave master del database](restore-a-database-master-key.md)  
   
  [Creare chiavi simmetriche identiche su due server](create-identical-symmetric-keys-on-two-servers.md)  
   
@@ -89,12 +89,12 @@ ms.locfileid: "74957125"
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
- [Ripristino di una chiave master del database](restore-a-database-master-key.md)  
+ [Ripristinare una chiave master del database](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Eseguire il backup e il ripristino delle chiavi di crittografia Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminare e ricreare le chiavi di crittografia &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

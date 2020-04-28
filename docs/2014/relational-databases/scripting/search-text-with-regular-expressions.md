@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243316"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
-  Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
+  Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile usare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Trova e sostituisci**di**.  
   
 #### <a name="to-find-using-regular-expressions"></a>Per eseguire la ricerca utilizzando espressioni regolari  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75243316"
 |Qualsiasi carattere del set|[]|Consente di ricercare qualsiasi carattere racchiuso tra []. Per specificare un intervallo di caratteri, immettere il carattere iniziale e quello finale separati da un trattino (-), ad esempio [a-z].|  
 |Qualsiasi carattere esterno al set|[^...]|Consente di ricercare qualsiasi carattere non compreso nel set di caratteri che seguono il simbolo ^.|  
 |Oppure|&#124;|Cerca l'espressione specificata prima o dopo il simbolo OR (&#124;). In genere viene utilizzata all'interno di un gruppo. Ad esempio, (caffè&#124;latte) macchiato corrisponde a "caffè macchiato" e "latte macchiato".|  
-|Carattere speciale di escape|\|Corrisponde al carattere che segue la barra rovesciata (\\) come valore letterale. Ciò consente di trovare caratteri utilizzati nella notazione delle espressioni regolari, quali { e ^. Ad esempio, \\^ consente di cercare il carattere ^.|  
+|Carattere speciale di escape|\|Cerca il carattere che segue la barra rovesciata (\\) come valore letterale. Ciò consente di trovare caratteri utilizzati nella notazione delle espressioni regolari, quali { e ^. Ad esempio, \\^ consente di cercare il carattere ^.|  
 |Espressione tag|{}|Consente di ricercare il testo con tag nell'espressione tra parentesi.|  
 |Identificatore C/C++|:i|Corrisponde all'espressione ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Stringa tra virgolette|:q|Cerca l'espressione (("[^"]*")&#124;('[^']\*')).|  
@@ -66,9 +66,8 @@ ms.locfileid: "75243316"
 |n ripetizioni|^n|Consente di ricercare n occorrenze dell'espressione precedente. Ad esempio, [0-9]^4 consente di ricercare qualsiasi sequenza di quattro cifre.|  
 |Raggruppamento|()|Consente di raggruppare una sottoespressione.|  
 |ennesimo testo con tag|\n|In un'espressione **Trova o Sostituisci** indica il testo corrispondente all'ennesima espressione con tag, dove n è un numero da 1 a 9.<br /><br /> In un'espressione di **sostituzione** \0 inserisce l'intero testo corrispondente.|  
-|Campo giustificato a destra|\\(w, n)|In un'espressione di **sostituzione** giustifica a destra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
-|Campo giustificato a sinistra|
-  \\(-w,n)|In un'espressione di **sostituzione** giustifica a sinistra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
+|Campo giustificato a destra|\\(w,n)|In un'espressione di **sostituzione** giustifica a destra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
+|Campo giustificato a sinistra|\\(-w,n)|In un'espressione di **sostituzione** giustifica a sinistra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
 |Impedisci corrispondenza|~(X)|Consente di escludere una corrispondenza quando X si trova nel punto specificato dell'espressione. Ad esempio, real~(tà) corrisponde a "real" in "realmente" e "realistico", ma non a "real" in "realtà".|  
 |Carattere alfanumerico|:a|Corrisponde all'espressione ([a-zA-Z0-9]).|  
 |Carattere alfabetico|:c|Corrisponde all'espressione ([a-zA-Z]).|  
@@ -133,4 +132,4 @@ ms.locfileid: "75243316"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca e sostituzione](search-and-replace.md)   
- [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)  
+ [Eseguire ricerche di testo con caratteri jolly](search-text-with-wildcards.md)  

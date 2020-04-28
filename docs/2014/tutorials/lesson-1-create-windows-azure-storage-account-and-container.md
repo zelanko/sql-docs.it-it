@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253505"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>Lezione 1: Creare account e contenitore di Archiviazione di Azure
   Prima di poter iniziare a archiviare i file di dati SQL Server in archiviazione di Azure, è necessario creare prima un account di archiviazione di Azure e un contenitore BLOB e una firma di accesso condiviso. Nella lezione 1 vengono illustrati i passaggi per accedere al portale di gestione di Azure, creare un account di archiviazione, un contenitore BLOB e una firma di accesso condiviso.  
   
- Per impostazione predefinita, solo il proprietario dell'account di archiviazione può accedere a BLOB, tabelle e code all'interno dell'account. Per accedere alle risorse utilizzando questa nuova funzionalità di SQL Server senza condividere la chiave di accesso dell'account di archiviazione, è necessario eseguire le seguenti operazioni:  
+ Per impostazione predefinita, solo il proprietario dell'account di archiviazione può accedere ai BLOB, alle tabelle e alle code dell'account in uso. Per accedere alle risorse utilizzando questa nuova funzionalità di SQL Server senza condividere la chiave di accesso dell'account di archiviazione, è necessario eseguire le seguenti operazioni:  
   
 -   Impostare le autorizzazioni del contenitore su privato.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "75253505"
   
  Per ulteriori informazioni, vedere [gestione dell'accesso alle risorse di archiviazione Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
-## <a name="create-storage-account"></a>Crea account di archiviazione  
+## <a name="create-storage-account"></a>Creare un account di archiviazione  
  Per creare un account di archiviazione nel portale di gestione di Azure, seguire questa procedura:  
   
 1.  Accedere al portale di gestione di [Azure](https://manage.windowsazure.com) usando l'account. Se non si dispone di un account Azure, provare la [versione di valutazione gratuita di Azure](https://www.windowsazure.com/pricing/free-trial/).  
@@ -42,7 +42,7 @@ ms.locfileid: "75253505"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>Creare un contenitore BLOB  
- In Azure un contenitore fornisce un raggruppamento di un set di BLOB. Tutti i BLOB devono trovarsi in un contenitore. Un account di archiviazione può contenere un numero illimitato di contenitori, tuttavia ne deve contenere almeno uno. In un contenitore può essere archiviato un numero illimitato di BLOB. Per informazioni aggiornate sui limiti delle dimensioni di archiviazione, vedere [come usare il servizio di archiviazione BLOB di Azure in .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
+ In Azure un contenitore fornisce un raggruppamento di un set di BLOB. Tutti i BLOB devono essere inclusi in un contenitore. Un account di archiviazione può contenere un numero illimitato di contenitori, tuttavia ne deve contenere almeno uno. In un contenitore è possibile archiviare un numero illimitato di BLOB. Per informazioni aggiornate sui limiti delle dimensioni di archiviazione, vedere [come usare il servizio di archiviazione BLOB di Azure in .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
  Per creare un contenitore in Azure, seguire questa procedura:  
   

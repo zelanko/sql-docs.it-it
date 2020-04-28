@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244116"
 ---
 # <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
@@ -30,20 +30,20 @@ ms.locfileid: "75244116"
   
  La preparazione del processo di corrispondenza prevede la creazione dei criteri di corrispondenza con uno o più regole di corrispondenza e l'esecuzione dei criteri sui dati di esempio. Il processo del progetto corrispondente è diverso dal processo per i criteri di corrispondenza in quanto la Knowledge Base non viene popolata con le informazioni di corrispondenza ottenute dal progetto corrispondente. Per ulteriori informazioni sulla creazione dei criteri di corrispondenza, vedere [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario avere creato una Knowledge Base con criteri di corrispondenza composti da una o più regole di corrispondenza.  
   
 -   Se i dati di origine per la corrispondenza si trovano in un file di Excel, è necessario che Microsoft Excel sia installato nel computer del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, non sarà possibile selezionare il file di Excel nella fase di mapping. I file creati da Microsoft Excel potranno presentare l'estensione xlsx, xls o csv. Se viene utilizzata la versione a 64 bit di Excel, sono supportati solo i file di Excel 2003 (xls), mentre non sono supportati file di Excel 2007 o 2010 (xlsx). Se si utilizza una versione a 64 bit di Excel 2007 o 2010, salvare il file come file xls o csv o installare una versione a 32 bit di Excel.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eseguire un progetto corrispondente, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="StartingaMatchingProject"></a>Primo passaggio: avvio di un progetto corrispondente  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>Primo passaggio: avvio di un progetto corrispondente  
  L'attività di corrispondenza viene eseguita in un progetto Data Quality creato nell'applicazione client DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "75244116"
   
 3.  Fare clic su **Apri progetto Data Quality** per eseguire la corrispondenza in un progetto Data Quality esistente. Selezionare il progetto, quindi fare clic su **Avanti**. In alternativa, è possibile fare clic su un progetto in **progetto Data Quality recente**. Se si apre un progetto corrispondente chiuso, si procederà con la fase in cui l'attività di progetto corrispondente è stata chiusa (come indicato dalla colonna **stato** nella tabella Project o nel nome del progetto in **progetto Data Quality recente**). Se si apre un progetto corrispondente completato, si passerà alla pagina **Esporta** e non sarà più possibile tornare alle schermate precedenti.  
   
-##  <a name="MappingStage"></a>Fase di mapping  
+##  <a name="mapping-stage"></a><a name="MappingStage"></a> Fase di mapping  
  Nella fase di mapping si identifica l'origine dei dati in cui verrà eseguita l'analisi di corrispondenza e si esegue il mapping delle colonne di origine ai domini per rendere tali domini disponibili per l'attività di corrispondenza.  
   
 1.  Nella pagina **Mappa** , per eseguire la corrispondenza su un database, lasciare selezionato **SQL Server** come **Origine dati**, selezionare il database su cui si desidera eseguire la corrispondenza, quindi selezionare la tabella. Il database di origine deve trovarsi nella stessa istanza di SQL Server del server DQS. in caso contrario, non verrà visualizzato nell'elenco a discesa.  
@@ -75,14 +75,14 @@ ms.locfileid: "75244116"
     > [!NOTE]  
     >  Fare clic su **Chiudi** per salvare la fase del progetto di corrispondenza e tornare alla home page di DQS. Alla successiva apertura, il progetto verrà avviato dalla stessa fase. Fare clic su **Annulla** per terminare l'attività di corrispondenza e tornare alla home page di DQS.  
   
-##  <a name="MatchingStage"></a>Fase corrispondente  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a>Fase corrispondente  
  In questa fase si esegue un processo di corrispondenza computerizzato che indica il numero di corrispondenze presenti nei dati di origine in base alle regole di corrispondenza. Questo processo genererà una tabella dei risultati di corrispondenza in cui vengono mostrati i cluster identificati da DQS, ogni record presente nel cluster con il relativo ID e il punteggio corrispondente nonché il record iniziale per il cluster. Il record iniziale nel cluster viene selezionato casualmente. Il record superstite viene determinato selezionando la regola di sopravvivenza nella pagina **Esporta** quando si esegue il progetto corrispondente. Ogni riga aggiuntiva in un cluster viene considerata una corrispondenza; il punteggio corrispondente, rispetto al record iniziale, viene riportato nella tabella dei risultati. Il numero del cluster corrisponde all'ID record relativo al record iniziale del cluster.  
   
  Nei risultati di corrispondenza è possibile applicare un filtro per i dati desiderati e rifiutare le corrispondenze non desiderate. È possibile visualizzare i dati di profiling per il processo di corrispondenza nel loro insieme, le specifiche sulle regole di corrispondenza applicate e le statistiche sui risultati di corrispondenza nel loro insieme. Il processo di corrispondenza può identificare i cluster sovrapposti e quelli non sovrapposti e in caso di più esecuzioni può essere eseguito sui dati appena copiati dall'origine e reindicizzati o sui dati precedenti.  
   
 1.  Nella pagina **Corrispondenza**selezionare **Cluster sovrapposti** dall'elenco a discesa per visualizzare i record pivot e i record successivi per tutti i cluster quando viene eseguita la corrispondenza, anche qualora i gruppi di cluster presentino record in comune. Selezionare **Cluster non sovrapposti** per visualizzare i cluster che presentano record in comune come cluster singolo all'esecuzione della corrispondenza.  
   
-2.  Fare clic su **Ricarica dati di origine** (valore predefinito) per copiare i dati dall'origine dati nella tabella di staging e reindicizzarli quando si esegue il progetto corrispondente. Fare clic su **Esegui sui dati precedenti** per eseguire il progetto corrispondente senza copiare i dati nella tabella di staging e senza reindicizzare i dati. **Esegui sui dati precedenti** è disabilitato per la prima esecuzione del progetto corrispondente o se si modifica il mapping nella pagina **Mappa** e si preme **Sì** nel popup seguente. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se il progetto corrispondente non viene modificato, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
+2.  Fare clic su **Ricarica dati di origine** (valore predefinito) per copiare i dati dall'origine dati nella tabella di staging e reindicizzarli quando si esegue il progetto corrispondente. Fare clic su **Esegui sui dati precedenti** per eseguire il progetto corrispondente senza copiare i dati nella tabella di staging e senza reindicizzare i dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione del progetto corrispondente o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nella finestra popup successiva. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se il progetto corrispondente non viene modificato, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
   
 3.  Fare clic su **Avvia** per avviare la corrispondenza sull'origine dati selezionata.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "75244116"
   
 12. Fare clic su **Avanti** per passare alla fase di sopravvivenza e di esportazione.  
   
-##  <a name="SurvivorshipandExportStage"></a>Fase di sopravvivenza e di esportazione  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>Fase di sopravvivenza e di esportazione  
  Nel processo di sopravvivenza Data Quality Services consente di determinare un record superstite per ogni cluster, che sostituirà gli altri record corrispondenti nel cluster. I risultati di sopravvivenza e/o di corrispondenza vengono quindi esportati in una tabella del database di SQL Server, in un file CSV o in un file di Excel.  
   
  La sopravvivenza è facoltativa. È possibile esportare i risultati senza eseguire la sopravvivenza. In tal caso viene utilizzato il record pivot definito nell'analisi di corrispondenza. Se due o più record in un cluster soddisfano la regola di sopravvivenza, il processo di sopravvivenza selezionerà l'ID record minore tra i record in conflitto come superstite. È possibile esportare i superstiti in diversi file o tabelle utilizzando regole di sopravvivenza diverse.  
@@ -143,7 +143,7 @@ ms.locfileid: "75244116"
   
     -   Selezionare **Record pivot** (valore predefinito) per identificare il record superstite come record pivot iniziale scelto arbitrariamente da DQS.  
   
-    -   Selezionare **Il record più completo e più lungo** per identificare il record superstite come il record con il maggior numero di campi popolati e con il maggior numero di termini in ogni campo. Vengono controllati tutti i campi di origine, anche quelli di cui non è stato eseguito il mapping a un dominio nella pagina **mappa** .  
+    -   Selezionare **Il record più completo e più lungo** per identificare il record superstite come il record con il maggior numero di campi popolati e con il maggior numero di termini in ogni campo. Vengono controllati tutti i campi di origine, anche quelli di cui non è stato eseguito il mapping a un dominio nella pagina **Mappa** .  
   
     -   Selezionare **Record più completo** per identificare il record superstite come il record con il maggior numero di campi popolati. Un campo popolato contiene almeno un valore (valori stringa o numerici oppure entrambi). Vengono controllati tutti i campi di origine, anche quelli di cui non è stato eseguito il mapping a un dominio nella pagina Mappa. Un campo popolato contiene almeno un valore (valori stringa o numerici oppure entrambi).  
   
@@ -166,10 +166,10 @@ ms.locfileid: "75244116"
     > [!NOTE]  
     >  Se un progetto corrispondente viene completato e quindi riutilizzato, verrà utilizzata la stessa Knowledge Base di quando il progetto è stato pubblicato. Non verrà utilizzata alcuna modifica apportata alla Knowledge Base dopo il completamento del progetto. Per utilizzare tali modifiche o una nuova Knowledge Base, sarà necessario creare un nuovo progetto corrispondente. Se invece il progetto corrispondente è stato creato ma non completato, verranno utilizzate tutte le modifiche pubblicate nei criteri di corrispondenza quando si esegue la corrispondenza nel progetto.  
   
-##  <a name="FollowUp"></a>Completamento: fasi successive all'esecuzione di un progetto corrispondente  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>Completamento: fasi successive all'esecuzione di un progetto corrispondente  
  Dopo avere eseguito un progetto corrispondente, è possibile modificare i criteri di corrispondenza nella Knowledge Base e creare ed eseguire un altro progetto corrispondente in base ai criteri di corrispondenza aggiornati. Per altre informazioni, vedere [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Profiler"></a>Schede Profiler e risultati  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Schede Profiler e risultati  
  Le schede Profiler e Risultati contengono le statistiche del processo di corrispondenza.  
   
 ### <a name="profiler-tab"></a>Scheda Profiler  
@@ -177,27 +177,27 @@ ms.locfileid: "75244116"
   
  Le statistiche relative al database di origine includono:  
   
--   **Record**: numero totale di record nel database  
+-   **Record**: numero complessivo di record nel database  
   
 -   **Valori totali**: numero totale di valori nei campi  
   
--   **Nuovi valori**: numero totale di valori nuovi dall'esecuzione precedente e relativa percentuale dell'intero  
+-   **Nuovi valori**: numero totale di valori nuovi dall'esecuzione precedente e la loro percentuale rispetto al totale  
   
--   **Valori univoci**: numero totale di valori univoci nei campi e relativa percentuale dell'intero  
+-   **Valori univoci**: numero totale di valori univoci nei campi e la loro percentuale rispetto al totale  
   
--   **Nuovi valori univoci**: numero totale di valori univoci nuovi nei campi e relativa percentuale dell'intero  
+-   **Nuovi valori univoci**: numero totale di valori univoci nuovi nei campi e la loro percentuale rispetto al totale  
   
  Le statistiche relative ai campi includono:  
   
--   **Field**: nome del campo incluso nei mapping.  
+-   **Campo**: nome del campo incluso nei mapping  
   
--   **Dominio**: nome del dominio di cui è stato eseguito il mapping al campo.  
+-   **Dominio**: nome del dominio di cui è stato eseguito il mapping al campo  
   
 -   **Nuovo**: numero di nuove corrispondenze trovate e relativa percentuale del totale  
   
--   **Unique**: numero di record univoci nel campo e relativa percentuale del totale  
+-   **Univoco**: numero di record univoci nel campo e relativa percentuale del totale  
   
--   **Completezza**: percentuale di completamento dell'esecuzione della regola.  
+-   **Completezza**: percentuale di completamento dell'esecuzione della regola  
   
 ### <a name="matching-policy-notifications"></a>Notifiche relative ai criteri di corrispondenza  
  Per l'attività relativa ai criteri di corrispondenza, le condizioni seguenti generano notifiche:  
@@ -215,7 +215,7 @@ ms.locfileid: "75244116"
 ### <a name="matching-rules-tab"></a>Scheda Regole di corrispondenza  
  Fare clic su questa scheda per visualizzare un elenco di regole nei criteri di corrispondenza e le condizioni in una regola.  
   
- **Elenco regole**  
+ **Elenco di regole**  
  Visualizza un elenco di tutte le regole di corrispondenza nei criteri di corrispondenza. Selezionare una delle regole per visualizzare le condizioni nella regola nella tabella delle regole di corrispondenza.  
   
  **Tabella delle regole di corrispondenza**  

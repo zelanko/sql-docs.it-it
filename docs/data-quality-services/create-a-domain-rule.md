@@ -13,10 +13,10 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245476"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
@@ -25,17 +25,17 @@ ms.locfileid: "75245476"
 
   In questo argomento viene descritto come creare una regola di dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola di dominio è una condizione utilizzata per convalidare, correggere e standardizzare i valori di dominio. Una regola di dominio deve rimanere valida in tutto il dominio affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Le regole di dominio possono includere le regole di convalida utilizzate per convalidare i valori di dominio, ma non per correggere i dati in un progetto Data Quality. Le regole includono anche le regole di standardizzazione applicate ai dati validi e utilizzate per la correzione dei dati.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Per creare una regola di dominio, è necessario disporre di una Knowledge Base e di un dominio aperto nell'attività Gestione dominio.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola di dominio.  
   
-##  <a name="Build"></a>Regole di dominio di compilazione  
+##  <a name="build-domain-rules"></a><a name="Build"></a> Compilare le regole di dominio  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75245476"
   
 6.  Selezionare **Attiva** per specificare che la regola verrà eseguita (valore predefinito) o deselezionare per impedire l'esecuzione della regola.  
   
-7.  Nel riquadro **Compila una regola** selezionare una condizione dall'elenco a discesa nella casella delle clausole della regola.  
+7.  Nel riquadro **Compila una regola** selezionare una condizione dall'elenco a discesa nella casella clausola della regola.  
   
 8.  Se la condizione richiede un valore, immettere il valore nella casella di testo associata.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "75245476"
   
 16. Continuare con la procedura relativa al test descritta di seguito.  
   
-##  <a name="Test"></a>Testare le regole di dominio  
+##  <a name="test-domain-rules"></a><a name="Test"></a> Testare le regole di dominio  
   
 1.  Con una regola selezionata fare clic sull'icona **Esegui la regola del dominio selezionato sui dati di test** .  
   
 2.  Nella finestra di dialogo Esegui la regola di dominio fare clic sull'icona **Aggiunge un nuovo termine di test per la regola di dominio** . Immettere un valore da testare. Immettere gli altri valori in base alle esigenze. Selezionare un valore e fare clic sull'icona **Rimuovi il termine di test selezionato** , se necessario.  
   
-3.  Fare clic sull'icona **testa la regola di dominio su tutti i termini** .  
+3.  Fare clic sull'icona **Testa la regola di dominio su tutti i termini** .  
   
 4.  Controllare la validità di ogni termine. Un segno di spunta significa "corretto", una croce significa "errore" e un triangolo significa "non valido".  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75245476"
   
 7.  Continuare con la procedura relativa all'applicazione descritta di seguito.  
   
-##  <a name="Apply"></a>Applicare le regole di dominio  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a> Applicare le regole di dominio  
   
 1.  Fare clic su **Applica tutte le regole** per applicare le regole ai valori nel dominio. Quando si fa clic su **Applica tutte le regole**, viene visualizzata una finestra popup che indica il numero di valori in determinati stati che sarà interessato dalla regola. Fare clic su **Sì** se si desidera comunque applicare la regola oppure su **No** se non si desidera applicarla. Se si sceglie **Sì**, fare clic su **OK** per chiudere la finestra popup dei risultati.  
   
@@ -99,10 +99,10 @@ ms.locfileid: "75245476"
   
 3.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di una regola di dominio  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola di dominio  
  Dopo avere creato una regola di dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Conditions"></a>Condizioni delle regole di dominio  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a> Condizioni delle regole di dominio  
  Nella tabella seguente vengono descritte le condizioni che è possibile applicare nella regola di dominio e viene fornito un esempio per illustrare la modalità di applicazione delle condizioni.  
   
  Quando viene applicata una regola di dominio e un valore del dominio non supera la regola, il valore viene definito Non validi. Un valore definito Non validi verrà modificato in Corretti se la regola che fa sì che il valore non sia valido viene eliminata o disattivata oppure se la regola viene modificata affinché il valore superi la regola. Se un valore viene definito Non validi manualmente (nella scheda Valori di dominio dell'attività di gestione del dominio) e la regola che il valore non supera viene eliminata, disattivata o modificata, il valore rimarrà Non validi in base alla designazione manuale.  

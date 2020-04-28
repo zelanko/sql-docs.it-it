@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245186"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurazione del debugger Transact-SQL
@@ -150,8 +150,7 @@ ms.locfileid: "75245186"
 ## <a name="requirements-for-starting-the-debugger"></a>Requisiti per l'avvio del debugger  
  Qualsiasi tentativo di avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] deve soddisfare anche i requisiti seguenti:  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.  
   
 * La finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere connessa tramite un account di accesso con autenticazione di Windows o con autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che sia membro del ruolo predefinito del server sysadmin.  
   
@@ -164,6 +163,6 @@ ms.locfileid: "75245186"
  [Esecuzione del debugger Transact-SQL](run-the-transact-sql-debugger.md)   
  [Eseguire il codice Transact-SQL](step-through-transact-sql-code.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
- [Editor di query del motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

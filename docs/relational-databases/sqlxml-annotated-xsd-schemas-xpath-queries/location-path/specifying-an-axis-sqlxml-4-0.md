@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253059"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "75253059"
     child::Customer  
     ```  
   
-     Nella query XPath seguente, `child` è l'asse. 
-  `Customer` è il test del nodo.  
+     Nella query XPath seguente, `child` è l'asse. `Customer` è il test del nodo.  
   
 -   **padre**  
   
@@ -54,8 +53,7 @@ ms.locfileid: "75253059"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. 
-  `Customer` e `Order` sono i test di nodo.  
+     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. `Customer` e `Order` sono i test di nodo.  
   
 -   **attributo**  
   

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243093"
 ---
 # <a name="error-list-window-management-studio"></a>Finestra Elenco errori (Management Studio)
-  Il [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Elenco errori** Visualizza gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di [!INCLUDE[ssDE](../../includes/ssde-md.md)] query di.  
+  La finestra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Elenco errori**di** mostra gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Caratteristiche della finestra Elenco errori  
  In **Elenco errori** sono disponibili le funzionalità seguenti:  
@@ -53,24 +53,19 @@ ms.locfileid: "75243093"
   
 -   Per modificare l'ordine di visualizzazione delle colonne, trascinare l'intestazione di una colonna verso sinistra o verso destra.  
   
- 
-  **Elenco errori** non offre collegamenti a informazioni aggiuntive su errori specifici.  
+ **Elenco errori** non offre collegamenti a informazioni aggiuntive su errori specifici.  
   
 ## <a name="transact-sql-errors-in-management-studio"></a>Errori Transact-SQL in Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mostra gli errori relativi agli script [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle seguenti posizioni:  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mostra gli errori relativi agli script [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle seguenti posizioni:  
   
--   
-  **Elenco errori** contiene tutti gli errori semantici e di sintassi individuati da IntelliSense nell'editor del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'elenco degli errori viene aggiornato dinamicamente durante la modifica di script [!INCLUDE[tsql](../../includes/tsql-md.md)] e comprende tutti gli errori individuati dall'editor in ogni script [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'editor non arresta l'analisi di un file dopo avere rilevato errori in uno script. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]IntelliSense non supporta tutti gli elementi della sintassi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] nell'editor [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
-  **Elenco errori** contiene solo gli errori della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] supportata da IntelliSense.  
+-   **Elenco errori** contiene tutti gli errori semantici e di sintassi individuati da IntelliSense nell'editor del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'elenco degli errori viene aggiornato dinamicamente durante la modifica di script [!INCLUDE[tsql](../../includes/tsql-md.md)] e comprende tutti gli errori individuati dall'editor in ogni script [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'editor non arresta l'analisi di un file dopo avere rilevato errori in uno script. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]IntelliSense non supporta tutti gli elementi della sintassi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] nell'editor [!INCLUDE[tsql](../../includes/tsql-md.md)] . **Elenco errori** contiene solo gli errori della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] supportata da IntelliSense.  
   
 -   La scheda **Messaggi** nella parte inferiore della finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] visualizza tutti gli errori e messaggi restituiti da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durante l'esecuzione di uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Questo elenco non subisce modifiche se non viene eseguito nuovamente lo script. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] arresta l'analisi di un batch dopo l'individuazione di uno o due errori di compilazione; pertanto la scheda **Messaggi** potrebbe non elencare tutti gli errori presenti in uno script.  
   
  Talvolta gli errori sono elencati in entrambe le posizioni. Ad esempio, in un file script potrebbe essere presente un errore di sintassi elencato in **Elenco errori**. Se lo script viene eseguito prima di correggere l'errore, il parser [!INCLUDE[ssDE](../../includes/ssde-md.md)] può rilevare la stessa condizione e restituire un'altra copia del messaggio di errore nella scheda **Messaggi** .  
   
 > [!NOTE]  
->  
-  **Elenco errori** visualizza solo gli errori dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non gli errori degli editor MDX, DMX o XML/A. Questi errori vengono visualizzati nella scheda **Messaggi** dei rispettivi editor.  
+>  **Elenco errori** visualizza solo gli errori dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non gli errori degli editor MDX, DMX o XML/A. Questi errori vengono visualizzati nella scheda **Messaggi** dei rispettivi editor.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  All'apertura di **Elenco errori** le informazioni sono visualizzate nelle colonne seguenti:  

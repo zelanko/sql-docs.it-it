@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246589"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
@@ -63,7 +63,7 @@ ms.locfileid: "75246589"
   
      La specifica XPath del W3C non definisce condizioni di errore. Le query XPath che non consentono di selezionare nodi restituiscono un set di nodi vuoto. In SQLXML 4.0 una query può restituire diversi tipi di messaggio di errore.  
   
--   **Ordine dei documenti**  
+-   **Ordine del documento**  
   
      In SQLXML 4.0 l'ordine dei documenti non è sempre definito. Pertanto, i predicati numerici e gli assi che usano l'ordine del documento (ad esempio, il **codice seguente**) non sono implementati.  
   
@@ -91,27 +91,27 @@ ms.locfileid: "75246589"
 ## <a name="supported-functionality"></a>Funzionalità supportata  
  Nella tabella seguente vengono mostrate le caratteristiche del linguaggio XPath implementate in SQLXML 4.0.  
   
-|Funzionalità|Elemento|Collegamento a query di esempio|  
+|Funzionalità|Item|Collegamento a query di esempio|  
 |-------------|----------|----------------------------|  
 |Assi|**attributi**, **figlio**, **padre**e assi **autonomi**|[Specifica di assi in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Predicati con valori booleani, tra i quali sono inclusi predicati successivi e nidificati||[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Tutti gli operatori relazionali|=,! =, <, \<=, >, >=|[Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operatori aritmetici|+, -, *, div|[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Funzioni di conversione esplicita|**numero ()**, **stringa ()**, **booleano ()**|[Specifica di funzioni di conversione esplicita nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|Operatori booleani|AND, OR|[Specifica di operatori booleani in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|operatori booleani|AND, OR|[Specifica di operatori booleani in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |funzioni booleane|**true ()**, **false ()**, **Not ()**|[Specifica di funzioni booleane in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variabili XPath||[Specifica di variabili XPath in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Funzionalità non supportata  
  Nella tabella seguente vengono mostrate le caratteristiche del linguaggio XPath non implementate in SQLXML 4.0.  
   
-|Funzionalità|Elemento|  
+|Funzionalità|Item|  
 |-------------|----------|  
 |Assi|**predecessore**, **predecessore-or-self**, **descendant**, **descendant-or-self (//)**, **seguente**, **seguente-elemento di pari livello**, **spazio dei nomi**, **precedente**, **precedente-di pari livello**|  
 |Predicati con valori numerici||  
 |Operatori aritmetici|mod|  
 |Funzioni nodo|**predecessore**, **predecessore-or-self**, **descendant**, **descendant-or-self (//)**, **seguente**, **seguente-elemento di pari livello**, **spazio dei nomi**, **precedente**, **precedente-di pari livello**|  
-|Funzioni stringa|**String ()**, **Concat ()**, **starts-with ()**, **Contains ()**, **substring-before ()**, **substring-after ()**, **substring ()**, **String-length ()**, **Normalize ()**, **translate ()**|  
+|Funzioni per i valori stringa|**String ()**, **Concat ()**, **starts-with ()**, **Contains ()**, **substring-before ()**, **substring-after ()**, **substring ()**, **String-length ()**, **Normalize ()**, **translate ()**|  
 |funzioni booleane|**lang ()**|  
 |Funzioni numeriche|**Sum ()**, **Floor ()**, **Ceiling ()**, **round ()**|  
 |Operatore Union|&#124;|  

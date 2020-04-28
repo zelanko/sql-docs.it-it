@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243331"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
@@ -49,10 +49,10 @@ ms.locfileid: "75243331"
  **Margine selezione**  
  Colonna di spazio vuoto tra la barra indicatori e il testo del codice in cui è possibile fare clic per selezionare righe di testo. È possibile nascondere o visualizzare il margine di selezione.  
   
- **Barre di scorrimento orizzontali e verticali**  
+ **Barre di scorrimento orizzontale e verticale**  
  Consentono di scorrere il riquadro del codice orizzontalmente e verticalmente in modo da visualizzare il codice che si estende oltre l'area visibile sullo schermo.  
   
- **Numerazione delle righe**  
+ **Numeri di riga**  
  Visualizza i numeri di riga a sinistra del testo o del codice nell'editor. È possibile passare a numeri di riga specifici.  
   
  **A capo automatico**  
@@ -107,26 +107,26 @@ ms.locfileid: "75243331"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor di query del motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query MDX.|[Editor di query MDX &#40;Analysis Services Dati multidimensionali&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query DMX.|[Editor di query DMX &#40;Analysis Services-Data mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query MDX.|[Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query DMX.|[Editor di query DMX &#40;Analysis Services - Data mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query XML/A.|[Editor XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
-|Viene descritto come configurare opzioni per i vari editor, ad esempio numerazione delle righe e opzioni IntelliSense.|[Configurare gli editor &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
-|Vengono descritti i vari modi in cui è possibile avviare gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Aprire un editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
+|Viene descritto come configurare opzioni per i vari editor, ad esempio numerazione delle righe e opzioni IntelliSense.|[Configurazione di editor &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
+|Vengono descritti i vari modi in cui è possibile avviare gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Apertura di un editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
 |Viene descritto come gestire le modalità di visualizzazione, ad esempio utilizzando il ritorno a capo automatico, la divisione di una finestra o le schede.|[Gestione dell'editor e della modalità di visualizzazione](manage-the-editor-and-view-mode.md)|  
 |Viene descritto come impostare le opzioni di formattazione, ad esempio testo nascosto o rientri.|[Gestione della formattazione del codice](manage-code-formatting.md)|  
-|Viene descritto come spostarsi nel testo in una finestra dell'editor mediante caratteristiche come la ricerca incrementale o la funzione "vai a".|[Spostarsi nel codice e nel testo](navigate-code-and-text.md)|  
+|Viene descritto come spostarsi nel testo in una finestra dell'editor mediante caratteristiche come la ricerca incrementale o la funzione "vai a".|[Spostamento nel codice e nel testo](navigate-code-and-text.md)|  
 |Viene descritto come impostare le opzioni di codifica a colori per varie classi di sintassi, semplificando la lettura di istruzioni complesse.|[Codifica con colori negli editor di query](color-coding-in-query-editors.md)|  
 |Viene descritto come utilizzare la struttura del codice per nascondere parti di script complessi nei momenti in cui non vengono utilizzate.|[Struttura del codice](code-outlining.md)|  
 |Viene descritto come trascinare il testo da un percorso in uno script e rilasciarlo in un nuovo percorso.|[Trascinamento della selezione](drag-and-drop-text.md)|  
 |Viene descritto come effettuare operazioni di ricerca e sostituzione globale, ad esempio in caso di modifica dei nomi di colonna.|[Ricerca e sostituzione](search-and-replace.md)|  
-|Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestire i segnalibri](../native-client-ole-db-rowsets/bookmarks.md)|  
+|Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestione di segnalibri](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Viene descritto come visualizzare script o risultati in una finestra o in una griglia.|[Stampa di codice e risultati](print-code-and-results.md)|  
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di sqlcmd nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifica di script SQLCMD con l'editor di query](edit-sqlcmd-scripts-with-query-editor.md)|  
 |Viene descritto come utilizzare le caratteristiche IntelliSense come il completamento automatico di nomi oggetto durante la digitazione o la verifica del corretto posizionamento dei punti di interruzione.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |Vengono descritte le modalità di utilizzo dei frammenti di codice nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . I frammenti sono modelli per istruzioni o blocchi di uso comune e possono essere personalizzati o estesi per includere frammenti specifici del sito.|[Frammenti di codice Transact-SQL](transact-sql-code-snippets.md)|  
 |Viene descritto come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice e visualizzare informazioni di debug, ad esempio i valori in variabili e parametri.|[Debugger Transact-SQL](transact-sql-debugger.md)|  
-|Viene descritto come impostare colori personalizzati per istanze diverse del [!INCLUDE[ssDE](../../includes/ssde-md.md)]e come impostarli come sfondo della barra di stato nelle finestre dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra di stato &#40;editor di query motore di database&#41;](status-bar-database-engine-query-editor.md)|  
+|Viene descritto come impostare colori personalizzati per istanze diverse del [!INCLUDE[ssDE](../../includes/ssde-md.md)]e come impostarli come sfondo della barra di stato nelle finestre dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra di stato &#40;editor di query del Motore di database&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

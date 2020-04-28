@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229427"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Informazioni sull'ordine di calcolo e di valutazione (MDX)
@@ -92,7 +92,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Differenza anno**|($20,160.56)|$2,878.06|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>Query 2-percentuale di reddito dopo le spese  
  Per la seconda query, calcolare la percentuale di reddito al netto delle spese per ogni anno utilizzando la query MDX seguente:  
@@ -149,14 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- In questo esempio di query MDX combinata, a `Profit Margin` è associato l'ordine di valutazione più alto, pertanto ha la precedenza quando le due espressioni interagiscono. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] valuta la cella in questione tramite la formula `Profit Margin` . Nella tabella seguente sono riportati i risultati di questo calcolo nidificato.  
+ In questo esempio di query MDX combinata, a `Profit Margin` è associato l'ordine di valutazione più alto, pertanto ha la precedenza quando le due espressioni interagiscono. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] valuta la cella in questione tramite la formula `Profit Margin` . Nella tabella seguente sono riportati i risultati di questo calcolo nidificato.  
   
 ||Importo vendite Internet|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Differenza anno**|($20,160.56)|$2,878.06|114.28%|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
   
  Il risultato nella cella condivisa è basato sulla formula per `Profit Margin`. Ciò significa che in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene calcolato il risultato nella cella condivisa con i dati di `Year Difference` , generando la formula seguente (il risultato è arrotondato per maggiore chiarezza):  
   
@@ -196,7 +195,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Differenza anno**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
   
  Poiché nella query viene usata la formula `Year Difference` con i dati `Profit Margin` , la formula per la cella condivisa assomiglia al calcolo seguente:  
   
@@ -210,12 +209,12 @@ FROM [Adventure Works]
 0.4145 - 0.4160= -0.15  
 ```  
   
-## <a name="additional-considerations"></a>Considerazione aggiuntive  
+## <a name="additional-considerations"></a>Ulteriori considerazioni  
  L'ordine di valutazione può essere un aspetto estremamente complesso da affrontare, soprattutto in cubi con un numero elevato di dimensioni che includono membri calcolati, formule di rollup personalizzato o celle calcolate. Quando in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene valutata una query MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prende in considerazione i valori dell'ordine di valutazione per tutti gli elementi coinvolti in una determinata sessione, incluse le dimensioni del cubo specificate nella query MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CalculationCurrentPass &#40;&#41;MDX](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;&#41;MDX](/sql/mdx/calculationpassvalue-mdx)   
  [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Manipolazione dei dati &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
+ [Manipolazione dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   

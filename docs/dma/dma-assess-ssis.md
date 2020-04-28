@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687162"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server Integration Services con Data Migration Assistant
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per valutare SQL Server pacchetti di Integration Services (SSIS), è necessario installare i componenti seguenti con Data Migration Assistant:
 
@@ -65,11 +65,11 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 1. Fare clic su **Start Assessment** (Avvia valutazione).
   ![Avvia valutazione](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
-## <a name="view-results"></a>Visualizzare i risultati
+## <a name="view-results"></a>Visualizzazione dei risultati
 
 La categoria problemi di compatibilità fornisce funzionalità parzialmente supportate o non supportate che bloccano la migrazione di pacchetti SSIS locali a Azure-SSIS Integration Runtime. Fornisce quindi consigli per risolvere tali problemi.
 
-![Visualizzare i risultati](media/dma-assess-ssis/dma-assess-ssis-result.png)
+![Visualizzazione dei risultati](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

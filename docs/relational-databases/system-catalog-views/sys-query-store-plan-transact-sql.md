@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d1137aab32a98a4699e95b7138bb333f63c65e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479465"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74479465"
 |**plan_id**|**bigint**|Chiave primaria.|  
 |**query_id**|**bigint**|Chiave esterna. Join a [sys. query_store_query &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|ID del gruppo di piani. Per le query di cursori sono in genere necessari più piani (popolamento e recupero). Popolare e recuperare i piani compilati insieme si trovano nello stesso gruppo.<br /><br /> 0 indica che il piano non è in un gruppo.|  
-|**engine_version**|**nvarchar (32)**|Versione del motore utilizzata per compilare il piano nel formato **' Major. minor. Build. Revision '** .|  
+|**engine_version**|**nvarchar(32)**|Versione del motore utilizzata per compilare il piano nel formato **' Major. minor. Build. Revision '** .|  
 |**compatibility_level**|**smallint**|Livello di compatibilità del database a cui si fa riferimento nella query.|  
 |**query_plan_hash**|**binario (8)**|Hash MD5 del piano singolo.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML per il piano di query.|  
@@ -57,7 +57,7 @@ ms.locfileid: "74479465"
 |**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**plan_forcing_type**|**int**|Tipo di forzatura del piano.<br /><br />0: NESSUNA<br /><br />1: MANUALE<br /><br />2: AUTO|  
-|**plan_forcing_type_desc**|**nvarchar (60)**|Descrizione del testo plan_forcing_type.<br /><br />NONE: nessuna forzatura del piano<br /><br />MANUALE: piano forzato dall'utente<br /><br />AUTOMATICO: piano forzato dall'ottimizzazione automatica|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descrizione del testo plan_forcing_type.<br /><br />NONE: nessuna forzatura del piano<br /><br />MANUALE: piano forzato dall'utente<br /><br />AUTOMATICO: piano forzato dall'ottimizzazione automatica|  
 
 ## <a name="plan-forcing-limitations"></a>Limitazioni per l'uso forzato dei piani
 Query Store è dotato di un meccanismo per imporre a Query Optimizer l'uso di determinati piani di esecuzione. Esistono tuttavia alcune limitazioni che possono impedire l'imposizione di un piano. 
@@ -91,10 +91,10 @@ Infine, problemi del piano stesso:
  [sys. query_store_query &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys. query_store_query_text &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys. query_store_runtime_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys. query_store_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Monitoraggio delle prestazioni tramite il Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -14,17 +14,16 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251663"
 ---
 # <a name="dqs-administration"></a>amministrazione dqs
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di amministrare e gestire varie attività DQS eseguite sul [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurare proprietà a livello di server correlate alle attività DQS, configurare le impostazioni del servizio dati di riferimento e le impostazioni di log DQS. Queste attività vengono eseguite tramite la funzionalità **Amministrazione** del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In base all'accesso di sicurezza (ruolo) di cui si dispone in DQS, l'accesso a determinate funzioni in quest'area può essere concesso o negato.  
   
  Oltre che per queste attività di amministrazione, in questo argomento vengono fornite informazioni anche per un'attività amministrativa, il backup e ripristino di database DQS, che non viene eseguita utilizzando il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "75251663"
   
 -   Configurare la registrazione in base al livello di gravità degli eventi.  
   
-##  <a name="AdminUsingClent"></a>Attività amministrative tramite Data Quality Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Attività di amministrazione tramite il client Data Quality  
  Queste attività vengono eseguite tramite la funzionalità **Amministrazione** nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Monitoraggio attività  
@@ -54,19 +53,19 @@ ms.locfileid: "75251663"
   
 -   **Dati di riferimento**: configurare provider del servizio dati di riferimento: Azure Marketplace o provider del servizio dati di riferimento diretti. Dopo avere configurato i provider del servizio dati di riferimento, è possibile eseguire il mapping di un dominio singolo/composito ai dati di riferimento durante l'attività di gestione del dominio in una Knowledge Base, quindi utilizzare la stessa Knowledge Base per l'attività di pulizia in un progetto Data Quality. Consente inoltre di specificare le impostazioni proxy per la connessione a Internet per l'uso di Azure Marketplace.  
   
--   **Impostazioni generali**: specificare i valori soglia per la pulizia dei dati e la corrispondenza dei dati e se abilitare le notifiche per la [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]profilatura in. Questi valori soglia vengono utilizzati da DQS durante le attività di pulizia assistita da computer e di corrispondenza in un progetto Data Quality.  
+-   **Impostazioni generali**: specificare i valori soglia per la pulizia e la corrispondenza dei dati e determinare se abilitare notifiche per il profiling nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Questi valori soglia vengono utilizzati da DQS durante le attività di pulizia assistita da computer e di corrispondenza in un progetto Data Quality.  
   
--   **Impostazioni log**: i file di log in DQS registrano le attività eseguite in DQS e sono utili per tenere traccia di problemi operativi durante la manutenzione e la risoluzione dei problemi. È possibile filtrare i messaggi che si desidera registrare per varie funzionalità DQS (gestione del dominio, individuazione delle informazioni, pulizia, corrispondenza e servizi dati di riferimento) e moduli DQS in base al livello di gravità degli eventi.  
+-   **Impostazioni di log**: i file di log in DQS consentono di registrare le attività eseguite in DQS e sono utili per tenere traccia di problemi operativi durante la manutenzione e la diagnosi. È possibile filtrare i messaggi che si desidera registrare per varie funzionalità DQS (gestione del dominio, individuazione delle informazioni, pulizia, corrispondenza e servizi dati di riferimento) e moduli DQS in base al livello di gravità degli eventi.  
   
 > [!NOTE]  
 >  La schermata **Configurazione** è disponibile solo per gli utenti che dispongono del ruolo dqs_administrator sul database DQS_MAIN.  
   
-##  <a name="AdminOutsideClient"></a>Attività amministrative esterne a Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Attività amministrative esterne a Data Quality Client  
  Vi sono attività che vengono eseguite esternamente al client Data Quality:  
   
--   **Backup e ripristino di database DQS**: la funzionalità di backup e ripristino dei database DQS è analoga al backup e al ripristino di qualsiasi database di SQL Server con alcune considerazioni specifiche di DQS.  
+-   **Backup e ripristino di database DQS**: la funzione di backup e ripristino di database DQS è analoga alla funzione di backup e ripristino di qualsiasi database di SQL Server, con alcune considerazioni specifiche di DQS.  
   
--   **Scollegamento e collegamento di database DQS**: i passaggi per scollegare e connettere i database DQS sono analoghi allo scollegamento e al collegamento di qualsiasi database di SQL Server con alcune considerazioni specifiche di DQS.  
+-   **Scollegare e collegare i database DQS**: i passaggi per scollegare e collegare i database DQS sono analoghi a quelli di qualsiasi database di SQL Server, con alcune considerazioni specifiche di DQS.  
   
  Per altre informazioni, vedere [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   

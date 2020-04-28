@@ -19,10 +19,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75256004"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Definizione di predicati di selezione nel percorso (SQLXML 4.0)
@@ -35,14 +35,13 @@ ms.locfileid: "75256004"
 >  Per informazioni sulle limitazioni di questa implementazione XPath di XPath e sulle differenze tra it e W3C Specification, vedere [Introduzione all'uso di query XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Predicato di selezione: esempio 1  
- L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli **** ** \<** elementi figlio del cliente>che dispongono dell'attributo CustomerID con valore ALFKI:  
+ L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli **CustomerID** ** \<** elementi figlio del cliente>che dispongono dell'attributo CustomerID con valore ALFKI:  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In questa query XPath `child` e `attribute` sono nomi di asse. `Customer`è il test di nodo (true `Customer` se è un ** \<nodo elemento>**, perché ** \<l'elemento>** è il tipo di nodo `child` principale per l'asse). 
-  `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (true se **CustomerID** è un attributo del nodo di contesto, perché ** \<attribute>** è il tipo di nodo principale dell'asse degli **attributi** ).  
+ In questa query XPath `child` e `attribute` sono nomi di asse. `Customer`è il test di nodo (true `Customer` se è un ** \<nodo elemento>**, perché ** \<l'elemento>** è il tipo di nodo `child` principale per l'asse). `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (true se **CustomerID** è un attributo del nodo di contesto, perché ** \<attribute>** è il tipo di nodo principale dell'asse degli **attributi** ).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -57,9 +56,7 @@ ms.locfileid: "75256004"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- In questa espressione XPath `child` e `attribute` sono nomi di asse. 
-  `Customer`, `Order` e `SalesOrderID` sono i test di nodo. 
-  `attribute::OrderID="1"` è il predicato.  
+ In questa espressione XPath `child` e `attribute` sono nomi di asse. `Customer`, `Order` e `SalesOrderID` sono i test di nodo. `attribute::OrderID="1"` è il predicato.  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -76,8 +73,7 @@ child::Customer[child::ContactName]
   
  In questo esempio si presuppone che il ** \<>ContactName** sia un elemento figlio dell'elemento ** \<Customer>** nel documento XML, denominato *mapping incentrato sugli elementi* in uno schema XSD con annotazioni.  
   
- In questa espressione XPath `child` è il nome dell'asse. `Customer`è il test di nodo (true `Customer` se è un ** \<elemento>** nodo, perché ** \<l'elemento>** è il tipo di `child` nodo principale per l'asse). 
-  `child::ContactName` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (true `ContactName` se è un ** \<elemento>** nodo).  
+ In questa espressione XPath `child` è il nome dell'asse. `Customer`è il test di nodo (true `Customer` se è un ** \<elemento>** nodo, perché ** \<l'elemento>** è il tipo di `child` nodo principale per l'asse). `child::ContactName` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (true `ContactName` se è un ** \<elemento>** nodo).  
   
  Questa espressione restituisce solo gli ** \<** elementi figlio del>Customer del nodo di contesto che hanno ** \<gli elementi figlio ContactName>** .  
   
@@ -96,8 +92,7 @@ child::Customer[not(child::ContactName)]
   
  In questo esempio si presuppone che ** \<ContactName>** sia un elemento figlio dell'elemento ** \<Customer>** nel documento XML e che il campo ContactName non sia necessario nel database.  
   
- In questo esempio, `child` è l'asse. `Customer`è il test di nodo (TRUE `Customer` se è \<un elemento> nodo). 
-  `not(child::ContactName)` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (true `ContactName` se è \<un elemento> nodo).  
+ In questo esempio, `child` è l'asse. `Customer`è il test di nodo (TRUE `Customer` se è \<un elemento> nodo). `not(child::ContactName)` è il predicato. Nel predicato `child` è l'asse e `ContactName` è il test di nodo (true `ContactName` se è \<un elemento> nodo).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -106,14 +101,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>Predicato di selezione: esempio 5  
- L'espressione XPath seguente seleziona dal nodo di contesto corrente tutti **** gli ** \<** elementi figlio del cliente>che dispongono dell'attributo CustomerID:  
+ L'espressione XPath seguente seleziona dal nodo di contesto corrente tutti **CustomerID** gli ** \<** elementi figlio del cliente>che dispongono dell'attributo CustomerID:  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- In `child` questo esempio è l'asse `Customer` e è il test di nodo (true `Customer` se è \<un elemento> nodo). 
-  `attribute::CustomerID` è il predicato. Nel predicato `attribute` , è l'asse `CustomerID` e è il predicato `CustomerID` (true se è un ** \<attributo>** nodo).  
+ In `child` questo esempio è l'asse `Customer` e è il test di nodo (true `Customer` se è \<un elemento> nodo). `attribute::CustomerID` è il predicato. Nel predicato `attribute` , è l'asse `CustomerID` e è il predicato `CustomerID` (true se è un ** \<attributo>** nodo).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -122,8 +116,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Predicato di selezione: esempio 6  
- 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

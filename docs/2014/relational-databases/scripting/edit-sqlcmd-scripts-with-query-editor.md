@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245176"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifica di script SQLCMD con l'editor di query
@@ -76,8 +76,7 @@ ms.locfileid: "75245176"
   
     -   (Righe interessate: 6)  
   
-    -   
-  \<Informazioni della directory>  
+    -   \<Informazioni della directory>  
   
     -   (Righe interessate: 4)  
   
@@ -111,8 +110,7 @@ ms.locfileid: "75245176"
 -   L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta variabili di ambiente e variabili definite come parte di uno script SQLCMD, ma non supporta variabili **osql** o SQLCMD predefinite. L'elaborazione di SQLCMD da parte di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] distingue tra maiuscole e minuscole nelle variabili. Ad esempio, PRINT '$ (COMPUTERNAME)' produce il risultato corretto, ma PRINT '$ (ComputerName)' restituisce un errore.  
   
 > [!CAUTION]  
->  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient per l'esecuzione in modalità regolare e SQLCMD. Quando viene eseguito dalla riga di comando, SQLCMD utilizza il provider OLE DB. Poiché le opzioni predefinite che è possibile applicare sono diverse, l'esecuzione della stessa query in modalità SQLCMD di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e nell'utilità SQLCMD potrebbe generare risultati diversi.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient per l'esecuzione in modalità regolare e SQLCMD. Quando viene eseguito dalla riga di comando, SQLCMD utilizza il provider OLE DB. Poiché le opzioni predefinite che è possibile applicare sono diverse, l'esecuzione della stessa query in modalità SQLCMD di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e nell'utilità SQLCMD potrebbe generare risultati diversi.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Sintassi SQLCMD supportata  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta le parole chiave degli script SQLCMD seguenti:  
@@ -140,7 +138,7 @@ ms.locfileid: "75245176"
 > [!NOTE]  
 >  Sia per `:error` sia per `:out`, `stderr` e `stdout` inviano l'output alla scheda Messaggi.  
   
- I comandi SQLCMD non inclusi nell'elenco precedente non sono supportati nell'editor di query. Quando viene eseguito uno script contenente parole chiave SQLCMD non supportate, l'editor di query invierà al messaggio "ignorando il comando * \<ignorato*>" alla destinazione per ogni parola chiave non supportata. Lo script verrà eseguito, ma i comandi non supportati verranno ignorati.  
+ I comandi SQLCMD non inclusi nell'elenco precedente non sono supportati nell'editor di query. Quando viene eseguito uno script contenente parole chiave SQLCMD non supportate, per ognuna di esse l'editor di query invierà un messaggio "Ignoring command *\<comando ignorato*>" alla destinazione. Lo script verrà eseguito, ma i comandi non supportati verranno ignorati.  
   
 > [!CAUTION]  
 >  Poiché SQLCMD non viene avviato dalla riga di comando, l'esecuzione dell'editor di query in modalità SQLCMD presenta alcune limitazioni. Non è possibile passare parametri della riga di comando come variabili e poiché l'editor di query non è in grado di rispondere ai prompt del sistema operativo, evitare di eseguire istruzioni interattive.  

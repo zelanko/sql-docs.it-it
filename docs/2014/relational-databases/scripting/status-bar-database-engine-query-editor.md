@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5fe864d5f4f622237c5c7b92e5a1e717c26692ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243154"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
@@ -26,12 +26,12 @@ ms.locfileid: "75243154"
   
 3.  **Per usare un colore di stato:**  [Aprire l'editor di query con un colore per il server](#OpenServerColor), [Aprire l'editor di query specificando un colore di stato](#OpenSpecColor)  
   
-##  <a name="StatusBarColors"></a> Colori della barra di stato  
+##  <a name="status-bar-colors"></a><a name="StatusBarColors"></a> Colori della barra di stato  
  È possibile associare un colore della barra di stato a uno specifico nodo server in **Esplora oggetti** o **Server registrati**. È possibile specificare i colori solo per nodi server connessi a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], non ai nodi server per altre tecnologie SQL Server. È inoltre possibile specificare anche un colore della barra di stato personalizzato ogni volta che si connette una nuova finestra dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile aprire una finestra dell'editor di query utilizzando il colore di stato definito per il nodo server oppure specificare un colore univoco per la finestra in questione.  
   
  L'impostazione di un colore della barra di stato personalizzato per un nodo server in Esplora oggetti deve essere effettuata al momento di effettuare la connessione. Per modificare il colore associato a un nodo server esistente, è necessario disconnettersi e quindi riconnettersi specificando il nuovo colore.  
   
-##  <a name="SetOEServerColor"></a> Impostare il colore di stato per un server in Esplora oggetti  
+##  <a name="set-the-status-color-for-a-server-in-object-explorer"></a><a name="SetOEServerColor"></a> Impostare il colore di stato per un server in Esplora oggetti  
  **Per impostare un colore di stato per un server in Esplora oggetti**  
   
 1.  In **Esplora oggetti** fare clic sul pulsante **Connetti**, quindi selezionare **Motore di database...**  
@@ -46,7 +46,7 @@ ms.locfileid: "75243154"
   
 6.  Immettere le altre informazioni di connessione, quindi fare clic sul pulsante **Connetti** .  
   
-##  <a name="SetRegServerColor"></a> Impostare il colore di stato per un server registrato  
+##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> Impostare il colore di stato per un server registrato  
  **Per impostare il colore di stato per un server registrato**  
   
 1.  In **Server registrati** fare clic con il pulsante destro del mouse sul nodo server desiderato, quindi scegliere **Proprietà...**  
@@ -61,7 +61,7 @@ ms.locfileid: "75243154"
   
 6.  Fare clic sul pulsante **Salva** nella finestra di dialogo **Modifica proprietà registrazione server** .  
   
-##  <a name="OpenServerColor"></a> Aprire un editor utilizzando un colore di server  
+##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> Aprire un editor utilizzando un colore di server  
  **Per aprire una finestra di editor utilizzando un colore di server**  
   
 -   Fare clic con il pulsante destro del mouse su un nodo server in **Esplora oggetti** o **Server registrati**, quindi scegliere **Nuova query**.  
@@ -70,7 +70,7 @@ ms.locfileid: "75243154"
   
 -   La barra di stato della finestra dell'editor utilizzerà il colore definito per il server associato.  
   
-##  <a name="OpenSpecColor"></a> Aprire un editor specificando un colore di stato  
+##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> Aprire un editor specificando un colore di stato  
  **Per aprire una finestra di editor specificando un colore di stato**  
   
 -   Scegliere **Nuovo** dal menu **File**, quindi selezionare **Query del motore di database**.  

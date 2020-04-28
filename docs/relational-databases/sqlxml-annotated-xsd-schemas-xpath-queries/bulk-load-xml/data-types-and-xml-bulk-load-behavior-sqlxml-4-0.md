@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246726"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipi di dati e comportamento del caricamento bulk XML (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "75246726"
   
 -   Se il tipo è **DateTime** o **Time**, è necessario specificare **SQL: DataType** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dati a Microsoft.  
   
--   Quando si esegue il caricamento bulk in una colonna **** di tipo uniqueidentifier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in e il valore XSD è un GUID che include parentesi graffe ({e}), è necessario specificare **SQL: DataType = "uniqueidentifier"** per rimuovere le parentesi graffe prima che il valore venga inserito nella colonna. Se **SQL: DataType** non è specificato, il valore viene inviato con le parentesi graffe e l'inserimento ha esito negativo.  
+-   Quando si esegue il caricamento bulk in una colonna **uniqueidentifier** di tipo uniqueidentifier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in e il valore XSD è un GUID che include parentesi graffe ({e}), è necessario specificare **SQL: DataType = "uniqueidentifier"** per rimuovere le parentesi graffe prima che il valore venga inserito nella colonna. Se **SQL: DataType** non è specificato, il valore viene inviato con le parentesi graffe e l'inserimento ha esito negativo.  
   
  Per ulteriori informazioni su **SQL: DataType**, vedere [coercizione del tipo di dati e l'annotazione sql: datatype &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   

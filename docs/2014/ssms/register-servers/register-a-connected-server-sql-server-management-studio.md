@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241342"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrazione di un server connesso (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "75241342"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>Per registrare un server connesso  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75241342"
      **Nuovo gruppo**  
      Fare clic su questo pulsante per aprire la finestra di dialogo **Nuovo gruppo** tramite la quale è possibile creare un nuovo gruppo di server per il server registrato.  
   
-     **Salvare**  
+     **Salva**  
      Fare clic su questo pulsante per salvare le informazioni immesse e creare un server registrato.  
   
   

@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401185"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Regole di conversione del tipo di dati per dwloader-Parallel data warehouse
 Questo argomento descrive i formati di dati di input e le conversioni implicite dei tipi di dati che il [caricatore da riga di comando di dwloader](dwloader.md) supporta quando carica i dati in PDW. Le conversioni di dati implicite si verificano quando i dati di input non corrispondono al tipo di dati nella tabella di destinazione SQL Server PDW. Usare queste informazioni quando si progetta il processo di caricamento per assicurarsi che i dati vengano caricati correttamente in SQL Server PDW.  
    
   
-## <a name="InsertBinaryTypes"></a>Inserimento di valori letterali in tipi binari  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>Inserimento di valori letterali in tipi binari  
 Nella tabella seguente vengono definiti i tipi letterali accettati, il formato e le regole di conversione per il caricamento di un valore letterale in una colonna SQL Server PDW di tipo **Binary** (*n*) o **varbinary**(*n*).  
   
 |Tipo di dati di input|Esempi di dati di input|Conversione in tipo di dati binary o varbinary|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |Valore letterale binario|0x *hexidecimal_string*<br /><br />Esempio: 12Ef o 0x12Ef|Il prefisso 0x è facoltativo.<br /><br />La lunghezza dell'origine dati non può superare il numero di byte specificato per il tipo di dati.<br /><br />Se la lunghezza dell'origine dati è inferiore alla dimensione del tipo di dati **binario** , i dati vengono riempiti a destra con zeri per raggiungere le dimensioni del tipo di dati.|  
   
-## <a name="InsertDateTimeTypes"></a>Inserimento di valori letterali in tipi di data e ora  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>Inserimento di valori letterali in tipi di data e ora  
 I valori letterali di data e ora vengono rappresentati usando valori letterali stringa in formati specifici, racchiusi tra virgolette singole. Nelle tabelle seguenti vengono definiti i tipi letterali consentiti, il formato e le regole di conversione per il caricamento di un valore letterale di data o ora in una colonna di tipo **DateTime**, **smalldatetime**, **date**, **Time**, **DateTimeOffset**o **datetime2**. Le tabelle definiscono il formato predefinito per il tipo di dati specificato. Altri formati che è possibile specificare sono definiti nella sezione [formati DateTime](#DateFormats). I valori letterali di data e ora non possono includere spazi iniziali o finali. i valori **date**, **smalldatetime**e null non possono essere caricati in modalità a larghezza fissa.  
   
 ### <a name="datetime-data-type"></a>Tipi di dati datetime  
@@ -83,7 +83,7 @@ La tabella seguente definisce il formato e le regole predefinite per il caricame
 |Valore letterale stringa nel formato **Data**|' AAAA-MM-GG '<br /><br />Esempio:' 2007-05-08'|I valori di ora (ora, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Il valore letterale "2007-05-08", ad esempio, viene inserito come "2007-05-08 12:00:00.0000000".|  
 |Valore letterale stringa in formato **datetime2**|' AAAA-MM-GG HH: mm: SS: fffffff '<br /><br />Esempio:' 2007-05-08 12:35:29.1234567'|Se l'origine dati contiene componenti di data e ora che sono minori o uguali al valore specificato in **datetime2**(*n*), i dati vengono inseriti. in caso contrario, viene generato un errore.|  
   
-### <a name="DateFormats"></a>Formati DateTime  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>Formati DateTime  
 Dwloader supporta i formati di dati seguenti per i dati di input che sta caricando in SQL Server PDW. Ulteriori dettagli sono elencati dopo la tabella.  
   
 |Datetime|smalldatetime|Data|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ Dettagli:
   
 -   Le lettere "zzz" designano la differenza di fuso orario per il fuso orario corrente del sistema nel formato {+|-}HH:ss].  
   
-## <a name="InsertNumerictypes"></a>Inserimento di valori letterali in tipi numerici  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>Inserimento di valori letterali in tipi numerici  
 Nelle tabelle seguenti vengono definiti il formato predefinito e le regole di conversione per il caricamento di un valore letterale in una colonna SQL Server PDW che utilizza un tipo numerico.  
   
 ### <a name="bit-data-type"></a>bit-tipo di dati  
@@ -162,7 +162,7 @@ I valori letterali Money sono rappresentati come una stringa di numeri con un se
 |Valore letterale decimale|123344,34455|Se il numero di cifre dopo il separatore decimale è maggiore di 4, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123344,34455 viene inserito come 123344,3446.|  
 |Valore letterale money|$123456,7890|Il simbolo di valuta non viene inserito con il valore.<br /><br />Se il numero di cifre dopo il separatore decimale è maggiore di 4, il valore viene arrotondato per eccesso al valore più vicino.|  
   
-## <a name="InsertStringTypes"></a>Inserimento di valori letterali in tipi stringa  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>Inserimento di valori letterali in tipi stringa  
 Nelle tabelle seguenti vengono definiti il formato predefinito e le regole di conversione per il caricamento di un valore letterale in una colonna SQL Server PDW che utilizza un tipo stringa.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>Tipi di dati char, varchar, nchar e nvarchar  
@@ -170,10 +170,10 @@ La tabella seguente definisce il formato e le regole predefinite per il caricame
   
 |Tipo di dati di input|Esempi di dati di input|Conversione in tipi di dati character|  
 |---------------|-------------------|----------------------------------|  
-|Valore letterale stringa|Formato:' stringa di caratteri '<br /><br />Esempio:' ABC '| ND |  
-|Valore letterale stringa Unicode|Formato: N'character String '<br /><br />Esempio: N'ABC '| ND |  
-|Valore letterale integer|Formato: ffffffffffn<br /><br />Esempio: 321312313123| ND |  
-|Valore letterale decimale|Formato: FFFFFF. fffffff<br /><br />Esempio: 12344,34455| ND |  
+|Valore letterale stringa|Formato:' stringa di caratteri '<br /><br />Esempio:' ABC '| N/D |  
+|Valore letterale stringa Unicode|Formato: N'character String '<br /><br />Esempio: N'ABC '| N/D |  
+|Valore letterale integer|Formato: ffffffffffn<br /><br />Esempio: 321312313123| N/D |  
+|Valore letterale decimale|Formato: FFFFFF. fffffff<br /><br />Esempio: 12344,34455| N/D |  
 |Valore letterale money|Formato: $ffffff. fffnn<br /><br />Esempio: $123456,99|Il simbolo di valuta facoltativo non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Questo corrisponde al formato del caricatore, che considera ogni valore letterale come valore letterale stringa.<br /><br />Virgole non consentite.<br /><br />Se il numero di cifre dopo il separatore decimale è maggiore di 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123,946789 viene inserito come 123,95.<br /><br />Quando si usa la funzione CONVERT per inserire valori letterali Money, è consentito solo lo stile predefinito 0 (nessuna virgola e 2 cifre dopo il separatore decimale).|  
   
 ### <a name="general-remarks"></a>Osservazioni generali  

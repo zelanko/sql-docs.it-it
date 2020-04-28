@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231801"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure
@@ -128,7 +128,7 @@ ms.locfileid: "75231801"
   
 1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.  
   
-2.  Fare clic con il pulsante destro del mouse su **Database**, quindi scegliere **Nuovo database**. Quindi, fare clic con il pulsante destro del mouse su TestDB1. Fare clic su Attività e quindi su Scollega. Nella finestra di dialogo Scollega, selezionare Interrompi connessioni. Fare clic su **OK**.  
+2.  Fare clic con il pulsante destro del mouse su **database**, quindi scegliere **nuovo database**. Quindi, fare clic con il pulsante destro del mouse su TestDB1. Fare clic su Attività e quindi su Scollega. Nella finestra di dialogo Scollega, selezionare Interrompi connessioni. Fare clic su **OK**.  
   
 3.  Connettersi al computer di destinazione con SQL Server 2014 CTP2 o versione successiva. Per preparare il computer di destinazione, è necessario creare una credenziale di SQL Server nel computer di destinazione che punti allo stesso contenitore in cui è stato inserito TestDB1. Se si intende eseguire il collegamento di nuovo nello stesso computer, non è necessario creare un'altra credenziale.  
   

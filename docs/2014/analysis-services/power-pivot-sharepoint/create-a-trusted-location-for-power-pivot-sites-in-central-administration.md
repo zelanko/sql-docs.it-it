@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684091"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale
@@ -22,25 +22,25 @@ ms.locfileid: "74684091"
   
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario essere un amministratore del servizio o della farm per definire un URL come percorso attendibile.  
   
  È necessario conoscere l'indirizzo URL del sito di SharePoint contenente la raccolta PowerPivot o un'altra libreria che archivia le cartelle di lavoro. Per ottenere l'indirizzo, aprire il sito che contiene la libreria, fare clic con il pulsante destro del mouse su **raccolta PowerPivot**, selezionare **Proprietà**, quindi copiare la prima parte dell'indirizzo (URL) che contiene il nome del server e il percorso del sito.  
   
-##  <a name="overview"></a>Panoramica  
+##  <a name="overview"></a>Panoramica di <a name="overview"></a>  
  Un'installazione iniziale di Excel Services specifica "http://" come percorso attendibile, pertanto, nel server, possono essere aperte cartelle di lavoro di qualsiasi sito della farm. Se è necessario un controllo più rigido sui percorsi considerati attendibili, è possibile creare nuovi percorsi attendibili che eseguono il mapping a siti specifici della farm, quindi variare le impostazioni e le autorizzazioni per ognuno.  
   
  La creazione di un nuovo percorso attendibile per siti che ospitano cartelle di lavoro di PowerPivot è utile soprattutto se si desidera mantenere i valori predefiniti per il resto della farm e applicare impostazioni diverse che funzionano meglio per l'accesso ai dati PowerPivot. Ad esempio, un percorso attendibile ottimizzato per le cartelle di lavoro di PowerPivot potrebbe disporre di una cartella di lavoro di dimensioni massime pari a 50 MB, mentre il resto della farm utilizza il valore predefinito di 10 MB.  
   
  La creazione di un percorso attendibile è consigliata se si utilizzano le librerie della raccolta PowerPivot per visualizzare in anteprima le cartelle di lavoro pubblicate e vengono rilevati avvisi di aggiornamento dati anziché l'immagine di anteprima prevista. La raccolta PowerPivot esegue il rendering delle immagini di anteprima dei report e delle cartelle di lavoro tramite dati e informazioni di presentazione all'interno del documento. Se l'opzione Avvisa in caso di aggiornamento è abilitata per un percorso attendibile, la raccolta PowerPivot potrebbe non disporre di autorizzazioni sufficienti per eseguire l'aggiornamento, provocando la visualizzazione di un errore al posto di un'immagine di anteprima. L'aggiunta di un sito che contiene la raccolta PowerPivot come nuovo percorso attendibile può risolvere questo problema.  
   
-##  <a name="create"></a>Creazione di un percorso attendibile per l'accesso ai dati PowerPivot  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>Creazione di un percorso attendibile per l'accesso ai dati PowerPivot  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Fare clic sull'applicazione di servizio Excel Services.  
   
-3.  Fare clic su **Posizioni attendibili file**.  
+3.  Fare clic su **Percorsi attendibili file**.  
   
 4.  Fare clic su **Aggiungi posizione attendibile file**.  
   

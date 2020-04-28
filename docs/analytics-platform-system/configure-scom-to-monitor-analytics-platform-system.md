@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401307"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurare System Center Operations Manager (SCOM) per monitorare il sistema della piattaforma di analisi
 Attenersi alla seguente procedura per configurare i Management Pack System Center Operations Manager (SCOM) per il sistema di piattaforma di analisi. I Management Pack sono necessari per monitorare il sistema di piattaforma di analisi da SCOM.  
   
-## <a name="BeforeBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Prima di iniziare  
 **Prerequisiti**  
   
 System Center Operations Manager 2007 R2 deve essere installato e in esecuzione.  
   
 I Management Pack devono essere installati e configurati. Vedere [Install the SCOM management packs &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md) e [importare il Management Pack di SCOM per PDW &#40;analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Configurare il profilo RunAs in System Center  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>Configurare il profilo RunAs in System Center  
 Per configurare System Center, è necessario eseguire le operazioni seguenti:  
   
 -   Creare un account RunAs per l'utente di dominio **APS Watcher** ed eseguirne il mapping all' **account Microsoft APS Watcher.**  
@@ -61,7 +61,7 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
 2.  Impostare il profilo dell' **account Microsoft APS Watcher** per l'uso dell'account RunAs del controllo **APS** .  
   
-    1.  Passare ad **Amministrazione** -> **Esegui come profili di configurazione** -> ****.  
+    1.  Passare ad **Amministrazione** -> **Esegui come profili di configurazione** -> **Profiles**.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -71,7 +71,7 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
     3.  Verrà visualizzata la finestra **di dialogo Creazione guidata profilo RunAs** . Fare clic su **Avanti**per ignorare la pagina **introduttiva** .  
   
-    4.  Nella pagina **Proprietà generali** fare clic su **Avanti**.  
+    4.  Nella pagina **Proprietà generali** , scegliere **Avanti**.  
   
     5.  Nella pagina **account RunAs** fare clic sul pulsante **Aggiungi...** e selezionare l'account RunAs del controllo **APS** creato in precedenza.  
   

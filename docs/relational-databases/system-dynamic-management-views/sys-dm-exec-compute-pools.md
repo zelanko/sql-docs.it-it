@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d749b9a7d9689426bffafe20ee7ab46ce199ffbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254608"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>sys. dm_exec_compute_pools (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "75254608"
 |-----------------|---------------|-----------------|  
 |name|`sysname`|Nome del pool di risorse di calcolo. Non ammette i valori Null. Restituisce `default` per il pool di calcolo predefinito. |
 |compute_pool_id|`int`|Identificatore univoco per il pool. Chiave per questa visualizzazione.|  
-|location|`sysname`|Da endpoint a controller in un cluster SQL Big Data. Non ammette i valori Null. |
+|posizione|`sysname`|Da endpoint a controller in un cluster SQL Big Data. Non ammette i valori Null. |
 
 ## <a name="permissions"></a>Autorizzazioni
 

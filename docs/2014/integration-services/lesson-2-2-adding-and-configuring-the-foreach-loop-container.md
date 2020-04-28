@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232466"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach
@@ -24,7 +24,7 @@ ms.locfileid: "75232466"
   
  Al momento, la gestione connessione file flat della lezione 1 si connette a un solo file flat specifico. Per ottenere la connessione in modo iterativo a ogni file flat della cartella, sarà necessario configurare il contenitore Ciclo Foreach e la gestione connessione file flat come segue:  
   
--   **Contenitore ciclo foreach:** Il valore enumerato del contenitore viene mappato a una variabile del pacchetto definita dall'utente. Il contenitore utilizzerà poi questa variabile definita dall'utente per modificare in modo dinamico la proprietà `ConnectionString` della gestione connessione file flat e connettersi in modo iterativo a ogni file flat della cartella.  
+-   **Contenitore Ciclo Foreach:** sul valore enumerato del contenitore verrà eseguito il mapping a una variabile di pacchetto definita dall'utente. Il contenitore utilizzerà poi questa variabile definita dall'utente per modificare in modo dinamico la proprietà `ConnectionString` della gestione connessione file flat e connettersi in modo iterativo a ogni file flat della cartella.  
   
 -   **Gestione connessione file flat:** La gestione connessione creata nella lezione 1 sarà modificata utilizzando una variabile definita dall'utente per popolare la `ConnectionString` proprietà della gestione connessione.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75232466"
   
 1.  Fare clic su **Mapping variabili**.  
   
-2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile...>**.  
+2.  Nella colonna **variabile** della pagina **Mapping variabili** fare clic sulla cella vuota e selezionare ** \<nuova variabile... >**.  
   
 3.  Nella finestra di dialogo **Aggiungi variabile** Digitare `varFileName`per **nome**.  
   
@@ -93,5 +93,5 @@ ms.locfileid: "75232466"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un contenitore ciclo foreach](control-flow/foreach-loop-container.md)   
- [Uso di variabili nei pacchetti](use-variables-in-packages.md)  
+ [Utilizzo di variabili nei pacchetti](use-variables-in-packages.md)  
   

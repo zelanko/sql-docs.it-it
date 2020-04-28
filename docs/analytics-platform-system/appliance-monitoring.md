@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401420"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoraggio degli appliance per il sistema di piattaforma Analytics
 Questa guida di monitoraggio dell'appliance descrive gli strumenti e le attività per il monitoraggio dell'appliance del sistema della piattaforma di analisi.  
   
-## <a name="Basics"></a>Strumenti e nozioni di base sul monitoraggio  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>Strumenti e nozioni di base sul monitoraggio  
 I valori e le informazioni che è possibile monitorare nell'appliance SQL Server PDW sono estesi. Ad esempio, di seguito sono riportate le attività di monitoraggio tipiche.  
   
 -   Verificare la presenza di eventuali avvisi emessi dal SQL Server PDW.  
@@ -38,7 +38,7 @@ I valori e le informazioni che è possibile monitorare nell'appliance SQL Server
 Sono disponibili diversi strumenti per il monitoraggio dell'appliance.  
   
 Console di amministrazione  
-SQL Server PDW dispone di una console di amministrazione. Si tratta di uno strumento basato sul Web che consente di visualizzare informazioni su query, caricamenti, backup e ripristino, blocchi, sessioni, avvisi e stato dell'appliance. La console di amministrazione viene eseguita nell'appliance. Gli utenti si connettono alla console di amministrazione tramite Internet Explorer. Per altre informazioni, vedere:  
+SQL Server PDW dispone di una console di amministrazione. Si tratta di uno strumento basato sul Web che consente di visualizzare informazioni su query, caricamenti, backup e ripristino, blocchi, sessioni, avvisi e stato dell'appliance. La console di amministrazione viene eseguita nell'appliance. Gli utenti si connettono alla console di amministrazione tramite Internet Explorer. Per altre informazioni, vedi:  
   
 -   [Monitorare l'appliance usando la console di amministrazione &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -61,7 +61,7 @@ Se la soluzione di monitoraggio non supporta le query\-Transact-SQL dirette oppu
   
 -   [Esempio di monitoraggio di Power Shell per SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>Attività di monitoraggio correlate  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>Attività di monitoraggio correlate  
   
 |Attività di monitoraggio|Descrizione|  
 |-------------------|---------------|  

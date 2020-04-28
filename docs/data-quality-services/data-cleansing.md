@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251769"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -38,7 +38,7 @@ ms.locfileid: "75251769"
   
  ![Processo di pulizia dei dati in DQS](../data-quality-services/media/dqs-cleansingprocess.gif "Processo di pulizia dei dati in DQS")  
   
-##  <a name="ComputerAssisted"></a>Pulizia assistita da computer  
+##  <a name="computer-assisted-cleansing"></a><a name="ComputerAssisted"></a> Pulizia assistita da computer  
  Tramite il processo di pulizia dei dati DQS la Knowledge Base viene applicata ai dati da pulire e vengono proposte modifiche ai dati. L'amministratore dei dati può accedere a ogni modifica proposta, valutando e correggendo le modifiche. Per eseguire la pulizia dei dati, l'amministratore dei dati effettua le operazioni seguenti:  
   
 1.  Creare un progetto Data Quality, selezionare una Knowledge Base rispetto alla quale analizzare e pulire i dati di origine e selezionare l'attività **Pulizia** . La stessa Knowledge Base può essere utilizzata per più progetti Data Quality.  
@@ -50,7 +50,7 @@ ms.locfileid: "75251769"
   
 3.  Eseguire il mapping dei campi dati da pulire ai domini singoli/composti appropriati nella Knowledge Base. Se si esegue il mapping di un campo a un dominio composito, il mapping avviene tra il campo e il dominio composito e non i domini singoli nel dominio composito. Inoltre, la pulizia dei dati per il campo di cui è stato eseguito il mapping viene effettuata in base alle regole specificate per il dominio composito e non per i domini singoli nel dominio composito. Per ulteriori informazioni sui domini compositi, vedere [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-4.  Eseguire il processo di pulizia assistita da computer facendo clic su **Avvia** nella pagina **Pulisci**.  
+4.  Eseguire il processo di pulizia assistita da computer facendo clic su **Avvia** nella pagina **Pulisci** .  
   
  Il processo di pulizia dei dati consente di trovare la corrispondenza migliore tra un'istanza di dati e valori noti del dominio di dati. Con il processo vengono applicate le informazioni sulla qualità dei dati a tutti i dati di origine, a differenza del processo di individuazione delle informazioni che viene eseguito su una percentuale dei dati di esempio.  
   
@@ -62,16 +62,16 @@ ms.locfileid: "75251769"
   
  Qualsiasi valore con un livello di confidenza inferiore al valore soglia di suggerimento automatico viene lasciato invariato da DQS a meno che l'amministratore dei dati specifichi una modifica.  
   
-##  <a name="Interactive"></a>Pulizia interattiva  
+##  <a name="interactive-cleansing"></a><a name="Interactive"></a> Pulizia interattiva  
  In base al processo di pulizia assistito da computer, all'amministratore dei dati vengono fornite le informazioni necessarie per prendere una decisione sulla modifica dei dati. DQS consente di suddividere i dati in categorie nelle cinque schede seguenti:  
   
 -   **Suggeriti**: valori per i quali sono stati trovati suggerimenti con un livello di confidenza superiore al valore *soglia di suggerimento automatico* ma inferiore al valore *soglia di correzione automatica* . È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
   
 -   **Nuovi**: valori validi per i quali DQS non dispone di informazioni sufficienti (suggerimento) e pertanto non è possibile eseguirne il mapping a qualsiasi altra scheda. Inoltre, questa scheda contiene anche valori con un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
   
--   **Non validi**: valori contrassegnati come non validi nel dominio della Knowledge base o valori che non hanno superato una regola di dominio o dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
+-   **Non validi**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
   
--   Con **correzione**: valori corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore *soglia di correzione automatica* . Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
+-   **Con correzione**: valori corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore *soglia di correzione automatica* . Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
   
 -   **Corretti**: valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
   
@@ -88,21 +88,21 @@ ms.locfileid: "75251769"
   
  ![Pulizia dei dati nel client Data Quality](../data-quality-services/media/dqs-cleansingindqsclient.gif "Pulizia dei dati nel client Data Quality")  
   
-##  <a name="Leading"></a>Correzione del valore iniziali  
+##  <a name="leading-value-correction"></a><a name="Leading"></a> Correzione del valore iniziale  
  La correzione del valore iniziale si applica ai valori di dominio con sinonimi, quando l'utente desidera utilizzare uno dei sinonimi come valore iniziale, anziché altri, per rappresentare il valore in modo coerente. Ad esempio, "New York", "NYC" e "Grande mela" sono sinonimi e l'utente vuole usare "New York" come valore iniziale, anziché "NYC" e "Grande mela". DQS supporta la correzione del valore iniziale durante il processo di pulizia per consentire di standardizzare i dati. La correzione del valore iniziale viene effettuata solo se il dominio è stato opportunamente abilitato al momento della creazione. Per impostazione predefinita, tutti i domini sono abilitati per la correzione del valore iniziale a meno che sia stata deselezionata la casella di controllo **Utilizza valori iniziali** durante la creazione di un dominio. Per ulteriori informazioni su questa casella di controllo, vedere [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
-##  <a name="Standardize"></a>Standardizzare i dati puliti  
+##  <a name="standardize-cleansed-data"></a><a name="Standardize"></a> Standardizzazione dei dati puliti  
  È possibile scegliere se esportare i dati puliti nel formato standardizzato basato sul formato di output definito per i domini. Durante la creazione di un dominio, è possibile selezionare la formattazione che verrà applicata alla restituzione dei valori dei dati nel dominio. Per ulteriori informazioni sulla specifica dei formati di output per un dominio, vedere l'elenco **Formato output in** in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
  Durante l'esportazione dei dati puliti nella pagina **Esporta** della procedura guidata di pulizia del progetto Data Quality, va specificato se si desidera che i dati puliti vengano esportati nel formato standardizzato selezionando la casella di controllo **Standardizzare output** . Per impostazione predefinita, i dati puliti vengono esportati nel formato standardizzato, cioè la casella di controllo è selezionata. Per altre informazioni sull’esportazione dei dati puliti, vedere [Pulizia dei dati mediante le informazioni interne di DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="Related"></a> Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto come configurare valori soglia per l'attività di pulizia.|[Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|Viene descritto come pulire i dati utilizzando le informazioni incorporate in DQS.|[Pulire i dati mediante DQS &#40;informazioni interne sulla&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
-|Viene descritto come pulire i dati utilizzando le informazioni del servizio dati di riferimento.|[Pulire i dati usando dati di riferimento &#40;conoscenza&#41; esterna](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Viene descritto come pulire i dati utilizzando le informazioni incorporate in DQS.|[Pulire i dati mediante DQS &#40;informazioni interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
+|Viene descritto come pulire i dati utilizzando le informazioni del servizio dati di riferimento.|[Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Viene descritto come pulire un dominio composito.|[Pulire i dati in un dominio composito](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257471"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversioni di tipi di dati e annotazione sql: DataType (SQLXML 4,0)
@@ -58,32 +58,32 @@ ms.locfileid: "75257471"
   
 |Tipo di dati di SQL Server|Tipo di dati XSD|  
 |--------------------------|-------------------|  
-|**bigint**|**lungo**|  
-|**BINARY**|**base64Binary**|  
+|**bigint**|**long**|  
+|**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**stringa**|  
+|**char**|**string**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**immagine**|**base64Binary**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**stringa**|  
-|**ntext**|**stringa**|  
-|**nvarchar**|**stringa**|  
-|**numerico**|**decimal**|  
-|**reale**|**float**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
-|**SMALLMONEY**|**decimal**|  
-|**sql_variant**|**stringa**|  
-|**sysname**|**stringa**|  
-|**text**|**stringa**|  
+|**smallmoney**|**decimal**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**stringa**|  
-|**uniqueidentifier**|**stringa**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>Annotazione sql:datatype  
  L'annotazione **SQL: DataType** viene utilizzata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificare il tipo di dati. Questa annotazione deve essere specificata nei casi seguenti:  
@@ -92,14 +92,14 @@ ms.locfileid: "75257471"
   
 -   Si esegue il caricamento bulk in una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo **uniqueidentifier** e il valore XSD è un GUID che include parentesi graffe ({e}). Quando si specifica **SQL: DataType = "uniqueidentifier"**, le parentesi graffe vengono rimosse dal valore prima che venga inserito nella colonna. Se **SQL: DataType** non è specificato, il valore viene inviato con le parentesi graffe e l'inserimento o l'aggiornamento non riesce.  
   
--   Il tipo di dati XML **base64Binary** esegue il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapping a vari tipi di dati (**Binary**, **Image**o **varbinary**). Per eseguire il mapping del tipo **** di dati XML base64Binary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un tipo di dati specifico, utilizzare l'annotazione **SQL: DataType** . Questa annotazione specifica il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna a cui viene mappato l'attributo. Ciò risulta utile durante l'archiviazione dei dati nei database. Specificando l'annotazione **SQL: DataType** è possibile identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati esplicito.  
+-   Il tipo di dati XML **base64Binary** esegue il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapping a vari tipi di dati (**Binary**, **Image**o **varbinary**). Per eseguire il mapping del tipo **base64Binary** di dati XML base64Binary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un tipo di dati specifico, utilizzare l'annotazione **SQL: DataType** . Questa annotazione specifica il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna a cui viene mappato l'attributo. Ciò risulta utile durante l'archiviazione dei dati nei database. Specificando l'annotazione **SQL: DataType** è possibile identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati esplicito.  
   
  È in genere consigliabile specificare **SQL: DataType** nello schema.  
   
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>R. Definizione dell'attributo xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Definizione dell'attributo xsd:type  
  In questo esempio viene illustrato come un tipo di **Data** XSD specificato utilizzando l'attributo **xsd: Type** nello schema influisca sul documento XML risultante. Lo schema fornisce una vista XML della tabella Sales.SalesOrderHeader nel database AdventureWorks.  
   
 ```  

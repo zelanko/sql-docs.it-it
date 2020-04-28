@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232275"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapping dei dati dei parametri CLR
@@ -38,7 +38,7 @@ ms.locfileid: "75232275"
   
 ||||  
 |-|-|-|  
-|**Tipo di dati di SQL Server**|Tipo (in System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo di dati CLR (.NET Framework)**|  
+|**Tipo di dati SQL Server**|Tipo (in System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo di dati CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Booleano,\<valore booleano nullable>**|  
@@ -59,11 +59,9 @@ ms.locfileid: "75232275"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|nessuno|nessuno|  
 |`numeric`|`SqlDecimal`|**Decimale\<, Nullable decimale>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` rappresenta la soluzione migliore per il trasferimento dei dati e l'accesso ai dati, mentre `SQLString` è preferibile per l'esecuzione di operazioni di stringa.|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` rappresenta la soluzione migliore per il trasferimento dei dati e l'accesso ai dati, mentre `SQLString` è preferibile per l'esecuzione di operazioni di stringa.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char>**|  
-|`real`|
-  `SqlSingle` (la gamma di `SqlSingle`, tuttavia, è maggiore di `real`)|**Single, Nullable\<Single>**|  
+|`real`|`SqlSingle` (la gamma di `SqlSingle`, tuttavia, è maggiore di `real`)|**Single, Nullable\<Single>**|  
 |`rowversion`|nessuno|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
 |`smallmoney`|`SqlMoney`|**Decimale\<, Nullable decimale>**|  
@@ -111,7 +109,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**Tipo di dati CLR (SQL Server)**|**Tipo di dati di SQL Server**|  
+|**Tipo di dati CLR (SQL Server)**|**Tipo di dati SQL Server**|  
 |`Decimal`|SMALLMONEY|  
 |`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  

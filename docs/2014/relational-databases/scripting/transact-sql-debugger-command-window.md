@@ -13,31 +13,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243078"
 ---
 # <a name="command-window"></a>Finestra di comando
-  Usare **finestra** per eseguire comandi, ad esempio comandi di debug e di modifica, sul codice nella finestra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dell'editor di query di cui è in corso il debug. Per usare la funzionalità **Finestra di comando**, è necessario usare la modalità di debug. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] supporta molti dei comandi supportati anche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Per altre informazioni, vedere [Visual Studio Command Window](https://go.microsoft.com/fwlink/?LinkId=112007)(Finestra di comando di Visual Studio).  
+  Usare la funzionalità **Finestra di comando** per eseguire comandi, ad esempio i comandi debug o di modifica, sul codice incluso nella finestra dell'editor di query del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di cui è in corso il debug. Per usare la funzionalità **Finestra di comando**, è necessario usare la modalità di debug. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] supporta molti dei comandi supportati anche nella finestra **Comando** di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per altre informazioni, vedere [Visual Studio Command Window](https://go.microsoft.com/fwlink/?LinkId=112007)(Finestra di comando di Visual Studio).  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per accedere alla finestra di comando**  
+ **Per accedere alla funzionalità Finestra di comando**  
   
 -   Scegliere **Avvia debug** dal menu **Debug**.  
   
  **Per stampare il valore di una variabile**  
   
--   In **finestra**digitare **debug. Print \<VariableName>**, quindi premere INVIO.  
+-   In **Finestra di comando** digitare **Debug.Print \<NomeVariabile>** , quindi premere INVIO.  
   
  **Per elencare le informazioni sul thread corrente**  
   
 -   In **finestra**Digitare `Debug.ListThread`e quindi premere INVIO.  
   
- **Per aggiungere una variabile alla finestra controllo immediato**  
+ **Per aggiungere una variabile alla finestra Controllo immediato**  
   
--   In **finestra**digitare **debug. controllo immediato \<VariableName>**, quindi premere INVIO.  
+-   In **Finestra di comando** digitare **Debug.QuickWatch \<NomeVariabile>** , quindi premere INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)  

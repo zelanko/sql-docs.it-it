@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232232"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
@@ -85,7 +85,7 @@ ms.locfileid: "75232232"
   
     -   [Pagina Risultati](#Results)  
   
-###  <a name="Introduction"></a> Pagina Introduzione  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la procedura guidata Importa applicazione livello dati.  
   
  **Opzioni**  
@@ -96,7 +96,7 @@ ms.locfileid: "75232232"
   
 -   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
-###  <a name="Import_settings"></a> Pagina Impostazioni di importazione  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Pagina Impostazioni di importazione  
  Utilizzare questa pagina per specificare il percorso del file con estensione bacpac da importare.  
   
 -   **Importa da disco locale**: fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
@@ -107,7 +107,7 @@ ms.locfileid: "75232232"
   
      Per continuare, specificare il file bacpac da importare, quindi fare clic su **Apri**.  
   
-###  <a name="Database_settings"></a> Pagina Impostazioni database  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Pagina Impostazioni database  
  Usare questa pagina per specificare i dettagli del database che verrà creato.  
   
  **Per un'istanza locale di SQL Server:**  
@@ -122,31 +122,31 @@ ms.locfileid: "75232232"
   
  **Per un database SQL:**  
   
--   **Nome nuovo database**: specificare un nome per il database importato.  
+-   **Nome nuovo database** : specificare un nome per il database importato.  
   
 -   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://www.windowsazure.com/home/tour/database/) .  
   
 -   **Dimensioni massime database (GB)** : usare il menu a discesa per specificare le dimensioni massime del database.  
   
- Scegliere **Avanti**per continuare.  
+ Per continuare, fare clic su **Avanti**.  
   
 ### <a name="validation-page"></a>Pagina Convalida  
  Usare questa pagina per esaminare gli eventuali problemi che impediscono l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
   
- Scegliere **Avanti**per continuare.  
+ Per continuare, fare clic su **Avanti**.  
   
-###  <a name="Summary"></a> Pagina Riepilogo  
+###  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di importazione utilizzando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di importazione e chiudere la procedura guidata, fare clic su **Annulla**.  
   
-###  <a name="Progress"></a> Pagina Stato  
+###  <a name="progress-page"></a><a name="Progress"></a>Pagina di stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
- Scegliere **Avanti**per continuare.  
+ Per continuare, fare clic su **Avanti**.  
   
-###  <a name="Results"></a> Pagina Risultati  
+###  <a name="results-page"></a><a name="Results"></a>Pagina dei risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
- Fare clic su **Chiudi** per chiudere la procedura guidata.  
+ Fare clic su **Chiudi** per uscire dalla procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)   

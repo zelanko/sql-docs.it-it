@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957169"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
@@ -31,21 +31,21 @@ ms.locfileid: "74957169"
   
      [Sicurezza](#Security)  
   
--   **Per creare un database protetto da Transparent Data Encryption utilizzando:**  
+-   **Per creare un database protetto con TDE usando:**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **Per spostare un database utilizzando:**  
+-   **Per spostare un database usando:**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Quando si sposta il database protetto con TDE, è necessario spostare anche la chiave asimmetrica o il certificato usato per aprire la chiave di decrittografia. Il certificato o la chiave asimmetrica deve essere installato nel `master` database del server di destinazione, in modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che possa accedere ai file del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957169"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Archivia i file creati qui in **C:\Programmi\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** per impostazione predefinita. I nomi e i percorsi dei file possono essere diversi.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
 -   È `CONTROL DATABASE` richiesta l'autorizzazione `master` per il database per creare la chiave master del database.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957169"
   
 -   Sono richieste l'autorizzazione `CONTROL DATABASE` per il database crittografato e l'autorizzazione `VIEW DEFINITION` per la chiave asimmetrica o il certificato usato per crittografare la chiave di crittografia del database.  
   
-##  <a name="SSMSProcedure"></a> Per creare un database protetto con TDE  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>Per creare un database protetto da Transparent Data Encryption  
   
-###  <a name="SSMSCreate"></a> Con SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Utilizzo di SQL Server Management Studio  
   
 1.  Creare una chiave master e un certificato del database `master` nel database. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "74957169"
   
 8.  Al termine, fare clic su **OK**.  
   
-###  <a name="TsqlCreate"></a> Uso di Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Uso di Transact-SQL  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -143,7 +143,7 @@ ms.locfileid: "74957169"
     GO  
     ```  
   
- Per altre informazioni, vedere:  
+ Per altre informazioni, vedi:  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -157,11 +157,11 @@ ms.locfileid: "74957169"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a>Per spostare un database  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>Per spostare un database  
   
-###  <a name="SSMSMove"></a> Utilizzo di SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Utilizzo di SQL Server Management Studio  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega...** .  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega...**.  
   
      Nella finestra di dialogo **Scollega database** sono disponibili le opzioni seguenti.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "74957169"
      **Mantieni cataloghi full-text**  
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-     **Status**  
+     **Stato**  
      Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
   
      **Messaggio**  
@@ -191,7 +191,7 @@ ms.locfileid: "74957169"
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando per un database esistono una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _Connessioni attive:_ **<numero_di_connessioni_attive>** , ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database dispone di una o più connessioni attive, lo **stato** è **non pronto** e nella colonna **messaggio** viene visualizzato _<number_of_active_connections>_ **connessioni attive** , ad esempio: **1 connessione attiva**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "74957169"
   
 6.  Ricreare il certificato del server usando il file di backup del certificato del server originale. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
-7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...** .  
+7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...**.  
   
 8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "74957169"
      **Proprietario**  
      Consente di visualizzare un elenco a discesa di possibili proprietari del database in cui è possibile selezionare un proprietario diverso.  
   
-     **Status**  
+     **Stato**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
     |Icona|Testo Stato|Descrizione|  
@@ -252,8 +252,8 @@ ms.locfileid: "74957169"
      **Rimuovi**  
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     **"** _<nome_database>_ **" dettagli database**  
-     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
+     Dettagli del database **"** _<database_name>_ **"**  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
   
     > [!NOTE]  
     >  Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  
@@ -268,9 +268,9 @@ ms.locfileid: "74957169"
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Messaggio**  
-     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
+     Visualizza un messaggio vuoto o un collegamento ipertestuale "**Impossibile trovare il file**".  
   
-###  <a name="TsqlMove"></a> Uso di Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Uso di Transact-SQL  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -311,7 +311,7 @@ ms.locfileid: "74957169"
     GO  
     ```  
   
- Per altre informazioni, vedere:  
+ Per altre informazioni, vedi:  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

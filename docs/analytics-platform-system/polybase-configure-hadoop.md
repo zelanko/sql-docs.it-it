@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245387"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
 Questo articolo illustra come usare la polibase in un appliance APS per eseguire query sui dati esterni in Hadoop.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH). Hadoop segue il modello "principale.secondaria.versione" per le nuove versioni e sono supportate tutte le versioni all'interno di una versione principale e secondaria supportata. Sono supportati i provider Hadoop seguenti:
  - Hortonworks HDP 1.3 su Linux/Windows Server  
@@ -49,7 +49,7 @@ Per prima cosa, configurare gli APS per l'uso del provider Hadoop specifico.
 
 2. Riavviare l'area APS usando la pagina stato del servizio nel [Configuration Manager Appliance](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Abilitare il calcolo con distribuzione  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Abilitare il calcolo con distribuzione  
 
 Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzione nel cluster Hadoop:  
   
@@ -227,7 +227,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Creare un'origine dati esterna con [Crea origine dati esterna](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

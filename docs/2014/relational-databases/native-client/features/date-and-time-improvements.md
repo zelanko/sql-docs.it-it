@@ -1,5 +1,5 @@
 ---
-title: Miglioramenti di data e ora | Microsoft Docs
+title: Miglioramenti relativi a data e ora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 160731a6749b3741a68dcccafedd3499db465349
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231756"
 ---
 # <a name="date-and-time-improvements"></a>Miglioramenti relativi a data e ora
@@ -22,7 +22,7 @@ ms.locfileid: "75231756"
   
  Per ulteriori informazioni sui miglioramenti relativi a data e ora, vedere [miglioramenti di data e ora &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) e [miglioramenti di data e ora &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la pagina relativa agli [esempi di programmazione dati di SQL Server](https://msftdpprodsamples.codeplex.com/).  
+ Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la [pagina relativa agli esempi di programmazione dati di SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="usage"></a>Uso  
  Nelle sezioni seguenti vengono descritte le diverse modalità di utilizzo dei nuovi tipi di data e ora.  
@@ -41,8 +41,7 @@ ms.locfileid: "75231756"
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>Utilizzare il tipo datetime con precisione frazionaria dei secondi estesa  
  OLE DB definisce già un tipo con una precisione pari fino a 1 nanosecondo. Questo tipo, tuttavia, è già utilizzato dalle applicazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistenti, che garantiscono una probabile precisione pari solo a 1/300 di secondo. Il nuovo tipo `datetime2(3)` non è direttamente compatibile con il tipo datetime esistente. Se vi è un rischio che tale tipo di dati influisca negativamente sul comportamento dell'applicazione, le applicazioni devono utilizzare un nuovo flag DBCOLUMN per determinare il tipo di server effettivo.  
   
- Anche ODBC definisce già un tipo con una precisione pari fino a 1 nanosecondo. Questo tipo, tuttavia, è già utilizzato dalle applicazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistenti, che garantiscono una probabile precisione pari solo a 3 millisecondi. Il nuovo tipo `datetime2(3)` non è direttamente compatibile con il tipo `datetime` esistente. 
-  `datetime2(3)` dispone di una precisione di un millisecondo e `datetime` dispone di una precisione di 1/300 di secondo. In ODBC le applicazioni possono determinare il tipo di server in uso tramite il campo di descrizione SQL_DESC_TYPE_NAME. Il tipo SQL_TYPE_TIMESTAMP (SQL_TIMESTAMP per le applicazioni ODBC 2.0) esistente può essere utilizzato per entrambi i tipi.  
+ Anche ODBC definisce già un tipo con una precisione pari fino a 1 nanosecondo. Questo tipo, tuttavia, è già utilizzato dalle applicazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistenti, che garantiscono una probabile precisione pari solo a 3 millisecondi. Il nuovo tipo `datetime2(3)` non è direttamente compatibile con il tipo `datetime` esistente. `datetime2(3)` dispone di una precisione di un millisecondo e `datetime` dispone di una precisione di 1/300 di secondo. In ODBC le applicazioni possono determinare il tipo di server in uso tramite il campo di descrizione SQL_DESC_TYPE_NAME. Il tipo SQL_TYPE_TIMESTAMP (SQL_TIMESTAMP per le applicazioni ODBC 2.0) esistente può essere utilizzato per entrambi i tipi.  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>Utilizzare il tipo datetime con precisione frazionaria dei secondi estesa e fuso orario  
  Alcune applicazioni richiedono valori datetime con informazioni sul fuso orario. Questo requisito è supportato dai nuovi tipi DBTYPE_DBTIMESTAMPOFFSET (OLE DB) e SQL_SS_TIMESTAMPOFFSET (ODBC).  

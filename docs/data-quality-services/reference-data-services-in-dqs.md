@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244142"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
@@ -32,7 +32,7 @@ ms.locfileid: "75244142"
   
 -   Supporta l'uso di dati di riferimento da Azure Marketplace e direttamente da provider di dati di riferimento di terze parti.  
   
-##  <a name="Marketplace"></a>Uso dei dati di riferimento da Azure Marketplace  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Uso dei dati di riferimento da Azure Marketplace  
  DQS supporta l'utilizzo di dati di riferimento da Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento tramite il Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per ulteriori informazioni su Marketplace, vedere informazioni [sulle Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
   
  La perfetta integrazione tra Marketplace e DQS semplifica i passaggi associati all'individuazione, all'esplorazione e all'acquisizione di informazioni per i progetti Data Quality dall'interno di DQS. I dati vengono utilizzati in DQS e aiutano gli utenti di DQS a ottenere un'elevata qualità dei dati unendo in modo del tutto innovativo le funzionalità di DQS, Marketplace e dei provider di servizi dati di riferimento.  
@@ -49,13 +49,13 @@ ms.locfileid: "75244142"
   
  È possibile eseguire tali attività nella scheda **Dati di riferimento** della schermata **Configurazione** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-##  <a name="Direct"></a>Uso dei dati di riferimento direttamente dai provider di dati di riferimento di terze parti  
+##  <a name="using-reference-data-directly-from-the-third-party-reference-data-providers"></a><a name="Direct"></a> Utilizzo dei dati di riferimento direttamente dai provider di dati di riferimento di terze parti  
  Se non si è connessi a Internet, e quindi non è possibile usare Marketplace, DQS supporta anche la connessione diretta a provider di dati disponibili all'interno della rete della propria organizzazione. Per utilizzare dati di riferimento da provider di dati di riferimento di terze parti online, è necessario creare un record per il provider di dati in DQS.  
   
-##  <a name="HowToCleanse"></a>Come pulire i dati usando i dati di riferimento  
+##  <a name="how-to-cleanse-data-by-using-the-reference-data"></a><a name="HowToCleanse"></a> Come pulire i dati utilizzando i dati di riferimento  
  La pulizia dei dati in DQS utilizzando dati di riferimento prevede i tre passaggi seguenti:  
   
-1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima di poter utilizzare i dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
+1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima che sia possibile utilizzare dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
   
     1.  Se si usa Marketplace, fornire una chiave account Marketplace valida, passare alla categoria di dati [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) in Marketplace e sottoscrivere i provider richiesti.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "75244142"
   
      La configurazione dei dettagli del provider di dati di riferimento in DQS è un'attività che si esegue una sola volta per ogni provider di dati specifico. Solo gli amministratori DQS possono configurare le impostazioni relative ai dati di riferimento in DQS.  
   
-2.  Eseguire **il mapping di un dominio/dominio composito in una Knowledge base al servizio dati di riferimento**: eseguire il mapping di un dominio/dominio composito al servizio dati di riferimento appropriato sottoscritto/aggiunto nel passaggio 1.  
+2.  **Eseguire il mapping di un dominio/dominio composito in una Knowledge Base al servizio dati di riferimento**: eseguire il mapping di un dominio/dominio composito al servizio dati di riferimento appropriato sottoscritto/aggiunto nel passaggio 1.  
   
-3.  **Utilizzare i domini di cui è stato eseguito il mapping per l'attività di pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività di **pulizia** , selezionare la Knowledge base che contiene domini/domini compositi di cui è stato eseguito il mapping con servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
+3.  **Utilizzare i domini con mapping per l'attività Pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività **Pulizia** , selezionare la Knowledge Base che contiene i domini/domini compositi di cui è stato eseguito il mapping ai servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -73,6 +73,6 @@ ms.locfileid: "75244142"
 |----------------------|-----------|  
 |Viene descritto come configurare DQS per utilizzare servizi dati di riferimento da Marketplace o da provider diretti di dati di terze parti online.|[Configurazione di DQS per l'utilizzo di dati di riferimento](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Viene descritto come eseguire il mapping di un dominio/dominio composito in una Knowledge Base a un servizio dati di riferimento.|[Collegare un dominio o un dominio composito ai dati di riferimento](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|Viene descritto come pulire i dati utilizzando un servizio dati di riferimento.|[Pulire i dati usando dati di riferimento &#40;conoscenza&#41; esterna](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Viene descritto come pulire i dati utilizzando un servizio dati di riferimento.|[Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

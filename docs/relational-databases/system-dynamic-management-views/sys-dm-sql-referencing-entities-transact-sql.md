@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982346"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982346"
   
 -   Trigger DDL a livello di server  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (e versioni successive [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]),.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +80,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|Nome dell'entità di riferimento. Non ammette i valori Null.|  
 |referencing_id|**int**|ID dell'entità di riferimento. Non ammette i valori Null.|  
 |referencing_class|**tinyint**|Classe dell'entità di riferimento. Non ammette i valori Null.<br /><br /> 1 = Oggetto<br /><br /> 12 = Trigger DDL a livello di database<br /><br /> 13 = Trigger DDL a livello di server|  
-|referencing_class_desc|**nvarchar (60)**|Descrizione della classe dell'entità di riferimento.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità di riferimento.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica che la risoluzione dell'ID dell'entità a cui si fa riferimento si verifica in fase di esecuzione poiché dipende dallo schema del chiamante.<br /><br /> 1 = L'entità di riferimento ha la possibilità di fare riferimento all'entità, tuttavia la risoluzione dell'ID dell'entità a cui si fa riferimento è dipendente dal chiamante e non può essere determinata. Ciò avviene solo per riferimenti a stored procedure non associati a schema, stored procedure estese o funzioni definite dall'utente chiamate all'interno di un'istruzione EXECUTE.<br /><br /> 0 = L'entità a cui si fa riferimento non è dipendente dal chiamante.|  
   
 ## <a name="exceptions"></a>Eccezioni  
@@ -102,10 +102,10 @@ sys.dm_sql_referencing_entities (
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizza|Sì|Sì|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]stored procedure * *|Sì|Sì|  
+|Visualizzazione|Sì|Sì|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
 |stored procedure CLR|No|Sì|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]funzione definita dall'utente|Sì|Sì|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
 |Funzione CLR definita dall'utente|No|Sì|  
 |Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
@@ -124,13 +124,13 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>Autorizzazioni  
   
-### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="sskatmai---sssql11"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   È richiesta l'autorizzazione CONTROL per l'oggetto a cui viene fatto riferimento. Quando l'entità a cui si fa riferimento è una funzione di partizione, è necessaria l'autorizzazione CONTROL per il database.  
   
 -   È richiesta l'autorizzazione SELECT per sys. dm_sql_referencing_entities. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public.  
   
-### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   Non sono richieste autorizzazioni per l'oggetto a cui viene fatto riferimento. I risultati parziali possono essere restituiti se l'utente dispone di VIEW DEFINITION solo per alcune entità di riferimento.  
   
@@ -175,7 +175,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_sql_referenced_entities &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

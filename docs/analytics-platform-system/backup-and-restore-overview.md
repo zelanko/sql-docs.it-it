@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401354"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 
 Viene descritto come funziona il backup e il ripristino dei dati per la data warehouse parallela (PDW). Le operazioni di backup e ripristino vengono usate per il ripristino di emergenza. È anche possibile usare backup e ripristino per copiare un database da un'appliance a un'altra appliance.  
     
-## <a name="BackupRestoreBasics"></a>Nozioni fondamentali su backup e ripristino
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>Nozioni fondamentali su backup e ripristino
 
 Un *backup del database* PDW è una copia di un database Appliance, archiviato in un formato in modo che possa essere usato per ripristinare il database originale in un'appliance.  
   
@@ -36,7 +36,7 @@ I backup del database vengono archiviati in uno o più server di backup, che si 
   
 I backup vengono archiviati nel server di backup come un set di file nel file system di Windows. È possibile ripristinare un backup del database PDW solo in PDW. Tuttavia, è possibile archiviare i backup del database dal server di backup in un altro percorso usando i processi di backup dei file di Windows standard. Per ulteriori informazioni sui server di backup, vedere [acquisire e configurare un server di backup](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Tipi di backup di database
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>Tipi di backup di database
 
 Sono disponibili due tipi di dati che richiedono un backup: database utente e database di sistema, ad esempio il database master. PDW non esegue il backup del log delle transazioni.  
   
@@ -50,7 +50,7 @@ Un backup differenziale è supportato solo per i database utente. Un backup del 
   
 Per eseguire il backup dell'intera Appliance, è necessario eseguire un backup di tutti i database utente e di un backup del database master.  
   
-## <a name="BackupProc"></a>Processo di backup del database
+## <a name="database-backup-process"></a><a name="BackupProc"></a>Processo di backup del database
 
 Il diagramma seguente illustra il flusso di dati durante un backup del database.  
   
@@ -84,7 +84,7 @@ Il processo di backup funziona nel modo seguente:
   
     -   Non è possibile modificare il nome del backup prima di eseguire un ripristino. Il nome della directory di backup deve corrispondere al nome del nome originale del backup. Il nome originale del backup si trova nel file backup. XML all'interno della directory di backup. Per ripristinare un database con un nome diverso, è possibile specificare il nuovo nome nel comando Restore. Ad esempio: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Modalità di ripristino del database
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modalità di ripristino del database
 
 Un ripristino completo del database ricrea il database PDW usando i dati nel backup del database. Il ripristino del database viene eseguito ripristinando prima un backup completo e quindi eventualmente ripristinando un backup differenziale. Il ripristino del database include gli utenti del database e i ruoli del database.  
   
@@ -92,7 +92,7 @@ Un'intestazione Restore Restore restituisce le informazioni di intestazione per 
   
 Il ripristino di un dispositivo è un ripristino dell'intero dispositivo. Ciò include il ripristino di tutti i database utente e del database master.  
   
-## <a name="RestoreProc"></a>Processo di ripristino
+## <a name="restore-process"></a><a name="RestoreProc"></a>Processo di ripristino
 
 Il diagramma seguente illustra il flusso di dati durante il ripristino di un database.  
   

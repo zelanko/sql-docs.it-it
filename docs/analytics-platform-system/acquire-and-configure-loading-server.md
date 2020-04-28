@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401481"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di caricamento per data warehouse paralleli
 Questo articolo descrive come acquisire e configurare un server di caricamento come sistema Windows non Appliance per l'invio di caricamenti di dati a Parallel data warehouse (PDW).  
   
-## <a name="Basics"></a>Basi  
+## <a name="basics"></a><a name="Basics"></a>Nozioni di base  
 Server di caricamento:  
   
 -   Non deve essere un singolo server. È possibile caricare simultaneamente con più server di caricamento.  
@@ -32,18 +32,18 @@ Server di caricamento:
   
 -   Si trova nel dominio del cliente, non nel dominio dell'appliance. Non esiste alcuna relazione di trust tra il dominio del cliente e il dominio dell'appliance.  
   
-## <a name="Step1"></a>Passaggio 1: determinare i requisiti di capacità  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Passaggio 1: determinare i requisiti di capacità  
 Il sistema di caricamento può essere progettato come uno o più server di caricamento che eseguono carichi simultanei. Per ogni server di caricamento non è necessario dedicarsi solo al caricamento, purché vengano gestiti i requisiti di prestazioni e archiviazione del carico di lavoro.  
   
 I requisiti di sistema per un server di caricamento dipendono quasi completamente dal proprio carico di lavoro. Utilizzare il [foglio](loading-server-capacity-planning-worksheet.md) di lavoro per la pianificazione della capacità del server per determinare i requisiti di capacità.  
   
-## <a name="Step2"></a>Passaggio 2: acquisire il sServer  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>Passaggio 2: acquisire il sServer  
 Ora che è possibile comprendere meglio i requisiti di capacità, è possibile pianificare i server e i componenti di rete che sarà necessario acquistare o effettuare il provisioning. Incorporare l'elenco di requisiti seguente nel piano di acquisto, quindi acquistare il server o effettuare il provisioning di un server esistente.  
   
-### <a name="R"></a>Requisiti software  
+### <a name="software-requirements"></a><a name="R"></a>Requisiti software  
 Sistemi operativi supportati:  
   
--   Windows Server 2012 o Windows Server 2012 R2. Questi sistemi operativi richiedono la scheda di rete FDR.  
+-   Windows Server 2012 o Windows Server 2012 R2. Questi sistemi operativi richiedono la scheda di rete FDR.  
   
 -   Windows Server 2008 R2. Questo sistema operativo richiede la scheda di rete DDR.  
   
@@ -60,7 +60,7 @@ Per preparare una connessione InfiniBand di Windows Server 2012 o Windows Server
   
 3.  Acquistare 2 cavi InfiniBand FDR per una scheda a doppia porta o 1 cavo InfiniBand FDR per una singola scheda di porta. I cavi InfiniBand FDR collegheranno il server di caricamento alla rete InfiniBand dell'appliance. La lunghezza del cavo dipende dalla distanza tra il server di caricamento e i commutatori InfiniBand dell'appliance, in base all'ambiente in uso.  
   
-## <a name="Step3"></a>Passaggio 3: connettere il server alle reti InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Passaggio 3: connettere il server alle reti InfiniBand  
 Utilizzare questa procedura per connettere il server di caricamento alla rete InfiniBand. Se il server non utilizza la rete InfiniBand, ignorare questo passaggio.  
   
 1.  Rack il server sufficientemente vicino al dispositivo in modo che sia possibile connetterlo alla rete InfiniBand dell'appliance.  
@@ -75,7 +75,7 @@ Utilizzare questa procedura per connettere il server di caricamento alla rete In
   
 5.  Configurare le impostazioni InfiniBand e DNS per le schede di rete. Per istruzioni sulla configurazione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Passaggio 4: installare gli strumenti di caricamento  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>Passaggio 4: installare gli strumenti di caricamento  
 Gli strumenti client sono disponibili per il download dall'area download Microsoft. 
 
 Per installare dwloader, eseguire l'installazione di dwloader dagli strumenti client.
@@ -85,8 +85,8 @@ Se si prevede di utilizzare Integration Services per il caricamento, sarà neces
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Passaggio 5: avviare il caricamento  
-A questo punto è possibile iniziare a caricare i dati. Per altre informazioni, vedere:  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>Passaggio 5: avviare il caricamento  
+A questo punto è possibile iniziare a caricare i dati. Per altre informazioni, vedi:  
   
 1.  [Strumento di caricamento da riga di comando dwloader](dwloader.md)  
   
@@ -95,7 +95,7 @@ A questo punto è possibile iniziare a caricare i dati. Per altre informazioni, 
 ## <a name="performance"></a>Prestazioni  
 Per ottimizzare le prestazioni in Windows Server 2012 e versioni successive, attivare l'inizializzazione immediata dei file in modo che, quando i dati vengono sovrascritti, il sistema operativo non sovrascriva i dati esistenti con zeri. Se si tratta di un rischio per la sicurezza perché i dati precedenti esistono ancora nei dischi, assicurarsi di disattivare l'inizializzazione immediata dei file.  
   
-## <a name="Security"></a>Avvisi sulla sicurezza  
+## <a name="security-notices"></a><a name="Security"></a>Avvisi sulla sicurezza  
 Poiché i dati da caricare non vengono archiviati nell'appliance, il team IT è responsabile della gestione di tutti gli aspetti della sicurezza per il caricamento dei dati. Questo include ad esempio la gestione della sicurezza dei dati da caricare, la sicurezza del server usato per archiviare i carichi e la sicurezza dell'infrastruttura di rete che connette il server di caricamento al dispositivo SQL Server PDW.  
   
 > [!IMPORTANT]  

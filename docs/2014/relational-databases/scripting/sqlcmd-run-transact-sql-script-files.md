@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243204"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Esecuzione di file script Transact-SQL mediante sqlcmd
@@ -66,7 +66,7 @@ ms.locfileid: "75243204"
  Nella finestra del prompt dei comandi non verrà restituito alcun output. L'output verrà invece inviato al file EmpAdds.txt. È possibile verificare l'output aprendo il file EmpAdds.txt.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio dell'utilità sqlcmd](sqlcmd-start-the-utility.md)   
+ [Avviare l'utilità sqlcmd](sqlcmd-start-the-utility.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

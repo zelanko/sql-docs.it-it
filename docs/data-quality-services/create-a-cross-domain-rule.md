@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245467"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
@@ -33,17 +33,17 @@ ms.locfileid: "75245467"
   
  Le regole tra domini vengono prese in esame dopo tutte le regole semplici applicate solo a un singolo dominio. Solo se un valore supera le singole regole di dominio (se esistono) verrà applicata la regola tra domini. Il dominio composito e i singoli domini su cui viene eseguita una regola devono tutti essere definiti prima dell'esecuzione della regola.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Per creare una regola tra domini, è necessario avere creato e aperto un dominio composito.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola tra domini.  
   
-##  <a name="Create"></a>Creazione di regole tra domini  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a> Creare le regole tra domini  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -52,8 +52,7 @@ ms.locfileid: "75245467"
     > [!NOTE]  
     >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
   
-3.  
-  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio composito per il quale si desidera creare una regola di dominio o creare un nuovo dominio composito. Se è necessario creare un nuovo dominio, vedere [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+3.  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio composito per il quale si desidera creare una regola di dominio o creare un nuovo dominio composito. Se è necessario creare un nuovo dominio, vedere [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
 4.  Fare clic sulla scheda **Regole CD** .  
   
@@ -79,7 +78,7 @@ ms.locfileid: "75245467"
   
 9. Continuare con la procedura relativa al test descritta di seguito.  
   
-##  <a name="Test"></a>Testare le regole tra domini  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a> Testare le regole tra domini  
   
 1.  Testare la regola tra domini come segue:  
   
@@ -91,13 +90,13 @@ ms.locfileid: "75245467"
   
     4.  Fare di nuovo clic sull'icona **Aggiunge un nuovo termine di test per la regola di dominio** per aggiungere un altro set di valori di test.  
   
-    5.  Fare clic sull'icona **Testa la regola di dominio su tutti i termini** . Se un set di valori di test è valido, nella colonna **Validità** verrà immesso un segno di spunta per la riga. Se il set di valori di test non è valido, nella colonna Validità verrà immesso un triangolo con un punto esclamativo per la riga.  
+    5.  Fare clic sull'icona **testa la regola di dominio su tutti i termini** . Se un set di valori di test è valido, nella colonna **Validità** verrà immesso un segno di spunta per la riga. Se il set di valori di test non è valido, nella colonna Validità verrà immesso un triangolo con un punto esclamativo per la riga.  
   
     6.  Al termine del test fare clic su **Chiudi** nella finestra di dialogo **Test regola dominio composito** .  
   
 2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di una regola tra domini  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola tra domini  
  Dopo avere creato una regola tra domini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
   

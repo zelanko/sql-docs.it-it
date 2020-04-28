@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401197"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Scaricare e applicare Microsoft Updates for Analytics Platform System
 In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalogo Microsoft Update in Windows Server Update Services (WSUS) e come applicare tali aggiornamenti ai server degli appliance del sistema della piattaforma di analisi. Microsoft Update installerà tutti gli aggiornamenti applicabili per Windows e SQL Server. WSUS è installato nella macchina virtuale VMM del dispositivo.  
   
-## <a name="TOP"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="TOP"></a>Prima di iniziare  
   
 > [!WARNING]  
 > Non tentare di applicare gli aggiornamenti se il dispositivo o qualsiasi componente dell'appliance non è attivo o si trova in uno stato di failover. In tal caso, contattare il supporto tecnico per assistenza.  
 >   
 > Non applicare gli aggiornamenti Microsoft mentre l'appliance è in uso. L'applicazione di aggiornamenti può causare il riavvio del nodo Appliance. Gli aggiornamenti devono essere applicati durante una finestra di manutenzione quando l'appliance non è in uso.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 Prima di eseguire questi passaggi, è necessario:  
   
 -   Configurare WSUS nell'appliance seguendo le istruzioni riportate in [configure Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
@@ -35,9 +35,9 @@ Prima di eseguire questi passaggi, è necessario:
   
 -   Disporre di un account di accesso con le autorizzazioni per accedere alla console di amministrazione del sistema Analytics Platform e visualizzare le informazioni sullo stato dell'appliance.  
   
--   Nella maggior parte dei casi WSUS deve accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo, è possibile configurare il DNS del sistema della piattaforma di analisi per supportare un server d'utilità di un nome esterno che consentirà agli host e alle macchine virtuali di sistema della piattaforma di analisi di usare server DNS esterni per risolvere i nomi all'esterno del Appliance. Per altre informazioni, vedere [usare un server di trasmissione DNS per risolvere i nomi DNS non Appliance &#40;&#41;del sistema della piattaforma di analisi ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Nella maggior parte dei casi WSUS deve accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo, è possibile configurare il DNS del sistema della piattaforma di analisi per supportare un server di un server d'utilità esterno che consentirà agli host e alle macchine virtuali di sistema della piattaforma di analisi di usare server DNS esterni per risolvere i nomi all'esterno dell'appliance. Per altre informazioni, vedere [usare un server di trasmissione DNS per risolvere i nomi DNS non Appliance &#40;&#41;del sistema della piattaforma di analisi ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
-## <a name="bkmk_ImportUpdates"></a>Per scaricare e applicare gli aggiornamenti Microsoft  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>Per scaricare e applicare gli aggiornamenti Microsoft  
   
 #### <a name="verify-the-appliance-state-indicators"></a>Verificare gli indicatori di stato dell'appliance  
   
@@ -81,7 +81,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 4.  Selezionare il gruppo di Server Appliance creato in [configurare Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Fare clic su **Approvato per l'installazione** e quindi su **OK**.  
+5.  Fare clic su **Approvato per l'installazione**e quindi su **OK**.  
   
     ![Approvare gli aggiornamenti per il gruppo di computer.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
@@ -139,7 +139,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 2.  Verificare che le colonne **cluster** e **rete** mostrino il verde (o na) per tutti i nodi. Se sono presenti avvisi in una di queste colonne, l'appliance potrebbe non essere in grado di installare correttamente gli aggiornamenti. Se sono presenti avvisi critici, contattare il supporto tecnico.  
   
-## <a name="RunUpdateWizard"></a>Eseguire il programma di aggiornamento  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>Eseguire il programma di aggiornamento  
 Seguire queste istruzioni per eseguire il programma di aggiornamento del sistema della piattaforma di analisi.  
   
 > [!NOTE]  

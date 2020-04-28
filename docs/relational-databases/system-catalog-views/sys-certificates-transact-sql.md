@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255837"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
@@ -37,26 +37,26 @@ ms.locfileid: "75255837"
 |**nome**|**sysname**|Nome del certificato. Valore univoco all'interno del database.|  
 |**certificate_id**|**int**|ID del certificato. Valore univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità di database che possiede il certificato.|  
-|**pvt_key_encryption_type**|**carattere (2)**|Tipo di crittografia utilizzata per la chiave.<br /><br /> NA = Nessuna chiave privata per il certificato<br /><br /> MK = La chiave privata è crittografata tramite la chiave master<br /><br /> PW = La chiave privata è crittografata tramite una password definita dall'utente<br /><br /> SK = La chiave privata è crittografata tramite la chiave master del servizio.|  
-|**pvt_key_encryption_type_desc**|**nvarchar (60)**|Descrizione della modalità di crittografia utilizzata per la chiave privata.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
+|**pvt_key_encryption_type**|**char(2)**|Tipo di crittografia utilizzata per la chiave.<br /><br /> NA = Nessuna chiave privata per il certificato<br /><br /> MK = La chiave privata è crittografata tramite la chiave master<br /><br /> PW = La chiave privata è crittografata tramite una password definita dall'utente<br /><br /> SK = La chiave privata è crittografata tramite la chiave master del servizio.|  
+|**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrizione della modalità di crittografia utilizzata per la chiave privata.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|Se è 1, questo certificato è utilizzato per avviare i dialoghi dei servizi crittografati.|  
 |**issuer_name**|**nvarchar (442)**|Nome dell'autorità emittente del certificato.|  
 |**cert_serial_number**|**nvarchar (64)**|Numero di serie del certificato.|  
-|**SID**|**varbinary(85)**|SID dell'account di accesso del certificato.|  
+|**sid**|**varbinary (85)**|SID dell'account di accesso del certificato.|  
 |**string_sid**|**nvarchar(128)**|Rappresentazione della stringa del SID dell'account di accesso per il certificato|  
 |**Oggetto**|**nvarchar(4000)**|Oggetto del certificato.|  
 |**expiry_date**|**datetime**|Data di scadenza del certificato.|  
 |**start_date**|**datetime**|Data di inizio di validità del certificato.|  
-|**thumbprint**|**varbinary (32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
 |**attested_by**|**nvarchar(260)**|Riservato per l'utilizzo nel sistema.|  
 |**pvt_key_last_backup_date**|**datetime**|Data e ora dell'ultima esportazione della chiave privata del certificato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
   

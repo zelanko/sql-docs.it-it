@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401239"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Connettersi ai nodi Appliance nel sistema della piattaforma Analytics
@@ -22,7 +22,7 @@ Questo articolo illustra i diversi modi per connettersi a ogni nodo nell'applian
 ## <a name="connecting-with-hadoop"></a>Connessione con Hadoop  
 Prima di usare Hadoop con SQL Server PDW, richiedere all'amministratore del dispositivo di installare il Java Runtime Environment nel SQL Server PDW. Per istruzioni, vedere [configurare la connettività di base per i dati esterni &#40;sistema della piattaforma di analisi&#41;](configure-polybase-connectivity-to-external-data.md) nella Guida operativa dell'appliance.  
   
-## <a name="ConnectingToIndividualNodes"></a>Connessione ai nodi Appliance  
+## <a name="connecting-to-appliance-nodes"></a><a name="ConnectingToIndividualNodes"></a>Connessione ai nodi Appliance  
 Ogni nodo del dispositivo è accessibile direttamente solo in scenari di utilizzo specifici e in base ai tipi di utente specifici. La tabella seguente elenca ogni nodo del dispositivo e gli scenari in cui gli utenti si connetteranno direttamente al nodo.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  

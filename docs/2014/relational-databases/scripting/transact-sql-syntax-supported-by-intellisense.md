@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242996"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintassi Transact-SQL supportata da IntelliSense
@@ -47,17 +47,17 @@ ms.locfileid: "75242996"
   
 |Istruzione Transact-SQL|Sintassi supportata|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Tutta la sintassi, eccetto la clausola *execute_statement* .|  
+|[INSERIRE](/sql/t-sql/statements/insert-transact-sql)|Tutta la sintassi, eccetto la clausola *execute_statement* .|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Tutta la sintassi.|  
-|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Tutta la sintassi.|  
-|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Tutta la sintassi.|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Tutta la sintassi.|  
+|[ELIMINARE](/sql/t-sql/statements/delete-transact-sql)|Tutta la sintassi.|  
+|[DICHIARARE@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Tutta la sintassi.|  
+|[SET@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Tutta la sintassi.|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Esecuzione di stored procedure e di funzioni definite dall'utente e di sistema.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Tutta la sintassi.|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Tutta la sintassi.|  
+|[CREA VISTA](/sql/t-sql/statements/create-view-transact-sql)|Tutta la sintassi.|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Tutta la sintassi, con le eccezioni seguenti:<br /><br /> Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Tutta la sintassi, con le eccezioni seguenti:<br /><br /> Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
-|[USA](/sql/t-sql/language-elements/use-transact-sql)|Tutta la sintassi.|  
+|[USARE](/sql/t-sql/language-elements/use-transact-sql)|Tutta la sintassi.|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in istruzioni supportate  
  Nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta i seguenti elementi della sintassi quando vengono utilizzati in una delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] supportate:  

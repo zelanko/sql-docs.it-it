@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232732"
 ---
 # <a name="xml-task"></a>Attività XML
@@ -119,7 +119,7 @@ ms.locfileid: "75232732"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività XML &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML Task Editor &#40;General Page&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Eseguire la convalida XML con l'attività XML](xml-task.md)  
   

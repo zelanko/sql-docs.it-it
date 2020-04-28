@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244938"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor di query del Motore di database (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "75244938"
  **Connettere**  
  Consente di aprire la finestra di dialogo **Connetti al server** . Utilizzare questa finestra di dialogo per stabilire una connessione a un server.  
   
- **Disconnetti**  
+ **Disconnettere**  
  Disconnette l'editor di query corrente dal server.  
   
  **Cambia connessione**  
@@ -71,13 +71,13 @@ ms.locfileid: "75244938"
  **Eseguire**  
  Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte del codice, di eseguire tutto il codice incluso nell'editor di query.  
   
- **Eseguire il debug**  
+ **Debug**  
  Consente di abilitare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , che supporta azioni di debug quali l'impostazione di punti di interruzione, il controllo di variabili e l'esecuzione di codice istruzione per istruzione.  
   
  **Annulla esecuzione query**  
  Consente di inviare una richiesta di annullamento al server. Alcune query non possono essere annullate immediatamente, ma devono attendere una condizione di annullamento adatta. Quando le transazioni vengono annullate, è possibile che si verifichino ritardi durante il rollback delle transazioni.  
   
- **Analizza**  
+ **Analizzare**  
  Consente di controllare la sintassi del codice selezionato. Se non è selezionata alcuna parte del codice, viene controllata la sintassi di tutto il codice incluso nella finestra dell'editor di query.  
   
  **Visualizza piano di esecuzione stimato**  
@@ -130,7 +130,7 @@ ms.locfileid: "75244938"
  **Interrompi tutto**  
  Consente di impostare il debugger per l'interruzione di tutti i processi a cui è connesso il debugger stesso quando si verifica un'interruzione.  
   
- **Arresta debug**  
+ **Debug**  
  Consente di disattivare la modalità di debug per la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e di ripristinare la modalità di esecuzione predefinita.  
   
  **Mostra istruzione successiva**  
@@ -142,7 +142,7 @@ ms.locfileid: "75244938"
  **Esegui istruzione/routine**  
  Viene eseguita l'istruzione successiva. Se l'istruzione richiama una stored procedure, una funzione o un trigger Transact-SQL, il modulo viene eseguito fino alla fine e i risultati vengono restituiti al codice che ha effettuato la chiamata. Se si è certi che non vi siano errori nel modulo, è possibile continuare. L'esecuzione viene sospesa in corrispondenza dell'istruzione che segue la chiamata al modulo.  
   
- **Esci da istruzione/routine**  
+ **Esci da istruzione/uscita**  
  Consente di tornare al successivo livello di chiamata più alto, ad esempio una funzione, una stored procedure o un trigger. L'esecuzione viene sospesa in corrispondenza dell'istruzione che segue la chiamata alla stored procedure, la funzione o il trigger.  
   
  **Windows**  

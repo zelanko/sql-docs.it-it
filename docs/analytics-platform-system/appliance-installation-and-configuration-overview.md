@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401441"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Installazione e configurazione di appliance per il sistema della piattaforma Analytics
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. installare l'hardware  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. installare l'hardware  
 Il nuovo appliance verrà distribuito sui pallet al Dock nel data center.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Se il IHV non esegue l'installazione dell'hardware, attenersi alla procedura seg
 |Conferma documentazione|Verificare di aver ricevuto tutte le informazioni e i documenti necessari dal fornitore dell'hardware indipendente (IHV). Vedere [le informazioni da ottenere dalla piattaforma IHV &#40;Analytics System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Installare l'hardware|Verificare che l'data center possa contenere l'appliance. Spostare i componenti dell'appliance nel data center. Rack i commutatori di rete, PDU e cablaggio. Vedere [Installazione Hardware &#40;&#41;di sistema della piattaforma di analisi ](hardware-installation.md).|  
   
-## <a name="PowerOnAppliance"></a>2. Accendere l'appliance  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. Accendere l'appliance  
   
 |||  
 |-|-|  
 |**Attività**|**Descrizione**|  
 |Accendere l'appliance|Accendere ogni nodo del componente Appliance nell'ordine necessario, in attesa di verificare che non vengano rilevati errori.|  
   
-## <a name="ConfigureAppliance"></a>3. configurare l'appliance  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. configurare l'appliance  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Se il IHV non esegue l'installazione dell'hardware, attenersi alla procedura seg
 > [!WARNING]  
 > Le modifiche alla configurazione devono essere apportate solo usando il SQL Server PDW**Configuration Manager**. Le modifiche non esposte tramite **Configuration Manager** non sono supportate. Ad esempio, l'appliance SQL Server PDW supporta solo l'impostazione della lingua inglese (Stati Uniti).  
   
-## <a name="SoftwareServicing"></a>4. configurare la manutenzione del software  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. configurare la manutenzione del software  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Se il IHV non esegue l'installazione dell'hardware, attenersi alla procedura seg
 |Applicare gli aggiornamenti di SQL Server PDW|Opzionale Potrebbe essere necessario applicare uno o più aggiornamenti SQL Server PDW per aggiornare il software SQL Server PDW alla versione più recente. Vedere applicare gli hotfix del sistema della piattaforma di [analisi &#40;&#41;del sistema della piattaforma di analisi ](apply-analytics-platform-system-hotfixes.md).|  
 |Configurare Windows Server Update Services|Configurare l'appliance per la ricezione di aggiornamenti da Windows Server Update Services per il software di supporto. Vedere [scaricare e applicare gli aggiornamenti Microsoft &#40;&#41;di sistema della piattaforma di analisi ](download-and-apply-microsoft-updates.md).|  
   
-## <a name="NextSteps"></a>Passaggi successivi  
+## <a name="next-steps"></a><a name="NextSteps"></a>Passaggi successivi  
 Dopo aver completato tutti i passaggi precedenti, l'appliance è pronta per l'uso. L'utente o altri addetti alla propria sede possono procedere con le attività seguenti.  
   
 |||  

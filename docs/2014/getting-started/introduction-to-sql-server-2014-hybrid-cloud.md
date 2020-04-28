@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228066"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduzione al cloud ibrido di SQL Server 2014
@@ -39,7 +39,7 @@ ms.locfileid: "75228066"
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>Scenari di cloud ibrido per SQL Server e Microsoft Azure 
  
-#### <a name="backup"></a>Eseguire il backup e il ripristino di database da e verso archiviazione di Azure 
+#### <a name="backup-and-restore-databases-tofrom-azure-storage"></a><a name="backup"></a>Eseguire il backup e il ripristino di database da e verso archiviazione di Azure 
  Una delle attività amministrative più importanti è rappresentata dal backup e ripristino dei database. Con SQL Server e Azure è possibile eseguire il backup sicuro dei database nel cloud. 
  
  I vantaggi principali dell'uso delle funzionalità di backup e ripristino di SQL Server con archiviazione di Azure come destinazione di backup includono: 
@@ -64,7 +64,7 @@ ms.locfileid: "75228066"
  
 -  Lo [strumento SQL Server backup in Azure](https://www.microsoft.com/download/details.aspx?id=40740) consente di eseguire il backup nell'archiviazione BLOB di Azure e crittografa e comprime SQL Server backup archiviati localmente o nel cloud. Tramite questo strumento viene abilitata una singola strategia di backup nel cloud in diverse versioni di SQL Server, ad esempio SQL Server 2005, 2008, 2008 R2 e 2014. 
  
-#### <a name="replica"></a>Gestire le repliche di database in macchine virtuali di Azure 
+#### <a name="maintain-database-replicas-on-azure-virtual-machines"></a><a name="replica"></a>Gestire le repliche di database in macchine virtuali di Azure 
  Una soluzione di ripristino di emergenza stabile per i database è essenziale per il successo dell'azienda. La maggior parte dei clienti deve configurare un sito per i ripristini di emergenza e acquistare dell'hardware aggiuntivo per le repliche di database. Con SQL Server e Azure è possibile gestire una o più repliche dei database nel cloud. 
  
  I vantaggi principali della gestione delle repliche secondarie in Azure includono: 
@@ -81,7 +81,7 @@ ms.locfileid: "75228066"
  
 -  Gruppi di disponibilità AlwaysOn, il mirroring del database e log shipping sono le tecnologie più comuni che è possibile usare per soddisfare le esigenze di disponibilità elevata e ripristino di emergenza dell'applicazione. Per informazioni, vedere [disponibilità elevata e ripristino di emergenza per SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/azure/jj870962.aspx). 
  
-#### <a name="store"></a>Archiviare SQL Server file di dati in archiviazione di Azure 
+#### <a name="store-sql-server-data-files-in-azure-storage"></a><a name="store"></a>Archiviare SQL Server file di dati in archiviazione di Azure 
  L'archiviazione di file di dati SQL Server locali in archiviazione di Azure offre un'archiviazione esterna flessibile, affidabile e illimitata per i database. A partire da SQL Server 2014, è possibile usare [SQL Server file di dati in Miceosoft Azure](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) per archiviare i file di database di SQL Server in archiviazione di Azure. Con questa funzionalità è possibile spostare i file di dati e di log dal database locale in archiviazione di Azure, mantenendo al contempo il nodo di calcolo di SQL Server in esecuzione in locale. Questa funzionalità consente di avere una capacità di archiviazione illimitata in archiviazione di Azure. 
  
  I principali vantaggi derivanti dall'archiviazione di SQL Server file di dati di archiviazione di Azure includono: 
@@ -92,7 +92,7 @@ ms.locfileid: "75228066"
  
 -  Semplificazione del ripristino di emergenza tramite separazione dell'istanza di calcolo (un'istanza di SQL Server) e dei dati (file di dati di SQL Server). In questo modo è possibile aggiungere facilmente il database a un'altra istanza di SQL Server in un ambiente locale o in una macchina virtuale di Azure in caso di emergenza. 
  
-#### <a name="migrate"></a>Eseguire la migrazione di database di SQL Server esistenti in macchine virtuali di Azure 
+#### <a name="migrate-existing-sql-server-databases-to-azure-virtual-machines"></a><a name="migrate"></a>Eseguire la migrazione di database di SQL Server esistenti in macchine virtuali di Azure 
  Il cloud computing offre alcuni vantaggi chiave alle organizzazioni, ad esempio risorse virtualizzate senza limiti disponibili con addebito in base all'utilizzo. È infatti possibile utilizzare i data center del cloud disponibili pubblicamente anziché compilare e gestire data center di proprietà; di conseguenza, è possibile ridurre i costi di hardware e di soluzioni IT. 
  
  Con [SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/azure/jj823132.aspx), è possibile spostare le applicazioni locali esistenti in Azure con modifiche minime o senza codice. Gli amministratori e gli sviluppatori possono comunque utilizzare gli stessi strumenti di sviluppo e amministrazione disponibili in locale. 

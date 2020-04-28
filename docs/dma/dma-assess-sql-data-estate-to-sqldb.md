@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253508"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Valutare la conformità di un SQL Server di dati di cui si esegue la migrazione al database SQL di Azure usando il Data Migration Assistant
@@ -58,7 +58,7 @@ Un progetto Azure Migrate viene usato per archiviare i metadati di individuazion
 
     È possibile creare un progetto di Azure Migrate in una delle aree geografiche seguenti.
 
-    | **Geografia**  | **Area località di archiviazione** |
+    | **Area geografica**  | **Area località di archiviazione** |
     | ------------- | ------------- |
     | Asia | Asia sud-orientale o Asia orientale |
     | Europa | Europa meridionale o Europa occidentale |

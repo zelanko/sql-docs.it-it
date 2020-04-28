@@ -18,17 +18,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232298"
 ---
 # <a name="creating-an-assembly"></a>Creazione di un assembly
   Gli oggetti di database gestiti, ad esempio le stored procedure o i trigger, vengono compilati e quindi distribuiti in unità denominate assembly. Gli assembly DLL gestiti devono essere registrati [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] in prima di poter utilizzare la funzionalità fornita dall'assembly. Per registrare l'assembly in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], utilizzare l'istruzione CREATE ASSEMBLY. In questo argomento viene descritto come registrare un assembly in un database tramite l'istruzione CREATE ASSEMBLY e specificare le impostazioni di sicurezza per l'assembly.  
   
 ## <a name="the-create-assembly-statement"></a>Istruzione CREATE ASSEMBLY  
- L'istruzione CREATE ASSEMBLY viene utilizzata per creare un assembly in un database. Di seguito è fornito un esempio:   
+ L'istruzione CREATE ASSEMBLY viene utilizzata per creare un assembly in un database. Esempio:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -37,8 +37,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  La clausola FROM specifica il percorso dell'assembly da creare. Questo percorso può essere un percorso UNC (Universal Naming Convention) o un percorso di file fisico locale rispetto al computer.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non consente la registrazione di versioni diverse di un assembly con lo stesso nome, lingua e chiave pubblica.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non consente la registrazione di versioni diverse di un assembly con lo stesso nome, lingua e chiave pubblica.  
   
  È possibile creare assembly che fanno riferimento ad altri assembly. Quando viene creato un assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , crea anche gli assembly a cui fa riferimento l'assembly a livello di radice, se gli assembly a cui si fa riferimento non sono già stati creati nel database.  
   
@@ -53,8 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>Configurazione della sicurezza durante la creazione di assembly  
  Quando si crea un assembly in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è possibile specificare uno tra tre diversi livelli di sicurezza in cui eseguire il codice: `SAFE`, `EXTERNAL_ACCESS` o `UNSAFE`. Quando si esegue l'istruzione `CREATE ASSEMBLY`, nell'assembly di codice vengono effettuati alcuni controlli che possono impedire la registrazione dell'assembly nel server. Per ulteriori informazioni, vedere l'esempio di rappresentazione in [codeplex](https://msftengprodsamples.codeplex.com/).  
   
- 
-  `SAFE` è il set di autorizzazioni predefinito e può essere utilizzato nella maggior parte degli scenari. Per specificare un determinato livello di sicurezza, è necessario modificare la sintassi dell'istruzione CREATE ASSEMBLY come indicato di seguito:  
+ `SAFE` è il set di autorizzazioni predefinito e può essere utilizzato nella maggior parte degli scenari. Per specificare un determinato livello di sicurezza, è necessario modificare la sintassi dell'istruzione CREATE ASSEMBLY come indicato di seguito:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -72,8 +70,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  Quando il codice in un assembly viene eseguito utilizzando il set di autorizzazioni `SAFE`, può eseguire solo calcoli e accesso ai dati nel server tramite il provider gestito in-process.  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Creazione di assembly EXTERNAL_ACCESS e UNSAFE  
- 
-  `EXTERNAL_ACCESS` consente di gestire scenari in cui il codice deve accedere a risorse esterne al server, ad esempio file, rete, Registro di sistema e variabili di ambiente. Ogni volta che il server accede a una risorsa esterna, rappresenta il contesto di sicurezza dell'utente che chiama il codice gestito.  
+ `EXTERNAL_ACCESS` consente di gestire scenari in cui il codice deve accedere a risorse esterne al server, ad esempio file, rete, Registro di sistema e variabili di ambiente. Ogni volta che il server accede a una risorsa esterna, rappresenta il contesto di sicurezza dell'utente che chiama il codice gestito.  
   
  L'autorizzazione `UNSAFE` per il codice è adatta in situazioni in cui un assembly non è effettivamente protetto o richiede accesso aggiuntivo a risorse limitate, ad esempio le API [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32.  
   

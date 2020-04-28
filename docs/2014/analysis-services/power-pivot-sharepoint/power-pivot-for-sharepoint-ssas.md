@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683582"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot per SharePoint (SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683582"
   
  Un'istanza del server Analysis Services in modalità integrata SharePoint completa la distribuzione. Carica, esegue query e scarica i dati. Elabora inoltre i dati se la cartella di lavoro viene configurata per l'aggiornamento dati PowerPivot.  Ogni istanza è strettamente associata al servizio di sistema PowerPivot locale che fa parte della stessa installazione.  
   
-##  <a name="bkmk_RelatedContent"></a>Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>Contenuto della sezione  
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
@@ -76,12 +76,12 @@ ms.locfileid: "74683582"
   
  [Connessione BI Semantic Model di PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **In altre sezioni**  
+ **Nelle altre sezioni**  
   
 ## <a name="additional-topics"></a>Argomenti aggiuntivi  
  [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installazione di PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [Riferimento a PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   

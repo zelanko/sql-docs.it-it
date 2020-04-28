@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401489"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di backup per data warehouse paralleli
 Questo articolo descrive come configurare un sistema Windows non Appliance come server di backup per l'uso con le funzionalità di backup e ripristino in Analytics Platform System (APS) e Parallel data warehouse (PDW).  
   
   
-## <a name="Basics"></a>Nozioni fondamentali sul server di backup  
+## <a name="backup-server-basics"></a><a name="Basics"></a>Nozioni fondamentali sul server di backup  
 Server di backup:  
   
 -   Viene fornito e gestito dal team IT.  
@@ -35,12 +35,12 @@ Server di backup:
   
 -   Ospita una condivisione file di backup, ovvero una condivisione file di Windows che usa il protocollo di rete a livello di applicazione SMB (Server Message Block). Le autorizzazioni per la condivisione file di backup assegnano a un utente di dominio di Windows (in genere si tratta di un utente di backup dedicato) la possibilità di eseguire operazioni di backup e ripristino sulla condivisione. Le credenziali del nome utente e della password dell'utente di dominio Windows sono archiviate in PDW, in modo che PDW possa eseguire operazioni di backup e ripristino nella condivisione file di backup.  
   
-## <a name="Step1"></a>Passaggio 1: determinare i requisiti di capacità  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Passaggio 1: determinare i requisiti di capacità  
 I requisiti di sistema per il server di backup dipendono quasi completamente dal proprio carico di lavoro. Prima di acquistare o effettuare il provisioning di un server di backup, è necessario determinare i requisiti di capacità. Non è necessario che il server di backup sia dedicato solo ai backup, purché vengano gestiti i requisiti di prestazioni e archiviazione del carico di lavoro. È inoltre possibile disporre di più server di backup per eseguire il backup e il ripristino di ogni database in uno dei diversi server.  
   
 Utilizzare il [foglio](backup-capacity-planning-worksheet.md) di lavoro per la pianificazione della capacità del server di backup per determinare i requisiti di capacità.  
   
-## <a name="Step2"></a>Passaggio 2: acquisire il server di backup  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>Passaggio 2: acquisire il server di backup  
 Ora che è possibile comprendere meglio i requisiti di capacità, è possibile pianificare i server e i componenti di rete che sarà necessario acquistare o effettuare il provisioning. Incorporare l'elenco di requisiti seguente nel piano di acquisto, quindi acquistare il server o effettuare il provisioning di un server esistente.  
   
 ### <a name="software-requirements"></a>Requisiti software  
@@ -61,7 +61,7 @@ Sebbene non sia obbligatorio, InfiniBand è il tipo di connessione consigliato p
   
 3.  Acquistare 2 cavi InfiniBand FDR per una scheda a doppia porta o 1 cavo InfiniBand FDR per una singola scheda di porta. I cavi InfiniBand FDR collegheranno il server di caricamento alla rete InfiniBand dell'appliance. La lunghezza del cavo dipende dalla distanza tra il server di caricamento e i commutatori InfiniBand dell'appliance, in base all'ambiente in uso.  
   
-## <a name="Step3"></a>Passaggio 3: connettere il server alle reti InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Passaggio 3: connettere il server alle reti InfiniBand  
 Utilizzare questa procedura per connettere il server di caricamento alla rete InfiniBand. Se il server non utilizza la rete InfiniBand, ignorare questo passaggio.  
   
 1.  Rack il server sufficientemente vicino al dispositivo in modo che sia possibile connetterlo alla rete InfiniBand dell'appliance.  
@@ -76,7 +76,7 @@ Utilizzare questa procedura per connettere il server di caricamento alla rete In
   
 5.  Configurare le impostazioni InfiniBand e DNS per le schede di rete. Per istruzioni sulla configurazione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Passaggio 4: configurare la condivisione file di backup  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>Passaggio 4: configurare la condivisione file di backup  
 PDW effettuerà l'accesso al server di backup tramite una condivisione file UNC. Per configurare la condivisione file:  
   
 1.  Creare una cartella nel server di backup per l'archiviazione dei backup.  
@@ -101,7 +101,7 @@ PDW effettuerà l'accesso al server di backup tramite una condivisione file UNC.
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>Passaggio 5: iniziare a eseguire il backup dei dati  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>Passaggio 5: iniziare a eseguire il backup dei dati  
 A questo punto è possibile iniziare a eseguire il backup dei dati nel server di backup.  
   
 Per eseguire il backup dei dati, utilizzare un client di query per connettersi a SQL Server PDW e quindi inviare i comandi BACKUP database o RESTOre DATABASE. Utilizzare la clausola DISK = per specificare il server di backup e il percorso di backup.  
@@ -118,13 +118,13 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Per altre informazioni, vedere: 
+Per altre informazioni, vedi: 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
 -   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>Avvisi sulla sicurezza  
+## <a name="security-notices"></a><a name="Security"></a>Avvisi sulla sicurezza  
 Il server di backup non è stato aggiunto al dominio privato per l'appliance. Si trova nella propria rete e non esiste alcuna relazione di trust tra il dominio e il dominio Appliance privato.  
   
 Poiché i backup PDW non sono archiviati nell'appliance, il team IT è responsabile della gestione di tutti gli aspetti della sicurezza del backup. Questo include ad esempio la gestione della sicurezza dei dati di backup, la sicurezza del server usato per archiviare i backup e la sicurezza dell'infrastruttura di rete che connette il server di backup al dispositivo APS.  
