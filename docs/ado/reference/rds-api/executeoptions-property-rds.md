@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964180"
 ---
 # <a name="executeoptions-property-rds"></a>Proprietà ExecuteOptions (Servizi Desktop remoto)
@@ -32,7 +32,7 @@ Indica se l'esecuzione asincrona è abilitata.
 |Costante|Descrizione|  
 |--------------|-----------------|  
 |**adcExecSync**|Esegue in modo sincrono l'aggiornamento successivo del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .|  
-|**adcExecAsync**|Default. Esegue l'aggiornamento successivo del **Recordset** in modo asincrono.|  
+|**adcExecAsync**|Valore predefinito. Esegue l'aggiornamento successivo del **Recordset** in modo asincrono.|  
   
 > [!NOTE]
 >  Ogni file eseguibile che usa queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  

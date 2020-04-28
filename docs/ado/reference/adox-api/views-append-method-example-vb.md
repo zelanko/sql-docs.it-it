@@ -15,10 +15,10 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964797"
 ---
 # <a name="views-append-method-example-vb"></a>Esempio del metodo Append di Views (VB)
@@ -66,4 +66,4 @@ End Sub
  [Metodo Append (viste ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

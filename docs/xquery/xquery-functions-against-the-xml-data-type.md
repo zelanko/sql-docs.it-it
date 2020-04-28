@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945991"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funzioni XQuery per il tipo di dati XML
@@ -52,13 +52,13 @@ ms.locfileid: "67945991"
 |[Funzioni per le sequenze](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[vuoto](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Funzione id (XQuery)](../xquery/functions-on-sequences-id.md)|  
-|[Funzioni di aggregazione &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[conteggio](../xquery/aggregate-functions-count.md)|  
+|[Funzioni di aggregazione &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[AVG](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
-||[Max](../xquery/aggregate-functions-max.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[somma](../xquery/aggregate-functions-sum.md)|  
 |[Funzioni del costruttore &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Funzioni costruttore](../xquery/constructor-functions-xquery.md)|  
-|[Funzioni di accesso ai dati](../xquery/data-accessor-functions.md)|[stringa](../xquery/data-accessor-functions-string-xquery.md)|  
+|[Funzioni di accesso ai dati](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[data](../xquery/data-accessor-functions-data-xquery.md)|  
 |[Funzioni costruttore booleane &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[Funzione true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Funzione false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
@@ -69,7 +69,7 @@ ms.locfileid: "67945991"
 ||[Funzione sql:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md)   
+ [Metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   

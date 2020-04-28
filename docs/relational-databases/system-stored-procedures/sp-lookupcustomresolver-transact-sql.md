@@ -16,10 +16,10 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937908"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -68,7 +68,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Solo i membri del ruolo predefinito del database **db_owner** nel database di pubblicazione possono eseguire **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Eseguire la logica di business durante la sincronizzazione di tipo merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Specificare un sistema di risoluzione dell'articolo di merge](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   

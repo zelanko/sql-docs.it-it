@@ -17,10 +17,10 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949382"
 ---
 # <a name="open-method-ado-md"></a>Metodo Open (ADO MD)
@@ -34,7 +34,7 @@ Cellset.Open Source, ActiveConnection
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Origine*  
+ *origine*  
  Facoltativa. **Variante** che restituisce una query multidimensionale valida, ad esempio una query MDX (Multidimensional Expression). L'argomento di *origine* corrisponde alla proprietà di [origine](../../../ado/reference/ado-md-api/source-property-ado-md.md) . Per ulteriori informazioni su MDX, vedere la documentazione relativa alla [OLE DB per l'elaborazione analitica in linea (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) in Microsoft Data Access Components SDK.  
   
  *ActiveConnection*  

@@ -16,10 +16,10 @@ ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964840"
 ---
 # <a name="view-object-adox"></a>Oggetto View (ADOX)
@@ -45,4 +45,4 @@ Rappresenta un set filtrato di record o una tabella virtuale. Quando viene utili
  [Esempio di metodo Append views (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Raccolta views, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Esempio di metodo Delete views (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

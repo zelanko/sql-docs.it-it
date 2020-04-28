@@ -10,10 +10,10 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989644"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introduzione con SSMA per DB2 (DB2ToSQL)
@@ -78,12 +78,12 @@ La barra degli strumenti del progetto contiene i pulsanti per l'utilizzo di prog
 #### <a name="migration-toolbar"></a>Barra degli strumenti migrazione  
 La tabella seguente illustra i comandi della barra degli strumenti di migrazione:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |------|--------|  
 |**Creazione di report**|Converte gli oggetti DB2 selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi, quindi crea un report che mostra l'esito positivo della conversione.<br /><br />Questo comando è disabilitato, a meno che non vengano selezionati oggetti in DB2 Metadata Explorer.|  
 |**Converti schema**|Converte gli oggetti DB2 selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti.<br /><br />Questo comando è disabilitato, a meno che non vengano selezionati oggetti in DB2 Metadata Explorer.|  
 |**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. Prima di eseguire questo comando, è necessario convertire gli schemi DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, quindi caricare gli oggetti in. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br />Questo comando è disabilitato, a meno che non vengano selezionati oggetti in DB2 Metadata Explorer.|  
-|**Stop**|Arresta il processo corrente.|  
+|**Arresta**|Arresta il processo corrente.|  
   
 ### <a name="menus"></a>Menu  
 La tabella seguente illustra i menu SSMA.  
@@ -94,7 +94,7 @@ La tabella seguente illustra i menu SSMA.
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli, ad esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] la copia dal riquadro dettagli SQL. Contiene anche l'opzione **Gestisci segnalibri** , in cui sarà possibile visualizzare un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
 |**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
 |**Strumenti**|Contiene i comandi per creare report ed eseguire la migrazione di oggetti e dati. Consente inoltre di accedere alle **Impostazioni globali** e alle finestre di dialogo **delle impostazioni del progetto** .|  
-|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
+|**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
 Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  

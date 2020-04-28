@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964518"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Object*  
+ *Oggetto*  
  Variabile oggetto che rappresenta un [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
@@ -51,7 +51,7 @@ object.CreateRecordset(ColumnInfos)
 |Nome|Nome dell'intestazione di colonna.|  
 |Type|Integer del tipo di dati.|  
 |Dimensione|Integer della larghezza in caratteri, indipendentemente dal tipo di dati.|  
-|Supporto di valori Null|Valore booleano.|  
+|Supporto di valori Null|.|  
 |Scala (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore non viene specificato, i valori numerici verranno troncati a una scala di tre. La precisione non è interessata, ma il numero di cifre che seguono il separatore decimale verrà troncato a tre.|  
   
  Il set di matrici di colonne viene quindi raggruppato in una matrice, che definisce il **Recordset**.  

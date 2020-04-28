@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939019"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67939019"
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale.<br /><br /> **1** = snapshot.<br /><br /> **2** = Unione.|  
-|**thirdparty_flag**|**bit**|Indica se una pubblicazione è un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = origine dati diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**thirdparty_flag**|**bit**|Indica se una pubblicazione è un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = origine dati diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o aggiornati a ogni esecuzione dell'agente snapshot.|  
 |**allow_push**|**bit**|Indica se è possibile creare sottoscrizioni di tipo push per la pubblicazione specificata.|  
@@ -49,7 +49,7 @@ ms.locfileid: "67939019"
 |**allow_subscription_copy**|**bit**|Abilita o disabilita la funzione di copia dei database di sottoscrizione che sottoscrivono la pubblicazione. **0** indica che la copia è disabilitata e **1** indica che è abilitata.|  
 |**thirdparty_options**|**int**|Specifica se la visualizzazione di una pubblicazione nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è stata annullata:<br /><br /> **0** = Visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = non visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |**allow_queued_tran**|**bit**|Specifica se la pubblicazione consente l'aggiornamento in coda:<br /><br /> **0 =** La pubblicazione non è in coda.<br /><br /> **1** = la pubblicazione è accodata.|  
-|**Opzioni**|**int**|Informazioni non disponibili in questa versione.|  
+|**options**|**int**|Informazioni non disponibili in questa versione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

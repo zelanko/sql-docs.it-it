@@ -14,10 +14,10 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964129"
 ---
 # <a name="fetchoptions-property-rds"></a>Proprietà FetchOptions (Servizi Desktop remoto)
@@ -33,7 +33,7 @@ Indica il tipo di recupero asincrono.
 |--------------|-----------------|  
 |**adcFetchUpFront**|Tutti i record del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo venga restituito all'applicazione. Il **Recordset** completo viene recuperato prima che l'applicazione possa eseguire qualsiasi operazione.|  
 |**adcFetchBackground**|Il controllo può tornare all'applicazione non appena il primo batch di record è stato recuperato. Una successiva lettura del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà posticipata fino a quando il record cercato non viene effettivamente recuperato, a cui il controllo del tempo torna all'applicazione.|  
-|**adcFetchAsync**|Default. Il controllo viene restituito immediatamente all'applicazione durante il recupero dei record in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, il record più vicino al record cercato verrà letto e il controllo verrà restituito immediatamente, a indicare che è stata raggiunta la fine corrente del **Recordset** . Una chiamata a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , ad esempio, sposterà la posizione del record corrente nell'ultimo record effettivamente recuperato, anche se più record continueranno a popolare il **Recordset**.|  
+|**adcFetchAsync**|Valore predefinito. Il controllo viene restituito immediatamente all'applicazione durante il recupero dei record in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, il record più vicino al record cercato verrà letto e il controllo verrà restituito immediatamente, a indicare che è stata raggiunta la fine corrente del **Recordset** . Una chiamata a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , ad esempio, sposterà la posizione del record corrente nell'ultimo record effettivamente recuperato, anche se più record continueranno a popolare il **Recordset**.|  
   
 > [!NOTE]
 >  Ogni file eseguibile lato client che utilizza queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  

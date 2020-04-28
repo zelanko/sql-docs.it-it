@@ -18,10 +18,10 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990265"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "67990265"
 |**publishercolumn_id**|**int**|Identifica una colonna pubblicata.|  
 |**table_id**|**int**|Identifica la tabella di origine da [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a cui appartiene la colonna.|  
 |**publisher_id**|**smallint**|Identifica il server di pubblicazione non SQL Server da cui viene pubblicata la colonna.|  
-|**nome**|**sysname**|Nome della colonna pubblicata.|  
+|**name**|**sysname**|Nome della colonna pubblicata.|  
 |**column_ordinal**|**int**|Identifica la colonna in base all'ordine.|  
-|**tipo**|**varchar (255)**|Tipo di dati della colonna di origine nel server di pubblicazione.|  
-|**lunghezza**|**bigint**|Lunghezza della colonna di origine nel server di pubblicazione.|  
+|**type**|**varchar(255)**|Tipo di dati della colonna di origine nel server di pubblicazione.|  
+|**length**|**bigint**|Lunghezza della colonna di origine nel server di pubblicazione.|  
 |**prec**|**int**|Precisione della colonna di origine nel server di pubblicazione.|  
-|**scala**|**int**|Scala della colonna di origine nel server di pubblicazione.|  
+|**scale**|**int**|Scala della colonna di origine nel server di pubblicazione.|  
 |**IsNullable**|**bit**|Indica se la colonna accetta valori NULL, dove **1** indica che i valori null sono accettati.|  
 |**iscaptured**|**bit**|Indica se esiste un trigger nella colonna. Il trigger potrebbe esistere anche se la colonna non è pubblicata in un articolo. Il valore **1** indica che il trigger esiste nella colonna.|  
   

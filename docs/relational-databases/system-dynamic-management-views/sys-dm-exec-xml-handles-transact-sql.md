@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936780"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -52,7 +52,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|ID della sessione che contiene l'handle del documento XML.|  
 |**document_id**|**int**|ID dell'handle del documento XML restituito da **sp_xml_preparedocument**.|  
 |**namespace_document_id**|**int**|ID handle interno utilizzato per il documento dello spazio dei nomi associato passato come terzo parametro a **sp_xml_preparedocument**. È NULL se non esiste un documento dello spazio dei nomi.|  
-|**sql_handle**|**varbinary (64)**|Handle per il testo del codice SQL in cui l'handle è stato definito.|  
+|**sql_handle**|**varbinary(64)**|Handle per il testo del codice SQL in cui l'handle è stato definito.|  
 |**statement_start_offset**|**int**|Numero di caratteri nel batch o stored procedure attualmente in esecuzione in corrispondenza del quale si verifica la chiamata al **sp_xml_preparedocument** . Può essere utilizzato in combinazione con il **sql_handle**, **statement_end_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**statement_end_offset**|**int**|Numero di caratteri nel batch o stored procedure attualmente in esecuzione in corrispondenza del quale si verifica la chiamata al **sp_xml_preparedocument** . Può essere utilizzato in combinazione con il **sql_handle**, **statement_start_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**creation_time**|**datetime**|Timestamp in cui è stato chiamato **sp_xml_preparedocument** .|  

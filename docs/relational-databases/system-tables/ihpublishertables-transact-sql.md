@@ -18,10 +18,10 @@ ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990153"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67990153"
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|Identificatore della tabella pubblicata.|  
 |**publisher_id**|**smallint**|Identificatore del server di pubblicazione non SQL Server dal quale la tabella viene pubblicata.|  
-|**nome**|**sysname**|Nome della tabella pubblicata.|  
+|**name**|**sysname**|Nome della tabella pubblicata.|  
 |**proprietario**|**sysname**|Proprietario della tabella.|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,21 +17,21 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965136"
 ---
 # <a name="tables-collection-adox"></a>Raccolta Tables (ADOX)
 Contiene tutti gli oggetti [tabella](../../../ado/reference/adox-api/table-object-adox.md) di un catalogo.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) per una raccolta **Tables** è univoco per ADOX. È possibile:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) per una raccolta **Tables** è univoco per ADOX. È possibile scegliere:  
   
 -   Aggiungere una nuova tabella alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
   
 -   Accedere a una tabella nella raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -45,7 +45,7 @@ Contiene tutti gli oggetti [tabella](../../../ado/reference/adox-api/table-objec
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta Tables](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta di oggetti Table](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà ActiveConnection di Catalog (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   

@@ -18,10 +18,10 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984887"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67984887"
 |**rowguid**|**uniqueidentifier**|Identificatore della riga specificata.|  
 |**partition_id**|**int**|ID della partizione a cui appartiene la riga. Il valore è-1 se la modifica della riga è pertinente per tutti i sottoscrittori.|  
 |**generazione**|**bigint**|Valore della generazione in cui si è verificata la modifica di partizione.|  
-|**motivo**|**tinyint**|Solo per uso interno.|  
+|**reason**|**tinyint**|Solo per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

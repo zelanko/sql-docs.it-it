@@ -18,10 +18,10 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995491"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server'`Nome del server da risincronizzare. il *Server* è di **tipo sysname**e non prevede alcun valore predefinito. Se si specifica **All** , tutti i server di destinazione vengono risincronizzati.  
+`[ @server_name = ] 'server'`Nome del server da risincronizzare. *server* è di tipo **sysname**e non prevede alcun valore predefinito. Se si specifica **All** , tutti i server di destinazione vengono risincronizzati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

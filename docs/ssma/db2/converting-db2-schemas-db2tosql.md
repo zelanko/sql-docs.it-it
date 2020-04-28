@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989873"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi DB2 (DB2ToSQL)
@@ -73,9 +73,9 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |I nomi alternativi|Mapping parziale. L'elaborazione manuale è necessaria per l'oggetto sottostante|  
 |Sinonimi|Viene mappato.|  
 |Funzioni standard in DB2|SSMA esegue il mapping delle funzioni di DB2 standard quando una funzione equivalente è disponibile nel SQL Server:|  
-|Authorization|Non mappato.|  
+|Autorizzazione|Non mappato.|  
 |Predicati|Viene mappato.|  
-|Istruzione SELECT INTO|Non mappato.|  
+|SELECT INTO - istruzione|Non mappato.|  
 |VALUEs INTO-istruzione|Non mappato.|  
 |Controllo transazione|Non mappato.|  
   

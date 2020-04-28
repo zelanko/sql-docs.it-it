@@ -16,10 +16,10 @@ ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986310"
 ---
 # <a name="aggregate-functions---count"></a>Funzioni di aggregazione - count
@@ -44,7 +44,7 @@ fn:count($arg as item()*) as xs:integer
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>R. Utilizzo della funzione XQuery count() per il conteggio del numero di centri di lavorazione nella produzione di un modello di prodotto  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Utilizzo della funzione XQuery count() per il conteggio del numero di centri di lavorazione nella produzione di un modello di prodotto  
  La query seguente conta il numero di centri di lavorazione nel processo di produzione di un modello di prodotto (ProductModelID=7).  
   
 ```  

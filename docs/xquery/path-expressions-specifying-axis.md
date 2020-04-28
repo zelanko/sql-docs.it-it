@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946489"
 ---
 # <a name="path-expressions---specifying-axis"></a>Espressioni di percorso - Specifica asse
@@ -45,8 +45,8 @@ ms.locfileid: "67946489"
   
 |Asse|Descrizione|  
 |----------|-----------------|  
-|**figlio**|Restituisce gli elementi figlio del nodo di contesto.|  
-|**discendente**|Restituisce tutti i discendenti del nodo di contesto.|  
+|**child**|Restituisce gli elementi figlio del nodo di contesto.|  
+|**descendant**|Restituisce tutti i discendenti del nodo di contesto.|  
 |**padre**|Restituisce l'elemento padre del nodo di contesto.|  
 |**attributo**|Restituisce gli attributi del nodo di contesto.|  
 |**auto**|Restituisce il nodo di contesto stesso.|  
@@ -59,7 +59,7 @@ ms.locfileid: "67946489"
 ## <a name="examples"></a>Esempi  
  Gli esempi di query in questo argomento vengono specificati per le colonne di tipo **XML** nel database **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>R. Definizione di un asse child  
+### <a name="a-specifying-a-child-axis"></a>A. Definizione di un asse child  
  Per un modello di prodotto specifico, la query seguente recupera \<le funzionalità> nodo elemento figlio del \<nodo elemento> ProductDescription dalla descrizione del catalogo prodotti archiviata nella `Production.ProductModel` tabella.  
   
 ```  

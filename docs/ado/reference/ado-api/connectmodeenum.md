@@ -16,10 +16,10 @@ ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933451"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
@@ -34,7 +34,7 @@ Specifica le autorizzazioni disponibili per la modifica dei dati in una [conness
 |**adModeShareDenyRead**|4|Impedisce ad altri utenti di aprire una connessione con autorizzazioni di lettura.|  
 |**adModeShareDenyWrite**|8|Impedisce ad altri utenti di aprire una connessione con autorizzazioni di scrittura.|  
 |**adModeShareExclusive**|12|Impedisce ad altri utenti di aprire una connessione.|  
-|**adModeUnknown**|0|Default. Indica che le autorizzazioni non sono state ancora impostate o non possono essere determinate.|  
+|**adModeUnknown**|0|Valore predefinito. Indica che le autorizzazioni non sono state ancora impostate o non possono essere determinate.|  
 |**adModeWrite**|2|Indica le autorizzazioni di sola scrittura.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
@@ -56,5 +56,5 @@ Specifica le autorizzazioni disponibili per la modifica dei dati in una [conness
   
 |||  
 |-|-|  
-|[Proprietà Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Metodo Open (Record - ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Metodo Open (Stream - ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+|[Proprietà Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Metodo Open (record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|

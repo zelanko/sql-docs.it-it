@@ -16,10 +16,10 @@ ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 848fffdaabaf0a7f783969d7e44d7612bb2f92dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966787"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Esempio delle proprietà Command e CommandText (VB)
@@ -80,4 +80,4 @@ End Sub
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Proprietà Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

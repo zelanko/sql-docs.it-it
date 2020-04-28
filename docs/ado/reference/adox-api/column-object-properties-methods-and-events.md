@@ -13,10 +13,10 @@ ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966893"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Column
@@ -42,9 +42,9 @@ ms.locfileid: "67966893"
  [Proprietà Type (Column)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>Metodi  
- No.  
+ Nessuno.  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

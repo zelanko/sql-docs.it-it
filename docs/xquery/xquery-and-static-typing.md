@@ -18,10 +18,10 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946087"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e tipizzazione statica
@@ -86,8 +86,7 @@ ms.locfileid: "67946087"
  All'interno del contesto XQuery, la funzione `fn:avg (//r)` "Average" restituisce un errore statico, perché il compilatore XQuery non è in grado di aggiungere valori di tipi diversi (**xs: int**, **xs: float** o **xs: Double**) per la <`r`> elementi nell'argomento di **FN: AVG ()**. Per risolvere il problema, è necessario riscrivere la chiamata alla funzione nel modo seguente: `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### <a name="example-operator-over-union-type"></a>Esempio: operatore su tipo unione  
- L'operazione di addizione ('+') richiede tipi di operandi specifici. Di conseguenza, l'espressione `(//r)[1] + 1` restituisce un errore statico con la definizione di tipo precedentemente descritta per l'elemento <`r`>. È possibile risolvere il problema riscrivendo l'espressione nel modo seguente: `(//r)[1] cast as xs:int? +1`, dove "?" indica zero o una occorrenza. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede "cast as" con "?", perché ogni operazione di cast può generare una sequenza vuota in caso di errore di run-time.  
+ L'operazione di addizione ('+') richiede tipi di operandi specifici. Di conseguenza, l'espressione `(//r)[1] + 1` restituisce un errore statico con la definizione di tipo precedentemente descritta per l'elemento <`r`>. È possibile risolvere il problema riscrivendo l'espressione nel modo seguente: `(//r)[1] cast as xs:int? +1`, dove "?" indica zero o una occorrenza. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede "cast as" con "?", perché ogni operazione di cast può generare una sequenza vuota in caso di errore di run-time.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

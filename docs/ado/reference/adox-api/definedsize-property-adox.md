@@ -20,10 +20,10 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966444"
 ---
 # <a name="definedsize-property-adox"></a>Proprietà DefinedSize (ADOX)
@@ -41,4 +41,4 @@ Indica le dimensioni massime indicate della colonna.
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio della proprietà DefinedSize (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
+ [Esempio di proprietà DefinedSize (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

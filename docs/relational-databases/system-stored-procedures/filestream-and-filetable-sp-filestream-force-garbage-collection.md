@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942281"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,11 +46,10 @@ sp_filestream_force_garbage_collection
  Indica il nome del database in cui eseguire il Garbage Collector.  
   
 > [!NOTE]  
-> `@dbname`è di **tipo sysname**. Se viene omesso, verrà considerato il database corrente.  
+> `@dbname` è di tipo **sysname**. Se viene omesso, verrà considerato il database corrente.  
   
  `[ @filename = ] 'logical_file_name'`  
- Indica il nome logico del contenitore FILESTREAM in cui eseguire il Garbage Collector. 
-  `@filename` è facoltativo. Se non viene specificato alcun nome di file logico, il Garbage Collector pulisce tutti i contenitori FILESTREAM nel database specificato.  
+ Indica il nome logico del contenitore FILESTREAM in cui eseguire il Garbage Collector. `@filename` è facoltativo. Se non viene specificato alcun nome di file logico, il Garbage Collector pulisce tutti i contenitori FILESTREAM nel database specificato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
   
@@ -89,7 +88,7 @@ Garbage Collection (GC) si basa sul troncamento del log. Di conseguenza, se i fi
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene eseguito il Garbage Collector per i contenitori FILESTREAM nel database `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>R. Specifica di nessun contenitore  
+### <a name="a-specifying-no-container"></a>A. Specifica di nessun contenitore  
   
 ```sql  
 USE FSDB;  

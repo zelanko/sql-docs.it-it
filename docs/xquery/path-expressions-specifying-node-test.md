@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946426"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - Specifica test di nodo
@@ -71,7 +71,7 @@ child::ProductDescription
   
  Di conseguenza, quando questa espressione viene eseguita sui documenti XML del catalogo dei prodotti nella tabella **ProductModel** , recupera tutti i nodi elemento figlio dell'elemento \<features> elemento figlio dell'elemento \<ProductDescription>.  
   
- L'espressione di percorso `/child::PD:ProductDescription/attribute::ProductModelID`,, è costituita da due passaggi. Entrambi i passi specificano un nome di nodo come test di nodo. Inoltre, il secondo passo utilizza l'asse attribute. Pertanto, ogni passo seleziona i nodi del tipo di nodo principale dell'asse corrispondente con il nome specificato come test di nodo. Pertanto, l'espressione restituisce **** il nodo dell'attributo ProductModelID \<del nodo dell'elemento> ProductDescription.  
+ L'espressione di percorso `/child::PD:ProductDescription/attribute::ProductModelID`,, è costituita da due passaggi. Entrambi i passi specificano un nome di nodo come test di nodo. Inoltre, il secondo passo utilizza l'asse attribute. Pertanto, ogni passo seleziona i nodi del tipo di nodo principale dell'asse corrispondente con il nome specificato come test di nodo. Pertanto, l'espressione restituisce **ProductModelID** il nodo dell'attributo ProductModelID \<del nodo dell'elemento> ProductDescription.  
   
  Quando si specificano i nomi dei nodi per i test di nodo, è inoltre possibile utilizzare il carattere jolly (*) per specificare il nome locale di un nodo o il relativo prefisso dello spazio dei nomi, come illustrato nell'esempio seguente:  
   
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |Tipo di nodo|Valori di codice restituiti|Esempio|  
 |---------------|-------------|-------------|  
-|`comment()`|True per un nodo di commento.|
-  `following::comment()` seleziona tutti i nodi di commento che seguono il nodo di contesto.|  
-|`node()`|True per un nodo di qualsiasi tipo.|
-  `preceding::node()` seleziona tutti nodi che precedono il nodo di contesto.|  
-|`processing-instruction()`|True per un nodo di istruzioni di elaborazione.|
-  `self::processing instruction()` seleziona tutti i nodi di istruzioni di elaborazione all'interno del nodo di contesto.|  
-|`text()`|True per un nodo di testo.|
-  `child::text()` seleziona tutti i nodi di testo figlio del nodo di contesto.|  
+|`comment()`|True per un nodo di commento.|`following::comment()` seleziona tutti i nodi di commento che seguono il nodo di contesto.|  
+|`node()`|True per un nodo di qualsiasi tipo.|`preceding::node()` seleziona tutti nodi che precedono il nodo di contesto.|  
+|`processing-instruction()`|True per un nodo di istruzioni di elaborazione.|`self::processing instruction()` seleziona tutti i nodi di istruzioni di elaborazione all'interno del nodo di contesto.|  
+|`text()`|True per un nodo di testo.|`child::text()` seleziona tutti i nodi di testo figlio del nodo di contesto.|  
   
  Se si specifica il tipo di nodo, ad esempio text() o comment() ..., come test di nodo, il passo restituisce solo i nodi del tipo specificato, indipendentemente dal tipo di nodo principale dell'asse. Ad esempio, l'espressione di percorso seguente restituisce solo i nodi di commento figlio del nodo di contesto:  
   
@@ -114,7 +110,7 @@ child::comment()
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti vengono confrontati il nome di nodo e il tipo di nodo.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>R. Risultati della definizione del nome di nodo e del tipo di nodo come test di nodo in un'espressione di percorso  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Risultati della definizione del nome di nodo e del tipo di nodo come test di nodo in un'espressione di percorso  
  Nell'esempio seguente viene assegnato un semplice documento XML a una variabile di tipo **XML** . Vengono eseguite query sul documento tramite espressioni di percorso diverse. Successivamente, vengono confrontati i risultati.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966185"
 ---
 # <a name="groups-collection-adox"></a>Raccolta di Groups (ADOX)
@@ -30,11 +30,11 @@ Contiene tutti gli oggetti [gruppo](../../../ado/reference/adox-api/group-object
 ## <a name="remarks"></a>Osservazioni  
  La raccolta di **gruppi** di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. La raccolta **gruppi** per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) per una raccolta di **gruppi** è univoco per ADOX. È possibile:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) per una raccolta di **gruppi** è univoco per ADOX. È possibile scegliere:  
   
 -   Aggiungere un nuovo gruppo di sicurezza alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
   
 -   Accedere a un gruppo della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -49,7 +49,7 @@ Contiene tutti gli oggetti [gruppo](../../../ado/reference/adox-api/group-object
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta Groups](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta di oggetti Group](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

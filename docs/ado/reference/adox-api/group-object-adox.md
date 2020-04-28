@@ -16,10 +16,10 @@ ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966216"
 ---
 # <a name="group-object-adox"></a>Oggetto Group (ADOX)
@@ -44,4 +44,4 @@ Rappresenta un account di gruppo che dispone di autorizzazioni di accesso all'in
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

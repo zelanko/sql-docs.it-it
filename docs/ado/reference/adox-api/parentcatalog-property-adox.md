@@ -41,10 +41,10 @@ ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965581"
 ---
 # <a name="parentcatalog-property-adox"></a>Proprietà ParentCatalog (ADOX)
@@ -66,4 +66,4 @@ Specifica il catalogo padre di una tabella, di un utente o di un oggetto colonna
 |[Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio della proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

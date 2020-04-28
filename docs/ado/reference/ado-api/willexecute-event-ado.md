@@ -17,10 +17,10 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936619"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
@@ -34,7 +34,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Origine*  
+ *origine*  
  **Stringa** che contiene un comando SQL o un nome di stored procedure.  
   
  *CursorType*  
@@ -64,7 +64,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento del comando in sospeso.  
   
 > [!NOTE]
->  Se l'origine originale per un **comando** è un flusso specificato dalla proprietà [COMMANDSTREAM Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) , l'assegnazione di una nuova stringa al parametro ****_source_ WillExecute modifica l'origine del **comando**. La proprietà **CommandStream** verrà deselezionata e la proprietà [COMMANDTEXT Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) verrà aggiornata con la nuova origine. Il flusso originale specificato da **CommandStream** verrà rilasciato e non sarà possibile accedervi.  
+>  Se l'origine originale per un **comando** è un flusso specificato dalla proprietà [COMMANDSTREAM Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) , l'assegnazione di una nuova stringa al parametro **WillExecute**_source_ WillExecute modifica l'origine del **comando**. La proprietà **CommandStream** verrà deselezionata e la proprietà [COMMANDTEXT Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) verrà aggiornata con la nuova origine. Il flusso originale specificato da **CommandStream** verrà rilasciato e non sarà possibile accedervi.  
   
  Se il dialetto della nuova stringa di origine è diverso dall'impostazione originale della proprietà della [Proprietà dialetto](../../../ado/reference/ado-api/dialect-property.md) (che corrisponde a **CommandStream**), è necessario specificare il dialetto corretto impostando la proprietà **dialetto** dell'oggetto Command a cui fa riferimento *pCommand*.  
   

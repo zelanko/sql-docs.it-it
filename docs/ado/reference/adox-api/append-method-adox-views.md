@@ -17,10 +17,10 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967159"
 ---
 # <a name="append-method-adox-views"></a>Metodo Append (raccolta Views ADOX)
@@ -49,7 +49,7 @@ Views.Append Name, Command
 >  Quando si usa il provider di OLE DB per Microsoft Jet, il metodo **Append** della raccolta **views** consente di specificare una **procedura** anziché una **vista** nel parametro *Command* . La **procedura** verrà aggiunta all'origine dati e verrà aggiunta alla raccolta **views** . Dopo l' **Accodamento**, se le raccolte **procedure** e **viste** vengono aggiornate, la **procedura** non sarà più presente nella raccolta **views** e verrà visualizzata nella raccolta **Procedures** .  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo Append views (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
@@ -59,4 +59,4 @@ Views.Append Name, Command
  [Metodo Append (chiavi ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Metodo Append (raccolta Users ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)
+ [Metodo Append (oggetti User ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)

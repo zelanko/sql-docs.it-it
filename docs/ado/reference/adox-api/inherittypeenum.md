@@ -16,10 +16,10 @@ ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965957"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
@@ -29,7 +29,7 @@ Specifica il modo in cui gli oggetti erediteranno le autorizzazioni impostate co
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Entrambi gli oggetti e altri contenitori contenuti nell'oggetto primario ereditano la voce.|  
 |**adInheritContainers**|2|Gli altri contenitori contenuti nell'oggetto primario ereditano la voce.|  
-|**adInheritNone**|0|Default. Non si verifica alcuna ereditarietà.|  
+|**adInheritNone**|0|Valore predefinito. Non si verifica alcuna ereditarietà.|  
 |**adInheritNoPropagate**|4|I flag **adInheritObjects** e **adInheritContainers** non vengono propagati a una voce ereditata.|  
 |**adInheritObjects**|1|Gli oggetti non contenitore nel contenitore ereditano le autorizzazioni.|  
   

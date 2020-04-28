@@ -17,10 +17,10 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967321"
 ---
 # <a name="append-method-adox-columns"></a>Metodo Append (raccolta Columns ADOX)
@@ -37,7 +37,7 @@ Columns.Append Column [,Type] [,DefinedSize]
  *Colonna*  
  Oggetto **colonna** da aggiungere o nome della colonna da creare e aggiungere.  
   
- *Tipo*  
+ *Type*  
  Facoltativa. Valore **Long** che specifica il tipo di dati della colonna. Il parametro di *tipo* corrisponde alla proprietà [Type](../../../ado/reference/adox-api/type-property-column-adox.md) di un oggetto **Column** .  
   
  *DefinedSize*  
@@ -47,7 +47,7 @@ Columns.Append Column [,Type] [,DefinedSize]
 >  Si verificherà un errore durante l'aggiunta di una **colonna** alla raccolta **Columns** di un [Indice](../../../ado/reference/adox-api/index-object-adox.md) se la **colonna** non esiste in una [tabella](../../../ado/reference/adox-api/table-object-adox.md) già accodata alla raccolta [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Raccolta di oggetti Column (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -59,4 +59,4 @@ Columns.Append Column [,Type] [,DefinedSize]
  [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Metodo Append (utenti ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Metodo Append (raccolta Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

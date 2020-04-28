@@ -19,21 +19,21 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966848"
 ---
 # <a name="columns-collection-adox"></a>Raccolta Columns (ADOX)
 Contiene tutti gli oggetti [colonna](../../../ado/reference/adox-api/column-object-adox.md) di una tabella, un indice o una chiave.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) per una raccolta **Columns** è univoco per ADOX. È possibile:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) per una raccolta **Columns** è univoco per ADOX. È possibile scegliere:  
   
 -   Aggiungere una nuova colonna alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
   
 -   Accedere a una colonna della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -48,7 +48,7 @@ Contiene tutti gli oggetti [colonna](../../../ado/reference/adox-api/column-obje
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta Columns](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta di oggetti Column](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   

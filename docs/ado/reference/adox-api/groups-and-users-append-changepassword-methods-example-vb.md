@@ -16,10 +16,10 @@ ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2b384167358f578835256c0e3f7906db20cf5bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966209"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Esempio dei metodi Append di Groups e Users e del metodo ChangePassword (VB)
@@ -130,4 +130,4 @@ End Sub
  [Oggetto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
  [Raccolta Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

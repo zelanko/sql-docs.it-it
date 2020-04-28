@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946602"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Moduli e prologhi - Prologo XQuery
@@ -45,8 +45,7 @@ WHERE ProductModelID=7
   
 -   La parola chiave `declare namespace` definisce un prefisso dello spazio dei nomi che viene utilizzato successivamente nel corpo della query.  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` è il corpo della query.  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` è il corpo della query.  
   
 ## <a name="namespace-declarations"></a>Dichiarazioni dello spazio dei nomi  
  Una dichiarazione dello spazio dei nomi definisce un prefisso e lo associa a un URI (Uniform Resource Identifier) dello spazio dei nomi, come illustrato nella query seguente. Nella query, `CatalogDescription` è una colonna di tipo **XML** .  

@@ -14,10 +14,10 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963820"
 ---
 # <a name="query-method-rds"></a>Metodo Query (Servizi Desktop remoto)
@@ -34,7 +34,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *recordset*  
+ *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
  *DataFactory*  
@@ -53,6 +53,6 @@ Set Recordset = DataFactory.Query(Connection, Query)
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio dell'oggetto DataFactory e dei metodi Query e CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
+ [Esempio di oggetto DataFactory, metodo Query e metodo CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

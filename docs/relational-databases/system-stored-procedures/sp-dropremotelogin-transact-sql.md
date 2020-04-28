@@ -18,10 +18,10 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933826"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "67933826"
   Rimuove un account di accesso remoto di cui è stato eseguito il mapping a un account di accesso locale utilizzato per eseguire stored procedure remote nel server locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilizzare i server collegati e le stored procedure per i server collegati in alternativa.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilizzare i server collegati e le stored procedure per i server collegati in alternativa.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>Argomenti  
 `[ @remoteserver = ] 'remoteserver'`Nome del server remoto di cui è stato eseguito il mapping all'account di accesso remoto da rimuovere. *RemoteServer* è di **tipo sysname**e non prevede alcun valore predefinito. *RemoteServer* deve esistere già.  
   
-`[ @loginame = ] 'login'`Nome dell'account di accesso facoltativo nel server locale associato al server remoto. *login* è di **tipo sysname**e il valore predefinito è null. Se specificato, l' *account di accesso* deve esistere già.  
+`[ @loginame = ] 'login'`Nome dell'account di accesso facoltativo nel server locale associato al server remoto. *login* è di tipo **sysname** e il valore predefinito è NULL. Se specificato, l' *account di accesso* deve esistere già.  
   
 `[ @remotename = ] 'remote_name'`Nome facoltativo dell'account di accesso remoto di cui è stato eseguito il mapping all' *account* di accesso quando si esegue l'accesso dal server remoto. *remote_name* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -59,8 +58,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  Per aggiungere gli utenti del server locale, utilizzare **sp_addlogin**. Per rimuovere gli utenti del server locale, utilizzare **sp_droplogin**.  
   
- Gli account di accesso remoti sono necessari solo in caso di utilizzo di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni successive utilizzano invece account di accesso dei server collegati. Utilizzare **sp_addlinkedsrvlogin** e **sp_droplinkedsrvlogin** per aggiungere e rimuovere gli account di accesso al server collegato.  
+ Gli account di accesso remoti sono necessari solo in caso di utilizzo di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni successive utilizzano invece account di accesso dei server collegati. Utilizzare **sp_addlinkedsrvlogin** e **sp_droplinkedsrvlogin** per aggiungere e rimuovere gli account di accesso al server collegato.  
   
  Impossibile eseguire **sp_dropremotelogin** in una transazione definita dall'utente.  
   

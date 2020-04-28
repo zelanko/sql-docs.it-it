@@ -14,10 +14,10 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963873"
 ---
 # <a name="internettimeout-property-rds"></a>Proprietà InternetTimeout (Servizi Desktop remoto)
@@ -42,6 +42,6 @@ Indica il numero di millisecondi di attesa prima che si verifichi il timeout di 
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di Proprietà InternetTimeout (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
- [Esempio della proprietà InternetTimeout (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
+ [Esempio di proprietà InternetTimeout (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  
 

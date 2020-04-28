@@ -16,10 +16,10 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966247"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Esempio dei metodi GetPermissions e SetPermissions (VB)
@@ -99,4 +99,4 @@ End Sub
  [Metodo GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Metodo sepermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
  [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

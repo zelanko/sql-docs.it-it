@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946286"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Espressioni SequenceType (XQuery)
@@ -320,8 +320,7 @@ select @x.query(' declare namespace CustOrders="Customers";
     data(<e1>123</e1>) instance of xs:integer  
     ```  
   
-     
-  `data(<e1>123</e1>) instance of xs:decimal` tuttavia restituirà True.  
+     `data(<e1>123</e1>) instance of xs:decimal` tuttavia restituirà True.  
   
 -   Per i tipi di sequenza **processing-instruction ()** e **document-node ()** , sono consentiti solo moduli senza argomenti. Ad esempio, `processing-instruction()` è consentito, ma `processing-instruction('abc')` non è consentito.  
   

@@ -13,10 +13,10 @@ ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14df0a3e29068b671f9320e90fac624b2aabbddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963784"
 ---
 # <a name="rds-api-reference"></a>Informazioni di riferimento per l'API RDS
@@ -31,8 +31,8 @@ ms.locfileid: "67963784"
   
 -   [Metodi di Servizi Desktop remoto](../../../ado/reference/rds-api/rds-methods.md)  
   
--   [Eventi di Servizi Desktop remoto](../../../ado/reference/rds-api/rds-events.md)  
+-   [Eventi Servizi Desktop remoto](../../../ado/reference/rds-api/rds-events.md)  
   
--   [Esempi di codice di Servizi Desktop remoto](../../../ado/reference/rds-api/rds-code-examples.md)
+-   [Esempi di codice Servizi Desktop remoto](../../../ado/reference/rds-api/rds-code-examples.md)
 
 

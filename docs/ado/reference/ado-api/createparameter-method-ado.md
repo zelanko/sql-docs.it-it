@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933294"
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
@@ -40,10 +40,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Nome*  
  Facoltativa. Valore **stringa** che contiene il nome dell'oggetto **Parameter** .  
   
- *Tipo*  
+ *Type*  
  Facoltativa. Valore [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) che specifica il tipo di dati dell'oggetto **Parameter** .  
   
- *Direzione*  
+ *Direction*  
  Facoltativa. Valore [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) che specifica il tipo di oggetto **Parameter** .  
   
  *Dimensione*  

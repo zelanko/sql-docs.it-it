@@ -15,10 +15,10 @@ ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964732"
 ---
 # <a name="views-refresh-method-example-vb"></a>Esempio del metodo Refresh di Views (VB)
@@ -57,4 +57,4 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

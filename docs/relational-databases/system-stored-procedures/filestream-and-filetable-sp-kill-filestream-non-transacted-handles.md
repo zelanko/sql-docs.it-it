@@ -18,10 +18,10 @@ ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942268"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
@@ -52,7 +52,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
- No.  
+ Nessuno.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Il *handle_id* richiesto da **sp_kill_filestream_non_transacted_handles** non è correlato al session_id o all'unità di lavoro utilizzata in altri comandi **Kill** .  
@@ -62,7 +62,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
 ## <a name="metadata"></a>Metadati  
  Per informazioni sugli handle di file non transazionali aperti, eseguire una query sulla vista a gestione dinamica [sys. dm_filestream_non_transacted_handles &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione **View database state** per ottenere gli handle di file dalla vista a gestione dinamica **sys. dm_FILESTREAM_non_transacted_handles** e per eseguire **sp_kill_filestream_non_transacted_handles**.  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
+ [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
  [Viste a gestione dinamica FILESTREAM e FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
  <br>[Viste del catalogo FILESTREAM e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
  <br>[sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)

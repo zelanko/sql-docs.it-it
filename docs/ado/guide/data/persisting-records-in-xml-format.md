@@ -17,10 +17,10 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924599"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistenza di record in formato XML
@@ -74,18 +74,18 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Spazi dei nomi](../../../ado/guide/data/namespaces.md)  
   
--   [Sezione dello schema](../../../ado/guide/data/schema-section.md)  
+-   [Sezione schema](../../../ado/guide/data/schema-section.md)  
   
 -   [Sezione di dati](../../../ado/guide/data/data-section.md)  
   
 -   [Recordset gerarchici in XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Proprietà dinamiche dei recordset in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Proprietà dinamiche del recordset in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [Trasformazioni XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Salvataggio nell'oggetto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Salvataggio nell'oggetto XML DOM](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
--   [Considerazioni sulla sicurezza per XML](../../../ado/guide/data/xml-security-considerations.md)  
+-   [Considerazioni sulla sicurezza XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Scenario di persistenza di recordset XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
+-   [Scenario di persistenza recordset XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

@@ -19,10 +19,10 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948639"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67948639"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificatore di oggetto per il database contenente la coda controllata dal monitoraggio. Ammette valori Null.|  
 |**queue_id**|**int**|Identificatore di oggetto per la coda controllata dal monitoraggio. Ammette valori Null.|  
-|**state**|**nvarchar (32)**|Stato del server di monitoraggio. Ammette valori Null. I possibili valori sono i seguenti:<br /><br /> **INATTIVO**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Stato del server di monitoraggio. Ammette valori Null. I possibili valori sono i seguenti:<br /><br /> **INATTIVO**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Ultima volta in cui un'istruzione RECEIVE dalla coda ha restituito un risultato vuoto. Ammette valori Null.|  
 |**last_activated_time**|**datetime**|Ultima volta in cui il monitoraggio di coda ha attivato una stored procedure. Ammette valori Null.|  
 |**tasks_waiting**|**int**|Numero di sessioni in attesa della coda all'interno di un'istruzione RECEIVE. Ammette valori Null.<br /><br /> Nota: questo numero include qualsiasi sessione che esegue un'istruzione RECEIVE, indipendentemente dal fatto che il monitoraggio di coda abbia avviato la sessione. Ciò è valido solo in caso di utilizzo di WAITFOR in combinazione con RECEIVE. Queste attività rimangono essenzialmente in attesa dell'arrivo di messaggi nella coda.|  
@@ -75,8 +75,8 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica correlate Service Broker &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica relative a Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

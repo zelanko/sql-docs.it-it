@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990393"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67990393"
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identifica una colonna pubblicata.|  
 |**publishercolumn_id**|**int**|Associa una colonna pubblicata con i metadati della colonna archiviati nella tabella di sistema [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) .|  
-|**nome**|**sysname**|Specifica il nome della colonna.|  
+|**name**|**sysname**|Specifica il nome della colonna.|  
 |**article_id**|**int**|Identifica l'articolo al quale appartiene la colonna.|  
 |**column_ordinal**|**int**|Identifica la colonna in base all'ordine.|  
 |**mapped_type**|**tinyint**|Tipo di dati della colonna di destinazione nel Sottoscrittore.|  

@@ -13,10 +13,10 @@ ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2f7602d1435b4a4075c437ba7f403b93aeed5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964407"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto DataControl (Servizi Desktop remoto)
@@ -34,7 +34,7 @@ ms.locfileid: "67964407"
   
  [Proprietà FilterCriterion (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)  
   
- [Proprietà FilterValue (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtervalue-property-rds.md)  
+ [Proprietà Filtervalue (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtervalue-property-rds.md)  
   
  [Proprietà Handler (Servizi Desktop remoto)](../../../ado/reference/rds-api/handler-property-rds.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "67964407"
   
  [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  [Evento onError (Servizi Desktop remoto)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
  [Evento onReadyStateChange (Servizi Desktop remoto)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  

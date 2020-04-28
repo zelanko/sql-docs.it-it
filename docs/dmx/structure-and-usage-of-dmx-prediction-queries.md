@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938066"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struttura e utilizzo di query di stima DMX
@@ -42,13 +42,13 @@ ms.locfileid: "67938066"
   
 -   **SELECT [FLATD]**  
   
--   **Torna all'inizio**  
+-   **TOP**  
   
--   *****Da\<Model>* **PREDICTION JOIN**      
+-   **FROM***Da\<Model>* **PREDICTION JOIN**      
   
--   **ON**  
+-   **IN**  
   
--   **WHERE**  
+-   **IN cui**  
   
 -   **ORDER BY**  
   

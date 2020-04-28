@@ -16,10 +16,10 @@ ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964971"
 ---
 # <a name="user-object-adox"></a>Oggetto User (ADOX)
@@ -49,4 +49,4 @@ Rappresenta un account utente che dispone di autorizzazioni di accesso all'inter
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodi GetPermissions e sepermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Raccolta Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

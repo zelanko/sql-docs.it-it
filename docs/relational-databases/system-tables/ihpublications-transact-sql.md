@@ -18,10 +18,10 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990330"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
@@ -32,11 +32,11 @@ ms.locfileid: "67990330"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|Colonna Identity che include un ID univoco per la pubblicazione.|  
-|**nome**|**sysname**|Nome univoco associato alla pubblicazione.|  
+|**name**|**sysname**|Nome univoco associato alla pubblicazione.|  
 |**repl_freq**|**tinyint**|Frequenza della replica:<br /><br /> **0** = basata sulle transazioni.<br /><br /> **1** = aggiornamento tabella pianificata.|  
-|**stato**|**tinyint**|Stato della pubblicazione. I possibili valori sono i seguenti.<br /><br /> **0** = inattivo.<br /><br /> **1** = attivo.|  
+|**Stato**|**tinyint**|Stato della pubblicazione. I possibili valori sono i seguenti.<br /><br /> **0** = inattivo.<br /><br /> **1** = attivo.|  
 |**sync_method**|**tinyint**|Metodo di sincronizzazione:<br /><br /> **1** = copia bulk del carattere.<br /><br /> **4** = concurrent_c, ovvero viene utilizzata la copia bulk del carattere, ma durante lo snapshot le tabelle non vengono bloccate.|  
-|**snapshot_jobid**|**BINARY**|ID dell'attività pianificata.|  
+|**snapshot_jobid**|**binary**|ID dell'attività pianificata.|  
 |**enabled_for_internet**|**bit**|Indica se i file di sincronizzazione per la pubblicazione sono esposti a Internet tramite FTP e altri servizi, dove **1** indica che è possibile accedervi da Internet.|  
 |**immediate_sync_ready**|**bit**|Indica se i file di sincronizzazione sono disponibili, dove **1** indica che sono disponibili. *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**allow_queued_tran**|**bit**|Specifica se disabilitare l'inserimento in coda delle modifiche apportate nel Sottoscrittore finché non è possibile applicarle al server di pubblicazione. Se è **1**, le modifiche nel Sottoscrittore vengono accodate. *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
@@ -59,7 +59,7 @@ ms.locfileid: "67990330"
 |**conflict_policy**|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = il conflitto viene vinto dal server di pubblicazione.<br /><br /> **2** = il conflitto viene vinto dal Sottoscrittore.<br /><br /> **3** = la sottoscrizione viene reinizializzata.<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = MSMQ, che usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **2** = SQL, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Questa colonna non viene utilizzata da[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non.<br /><br /> Nota: l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilizzo di Accodamento messaggi è stato deprecato e non è più supportato.<br /><br /> *Questa colonna non è supportata per i Publisher non SQL.*|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificatore univoco globale (GUID) valido indica che la pubblicazione è pubblicata nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory e il GUID è l'oggetto di pubblicazione Active Directory corrispondente **objectGUID**. Se il valore è NULL, la pubblicazione non è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
-|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
+|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**Descrizione**|**nvarchar(255)**|Voce descrittiva della pubblicazione.|  
 |**independent_agent**|**bit**|Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo.<br /><br /> **0** = la pubblicazione utilizza un agente di distribuzione condiviso e ogni coppia database del server di pubblicazione/database del Sottoscrittore dispone di un solo agente condiviso.<br /><br /> **1** = è presente una agente di distribuzione autonoma per questa pubblicazione.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati ogni volta che viene eseguita la agente di snapshot, dove **1** indica che vengono creati ogni volta che viene eseguito l'agente.|  
@@ -70,7 +70,7 @@ ms.locfileid: "67990330"
 |**allow_initialize_from_backup**|**bit**|Specifica se i Sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. **1** indica che le sottoscrizioni possono essere inizializzate da un backup e **0** indica che non è possibile. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md). *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**min_autonosync_lsn**|**binario (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indica se per la pubblicazione è supportata la replica dello schema. **1** indica che le istruzioni DDL eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
-|**Opzioni**|**int**|Mappa di bit che specifica opzioni di pubblicazione aggiuntive. I possibili valori delle opzioni bit per bit sono i seguenti:<br /><br /> **0x1** : abilitata per la replica peer-to-peer.<br /><br /> **0x2** -pubblica solo le modifiche locali.<br /><br /> **0x4** : abilitata per Sottoscrittori non SQL Server.|  
+|**options**|**int**|Mappa di bit che specifica opzioni di pubblicazione aggiuntive. I possibili valori delle opzioni bit per bit sono i seguenti:<br /><br /> **0x1** : abilitata per la replica peer-to-peer.<br /><br /> **0x2** -pubblica solo le modifiche locali.<br /><br /> **0x4** : abilitata per Sottoscrittori non SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

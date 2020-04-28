@@ -14,10 +14,10 @@ ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963619"
 ---
 # <a name="rds-properties"></a>Proprietà di Servizi Desktop remoto
@@ -39,7 +39,7 @@ ms.locfileid: "67963619"
 |[Server (Servizi Desktop remoto)](../../../ado/reference/rds-api/server-property-rds.md)|Indica il nome del Internet Information Services (IIS) e il protocollo di comunicazione.|  
 |[SortColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica in quale colonna ordinare i record.|  
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se un ordinamento è crescente o decrescente.|  
-|[SQL (SERVIZI DESKTOP REMOTO)](../../../ado/reference/rds-api/sql-property.md)|Indica la stringa di query utilizzata per recuperare il **Recordset**.|  
+|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica la stringa di query utilizzata per recuperare il **Recordset**.|  
 |[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Indica una stringa che contiene un URL relativo o assoluto.|
 
 

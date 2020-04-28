@@ -17,21 +17,21 @@ ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965439"
 ---
 # <a name="procedures-collection-adox"></a>Raccolta Procedures (ADOX)
 Contiene tutti gli oggetti [procedure](../../../ado/reference/adox-api/procedure-object-adox.md) di un catalogo.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) per una raccolta **Procedures** è univoco per ADOX. È possibile:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) per una raccolta **Procedures** è univoco per ADOX. È possibile scegliere:  
   
 -   Aggiungere una nuova routine alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
   
 -   Accedere a una routine della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -43,7 +43,7 @@ Contiene tutti gli oggetti [procedure](../../../ado/reference/adox-api/procedure
   
  Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta di oggetti Index](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Command e CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
