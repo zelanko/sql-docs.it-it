@@ -18,10 +18,10 @@ ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 693a62cd76e479dc5afa036b207bf486d09c7726
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659367"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>Proprietà ProtocolName (classe ClientNetLibInfo)
@@ -45,6 +45,6 @@ object.ProtocolName [= value]
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

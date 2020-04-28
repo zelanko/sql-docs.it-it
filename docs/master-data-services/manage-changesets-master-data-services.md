@@ -11,10 +11,10 @@ ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728033"
 ---
 # <a name="manage-changesets-master-data-services"></a>Gestire gli insiemi di modifiche (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73728033"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile gestire tutte le modifiche in base a modello e versione.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** . Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** . Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   È necessario almeno l'accesso con diritti di lettura sull'entità o su uno dei relativi attributi.  
   

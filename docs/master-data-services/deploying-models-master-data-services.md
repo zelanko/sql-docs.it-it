@@ -14,10 +14,10 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728285"
 ---
 # <a name="deploying-models-master-data-services"></a>Distribuzione di modelli (Master Data Services)
@@ -32,11 +32,11 @@ ms.locfileid: "73728285"
 ## <a name="tools-for-deploying-models"></a>Strumenti per la distribuzione di modelli  
  Per utilizzare i pacchetti di modello sono disponibili tre strumenti, a seconda delle proprie esigenze.  
   
--   **Strumento MDSModelDeploy**: per creare e distribuire dati e oggetti modello, usare lo strumento MDSModelDeploy. exe. Se durante l'installazione di MDS è stato selezionato il percorso predefinito, questo strumento si trova in *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Strumento MDSModelDeploy**: per creare e distribuire oggetti modello e dati, usare lo strumento MDSModelDeploy.exe. Se durante l'installazione di MDS è stato selezionato il percorso predefinito, questo strumento si trova in *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
--   **Distribuzione guidata modello**: per creare e distribuire solo pacchetti della struttura del modello, usare la procedura guidata nell' [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] applicazione Web. Non è possibile utilizzare questa procedura guidata per distribuire dati.  
+-   **Distribuzione guidata modello**: per creare e distribuire solo pacchetti della struttura del modello, usare la procedura guidata nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Non è possibile utilizzare questa procedura guidata per distribuire dati.  
   
--   **Editor pacchetti di modelli**: per modificare un pacchetto di modelli, utilizzare ModelPackageEditor. exe che avvia la procedura guidata Editor pacchetti di modelli. Questa procedura guidata viene utilizzata per modificare un pacchetto creato dallo strumento MDSModelDeploy o dalla Distribuzione guidata modello. Se durante l'installazione di MDS è stato selezionato il percorso predefinito, questo strumento si trova in *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Editor pacchetti di modelli**: per modificare un pacchetto di modelli, usare ModelPackageEditor.exe che avvia la procedura guidata Editor pacchetti di modelli. Questa procedura guidata viene utilizzata per modificare un pacchetto creato dallo strumento MDSModelDeploy o dalla Distribuzione guidata modello. Se durante l'installazione di MDS è stato selezionato il percorso predefinito, questo strumento si trova in *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  È possibile usare lo strumento MDSModelDeploy per creare un nuovo modello, creare un clone di un modello oppure aggiornare un modello esistente e i relativi dati. Se si utilizza lo strumento MDSModelDeploy per aggiornare un modello esistente e i relativi dati e nel pacchetto non è contenuto alcun attributo, entità o membro disponibile nel modello di destinazione, questi elementi non saranno eliminati dal modello tramite MDSModelDeploy.  
@@ -79,6 +79,6 @@ ms.locfileid: "73728285"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Opzioni di distribuzione del modello &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [Opzioni di distribuzione dei modelli &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797648"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparare manualmente un database secondario per un gruppo di disponibilità (SQL Server)
@@ -49,11 +49,11 @@ ms.locfileid: "72797648"
   
 -   [Attività correlate a backup e ripristino](#RelatedTasks)  
   
--   **Completamento:** [dopo la preparazione di un database secondario](#FollowUp)  
+-   **Completamento:** [Dopo la preparazione di un database secondario](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti e restrizioni  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Prerequisiti e restrizioni  
   
 -   Verificare che nel sistema in cui si desidera collocare il database sia presente un'unità disco con spazio sufficiente per i database secondari.  
   
@@ -67,24 +67,24 @@ ms.locfileid: "72797648"
   
 -   Dopo il ripristino del database, è necessario ripristinare (WITH NORECOVERY) ogni backup del log creato dall'ultimo backup dei dati ripristinato.  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Nelle istanze autonome di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]è consigliabile che il percorso del file di un determinato database secondario, inclusa la lettera di unità, sia se possibile identico a quello del database primario corrispondente. Se durante la creazione di un database secondario i file del database vengono spostati, infatti, potrebbe essere impossibile aggiungere successivamente file al database secondario senza sospendere il database secondario.  
   
 -   Prima di preparare i database secondari, si consiglia di sospendere i backup del log pianificati sui database nel gruppo di disponibilità finché non viene completata l'inizializzazione delle repliche secondarie.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Quando viene eseguito il backup di un database, la [Proprietà Trustworthy del database](../../../relational-databases/security/trustworthy-database-property.md) viene impostata su off. Di conseguenza, la proprietà TRUSTWORTHY è sempre impostata su OFF in un database appena ripristinato.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** . Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
  Se il database da ripristinare non esiste nell'istanza del server, l'istruzione RESTORE richiede autorizzazioni CREATE DATABASE. Per altre informazioni, vedere [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 > [!NOTE]  
->  Se i percorsi dei file di backup e ripristino sono identici nell'istanza del server che ospita una replica primaria e in ogni istanza che ospita una replica secondaria, è possibile creare database secondari usando la [Creazione guidata Gruppo di disponibilità](use-the-availability-group-wizard-sql-server-management-studio.md), la [procedura guidata Aggiungi replica a gruppo di disponibilità](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)o la [procedura guidata Aggiungi database a gruppo di disponibilità](availability-group-add-database-to-group-wizard.md).  
+>   Se i percorsi dei file di backup e ripristino sono identici nell'istanza del server che ospita una replica primaria e in ogni istanza che ospita una replica secondaria, è possibile creare database secondari utilizzando la [Creazione guidata Gruppo di disponibilità](use-the-availability-group-wizard-sql-server-management-studio.md), la procedura guidata [Aggiungi database a gruppo di disponibilità](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)o la procedura guidata [Aggiungi database a gruppo di disponibilità](availability-group-add-database-to-group-wizard.md).  
   
  **Per preparare un database secondario**  
   
@@ -101,9 +101,9 @@ ms.locfileid: "72797648"
 4.  Per completare la configurazione del database secondario, è necessario creare un join del database secondario al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Per informazioni sull'esecuzione di queste operazioni di backup e ripristino, vedere [Attività correlate a backup e ripristino](#RelatedTasks), più avanti in questa sezione.  
+>   Per informazioni sull'esecuzione di queste operazioni di backup e ripristino, vedere [Attività correlate a backup e ripristino](#RelatedTasks), più avanti in questa sezione.  
   
-###  <a name="RelatedTasks"></a>Attività correlate a backup e ripristino  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a>Attività correlate a backup e ripristino  
  **Per creare un backup del database**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "72797648"
   
 -   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per preparare un database secondario**  
   
 > [!NOTE]  
@@ -144,9 +144,9 @@ ms.locfileid: "72797648"
 4.  Per completare la configurazione del database secondario, è necessario creare un join del database secondario al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Per informazioni sull'esecuzione di queste operazioni di backup e ripristino, vedere [Attività correlate a backup e ripristino](#RelatedTasks), più avanti in questo argomento.  
+>   Per informazioni sull'esecuzione di queste operazioni di backup e ripristino, vedere [Attività correlate a backup e ripristino](#RelatedTasks), più avanti in questo argomento.  
   
-###  <a name="ExampleTsql"></a>Esempio Transact-SQL  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Esempio Transact-SQL  
  Nell'esempio seguente viene preparato un database secondario. Nell'esempio viene utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] in cui, per impostazione predefinita, viene utilizzato il modello di recupero con registrazione minima.  
   
 1.  Per utilizzare il database [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modificarlo in modo da utilizzare il modello di recupero con registrazione completa:  
@@ -242,7 +242,7 @@ ms.locfileid: "72797648"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per preparare un database secondario**  
   
 1.  Se è necessario creare un backup recente del database primario, spostarsi sulla directory (`cd`) dell'istanza del server che ospita la replica primaria.  
@@ -262,7 +262,7 @@ ms.locfileid: "72797648"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a>Script e comando di backup e ripristino di esempio  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a>Script e comando di backup e ripristino di esempio  
  Tramite i comandi di PowerShell riportati di seguito viene eseguito il backup completo di un database e del log delle transazioni in una condivisione di rete e vengono ripristinati i backup dalla condivisione. In questo esempio si presuppone che il percorso del file in cui viene ripristinato il database corrisponda al percorso del file nel quale è stato eseguito il backup del database.  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a>Completamento: dopo la preparazione di un database secondario  
+##  <a name="follow-up-after-preparing-a-secondary-database"></a><a name="FollowUp"></a> Completamento: Dopo la preparazione di un database secondario  
  Per completare la configurazione del database secondario, creare un join del database appena ripristinato al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Argomenti di ripristino &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Risolvere i problemi relativi a un'operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

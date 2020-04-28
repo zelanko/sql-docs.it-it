@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798213"
 ---
 # <a name="list-job-category-information"></a>Elencare le informazioni sulle categorie di processi
   Come elencare le informazioni sulle categorie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di processi [!INCLUDE[tsql](../../includes/tsql-md.md)] in tramite o SQL Server Management Objects.  
 
   
-##  <a name="Security"></a> Sicurezza  
+##  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
 
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-list-job-category-information"></a>Per elencare le informazioni sulle categorie di processi  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798213"
  Per ulteriori informazioni, vedere [sp_help_category &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
   
   
-##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per elencare le informazioni sulle categorie di processi**  
   
  Usare la classe `JobCategory` tramite il linguaggio di programmazione desiderato, ad esempio Visual Basic, Visual C# o PowerShell. Per ulteriori informazioni, vedere [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  

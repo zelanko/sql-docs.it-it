@@ -14,10 +14,10 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: dff1ab73713aed3bfb635c0399028f0c9a1a8c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727903"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Tabella di gestione temporanea delle relazioni (Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "73727903"
 
   Usare la tabella di staging delle relazioni nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per modificare il percorso dei membri in una gerarchia esplicita, in base alla relazione esistente tra i membri.  
   
-##  <a name="TableColumns"></a>Colonne della tabella  
+##  <a name="table-columns"></a><a name="TableColumns"></a>Colonne della tabella  
  Nella seguente tabella viene illustrato il motivo per cui viene utilizzato ogni campo della tabella di staging Relazione.  
   
-|Nome colonna|Descrizione|valore|  
+|Nome colonna|Descrizione|Valore|  
 |-----------------|-----------------|-----------|  
 |**ID**|Un identificatore assegnato automaticamente.|Non immettere un valore in questo campo. Se il batch non è stato elaborato, questo campo è vuoto.|  
-|**RelationshipType**|Obbligatoria<br /><br /> Il tipo di relazione impostata.|Valori possibili:<br /><br /> **1**:P adre<br /><br /> **2**: elemento di pari livello (allo stesso livello)|  
-|**ImportStatus_ID**|Obbligatoria<br /><br /> Lo stato del processo di importazione.|Valori possibili:<br /><br /> **0**, specificato per indicare che il record è pronto per la gestione temporanea.<br /><br /> **1**, assegnato automaticamente e indica che il processo di gestione temporanea del record ha avuto esito positivo.<br /><br /> **2**, assegnato automaticamente e indica che il processo di gestione temporanea del record non è riuscito.|  
+|**RelationshipType**|Obbligatoria<br /><br /> Il tipo di relazione impostata.|I valori possibili sono:<br /><br /> **1**:Padre<br /><br /> **2**: Pari livello (allo stesso livello)|  
+|**ImportStatus_ID**|Obbligatoria<br /><br /> Lo stato del processo di importazione.|I valori possibili sono:<br /><br /> **0**, specificato per indicare che il record è pronto per la gestione temporanea.<br /><br /> **1**, assegnato automaticamente indica che il processo di gestione temporanea del record ha avuto esito positivo.<br /><br /> **2**, assegnato automaticamente e indica che il processo di gestione temporanea del record non è riuscito.|  
 |**Batch_ID**|Richiesto solo dal servizio Web<br /><br /> Un identificatore assegnato automaticamente che raggruppa i record per la gestione temporanea.<br /><br /> Se il batch non è stato elaborato, questo campo è vuoto.|A tutti i membri nel batch viene assegnato questo identificatore, visualizzato nella colonna [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ID **dell'interfaccia utente di** .|  
 |**BatchTag**|Richiesto, salvo che dal servizio Web<br /><br /> Un nome univoco per il batch, composto da un massimo di 50 caratteri.||  
 |**HierarchyName**|Obbligatoria<br /><br /> Il nome della gerarchia esplicita. Ogni membro consolidato può appartenere solo ad un'unica gerarchia.||  

@@ -14,10 +14,10 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728432"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
@@ -38,11 +38,11 @@ ms.locfileid: "73728432"
   
 -   [Eliminazione di versioni](#Versions)  
   
--   [Applicazione immediata di autorizzazioni membri gerarchia](#Hierarchy)  
+-   [Applicazione immediata di autorizzazioni per membri della gerarchia](#Hierarchy)  
   
--   [Configurazione delle impostazioni di sistema](#SysSettings)  
+-   [Configurazione di impostazioni di sistema](#SysSettings)  
   
-##  <a name="Staging"></a>Gestione temporanea dei dati  
+##  <a name="staging-data"></a><a name="Staging"></a> Dati di gestione temporanea  
  Nella tabella seguente, in ogni entità a protezione diretta la parola "name" fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
@@ -57,7 +57,7 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Panoramica: importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a>Convalida dei dati rispetto a regole business  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Convalida dei dati rispetto a regole business  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|---------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a>Eliminazione di versioni  
+##  <a name="deleting-versions"></a><a name="Versions"></a>Eliminazione di versioni  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Eliminare una versione &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a>Applicazione immediata di autorizzazioni membri gerarchia  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Applicazione immediata di autorizzazioni membri gerarchia  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -82,10 +82,10 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysSettings"></a>Configurazione delle impostazioni di sistema  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Configurazione delle impostazioni di sistema  
  È possibile configurare alcune impostazioni di sistema per controllare il comportamento in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Queste impostazioni possono essere modificate in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oppure, se si dispone dell'autorizzazione di accesso UPDATE, direttamente nella tabella di database mdm.tblSystemSetting. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;di sicurezza Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

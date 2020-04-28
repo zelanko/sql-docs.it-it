@@ -26,10 +26,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73594526"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
@@ -46,17 +46,17 @@ ms.locfileid: "73594526"
 |**key_store_provider_name**|**sysname**|Nome del provider per l'archivio delle chiavi master della colonna contenente CMK. I valori consentiti sono i seguenti:<br /><br /> MSSQL_CERTIFICATE_STORE: se l'archivio della chiave master della colonna è un archivio certificati.<br /><br /> Valore definito dall'utente, se l'archivio della chiave master della colonna è di un tipo personalizzato.|  
 |**key_path**|**nvarchar(4000)**|Percorso specifico dell'archivio della chiave master della colonna. Il formato del percorso dipende dal tipo di archivio delle chiavi master della colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master di colonna personalizzato, lo sviluppatore è responsabile della definizione di un percorso chiave per l'archivio delle chiavi master della colonna personalizzata.|  
 |**allow_enclave_computations**|**bit**|Indica se la chiave master della colonna è abilitata per l'enclave, (se le chiavi di crittografia della colonna, crittografate con la chiave master, possono essere usate per i calcoli all'interno di enclave protette sul lato server). Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**firma**|**varbinary(max)**|Firma digitale di **key_path** e **allow_enclave_computations**, prodotti usando la chiave master della colonna, a cui fa riferimento **key_path**.|
+|**URL REST**|**varbinary(max)**|Firma digitale di **key_path** e **allow_enclave_computations**, prodotti usando la chiave master della colonna, a cui fa riferimento **key_path**.|
 
 
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **View any Column Master Key** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [CREAZIONE della chiave MASTER della colonna &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

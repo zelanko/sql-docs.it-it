@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728011"
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
@@ -65,15 +65,15 @@ ms.locfileid: "73728011"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare un nuovo membro foglia.|[Creare un membro foglia &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|Creare un nuovo membro consolidato.|[Creazione di un membro consolidato &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|Creare un nuovo membro consolidato.|[Creare membri consolidati &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Eliminare un membro o una raccolta esistente.|[Eliminare un membro o una raccolta &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Riattivare una raccolta o un membro eliminato.|[Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Aggiornare i valori dell'attributo di un membro.|[Modificare il tipo di attributo &#40;Componente aggiuntivo MDS per Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Aggiornare i valori dell'attributo di un membro.|[Modificare il tipo di attributo &#40;componente aggiuntivo MDS per Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Panoramica di Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "73728011"
   
 -   [Raccolte &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [Autorizzazioni foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
 -   [Operatori di filtro &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  

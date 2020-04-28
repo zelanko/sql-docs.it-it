@@ -21,15 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797615"
 ---
 # <a name="dimension-relationships"></a>Relazioni tra dimensioni
-  L'utilizzo delle dimensioni definisce le relazioni tra le dimensioni e i gruppi di misure di un cubo. Una dimensione di un cubo è un'istanza di una dimensione del database utilizzata in un cubo specifico. Spesso un cubo contiene dimensioni che non sono correlate direttamente a un gruppo di misure, ma che possono essere correlate indirettamente al gruppo di misure tramite un'altra dimensione o un altro gruppo di misure. Quando si aggiunge una dimensione o un gruppo di misure del database a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un cubo, tenta di determinare l'utilizzo della dimensione esaminando le relazioni tra le tabelle delle dimensioni e le tabelle dei fatti nella vista origine dati del cubo ed esaminando le relazioni tra gli attributi nelle dimensioni. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di configurare automaticamente le impostazioni delle dimensioni per le relazioni che è possibile rilevare.  
+  L'utilizzo delle dimensioni definisce le relazioni tra le dimensioni e i gruppi di misure di un cubo. Una dimensione di un cubo è un'istanza di una dimensione del database utilizzata in un cubo specifico. Spesso un cubo contiene dimensioni che non sono correlate direttamente a un gruppo di misure, ma che possono essere correlate indirettamente al gruppo di misure tramite un'altra dimensione o un altro gruppo di misure. Quando si aggiunge una dimensione o un gruppo di misure del database a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un cubo, tenta di determinare l'utilizzo della dimensione esaminando le relazioni tra le tabelle delle dimensioni e le tabelle dei fatti nella vista origine dati del cubo ed esaminando le relazioni tra gli attributi nelle dimensioni. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di configurare automaticamente le impostazioni delle dimensioni per le relazioni che è possibile rilevare.  
   
  Una relazione tra una dimensione e un gruppo di misure è costituita dalle tabelle delle dimensioni e dei fatti che partecipano alla relazione e da un attributo di granularità che specifica la granularità della dimensione nel particolare gruppo di misure.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "72797615"
  Per ulteriori informazioni sulle relazioni a cui si fa riferimento, vedere [definire una relazione di riferimento e le proprietà delle relazioni a cui si fa riferimento](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Relazioni di tipo Fatti  
- Le dimensioni dei fatti, spesso denominate dimensioni degenerate, sono dimensioni standard create da colonne attributo di tabelle dei fatti anziché da colonne attributo di tabelle delle dimensioni. A volte, i dati dimensionali utili vengono archiviati in una tabella dei fatti per ridurre la duplicazione. Nel diagramma seguente, ad esempio, viene **** visualizzata la tabella dei fatti FactResellerSales [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] del database di esempio.  
+ Le dimensioni dei fatti, spesso denominate dimensioni degenerate, sono dimensioni standard create da colonne attributo di tabelle dei fatti anziché da colonne attributo di tabelle delle dimensioni. A volte, i dati dimensionali utili vengono archiviati in una tabella dei fatti per ridurre la duplicazione. Nel diagramma seguente, ad esempio, viene **FactResellerSales** visualizzata la tabella dei fatti FactResellerSales [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] del database di esempio.  
   
  ![Le colonne nella tabella dei fatti possono supportare le dimensioni](../../analysis-services/dev-guide/media/as-factdim.gif "Le colonne nella tabella dei fatti possono supportare le dimensioni")  
   
@@ -85,6 +84,6 @@ ms.locfileid: "72797615"
  Per ulteriori informazioni sulle relazioni molti-a-molti, vedere [definire una relazione molti-a-molti e le proprietà delle relazioni molti-a-molti](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -17,17 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797852"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
-  **Invoke-PolicyEvaluation** è un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet che indica se un set di destinazioni di SQL Server oggetti è conforme alle condizioni specificate in uno o più criteri della gestione basata su criteri.  
+  **Invoke-PolicyEvaluation** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che segnala se un set di destinazioni di oggetti di SQL Server è conforme alle condizioni specificate in uno o più criteri della gestione basata su criteri.  
   
 ## <a name="using-invoke-policyevaluation"></a>Utilizzo di Invoke-PolicyEvaluation  
- **Invoke-PolicyEvaluation** valuta uno o più criteri rispetto a un set di oggetti SQL Server denominato set di destinazioni. Il set di oggetti di destinazione proviene da un server di destinazione. I criteri definiscono delle condizioni, che sono gli stati consentiti per gli oggetti di destinazione. Ad esempio, i criteri **Database con proprietà trustworthy** dichiarano che la proprietà di database TRUSTWORTHY deve essere impostata su OFF.  
+ **Invoke-PolicyEvaluation** valuta uno o più criteri rispetto a un set di oggetti di SQL Server denominato set di destinazioni. Il set di oggetti di destinazione proviene da un server di destinazione. I criteri definiscono delle condizioni, che sono gli stati consentiti per gli oggetti di destinazione. Ad esempio, i criteri **Database con proprietà trustworthy** dichiarano che la proprietà di database TRUSTWORTHY deve essere impostata su OFF.  
   
  Il parametro **-AdHocPolicyEvaluationMode** specifica le azioni intraprese:  
   
@@ -84,11 +84,11 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Specifica del set di destinazioni  
  Utilizzare tre parametri per specificare il set di oggetti di destinazione:  
   
--   **-TargetServerName** specifica l'istanza di SQL Server contenente gli oggetti di destinazione. È possibile specificare le informazioni in una stringa che utilizza il formato definito per la proprietà ConnectionString della classe <xref:System.Data.SqlClient.SqlConnection> . È possibile usare la classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per compilare una stringa di connessione con formato corretto. È inoltre possibile creare un oggetto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> e passarlo a **-TargetServer**. Se si specifica una stringa che contiene solo il nome del server, **Invoke-PolicyEvaluation** userà l'autenticazione di Windows per connettersi al server.  
+-   **-TargetServerName** consente di specificare l'istanza di SQL Server che contiene gli oggetti di destinazione. È possibile specificare le informazioni in una stringa che utilizza il formato definito per la proprietà ConnectionString della classe <xref:System.Data.SqlClient.SqlConnection> . È possibile usare la classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per compilare una stringa di connessione con formato corretto. È inoltre possibile creare un oggetto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> e passarlo a **-TargetServer**. Se si specifica una stringa che contiene solo il nome del server, **Invoke-PolicyEvaluation** userà l'autenticazione di Windows per connettersi al server.  
   
--   **-TargetObjects** accetta un oggetto o una matrice di oggetti che rappresentano gli oggetti SQL Server nel set di destinazioni. È possibile ad esempio creare una matrice di oggetti di classe <xref:Microsoft.SqlServer.Management.Smo.Database> da passare in **-TargetObjects**.  
+-   **-TargetObjects** accetta un oggetto o una matrice di oggetti che rappresenta gli oggetti di SQL Server nel set di destinazioni. È possibile ad esempio creare una matrice di oggetti di classe <xref:Microsoft.SqlServer.Management.Smo.Database> da passare in **-TargetObjects**.  
   
--   **-TargetExpressions consente** accetta una stringa contenente un'espressione di query che specifica gli oggetti nel set di destinazioni. L'espressione di query è nel formato di nodi separati dal carattere barra (/). Ogni nodo è nel formato ObjectType[Filter]. Il tipo di oggetto è uno degli oggetti in una gerarchia di oggetti SMO (SQL Server Management Object). Filter è un'espressione che filtra gli oggetti in corrispondenza di quel nodo. Per altre informazioni, vedere [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** consente di prendere una stringa contenente un'espressione di query che specifica gli oggetti nel set di destinazioni. L'espressione di query è nel formato di nodi separati dal carattere barra (/). Ogni nodo è nel formato ObjectType[Filter]. Il tipo di oggetto è uno degli oggetti in una gerarchia di oggetti SMO (SQL Server Management Object). Filter è un'espressione che filtra gli oggetti in corrispondenza di quel nodo. Per altre informazioni, vedere [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Specificare il parametro **-TargetObjects** o **-TargetExpression**, ma non entrambi.  
   
@@ -129,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>Formattazione dell'output  
- Per impostazione predefinita, l'output di **Invoke-PolicyEvaluation** viene visualizzato nella finestra del prompt dei comandi sotto forma di breve report in formato leggibile. Usare il parametro **-OutputXML** per specificare che dal cmdlet venga generato invece un report dettagliato come file XML. **Invoke-PolicyEvaluation** usa lo schema SML-if (Systems Modeling Language Interchange Format), in modo che il file possa essere letto da SML-if Readers.  
+ Per impostazione predefinita, l'output di **Invoke-PolicyEvaluation** viene visualizzato nella finestra del prompt dei comandi sotto forma di breve report in formato leggibile. Usare il parametro **-OutputXML** per specificare che dal cmdlet venga generato invece un report dettagliato come file XML. **Invoke-PolicyEvaluation** usa lo schema SML-IF (Systems Modeling Language Interchange Format) affinché il file sia leggibile tramite i lettori SML-IF.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

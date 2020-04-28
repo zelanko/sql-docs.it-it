@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798075"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
@@ -86,17 +86,17 @@ ms.locfileid: "72798075"
   
 -   [Registrazione dell'istanza di SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Introduzione alla procedura guidata Registra istanza  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Introduzione alla procedura guidata Registra istanza  
  Per avviare la procedura guidata, espandere l'albero in Esplora utilità fino a visualizzare un punto di controllo dell'utilità, fare clic con il pulsante destro del mouse su **Istanze gestite** e scegliere **Aggiungi istanza gestita**.  
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Instance_name"></a> Specificare l'istanza di SQL Server  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Specificare l'istanza di SQL Server  
  Per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza. Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Connection_dialog"></a> Finestra di dialogo di connessione  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Finestra di dialogo di connessione  
  Nella finestra di dialogo Connetti al server, verificare il tipo di server, il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "72798075"
   
  Per continuare, fare clic su **Connetti**.  
   
-##  <a name="Proxy_configuration"></a> Account set di raccolta utilità  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Account set di raccolta utilità  
  Specificare un account di dominio di Windows per eseguire il set di raccolta di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo account viene utilizzato come account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per il set di raccolta di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In alternativa, è possibile utilizzare l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esistente. Per soddisfare i requisiti della convalida, utilizzare le linee guida seguenti per specificare l'account.  
   
  Se si specifica l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
@@ -113,7 +113,7 @@ ms.locfileid: "72798075"
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Validation_rules"></a> Convalida istanza di SQL Server  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Convalida istanza di SQL Server  
  In questa versione le condizioni seguenti devono essere vere affinché l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] venga registrata in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Condizione|Azione correttiva|  
@@ -140,7 +140,7 @@ ms.locfileid: "72798075"
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Summary"></a> Riepilogo della registrazione dell'istanza  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Riepilogo della registrazione dell'istanza  
  Nella pagina di riepilogo sono elencate informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiungere a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Impostazioni istanza gestita  
@@ -151,7 +151,7 @@ ms.locfileid: "72798075"
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Enrolling"></a> Registrazione dell'istanza di SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Registrazione dell'istanza di SQL Server  
  Nella pagina di registrazione viene indicato lo stato dell'operazione:  
   
 -   Preparazione dell'istanza per la registrazione.  
@@ -182,7 +182,7 @@ ms.locfileid: "72798075"
   
  Per rimuovere le istanze gestite da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** per popolare la visualizzazione elenco di istanze gestite, fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella visualizzazione elenco in **Contenuto Esplora utilità** , quindi scegliere **Rendi istanza non gestita**.  
   
-##  <a name="PowerShell_enroll"></a> Registrazione di un'istanza di SQL Server tramite PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Registrazione di un'istanza di SQL Server tramite PowerShell  
  Usare l'esempio seguente per registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente:  
   
 ```powershell

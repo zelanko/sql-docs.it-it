@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811595"
 ---
 # <a name="user-hierarchies"></a>Gerarchie definite dall'utente
@@ -37,18 +37,18 @@ ms.locfileid: "72811595"
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
-|1999|Trimestre 1|gen|  
-|1999|Trimestre 1|feb|  
-|1999|Trimestre 1|mar|  
-|1999|Trimestre 2|apr|  
-|1999|Trimestre 2|mag|  
-|1999|Trimestre 2|Jun|  
-|1999|Trimestre 3|lug|  
-|1999|Trimestre 3|ago|  
+|1999|Trimestre 1|Gen|  
+|1999|Trimestre 1|Feb|  
+|1999|Trimestre 1|Mar|  
+|1999|Trimestre 2|Apr|  
+|1999|Trimestre 2|Mag|  
+|1999|Trimestre 2|Giu|  
+|1999|Trimestre 3|Lug|  
+|1999|Trimestre 3|Ago|  
 |1999|Trimestre 3|Set|  
-|1999|Trimestre 4|ott|  
-|1999|Trimestre 4|nov|  
-|1999|Trimestre 4|dic|  
+|1999|Trimestre 4|Oct|  
+|1999|Trimestre 4|Nov|  
+|1999|Trimestre 4|Dec|  
   
  Gli attributi Year, Quarter e Month vengono utilizzati per creare nella dimensione temporale una gerarchia definita dall'utente denominata Calendar. Nella figura riportata di seguito è illustrata la relazione esistente tra i livelli e i membri della dimensione Calendar, che è una dimensione regolare.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72811595"
  Sebbene per gli utenti finali potrebbe essere impossibile distinguere le gerarchie sbilanciate da quelle incomplete, si utilizzano tecniche e proprietà diverse in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare questi due tipi di gerarchia. Per ulteriori informazioni, vedere [gerarchie incomplete](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)e [attributi nelle gerarchie padre-figlio](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ### <a name="ragged-hierarchies"></a>Gerarchie incomplete  
- In una gerarchia incompleta, il membro padre logico di almeno un membro non si trova nel livello immediatamente superiore rispetto al membro. Ne consegue che i rami della gerarchia possono scendere a livelli di dettaglio diversi. Ad esempio, in una dimensione Geography definita con i livelli Continent, CountryRegion e City in questo ordine, il membro Europe viene visualizzato nel livello superiore della gerarchia, il membro France nel livello intermedio e il membro Paris nel livello inferiore, in quanto France è più specifico di Europe e Paris è più specifico di France. A questa gerarchia regolare vengono apportate le modifiche seguenti:  
+ In una gerarchia incompleta, il membro padre logico di almeno un membro non si trova nel livello immediatamente superiore rispetto al membro. Ne consegue che i rami della gerarchia possono scendere a livelli di dettaglio diversi. Ad esempio, in una dimensione Geography definita con i livelli Continent, CountryRegion e City in questo ordine, il membro Europa viene visualizzato nel livello superiore della gerarchia, il membro France nel livello intermedio e il membro Paris nel livello inferiore, in quanto France è più specifico di Europa e Paris è più specifico di France. A questa gerarchia regolare vengono apportate le modifiche seguenti:  
   
 -   Il membro Vatican City viene aggiunto al livello CountryRegion.  
   

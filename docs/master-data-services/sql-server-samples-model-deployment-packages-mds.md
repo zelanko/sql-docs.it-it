@@ -14,10 +14,10 @@ ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727874"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)
@@ -29,7 +29,7 @@ ms.locfileid: "73727874"
  Per istruzioni su come distribuire i pacchetti di modelli di esempio, vedere [Distribuzione di modelli di esempio e dati](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). I pacchetti di modelli di esempio vengono distribuiti con lo [strumento MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Aggiornamenti di esempio in[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Aggiornamenti di esempio in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  I pacchetti di esempio sono stati aggiornati per supportare le nuove funzionalità seguenti.  
 > 
@@ -42,7 +42,7 @@ ms.locfileid: "73727874"
 >      Per altre informazioni, vedere [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
 > -   Richiedere l'approvazione delle modifiche delle entità.  
 > 
->      Per altre informazioni, vedere [Approvazione necessaria &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
+>      Per ulteriori informazioni, vedere [approvazione obbligatoria &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
 > -   Usare gli operatori Not ed Else nelle regole di business  
 > 
 >      Per altre informazioni, vedere [Esempi di regole di business](../master-data-services/business-rule-examples-master-data-services.md).  

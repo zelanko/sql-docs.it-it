@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796398"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services
   Un aspetto importante della configurazione del server di report riguarda la creazione di una copia di backup della chiave simmetrica utilizzata per crittografare le informazioni riservate. La copia di backup della chiave è obbligatoria per molte operazioni di routine e consente di riutilizzare un database del server di report esistente in una nuova installazione.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
  È necessario ripristinare la copia di backup della chiave di crittografia se si verifica uno degli eventi seguenti:  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72796398"
 ## <a name="backing-up-the-encryption-keys"></a>Backup delle chiavi di crittografia  
  Durante il backup della chiave simmetrica, la chiave viene scritta nel file specificato dall'utente e quindi viene codificata utilizzando la password fornita dall'utente. La chiave simmetrica non può mai essere archiviata non crittografata, pertanto è necessario fornire una password per codificarla al momento di salvarla su disco. Dopo aver creato il file, è necessario archiviarlo in un percorso protetto e **ricordare la password** per poterlo sbloccare. Per eseguire il backup della chiave simmetrica, è possibile utilizzare gli strumenti riportati di seguito.  
   
- **Modalità nativa:** Il Reporting Services Configuration Manager o l'utilità **RSKEYMGMT** .  
+ **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt** .  
   
- **Modalità SharePoint:** Pagine di amministrazione centrale SharePoint o PowerShell.  
+ **Modalità SharePoint:** pagine di Amministrazione centrale SharePoint o PowerShell.  
   
-####  <a name="bkmk_backup_sharepoint"></a>Backup di server di report in modalità SharePoint  
+####  <a name="backup-sharepoint-mode-report-servers"></a><a name="bkmk_backup_sharepoint"></a> Eseguire il backup di server di report in modalità SharePoint  
  Per i server di report in modalità SharePoint è possibile utilizzare i comandi di PowerShell o le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere la sezione "Gestione chiavi" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md)  
   
-####  <a name="bkmk_backup_configuration_manager"></a>Eseguire il backup delle chiavi di crittografia-Reporting Services Configuration Manager (modalità nativa)  
+####  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Eseguire il backup di chiavi di crittografia - Gestione configurazione Reporting Services (modalità nativa)  
   
 1.  Avviare Gestione configurazione Reporting Services, quindi connettersi all'istanza del server di report che si desidera configurare.  
   
@@ -61,12 +61,11 @@ ms.locfileid: "72796398"
   
 3.  Utilizzare una password complessa.  
   
-4.  Specificare un file in cui includere la chiave archiviata. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiunge l'estensione snk al file. È consigliabile archiviare il file su un disco separato dal server di report.  
+4.  Specificare un file in cui includere la chiave archiviata. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiunge l'estensione snk al file. È consigliabile archiviare il file su un disco separato dal server di report.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a>Eseguire il backup delle chiavi di crittografia-rskeymgmt (modalità nativa)  
+####  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a>Eseguire il backup delle chiavi di crittografia-rskeymgmt (modalità nativa)  
   
 1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. È necessario utilizzare l'argomento di estrazione `-e` per copiare la chiave. Specificare un nome file e una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "72796398"
   
  Per ripristinare la chiave di crittografia è necessario possederne una copia su file. È inoltre necessario conoscere la password per l'accesso alla copia archiviata. Il possesso della chiave e della password consente di eseguire lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt** per ripristinare la chiave. La chiave simmetrica deve essere la stessa che blocca e sblocca i dati crittografati attualmente archiviati nel database del server di report. Se viene ripristinata una copia non valida, il server di report non è in grado di accedere ai dati crittografati attualmente archiviati nel database del server di report. In questo caso, potrebbe essere necessario eliminare tutti i valori crittografati se non è possibile ripristinare una chiave valida. Se per qualche ragione non è possibile ripristinare la chiave di crittografia, ad esempio se non si possiede una copia di backup, è necessario eliminare la chiave esistente e il contenuto crittografato. Per altre informazioni, vedere [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Per altre informazioni sulla creazione della chiave simmetrica, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
-####  <a name="bkmk_restore_configuration_manager"></a>Ripristinare le chiavi di crittografia-Reporting Services Configuration Manager (modalità nativa)  
+####  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Ripristinare le chiavi di crittografia - Gestione configurazione Reporting Services (modalità nativa)  
   
 1.  Avviare Gestione configurazione Reporting Services, quindi connettersi all'istanza del server di report che si desidera configurare.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "72796398"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a>Ripristinare le chiavi di crittografia-rskeymgmt (modalità nativa)  
+####  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> Ripristinare le chiavi di crittografia - rskeymgmt (modalità nativa)  
   
 1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. Utilizzare l'argomento `-a` per ripristinare le chiavi. È necessario fornire un nome file completo e specificare una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
   

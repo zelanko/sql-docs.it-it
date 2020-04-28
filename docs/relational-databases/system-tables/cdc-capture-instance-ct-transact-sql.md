@@ -18,10 +18,10 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72908399"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "72908399"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**_ _ $ start_lsn**|**binario (10)**|Numero di sequenza del file di log (LSN) associato alla transazione commit per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di eliminazione nella tabella di origine rimuove due righe, la tabella delle modifiche conterrà due righe, ognuna con lo stesso valore **_ _ $ start_lsn** .|  
-|**_ _ $ end_lsn**|**binario (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questa colonna è sempre a NULL.|  
-|**_ _ $ seqval**|**binario (10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
-|**_ _ $ operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori obsoleti)<br /><br /> I dati della colonna includono valori di riga prima dell'esecuzione dell'istruzione di aggiornamento.<br /><br /> 4 = aggiornamento (valori nuovi)<br /><br /> I dati della colonna includono valori di riga dopo l'esecuzione dell'istruzione di aggiornamento.|  
-|**_ _ $ update_mask**|**varbinary (128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identificano le colonne modificate.|  
+|**__$start_lsn**|**binary(10)**|Numero di sequenza del file di log (LSN) associato alla transazione commit per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di eliminazione nella tabella di origine rimuove due righe, la tabella delle modifiche conterrà due righe, ognuna con lo stesso valore **_ _ $ start_lsn** .|  
+|**_ _ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questa colonna è sempre a NULL.|  
+|**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
+|**_ _ $ operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori obsoleti)<br /><br /> I dati della colonna includono valori di riga prima dell'esecuzione dell'istruzione di aggiornamento.<br /><br /> 4 = aggiornamento (valori nuovi)<br /><br /> I dati della colonna includono valori di riga dopo l'esecuzione dell'istruzione di aggiornamento.|  
+|**__$update_mask**|**varbinary(128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identificano le colonne modificate.|  
 |*\<colonne della tabella di origine acquisite>*|variabile|Le colonne rimanenti della tabella delle modifiche sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, tutte le colonne della tabella di origine vengono incluse in questa tabella.|  
 |**_ _ $ command_id** |**int** |Tiene traccia dell'ordine delle operazioni all'interno di una transazione. |  
   
@@ -57,7 +57,7 @@ La `__$command_id` colonna colonna was è stata introdotta in un aggiornamento c
  Tuttavia, i valori in queste colonne sono uguali ai valori della colonna di origine.  
   
 ### <a name="large-object-data-types"></a>Tipi di dati per oggetti di grandi dimensioni:  
- Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore **null** quando _ _ $ operation = \_ \_1 o $Operation = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato **** un valore null \_ \_quando $Operation = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando \_ \_$Operation = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore **null**.  
+ Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore **null** quando _ _ $ operation = \_ \_1 o $Operation = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato **NULL** un valore null \_ \_quando $Operation = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando \_ \_$Operation = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore **null**.  
   
  Per impostazione predefinita, la dimensione massima che può essere aggiunta a una colonna acquista in una singola istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT è pari a 65.536 byte o 64 KB Per aumentare questa dimensione per supportare dati LOB di dimensioni maggiori, usare l' [opzione di configurazione del server Configure max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) per specificare una dimensione massima maggiore. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
@@ -83,6 +83,6 @@ La `__$command_id` colonna colonna was è stata introdotta in un aggiornamento c
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

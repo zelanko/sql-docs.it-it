@@ -22,30 +22,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797991"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
   Usare la **procedura guidata Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
   
--   **Prima di iniziare:**  [limitazioni e restrizioni](#LimitationsRestrictions), [autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
 -   **Per estrarre un'applicazione livello dati, utilizzando:**  [la procedura guidata Estrai applicazione livello dati](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  È possibile estrarre un'applicazione livello dati dai database che risiedono in istanze di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4, o versioni successive. Se il processo di estrazione viene eseguito rispetto a un database distribuito da un'applicazione livello dati, vengono estratte solo le definizioni degli oggetti nel database. Il processo non fa riferimento all'applicazione livello dati `msdb` registrata in ( [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**Master** in). Il processo di estrazione non consente di registrare la definizione DAC nell'istanza corrente del motore di database. Per ulteriori informazioni sulla registrazione di un'applicazione livello dati, vedere [Register a Database As a DAC](register-a-database-as-a-dac.md).  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Un'applicazione livello dati può essere estratta solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Non è possibile estrarre un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'estrazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'estrazione di un'applicazione del livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene estratta l'applicazione del livello dati. Possono estrarre un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
-##  <a name="UsingDACExtractWizard"></a>Utilizzo della procedura guidata Estrai applicazione livello dati  
- **Per estrarre un'applicazione livello dati tramite una procedura guidata**  
+##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> Utilizzo della Procedura guidata Estrai applicazione livello dati  
+ **Per estrarre un'applicazione livello dati utilizzando una procedura guidata**  
   
 1.  In **Esplora oggetti**, espandere il nodo dell'istanza contenente il database da cui è necessario estrarre l'applicazione livello dati.  
   
@@ -65,23 +65,23 @@ ms.locfileid: "72797991"
   
     5.  [Pagina Compila pacchetto](#BuildPackage)  
   
-###  <a name="Introduction"></a> Pagina Introduzione  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per l'estrazione di un'applicazione livello dati.  
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Next >** : consente di passare alla pagina **Choose Method** .  
+ **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
   
- **Annulla** : consente di terminare la procedura guidata senza estrarre un'applicazione livello dati dal database.  
+ **Annulla** : termina la procedura guidata senza estrarre un'applicazione livello dati dal database.  
   
-###  <a name="SelectData"></a>Pagina Seleziona dati  
+###  <a name="select-data-page"></a><a name="SelectData"></a>Pagina Seleziona dati  
  Utilizzare questa pagina della procedura guidata per selezionare i dati di riferimento che si desidera includere nel file del pacchetto di applicazione livello dati. L'inserimento di dati nel pacchetto di applicazione livello dati è facoltativo. Il pacchetto di applicazione livello dati include già lo schema di tutti gli oggetti di database e gli oggetti istanza supportati correlati al database.  
   
  È possibile includere un massimo di 10 MB di dati di riferimento nel file di pacchetto di applicazione livello dati. Per poter essere incluse nell'applicazione livello dati, tuttavia, le tabelle non devono contenere tipi di dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni), ad esempio **image** o **varchar(max)**. Per estrarre maggiori quantità di dati per il trasferimento a un altro database, utilizzare SQL Server Integration Services, l'utilità di copia bulk o una delle numerose altre tecniche di migrazione dei dati.  
   
- **Tabella di database** : selezionare la casella di controllo accanto alle tabelle del database contenenti i dati che si desidera includere nel pacchetto di applicazione livello dati. È possibile selezionare fino a dieci tabelle contenenti un massimo di 10.000 righe.  
+ **Tabella di database** : selezionare la casella di controllo accanto alle tabelle di database contenenti i dati da includere nel pacchetto di applicazione livello dati. È possibile selezionare fino a dieci tabelle contenenti un massimo di 10.000 righe.  
   
-###  <a name="SetProperties"></a>Pagina Imposta proprietà  
+###  <a name="set-properties-page"></a><a name="SetProperties"></a>Pagina Imposta proprietà  
  Utilizzare questa pagina della procedura guidata per descrivere l'applicazione livello dati. Queste proprietà vengono utilizzate per identificare l'applicazione livello dati e distinguerla dalle altre.  
   
  **Nome** identifica l'applicazione livello dati. Può essere diverso dal nome del file del pacchetto di applicazione livello dati e deve descrivere l'applicazione. Ad esempio, se il database viene utilizzato per un'applicazione finanziaria, si può chiamare DAC Finanza.  
@@ -94,7 +94,7 @@ ms.locfileid: "72797991"
   
  **Sovrascrivi file esistente** : selezionare questa casella di controllo per sostituire il file del pacchetto di applicazione livello dati se ne esiste già uno con lo stesso nome.  
   
-###  <a name="ValidateSummary"></a>Pagina convalida e riepilogo  
+###  <a name="validation-and-summary-page"></a><a name="ValidateSummary"></a>Pagina convalida e riepilogo  
  In questa pagina della procedura guidata viene verificato che tutti gli oggetti di database siano supportati da un'applicazione livello dati. Controlla inoltre le dipendenze attraverso gli oggetti di database per determinare il set di oggetti che possono essere inclusi correttamente nella DAC. Successivamente, visualizza il report di convalida e riepiloga le opzioni selezionate nella procedura guidata. Per modificare un'opzione, fare clic su **Indietro**. Per avviare l'estrazione di un'applicazione livello dati, fare clic su **Avanti**.  
   
 > [!NOTE]  
@@ -114,7 +114,7 @@ ms.locfileid: "72797991"
   
  **Salva report** : consente di salvare nel riepilogo un file basato su HTML che elenca tutti gli oggetti sotto il nodo **Oggetti DAC** . Questo report può essere utile quando alcuni oggetti di database non sono supportati in una DAC. Utilizzare il report per modificare o rimuovere gli oggetti che non sono supportati, prima di tentare di estrarre nuovamente la DAC.  
   
-###  <a name="BuildPackage"></a>Pagina Compila pacchetto  
+###  <a name="build-package-page"></a><a name="BuildPackage"></a>Pagina Compila pacchetto  
  Utilizzare questa pagina per monitorare l'avanzamento della procedura guidata durante l'estrazione dell'applicazione livello dati.  
   
  **Azione** : durante l'azione **Crea e salva il file del pacchetto di applicazione livello dati** , la procedura guidata estrae un'applicazione livello dati dal database SQL Server. Quindi, nella memoria viene creato un pacchetto di applicazione livello dati che viene salvato nel percorso specificato. Fare clic sui collegamenti nella colonna **Risultato** per vedere il risultato del passaggio corrispondente.  
@@ -123,7 +123,7 @@ ms.locfileid: "72797991"
   
  **Fine** fare clic per chiudere la procedura guidata una volta completata o se si verifica un errore.  
   
-##  <a name="ExtractDACPowerShell"></a>Estrarre un'applicazione livello dati con PowerShell  
+##  <a name="extract-a-dac-using-powershell"></a><a name="ExtractDACPowerShell"></a>Estrarre un'applicazione livello dati con PowerShell  
  **Per estrarre un'applicazione livello dati da un database con il metodo Extract() in uno script di PowerShell**  
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente il database da cui si desidera estrarre l'applicazione livello dati.  

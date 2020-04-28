@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727800"
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
@@ -50,7 +50,7 @@ ms.locfileid: "73727800"
   
 1.  Una versione iniziale viene creata automaticamente quando si crea un modello e si popola il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con i dati master dell'azienda. In base alle autorizzazioni, gli utenti hanno la possibilità di apportare modifiche a tale versione, se necessario.  
   
-2.  Quando si desidera eseguire il commit di una versione di un modello, bloccare la versione in modo che solo gli amministratori di modelli siano in grado di aggiornare i dati. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Se vengono configurate notifiche, verrà inviata una notifica tramite posta elettronica agli amministratori di modelli ogni volta che lo stato della versione viene modificato. Per altre informazioni, vedere [Configurare notifiche di posta elettronica &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Quando si desidera eseguire il commit di una versione di un modello, bloccare la versione in modo che solo gli amministratori di modelli siano in grado di aggiornare i dati. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Se vengono configurate notifiche, verrà inviata una notifica tramite posta elettronica agli amministratori di modelli ogni volta che lo stato della versione viene modificato. Per altre informazioni, vedere [Configurare notifiche di posta elettronica &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Applicare regole business ai dati della versione bloccata ed esaminare gli eventuali problemi di convalida. Se necessario, è possibile immettere le informazioni mancanti o ripristinare la transazione che ha causato il problema. È inoltre possibile sbloccare la versione per consentire agli utenti di apportare modifiche.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "73727800"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Modificare il nome di una versione esistente.|[Modificare il nome della versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Modificare il nome di una versione esistente.|[Modificare il nome di una versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
 |Bloccare una versione così solo gli amministratori possono modificare i dati.|[Bloccare una versione &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Sbloccare una versione così solo gli amministratori possono modificare i dati.|[Sbloccare una versione &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
 |Eseguire il commit di una versione dopo la convalida di tutti i dati.|[Eseguire il commit di una versione &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
 |Creare un nuovo flag per contrassegnare una versione.|[Creare un flag di versione &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Modificare il nome di un flag di versione esistente.|[Modificare il nome del flag di versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Modificare il nome di un flag di versione esistente.|[Modificare il nome di un flag di versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Assegnare un flag esistente a una versione.|[Assegnare un flag a una versione &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
 |Creare una nuova copia di una versione esistente|[Copiare una versione &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminare una versione esistente.|[Eliminare una versione &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
@@ -89,6 +89,6 @@ ms.locfileid: "73727800"
   
 -   [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

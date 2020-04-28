@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798014"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backup di sola copia (SQL Server)
-  Un *backup di sola copia* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup indipendente dalla sequenza di backup convenzionali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.  
+  Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.  
   
  I tipi di backup di sola copia sono i seguenti:  
   
@@ -43,29 +43,29 @@ ms.locfileid: "72798014"
 ## <a name="to-create-a-copy-only-backup"></a>Per creare un backup di sola copia  
  È possibile creare un backup di sola copia utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
   
-###  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 1.  Nella pagina **Generale** della finestra di dialogo **Backup database** selezionare l'opzione **Backup di sola copia**.  
   
-###  <a name="TsqlProcedure"></a> Con Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  La sintassi [!INCLUDE[tsql](../../../includes/tsql-md.md)] essenziale è la seguente:  
   
 -   Per un backup completo di sola copia:  
   
-     BACKUP del ** DATABASE database_name \<backup_device*>* ... CON COPY_ONLY...  
+     BACKUP del *database_name* DATABASE database_name \<backup_device*>* ... CON COPY_ONLY...  
   
     > [!NOTE]  
     >  L'opzione COPY_ONLY non ha alcun effetto quando specificata con l'opzione DIFFERENTIAL.  
   
 -   Per un backup del log di sola copia:  
   
-     BACKUP del ** LOG database_name *\<* backup_device*>* ... CON COPY_ONLY...  
+     BACKUP del *database_name* LOG database_name *\<* backup_device*>* ... CON COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a> Con PowerShell  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
 Utilizzare il cmdlet `Backup-SqlDatabase` con il parametro `-CopyOnly`.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
 
 ### <a name="to-create-a-full-or-log-backup"></a>Per creare un backup completo o del log
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637633"
 ---
 # <a name="result-set-sample"></a>Esempio Result Set
@@ -25,12 +25,10 @@ ms.locfileid: "73637633"
   
  L'API per questa classe è simile a un lettore di dati, ad eccezione del fatto che è possibile passare al risultato precedente o successivo nel set di risultati ed eseguire altri comandi sulla connessione mentre il set di risultati è aperto. Per facilitare la comprensione dell'esempio, questa implementazione è stata notevolmente semplificata. In un'implementazione più efficace verrebbero recuperate più righe per evitare turnaround del database per ogni riga recuperata. L'utilizzo di questa classe garantisce un footprint di memoria notevolmente inferiore rispetto a quello derivante dall'inserimento di tutti i risultati della query in un set di dati, aspetto di estrema importanza nella programmazione sul lato server. L'esempio illustra inoltre l'utilizzo dell'attributo "Allow partially trusted callers" per indicare che l'assembly del set di risultati è una libreria che può essere chiamata da altri assembly senza problemi. Questo approccio è leggermente più complesso ma molto più sicuro rispetto alla registrazione dell'assembly chiamante tramite l'autorizzazione UNSAFE. È più sicuro in quanto, registrando l'assembly chiamante come sicuro, si limitano le risorse interessate al di fuori del server e si evitano danni all'integrità del server.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -59,7 +57,7 @@ ms.locfileid: "73637633"
   
 -   Il database AdventureWorks deve essere installato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso.  
   
--   Se non si dispone dei diritti di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso, è necessario ricevere da un amministratore l'autorizzazione **CreateAssembly**  per completare l'installazione.  
+-   Se non si è un amministratore per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di in uso, è necessario disporre di un amministratore per concedere l'autorizzazione **CreateAssembly** per completare l'installazione.  
   
 ## <a name="building-the-sample"></a>Compilazione dell'esempio  
   
@@ -1414,6 +1412,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenari di utilizzo ed esempi per Common Language Runtime &#40;l'integrazione con&#41; CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scenari di utilizzo ed esempi per l'integrazione con CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

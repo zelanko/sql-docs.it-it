@@ -11,31 +11,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e3e244b2c4892d725e8e3ddf684b55a224138a50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637677"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installare SQL Server 2014 in Server Core
   È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. In questo argomento vengono fornite informazioni dettagliate specifiche dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in Server Core.  
   
- L'opzione di installazione Server Core per il sistema operativo [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre un ambiente minimo per l'esecuzione di ruoli del server specifici. Ciò consente di ridurre i requisiti di manutenzione e gestione e la superficie di attacco per i ruoli del server in questione. Per ulteriori informazioni sull'implementazione di Server Core in [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], vedere [Server Core per Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Per altre informazioni sull'implementazione di Server Core in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) (Server Core per Windows Server 2012).  
+ L'opzione di installazione Server Core per il sistema operativo [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre un ambiente minimo per l'esecuzione di ruoli del server specifici. Ciò consente di ridurre i requisiti di manutenzione e gestione e la superficie di attacco per i ruoli del server in questione. Per ulteriori informazioni sull'implementazione di Server Core in [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], vedere [Server Core per Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Per ulteriori informazioni sull'implementazione di Server Core in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [Server Core per Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
 |Requisito|Modalità di installazione|  
 |-----------------|--------------------|  
-|
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> Non è possibile eseguire le versioni 2.0, 3.0 e 3.5 side-by-side in un computer. Durante l'installazione di .NET Framework 3.5 SP1 si ottengono automaticamente i livelli 2.0 e 3.0.|  
-|
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> In un computer con sistema operativo Windows Server, è necessario scaricare e installare .NET Framework 3.5 SP1 prima di eseguire il programma di installazione per installare i componenti dipendenti da .NET 3.5 SP1.<br /><br /> Per ulteriori informazioni sui suggerimenti e indicazioni su come acquisire e abilitare .NET Framework 3,5 in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere Considerazioni sulla [distribuzione di Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
-|
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], uno dei prerequisiti di installazione prevede l'installazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile.<br /><br /> Per [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], scaricare il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] profilo 4 Server Core da [Microsoft .NET Framework 4 (programma di installazione autonomo) per Server Core](https://www.microsoft.com/download/details.aspx?id=17718) (https://www.microsoft.com/download/details.aspx?id=17718)e installarlo prima di procedere con l'installazione.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> Non è possibile eseguire le versioni 2.0, 3.0 e 3.5 side-by-side in un computer. Durante l'installazione di .NET Framework 3.5 SP1 si ottengono automaticamente i livelli 2.0 e 3.0.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> In un computer con sistema operativo Windows Server, è necessario scaricare e installare .NET Framework 3.5 SP1 prima di eseguire il programma di installazione per installare i componenti dipendenti da .NET 3.5 SP1.<br /><br /> Per ulteriori informazioni sui suggerimenti e indicazioni su come acquisire e abilitare .NET Framework 3,5 in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere Considerazioni sulla [distribuzione di Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], uno dei prerequisiti di installazione prevede l'installazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile.<br /><br /> Per [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], scaricare il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] profilo 4 Server Core da [Microsoft .NET Framework 4 (programma di installazione autonomo) per Server Core](https://www.microsoft.com/download/details.aspx?id=17718) (https://www.microsoft.com/download/details.aspx?id=17718)e installarlo prima di procedere con l'installazione.|  
 |Windows Installer 4.5|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
   
-##  <a name="BK_SupportedFeatures"></a> Funzionalità supportate  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> Funzionalità supportate  
  Utilizzare la tabella seguente per identificare le funzionalità supportate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
 |Funzionalità|Supportato|  
@@ -74,13 +71,7 @@ ms.locfileid: "73637677"
 |Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le edizioni a 64 bit<sup>[1]</sup>|  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le lingue|  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella combinazione lingua/impostazioni locali del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows il lingua giapponese<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tedesca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua cinese (Cina)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua araba (Arabia Saudita)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tailandese (Thai)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua turca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua portoghese (Portogallo)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua inglese|  
-|Edizione di Windows|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bit x64 Datacenter<br /><br /> 
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bit x64 Standard<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Data Center Server Core<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Enterprise Server Core<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Standard Server Core<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Web Server Core|  
+|Edizione di Windows|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bit x64 Datacenter<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bit x64 Standard<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Data Center Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Enterprise Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Standard Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Web Server Core|  
   
  <sup>[1]</sup> L'installazione della versione a 32 bit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] delle edizioni di non è supportata in Server Core.  
   
@@ -271,10 +262,10 @@ ms.locfileid: "73637677"
   
          Se il file DefaultSetup.ini non esiste, è possibile crearlo e copiarlo nelle cartelle \x86 e \x64, al livello radice dei supporti di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Configurazione dell'accesso remoto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core  
+## <a name="configuring-remote-access-of-ssnoversion-running-on-server-core"></a>Configurazione dell'accesso remoto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core  
  Eseguire le azioni descritte di seguito per configurare l'accesso remoto di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in esecuzione in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Abilitare connessioni remote nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>Abilitare connessioni remote nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Per abilitare connessioni remote, utilizzare in locale SQLCMD.exe ed eseguire le istruzioni seguenti nell'istanza Server Core:  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -285,7 +276,7 @@ ms.locfileid: "73637677"
   
      `GO`  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>Abilitare e avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>Abilitare e avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser  
  Per impostazione predefinita, il servizio Browser è disabilitato.  Se risulta disabilitato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core, eseguire il comando riportato di seguito dal prompt dei comandi per abilitarlo:  
   
  `sc config SQLBROWSER start= auto`  
@@ -297,14 +288,14 @@ ms.locfileid: "73637677"
 ### <a name="create-exceptions-in-windows-firewall"></a>Creazione di eccezioni in Windows Firewall  
  Per creare eccezioni per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Windows Firewall, seguire i passaggi specificati in [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Abilitare TCP/IP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Abilitare TCP/IP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Il protocollo TCP/IP può essere abilitato tramite Windows PowerShell per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Server Core. A tale scopo, seguire questa procedura:  
   
 1.  Avviare Gestione attività nel computer in cui è in esecuzione [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core.  
   
 2.  Nella scheda **Applicazioni** fare clic su **Nuova attività**.  
   
-3.  Nella finestra di dialogo **Crea una nuova attività** digitare **sqlps.exe** nel campo **Apri** , quindi fare clic su **OK**. Viene aperta la finestra di **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell**.  
+3.  Nella finestra di dialogo **Crea una nuova attività** digitare **sqlps.exe** nel campo **Apri** , quindi fare clic su **OK**. Verrà visualizzata la finestra di ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell** .  
   
 4.  Nella finestra di **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** eseguire lo script seguente per abilitare il protocollo TCP/IP:  
   

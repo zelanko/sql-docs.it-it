@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797631"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Regole di integrità di PowerPivot: configurazione
@@ -28,24 +28,24 @@ ms.locfileid: "72797631"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Nota:** Le impostazioni delle regole di integrità vengono configurate separatamente per l'istanza di SQL Server Analysis Services e per l'applicazione di servizio PowerPivot. Utilizzare le istruzioni riportate in questo argomento per configurare le regole di integrità per ogni servizio. Per una distribuzione di SharePoint 2013, in [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] viene utilizzata solo l'applicazione di servizio. Pertanto con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vengono installati differenti set di regole di integrità per versioni diverse di SharePoint. Vedere la colonna "Version" nell'argomento [riferimento alle regole di integrità &#40;PowerPivot per SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)oppure è possibile eseguire il comando di Windows PowerShell seguente per visualizzare le regole installate.  
+ **Nota:** le impostazioni delle regole di integrità vengono configurate separatamente per l'istanza di SQL Server Analysis Services e l'applicazione del servizio PowerPivot. Utilizzare le istruzioni riportate in questo argomento per configurare le regole di integrità per ogni servizio. Per una distribuzione di SharePoint 2013, in [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] viene utilizzata solo l'applicazione di servizio. Pertanto con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vengono installati differenti set di regole di integrità per versioni diverse di SharePoint. Vedere la colonna "Version" nell'argomento [riferimento alle regole di integrità &#40;PowerPivot per SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)oppure è possibile eseguire il comando di Windows PowerShell seguente per visualizzare le regole installate.  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
 ```  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
  [Visualizzare le regole di integrità di PowerPivot](#bkmk_view)  
   
- [Configurare le regole di integrità usate per valutare la stabilità del server (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
+ [Configurare le regole di integrità utilizzate per valutare la stabilità del server (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
  [Configurare le regole di integrità utilizzate per valutare la stabilità dell'applicazione (applicazione del servizio PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario essere un amministratore dell'applicazione di servizio per modificare le proprietà di configurazione dell'istanza di Analysis Services e dell'applicazione del servizio PowerPivot.  
   
-##  <a name="bkmk_view"></a>Visualizzare le regole di integrità di PowerPivot  
+##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>Visualizzare le regole di integrità di PowerPivot  
   
 1.  In Amministrazione centrale SharePoint fare clic su **Monitoraggio**e nella sezione **Analizzatore dell'integrità** fare clic su **Controlla definizioni regole**.  
   
@@ -57,12 +57,12 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  A tale scopo, fare clic sulla regola per aprirne la definizione, quindi fare clic su **Esegui ora** sulla barra multifunzione. Fare clic su **Chiudi** per tornare alla pagina **Controlla problemi e soluzioni** per visualizzare il report. Se tramite la regola viene rilevato un problema, un avviso o un errore sarà segnalato nella pagina. In alcuni casi, la visualizzazione dell'errore o dell'avviso può richiedere alcuni minuti.  
   
-##  <a name="bkmk_HR_SSAS"></a>Configurare le regole di integrità usate per valutare la stabilità del server (SQL Server Analysis Services)  
+##  <a name="configure-health-rules-used-to-evaluate-server-stability-sql-server-analysis-services"></a><a name="bkmk_HR_SSAS"></a>Configurare le regole di integrità usate per valutare la stabilità del server (SQL Server Analysis Services)  
  Nell'istanza di Analysis Services sono incluse regole di integrità tramite cui vengono rilevati problemi a livello di sistema (CPU, memoria e spazio su disco utilizzato per la memorizzazione nella cache). Utilizzare le istruzioni seguenti per modificare le soglie che consentono l'attivazione di regole di integrità specifiche.  
   
 1.  Nella sezione **Impostazioni sistema** di Amministrazione centrale SharePoint fare clic su **Gestisci servizi nel server**.  
   
-2.  Nella parte superiore della pagina selezionare il server nella farm di SharePoint con un'istanza di Analysis Services (nell'illustrazione seguente il nome del server è AW-SRV033). **SQL Server Analysis Services** verrà visualizzato nell'elenco dei servizi.  
+2.  Nella parte superiore della pagina selezionare il server nella farm di SharePoint con un'istanza di Analysis Services (nell'illustrazione seguente il nome del server è AW-SRV033). Nell'elenco dei servizi verrà visualizzato**SQL Server Analysis Services** .  
   
      ![Schermata della pagina Gestisci servizi nel server](../media/ssas-centraladmin-servicesonserver.gif "Schermata della pagina Gestisci servizi nel server")  
   
@@ -98,9 +98,9 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      Intervallo di raccolta dati (in ore)  
      È possibile specificare il periodo di raccolta dei dati utilizzato per calcolare i numeri utilizzati per l'attivazione delle regole di analisi dell'integrità. Benché il sistema sia monitorato costantemente, le soglie utilizzate per attivare gli avvisi delle regole di analisi dell'integrità vengono calcolate utilizzando dati generati in un intervallo predefinito. L'intervallo predefinito è di 4 ore. Il server recupera dati di sistema e di utilizzo raccolti nelle 4 ore precedenti per valutare il numero di connessioni utente, l'utilizzo dello spazio su disco e i tassi di utilizzo della CPU e della memoria.  
   
-##  <a name="bkmk_evaluate_application_stability"></a>Configurare le regole di integrità utilizzate per valutare la stabilità dell'applicazione (applicazione del servizio PowerPivot)  
+##  <a name="configure-health-rules-used-to-evaluate-application-stability-powerpivot-service-application"></a><a name="bkmk_evaluate_application_stability"></a>Configurare le regole di integrità utilizzate per valutare la stabilità dell'applicazione (applicazione del servizio PowerPivot)  
   
-1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
+1.  In Gestione applicazioni di amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Nella pagina Applicazioni di servizio fare clic su **Applicazione di servizio PowerPivot predefinita**.  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797807"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell
@@ -28,11 +28,11 @@ ms.locfileid: "72797807"
 |Cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Descrizione|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Consente di ottenere il nodo corrente.|  
-|`Set-Location`|**SL**|**CD, ChDir**|**CD, ChDir**|Consente di modificare il nodo corrente.|  
-|**Get-ChildItem**|**GCI**|**dir**|**LS**|Consente di visualizzare un elenco degli oggetti archiviati nel nodo corrente.|  
+|`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Consente di modificare il nodo corrente.|  
+|**Get-ChildItem**|**gci**|**dir**|**LS**|Consente di visualizzare un elenco degli oggetti archiviati nel nodo corrente.|  
 |**Get-Item**|**gi**|||Restituisce le proprietà dell'elemento corrente.|  
-|**Rinomina-elemento**|**RNI**|**RN**|**Ren**|Consente di rinominare un oggetto.|  
-|**Remove-Item**|**istanza riservata**|**CANC, Rd**|**RM, rmdir**|Consente di rimuovere un oggetto.|  
+|**Rinomina-elemento**|**rni**|**RN**|**ren**|Consente di rinominare un oggetto.|  
+|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Consente di rimuovere un oggetto.|  
   
 > [!IMPORTANT]  
 >  Alcuni identificatori (nomi di oggetto) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contengono caratteri non supportati da Windows PowerShell nei nomi dei percorsi. Per altre informazioni sull'uso dei nomi che contengono questi caratteri, vedere [Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "72797807"
 |Posizione nel percorso|Risultati di Get-ChildItem|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Restituisce il nome del computer locale. Se è stato utilizzato SMO o WMI per connettersi a istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] in altri computer, vengono elencati anche tali computer.|  
-|SQLSERVER:\SQL\\*NomeComputer*|Elenco delle istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer.|  
+|SqlServer: \ SQL\\*nomecomputer*|Elenco delle istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer.|  
 |SqlServer: \ SQL\\*nomecomputer*\\*NomeIstanza*|Elenco dei tipi di oggetto di primo livello nell'istanza, ad esempio Endpoint, Certificati e Database.|  
 |Nodo della classe di oggetto, ad esempio Database|Elenco di oggetti del tipo, ad esempio l'elenco di database: master, model, AdventureWorks2008R2.|  
 |Nodo del nome dell'oggetto, ad esempio AdventureWorks2012|Elenco dei tipi di oggetto contenuti all'interno dell'oggetto. Per un database, ad esempio, vengono elencati tipi di oggetto come tabelle e viste.|  
@@ -54,7 +54,7 @@ ms.locfileid: "72797807"
  Windows PowerShell consente agli utenti di definire unità virtuali, definite come unità di PowerShell. Per tali unità viene eseguito il mapping ai nodi iniziali di un'istruzione di percorso. Tali unità vengono in genere utilizzate per abbreviare percorsi digitati con frequenza. I percorsi SQLSERVER: possono diventare lunghi, occupando spazio nella finestra di Windows PowerShell e richiedendo molta digitazione. Se si prevede di lavorare molto in un particolare nodo del percorso, è possibile definire un'unità di Windows PowerShell personalizzata di cui è stato eseguito il mapping a tale nodo.  
   
 ## <a name="use-powershell-cmdlet-aliases"></a>Utilizzare alias di cmdlet di PowerShell  
- **Usare un alias di cmdlet**  
+ **Utilizzare un alias di cmdlet**  
   
 -   Anziché digitare il nome completo di un cmdlet, digitare un alias più breve o uno con mapping a un comando comune del prompt dei comandi.  
   

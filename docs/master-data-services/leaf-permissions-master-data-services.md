@@ -17,10 +17,10 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728082"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorizzazioni per elementi foglia (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73728082"
   
  Per le entità senza gerarchie esplicite abilitate, l'assegnazione delle autorizzazioni all'elemento **Foglia** equivale all'assegnazione delle autorizzazioni all'entità.  
   
- **Note**  
+ **Note:**  
   
 -   Le autorizzazioni foglia si applicano solo all'area funzionale **Visualizzatore** dell'interfaccia utente.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73728082"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri foglia e i relativi attributi.|  
-|**Creare**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
+|**Crea**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
 |**Aggiornamento**|L'utente può aggiornare i membri foglia e gli attributi.|  
 |**Elimina**|L'utente può eliminare i membri foglia.|  
 |**Nega**|Negare l'accesso ai membri foglia.|  
@@ -53,9 +53,9 @@ ms.locfileid: "73728082"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere gli attributi.|  
-|**Creare**|L'utente può assegnare valori durante la creazione di membri.|  
+|**Crea**|L'utente può assegnare valori durante la creazione di membri.|  
 |**Aggiornamento**|L'utente può aggiornare gli attributi.|  
-|**Elimina**|Nessun effetto|  
+|**Elimina**|Nessun effetto.|  
 |**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
   
 ### <a name="example"></a>Esempio  
@@ -63,8 +63,8 @@ ms.locfileid: "73728082"
   
 |Nome|Codice|Subcategory (Aggiornamento)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5}Mountain bike|  
+|Mountain-100|BK-M201|{5}Mountain bike|  
   
  Nel **Visualizzatore**è possibile aggiornare qualsiasi valore di attributo nella colonna Subcategory. Se non si dispone delle autorizzazioni per un attributo, l'attributo non viene visualizzato.  
   

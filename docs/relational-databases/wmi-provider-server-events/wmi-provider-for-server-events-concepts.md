@@ -17,10 +17,10 @@ ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1acbe114258b0a7a5bee71656a0b6878f09fefc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657329"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Concetti relativi al provider WMI per eventi del server
@@ -31,7 +31,7 @@ ms.locfileid: "73657329"
  [Informazioni sul provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  
  Viene fornita una panoramica dell'architettura del provider e viene illustrato come programmare SQL Server Agent per l'utilizzo in questa architettura.  
   
- [Utilizzo del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md)  
+ [Uso del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md)  
  Vengono illustrati i fattori che è necessario considerare prima di programmare con il provider.  
   
  [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  

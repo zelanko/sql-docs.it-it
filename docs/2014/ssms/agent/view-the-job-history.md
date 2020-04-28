@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783385"
 ---
 # <a name="view-the-job-history"></a>Visualizzare la cronologia processi
@@ -30,7 +30,7 @@ ms.locfileid: "72783385"
   
      [Sicurezza](#Security)  
   
--   **Per visualizzare il log di cronologia processo utilizzando:**  
+-   **Per visualizzare il log cronologia processi utilizzando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -38,16 +38,16 @@ ms.locfileid: "72783385"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-the-job-history-log"></a>Per visualizzare il log cronologia processi  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
 2.  Espandere **SQL Server Agent**e quindi espandere **Processi**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783385"
   
 5.  Per aggiornare la cronologia processo, fare clic su **Aggiorna**. Per visualizzare un numero inferiore di righe, fare clic sul pulsante **Filtro** e immettere i parametri di filtro.  
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-job-history-log"></a>Per visualizzare il log cronologia processi  
   
@@ -79,7 +79,7 @@ ms.locfileid: "72783385"
   
  Per ulteriori informazioni, vedere [sp_help_jobhistory &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
-##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per visualizzare il log cronologia processi**  
   
  Chiamare il metodo `EnumHistory` della classe `Job` usando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

@@ -14,10 +14,10 @@ ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728370"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminare una gerarchia derivata (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728370"
 > [!NOTE]  
 >  L'eliminazione di una gerarchia derivata non influenza le relazioni tra attributi sulle quali è basata la gerarchia.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>Per eliminare una gerarchia derivata  
   
@@ -42,11 +42,11 @@ ms.locfileid: "73728370"
   
 2.  Scegliere **Gestisci** dalla barra dei menu e fare clic su **Gerarchie derivate**.  
   
-3.  Nella pagina **Gestione gerarchia derivata** dall'elenco **Modello** selezionare un modello.  
+3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
   
 4.  Selezionare la riga relativa alla gerarchia derivata che si desidera eliminare.  
   
-5.  Scegliere **Elimina**.  
+5.  Fare clic su **Elimina**.  
   
 6.  Nella finestra di dialogo di conferma fare clic su **OK**.  
   

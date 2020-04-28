@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797881"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
@@ -42,7 +42,7 @@ ms.locfileid: "72797881"
   
  L'input *-Query* o *-QueryFromFile* può contenere:  
   
--   variabili e comandi di **SQLCMD** . Per informazioni su variabili e comandi, vedere la sezione Osservazioni di [Utilità sqlcmd](../tools/sqlcmd-utility.md).  
+-   Variabili e comandi di**sqlcmd** . Per informazioni su variabili e comandi, vedere la sezione Osservazioni di [Utilità sqlcmd](../tools/sqlcmd-utility.md).  
   
 -   Istruzioni[!INCLUDE[tsql](../includes/tsql-md.md)] . Per altre informazioni sul linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](/sql/t-sql/language-reference).  
   
@@ -89,7 +89,7 @@ Get-Help -Category provider
 ```  
   
 ## <a name="get-help-about-the-sql-server-provider"></a>Ottenere la Guida sul provider SQL Server  
- **Per ottenere informazioni sul provider**  
+ **Per ottenere la Guida sul provider**  
   
 1.  Eseguire Get-Help specificando il nome SQLServer  
   

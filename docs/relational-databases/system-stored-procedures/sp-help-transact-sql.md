@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909087"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
@@ -56,18 +56,18 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nome**|**nvarchar (** 128 **)**|Nome dell'oggetto|  
     |**Proprietario**|**nvarchar (** 128 **)**|Proprietario dell'oggetto. Si tratta dell'entità di database proprietaria dell'oggetto. Corrispondente per impostazione predefinita al proprietario dello schema contenente l'oggetto.|  
-    |**Object_type**|**nvarchar (** 31 **)**|Tipo di oggetto|  
+    |**Object_type**|**nvarchar (** 31 **)**|Tipo oggetto|  
   
 2.  Se *Name* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati o un tipo di dati definito dall'utente, **sp_help** restituisce il set di risultati.  
   
     |Nome colonna|Tipo di dati|Descrizione|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Nome del tipo di dati.|  
-    |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nome del tipo.|  
-    |**Length**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
+    |**Storage_type**|**nvarchar (** 128 **)**|Nome del tipo di archiviazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-    |**Scalabilità**|**int**|Numero di cifre a destra del separatore decimale.|  
-    |**Nullable**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
+    |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
+    |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Regole di confronto**|**sysname**|Regole di confronto per il tipo di dati. Per i tipi di dati non carattere, è NULL.|  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nome**|**nvarchar (** 128 **)**|Nome tabella|  
     |**Proprietario**|**nvarchar (** 128 **)**|Proprietario della tabella.|  
-    |**Tipo**|**nvarchar (** 31 **)**|Tipo di tabella|  
+    |**Type**|**nvarchar (** 31 **)**|Tipo di tabella.|  
     |**Created_datetime**|**datetime**|Data di creazione della tabella.|  
   
      A seconda dell'oggetto di database specificato, **sp_help** restituisce set di risultati aggiuntivi.  
@@ -89,13 +89,13 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Column_name**|**nvarchar (** 128 **)**|Nome della colonna.|  
-        |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
+        |**Column_name**|**nvarchar (** 128 **)**|Nome colonna.|  
+        |**Type**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
         |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
-        |**Length**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
+        |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
         |**Prec**|**char (** 5 **)**|Precisione della colonna.|  
-        |**Scalabilità**|**char (** 5 **)**|Scala della colonna.|  
-        |**Nullable**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
+        |**Ridimensionare**|**char (** 5 **)**|Scala della colonna.|  
+        |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
         |**Regole di confronto**|**sysname**|Regole di confronto della colonna. NULL per i tipi di dati non carattere.|  
@@ -105,8 +105,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
-        |**Inizializzazione**|**numerico**|Valore iniziale per la colonna Identity.|  
-        |**Incremento**|**numerico**|Incremento da utilizzare per i valori della colonna.|  
+        |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
+        |**Incremento**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
         |**Non per la replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Set di risultati aggiuntivo restituito per le colonne  
@@ -152,10 +152,10 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nome del parametro della stored procedure.|  
-        |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
-        |**Length**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
+        |**Type**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
+        |**Lunghezza**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-        |**Scalabilità**|**int**|Numero di cifre a destra del separatore decimale.|  
+        |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -195,9 +195,9 @@ GO
  [sp_helpindex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helptrigger &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. sysobjects &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

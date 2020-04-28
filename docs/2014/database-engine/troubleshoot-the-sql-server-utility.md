@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797782"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
@@ -165,5 +165,5 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
     5.  Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è già registrata con il punto di controllo dell'utilità prima di aggiungere l'utente a questo gruppo, riavviare il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Funzionalità e attività di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Risolvere i problemi relativi all'integrità delle risorse di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

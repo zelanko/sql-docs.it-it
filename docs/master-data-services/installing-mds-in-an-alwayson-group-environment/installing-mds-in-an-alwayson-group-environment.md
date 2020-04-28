@@ -11,10 +11,10 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728098"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
@@ -29,7 +29,7 @@ Questo articolo descrive una soluzione per Master Data Services (MDS) ospitata i
 
 Per implementare la soluzione, è necessario completare le attività seguenti illustrate in questo articolo.
 
-1. [Installare e configurare Windows Server failover Custer (WSFC)](#windows-server-failover-cluster-wsfc).
+1. [Installare e configurare Windows Server Failover Cluster (WSFC)](#windows-server-failover-cluster-wsfc).
 
 2. [Configurare un gruppo di disponibilità always on](#sql-server-always-on-availability-group).
 
@@ -82,7 +82,7 @@ Pertanto, è importante prendere in considerazione i requisiti e gli scenari e d
 
 In questa sezione vengono trattate le attività seguenti.
 
-1. [Installare la funzionalità cluster di failover di Windows](#install-failover-cluster-feature).
+1. [Installare la funzionalità Windows Failover Cluster](#install-failover-cluster-feature).
 
 2. [Creare un cluster di failover di Windows Server](#create-a-windows-server-failover-cluster).
 
@@ -90,7 +90,7 @@ Come illustrato nella figura 1 nella sezione precedente, la soluzione descritta 
 
 WSFC è una funzionalità che migliora la disponibilità elevata di applicazioni e servizi. È costituita da un gruppo di istanze di Windows Server indipendenti che eseguono il servizio cluster di failover Microsoft. Le istanze di Windows Server, o nodi come vengono talvolta chiamate, sono connesse in modo che possano comunicare tra loro rendendo possibile il rilevamento degli errori. WSFC offre la funzionalità di rilevamento degli errori e il failover. Se un nodo o un servizio del cluster hanno esito negativo, viene rilevato l'errore e un altro nodo inizia automaticamente o manualmente ad offrire i servizi ospitati sul nodo in errore. Di conseguenza, le interruzioni per gli utenti sono minime e la disponibilità del servizio è migliorata.  
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 Il sistema operativo Windows Server deve essere installato in tutte le istanze e tutti gli aggiornamenti devono essere corretti.
 
@@ -207,9 +207,9 @@ Un gruppo di disponibilità fornisce disponibilità a livello di database. Il gr
 
 Failover offrono disponibilità elevata a livello di istanza. Il servizio SQL Server e i servizi correlati vengono registrati come risorse in WSFC. La soluzione delle istanze del cluster di failover richiede l'archiviazione simmetrica su disco condiviso, ad esempio condivisioni di file SAN o SMB, che devono essere disponibili a tutti i nodi nel cluster WFC.
    
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
-- Installare SQL Server in tutti i nodi. Per ulteriori informazioni, vedere [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
+- Installare SQL Server in tutti i nodi. Per altre informazioni, vedere [Installare SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
 - (Scelta consigliata) Installare esattamente lo stesso set di funzionalità e la stessa versione di SQL Server in ogni nodo. In particolare, è necessario installare MDS.
 
@@ -244,7 +244,7 @@ Failover offrono disponibilità elevata a livello di istanza. Il servizio SQL Se
 > [!NOTE]
 > È possibile modificare l'account del servizio che esegue il servizio SQL Server tramite **Gestione configurazione SQL Server**. Fare clic sulla scheda **Accedi** nella finestra di dialogo **Proprietà** **SQL Server (MSSQLSERVER)**. Vedere Figura 11.
 
-### <a name="create-an-availability-group"></a>Creare un set di disponibilità
+### <a name="create-an-availability-group"></a>Creare un gruppo di disponibilità
 
 Una volta abilitata la funzionalità gruppo di disponibilità in tutte le istanze di SQL Server, viene creato un nuovo gruppo di disponibilità che contiene il database MDS in un nodo.
 
@@ -298,13 +298,13 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
    Per ogni replica, configurare le impostazioni **Commit sincrono**, **Failover automatico** e **Secondario leggibile** seguenti. Vedere Figura 17.
 
-**Commit sincrono**: garantisce che se viene eseguito il commit di una transazione nella replica primaria di un database, viene eseguito il commit anche della transazione in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
+**Commit sincrono**: in questo modo si garantisce che se viene eseguito il commit di una transazione nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
 
 In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi sono nello stesso data center. Se sono in data center diversi, il commit sincrono può rallentare le prestazioni del database. Se questa casella di controllo non è selezionata, viene usato il commit asincrono.
 
-**Failover automatico:** Quando la replica primaria è inattiva, il gruppo di disponibilità esegue automaticamente il failover alla replica secondaria quando è selezionato il failover automatico. Questa opzione può essere abilitata solo sulle repliche con commit sincrono.
+**Failover automatico:** quando la replica primaria è inattiva, il gruppo di disponibilità esegue automaticamente il failover nella replica secondaria se è stato selezionato il failover automatico. Questa opzione può essere abilitata solo sulle repliche con commit sincrono.
 
-**Secondario leggibile:** Per impostazione predefinita, gli utenti non possono connettersi alle repliche secondarie. Questa opzione consente agli utenti di connettersi a una replica secondaria con accesso in sola lettura.
+**Secondario leggibile:** per impostazione predefinita, gli utenti non possono connettersi alle repliche secondarie. Questa opzione consente agli utenti di connettersi a una replica secondaria con accesso in sola lettura.
 
 8. Nella pagina **Specifica repliche** fare clic sulla scheda **Listener** ed eseguire le operazioni seguenti. Vedere Figura 18.
 
@@ -323,7 +323,7 @@ In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi 
 
    Figura 18
 
-9. Nella pagina **Seleziona sincronizzazione dati** fare clic su **Completa** e specificare una condivisione di rete cui possano accedere tutti i nodi. Fare clic su **Avanti** per continuare. Vedere Figura 19.
+9. Nella pagina **Seleziona sincronizzazione dati** fare clic su **Completa** e specificare una condivisione di rete cui possano accedere tutti i nodi. Scegliere **Avanti** per continuare. Vedere Figura 19.
 
    Tale condivisione di rete verrà usata per archiviare il backup di database per creare le repliche secondarie. Se tale preferenza non è disponibile per l'organizzazione, scegliere un altro tipo di sincronizzazione dei dati. Per usare altre opzioni per creare repliche secondarie, vedere [SQL Server 2016 always on gruppo di disponibilità](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) . Nella figura 17 vengono elencate anche altre opzioni.
 
@@ -331,7 +331,7 @@ In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi 
 
    Figura 19 
 
-10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Fare clic su **Avanti** per continuare.
+10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Scegliere **Avanti** per continuare.
 
 11. Nella pagina **Riepilogo** esaminare tutte le impostazioni di configurazione e fare clic su **Fine**. In questo modo verrà creato e configurato il gruppo di disponibilità.
 
@@ -391,7 +391,7 @@ In questo white paper è stato illustrato come configurare e configurare il data
 
 ## <a name="feedback"></a>Commenti e suggerimenti
 
-Il documento è stato di aiuto? Per commenti e suggerimenti, fare clic su **Commenti** nella parte inferiore dell'articolo. 
+Il documento è risultato utile? Per commenti e suggerimenti, fare clic su **Commenti** nella parte inferiore dell'articolo. 
 
 I commenti e i suggerimenti ci consentono di migliorare la qualità della documentazione pubblicata. 
 

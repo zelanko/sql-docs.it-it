@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632856"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
@@ -43,20 +43,20 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 - Individuare i problemi che possono influire sull'aggiornamento a un SQL Server locale.Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
 
   - Modifiche di rilievo
-  - Modifiche del comportamento
+  - Modifiche funzionali
   - Funzionalità deprecate
 
 - Individuare nuove funzionalità nella piattaforma di SQL Server di destinazione che il database può trarre vantaggio da dopo un aggiornamento. Questi sono descritti come raccomandazioni sulle funzionalità e sono organizzati nelle categorie seguenti:
 
   - Prestazioni
-  - Security
+  - Sicurezza
   - Archiviazione
 
 - Eseguire la migrazione di un'istanza di SQL Server locale a un'istanza di SQL Server moderna ospitata in locale o in una macchina virtuale (VM) di Azure accessibile dalla rete locale. È possibile accedere alla macchina virtuale di Azure tramite VPN o altre tecnologie. Il flusso di lavoro di migrazione consente di eseguire la migrazione dei componenti seguenti:
 
   - Schema dei database
   - Dati e utenti
-  - Ruoli del server
+  - Ruoli server
   - SQL Server e account di accesso di Windows
 
 - Al termine della migrazione, le applicazioni possono connettersi senza problemi ai database di destinazione SQL Server.
@@ -67,15 +67,15 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 
   - Problemi di informazioni: rileva le funzionalità parzialmente supportate o deprecate utilizzate nei pacchetti di origine.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per eseguire una valutazione, è necessario essere un membro del ruolo **sysadmin** SQL Server.
 
-## <a name="supported-source-and-target-versions"></a>Versioni di origine e di destinazione supportate
+## <a name="supported-source-and-target-versions"></a>Versioni dei database di origine e di destinazione supportate
 
 DMA sostituisce tutte le versioni precedenti di SQL Server preparazione aggiornamento e deve essere utilizzato per gli aggiornamenti per la maggior parte delle SQL Server versioni. Le versioni di origine e di destinazione supportate sono:
 
-**Fonti**
+**recenti**
 
 - SQL Server 2005
 - SQL Server 2008
@@ -83,7 +83,7 @@ DMA sostituisce tutte le versioni precedenti di SQL Server preparazione aggiorna
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  SQL Server 2017 su Windows
+-  SQL Server 2017 in Windows
 
 **Server di destinazione**
 

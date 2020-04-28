@@ -11,10 +11,10 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728025"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Caratteristiche e attività di Master Data Services
@@ -51,7 +51,7 @@ ms.locfileid: "73728025"
   
 ## <a name="improve-data-quality"></a>Miglioramento della qualità dei dati  
   
--   [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
 -   [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
@@ -59,13 +59,13 @@ ms.locfileid: "73728025"
   
 -   [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [&#40;di sicurezza Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
 ## <a name="move-data"></a>Spostare dati  
   
--   [Panoramica: importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+-   [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
--   [Panoramica: esportazione di dati &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [Panoramica: Esportazione di dati &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [Distribuzione di modelli &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   

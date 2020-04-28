@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637892"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
@@ -35,7 +35,7 @@ ms.locfileid: "73637892"
   
  In questo argomento vengono descritti i metodi di uso comune per trovare informazioni sulle proprietà disponibili, in particolare sulle proprietà definite da Microsoft. Per informazioni sulle proprietà definite da terze parti, fare riferimento alla documentazione di terze parti o contattare il fornitore.  
   
-##  <a name="wellknown"></a> Ricerca di informazioni sulle proprietà Microsoft note e ampiamente utilizzate  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> Ricerca di informazioni sulle proprietà Microsoft note e ampiamente utilizzate  
  Microsoft definisce centinaia di proprietà del documento da utilizzare in molti contesti, ma solo un piccolo subset delle proprietà disponibili viene utilizzato da ogni formato di file. Tra le proprietà di Windows utilizzate di frequente è presente un piccolo set di proprietà generiche. Nella tabella seguente sono illustrati alcuni esempi di proprietà generiche note. Nella tabella sono indicati il nome noto, il nome canonico di Windows (in base alla descrizione della proprietà pubblicata da Microsoft), il GUID del set di proprietà, l'identificatore di tipo integer della proprietà e una breve descrizione.  
   
 |Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Descrizione|  
@@ -55,7 +55,7 @@ ms.locfileid: "73637892"
   
 -   Proprietà personalizzate specifiche dell'applicazione definite dal fornitore di software.  
   
-##  <a name="filtdump"></a> Ricerca di informazioni sulle proprietà disponibili tramite FILTDUMP.EXE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a>Ricerca di informazioni sulle proprietà disponibili tramite FILTDUMP. EXE  
  Per conoscere le proprietà individuate ed estratte da un filtro IFilter installato, è possibile installare ed eseguire l'utilità **filtdump.exe** , che fa parte di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK.  
   
  Dal prompt dei comandi eseguire **filtdump.exe** e fornire un argomento singolo. Questo argomento corrisponde al nome di un singolo file che dispone di un tipo di file per il quale viene installato un filtro IFilter. Tramite l'utilità viene visualizzato un elenco di tutte le proprietà individuate da IFilter nel documento, con i relativi GUID del set di proprietà, gli ID di tipo integer e informazioni aggiuntive.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637892"
   
 -   Per la versione a 32 bit, vedere in `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`.  
   
-##  <a name="propdesc"></a> Individuazione di valori per una proprietà di ricerca dalla descrizione di una proprietà di Windows  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a>Ricerca di valori per una proprietà di ricerca da una descrizione di una proprietà di Windows  
  Per una proprietà di ricerca di Windows nota, è possibile ottenere le informazioni necessarie dagli attributi `formatID` e `propID` della descrizione della proprietà (`propertyDescription`).  
   
  Nell'esempio seguente viene illustrata la parte rilevante della descrizione di una tipica proprietà Microsoft, in questo caso la proprietà `System.Author` . Con l'attributo `formatID` si specifica il GUID del set di proprietà, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`, e con l'attributo `propID` si specifica l'ID di tipo integer della proprietà, `4.` Si noti che con l'attributo `name` si specifica il nome canonico della proprietà di Windows, `System.Author`. In questo esempio vengono omesse le parti della descrizione della proprietà non rilevanti.  
@@ -85,7 +85,7 @@ propID = 4
   
  Per un elenco completo delle proprietà di Windows, vedere [Proprietà di Windows](https://go.microsoft.com/fwlink/?LinkId=215013)nella documentazione di Windows Search.  
   
-##  <a name="examples"></a> Aggiunta di una proprietà a un elenco delle proprietà di ricerca  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a>Aggiunta di una proprietà a un elenco di proprietà di ricerca  
  Nell'esempio seguente viene illustrato come aggiungere una proprietà a un elenco delle proprietà di ricerca. L'esempio usa un'istruzione [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) per aggiungere la proprietà `System.Author` a un elenco delle proprietà di ricerca denominato `PropertyList1`e fornisce il nome descrittivo per la proprietà `Author`.  
   
 ```  
@@ -103,6 +103,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](search-document-properties-with-search-property-lists.md)   
- [Configurare e gestire filtri per la ricerca](configure-and-manage-filters-for-search.md)  
+ [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md)  
   
   

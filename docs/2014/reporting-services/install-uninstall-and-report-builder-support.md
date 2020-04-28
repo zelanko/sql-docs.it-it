@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637883"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installazione, disinstallazione e supporto di Generatore report
@@ -29,7 +29,7 @@ ms.locfileid: "73637883"
   
  In genere, un amministratore installa e configura [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede l'autorizzazione per utilizzare la versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per ulteriori informazioni sull' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] amministrazione, vedere [Reporting Services server di report &#40;modalità nativa&#41;](report-server/reporting-services-report-server-native-mode.md) nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di MSDN.Microsoft.com.  
   
-##  <a name="Installing"></a>Installazione di Generatore report  
+##  <a name="installing-report-builder"></a><a name="Installing"></a>Installazione di Generatore report  
  Generatore report è disponibile nella versione autonoma e in quella [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . La versione autonoma può essere scaricata e installata nel computer in uso dall'utente o dall'amministratore mentre la versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] viene installata con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Generatore report può essere scaricato dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53613).  
   
 > [!NOTE]  
@@ -58,9 +58,7 @@ ms.locfileid: "73637883"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installazione della versione ClickOnce di Generatore report nel computer in uso  
  La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report viene installata con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Viene installata sia con le installazioni native sia con quelle integrate di SharePoint di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] è una tecnologia Microsoft per la distribuzione di applicazioni Windows. 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] consente agli utenti di installare ed eseguire un'applicazione Windows quale Generatore report facendo clic su un collegamento in una pagina Web. Per ulteriori informazioni sulla distribuzione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di applicazioni, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sull'applicazione della sicurezza dell' [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applicazione o sull'esecuzione di applicazioni nell'area Internet, vedere gli articoli "distribuzione ClickOnce per applicazioni Windows Forms", "panoramica della sicurezza in Windows Forms" o "panoramica della distribuzione [!INCLUDE[msCoName](../includes/msconame-md.md)] di applicazioni attendibili" [https://developer.microsoft.com/](https://developer.microsoft.com/)sul sito Web di rete per sviluppatori all'indirizzo.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] è una tecnologia Microsoft per la distribuzione di applicazioni Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] consente agli utenti di installare ed eseguire un'applicazione Windows quale Generatore report facendo clic su un collegamento in una pagina Web. Per ulteriori informazioni sulla distribuzione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di applicazioni, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sull'applicazione della sicurezza dell' [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applicazione o sull'esecuzione di applicazioni nell'area Internet, vedere gli articoli "distribuzione ClickOnce per applicazioni Windows Forms", "panoramica della sicurezza in Windows Forms" o "panoramica della distribuzione [!INCLUDE[msCoName](../includes/msconame-md.md)] di applicazioni attendibili" [https://developer.microsoft.com/](https://developer.microsoft.com/)sul sito Web di rete per sviluppatori all'indirizzo.  
   
  La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report si trova nel server di report e viene installata nel computer in uso quando si fa clic sul pulsante **Generatore report** in Gestione report o sull'opzione **Report di Generatore report** nel menu **Nuovo documento** in una raccolta di SharePoint.  
   
@@ -83,7 +81,7 @@ ms.locfileid: "73637883"
 |1030|Danese|da-DK|  
 |1031|Tedesco|de-DE|  
 |1032|Greco|el-GR|  
-|1040|Inglese|it-IT|  
+|1033|Inglese|it-IT|  
 |1035|Finlandese|fi-FI|  
 |1036|Francese|fr-FR|  
 |1038|Ungherese|hu-HU|  
@@ -102,13 +100,13 @@ ms.locfileid: "73637883"
 |3082|Spagnolo (Spagna)|es-ES|  
   
   
-##  <a name="Uninstalling"></a>Disinstallazione di Generatore report  
+##  <a name="uninstalling-report-builder"></a><a name="Uninstalling"></a>Disinstallazione di Generatore report  
  È possibile disinstallare la versione autonoma di Generatore report dal Pannello di controllo o dalla riga di comando. Questa regola si applica solo alla versione autonoma di Generatore report. La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report non può essere disinstallata separatamente. Viene sempre installata e disinstallata con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  Per ulteriori informazioni, vedere [disinstallare la versione autonoma di Generatore report &#40;Generatore report&#41;](install-windows/uninstall-report-builder.md).  
   
   
-##  <a name="Supporting"></a>Supporto di Generatore report  
+##  <a name="supporting-report-builder"></a><a name="Supporting"></a>Supporto di Generatore report  
  Per supportare gli autori dei report, un amministratore è responsabile della gestione delle cartelle, dei report e degli elementi correlati ai report sul server di report, della concessione dell'autorizzazione alle risorse sul server di report, nonché della configurazione del server di report per l'accesso.  
   
 ### <a name="folders-reports-and-report-related-items"></a>Cartelle, report ed elementi correlati ai report  
@@ -157,7 +155,7 @@ ms.locfileid: "73637883"
  Per ulteriori informazioni sulla configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]di, vedere [Reporting Services Configuration Manager &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) nella [documentazione di Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) in MSDN.Microsoft.com.  
   
   
-##  <a name="SampleDatabases"></a>SQL Server database di esempio  
+##  <a name="sql-server-sample-databases"></a><a name="SampleDatabases"></a>SQL Server database di esempio  
  Nella famiglia di database di esempio Adventure Works sono disponibili dati che è possibile utilizzare per ottenere informazioni sulla creazione di report e per scrivere report di esempio.  
   
  I database sono disponibili nelle versioni seguenti:  
@@ -173,7 +171,7 @@ ms.locfileid: "73637883"
  Per informazioni sui prerequisiti e istruzioni sul download e sull'installazione dei database di esempio di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , vedere le pagine relative all' [installazione dei prerequisiti per i database di esempio di SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=166648) e all' [installazione dei database di esempio](https://go.microsoft.com/fwlink/?LinkId=166649) sul sito CodePlex.  
   
   
-##  <a name="HowTo"></a>Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Procedure  
  In questa sezione vengono elencate le procedure in cui viene illustrato come installare e disinstallare Generatore report.  
   
  [Installare la versione autonoma di Generatore report &#40;Generatore report&#41;](install-windows/install-report-builder.md)  

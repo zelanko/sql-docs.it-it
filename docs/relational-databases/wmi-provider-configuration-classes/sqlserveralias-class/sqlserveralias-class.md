@@ -18,10 +18,10 @@ ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6cbcb2ab05c30f667e6e5b95d8223ab4e152137e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659189"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
@@ -34,9 +34,9 @@ ms.locfileid: "73659189"
   
 -   L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui è connesso il client è in attesa su una named pipe alternativa.  
   
- **Nota:** La [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) eredita il metodo **put** dalla classe provider. Tuttavia, non viene restituito alcun risultato come indicato dal metodo **Provider::Put** . Per ulteriori informazioni, vedere la documentazione di WMI.  
+ **Nota:** La [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) eredita il metodo **Put** dalla classe Provider. Tuttavia, non viene restituito alcun risultato come indicato dal metodo **Provider::Put** . Per ulteriori informazioni, vedere la documentazione di WMI.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

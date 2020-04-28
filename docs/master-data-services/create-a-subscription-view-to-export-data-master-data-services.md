@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728477"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
@@ -26,18 +26,18 @@ ms.locfileid: "73728477"
 
   Creare una vista sottoscrizioni per esportare dati di Master Data Services nei sistemi di sottoscrizione Si sta creando una vista dei dati nel database di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione** . Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione** . Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>Per creare e modificare una vista sottoscrizioni  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]fare clic su **Gestione integrazione**.  
   
-2.  Dalla barra dei menu, scegliere **Crea viste**.  
+2.  Dalla barra dei menu scegliere **Crea viste**.  
   
 3.  Nella pagina **Viste sottoscrizioni** fare clic su **Aggiungi** per creare una vista o fare clic su **Modifica** per modificare una vista. Viene visualizzato un pannello sulla destra.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73728477"
   
      Digitare un altro nome per la vista nella casella **Nome** del riquadro **Modifica vista sottoscrizioni** .  
   
-5.  Dall'elenco **Modello** , selezionare un modello.  
+5.  Selezionare un modello dall'elenco **Modello** .  
   
 6.  Selezionare **Includi membri eliminati temporaneamente**per includere nella vista i membri eliminati temporaneamente.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "73728477"
   
  Quando si fa clic su una vista, vengono visualizzate le informazioni seguenti.  
   
--   **Creato da**: nome dell'utente che ha creato la visualizzazione.  
+-   **Creata da**: nome dell'utente che ha creato la vista.  
   
--   Il **: data e ora di creazione**della vista.  
+-   **Il**: data e ora di creazione della vista.  
   
--   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato la vista.  
+-   **Aggiornata da**: nome dell'ultimo utente che ha aggiornato la vista.  
   
--   **Il: data**e ora dell'ultimo aggiornamento della vista.  
+-   **Il**: data e ora dell'ultimo aggiornamento della vista.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica: esportazione di dati &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   

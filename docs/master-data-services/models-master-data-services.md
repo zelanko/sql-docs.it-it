@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727943"
 ---
 # <a name="models-master-data-services"></a>Modelli (Master Data Services)
@@ -73,13 +73,13 @@ ms.locfileid: "73727943"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Creare un modello per organizzare i dati master.|[Creazione di un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Modificare il nome di un modello esistente.|[Modifica Master Data Services &#40;del modello&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Creare un modello per organizzare i dati master.|[Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Modificare il nome di un modello esistente.|[Modifica modello &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Eliminare un modello esistente.|[Eliminare un modello &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Panoramica di Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   

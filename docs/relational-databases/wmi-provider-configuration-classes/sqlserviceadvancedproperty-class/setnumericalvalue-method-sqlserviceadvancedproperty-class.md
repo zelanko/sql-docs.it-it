@@ -18,10 +18,10 @@ ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e93cfbb28276b15906296323539937009213632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659992"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumericalValue (classe SqlServiceAdvancedProperty)
@@ -46,7 +46,7 @@ object.SetNumericalValue(NumValue)
 |*NumValue*|Valore **uint32** che specifica il valore della proprietà avanzata.|  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore **UInt32** , che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
+ Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il tipo di valore della proprietà deve essere numerico per potere impostare la proprietà su un valore numerico.  

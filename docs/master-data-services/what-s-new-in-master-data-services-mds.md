@@ -11,10 +11,10 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727786"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
@@ -25,13 +25,13 @@ ms.locfileid: "73727786"
   
  Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
- **Per installare Master Data Services, configurare il database e il sito Web e distribuire i modelli di esempio, vedere Panoramica di** [Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ **Per installare Master Data Services, configurare il database e il sito Web e distribuire i modelli di esempio, vedere** [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Scaricare**  
+ **Scarica**  
   
 -   Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Per i titolari di un account di Azure:  Fare clic **[qui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] cui è già installato.  
+-   Se si ha un account di Azure,  Fare clic **[qui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] cui è già installato.  
   
 ##  <a name="improved-performance"></a>Prestazioni migliorate  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73727786"
   
 ##  <a name="improved-security"></a>Sicurezza migliorata  
   
- La nuova autorizzazione della funzione Utente con privilegi avanzati concede a un utente o a un gruppo le stesse autorizzazioni di amministratore del server della versione precedente di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L'autorizzazione Utente con privilegi avanzati può essere assegnata a più utenti e gruppi. Nella versione precedente l'utente che aveva installato inizialmente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] era l'amministratore del server ed era difficile trasferire questa autorizzazione a un altro utente o gruppo. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+ La nuova autorizzazione della funzione Utente con privilegi avanzati concede a un utente o a un gruppo le stesse autorizzazioni di amministratore del server della versione precedente di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L'autorizzazione Utente con privilegi avanzati può essere assegnata a più utenti e gruppi. Nella versione precedente l'utente che aveva installato inizialmente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] era l'amministratore del server ed era difficile trasferire questa autorizzazione a un altro utente o gruppo. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  Ora l'autorizzazione di amministratore può essere assegnata a un utente in modo esplicito al livello del modello. Ciò significa che l'utente non perderà l'autorizzazione di amministratore se in un secondo momento gli vengono assegnate autorizzazioni nel sottoalbero di modello, ad esempio per il livello di entità.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "73727786"
   
 ## <a name="improved-troubleshooting"></a>Risoluzione dei problemi migliorata  
   
- In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono state aggiunte funzionalità per migliorare il debug e semplificare la risoluzione dei problemi. Per altre informazioni, vedere [Traccia &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sono state aggiunte funzionalità per migliorare il debug e semplificare la risoluzione dei problemi. Per altre informazioni, vedere [Traccia &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## <a name="improved-manageability"></a>Gestione migliorata  
   
@@ -130,10 +130,10 @@ ms.locfileid: "73727786"
   
 -   [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [&#40;di sicurezza Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>Miglioramenti alle regole business
- **Gestisci regole business (Componente aggiuntivo MDS per Excel)**  
+ **Gestire le regole business (componente aggiuntivo MDS per Excel)**  
   
  Nel componente aggiuntivo Master Data Services per Excel è possibile gestire le regole business, ad esempio crearle e modificarle. Le regole business vengono usate per convalidare i dati.  
  
@@ -141,11 +141,11 @@ ms.locfileid: "73727786"
   
  È possibile applicare gli script SQL definiti dall'utente come estensione delle azioni e delle condizioni della regola business. Le funzioni SQL possono essere usate come condizioni. Le stored procedure SQL possono essere usate come azioni. Per altre informazioni, vedere [Estensione delle regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md). 
  
- **Esperienza di gestione delle regole business riprogettata**  
+ **Nuova progettazione dell'esperienza di gestione delle regole business**  
   
  La gestione delle regole business in MDS è stata completamente riprogettata per migliorare l'esperienza degli utenti. Per altre informazioni su questa funzionalità, vedere [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
- **Funzionalità di gestione delle regole business rimosse dalla Componente aggiuntivo MDS per Excel**  
+ **Funzionalità di gestione delle regole business rimossa dal componente aggiuntivo MDS per Excel**  
   
  La funzionalità di gestione delle regole business è stata rimossa dal componente aggiuntivo MDS per Excel perché è stata introdotta una nuova progettazione.    
 
@@ -165,7 +165,7 @@ ms.locfileid: "73727786"
  
  **Modificare le relazioni molti-a-molti nelle gerarchie derivate**  
   
- È possibile modificare la relazione molti-a-molti cambiando i membri dell'entità di mapping. Per altre informazioni, vedere [Mostrare le relazioni molti-a-molti nelle gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
+ È possibile modificare la relazione molti-a-molti cambiando i membri dell'entità di mapping. Per ulteriori informazioni, vedere la pagina relativa alla [visualizzazione delle relazioni molti-a-molti nelle gerarchie Derivate &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
  **Esperienza di gestione delle gerarchie derivate migliorata**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "73727786"
   
  Per migliorare le prestazioni delle query, è possibile creare un indice non cluster in un attributo (indice singolo) o in un elenco di attributi (indice composto) in un'entità. Per altre informazioni, vedere [Indice personalizzato &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
-  **Filtri per attributi**  
+  **Filtri di attributo**  
   
  Per un attributo basato su dominio di un membro foglia, è possibile usare un attributo padre di filtro per limitare i valori consentiti per l'attributo basato su dominio. Per altre informazioni, vedere [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
  
@@ -189,7 +189,7 @@ ms.locfileid: "73727786"
   
  È possibile condividere i dati delle entità tra i vari modelli creando una relazione di sincronizzazione delle entità. Per altre informazioni, vedere [Relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md).  
   
- **Elimina membri eliminati temporaneamente**  
+ **Rimuovere i membri eliminati temporaneamente**  
   
  Ora è possibile rimuovere (eliminare definitivamente) tutti i membri eliminati temporaneamente nella versione di un modello. Con l'eliminazione, un membro viene solo disattivato o eliminato temporaneamente. Per altre informazioni, vedere [Ripulire i membri di versione &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md).  
  
@@ -205,9 +205,9 @@ ms.locfileid: "73727786"
   
  **Insiemi di modifiche**  
   
- È possibile usare gli insiemi di modifiche per salvare, visualizzare e modificare le modifiche in sospeso di un'entità. Se l'entità richiede l'approvazione delle modifiche, è necessario salvare le modifiche in sospeso in un insieme di modifiche e inviarle all'amministratore per l'approvazione. Per altre informazioni, vedere [Insiemi di modifiche &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
+ È possibile usare gli insiemi di modifiche per salvare, visualizzare e modificare le modifiche in sospeso di un'entità. Se l'entità richiede l'approvazione delle modifiche, è necessario salvare le modifiche in sospeso in un insieme di modifiche e inviarle all'amministratore per l'approvazione. Per ulteriori informazioni, vedere [insiemi di modifiche &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
- **Modificare la posta elettronica e la gestione del set di modifiche**  
+ **Gestione e notifiche tramite posta elettronica per l'insieme di modifiche**  
   
  In questa versione è possibile visualizzare e gestire tutte le modifiche in base al modello e alla versione. È anche possibile ricevere notifiche tramite posta elettronica ogni volta che viene modificato lo stato di un insieme di modifiche per un'entità che richiede l'approvazione. Per altre informazioni, vedere [Gestire gli insiemi di modifiche &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) e [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
   
@@ -217,13 +217,13 @@ ms.locfileid: "73727786"
  
 ## <a name="tool-and-sample-improvements"></a>Miglioramenti agli strumenti e agli esempi 
   
- **Salvare o aprire file di query in Componente aggiuntivo MDS per Excel**  
+ **Salvare o aprire file di query nel componente aggiuntivo MDS per Excel**  
   
  Dalla pagina Entity Explorer è possibile fare clic su **Excel** per salvare i file di query di collegamento. In alternativa, è possibile aprire il file di query archiviato nel computer nel componente aggiuntivo MDS per Excel. Il file salvato può essere aperto con l'applicazione QueryOpener. Per altre informazioni, vedere [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
   
  Il file di query contiene i filtri e le informazioni di gerarchia recuperate nella pagina di Explorer.  
    
- **Pacchetti di distribuzione del modello di esempio aggiornati**  
+ **Pacchetti di distribuzione per i modelli di esempio aggiornati**  
   
  I pacchetti di esempio sono stati aggiornati per supportare nuovi scenari. Per altre informazioni, vedere [Esempi: pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
@@ -233,5 +233,5 @@ ms.locfileid: "73727786"
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di Master Data Services e Data Quality Services supportate dalle edizioni di SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Funzionalità di Master Data Services deprecate](../master-data-services/deprecated-master-data-services-features.md)  
- [Funzionalità di Master Data Services sospese](../master-data-services/discontinued-master-data-services-features.md)
+ [Funzionalità deprecate di Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
+ [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)

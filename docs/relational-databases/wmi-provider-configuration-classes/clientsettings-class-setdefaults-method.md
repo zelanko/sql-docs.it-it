@@ -18,10 +18,10 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657630"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings - Metodo SetDefaults
@@ -43,10 +43,10 @@ object.SetDefaults(OverwriteAll)
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|*OverwriteAll*|Un valore booleano che specifica se sovrascrivere valori esistenti sull'istanza del client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** per sovrascrivere i dati esistenti; **false** se i dati esistenti non devono essere sovrascritti.|  
+|*OverwriteAll*|Un valore booleano che specifica se sovrascrivere valori esistenti sull'istanza del client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** per sovrascrivere dati esistenti; **false** se non devono essere sovrascritti dati esistenti.|  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore **UInt32** , che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
+ Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
 ## <a name="remarks"></a>Osservazioni  
   

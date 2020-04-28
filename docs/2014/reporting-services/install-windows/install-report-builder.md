@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637839"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installare la versione autonoma di Generatore report (Generatore report)
@@ -109,11 +109,11 @@ ms.locfileid: "73637839"
   
 2.  Fare clic su **pacchetto x86**.  
   
-3.  Fare clic su Save.  
+3.  Fare clic su Salva.  
   
 4.  Facoltativamente, passare al percorso in cui salvare, verificare che l'opzione **Salva con nome** sia **Windows Installer pacchetto**, quindi fare clic su **Salva**.  
   
-5.  Fare clic sul menu **Start** e scegliere **Esegui**.  
+5.  Fare clic sul pulsante **Start**, quindi scegliere **Esegui**.  
   
 6.  Nella casella di testo Apri digitare `cmd.`  
   

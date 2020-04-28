@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637829"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
@@ -155,14 +155,13 @@ ms.locfileid: "73637829"
  In alcuni casi il salvataggio di dati nelle destinazioni potrebbe richiedere tempi più lunghi di quelli previsti. Per stabilire se ciò è dovuto a un'elaborazione lenta dei dati nella destinazione, è possibile sostituire temporaneamente la destinazione con una trasformazione Conteggio righe. Se la velocità effettiva risulta notevolmente migliorata, è probabile che la causa delle prestazioni lente sia la destinazione in cui vengono caricati i dati.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Analisi delle informazioni nella scheda Stato  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in Progettazione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** sono elencati i contenitori e le attività in ordine di esecuzione, nonché l'ora di inizio e di fine, gli avvisi e i messaggi di errore per ogni contenitore e attività, inclusi quelli relativi al pacchetto stesso. Sono inoltre elencati i componenti del flusso di dati in ordine di esecuzione, nonché informazioni sullo stato, visualizzato in forma di percentuale di completamento, e il numero di righe elaborate.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in Progettazione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** sono elencati i contenitori e le attività in ordine di esecuzione, nonché l'ora di inizio e di fine, gli avvisi e i messaggi di errore per ogni contenitore e attività, inclusi quelli relativi al pacchetto stesso. Sono inoltre elencati i componenti del flusso di dati in ordine di esecuzione, nonché informazioni sullo stato, visualizzato in forma di percentuale di completamento, e il numero di righe elaborate.  
   
  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** . La disabilitazione del report di stato consente di migliorare le prestazioni durante l'esecuzione di un pacchetto complesso in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Ordinare i dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
@@ -173,7 +172,7 @@ ms.locfileid: "73637829"
   
 -   Articolo tecnico sull' [aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)su sqlcat.com  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com.  
   
 -   Articolo tecnico relativo al [caricamento di 1 TB in 30 minuti con SSIS](https://go.microsoft.com/fwlink/?LinkId=220817), disponibile su msdn.microsoft.com  
   
@@ -198,7 +197,7 @@ ms.locfileid: "73637829"
 -   Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Strumenti per la risoluzione dei problemi per lo sviluppo di pacchetti](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

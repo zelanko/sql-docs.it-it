@@ -11,10 +11,10 @@ ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728015"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Insiemi di modifiche e approvazione (Componente aggiuntivo MDS per Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "73728015"
 
   Nel componente aggiuntivo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per Excel è possibile salvare le modifiche in sospeso a un'entità in un insieme di modifiche. È possibile applicare un insieme di modifiche esistente per visualizzare e cambiare le modifiche in sospeso ed eseguire il commit di un insieme di modifiche esistente.  
   
- Se l'entità richiede l'approvazione delle modifiche, è necessario salvare le modifiche in sospeso in un insieme di modifiche e inviarle per l'approvazione. Per ulteriori informazioni, vedere [approvazione obbligatoria &#40;Master Data Services&#41;](../../master-data-services/approval-required-master-data-services.md)  
+ Se l'entità richiede l'approvazione delle modifiche, è necessario salvare le modifiche in sospeso in un insieme di modifiche e inviarle per l'approvazione. Per altre informazioni, vedere [Approvazione necessaria &#40;Master Data Services&#41;](../../master-data-services/approval-required-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Insiemi di modifiche &#40;Master Data Services&#41;](../../master-data-services/changesets-master-data-services.md)  

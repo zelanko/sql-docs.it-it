@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8c20e52eadb614418b5de8a8b2512ccd1ecd4e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72890524"
 ---
 # <a name="dmx-statements---data-definition"></a>Istruzioni DMX - Definizione dei dati 
@@ -22,17 +22,17 @@ ms.locfileid: "72890524"
   
 |.|Descrizione|  
 |---------------|-----------------|  
-|[CREA STRUTTURA DI DATA MINING &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Crea una nuova struttura di data mining nel database.|  
+|[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Crea una nuova struttura di data mining nel database.|  
 |[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)|Aggiunge un modello di data mining a una struttura di data mining esistente.|  
 |[CREAZIONE DI UN MODELLO DI DATA MINING &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)|Crea una nuova struttura di data mining e un nuovo modello di data mining nel database.|  
-|[ELIMINA MODELLO DI DATA MINING &#40;DMX&#41;](../dmx/drop-mining-model-dmx.md)|Elimina un modello di data mining dal database.|  
+|[DROP MINING MODEL &#40;DMX&#41;](../dmx/drop-mining-model-dmx.md)|Elimina un modello di data mining dal database.|  
 |[ELIMINA STRUTTURA DI DATA MINING &#40;DMX&#41;](../dmx/drop-mining-structure-dmx.md)|Elimina una struttura di data mining dal database.|  
-|[ESPORTA &#40;DMX&#41;](../dmx/export-dmx.md)|Esporta in un file con estensione abf un modello o una struttura di data mining e tutti gli oggetti associati.|  
-|[IMPORTA &#40;DMX&#41;](../dmx/import-dmx.md)|Importa da un file con estensione abf un modello o una struttura di data mining e tutti gli oggetti associati.|  
+|[EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)|Esporta in un file con estensione abf un modello o una struttura di data mining e tutti gli oggetti associati.|  
+|[IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)|Importa da un file con estensione abf un modello o una struttura di data mining e tutti gli oggetti associati.|  
 |[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|Crea una copia di un modello di data mining esistente.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
