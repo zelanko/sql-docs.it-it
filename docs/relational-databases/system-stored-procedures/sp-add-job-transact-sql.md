@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381906"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Se il processo verrà eseguito in uno o più server di destinazione in un ambiente multiserver, utilizzare **sp_apply_job_to_targets** per impostare i server di destinazione o i gruppi di server di destinazione per il processo. Per rimuovere i processi dai server di destinazione o dai gruppi di server di destinazione, utilizzare **sp_remove_job_from_targets**.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** o disporre di uno dei ruoli predefiniti del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Agent seguenti, che risiedono nel database **msdb** :  

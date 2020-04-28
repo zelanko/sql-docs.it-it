@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154507"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Associare un dominio o un dominio composito a dati di riferimento
@@ -32,15 +32,15 @@ ms.locfileid: "70154507"
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  È necessario avere configurato [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) per utilizzare i servizi dati di riferimento. Vedere [Configurare DQS per l'uso di dati di riferimento](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 #### <a name="permissions"></a>Autorizzazioni  
  Per eseguire il mapping dei domini ai dati di riferimento, è necessario disporre del ruolo dqs_kb_editor nel database DQS_MAIN.  
   
-##  <a name="Map"></a>Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
+##  <a name="map-domains-to-reference-data-from-melissa-data"></a><a name="Map"></a>Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -71,17 +71,17 @@ ms.locfileid: "70154507"
   
 9. Si tornerà alla scheda **dati di riferimento** . Nell'area **Impostazioni provider** modificare i valori nelle caselle seguenti, se necessario:  
   
-    -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno eseguite automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
+    -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno effettuate automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
   
-    -   **Candidati suggeriti**: numero di candidati suggeriti da visualizzare dal servizio dati di riferimento.  
+    -   **Candidati suggeriti**: numero di candidati suggeriti da visualizzare nel servizio dati di riferimento.  
   
-    -   **Confidenza min**: i suggerimenti del servizio dati di riferimento con livello di confidenza inferiore a questo valore verranno ignorati. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,6 per 60%.  
+    -   **Confidenza min**: i suggerimenti del servizio dati di riferimento con livello di confidenza al di sotto di questo valore verranno ignorati. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,6 per 60%.  
   
 10. Fare clic su **Fine** per pubblicare la Knowledge Base. Al termine della pubblicazione della Knowledge Base verrà visualizzato un messaggio di conferma.  
   
  È ora possibile usare questa Knowledge base per l'attività di pulizia in un progetto Data Quality per standardizzare e pulire gli indirizzi US nei dati di origine in base alle informazioni fornite da Melissa Data tramite Azure Marketplace.  
   
-##  <a name="FollowUp"></a>Completamento: dopo il mapping di un dominio ai dati di riferimento  
+##  <a name="follow-up-after-mapping-a-domain-to-reference-data"></a><a name="FollowUp"></a> Completamento: fasi successive all'esecuzione del mapping di un dominio ai dati di riferimento  
  Creare un progetto Data Quality ed eseguire l'attività di pulizia sui dati di origine che contengono gli indirizzi US confrontandolo con la Knowledge Base creata in questo argomento. Vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Vedere anche  

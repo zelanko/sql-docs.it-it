@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251214"
 ---
 # <a name="relational-query-designer-ssas"></a>Progettazione query relazionale (SSAS)
@@ -38,12 +38,11 @@ ms.locfileid: "72251214"
  La finestra Progettazione query con interfaccia grafica è suddivisa in tre aree. A seconda che la query utilizzi tabelle/viste o stored procedure/funzioni con valori di tabella il layout di Progettazione query cambia.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] non supporta stored procedure o funzioni con valori di tabella.  
+>  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] non supporta stored procedure o funzioni con valori di tabella.  
   
  Nella figura seguente è illustrata la finestra Progettazione query con interfaccia grafica nell'utilizzo con tabelle o viste.  
   
- ![Finestra di progettazione grafica per le query](media/rsqd-relational-graphical.gif "Progettazione query con interfaccia grafica")  
+ ![Progettazione query con interfaccia grafica](media/rsqd-relational-graphical.gif "Progettazione query con interfaccia grafica")  
   
  Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica quando viene utilizzata con stored procedure o funzioni con valori di tabella.  
   
@@ -55,24 +54,24 @@ ms.locfileid: "72251214"
 |----------|--------------|  
 |[Vista di database](#DatabaseView)|Consente di visualizzare gerarchicamente tabelle, viste, stored procedure e funzioni con valori di tabella organizzate in base allo schema del database.|  
 |[Campi selezionati](#SelectedFields)|Visualizza l'elenco dei nomi di campo del database dagli elementi selezionati nel riquadro Vista di database. Questi campi diventano la raccolta dei campi per il set di dati.|  
-|[Parametri della funzione](#FunctionParameters)|Visualizza l'elenco dei parametri di input per stored procedure o funzioni con valori di tabella presenti nel riquadro Vista di database.|  
+|[Parametri di funzione](#FunctionParameters)|Visualizza l'elenco dei parametri di input per stored procedure o funzioni con valori di tabella presenti nel riquadro Vista di database.|  
 |[Relazioni](#Relationships)|Visualizza un elenco delle relazioni derivate dai campi selezionati per tabelle o viste nel riquadro Vista di database o delle relazioni create manualmente.|  
 |[Filtri applicati](#AppliedFilters)|Visualizza l'elenco dei campi e i criteri di filtro per tabelle o viste presenti nella Vista di database.|  
 |[Risultati query](#QueryResults)|Visualizza i dati di esempio per il set di risultati per la query generata automaticamente.|  
   
-###  <a name="DatabaseView"></a>Riquadro Vista di database  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Riquadro Vista di database  
  Nel riquadro Vista di database vengono visualizzati i metadati per gli oggetti di database per cui si dispone delle autorizzazioni per la visualizzazione, determinate dalla connessione all'origine dati e dalle credenziali. Nella visualizzazione gerarchica, gli oggetti di database sono organizzati in base allo schema del database. Espandere il nodo di ogni schema per visualizzare tabelle, viste, stored procedure e funzioni con valori di tabella. Espandere la tabella o la vista per visualizzare le colonne.  
   
-###  <a name="SelectedFields"></a>Riquadro campi selezionati  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a>Riquadro campi selezionati  
  Nel riquadro Campi selezionati sono visualizzati i campi del set di dati e i gruppi e le aggregazioni da includere nella query.  
   
  Vengono visualizzate le opzioni seguenti:  
   
--   **Campi selezionati** Consente di visualizzare i campi del database selezionati per tabelle o viste oppure i parametri di input per stored procedure o funzioni con valori di tabella. I campi visualizzati in questo riquadro diventano la raccolta dei campi per il set di dati.  
+-   **Campi selezionati** Visualizza i campi del database selezionati per tabelle o viste oppure i parametri di input per stored procedure o funzioni con valori di tabella. I campi visualizzati in questo riquadro diventano la raccolta dei campi per il set di dati.  
   
      Utilizzare il riquadro dei dati del report per visualizzare la raccolta di campi di un set di dati.  
   
--   **Raggruppamento e aggregazione** Consente di disabilitare l'utilizzo del raggruppamento e delle aggregazioni nella query. Se la funzionalità in questione viene disabilitata dopo avere aggiunto raggruppamento e aggregazioni, questi vengono rimossi. Il testo **(nessuno)** indica che non vengono usati raggruppamenti e aggregazioni. Se questa funzionalità viene riattivata, il raggruppamento e le aggregazioni precedenti vengono ripristinati.  
+-   **Raggruppa e aggrega** Attiva e disattiva l'uso del raggruppamento e delle aggregazioni nella query. Se la funzionalità in questione viene disabilitata dopo avere aggiunto raggruppamento e aggregazioni, questi vengono rimossi. Il testo **(nessuno)** indica che non vengono usati raggruppamenti e aggregazioni. Se questa funzionalità viene riattivata, il raggruppamento e le aggregazioni precedenti vengono ripristinati.  
   
 -   **Elimina campo** Elimina il campo selezionato.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "72251214"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] USA [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] USA [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
- Per altre informazioni su [!INCLUDE[tsql](../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella Documentazione online[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ di ](https://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com.  
+ Per altre informazioni su [!INCLUDE[tsql](../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di  sul sito msdn.microsoft.com.  
   
  Nella tabella seguente sono elencate le aggregazioni per le quali vengono fornite brevi descrizioni.  
   
@@ -108,24 +107,24 @@ ms.locfileid: "72251214"
 |Var Distinct|Restituisce varianze statistiche univoche. Implementa una combinazione dell'aggregazione VAR e della parola chiave DISTINCT.|  
 |VarP Distinct|Restituisce varianze statistiche univoche. Implementa una combinazione dell'aggregazione VARP e della parola chiave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a>Riquadro parametri funzione  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Riquadro Parametri di funzione  
  Nel riquadro Parametri di funzione vengono visualizzati i parametri per una stored procedure o una funzione con valori di tabella. Vengono visualizzate le colonne seguenti:  
   
--   **Nome parametro** Consente di visualizzare il nome del parametro definito dall'stored procedure o dalla funzione con valori di tabella.  
+-   **Nome parametro** Visualizza il nome del parametro definito dalla stored procedure o dalla funzione con valori di tabella.  
   
--   **Valore** di Valore da utilizzare per il parametro quando la query viene eseguita per recuperare i dati da visualizzare nel riquadro risultati query in fase di progettazione. Questo valore non è utilizzato in fase di esecuzione.  
+-   **Valore** Valore da usare per il parametro quando la query viene eseguita per recuperare dati da visualizzare nel riquadro Risultati query in fase di progettazione. Questo valore non è utilizzato in fase di esecuzione.  
   
-###  <a name="Relationships"></a>Riquadro relazioni  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Riquadro Relazioni  
  Il riquadro Relazioni visualizza le relazioni di join. Le relazioni possono essere rilevate automaticamente dalle relazioni di chiave esterna recuperate dai metadati del database o possono essere create manualmente.  
   
  Vengono visualizzate le opzioni seguenti:  
   
--   **Rilevamento automatico** Alterna la funzionalità di rilevamento automatico che crea automaticamente le relazioni tra le tabelle. Se il rilevamento automatico è abilitato, Progettazione query crea relazioni dalle chiavi esterne delle tabelle. In caso contrario, è necessario creare le relazioni manualmente. Quando si selezionano tabelle nel riquadro **Vista di database** , la funzione di rilevamento automatico tenta di creare relazioni. Se si abilita il rilevamento automatico dopo avere creato manualmente join, tali join verranno rimossi.  
+-   **Rilevamento automatico** Attiva e disattiva la funzionalità di rilevamento automatico che crea automaticamente le relazioni tra tabelle. Se il rilevamento automatico è abilitato, Progettazione query crea relazioni dalle chiavi esterne delle tabelle. In caso contrario, è necessario creare le relazioni manualmente. Quando si selezionano tabelle nel riquadro **Vista di database** , la funzione di rilevamento automatico tenta di creare relazioni. Se si abilita il rilevamento automatico dopo avere creato manualmente join, tali join verranno rimossi.  
   
     > [!IMPORTANT]  
     >  Se vengono usati con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , i metadati necessari a creare join non vengono forniti e non è possibile rilevare le relazioni automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
   
--   **Aggiungi relazione** Aggiunge una relazione all'elenco di **relazioni** .  
+-   **Aggiungi relazione** Aggiunge una relazione all'elenco **Relazione** .  
   
      Se il rilevamento automatico è abilitato, le tabelle, le cui colonne vengono usate nella query, vengono aggiunte automaticamente all'elenco **Relazione** . Quando il rilevamento automatico identifica la relazione tra due tabelle, una tabella viene aggiunta alla colonna **Tabella a sinistra** , l'altra alla colonna **Tabella a destra** e viene creato un inner join tra di esse. Ogni relazione genera una clausola JOIN nella query. Se le tabelle non sono correlate, vengono tutte elencate nella colonna **Tabella a sinistra** e la colonna **Tipo di join** indica che non sono correlate ad altre tabelle. Quando il rilevamento automatico è abilitato, non è possibile aggiungere manualmente relazioni tra le tabelle identificate da tale funzionalità come non correlate.  
   
@@ -137,36 +136,36 @@ ms.locfileid: "72251214"
   
      Se a entrambe le tabelle di una relazione viene fatto riferimento da una relazione precedente, la relazione non genera una clausola join separata. Viene invece aggiunta una condizione di join alla clausola join generata per la relazione precedente. Il tipo di join viene derivato dalla relazione precedente che faceva riferimento alle stesse tabelle.  
   
--   **Modifica campi** Apre la finestra di dialogo **modifica campi correlati** in cui è possibile aggiungere e modificare le relazioni tra tabelle. È possibile scegliere i campi di cui creare un join nelle tabelle a destra e a sinistra. È possibile creare un join di più campi delle tabelle a sinistra e a destra per specificare più condizioni di join in una relazione. I due campi che uniscono in join le tabelle a sinistra e a destra non devono presentare lo stesso nome. I campi di join devono presentare tipi di dati compatibili.  
+-   **Modifica campi** Apre la finestra di dialogo **Modifica campi correlati** in cui è possibile aggiungere e modificare le relazioni tra tabelle. È possibile scegliere i campi di cui creare un join nelle tabelle a destra e a sinistra. È possibile creare un join di più campi delle tabelle a sinistra e a destra per specificare più condizioni di join in una relazione. I due campi che uniscono in join le tabelle a sinistra e a destra non devono presentare lo stesso nome. I campi di join devono presentare tipi di dati compatibili.  
   
 -   **Elimina relazione**  Elimina la relazione selezionata **.**  
   
--   **Sposta su** e **Sposta giù** sposta le relazioni verso l'alto o verso il basso nell'elenco di **relazioni** . La sequenza di inserimento delle relazioni nella query può avere un impatto sui risultati della query. Le relazioni vengono aggiunte alla query nell'ordine in cui sono visualizzate nell'elenco **Relazione** .  
+-   **Sposta su** e **Sposta giù** Consentono di spostare le relazioni verso l'alto o il basso nell'elenco **Relazione** . La sequenza di inserimento delle relazioni nella query può avere un impatto sui risultati della query. Le relazioni vengono aggiunte alla query nell'ordine in cui sono visualizzate nell'elenco **Relazione** .  
   
  Vengono visualizzate le colonne seguenti:  
   
--   **Tabella a sinistra** Consente di visualizzare il nome della prima tabella che fa parte di una relazione di join.  
+-   **Tabella a sinistra** Visualizza il nome della prima tabella che fa parte di una relazione di join.  
   
--   **Tipo di join** Consente di visualizzare il tipo di istruzione SQL JOIN utilizzata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni su tipi di JOIN, vedere "Nozioni fondamentali sui join" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+-   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni su tipi di JOIN, vedere "Nozioni fondamentali sui join" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
--   **Tabella a destra** Consente di visualizzare il nome della seconda tabella nella relazione di join.  
+-   **Tabella a destra** Visualizza il nome della seconda tabella nella relazione di join.  
   
--   **Campi join** Elenca le coppie di campi Uniti, se una relazione presenta più condizioni di join, le coppie di campi Uniti sono separate da virgole (,).  
+-   **Campi di join** Elenca le coppie di campi di join. Se una relazione presenta più condizioni di join, le coppie di campi di join sono separate da virgole (,).  
   
-###  <a name="AppliedFilters"></a>Riquadro filtri applicati  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Riquadro Filtri applicati  
  Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro vengono utilizzati per generare una clausola SQL WHERE. Quando si seleziona l'opzione del parametro, viene creato automaticamente un parametro.  
   
  Vengono visualizzate le colonne seguenti:  
   
--   **Nome campo** Consente di visualizzare il nome del campo a cui applicare i criteri.  
+-   **Nome campo** Visualizza il nome del campo al quale applicare i criteri.  
   
--   **Operatore** di Consente di visualizzare l'operazione da utilizzare nell'espressione di filtro.  
+-   **Operatore** Visualizza l'operazione da usare nell'espressione di filtro.  
   
--   **Valore** di Consente di visualizzare il valore da utilizzare nell'espressione di filtro.  
+-   **Valore** Visualizza il valore da usare nell'espressione di filtro.  
   
--   **Parametro** di Consente di visualizzare l'opzione per l'aggiunta di un parametro di query alla query.  
+-   **Parametro** Visualizza l'opzione per aggiungere un parametro di query alla query.  
   
-###  <a name="QueryResults"></a>Riquadro risultati query  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Riquadro Risultati query  
  Nel riquadro Risultati query vengono visualizzati i risultati della query generata automaticamente in base alle selezioni negli altri riquadri. Le colonne nel set di risultati sono costituite dai campi che si specificano nel riquadro Campi selezionati e i dati di riga sono limitati dai filtri che si specificano nel riquadro Filtri applicati.  
   
  Questi dati rappresentano i valori dell'origine dati al momento dell'esecuzione della query.  
@@ -176,11 +175,11 @@ ms.locfileid: "72251214"
 ### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  La barra degli strumenti della finestra Progettazione query con interfaccia grafica dispone dei pulsanti seguenti per specificare o visualizzare i risultati di una query.  
   
-|Pulsante|Descrizione|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare alla finestra Progettazione query basata su testo per visualizzare la query generata automaticamente o per modificare la query.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati i tipi di file con estensione sql e rdl.|  
-|**Eseguire la query**|Consente di eseguire la query. Il set di risultati viene visualizzato nel riquadro Risultati query.|  
+|**Esegui query**|Consente di eseguire la query. Il set di risultati viene visualizzato nel riquadro Risultati query.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Informazioni sulle query generate automaticamente  
  Quando nel riquadro Vista di database si selezionano tabelle e colonne o stored procedure e viste, Progettazione query recupera le relazioni di chiave esterna e di chiave primaria sottostanti dallo schema del database. Grazie all'analisi di queste relazioni, Progettazione query rileva le relazioni tra due tabelle e aggiunge join alla query. È quindi possibile modificare la query aggiungendo gruppi e aggregazioni, aggiungendo o modificando relazioni e aggiungendo filtri. Per visualizzare il testo della query che mostra le colonne dalle quali recuperare i dati, i join tra tabelle e i gruppi o le aggregazioni, fare clic su **Modifica come testo**.  
@@ -192,18 +191,18 @@ ms.locfileid: "72251214"
   
  Nella finestra Progettazione query basata su testo vengono visualizzati una barra degli strumenti e i due riquadri seguenti:  
   
--   **Query** di Consente di visualizzare il testo della query, il nome della tabella o il nome della stored procedure a seconda del tipo di query. Non tutti i tipi di query sono disponibili per tutti i tipi di origine dati. Il nome tabella, ad esempio, è supportato solo per le origini dati di tipo OLE DB.  
+-   **Query** Mostra il testo della query e il nome della tabella o della stored procedure, a seconda del tipo di query. Non tutti i tipi di query sono disponibili per tutti i tipi di origine dati. Il nome tabella, ad esempio, è supportato solo per le origini dati di tipo OLE DB.  
   
--   **Risultato** Mostra i risultati dell'esecuzione della query in fase di progettazione.  
+-   **Risultato** Consente di visualizzare i risultati della query eseguita in fase di progettazione.  
   
 ### <a name="text-based-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query basata su testo  
  La finestra Progettazione query basata su testo include una sola barra degli strumenti per tutti i tipi di comandi. Nella tabella seguente sono elencati tutti i pulsanti contenuti nella barra degli strumenti con la rispettiva funzione.  
   
-|Pulsante|Descrizione|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|  
-|![Eseguire la query](media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
+|![Eseguire la query](media/rsqdicon-run.gif "Eseguire la query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
 |**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Si noti che se un stored procedure restituisce più di un set di risultati, per popolare il set di dati viene utilizzato solo il primo set di risultati. Si noti anche che <br />                      **TableDirect** è disponibile solo per il tipo di origine dati OLE DB.|  
   
 #### <a name="command-type-text"></a>Tipo di comando Text  

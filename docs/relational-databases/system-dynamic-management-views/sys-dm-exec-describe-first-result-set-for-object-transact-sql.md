@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199339"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argomenti  
  *\@object_id*  
- Oggetto @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di [!INCLUDE[tsql](../../includes/tsql-md.md)] un trigger. @object_idè di tipo **int**.  
+ Oggetto @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di [!INCLUDE[tsql](../../includes/tsql-md.md)] un trigger. @object_id è di tipo **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationè di tipo **bit**. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Restituisce informazioni sulla tabella di origine e colonne chiave aggiuntive.  
@@ -56,13 +56,13 @@ sys.dm_exec_describe_first_result_set_for_object
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Specifica se la colonna è una colonna aggiuntiva inserita per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
-|**nome**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
+|**name**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
 |**is_nullable**|**bit**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
 |**system_type_id**|**int**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome del tipo di dati. Include gli argomenti (quali lunghezza, precisione, scala) specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
 |**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '**.|  
 |**precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**scala**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
+|**scale**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**collation_name**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
 |**user_type_id**|**int**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**user_type_database**|**sysname**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -94,7 +94,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|Contiene il messaggio sullo stato attuale restituito dalla funzione. Se non si sono verificati errori. la colonna conterrà NULL.|  
 |**error_message**|**nvarchar (4096)**|Contiene il messaggio restituito dalla funzione. La colonna contiene NULL se non si è verificato alcun errore.|  
 |**error_type**|**int**|Contiene un numero intero che rappresenta l'errore restituito. Viene eseguito il mapping a error_type_desc. Vedere l'elenco nelle osservazioni.|  
-|**error_type_desc**|**nvarchar (60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
+|**error_type_desc**|**nvarchar(60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
@@ -104,7 +104,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |error_type|error_type|Descrizione|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Tutti gli errori che non sono stati descritti.|  
-|2|SINTASSI|Errore di sintassi nel batch.|  
+|2|SYNTAX|Errore di sintassi nel batch.|  
 |3|CONFLICTING_RESULTS|Impossibile determinare il risultato a causa di un conflitto tra due possibili prime istruzioni.|  
 |4|DYNAMIC_SQL|Impossibile determinare il risultato perché codice SQL dinamico potrebbe potenzialmente restituire il primo risultato.|  
 |5|CLR_PROCEDURE|Impossibile determinare il risultato perché una stored procedure CLR potrebbe potenzialmente restituire il primo risultato.|  

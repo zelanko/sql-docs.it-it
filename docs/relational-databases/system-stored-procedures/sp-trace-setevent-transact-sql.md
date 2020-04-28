@@ -18,10 +18,10 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305295"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
@@ -81,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Indica la rimozione di un elemento dalla cache delle procedure.|  
 |37|SP:Recompile|Indica la ricompilazione di una stored procedure.|  
 |38|SP:CacheHit|Indica l'individuazione di una stored procedure nella cache delle procedure.|  
-|39|Funzionalità deprecate|Funzionalità deprecate|  
+|39|Deprecato|Deprecato|  
 |40|SQL:StmtStarting|Viene generato all'avvio dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |41|SQL:StmtCompleted|Viene generato al completamento dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |42|SP:Starting|Indica l'avvio della stored procedure.|  
@@ -245,11 +245,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |1|**TextData**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|  
 |2|**BinaryData**|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
 |3|**DatabaseID**|ID del database specificato nell'istruzione USE *database* oppure il database predefinito se per una determinata connessione non viene eseguita un'istruzione USE *database* .<br /><br /> È possibile determinare l'ID di un database utilizzando la funzione DB_ID.|  
-|4|**ID transazione**|ID della transazione assegnato dal sistema.|  
+|4|**TransactionID**|ID della transazione assegnato dal sistema.|  
 |5|**LineNumber**|Contiene il numero della riga contenente l'errore. Per gli eventi associati a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , come **SP:StmtStarting**, **LineNumber** contiene il numero di riga dell'istruzione nella stored procedure o nel batch.|  
 |6|**NTUserName**|Nome utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |7|**NTDomainName**|Dominio Windows di appartenenza dell'utente.|  
-|8|**Nome host**|Nome del computer client che ha eseguito la richiesta.|  
+|8|**HostName**|Nome del computer client che ha eseguito la richiesta.|  
 |9|**ClientProcessID**|ID assegnato dal computer client al processo in cui è in esecuzione l'applicazione client.|  
 |10|**ApplicationName**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|  
 |11|**LoginName**|Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del client.|  
@@ -257,36 +257,36 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|**Duration**|Durata dell'evento in microsecondi. Questa colonna di dati non viene popolata dall'evento Hash Warning.|  
 |14|**StartTime**|Ora di inizio dell'evento, se disponibile.|  
 |15|**EndTime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi di evento di avvio, ad esempio **SQL: BatchStarting** o **SP: Starting**. Inoltre, non viene popolata dall'evento **Hash Warning** .|  
-|16|**Letture**|Numero di letture logiche del disco eseguite dal server per conto dell'evento. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
-|17|**Scritture**|Numero di scritture fisiche su disco eseguite dal server per conto dell'evento.|  
+|16|**Legge**|Numero di letture logiche del disco eseguite dal server per conto dell'evento. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
+|17|**Scrive**|Numero di scritture fisiche su disco eseguite dal server per conto dell'evento.|  
 |18|**CPU**|Tempo della CPU in millisecondi utilizzato dall'evento.|  
 |19|**Autorizzazioni**|Rappresenta la mappa di bit delle autorizzazioni e viene utilizzata per il controllo di sicurezza.|  
 |20|**Gravità**|Livello di gravità di un'eccezione.|  
 |21|**EventSubClass**|Tipo di sottoclasse di evento. Questa colonna di dati non viene popolata per tutte le classi di evento.|  
 |22|**ObjectID**|ID dell'oggetto assegnato dal sistema.|  
-|23|**Success**|Esito del tentativo di utilizzo delle autorizzazioni; valore utilizzato per il controllo.<br /><br /> **1** = esito positivo**0** = esito negativo|  
+|23|**Operazione completata**|Esito del tentativo di utilizzo delle autorizzazioni; valore utilizzato per il controllo.<br /><br /> **1** = esito positivo**0** = esito negativo|  
 |24|**IndexID**|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|  
 |25|**IntegerData**|Valore integer che dipende dalla classe di evento acquisita nella traccia.|  
 |26|**ServerName**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ovvero *ServerName* o *nomeserver\nomeistanza*, tracciata.|  
 |27|**EventClass**|Tipo di classe di evento che viene registrato.|  
 |28|**ObjectType**|Tipo di oggetto, ad esempio tabella, funzione o stored procedure.|  
 |29|**NestLevel**|Livello di nidificazione in cui viene eseguita la stored procedure. Vedere [@@NESTLEVEL &#40;&#41;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**Stato**|Stato del server in caso di errore.|  
+|30|**State**|Stato del server in caso di errore.|  
 |31|**Error (Errore) (Error (Errore)e)**|Numero di errore.|  
-|32|**Mode**|Modalità del blocco acquisito. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
-|33|**Gestire**|Handle dell'oggetto a cui si fa riferimento nell'evento.|  
+|32|**Modalità**|Modalità del blocco acquisito. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
+|33|**Handle**|Handle dell'oggetto a cui si fa riferimento nell'evento.|  
 |34|**ObjectName**|Nome dell'oggetto a cui si accede.|  
 |35|**DatabaseName**|Nome del database specificato nell'istruzione USE *database* .|  
 |36|**FileName**|Nome logico del nome di file modificato.|  
 |37|**OwnerName**|Nome del proprietario dell'oggetto a cui si fa riferimento.|  
 |38|**RoleName**|Nome del ruolo del database o del server a cui viene applicata un'istruzione.|  
-|39|**Nome**|Nome utente della destinazione di un'azione.|  
+|39|**TargetUserName**|Nome utente della destinazione di un'azione.|  
 |40|**DBUserName**|Nome utente del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del client.|  
 |41|**LoginSid**|ID di sicurezza (SID) dell'utente connesso.|  
 |42|**TargetLoginName**|Nome dell'account di accesso della destinazione di un'azione.|  
 |43|**TargetLoginSid**|SID dell'account di accesso che rappresenta la destinazione di un'azione.|  
-|44|**Autorizzazioni**|Stato delle autorizzazioni a livello di colonna; valore utilizzato per il controllo di sicurezza.|  
-|45|**Nomeservercollegato**|Nome del server collegato.|  
+|44|**ColumnPermissions**|Stato delle autorizzazioni a livello di colonna; valore utilizzato per il controllo di sicurezza.|  
+|45|**LinkedServerName**|Nome del server collegato.|  
 |46|**ProviderName**|Nome del provider OLE DB.|  
 |47|**MethodName**|Nome del metodo OLE DB.|  
 |48|**RowCounts**|Numero di righe nel batch.|  
@@ -298,13 +298,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|Valore GUID che dipende dalla classe di evento acquisita nella traccia.|  
 |55|**IntegerData2**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |56|**ObjectID2**|ID dell'entità o dell'oggetto correlato, se disponibile.|  
-|57|**Tipo**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
+|57|**Type**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |58|**OwnerID**|Tipo di oggetto proprietario del blocco. Solo per gli eventi di blocco.|  
 |59|**ParentName**|Nome dello schema in cui è incluso l'oggetto.|  
 |60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = utente.|  
 |61|**Offset**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|  
 |62|**SourceDatabaseID**|ID del database in cui esiste l'origine dell'oggetto.|  
-|63|**SqlHandle**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
+|63|**SqlHandle**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. Questo valore può essere passato a **sys. dm_exec_sql_text ()** per recuperare il testo SQL associato.|  
 |64|**SessionLoginName**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si esegue la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso **Login1** e si esegue un'istruzione con l'account di accesso **Login2**, **SessionLoginName** indica **Login1**, mentre **LoginName** indica **Login2**. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|  
   
  **[ @on=]** *in*  
@@ -335,7 +335,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|La colonna specificata non è valida.|  
 |9|L'handle di traccia specificato non è valido.|  
 |11|La colonna specificata viene utilizzata internamente e non può essere rimossa.|  
-|13|memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
+|13|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
 |16|Funzione non valida per la traccia.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -358,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys. fn_trace_getinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Guida di riferimento alle classi di evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [SQL Server riferimento alla classe di evento](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

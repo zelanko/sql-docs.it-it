@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782910"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utilizzare il provider PowerShell per eventi estesi
@@ -28,7 +28,7 @@ ms.locfileid: "72782910"
   
 -   In Esplora oggetti espandere il nome dell'istanza, espandere **Gestione**, fare clic con il pulsante destro del mouse su **Eventi estesi**, quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell nel percorso seguente:  
   
-     PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*>  
+     PS SqlServer: \ XEvent\\*nomeserver*\\*NomeIstanza*>  
   
     > [!NOTE]  
     >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni**e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
@@ -106,10 +106,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per creare, modificare o eliminare una sessione di eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md)   
+ [Usare la sessione di system_health](use-the-ssms-xe-profiler.md)   
  [Strumenti degli eventi estesi](extended-events-tools.md)  

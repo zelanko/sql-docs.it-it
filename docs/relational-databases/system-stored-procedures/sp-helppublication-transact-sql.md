@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689045"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|Indica se l'agente snapshot ha generato o meno uno snapshot pronto per l'utilizzo nelle nuove sottoscrizioni. Questo parametro viene definito solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.|  
 |allow_sync_tran|**bit**|Indica se per la pubblicazione sono consentite sottoscrizioni ad aggiornamento immediato.|  
 |autogen_sync_procs|**bit**|Indica se generare automaticamente stored procedure per il supporto di sottoscrizioni ad aggiornamento immediato.|  
-|snapshot_jobid|**binario (16)**|ID dell'attività pianificata.|  
+|snapshot_jobid|**binary(16)**|ID dell'attività pianificata.|  
 |retention|**int**|Quantità di modifiche, espresse in ore, da salvare per la pubblicazione specificata.|  
 |has subscription|**bit**|Indica se esistono sottoscrizioni attive della pubblicazione. **1** indica che la pubblicazione dispone di sottoscrizioni attive e **0** indica che la pubblicazione non dispone di sottoscrizioni.|  
 |allow_queued_tran|**bit**|Specifica se è abilitato o meno l'inserimento in coda delle modifiche apportate nel Sottoscrittore finché non è possibile applicarle al server di pubblicazione. Se è **0**, le modifiche nel Sottoscrittore non vengono accodate.|  
@@ -88,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Specifica il periodo di memorizzazione dei conflitti, espresso in giorni.|  
 |conflict_policy|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = il conflitto viene vinto dal server di pubblicazione.<br /><br /> **2** = il conflitto viene vinto dal Sottoscrittore.<br /><br /> **3** = la sottoscrizione viene reinizializzata.|  
 |queue_type||Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **MSMQ** = utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **SQL** = usato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: il supporto per Accodamento messaggi è stato interrotto.|  
-|backward_comp_level||Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Il valore **1** indica che è pubblicato e il valore **0** indica che non è pubblicato.|  
 |allow_initialize_from_backup|**bit**|Specifica se i Sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. **1** indica che le sottoscrizioni possono essere inizializzate da un backup e **0** indica che non è possibile. Per ulteriori informazioni, vedere [inizializzare una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) di un Sottoscrittore transazionale senza snapshot.|  
 |replicate_ddl|**int**|Indica se per la pubblicazione è supportata la replica dello schema. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  

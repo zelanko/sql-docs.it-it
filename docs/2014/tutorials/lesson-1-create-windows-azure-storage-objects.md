@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176102"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>Lezione 1: Creare gli oggetti di Archiviazione di Azure
+# <a name="lesson-1-create-azure-storage-objects"></a>Lezione 1: Creare oggetti di Archiviazione di Azure
   Prima di creare i backup di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'archiviazione del cloud, è necessario creare prima un account di archiviazione e, successivamente, un contenitore BLOB. Nella lezione 1 vengono illustrati i passaggi per accedere al portale di gestione di Azure, creando un account di archiviazione e un contenitore BLOB.  
   
 ## <a name="create-a-storage-account"></a>Creare un account di archiviazione  
@@ -37,7 +37,7 @@ ms.locfileid: "70176102"
     >  Inoltre, è possibile creare un account di archiviazione a livello di programmazione tramite le API REST. Per altre informazioni, vedere [creare un account di archiviazione](https://go.microsoft.com/fwlink/?LinkId=271928).  
   
 ### <a name="create-a-blob-container"></a>Creare un contenitore BLOB  
- Un contenitore consente di raggruppare un set di BLOB. Tutti i BLOB devono trovarsi in un contenitore. Un account può contenere un numero illimitato di contenitori, tuttavia ne deve contenere almeno uno. In un contenitore può essere archiviato un numero illimitato di BLOB.  
+ Un contenitore fornisce un raggruppamento di un set di BLOB. Tutti i BLOB devono essere inclusi in un contenitore. Un account può contenere un numero illimitato di contenitori, tuttavia ne deve contenere almeno uno. In un contenitore è possibile archiviare un numero illimitato di BLOB.  
   
  Per creare un contenitore, attenersi ai passaggi seguenti:  
   

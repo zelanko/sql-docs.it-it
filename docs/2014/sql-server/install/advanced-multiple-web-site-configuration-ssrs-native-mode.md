@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952673"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configurazione avanzata più siti Web (modalità nativa SSRS)
@@ -34,13 +34,13 @@ ms.locfileid: "71952673"
  **Indirizzo IP**  
  Identifica il computer server di report in una rete TCP/IP. I valori validi includono:  
   
--   **Tutti assegnati** specifica che uno degli indirizzi IP assegnati al computer può essere utilizzato in un URL che punta a un'applicazione del server di report. Questo valore include anche i nomi host descrittivi, ad esempio i nomi computer, che possono essere risolti da un DNS in un indirizzo IP assegnato al computer. Si tratta del valore predefinito per un URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Tutti assegnati** : specifica che qualunque indirizzo IP assegnato al computer può essere usato in un URL che punta a un'applicazione del server di report. Questo valore include anche i nomi host descrittivi, ad esempio i nomi computer, che possono essere risolti da un DNS in un indirizzo IP assegnato al computer. Si tratta del valore predefinito per un URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Tutti non assegnati** : specifica che il server di report accetterà qualsiasi richiesta che non abbia una corrispondenza esatta per l'indirizzo IP o il nome host. Non utilizzare questo valore se è già in uso in un'altra applicazione Web. In caso contrario, verrà interrotta l'esecuzione del servizio per l'altra applicazione.  
+-   **Non assegnati** : specifica che il server di report accetterà qualsiasi richiesta per cui non esiste una corrispondenza esatta per l'indirizzo IP o il nome host. Non utilizzare questo valore se è già in uso in un'altra applicazione Web. In caso contrario, verrà interrotta l'esecuzione del servizio per l'altra applicazione.  
   
--   **127.0.0.1** viene usato per accedere a localhost. Tale indirizzo supporta l'amministrazione locale nel computer server di report. Se si seleziona solo questo valore, potranno accedere all'applicazione solo gli utenti connessi localmente al computer server di report.  
+-   **127.0.0.1** : utilizzato per accedere a localhost. Tale indirizzo supporta l'amministrazione locale nel computer server di report. Se si seleziona solo questo valore, potranno accedere all'applicazione solo gli utenti connessi localmente al computer server di report.  
   
--   *Nnn. nnn. nnn. nnn* è l'indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* : indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se si dispone di più schede, verrà visualizzato un indirizzo IP per ognuna. Se si seleziona solo questo valore, l'accesso all'applicazione sarà limitato all'indirizzo IP specificato e a qualsiasi nome host di cui il DNS esegue il mapping all'indirizzo. Non è possibile utilizzare localhost per accedere a un server di report, né utilizzare gli indirizzi IP di altre schede di rete installate nel computer server di report.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "71952673"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurare un URL &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

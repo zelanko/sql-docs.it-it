@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175632"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>Lezione 4: Creare un database in Archiviazione di Azure
@@ -85,7 +85,7 @@ ms.locfileid: "70175632"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Nota:** Se sono presenti riferimenti attivi ai file di dati in un contenitore, qualsiasi tentativo di eliminare le credenziali SQL Server associate avrà esito negativo. Analogamente, se esiste già un lease in un file di database specifico in un BLOB e si desidera eliminarlo, è necessario innanzitutto arrestare il lease nel BLOB. Per interrompere il lease, è possibile usare [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Nota:** Se sono presenti riferimenti attivi ai file di dati in un contenitore, qualsiasi tentativo di eliminare la credenziale associata di SQL Server non riesce. Analogamente, se esiste già un lease in un file di database specifico in un BLOB e si desidera eliminarlo, è necessario innanzitutto arrestare il lease nel BLOB. Per interrompere il lease, è possibile usare [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Con questa nuova funzionalità, è possibile configurare SQL Server in modo che qualsiasi istruzione CREATE DATABASE imposta come valore predefinito un database abilitato al cloud. In altre parole, è possibile impostare i percorsi predefiniti di log e dati nelle proprietà dell'istanza di SQL Server Management Studio Server in modo che ogni volta che si crea un database, tutti i file di database (con estensione MDF e ldf) vengono creati come BLOB di pagine in archiviazione di Azure.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70175632"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
-     Per altre informazioni, vedere [Aggiungere file di dati o file di log a un database](databases/add-data-or-log-files-to-a-database.md).  
+     Per ulteriori informazioni, vedere [Aggiungere file di dati o file di log a un database](databases/add-data-or-log-files-to-a-database.md).  
   
 5.  Mantenere tutti gli altri valori predefiniti.  
   

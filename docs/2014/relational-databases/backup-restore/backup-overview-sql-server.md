@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175991"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "70175991"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a>Componenti e concetti  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>Componenti e concetti  
  eseguire il backup  
  Operazione di copia di dati o record di log da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dal relativo log delle transazioni in un dispositivo di backup, ad esempio un disco, per creare un backup dei dati o del log.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70175991"
  [modello di recupero](recovery-models-sql-server.md)  
  Proprietà del database che controlla la manutenzione del log delle transazioni su un database. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. Il modello di recupero del database ne determina i requisiti di backup e di ripristino.  
   
- [ripristinare](restore-and-recovery-overview-sql-server.md)  
+ [restore](restore-and-recovery-overview-sql-server.md)  
  Processo multifase che copia tutti i dati e le pagine di log da un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un database specificato ed esegue il rollforward di tutte le transazioni registrate nel backup applicando le modifiche registrate in modo da aggiornare i dati.  
   
  **Tipi di backup**  
@@ -74,7 +74,7 @@ ms.locfileid: "70175991"
  backup completo  
  Backup dei dati che include tutti i dati in un database specifico o in un set di filegroup o file, oltre a una parte di log sufficiente al recupero di tali dati.  
   
- [backup del log](transaction-log-backups-sql-server.md)  
+ [backup di log](transaction-log-backups-sql-server.md)  
  Backup dei log delle transazioni che include tutti i record di log di cui non è stato eseguito il backup in un backup di log precedente. (modello di recupero con registrazione completa)  
   
  [backup di file](full-file-backups-sql-server.md)  
@@ -83,7 +83,7 @@ ms.locfileid: "70175991"
  [backup parziale](partial-backups-sql-server.md)  
  Contiene dati provenienti solo da una parte dei filegroup in un database, compresi i dati del filegroup primario, di ogni filegroup con accesso di lettura/scrittura e di eventuali file di sola lettura specificati opzionalmente.  
   
- **Termini e definizioni dei supporti di backup**  
+ **Termini e definizioni relativi ai supporti di backup**  
   
  [dispositivo di backup](backup-devices-sql-server.md)  
  Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio Archiviazione BLOB di Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -103,11 +103,10 @@ ms.locfileid: "70175991"
  [set di supporti con mirroring](mirrored-backup-media-sets-sql-server.md)  
  Più copie (copie mirror) di un set di supporti.  
   
-##  <a name="BackupCompression"></a>Compressione dei backup  
- 
-  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive. I backup compressi possono essere ripristinati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a>Compressione dei backup  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive. I backup compressi possono essere ripristinati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>Limitazioni relative alle operazioni di backup in SQL Server  
+##  <a name="restrictions-on-backup-operations-in-sql-server"></a><a name="Restrictions"></a>Limitazioni relative alle operazioni di backup in SQL Server  
  Il backup può verificarsi mentre il database è online e in uso. Si applicano tuttavia le restrizioni seguenti.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Non è possibile eseguire il backup dei dati offline  
@@ -124,8 +123,7 @@ ms.locfileid: "70175991"
  In genere, un backup del log riesce anche se uno o più file di dati non sono disponibili. Tuttavia, se uno o più file contengono modifiche con registrazione minima delle operazioni bulk apportate nel modello di recupero con registrazione minima delle operazioni bulk, è necessario che tutti i file siano online perché il backup riesca.  
   
 ### <a name="concurrency-restrictions-during-backup"></a>Restrizioni di concorrenza durante il backup  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza un processo di backup online per consentire un backup del database mentre questo è in uso. Durante un backup, è possibile eseguire la maggior parte delle operazioni, ad esempio istruzioni INSERT, UPDATE o DELETE. Tuttavia, se si tenta di avviare un'operazione di backup durante la creazione o l'eliminazione di un file di database, l'operazione verrà rimandata fino al completamento dell'operazione di creazione o di eliminazione, oppure verrà annullata a causa di un timeout.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza un processo di backup online per consentire un backup del database mentre questo è in uso. Durante un backup, è possibile eseguire la maggior parte delle operazioni, ad esempio istruzioni INSERT, UPDATE o DELETE. Tuttavia, se si tenta di avviare un'operazione di backup durante la creazione o l'eliminazione di un file di database, l'operazione verrà rimandata fino al completamento dell'operazione di creazione o di eliminazione, oppure verrà annullata a causa di un timeout.  
   
  Le operazioni che non possono essere eseguite durante un backup del database o del log delle transazioni sono le seguenti:  
   
@@ -137,7 +135,7 @@ ms.locfileid: "70175991"
   
  Se un'operazione di backup si sovrappone a un'operazione di gestione di file o di compattazione, si verifica un conflitto. Indipendentemente dall'operazione in conflitto avviata per prima, la seconda operazione attende il timeout del blocco impostato dalla prima operazione. Il periodo di timeout è controllato da un'impostazione di timeout della sessione. Se il blocco viene rilasciato durante il periodo di timeout, la seconda operazione continua. Se il periodo di timeout scade, la seconda operazione non viene eseguita.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per utilizzare i dispositivi di backup e i supporti di backup**  
   
 -   [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
@@ -148,17 +146,17 @@ ms.locfileid: "70175991"
   
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Impostare la data di scadenza di un &#40;di backup SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Impostazione della data di scadenza di un backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Visualizzare i file di dati e di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Visualizzare i file di dati e i file di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Per creare un backup**  
   
@@ -179,12 +177,12 @@ ms.locfileid: "70175991"
   
 -   [Specifica se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
--   [Utilizzare Resource Governor per limitare l'utilizzo della CPU tramite la compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e ripristino di database di SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Piani di manutenzione](../maintenance-plans/maintenance-plans.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

@@ -18,10 +18,10 @@ ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9c1dfefbc309e9ccc0f170461795c00a117247e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304981"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
@@ -42,13 +42,13 @@ ms.locfileid: "72304981"
 |**last_backup_file**|**nvarchar (500)**|Percorso assoluto del backup del log delle transazioni più recente.|  
 |**last_backup_date**|**datetime**|Data e ora dell'ultima operazione di backup dei log.|  
 |**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** e **sp_help_log_shipping_secondary_primary** utilizzare questa colonna per controllare la visualizzazione delle impostazioni di monitoraggio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in.<br /><br /> 0 = quando si richiama una di queste due stored procedure, l'utente non ha specificato un valore esplicito per ** \@** il parametro monitor_server.<br /><br /> 1 = È stato specificato un valore esplicito.|  
-|**backup_compression**|**tinyint**|Indica se la configurazione per il log shipping esegue l'override del comportamento della compressione dei backup a livello del server.<br /><br /> 0 = disabilitati. I backup del log non vengono mai compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 1 = abilitati. I backup del log vengono sempre compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 2 = usa la configurazione del server per l'opzione di configurazione server per la [visualizzazione o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) . Si tratta del valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.|  
+|**backup_compression**|**tinyint**|Indica se la configurazione per il log shipping esegue l'override del comportamento della compressione dei backup a livello del server.<br /><br /> 0 = disabilitati. I backup del log non vengono mai compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 1 = abilitati. I backup del log vengono sempre compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 2 = usa la configurazione del server per l'opzione di configurazione server per la [visualizzazione o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) . Questo è il valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_primary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

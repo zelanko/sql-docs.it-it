@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174264"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -84,7 +84,7 @@ sp_add_alert [ @name = ] 'name'
 |**0**|nessuno|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
-|**4**|**NET SEND**|  
+|**4**|**net send**|  
   
 `[ @database_name = ] 'database'`Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se il *database*non viene specificato, l'avviso viene attivato indipendentemente dalla posizione in cui si è verificato l'errore. il *database* è di **tipo sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
@@ -103,7 +103,7 @@ sp_add_alert [ @name = ] 'name'
   
 |Componente del formato|Descrizione|  
 |--------------------|-----------------|  
-|*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
+|*Item*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
 |*Confronto*|Uno di questi operatori: >, < o =|  
 |*Valore*|Valore numerico del contatore|  
   
@@ -132,8 +132,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Qualsiasi evento registrato utilizzando **xp_logevent**  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi ed è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi ed è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
   
  Se un avviso non funziona adeguatamente, controllare se:  
   

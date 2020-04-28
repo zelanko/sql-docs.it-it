@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 61402b762b7a6b4d944214d59e187e1457e93f93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155772"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Database di SQL Azure)
@@ -35,10 +35,10 @@ ms.locfileid: "70155772"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|id|**INTERO**|Identificatore dell'impostazione del firewall a livello di database.|  
+|id|**INTEGER**|Identificatore dell'impostazione del firewall a livello di database.|  
 |name|**NVARCHAR (128)**|Il nome scelto per descrivere e distinguere l'impostazione del firewall a livello di database.|  
 |start_ip_address|**VARCHAR (45)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (45)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall. Gli indirizzi IP uguali o minori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: i tentativi di connessione di Azure sono consentiti quando **** sia questo campo che `0.0.0.0`il campo start_ip_address è uguale a.|  
+|end_ip_address|**VARCHAR (45)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall. Gli indirizzi IP uguali o minori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: i tentativi di connessione di Azure sono consentiti quando **start_ip_address** sia questo campo che `0.0.0.0`il campo start_ip_address è uguale a.|  
 |create_date|**DATETIME**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di database.|  
 |modify_date|**DATETIME**|Data e ora UTC in cui è stata modificata per l'ultima volta l'impostazione del firewall a livello di database.|  
   
@@ -49,9 +49,9 @@ ms.locfileid: "70155772"
  Questa vista è disponibile nel database **Master** e in ogni database utente. L'accesso di sola lettura a questa vista è disponibile per tutti gli utenti che dispongono dell'autorizzazione per connettersi al database.  
   
 ## <a name="see-also"></a>Vedere anche
-[sp_set_database_firewall_rule &#40;database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
+[sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
 [sp_delete_database_firewall_rule &#40;database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
-[sp_set_firewall_rule &#40;database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
+[sp_set_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 [sp_delete_firewall_rule &#40;database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
 [sys. firewall_rules &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
 [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     

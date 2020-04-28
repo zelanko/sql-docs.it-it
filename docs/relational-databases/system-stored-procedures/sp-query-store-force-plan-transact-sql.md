@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71207716"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
@@ -78,7 +78,7 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Viste del catalogo di Query Store &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite il Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       

@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304802"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
 |**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuna|  
-|**nome**|**sysname**|Nome categoria|  
+|**name**|**sysname**|Nome della categoria|  
   
  Quando ** \@il suffisso** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
   
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
 |**category_type**|**sysname**|Tipo di categoria: Uno dei sistemi **locali**, **multiserver**o **None**|  
-|**nome**|**sysname**|Nome categoria|  
+|**name**|**sysname**|Nome della categoria|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_help_category** deve essere eseguito dal database **msdb** .  
@@ -88,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
  Se non viene specificato alcun parametro, il set di risultati include informazioni su tutte le categorie dei processi.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   

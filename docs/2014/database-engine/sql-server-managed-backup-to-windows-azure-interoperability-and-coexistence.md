@@ -11,21 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176070"
 ---
-# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Azure: interoperabilità e coesistenza
+# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza
   In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tra cui gruppi di disponibilità AlwaysOn, mirroring del database, piani di manutenzione di backup, log shipping, backup ad hoc, scollegamento del database ed eliminazione del database.  
   
 ### <a name="alwayson-availability-groups"></a>Gruppi di disponibilità AlwaysOn  
  Gruppi di disponibilità AlwaysOn configurate come una soluzione solo Azure supportata per [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Le configurazioni del gruppo di disponibilità AlwaysOn ibride o solo in locale non sono supportate. Per altre informazioni e altre considerazioni, vedere [configurazione di SQL Server backup gestito in Azure per i gruppi di disponibilità](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Mirroring del database  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è supportato solo nel database principale. Se sia il server principale che il server mirror sono configurati per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il database con mirroring viene ignorato e non ne verrà eseguito il backup. Tuttavia, in caso di failover, tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà avviato il processo di backup dopo il completamento del cambio di ruolo da parte del mirror e quest'ultimo è online. I backup verranno archiviati in un nuovo contenitore in questo caso. Se il mirror non è configurato per utilizzare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in caso di failover non verrà eseguito alcun backup. È consigliabile configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sia nel server principale che nel server mirror in modo tale che i backup possano continuare in caso di failover.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è supportato solo nel database principale. Se sia il server principale che il server mirror sono configurati per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il database con mirroring viene ignorato e non ne verrà eseguito il backup. Tuttavia, in caso di failover, tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà avviato il processo di backup dopo il completamento del cambio di ruolo da parte del mirror e quest'ultimo è online. I backup verranno archiviati in un nuovo contenitore in questo caso. Se il mirror non è configurato per utilizzare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in caso di failover non verrà eseguito alcun backup. È consigliabile configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sia nel server principale che nel server mirror in modo tale che i backup possano continuare in caso di failover.  
   
 > [!TIP]  
 >  Se si crea un database con mirroring in un'istanza con le impostazioni predefinite di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], può essere preferibile disabilitare le impostazioni predefinite dell'istanza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in modo da non essere applicate al database con mirroring, e quindi riabilitare le impostazioni predefinite dell'istanza dopo aver configurato il server principale e mirror.  

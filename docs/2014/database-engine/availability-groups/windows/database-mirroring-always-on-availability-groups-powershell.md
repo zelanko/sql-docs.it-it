@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782986"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn (SQL Server PowerShell)
@@ -26,29 +26,28 @@ ms.locfileid: "72782986"
   
  **Contenuto dell'articolo**  
   
--   **Prima di iniziare:**  [sicurezza](#Security)  
+-   **Prima di iniziare**  [Sicurezza](#Security)  
   
 -   **Per creare un endpoint del mirroring del database tramite:**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 > [!IMPORTANT]  
->  L'algoritmo RC4 è deprecato. 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
+>  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per creare un endpoint del mirroring del database**  
   
 1.  Spostarsi sulla directory (`cd`) dell'istanza del server per la quale creare l'endpoint del mirroring del database.  
   
 2.  Utilizzare il cmdlet `New-SqlHadrEndpoint` per creare l'endpoint, quindi utilizzare `Set-SqlHadrEndpoint` per avviare l'endpoint.  
   
-###  <a name="PShellExample"></a> Esempio (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> Esempio (PowerShell)  
  I comandi di PowerShell seguenti creano un endpoint del mirroring del database in un'istanza di SQL Server (*istanza*del*computer*\\). L'endpoint utilizza la porta 5022.  
   
 > [!IMPORTANT]  
@@ -62,12 +61,12 @@ $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\
 Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare un endpoint del mirroring del database**  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   

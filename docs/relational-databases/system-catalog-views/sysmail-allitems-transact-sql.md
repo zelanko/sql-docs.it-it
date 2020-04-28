@@ -18,10 +18,10 @@ ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745458"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "70745458"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta nella coda della posta.|  
 |**profile_id**|**int**|Identificatore del profilo utilizzato per l'invio del messaggio.|  
-|**destinatari**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
+|**recipients**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
 |**Oggetto**|**nvarchar (510)**|Oggetto del messaggio.|  
-|**corpo**|**ntext**|Il corpo del messaggio|  
+|**body**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar (20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
-|**importanza**|**varchar (6)**|Parametro di **importanza** del messaggio.|  
+|**importance**|**varchar (6)**|Parametro di **importanza** del messaggio.|  
 |**sensibilità**|**varchar (12)**|Parametro di **riservatezza** del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
 |**attachment_encoding**|**varchar (20)**|Tipo di allegato del messaggio di posta elettronica.|  
@@ -56,7 +56,7 @@ ms.locfileid: "70745458"
 |**send_request_date**|**datetime**|Data e ora di inserimento del messaggio nella coda della posta.|  
 |**send_request_user**|**sysname**|Utente che ha inviato il messaggio. Corrisponde al contesto utente della procedura di Posta elettronica database e non al campo Da del messaggio.|  
 |**sent_account_id**|**int**|Identificatore dell'account di Posta elettronica database utilizzato per l'invio del messaggio.|  
-|**sent_status**|**varchar (8)**|Stato del messaggio. Valori possibili:<br /><br /> **inviato** : il messaggio di posta elettronica è stato inviato.<br /><br /> non **inviato** -posta elettronica database sta ancora tentando di inviare il messaggio.<br /><br /> nuovo **tentativo** -posta elettronica database non è riuscito a inviare il messaggio ma sta provando a inviarlo di nuovo.<br /><br /> **errore** : posta elettronica database non è stato in grado di inviare il messaggio.|  
+|**sent_status**|**varchar (8)**|Stato del messaggio. I valori possibili sono:<br /><br /> **inviato** : il messaggio di posta elettronica è stato inviato.<br /><br /> non **inviato** -posta elettronica database sta ancora tentando di inviare il messaggio.<br /><br /> nuovo **tentativo** -posta elettronica database non è riuscito a inviare il messaggio ma sta provando a inviarlo di nuovo.<br /><br /> **errore** : posta elettronica database non è stato in grado di inviare il messaggio.|  
 |**sent_date**|**datetime**|Data e ora di invio del messaggio.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  

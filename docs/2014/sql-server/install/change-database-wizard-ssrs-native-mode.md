@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952660"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Procedura guidata Cambia database (modalità nativa SSRS)
@@ -36,12 +36,11 @@ ms.locfileid: "71952660"
  Consente di selezionare l'attività che si desidera eseguire. È possibile creare un nuovo database in modalità nativa o in modalità integrata SharePoint. In alternativa, è possibile selezionare un database del server di report esistente da utilizzare con l'istanza del server di report corrente.  
   
  **Server di database**  
- Consente di specificare il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di che ospita il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto. Se ci si connette a un'istanza denominata, immettere il nome del server nel formato: \< **>\\<*istanza* del server>.  
+ Consente di specificare il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di che ospita il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto. Se ci si connette a un'istanza denominata, immettere il nome del server nel formato: \< *server*>\\<*istanza* del server>.  
   
  Per connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilizzare credenziali che dispongono delle autorizzazioni necessarie per accedere al server e aggiornare le informazioni del database. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza le credenziali di Windows correnti, ma se non si dispone di un account di accesso o di autorizzazioni per il database, è necessario specificare un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è possibile specificare credenziali di Windows diverse. Se si desidera connettersi come utente di Windows diverso, accedere utilizzando il nome utente desiderato, quindi avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Per la connessione a un'istanza remota, è innanzitutto necessario abilitare l'istanza specifica per le connessioni remote. In alcune versioni ed edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni remote non sono abilitate per impostazione predefinita. Per verificare se le connessioni remote sono consentite, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e assicurarsi che i protocolli TCP/IP e Named Pipes siano abilitati. Se l'istanza remota è anche un'istanza denominata, verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia abilitato e in esecuzione nel server di destinazione. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fornisce a Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il numero di porta utilizzato dall'istanza denominata.  
+ Per la connessione a un'istanza remota, è innanzitutto necessario abilitare l'istanza specifica per le connessioni remote. In alcune versioni ed edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni remote non sono abilitate per impostazione predefinita. Per verificare se le connessioni remote sono consentite, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e assicurarsi che i protocolli TCP/IP e Named Pipes siano abilitati. Se l'istanza remota è anche un'istanza denominata, verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia abilitato e in esecuzione nel server di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fornisce a Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il numero di porta utilizzato dall'istanza denominata.  
   
  **Database**  
  Consente di specificare il nome del database del server di report in cui sono archiviati i dati del server. È possibile specificare un database esistente o crearne uno nuovo.  
@@ -71,7 +70,7 @@ ms.locfileid: "71952660"
   
  Se il computer è in un dominio diverso o non trusted, utilizzare un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulla scelta di un account, vedere [configurare una connessione del database del server di Report &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
- **Summary**  
+ **Riepilogo**  
  Verificare le impostazioni prima della configurazione della connessione da parte del programma di installazione.  
   
  **Continua e termina**  

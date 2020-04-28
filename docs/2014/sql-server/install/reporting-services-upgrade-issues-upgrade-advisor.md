@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952065"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Problemi di aggiornamento di Reporting Services (Preparazione aggiornamento)
@@ -34,8 +34,7 @@ ms.locfileid: "71952065"
  Negli argomenti seguenti vengono descritti i problemi noti segnalati da Preparazione aggiornamento e viene illustrato come modificare l'installazione esistente per consentire l'esecuzione di un aggiornamento.  
   
 > [!IMPORTANT]  
->  Per analizzare un'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è necessario aver installato Preparazione aggiornamento nel server di report. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta l'analisi remota.  
+>  Per analizzare un'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è necessario aver installato Preparazione aggiornamento nel server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta l'analisi remota.  
 >   
 >  Per ulteriori informazioni, vedere [installazione di preparazione aggiornamento](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
   

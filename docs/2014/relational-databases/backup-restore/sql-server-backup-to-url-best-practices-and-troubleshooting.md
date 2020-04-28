@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175970"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
@@ -24,7 +24,7 @@ ms.locfileid: "70175970"
   
 -   [Backup e ripristino di SQL Server con il servizio Archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestione dei backup  
  Nell'elenco seguente sono inclusi i consigli generali sulla gestione dei backup:  
@@ -69,7 +69,7 @@ ms.locfileid: "70175970"
   
 -   Verificare il nome dell'account di archiviazione e i valori di chiave. Le informazioni archiviate nelle credenziali devono corrispondere ai valori delle proprietà dell'account di archiviazione di Azure usati nelle operazioni di backup e ripristino.  
   
- **Errori di backup/errori:**  
+ **Errori di backup:**  
   
 -   L'esecuzione di backup paralleli nello stesso BLOB comporta il mancato completamento di uno dei backup con conseguente errore **Inizializzazione non riuscita** .  
   
@@ -102,18 +102,18 @@ ms.locfileid: "70175970"
   
      Se si tenta di nuovo un'istruzione di backup, quest'ultimo potrebbe non essere completato e potrebbe essere visualizzato un errore simile al seguente:  
   
-     **Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: il server remoto ha restituito un errore: (412) attualmente esiste un lease nel BLOB e nella richiesta non è stato specificato alcun ID lease**.  
+     **Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Il server remoto ha restituito un errore: (412) Attualmente esiste un lease nel BLOB ma nella richiesta non è stato specificato alcun ID lease**.  
   
      Se un'istruzione RESTORE viene tentata in un file BLOB di backup con un lease attivo, l'operazione di ripristino non viene completata e viene visualizzato un errore simile al seguente:  
   
-     **Messaggio eccezione: il server remoto ha restituito un errore: (409) conflitto.**  
+     **Messaggio eccezione: Il server remoto ha restituito un errore: (409) Conflitto.**  
   
      Quando si verifica un errore di questo tipo, i file BLOB devono essere eliminati. Per altre informazioni su questo scenario e su come risolvere il problema, vedere [Eliminazione dei file BLOB di backup con lease attivi](deleting-backup-blob-files-with-active-leases.md)  
   
 ## <a name="proxy-errors"></a>Errori del proxy  
  Se si utilizzano server proxy per accedere a Internet, è possibile che si verifichino i problemi indicati di seguito:  
   
- **Limitazione della connessione da server proxy:**  
+ **Limitazione della connessione da parte dei server proxy**  
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server.   Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   

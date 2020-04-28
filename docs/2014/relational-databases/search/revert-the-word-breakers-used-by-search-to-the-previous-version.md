@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874719"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente
@@ -32,7 +32,7 @@ ms.locfileid: "70874719"
   
  Per informazioni generali su word breaker e stemmer, vedere [Configurazione e gestione di word breaker e stemmer per la ricerca](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="overview"></a> Panoramica del ripristino di word breaker e stemmer  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> Panoramica del ripristino di word breaker e stemmer  
  Le istruzioni relative al ripristino di word breaker e stemmer variano a seconda della lingua. Nella tabella seguente vengono riepilogati i 3 set di azioni che potrebbe essere necessario eseguire per ripristinare la versione precedente dei componenti.  
   
 |File corrente|File precedente|Numero di lingue interessate|Azione per i file|Azione per le voci del Registro di sistema|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874719"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> Lingue per le quali il nome file del word breaker corrente e precedente è NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> Lingue per le quali il nome file del word breaker corrente e precedente è NaturalLanguage6.dll  
  Per le lingue elencate nella tabella seguente, il nome file del word breaker corrente e precedente è NaturalLanguage6.dll. Per ripristinare questi componenti, è necessario sovrascrivere NaturalLanguage6.dll con una versione diversa dello stesso file. Non è necessario modificare le voci del Registro di sistema perché per questa versione non sono cambiate.  
   
 > [!WARNING]  
@@ -95,7 +95,7 @@ ms.locfileid: "70874719"
   
  La tabella precedente è ordinata alfabeticamente in base alla colonna Abbreviazione.  
   
-###  <a name="nl6nl6revert"></a> Per ripristinare i componenti precedenti  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> Per ripristinare i componenti precedenti  
   
 1.  Spostarsi sulla cartella Binn descritta in precedenza.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "70874719"
   
 4.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="nl6nl6restore"></a> Per ripristinare i componenti correnti  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> Per ripristinare i componenti correnti  
   
 1.  Spostarsi sul percorso in cui si è eseguito il backup della versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di NaturalLanguage6.dll.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "70874719"
   
 3.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="newnl6"></a> Lingue per le quali il nome file del word breaker precedente è solo NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> Lingue per le quali il nome file del word breaker precedente è solo NaturalLanguage6.dll  
  Per le lingue elencate nella tabella seguente, il nome file del word breaker precedente è diverso da quello della nuova versione. Il nome file precedente è NaturalLanguage6.dll. Per ripristinare la versione precedente, è necessario sovrascrivere la versione corrente di NaturalLanguage6.dll con una versione precedente dello stesso file. È inoltre necessario modificare un set di voci del Registro di sistema per specificare la versione precedente o corrente dei componenti.  
   
 > [!WARNING]  
@@ -139,7 +139,7 @@ ms.locfileid: "70874719"
   
  Utilizzare le istruzioni seguenti con l'elenco di valori nella sezione [Nomi file e valori del Registro di sistema per il ripristino di word breaker e stemmer](#newnl6values).  
   
-###  <a name="newnl6revert"></a> Per ripristinare i componenti precedenti  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> Per ripristinare i componenti precedenti  
   
 1.  Spostarsi sulla cartella Binn descritta in precedenza.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "70874719"
   
 10. Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6restore"></a> Per ripristinare i componenti correnti  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> Per ripristinare i componenti correnti  
   
 1.  Spostarsi sul percorso in cui si è eseguito il backup della versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di NaturalLanguage6.dll.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "70874719"
   
 8.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6values"></a> Nomi file e valori del Registro di sistema per il ripristino di word breaker e stemmer  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> Nomi file e valori del Registro di sistema per il ripristino di word breaker e stemmer  
  Utilizzare l'elenco seguente di nomi file e di voci del Registro di sistema con le istruzioni riportate nella sezione precedente. Utilizzare i valori precedenti per ripristinare la versione precedente o utilizzare i valori correnti per ripristinare la versione corrente dei componenti.  
   
  Gli elementi seguenti sono elencati alfabeticamente in base all'abbreviazione utilizzata per ogni lingua.  
@@ -251,7 +251,7 @@ ms.locfileid: "70874719"
 |CLSID corrente|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |Nome file corrente|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> Lingue per le quali né il nome file precedente del word breaker né quello corrente è NaturalLanguage6.dll  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Lingue per le quali né il nome file precedente del word breaker né quello corrente è NaturalLanguage6.dll  
  Per le lingue elencate nella tabella seguente, i nomi file dei word breaker e degli stemmer precedenti sono diversi da quelli delle nuove versioni. Né il nome file precedente né quello corrente è NaturalLanguage6.dll. Non è necessario sostituire alcun file perché durante l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono copiate entrambe le versioni precedente e corrente dei componenti nella cartella Binn. È tuttavia necessario modificare un set di voci del Registro di sistema per specificare la versione precedente o corrente dei componenti.  
   
  **Elenco delle lingue interessate**  
@@ -269,7 +269,7 @@ ms.locfileid: "70874719"
   
  Utilizzare le istruzioni seguenti con l'elenco di valori nella sezione [Nomi file e valori del Registro di sistema per il ripristino di word breaker e stemmer](#newnewvalues).  
   
-###  <a name="newnewrevert"></a> Per ripristinare i componenti precedenti  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> Per ripristinare i componenti precedenti  
   
 1.  Non rimuovere i file per la versione corrente dei componenti dalla cartella Binn.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "70874719"
   
 7.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewrestore"></a> Per ripristinare i componenti precedenti  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> Per ripristinare i componenti precedenti  
   
 1.  Non rimuovere i file per la versione precedente dei componenti dalla cartella Binn.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "70874719"
   
 7.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewvalues"></a> Nomi file e valori del Registro di sistema per il ripristino di word breaker e stemmer  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> Nomi file e valori del Registro di sistema per il ripristino di word breaker e stemmer  
  Utilizzare l'elenco seguente di nomi file e di voci del Registro di sistema con le istruzioni riportate nella sezione precedente. Utilizzare i valori precedenti per ripristinare la versione precedente o utilizzare i valori correnti per ripristinare la versione corrente dei componenti.  
   
  Gli elementi seguenti sono elencati alfabeticamente in base all'abbreviazione utilizzata per ogni lingua.  

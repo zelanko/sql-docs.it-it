@@ -18,10 +18,10 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251944"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "72251944"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome dell'articolo.|  
-|**tipo**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella.<br /><br /> **32** = stored procedure (solo schema).<br /><br /> **64** = vista o vista indicizzata (solo schema).<br /><br /> **128** = funzione definita dall'utente (solo schema).<br /><br /> **160** = sinonimo (solo schema).|  
-|**ObjID**|**int**|Identificatore dell'oggetto.|  
+|**type**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella.<br /><br /> **32** = stored procedure (solo schema).<br /><br /> **64** = vista o vista indicizzata (solo schema).<br /><br /> **128** = funzione definita dall'utente (solo schema).<br /><br /> **160** = sinonimo (solo schema).|  
+|**objid**|**int**|Identificatore dell'oggetto.|  
 |**sync_objid**|**int**|ID di oggetto della vista che rappresenta il set di dati sincronizzato.|  
 |**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non è una vista; utilizzare tutti gli oggetti di base.<br /><br /> **1** = visualizzazione permanente.<br /><br /> **2** = visualizzazione temporanea.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
@@ -42,7 +42,7 @@ ms.locfileid: "72251944"
 |**pubid**|**uniqueidentifier**|ID della pubblicazione a cui appartiene l'articolo corrente.|  
 |**Nickname**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
 |**column_tracking**|**int**|Indica se il rilevamento a livello di colonna viene implementato per l'articolo.|  
-|**stato**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per la pubblicazione della tabella verrà eseguito alla successiva esecuzione del agente di snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per la pubblicazione della tabella è stato eseguito.<br /><br /> **5** = New_inactive-da aggiungere.<br /><br /> **6** = New_active-da aggiungere.|  
+|**Stato**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per la pubblicazione della tabella verrà eseguito alla successiva esecuzione del agente di snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per la pubblicazione della tabella è stato eseguito.<br /><br /> **5** = New_inactive-da aggiungere.<br /><br /> **6** = New_active-da aggiungere.|  
 |**conflict_table**|**sysname**|Nome della tabella locale che include i record in conflitto per l'articolo corrente. Lo scopo di questa tabella è esclusivamente informativo. Il contenuto può essere modificato o eliminato da routine di risoluzione dei conflitti personalizzate oppure direttamente dall'amministratore.|  
 |**creation_script**|**nvarchar(255)**|Script per la creazione dell'articolo.|  
 |**conflict_script**|**nvarchar(255)**|Script dei conflitti dell'articolo.|  
@@ -59,11 +59,11 @@ ms.locfileid: "72251944"
 |**resolver_clsid**|**nvarchar(50)**|ID del sistema di risoluzione dei conflitti personalizzato.|  
 |**subset_filterclause**|**nvarchar (1000)**|Clausola di filtro per l'articolo.|  
 |**missing_col_count**|**int**|Numero di colonne mancanti.|  
-|**missing_cols**|**varbinary (128)**|Mappa di bit delle colonne mancanti.|  
-|**excluded_cols**|**varbinary (128)**|Mappa di bit delle colonne escluse dall'articolo quando viene inviato al Sottoscrittore.|  
+|**missing_cols**|**varbinary(128)**|Mappa di bit delle colonne mancanti.|  
+|**excluded_cols**|**varbinary(128)**|Mappa di bit delle colonne escluse dall'articolo quando viene inviato al Sottoscrittore.|  
 |**excluded_col_count**|**int**|Numero di colonne escluse.|  
-|**colonne**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|Mappe di bit delle colonne eliminate dalla tabella di origine.|  
+|**colonne**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|Mappe di bit delle colonne eliminate dalla tabella di origine.|  
 |**resolver_info**|**nvarchar(255)**|Archivio per informazioni aggiuntive necessarie per il sistema di risoluzione dei conflitti personalizzato.|  
 |**view_sel_proc**|**nvarchar (290)**|Nome di una stored procedure utilizzata dall'agente di merge per il popolamento iniziale di un articolo in una pubblicazione filtrata in modo dinamico e per l'enumerazione delle righe modificate in qualsiasi pubblicazione filtrata.|  
 |**gen_cur**|**int**|Numero di generazione per modifiche locali della tabella di base di un articolo.|  
@@ -80,7 +80,7 @@ ms.locfileid: "72251944"
 |**upload_options**|**tinyint**|Imposta le restrizioni per gli aggiornamenti eseguiti in un Sottoscrittore con una sottoscrizione client. I possibili valori sono i seguenti.<br /><br /> **0** = non sono previste restrizioni per gli aggiornamenti eseguiti in un Sottoscrittore con una sottoscrizione client. tutte le modifiche vengono caricate nel server di pubblicazione.<br /><br /> **1** = le modifiche sono consentite in un Sottoscrittore con una sottoscrizione client, ma non vengono caricate nel server di pubblicazione.<br /><br /> **2** = le modifiche non sono consentite in un Sottoscrittore con una sottoscrizione client.<br /><br /> Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).|  
 |**published_in_tran_pub**|**bit**|Indica che un articolo in una pubblicazione di tipo merge viene pubblicato anche in una pubblicazione transazionale.<br /><br /> **0** = l'articolo non è pubblicato in un articolo transazionale.<br /><br /> **1** = l'articolo è pubblicato anche in un articolo transazionale.|  
 |**leggero**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|Da aggiungere.|  
 |**delete_tracking**|**bit**|Indica se viene eseguita la replica delle eliminazioni.<br /><br /> **0** = le eliminazioni non vengono replicate<br /><br /> **1** = le eliminazioni vengono replicate, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Quando il valore di *delete_tracking* è **0**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.<br /><br /> Nota: un valore pari a **0** comporta la non convergenza.|  
@@ -96,6 +96,6 @@ ms.locfileid: "72251944"
  [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

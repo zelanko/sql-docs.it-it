@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952175"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chiavi di crittografia (modalità nativa SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "71952175"
  **Backup**  
  Consente di copiare la chiave simmetrica in un file specificato. La chiave simmetrica non viene mai archiviata in testo non crittografato. Per la protezione del file, è necessario digitare una password.  
   
- **Ripristinare**  
+ **Ripristina**  
  Consente di applicare una copia della chiave simmetrica salvata in precedenza al database del server di report. Per sbloccare il file, è necessario specificare la password.  
   
  La copia della chiave simmetrica eseguita in precedenza per l'istanza del server di report a cui si è attualmente connessi viene sovrascritta dalla versione ripristinata. Dopo avere ripristinato la chiave simmetrica, è necessario inizializzare tutti i server di report che utilizzano il database del server di report. Per ulteriori informazioni sull'inizializzazione di server di report, vedere [inizializzare un server di report &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
@@ -69,9 +69,9 @@ ms.locfileid: "71952175"
   
 ## <a name="see-also"></a>Vedere anche  
  [Reporting Services Configuration Manager argomenti della Guida F1 &#40;modalità nativa di SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Inizializzare un server di report &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Eseguire il backup e il ripristino delle chiavi di crittografia Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminare e ricreare le chiavi di crittografia &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

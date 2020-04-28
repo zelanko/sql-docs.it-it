@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154972"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lezione 1: Creazione di una Knowledge Base DQS Suppliers.
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lezione 1: Creazione di una Knowledge Base DQS Suppliers
   In questa lezione verrà creata una Knowledge Base DQS denominata **Suppliers** con le informazioni (metadati) sui dati del fornitore. È possibile utilizzare la Knowledge Base per effettuare attività di pulizia e di corrispondenza nei dati di input del fornitore. Tramite l'attività di pulizia è possibile identificare i dati errati/non validi, correggere i dati errati, proporre correzioni/suggerimenti, standardizzare i dati, nonché arricchire i dati con ulteriori informazioni. Tramite l'attività di corrispondenza è possibile confrontare i dati e identificare in essi i record simili, ma leggermente diversi, al fine di rimuovere i dati duplicati.  
   
  È possibile utilizzare sia processi interattivi sia computerizzati per creare, compilare e gestire una Knowledge Base. Le informazioni in una Knowledge Base sono mantenute in domini, ognuno dei quali è specifico per un campo dati nei dati che si desidera pulire e/o di cui di desidera individuarne le corrispondenze.  

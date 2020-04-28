@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782864"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Rimuovere un database primario da un gruppo di disponibilità (SQL Server)
@@ -41,20 +41,20 @@ ms.locfileid: "72782864"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Completamento:**  [dopo la rimozione di un database di disponibilità da un gruppo di disponibilità](#FollowUp)  
+-   **Completamento:**  [Dopo la rimozione di un database di disponibilità da un gruppo di disponibilità](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti e restrizioni  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Prerequisiti e restrizioni  
   
 -   Questa attività può essere eseguita solo sulle repliche primarie. È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per rimuovere un database di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria del database o dei database da rimuovere ed espandere l'albero del server.  
@@ -73,7 +73,7 @@ ms.locfileid: "72782864"
   
 6.  Nella finestra di dialogo **Rimuovi i database dal gruppo di disponibilità** scegliere **OK**per rimuovere tutti i database elencati. Se non si desidera rimuoverli tutti, scegliere **Annulla**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per rimuovere un database di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -90,7 +90,7 @@ ms.locfileid: "72782864"
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per rimuovere un database di disponibilità**  
   
 1.  Spostarsi nella directory (`cd`) dell'istanza del server che ospita la replica primaria.  
@@ -110,7 +110,7 @@ ms.locfileid: "72782864"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la rimozione di un database di disponibilità da un gruppo di disponibilità  
+##  <a name="follow-up-after-removing-an-availability-database-from-an-availability-group"></a><a name="FollowUp"></a>Completamento: dopo la rimozione di un database di disponibilità da un gruppo di disponibilità  
  La rimozione di un database di disponibilità dal relativo gruppo di disponibilità termina la sincronizzazione dati tra il database primario precedente e i database secondari corrispondenti. Il database primario precedente rimane online. Ogni database secondario corrispondente viene posto nello stato RESTORING.  
   
  A questo punto sono disponibili modi alternativi per gestire un database secondario rimosso:  

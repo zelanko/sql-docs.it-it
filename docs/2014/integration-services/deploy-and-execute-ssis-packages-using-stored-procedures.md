@@ -11,23 +11,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251320"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
   Quando un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
- Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche**.  
+ Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche** .  
   
 > [!TIP]
 >  Ad eccezione di catalog.deploy_project, è possibile generare facilmente le istruzioni Transact-SQL per le stored procedure elencate nella procedura descritta di seguito effettuando le operazioni seguenti:  
 > 
->  1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] espandere il nodo **Cataloghi di Integration Services** in Esplora oggetti e selezionare il pacchetto che si desidera eseguire.  
+>  1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]espandere il nodo **Cataloghi di Integration Services** in Esplora oggetti e selezionare il pacchetto che si desidera eseguire.  
 > 2.  Fare clic con il pulsante destro del mouse sul pacchetto, quindi scegliere **Esegui**.  
-> 3.  In base alle esigenze, impostare i valori dei parametri, le proprietà di gestione connessione e le opzioni nella scheda **Avanzate**, ad esempio il livello di registrazione.  
+> 3.  In base alle esigenze, impostare i valori dei parametri, le proprietà di gestione connessione e le opzioni nella scheda **Avanzate** , ad esempio il livello di registrazione.  
 > 
 >      Per altre informazioni sui livelli di registrazione, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Prima di fare clic su **OK** per eseguire il pacchetto, scegliere **Script**. Transact-SQL viene visualizzato in una finestra dell'editor di query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

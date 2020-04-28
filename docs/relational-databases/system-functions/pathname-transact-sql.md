@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251956"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -148,7 +148,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati BLOB (Binary Large Object) (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Binary Large Object &#40;BLOB&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;&#41;Transact-SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Accesso ai dati FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

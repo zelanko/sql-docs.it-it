@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175981"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
@@ -44,15 +44,15 @@ ms.locfileid: "70175981"
  Il processo di esportazione imposta la versione dell'applicazione livello dati su 1.0.0.0 e la descrizione dell'applicazione livello dati nel file di esportazione su una stringa vuota. Se il database è stato distribuito da un'applicazione livello dati, la definizione dell'applicazione livello dati nel file di esportazione conterrà il nome assegnato all'applicazione livello dati originale, in caso contrario il nome dell'applicazione livello dati verrà impostato sul nome del database.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Un database o un'applicazione livello dati può essere esportata solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
   
  Non è possibile esportare un database contenente oggetti non supportati in un'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'esportazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
-##  <a name="UsingDeployDACWizard"></a>Utilizzo della procedura guidata Esporta applicazione livello dati  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a>Utilizzo della procedura guidata Esporta applicazione livello dati  
  **Per esportare un'applicazione livello dati tramite una procedura guidata**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], locale o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "70175981"
   
     -   [Pagina Introduzione](#Introduction)  
   
-    -   [Pagina impostazioni di esportazione](#Export_settings)  
+    -   [Pagina Impostazioni di esportazione](#Export_settings)  
   
     -   [Pagina Convalida](#Validation)  
   
@@ -77,44 +77,44 @@ ms.locfileid: "70175981"
   
     -   [Pagina Risultati](#Results)  
   
-##  <a name="Introduction"></a> Pagina Introduzione  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la procedura guidata Esporta l'applicazione livello dati.  
   
  **Opzioni**  
   
  **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
- **Avanti** : consente di passare alla pagina **Seleziona pacchetto di applicazione livello dati** .  
+ **Avanti** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati** .  
   
  **Annulla** : Annulla l'operazione e chiude la procedura guidata.  
   
-##  <a name="Export_settings"></a>Pagina impostazioni di esportazione  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a>Pagina impostazioni di esportazione  
  Utilizzare questa pagina per specificare il percorso in cui creare il file BACPAC.  
   
 -   **Salva su disco locale** : crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Salva in Azure** : crea un file BACPAC in un contenitore di Azure. È necessario connettersi a un contenitore Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
+-   **Salva in Azure** : crea un file BACPAC in un contenitore Azure. È necessario connettersi a un contenitore Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
   
  Per specificare un subset di tabelle da esportare, usare l'opzione **Avanzate** .  
   
-##  <a name="Validation"></a>Pagina convalida  
+##  <a name="validation-page"></a><a name="Validation"></a>Pagina convalida  
  Utilizzare la pagina di convalida per esaminare gli eventuali problemi che bloccano l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
   
- Scegliere **Avanti**per continuare.  
+ Per continuare, fare clic su **Avanti**.  
   
-##  <a name="Summary"></a> Pagina Riepilogo  
+##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di esportazione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di esportazione e chiudere la procedura guidata, fare clic su **Annulla**.  
   
-##  <a name="Progress"></a> Pagina Stato  
+##  <a name="progress-page"></a><a name="Progress"></a>Pagina di stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
-##  <a name="Results"></a> Pagina Risultati  
+##  <a name="results-page"></a><a name="Results"></a>Pagina dei risultati  
  In questa pagina viene riportato l'esito positivo o negativo dell'operazione di esportazione, indicante i risultati di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
  Fare clic su **fine** per chiudere la procedura guidata.  
   
-##  <a name="NetApp"></a>Uso di un'applicazione .NET Framework  
- **Per esportare un'applicazione livello dati utilizzando il metodo Export () in un'applicazione .NET Framework.**  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a>Uso di un'applicazione .NET Framework  
+ **Per esportare un'applicazione livello dati con il metodo Export() in un'applicazione .NET Framework.**  
   
  Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   

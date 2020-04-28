@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783001"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurare il backup su repliche di disponibilità (SQL Server)
@@ -35,21 +35,21 @@ ms.locfileid: "72783001"
   
 
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
 |Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per configurare il backup delle repliche secondarie in caso di creazione di un gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare un gruppo di disponibilità o una replica di disponibilità|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per configurare il backup delle repliche secondarie**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata la replica primaria e fare clic sul nome del server per espandere il relativo albero.  
@@ -101,14 +101,14 @@ ms.locfileid: "72783001"
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per configurare il backup delle repliche secondarie**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
   
 2.  Per un nuovo gruppo di disponibilità, usare l'istruzione [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql). Se si modifica un gruppo di disponibilità esistente, usare l'istruzione [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
 
 ### <a name="to-configure-backup-on-secondary-replicas"></a>Per configurare il backup delle repliche secondarie
   
@@ -160,7 +160,7 @@ ms.locfileid: "72783001"
   
 Per configurare e usare il provider di SQL Server PowerShell, vedere [provider SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md) e [ottenere assistenza SQL Server PowerShell](../../../powershell/sql-server-powershell.md).
   
-##  <a name="FollowUp"></a>Completamento: dopo la configurazione del backup su repliche secondarie  
+##  <a name="follow-up-after-configuring-backup-on-secondary-replicas"></a><a name="FollowUp"></a>Completamento: dopo la configurazione del backup su repliche secondarie  
  Per prendere in considerazione le preferenze di backup automatico per un gruppo di disponibilità specifico, in ogni istanza del server in cui è ospitata una replica di disponibilità la cui priorità di backup è maggiore di zero (>0) è necessario generare script dei processi di backup per i database nel gruppo di disponibilità. Per determinare se la replica corrente è la replica di backup preferita, usare la funzione [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) nello script di backup. Se la replica di disponibilità ospitata dall'istanza del server corrente è la replica preferita per i backup, questa funzione restituisce 1. In caso contrario, la funzione restituisce 0. Eseguendo uno script semplice in ogni replica di disponibilità tramite cui viene eseguita una query su questa funzione, è possibile determinare in quale replica deve essere eseguito un processo di backup specificato. Di seguito è riportato un esempio di un tipico frammento di script per un processo di backup:  
   
 ```  
@@ -178,17 +178,17 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 > [!TIP]  
 >  Se si usa la[Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)per creare un processo di backup specifico, il processo includerà automaticamente la logica di scripting che chiama e controlla la funzione **sys.fn_hadr_backup_is_preferred_replica** . Tuttavia, il processo di backup non restituirà il messaggio che indica che non si tratta della replica preferita. Assicurarsi di creare i processi per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità.  
   
-##  <a name="ForInfoAboutBuPref"></a>Per ottenere informazioni sulle impostazioni delle preferenze di backup  
+##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a>Per ottenere informazioni sulle impostazioni delle preferenze di backup  
  Gli elementi seguenti sono utili per ottenere informazioni pertinenti per il backup di una replica secondaria.  
   
-|Visualizza|Informazioni|Colonne pertinenti|  
+|Visualizzazione|Informazioni|Colonne pertinenti|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Indica se la replica corrente è la replica di backup preferita|Non applicabile.|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|preferenza di backup automatico|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|Priorità di backup di una determinata replica di disponibilità|**backup_priority**|  
-|[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Indica se la replica è locale all'istanza del server<br /><br /> Ruolo corrente<br /><br /> Stato operativo<br /><br /> Stato Connesso<br /><br /> Integrità della sincronizzazione di una replica di disponibilità|**is_local**<br /><br /> **Role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
+|[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Indica se la replica è locale all'istanza del server<br /><br /> Ruolo corrente<br /><br /> Stato operativo<br /><br /> Stato Connesso<br /><br /> Integrità della sincronizzazione di una replica di disponibilità|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

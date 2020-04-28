@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71163935"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -35,15 +35,15 @@ ms.locfileid: "71163935"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**classe**|**tinyint**|Identifica la classe dell'elemento per cui esiste l'autorizzazione.<br /><br /> 100 = Server<br /><br /> 101 = Entità server<br /><br /> 105 = Endpoint|  
-|**class_desc**|**nvarchar (60)**|Descrizione della classe per cui esiste l'autorizzazione. Uno dei valori seguenti:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|Descrizione della classe per cui esiste l'autorizzazione. Uno dei valori seguenti:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|ID dell'entità a sicurezza diretta per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza. Nella maggior parte dei casi, si tratta semplicemente dell'ID che si applica a ciò che la classe rappresenta. Negli altri casi, l'interpretazione dei possibili valori è la seguente:<br /><br /> 100 = sempre 0|  
 |**minor_id**|**int**|ID secondario dell'elemento per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza.|  
 |**grantee_principal_id**|**int**|ID dell'entità server alla quale vengono concesse le autorizzazioni.|  
 |**grantor_principal_id**|**int**|ID dell'entità server dell'utente che concede queste autorizzazioni.|  
-|**tipo**|**char (4)**|Tipo di autorizzazione per il server. Per un elenco dei tipi di autorizzazioni, vedere la tabella seguente.|  
+|**type**|**char (4)**|Tipo di autorizzazione per il server. Per un elenco dei tipi di autorizzazioni, vedere la tabella seguente.|  
 |**permission_name**|**nvarchar(128)**|Nome dell'autorizzazione.|  
 |**state**|**char (1)**|Stato dell'autorizzazione:<br /><br /> D = Deny<br /><br /> R = Revoke<br /><br /> G = Grant<br /><br /> W = Grant With Grant Option|  
-|**state_desc**|**nvarchar (60)**|Descrizione dello stato dell'autorizzazione:<br /><br /> NEGA<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state_desc**|**nvarchar(60)**|Descrizione dello stato dell'autorizzazione:<br /><br /> NEGA<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Tipo di autorizzazione|Nome dell'autorizzazione|Entità a protezione diretta a cui si applica|  
 |---------------------|---------------------|--------------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "71163935"
 ## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può visualizzare le proprie autorizzazioni. Per visualizzare le autorizzazioni per altri account di accesso, è richiesta VIEW DEFINITION, ALTER ANY LOGIN o qualsiasi autorizzazione per un account di accesso. Per visualizzare i ruoli del server definiti dall'utente, è richiesta l'autorizzazione ALTER ANY SERVER ROLE o l'appartenenza al ruolo.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità del server.  
@@ -110,6 +110,6 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Oggetti proteggibili](../../relational-databases/security/securables.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

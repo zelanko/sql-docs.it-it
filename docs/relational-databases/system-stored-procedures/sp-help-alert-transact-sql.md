@@ -18,10 +18,10 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304839"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -61,13 +61,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
-|**nome**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
+|**id**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
+|**name**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento. Sarà sempre **MSSQLSERVER** per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numero dell'errore del messaggio che definisce l'avviso Corrisponde in genere a un numero di errore nella tabella **sysmessages** . Se per la definizione dell'avviso viene utilizzata la gravità, **message_id** è **0** o null.|  
-|**gravità**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130**o **140**) che definisce l'avviso.|  
+|**severity**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130**o **140**) che definisce l'avviso.|  
 |**abilitato**|**tinyint**|Stato che indica se l'avviso è attualmente abilitato (**1**) o meno (**0**). Gli avvisi non abilitati non vengono inviati.|  
 |**delay_between_responses**|**int**|Periodo di attesa in secondi tra risposte successive per l'avviso.|  
 |**last_occurrence_date**|**int**|Data dell'ultima generazione dell'avviso.|  
@@ -84,25 +84,24 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|Numero di identificazione del processo da eseguire in risposta a un avviso.|  
 |**job_name**|**sysname**|Nome del processo da eseguire in risposta a un avviso.|  
 |**has_notification**|**int**|È diverso da zero se uno o più operatori ricevono una notifica dell'avviso. Può essere uno o più d'uno dei valori seguenti uniti dall'operatore OR:<br /><br /> **1**= notifica tramite posta elettronica<br /><br /> **2**= notifica tramite cercapersone<br /><br /> **4**= notifica **net send** .|  
-|**Bandiere**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|Se **Type** è **2**, in questa colonna viene visualizzata la definizione della condizione delle prestazioni. in caso contrario, la colonna è NULL.|  
-|**category_name**|**sysname**|
-  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 è sempre '[Uncategorized]'.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 è sempre '[Uncategorized]'.|  
 |**wmi_namespace**|**sysname**|Se **Type** è **3**, in questa colonna viene visualizzato lo spazio dei nomi per l'evento WMI.|  
 |**wmi_query**|**nvarchar(512)**|Se **Type** è **3**, in questa colonna viene visualizzata la query per l'evento WMI.|  
-|**tipo**|**int**|Tipo dell'evento:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
+|**type**|**int**|Tipo dell'evento:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
   
  Quando ** \@legacy_format** è **1**, **sp_help_alert** produce il set di risultati seguente.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
-|**nome**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
+|**id**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
+|**name**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento. Sarà sempre **MSSQLSERVER** per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numero dell'errore del messaggio che definisce l'avviso Corrisponde in genere a un numero di errore nella tabella **sysmessages** . Se per la definizione dell'avviso viene utilizzata la gravità, **message_id** è **0** o null.|  
-|**gravità**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130**o 1**40**) che definisce l'avviso.|  
+|**severity**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130**o 1**40**) che definisce l'avviso.|  
 |**abilitato**|**tinyint**|Stato che indica se l'avviso è attualmente abilitato (**1**) o meno (**0**). Gli avvisi non abilitati non vengono inviati.|  
 |**delay_between_responses**|**int**|Periodo di attesa in secondi tra risposte successive per l'avviso.|  
 |**last_occurrence_date**|**int**|Data dell'ultima generazione dell'avviso.|  
@@ -119,16 +118,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|Numero di identificazione del processo.|  
 |**job_name**|**sysname**|Processo su richiesta da eseguire in risposta a un avviso.|  
 |**has_notification**|**int**|È diverso da zero se uno o più operatori ricevono una notifica dell'avviso. Può essere uno o più d'uno dei valori seguenti uniti dall'operatore OR:<br /><br /> **1**= notifica tramite posta elettronica<br /><br /> **2**= notifica tramite cercapersone<br /><br /> **4**= notifica **net send** .|  
-|**Bandiere**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Se **Type** è **2**, in questa colonna viene visualizzata la definizione della condizione delle prestazioni. Se **Type** è **3**, in questa colonna viene visualizzata la query per l'evento WMI. Negli altri casi la colonna è NULL.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Sarà sempre '**[Uncategorized]**' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
-|**tipo**|**int**|Tipo di avviso:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
+|**type**|**int**|Tipo di avviso:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_help_alert** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
  Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
@@ -144,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_update_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

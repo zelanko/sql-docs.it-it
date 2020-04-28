@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781926"
 ---
 # <a name="scripting"></a>Scripting
@@ -40,7 +40,7 @@ ms.locfileid: "72781926"
  Nella terza e ultima fase viene generato uno script con l'elenco e le opzioni di generazione script specificate. Il risultato viene restituito come un oggetto di sistema <xref:System.Collections.Specialized.StringCollection>. In questa fase i nomi degli oggetti dipendenti vengono estratti dalla raccolta Elementi dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> e da proprietà come <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> e <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
 ## <a name="example"></a>Esempio  
- Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Per questo esempio di codice è necessaria un'istruzione `Imports` per lo spazio dei nomi System.Collections.Specialized. Inserire questa istruzione con le altre istruzioni Imports prima di qualsiasi dichiarazione nell'applicazione.  
   

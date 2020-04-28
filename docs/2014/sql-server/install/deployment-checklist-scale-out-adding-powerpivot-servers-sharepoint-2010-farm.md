@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d3a5fab0a0502d2e6faba2f66b64ae65b995b48f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952182"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Elenco di controllo per la distribuzione: scalabilità orizzontale mediante l'aggiunta di server PowerPivot a una farm di SharePoint 2010
@@ -22,7 +22,7 @@ ms.locfileid: "71952182"
   
  Dopo aver installato una nuova istanza, si dispone di capacità aggiuntive per l'esecuzione di query sui dati PowerPivot o l'elaborazione di processi di aggiornamento dati PowerPivot. Facoltativamente, è possibile configurare ogni server per gestire un solo tipo di richiesta: query o aggiornamento dati.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  SharePoint Server 2010 è installato e configurato.  
   
  SharePoint Server 2010 SP1 è applicato e la farm è aggiornata.  

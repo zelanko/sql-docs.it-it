@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176028"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "70176028"
   
 
   
-##  <a name="Benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="Benefits"></a>Vantaggi  
   
 -   L'esecuzione di backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'esecuzione di procedure di ripristino di test sui backup e l'archiviazione delle copie di backup in una posizione esterna sicura costituiscono modi validi per evitare una perdita di dati potenzialmente irreversibile.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70176028"
   
 
   
-##  <a name="TermsAndDefinitions"></a>Componenti e concetti  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>Componenti e concetti  
  eseguire il backup  
  Operazione di copia di dati o record di log da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dal relativo log delle transazioni in un dispositivo di backup, ad esempio un disco, per creare un backup dei dati o del log.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70176028"
   
 
   
-##  <a name="BnrStrategies"></a>Introduzione alle strategie di backup e ripristino  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>Introduzione alle strategie di backup e ripristino  
  Il backup e il ripristino dei dati devono essere personalizzati per uno specifico ambiente e devono funzionare con le risorse disponibili. Per un utilizzo affidabile delle funzionalità di backup e ripristino è pertanto necessaria un'apposita strategia. Una strategia ben progettata a tale scopo ottimizza la disponibilità dei dati e ne riduce al minimo la perdita, rispettando al contempo le esigenze aziendali specifiche.  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.locfileid: "70176028"
   
      Per altre informazioni, vedere [Stimare le dimensioni di un backup completo del database](#EstimateDbBuSize), più avanti in questa sezione.  
   
-####  <a name="EstimateDbBuSize"></a>Stima delle dimensioni di un backup completo del database  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>Stima delle dimensioni di un backup completo del database  
  Prima di implementare una strategia di backup e ripristino, stimare quanto spazio su disco verrà utilizzato da un backup del database completo. Con l'operazione di backup i dati contenuti nel database vengono copiati nel file di backup. Poiché il backup include soltanto i dati presenti nel database, ma non lo spazio inutilizzato, le dimensioni del backup risultano di solito inferiori a quelle del database originale. È possibile stimare la dimensione di un backup del database completo tramite la stored procedure di sistema **sp_spaceused** . Per altre informazioni, vedere [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Pianificare le operazioni di backup  
@@ -166,7 +166,7 @@ ms.locfileid: "70176028"
   
  È consigliabile mantenere un manuale operativo per ogni database, in cui indicare la posizione dei backup, i nomi dei dispositivi di backup (se presenti) e il tempo necessario per il ripristino dei backup di prova.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 ### <a name="scheduling-backup-jobs"></a>Pianificazione dei processi di backup  
   
@@ -174,7 +174,7 @@ ms.locfileid: "70176028"
   
 -   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
+-   [Pianificare un processo](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>Utilizzo dei dispositivi di backup e dei supporti di backup  
   
@@ -186,11 +186,11 @@ ms.locfileid: "70176028"
   
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Impostare la data di scadenza di un &#40;di backup SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Impostazione della data di scadenza di un backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Visualizzare i file di dati e di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Visualizzare i file di dati e i file di log in un set di backup &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -213,7 +213,7 @@ ms.locfileid: "70176028"
   
  **Utilizzo di Transact-SQL**  
   
--   [Utilizzare Resource Governor per limitare l'utilizzo della CPU tramite la compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [Esecuzione del backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
@@ -251,7 +251,7 @@ ms.locfileid: "70176028"
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Ripristino di log delle transazioni (modello di recupero con registrazione completa)  
  **Utilizzo di SQL Server Management Studio**  
   
--   [Ripristinare un database a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+-   [Ripristinare un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
@@ -278,8 +278,8 @@ ms.locfileid: "70176028"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [Eseguire il backup e il ripristino di indici e cataloghi full-text](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Eseguire il backup e il ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Backup e ripristino di indici e cataloghi full-text](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Modelli di recupero &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  

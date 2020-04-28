@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260385"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72260385"
 |**session_id**|**smallint**|ID della sessione associata all'attività.|  
 |**exec_context_id**|**int**|ID del contesto di esecuzione associato all'attività.|  
 |**wait_duration_ms**|**bigint**|Tempo totale di attesa per questo tipo di attesa, in millisecondi. Questa volta è incluso **signal_wait_time**.|  
-|**wait_type**|**nvarchar (60)**|Nome del tipo di attesa.|  
+|**wait_type**|**nvarchar(60)**|Nome del tipo di attesa.|  
 |**resource_address**|**varbinary (8)**|Indirizzo della risorsa attesa dall'attività.|  
 |**blocking_task_address**|**varbinary (8)**|Attività che mantiene bloccata la risorsa.|  
 |**blocking_session_id**|**smallint**|ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata.<br /><br /> -2 = La risorsa di blocco appartiene a una transazione distribuita orfana.<br /><br /> -3 = La risorsa di blocco appartiene a una transazione di recupero posticipata.<br /><br /> -4 = Non è possibile determinare l'ID di sessione del proprietario del latch di blocco a causa di transizioni nello stato del latch interno.|  
@@ -149,6 +149,6 @@ WHERE blocking_session_id IS NOT NULL;
   
 ## <a name="see-also"></a>Vedere anche  
 [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
-[Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)     
+[Guida all'architettura di thread e attività](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

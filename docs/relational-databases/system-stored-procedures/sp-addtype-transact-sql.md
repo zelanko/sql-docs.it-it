@@ -18,10 +18,10 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305133"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
@@ -52,10 +52,10 @@ sp_addtype [ @typename = ] type,
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
-|**float**|**immagine**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**numerico**|**nvarchar(n)**|**reale**|  
-|**smalldatetime**|**smallint**|**SMALLMONEY**|  
+|**float**|**image**|**int**|  
+|**money**|**nchar (n)**|**ntext**|  
+|**numeric**|**nvarchar (n)**|**real**|  
+|**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
@@ -135,11 +135,11 @@ GO
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Crea tipo &#40;&#41;Transact-SQL](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [CREARE una regola &#40;&#41;Transact-SQL](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_droptype &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
- [sp_rename &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindefault &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

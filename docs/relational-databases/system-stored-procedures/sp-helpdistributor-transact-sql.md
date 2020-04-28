@@ -16,10 +16,10 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745390"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**database di distribuzione**|**sysname**|Nome del database di distribuzione.|  
 |**Directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
-|**account**|**nvarchar(255)**|Nome dell'account utente di Windows.|  
+|**account aziendale**|**nvarchar(255)**|Nome dell'account utente di Windows.|  
 |**min distrib retention**|**int**|Periodo di memorizzazione minimo per la distribuzione.|  
 |**max distrib retention**|**int**|Periodo di memorizzazione massimo per la distribuzione.|  
 |**history retention**|**int**|Periodo di memorizzazione per la cronologia.|  
@@ -115,7 +115,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  La colonna del set dei risultati seguente viene restituita agli utenti nell'elenco di accesso alla pubblicazione per una pubblicazione nel server di distribuzione:  
   
--   Directory  
+-   directory  
   
  Le seguenti colonne del set di risultati vengono restituite a tutti gli utenti.  
   
@@ -127,7 +127,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   

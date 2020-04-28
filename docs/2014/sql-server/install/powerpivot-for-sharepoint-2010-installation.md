@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952049"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è una raccolta di componenti server che forniscono funzionalità di elaborazione di query e controllo di gestione per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da pubblicare in SharePoint. I servizi includono il motore di Analysis Services e il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -35,11 +34,11 @@ ms.locfileid: "71952049"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Installare PowerPivot per SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
   
- [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Installazione del provider OLE DB Analysis Services nei server di SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
  [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)  
   
- [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)  
+ [Installare Servizi dati di ADO.NET per supportare esportazioni di feed di dati di elenchi SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)  
   
  [Installazione di PowerPivot dal prompt dei comandi](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)  
   

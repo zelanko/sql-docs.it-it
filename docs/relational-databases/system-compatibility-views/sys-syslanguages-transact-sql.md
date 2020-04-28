@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874877"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -36,23 +36,22 @@ ms.locfileid: "70874877"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|ID di lingua univoco.|  
-|dateformat|**nchar (3)**|Formato di data, ad esempio DMY.|  
+|dateformat|**nchar(3)**|Formato di data, ad esempio DMY.|  
 |datefirst|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
-|Aggiornamento|**int**|Riservato per l'utilizzo nel sistema.|  
+|aggiornamento|**int**|Riservato per l'utilizzo nel sistema.|  
 |name|**sysname**|Nome della lingua ufficiale, ad esempio, Français.|  
 |alias|**sysname**|Nome di lingua alternativo, ad esempio Francese.|  
-|months|**nvarchar (372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
-|shortmonths|**nvarchar (132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
-|days|**nvarchar (217)**|Elenco delimitato da virgole dei nomi dei giorni da lunedì a domenica. Ogni nome contiene un massimo di 30 caratteri.|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ID delle impostazioni locali di Windows per la lingua.|  
+|months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
+|shortmonths|**nvarchar(132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
+|days|**nvarchar(217)**|Elenco delimitato da virgole dei nomi dei giorni da lunedì a domenica. Ogni nome contiene un massimo di 30 caratteri.|  
+|lcid|**int**|ID delle impostazioni locali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relative alla lingua.|  
 |msglangid|**smallint**|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] include le lingue installate seguenti.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] include le lingue installate seguenti.  
   
-|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ID gruppo di messaggi|  
+|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |---------------------|------------------|-----------------------------------------|  
-|Inglese|1040|1040|  
+|Inglese|1033|1033|  
 |Tedesco|1031|1031|  
 |Francese|1036|1036|  
 |Giapponese|1041|1041|  
@@ -75,7 +74,7 @@ ms.locfileid: "70874877"
 |Bulgaro|1026|1026|  
 |Russo|1049|1049|  
 |Turco|1055|1055|  
-|Inglese (Regno Unito)|2057|1040|  
+|Inglese (Regno Unito)|2057|1033|  
 |Estone|1061|1061|  
 |Lettone|1062|1062|  
 |Lituano|1063|1063|  

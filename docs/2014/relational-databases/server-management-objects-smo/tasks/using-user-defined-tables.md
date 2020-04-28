@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781814"
 ---
 # <a name="using-user-defined-tables"></a>Utilizzo di tabelle definite dall'utente
@@ -26,8 +26,7 @@ ms.locfileid: "72781814"
   
  Quando si definisce una nuova tabella definita dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, è necessario fornire colonne e una chiave primaria basata su una delle colonne.  
   
- Dopo averli creati, non è più possibile modificare i tipi di tabella definita dall'utente. 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> non supporta il metodo Alter. I tipi di tabella definita dall'utente possono disporre di vincoli CHECK, ma alcune operazioni di controllo genereranno un'eccezione perché il tipo non è modificabile.  
+ Dopo averli creati, non è più possibile modificare i tipi di tabella definita dall'utente. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> non supporta il metodo Alter. I tipi di tabella definita dall'utente possono disporre di vincoli CHECK, ma alcune operazioni di controllo genereranno un'eccezione perché il tipo non è modificabile.  
   
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> consente di specificare il tipo di dati associato a colonne e parametri. Utilizzare questo tipo per specificare il tipo di tabella definita dall'utente come parametro per stored procedure e funzioni definite dall'utente.  
   

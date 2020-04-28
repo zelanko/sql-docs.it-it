@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952328"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "71952328"
   
  
   
-##  <a name="bkmk_configuration_requirements"></a>Requisiti di configurazione  
+##  <a name="configuration-requirements"></a><a name="bkmk_configuration_requirements"></a>Requisiti di configurazione  
   
 -   La funzionalità di recapito tramite posta elettronica del server di report viene implementata in oggetti CDO (Collaboration Data Objects) e per essa è richiesto un server SMTP (Simple Mail Transfer Protocol) locale o remoto o un server d'inoltro SMTP. SMTP non è supportato in tutti i sistemi operativi Windows. Se si utilizza l'edizione basata su Itanium di Windows Server 2008, SMTP non è supportato. Per ulteriori informazioni sulle opzioni di configurazione disponibili tramite CDO, vedere la pagina relativa alla [coclasse Configuration](https://go.microsoft.com/fwlink/?LinkId=98237) nel sito Web MSDN.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "71952328"
   
  
   
-##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a>Configurazione di un server di report per il servizio SMTP locale o remoto  
+##  <a name="configuring-a-report-server-for-local-or-remote-smtp-service"></a><a name="bkmk_configure_for_local_or_remote_SMTP"></a>Configurazione di un server di report per il servizio SMTP locale o remoto  
  È possibile utilizzare un servizio SMTP locale o un server SMTP remoto o un server d'inoltro per supportare il recapito tramite posta elettronica. Se si ha accesso a un server SMTP remoto esistente, è consigliabile utilizzarlo. Se non esiste alcun server SMTP disponibile o se in seguito vengono generati errori di recapito dei report che possono essere attribuiti a errori di connessione del computer, utilizzare un servizio SMTP locale. Più avanti in questo argomento vengono forniti dettagli sulla configurazione di un server di report per un servizio locale o remoto.  
   
   
   
-##  <a name="bkmk_setting_email_delivery"></a>Impostazione delle opzioni di configurazione per il recapito tramite posta elettronica  
+##  <a name="setting-configuration-options-for-e-mail-delivery"></a><a name="bkmk_setting_email_delivery"></a>Impostazione delle opzioni di configurazione per il recapito tramite posta elettronica  
  Prima di poter utilizzare il recapito tramite posta elettronica di Server report, è necessario impostare valori di configurazione che offrano informazioni sul server SMTP da utilizzare.  
   
  Per configurare un server di report per il recapito tramite posta elettronica, eseguire le operazioni seguenti:  
@@ -74,7 +74,7 @@ ms.locfileid: "71952328"
   
 
   
-##  <a name="bkmk_example_config_file"></a>Esempio di configurazione della posta elettronica del server di report  
+##  <a name="example-report-server-e-mail-configuration"></a><a name="bkmk_example_config_file"></a>Esempio di configurazione della posta elettronica del server di report  
  Nell'esempio seguente vengono illustrate le impostazioni nel file RSreportserver.config per un server SMTP remoto. Per ulteriori nella documentazione online diformazioni sulle descrizioni e sui valori validi dell'impostazione, vedere [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlnella documentazione online die or the CDO product documentation.  
   
 ```  
@@ -107,7 +107,7 @@ ms.locfileid: "71952328"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a>Opzioni di configurazione per l'impostazione del campo a: in un messaggio  
+##  <a name="configuration-options-for-setting-the-to-field-in-a-message"></a><a name="bkmk_setting_TO_field"></a>Opzioni di configurazione per l'impostazione del campo a: in un messaggio  
  Le sottoscrizioni definite dall'utente create in base alle autorizzazioni concesse dall'attività **Gestisci sottoscrizioni individuali** contengono un nome utente preimpostato che si basa sull'account utente di dominio. Quando l'utente crea la sottoscrizione, l'indirizzo del nome del destinatario incluso nel campo **A:** viene immesso automaticamente in base all'account utente di dominio della persona che crea la sottoscrizione.  
   
  Se si utilizza un server SMTP o un server d'inoltro che utilizza account di posta elettronica diversi dall'account utente di dominio, il recapito del report non riuscirà quando il server SMTP tenterà di recapitare il report a tale utente.  
@@ -124,14 +124,12 @@ ms.locfileid: "71952328"
   
   
   
-##  <a name="bkmk_options_remote_SMTP"></a>Opzioni di configurazione per il servizio SMTP remoto  
+##  <a name="configuration-options-for-remote-smtp-service"></a><a name="bkmk_options_remote_SMTP"></a>Opzioni di configurazione per il servizio SMTP remoto  
  La connessione tra il server di report e un server SMTP o un server d'inoltro viene determinata tramite le impostazioni di configurazione seguenti:  
   
--   
-  `SendUsing` specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.  
+-   `SendUsing` specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.  
   
--   
-  `SMTPServer` specifica il server SMTP remoto o il server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
+-   `SMTPServer` specifica il server SMTP remoto o il server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
   
 -   `From`imposta il valore che viene visualizzato nella riga **da:** di un messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
   
@@ -139,13 +137,13 @@ ms.locfileid: "71952328"
   
 -   **SMTPServerPort** è configurato per la porta 25.  
   
--   **SMTPAuthenticate** specifica il modo in cui il server di report si connette al server SMTP remoto. Il valore predefinito è 0, ovvero nessuna autenticazione. In questo caso, la connessione viene stabilita tramite l'accesso anonimo. In base alla configurazione del dominio, potrebbe essere necessario che il server di report e il server SMTP siano membri dello stesso dominio.  
+-   **SMTPAuthenticate** specifica il modo in cui il server di report si connette a un server SMTP remoto. Il valore predefinito è 0, ovvero nessuna autenticazione. In questo caso, la connessione viene stabilita tramite l'accesso anonimo. In base alla configurazione del dominio, potrebbe essere necessario che il server di report e il server SMTP siano membri dello stesso dominio.  
   
      Per inviare messaggi di posta elettronica a liste di distribuzione limitate, ad esempio liste di distribuzione in cui si accettano i messaggi in arrivo solo da account autenticati, impostare **SMTPAuthenticate** su **2**.  
   
 
   
-##  <a name="bkmk_options_local_SMTP"></a>Opzioni di configurazione per il servizio SMTP locale  
+##  <a name="configuration-options-for-local-smtp-service"></a><a name="bkmk_options_local_SMTP"></a>Opzioni di configurazione per il servizio SMTP locale  
  La configurazione di un servizio SMTP locale è utile se si desidera testare o risolvere i problemi di recapito tramite posta elettronica del server di report. Il servizio SMTP locale non è attivato per impostazione predefinita. Per istruzioni su come abilitarlo, vedere [configurare un server di report per il recapito tramite posta elettronica (ssrs Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [le impostazioni di posta elettronica-Configuration Manager &#40;modalità nativa di SSRS&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  La connessione tra il server di report e un server SMTP locale o un server d'inoltro viene determinata tramite le impostazioni di configurazione seguenti:  
@@ -161,7 +159,7 @@ ms.locfileid: "71952328"
   
  
   
-##  <a name="bkmk_use_configuration_manager"></a>Per configurare la posta elettronica del server di report utilizzando il Reporting Services Configuration Manager  
+##  <a name="to-configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="bkmk_use_configuration_manager"></a>Per configurare la posta elettronica del server di report utilizzando il Reporting Services Configuration Manager  
   
 1.  Verificare che il servizio Windows ReportServer disponga delle autorizzazioni `Send As` sul server SMTP.  
   
@@ -171,11 +169,11 @@ ms.locfileid: "71952328"
   
 4.  In **Indirizzo mittente**immettere il nome di un account autorizzato a inviare messaggi di posta elettronica dal server SMTP.  
   
-5.  Fare clic su **Apply**.  
+5.  Fare clic su **Applica**.  
   
 
   
-##  <a name="bkmk_confiugre_remote_SMTP"></a>Per configurare un servizio SMTP remoto per il server di report  
+##  <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a><a name="bkmk_confiugre_remote_SMTP"></a>Per configurare un servizio SMTP remoto per il server di report  
   
 1.  Verificare che il servizio Windows ReportServer disponga delle autorizzazioni `Send As` sul server SMTP.  
   
@@ -197,7 +195,7 @@ ms.locfileid: "71952328"
   
 
   
-##  <a name="bkmk_confiugre_local_SMTP"></a>Per configurare un servizio SMTP locale per il server di report  
+##  <a name="to-configure-a-local-smtp-service-for-the-report-server"></a><a name="bkmk_confiugre_local_SMTP"></a>Per configurare un servizio SMTP locale per il server di report  
   
 1.  Nel Pannello di controllo fare clic su **Installazione applicazioni**.  
   

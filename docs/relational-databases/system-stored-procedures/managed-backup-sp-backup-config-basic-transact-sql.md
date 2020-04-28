@@ -21,10 +21,10 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3b3c547453c41dff6d32d1cafcd62746a2f194f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305257"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  @enable_backup  
  Abilitare o disabilitare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database specificato. È @enable_backup di **bit**. Parametro obbligatorio quando si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configura per la prima istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Se si modifica una configurazione esistente [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , questo parametro è facoltativo. In tal caso, i valori di configurazione non specificati mantengono i valori esistenti.  
   
@@ -70,7 +70,7 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory** stored procedure.  
@@ -110,6 +110,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
- [managed_backup. sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952628"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
@@ -62,8 +62,7 @@ ms.locfileid: "71952628"
  Alle credenziali fornite deve essere concesso l'accesso al database del server di report. Se si utilizza lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , questo passaggio verrà eseguito automaticamente. Per ulteriori informazioni sulle autorizzazioni necessarie per accedere al database, vedere la sezione "Autorizzazioni per il database" di questo argomento.  
   
 ### <a name="storing-database-connection-information"></a>Archiviazione delle informazioni di connessione al database  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni di connessione vengono archiviate e crittografate nelle impostazioni di RSreportserver.config seguenti. Per creare valori crittografati per queste impostazioni, è necessario utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o l'utilità rsconfig.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni di connessione vengono archiviate e crittografate nelle impostazioni di RSreportserver.config seguenti. Per creare valori crittografati per queste impostazioni, è necessario utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o l'utilità rsconfig.  
   
  Non tutti i valori vengono impostati per ogni tipo di connessione. Se si configura la connessione utilizzando i valori predefiniti, ovvero utilizzando gli account del servizio per effettuare la connessione, <`LogonUser`>, <`LogonDomain`> e <`LogonCred`> saranno vuoti, come indicato di seguito:  
   
@@ -107,9 +106,9 @@ ms.locfileid: "71952628"
 ### <a name="database-permissions"></a>Autorizzazioni per il database  
  Agli account utilizzati per connettersi al database del server di report vengono concessi i ruoli seguenti:  
   
--   ruoli **public** e **RSExecRole** per il database **ReportServer** .  
+-   Ruoli**public** e **RSExecRole** per il database **ReportServer** .  
   
--   Ruolo **RSExecRole** per i database **Master**, **msdb**e **ReportServerTempDB** .  
+-   Ruolo**RSExecRole** per i database **master**, **msdb**e **ReportServerTempDB** .  
   
  Quando si utilizza lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare o modificare la connessione, queste autorizzazioni vengono concesse automaticamente. Se si utilizza l'utilità rsconfig e si specifica un account diverso per la connessione, è necessario aggiornare l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il nuovo account. È possibile creare file script nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiornare l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il server di report.  
   
@@ -117,13 +116,13 @@ ms.locfileid: "71952628"
  Utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per determinare il database del server di report utilizzato da un'istanza del server di report specifica. Per individuare il nome, connettersi all'istanza del server di report e aprire la pagina Impostazioni database.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>Utilizzo di un database diverso del server di report o spostamento di un database del server di report  
- È possibile configurare un'istanza del server di report in modo da utilizzare un database diverso del server di report modificando le informazioni di connessione. In genere, si rende necessario cambiare database quando si distribuisce un server di report di produzione. Il trasferimento da un database del server di report di prova a un database del server di report di produzione è in genere il modo in cui vengono implementati i server È inoltre possibile spostare un database del server di report in un altro computer. Per altre informazioni, vedere [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ È possibile configurare un'istanza del server di report in modo da utilizzare un database diverso del server di report modificando le informazioni di connessione. In genere, si rende necessario cambiare database quando si distribuisce un server di report di produzione. In questo caso si passa da un database del server di report di prova a un database del server di report di produzione. È inoltre possibile spostare un database del server di report in un altro computer. Per altre informazioni, vedere [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>Configurazione di più server di report per garantire l'utilizzo dello stesso database del server di report  
  È possibile configurare più server di report in modo che utilizzino lo stesso database del server di report. Questa configurazione di distribuzione è denominata distribuzione con scalabilità orizzontale e costituisce un prerequisito se si desidera eseguire più server di report in un cluster di server. È tuttavia possibile utilizzare tale configurazione se si desidera segmentare le applicazioni del servizio o eseguire il test dell'installazione e delle impostazioni di una nuova istanza del server di report per confrontarla con un'installazione del server di report esistente. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Creazione di un database del server di report &#40;Configuration Manager SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Gestire un server di report Reporting Services in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

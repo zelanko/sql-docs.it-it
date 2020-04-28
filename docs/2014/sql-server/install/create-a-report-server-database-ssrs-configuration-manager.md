@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952298"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]In **modalità nativa** vengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzati due database relazionali per archiviare i metadati e gli oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database sono denominati `reportserver` e `reportservertempdb`. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]La **modalità SharePoint** include un terzo database utilizzato per i metadati di avviso dei dati. I tre database vengono creati per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nei nomi dei database è incluso, per impostazione predefinita, un GUID che rappresenta l'applicazione di servizio. Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **modalità SharePoint** include un terzo database usato per i metadati di avviso dei dati. I tre database vengono creati per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nei nomi dei database è incluso, per impostazione predefinita, un GUID che rappresenta l'applicazione di servizio. Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:  
   
 -   ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -38,21 +38,20 @@ ms.locfileid: "71952298"
 >  L'eccezione a questa situazione è rappresentata dalle viste del log di esecuzione. Per ulteriori informazioni, vedere [il log di esecuzione del server di report e la vista ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
 ## <a name="ways-to-create-the-report-server-database"></a>Creazione del database del server di report  
- **Modalità nativa:** È possibile creare il database del server di report in modalità nativa nei modi seguenti:  
+ **Modalità nativa** è possibile creare il database del server di report in modalità nativa nei modi seguenti:  
   
 -   Automaticamente. Utilizzare la Configurazione guidata di SQL Server, se si sceglie l'opzione di installazione della configurazione predefinita. Nell'Installazione guidata di SQL Server, si tratta dell'opzione **Installazione e configurazione** disponibile nella pagina delle opzioni di installazione del server di report. Se si sceglie l'opzione **Solo installazione** , è necessario usare Gestione configurazione Reporting Services per creare il database.  
   
 -   Manualmente. Utilizzare lo strumento Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario creare manualmente il database del server di report se per ospitare il database si utilizza un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- **Modalità SharePoint:** Nella pagina Opzioni di installazione del server di report è presente una sola opzione per la modalità SharePoint di **solo installazione**. Questa opzione consente di installare tutti i file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e il servizio condiviso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il passaggio successivo prevede la creazione di almeno un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una delle modalità seguenti:  
+ **Modalità SharePoint** : nella pagina delle opzioni di installazione del server di report è disponibile la sola opzione **Solo installazione**per la modalità SharePoint. Questa opzione consente di installare tutti i file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e il servizio condiviso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il passaggio successivo prevede la creazione di almeno un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una delle modalità seguenti:  
   
--   Utilizzare Amministrazione centrale SharePoint per creare un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere la sezione "Applicazione di servizio" di [Passaggio 3: Creare un'applicazione di servizio Reporting Services](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+-   Utilizzare Amministrazione centrale SharePoint per creare un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere la sezione "applicazione di servizio" del [passaggio 3: creare un'applicazione di servizio Reporting Services](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
--   Utilizzare i cmdlet PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare un'applicazione di servizio e i database del server di report. Per ulteriori informazioni, vedere l'esempio per la creazione di applicazioni di servizio nell'argomento [cmdlet di PowerShell per Reporting Services modalità SharePoint](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   Utilizzare i cmdlet PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare un'applicazione di servizio e i database del server di report. Per altre informazioni, vedere l'esempio per la creazione di applicazioni di servizio nell'argomento [Cmdlet di PowerShell per la modalità SharePoint di Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="database-server-version-requirements"></a>Requisiti relativi alla versione del server di database  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato per ospitare i database del server di report. L'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può essere un'istanza locale o remota. Di seguito sono riportate le versioni supportate del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che possono essere utilizzate per ospitare i database del server di report:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato per ospitare i database del server di report. L'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può essere un'istanza locale o remota. Di seguito sono riportate le versioni supportate del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che possono essere utilizzate per ospitare i database del server di report:  
   
 - SQL Server 2014
   
@@ -62,7 +61,7 @@ ms.locfileid: "71952298"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
  Per creare il database del server di report in un computer remoto, è necessario configurare la connessione per l'utilizzo di un account utente di dominio o un account di servizio con accesso alla rete. Se si sceglie di utilizzare un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , valutare attentamente le credenziali che il server di report dovrà utilizzare per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [configurare una connessione del database del server di Report &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   

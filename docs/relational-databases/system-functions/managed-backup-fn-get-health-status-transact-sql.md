@@ -21,10 +21,10 @@ ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155809"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "70155809"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  [@begin_time]  
  L'inizio del periodo di tempo a partire dal quale viene eseguito il conteggio aggregato degli errori.  Il @begin_time parametro è DateTime. Il valore predefinito è NULL. Quando il valore è NULL, la funzione elabora gli eventi restituiti fino a 30 minuti prima dell'ora corrente.  
   
@@ -65,7 +65,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 ## <a name="best-practices"></a>Procedure consigliate  
  Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, utilizzare il stored procedure **managed_backup. sp_get_backup_diagnostics** per ottenere un elenco di eventi estesi per trovare i dettagli dell'errore.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni **Select** per la funzione.  

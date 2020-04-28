@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304888"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -51,9 +51,9 @@ sp_help_fulltext_system_components
   
 -   **filtro**  
   
--   **protocol handler**  
+-   **gestore di protocollo**  
   
--   **FullPath**  
+-   **fullpath**  
   
  Se viene specificato un percorso completo, è necessario specificare anche *param* con il percorso completo della dll del componente o viene restituito un messaggio di errore.  
   
@@ -67,11 +67,11 @@ sp_help_fulltext_system_components
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Tipo di componente. Uno dei seguenti:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**ComponentName**|**sysname**|Nome del componente.|  
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
-|**FullPath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
-|**Versione**|**nvarchar (30)**|Versione del componente.|  
+|**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
+|**version**|**nvarchar(30)**|Versione del componente.|  
 |**manufacturer**|**sysname**|Nome del produttore del componente.|  
   
  Il set di risultati seguente viene restituito solo se esistono uno o più cataloghi full-text che utilizzano *component_type*.  
@@ -138,7 +138,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Visualizza o modifica i Word breaker e i filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
+ [Configurare e gestire i filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Stored procedure per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

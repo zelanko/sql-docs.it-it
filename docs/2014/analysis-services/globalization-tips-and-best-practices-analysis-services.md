@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874409"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "70874409"
   
  Questi suggerimenti e linee guida consentono di aumentare la portabilità delle soluzioni di Business Intelligence e di evitare errori direttamente correlati alle impostazioni relative alla lingua e alle regole di confronto.  
   
--   [Usa regole di confronto simili in tutto lo stack](#bkmk_sameColl)  
+-   [Usare regole di confronto simili in tutto lo stack](#bkmk_sameColl)  
   
 -   [Raccomandazioni comuni per le regole di confronto](#bkmk_recos)  
   
--   [Distinzione maiuscole/minuscole degli identificatori di oggetto](#bkmk_objid)  
+-   [Distinzione tra maiuscole/minuscole degli identificatori di oggetto](#bkmk_objid)  
   
 -   [Test delle impostazioni locali con Excel e SQL Server Profiler](#bkmk_test)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70874409"
   
 -   [Scrittura di query MDX contenenti valori di data e ora](#bkmk_datetime)  
   
-##  <a name="bkmk_sameColl"></a>Usa regole di confronto simili in tutto lo stack  
+##  <a name="use-similar-collations-throughout-the-stack"></a><a name="bkmk_sameColl"></a>Usa regole di confronto simili in tutto lo stack  
  Se possibile, provare a usare le stesse impostazioni delle regole di confronto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usate per il motore di database, cercando di ottenere una corrispondenza nella distinzione tra maiuscole/minuscole, caratteri accentati/non accentati e di larghezza.  
   
  Per ogni servizio sono previste impostazioni delle regole di confronto specifiche con il valore predefinito del motore di database impostato su SQL_Latin1_General_CP1_CI_AS e Analysis Services impostato su Latin1_General_AS. Le impostazioni predefinite sono compatibili in termini di distinzione tra maiuscole/minuscole, caratteri accentati/non accentati e di larghezza. Tenere presente che se si modificano le impostazioni di un qualsiasi set di regole di confronto, possono verificarsi problemi quando le proprietà delle regole di confronto si differenziano in modo sostanziale.  
@@ -51,7 +51,7 @@ ms.locfileid: "70874409"
   
  Per altre informazioni e soluzioni alternative consigliate, vedere [Gli spazi vuoti in una stringa Unicode restituiscono risultati di elaborazione diversi in base alle regole di confronto](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
-##  <a name="bkmk_recos"></a>Raccomandazioni comuni per le regole di confronto  
+##  <a name="common-collation-recommendations"></a><a name="bkmk_recos"></a> Indicazioni comuni per le regole di confronto  
  In Analysis Services viene sempre visualizzato l'elenco completo di tutte le lingue e le regole di confronto disponibili; le regole di confronto non vengono filtrate in base alla lingua selezionata. Assicurarsi di scegliere una combinazione fattibile.  
   
  Alcune delle regole di confronto usate più comunemente includono quelle presenti nell'elenco seguente.  
@@ -78,22 +78,22 @@ ms.locfileid: "70874409"
   
 -   Peri il coreano è consigliabile Korean_100. Sebbene Korean_Wansung_Unicode sia ancora disponibile nell'elenco, è stato deprecato.  
   
-##  <a name="bkmk_objid"></a>Distinzione maiuscole/minuscole degli identificatori di oggetto  
+##  <a name="case-sensitivity-of-object-identifiers"></a><a name="bkmk_objid"></a>Distinzione maiuscole/minuscole degli identificatori di oggetto  
  A partire da SQL Server 2012 SP2, la distinzione tra maiuscole/minuscole degli ID oggetto viene applicata indipendentemente dalle regole di confronto, ma il comportamento varia a seconda della lingua:  
   
-|Alfabeto|Distinzione tra maiuscole e minuscole|  
+|Alfabeto|Maiuscole/minuscole|  
 |---------------------|----------------------|  
 |**Alfabeto latino di base**|Gli identificatori di oggetto espressi in caratteri latini (una qualsiasi delle 26 lettere minuscole o minuscole in inglese) vengono trattati come valori senza distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Ad esempio, gli ID oggetto seguenti sono considerati identici: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services considera i caratteri nella stringa come se fossero tutti in maiuscolo e quindi esegue un semplice confronto tra byte indipendente dalla lingua.<br /><br /> Si noti che sono interessati solo i 26 caratteri. Nel caso di una lingua dell'Europa occidentale, che usa però caratteri scandinavi, il carattere aggiuntivo non sarà in maiuscolo.|  
 |**Cirillico, greco, copto, armeno**|Gli identificatori di oggetto in un alfabeto non latino composto da due set di caratteri maiuscoli/minuscoli distinti, ad esempio il cirillico, fanno sempre distinzione tra maiuscole e minuscole. Ad esempio, Измерение e измерение sono considerati due valori distinti, anche se l'unica differenza è rappresentata dal carattere minuscolo/maiuscolo della prima lettera.|  
   
- **Implicazioni della distinzione tra maiuscole e minuscole per gli identificatori di oggetto**  
+ **Implicazioni della distinzione tra maiuscole/minuscole per gli identificatori di oggetto**  
   
  Il comportamento dei caratteri maiuscoli/minuscoli descritto nella tabella riguarda solo gli identificatori di oggetto e non i nomi degli oggetti. Se si noterà una differenza nella modalità di funzionamento della soluzione (dopo l'installazione di SQL Server 2012 SP2 o versioni successive), sarà probabilmente un problema di elaborazione. Le query non sono interessate dagli identificatori di oggetto. Per entrambi linguaggi di query (DAX e MDX), il motore delle formule usa il nome dell'oggetto (non l'identificatore).  
   
 > [!NOTE]  
 >  Le modifiche al codice correlate alla distinzione maiuscole/minuscole sono state considerate una modifica di rilievo per alcune applicazioni. Per ulteriori informazioni, vedere [modifiche di rilievo alle funzionalità Analysis Services in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) .  
   
-##  <a name="bkmk_test"></a>Test delle impostazioni locali con Excel, SQL Server Profiler e SQL Server Management Studio  
+##  <a name="locale-testing-using-excel-sql-server-profiler-and-sql-server-management-studio"></a><a name="bkmk_test"></a> Test delle impostazioni locali con Excel, SQL Server Profiler e SQL Server Management Studio  
  Durante il test delle traduzioni, la connessione deve specificare l'identificatore LCID della traduzione. Come illustrato nell'argomento relativo a come [ottenere una lingua diversa da SSAS in Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)è possibile usare Excel per testare le traduzioni.  
   
  A tale scopo, modificare manualmente il file con estensione odc in modo da includere la proprietà della stringa di connessione relativa all'identificatore delle impostazioni locali. Provare questa procedura con il database multidimensionale di esempio Adventure Works.  
@@ -102,7 +102,7 @@ ms.locfileid: "70874409"
   
 -   Aggiungere `Locale Identifier=1036` alla stringa di connessione. Salvare e chiudere il file.  
   
--   Apri Excel | **** | **Connessioni esistenti**ai dati. Filtrare l'elenco per visualizzare solo i file delle connessioni presenti nel computer in uso. Trovare la connessione per Adventure Works (controllare il nome con attenzione perché potrebbero essercene più di uno). Aprire la connessione.  
+-   Apri Excel | **Data** | **Connessioni esistenti**ai dati. Filtrare l'elenco per visualizzare solo i file delle connessioni presenti nel computer in uso. Trovare la connessione per Adventure Works (controllare il nome con attenzione perché potrebbero essercene più di uno). Aprire la connessione.  
   
      Verranno visualizzate le traduzioni francesi dal database di esempio Adventure Works.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "70874409"
   
  In Management Studio è possibile specificare l'identificatore delle impostazioni locali in una connessione al server.  
   
--   In Esplora oggetti | **Connetti** | **** Analysis Services | **Opzioni**, fare clic sulla scheda **parametri aggiuntivi** per la connessione.  
+-   In Esplora oggetti | **Connetti** | **Analysis Services**Analysis Services | **Opzioni**, fare clic sulla scheda **parametri aggiuntivi** per la connessione.  
   
 -   Immettere `Local Identifier=1036` , quindi fare clic su **Connetti**.  
   
@@ -120,20 +120,20 @@ ms.locfileid: "70874409"
   
      ![Query MDX con traduzioni in francese in SSMS](media/ssas-localetest-ssms.png "Query MDX con traduzioni in francese in SSMS")  
   
-##  <a name="bkmk_mdx"></a>Scrittura di query MDX in una soluzione contenente traduzioni  
+##  <a name="writing-mdx-queries-in-a-solution-containing-translations"></a><a name="bkmk_mdx"></a> Scrittura di query MDX in una soluzione contenente traduzioni  
  Le traduzioni forniscono informazioni visualizzate relative ai nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma gli identificatori degli oggetti corrispondenti non vengono tradotti. Se possibile, per gli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è preferibile usare gli identificatori e le chiavi anziché didascalie e nomi tradotti. Per istruzioni e script DMX (Multidimensional Expressions), ad esempio, è consigliabile usare chiavi di membri anziché nomi di membri al fine di assicurare la portabilità in contesti con più lingue.  
   
 > [!NOTE]  
 >  Tenere presente che i nomi degli oggetti tabulari non fanno mai distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. I nomi degli oggetti multidimensionali invece rispettano la distinzione tra maiuscole e minuscole delle regole di confronto. Poiché solo i nomi degli oggetti multidimensionali fanno distinzione tra maiuscole e minuscole, assicurarsi che tutte le query MDX che fanno riferimento a oggetti multidimensionali siano digitate correttamente rispettando anche i caratteri maiuscoli/minuscoli.  
   
-##  <a name="bkmk_datetime"></a>Scrittura di query MDX contenenti valori di data e ora  
+##  <a name="writing-mdx-queries-containing-date-and-time-values"></a><a name="bkmk_datetime"></a> Scrittura di query MDX contenenti valori di data e ora  
  Di seguito sono riportati alcuni suggerimenti per aumentare la portabilità delle query MDX basate su data e ora tra le diverse lingue:  
   
 1.  **Usare le parti numeriche per confronti e operazioni**  
   
      Quando si eseguono confronti e operazioni basati su mesi e giorni della settimana, usare le parti numeriche di data e ora anziché valori equivalenti in formato stringa, ad esempio usare MonthNumberofYear anziché MonthName. I valori numerici sono meno interessati da differenze nelle traduzioni delle lingue.  
   
-2.  **Usare gli equivalenti di stringa in un set di risultati**  
+2.  **Usare valori equivalenti in formato stringa in un set di risultati**  
   
      Per la creazione di set di risultati visualizzati dagli utenti finali, provare a usare la stringa, ad esempio MonthName, in modo che i destinatari multilingue possano trarre vantaggio dalle traduzioni fornite.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "70874409"
   
      La query MDX seguente, presa in prestito da un post del forum, illustra come usare la funzione Format per restituire le date in un formato specifico, indipendentemente dalle impostazioni internazionali sottostanti.  
   
-     Per il post originale, vedere il [post relativo a SSAS 2012 che genera date non valide nel forum di Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2).  
+     Per il post originale, vedere il [post relativo a SSAS 2012 che genera date non valide nel forum di Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) .  
   
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952040"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Argomenti della Guida F1 di Gestione configurazione Reporting Services (modalità nativa SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "71952040"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Connessione a un server di report](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
+-   [Connessione a un'istanza di un server di report](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
 -   [Stato server di report](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952040"
   
 -   [Database](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
--   [Procedura guidata Cambia database](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
+-   [Procedura guidata Modifica database](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
 -   [Procedura guidata Modifica credenziali](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   

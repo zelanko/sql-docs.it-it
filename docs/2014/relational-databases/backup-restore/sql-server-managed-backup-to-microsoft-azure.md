@@ -11,24 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175759"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>SQL Server backup gestito in Azure
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]consente di gestire e automatizzare SQL Server backup nel servizio di archiviazione BLOB di Azure. La strategia di backup utilizzata da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è basata sul periodo di memorizzazione e sul carico di lavoro della transazione nel database. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supporta il ripristino temporizzato per il periodo di memorizzazione specificato.   
-
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] può essere abilitato a livello di database o a livello di istanza per gestire tutti i database nell'istanza di SQL Server. Il SQL Server può essere eseguito in locale o in ambienti ospitati come la macchina virtuale di Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]è consigliato per SQL Server in esecuzione in macchine virtuali di Azure.  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]consente di gestire e automatizzare SQL Server backup nel servizio di archiviazione BLOB di Azure. La strategia di backup utilizzata da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è basata sul periodo di memorizzazione e sul carico di lavoro della transazione nel database. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supporta il ripristino temporizzato per il periodo di memorizzazione specificato.   
+[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] può essere abilitato a livello di database o a livello di istanza per gestire tutti i database nell'istanza di SQL Server. Il SQL Server può essere eseguito in locale o in ambienti ospitati come la macchina virtuale di Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]è consigliato per SQL Server in esecuzione in macchine virtuali di Azure.  
   
-## <a name="benefits-of-automating-sql-server-backup-using-includess_smartbackupincludesss-smartbackup-mdmd"></a>Vantaggi dell'automatizzazione del backup di SQL Server tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="benefits-of-automating-sql-server-backup-using-ss_smartbackup"></a>Vantaggi dell'automatizzazione del backup di SQL Server tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 -   Per l'automatizzazione di backup per più database sono attualmente richiesti lo sviluppo di una strategia di backup, la scrittura di codice personalizzato e la pianificazione di backup. Utilizzando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessario fornire solo le impostazioni del periodo di memorizzazione e il percorso di archiviazione. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]Pianifica, esegue e gestisce i backup.  
   
-     
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] può essere configurato a livello di database o con le impostazioni predefinite per un'istanza di SQL Server. L'automazione del backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con presenta i vantaggi seguenti:  
+     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] può essere configurato a livello di database o con le impostazioni predefinite per un'istanza di SQL Server. L'automazione del backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con presenta i vantaggi seguenti:  
   
     -   Configurando le impostazioni predefinite a livello di istanza, è possibile applicare queste impostazioni a qualsiasi database creato successivamente, eliminando di conseguenza il rischio di mancata esecuzione di backup di nuovi database e di perdita di dati.  
   
@@ -50,22 +47,21 @@ ms.locfileid: "70175759"
  Catena di log  
  Una sequenza continua di backup del log è denominata catena di log. Una catena di log ha inizio con un backup completo del database.  
   
-##  <a name="Concepts"></a>Requisiti, concetti e componenti  
+##  <a name="requirements-concepts-and-components"></a><a name="Concepts"></a>Requisiti, concetti e componenti  
   
   
-###  <a name="Security"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Security"></a> Autorizzazioni  
  Transact-SQL è l'interfaccia principale utilizzata per configurare e monitorare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. In generale, per eseguire le stored procedure di configurazione, è necessario **db_backupoperator** ruolo del database con autorizzazioni **ALTER ANY CREDENTIAL** e `EXECUTE` autorizzazioni per **sp_delete_backuphistory** stored procedure.  Per le stored procedure e le funzioni utilizzate per esaminare le informazioni sono in genere richieste rispettivamente le autorizzazioni `Execute` per la stored procedure e `Select` per la funzione.  
   
-###  <a name="Prereqs"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prereqs"></a> Prerequisiti  
  **Prerequisiti**  
   
  Il **servizio di archiviazione** di Azure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] viene usato da per archiviare i file di backup.    I concetti, la struttura e i requisiti per la creazione di un account di archiviazione di Azure sono illustrati in dettaglio nella sezione [Introduzione ai componenti e ai concetti chiave](sql-server-backup-to-url.md#intorkeyconcepts) dell'argomento **SQL Server backup nell'URL** .  
   
  Le **credenziali SQL** vengono usate per archiviare le informazioni necessarie per l'autenticazione nell'account di archiviazione di Azure. Tramite l'oggetto relativo alle credenziali SQL vengono archiviati il nome dell'account e le informazioni sulla chiave di accesso. Per ulteriori informazioni, vedere la sezione [Introduzione ai componenti e ai concetti chiave](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) nell'argomento **SQL Server backup in URL** . Per una procedura dettagliata su come creare credenziali SQL per archiviare le informazioni di autenticazione di archiviazione di Azure, vedere [lezione 2: creare una SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
-###  <a name="Concepts_Components"></a>Concetti e componenti chiave  
- 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è una funzionalità tramite cui vengono gestite le operazioni di backup. Archivia i metadati nel database **msdb** e utilizza i processi di sistema per scrivere backup completi del database e del log delle transazioni.  
+###  <a name="concepts-and-key-components"></a><a name="Concepts_Components"></a>Concetti e componenti chiave  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è una funzionalità tramite cui vengono gestite le operazioni di backup. Archivia i metadati nel database **msdb** e utilizza i processi di sistema per scrivere backup completi del database e del log delle transazioni.  
   
 #### <a name="components"></a>Componenti  
  Transact-SQL è l'interfaccia principale per interagire con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le stored procedure di sistema vengono utilizzate per l'abilitazione, la configurazione e il monitoraggio di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le funzioni di sistema vengono utilizzate per recuperare le informazioni sui file di backup, i valori dei parametri e le impostazioni di configurazione esistenti. Gli eventi estesi vengono utilizzati per esporre errori e avvisi. I meccanismi di avviso sono abilitati tramite i processi di SQL Agent e la gestione basata su criteri di SQL Server. Di seguito sono riportati un elenco di oggetti e una descrizione della relativa funzionalità rispetto a [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -109,8 +105,7 @@ ms.locfileid: "70175759"
   
 -   È passato l'intervallo di tempo massimo di una settimana dall'ultimo backup completo del database.  
   
--   La catena di log è stata interrotta. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] vengono eseguiti controlli periodici per determinare se la catena di log è intatta confrontando il primo e l'ultimo LSN dei file di backup. Se si verifica un'interruzione nella catena di log per qualsiasi motivo, tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] viene pianificato un backup completo del database. Nella maggior parte dei casi le interruzioni della catena di log sono dovute probabilmente a un comando di backup eseguito tramite Transact-SQL o mediante l'attività di backup in SQL Server Management Studio.  Tra gli altri scenari comuni sono incluse l'eliminazione accidentale dei file di log di backup o la sovrascrittura accidentale dei backup.  
+-   La catena di log è stata interrotta. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] vengono eseguiti controlli periodici per determinare se la catena di log è intatta confrontando il primo e l'ultimo LSN dei file di backup. Se si verifica un'interruzione nella catena di log per qualsiasi motivo, tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] viene pianificato un backup completo del database. Nella maggior parte dei casi le interruzioni della catena di log sono dovute probabilmente a un comando di backup eseguito tramite Transact-SQL o mediante l'attività di backup in SQL Server Management Studio.  Tra gli altri scenari comuni sono incluse l'eliminazione accidentale dei file di log di backup o la sovrascrittura accidentale dei backup.  
   
  **Backup del log delle transazioni:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pianifica un backup del log se si verifica una delle condizioni seguenti:  
   
@@ -125,22 +120,19 @@ ms.locfileid: "70175759"
 #### <a name="retention-period-settings"></a>Impostazioni del periodo di memorizzazione  
  Quando si abilita il backup, è necessario impostare il periodo di memorizzazione in giorni: il valore minimo è pari a 1 giorno mentre quello massimo a 30 giorni.  
   
- 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basato sulle impostazioni del periodo di memorizzazione viene valutata la possibilità di eseguire un recupero fino a una data e ora specifiche in un tempo specificato, per determinare quali file di backup mantenere e quali invece eliminare. L'oggetto backup_finish_date del backup viene utilizzato per determinare e far corrispondere il tempo specificato in base alle impostazioni del periodo di memorizzazione.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basato sulle impostazioni del periodo di memorizzazione viene valutata la possibilità di eseguire un recupero fino a una data e ora specifiche in un tempo specificato, per determinare quali file di backup mantenere e quali invece eliminare. L'oggetto backup_finish_date del backup viene utilizzato per determinare e far corrispondere il tempo specificato in base alle impostazioni del periodo di memorizzazione.  
   
 #### <a name="important-considerations"></a>Importanti considerazioni  
  Vi sono alcune considerazioni importanti per comprendere il relativo impatto sulle operazioni di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Tali considerazioni sono elencate di seguito:  
   
 -   Per un database, se è in esecuzione un processo di backup completo del database esistente, tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] si attende il completamento del processo corrente prima di eseguire un altro backup completo dello stesso database. Analogamente, solo un backup del log delle transazioni può essere in esecuzione in un determinato momento. Tuttavia, un backup completo del database e un backup del log delle transazioni possono essere eseguiti contemporaneamente. Gli errori vengono registrati come eventi estesi.  
   
--   Se sono pianificati più di 10 backup completi del database simultanei, viene generato un avviso tramite il canale di debug di eventi estesi. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] viene quindi gestita una coda di priorità per i database rimanenti di cui deve essere eseguito un backup fino alla pianificazione e al completamento di tutti i backup.  
+-   Se sono pianificati più di 10 backup completi del database simultanei, viene generato un avviso tramite il canale di debug di eventi estesi. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] viene quindi gestita una coda di priorità per i database rimanenti di cui deve essere eseguito un backup fino alla pianificazione e al completamento di tutti i backup.  
   
-###  <a name="support_limits"></a>Limitazioni del supporto di   
+###  <a name="support-limitations"></a>Limitazioni del supporto di <a name="support_limits"></a>  
  Di seguito sono riportate alcune limitazioni specifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Agent supporta solo backup del database, vale a dire backup del log e completi.  L'automazione di backup di file non è supportata.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Agent supporta solo backup del database, vale a dire backup del log e completi.  L'automazione di backup di file non è supportata.  
   
 -   Le operazioni di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sono supportate attualmente tramite Transact-SQL. Il monitoraggio e la risoluzione dei problemi possono essere eseguiti utilizzando gli eventi estesi. Il supporto SMO e PowerShell è limitato alla configurazione delle impostazioni predefinite del periodo di memorizzazione e di archiviazione per un'istanza di SQL Server e al monitoraggio dello stato di backup e dell'integrità complessiva in base a criteri di gestione basata su criteri di SQL Server.  
   
@@ -148,14 +140,13 @@ ms.locfileid: "70175759"
   
 -   Il servizio di archiviazione BLOB di Azure è l'unica opzione di archiviazione di backup supportata. I backup su disco o su nastro non sono supportati.  
   
--   Attualmente, le dimensioni massime del file consentite per un BLOB di pagine in archiviazione di Azure sono pari a 1 TB. Pertanto l'uso di file di backup maggiori di 1 TB avrà esito negativo. Per evitare questa situazione, in caso di database di grandi dimensioni è consigliabile utilizzare la compressione e verificare le dimensioni del file di backup prima di configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. È possibile eseguire il test eseguendo il backup in un disco locale o eseguendo manualmente il backup nell'archiviazione di Azure `BACKUP TO URL` usando l'istruzione Transact-SQL. Per altre informazioni, vedere [Backup di SQL Server nell'URL](sql-server-backup-to-url.md).  
+-   Attualmente, le dimensioni massime del file consentite per un BLOB di pagine in archiviazione di Azure sono pari a 1 TB. Pertanto l'uso di file di backup maggiori di 1 TB avrà esito negativo. Per evitare questa situazione, in caso di database di grandi dimensioni è consigliabile utilizzare la compressione e verificare le dimensioni del file di backup prima di configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. È possibile eseguire il test eseguendo il backup in un disco locale o eseguendo manualmente il backup nell'archiviazione di Azure `BACKUP TO URL` usando l'istruzione Transact-SQL. Per altre informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Modelli di recupero: sono supportati solo database impostati sul modello con registrazione completa o con registrazione minima delle operazioni bulk.  I database impostati sul modello di recupero con registrazione minima non sono supportati.  
   
--   
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] può presentare alcune limitazioni se configurato con altre tecnologie che supportano il backup, la disponibilità elevata o il ripristino di emergenza. Per altre informazioni, vedere [SQL Server backup gestito in Azure: interoperabilità e coesistenza](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] può presentare alcune limitazioni se configurato con altre tecnologie che supportano il backup, la disponibilità elevata o il ripristino di emergenza. Per altre informazioni, vedere [SQL Server backup gestito in Azure: interoperabilità e coesistenza](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 |||  
 |-|-|  

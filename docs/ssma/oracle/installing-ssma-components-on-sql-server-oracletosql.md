@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713316"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installazione dei componenti di SSMA in SQL Server (OracleToSQL)
@@ -30,7 +30,7 @@ Il pacchetto di estensione SSMA aggiunge i database **sysdb** e **ssmatesterdb**
   
 Inoltre, quando si esegue la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea processi di Agent quando viene utilizzato il motore di migrazione dei dati sul lato server per la migrazione dei dati.  
   
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 Prima di installare i componenti di SSMA per Oracle server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in, verificare che il sistema soddisfi i requisiti seguenti:  
   
@@ -68,7 +68,7 @@ Prima di installare i componenti di SSMA per Oracle server [!INCLUDE[ssNoVersion
   
 6. Nella pagina Selezione **tipo di installazione** selezionare **tipico**.  
   
-7. Nella pagina **pronto per l'installazione** selezionare **Installa**.  
+7. Nella pagina **Inizio installazione** fare clic su **Installa**.  
   
 8. Nella pagina **completamento del primo passaggio dell'installazione** fare clic su **Avanti**.  
   

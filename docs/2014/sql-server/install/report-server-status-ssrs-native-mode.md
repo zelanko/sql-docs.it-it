@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952465"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Stato del server di report (modalità nativa SSRS)
@@ -61,13 +61,13 @@ ms.locfileid: "71952465"
  **Modalità server di report**  
  Tramite questa opzione deve essere sempre visualizzato un valore di **Nativa**. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta solo server di report in modalità nativa. Se si visualizza un valore della **modalità integrata SharePoint**, è possibile che la distribuzione in modalità nativa non sia configurata correttamente, pertanto è necessario connettersi a un catalogo del report in modalità nativa. Utilizzare la pagina **Database** di Gestione configurazione per modificare il database e creare un nuovo database o connettersi a un catalogo del database del server di report in modalità nativa esistente.  
   
- **Stato del server**  
+ **Stato server**  
  Indica se il servizio del server di report è in esecuzione.  
   
  **Inizia**  
  Consente di avviare il servizio del server di report. Il riavvio del servizio è necessario dopo avere apportato alcune modifiche di configurazione, ad esempio quando si riconfigura un server di report in seguito alla modifica del nome di un computer. Se si riconfigurano le prenotazioni URL, il servizio verrà riavviato automaticamente. Il riavvio è necessario per rendere effettive le modifiche.  
   
- **Stop**  
+ **Arresta**  
  Consente di arrestare il servizio del server di report. L'arresto del servizio causa l'interruzione del funzionamento del server di report. Per ulteriori informazioni, vedere [avviare e arrestare il servizio del server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report nella documentazione online di.  
   
 ## <a name="see-also"></a>Vedere anche  

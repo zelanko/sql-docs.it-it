@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682137"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
@@ -59,7 +59,7 @@ sp_estimate_data_compression_savings
  Nome dello schema del database che contiene la tabella o la vista indicizzata. *schema_name* è di **tipo sysname**. Se *schema_name* è null, viene usato lo schema predefinito dell'utente corrente.  
   
  [ @object_name= ] '*object_name*'  
- Nome della tabella o della vista indicizzata su cui è basato l'indice. *object_name* è di **tipo sysname**.  
+ Nome della tabella o della vista indicizzata su cui è basato l'indice. *object_name* è di tipo **sysname**.  
   
  [ @index_id= ] *index_id*  
  ID dell'indice. *index_id* è di **tipo int**. i possibili valori sono i seguenti: il numero di ID di un indice, NULL o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *partition_number*.  

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154616"
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
@@ -47,7 +47,7 @@ ms.locfileid: "70154616"
  [Esercitazione: Valutazione di procedure consigliate tramite la gestione basata su criteri](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  In questa esercitazione viene illustrato come creare criteri utilizzabili per analizzare istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] per problemi noti.  
   
- [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  In questa esercitazione viene illustrato come effettuare un backup di SQL Server e il ripristino nel servizio di archiviazione BLOB di Azure.  
   
  [Esercitazione: File di dati di SQL Server nel servizio Archiviazione di Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

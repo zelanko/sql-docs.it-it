@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952314"
 ---
 # <a name="database-ssrs-native-mode"></a>Database (modalità nativa SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "71952314"
  **Cambia database**  
  Consente di avviare una procedura guidata per l'esecuzione semplificata di tutti i passaggi necessari per la creazione o la selezione di un database del server di report.  
   
- **Tipo di credenziale**  
+ **Tipo di credenziali**  
  Consente di specificare le credenziali utilizzate dal server di report per eseguire la connessione al database. Tra i tipi di credenziali che è possibile specificare sono inclusi l'account del servizio, un utente di dominio di Windows o un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulla selezione delle credenziali, vedere [configurare una connessione del database del server di Report &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome utente**  

@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278177"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "72278177"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome dell'articolo.|  
-|**tipo**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella.<br /><br /> **32** = solo schema proc.<br /><br /> **64** = solo schema della vista o solo schema della vista indicizzata.<br /><br /> **128** = solo schema di funzione.<br /><br /> **160** = solo schema sinonimo.|  
-|**ObjID**|**int**|Identificatore dell'oggetto del server di pubblicazione.|  
+|**type**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella.<br /><br /> **32** = solo schema proc.<br /><br /> **64** = solo schema della vista o solo schema della vista indicizzata.<br /><br /> **128** = solo schema di funzione.<br /><br /> **160** = solo schema sinonimo.|  
+|**objid**|**int**|Identificatore dell'oggetto del server di pubblicazione.|  
 |**sync_objid**|**int**|Identificatore della vista che rappresenta il set di dati sincronizzato.|  
 |**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non è una vista; utilizzare tutti gli oggetti di base.<br /><br /> **1** = visualizzazione permanente.<br /><br /> **2** = visualizzazione temporanea.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
@@ -42,7 +42,7 @@ ms.locfileid: "72278177"
 |**pubid**|**uniqueidentifier**|ID della pubblicazione a cui appartiene l'articolo corrente.|  
 |**Nickname**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
 |**column_tracking**|**int**|Specifica se viene implementato il rilevamento a livello di colonna per l'articolo.|  
-|**stato**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per la pubblicazione della tabella verrà eseguito alla successiva esecuzione del agente di snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per la pubblicazione della tabella è stato eseguito.<br /><br /> **5** = New_inactive-da aggiungere.<br /><br /> **6** = New_active-da aggiungere.|  
+|**Stato**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per la pubblicazione della tabella verrà eseguito alla successiva esecuzione del agente di snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per la pubblicazione della tabella è stato eseguito.<br /><br /> **5** = New_inactive-da aggiungere.<br /><br /> **6** = New_active-da aggiungere.|  
 |**conflict_table**|**sysname**|Nome della tabella locale che include i record in conflitto per l'articolo corrente. Lo scopo di questa tabella è esclusivamente informativo. Il contenuto può essere modificato o eliminato da routine di risoluzione dei conflitti personalizzate oppure direttamente dall'amministratore.|  
 |**creation_script**|**nvarchar(255)**|Script per la creazione dell'articolo.|  
 |**conflict_script**|**nvarchar(255)**|Script dei conflitti dell'articolo.|  
@@ -56,12 +56,12 @@ ms.locfileid: "72278177"
 |**resolver_clsid**|**nvarchar(50)**|ID del sistema di risoluzione dei conflitti personalizzato.|  
 |**subset_filterclause**|**nvarchar (1000)**|Clausola di filtro per l'articolo.|  
 |**missing_col_count**|**int**|Numero di colonne mancanti.|  
-|**missing_cols**|**varbinary (128)**|Mappa di bit delle colonne mancanti.|  
-|**colonne**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**missing_cols**|**varbinary(128)**|Mappa di bit delle colonne mancanti.|  
+|**colonne**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resolver_info**|**nvarchar(255)**|Archivio per informazioni aggiuntive necessarie ai sistemi di risoluzione dei conflitti personalizzati.|  
 |**view_sel_proc**|**nvarchar (290)**|Nome di una stored procedure utilizzata dall'agente di merge per il popolamento iniziale di un articolo in una pubblicazione filtrata in modo dinamico e per l'enumerazione delle righe modificate in qualsiasi pubblicazione filtrata.|  
 |**gen_cur**|**int**|Numero di generazione per modifiche locali della tabella di base di un articolo.|  
-|**excluded_cols**|**varbinary (128)**|Mappa di bit delle colonne escluse dall'articolo quando viene inviato al Sottoscrittore.|  
+|**excluded_cols**|**varbinary(128)**|Mappa di bit delle colonne escluse dall'articolo quando viene inviato al Sottoscrittore.|  
 |**excluded_col_count**|**int**|Numero di colonne escluse.|  
 |**vertical_partition**|**int**|Specifica se in un articolo di tabella il filtraggio delle colonne è abilitato. **0** indica che non è presente alcun filtro verticale e che tutte le colonne vengono pubblicate.|  
 |**identity_support**|**int**|Specifica se è abilitata la gestione automatica degli intervalli di valori Identity. **1** indica che la gestione degli intervalli di valori Identity è abilitata e **0** indica che non è disponibile alcun supporto per l'intervallo di valori Identity.|  

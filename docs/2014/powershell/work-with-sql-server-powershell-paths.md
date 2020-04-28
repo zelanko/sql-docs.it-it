@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782725"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utilizzo di percorsi di SQL Server PowerShell
@@ -22,9 +22,9 @@ ms.locfileid: "72782725"
   
 1.  [Prima di iniziare](#BeforeYouBegin)  
   
-2.  **Per lavorare su un nodo di percorso: elenco di**  [metodi e proprietà](#ListPropMeth), [utilizzo di metodi e proprietà](#UsePropMeth)  
+2.  **Per utilizzare un nodo di percorso:**  [Elenco di metodi e proprietà](#ListPropMeth), [Utilizzo di metodi e proprietà](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../includes/ssde-md.md)] è possibile eseguire due tipi di azioni:  
   
 -   È possibile eseguire i cmdlet di Windows PowerShell che operano sui nodi, ad esempio **Rename-Item**.  
@@ -33,7 +33,7 @@ ms.locfileid: "72782725"
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzato per gestire gli oggetti in un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Non viene utilizzato per i dati nei database. Se si è passati a una tabella o una vista, non è possibile utilizzare il provider per selezionare, inserire, aggiornare o eliminare i dati. Usare il cmdlet **Invoke-Sqlcmd** per eseguire una query o per modificare dati in tabelle e viste nell'ambiente di Windows PowerShell. Per altre informazioni, vedere [cmdlet Invoke-Sqlcmd](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a>Elenco di metodi e proprietà
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> Elenco di metodi e proprietà
   
  Per visualizzare i metodi e le proprietà disponibili per specifici oggetti o classi di oggetti, usare il cmdlet **Get-Member** .  
   
@@ -62,7 +62,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>Utilizzo di metodi e proprietà SMO  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>Utilizzo di metodi e proprietà SMO  
   
  Per eseguire operazioni su oggetti di un percorso di provider [!INCLUDE[ssDE](../includes/ssde-md.md)] è possibile utilizzare metodi e proprietà SMO.  
   

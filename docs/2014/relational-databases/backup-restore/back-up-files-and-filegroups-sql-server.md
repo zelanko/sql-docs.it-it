@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782752"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Backup di file e filegroup (SQL Server)
@@ -44,28 +44,28 @@ ms.locfileid: "72782752"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Non è possibile utilizzare l'istruzione BACKUP in una transazione esplicita o implicita.  
   
--   In base al modello di recupero con registrazione minima, è necessario creare una copia di backup contenente tutti i file di lettura/scrittura, al fine di garantire che il database possa essere ripristinato fino a un punto nel tempo coerente. Anziché specificare singolarmente ogni file o filegroup di lettura/scrittura, utilizzare l'opzione READ_WRITE_FILEGROUPS. Questa opzione consente di eseguire il backup di tutti i filegroup di lettura/scrittura del database. Un backup creato con l'opzione READ_WRITE_FILEGROUPS è noto come *backup parziale*. Per altre informazioni, vedere [Backup parziali &#40;SQL Server&#41;](partial-backups-sql-server.md).  
+-   In base al modello di recupero con registrazione minima, è necessario creare una copia di backup contenente tutti i file di lettura/scrittura, al fine di garantire che il database possa essere ripristinato fino a un punto nel tempo coerente. Anziché specificare singolarmente ogni file o filegroup di lettura/scrittura, utilizzare l'opzione READ_WRITE_FILEGROUPS. Questa opzione consente di eseguire il backup di tutti i filegroup di lettura/scrittura del database. Un backup creato specificando READ_WRITE_FILEGROUPS è noto come *backup parziale*. Per altre informazioni, vedere [Backup parziali &#40;SQL Server&#41;](partial-backups-sql-server.md).  
   
 -   Per altre informazioni sulle limitazioni e restrizioni, vedere [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
- Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
+ Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, [non](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)vengono controllate dalla stored procedure sp_addumpdevice , che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-back-up-database-files-and-filegroups"></a>Per eseguire il backup di file e filegroup del database  
   
@@ -73,7 +73,7 @@ ms.locfileid: "72782752"
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, selezionare **Attività**, quindi fare clic su **Esegui backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, selezionare **Attività**, quindi fare clic su **Esegui backup**. Verrà visualizzata la finestra di dialogo **Backup del database**.  
   
 4.  Nell'elenco **Database** verificare il nome del database. È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "72782752"
   
          Per questa opzione, immettere un nome nella casella di testo **Nome nuovo set di supporti** e, se lo si desidera, descrivere il set di supporti nella casella di testo **Descrizione nuovo set di supporti**. Per altre informazioni sulla creazione di un nuovo set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
-14. Nella sezione **Affidabilità** è possibile selezionare facoltativamente:  
+14. Nella sezione **affidabilità** selezionare facoltativamente:  
   
     -   **Verificare il backup al termine**dell'operazione.  
   
-    -   **Eseguire checksum prima della scrittura nei supporti**e, facoltativamente, **continuare in un errore di checksum**. Per altre informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Esegui checksum prima della scrittura nei supporti** e, facoltativamente, **Continua su errore di checksum**. Per altre informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale** , l'opzione **Scarica nastro al termine del backup** sarà attiva. Selezionando questa opzione viene abilitata anche l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
@@ -135,11 +135,11 @@ ms.locfileid: "72782752"
   
     -   [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-back-up-files-and-filegroups"></a>Per eseguire il backup di file e filegroup  
   
-1.  Per creare un backup di file o filegroup, utilizzare un'istruzione [backup DATABASE <file_or_filegroup>](/sql/t-sql/statements/backup-transact-sql) . In questa istruzione è necessario specificare almeno gli elementi seguenti:  
+1.  Per creare un backup del file o del filegroup, usare un'istruzione [BACKUP DATABASE <file_or_filegroup>](/sql/t-sql/statements/backup-transact-sql). In questa istruzione è necessario specificare almeno gli elementi seguenti:  
   
     -   Nome del database.  
   
@@ -163,19 +163,19 @@ ms.locfileid: "72782752"
     |**=** _Logical_file_name_ file|Specifica il nome logico di un file da includere nel backup del file.|  
     |**=** _Logical_filegroup_name_ filegroup|Specifica il nome logico di un filegroup da includere nel backup del file. Con il modello di recupero con registrazione minima, il backup dei filegroup è consentito solo per i filegroup di sola lettura.|  
     |[ **,**...*f* ]|Segnaposto che indica che è possibile specificare più file e filegroup. Il numero di file o filegroup che possono essere specificati è illimitato.|  
-    |*backup_device* [ **,**... *n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> {DISK &#124; TAPE} **=** _physical_backup_device_name_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> {DISK &#124; TAPE} **=** _physical_backup_device_name_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *con_opzioni* [ **,**...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, ad esempio DIFFERENTIAL.<br /><br /> Nota: il backup differenziale del file richiede come base un backup completo del file. Per altre informazioni, vedere [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
 2.  Se si utilizza il modello di recupero con registrazione completa, è inoltre necessario eseguire un backup del log delle transazioni. Per utilizzare un set completo di backup del file completi per il ripristino di un database, è inoltre necessario disporre di backup dei log relativi a tutti i backup del file, dall'inizio del primo backup del file. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
  Negli esempi seguenti viene eseguito il backup di uno o più file dei filegroup secondari del database `Sales` . Questo database utilizza il modello di recupero con registrazione completa e contiene i filegroup secondari seguenti:  
   
 -   Un filegroup denominato `SalesGroup1` che include i file `SGrp1Fi1` e `SGrp1Fi2`.  
   
 -   Un filegroup denominato `SalesGroup2` che include i file `SGrp2Fi1` e `SGrp2Fi2`.  
   
-#### <a name="a-creating-a-file-backup-of-two-files"></a>R. Creazione di un backup del file per due file  
+#### <a name="a-creating-a-file-backup-of-two-files"></a>A. Creazione di un backup del file per due file  
  Nell'esempio seguente viene creato un backup differenziale del file solo per il file `SGrp1Fi2` del filegroup `SalesGroup1` e per il file `SGrp2Fi2` del filegroup `SalesGroup2` .  
   
 ```sql  
@@ -213,7 +213,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
 Utilizzare il cmdlet `Backup-SqlDatabase` e specificare `Files` per il valore del parametro `-BackupAction`. Inoltre, specificare uno dei parametri seguenti:  
   
@@ -238,7 +238,7 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
  [Pagina Backup database &#40;opzioni di backup&#41;](back-up-database-backup-options-page.md)   
  [Backup completi dei file &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
+ [Ripristini di file &#40;modello di recupero con versione completa&#41;](file-restores-full-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](file-restores-simple-recovery-model.md)  
   
   

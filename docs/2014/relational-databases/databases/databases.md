@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154578"
 ---
 # <a name="databases"></a>Database
@@ -40,18 +40,18 @@ ms.locfileid: "70154578"
   
 |||  
 |-|-|  
-|[Database di sistema.](system-databases.md)|[Eliminare file di dati o file di log da un database](delete-data-or-log-files-from-a-database.md)|  
+|[Database di sistema](system-databases.md)|[Eliminare file di dati o file di log da un database](delete-data-or-log-files-from-a-database.md)|  
 |[Database indipendenti](contained-databases.md)|[Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](display-data-and-log-space-information-for-a-database.md)|  
 |[File di dati di SQL Server in Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
 |[Filegroup e file di database](database-files-and-filegroups.md)|[Rinominare un database](rename-a-database.md)|  
 |[Stati del database](database-states.md)|[Impostare un database in modalità utente singolo](set-a-database-to-single-user-mode.md)|  
-|[Stati dei file](file-states.md)|[Compattare un database](shrink-a-database.md)|  
+|[Stati di file](file-states.md)|[Compattare un database](shrink-a-database.md)|  
 |[Stima delle dimensioni di un database](estimate-the-size-of-a-database.md)|[Compattare un file](shrink-a-file.md)|  
 |[Copiare database in altri server](copy-databases-to-other-servers.md)|[Visualizzare o modificare le proprietà di un database](view-or-change-the-properties-of-a-database.md)|  
 |[Collegamento e scollegamento di un database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Visualizzare un elenco di database in un'istanza di SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[Aggiungere file di dati o file di log a un database](add-data-or-log-files-to-a-database.md)|[Visualizzare o modificare il livello di compatibilità di un database](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[Modificare le impostazioni di configurazione per un database](change-the-configuration-settings-for-a-database.md)|[Utilizzare la Creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[Creare un database](create-a-database.md)|[Creare un alias del tipo di dati definito dall'utente](create-a-user-defined-data-type-alias.md)|  
+|[Creazione di un database](create-a-database.md)|[Creare un alias del tipo di dati definito dall'utente](create-a-user-defined-data-type-alias.md)|  
 |[Eliminare un database](delete-a-database.md)|[Snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  

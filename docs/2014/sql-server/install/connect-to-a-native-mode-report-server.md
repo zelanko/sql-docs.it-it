@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 5bf32c8427679b342bee89d6541b051beed2e8ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952295"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Connettersi a un server di report in modalità nativa
@@ -39,7 +39,7 @@ ms.locfileid: "71952295"
  Per aprire questa finestra di dialogo, avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La finestra di dialogo verrà visualizzata non appena si avvia lo strumento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome server**  
+ **Nome del server**  
  Consente di immettere il nome di rete del computer in cui è installato [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Digitare solo il nome del computer senza includere barre o un prefisso.  
   
  **Trovare**  

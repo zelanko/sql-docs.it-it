@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688894"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
@@ -73,16 +73,16 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
 |Sezione|Dimensione|Commenti|  
 |-------------|----------|--------------|  
 |Colonne di tipo superficiale|SUM([size of shallow types])<br /><br /> **Le dimensioni dei singoli tipi sono le seguenti:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisione <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisione>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
-|Riempimento delle colonne superficiali|Valori possibili:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni totali dei dati delle colonne superficiali sono un numero dispari.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Matrice di offset delle colonne di tipo approfondito|Valori possibili:<br /><br /> 0 se non sono disponibili colonne di tipo approfondito<br /><br /> 2 + 2 * [number of deep type columns] in caso contrario|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Riempimento delle colonne superficiali|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni totali dei dati delle colonne superficiali sono un numero dispari.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Matrice di offset delle colonne di tipo approfondito|I valori possibili sono:<br /><br /> 0 se non sono disponibili colonne di tipo approfondito<br /><br /> 2 + 2 * [number of deep type columns] in caso contrario|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Matrice NULL|[number of nullable columns] / 8, arrotondato per eccesso ai byte completi.|La matrice dispone di un bit per ogni colonna che ammette i valori Null. Il valore viene arrotondato per eccesso ai byte completi.|  
-|Riempimento della matrice NULL|Valori possibili:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni della matrice NULL sono un numero dispari di byte.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Riempimento della matrice NULL|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni della matrice NULL sono un numero dispari di byte.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Riempimento|0 se non sono disponibili colonne di tipo approfondito<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Colonne di tipo approfondito a lunghezza fissa|SUM([size of fixed length deep type columns])<br /><br /> Le dimensioni di ogni colonna sono le seguenti:<br /><br /> i per char(i) e binary(i).<br /><br /> 2 * i per nchar(i)|Le colonne di tipo approfondito a lunghezza fissa sono le colonne di tipo char(i), nchar(i) o binary(i).|  
 |Colonne di tipo approfondito a lunghezza variabile [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Le dimensioni calcolate di ogni colonna sono le seguenti:<br /><br /> i per varchar(i) e varbinary(i)<br /><br /> 2 * i per nvarchar(i)|Questa riga si riferiva solo a [computed row body size].<br /><br /> Le colonne di tipo approfondito a lunghezza variabile sono le colonne di tipo varchar(i), nvarchar(i) o varbinary(i). Le dimensioni calcolate sono determinate dalla lunghezza massima (i) della colonna.|  
 |Colonne di tipo approfondito a lunghezza variabile [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Le dimensioni effettive di ogni colonna sono le seguenti:<br /><br /> n, dove n è il numero di caratteri archiviato nella colonna, per varchar(i).<br /><br /> 2 * n, dove n è il numero di caratteri archiviato nella colonna, per nvarchar(i).<br /><br /> n, dove n è il numero di byte archiviato nella colonna, per varbinary(i).|Questa riga si riferiva solo a [actual row body size].<br /><br /> Le dimensioni effettive sono determinate dai dati archiviati nelle colonne della riga.|  
   
-##  <a name="bkmk_RowStructure"></a>Struttura di righe  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a>Struttura di righe  
  Le righe di una tabella ottimizzata per la memoria includono i componenti seguenti:  
   
 -   L'intestazione di riga contiene il timestamp necessario per implementare il controllo delle versioni delle righe. L'intestazione di riga contiene inoltre il puntatore dell'indice per implementare il concatenamento di righe nei bucket di hash (descritti in precedenza).  
@@ -91,7 +91,7 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
   
  Nella figura seguente viene illustrata la struttura di righe per una tabella con due indici:  
   
- ![Struttura di riga per una tabella con due indici.](../../database-engine/media/hekaton-tables-4.gif "Struttura di riga per una tabella con due indici.")  
+ ![Struttura di righe per una tabella con due indici.](../../database-engine/media/hekaton-tables-4.gif "Struttura di righe per una tabella con due indici.")  
   
  I timestamp di inizio e fine indicano il periodo in cui è valida una versione di riga specifica. Le transazioni che iniziano in questo intervallo possono rilevare questa versione di riga. Per altri dettagli, vedere [Transactions in Memory-Optimized Tables](memory-optimized-tables.md) (Transazioni in tabelle con ottimizzazione per la memoria).  
   
@@ -130,7 +130,7 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
 |Jane|Praga|  
 |Susan|Bogotà|  
   
-##  <a name="bkmk_ExampleComputation"></a>Esempio: calcolo delle dimensioni della tabella e delle righe  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Esempio: calcolo delle dimensioni della tabella e delle righe  
  Per gli indici hash il numero effettivo di bucket viene arrotondato alla più vicina potenza di 2. Ad esempio, se il valore di bucket_count specificato è 100.000, il numero effettivo di bucket per l'indice è 131.072.  
   
  Si consideri una tabella Orders con la definizione seguente:  
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  
+ [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
   
   

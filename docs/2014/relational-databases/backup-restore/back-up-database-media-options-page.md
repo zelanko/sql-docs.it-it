@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154833"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
@@ -91,10 +91,10 @@ ms.locfileid: "70154833"
 > [!NOTE]  
 >  Per informazioni sui backup del log delle transazioni, vedere [Backup di log delle transazioni &#40; SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
- **Troncamento del log delle transazioni**  
+ **Tronca il log delle transazioni**  
  Consente di eseguire il backup del log delle transazioni e di troncarlo per liberare spazio per i log. Il database rimane online. Questa è l'opzione predefinita.  
   
- **Esegui il backup della parte finale del log e lascia il database nello stato RESTORING**  
+ **Esegui backup della parte finale del log e lascia il database in stato di ripristino**  
  Consente di eseguire il backup della parte finale del log lasciando il database in stato di ripristino. Questa opzione crea un *backup della parte finale del log*, che consente di eseguire il backup dei log non ancora sottoposti a questa procedura (il log attivo), in genere per la preparazione del ripristino di un database. Il database non sarà disponibile per gli utenti finché non viene ripristinato completamente.  
   
  La selezione di questa opzione equivale a specificare l'opzione WITH NO_TRUNCATE, NORECOVERY in un'istruzione [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  

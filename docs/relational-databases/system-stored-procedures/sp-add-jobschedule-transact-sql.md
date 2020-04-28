@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810501"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -70,9 +70,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**16**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**16**|Ogni mese|  
 |**32**|Mensile rispetto a *frequency_interval.*|  
 |**64**|All'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |**128**|Quando il computer è inattivo|  
@@ -139,7 +139,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiungere una pianificazione a un processo, usare **sp_add_schedule** per creare la pianificazione e **sp_attach_schedule** per alleghiare la pianificazione a un processo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -170,6 +170,6 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_update_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

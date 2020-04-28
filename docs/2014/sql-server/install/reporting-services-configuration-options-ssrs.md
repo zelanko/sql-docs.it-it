@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952118"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opzioni di configurazione di Reporting Services (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "71952118"
 > [!NOTE]  
 >  La presenza di un file di database del server di report può impedire l'installazione se si seleziona una delle opzioni di installazione predefinite. Quando si seleziona un'opzione di installazione predefinita, il programma di installazione tenta di creare un database del server di report utilizzando il nome predefinito. Se è già presente un database con lo stesso nome, l'installazione avrà esito negativo e sarà necessario eseguirne il rollback. Per evitare questo problema, è possibile rinominare il database esistente prima di eseguire l'installazione oppure selezionare l'opzione **Solo installazione** in modo da poter specificare impostazioni personalizzate per il database al termine dell'installazione.  
   
-#### <a name="install-and-configure"></a>Installare e configurare  
+#### <a name="install-and-configure"></a>Installazione e configurazione  
  Consente di installare un'istanza del server di report in modalità nativa utilizzando i valori predefiniti per i database del server di report, l'account del servizio e le prenotazioni di URL. Se si sceglie questa opzione, l'istanza del server di report è pronta per essere utilizzata al termine dell'installazione. Durante l'installazione viene creato un database del server di report utilizzando un'istanza locale di [!INCLUDE[ssDE](../../includes/ssde-md.md)] e viene configurato un server di report per l'utilizzo dei valori predefiniti.  
   
  Questa opzione è disponibile solo se i valori predefiniti utilizzati nell'installazione di un server di report sono validi per il sistema. Questa opzione è consigliabile per gli sviluppatori che desiderano installare tutti i componenti localmente e per gli utenti che desiderano valutare il software.  

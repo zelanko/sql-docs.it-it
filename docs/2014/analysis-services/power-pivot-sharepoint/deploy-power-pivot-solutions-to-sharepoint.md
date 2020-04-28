@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782827"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "72782827"
   
  [Informazioni sulle soluzioni PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a>Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
+##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
  PowerPivot per SharePoint è supportato solo per le applicazioni Web che utilizzano l'autenticazione in modalità classica di Windows. Per verificare se l'applicazione usa la modalità classica, eseguire il cmdlet di PowerShell seguente dalla **Shell di gestione di sharepoint 2010**, sostituendo `http://<top-level site name>` con il nome del sito di SharePoint:  
   
 ```powershell
@@ -47,7 +47,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Il valore restituito dovrebbe essere **false**. Se è **true**, non è possibile accedere ai dati PowerPivot con questa applicazione Web.  
   
-##  <a name="bkmk_farm"></a>Passaggio 1: distribuire la soluzione farm  
+##  <a name="step-1-deploy-the-farm-solution"></a><a name="bkmk_farm"></a> Passaggio 1: distribuire la soluzione farm  
  In questa sezione viene illustrato come distribuire le soluzioni utilizzando PowerShell, ma è anche possibile utilizzare lo strumento di configurazione PowerPivot per completare questa attività. Per ulteriori informazioni, vedere [configurare o ripristinare PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  È necessario eseguire questa attività una sola volta dopo l'installazione di PowerPivot per SharePoint.  
@@ -68,7 +68,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a>Passaggio 2: distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale  
+##  <a name="step-2-deploy-the-powerpivot-web-application-solution-to-central-administration"></a><a name="deployCA"></a>Passaggio 2: distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale  
  Dopo la distribuzione della soluzione farm, è necessario distribuire la soluzione applicazione Web in Amministrazione centrale. Tramite questo passaggio viene aggiunto il dashboard di gestione PowerPivot in Amministrazione centrale.  
   
 1.  Aprire una shell di gestione di SharePoint 2010 utilizzando l'opzione **Esegui come amministratore** .  
@@ -95,12 +95,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Dopo la distribuzione della soluzione applicazione Web in Amministrazione centrale, sarà possibile utilizzare questo strumento per completare tutti i passaggi di configurazione rimanenti.  
   
-##  <a name="deployUI"></a>Passaggio 3: distribuire la soluzione applicazione Web PowerPivot ad altre applicazioni Web  
+##  <a name="step-3-deploy-the-powerpivot-web-application-solution-to-other-web-applications"></a><a name="deployUI"></a>Passaggio 3: distribuire la soluzione applicazione Web PowerPivot ad altre applicazioni Web  
  Nell'attività precedente si è distribuito Powerpivotwebapp.wsp in Amministrazione centrale. In questa sezione si provvederà alla distribuzione di powerpivotwebapp.wsp in un'applicazione Web esistente che supporta l'accesso ai dati PowerPivot. Se in seguito si aggiungono altre applicazioni Web, assicurarsi di ripetere questo passaggio anche per tali applicazioni.  
   
 1.  In Impostazioni sistema di Amministrazione centrale fare clic su **Gestisci soluzioni farm**.  
   
-2.  Fare clic su **powerpivotwebapp.wsp**.  
+2.  Fare clic su **powerpivotwebapp. wsp**.  
   
 3.  Fare clic su **Distribuisci soluzione**.  
   
@@ -110,12 +110,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 6.  Ripetere l'operazione per le altre applicazioni Web SharePoint che supporteranno l'accesso ai dati PowerPivot.  
   
-##  <a name="retract"></a>Ridistribuire o ritirare la soluzione  
+##  <a name="redeploy-or-retract-the-solution"></a><a name="retract"></a> Ridistribuire o ritirare la soluzione  
  Sebbene Amministrazione centrale SharePoint consenta il ritiro della soluzione, non è necessario ritirare il file powerpivotwebapp.wsp a meno che si stia sistematicamente eseguendo la risoluzione dei problemi relativi a un'installazione o alla distribuzione di una patch.  
   
 1.  In Impostazioni sistema di Amministrazione centrale SharePoint 2010 fare clic su **Gestisci soluzioni farm**.  
   
-2.  Fare clic su **powerpivotwebapp. wsp**.  
+2.  Fare clic su **Powerpivotwebapp.wsp**.  
   
 3.  Fare clic su **Ritira soluzione**.  
   
@@ -131,7 +131,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  Ridistribuire la soluzione dell'applicazione Web PowerPivot in tutte le applicazioni Web SharePoint.  
   
-##  <a name="intro"></a>Informazioni sulle soluzioni PowerPivot  
+##  <a name="about-the-powerpivot-solutions"></a><a name="intro"></a>Informazioni sulle soluzioni PowerPivot  
  In PowerPivot per SharePoint vengono utilizzati due pacchetti di soluzioni per distribuire le relative pagine dell'applicazione e file di programma nella farm e in singole applicazioni Web.  
   
 -   La soluzione farm è globale. Viene distribuita una volta e quindi diventa automaticamente disponibile in qualsiasi nuovo server PowerPivot per SharePoint che verrà aggiunto alla farm.  

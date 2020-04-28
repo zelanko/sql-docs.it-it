@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289354"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -58,11 +58,11 @@ ms.locfileid: "72289354"
 |exception_severity|**int**|Gravità dell'ultima eccezione rilevata dal thread di lavoro.|  
 |exception_address|**varbinary (8)**|Indirizzo del codice che ha generato l'eccezione|  
 |affinity|**bigint**|L'affinità del thread di lavoro. Corrisponde all'affinità del thread in [sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar (60)**|Stato del thread di lavoro. Può avere uno dei valori seguenti:<br /><br /> INIT = Il thread di lavoro è in fase di inizializzazione.<br /><br /> RUNNING = Il thread di lavoro è in esecuzione in modalità non preemptive o preemptive.<br /><br /> RUNNABLE = Il thread di lavoro è pronto per essere eseguito nell'utilità di pianificazione.<br /><br /> SUSPENDED = Il thread di lavoro è sospeso ed è in attesa di un evento per inviare un segnale.|  
+|state|**nvarchar(60)**|Stato del thread di lavoro. I possibili valori sono i seguenti:<br /><br /> INIT = Il thread di lavoro è in fase di inizializzazione.<br /><br /> RUNNING = Il thread di lavoro è in esecuzione in modalità non preemptive o preemptive.<br /><br /> RUNNABLE = Il thread di lavoro è pronto per essere eseguito nell'utilità di pianificazione.<br /><br /> SUSPENDED = Il thread di lavoro è sospeso ed è in attesa di un evento per inviare un segnale.|  
 |start_quantum|**bigint**|Tempo, espresso in millisecondi, all'inizio dell'esecuzione del thread di lavoro.|  
 |end_quantum|**bigint**|Tempo, espresso in millisecondi, alla fine dell'esecuzione del thread di lavoro.|  
-|last_wait_type|**nvarchar (60)**|Tipo dell'ultima attesa. Per un elenco dei tipi di attesa, vedere [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Valore restituito dall'ultima attesa. Può avere uno dei valori seguenti:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|last_wait_type|**nvarchar(60)**|Tipo dell'ultima attesa. Per un elenco dei tipi di attesa, vedere [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|return_code|**int**|Valore restituito dall'ultima attesa. I possibili valori sono i seguenti:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Solo per uso interno.|  
 |max_quantum|**bigint**|Solo per uso interno.|  
 |boost_count|**int**|Solo per uso interno.|  
@@ -79,8 +79,7 @@ ms.locfileid: "72289354"
 ## <a name="remarks"></a>Osservazioni  
  Se lo stato del thread di lavoro è RUNNING e il thread di lavoro è in esecuzione in modalità non preemptive, l'indirizzo del thread di lavoro corrisponde alla colonna active_worker_address in sys.dm_os_schedulers.  
   
- Quando viene segnalato un thread di lavoro in attesa di un evento, tale thread viene inserito all'inizio della coda eseguibile. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'esecuzione di questa operazione mille volte in una riga. Superato questo valore, il thread di lavoro viene inserito alla fine della coda. Lo spostamento di un thread di lavoro alla fine della coda è caratterizzato da alcune implicazioni a livello di prestazioni.  
+ Quando viene segnalato un thread di lavoro in attesa di un evento, tale thread viene inserito all'inizio della coda eseguibile. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'esecuzione di questa operazione mille volte in una riga. Superato questo valore, il thread di lavoro viene inserito alla fine della coda. Lo spostamento di un thread di lavoro alla fine della coda è caratterizzato da alcune implicazioni a livello di prestazioni.  
   
 ## <a name="permissions"></a>Autorizzazioni
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
@@ -139,4 +138,4 @@ SELECT
 ## <a name="see-also"></a>Vedere anche  
 [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Guida all'architettura di thread e attività](../../relational-databases/thread-and-task-architecture-guide.md)    

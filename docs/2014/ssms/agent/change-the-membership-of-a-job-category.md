@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782792"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modificare l'appartenenza a una categoria di processi
@@ -33,7 +33,7 @@ ms.locfileid: "72782792"
   
      [Sicurezza](#Security)  
   
--   **Per modificare l'appartenenza di una categoria di processi utilizzando:**  
+-   **Per modificare l'appartenenza a una categoria di processi usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,12 +41,12 @@ ms.locfileid: "72782792"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Per modificare l'appartenenza a una categoria di processi  
   
@@ -56,15 +56,15 @@ ms.locfileid: "72782792"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** e selezionare **Gestione categorie processi**.  
   
-4.  Nella finestra di dialogo **Gestisci categorie di processi**_server_name_ Selezionare la categoria di processi che si desidera modificare, quindi fare clic su **Visualizza processi**.  
+4.  Nella finestra di dialogo **Gestione categorie processi**_nome_server_ selezionare la categoria di processi da modificare e fare clic su **Visualizza processi**.  
   
 5.  Selezionare la casella di controllo **Mostra tutti i processi** .  
   
 6.  Per aggiungere un processo alla categoria, selezionare nella griglia principale la casella di controllo della colonna **Seleziona** corrispondente al processo. Per rimuovere un processo dalla categoria, deselezionare la casella. Al termine, fare clic su **OK**.  
   
-7.  Chiudere la finestra di dialogo **Gestisci categorie di processi**_server_name_ .  
+7.  Chiudere la finestra di dialogo **Gestione categorie processi**_nome_server_ .  
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Per modificare l'appartenenza a una categoria di processi  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72782792"
   
  Per ulteriori informazioni, vedere [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
-##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
- **Per modificare l'appartenenza di una categoria di processi**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+ **Per modificare l'appartenenza a una categoria di processi**  
   
  Usare la classe `JobCategory` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  

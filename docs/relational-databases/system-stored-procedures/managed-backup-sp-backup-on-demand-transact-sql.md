@@ -21,10 +21,10 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155395"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  @database_name  
  Nome del database in cui deve essere eseguito il backup. È @database_name di **tipo sysname**.  
   
@@ -58,7 +58,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory**stored procedure.  

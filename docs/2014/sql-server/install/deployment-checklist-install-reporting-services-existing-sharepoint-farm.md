@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952618"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente
   È possibile installare i server di report di SharePoint per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint nuova o esistente. In questo argomento vengono descritti i possibili scenari e le procedure consigliate per installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Prima di eseguire il programma di installazione, esaminare le informazioni seguenti:  
   
 |Passaggio|Collegamento|  
@@ -35,7 +35,7 @@ ms.locfileid: "71952618"
   
 |Avvio configurazione|Flusso di lavoro|Fine della configurazione|Commenti|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]in modalità locale|Installazione|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] in modalità locale|Installazione|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
 |Modalità con connessione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Aggiornamento sul posto|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
 |Modalità con connessione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Migrazione|Modalità con connessione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71952618"
 |**Configurazione aggiuntiva**||  
 |Aggiungere i tipi di contenuto SSRS alla raccolta documenti.|[Aggiungere tipi di contenuto del server di report a una raccolta &#40;Reporting Services in modalità integrata SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |Effettuare il provisioning di SQL Server Agent|[Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|Configurare le impostazioni di posta elettronica per l'applicazione di servizio|[Configurare la posta elettronica per un'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Configurare le impostazioni di posta elettronica per l'applicazione di servizio|[Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Configurare Claims to Windows Token Service (C2WTS)|[Attestazioni per il servizio token Windows &#40;C2WTS&#41; e Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>Elenco di controllo per la migrazione  
@@ -59,8 +59,7 @@ ms.locfileid: "71952618"
   
 |Passaggio|Collegamento|  
 |----------|----------|  
-|Installare e configurare il nuovo server. Sono inclusi gli elementi seguenti:<br /><br /> Utilità preparazione prodotti SharePoint<br /><br /> Prodotti SharePoint 2010<br /><br /> SharePoint 2010 SP1<br /><br /> 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint<br /><br /> Componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint 2010|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Installare e configurare il nuovo server. Sono inclusi gli elementi seguenti:<br /><br /> Utilità preparazione prodotti SharePoint<br /><br /> Prodotti SharePoint 2010<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint<br /><br /> Componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint 2010|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Creare almeno un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Eseguire il backup dei database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Eseguire il backup delle chiavi di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  

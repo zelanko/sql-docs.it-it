@@ -18,10 +18,10 @@ ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f84e84ed7801beb20bdaca5c92d333133fad3b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745360"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "70745360"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta nella coda della posta.|  
 |**profile_id**|**int**|Identificatore del profilo utilizzato per l'invio del messaggio.|  
-|**destinatari**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
+|**recipients**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
 |**Oggetto**|**nvarchar (510)**|Oggetto del messaggio.|  
-|**corpo**|**ntext**|Il corpo del messaggio|  
+|**body**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar (20)**|Formato del corpo del messaggio. I valori possibili sono **Text** e **HTML**.|  
-|**importanza**|**varchar (6)**|Parametro di **importanza** del messaggio.|  
+|**importance**|**varchar (6)**|Parametro di **importanza** del messaggio.|  
 |**sensibilità**|**varchar (12)**|Parametro di **riservatezza** del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
 |**attachment_encoding**|**varchar (20)**|Tipo di allegato del messaggio di posta elettronica.|  

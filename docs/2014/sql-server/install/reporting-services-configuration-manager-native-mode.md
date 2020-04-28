@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952488"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestione configurazione Reporting Services (modalità nativa)
-  Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. Se si è installato un server di report mediante l'opzione di installazione di tipo "solo file", è necessario utilizzare Gestione configurazione per configurare il server prima di poterlo utilizzare. Se si è installato un server di report mediante l'opzione di installazione della configurazione predefinita, è possibile utilizzare Gestione configurazione per verificare o modificare le impostazioni specificate durante l'installazione. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'istanza remota o locale di un server di report.  
+  Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. Se si è installato un server di report mediante l'opzione di installazione di tipo "solo file", è necessario utilizzare Gestione configurazione per configurare il server prima di poterlo utilizzare. Se si è installato un server di report mediante l'opzione di installazione della configurazione predefinita, è possibile utilizzare Gestione configurazione per verificare o modificare le impostazioni specificate durante l'installazione. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'istanza remota o locale di un server di report.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
   
@@ -63,15 +62,15 @@ ms.locfileid: "71952488"
  [Reporting Services Configuration Manager argomenti della Guida F1 &#40;modalità nativa di SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Sono inclusi gli argomenti della Guida relativi alle pagine dello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
--   [Scenari di utilizzo di Reporting Services Configuration Manager](#bkmk_scenarios)  
+-   [Scenari di utilizzo di Gestione configurazione Reporting Services](#bkmk_scenarios)  
   
 -   [Requisiti](#bkmk_requirements)  
   
--   [Per avviare il Reporting Services Configuration Manager](#bkmk_start_configuration_manager)  
+-   [Per avviare Gestione configurazione Reporting Services](#bkmk_start_configuration_manager)  
   
-##  <a name="bkmk_scenarios"></a>Scenari di utilizzo di Reporting Services Configuration Manager  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a>Scenari di utilizzo di Reporting Services Configuration Manager  
  Tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile effettuare le attività seguenti:  
   
 -   Configurare l'account del servizio del server di report. Questo account viene inizialmente configurato durante l'installazione, ma può essere modificato tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se la password viene aggiornata o si desidera utilizzare un account diverso.  
@@ -80,19 +79,17 @@ ms.locfileid: "71952488"
   
 -   Creare e configurare il database del server di report. Il server di report è un server senza stato che richiede un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per lo spazio di archiviazione interno. Per creare il database del server di report e configurare una connessione al database del server di report, è possibile utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È anche possibile selezionare un database del server di report esistente in cui è già incluso il contenuto che si desidera utilizzare.  
   
--   Configurare una distribuzione con scalabilità orizzontale in modalità nativa 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta una topologia di distribuzione che consente a più istanze del server di report di utilizzare un singolo database del server di report condiviso. Per distribuire un server di report con scalabilità orizzontale, utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per connettere ogni server di report al database del server di report condiviso.  
+-   Configurare una distribuzione con scalabilità orizzontale in modalità nativa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta una topologia di distribuzione che consente a più istanze del server di report di utilizzare un singolo database del server di report condiviso. Per distribuire un server di report con scalabilità orizzontale, utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per connettere ogni server di report al database del server di report condiviso.  
   
 -   Eseguire il backup, il ripristino o la sostituzione della chiave simmetrica utilizzata per crittografare stringhe di connessione e credenziali archiviate. È necessario disporre di un backup della chiave simmetrica se si modifica l'account del servizio o si sposta un database del server di report in un altro computer.  
   
 -   Configurazione dell'account di esecuzione automatica. Questo account viene utilizzato per le connessioni remote durante le operazioni pianificate o quando non sono disponibili credenziali utente.  
   
--   Consente di configurare la posta elettronica del server di report. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite posta elettronica del server di report che usa SMTP (Simple Mail Transfer Protocol) per recapitare report o notifiche di elaborazione di report in una cassetta postale elettronica. È possibile utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per specificare quale server o gateway SMTP nella rete dovrà essere utilizzato per il recapito tramite posta elettronica.  
+-   Consente di configurare la posta elettronica del server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite posta elettronica del server di report che usa SMTP (Simple Mail Transfer Protocol) per recapitare report o notifiche di elaborazione di report in una cassetta postale elettronica. È possibile utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per specificare quale server o gateway SMTP nella rete dovrà essere utilizzato per il recapito tramite posta elettronica.  
   
  Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di gestire il contenuto del server di report, abilitare funzionalità aggiuntive o concedere l'accesso al server. Per la distribuzione completa è necessario usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] anche per abilitare funzionalità aggiuntive o modificare valori predefiniti e gestione report per concedere l'accesso utente al server.  
   
-##  <a name="bkmk_requirements"></a>Requisiti  
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Requisiti  
  Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è uno strumento specifico della versione. Non è possibile utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato con questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per configurare una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se si eseguono versioni precedenti e più recenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità side-by-side nello stesso computer, sarà necessario utilizzare Gestione configurazione Reporting Services fornito con ogni versione per configurare ciascuna istanza.  
   
  Per utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario disporre di quanto segue:  
@@ -107,7 +104,7 @@ ms.locfileid: "71952488"
   
  Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato automaticamente durante l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-##  <a name="bkmk_start_configuration_manager"></a>Per avviare il Reporting Services Configuration Manager  
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a>Per avviare il Reporting Services Configuration Manager  
   
 #### <a name="to-start-reporting-services-configuration"></a>Per avviare la configurazione di Reporting Services  
   
@@ -127,7 +124,7 @@ ms.locfileid: "71952488"
   
 4.  Se si specifica un computer remoto, fare clic su **Trova** per stabilire una connessione.  
   
-5.  In **Istanza server di report**selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si desidera configurare. Nell'elenco sono visualizzate solo le istanze del server di report relative a questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è possibile configurare versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+5.  In **Istanza server di report**selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si vuole configurare. Nell'elenco sono visualizzate solo le istanze del server di report relative a questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è possibile configurare versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 6.  Fare clic su **Connetti**.  
   

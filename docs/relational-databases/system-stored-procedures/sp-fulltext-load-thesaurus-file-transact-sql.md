@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305207"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -41,7 +41,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *LCID*  
+ *lcid*  
  Valore intero che esegue il mapping dell'identificatore delle impostazioni locali (LCID) della lingua per cui si desidera caricare la definizione XML del thesaurus. Per ottenere gli LCID delle lingue disponibili in un'istanza del server, utilizzare la vista del catalogo [&#41;Transact-SQL sys. fulltext_languages &#40;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
  **\@** = *azione* loadOnlyIfNotLoaded  

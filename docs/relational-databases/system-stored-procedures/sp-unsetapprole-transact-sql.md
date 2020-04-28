@@ -18,10 +18,10 @@ ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305165"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
@@ -43,7 +43,7 @@ sp_unsetapprole @cookie
  Specifica il cookie creato al momento dell'attivazione del ruolo applicazione. Il cookie viene creato da [sp_setapprole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)**.  
   
 > [!NOTE]  
->  Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)**. Le applicazioni devono continuare a riservare **varbinary (8000),** in modo che l'applicazione continui a funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione futura.  
+>  Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Le applicazioni devono continuare a riservare **varbinary (8000),** in modo che l'applicazione continui a funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione futura.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
@@ -78,10 +78,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_setapprole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREAZIONE del ruolo applicazione &#40;&#41;Transact-SQL](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)  
   
   

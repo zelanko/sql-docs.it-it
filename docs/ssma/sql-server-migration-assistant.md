@@ -10,10 +10,10 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252130"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -50,11 +50,11 @@ Per SSMA sono supportate le seguenti versioni di destinazione.
 
 ## <a name="downloads"></a>Download
 
-- [SSMA per l'accesso](https://aka.ms/ssmaforaccess)
+- [SSMA per Access](https://aka.ms/ssmaforaccess)
 - [SSMA per DB2](https://aka.ms/ssmafordb2)
 - [SSMA per MySql](https://aka.ms/ssmaformysql)
 - [SSMA per Oracle](https://aka.ms/ssmafororacle)
-- [SSMA per SAP ASE](https://aka.ms/ssmaforsybase)
+- [SSMA per ASE SAP](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Recupero del supporto SSMA  
 
@@ -80,7 +80,7 @@ La presente documentazione, incluse le applicazioni di esempio in essa contenute
   
 Obiettivo principale degli esempi inclusi nella documentazione è quello di illustrare un concetto o l'utilizzo comune di un'istruzione o di una clausola specifica. La maggior parte degli esempi non include tutto il codice che in genere si trova in un sistema di produzione completo, in quanto alcune delle consuete operazioni di convalida dei dati e di gestione degli errori vengono rimosse per concentrare l'esempio su un particolare concetto o istruzione. Il supporto tecnico non è disponibile per questi esempi o per il codice sorgente incluso.  
   
-Se non specificato diversamente, le aziende, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, le persone, i luoghi e gli eventi di esempio descritti nel presente documento sono fittizi e nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, persona, luogo o evento è intenzionale o può essere dedotto. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
+Se non specificato diversamente, le aziende, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, le persone, i luoghi e gli eventi di esempio descritti nel presente documento sono fittizi e nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   

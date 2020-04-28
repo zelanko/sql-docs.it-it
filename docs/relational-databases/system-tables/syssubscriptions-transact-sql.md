@@ -18,10 +18,10 @@ ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 251dbb143c1b5aa150cc094ce67943dd0139ee6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305020"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "72305020"
 |**artid**|**int**|ID univoco di un articolo.|  
 |**srvid**|**smallint**|ID del Sottoscrittore.|  
 |**dest_db**|**sysname**|Nome del database di destinazione.|  
-|**stato**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo.<br /><br /> **1** = sottoscritto.<br /><br /> **2** = attivo.|  
+|**Stato**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo.<br /><br /> **1** = sottoscritto.<br /><br /> **2** = attivo.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione iniziale:<br /><br /> **1** = automatico.<br /><br /> **2** = nessuna|  
 |**login_name**|**sysname**|Nome dell'account di accesso utilizzato quando si aggiunge la sottoscrizione.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> 0 = Push: l'agente di distribuzione viene eseguito nel server di distribuzione.<br /><br /> 1 = Pull: l'agente di distribuzione viene eseguito nel Sottoscrittore.|  
-|**distribution_jobid**|**binario (16)**|ID del processo dell'agente di distribuzione.|  
+|**distribution_jobid**|**binary(16)**|ID del processo dell'agente di distribuzione.|  
 |**timestamp**|**timestamp**|Il timestamp.|  
 |**update_mode**|**tinyint**|Modalità di aggiornamento:<br /><br /> **0** = sola lettura.<br /><br /> **1** = aggiornamento immediato.|  
 |**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.|  

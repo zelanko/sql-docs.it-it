@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72005968"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -54,11 +54,11 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Create**|Crea un nuovo catalogo full-text vuoto nel file system e aggiunge una riga associata in **sysfulltextcatalogs** con i valori *fulltext_catalog_name* e *root_directory*, se presenti. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
+|**Crea**|Crea un nuovo catalogo full-text vuoto nel file system e aggiunge una riga associata in **sysfulltextcatalogs** con i valori *fulltext_catalog_name* e *root_directory*, se presenti. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
 |**Goccia**|Elimina *fulltext_catalog_name* rimuovendo dalla file System ed eliminando la riga associata in **sysfulltextcatalogs**. Questa azione non viene completata se nel catalogo sono inclusi indici per una o più tabelle. **sp_fulltext_table** per eliminare le tabelle dal catalogo, è necessario eseguire '*table_name*',' drop '.<br /><br /> Se il catalogo non esiste, viene visualizzato un errore.|  
 |**start_incremental**|Avvia un popolamento incrementale per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se è già attivo il popolamento di un indice full-text, viene visualizzato un avviso e il popolamento non viene eseguito. Con il popolamento incrementale vengono recuperate solo le righe modificate per l'indicizzazione full-text, purché sia presente una colonna **timestamp** nella tabella da indicizzare full-text.|  
 |**start_full**|Avvia un popolamento completo per *fulltext_catalog_name*. Per l'indicizzazione full-text viene recuperata ogni riga di ogni tabella associata al catalogo, anche se è già stata indicizzata.|  
-|**Stop**|Arresta il popolamento di un indice per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se il popolamento è già stato arrestato, non viene visualizzato alcun avviso.|  
+|**Arresta**|Arresta il popolamento di un indice per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se il popolamento è già stato arrestato, non viene visualizzato alcun avviso.|  
 |**Ricompilare**|Ricompila *fulltext_catalog_name*. Quando viene ricompilato un catalogo, il catalogo esistente viene eliminato e al suo posto viene creato un nuovo catalogo. Tutte le tabelle con riferimenti di indicizzazione full-text vengono associate al nuovo catalogo. La ricompilazione reimposta i metadati full-text nelle tabelle di sistema del database.<br /><br /> Se il rilevamento delle modifiche è impostato su OFF, la ricompilazione non comporta il ripopolamento del catalogo full-text appena creato. In questo caso, per ripopolare, eseguire **sp_fulltext_catalog** con l'azione **start_full** o **start_incremental** .|  
   
 `[ @path = ] 'root_directory'`È la directory radice (non il percorso fisico completo) per un'azione **create** . *root_directory* è di **tipo nvarchar (100)** e il valore predefinito è null, che indica l'utilizzo del percorso predefinito specificato al momento dell'installazione. Si tratta della sottodirectory Ftdata nella directory MSSQL. ad esempio, C:\Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. La directory radice specificata deve trovarsi in un'unità dello stesso computer, non deve corrispondere alla sola lettera di unità e non può essere un percorso relativo. Le unità di rete, le unità rimovibili, i dischi floppy e i percorsi in formato UNC non sono supportati. È necessario creare i cataloghi full-text in un'unità disco rigido locale associata a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -138,7 +138,7 @@ GO
  [sp_fulltext_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)  
   
   

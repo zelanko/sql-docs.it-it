@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154784"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Ripristino di un backup del database (SQL Server Management Studio)
@@ -32,11 +32,11 @@ ms.locfileid: "70154784"
 > [!IMPORTANT]  
 >  Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md). Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
- Si noti che se si ripristina un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Tuttavia, se in un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono inclusi indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti anche che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestire e monitorare la ricerca full-text per un'istanza del server](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Si noti che se si ripristina un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Tuttavia, se in un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono inclusi indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ### <a name="to-restore-a-full-database-backup"></a>Per ripristinare un backup completo del database  
   
-1.  Dopo aver stabilito la connessione all'istanza appropriata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
+1.  Dopo aver eseguito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
   
 2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70154784"
   
     -   **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia (**..**.) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -102,7 +102,7 @@ ms.locfileid: "70154784"
   
         -   **Mantieni le impostazioni di replica (WITH KEEP_REPLICATION)**  
   
-        -   **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**  
+        -   **Limitazione dell'accesso al database ripristinato (con RESTRICTED_USER)**  
   
     2.  Selezionare un'opzione per la casella **Stato di recupero** . Questa casella determina lo stato del database al termine dell'operazione di ripristino.  
   
@@ -112,13 +112,13 @@ ms.locfileid: "70154784"
   
         -   **RESTORE WITH STANDBY** lascia il database in modalità di sola lettura. Annulla le transazioni di cui non è stato eseguito il commit, ma salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati.  
   
-    3.  Esegui il backup della parte **finale del log prima** che il ripristino venga selezionato se necessario per il punto nel tempo selezionato. Non è necessario modificare questa impostazione, ma è possibile scegliere di eseguire il backup della parte finale del log, anche se non è richiesto. Inserire il nome file in questa posizione? Se il primo set di backup nella pagina **generale** è in Azure, verrà eseguito il backup anche del log della parte finale nello stesso contenitore di archiviazione.  
+    3.  **Esegui il backup della parte finale del log prima del ripristino** verrà selezionato se necessario per il punto nel tempo selezionato. Non è necessario modificare questa impostazione, ma è possibile scegliere di eseguire il backup della parte finale del log, anche se non è richiesto. Inserire il nome file in questa posizione? Se il primo set di backup nella pagina **generale** è in Azure, verrà eseguito il backup anche del log della parte finale nello stesso contenitore di archiviazione.  
   
     4.  Le operazioni di ripristino potrebbero non riuscire in presenza di connessioni attive al database. Selezionare l'opzione **Chiudi connessioni esistenti** per garantire che tutte le connessioni attive tra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il database vengano chiuse. Questa casella di controllo imposta il database sulla modalità utente singolo prima di effettuare qualsiasi operazione di ripristino e imposta il database sulla modalità multiutente al termine.  
   
     5.  Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.  
   
-     Per altre informazioni su queste opzioni di ripristino, vedere [Ripristina database &#40;(pagina Opzioni)&#41;](restore-database-options-page.md).  
+     Per altre informazioni su queste opzioni di ripristino, vedere [Ripristina database &#40;pagina Opzioni&#41;](restore-database-options-page.md).  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -128,7 +128,7 @@ ms.locfileid: "70154784"
  [Ripristinare un database in un nuovo percorso &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Ripristina database &#40;pagina Opzioni&#41;](restore-database-options-page.md)   
+ [Pagina Opzioni di ripristino &#40;database&#41;](restore-database-options-page.md)   
  [Ripristina database &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874475"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possibili errori durante le sessioni tra repliche di disponibilità (SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874475"
   
 -   I cavi sono scollegati.  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows blocca una porta specifica.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows blocca una porta specifica.  
   
 -   Si è verificato un errore nell'applicazione che esegue il monitoraggio di una porta.  
   
@@ -69,8 +68,7 @@ ms.locfileid: "70874475"
 -   Un server Windows è stato riavviato.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] non fornisce protezione da problemi specifici dei client che accedono ai server. Si consideri, ad esempio, un caso in cui una scheda di rete pubblica gestisce le connessioni client alla replica primaria, mentre una scheda di interfaccia di rete privata gestisce il traffico tra le istanze del server che ospitano le repliche di un gruppo di disponibilità. In questo caso, l'errore della scheda di rete pubblica impedirebbe l'accesso dei client al database.  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] non fornisce protezione da problemi specifici dei client che accedono ai server. Si consideri, ad esempio, un caso in cui una scheda di rete pubblica gestisce le connessioni client alla replica primaria, mentre una scheda di interfaccia di rete privata gestisce il traffico tra le istanze del server che ospitano le repliche di un gruppo di disponibilità. In questo caso, l'errore della scheda di rete pubblica impedirebbe l'accesso dei client al database.  
   
 ## <a name="failures-due-to-soft-errors"></a>Errori provocati da errori software  
  Di seguito vengono riportate alcune possibili cause dei timeout della sessione:  

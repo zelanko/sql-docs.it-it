@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688728"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -42,7 +42,7 @@ ms.locfileid: "72688728"
  Per usare in modo ottimale il supporto delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario approfondire la conoscenza dei termini specificati in questo argomento e delle relative relazioni con le caratteristiche dei dati.  
   
   
-###  <a name="Collation_Defn"></a> Confronto  
+###  <a name="collation"></a><a name="Collation_Defn"></a>Confronto  
  Le regole di confronto specificano i modelli di bit che rappresentano i caratteri in un set di dati. Le regole di confronto determinano inoltre le regole in base alle quali i dati vengono ordinati e confrontati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'archiviazione di oggetti con regole di confronto diverse in un singolo database. Per le colonne non Unicode, l'impostazione delle regole di confronto specifica la tabella codici dei dati e i caratteri che possono essere rappresentati. Per i dati spostati tra colonne non Unicode, è necessaria la conversione dalla tabella codici di origine a quella di destinazione.  
   
  I risultati di un'istruzione[!INCLUDE[tsql](../../includes/tsql-md.md)] possono variare se l'istruzione viene eseguita nel contesto di database diversi che utilizzano impostazioni diverse per le regole di confronto. Se possibile, usare regole di confronto standardizzate per l'organizzazione. In questo modo, non è necessario specificare esplicitamente le regole di confronto in ogni carattere o espressione Unicode. Se è necessario usare oggetti con impostazioni diverse per tabelle codici e regole di confronto, codificare le query in modo da considerare la precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql).  
@@ -53,7 +53,7 @@ ms.locfileid: "72688728"
 |------------|-----------------|  
 |Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra maiuscole e minuscole. Ovvero, in SQL Server non viene operata una distinzione tra lettere maiuscole e minuscole, che vengono considerate identiche ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra maiuscole e minuscole specificando _CI.|  
 |Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Ad esempio,' a' non è uguale a' &#x1EA5;'. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra caratteri accentati e non accentati. Ovvero, in SQL Server non viene opera una distinzione tra caratteri accentati e non accentati, che vengono considerati identici ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando _AI.|  
-|Distinzione Kana (_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero, in SQL Server i caratteri Hiragana e Katakana vengono considerati identici ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|  
+|Distinzione Kana (_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi: Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero, in SQL Server i caratteri Hiragana e Katakana vengono considerati identici ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|  
 |Distinzione larghezza (_WS)|Opera una distinzione tra caratteri a larghezza intera e caratteri a metà larghezza. Se questa opzione non viene selezionata, SQL Server considera identiche le rappresentazioni con caratteri a larghezza intera e a metà larghezza dello stesso carattere ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione larghezza.|  
   
  In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i seguenti set di regole di confronto:  
@@ -67,7 +67,7 @@ ms.locfileid: "72688728"
  Esistono due tipi di regole di confronto binarie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: le regole di confronto meno recenti `BIN` e le regole di confronto più recenti `BIN2`. Nelle regole di confronto `BIN2` tutti i caratteri vengono ordinati in base ai relativi punti di codice. Nelle regole di confronto `BIN` solo il primo carattere viene ordinato in base al punto di codice e i restanti caratteri vengono ordinati in base ai relativi valori di byte. Poiché la piattaforma Intel si avvale di un'architettura little endian, i caratteri di codice Unicode vengono sempre scambiati con i byte archiviati.  
   
  regole di confronto di SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le regole di confronto (SQL_ *) forniscono la compatibilità con l'ordinamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]con le versioni precedenti di. Le regole di ordinamento del dizionario per i dati non Unicode sono compatibili con qualsiasi routine di ordinamento fornita dai sistemi operativi Windows. Tuttavia l'ordinamento dei dati Unicode è compatibile con una versione specifica di regole di ordinamento di Windows. Poiché le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono per i dati non Unicode e i dati Unicode, confrontando gli stessi dati verranno visualizzati risultati diversi, a seconda del tipo di dati sottostante. Per altre informazioni, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
+ Le regole di confronto[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) garantiscono la compatibilità di ordinamento con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le regole di ordinamento del dizionario per i dati non Unicode sono compatibili con qualsiasi routine di ordinamento fornita dai sistemi operativi Windows. Tuttavia l'ordinamento dei dati Unicode è compatibile con una versione specifica di regole di ordinamento di Windows. Poiché le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono per i dati non Unicode e i dati Unicode, confrontando gli stessi dati verranno visualizzati risultati diversi, a seconda del tipo di dati sottostante. Per altre informazioni, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
   
 > [!NOTE]
 >  Quando si aggiorna un'istanza in lingua inglese di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) per assicurare la compatibilità con le istanze esistenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché le regole di confronto predefinite per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono definite durante la configurazione, è importante specificare attentamente le impostazioni delle regole di confronto quando le condizioni riportate di seguito sono vere:  
@@ -100,19 +100,19 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```  
   
   
-###  <a name="Locale_Defn"></a> Impostazioni locali  
+###  <a name="locale"></a><a name="Locale_Defn"></a>Locale  
  Le impostazioni locali rappresentano un set di informazioni associate a un paese o a una lingua. Possono includere il nome e l'identificatore della lingua parlata, lo script usato per la scrittura della lingua e le convenzioni culturali. Le regole di confronto possono essere associate a uno o più set di impostazioni locali. Per altre informazioni, vedere [ID delle impostazioni locali assegnati da Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).  
   
   
-###  <a name="Code_Page_Defn"></a>Tabella codici  
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a>Tabella codici  
  Una tabella codici è un set ordinato di caratteri di uno script specifico nel quale a ogni carattere viene associato un indice numerico o un valore punto di codice. Per tabella codici di Windows si intende in genere un *set di caratteri* o *charset*. Queste tabelle vengono usate per supportare i set di caratteri e i layout di tastiera impiegati per le diverse impostazioni locali di Windows.  
   
   
-###  <a name="Sort_Order_Defn"></a>Ordinamento  
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a>Ordinamento  
  L'ordinamento specifica il modo in cui vengono ordinati i valori dei dati. e influisce sui risultati del confronto dei dati stessi. I dati vengono ordinati tramite regole di confronto e possono essere ottimizzati tramite indici.  
   
   
-##  <a name="Unicode_Defn"></a>Supporto Unicode  
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Supporto Unicode  
  Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse. Se vengono archiviati dati di tipo carattere che riflettono più lingue, usare sempre tipi di dati Unicode (`nchar`, `nvarchar` e `ntext`) anziché tipi di dati non Unicode (`char`, `varchar` e `text`).  
   
  Ai tipi di dati non Unicode sono associate numerose limitazioni, in quanto nei computer non Unicode sarà disponibile una sola tabella codici. Utilizzando tipi di dati Unicode è possibile ottenere prestazioni migliori, in quanto è necessario un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.  
@@ -129,9 +129,9 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  In molti casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagirà con altri server o client e l'organizzazione potrà usare più standard di accesso ai dati tra applicazioni e istanze del server. I client[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono principalmente di due tipi:  
   
--   **Client Unicode** che usano OLE DB e Open Database Connectivity (ODBC) versione 3,7 o versione successiva.  
+-   **Client Unicode** che usano OLE DB e ODBC (Open Database Connectivity) versione 3.7 o successive.  
   
--   **Client non Unicode** che usano DB-Library e ODBC versione 3,6 o una versione precedente.  
+-   **Client non Unicode** che usano DB-Library e ODBC versione 3.6 o precedenti.  
   
  Nella tabella seguente sono riportate informazioni sull'utilizzo di dati multilingue con diverse combinazioni di server Unicode e non Unicode.  
   
@@ -143,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Non Unicode|Non Unicode|Si tratta di uno scenario che presenta numerose limitazioni per i dati multilingue. È possibile usare solo una tabella codici.|  
   
   
-##  <a name="Supplementary_Characters"></a>Caratteri supplementari  
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Caratteri supplementari  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce tipi di dati come `nchar` e `nvarchar` per archiviare dati Unicode. Questi tipi di dati codificano il testo in un formato denominato *UTF-16*. L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 0x0000 e 0x10FFFF. Benché i caratteri più frequentemente usati siano associati a valori di punti di codice compresi in una parola a 16 bit in memoria e su disco, i caratteri con valori di punti di codice maggiori di 0xFFFF richiedono due parole a 16 bit consecutive. Questi caratteri sono denominati *caratteri supplementari*e le due parole a 16 bit consecutive sono denominate *coppie di surrogati*.  
   
  Se si utilizzano caratteri supplementari:  
@@ -181,11 +181,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[Carattere jolly per corrispondenze di singoli caratteri](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [Carattere jolly per la mancata corrispondenza dei caratteri](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|Sono supportati caratteri supplementari per tutte le operazioni con caratteri jolly.|Non sono supportati caratteri supplementari per queste operazioni con caratteri jolly. Sono supportati altri operatori jolly.|  
   
   
-##  <a name="GB18030"></a>Supporto di GB18030  
+##  <a name="gb18030-support"></a><a name="GB18030"></a> Supporto GB18030  
  GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, tali caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello _100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie surrogate), è possibile usare le regole di confronto SC in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.  
   
   
-##  <a name="Complex_script"></a>Supporto per script complessi  
+##  <a name="complex-script-support"></a><a name="Complex_script"></a> Supporto di lingue con alfabeti non latini  
  In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supportata l'immissione, l'archiviazione, la modifica e la visualizzazione di lingue con alfabeti non latini. Le lingue con alfabeti non latini includono:  
   
 -   Lingue che presentano una combinazione di testo scritto sia da destra verso sinistra sia da sinistra verso destra, ad esempio una combinazione di testo in arabo e inglese.  
@@ -197,7 +197,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  Le applicazioni di database che interagiscono con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono usare controlli che supportano le lingue con alfabeti non latini. I form standard di Windows creati in codice gestito sono abilitati per le lingue con alfabeti non latini.  
   
   
-##  <a name="Related_Tasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  
@@ -206,19 +206,19 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Viene descritto come impostare o modificare le regole di confronto di una colonna nel database.|[Impostare o modificare le regole di confronto delle colonne](set-or-change-the-column-collation.md)|  
 |Viene descritto come restituire informazioni sulle regole di confronto a livello di server, di database o di colonna.|[Visualizzazione di informazioni sulle regole di confronto](view-collation-information.md)|  
 |Viene descritto come scrivere istruzioni Transact-SQL per aumentarne la portabilità da un linguaggio a un altro o per supportare più linguaggi con maggiore facilità.|[Scrittura di istruzioni Transact-SQL internazionali](write-international-transact-sql-statements.md)|  
-|Viene descritto come modificare la lingua dei messaggi di errore e le preferenze di utilizzo e visualizzazione dei dati di tipo data, ora e valuta.|[Impostazione di una lingua di sessione](set-a-session-language.md)|  
+|Viene descritto come modificare la lingua dei messaggi di errore e le preferenze di utilizzo e visualizzazione dei dati di tipo data, ora e valuta.|[Impostare una lingua di sessione](set-a-session-language.md)|  
   
   
-##  <a name="Related_Content"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="Related_Content"></a> Contenuto correlato  
  [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["SQL Server procedure consigliate per la migrazione a Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890)  
+ [SQL Server Best Practices Migration to Unicode](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
  [Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Regole di confronto dei database indipendenti](../databases/contained-database-collations.md)   
- [Scelta di una lingua durante la creazione di un indice full-text](../search/choose-a-language-when-creating-a-full-text-index.md)   
+ [Regole di confronto del database indipendente](../databases/contained-database-collations.md)   
+ [Scegliere una lingua durante la creazione di un indice full-text](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

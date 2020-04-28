@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586733"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
@@ -38,7 +38,7 @@ La funzionalità relativa alle raccomandazioni per gli SKU consente di identific
 
 Di seguito sono riportate le istruzioni che consentono di determinare le raccomandazioni dello SKU del database SQL di Azure e di effettuare il provisioning di singoli database o istanze gestite in Azure tramite DMA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Scaricare e installare la versione più recente di [DMA](https://aka.ms/get-dma). Se si dispone già di una versione precedente dello strumento, aprirla e verrà richiesto di aggiornare DMA.
 - Verificare che il computer disponga di [PowerShell versione 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o successiva, che è necessario per eseguire tutti gli script. Per informazioni su findoug in quale versione di PowerShell è installata nel computer, vedere l'articolo [scaricare e installare Windows powershell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -102,7 +102,7 @@ Inoltre, selezionare uno degli argomenti seguenti:
     - **/AzureAuthenticationTenantId**: tenant di autenticazione.
     - **/AzureAuthenticationClientId**: ID client dell'app AAD usata per l'autenticazione.
     - Una delle opzioni di autenticazione seguenti:
-      - Interattività
+      - Interactive (Interattivo)
         - **AzureAuthenticationInteractiveAuthentication**: impostare su true per una finestra popup di autenticazione.
       - Basato su certificati
         - **AzureAuthenticationCertificateStoreLocation**: impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser".

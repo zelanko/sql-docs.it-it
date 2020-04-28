@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154936"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Attività 9: Configurazione di un servizio dati di riferimento
@@ -37,6 +37,6 @@ ms.locfileid: "70154936"
 7.  Fare clic su **Chiudi** nella parte inferiore della pagina per passare alla pagina principale del client DQS.  
   
 ## <a name="next-task"></a>Attività successiva  
- [Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [Attività 10: Configurazione del dominio composito per usare il servizio dati di riferimento](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

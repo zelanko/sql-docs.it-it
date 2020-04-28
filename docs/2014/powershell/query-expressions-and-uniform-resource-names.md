@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782757"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Espressioni di query e Uniform Resource Name
@@ -41,7 +41,7 @@ ms.locfileid: "72782757"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Object*  
+ *Oggetto*  
  Specifica il tipo di oggetto che è rappresentato in corrispondenza del nodo della stringa di espressione. Ciascun oggetto rappresenta una classe di raccolte dai seguenti spazi dei nomi del modello a oggetti SMO:  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -63,7 +63,7 @@ ms.locfileid: "72782757"
  Ad esempio, specificare Server per la classe **ServerCollection** , Database per la classe **DatabaseCollection** .  
   
  \@*PropertyName*  
- Specifica il nome di una delle proprietà della classe associato all'oggetto specificato in *Object*. Il nome della proprietà deve essere preceduto dal carattere \@. Ad esempio, specificare \@IsAnsiNull per la proprietà **IsAnsiNull** della classe **Database**.  
+ Specifica il nome di una delle proprietà della classe associato all'oggetto specificato in *Object*. Il nome della proprietà deve essere preceduto dal carattere \@. Ad esempio, specificare \@IsAnsiNull per la proprietà della classe di **database** **IsAnsiNull**.  
   
  \@*BooleanPropertyName*=true()  
  Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su TRUE.  
@@ -71,7 +71,7 @@ ms.locfileid: "72782757"
  \@*BooleanPropertyName*=false()  
  Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su FALSE.  
   
- contains(\@*StringPropertyName*, '*PatternString*')  
+ Contains\@(*StringtPropertyName*,'*PatternString*')  
  Enumera tutti gli oggetti in cui la proprietà della stringa specificata contiene almeno un'occorrenza del set di caratteri specificato in '*PatternString*'.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -92,7 +92,7 @@ ms.locfileid: "72782757"
   
  Le date specificate in questo formato possono essere valutate rispetto a qualsiasi formato della data archiviato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(\@*PropertyName*)  
+ is_Null (\@*PropertyName*)  
  Enumera tutti gli oggetti in cui la proprietà specificata è impostata su NULL.  
   
  not(\<*PropertyExpression*>)  
@@ -103,7 +103,7 @@ ms.locfileid: "72782757"
   
  Le espressioni di query devono iniziare con un riferimento assoluto all'oggetto Server. Le espressioni relative con un carattere "/" iniziale non sono consentite. La sequenza di oggetti che sono specificati in un'espressione di query deve seguire la gerarchia di oggetti Collection nel modello a oggetti associato. Ad esempio, un'espressione di query che fa riferimento a oggetti nello spazio dei nomi Microsoft.SqlServer.Management.Smo deve iniziare con un nodo Server seguito da un nodo Database e così via.  
   
- Se non viene specificata una *\<FilterExpression>* per un oggetto, vengono enumerati tutti gli oggetti del nodo.  
+ Se non viene specificato un * \<>FilterExpression* per un oggetto, vengono enumerati tutti gli oggetti in tale nodo.  
   
 ## <a name="uniform-resource-names-urn"></a>Unique Resource Name (URN)  
  Gli URN sono un subset di espressioni di query. Ciascun URN rappresenta un riferimento completo a un oggetto singolo. Il tipico URN utilizza la proprietà Name per identificare un singolo oggetto in corrispondenza di ciascun nodo. Ad esempio, questo URN si riferisce a una colonna specifica:  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

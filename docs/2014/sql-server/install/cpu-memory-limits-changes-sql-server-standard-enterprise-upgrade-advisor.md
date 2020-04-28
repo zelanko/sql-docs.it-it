@@ -11,26 +11,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952568"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Modifiche ai limiti di memoria e CPU per SQL Server Standard e Enterprise (Upgrade Advisor)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard ed Enterprise supportano un massimo di 64 GB di memoria di sistema.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint di.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ### <a name="description"></a>Descrizione  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition supporta 128 gigabyte di memoria di sistema e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise supporta al massimo il valore massimo del sistema operativo.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition supporta 128 gigabyte di memoria di sistema e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise supporta al massimo il valore massimo del sistema operativo.  
   
 > [!NOTE]  
 >  Potrebbe essere necessario riconfigurare le impostazioni di sistema correnti in base ai nuovi limiti.  

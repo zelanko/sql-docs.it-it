@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313606"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Editor avanzato query di data mining
@@ -41,7 +41,7 @@ ms.locfileid: "72313606"
  **Modelli DMX**  
  Fare clic e selezionare in un elenco di modelli che contengono esempi DMX. I modelli forniscono quasi tutti i tipi di query di stima o del modello che potrebbero essere necessari, tra cui query con tabelle annidate, e istruzioni DMX per gestire i modelli. Anche se si ha familiarità con alcune istruzioni DMX, i modelli possono far risparmiare del tempo grazie alla sintassi appropriata.  
   
- **Seleziona modello**  
+ **Scegli modello**  
  Fare clic per visualizzare un elenco di modelli di data mining disponibili nella connessione corrente.  
   
  È inoltre possibile visualizzare un elenco dei modelli disponibili facendo clic sul nome del modello nell'istruzione DMX nel riquadro **query DMX** . Il nome del modello è in genere evidenziato in rosso.  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717257"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Dopo l'acquisizione di un blocco a livello di applicazione, è possibile recuperare solo i primi 32 caratteri in testo normale. La parte rimanente viene sottoposta a hashing.  
   
  [ @LockMode= ] '*Lock_Mode*'  
- Modalità di blocco da acquisire per una particolare risorsa. *Lock_Mode* è di **tipo nvarchar (32)** e non prevede alcun valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Per altre informazioni, vedere [modalità di blocco](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Per altre informazioni, vedere [modalità di blocco](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner= ] '*lock_owner*'  
- Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è di **tipo nvarchar (32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando il valore *lock_owner* è **Transaction**, per impostazione predefinita o specificato in modo esplicito, è necessario eseguire sp_getapplock all'interno di una transazione.  
+ Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando il valore *lock_owner* è **Transaction**, per impostazione predefinita o specificato in modo esplicito, è necessario eseguire sp_getapplock all'interno di una transazione.  
   
  [ @LockTimeout= ] '*valore*'  
  Valore di timeout del blocco espresso in millisecondi. Il valore predefinito corrisponde al valore restituito da @@LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un codice restituito-1 anziché attendere il blocco quando la richiesta non può essere concessa immediatamente, specificare 0.  
@@ -111,7 +111,7 @@ GO
   
  Un deadlock con un blocco a livello di applicazione non comporta il rollback della transazione che ha richiesto il blocco. Le eventuali operazioni di rollback richieste a causa del valore restituito devono essere eseguite in modo manuale. È pertanto consigliabile includere nel codice il controllo degli errori, in modo che venga avviata un'istruzione ROLLBACK TRANSACTION o un'azione alternativa se vengono restituiti valori specifici, ad esempio -3.  
   
- Di seguito è fornito un esempio:   
+ Esempio:  
   
 ```  
 USE AdventureWorks2012;  
@@ -166,6 +166,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [APPLOCK_MODE &#40;&#41;Transact-SQL](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;&#41;Transact-SQL](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

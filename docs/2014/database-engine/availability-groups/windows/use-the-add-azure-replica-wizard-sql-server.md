@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176000"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server)
@@ -28,12 +28,12 @@ ms.locfileid: "70176000"
   
      [Sicurezza](#Security)  
   
--   **Per aggiungere una replica tramite:**  [procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Per aggiungere una replica mediante:**  [Procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "istanze del server" e "repliche e gruppi di disponibilità" in [prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
@@ -47,12 +47,12 @@ ms.locfileid: "70176000"
   
      Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Vedere [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica Azure (SQL Server Management Studio)  
+##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica Azure (SQL Server Management Studio)  
  La procedura guidata Aggiungi replica Azure può essere avviata dalla [Pagina Specifica repliche](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Questa pagina può essere visualizzata in due modi:  
   
 -   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "70176000"
   
 4.  Specificare le impostazioni per la macchina virtuale di Azure che ospiterà la nuova replica secondaria:  
   
-     Image  
+     Immagine  
      Nome dell'immagine di SQL Server da usare per la macchina virtuale di Azure  
   
      Dimensioni macchina virtuale  
@@ -103,9 +103,9 @@ ms.locfileid: "70176000"
   
 6.  Continuare con il resto dei passaggi di configurazione della [Pagina Specifica repliche](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) come per qualsiasi nuova replica.  
   
-     Al termine della creazione guidata gruppo di disponibilità o della procedura guidata Aggiungi replica a gruppo di disponibilità, il processo di configurazione esegue tutte le operazioni in Azure per creare la nuova macchina virtuale, aggiungerla al dominio di Active Directory, aggiungerla al cluster di Windows, abilitare AlwaysOn High Disponibilità e aggiunta della nuova replica al gruppo di disponibilità.  
+     Al termine della creazione guidata gruppo di disponibilità o della procedura guidata Aggiungi replica a gruppo di disponibilità, il processo di configurazione esegue tutte le operazioni in Azure per creare la nuova macchina virtuale, aggiungerla al dominio AD, aggiungerla al cluster di Windows, abilitare la disponibilità elevata AlwaysOn e aggiungere la nuova replica al gruppo di disponibilità.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

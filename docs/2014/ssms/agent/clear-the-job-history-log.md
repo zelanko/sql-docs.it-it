@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782769"
 ---
 # <a name="clear-the-job-history-log"></a>Cancellare il contenuto del log di cronologia processi
@@ -40,16 +40,16 @@ ms.locfileid: "72782769"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-clear-the-job-history-log"></a>Per cancellare il contenuto del log di cronologia processo  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
 2.  Espandere **SQL Server Agent**e quindi espandere **Processi**.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "72782769"
   
     -   Fare clic su **Stato processo** se si desidera cancellare il contenuto del log della cronologia di un processo multiserver. Fare clic su **Processo**, selezionare il nome di un processo e quindi fare clic su **Visualizza cronologia processi remoti**.  
   
-5.  Scegliere **Elimina**.  
+5.  Fare clic su **Elimina**.  
   
-##  <a name="TSQL"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Uso di Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Per cancellare il contenuto del log di cronologia processo  
   
@@ -83,8 +83,8 @@ ms.locfileid: "72782769"
     GO  
     ```  
   
-##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
- **Per cancellare il contenuto del log di cronologia processi**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+ **Per cancellare il contenuto del log di cronologia processo**  
   
  Utilizzare il metodo `PurgeJobHistory` della classe `JobServer` utilizzando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

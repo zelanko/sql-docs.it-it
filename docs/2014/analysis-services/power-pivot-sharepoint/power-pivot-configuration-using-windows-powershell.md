@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782810"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configurazione di PowerPivot tramite Windows PowerShell
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include i cmdlet di Windows PowerShell che è possibile usare per configurare un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Per configurazione completamente un'installazione con PowerShell, è necessario utilizzare cmdlet sia di SharePoint che di PowerPivot per SharePoint. La maggior parte della configurazione può essere completata usando uno degli strumenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per ulteriori informazioni sugli strumenti, vedere [strumenti di configurazione di PowerPivot](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ ms.locfileid: "72782810"
     Get-Help *powerpivot*  
     ```  
   
-     Dovrebbe venire visualizzato un elenco di cmdlet nel cui nome è incluso PowerPivot. Ad esempio, `Get-PowerPivotServiceApplication`. Il numero di cmdlet disponibili dipende dalla versione di Analysis Services in uso.  
+     Dovrebbe venire visualizzato un elenco di cmdlet nel cui nome è incluso PowerPivot. Ad esempio `Get-PowerPivotServiceApplication`. Il numero di cmdlet disponibili dipende dalla versione di Analysis Services in uso.  
   
     -   10 cmdlet con il server SQL Server 2012 SP1 Analysis Services configurato nella modalità SharePoint e SharePoint 2013. La versione 2012 SP1 utilizza una nuova architettura che consente l'esecuzione di Analysis Server all'esterno della farm di SharePoint e richiede meno cmdlet di Windows PowerShell di gestione.  
   

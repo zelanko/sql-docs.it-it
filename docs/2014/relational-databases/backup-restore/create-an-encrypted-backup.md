@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154750"
 ---
 # <a name="create-an-encrypted-backup"></a>Creare un backup crittografato
@@ -29,7 +29,7 @@ ms.locfileid: "70154750"
   
  Utilizzare i passaggi seguenti per creare un backup crittografato di un database in un disco locale. In questo esempio viene utilizzato un database utente denominato MyTestDB.  
   
-1.  **Creare una chiave master del database master:** Scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
+1.  **Creare una chiave master del database per il database master:** scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a database master key.   
@@ -52,7 +52,7 @@ ms.locfileid: "70154750"
   
     ```  
   
-3.  **Eseguire il backup del database:** Specificare l'algoritmo di crittografia e il certificato da utilizzare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  **Backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -80,7 +80,7 @@ ms.locfileid: "70154750"
   
 -   Chiave master di un database master e certificato o chiave asimmetrica nell'istanza di SQL Server. Per le autorizzazioni e i requisiti di crittografia, vedere [Crittografia dei backup](backup-encryption.md).  
   
-1.  **Creare credenziali SQL Server:** Per creare una credenziale di SQL Server, connettersi al motore di database, aprire una nuova finestra query e copiare e incollare l'esempio seguente e fare clic su **Esegui**.  
+1.  **Creare le credenziali di SQL Server:** per creare le credenziali di SQL Server, connettersi al motore di database, aprire una nuova finestra Query e copiare e incollare il seguente esempio, quindi fare clic su **Esegui**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -88,7 +88,7 @@ ms.locfileid: "70154750"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Creare una chiave master del database:** Scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
+2.  **Creare una chiave master del database:** scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a database master key.  
@@ -100,7 +100,7 @@ ms.locfileid: "70154750"
   
     ```  
   
-3.  **Creare un certificato di backup:** Creare un certificato di backup nel database master. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**  
+3.  **Creare un certificato di backup:** creare un certificato di backup nel database master. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "70154750"
   
     ```  
   
-4.  **Eseguire il backup del database:** Specificare l'algoritmo di crittografia e il certificato da utilizzare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+4.  **Backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
