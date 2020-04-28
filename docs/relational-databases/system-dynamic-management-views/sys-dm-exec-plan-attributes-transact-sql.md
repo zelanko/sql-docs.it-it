@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255605"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -46,8 +46,8 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|attributo|**varchar (128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
-|Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
+|attributo|**varchar(128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
+|value|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
 Nella tabella precedente, l' **attributo** può avere i valori seguenti:
@@ -55,7 +55,7 @@ Nella tabella precedente, l' **attributo** può avere i valori seguenti:
 |Attributo|Tipo di dati|Descrizione|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica i valori delle opzioni con cui è stato compilato il piano.|  
-|objectId|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Si tratta dell'ID oggetto archiviato in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per gli oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
+|objectid|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Si tratta dell'ID oggetto archiviato in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per gli oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
 |dbid|**int**|ID del database contenente l'entità alla quale fa riferimento il piano.<br /><br /> Per i piani ad hoc o preparati, corrisponde all'ID del database da cui viene eseguito il batch.|  
 |dbid_execute|**int**|Per gli oggetti di sistema archiviati nel database **Resource** , l'ID del database da cui viene eseguito il piano memorizzato nella cache. In tutti gli altri casi è 0.|  
 |user_id|**int**|Il valore -2 indica che il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo preferito. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.| 
@@ -167,9 +167,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys. dm_exec_cached_plans &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

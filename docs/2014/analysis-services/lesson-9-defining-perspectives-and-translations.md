@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530834"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
   In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
   
 > [!NOTE]  
->  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio che vengono illustrati in questa esercitazione.  
+>  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
  In questa lezione sono incluse le attività seguenti:  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888643"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Creazione di una vista origine dati (Esercitazione di base sul data mining)

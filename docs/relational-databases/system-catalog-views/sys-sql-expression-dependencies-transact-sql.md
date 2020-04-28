@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69561131"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
@@ -51,10 +51,10 @@ ms.locfileid: "69561131"
 |referencing_id|**int**|ID dell'entità di riferimento. Non ammette i valori Null.|  
 |referencing_minor_id|**int**|ID di colonna quando l'entità di riferimento è una colonna, in caso contrario, 0. Non ammette i valori Null.|  
 |referencing_class|**tinyint**|Classe dell'entità di riferimento.<br /><br /> 1 = Oggetto o colonna<br /><br /> 12 = Trigger DDL database<br /><br /> 13 = Trigger DDL server<br /><br /> Non ammette i valori Null.|  
-|referencing_class_desc|**nvarchar (60)**|Descrizione della classe dell'entità di riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Non ammette i valori Null.|  
+|referencing_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità di riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Non ammette i valori Null.|  
 |is_schema_bound_reference|**bit**|1 = L'entità a cui si fa riferimento è associata a schema.<br /><br /> 0 = L'entità a cui si fa riferimento non è associata a schema.<br /><br /> Non ammette i valori Null.|  
 |referenced_class|**tinyint**|Classe dell'entità con riferimenti.<br /><br /> 1 = Oggetto o colonna<br /><br /> 6 = Tipo<br /><br /> 10 = Raccolta di XML Schema<br /><br /> 21 = Funzione di partizione<br /><br /> Non ammette i valori Null.|  
-|referenced_class_desc|**nvarchar (60)**|Descrizione della classe dell'entità a cui viene fatto riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Non ammette i valori Null.|  
+|referenced_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità a cui viene fatto riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Non ammette i valori Null.|  
 |referenced_server_name|**sysname**|Nome del server dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per le dipendenze tra server eseguite specificando un nome valido composto da quattro parti. Per informazioni sui nomi multipart, vedere [convenzioni della sintassi Transact-sql &#40;&#41;Transact-SQL ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Valore NULL per le entità non associate a schemi per le quali è stato fatto riferimento all'entità senza specificare un nome composto da quattro parti.<br /><br /> NULL per le entità associate a schema perché devono trovarsi nello stesso database e pertanto possono essere definite solo utilizzando un nome in due parti (*schema. Object*).|  
 |referenced_database_name|**sysname**|Nome del database dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per i riferimenti tra database o tra server eseguiti specificando un nome valido composto da tre o quattro parti.<br /><br /> Valore NULL per i riferimenti non associati a schemi che vengono specificati utilizzando un nome composto da una o due parti.<br /><br /> NULL per le entità associate a schema perché devono trovarsi nello stesso database e pertanto possono essere definite solo utilizzando un nome in due parti (*schema. Object*).|  
 |referenced_schema_name|**sysname**|Schema a cui appartiene l'entità a cui viene fatto riferimento.<br /><br /> Valore NULL per i riferimenti non associati a schemi in cui è stato fatto riferimento all'entità senza specificare il nome dello schema.<br /><br /> Non è mai un valore NULL per i riferimenti associati a schemi perché le entità associate a schemi devono essere definite e riferite utilizzando un nome composto da due parti.|  
@@ -73,12 +73,12 @@ ms.locfileid: "69561131"
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizza|Sì|Sì|  
+|Visualizzazione|Sì|Sì|  
 |Indice filtrato|Sì**|No|  
 |Statistiche filtrate|Sì**|No|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]stored procedure * * *|Sì|Sì|  
+|Stored procedure*** [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|Sì|  
 |stored procedure CLR|No|Sì|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]funzione definita dall'utente|Sì|Sì|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
 |Funzione CLR definita dall'utente|No|Sì|  
 |Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_sql_referenced_entities &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   

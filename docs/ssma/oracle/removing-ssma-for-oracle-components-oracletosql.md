@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266556"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Rimozione di SSMA per i componenti Oracle (OracleToSQL)
@@ -27,7 +27,7 @@ Al termine della migrazione dei database da Oracle a [!INCLUDE[ssNoVersion](../.
   
 **Per disinstallare SSMA**  
   
-1.  Nel Pannello di controllo aprire **Installazione applicazioni**.  
+1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
 2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] Selezionare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Oracle**e quindi fare clic su **Rimuovi**.  
   
@@ -38,7 +38,7 @@ Se si è certi che i database migrati non utilizzino oggetti nello schema **sysd
   
 **Per disinstallare il pacchetto di estensione**  
   
-1.  Nel Pannello di controllo aprire **Installazione applicazioni**.  
+1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
 2.  Selezionare **Microsoft SQL Server Migration Assistant per Oracle Extension Pack**, quindi fare clic su **Rimuovi**.  
   

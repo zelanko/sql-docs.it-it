@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265958"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68265958"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|ID dell'host del daemon di filtri.|  
-|**fdhost_name**|**nvarchar (120)**|Nome dell'host del daemon di filtri.|  
+|**fdhost_name**|**nvarchar(120)**|Nome dell'host del daemon di filtri.|  
 |**fdhost_process_id**|**int**|ID del processo Windows dell'host del daemon di filtri.|  
-|**fdhost_type**|**nvarchar (120)**|Tipo di documento elaborato dall'host del daemon di filtri, ad esempio:<br /><br /> A thread singolo<br /><br /> Multi-thread<br /><br /> Documento di grandi dimensioni|  
+|**fdhost_type**|**nvarchar(120)**|Tipo di documento elaborato dall'host del daemon di filtri, ad esempio:<br /><br /> A thread singolo<br /><br /> Multi-thread<br /><br /> Documento di grandi dimensioni|  
 |**max_thread**|**int**|Numero massimo di thread nell'host del daemon di filtri.|  
 |**batch_count**|**int**|Numero di batch in elaborazione nell'host del daemon di filtri.|  
   

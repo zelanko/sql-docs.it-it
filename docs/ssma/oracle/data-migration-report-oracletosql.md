@@ -11,20 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264248"
 ---
 # <a name="data-migration-report--oracletosql"></a>Report di migrazione dati (OracleToSQL)
 Viene visualizzata la finestra di dialogo **report migrazione dati** dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dei dati a.  
   
 ## <a name="options"></a>Opzioni  
-**Status**  
+**Stato**  
 Mostra lo stato della migrazione dei dati dal database di origine al database di destinazione.  
   
-**Da**  
+**From**  
 Tabella di origine.  
   
 **A**  

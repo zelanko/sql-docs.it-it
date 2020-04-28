@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769128"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -93,9 +93,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**10**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**10**|Ogni mese|  
 |**20**|Mensile, in base all'intervallo di frequenza|  
 |**40**|All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |NULL (predefinito)||  
@@ -112,7 +112,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**6**|Friday|  
 |**7**|Sabato|  
 |**8**|Giorno|  
-|**9**|Giorni della settimana|  
+|**9**|Giorni feriali|  
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Osservazioni  
  **sp_addmergesubscription** viene utilizzata nella replica di tipo merge.  
   
- Quando **sp_addmergesubscription** viene eseguita da un membro del ruolo predefinito del server **sysadmin** per creare una sottoscrizione push, il processo di agente di merge viene creato in modo implicito e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito con l'account del servizio Agent. Si consiglia di eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso, specifico dell'agente per ** \@job_login** e ** \@job_password**. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Quando **sp_addmergesubscription** viene eseguita da un membro del ruolo predefinito del server **sysadmin** per creare una sottoscrizione push, il processo di agente di merge viene creato in modo implicito e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito con l'account del servizio Agent. Si consiglia di eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso, specifico dell'agente per ** \@job_login** e ** \@job_password**. Per ulteriori informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -186,10 +186,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Creare una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Risoluzione interattiva dei conflitti](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

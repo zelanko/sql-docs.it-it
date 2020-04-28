@@ -16,10 +16,10 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770956"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
@@ -53,11 +53,11 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 `[ @parameter_name = ] 'parameter_name'`Nome del parametro. *parameter_name* è di **tipo sysname**e non prevede alcun valore predefinito. Per un elenco dei parametri già definiti nei profili di sistema, vedere [profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md). Per un elenco completo dei parametri validi per ogni agente, vedere gli argomenti seguenti:  
   
--   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Agente snapshot repliche](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agente lettura log repliche](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   

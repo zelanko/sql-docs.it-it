@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493818"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definizione e utilizzo di un'azione drill-through
@@ -110,7 +110,7 @@ ms.locfileid: "69493818"
   
 8.  Modificare la proprietà **Name** dell'attributo **Ship Date Key** in `Ship Date`, quindi modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)**.  
   
-9. Passare alla scheda **Azioni** di Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
+9. Passare alla scheda **Azioni[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Progettazione cubi per il cubo ** Tutorial.  
   
 10. Nella casella **Colonne drill-through** selezionare le caselle di controllo per aggiungere le colonne seguenti all'elenco **Colonne restituite** e fare clic su **OK**:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "69493818"
   
 1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu **Compila**.  
   
-2.  Dopo aver completato la distribuzione, passare alla scheda **Esplorazione** in Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sul pulsante **Riconnetti**.  
+2.  Dopo aver completato la distribuzione, passare alla scheda **Esplorazione[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in Progettazione cubi per il cubo ** Tutorial e fare clic sul pulsante **Riconnetti**.  
   
 3.  Avviare Excel.  
   

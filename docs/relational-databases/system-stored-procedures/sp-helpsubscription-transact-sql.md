@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771574"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -65,7 +65,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**subscriber**|**sysname**|Nome del Sottoscrittore.|  
+|**Sottoscrittore**|**sysname**|Nome del Sottoscrittore.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**articolo**|**sysname**|Nome dell'articolo.|  
 |**database di destinazione**|**sysname**|Nome del database di destinazione per i dati replicati.|  
@@ -75,13 +75,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**full subscription**|**bit**|Indica se la sottoscrizione è associata a tutti gli articoli della pubblicazione:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**nome sottoscrizione**|**nvarchar(255)**|Nome della sottoscrizione.|  
 |**modalità di aggiornamento**|**int**|**0** = sola lettura<br /><br /> **1** = sottoscrizione ad aggiornamento immediato|  
-|**distribution job id**|**binario (16)**|ID di processo dell'agente di distribuzione.|  
+|**distribution job id**|**binary(16)**|ID di processo dell'agente di distribuzione.|  
 |**loopback_detection**|**bit**|Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.<br /><br /> Utilizzato con la replica transazionale bidirezionale. Per ulteriori informazioni, vedere [replica transazionale bidirezionale](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Specifica se per un agente di replica è impostata l'esecuzione con ripartizione del carico di lavoro nel Sottoscrittore.<br /><br /> Se è **0**, Agent viene eseguito nel server di pubblicazione.<br /><br /> Se è **1**, Agent viene eseguito nel Sottoscrittore.|  
 |**offload_server**|**sysname**|Nome del server abilitato per l'attivazione remota degli agenti. Se NULL, viene utilizzata la offload_server corrente elencata in [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) tabella.|  
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
 |**dts_package_location**|**int**|Posizione del pacchetto DTS, se assegnato alla sottoscrizione. Se è presente un pacchetto, un valore pari a **0** indica il percorso del pacchetto nel **server di distribuzione**. Il valore **1** specifica il **Sottoscrittore**.|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **** e 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **0** e 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**||La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una stringa "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
 |**job_login**|**sysname**|Nome dell'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione.|  

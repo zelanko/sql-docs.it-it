@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106349"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68106349"
 |**agent_id**|**int**|ID dell'agente di merge.|  
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**end_time**|**datetime**|Ora di fine dell'esecuzione del processo.|  
-|**durata**|**int**|Durata cumulativa, espressa in secondi, di questa sessione del processo.|  
+|**duration**|**int**|Durata cumulativa, espressa in secondi, di questa sessione del processo.|  
 |**delivery_time**|**int**|Numero di secondi necessari per applicare un batch di modifiche.|  
 |**upload_time**|**int**|Numero di secondi necessari per il caricamento delle modifiche nel server di pubblicazione.|  
 |**download_time**|**int**|Numero di secondi necessari per il download delle modifiche nel Sottoscrittore.|  

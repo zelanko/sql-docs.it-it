@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266058"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68266058"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**nvarchar(128)**|Nome della proprietà.|  
-|**valore**|**nvarchar(128)**|Valore della proprietà.|  
+|**value**|**nvarchar(128)**|Valore della proprietà.|  
   
 ## <a name="properties"></a>Proprietà  
  La proprietà **directory** indica la directory in cui è stato installato il .NET Framework nel server. Nel computer server possono essere presenti più installazioni di .NET Framework. Il valore di questa proprietà identifica l'installazione utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La proprietà **Version** indica la versione del .NET Framework e del CLR ospitato nel server.  
   
- La vista gestita dinamica **sys. dm_clr_properties** può restituire sei valori diversi per la proprietà **state** , che riflette lo stato del CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hosted. Sono:  
+ La vista gestita dinamica **sys. dm_clr_properties** può restituire sei valori diversi per la proprietà **state** , che riflette lo stato del CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hosted. ovvero:  
   
 -   Mscoree is not loaded.  
   
@@ -85,7 +85,7 @@ FROM sys.dm_clr_properties;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative a Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

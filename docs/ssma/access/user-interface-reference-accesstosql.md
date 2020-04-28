@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266956"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Guida di riferimento all'interfaccia utente (AccessToSQL)
@@ -43,10 +43,10 @@ Questa sezione include gli argomenti della [!INCLUDE[ssNoVersion](../../includes
 |[Impostazioni globali &#40;Finestra di output&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-output-window-accesstosql.md)|Utilizzare la pagina Finestra di output della finestra di dialogo **Impostazioni globali** per configurare la visualizzazione del riquadro di output e del riquadro della finestra di errore.|  
 |[Migrazione guidata](migration-wizard-accesstosql.md)|Utilizzare la migrazione guidata per eseguire il processo di migrazione.|  
 |[Nuovo progetto (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA.|  
-|[Impostazioni del progetto (conversione)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Utilizzare la pagina **conversione** della finestra di dialogo **Impostazioni progetto** per specificare il modo in cui SSMA converte le colonne Memo indicizzate, le chiavi primarie, i vincoli di chiave esterna, i timestamp e le tabelle senza indici.|  
+|[Impostazioni progetto (conversione)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Utilizzare la pagina **conversione** della finestra di dialogo **Impostazioni progetto** per specificare il modo in cui SSMA converte le colonne Memo indicizzate, le chiavi primarie, i vincoli di chiave esterna, i timestamp e le tabelle senza indici.|  
 |[Impostazioni progetto &#40;GUI&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Utilizzare la pagina GUI della finestra di dialogo **Impostazioni progetto** per specificare la quantità di dati da visualizzare nella scheda **dati** .|  
-|[Impostazioni del progetto (migrazione)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilizzare la pagina Migrazione della finestra di dialogo **Impostazioni progetto** per specificare le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, l'attivazione del trigger di inserimento, la gestione delle identità e dei valori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null e la modalità di gestione delle date non comprese nell'intervallo.|  
-|[Impostazioni del progetto (mapping dei tipi)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Utilizzare la pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** per specificare i mapping dei tipi predefiniti per tutti i database e gli oggetti di database nel progetto SSMA.|  
+|[Impostazioni progetto (migrazione)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilizzare la pagina Migrazione della finestra di dialogo **Impostazioni progetto** per specificare le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, l'attivazione del trigger di inserimento, la gestione delle identità e dei valori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null e la modalità di gestione delle date non comprese nell'intervallo.|  
+|[Impostazioni progetto (mapping dei tipi)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Utilizzare la pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** per specificare i mapping dei tipi predefiniti per tutti i database e gli oggetti di database nel progetto SSMA.|  
 |[Impostazioni progetto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Utilizzare la pagina SQL Azure della finestra di dialogo **Impostazioni progetto** per specificare il suffisso del database e anche l'intervallo di timeout dell'heartbeat.|  
 |[Salva metadati &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  
   

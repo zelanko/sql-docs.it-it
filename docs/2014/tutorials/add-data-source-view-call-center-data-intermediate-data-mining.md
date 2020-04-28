@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888683"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati per i dati del call center (Esercitazione intermedia sul data mining)
@@ -69,13 +69,13 @@ ms.locfileid: "68888683"
 |FactCallCenterID|Una chiave arbitraria creata durante l'importazione dei dati nel data warehouse.<br /><br /> Questa colonna identifica record univoci e deve essere utilizzata come chiave del case per il modello di data mining.|  
 |DateKey|La data dell'operazione del call center, espressa come un Integer. Le chiavi della data di tipo Integer vengono spesso utilizzate nei data warehouse, ma è consigliabile ottenere la data nel formato di data/ora se si prevede di eseguire il raggruppamento in base ai valori di data.<br /><br /> Le date non sono univoche perché il fornitore presenta un report distinto per ogni turno di ogni giorno lavorativo.|  
 |WageType|Viene indicato se il giorno è un giorno feriale, festivo o un fine settimana.<br /><br /> È possibile che vi sia una differenza nella qualità del servizio clienti nei fine settimana e nei giorni feriali, quindi questa colonna verrà usata come input.|  
-|MAIUSC|Indica il turno per il quale vengono registrate le chiamate. In questo call center la giornata lavorativa viene divisa in quattro turni: AM, PM1, PM2 e Midnight.<br /><br /> È possibile che il turno influisca sulla qualità del servizio clienti, quindi si utilizzerà questa colonna come input.|  
+|Turno|Indica il turno per il quale vengono registrate le chiamate. In questo call center la giornata lavorativa viene divisa in quattro turni: AM, PM1, PM2 e Midnight.<br /><br /> È possibile che il turno influisca sulla qualità del servizio clienti, quindi si utilizzerà questa colonna come input.|  
 |LevelOneOperators|Indica il numero di operatori di livello 1 in servizio.<br /><br /> I dipendenti del call center iniziano a Livello 1, pertanto questi dipendenti sono meno esperti.|  
 |LevelTwoOperators|Indica il numero di operatori di livello 2 in servizio.<br /><br /> Per qualificarsi come operatore di livello 2, un dipendente deve registrare un determinato numero di ore di servizio.|  
 |TotalOperators|Numero complessivo di operatori presenti durante il turno.|  
 |Calls|Numero di chiamate ricevute durante il turno.|  
 |AutomaticResponses|Numero di chiamate gestite completamente dall'elaborazione automatica delle chiamate (Interactive Voice Response o IVR).|  
-|Ordini|Numero di ordini risultanti dalle chiamate.|  
+|Orders|Numero di ordini risultanti dalle chiamate.|  
 |IssuesRaised|Numero di problemi generati dalle chiamate che richiedono una soluzione.|  
 |AverageTimePerIssue|Tempo medio richiesto per rispondere a una chiamata in entrata.|  
 |ServiceGrade|Metrica che indica la qualità generale del servizio, misurata come *tasso di abbandono* per l'intero turno. Più elevata è la frequenza di abbandono, più è probabile che i clienti siano scontenti e che gli ordini potenziali non vengano conclusi.|  

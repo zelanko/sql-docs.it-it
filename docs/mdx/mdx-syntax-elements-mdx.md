@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 263238a0d8430928fad99042dfa0ffd06921a33b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893325"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Elementi della sintassi MDX (MDX)
@@ -32,6 +32,6 @@ ms.locfileid: "68893325"
 |[Membri, tuple e set](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Prima di creare una query MDX, è necessario comprendere i concetti di membro, tupla e set.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni multidimensionali &#40;riferimento&#41; MDX](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

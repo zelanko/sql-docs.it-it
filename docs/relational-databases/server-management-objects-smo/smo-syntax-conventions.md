@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148567"
 ---
 # <a name="smo-syntax-conventions"></a>Convenzioni della sintassi SMO
@@ -32,7 +32,7 @@ ms.locfileid: "70148567"
 |----------------|--------------|  
 |LETTERE MAIUSCOLE|Istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], nomi delle macro e termini utilizzati a livello di sistema operativo, nomi file in formato testo.|  
 |`monospace`|Righe di comando e codice di programmazione di esempio.|  
-|*Corsivo*|Variabili, formule o termini definiti in formato testo. Nella sintassi le lettere in corsivo possono indicare segnaposto per le informazioni fornite dall'utente.|  
+|*corsivo*|Variabili, formule o termini definiti in formato testo. Nella sintassi le lettere in corsivo possono indicare segnaposto per le informazioni fornite dall'utente.|  
 |**grassetto**|Oggetti SMO, eventi, metodi o proprietà, termini di programmazione in formato testo.|  
   
   

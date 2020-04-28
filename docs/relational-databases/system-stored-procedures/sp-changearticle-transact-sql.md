@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771398"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -69,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||Comando preliminare per eliminare, rimuovere o troncare la tabella di destinazione prima della sincronizzazione.|  
 ||**nessuno**|Non utilizza alcun comando.|  
 ||**goccia**|Rimuove la tabella di destinazione.|  
-||**eliminare**|Elimina la tabella di destinazione.|  
+||**delete**|Elimina la tabella di destinazione.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
 |**pub_identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
 |**schema_option**||Specifica la mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* è **binario (8)**. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.|  
@@ -118,7 +118,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|Replica l'attributo SPARSE per le colonne. Per altre informazioni su questo attributo, vedere [usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Consente di creare script da parte dell'agente snapshot per creare una tabella con ottimizzazione per la memoria nel Sottoscrittore.|  
 ||**0x80000000000**|Converte l'indice cluster in un indice non cluster per gli articoli con ottimizzazione per la memoria.|  
-|**stato**||Nuovo stato della proprietà.|  
+|**Stato**||Nuovo stato della proprietà.|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|I nomi delle colonne sono inclusi nell'istruzione INSERT replicata.|  
 ||**no column names**|I nomi delle colonne non sono inclusi nell'istruzione INSERT replicata.|  
@@ -127,9 +127,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**parametri**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
 ||**valori letterali stringa**|Le modifiche vengono propagate al Sottoscrittore tramite i valori letterali stringa.|  
 |**sync_object**||Nome della tabella o vista utilizzata per generare un file di output di sincronizzazione. Il valore predefinito è NULL. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|**spazio tabella**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**tablespace**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**soglia**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
-|**tipo**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
+|**type**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased**|Articolo basato su un log.|  
 ||**logbased manualboth**|Articolo basato su log con filtro manuale e vista manuale. Questa opzione richiede che vengano impostate anche le proprietà *sync_object* e *filtro* . Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased manualfilter**|Articolo basato su log con filtro manuale. Questa opzione richiede che vengano impostate anche le proprietà *sync_object* e *filtro* . Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -198,7 +198,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **ins_cmd**  
   
--   **stato**  
+-   **Stato**  
   
 -   **upd_cmd**  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892388"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -42,7 +42,7 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance (N) = 1-(membershipWeight (N))  
   
- In alternativa:  
+ Oppure:  
   
  ClusterDistance (N) = 1-ClusterProbability (N))  
   
@@ -128,6 +128,6 @@ NATURAL PREDICTION JOIN
  [&#40;&#41;DMX del cluster](../dmx/cluster-dmx.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Contenuto del modello di data mining per i modelli di clustering &#40;Analysis Services-Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

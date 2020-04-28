@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670554"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Viste del catalogo di sistema (Transact-SQL)
@@ -52,18 +52,18 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 |||
 |-|-|
 |[Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)|[Messaggi &#40;per errori&#41; viste del catalogo &#40;&#41;Transact-SQL ](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md))|
-|[Viste del catalogo del database SQL di Azure](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)|[Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)|
+|[Viste del catalogo del database SQL di Azure](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)|[Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)|
 |[Viste del catalogo di Rilevamento modifiche &#40;&#41;Transact-SQL](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)|[Viste del catalogo delle funzioni di partizione &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)|
-|[Viste del catalogo degli assembly CLR &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)|[Viste della gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)|
+|[Viste del catalogo degli assembly CLR &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)|[Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)|
 |[Viste dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)|[Viste del catalogo di Resource Governor &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)|
 |[Spazi dati &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)|[Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)|
 |[Viste di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)|[Viste del catalogo di tipi scalari &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)|
 |[Viste del catalogo del server di controllo del mirroring del database &#40;&#41;Transact-SQL](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)|[Viste del catalogo degli schemi &#40;&#41;Transact-SQL](../system-catalog-views/schemas-catalog-views-sys-schemas.md)|
-|[Viste del catalogo di database e file &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)|[Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|
-|[Viste del catalogo degli endpoint &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)|[Viste del catalogo di Service Broker &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)|
+|[Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)|[Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|
+|[Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)|[Viste del catalogo di Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)|
 |[Viste del catalogo degli eventi estesi &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)|[Viste del catalogo di configurazione a livello di server &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)|
 |[Viste del catalogo delle proprietà estese &#40;Transact-SQL&#41;](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)|[Viste del catalogo dati spaziali](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)|
-|[Viste del catalogo delle operazioni esterne &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)|[SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)|
+|[Viste del catalogo delle operazioni esterne &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)|[Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)|
 |[Viste del catalogo FILESTREAM e FileTable &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)|[Viste del catalogo di Stretch Database &#40;&#41;Transact-SQL](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)|
 |[Viste del catalogo di ricerca full-text e semantica &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)|[XML Schema &#40;viste del catalogo&#41; di sistema di tipo XML &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)|
 |[Viste del catalogo di server collegati &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)||
@@ -71,5 +71,5 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 ## <a name="see-also"></a>Vedere anche
 
 - [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)
+- [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
 - [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)

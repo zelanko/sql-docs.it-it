@@ -16,10 +16,10 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771297"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_dropdistributor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

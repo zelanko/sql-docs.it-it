@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811092"
 ---
 # <a name="sql-server-components"></a>Componenti di SQL Server
@@ -55,14 +55,11 @@ ms.locfileid: "68811092"
   
 -   Se si analizza un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto, è necessario abilitare i servizi del Registro di sistema nel computer remoto.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene rilevato se nel Registro di sistema del computer viene individuata un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene rilevato se nel Registro di sistema del computer viene individuata un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene rilevato se nel Registro di sistema del computer viene individuata un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene rilevato se nel Registro di sistema del computer viene individuata un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene rilevato se nel Registro di sistema del computer viene individuato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Tuttavia, con Preparazione aggiornamento vengono analizzati solo i server di report locali.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene rilevato se nel Registro di sistema del computer viene individuato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Tuttavia, con Preparazione aggiornamento vengono analizzati solo i server di report locali.  
   
  **Componenti**  
  Selezionare i componenti da analizzare. È possibile fare clic sul pulsante **rileva** per selezionare tutti i componenti installati nel computer. Accanto ai componenti rilevati come installati nel computer verrà visualizzato un segno di spunta. È anche possibile selezionare manualmente i componenti da analizzare selezionando o deselezionando la casella di controllo corrispondente.  

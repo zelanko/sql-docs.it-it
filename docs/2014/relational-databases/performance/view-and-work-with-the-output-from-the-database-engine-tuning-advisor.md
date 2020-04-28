@@ -27,16 +27,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811025"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
   Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se si desidera implementare le indicazioni di ottimizzazione o continuare l'ottimizzazione fino a quando non si ottengono i miglioramenti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle prestazioni delle query necessarie per l'installazione. Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
-##  <a name="View"></a>Visualizzazione dell'output di ottimizzazione  
+##  <a name="view-tuning-output"></a><a name="View"></a> Visualizzazione output di ottimizzazione  
  Nelle procedure indicate di seguito viene illustrata la visualizzazione di indicazioni, riepiloghi, report e log di ottimizzazione tramite l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database. Per ulteriori informazioni sulle opzioni dell'interfaccia utente, vedere [Descrizioni dell'interfaccia utente](#UI) più avanti in questo argomento.  
   
  È possibile usare la GUI anche per visualizzare l'output dell'ottimizzazione generato dall'utilità della riga di comando **dta** .  
@@ -82,7 +82,7 @@ ms.locfileid: "68811025"
   
      Se tutti gli eventi nella sessione di ottimizzazione sono stati analizzati tramite Ottimizzazione guidata motore di database, viene visualizzato un messaggio indicante che il log di ottimizzazione è vuoto per la sessione. Se l'opzione **Salva log di ottimizzazione** non è stata selezionata nella scheda **Generale** quando la sessione di ottimizzazione originale è stata eseguita, viene visualizzato un messaggio indicante questo aspetto.  
   
-##  <a name="Implement"></a>Implementare le indicazioni di ottimizzazione  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> implementazione delle indicazioni di ottimizzazione  
  È possibile implementare le indicazioni di Ottimizzazione guidata motore di database manualmente oppure automaticamente come parte della sessione di ottimizzazione. Per esaminare i risultati dell'ottimizzazione prima di implementarli, utilizzare la GUI di Ottimizzazione guidata motore di database. È quindi possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire manualmente gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] generati da Ottimizzazione guidata motore di database come risultato dell'analisi di un carico di lavoro per implementare le raccomandazioni. Se non è necessario esaminare i risultati prima di implementarli, è possibile usare l'opzione **-a** con l'utilità del prompt dei comandi **dta** . In tal modo l'utilità implementa automaticamente le indicazioni di ottimizzazione dopo che analizza il carico di lavoro. Nelle procedure seguenti viene illustrato come utilizzare entrambe le interfacce di Ottimizzazione guidata motore di database per implementare le indicazioni relative all'ottimizzazione.  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Per implementare manualmente le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
@@ -117,7 +117,7 @@ ms.locfileid: "68811025"
   
 3.  Premere INVIO.  
   
-##  <a name="Analysis"></a>Eseguire l'analisi esplorativa  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> Esecuzione dell'analisi esplorativa  
  La funzionalità di configurazione specificata dall'utente di Ottimizzazione guidata motore di database consente agli amministratori di database di eseguire l'analisi esplorativa. Tramite questa funzionalità è possibile specificare la progettazione del database fisica in Ottimizzazione guidata motore di database e valutare quindi gli effetti di tale progettazione sulle prestazioni senza doverla implementare. La configurazione specificata dall'utente è supportata sia dall'interfaccia utente grafica (GUI) che dall'utilità da riga di comando di Ottimizzazione guidata motore di database. L'utilità da riga di comando offre tuttavia il livello di flessibilità maggiore.  
   
  Tramite la GUI è possibile valutare gli effetti ottenuti con l'implementazione di un subset di un'indicazione di ottimizzazione suggerita da Ottimizzazione guidata motore di database, mentre non è possibile aggiungere strutture di progettazione fisica ipotetiche per la valutazione in Ottimizzazione guidata.  
@@ -181,8 +181,8 @@ ms.locfileid: "68811025"
   
 7.  Ripetere i passaggi 6 e 7 fino a creare la configurazione ipotetica che consente di ottenere i miglioramenti delle prestazioni di esecuzione delle query desiderati. È quindi possibile implementare la nuova configurazione. Per ulteriori informazioni, vedere [Implementazione delle indicazioni relative all'ottimizzazione](#Implement) più indietro in questo argomento.  
   
-##  <a name="ReviewEvaluateClone"></a>Verifica, valutazione e clonazione delle sessioni di ottimizzazione  
- Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione ogni volta che si avvia l'analisi dell'effetto di un carico di lavoro sul database o sui database. È possibile utilizzare il riquadro **Monitoraggio sessione** della GUI di Ottimizzazione guidata motore di database per visualizzare o ricaricare tutte le sessioni di ottimizzazione eseguite su una data istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La visualizzazione di tutte le sessioni di ottimizzazione esistenti per la verifica contribuisce a semplificare la clonazione di sessioni in base alle sessioni esistenti, la modifica di indicazioni esistenti sull'ottimizzazione e quindi l'utilizzo di Ottimizzazione guidata motore di database per valutare la sessione modificata oppure l'esecuzione dell'ottimizzazione a intervalli regolari per monitorare la struttura fisica dei database. Ad esempio, è possibile pianificare l'ottimizzazione dei database su base mensile.  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> Verifica, valutazione e clonazione delle sessioni di ottimizzazione  
+ Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione ogni volta che si avvia l'analisi dell'effetto di un carico di lavoro sul database o sui database. È possibile usare il riquadro **Monitoraggio sessione** della GUI di Ottimizzazione guidata motore di database per visualizzare o ricaricare tutte le sessioni di ottimizzazione eseguite su un'istanza specifica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La visualizzazione di tutte le sessioni di ottimizzazione esistenti per la verifica contribuisce a semplificare la clonazione di sessioni in base alle sessioni esistenti, la modifica di indicazioni esistenti sull'ottimizzazione e quindi l'utilizzo di Ottimizzazione guidata motore di database per valutare la sessione modificata oppure l'esecuzione dell'ottimizzazione a intervalli regolari per monitorare la struttura fisica dei database. Ad esempio, è possibile pianificare l'ottimizzazione dei database su base mensile.  
   
  Prima di verificare le sessioni di ottimizzazione per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario creare sessioni di ottimizzazione sull'istanza del server, ottimizzando i carichi di lavoro tramite Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
@@ -239,10 +239,10 @@ ms.locfileid: "68811025"
   
 6.  Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti per analizzare gli effetti del carico di lavoro in modo analogo alle altre sessioni di ottimizzazione. Al termine di Ottimizzazione guidata motore di database è possibile visualizzare i risultati della sessione in modo analogo ai risultati delle altre sessioni.  
   
-##  <a name="UI"></a>Descrizioni dell'interfaccia utente  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a>Descrizioni dell'interfaccia utente  
   
 ### <a name="sessions-monitor"></a>Monitoraggio delle sessioni  
- **Monitoraggio sessione** consente di visualizzare informazioni sulle sessioni aperte nel Ottimizzazione guidata motore di database. Selezionare un nome di sessione in **Monitoraggio sessione**per visualizzare informazioni sulla sessione nella finestra delle proprietà.  
+ **Monitoraggio sessione** consente di visualizzare informazioni sulle sessioni aperte in Ottimizzazione guidata motore di database. Selezionare un nome di sessione in **Monitoraggio sessione**per visualizzare informazioni sulla sessione nella finestra delle proprietà.  
   
 ### <a name="recommendations-tab"></a>Scheda Indicazioni  
  La scheda **Indicazioni** viene visualizzata al termine dell'analisi di un carico di lavoro da parte di Ottimizzazione guidata motore di database. Questa griglia contiene le indicazioni relative a ogni oggetto analizzato. Le indicazioni relative alle partizioni, se presenti, vengono visualizzate nella griglia superiore, mentre quelle relative agli indici vengono visualizzate nella griglia inferiore. Se non vi sono indicazioni, non viene visualizzata alcuna griglia.  
@@ -253,16 +253,16 @@ ms.locfileid: "68811025"
  **Nome database**  
  Database contenente gli oggetti che è consigliabile modificare.  
   
- **Recommendation**  
+ **Consiglio**  
  Azione consigliata per migliorare le prestazioni. I valori possibili sono Crea ed Elimina.  
   
- **Destinazione raccomandazione**  
+ **Destinazione indicazione**  
  Funzione o schema di partizione interessato dall'indicazione. L'icona visualizzata in questa colonna indica se è consigliabile eliminare o aggiungere la **Destinazione indicazione** e se si tratta di uno schema o di una funzione di partizione.  
   
  **Dettagli**  
  Descrizione di **Destinazione indicazione**. I valori possibili includono un intervallo per le funzioni di partizione o un valore vuoto per gli schemi di partizione.  
   
- **No. di partizioni**  
+ **Numero partizioni**  
  Numero di partizioni definite dalle funzioni di partizione consigliate. Quando questa funzione viene utilizzata con un schema e quindi applicata a una tabella, i dati contenuti in tale tabella vengono divisi nel numero indicato di partizioni.  
   
  **Definizione**  
@@ -275,10 +275,10 @@ ms.locfileid: "68811025"
  **nome oggetto**  
  Tabella relativa all'indicazione.  
   
- **Recommendation**  
+ **Consiglio**  
  Azione consigliata per migliorare le prestazioni. I valori possibili sono Crea ed Elimina.  
   
- **Destinazione raccomandazione**  
+ **Destinazione indicazione**  
  Vista o indice interessato dall'indicazione. L'icona visualizzata in questa colonna indica se è consigliabile eliminare o aggiungere la **Destinazione indicazione**.  
   
  **Dettagli**  
@@ -296,7 +296,7 @@ ms.locfileid: "68811025"
  **Mostra oggetti esistenti**  
  Se selezionata, questa opzione consente di visualizzare tutti gli oggetti esistenti nella griglia, anche se Ottimizzazione guidata motore di database non ha espresso alcuna indicazione relativa agli oggetti.  
   
- **Vedere i report per le dimensioni degli oggetti esistenti**  
+ **Fare clic su Report per visualizzare le dimensioni degli oggetti esistenti**  
  Selezionare questa opzione per visualizzare i report che indicano le dimensioni degli oggetti selezionati nella griglia delle indicazioni.  
   
 ### <a name="actions-menuapply-recommendations-options"></a>Menu Azioni/Opzioni di Applica indicazioni  
@@ -311,7 +311,7 @@ ms.locfileid: "68811025"
  **Data**  
  Consente di specificare la data in cui si desidera eseguire il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'applicazione delle indicazioni.  
   
- **Time**  
+ **Tempo**  
  Consente di specificare l'ora in cui si desidera eseguire il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'applicazione delle indicazioni.  
   
 ### <a name="reports-tab-options"></a>Opzioni della scheda Report  
@@ -323,7 +323,7 @@ ms.locfileid: "68811025"
  **Data**  
  Data di creazione del report da parte dell'Ottimizzazione guidata motore di database.  
   
- **Time**  
+ **Tempo**  
  Ora di creazione del report da parte dell'Ottimizzazione guidata motore di database.  
   
  **Server**  
@@ -338,10 +338,10 @@ ms.locfileid: "68811025"
  **Tabella del carico di lavoro**  
  Questa opzione viene visualizzata se il carico di lavoro è una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Carico**  
+ **Carico di lavoro**  
  Questa opzione viene visualizzata se il carico di lavoro è stato importato dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Tempo massimo di ottimizzazione**  
+ **Tempo massimo per l'ottimizzazione**  
  Tempo massimo configurato che deve essere disponibile per l'analisi dell'Ottimizzazione guidata motore di database.  
   
  **Tempo impiegato per l'ottimizzazione**  
@@ -356,7 +356,7 @@ ms.locfileid: "68811025"
  **Spazio attualmente utilizzato (MB)**  
  Spazio attualmente utilizzato dagli indici nel database analizzato.  
   
- **Spazio utilizzato dalla raccomandazione (MB)**  
+ **Spazio utilizzato seguendo le indicazioni (MB)**  
  Spazio approssimativo che verrà utilizzato dagli indici implementando tutte le indicazioni dell'Ottimizzazione guidata motore di database.  
   
  **Numero di eventi nel carico di lavoro**  
@@ -383,11 +383,11 @@ ms.locfileid: "68811025"
  **Numero di statistiche che è consigliabile creare**  
  Numero consigliato di statistiche da creare nel database ottimizzato. Questa opzione viene visualizzata solo se le statistiche fanno parte dell'indicazione.  
   
- **Seleziona report**  
+ **Select Report**  
  Consente di visualizzare i dettagli del report selezionato. Le colonne della griglia cambiano a seconda del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
+ [Avviare e usare il Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
  [dta - utilità](../../tools/dta/dta-utility.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809925"
 ---
 # <a name="modify-unique-constraints"></a>Modificare vincoli univoci
@@ -31,20 +31,20 @@ ms.locfileid: "68809925"
   
      [Sicurezza](#Security)  
   
--   **Per modificare un vincolo UNIQUE usando:**  
+-   **Per modificare un vincolo UNIQUE:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>Per modificare un vincolo UNIQUE  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68809925"
   
 5.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a>**Per modificare un vincolo UNIQUE**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Per modificare un vincolo UNIQUE**  
   
  Per modificare un vincolo UNIQUE utilizzando Transact-SQL, è innanzitutto necessario eliminare il vincolo UNIQUE esistente e quindi ricrearlo con la nuova definizione. Per ulteriori informazioni, vedere [Delete Unique Constraints](delete-unique-constraints.md) e [Create Unique Constraints](create-unique-constraints.md).  
   

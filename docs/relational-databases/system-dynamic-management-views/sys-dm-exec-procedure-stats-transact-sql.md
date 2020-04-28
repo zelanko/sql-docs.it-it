@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742898"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "68742898"
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ID del database in cui è contenuta la stored procedure.|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto della stored procedure.|  
-|**tipo**|**carattere (2)**|Tipo dell'oggetto:<br /><br /> P = stored procedure SQL<br /><br /> PC = stored procedure assembly (CLR)<br /><br /> X = stored procedure estesa|  
-|**type_desc**|**nvarchar (60)**|Descrizione del tipo di oggetto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary (64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm_exec_query_stats** eseguite dall'interno di questo stored procedure.|  
-|**plan_handle**|**varbinary (64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm_exec_cached_plans** .<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**type**|**char(2)**|Tipo dell'oggetto:<br /><br /> P = stored procedure SQL<br /><br /> PC = stored procedure assembly (CLR)<br /><br /> X = stored procedure estesa|  
+|**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary(64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm_exec_query_stats** eseguite dall'interno di questo stored procedure.|  
+|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm_exec_cached_plans** .<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**cached_time**|**datetime**|Ora in cui la stored procedure è stata aggiunta alla cache.|  
 |**last_execution_time**|**datetime**|Ora dell'ultima esecuzione della stored procedure.|  
 |**execution_count**|**bigint**|Il numero di volte in cui il stored procedure è stato eseguito dopo l'ultima compilazione.|  

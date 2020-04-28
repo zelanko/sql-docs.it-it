@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811014"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
@@ -36,7 +36,7 @@ ms.locfileid: "68811014"
   
 -   [Memoria in caso di aumento delle dimensioni](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a> Esempio di tabella ottimizzata per la memoria  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>Tabella ottimizzata per la memoria di esempio  
  Si consideri il seguente schema di tabella ottimizzata per la memoria:  
   
 ```sql  
@@ -61,7 +61,7 @@ GO
   
  Utilizzando questo schema sarà possibile stabilire la memoria minima necessaria per questa tabella ottimizzata per la memoria.  
   
-##  <a name="bkmk_MemoryForTable"></a> Memoria per la tabella  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>Memoria per la tabella  
  La riga di una tabella ottimizzata per la memoria è costituita da tre parti:  
   
 -   **Timestamp**   
@@ -79,7 +79,7 @@ GO
   
  Dai calcoli sopra riportati, le dimensioni di ogni riga della tabella ottimizzata per la memoria sono pari a 24 + 32 + 200, vale a dire 256 byte.  Dal momento che sono presenti 5 milioni di righe, per la tabella verranno utilizzati 5.000.000 * 256 byte, vale a dire 1.280.000.000 di byte, circa 1,28 GB.  
   
-##  <a name="bkmk_IndexMeemory"></a> Memoria per gli indici  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>Memoria per gli indici  
  **Memoria per ogni indice hash**  
   
  Ogni indice hash è una matrice di hash di puntatori all'indirizzo di 8 byte.  Le dimensioni della matrice vengono determinata meglio in base al numero di valori di indice univoci per l'indice in questione, ad esempio il numero di valori Col2 univoci è un buon punto di partenza per le dimensioni della matrice per t1c2_index. Una matrice di hash eccessiva comporta uno spreco di memoria.  Una matrice di hash di piccole dimensioni determina un rallentamento delle prestazioni in quanto vi saranno troppe collisioni per i valori di indice con hashing nello stesso indice.  
@@ -150,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a> Memoria per il controllo delle versioni delle righe  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a>Memoria per il controllo delle versioni delle righe  
  Per evitare blocchi, tramite OLTP in memoria viene utilizzata la concorrenza ottimistica durante l'aggiornamento o l'eliminazione di righe. Pertanto, quando una riga viene aggiornata, viene creata una versione aggiuntiva della riga. Il sistema mantiene le versioni precedenti disponibili fino a quando non viene completata l'esecuzione di tutte le transazioni che potrebbero eventualmente utilizzare la versione. Quando una riga viene eliminata, il sistema funziona in una modalità simile a un aggiornamento, mantenendo la versione disponibile fino a quando non è più necessaria. Le operazioni di lettura e inserimento non comportano la creazione di versioni di righe aggiuntive.  
   
  Poiché è possibile che vi sia un numero di righe aggiuntive in memoria in qualsiasi momento in attesa del ciclo di Garbage Collection per rilasciare la memoria, è necessario disporre di memoria sufficiente per contenere queste righe aggiuntive.  
@@ -165,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a> Memoria per le variabili di tabella  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>Memoria per le variabili di tabella  
  La memoria utilizzata per una variabile di tabella viene rilasciata solo quando la variabile di tabella abbandona l'ambito. Le righe eliminate, incluse quelle eliminate come parte di un aggiornamento, da una variabile di tabella non vengono sottoposte a Garbage Collection. Finché la variabile di tabella non abbandona l'ambito, la memoria non viene rilasciata.  
   
  Le variabili di tabella definite in un batch SQL di grandi dimensioni, a differenza di un ambito di procedura, utilizzate in molte transazioni, possono richiedere una grande quantità di memoria. Poiché non vengono sottoposte a Garbage Collection, le righe eliminate in una variabile di tabella possono utilizzare una grande quantità di memoria e influire negativamente sulle prestazioni poiché le operazioni di lettura devono eseguire l'analisi delle righe eliminate.  
   
-##  <a name="bkmk_MemoryForGrowth"></a> Memoria in caso di aumento delle dimensioni  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>Memoria per la crescita  
  Con i calcoli sopra riportati vengono stimati i requisiti di memoria della tabella attuale. Oltre a questa memoria, è necessario stimare la crescita della tabella e fornire una memoria sufficiente per gestire questa crescita.  Ad esempio, se si prevede una crescita del 10%, sarà necessario moltiplicare i risultati precedenti per 1,1 per ottenere la memoria totale necessaria per la tabella.  
   
 ## <a name="see-also"></a>Vedere anche  

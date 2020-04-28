@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266485"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Test di oggetti di database migrati (OracleToSQL)
@@ -45,7 +45,7 @@ SSMA tester esegue gli oggetti selezionati per il testing in Oracle e le relativ
 > [!NOTE]  
 > Attenzione! Non usare mai SSMA tester nei sistemi di produzione. Durante l'esecuzione del tester, lo schema di origine e i dati vengono modificati. Nel frattempo, il ripristino completo dello stato originale potrebbe non essere possibile per alcuni tipi di codice testato.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Se si vuole usare SSMA tester, installare SSMA Oracle Extension Pack con l'opzione di **database install tester** attivata.  
   
 Per consentire il confronto dei dati della tabella risultante, impostare l'opzione **genera colonna ROWID** su **Sì** prima che venga avviata la conversione dello schema. SSMA consente di aggiungere una colonna ROWID a tutte le tabelle durante l'esecuzione del comando **Convert schema** .  

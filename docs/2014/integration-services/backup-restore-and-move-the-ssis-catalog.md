@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670505"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSISDB
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]include il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è incluso il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  
   
  Nel catalogo **SSISDB** sono archiviati i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per ulteriori informazioni sul catalogo, vedere [Catalogo SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a>Per eseguire il backup del database SSIS  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a>Per eseguire il backup del database SSIS  
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e connettersi a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68670505"
   
      Per altre informazioni sull'istruzione, vedere [BACKUP MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-master-key-transact-sql).  
   
-     Nell'esempio seguente la chiave master viene esportata nel file `c:\temp directory\RCTestInstKey`. Per crittografare la chiave master viene utilizzata la password `LS2Setup!` .  
+     Nell'esempio seguente la chiave master viene esportata nel file `c:\temp directory\RCTestInstKey` . Per crittografare la chiave master viene utilizzata la password `LS2Setup!` .  
   
     ```  
     backup master key to file = 'c:\temp\RCTestInstKey'  
@@ -42,7 +42,7 @@ ms.locfileid: "68670505"
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-    1.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] espandere il nodo **Sicurezza**, quindi espandere il nodo **Account di accesso**.  
+    1.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]espandere il nodo **Sicurezza** , quindi espandere il nodo **Account di accesso** .  
   
     2.  Fare clic con il pulsante destro del mouse su **##MS_SSISServerCleanupJobLogin##**, quindi fare clic su **Crea script per account di accesso** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68670505"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Per le stored procedure CLR è necessario concedere le autorizzazioni UNSAFE all'account di accesso perché l'account di accesso richiede l'accesso aggiuntivo alle risorse limitate, ad esempio l'API Microsoft Win32. Per altre informazioni sull'autorizzazione codice UNSAFE, vedere [Creazione di un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Per le stored procedure CLR è necessario concedere le autorizzazioni UNSAFE all'account di accesso, poiché per questo account è richiesto un accesso aggiuntivo alle risorse limitate, ad esempio l'API Microsoft Win32. Per altre informazioni sull'autorizzazione codice UNSAFE, vedere [Creazione di un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -93,7 +93,7 @@ ms.locfileid: "68670505"
   
     -   [Ripristina database &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Pagina Ripristina file &#40;di database&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Ripristina database &#40;pagina File&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [Ripristina database &#40;pagina Opzioni&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   

@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68894047"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -102,12 +102,12 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**16**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64** (impostazione predefinita)|Avvio automatico|  
-|**128**|Ricorrente|  
+|**128**|Periodica|  
   
 > [!NOTE]  
 >  Se si specifica un valore **64** , il agente di distribuzione viene eseguito in modalità continua. Corrisponde all'impostazione del parametro **-Continuous** per l'agente. Per altre informazioni, vedere [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
@@ -183,10 +183,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addpushsubscription_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Creare una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md)   
  [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
- [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
  [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

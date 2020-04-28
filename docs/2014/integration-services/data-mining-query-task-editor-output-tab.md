@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890464"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor attività Query di data mining (Scheda Output)
@@ -40,17 +40,17 @@ ms.locfileid: "68890464"
  **Connessione**  
  Selezionare una gestione connessione nell'elenco oppure fare clic su **Nuova** per creare una nuova gestione connessione.  
   
- **Nuovo**  
+ **Nuova**  
  Consente di creare una nuova gestione connessione. È possibile utilizzare solo i tipi di gestione connessione ADO.NET e OLE DB.  
   
  **Tabella di output**  
  Consente di specificare la tabella in cui la query di stima scrive i risultati.  
   
- **Eliminare e ricreare la tabella di output**  
+ **Elimina e ricrea tabella di output**  
  Consente di indicare se la query di stima deve sovrascrivere il contenuto nella tabella di destinazione, eliminando e quindi creando di nuovo la tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività query di data mining &#40;scheda modello di data mining&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor attività query di data mining &#40;scheda query&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  

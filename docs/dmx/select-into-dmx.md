@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887678"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
@@ -39,7 +39,7 @@ FROM <existing model>
  *elenco di parametri*  
  Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
- *espressione*  
+ *expression*  
  Espressione che restituisce una condizione di filtro valida sui dati di training. Per ulteriori informazioni sulle espressioni che possono essere utilizzate come filtri, vedere [filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  *modello esistente*  
@@ -76,6 +76,6 @@ FROM [TM Clustering]
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

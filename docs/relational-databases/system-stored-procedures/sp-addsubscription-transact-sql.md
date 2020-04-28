@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769031"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -123,7 +123,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |read only (predefinito)|La sottoscrizione è di sola lettura. Le modifiche apportate nel Sottoscrittore non vengono ritrasmesse al server di pubblicazione.|  
 |sync tran|Abilita il supporto per sottoscrizioni ad aggiornamento immediato. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |queued tran|Abilita la sottoscrizione per l'aggiornamento in coda. Le modifiche dei dati possono essere apportate nel Sottoscrittore, archiviate in una coda e quindi distribuite al server di pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|Failover|Abilita la sottoscrizione per l'aggiornamento immediato sostituito dall'aggiornamento in coda in caso di failover. Le modifiche dei dati possono essere apportate nel Sottoscrittore e distribuite immediatamente al server di pubblicazione. Se il server di pubblicazione e il Sottoscrittore non sono connessi, la modalità di aggiornamento può essere modificata in modo tale che le modifiche apportate ai dati nel Sottoscrittore vengano archiviate in una coda fino alla riconnessione del Sottoscrittore e del server di pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
+|failover|Abilita la sottoscrizione per l'aggiornamento immediato sostituito dall'aggiornamento in coda in caso di failover. Le modifiche dei dati possono essere apportate nel Sottoscrittore e distribuite immediatamente al server di pubblicazione. Se il server di pubblicazione e il Sottoscrittore non sono connessi, la modalità di aggiornamento può essere modificata in modo tale che le modifiche apportate ai dati nel Sottoscrittore vengano archiviate in una coda fino alla riconnessione del Sottoscrittore e del server di pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |queued failover|Abilita la sottoscrizione come sottoscrizione con aggiornamento in coda con la possibilità di passare alla modalità di aggiornamento immediato. Le modifiche ai dati possono essere apportate nel Sottoscrittore e archiviate in una coda fino alla riconnessione del Sottoscrittore e del server di pubblicazione. Quando viene ristabilita una connessione continua, la modalità di aggiornamento può essere modificata nella modalità di aggiornamento immediato. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
   
  Si noti che i valori synctran e queued tran non sono consentiti se la pubblicazione da sottoscrivere supporta DTS.  
@@ -134,7 +134,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |valore|Descrizione|  
 |-----------|-----------------|  
 |true|L'agente di distribuzione non reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore. Utilizzato con la replica transazionale bidirezionale. Per ulteriori informazioni, vedere [replica transazionale bidirezionale](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
-|False|L'agente di distribuzione reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore.|  
+|false|L'agente di distribuzione reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore.|  
 |NULL (predefinito)|Impostato automaticamente su true per un Sottoscrittore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e su false per un Sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  [ @frequency_type=] *frequency_type*  
@@ -144,12 +144,12 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|Singola occorrenza|  
 |2|On demand|  
-|4|Ogni giorno|  
-|8|Ogni settimana|  
-|16|Mensile|  
+|4|Giornaliera|  
+|8|Settimanale|  
+|16|Ogni mese|  
 |32|Mensile relativa|  
 |64 (impostazione predefinita)|Avvio automatico|  
-|128|Ricorrente|  
+|128|Periodica|  
   
  [ @frequency_interval=] *frequency_interval*  
  Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è null.  
@@ -291,7 +291,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Osservazioni  
  La stored procedure sp_addsubscription viene utilizzata per la replica snapshot e transazionale.  
   
- Se la stored procedure sp_addsubscription viene eseguita da un membro del ruolo predefinito del server sysadmin per creare una sottoscrizione push, il processo dell'agente di distribuzione viene creato in modo implicito e viene eseguito utilizzando l'account del servizio SQL Server Agent. Si consiglia di eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso da quello specifico dell'agente @job_login per @job_passworde. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Se la stored procedure sp_addsubscription viene eseguita da un membro del ruolo predefinito del server sysadmin per creare una sottoscrizione push, il processo dell'agente di distribuzione viene creato in modo implicito e viene eseguito utilizzando l'account del servizio SQL Server Agent. Si consiglia di eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso da quello specifico dell'agente @job_login per @job_passworde. Per ulteriori informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  La stored procedure sp_addsubscription impedisce ai Sottoscrittori ODBC e OLE DB di accedere ai seguenti tipi di pubblicazione:  
   
@@ -316,9 +316,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Creare una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md)   
  [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

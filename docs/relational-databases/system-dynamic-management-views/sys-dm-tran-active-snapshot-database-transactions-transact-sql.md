@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262698"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -67,7 +67,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|ID della sessione che ha avviato la transazione.|  
 |**first_snapshot_sequence_num**|**bigint**|Numero di sequenza più basso delle transazioni attive nel momento in cui è stato eseguito uno snapshot. Al momento dell'esecuzione, una transazione snapshot esegue uno snapshot di tutte le transazioni attive in quel momento. Per le transazioni non snapshot, il valore di questa colonna è 0.|  
 |**max_version_chain_traversed**|**int**|Lunghezza massima della catena delle versioni attraversata per trovare la versione consistente dal punto di vista transazionale.|  
-|**average_version_chain_traversed**|**reale**|Numero medio di versioni di riga nelle catene delle versioni attraversate.|  
+|**average_version_chain_traversed**|**real**|Numero medio di versioni di riga nelle catene delle versioni attraversate.|  
 |**elapsed_time_seconds**|**bigint**|Tempo trascorso dal momento in cui la transazione ha acquisito il relativo numero di sequenza.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
@@ -145,8 +145,7 @@ elapsed_time_seconds
   
  Le informazioni seguenti valutano i risultati di **sys. dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: poiché questa transazione non viene eseguita con l'isolamento dello snapshot `is_snapshot` , il `first_snapshot_sequence_num` valore `0`e sono. 
-  `transaction_sequence_num` indica che alla transazione è stato assegnato un numero di sequenza della transazione, poiché una o entrambe le opzioni di database ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT sono impostate su ON.  
+-   XSN-57: poiché questa transazione non viene eseguita con l'isolamento dello snapshot `is_snapshot` , il `first_snapshot_sequence_num` valore `0`e sono. `transaction_sequence_num` indica che alla transazione è stato assegnato un numero di sequenza della transazione, poiché una o entrambe le opzioni di database ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT sono impostate su ON.  
   
 -   XSN-58: questa transazione non viene eseguita nel livello di isolamento dello snapshot e si applicano le stesse informazioni di XSN-57.  
   
@@ -155,8 +154,8 @@ elapsed_time_seconds
 -   XSN-60: si tratta della seconda transazione eseguita nel livello di isolamento dello snapshot. L'output restituisce le stesse informazioni di XSN-59.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [IMPOSTAZIONE del livello di isolamento delle transazioni &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

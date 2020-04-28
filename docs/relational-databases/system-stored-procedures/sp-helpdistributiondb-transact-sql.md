@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770926"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Numero di ore di memorizzazione della cronologia.|  
 |**history_cleanup_agent**|**sysname**|Nome dell'agente di pulizia del contenuto della cronologia.|  
 |**distribution_cleanup_agent**|**sysname**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
-|**stato**|**int**|Solo per uso interno.|  
+|**Stato**|**int**|Solo per uso interno.|  
 |**data_folder**|**nvarchar(255)**|Nome della directory utilizzata per archiviare i file di database.|  
 |**data_file**|**nvarchar(255)**|Nome del file di database.|  
 |**data_file_size**|**int**|Dimensioni iniziali del file di dati in MB.|  
@@ -67,7 +67,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  I membri del ruolo predefinito del database **db_owner** o del ruolo **replmonitor** in un database di distribuzione e gli utenti nell'elenco di accesso alla pubblicazione di una pubblicazione che utilizza il database di distribuzione possono eseguire **sp_helpdistributiondb** per restituire informazioni correlate ai file. I membri del ruolo **public** possono eseguire **sp_helpdistributiondb** per restituire informazioni non correlate ai file per i database di distribuzione a cui hanno accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

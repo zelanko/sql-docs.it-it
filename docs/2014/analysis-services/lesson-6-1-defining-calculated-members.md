@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493879"
 ---
 # <a name="defining-calculated-members"></a>Definizione dei membri calcolati
@@ -61,11 +61,11 @@ ms.locfileid: "69493879"
   
 7.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Vendite rivenditore**e trascinare **Reseller Sales-Sales Amount** nella casella **Espressione** del riquadro **Calculation Expressions** (Espressioni di calcolo) dopo il segno più (+).  
   
-8.  Nell'elenco **Stringa formato** selezionare **"Currency".**  
+8.  Nell'elenco **stringa formato** selezionare **"valuta".**  
   
 9. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Sales Amount** e **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
-     Le misure specificate nell'elenco **Gestione NON EMPTY** vengono usate per risolvere query NON VUOTE in MDX. Quando si specifica una o più misure nell'elenco **Gestione NON EMPTY**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tratta i membri calcolati come vuoti se tutte le misure specificate sono vuote. Se la proprietà **Gestione NON EMPTY** è vuota, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve valutare il membro calcolato stesso per determinare se è vuoto.  
+     Le misure specificate nell'elenco **Gestione NON EMPTY** vengono usate per risolvere query NON VUOTE in MDX. Quando si specifica una o più misure nell'elenco **Gestione NON EMPTY[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ** tratta i membri calcolati come vuoti se tutte le misure specificate sono vuote. Se la proprietà **Gestione NON EMPTY[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è vuota, ** deve valutare il membro calcolato stesso per determinare se è vuoto.  
   
      Nella figura seguente viene illustrato il riquadro **Calculation Expressions** (Espressioni di calcolo) popolato con le impostazione specificate nei passaggi precedenti.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493879"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Nell'elenco **stringa formato** selezionare **"valuta"**.  
+14. Nell'elenco **Stringa formato** selezionare **"Currency"**.  
   
 15. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Total Product Cost** e **Reseller Sales-Total Product Cost**e fare clic su **OK**.  
   

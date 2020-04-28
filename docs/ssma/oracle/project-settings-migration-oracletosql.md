@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266599"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Impostazioni del progetto (migrazione) (OracleToSQL)
@@ -43,9 +43,9 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni**
 |**Vincoli CHECK**|Specifica se SSMA deve verificare i vincoli quando inserisce i dati in tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
 |**Timeout migrazione dati**|Specifica il timeout utilizzato durante la migrazione dei dati<br /><br />**Modalità predefinita**: 15<br /><br />**Modalità ottimistica**: 15<br /><br />**Modalità completa**: 15|  
 |**Opzioni di migrazione dei dati estese**|Mostra le opzioni di migrazione dei dati aggiuntive per ogni tabella nella scheda Dettagli separata.<br /><br />**Modalità predefinita**: Nascondi<br /><br />**Modalità ottimistica**: Nascondi<br /><br />**Modalità completa**: Nascondi|  
-|**Attiva trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
-|**Mantieni identità**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: false|  
-|**Mantieni valori null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
+|**Attive trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
+|**Mantieni valori Identity**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: false|  
+|**Mantieni valori Null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
 |**Contrassegno operazione Trim stringa con errore**|Se la dimensione della colonna di destinazione è inferiore alla lunghezza della stringa di origine, il valore verrà tagliato e contrassegnato come un errore.<br /><br />**Modalità predefinita**: Sì<br /><br />**Modalità ottimistica**: Sì<br /><br />**Modalità completa**: Sì|  
 |**In errore**|Interrompe la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompi migrazione:** Arresta l'operazione di migrazione dei dati<br /><br />**Vai alla tabella successiva:** Interrompe la migrazione dei dati alla tabella corrente e procede a quello successivo<br /><br />**Vai al batch successivo:** Interrompe la migrazione dei dati al batch corrente e procede a quello successivo<br /><br />**Modalità predefinita**: passare al batch successivo<br /><br />**Modalità ottimistica**: passare al batch successivo<br /><br />**Modalità completa**: passare al batch successivo|  
 |**Sostituisci date non supportate**|Specifica se SSMA deve correggere le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date antecedenti alla data di** data/ora precedente (01 gennaio 1753).<br /><br />Per memorizzare i valori correnti della data, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non accetterà le date precedenti al 01 gennaio 1753 in una colonna DateTime. Se si utilizzano date precedenti, è necessario convertire i valori DateTime in valori di tipo carattere.<br /><br />Per convertire le date precedenti al 01 gennaio 1753 in NULL, selezionare **Sostituisci con null**.<br /><br />Per sostituire le date precedenti al 01 gennaio 1753 con una data supportata, selezionare **Sostituisci con la data più vicina supportata**.<br /><br />**Modalità predefinita**: non eseguire alcuna operazione<br /><br />**Modalità ottimistica**: non eseguire alcuna operazione<br /><br />**Modalità completa**: sostituire con la data più vicina supportata|  

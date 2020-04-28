@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764348"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -63,7 +63,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0** (impostazione predefinita)|Restituisce tutte le sottoscrizioni.|  
+|**0** (predefinito)|Restituisce tutte le sottoscrizioni.|  
 |**1**|Restituisce solo le sottoscrizioni con errori.|  
 |**2**|Restituisce solo le sottoscrizioni che hanno generato avvisi correlati alla misurazione del valore soglia.|  
 |**3**|Restituisce solo le sottoscrizioni con errori o che hanno generato avvisi correlati alla misurazione del valore soglia.|  
@@ -82,14 +82,14 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**status**|**int**|Analizza lo stato di tutti gli agenti di replica associati alla pubblicazione e restituisce lo stato più elevato trovato nell'ordine seguente:<br /><br /> **6** = operazione non riuscita<br /><br /> **5** = nuovo tentativo<br /><br /> **2** = arrestato<br /><br /> **4** = inattivo<br /><br /> **3** = in corso<br /><br /> **1** = avviato|  
-|**avviso**|**int**|Avviso correlato alla soglia massima generato da una sottoscrizione appartenente alla pubblicazione. Può essere il risultato OR logico di uno o più dei valori seguenti.<br /><br /> **1** = scadenza: una sottoscrizione di una pubblicazione transazionale non è stata sincronizzata entro la soglia del periodo di memorizzazione.<br /><br /> **2** = latenza: il tempo impiegato per replicare i dati da un server di pubblicazione transazionale al Sottoscrittore supera la soglia, in secondi.<br /><br /> **4** = mergeexpiration-una sottoscrizione di una pubblicazione di tipo merge non è stata sincronizzata entro la soglia del periodo di memorizzazione.<br /><br /> **8** = mergefastrunduration-il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, in secondi, su una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration-il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, in secondi, su una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
-|**subscriber**|**sysname**|Nome del Sottoscrittore.|  
+|**Stato**|**int**|Analizza lo stato di tutti gli agenti di replica associati alla pubblicazione e restituisce lo stato più elevato trovato nell'ordine seguente:<br /><br /> **6** = operazione non riuscita<br /><br /> **5** = nuovo tentativo<br /><br /> **2** = arrestato<br /><br /> **4** = inattivo<br /><br /> **3** = in corso<br /><br /> **1** = avviato|  
+|**warning**|**int**|Avviso correlato alla soglia massima generato da una sottoscrizione appartenente alla pubblicazione. Può essere il risultato OR logico di uno o più dei valori seguenti.<br /><br /> **1** = scadenza: una sottoscrizione di una pubblicazione transazionale non è stata sincronizzata entro la soglia del periodo di memorizzazione.<br /><br /> **2** = latenza: il tempo impiegato per replicare i dati da un server di pubblicazione transazionale al Sottoscrittore supera la soglia, in secondi.<br /><br /> **4** = mergeexpiration-una sottoscrizione di una pubblicazione di tipo merge non è stata sincronizzata entro la soglia del periodo di memorizzazione.<br /><br /> **8** = mergefastrunduration-il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, in secondi, su una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration-il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, in secondi, su una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge non è riuscita a mantenere la frequenza di soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
+|**Sottoscrittore**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database utilizzato per la sottoscrizione.|  
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome di una pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione. I possibili valori sono i seguenti:<br /><br /> **0** = pubblicazione transazionale<br /><br /> **1** = pubblicazione snapshot<br /><br /> **2** = pubblicazione di tipo merge|  
-|**sottotipo**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
+|**subtype**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
 |**latenza**|**int**|Latenza più alta, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
 |**latencythreshold**|**int**|Latenza massima per una pubblicazione transazionale, superata la quale viene generato un avviso.|  
 |**agentnotrunning**|**int**|Indica da quante ore l'agente non viene eseguito.|  
@@ -106,8 +106,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|Velocità di recapito dell'ultima sincronizzazione per la sottoscrizione.|  
 |**mergerunduration**|**int**|Tempo necessario per completare l'ultima sincronizzazione della sottoscrizione.|  
 |**monitorranking**|**int**|Valore di rango utilizzato per ordinare le sottoscrizioni nel set di risultati. I possibili valori sono i seguenti:<br /><br /> Per una pubblicazione transazionale:<br /><br /> **60** = errore<br /><br /> **56** = avviso: prestazioni critiche<br /><br /> **52** = avviso: scadenza imminente o scaduta<br /><br /> **50** = avviso: sottoscrizione non inizializzata<br /><br /> **40** = nuovo tentativo non riuscito<br /><br /> **30** = non in esecuzione (esito positivo)<br /><br /> **20** = in esecuzione (avvio, in esecuzione o inattivo)<br /><br /> Per una pubblicazione di tipo merge:<br /><br /> **60** = errore<br /><br /> **56** = avviso: prestazioni critiche<br /><br /> **54** = avviso: merge con esecuzione prolungata<br /><br /> **52** = avviso: scadenza imminente<br /><br /> **50** = avviso: sottoscrizione non inizializzata<br /><br /> **40** = nuovo tentativo non riuscito<br /><br /> **30** = in esecuzione (avvio, in esecuzione o inattivo)<br /><br /> **20** = non in esecuzione (esito positivo)|  
-|**distributionagentjobid**|**binario (16)**|ID del processo dell'agente di distribuzione per le sottoscrizioni di una pubblicazione transazionale.|  
-|**mergeagentjobid**|**binario (16)**|ID del processo dell'agente di merge per le sottoscrizioni di una pubblicazione di tipo merge.|  
+|**distributionagentjobid**|**binary(16)**|ID del processo dell'agente di distribuzione per le sottoscrizioni di una pubblicazione transazionale.|  
+|**mergeagentjobid**|**binary(16)**|ID del processo dell'agente di merge per le sottoscrizioni di una pubblicazione di tipo merge.|  
 |**distributionagentid**|**int**|ID del processo dell'agente di distribuzione per la sottoscrizione.|  
 |**distributionagentprofileid**|**int**|ID del profilo dell'agente utilizzato dall'agente di distribuzione.|  
 |**mergeagentid**|**int**|ID del processo dell'agente di merge per la sottoscrizione.|  
@@ -125,6 +125,6 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione possono eseguire **sp_replmonitorhelpsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

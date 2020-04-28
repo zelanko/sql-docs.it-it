@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771528"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -56,7 +56,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome del database.|  
-|**ID**|**int**|Identificatore del database.|  
+|**id**|**int**|Identificatore del database.|  
 |**transpublish**|**bit**|Se il database è stato abilitato per la pubblicazione snapshot o transazionale; dove il valore **1** indica che la pubblicazione snapshot o transazionale è abilitata.|  
 |**mergepublish**|**bit**|Se il database è stato abilitato per la pubblicazione di tipo merge; dove il valore **1** indica che la pubblicazione di tipo merge è abilitata.|  
 |**dbowner**|**bit**|Se l'utente è un membro del ruolo predefinito del database **db_owner** ; dove il valore **1** indica che l'utente è un membro di questo ruolo.|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890717"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor attività Query di data mining (scheda Query)
@@ -40,12 +40,12 @@ ms.locfileid: "68890717"
  **Query di data mining**  
  Consente di digitare una query di data mining.  
   
- **Argomenti correlati:**  [informazioni di riferimento sulle estensioni di Data Mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Argomenti correlati:**  [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Compila nuova query**  
  Consente di creare una query di data mining utilizzando uno strumento grafico.  
   
- **Argomenti correlati:** [query di data mining](control-flow/data-mining-query.md)  
+ **Argomenti correlati:** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opzioni della scheda Mapping parametri  
  **Nome parametro**  
@@ -79,7 +79,7 @@ ms.locfileid: "68890717"
  Selezionare un risultato e quindi fare clic su **Rimuovi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività query di data mining &#40;scheda modello di data mining&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor attività query di data mining &#40;scheda output&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  

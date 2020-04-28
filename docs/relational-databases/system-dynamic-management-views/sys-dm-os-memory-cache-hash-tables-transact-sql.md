@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5a52fc7c614752cde43a1670f2fb299b35aa0ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265772"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68265772"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Indirizzo (chiave primaria) della voce nella cache. Non ammette i valori Null.|  
-|**nome**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
-|**tipo**|**nvarchar (60)**|Tipo di cache. Non ammette i valori Null.|  
+|**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
+|**type**|**nvarchar(60)**|Tipo di cache. Non ammette i valori Null.|  
 |**table_level**|**int**|Numero di tabella hash. Una cache specifica può avere più tabelle hash corrispondenti a funzioni hash diverse. Non ammette i valori Null.|  
 |**buckets_count**|**int**|Numero di bucket nella tabella hash. Non ammette i valori Null.|  
 |**buckets_in_use_count**|**int**|Numero di bucket in uso. Non ammette i valori Null.|  

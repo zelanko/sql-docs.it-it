@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530824"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services
@@ -42,7 +42,7 @@ ms.locfileid: "69530824"
 ## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Passaggio 2: scaricare SQL Server Data Tools-Business Intelligence per Visual Studio 2012  
  In questa versione il download e l'installazione di SQL Server Data Tools vengono effettuati separatamente dalle altre funzionalità di SQL Server. Le finestre di progettazione e i modelli di progetto utilizzati per creare modelli e report di Business Intelligence sono ora disponibili come download Web gratuito.  
   
--   [Scaricare la versione di business intelligence di SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Il file viene salvato nella cartella Downloads. Eseguire il programma di installazione per installare lo strumento.  
+-   [Scaricare la versione Business Intelligence di SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Il file viene salvato nella cartella Downloads. Eseguire il programma di installazione per installare lo strumento.  
   
      Riavviare il computer per completare l'installazione.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "69530824"
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 dall'installazione guidata &#40;&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurare la Windows Firewall per consentire l'accesso Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

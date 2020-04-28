@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890325"
 ---
 # <a name="data-mining-query"></a>Query di data mining
@@ -26,9 +26,9 @@ ms.locfileid: "68890325"
  Pulsante Cambia visualizzazione  
  Fare clic su un'icona per alternare il riquadro di progettazione al riquadro Query. Per impostazione predefinita è aperto il riquadro di progettazione.  
   
- Per passare al riquadro di progettazione, fare clic sull'icona di ![progettazione](../media/ssis-designicon.gif "Icona Progettazione") .  
+ Per passare al riquadro di progettazione, fare clic sull'icona ![Icona Progettazione](../media/ssis-designicon.gif "Icona Progettazione").  
   
- Per passare al riquadro query, fare clic sull'icona ![icona SQL](../media/ssis-queryicon.gif "Icona SQL") .  
+ Per passare al riquadro Query, fare clic sull'icona ![Icona SQL](../media/ssis-queryicon.gif "Icona SQL").  
   
  **Modello di data mining**  
  Consente di visualizzare il modello di data mining selezionato sul quale si desidera basare le stime.  
@@ -56,14 +56,14 @@ ms.locfileid: "68890325"
  **Gruppo**  
  Usare questa opzione con la colonna **And/Or** per raggruppare le espressioni. Ad esempio, (espr1 OR espr2) AND espr3.  
   
- **E/o**  
+ **And/Or**  
  Utilizzare questa opzione per creare una query logica. Ad esempio, (espr1 OR espr2) AND espr3.  
   
- **Criteri/argomento**  
+ **Criteri/Argomento**  
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfacce di query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

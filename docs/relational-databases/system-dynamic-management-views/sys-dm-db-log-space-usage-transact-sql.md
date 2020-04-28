@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264584"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>sys. dm_db_log_space_usage (Transact-SQL)
@@ -40,7 +40,7 @@ Restituisce informazioni sull'utilizzo dello spazio per il log delle transazioni
 |database_id|**smallint**|ID del database.|  
 |total_log_size_in_bytes |**bigint** |Dimensioni del log  |
 |used_log_space_in_bytes |**bigint** |Dimensione occupata del log  |     
-|used_log_space_in_percent |**reale** |Dimensioni occupate del log come percentuale delle dimensioni totali del log |
+|used_log_space_in_percent |**real** |Dimensioni occupate del log come percentuale delle dimensioni totali del log |
 |log_space_in_bytes_since_last_backup |**bigint** |Quantità di spazio utilizzata dall'ultimo backup del log <br />**Si applica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a,.|
     
   
@@ -63,13 +63,13 @@ FROM sys.dm_db_log_space_usage;
 ```
   
 ## <a name="see-also"></a>Vedere anche  
-[Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
 [sys. dm_db_task_space_usage &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
-[sys. dm_db_session_space_usage &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+[sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
 [sys. dm_db_log_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
-[sys. dm_db_log_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
 
 
 

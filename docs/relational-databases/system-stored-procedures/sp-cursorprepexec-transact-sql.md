@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652433"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652433"
 
   Compila un piano per il batch o l'istruzione di cursore inviata, quindi crea e popola il cursore. sp_cursorprepexec combina le funzioni di sp_cursorprepare e sp_cursorexecute. Questa procedura viene richiamata specificando ID = 5 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
- ![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *handle preparato*  
  Identificatore dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *handle* preparato generato. *handle preparato* obbligatorio e restituisce **int**.  
   
- *cursore*  
+ *cursor*  
  Identificatore del cursore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Cursor* è un parametro obbligatorio che deve essere fornito in tutte le procedure successive che agiscono su questo cursore, ad esempio sp_cursorfetch.  
   
  *params*  
@@ -59,7 +59,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Le regole per la specifica del valore stmt sono le stesse di quelle per sp_cursoropen, con l'eccezione che il tipo di dati stringa *stmt* deve essere **ntext**.  
   
- *Opzioni*  
+ *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. * le opzioni richiedono il valore di input **int** seguente.  
   
 |valore|Descrizione|  

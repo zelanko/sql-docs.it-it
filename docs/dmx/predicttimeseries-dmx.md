@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893887"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -244,9 +244,9 @@ OR [Model Region] = 'M200 North America'
 |M200 Europe|7/25/2008 12:00:00 AM|121|11.6050581415597|3.40661975300439|  
 |M200 Europe|8/25/2008 12:00:00 AM|142|10.678201866621|3.26775180615374|  
 |M200 Europe|9/25/2008 12:00:00 AM|152|9.86897842568614|3.14149302493037|  
-|M200 North America|7/25/2008 12:00:00 AM|163|1.20434529288162|1.20434529288162|  
-|M200 North America|8/25/2008 12:00:00 AM|178|1.65031343900634|1.65031343900634|  
-|M200 North America|9/25/2008 12:00:00 AM|156|1.68969399185442|1.68969399185442|  
+|M200 America del Nord|7/25/2008 12:00:00 AM|163|1.20434529288162|1.20434529288162|  
+|M200 America del Nord|8/25/2008 12:00:00 AM|178|1.65031343900634|1.65031343900634|  
+|M200 America del Nord|9/25/2008 12:00:00 AM|156|1.68969399185442|1.68969399185442|  
   
 > [!NOTE]  
 >  In questo esempio è stata utilizzata la parola chiave FLATTENED per rendere più semplice la presentazione dei risultati in una tabella. Tuttavia, se il provider supporta i set di righe gerarchici, è possibile omettere la parola chiave FLATTENED. Se si omette la parola chiave FLATTENED, la query restituisce due colonne, la prima colonna contenente il valore che identifica la serie di dati `[Model Region]` e la seconda colonna contenente la tabella di statistiche nidificata.  
@@ -254,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Esempi di query sul modello Time Series](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

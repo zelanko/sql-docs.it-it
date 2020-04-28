@@ -16,10 +16,10 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768899"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
@@ -53,7 +53,7 @@ sp_changedistributor_password [ @password= ] 'password'
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Proteggere il server di distribuzione](../../relational-databases/replication/security/secure-the-distributor.md)   
+ [Proteggere il database di distribuzione](../../relational-databases/replication/security/secure-the-distributor.md)   
  [sp_adddistributor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

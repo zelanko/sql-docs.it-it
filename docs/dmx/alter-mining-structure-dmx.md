@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889869"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *struttura*  
+ *structure*  
  Nome della struttura di data mining a cui verrà aggiunto il modello di data mining.  
   
  *model*  
@@ -103,8 +103,7 @@ USING <algorithm> [(<parameter list>)]
  È possibile definire un'espressione di filtro che viene applicata alla tabella nidificata aggiungendo un'espressione di criteri di filtro dopo la definizione di colonna della tabella nidificata.  
   
 ### <a name="modeling-flags"></a>Flag di modellazione  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta i flag di modellazione seguenti per l'utilizzo nelle colonne del modello di data mining:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta i flag di modellazione seguenti per l'utilizzo nelle colonne del modello di data mining:  
   
 > [!NOTE]  
 >  Il flag di modellazione NOT_NULL si applica alla colonna della struttura di data mining. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -182,7 +181,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
   
  La struttura di data mining include anche una tabella nidificata in cui sono elencati gli elementi acquistati dal cliente.  
   
- Poiché la struttura di data mining contiene una tabella nidificata, è possibile definire un filtro sulla tabella del case, sulla tabella nidificata o su entrambe. In questo esempio vengono combinati un filtro di case e un filtro di riga nidificata per limitare i case ai clienti europei abbienti che hanno acquistato uno dei modelli di pneumatici Road.  
+ Poiché la struttura di data mining contiene una tabella nidificata, è possibile definire un filtro sulla tabella del case, sulla tabella nidificata o su entrambe. In questo esempio vengono combinati un filtro di case e un filtro di riga nidificata per limitare i case ai clienti Europai abbienti che hanno acquistato uno dei modelli di pneumatici Road.  
   
 ```  
 ALTER MINING STRUCTURE [Market Basket with Region and Income]  
@@ -204,6 +203,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

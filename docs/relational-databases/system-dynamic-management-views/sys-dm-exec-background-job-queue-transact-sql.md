@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263935"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68263935"
 
   Restituisce una riga per ogni processo di Query Processor pianificato per l'esecuzione asincrona (in background).  
   
-> **NOTA** Per chiamare questo oggetto **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** da **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** o, usare il nome **sys. dm_pdw_nodes_exec_background_job_queue**.  
+> **Nota!** Per chiamare questo oggetto **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** da **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** o, usare il nome **sys. dm_pdw_nodes_exec_background_job_queue**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -60,7 +60,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
   
  I valori di **object_id1** tramite **object_id4** dipendono dal tipo della richiesta di processo. Nella tabella seguente viene descritto il significato delle colonne per i diversi tipi di processo.  
   
-|tipo di richiesta|object_id1|object_id2|object_id3|object_id4|  
+|Tipo di richiesta|object_id1|object_id2|object_id3|object_id4|  
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |Aggiornamenti asincroni delle statistiche|ID di tabella o vista|ID delle statistiche|Non usato|Non usato|  
   
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Statistiche](../../relational-databases/statistics/statistics.md)   
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  

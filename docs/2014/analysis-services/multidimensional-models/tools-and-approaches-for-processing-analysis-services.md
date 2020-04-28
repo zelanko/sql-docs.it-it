@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530937"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
@@ -92,14 +92,13 @@ ms.locfileid: "69530937"
   
 6.  Al termine dell'elaborazione, fare clic su **Chiudi**.  
   
-##  <a name="bkmk_impactanalysis"></a>Eseguire l'analisi di effetto per identificare le dipendenze tra oggetti e l'ambito delle operazioni  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>Eseguire l'analisi di effetto per identificare le dipendenze tra oggetti e l'ambito delle operazioni  
   
 1.  Prima di elaborare un oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile analizzare l'effetto sugli oggetti correlati facendo clic su **Analisi di impatto** in una delle finestre di dialogo **Elabora oggetti** .  
   
 2.  Fare clic con il pulsante destro del mouse su una dimensione, un cubo, un gruppo di misure o una partizione per aprire una finestra di dialogo **Elabora oggetti** .  
   
-3.  Fare clic su **Analisi di impatto**. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue l’analisi del modello e indica i requisiti di rielaborazione per gli oggetti correlati a quello che è stato selezionato per l’elaborazione.  
+3.  Fare clic su **Analisi di impatto**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue l’analisi del modello e indica i requisiti di rielaborazione per gli oggetti correlati a quello che è stato selezionato per l’elaborazione.  
   
 ### <a name="processing-objects-using-xmla"></a>Elaborazione di oggetti tramite XMLA  
   
@@ -129,7 +128,7 @@ ms.locfileid: "69530937"
   
     -   [Cmdlet Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), che può essere utilizzato per eseguire script XMLA, MDX o DMX che includono comandi di elaborazione.  
+    -   [cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd)che può essere usato per eseguire script XMLA, MDX o DMX che includono comandi di elaborazione.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Monitoraggio dell'elaborazione degli oggetti utilizzando SQL Server Profiler  
   
@@ -139,13 +138,13 @@ ms.locfileid: "69530937"
   
 3.  Scegliere gli eventi seguenti:  
   
-    -   **Inizio del comando** e **fine del comando** da visualizzare quando l'elaborazione viene avviata e interrotta  
+    -   **Inizio del comando** e **Fine del comando** per mostrare l'inizio e la fine dell'elaborazione  
   
-    -   **Errore** di acquisizione degli errori  
+    -   **Errore** per acquisire eventuali errori  
   
-    -   **Inizio del report**di stato, stato **corrente**del report di stato e **fine del report** di stato per creare un report sullo stato del processo e visualizzare le query SQL utilizzate per recuperare i dati  
+    -   **Inizio del report di stato**, **Stato corrente del report di stato**e **Fine del report di stato** per creare un report sullo stato dell'elaborazione e mostrare le query SQL utilizzate per recuperare i dati  
   
-    -   **Esecuzione di script MDX Begin** ed **Execute MDX end** per mostrare i calcoli del cubo  
+    -   **Inizio dell'esecuzione di script MDX** e **Fine dell'esecuzione di script MDX** per mostrare i calcoli del cubo  
   
     -   Facoltativamente, aggiungere eventi di blocco in caso di diagnosi di problemi di prestazioni correlati all'elaborazione  
   

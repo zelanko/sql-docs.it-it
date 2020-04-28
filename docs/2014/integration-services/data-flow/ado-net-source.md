@@ -19,23 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153963"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
   L'origine ADO NET utilizza i dati di un provider .NET e li rende disponibili per il flusso di dati.  
   
- È possibile utilizzare l'origine ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere la pagina relativa alle [linee guida e limitazioni generali (database SQL di Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ È possibile usare l'origine ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere la pagina relativa alle [linee guida e limitazioni generali (database SQL di Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Supporto dei tipi di dati  
  Tramite l'origine viene convertito qualsiasi tipo di dati di cui non è stato eseguito il mapping a un tipo di dati specifico di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel tipo di dati DT_NTEXT di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La conversione viene eseguita anche se il tipo di dati è `System.Object`.  
   
  È possibile modificare il tipo di dati DT_NTEXT nel tipo di dati DT_WSTR e vice versa. È possibile modificare i tipi di dati configurando la proprietà **DataType** nella finestra di dialogo **Editor avanzato** dell'origine ADO NET. Per altre informazioni, vedere [Proprietà comuni](../common-properties.md).  
   
- Il tipo di dati DT_NTEXT può anche essere convertito nel tipo di dati DT_BYTES o DT_STR utilizzando una trasformazione Conversione dati sull'origine ADO NET. Per altre informazioni, vedere [trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
+ Il tipo di dati DT_NTEXT può anche essere convertito nel tipo di dati DT_BYTES o DT_STR utilizzando una trasformazione Conversione dati sull'origine ADO NET. Per altre informazioni, vedere [Trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
   
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sui tipi di dati relativi alle date, DT_DBDATE, DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, viene eseguito il mapping a tipi di dati relativi alle date specifici in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile configurare l'origine ADO NET per convertire i tipi di dati relativi alle date usati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei tipi usati in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'origine ADO NET per convertire questi tipi di dati relativi alle date, impostare la proprietà **Type System Version** della gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] su **Ultima versione**. La proprietà **Type System Version** si trova nella pagina **Tutto** della finestra di dialogo **Gestione connessione** . Per aprire la finestra di dialogo **Gestione connessione** , fare clic con il pulsante destro del mouse sulla gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e quindi su **Modifica**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70153963"
 > [!NOTE]  
 >  Se si utilizza un'istruzione SQL per eseguire una stored procedure e l'esecuzione del pacchetto ha esito negativo con l'errore seguente, è possibile risolvere il problema aggiungendo l'istruzione `SET FMTONLY OFF` prima dell'istruzione exec.  
 >   
->  **Impossibile trovare la colonna <column_name> nell'origine dati.**  
+>  **Impossibile trovare la colonna <nome_colonna> nell'origine dati.**  
   
  Nell'origine ADO NET viene usata una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in cui è specificato il provider .NET per connettersi a un'origine dati. Per altre informazioni, vedere [Gestione connessione ADO.NET](../connection-manager/ado-net-connection-manager.md).  
   

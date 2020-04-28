@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154478"
 ---
 # <a name="data-quality-client-home-screen"></a>Schermata iniziale del client Data Quality
@@ -27,10 +27,10 @@ ms.locfileid: "70154478"
 ### <a name="knowledge-base-management"></a>Gestione Knowledge Base  
  Una Knowledge Base DQS è un repository di metadati utilizzati da DQS per migliorare la qualità dei dati. Questi metadati vengono creati sia dalla piattaforma DQS in un processo computerizzato di individuazione delle informazioni che dall'amministratore dei dati in un processo interattivo di gestione del dominio.  
   
- **Nuova Knowledge base**  
+ **Nuova Knowledge Base**  
  Consente di avviare il processo di creazione di una Knowledge Base da zero o in base ai metadati di una Knowledge Base esistente. Questo comando consente di aprire una pagina nella quale è possibile identificare la Knowledge Base, basarla su una Knowledge Base esistente, selezionare l'attività desiderata relativa alla Knowledge Base, quindi creare la Knowledge Base.  
   
- **Apri Knowledge base**  
+ **Apri Knowledge Base**  
  Consente di aprire una Knowledge Base per gestirne i domini, eseguire l'individuazione delle informazioni o creare criteri di corrispondenza. Se si fa clic sul pulsante **Apri Knowledge Base** , viene visualizzata la pagina **Apri Knowledge Base** che contiene un elenco di Knowledge Base esistenti con le relative proprietà, lo stato corrente e i dettagli dei domini. Selezionare una Knowledge Base e aprirla da **Apri Knowledge Base**.  
   
  **Knowledge Base recente**  

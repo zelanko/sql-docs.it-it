@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493947"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilizzo di una versione modificata del progetto Analysis Services Tutorial
@@ -24,7 +24,7 @@ ms.locfileid: "69493947"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Download ed estrazione del file di progetto  
   
-1.  [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per passare alla pagina di download che fornisce i progetti di esempio in questa esercitazione. I progetti dell'esercitazione sono inclusi nel download **Analysis Services Tutorial SQL Server 2012** .  
+1.  [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel download **Analysis Services Tutorial SQL Server 2012** .  
   
 2.  Fare clic su **Analysis Services Tutorial SQL Server 2012** per scaricare il pacchetto in cui sono contenuti i progetti per questa esercitazione.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "69493947"
 #### <a name="internet-sales-diagram"></a>Diagramma Internet Sales  
  Il diagramma **Internet Sales** contiene le tabelle relative alla vendita dei prodotti [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] direttamente ai clienti tramite Internet. Le tabelle del diagramma sono le quattro tabelle delle dimensioni e una sola tabella dei fatti aggiunte alla vista origine dati di **Adventure Works DW 2012** nella Lezione 1. Le tabelle sono le seguenti:  
   
--   **Geografia**  
+-   **Area geografica**  
   
--   **Customer**  
+-   **Cliente**  
   
 -   **Data**  
   
@@ -74,13 +74,13 @@ ms.locfileid: "69493947"
 #### <a name="reseller-sales-diagram"></a>Diagramma Reseller Sales  
  Il diagramma **Reseller Sales** contiene le tabelle relative alla vendita dei prodotti [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] da parte dei rivenditori. Nel diagramma sono incluse le seguenti sette tabelle delle dimensioni e una tabella dei fatti del database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
--   **Rivenditore**  
+-   **Reseller**  
   
--   **Promozione**  
+-   **Promotion**  
   
 -   **SalesTerritory**  
   
--   **Geografia**  
+-   **Area geografica**  
   
 -   **Data**  
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811524"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
@@ -63,14 +63,14 @@ sys.dm_db_index_physical_stats (
  È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Quando si utilizza DB_ID senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o un valore superiore.  
   
  *object_id* | NULL | 0 | PREDEFINITA  
- ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di **tipo int**.  
+ ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di tipo **int**.  
   
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]da, gli input validi includono anche il nome della coda di Service Broker o il nome della tabella interna della coda. Quando vengono applicati parametri predefiniti, ovvero tutti gli oggetti, tutti gli indici e così via, le informazioni sulla frammentazione per tutte le code sono incluse nel set di risultati.  
   
  Specificare NULL per restituire le informazioni per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare null anche per *index_id* e *partition_number*.  
   
  *index_id* | 0 | NULL | -1 | PREDEFINITA  
- ID dell'indice. *index_id* è di **tipo int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, null,-1 o default. Il valore predefinito è-1. NULL,-1 e DEFAULT sono valori equivalenti in questo contesto.  
+ ID dell'indice. *index_id* è di **tipo int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, null,-1 o default. Il valore predefinito è -1. NULL,-1 e DEFAULT sono valori equivalenti in questo contesto.  
   
  Specificare NULL per restituire le informazioni per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare null anche per *partition_number*.  
   
@@ -92,9 +92,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|ID oggetto della tabella o della vista in cui è contenuto l'indice.|  
 |index_id|**int**|ID di un indice.<br /><br /> 0 = Heap.|  
 |partition_number|**int**|Numero di partizione in base 1 all'interno dell'oggetto proprietario, una tabella, una vista o un indice.<br /><br /> 1 = Indice o heap non partizionato.|  
-|index_type_desc|**nvarchar (60)**|Descrizione del tipo di indice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> Indice di MAPPING COLUMNStore (interno)<br /><br /> Indice DELETEBUFFER COLUMNStore (interno)<br /><br /> Indice DELETEBITMAP COLUMNStore (interno)|  
+|index_type_desc|**nvarchar(60)**|Descrizione del tipo di indice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> Indice di MAPPING COLUMNStore (interno)<br /><br /> Indice DELETEBUFFER COLUMNStore (interno)<br /><br /> Indice DELETEBITMAP COLUMNStore (interno)|  
 |hobt_id|**bigint**|ID dell'heap o dell'albero B dell'indice o della partizione.<br /><br /> Oltre a restituire la hobt_id di indici definiti dall'utente, viene restituito anche il hobt_id degli indici columnstore interni.|  
-|alloc_unit_type_desc|**nvarchar (60)**|Descrizione del tipo dell'unità di allocazione:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> L'unità di allocazione LOB_DATA contiene i dati archiviati nelle colonne di tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** e **XML**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> L'unità di allocazione ROW_OVERFLOW_DATA contiene i dati archiviati nelle colonne di tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)** e **sql_variant** spostati all'esterno di righe.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Descrizione del tipo dell'unità di allocazione:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> L'unità di allocazione LOB_DATA contiene i dati archiviati nelle colonne di tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** e **XML**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> L'unità di allocazione ROW_OVERFLOW_DATA contiene i dati archiviati nelle colonne di tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)** e **sql_variant** spostati all'esterno di righe.|  
 |index_depth|**tinyint**|Numero di livelli dell'indice.<br /><br /> 1 = Heap o unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA.|  
 |index_level|**tinyint**|Livello corrente dell'indice.<br /><br /> 0 per i livelli foglia di indice, gli heap e le unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA.<br /><br /> Maggiore di 0 per i livelli dell'indice non foglia. *index_level* sarà il più elevato al livello di radice di un indice.<br /><br /> I livelli non foglia degli indici vengono elaborati solo quando *mode* = detailed.|  
 |avg_fragmentation_in_percent|**float**|Frammentazione logica per gli indici o frammentazione extent per gli heap nell'unità di allocazione IN_ROW_DATA.<br /><br /> Il valore viene misurato come percentuale e a tal fine vengono presi in considerazione più file. Per le definizioni di frammentazione logica ed extent, vedere la sezione Osservazioni.<br /><br /> 0 per le unità di allocazione LOB_DATA e ROW_OVERFLOW_DATA.<br /><br /> NULL per gli heap quando *mode* = sampled.|  
@@ -111,7 +111,7 @@ sys.dm_db_index_physical_stats (
 |forwarded_record_count|**bigint**|Numero di record in un heap che hanno inoltrato puntatori a un altro percorso dei dati. Questo stato si verifica durante un aggiornamento, nel caso in cui non vi sia spazio sufficiente per archiviare la riga nel percorso originale.<br /><br /> NULL per tutte le unità di allocazione escluse le unità di allocazione IN_ROW_DATA per un heap.<br /><br /> NULL per gli heap quando *mode* = Limited.|  
 |compressed_page_count|**bigint**|Numero di pagine compresse.<br /><br /> Per gli heap, alle pagine appena allocate non viene applicata la compressione di tipo PAGE. A un heap viene applicata la compressione di tipo PAGE in due condizioni speciali, ovvero quando i dati vengono importati mediante un'operazione bulk o quando un heap viene ricompilato. Alle operazioni DML tipiche che determinano le allocazioni delle pagine non verrà applicata la compressione di tipo PAGE. Ricompilare un heap quando il valore compressed_page_count aumenta oltre la soglia desiderata.<br /><br /> Per tabelle in cui è presente un indice cluster, il valore compressed_page_count indica l'efficacia della compressione di tipo PAGE.|  
 |hobt_id|bigint|**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Solo per gli indici columnstore, questo è l'ID di un set di righe che tiene traccia dei dati columnstore interni per una partizione. I set di righe vengono archiviati come heap di dati o alberi binari. Hanno lo stesso ID di indice dell'indice columnstore padre. Per ulteriori informazioni, vedere [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se|  
-|column_store_delete_buffer_state|tinyint|**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = SVUOTAMENTO<br /><br /> 3 = SCARICAMENTO<br /><br /> 4 = RITIRO<br /><br /> 5 = PRONTO|  
+|column_store_delete_buffer_state|TINYINT|**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = SVUOTAMENTO<br /><br /> 3 = SCARICAMENTO<br /><br /> 4 = RITIRO<br /><br /> 5 = PRONTO|  
 |column_store_delete_buff_state_desc||**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NON valido: l'indice padre non è un indice columnstore.<br /><br /> Gli scanner e gli eliminatori utilizzano questa operazione.<br /><br /> SVUOTAMENTO: gli eliminatori si svuotano, ma gli scanner lo usano ancora.<br /><br /> Il buffer di SCARICAmento viene chiuso e le righe nel buffer vengono scritte nella bitmap Delete.<br /><br /> Il ritiro delle righe nel buffer di eliminazione chiuso è stato scritto nella bitmap di eliminazione, ma il buffer non è stato troncato perché gli scanner lo usano ancora. I nuovi scanner non devono usare il buffer di ritiro perché il buffer aperto è sufficiente.<br /><br /> PRONTO: il buffer di eliminazione è pronto per l'uso.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -194,7 +194,7 @@ GO
   
 -   Utilizzare ALTER INDEX REORGANIZE, l'alternativa a DBCC INDEXDEFRAG, per riordinare le pagine di livello foglia dell'indice in un ordine logico. Poiché si tratta di un'operazione online, l'indice è disponibile durante l'esecuzione dell'istruzione. L'operazione può essere interrotta senza perdere il lavoro già completato. Lo svantaggio di questo metodo è che il processo di riorganizzazione dei dati non è tanto efficiente quanto un'operazione di ricompilazione dell'indice e non aggiorna le statistiche.  
   
--   Utilizzare ALTER INDEX REBUILD, l'alternativa a DBCC DBREINDEX, per ricompilare l'indice online o offline. Per ulteriori informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+-   Utilizzare ALTER INDEX REBUILD, l'alternativa a DBCC DBREINDEX, per ricompilare l'indice online o offline. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  La sola frammentazione non è un motivo sufficiente per riorganizzare o ricompilare un indice. L'effetto principale della frammentazione è che rallenta la velocità read-ahead effettiva delle pagine durante le analisi di indici, provocando tempi di risposta più lenti. Se il carico di lavoro della query in una tabella o in un indice frammentato non comporta analisi, poiché il carico di lavoro è rappresentato principalmente da ricerche singleton, la rimozione della frammentazione potrebbe non avere alcun effetto.
   
@@ -410,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**Si applica a** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da a.|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  Negli esempi seguenti viene illustrato come eseguire una query sulle code di Service Broker per la frammentazione.  
   
@@ -424,12 +424,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative agli indici &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys. allocation_units &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

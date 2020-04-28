@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264452"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introduzione a SSMA per Oracle (OracleToSQL)
@@ -84,12 +84,12 @@ La barra degli strumenti del progetto contiene pulsanti per l'utilizzo di proget
 #### <a name="migration-toolbar"></a>Barra degli strumenti migrazione  
 La tabella seguente illustra i comandi della barra degli strumenti di migrazione:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |------|--------|  
 |**Creazione di report**|Converte gli oggetti Oracle selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi, quindi crea un report che mostra l'esito positivo della conversione.<br /><br />Questo comando è disabilitato, a meno che non vengano selezionati oggetti in Esplora metadati Oracle.|  
 |**Converti schema**|Converte gli oggetti Oracle selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti.<br /><br />Questo comando è disabilitato, a meno che non vengano selezionati oggetti in Esplora metadati Oracle.|  
 |**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. Prima di eseguire questo comando, è necessario convertire gli schemi Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, quindi caricare gli oggetti in. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br />Questo comando è disabilitato, a meno che non vengano selezionati oggetti in Esplora metadati Oracle.|  
-|**Stop**|Arresta il processo corrente.|  
+|**Arresta**|Arresta il processo corrente.|  
   
 ### <a name="menus"></a>Menu  
 La tabella seguente illustra i menu SSMA.  
@@ -101,7 +101,7 @@ La tabella seguente illustra i menu SSMA.
 |**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
 |**Strumenti**|Contiene i comandi per creare report ed eseguire la migrazione di oggetti e dati. Consente inoltre di accedere alle **Impostazioni globali** e alle finestre di dialogo **delle impostazioni del progetto** .|  
 |**Tester**|Contiene i comandi per la creazione e l'utilizzo di test case, repository e sistemi di gestione di backup.|  
-|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
+|**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
 Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  

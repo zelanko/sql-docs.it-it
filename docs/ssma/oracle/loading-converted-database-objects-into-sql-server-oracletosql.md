@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262993"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Caricamento di oggetti di database convertiti in SQL Server (OracleToSQL)

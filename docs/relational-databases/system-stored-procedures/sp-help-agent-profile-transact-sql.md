@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771460"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|ID del profilo.|  
 |**profile_name**|**sysname**|Nome univoco per il tipo di agente.|  
 |**agent_type**|**int**|**1** = agente di snapshot<br /><br /> **2** = agente di lettura log<br /><br /> **3** = agente di distribuzione<br /><br /> **4** = agente di merge<br /><br /> **9** = agente di lettura coda|  
-|**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizzato|  
+|**Type**|**int**|**0** = sistema<br /><br /> **1** = personalizzato|  
 |**Descrizione**|**varchar (3000)**|Descrizione del profilo.|  
 |**def_profile**|**bit**|Indica se il profilo corrisponde al profilo predefinito per il tipo di agente specificato.|  
   

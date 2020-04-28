@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891143"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipolazione dei dati MDX - SELECT
@@ -119,7 +119,7 @@ FROM
  I membri calcolati possono essere \<inclusi nella clausola SELECT query AXIS> ogni volta che la connessione è stata aperta utilizzando il parametro della stringa di connessione *sottoquery = 1*; vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri. Un esempio è fornito sui membri calcolati nelle sub-SELECT.  
   
 ## <a name="autoexists"></a>Auto Exist  
- Quando in un'istruzione SELECT vengono utilizzati due o più attributi della dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi. Si supponga ad esempio di utilizzare gli attributi della dimensione Geografia. Se una delle espressioni restituisce tutti i membri dell'attributo Città e un'altra limita i membri dell'attributo Paese a tutti i paesi europei, allora i membri di Città saranno limitati alle sole città che appartengono a paesi europei. Questa caratteristica di Analysis Services, denominata Auto Exist, si applica solo agli attributi della stessa dimensione, un quanto tenta di impedire che i record di dimensioni esclusi nell'espressione di un attributo vengano inclusi dalle espressioni di altri attributi. La caratteristica Auto Exist può inoltre essere interpretata come l'intersezione risultante da diverse espressioni di attributi su record di dimensioni. Vedere gli esempi seguenti:  
+ Quando in un'istruzione SELECT vengono utilizzati due o più attributi della dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi. Si supponga ad esempio di utilizzare gli attributi della dimensione Geografia. Se una delle espressioni restituisce tutti i membri dell'attributo Città e un'altra limita i membri dell'attributo Paese a tutti i paesi Europai, allora i membri di Città saranno limitati alle sole città che appartengono a paesi Europai. Questa caratteristica di Analysis Services, denominata Auto Exist, si applica solo agli attributi della stessa dimensione, un quanto tenta di impedire che i record di dimensioni esclusi nell'espressione di un attributo vengano inclusi dalle espressioni di altri attributi. La caratteristica Auto Exist può inoltre essere interpretata come l'intersezione risultante da diverse espressioni di attributi su record di dimensioni. Vedere gli esempi seguenti:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
   
@@ -161,17 +161,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Importo vendite rivenditore**|**Importo dello sconto**|**Sconto PCT**|  
-|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13%**|  
-|**Road-250**|**$9.377.457,68**|**$4.032,47**|**0,04%**|  
-|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
-|**Road-650**|**$7.442.141,81**|**$39.698,30**|**0,53%**|  
-|**Touring-1000**|**$6.723.794,29**|**$166.144,17**|**2,47%**|  
-|**Road-550-W**|**$3.668.383,88**|**$1.901,97**|**0,05%**|  
-|**Road-350-W**|**$3.665.932,31**|**$20.946,50**|**0,57%**|  
-|**Frame della montagna HL**|**$3.365.069,27**|**$174,11**|**0,01%**|  
-|**Road-150**|**$2.363.805,16**|**$0,00**|**0,00%**|  
-|**Touring-3000**|**$2.046.508,26**|**$79.582,15**|**3,89%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
+|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
+|**Road-150**|**$2,363,805.16**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89%**|  
   
  Il set di prodotti ottenuto sembra uguale a Preferred10Products, riportato di seguito per verifica:  
   
@@ -213,17 +213,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Importo vendite rivenditore**|**Importo dello sconto**|**Sconto PCT**|  
-|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13%**|  
-|**Road-250**|**$9.377.457,68**|**$4.032,47**|**0,04%**|  
-|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
-|**Road-650**|**$7.442.141,81**|**$39.698,30**|**0,53%**|  
-|**Touring-1000**|**$6.723.794,29**|**$166.144,17**|**2,47%**|  
-|**Road-550-W**|**$3.668.383,88**|**$1.901,97**|**0,05%**|  
-|**Road-350-W**|**$3.665.932,31**|**$20.946,50**|**0,57%**|  
-|**Frame della montagna HL**|**$3.365.069,27**|**$174,11**|**0,01%**|  
-|**Road-150**|**$2.363.805,16**|**$0,00**|**0,00%**|  
-|**Touring-3000**|**$2.046.508,26**|**$79.582,15**|**3,89%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
+|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
+|**Road-150**|**$2,363,805.16**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89%**|  
   
  Negli esempi precedenti sono stati creati due set, uno come espressione calcolata e l'altro come espressione costante. In questi esempi vengono illustrate le versioni diverse di Auto Exist.  
   
@@ -247,17 +247,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Importo vendite rivenditore**|**Importo dello sconto**|**Sconto PCT**|  
-|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13%**|  
-|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
-|**Frame della montagna HL**|**$3.365.069,27**|**$174,11**|**0,01%**|  
-|**Mountain-300**|**$1.907.249,38**|**$876,95**|**0,05%**|  
-|**Mountain-500**|**$1.067.327,31**|**$17.266,09**|**1,62%**|  
-|**Mountain-400-W**|**$592.450,05**|**$303,49**|**0,05%**|  
-|**Cornice Mountain**|**$521.864,42**|**$252,41**|**0,05%**|  
-|**Fotogramma Mountain ML-W**|**$482.953,16**|**$206,95**|**0,04%**|  
-|**Frame Mountain ML**|**$343.785,29**|**$161,82**|**0,05%**|  
-|**Women's Mountain Shorts**|**$260.304,09**|**$6.675,56**|**2,56%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
+|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
+|**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
+|**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
+|**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
+|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0,04%**|  
+|**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0.05%**|  
+|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2.56%**|  
   
  Nel set di risultati precedente si registrano sette nuove presenze nell'elenco Top10SellingProducts, mentre Mountain-200, Mountain-100 e HL Mountain Frame sono stati spostati all'inizio dell'elenco. Questi tre valori sono frammisti.  
   
@@ -305,10 +305,10 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Importo vendite rivenditore**|**Importo dello sconto**|**Sconto PCT**|  
-|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13%**|  
-|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
-|**Frame della montagna HL**|**$3.365.069,27**|**$174,11**|**0,01%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  Nei risultati precedenti il sezionamento fornisce un risultato che contiene solo i prodotti dell'elenco Preferred10Products che fanno parte del gruppo [Mountain] in [Product].[Product Line], come previsto, in quanto Preferred10Products è un'espressione costante.  
   
@@ -334,10 +334,10 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Importo vendite rivenditore**|**Importo dello sconto**|**Sconto PCT**|  
-|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13%**|  
-|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
-|**Frame della montagna HL**|**$3.365.069,27**|**$174,11**|**0,01%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  Il comportamento di Auto Exist può essere modificato utilizzando il parametro auto EXISTs = [1 | 2 | 3] nella stringa di connessione. vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
   
@@ -377,11 +377,11 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessori**|**Moto**|**Clothing**|**Componenti**|  
-|**Tutti i rivenditori**|**$80,450,596.98**|**$571.297,93**|**$66.302.381,56**|**$1.777.840,84**|**$11.799.076,66**|  
-|**Special Bike Shop**|**$6.756.166,18**|**$65.125,48**|**$6.080.117,73**|**$252.933,91**|**$357.989,07**|  
-|**Valore aggiunto rivenditore**|**$34,967,517.33**|**$175.002,81**|**$30.892.354,33**|**$592,385.71**|**$3.307.774,48**|  
-|**Warehouse**|**$38,726,913.48**|**$331.169,64**|**$29.329.909,50**|**$932.521,23**|**$8.133.313,11**|  
+||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Componenti**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
+|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
+|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
  Per produrre una tabella solo con i dati per i prodotti Accessories e Clothing, i rivenditori Value Added Reseller e Warehouse, conservando tuttavia i totali complessivi, si potrebbe scrivere una query come la seguente utilizzando NON VISUAL:  
   
@@ -401,10 +401,10 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessori**|**Clothing**|  
-|**Tutti i rivenditori**|**$80,450,596.98**|**$571.297,93**|**$1.777.840,84**|  
-|**Valore aggiunto rivenditore**|**$34,967,517.33**|**$175.002,81**|**$592,385.71**|  
-|**Warehouse**|**$38,726,913.48**|**$331.169,64**|**$932.521,23**|  
+||**All Products**|**Accessories**|**Clothing**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
+|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
  Per produrre una tabella che visivamente somma le colonne, ma per i totali delle righe riporta il totale vero di [Category], immettere la query seguente:  
   
@@ -465,7 +465,7 @@ WHERE
 ## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Limitazione della query con gli assi di query e di sezionamento &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Restrizione della query con gli assi della query e di sezionamento &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

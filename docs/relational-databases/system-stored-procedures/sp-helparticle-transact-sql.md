@@ -16,10 +16,10 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771105"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -63,8 +63,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**base object**|**nvarchar (257)**|Nome della tabella sottostante rappresentata dall'articolo o dalla stored procedure.|  
 |**oggetto destination**|**sysname**|Nome della tabella di destinazione (sottoscrizione).|  
 |**synchronization object**|**nvarchar (257)**|Nome della vista che definisce l'articolo pubblicato.|  
-|**tipo**|**smallint**|Tipo di articolo:<br /><br /> **1** = basato su log.<br /><br /> **3** = basato su log con filtro manuale.<br /><br /> **5** = basato su log con vista manuale.<br /><br /> **7** = basato su log con filtro manuale e vista manuale.<br /><br /> **8** = esecuzione di stored procedure.<br /><br /> **24** = esecuzione stored procedure serializzabile.<br /><br /> **32** = stored procedure (solo schema).<br /><br /> **64** = View (solo schema).<br /><br /> **96** = funzione di aggregazione (solo schema).<br /><br /> **128** = funzione (solo schema).<br /><br /> **257** = vista indicizzata basata su log.<br /><br /> **259** = vista indicizzata basata su log con filtro manuale.<br /><br /> **261** = vista indicizzata basata su log con vista manuale.<br /><br /> **263** = vista indicizzata basata su log con filtro manuale e vista manuale.<br /><br /> **320** = vista indicizzata (solo schema).<br /><br />|  
-|**stato**|**tinyint**|Può essere il risultato [& (and bit per bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) di una o più proprietà di articolo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = l'articolo è attivo.<br /><br /> **0x08** = include il nome della colonna nelle istruzioni INSERT.<br /><br /> **0x16** = usa istruzioni con parametri.<br /><br /> **0x32** = usa istruzioni con parametri e include il nome della colonna nelle istruzioni INSERT.|  
+|**type**|**smallint**|Tipo di articolo:<br /><br /> **1** = basato su log.<br /><br /> **3** = basato su log con filtro manuale.<br /><br /> **5** = basato su log con vista manuale.<br /><br /> **7** = basato su log con filtro manuale e vista manuale.<br /><br /> **8** = esecuzione di stored procedure.<br /><br /> **24** = esecuzione stored procedure serializzabile.<br /><br /> **32** = stored procedure (solo schema).<br /><br /> **64** = View (solo schema).<br /><br /> **96** = funzione di aggregazione (solo schema).<br /><br /> **128** = funzione (solo schema).<br /><br /> **257** = vista indicizzata basata su log.<br /><br /> **259** = vista indicizzata basata su log con filtro manuale.<br /><br /> **261** = vista indicizzata basata su log con vista manuale.<br /><br /> **263** = vista indicizzata basata su log con filtro manuale e vista manuale.<br /><br /> **320** = vista indicizzata (solo schema).<br /><br />|  
+|**Stato**|**tinyint**|Può essere il risultato [& (and bit per bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) di una o più proprietà di articolo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = l'articolo è attivo.<br /><br /> **0x08** = include il nome della colonna nelle istruzioni INSERT.<br /><br /> **0x16** = usa istruzioni con parametri.<br /><br /> **0x32** = usa istruzioni con parametri e include il nome della colonna nelle istruzioni INSERT.|  
 |**filtro**|**nvarchar (257)**|Stored procedure utilizzata per filtrare la tabella in senso orizzontale. Questa stored procedure deve essere stata creata con la clausola FOR REPLICATION.|  
 |**Descrizione**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
 |**insert_command**|**nvarchar(255)**|Tipo di comando di replica utilizzato per la replica degli inserimenti con articoli di tabella. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  

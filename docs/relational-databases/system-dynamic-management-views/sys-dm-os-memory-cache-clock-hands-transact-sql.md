@@ -19,10 +19,10 @@ ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265787"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68265787"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Indirizzo della cache associata all'orologio. Non ammette i valori Null.|  
-|**nome**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
-|**tipo**|**nvarchar (60)**|Tipo di archivio di cache. Possono essere presenti diverse cache dello stesso tipo. Non ammette i valori Null.|  
-|**clock_hand**|**nvarchar (60)**|Tipo di indicatore. I possibili valori sono i seguenti:<br /><br /> Esterno<br /><br /> Interno<br /><br /> Non ammette i valori Null.|  
-|**clock_status**|**nvarchar (60)**|Stato dell'orologio. I possibili valori sono i seguenti:<br /><br /> Suspended<br /><br /> In esecuzione<br /><br /> Non ammette i valori Null.|  
+|**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
+|**type**|**nvarchar(60)**|Tipo di archivio di cache. Possono essere presenti diverse cache dello stesso tipo. Non ammette i valori Null.|  
+|**clock_hand**|**nvarchar(60)**|Tipo di indicatore. I possibili valori sono i seguenti:<br /><br /> Esterno<br /><br /> Interno<br /><br /> Non ammette i valori Null.|  
+|**clock_status**|**nvarchar(60)**|Stato dell'orologio. I possibili valori sono i seguenti:<br /><br /> Suspended<br /><br /> In esecuzione<br /><br /> Non ammette i valori Null.|  
 |**rounds_count**|**bigint**|Numero di operazioni eseguite nella cache per rimuovere le voci. Non ammette i valori Null.|  
 |**removed_all_rounds_count**|**bigint**|Numero di voci rimosse da tutte le operazioni. Non ammette i valori Null.|  
 |**updated_last_round_count**|**bigint**|Numero di voci aggiornate durante l'ultima operazione. Non ammette i valori Null.|  

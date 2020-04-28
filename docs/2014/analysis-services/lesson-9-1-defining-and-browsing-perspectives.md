@@ -1,5 +1,5 @@
 ---
-title: Definizione e navigazione delle prospettive Documenti Microsoft
+title: Definizione ed esplorazione delle prospettive | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493769"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definizione ed esplorazione delle prospettive
@@ -41,7 +41,7 @@ ms.locfileid: "69493769"
   
      ![Nuova prospettiva nella colonna Nome prospettiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nuova prospettiva nella colonna Nome prospettiva")  
   
-3.  Modificare il nome `Internet Sales`della prospettiva in .  
+3.  Modificare il nome della prospettiva `Internet Sales`in.  
   
 4.  Nella riga successiva impostare DefaultMeasure su **Internet Sales-Sales Amount**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493769"
   
 1.  Fare clic sul pulsante **Nuova prospettiva** sulla barra degli strumenti della scheda **Prospettive** .  
   
-2.  Modificare il nome della `Reseller Sales`nuova prospettiva in .  
+2.  Modificare il nome della nuova prospettiva in `Reseller Sales`.  
   
 3.  Impostare **Reseller Sales-Sales Amount** come misura predefinita.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "69493769"
   
 1.  Fare clic sul pulsante **Nuova prospettiva** sulla barra degli strumenti della scheda **Prospettive** .  
   
-2.  Modificare il nome della `Sales Summary`nuova prospettiva in .  
+2.  Modificare il nome della nuova prospettiva in `Sales Summary`.  
   
     > [!NOTE]  
     >  Non è possibile specificare una misura calcolata come misura predefinita.  
@@ -176,13 +176,13 @@ ms.locfileid: "69493769"
   
      ![Connessione dati guidata in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Connessione dati guidata in Excel")  
   
-6.  Selezionare `Internet Sales` nell'elenco **Prospettiva,** quindi esaminare le misure e le dimensioni nel riquadro dei metadati.  
+6.  Selezionare `Internet Sales` nell'elenco **prospettiva** , quindi rivedere le misure e le dimensioni nel riquadro metadati.  
   
      Si noti che vengono visualizzati solo gli oggetti specificati per la prospettiva Internet Sales.  
   
 7.  Nel riquadro dei metadati espandere **Misure**.  
   
-     Si noti `Internet Sales` che viene visualizzato solo il gruppo di misure, insieme a **Internet GPM** e **Rapporto vendite Internet a tutti i prodotti** membri calcolati.  
+     Si noti che viene `Internet Sales` visualizzato solo il gruppo di misure, insieme ai membri calcolati **Internet GPM** e **Internet Sales Ratio per tutti i prodotti** .  
   
 8.  Nel modello selezionare di nuovo Excel. Selezionare `Sales Summary`.  
   

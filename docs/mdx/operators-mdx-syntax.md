@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892109"
 ---
 # <a name="operators-mdx-syntax"></a>Operatori (sintassi MDX)
@@ -75,7 +75,7 @@ ms.locfileid: "68892109"
   
 -   XOR  
   
--   o  
+-   OR  
   
  Per ulteriori informazioni sugli operatori in MDX, vedere Guida di riferimento agli operatori [mdx &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68892109"
   
  Sono previste inoltre regole per determinare precisione, scala e lunghezza del risultato in base alla precisione, alla scala e alla lunghezza delle varie espressioni semplici.  
   
-## <a name="converting-data-types"></a>Conversione dei tipi di dati  
+## <a name="converting-data-types"></a>Conversione del tipo di dati  
  MDX converte implicitamente un oggetto in un tipo diverso se tale oggetto viene utilizzato in un'espressione che richiede un tipo diverso. Nella tabella seguente sono definite le regole di conversione per ogni oggetto.  
   
 |Tipo originale|Tipo necessario|Conversione|  
@@ -95,10 +95,10 @@ ms.locfileid: "68892109"
 |Gerarchia|Membro|\<gerarchia>. DefaultMember|  
 |Membro|Tupla|(\<Membro>)|  
 |Tupla|Membro|\<Tuple>. Item (0)|  
-|Tupla|Valori scalari|\<Tuple>. Value|  
+|Tupla|Scalare|\<Tuple>. Value|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
- [Elementi della sintassi MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

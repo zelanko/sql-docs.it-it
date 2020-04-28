@@ -22,19 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811077"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
-  L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Selezionare un account per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in cui è possibile scegliere tra le opzioni seguenti:  
+  L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Selezionare un account per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in cui è possibile scegliere tra le opzioni seguenti:  
   
 -   **Account predefinito**. è possibile scegliere da un elenco di account di servizio Windows predefiniti riportati di seguito:  
   
-    -   Account **sistema locale** . il nome di questo account è NT AUTHORITY\System. Si tratta di un account potente con accesso illimitato a tutte le risorse del sistema locale. Questo account è membro del gruppo **Administrators** di Windows nel computer locale e, di conseguenza, anche del ruolo predefinito del server sysadmin[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** di **  
+    -   Account **sistema locale** . il nome di questo account è NT AUTHORITY\System. Si tratta di un account potente con accesso illimitato a tutte le risorse del sistema locale. Questo account è membro del gruppo **Administrators** di Windows nel computer locale e, di conseguenza, anche del ruolo predefinito del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** di   
   
         > [!IMPORTANT]  
         >  L'opzione **Account di sistema locale** deve essere usata esclusivamente per garantire la compatibilità con le versioni precedenti. L'account di sistema locale dispone di autorizzazioni non necessarie per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Evitare di eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account di sistema locale. Per migliorare la sicurezza, utilizzare un account di dominio di Windows con le autorizzazioni elencate nella sezione seguente, "Autorizzazioni dell'account di dominio di Windows".  
@@ -77,12 +76,11 @@ ms.locfileid: "68811077"
   
 |Tipo di account di servizio|Server non cluster|Server di cluster|Controller di dominio (non cluster)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
-|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
 |Account di dominio di Windows (non amministrativo)|Supportato<sup>1</sup>|Supportato<sup>1</sup>|Supportato<sup>1</sup>|  
 |Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<sup>1, 3, 4</sup>|Non supportate|Non supportate|  
-|Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportate|Non applicabile|  
-|Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportate|Supportato<sup>2</sup>|  
+|Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportato|Non applicabile|  
+|Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportato|Supportato<sup>2</sup>|  
 |Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportate|Non supportate|Non supportate|  
   
  <sup>1</sup> vedere la limitazione 1 riportata di seguito.  
@@ -106,25 +104,23 @@ ms.locfileid: "68811077"
  Questo messaggio può essere ignorato. L'operazione di integrazione verrà completata correttamente. Per altre informazioni, vedere [Creare un ambiente multiserver](create-a-multiserver-environment.md).  
   
 ### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitazione 3: utilizzo dell'account Servizio di rete quando è un utente di SQL Server  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non essere avviato correttamente se si esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account Servizio di rete e a quest'ultimo è stato esplicitamente consentito l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non essere avviato correttamente se si esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account Servizio di rete e a quest'ultimo è stato esplicitamente consentito l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione. È necessario eseguire questa operazione una sola volta.  
   
 ### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitazione 4: utilizzo dell'account Servizio di rete quando SQL Server Reporting Services è in esecuzione sullo stesso computer  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non essere avviato correttamente se si esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account Servizio di rete sullo stesso computer in cui viene eseguito anche [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non essere avviato correttamente se si esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account Servizio di rete sullo stesso computer in cui viene eseguito anche [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione, quindi riavviare sia il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È necessario eseguire questa operazione una sola volta.  
   
 ## <a name="common-tasks"></a>Attività comuni  
- **Per specificare l'account di avvio per il servizio SQL Server Agent**  
+ **Per specificare l'account di avvio del servizio SQL Server Agent**  
   
--   [Impostare l'account di avvio del servizio per SQL Server Agent &#40;Gestione configurazione SQL Server&#41;](set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Impostazione dell'account di avvio del servizio SQL Server Agent &#40;Gestione configurazione SQL Server&#41;](set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
- **Per specificare il profilo di posta per SQL Server Agent**  
+ **Per specificare il profilo di posta di SQL Server Agent**  
   
--   [Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+-   [Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 > [!NOTE]  
 >  Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di specificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere avviato all'avvio del sistema operativo.  

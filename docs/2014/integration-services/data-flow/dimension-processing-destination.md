@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890563"
 ---
 # <a name="dimension-processing-destination"></a>destinazione elaborazione dimensione
-  La destinazione elaborazione dimensione carica ed elabora una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensione. Per altre informazioni sulle dimensioni, vedere [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  La destinazione elaborazione dimensione consente di caricare ed elaborare una dimensione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle dimensioni, vedere [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
  La destinazione elaborazione dimensione include le caratteristiche seguenti:  
   
@@ -48,9 +48,9 @@ ms.locfileid: "68890563"
   
 -   [Editor destinazione elaborazione dimensione &#40;pagina Gestione connessione&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione elaborazione dimensione &#40;pagina mapping&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Editor destinazione elaborazione dimensione &#40;pagina Mapping&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Editor destinazione elaborazione dimensione &#40;pagina avanzate&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Editor destinazione elaborazione dimensione &#40;pagina Avanzate&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di programmazione, fare clic su uno degli argomenti seguenti:  
   

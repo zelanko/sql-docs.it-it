@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771442"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -52,7 +52,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
 |**database del server di pubblicazione**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
@@ -61,12 +61,12 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**publication description**|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |**last updating time**|**date**|Data e ora dell'aggiornamento delle informazioni della sottoscrizione. Si tratta di una stringa UNICODE con data ISO (114) + ora ODBC (121). Il formato è yyyymmdd hh:mi:sss.mmm dove 'yyyy' rappresenta l'anno, 'mm' il mese, 'dd' il giorno, 'hh' l'ora, 'mi' i minuti, 'sss' i secondi e 'mmm' i millisecondi.|  
 |**nome sottoscrizione**|**varchar (386)**|Nome della sottoscrizione.|  
-|**timestamp ultima transazione**|**varbinary (16)**|Timestamp dell'ultima transazione replicata.|  
+|**timestamp ultima transazione**|**varbinary(16)**|Timestamp dell'ultima transazione replicata.|  
 |**modalità di aggiornamento**|**tinyint**|Tipo di aggiornamenti consentiti.|  
 |**distribution agent job_id**|**int**|ID di processo dell'agente di distribuzione.|  
 |**enabled_for_synmgr**|**int**|Indica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|**subscription guid**|**binario (16)**|Identificatore globale della versione della sottoscrizione nella pubblicazione.|  
-|**subid**|**binario (16)**|Identificatore globale di una sottoscrizione anonima.|  
+|**subscription guid**|**binary(16)**|Identificatore globale della versione della sottoscrizione nella pubblicazione.|  
+|**subid**|**binary(16)**|Identificatore globale di una sottoscrizione anonima.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |**account di accesso del server di pubblicazione**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password del server di pubblicazione**|**nvarchar (524)**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

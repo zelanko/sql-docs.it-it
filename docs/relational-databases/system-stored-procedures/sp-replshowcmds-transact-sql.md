@@ -16,10 +16,10 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96a32ea04fc53f1a0bf3a842a5e68cde5586ac29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770876"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
@@ -44,12 +44,12 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**binario (10)**|Numero di sequenza del comando.|  
+|**xact_seqno**|**binary(10)**|Numero di sequenza del comando.|  
 |**originator_id**|**int**|ID dell'origine del comando, sempre **0**.|  
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione, sempre **0**.|  
 |**article_id**|**int**|ID dell'articolo.|  
-|**tipo**|**int**|Tipo di comando.|  
-|**comando**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]comando.|  
+|**type**|**int**|Tipo di comando.|  
+|**comando**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_replshowcmds** viene utilizzata nella replica transazionale.  
@@ -68,7 +68,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   

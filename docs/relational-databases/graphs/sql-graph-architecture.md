@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811115"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di SQL Graph  
@@ -98,22 +98,22 @@ Nella tabella seguente sono elencati i valori validi `graph_type` per la colonna
 
 Colonne implicite in una tabella nodi
 
-|Nome colonna    |Tipo di dati  |is_hidden  |Comment  |
+|Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |colonna `graph_id` interna  |
+|graph_id_\<hex_string> |bigint |1  |colonna `graph_id` interna  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |Colonna nodo `node_id` esterno  |
 
 Colonne implicite in una tabella Edge
 
-|Nome colonna    |Tipo di dati  |is_hidden  |Comment  |
+|Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |colonna `graph_id` interna  |
+|graph_id_\<hex_string> |bigint |1  |colonna `graph_id` interna  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |colonna `edge_id` esterna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno da nodo`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |Interno da nodo`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |Interno da nodo`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |esterno da nodo`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |da interno a nodo`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |Da interno a nodo`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |Da interno a nodo`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |da esterno a nodo`node_id`  |
  
 ### <a name="system-functions"></a>Funzioni di sistema
@@ -149,7 +149,7 @@ Informazioni sulle [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni int
 |Attività   |Articolo correlato  |Note
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|L'inserimento in una tabella nodi non è diverso dall'inserimento in una tabella relazionale. I valori per `$node_id` la colonna vengono generati automaticamente. Se si tenta di inserire un `$node_id` valore `$edge_id` in una colonna o, verrà generato un errore. Gli utenti devono fornire valori `$from_id` per `$to_id` le colonne e durante l'inserimento in una tabella Edge. `$from_id`e `$to_id` sono i `$node_id` valori dei nodi a cui un determinato bordo si connette.  |
-|Elimina | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|I dati delle tabelle nodi o bordi possono essere eliminati nello stesso modo in cui vengono eliminati dalle tabelle relazionali. In questa versione, tuttavia, non sono previsti vincoli per garantire che nessun bordo punti a un nodo eliminato e l'eliminazione a catena di bordi, quando l'eliminazione di un nodo non è supportata. Quando un nodo viene eliminato, vengono eliminati anche tutti i bordi di connessione al nodo, in modo da mantenere l'integrità del grafo.  |
+|DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|I dati delle tabelle nodi o bordi possono essere eliminati nello stesso modo in cui vengono eliminati dalle tabelle relazionali. In questa versione, tuttavia, non sono previsti vincoli per garantire che nessun bordo punti a un nodo eliminato e l'eliminazione a catena di bordi, quando l'eliminazione di un nodo non è supportata. Quando un nodo viene eliminato, vengono eliminati anche tutti i bordi di connessione al nodo, in modo da mantenere l'integrità del grafo.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |I valori nelle colonne definite dall'utente possono essere aggiornati utilizzando l'istruzione UPDATE. L'aggiornamento delle colonne grafiche interne `$node_id`, `$edge_id`, `$from_id` e `$to_id` non è consentito.  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`l'istruzione è supportata in una tabella nodi o bordi.  |
 

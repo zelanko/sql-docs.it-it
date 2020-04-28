@@ -16,10 +16,10 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768986"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
@@ -104,7 +104,7 @@ sp_articleview [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_articleview**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
  [Definire e modificare un filtro di riga statico](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   

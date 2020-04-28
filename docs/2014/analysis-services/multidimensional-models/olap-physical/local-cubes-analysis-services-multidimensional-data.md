@@ -12,11 +12,11 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889493"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubi locali (Analysis Services - Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "68889493"
   
  I cubi locali e i modelli di data mining locali consentono di eseguire analisi in una workstation client disconnessa dalla rete. Un'applicazione client può ad esempio chiamare il provider OLE DB per OLAP 9.0 (MSOLAP.3), il quale carica il motore dei cubi locali per creare cubi locali ed eseguire query su di essi, come illustrato nella figura seguente:  
   
- ![Architettura client per modelli e cubi locali](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-localcubearch9.gif "Architettura client per modelli e cubi locali")  
+ ![Architettura client per modelli e cubi locali](../../../analysis-services/dev-guide/media/as-localcubearch9.gif "Architettura client per modelli e cubi locali")  
   
  Il motore dei cubi locali viene inoltre caricato da ADMOD.NET e dalla libreria AMO (Analysis Management Objects) durante l'interazione con cubi locali. A un file di cubo locale può accedere un unico processo, poiché il motore dei cubi locali blocca un file di cubo locale in modo esclusivo quando stabilisce una connessione con esso. Durante uno stesso processo, sono consentite fino a cinque connessioni simultanee.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68889493"
 ### <a name="local-cubes-created-from-server-based-cubes"></a>Cubi locali creati da cubi basati su server  
  In caso di creazione di cubi locali a partire da cubi basati su server, si applicano le considerazioni seguenti:  
   
--   Non sono supportate misure Distinct Count.  
+-   Non sono supportate misure totale valori distinti.  
   
 -   Quando si aggiunge una misura, è inoltre necessario includere almeno una dimensione correlata alla misura aggiunta. Per ulteriori informazioni sulle relazioni tra dimensioni e gruppi di misure, vedere [relazioni tra dimensioni](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68889493"
   
 -   Nel cubo locale verranno inclusi soltanto i membri calcolati, i set denominati e le assegnazioni basati su misure e dimensioni aggiunte al cubo locale. I membri calcolati, i set denominati e le assegnazioni non validi verranno automaticamente esclusi.  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
  Per consentire a un utente di creare un cubo locale da un cubo del server, all'utente devono essere concesse le autorizzazioni **drill-through e cubo locale** per il cubo server. Per ulteriori informazioni, vedere [Grant Cube or Model permissions &#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  I cubi locali non sono protetti tramite ruoli come i cubi sul server. Qualsiasi utente con accesso a livello di file per un file di cubo locale può eseguire query sui cubi in esso contenuti. È possibile utilizzare la proprietà di connessione `Encryption Password` in un cubo locale per impostare una password per un file di cubo locale. Con l'impostazione di una password per un file di cubo locale, tutte le successive connessioni a tale file dovranno utilizzare la password per eseguire query sul file.  

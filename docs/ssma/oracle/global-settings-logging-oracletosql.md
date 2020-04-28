@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264435"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Impostazioni globali (registrazione) (OracleToSQL)
@@ -30,12 +30,12 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
 |----------|---------------|  
 |**[tutte le categorie]**|Utilizzato per impostare il livello di registrazione per tutte le opzioni seguenti.|  
 |**Agente di raccolta**|Raccoglie i metadati relativi allo schema di origine e li salva nel progetto.|  
-|**Convertitore**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in strutture corrispondenti.|  
+|**Converter**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in strutture corrispondenti.|  
 |**Migrator dati**|Esegue la migrazione dei dati dal database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]origine in.|  
 |**Formattatore**|Componente secondario del convertitore che genera script per lo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema.|  
 |**Interfaccia utente grafica**|Messaggi visualizzati quando si usa lo strumento SSMA.|  
 |**Linker**|Risolve gli identificatori SQL e fornisce informazioni ad altri componenti.|  
-|**Altri**|Tutti i messaggi che non sono in nessun'altra categoria.|  
+|**Altro**|Tutti i messaggi che non sono in nessun'altra categoria.|  
 |**Parser**|Analizza lo schema di origine.|  
 |**Sincronizzazione**|Carica gli oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine in.|  
 |**TreeConverter**|Converte gli oggetti nei metadati di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in metadati.|  
@@ -47,11 +47,11 @@ Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di 
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  
-|**Warning**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
-|**Informazioni**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
+|**Avviso**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
+|**Info**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
 |**Debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
   
-**Percorso del file di log**  
+**Percorso file di registro**  
 Il percorso e il nome del file di log SSMA. Per specificare un nome diverso, fare clic sul percorso corrente, quindi fare clic sul pulsante Sfoglia (**...**).  
   
 **Dimensioni file di log**  

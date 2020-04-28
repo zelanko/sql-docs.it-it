@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265859"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68265859"
 |page_id|**int**|ID della pagina all'interno del file. Ammette i valori Null.|  
 |page_level|**int**|Livello di indice della pagina. Ammette i valori Null.|  
 |allocation_unit_id|**bigint**|ID dell'unità di allocazione della pagina. Questo valore può essere utilizzato per unire in join sys.allocation_units. Ammette i valori Null.|  
-|page_type|**nvarchar (60)**|Tipo di pagina, ad esempio pagina di dati o pagina di indice. Ammette i valori Null.|  
+|page_type|**nvarchar(60)**|Tipo di pagina, ad esempio pagina di dati o pagina di indice. Ammette i valori Null.|  
 |row_count|**int**|Numero di righe nella pagina. Ammette i valori Null.|  
 |free_space_in_bytes|**int**|Quantità di spazio disponibile, in byte, nella pagina. Ammette i valori Null.|  
 |is_modified|**bit**|1 = La pagina è stata modificata dopo essere stata letta dal disco. Ammette i valori Null.|  
@@ -60,7 +60,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ## <a name="remarks"></a>Osservazioni  
  sys. dm_os_buffer_descriptors restituisce le pagine utilizzate dal database Resource. sys. dm_os_buffer_descriptors non restituisce informazioni sulle pagine libere o rubate oppure sulle pagine che contengono errori durante la lettura.  
   
-|Da|A|Attivato|Relazione|  
+|From|A|Attivato|Relazione|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|molti-a-uno|  
 |sys.dm_os_buffer_descriptors|\<userdb al>. sys. allocation_units|allocation_unit_id|molti-a-uno|  
@@ -116,8 +116,8 @@ ORDER BY cached_pages_count DESC;
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Database Resource](../../relational-databases/databases/resource-database.md)   
- [sys. dm_os_buffer_pool_extension_configuration &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [Database delle risorse](../../relational-databases/databases/resource-database.md)   
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

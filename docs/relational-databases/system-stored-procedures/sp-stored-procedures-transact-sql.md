@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702778"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -73,10 +73,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome di qualificatore della procedura. Questa colonna può essere NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome del proprietario della procedura. In questa colonna viene sempre restituito un valore.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|Nome della procedura. In questa colonna viene sempre restituito un valore.|  
-|**NUM_INPUT_PARAMS**|**int**|Riservato a un uso futuro.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Riservato a un uso futuro.|  
-|**NUM_RESULT_SETS**|**int**|Riservato a un uso futuro.|  
-|**OSSERVAZIONI**|**varchar (254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**NUM_INPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
+|**NUM_RESULT_SETS**|**int**|Riservato per utilizzi futuri.|  
+|**COMMENTI**|**varchar (254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo di procedura. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito sempre 2.0. I valori validi sono i seguenti:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Osservazioni  

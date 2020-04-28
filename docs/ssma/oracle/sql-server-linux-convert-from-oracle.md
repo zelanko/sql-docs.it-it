@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266523"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Eseguire la migrazione di uno schema Oracle a SQL Server 2017 in Linux con il SQL Server Migration Assistant
@@ -28,7 +28,7 @@ Questa esercitazione usa SQL Server Migration Assistant (SSMA) per Oracle in Win
 > * Convertire lo schema HR di esempio
 > * Migrazione dei dati
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Istanza di Oracle 12C (12.2.0.1.0) con lo schema **HR** installato
 - Istanza funzionante di SQL Server in Linux
@@ -71,7 +71,7 @@ Connettere quindi SSMA a Oracle.
 
    ![Connettersi a Oracle](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. Successivamente, fare clic su **Connetti**. In pochi istanti, SSMA per Oracle si connette al database e ne legge i metadati.
+1. Fare clic su **Connetti**. In pochi istanti, SSMA per Oracle si connette al database e ne legge i metadati.
 
 ## <a name="create-a-report"></a>Creare un report
 

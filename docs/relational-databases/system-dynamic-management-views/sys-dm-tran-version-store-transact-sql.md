@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262597"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -51,12 +51,12 @@ sys.dm_tran_version_store
 |**version_sequence_num**|**bigint**|Numero di sequenza del record con versione. Questo valore è univoco all'interno della transazione di generazione della versione.|  
 |**database_id**|**int**|ID di database del record con versione.|  
 |**rowset_id**|**bigint**|ID del set di righe del record.|  
-|**stato**|**tinyint**|Indica se un record con versione è stato suddiviso in due record. Se il valore è 0, il record è archiviato in una pagina. Se è 1, il record è suddiviso in due record archiviati in due pagine diverse.|  
+|**Stato**|**tinyint**|Indica se un record con versione è stato suddiviso in due record. Se il valore è 0, il record è archiviato in una pagina. Se è 1, il record è suddiviso in due record archiviati in due pagine diverse.|  
 |**min_length_in_bytes**|**smallint**|Lunghezza minima del record in byte.|  
 |**record_length_first_part_in_bytes**|**smallint**|Lunghezza della prima parte del record con versione, espressa in byte.|  
-|**record_image_first_part**|**varbinary (8000)**|Immagine binaria della prima parte del record con versione.|  
+|**record_image_first_part**|**varbinary(8000)**|Immagine binaria della prima parte del record con versione.|  
 |**record_length_second_part_in_bytes**|**smallint**|Lunghezza della seconda parte del record con versione, espressa in byte.|  
-|**record_image_second_part**|**varbinary (8000)**|Immagine binaria della seconda parte del record con versione.|  
+|**record_image_second_part**|**varbinary(8000)**|Immagine binaria della seconda parte del record con versione.|  
   
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  L'output indica che XSN-57 ha creato tre versioni di riga da una tabella e che XSN-58 ha creato una versione di riga da un'altra tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

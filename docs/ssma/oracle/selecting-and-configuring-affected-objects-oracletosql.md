@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266499"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selezione e configurazione degli oggetti interessati (OracleToSQL)
@@ -41,7 +41,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
   
 -   Regola  
   
--   Predefinito  
+-   Impostazione predefinita  
   
 -   Identità  
   
@@ -50,7 +50,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
 ## <a name="sql"></a>Sql  
 Scheda SQL contiene il SQL "Create Table" della tabella selezionata.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 Scheda dati consente di visualizzare i dati presenti nella tabella selezionata.  
   
 ## <a name="properties"></a>Proprietà  

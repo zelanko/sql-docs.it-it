@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266534"
 ---
 # <a name="setting-project-options-oracletosql"></a>Impostazione delle opzioni progetto (OracleToSQL)
@@ -39,7 +39,7 @@ SSMA include cinque set di impostazioni di progetto:
   
 Sono inoltre disponibili quattro modalità per la configurazione di queste impostazioni:  
   
--   Predefinito  
+-   Impostazione predefinita  
   
 -   Optimistic  
   

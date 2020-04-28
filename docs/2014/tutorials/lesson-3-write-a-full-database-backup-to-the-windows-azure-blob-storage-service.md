@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153469"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lezione 3: Scrivere un backup completo del database nel servizio di archiviazione BLOB di Azure
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lezione 3: Scrivere un backup completo del database nel servizio Archiviazione BLOB di Azure
   In questa lezione viene illustrato l'utilizzo dell'istruzione tsql per eseguire un backup completo del database nel servizio di archiviazione BLOB di Azure.  
   
 ## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Eseguire un backup completo del database nel servizio di archiviazione BLOB di Azure  

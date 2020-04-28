@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809898"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Dati spaziali-sys. dm_db_objects_disabled_on_compatibility_level_change
@@ -40,7 +40,7 @@ ms.locfileid: "68809898"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  *compatibility_level*  
  **int** che identifica il livello di compatibilità che si intende impostare.  
   
@@ -49,10 +49,10 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**classe**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
-|**class_desc**|**nvarchar (60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
+|**class_desc**|**nvarchar(60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
 |**major_id**|**int**|OBJECT ID dei vincoli<br /><br /> OBJECT ID della tabella che contiene indici e heap|  
 |**minor_id**|**int**|NULL per i vincoli<br /><br /> Index_id per indici e heap|  
-|**dipendenza**|**nvarchar (60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
+|**dipendenza**|**nvarchar(60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Le colonne calcolate persistenti in cui sono utilizzate alcune funzioni intrinseche vengono disabilitate quando il livello di compatibilità viene modificato. In modo analogo, anche le colonne calcolate persistenti che utilizzano metodi geometry o geography vengono disabilitate quando un database viene aggiornato.  
@@ -140,7 +140,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Poiché non è possibile disabilitare una sola colonna, l'intera tabella viene disabilitata applicando questa operazione all'indice cluster o all'heap.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  

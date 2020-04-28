@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891435"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Creazione di una soluzione e di un'origine dati (Esercitazione intermedia sul data mining)
@@ -70,9 +70,9 @@ ms.locfileid: "68891435"
 |Scenario|Dati inclusi nella vista origine dati|  
 |--------------|-------------------------------------------|  
 |[Lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Report mensili sulle vendite per i modelli di bicicletta nelle diverse aree geografiche, raccolti come singola vista.|  
-|[Lezione 3: creazione di uno scenario Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Tabella contenente un elenco di ordini cliente e tabella annidata che mostra i singoli acquisti per ciascun cliente.|  
+|[Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Tabella contenente un elenco di ordini cliente e tabella annidata che mostra i singoli acquisti per ciascun cliente.|  
 |[Lezione 4: compilazione di uno scenario di clustering delle sequenze &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Gli stessi dati usati per il Market basket analysis, con l'aggiunta di un identificatore che mostra l'ordine in cui sono stati acquistati gli articoli.|  
-|[Lezione 5: creazione di modelli di rete neurale e di regressione logistica &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Singola tabella contenente i dati preliminari sul monitoraggio delle prestazioni provenienti da un call center.|  
+|[Lezione 5: Compilazione dei modelli di rete neurale e di regressione logistica &#40;Esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Singola tabella contenente i dati preliminari sul monitoraggio delle prestazioni provenienti da un call center.|  
   
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  

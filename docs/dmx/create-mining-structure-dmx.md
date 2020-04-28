@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892819"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *struttura*  
+ *structure*  
  Nome univoco della struttura.  
   
  *elenco delle definizioni di colonna*  
@@ -95,11 +95,11 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire le colonne di una struttura, vedere gli argomenti seguenti:  
   
--   [Tipi di dati &#40;&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipi di dati &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipi di contenuto &#40;&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipi di contenuto &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuzioni di colonne &#40;&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuzioni delle colonne &#40;Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
 -   [Flag di modellazione &#40;data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
@@ -180,6 +180,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

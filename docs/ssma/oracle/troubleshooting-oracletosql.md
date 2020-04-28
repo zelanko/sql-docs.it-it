@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d53620afbe1fffa51ae484beaa2f2520ccb0eecb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266459"
 ---
 # <a name="troubleshooting-oracletosql"></a>Risoluzione dei problemi (OracleToSQL)
@@ -26,7 +26,7 @@ Gli errori di risolvibili possono essere correlati a:
   
 2.  Procedura  
   
-3.  Visualizza  
+3.  Visualizzazione  
   
 4.  Trigger  
   

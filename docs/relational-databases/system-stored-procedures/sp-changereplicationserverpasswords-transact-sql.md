@@ -16,10 +16,10 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762247"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
@@ -58,8 +58,8 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**distribuzione**|Tutte le connessioni di agenti al server di distribuzione.|  
-|**publisher**|Tutte le connessioni di agenti al server di pubblicazione.|  
-|**subscriber**|Tutte le connessioni di agenti al Sottoscrittore.|  
+|**pubblicazione**|Tutte le connessioni di agenti al server di pubblicazione.|  
+|**Sottoscrittore**|Tutte le connessioni di agenti al Sottoscrittore.|  
 |**%** predefinita|Tutte le connessioni di agenti a tutti i server di una topologia di replica.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  

@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769049"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -55,7 +55,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0** (impostazione predefinita)|Agente di distribuzione|  
+|**0** (predefinito)|Agente di distribuzione|  
 |**1**|Agente di merge|  
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
@@ -64,12 +64,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**16**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64** (impostazione predefinita)|Avvio automatico|  
-|**128**|Ricorrente|  
+|**128**|Periodica|  
   
 `[ @frequency_interval = ] frequency_interval`Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è **1**.  
   

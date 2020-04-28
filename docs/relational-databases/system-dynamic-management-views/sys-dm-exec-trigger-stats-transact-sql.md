@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262207"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68262207"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database in cui è contenuto il trigger.|  
 |**object_id**|**int**|Numero di identificazione del trigger.|  
-|**tipo**|**carattere (2)**|Tipo dell'oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
-|**Type_desc**|**nvarchar (60)**|Descrizione del tipo di oggetto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary (64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm_exec_query_stats** eseguite dall'interno del trigger.|  
-|**plan_handle**|**varbinary (64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm_exec_cached_plans** .|  
+|**type**|**char(2)**|Tipo dell'oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
+|**Type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary(64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm_exec_query_stats** eseguite dall'interno del trigger.|  
+|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm_exec_cached_plans** .|  
 |**cached_time**|**datetime**|Ora in cui il trigger è stato aggiunto alla cache.|  
 |**last_execution_time**|**datetime**|Ora dell'ultima esecuzione del trigger.|  
 |**execution_count**|**bigint**|Numero di esecuzioni del trigger a partire dall'ultima compilazione.|  

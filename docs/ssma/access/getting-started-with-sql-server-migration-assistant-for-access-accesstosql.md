@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259918"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
@@ -105,13 +105,13 @@ La barra degli strumenti del progetto contiene pulsanti per l'utilizzo di proget
 #### <a name="the-migration-toolbar"></a>Barra degli strumenti migrazione  
 La barra degli strumenti di migrazione contiene i comandi seguenti:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |----------|------------|  
 |**Convertire, caricare ed eseguire la migrazione**|Converte i database di Access, carica gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertiti in o nel database SQL di Azure ed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue la migrazione dei dati in o nel database SQL di Azure, il tutto in un unico passaggio.|  
 |**Creazione di report**|Converte lo schema di accesso selezionato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in o la sintassi del database SQL di Azure, quindi crea un report che mostra l'esito positivo della conversione.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Esplora metadati di Access.|  
 |**Converti schema**|Converte lo schema di accesso selezionato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in o negli schemi del database SQL di Azure.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Esplora metadati di Access.|  
 |**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access a o al database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli schemi del database SQL di Azure e quindi caricare gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in o nel database SQL di Azure.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Esplora metadati di Access.|  
-|**Stop**|Arresta il processo corrente, ad esempio la conversione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti in o la sintassi del database SQL di Azure.|  
+|**Arresta**|Arresta il processo corrente, ad esempio la conversione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti in o la sintassi del database SQL di Azure.|  
   
 ### <a name="menus"></a>Menu  
 SSMA contiene i menu seguenti:  
@@ -122,7 +122,7 @@ SSMA contiene i menu seguenti:
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli, ad esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] la copia dal riquadro dettagli SQL. Per aprire la finestra di dialogo **Gestisci segnalibri** , scegliere Gestisci segnalibri dal menu Modifica. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
 |**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Questo sincronizza gli oggetti tra Esplora metadati di Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  
 |**Strumenti**|Contiene i comandi per la creazione di report, l'esportazione di dati, la migrazione di oggetti e dati, la connessione di tabelle e l'accesso alle finestre di dialogo delle impostazioni globali e progetto.|  
-|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
+|**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
 Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  

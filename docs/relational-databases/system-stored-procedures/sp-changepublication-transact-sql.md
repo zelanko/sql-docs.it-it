@@ -16,10 +16,10 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762420"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
@@ -94,7 +94,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||Specifica il percorso di un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguito dall'agente di distribuzione prima dell'applicazione di tutti gli altri dati e script di oggetti replicati durante una sincronizzazione iniziale.|  
 |**publish_to_ActiveDirectory**|**true**|Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Rimuove le informazioni sulla pubblicazione da Active Directory.|  
-|**queue_type**|**sql**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive.<br /><br /> Nota: il supporto per [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'utilizzo di Accodamento messaggi è stato interrotto. Se si specifica il valore **MSMQ** per *value* , viene restituito un errore.|  
+|**queue_type**|**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive.<br /><br /> Nota: il supporto per [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'utilizzo di Accodamento messaggi è stato interrotto. Se si specifica il valore **MSMQ** per *value* , viene restituito un errore.|  
 |**repl_freq**|**continuo**|Pubblica l'output di tutte le transazioni basate su log.|  
 ||**snapshot**|Pubblica solo gli eventi di sincronizzazione pianificati.|  
 |**replicate_ddl**|**1**|Le istruzioni DDL (Data Definition Language) eseguite nel server di pubblicazione vengono replicate. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -104,10 +104,10 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**conservazione**||**int** che rappresenta il periodo di memorizzazione, in ore, per l'attività della sottoscrizione. Se una sottoscrizione non viene attivata entro il periodo di memorizzazione, viene rimossa.|  
 |**snapshot_in_defaultfolder**|**true**|I file di snapshot sono memorizzati nella cartella snapshot predefinita. Se viene specificato anche *alt_snapshot_folder*, i file di snapshot vengono archiviati sia nella posizione predefinita che in quella alternativa.|  
 ||**false**|I file di snapshot vengono archiviati nella posizione alternativa specificata da *alt_snapshot_folder*.|  
-|**stato**|**Active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
+|**Stato**|**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**inattivo**|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|**sync_method**|**Native**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
-||**character**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
+|**sync_method**|**native**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
+||**carattere**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
 ||**simultanee**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 ||**concurrent_c**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 |**taskId**||Questa proprietà è deprecata e non è più supportata.|  
@@ -150,7 +150,7 @@ Per informazioni sulle proprietà che richiedono la generazione di un nuovo snap
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-Per elencare gli oggetti di pubblicazione nel Active Directory **** utilizzando il parametro publish_to_active_directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che l'oggetto sia già stato creato nella Active Directory.  
+Per elencare gli oggetti di pubblicazione nel Active Directory **publish_to_active_directory** utilizzando il parametro publish_to_active_directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che l'oggetto sia già stato creato nella Active Directory.  
   
 ## <a name="impact-of-immediate-sync"></a>Impatto della sincronizzazione immediata  
  Quando la sincronizzazione immediata è attiva, tutte le modifiche nel log vengono rilevate subito dopo la generazione dello snapshot iniziale anche se non sono presenti sottoscrizioni. Le modifiche registrate vengono utilizzate quando un cliente utilizza il backup per aggiungere un nuovo nodo peer. Dopo il ripristino del backup, il peer viene sincronizzato con qualsiasi altra modifica che si verifica dopo l'esecuzione del backup. Poiché i comandi vengono rilevati nel database di distribuzione, la logica di sincronizzazione può esaminare l'ultimo LSN di cui è stato eseguito il backup e utilizzarlo come punto di partenza, sapendo che il comando è disponibile se il backup è stato eseguito entro il periodo di memorizzazione massimo. Il valore predefinito per il periodo di memorizzazione minimo è 0 ore e il periodo di memorizzazione massimo è di 24 ore.  

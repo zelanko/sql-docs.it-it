@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265971"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "68265971"
 |**database_id**|**int**|ID del database contenente il catalogo full-text attivo.|  
 |**catalog_id**|**int**|ID del catalogo full-text attivo.|  
 |**memory_address**|**varbinary (8)**|Indirizzo dei buffer di memoria allocati per l'attività di popolamento correlata al catalogo full-text.|  
-|**nome**|**nvarchar(128)**|Nome del catalogo full-text attivo.|  
+|**name**|**nvarchar(128)**|Nome del catalogo full-text attivo.|  
 |**is_paused**|**bit**|Indica se il popolamento del catalogo full-text attivo è stato sospeso.|  
-|**stato**|**int**|Stato corrente del catalogo full-text. Uno dei seguenti:<br /><br /> 0 = Inizializzazione in corso<br /><br /> 1 = Pronto<br /><br /> 2 = sospeso<br /><br /> 3 = Errore temporaneo<br /><br /> 4 = Rimontaggio necessario<br /><br /> 5 = Chiusura<br /><br /> 6 = In stato di inattività per backup<br /><br /> 7 = Il backup viene eseguito tramite il catalogo<br /><br /> 8 = Il catalogo è danneggiato|  
-|**status_description**|**nvarchar (120)**|Descrizione dello stato corrente del catalogo full-text attivo.|  
-|**previous_status**|**int**|Stato precedente del catalogo full-text. Uno dei seguenti:<br /><br /> 0 = Inizializzazione in corso<br /><br /> 1 = Pronto<br /><br /> 2 = sospeso<br /><br /> 3 = Errore temporaneo<br /><br /> 4 = Rimontaggio necessario<br /><br /> 5 = Chiusura<br /><br /> 6 = In stato di inattività per backup<br /><br /> 7 = Il backup viene eseguito tramite il catalogo<br /><br /> 8 = Il catalogo è danneggiato|  
-|**previous_status_description**|**nvarchar (120)**|Descrizione dello stato precedente del catalogo full-text attivo.|  
+|**Stato**|**int**|Stato corrente del catalogo full-text. I tipi validi sono:<br /><br /> 0 = Inizializzazione in corso<br /><br /> 1 = Pronto<br /><br /> 2 = sospeso<br /><br /> 3 = Errore temporaneo<br /><br /> 4 = Rimontaggio necessario<br /><br /> 5 = Chiusura<br /><br /> 6 = In stato di inattività per backup<br /><br /> 7 = Il backup viene eseguito tramite il catalogo<br /><br /> 8 = Il catalogo è danneggiato|  
+|**status_description**|**nvarchar(120)**|Descrizione dello stato corrente del catalogo full-text attivo.|  
+|**previous_status**|**int**|Stato precedente del catalogo full-text. I tipi validi sono:<br /><br /> 0 = Inizializzazione in corso<br /><br /> 1 = Pronto<br /><br /> 2 = sospeso<br /><br /> 3 = Errore temporaneo<br /><br /> 4 = Rimontaggio necessario<br /><br /> 5 = Chiusura<br /><br /> 6 = In stato di inattività per backup<br /><br /> 7 = Il backup viene eseguito tramite il catalogo<br /><br /> 8 = Il catalogo è danneggiato|  
+|**previous_status_description**|**nvarchar(120)**|Descrizione dello stato precedente del catalogo full-text attivo.|  
 |**worker_count**|**int**|Numero di thread che elaborano il catalogo full-text.|  
 |**active_fts_index_count**|**int**|Numero di indici full-text che vengono popolati.|  
 |**auto_population_count**|**int**|Numero di tabelle in cui è in corso il popolamento automatico del catalogo full-text.|  
@@ -68,7 +68,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno-a-uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno-a-uno|  

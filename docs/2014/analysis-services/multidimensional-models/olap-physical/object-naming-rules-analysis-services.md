@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530889"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
   In questo argomento vengono descritte le convenzioni di denominazione dell'oggetto, le parole riservate e i caratteri che non possono essere utilizzati nel nome dell'oggetto, nel codice o nello script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a>Convenzioni di denominazione  
+##  <a name="naming-conventions"></a><a name="bkmk_Names"></a>Convenzioni di denominazione  
  Ogni oggetto dispone di una proprietà `Name` e `ID` che deve essere univoca nell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
   
  Sebbene sia possibile specificarlo manualmente, l'`ID` viene solitamente generato automaticamente quando viene creato l'oggetto. Si consiglia di non modificare mai la proprietà `ID` una volta avviata la compilazione di un modello. In un modello tutti i riferimenti agli oggetti sono basati sull'`ID`. Pertanto, la modifica dell'`ID` può facilmente causare il danneggiamento del modello.  
@@ -39,7 +39,7 @@ ms.locfileid: "69530889"
   
 -   Non esiste alcun particolare requisito per il primo carattere di un identificatore, che può pertanto essere qualsiasi carattere valido.  
   
-##  <a name="bkmk_reserved"></a>Parole riservate e caratteri  
+##  <a name="reserved-words-and-characters"></a><a name="bkmk_reserved"></a>Parole riservate e caratteri  
  Le parole riservate sono in inglese e si applicano ai nomi di oggetto, non alle didascalie. Se si utilizza inavvertitamente una parola riservata in un nome di oggetto, si verificherà un errore di convalida. Per i modelli di data mining e multidimensionali, le parole riservate descritte di seguito non possono mai essere utilizzate in alcun nome di oggetto.  
   
  Per i modelli tabulari dove la compatibilità di database è impostata su 1103, le regole di convalida sono state rese flessibili per alcuni oggetti, non conformi per i requisiti di caratteri estesi e le convenzioni di denominazione di alcune applicazioni client. I database che soddisfano questi criteri sono soggetti a regole di convalida meno restrittive. In questo caso è possibile che un nome di oggetto includa un carattere limitato e superi comunque la convalida.  
@@ -70,8 +70,8 @@ ms.locfileid: "69530889"
 |------------|------------------------|  
 |`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Per informazioni dettagliate, vedere [convenzioni di denominazione (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level`o`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension`o`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level` o `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Tutti gli altri oggetti|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Eccezioni: quando sono consentiti i caratteri riservati**  

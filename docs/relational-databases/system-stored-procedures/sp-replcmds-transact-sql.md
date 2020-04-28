@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771015"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
@@ -49,8 +49,8 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**ID articolo**|**int**|ID dell'articolo.|  
 |**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary (1024)**|Valore del comando.|  
-|**xactid**|**binario (10)**|ID della transazione.|  
-|**xact_seqno**|**varbinary (16)**|Numero di sequenza della transazione.|  
+|**xactid**|**binary(10)**|ID della transazione.|  
+|**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
 |**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo di comando.|  
@@ -59,7 +59,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|Solo per uso interno.|  
 |**originator_publication_id**|**int**|ID della pubblicazione in cui ha origine la transazione.|  
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
-|**originator_lsn**|**varbinary (16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
+|**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_replcmds** viene utilizzato dal processo di lettura log nella replica transazionale.  

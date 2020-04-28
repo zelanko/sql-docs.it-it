@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892859"
 ---
 # <a name="data-types-dmx"></a>Tipi di dati (DMX)
@@ -22,13 +22,13 @@ ms.locfileid: "68892859"
   
  I tipi di dati dipendono dall'algoritmo. Ogni algoritmo determina i tipi di dati supportati e le modalità con cui vengono utilizzati. Gli algoritmi Microsoft supportano i tipi di dati seguenti:  
   
--   Text  
+-   Testo  
   
 -   long  
   
 -   Boolean  
   
--   DOUBLE  
+-   Double  
   
 -   Data  
   

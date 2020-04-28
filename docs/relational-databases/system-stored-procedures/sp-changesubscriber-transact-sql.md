@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762785"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`Tipo di Sottoscrittore. *Type* è di tipo **tinyint**e il valore predefinito è null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittore. **1** specifica un Sottoscrittore del server origine dati ODBC non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o altro.  
   
-`[ @login = ] 'login'`ID di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso per l'autenticazione. *login* è di **tipo sysname**e il valore predefinito è null.  
+`[ @login = ] 'login'`ID di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso per l'autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
 `[ @password = ] 'password'`Password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *password* è di **%** **tipo sysname**e il valore predefinito è. **%** indica che non è stata apportata alcuna modifica alla proprietà della password.  
   
@@ -76,12 +76,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**16**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Ricorrente|  
+|**128**|Periodica|  
   
 `[ @frequency_interval = ] frequency_interval`Intervallo per *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è null.  
   

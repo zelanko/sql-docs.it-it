@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264477"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Connettersi a Oracle (OracleToSQL)
@@ -26,7 +26,7 @@ Per accedere a questa finestra di dialogo, scegliere **Connetti a Oracle**dal me
 **Provider**  
 Selezionare il provider di accesso ai dati per la connessione al database Oracle. I provider disponibili sono il provider client Oracle e il provider di OLE DB. Il valore predefinito è provider client Oracle.  
   
-**Mode**  
+**Modalità**  
 Selezionare la modalità standard, TNSNAME o stringa di connessione.  
   
 -   In modalità standard, immettere o selezionare i valori per il provider, il nome del server, la porta del server, il SID Oracle, il nome utente e la password.  

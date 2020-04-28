@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771244"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -49,7 +49,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |valore|Descrizione|  
 |-----------|-----------------|  
 |< **0**|Restituisce informazioni sulle esecuzioni passate dell'agente, per al massimo 100 esecuzioni.|  
-|**0** (impostazione predefinita)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
+|**0** (predefinito)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
 |> **0**|Restituisce informazioni sulle esecuzioni di agenti che si sono verificate nel numero di ore dell'ultima *ora* .|  
   
 `[ @session_type = ] session_type`Filtra il set di risultati in base al risultato finale della sessione. *session_type* è di **tipo int**. i possibili valori sono i seguenti.  
@@ -70,7 +70,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|ID della sessione del processo dell'agente.|  
-|**Status**|**int**|Stato dell'esecuzione dell'agente:<br /><br /> **1** = avvio<br /><br /> **2** = esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = esito negativo|  
+|**Stato**|**int**|Stato dell'esecuzione dell'agente:<br /><br /> **1** = avvio<br /><br /> **2** = esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = esito negativo|  
 |**StartTime**|**datetime**|Data e ora di inizio della sessione del processo dell'agente.|  
 |**EndTime**|**datetime**|Data e ora di completamento della sessione del processo dell'agente.|  
 |**Duration**|**int**|Durata cumulativa, espressa in secondi, della sessione del processo.|  
@@ -95,6 +95,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione nel Sottoscrittore possono eseguire **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

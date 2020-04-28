@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768953"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -63,12 +63,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**16**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Ricorrente|  
+|**128**|Periodica|  
 |NULL (predefinito)||  
   
 `[ @frequency_interval = ] frequency_interval`Giorni in cui viene eseguito l'agente. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
@@ -83,7 +83,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**6**|Friday|  
 |**7**|Sabato|  
 |**8**|Giorno|  
-|**9**|Giorni della settimana|  
+|**9**|Giorni feriali|  
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   

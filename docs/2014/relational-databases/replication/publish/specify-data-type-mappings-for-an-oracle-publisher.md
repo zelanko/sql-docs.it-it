@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d3377cb5ed4afd4577462e0b436bb16d2fee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941095"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Specifica dei mapping tra i tipi di dati di un server di pubblicazione Oracle
@@ -32,8 +32,8 @@ ms.locfileid: "68941095"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
- Nella scheda **Mapping dei dati** della finestra di dialogo **Proprietà articolo - \<Articolo>** specificare i mapping tra i tipi di dati. È possibile accedere a questa finestra nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione da un database Oracle](create-a-publication-from-an-oracle-database.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+ Nella scheda **Mapping dei dati** della finestra di dialogo **Proprietà articolo - \<Articolo>** specificare i mapping tra i tipi di dati. È possibile accedere a questa finestra nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione da un database Oracle](create-a-publication-from-an-oracle-database.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Per specificare un mapping tra i tipi di dati  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68941095"
   
 2.  Fare clic su **Imposta proprietà dell'articolo tabella evidenziato**.  
   
-3.  Nella scheda **Mapping dei dati** della finestra di dialogo **Proprietà articolo - \<Articolo>** , selezionare i mapping nella colonna **Tipo di dati del Sottoscrittore**:  
+3.  Nella scheda **Mapping dei dati** della finestra di dialogo **Proprietà articolo - \<Articolo>**, selezionare i mapping nella colonna **Tipo di dati del Sottoscrittore**:  
   
     -   Per alcuni tipi di dati è disponibile un solo tipo di mapping. In questo caso, la colonna nella proprietà è di sola lettura.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68941095"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile specificare mapping personalizzati di tipi di dati a livello di programmazione tramite le stored procedure di replica. È inoltre possibile impostare i mapping predefiniti utilizzati per il mapping dei tipi di dati tra [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e un sistema di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestione non di database (DBMS). Per altre informazioni, vedere [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Per definire mapping personalizzati di tipi di dati durante la creazione di un articolo appartenente a una pubblicazione Oracle  
@@ -60,15 +60,15 @@ ms.locfileid: "68941095"
   
 3.  Nel server di distribuzione eseguire [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) per visualizzare il mapping esistente per una colonna in un articolo pubblicato.  
   
-4.  Nel server di distribuzione eseguire [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Specificare il nome del server di pubblicazione Oracle per **\@publisher**, nonché **\@publication**, **\@article** e **\@column** per definire la colonna pubblicata. Specificare il nome del tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui eseguire il mapping per **\@type**, nonché **\@length**, **\@precision** e **\@scale** se applicabile.  
+4.  Nel server di distribuzione eseguire [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Specificare il nome del server di pubblicazione Oracle ** \@** per il server di pubblicazione, nonché la ** \@pubblicazione**, ** \@** ** \@l'articolo**e la colonna per definire la colonna pubblicata. Specificare il nome del tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di dati a cui eseguire il mapping per ** \@il tipo**, nonché la ** \@lunghezza**, ** \@la precisione**e ** \@la scala**, ove applicabile.  
   
 5.  Nel server di distribuzione eseguire [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). In questo modo verrà creata la vista utilizzata per generare lo snapshot dalla pubblicazione Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Per specificare un mapping come mapping predefinito per un tipo di dati  
   
-1.  (Facoltativo) In un database del server di distribuzione eseguire [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Specificare **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_version** e qualsiasi altro parametro necessario per identificare il sistema DBMS di origine. Le informazioni sui tipi di dati attualmente sottoposti a mapping nel sistema DBMS di destinazione vengono restituite tramite parametri di output.  
+1.  (Facoltativo) In un database del server di distribuzione eseguire [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Specificare ** \@source_dbms**, ** \@source_type**, ** \@destination_dbms**, ** \@destination_version**e qualsiasi altro parametro necessario per identificare il sistema DBMS di origine. Le informazioni sui tipi di dati attualmente sottoposti a mapping nel sistema DBMS di destinazione vengono restituite tramite parametri di output.  
   
-2.  (Facoltativo) In un database del server di distribuzione eseguire [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Specificare **\@source_dbms** e qualsiasi altro parametro necessario per filtrare il set di risultati. Si noti il valore di **mapping_id** per il mapping desiderato nel set di risultati.  
+2.  (Facoltativo) In un database del server di distribuzione eseguire [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Specificare ** \@source_dbms** e qualsiasi altro parametro necessario per filtrare il set di risultati. Si noti il valore di **mapping_id** per il mapping desiderato nel set di risultati.  
   
 3.  In un database del database di distribuzione eseguire [sp_setdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql).  
   
@@ -80,8 +80,8 @@ ms.locfileid: "68941095"
   
 1.  In un database del server di distribuzione eseguire [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Specificare il valore **ORACLE** per **\@source_dbms** e qualsiasi altro parametro necessario per filtrare il set di risultati.  
   
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
- In questo esempio viene modificata una colonna con un tipo di dati NUMBER di Oracle in modo che venga eseguito il mapping al tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (38,38) di `numeric` anziché al tipo di dati predefinito `float`.  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
+ In questo esempio viene modificata una colonna con un tipo di dati NUMBER di Oracle in modo che venga eseguito il mapping al tipo di dati `numeric` (38,38) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anziché al tipo di dati predefinito `float`.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
   
@@ -94,9 +94,9 @@ ms.locfileid: "68941095"
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Mapping dei tipi di dati per i Publisher Oracle](../non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Replica di database eterogenei](../non-sql/heterogeneous-database-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Concetti relativi alle stored procedure del sistema di replica](../concepts/replication-system-stored-procedures-concepts.md)   
  [Configurare un server di pubblicazione Oracle](../non-sql/configure-an-oracle-publisher.md)  
   
   

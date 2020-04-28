@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263802"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
@@ -40,25 +40,25 @@ ms.locfileid: "68263802"
 |session_id|**int**|Identifica la sessione associata alla connessione Ammette i valori Null.|  
 |most_recent_session_id|**int**|Rappresenta l'ID di sessione della richiesta più recente associata alla connessione. (Le connessioni SOAP possono essere riutilizzate da un'altra sessione). Ammette valori null.|  
 |connect_time|**datetime**|Timestamp relativo al momento in cui è stata stabilita la connessione. Non ammette i valori Null.|  
-|net_transport|**nvarchar (40)**|Restituisce sempre **Session** quando per una connessione è abilitato MARS (Multiple Active Result Sets).<br /><br /> **Nota:** Descrive il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.|  
-|protocol_type|**nvarchar (40)**|Specifica il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
+|net_transport|**nvarchar(40)**|Restituisce sempre **Session** quando per una connessione è abilitato MARS (Multiple Active Result Sets).<br /><br /> **Nota:** Descrive il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.|  
+|protocol_type|**nvarchar(40)**|Specifica il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
 |protocol_version|**int**|Versione del protocollo di accesso ai dati associato a questa connessione. Ammette i valori Null.|  
 |endpoint_id|**int**|Identificatore che descrive il tipo di connessione. Il valore di endpoint_id può essere utilizzato per eseguire query nella vista sys.endpoints. Ammette i valori Null.|  
-|encrypt_option|**nvarchar (40)**|Valore booleano che specifica se per la connessione è abilitata la crittografia. Non ammette i valori Null.|  
-|auth_scheme|**nvarchar (40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
+|encrypt_option|**nvarchar(40)**|Valore booleano che specifica se per la connessione è abilitata la crittografia. Non ammette i valori Null.|  
+|auth_scheme|**nvarchar(40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
 |node_affinity|**smallint**|Identifica il nodo di memoria con cui la connessione dispone di affinità. Non ammette i valori Null.|  
 |num_reads|**int**|Numero di letture di byte eseguite sulla connessione. Ammette i valori Null.|  
 |num_writes|**int**|Numero di scritture di byte eseguite sulla connessione. Ammette i valori Null.|  
 |last_read|**datetime**|Timestamp dell'ultima lettura eseguita sulla connessione. Ammette i valori Null.|  
 |last_write|**datetime**|Timestamp dell'ultima scrittura eseguita sulla connessione. Non ammette valori Null.|  
 |net_packet_size|**int**|Dimensioni dei pacchetti di rete utilizzate per il trasferimento di informazioni e dati. Ammette i valori Null.|  
-|client_net_address|**varchar (48)**|Indirizzo host del client che si connette al server. Ammette i valori Null.<br /><br /> Prima di V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa colonna restituisce sempre NULL.|  
+|client_net_address|**varchar(48)**|Indirizzo host del client che si connette al server. Ammette i valori Null.<br /><br /> Prima di V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa colonna restituisce sempre NULL.|  
 |client_tcp_port|**int**|Numero di porta del computer client associato alla connessione. Ammette i valori Null.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna restituisce sempre un valore NULL.|  
-|local_net_address|**varchar (48)**|Rappresenta l'indirizzo IP del server di destinazione della connessione. Disponibile solo per le connessioni che utilizzano il provider del trasporto TCP. Ammette i valori Null.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna restituisce sempre un valore NULL.|  
+|local_net_address|**varchar(48)**|Rappresenta l'indirizzo IP del server di destinazione della connessione. Disponibile solo per le connessioni che utilizzano il provider del trasporto TCP. Ammette i valori Null.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna restituisce sempre un valore NULL.|  
 |local_tcp_port|**int**|Rappresenta la porta TCP del server che verrebbe impiegata in caso di utilizzo del trasporto TCP per la connessione. Ammette i valori Null.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna restituisce sempre un valore NULL.|  
 |connection_id|**uniqueidentifier**|Identifica in modo univoco ogni connessione. Non ammette i valori Null.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la connessione primaria utilizzata dalla sessione MARS. Ammette i valori Null.|  
-|most_recent_sql_handle|**varbinary (64)**|Handle SQL dell'ultima richiesta eseguita sulla connessione. La colonna most_recent_sql_handle è sempre sincronizzata con la colonna most_recent_session_id. Ammette i valori Null.|  
+|most_recent_sql_handle|**varbinary(64)**|Handle SQL dell'ultima richiesta eseguita sulla connessione. La colonna most_recent_sql_handle è sempre sincronizzata con la colonna most_recent_session_id. Ammette i valori Null.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni

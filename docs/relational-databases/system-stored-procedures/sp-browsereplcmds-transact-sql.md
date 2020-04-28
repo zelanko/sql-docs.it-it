@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769003"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -67,17 +67,17 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary (16)**|Numero di sequenza del comando.|  
+|**xact_seqno**|**varbinary(16)**|Numero di sequenza del comando.|  
 |**originator_srvname**|**sysname**|Server in cui ha origine la transazione.|  
 |**originator_db**|**sysname**|Database in cui ha origine la transazione.|  
 |**article_id**|**int**|ID dell'articolo.|  
-|**tipo**|**int**|Tipo di comando.|  
+|**type**|**int**|Tipo di comando.|  
 |**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
 |**hashkey**|**int**|Solo per uso interno.|  
 |**originator_publication_id**|**int**|ID della pubblicazione in cui ha origine la transazione.|  
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
-|**originator_lsn**|**varbinary (16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Utilizzato nella replica transazionale peer-to-peer.|  
-|**comando**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]comando.|  
+|**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Utilizzato nella replica transazionale peer-to-peer.|  
+|**comando**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  È possibile suddividere i comandi lunghi in più righe nei set di risultati.  
@@ -89,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Solo i membri del ruolo predefinito del server **sysadmin** o i membri dei ruoli predefiniti del database **db_owner** o **replmonitor** nel database di distribuzione possono eseguire **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

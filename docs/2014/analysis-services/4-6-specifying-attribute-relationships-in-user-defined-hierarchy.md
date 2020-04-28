@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493857"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente
@@ -84,7 +84,7 @@ ms.locfileid: "69493857"
   
      Si noti che quando si elimina l'ultima relazione tra l'attributo **Geography** e gli altri attributi, viene eliminato anche l'attributo **Geography** stesso, poiché non viene più utilizzato.  
   
-24. Scegliere **Salva tutto**dal menu File.  
+24. Scegliere Salva tutti dal menu **File**.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>Definizione delle relazioni tra gli attributi della gerarchia Sales Territory  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493857"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     **Sales Territory Group** è ora collegato a **Sales Territory Country**e **Sales Territory Country** è ora collegato a **Sales Territory Region**. La proprietà **RelationshipType** per ognuna di queste relazioni è impostata su **Flessibile** dal momento che i raggruppamenti delle regioni all'interno di un paese e i raggruppamenti stessi dei paesi possono cambiare nel corso del tempo.  
+     L'attributo**Sales Territory Group** è ora collegato a **Sales Territory Country**e **Sales Territory Country** è ora collegato a **Sales Territory Region**. La proprietà **RelationshipType** per ognuna di queste relazioni è impostata su **Flessibile** dal momento che i raggruppamenti delle regioni all'interno di un paese e i raggruppamenti stessi dei paesi possono cambiare nel corso del tempo.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>Definizione delle relazioni tra gli attributi della gerarchia Product Model Lines  
   
@@ -110,7 +110,7 @@ ms.locfileid: "69493857"
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-fiscal-date-hierarchy"></a>Definizione delle relazioni tra attributi nella gerarchia Fiscal Date  
   
-1.  Passare a Progettazione dimensioni per la dimensione **Date** e quindi fare clic sulla scheda **Relazioni tra attributi** .  
+1.  Passare a Progettazione dimensioni per la dimensione **Date** e fare clic sulla scheda **Relazioni tra attributi** .  
   
 2.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Month Name** , quindi scegliere **Nuova relazione tra attributi**.  
   

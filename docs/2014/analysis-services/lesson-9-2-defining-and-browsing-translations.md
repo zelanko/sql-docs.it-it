@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493784"
 ---
 # <a name="defining-and-browsing-translations"></a>Definizione ed esplorazione delle traduzioni
@@ -52,7 +52,7 @@ ms.locfileid: "69493784"
   
 8.  Selezionare **SpanishMonthName** nell'elenco **Colonne per la traduzione**, come illustrato nella figura seguente.  
   
-     ![Finestra di dialogo Traduzione dati attributo](../../2014/tutorials/media/l9-translations-4.gif "Traduzione dati attributo - finestra di dialogo")  
+     ![Traduzione dati attributo - finestra di dialogo](../../2014/tutorials/media/l9-translations-4.gif "Traduzione dati attributo - finestra di dialogo")  
   
 9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione (**...**) per la traduzione in **francese (Francia)** dell'attributo **Month Name** .  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69493784"
   
 2.  Dopo aver completato la distribuzione, passare alla scheda **Esplorazione** e fare clic sul pulsante **Riconnetti**.  
   
-3.  Rimuovere tutte le gerarchie e le misure dal riquadro **Dati**, selezionare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial nell'elenco **Prospettive**.  
+3.  Rimuovere tutte le gerarchie e le misure dal riquadro **Dati[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], selezionare ** Tutorial nell'elenco **Prospettive**.  
   
 4.  Nel riquadro dei metadati espandere **Measures** e poi **Internet Sales**.  
   

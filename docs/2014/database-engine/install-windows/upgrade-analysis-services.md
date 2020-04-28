@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889191"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
   Utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sull'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità SharePoint, vedere [upgrade PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md). Per ulteriori informazioni sull'aggiornamento di un'istanza di SQL Server esistente, vedere [eseguire l'aggiornamento a SQL Server 2014 utilizzando l'installazione guidata &#40;&#41;di ](upgrade-sql-server-using-the-installation-wizard-setup.md)installazione.  
   
 ## <a name="known-upgrade-issues"></a>Problemi di aggiornamento noti  
- Prima di eseguire [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]l'aggiornamento a, esaminare gli elementi seguenti:  
+ Prima di effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere gli argomenti seguenti:  
   
 -   [Note sulla versione di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68889191"
   
 -   [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
--   [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+-   [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
 ## <a name="upgrading-analysis-services"></a>Aggiornamento di Analysis Services  
  È possibile scegliere diversi approcci per aggiornare il server e i dati:  
@@ -83,6 +83,6 @@ ms.locfileid: "68889191"
  [Informazioni sull'architettura Microsoft OLAP](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [PowerPivot per SharePoint di aggiornamento](upgrade-power-pivot-for-sharepoint.md)   
  [Installare Analysis Services in modalità multidimensionale e di data mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installazione di PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

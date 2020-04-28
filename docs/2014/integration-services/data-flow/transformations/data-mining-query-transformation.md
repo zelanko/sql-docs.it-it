@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890531"
 ---
 # <a name="data-mining-query-transformation"></a>Query di data mining - trasformazione
@@ -36,15 +36,15 @@ ms.locfileid: "68890531"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Query di data mining** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione query di data mining &#40;scheda modello di data mining&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor trasformazione Query di data mining &#40;scheda Modello di data mining&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Editor trasformazione query di data mining &#40;scheda modello di data mining&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor trasformazione Query di data mining &#40;scheda Modello di data mining&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   

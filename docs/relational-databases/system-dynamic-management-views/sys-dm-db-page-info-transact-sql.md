@@ -21,10 +21,10 @@ ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68841603"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
@@ -99,17 +99,17 @@ Determina il livello di dettaglio nell'output della funzione. ' LIMITED ' restit
 |ml_map_page_id |INT |ID pagina della pagina bitmap di registrazione minima corrispondente |
 |ml_status |bit |Bit per indicare se la pagina è con registrazione minima |
 |ml_status_desc |nvarchar (64) |Descrizione del bit di stato di registrazione minimo |
-|prev_page_file_id |smallint |ID file di pagina precedente |
+|prev_page_file_id |SMALLINT |ID file di pagina precedente |
 |prev_page_page_id |INT |ID pagina pagina precedente |
-|next_page_file_id |smallint |ID file della pagina successiva |
+|next_page_file_id |SMALLINT |ID file della pagina successiva |
 |next_page_page_id |INT |ID pagina pagina successiva |
-|fixed_length |smallint |Lunghezza delle righe a dimensione fissa |
-|slot_count |smallint |Numero totale di slot (usati e non usati) <br> Per una pagina di dati, questo numero è equivalente al numero di righe. |
-|ghost_rec_count |smallint |Numero di record contrassegnati come Ghost nella pagina <br> Un record fantasma è uno che è stato contrassegnato per l'eliminazione ma che è ancora stato rimosso. |
-|free_bytes |smallint |Numero di byte disponibili nella pagina |
+|fixed_length |SMALLINT |Lunghezza delle righe a dimensione fissa |
+|slot_count |SMALLINT |Numero totale di slot (usati e non usati) <br> Per una pagina di dati, questo numero è equivalente al numero di righe. |
+|ghost_rec_count |SMALLINT |Numero di record contrassegnati come Ghost nella pagina <br> Un record fantasma è uno che è stato contrassegnato per l'eliminazione ma che è ancora stato rimosso. |
+|free_bytes |SMALLINT |Numero di byte disponibili nella pagina |
 |free_data_offset |INT |Offset dello spazio disponibile alla fine dell'area dati |
-|reserved_bytes |smallint |Numero di byte liberi riservati da tutte le transazioni (se heap) <br> Numero di righe fantasma (se foglia dell'indice) |
-|reserved_bytes_by_xdes_id |smallint |Spazio fornito da m_xdesID per m_reservedCnt <br> Solo a scopo di debug |
+|reserved_bytes |SMALLINT |Numero di byte liberi riservati da tutte le transazioni (se heap) <br> Numero di righe fantasma (se foglia dell'indice) |
+|reserved_bytes_by_xdes_id |SMALLINT |Spazio fornito da m_xdesID per m_reservedCnt <br> Solo a scopo di debug |
 |xdes_id |nvarchar (64) |Ultima transazione aggiunta come contributo da m_reserved <br> Solo a scopo di debug |
 ||||
 
@@ -148,9 +148,9 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys. dm_exec_requests &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

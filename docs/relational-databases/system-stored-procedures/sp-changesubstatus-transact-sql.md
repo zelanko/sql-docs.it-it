@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771333"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
@@ -74,9 +74,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Active**|Il Sottoscrittore è sincronizzato e in fase di ricezione dei dati.|  
+|**active**|Il Sottoscrittore è sincronizzato e in fase di ricezione dei dati.|  
 |**inattivo**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
-|**sottoscritto**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
+|**subscribed**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
   
 `[ @previous_status = ] 'previous_status'`Stato precedente della sottoscrizione. *previous_status* è di **tipo sysname**e il valore predefinito è null. Questo parametro consente di modificare le sottoscrizioni che hanno attualmente tale stato, consentendo così le funzioni di gruppo in un set specifico di sottoscrizioni, ad esempio impostando tutte le sottoscrizioni attive su **sottoscritte**.  
   

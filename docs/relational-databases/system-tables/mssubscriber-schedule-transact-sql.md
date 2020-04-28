@@ -18,10 +18,10 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139804"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
@@ -34,8 +34,8 @@ ms.locfileid: "68139804"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
-|**subscriber**|**sysname**|Nome del Sottoscrittore.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
+|**Sottoscrittore**|**sysname**|Nome del Sottoscrittore.|  
 |**agent_type**|**smallint**|Tipo di agente:<br /><br /> 0 = agente di distribuzione<br /><br /> 1 = agente di merge|  
 |**frequency_type**|**int**|Frequenza di pianificazione dell'agente di distribuzione:<br /><br /> **1** = una volta.<br /><br /> **2** = su richiesta.<br /><br /> **4** = giornaliero.<br /><br /> **8** = settimanale.<br /><br /> **16** = mensile.<br /><br /> **32** = mensile relativo.<br /><br /> **64** = avvio automatico.<br /><br /> **128** = ricorrente.|  
 |**frequency_interval**|**int**|Valore da applicare alla frequenza impostata da **frequency_type**.|  

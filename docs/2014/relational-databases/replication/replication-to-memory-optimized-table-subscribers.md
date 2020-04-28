@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811234"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
@@ -303,7 +303,7 @@ GO
   
 -   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Per informazioni, vedere [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
-##  <a name="Schema"></a> Modifica di un file dello schema  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>Modifica di un file di schema  
   
 -   Gli indici cluster non sono supportati. Modificare gli indici cluster in indici non cluster.  
   
@@ -313,10 +313,10 @@ GO
   
 -   ANSI_PADDING deve essere ON.  
   
-##  <a name="PrimaryKey"></a>Replica delle modifiche a una chiave primaria  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>Replica delle modifiche a una chiave primaria  
  Non è possibile aggiornare la chiave primaria di una tabella ottimizzata per la memoria. Per replicare un aggiornamento della chiave primaria in un sottoscrittore, modificare la stored procedure di aggiornamento per recapitare l'aggiornamento come coppia di eliminazione e inserimento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Replica di SQL Server](sql-server-replication.md)  
+ [Replica SQL Server](sql-server-replication.md)  
   
   

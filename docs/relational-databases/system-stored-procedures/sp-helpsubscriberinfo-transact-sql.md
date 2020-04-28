@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771494"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
@@ -49,10 +49,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
-|**subscriber**|**sysname**|Nome del Sottoscrittore.|  
-|**tipo**|**tinyint**|Tipo di Sottoscrittore:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] database 1 = origine dati ODBC **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**accesso**|**sysname**|ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
+|**Sottoscrittore**|**sysname**|Nome del Sottoscrittore.|  
+|**type**|**tinyint**|Tipo di Sottoscrittore:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] database 1 = origine dati ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**login**|**sysname**|ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Non supportato.|  
 |**status_batch_size**|**int**|Non supportato.|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|Non supportato.|  
 |**retrydelay**|**int**|Non supportato.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione in formato testo del Sottoscrittore.|  
-|**security_mode**|**int**|Modalità di sicurezza implementata:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows|  
+|**security_mode**|**int**|Modalità di sicurezza implementata:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows|  
 |**frequency_type2**|**int**|Frequenza di esecuzione dell'agente di merge:<br /><br /> **1** = una volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativo<br /><br /> **64** = avvio automatico<br /><br /> **128** = ricorrente|  
 |**frequency_interval2**|**int**|Valore applicato alla frequenza impostata da *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Data di agente di merge utilizzata quando *frequency_type* è impostato su 32 (mensile relativo):<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  

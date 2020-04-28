@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762261"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
@@ -65,12 +65,12 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4**|Ogni giorno|  
-|**8**|Ogni settimana|  
-|**16**|Mensile|  
+|**4**|Giornaliera|  
+|**8**|Settimanale|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Ricorrente|  
+|**128**|Periodica|  
 |NULL (predefinito)||  
   
 `[ @frequency_interval = ] frequency_interval`Specifica i giorni in cui viene eseguito l'agente. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
@@ -85,7 +85,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**6**|Friday|  
 |**7**|Sabato|  
 |**8**|Giorno|  
-|**9**|Giorni della settimana|  
+|**9**|Giorni feriali|  
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   

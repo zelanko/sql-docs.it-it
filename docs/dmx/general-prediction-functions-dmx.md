@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 57909c1bb4009ae85b7e1b38b8b3cf3fa0e70ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892776"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funzioni di stima correlate (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68892776"
 |-|-|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[Conteggio &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)|[Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
 |[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[&#40;DMX&#41;](../dmx/topsum-dmx.md)|  
 |[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
   
@@ -35,13 +35,13 @@ ms.locfileid: "68892776"
   
 -   [Esistente &#40;DMX&#41;](../dmx/exists-dmx.md)  
   
--   [&#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
+-   [IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
   
 -   [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)  
   
 -   [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)  
   
--   [Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)  
+-   [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
 -   [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
   
@@ -61,10 +61,10 @@ ms.locfileid: "68892776"
 |Tipo di query|Funzioni supportate|Osservazioni|  
 |----------------|-------------------------|-------------|  
 |[Selezionare DISTINCT dal \<modello>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|Queste funzioni possono essere utilizzate per fornire valori massimi, valori minimi e medie per qualsiasi colonna che contenga un tipo di dati numerico, indipendentemente dal fatto che sia continua o sia stata discretizzata.|  
-|[Selezionare da \<Model>. CONTENUTO](../dmx/select-from-model-content-dmx.md)<br /><br /> o<br /><br /> [Selezionare da \<Model>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[&#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Questa funzione recupera i nodi figlio per il nodo specificato nel modello e può essere utilizzata, ad esempio, per scorrere i nodi nel contenuto del modello di data mining. La disposizione dei nodi nel contenuto del modello di data mining dipende dal tipo di modello. Per informazioni sulla struttura per ogni tipo di modello di data mining, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se il contenuto del modello di data mining è stato salvato come dimensione, è anche possibile utilizzare altre funzioni MDX (Multidimensional Expression) disponibili per l'esecuzione di query su una gerarchia di attributo.|  
+|[Selezionare da \<Model>. CONTENUTO](../dmx/select-from-model-content-dmx.md)<br /><br /> o<br /><br /> [Selezionare da \<Model>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Questa funzione recupera i nodi figlio per il nodo specificato nel modello e può essere utilizzata, ad esempio, per scorrere i nodi nel contenuto del modello di data mining. La disposizione dei nodi nel contenuto del modello di data mining dipende dal tipo di modello. Per informazioni sulla struttura per ogni tipo di modello di data mining, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se il contenuto del modello di data mining è stato salvato come dimensione, è anche possibile utilizzare altre funzioni MDX (Multidimensional Expression) disponibili per l'esecuzione di query su una gerarchia di attributo.|  
 |[Selezionare da \<Model>. CASI](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|La funzione Lag è supportata solo per i modelli Time Series.<br /><br /> La funzione IsTestCase è supportata nei modelli basati su una struttura creata usando l'opzione di controllo per creare un set di dati di testing. Se il modello non è basato su una struttura con un set di test di controllo, tutti i case vengono considerati case di training.|  
 |[Selezionare da \<Model>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In questo contesto, la funzione IsInNode restituisce un case che appartiene a un set di case di esempio idealizzati.|  
-|Selezionare da \<Model>. PMML|Non applicabile. Utilizzare la funzione XML.|Le rappresentazioni PMML sono supportate solo per i tipi di modello seguenti:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Alberi delle decisioni<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering|  
+|Selezionare da \<Model>. PMML|Non applicabile. Utilizzare la funzione XML.|Le rappresentazioni PMML sono supportate solo per i tipi di modello seguenti:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECT FROM \<Model> PREDICtion join](../dmx/select-from-model-prediction-join-dmx.md)|Funzioni di stima specifiche dell'algoritmo utilizzato per compilare il modello.|Per un elenco delle funzioni di stima per ogni tipo di modello, vedere [query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
 |[Seleziona da \<modello>](../dmx/select-from-model-dmx.md)|Funzioni di stima specifiche dell'algoritmo utilizzato per compilare il modello.|Per un elenco delle funzioni di stima per ogni tipo di modello, vedere [query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   

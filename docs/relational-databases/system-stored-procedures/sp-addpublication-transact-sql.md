@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769105"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -93,13 +93,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Native**|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle. *Non supportato per i Publisher Oracle*.|  
-|**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. _Per un server di pubblicazione Oracle,_ il **carattere** _è valido solo per la replica snapshot_.|  
+|**native**|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle. *Non supportato per i Publisher Oracle*.|  
+|**carattere**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. _Per un server di pubblicazione Oracle,_ il **carattere** _è valido solo per la replica snapshot_.|  
 |**simultanee**|Genera l'output del programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante lo snapshot. Questo valore è supportato solo per pubblicazioni transazionali. *Non supportato per i Publisher Oracle*.|  
 |**concurrent_c**|Genera l'output del programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante lo snapshot. Questo valore è supportato solo per pubblicazioni transazionali.|  
 |**snapshot del database**|Genera output del programma in modalità nativa per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |**database snapshot character**|Genera output del programma in modalità carattere per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (predefinito)|Il valore predefinito **** è nativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i Publisher. Per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i Publisher non, il valore predefinito è **character** quando il valore di *repl_freq* è **snapshot** e **concurrent_c** per tutti gli altri casi.|  
+|NULL (predefinito)|Il valore predefinito **native** è nativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i Publisher. Per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i Publisher non, il valore predefinito è **character** quando il valore di *repl_freq* è **snapshot** e **concurrent_c** per tutti gli altri casi.|  
   
 `[ \@repl_freq = ] 'repl_freq'`Tipo di frequenza di replica. *repl_freq* è di tipo **nvarchar (10)**. i possibili valori sono i seguenti.  
   
@@ -114,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori.|  
+|**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori.|  
 |**inattivo** (impostazione predefinita)|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione (è possibile creare una sottoscrizione, che tuttavia non viene elaborata).|  
   
  *Non supportato per i Publisher Oracle*.  
@@ -193,7 +193,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**sql**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
+|**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
 |NULL (predefinito)|Il valore predefinito è **SQL**, che specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzare per archiviare le transazioni.|  
   
 > [!NOTE]  

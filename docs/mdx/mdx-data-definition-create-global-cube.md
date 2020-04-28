@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892155"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definizione dei dati MDX - CREATE GLOBAL CUBE
@@ -137,7 +137,7 @@ FROM source_cube_name (<param list>)
   
 -   Un cubo globale creato da un cubo globale esistente in un file di cubo locale non può essere salvato nello stesso file di cubo locale. A titolo di esempio, si supponga di creare un cubo globale denominato SalesLocal1 e di salvare tale cubo nel file C:\SalesLocal.cub. Si supponga poi di connettersi al file C:\SalesLocal.cub file e di creare un secondo cubo globale denominato SalesLocal2. Se a questo punto si tenta di salvare il cubo globale SalesLocal2 nel file C:\SalesLocal.cub, verrà generato un errore. È invece possibile salvare il cubo globale SalesLocal2 in un diverso file di cubo locale.  
   
--   I cubi globali non supportano misure Distinct Count. Poiché i cubi che includono misure Distinct Count non sono additivi, l'istruzione CREATE GLOBAL CUBE non supporta la creazione o l'utilizzo di misure Distinct Count.  
+-   I cubi globali non supportano misure totale valori distinti. Poiché i cubi che includono misure totale valori distinti non sono additivi, l'istruzione CREATE GLOBAL CUBE non supporta la creazione o l'utilizzo di misure totale valori distinti.  
   
 -   Quando si aggiunge una misura a un cubo locale, è necessario includere almeno una dimensione relativa alla misura aggiunta.  
   

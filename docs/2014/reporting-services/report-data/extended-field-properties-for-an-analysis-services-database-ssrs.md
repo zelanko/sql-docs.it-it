@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892026"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
@@ -29,16 +29,16 @@ ms.locfileid: "68892026"
   
  Per fare riferimento a una proprietà estesa non predefinita, utilizzare la sintassi seguente in un'espressione:  
   
--   *Campi! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Proprietà di campo predefinite  
  Nella maggior parte dei casi, le proprietà di campo predefinite si applicano a misure, livelli o dimensioni. Una proprietà di campo predefinita deve avere un valore corrispondente archiviato nell'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se non esiste un valore o se si specifica una proprietà dei campi solo di misura, ad esempio per un livello, la proprietà restituisce un valore Null.  
   
  Per fare riferimento a una proprietà predefinita da un'espressione, utilizzare uno dei due tipi di sintassi seguenti:  
   
--   *Campi! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *Campi! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
  Nella tabella seguente viene illustrato un elenco di proprietà di campo predefinite che è possibile utilizzare.  
   

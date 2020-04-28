@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fed15fbcfa685bde5d408e799bb605a40380ab5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265916"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68265916"
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|ID del pool di memoria allocato.<br /><br /> 0 = Buffer di piccole dimensioni<br /><br /> 1 = Buffer di grandi dimensioni|  
 |**memory_address**|**varbinary (8)**|Indirizzo del buffer di memoria allocato.|  
-|**nome**|**nvarchar(4000)**|Nome del buffer di memoria condivisa per cui è stata eseguita questa allocazione.|  
+|**name**|**nvarchar(4000)**|Nome del buffer di memoria condivisa per cui è stata eseguita questa allocazione.|  
 |**is_free**|**bit**|Stato corrente del buffer di memoria.<br /><br /> 0 = Libero<br /><br /> 1 = Occupato|  
 |**row_count**|**int**|Numero di righe gestite dal buffer.|  
 |**bytes_used**|**int**|Quantità, espressa in byte, di memoria utilizzata nel buffer.|  
@@ -56,12 +56,12 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

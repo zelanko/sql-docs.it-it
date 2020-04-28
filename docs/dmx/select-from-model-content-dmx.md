@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892834"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Selezionare da &lt;modello&gt;. CONTENUTO (DMX)
@@ -42,7 +42,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *espressione della condizione*  
  Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
+ *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -136,7 +136,7 @@ WHERE NODE_TYPE = 26
   
  Risultati dell'esempio:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
@@ -145,6 +145,6 @@ WHERE NODE_TYPE = 26
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

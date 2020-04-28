@@ -16,10 +16,10 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771558"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
@@ -58,7 +58,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale<br /><br /> **1** = snapshot<br /><br /> **2** = Unione|  
@@ -88,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar (524)**|Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_security_mode**|**int**|Modalità di autenticazione utilizzata per la connessione al server Web che ospita la sincronizzazione Web, dove il valore **1** indica l'autenticazione di Windows e il valore **0** indica l'autenticazione di base.|  
 |**internet_timeout**|**int**|Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
-|**nome host**|**nvarchar(128)**|Specifica il valore di HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
+|**hostname**|**nvarchar(128)**|Specifica il valore di HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

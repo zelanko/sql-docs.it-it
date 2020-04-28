@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266554"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di test case (OracleToSQL)
@@ -33,7 +33,7 @@ Al termine del test, viene creato il report del test case. Fare clic sul pulsant
   
 ## <a name="test-case-execution-steps"></a>Passaggi di esecuzione del test case  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 SSMA tester verifica se tutti i prerequisiti sono soddisfatti per l'esecuzione dei test prima dell'avvio del test. Se alcune condizioni non vengono soddisfatte, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  

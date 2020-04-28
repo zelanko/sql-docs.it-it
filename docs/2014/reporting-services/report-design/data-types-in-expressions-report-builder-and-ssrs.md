@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891870"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "68891870"
   
 -   Creare un campo calcolato basato su un campo del set di dati del report esistente scrivendo un'espressione che converte tutti i dati di una colonna del set di risultati in una nuova colonna con un tipo di dati differente. L'espressione seguente, ad esempio, converte il campo Year da un valore di tipo Integer in un valore di tipo String: `=CStr(Fields!Year.Value)`. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] query MDX, ad esempio, include una FORMATTED_VALUE proprietà estesa per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include ad esempio una proprietà estesa FORMATTED_VALUE per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Informazioni sui tipi di dati dei parametri  
  I parametri del report devono essere di uno dei cinque tipi di dati seguenti: Boolean, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
@@ -84,7 +84,7 @@ ms.locfileid: "68891870"
 |Da String a DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |Da String a DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Estrazione dell'anno|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 è True e 0 è False.|  
+|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 è True e 0 è False.|  
 |Da Boolean a Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 è True e 0 è False.|  
 |Solo la parte DateTime di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Solo la parte Offset di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
