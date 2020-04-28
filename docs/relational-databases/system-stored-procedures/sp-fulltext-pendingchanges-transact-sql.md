@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124221"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -47,9 +47,9 @@ sp_fulltext_pendingchanges table_id
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Chiave**|*|Valore di chiave full-text dalla tabella specificata.|  
+|**Codice**|*|Valore di chiave full-text dalla tabella specificata.|  
 |**DocId**|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
-|**Status**|**int**|0 = La riga verrà rimossa dall'indice full-text.<br /><br /> 1 = Alla riga verrà applicata l'indicizzazione full-text.<br /><br /> 2 = La riga è aggiornata.<br /><br /> -1 = La riga è in uno stato di transizione (elaborazione batch senza commit) o in uno stato di errore.|  
+|**Stato**|**int**|0 = La riga verrà rimossa dall'indice full-text.<br /><br /> 1 = Alla riga verrà applicata l'indicizzazione full-text.<br /><br /> 2 = La riga è aggiornata.<br /><br /> -1 = La riga è in uno stato di transizione (elaborazione batch senza commit) o in uno stato di errore.|  
 |**DocState**|**tinyint**|Dump non elaborato della colonna relativa allo stato del mapping dell'identificatore interno del documento (DocId).|  
   
  <sup>* Il tipo di dati per la colonna Key corrisponde al tipo di dati della colonna chiave full-text nella tabella di base.</sup>  

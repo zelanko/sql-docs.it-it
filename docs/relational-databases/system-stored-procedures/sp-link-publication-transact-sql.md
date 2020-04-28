@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139901"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -63,7 +63,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: questo account deve esistere anche nel server di pubblicazione con privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
 |**2**|Usa un account di accesso del server collegato definito dall'utente esistente creato con **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Account di accesso. *login* è di **tipo sysname**e il valore predefinito è null. Questo parametro deve essere specificato quando *security_mode* è **0**.  
+`[ @login = ] 'login'`Account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro deve essere specificato quando *security_mode* è **0**.  
   
 `[ @password = ] 'password'`Password. *password* è di **tipo sysname**e il valore predefinito è null. Questo parametro deve essere specificato quando *security_mode* è **0**.  
   

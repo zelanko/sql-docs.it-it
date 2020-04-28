@@ -20,16 +20,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133065"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Restituisce l'utilizzo della CPU, l'i/o e i dati di archiviazione per un Istanza gestita SQL di Azure. I dati vengono raccolti e aggregati per intervalli di cinque minuti. Una riga viene segnalata ogni 15 secondi. I dati restituiti includono l'utilizzo della CPU, le dimensioni di archiviazione, l'utilizzo di IO e lo SKU dell'istanza gestita. I dati cronologici vengono mantenuti per circa 14 giorni.
+Restituisce l'utilizzo della CPU, l'i/o e i dati di archiviazione per un Istanza gestita SQL di Azure. I dati vengono raccolti e aggregati in intervalli di cinque minuti. Una riga viene segnalata ogni 15 secondi. I dati restituiti includono l'utilizzo della CPU, le dimensioni di archiviazione, l'utilizzo di IO e lo SKU dell'istanza gestita. I dati cronologici vengono mantenuti per circa 14 giorni.
 
 La vista **sys. server_resource_stats** ha definizioni diverse a seconda della versione dell'istanza gestita di SQL Azure a cui è associato il database. Prendere in considerazione queste differenze e le eventuali modifiche richieste dall'applicazione durante l'aggiornamento a una nuova versione del server.
  
@@ -40,7 +40,7 @@ La vista **sys. server_resource_stats** ha definizioni diverse a seconda della v
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Ora UTC che indica l'inizio dell'intervallo di Reporting di quindici secondi|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di Reporting di quindici secondi|
-|resource_type|Nvarchar (128)|Tipo di risorsa per cui vengono fornite le metriche|
+|resource_type|Nvarchar(128)|Tipo di risorsa per cui vengono fornite le metriche|
 |resource_name|nvarchar(128)|Nome della risorsa.|
 |sku|nvarchar(128)|Istanza gestita livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|Identificatore di generazione hardware: come gen 4 o gen 5|
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Vedere anche  
- [Livelli di servizio Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Livelli di servizio di Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

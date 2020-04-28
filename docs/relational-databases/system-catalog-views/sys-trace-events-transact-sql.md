@@ -20,10 +20,10 @@ ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106664"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events (Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "68106664"
 
   La vista del catalogo **sys. trace_events** contiene un elenco di tutti gli eventi di traccia SQL. Questi eventi di traccia non variano in una versione specifica di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-> **IMPORTANTE!** 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare le viste del catalogo di Eventi estesi.  
+> **IMPORTANTE** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare le viste del catalogo di Eventi estesi.  
   
  Per ulteriori informazioni su questi eventi di traccia, vedere [SQL Server riferimento alla classe di evento](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
@@ -41,10 +40,10 @@ ms.locfileid: "68106664"
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|ID univoco dell'evento. Questa colonna è inoltre presente nelle viste del catalogo **sys. trace_event_bindings** e **sys. trace_subclass_values** .|  
 |**category_id**|**smallint**|ID della categoria dell'evento. Questa colonna si trova anche nella vista del catalogo **sys. trace_categories** .|  
-|**nome**|**nvarchar(128)**|Nome univoco dell'evento. Questo parametro non è localizzato.|  
+|**name**|**nvarchar(128)**|Nome univoco dell'evento. Questo parametro non è localizzato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

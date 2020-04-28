@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133781"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68133781"
     
 ||||  
 |-|-|-|  
-|**Nome colonna**|**Tipo**|**Descrizione**|  
+|**Nome colonna**|**Type**|**Descrizione**|  
 |lcid|INT|ID delle impostazioni locali (LCID) di Microsoft Windows per la lingua.|  
 |name|sysname|Valore dell'alias in [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID**o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68133781"
 ## <a name="metadata"></a>Metadati  
  Per ulteriori informazioni sul database di statistiche lingua semantica installato per supportare l'indicizzazione semantica, eseguire una query sulla vista del catalogo [sys. fulltext_semantic_language_statistics_database &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  
@@ -59,6 +59,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare e configurare la ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
+ [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108478"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
@@ -41,7 +41,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *cursore*  
+ *cursor*  
  Identificatore del cursore generato da SQL Server. *Cursor* è un valore dell' *handle* che deve essere fornito in tutte le procedure successive che coinvolgono il cursore, ad esempio sp_cursorfetch. *Cursor* è un parametro obbligatorio con un valore restituito **int** .  
   
  il *cursore* consente l'attivazione di più cursori in una singola connessione al database.  
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH e AUTO_CLOSE possono essere collegati tramite OR a FAST_FORWARD.  
   
- Se CHECK_ACCEPTED_TYPES è ON, è necessario che sia ON almeno uno ** degli ultimi cinque valori`,` scrollopt (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE o FAST_FORWARD_ACCEPTABLE).  
+ Se CHECK_ACCEPTED_TYPES è ON, è necessario che sia ON almeno uno *scrollopt* degli ultimi cinque valori`,` scrollopt (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE o FAST_FORWARD_ACCEPTABLE).  
   
  I cursori STATIC sono sempre aperti come READ_ONLY. Ciò significa che non è possibile aggiornare la tabella sottostante tramite questo cursore.  
   

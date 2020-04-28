@@ -21,10 +21,10 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140645"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68140645"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  parameter_name  
  Nome del parametro. parameter_name è di **tipo nvarchar (128)**. Se viene fornito come argomento della funzione NULL o una stringa vuota, vengono restituite coppie nome-valore per tutti i parametri Smart Admin configurati.  
   
@@ -55,7 +55,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
 |parameter_name|NVARCHAR(128)|Nome del parametro. Di seguito è riportato un elenco corrente di parametri restituiti:<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|Valore impostato corrente del parametro.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni SELECT per la funzione.  
@@ -82,6 +82,6 @@ FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server backup gestito Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

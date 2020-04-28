@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135185"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
@@ -48,8 +48,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|ID della tabella con la colonna XML.|  
 |**index_id**|**int**|ID univoco dell'indice XML selettivo.|  
 |**path_id**|**int**|ID del percorso XML promosso|  
-|**percorso**|**nvarchar(4000)**|Percorso promosso. Ad esempio, '/a/b/c/d/e'.|  
-|**nome**|**sysname**|Nome del percorso.|  
+|**path**|**nvarchar(4000)**|Percorso promosso. Ad esempio, '/a/b/c/d/e'.|  
+|**name**|**sysname**|Nome del percorso.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|Basato sul valore **path_type** ' XQuery ' o ' SQL '.|  
 |**xml_component_id**|**int**|ID univoco del componente di XML Schema nel database.|  
@@ -62,15 +62,15 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**user_type_id**|**tinyint**|ID del tipo di utente della colonna.|  
 |**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = La colonna è di tipo varchar(max), nvarchar(max), varbinary(max) o xml.|  
 |**precisione**|**tinyint**|Precisione massima del tipo se numerico. In caso contrario, 0|  
-|**scala**|**tinyint**|Scala massima del tipo se numerico. Altrimenti, è impostato su 0.|  
+|**scale**|**tinyint**|Scala massima del tipo se numerico. Altrimenti, è impostato su 0.|  
 |**collation_name**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = hint SINGLETON non presente.<br /><br /> 1 = hint di ottimizzazione SINGLETON applicato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML Schema &#40;viste del catalogo&#41; di sistema di tipo XML &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

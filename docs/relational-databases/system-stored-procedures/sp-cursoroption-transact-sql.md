@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108453"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -39,10 +39,10 @@ sp_cursoroption cursor, code, value
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *cursore*  
+ *cursor*  
  Valore dell' *handle* generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito dal sp_cursoropen stored procedure. il *cursore* richiede un valore di input **int** per l'esecuzione.  
   
- *codice*  
+ *code*  
  Consente di specificare i vari fattori dei valori restituiti del cursore. il *codice* richiede uno dei valori di input **int** seguenti:  
   
 |valore|Nome|Descrizione|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|Opzioni del controllo della concorrenza. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
 |0x0006|ROWCOUNT|Numero di righe correntemente nel set di risultati.<br /><br /> Nota: è possibile che il conteggio delle righe sia stato modificato rispetto al valore restituito da sp_cursoropen se viene utilizzato il popolamento asincrono. Se il numero di righe è sconosciuto, viene restituito il valore-1.|  
   
- *valore*  
+ *value*  
  Definisce il valore restituito dal *codice*. il *valore* è un parametro obbligatorio che richiede un valore di input di *codice* 0x0001, 0x0002 o 0x0003.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_cursoroption cursor, code, value
 |0x0004 o 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

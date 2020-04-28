@@ -16,10 +16,10 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137765"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
@@ -56,7 +56,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar (255)**|Origine del conflitto.|  
+|**origin_datasource**|**varchar(255)**|Origine del conflitto.|  
 |**conflict_type**|**int**|Codice che indica il tipo di conflitto:<br /><br /> **1** = conflitto di aggiornamento: il conflitto viene rilevato a livello di riga.<br /><br /> **2** = conflitto di aggiornamento della colonna: conflitto rilevato a livello di colonna.<br /><br /> **3** = conflitto di aggiornamento di eliminazione WINS: il conflitto viene eliminato.<br /><br /> **4** = conflitto di eliminazione di aggiornamento WINS: il ROWGUID eliminato che perde il conflitto viene registrato in questa tabella.<br /><br /> **5** = inserimento di caricamento non riuscito: Impossibile applicare l'inserimento dal Sottoscrittore al server di pubblicazione.<br /><br /> **6** = inserimento di download non riuscito: Impossibile applicare l'inserimento dal server di pubblicazione nel Sottoscrittore.<br /><br /> **7** = eliminazione del caricamento non riuscita: non è stato possibile caricare l'eliminazione nel Sottoscrittore nel server di pubblicazione.<br /><br /> **8** = eliminazione del download non riuscita: non è stato possibile scaricare l'eliminazione nel server di pubblicazione nel Sottoscrittore.<br /><br /> **9** = aggiornamento di caricamento non riuscito: non è stato possibile applicare l'aggiornamento nel Sottoscrittore al server di pubblicazione.<br /><br /> **10** = aggiornamento di download non riuscito: non è stato possibile applicare l'aggiornamento nel server di pubblicazione al Sottoscrittore.<br /><br /> **12** = eliminazione WINS aggiornamento record logico: il record logico eliminato che perde il conflitto viene registrato in questa tabella.<br /><br /> **13** = conflitto di inserimento dei record logici: l'inserimento in un record logico è in conflitto con un aggiornamento.<br /><br /> **14** = conflitto di aggiornamento WINS di eliminazione di record logici: il record logico aggiornato che perde il conflitto viene registrato in questa tabella.|  
 |**reason_code**|**int**|Codice di errore che può essere sensibile al contesto.|  
 |**reason_text**|**varchar (720)**|Descrizione dell'errore che può essere sensibile al contesto.|  

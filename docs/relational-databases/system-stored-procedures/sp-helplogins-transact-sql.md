@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122446"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @LoginNamePattern = ] 'login'`Nome dell'account di accesso. *login* è di **tipo sysname**e il valore predefinito è null. Se specificato, deve esistere un *account di accesso* . Se *login* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
+`[ @LoginNamePattern = ] 'login'`Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Se specificato, deve esistere un *account di accesso* . Se *login* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -50,7 +50,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
-|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'account di accesso.|  
+|**SID**|**varbinary (85)**|ID di sicurezza (SID) dell'account di accesso.|  
 |**DefDBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di.|  
 |**DefLangName**|**sysname**|Lingua predefinita utilizzata da **LoginName**.|  
 |**Auser**|**char (5)**|Yes = **LoginName** è associato a un nome utente in un database.<br /><br /> No = **LoginName** non è associato a un nome utente.|  

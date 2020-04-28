@@ -18,10 +18,10 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124668"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
@@ -48,13 +48,13 @@ sp_enum_sqlagent_subsystems
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**sottosistema**|**nvarchar (40)**|Nome del sottosistema.|  
+|**sottosistema**|**nvarchar(40)**|Nome del sottosistema.|  
 |**Descrizione**|**nvarchar(512)**|Descrizione del sottosistema.|  
 |**subsystem_dll**|**nvarchar (510)**|Modulo DLL contenente il sottosistema.|  
 |**agent_exe**|**nvarchar (510)**|Modulo eseguibile utilizzato dal sottosistema.|  
-|**start_entry_point**|**nvarchar (30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
-|**event_entry_point**|**nvarchar (30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
-|**stop_entry_point**|**nvarchar (30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
+|**start_entry_point**|**nvarchar(30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
+|**event_entry_point**|**nvarchar(30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
+|**stop_entry_point**|**nvarchar(30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
 |**max_worker_threads**|**int**|Numero massimo di thread avviati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo sottosistema.|  
 |**subsystem_id**|**int**|Identificatore del sottosistema.|  
   
@@ -62,12 +62,12 @@ sp_enum_sqlagent_subsystems
  Questa procedura elenca i sottosistemi disponibili nell'istanza.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
  Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementare SQL Server Agent sicurezza](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_add_jobstep &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

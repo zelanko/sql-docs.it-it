@@ -16,10 +16,10 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126936"
 ---
 # <a name="localdbcreateinstance-function"></a>Funzione LocalDBCreateInstance
@@ -105,6 +105,6 @@ HRESULT LocalDBCreateInstance(
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla versione e intestazione del database locale di SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

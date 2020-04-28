@@ -20,10 +20,10 @@ ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 99e3a647c55380e1731b97c267eb754a1f3c6a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122735"
 ---
 # <a name="syshash_indexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68122735"
 |**bucket_count**|**int**|Conteggio dei bucket hash per gli indici hash.<br /><br /> Per ulteriori informazioni sul valore bucket_count, incluse le linee guida per l'impostazione del valore, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   

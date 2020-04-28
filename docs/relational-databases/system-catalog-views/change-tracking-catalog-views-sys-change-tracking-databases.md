@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68136544"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Viste del catalogo Rilevamento modifiche-sys. change_tracking_databases
@@ -38,7 +38,7 @@ ms.locfileid: "68136544"
 |database_id|**int**|ID del database. È univoco all'interno dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |is_auto_cleanup_on|**bit**|Indica se i dati di rilevamento delle modifiche vengono rimossi automaticamente una volta trascorso il periodo di memorizzazione configurato:<br /><br /> 0 = Off<br /><br /> 1 = On|  
 |retention_period|**int**|Se si utilizza la rimozione automatica, il periodo di memorizzazione specifica per quanto tempo i dati di rilevamento delle modifiche verranno conservati nel database.|  
-|retention_period_units_desc|**nvarchar (60)**|Specifica la descrizione del periodo memorizzazione:<br /><br /> Minuti<br /><br /> Ore<br /><br /> Days|  
+|retention_period_units_desc|**nvarchar(60)**|Specifica la descrizione del periodo memorizzazione:<br /><br /> Minuti<br /><br /> Ore<br /><br /> Days|  
 |retention_period_units|**tinyint**|Unità di tempo relativa al periodo di memorizzazione:<br /><br /> 1 = Minuti<br /><br /> 2 = Ore<br /><br /> 3 = Giorni|  
   
 ## <a name="permissions"></a>Autorizzazioni  

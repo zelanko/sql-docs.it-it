@@ -18,10 +18,10 @@ ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127427"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
@@ -32,15 +32,15 @@ ms.locfileid: "68127427"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione.|  
-|**xact_seqno**|**varbinary (16)**|Numero di sequenza della transazione.|  
-|**tipo**|**int**|Tipo di comando.|  
+|**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
+|**type**|**int**|Tipo di comando.|  
 |**article_id**|**int**|ID dell'articolo.|  
 |**originator_id**|**int**|ID dell'origine.|  
 |**command_id**|**int**|ID del comando.|  
 |**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary (1024)**|Valore del comando.|  
 |**hashkey**|**int**|Solo per uso interno.|  
-|**originator_lsn**|**varbinary (16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Viene utilizzato nella replica transazionale peer-to-peer.|  
+|**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Viene utilizzato nella replica transazionale peer-to-peer.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

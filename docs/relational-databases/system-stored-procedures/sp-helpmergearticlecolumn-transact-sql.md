@@ -16,10 +16,10 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126436"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identificatore della colonna.|  
 |**column_name**|**sysname**|Nome della colonna di una tabella o vista.|  
-|**Pubblicato**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna è in fase di pubblicazione.<br /><br /> **0** indica che non è pubblicato.|  
+|**published**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna è in fase di pubblicazione.<br /><br /> **0** indica che non è pubblicato.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

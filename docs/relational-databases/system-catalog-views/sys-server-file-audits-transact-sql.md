@@ -20,10 +20,10 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133126"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "68133126"
 |name|**sysname**|Nome del controllo.|  
 |audit_guid|**uniqueidentifier**|GUID del controllo.|  
 |create_date|**datetime**|Data UTC di creazione del controllo dei file.|  
-|modify_date|**DataTime**|Data UTC dell'ultima modifica del controllo dei file.|  
+|modify_date|**datetime**|Data UTC dell'ultima modifica del controllo dei file.|  
 |principal_id|**int**|ID del proprietario del controllo come registrato nel server.|  
-|type|**carattere (2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
-|type_desc|**nvarchar (60)**|Descrizione del tipo di controllo.|  
+|type|**char(2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
+|type_desc|**nvarchar(60)**|Descrizione del tipo di controllo.|  
 |on_failure|**tinyint**|In condizione di errore:<br /><br /> 0 = Continua<br /><br /> 1 = Arresta l'istanza del server<br /><br /> 2= Errore operazione|  
-|on_failure_desc|**nvarchar (60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
+|on_failure_desc|**nvarchar(60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Disabilitato<br /><br /> 1 = Attivato|  
 |queue_delay|**int**|Tempo massimo di attesa suggerito, in millisecondi, prima di scrivere su disco. Se il valore è 0, il controllo garantirà una scrittura prima che l'evento possa continuare.|  
 |predicate|**nvarchar (8000)**|Espressione del predicato applicata all'evento.|  
@@ -56,28 +56,28 @@ ms.locfileid: "68133126"
 ## <a name="permissions"></a>Autorizzazioni  
  Le entità con l'autorizzazione **ALTER ANY Server Audit** o **View any Definition** possono accedere a questa vista del catalogo. Non è inoltre necessario negare l'autorizzazione **View any Definition** per l'entità.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [CREAZIONE della specifica del controllo del SERVER &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [CREARE una specifica del controllo del DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys. fn_get_audit_file &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys. server_audits &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
  [sys. server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys. server_audit_specifications &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specifications &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specification_details &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys. dm_server_audit_status &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_audit_actions &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys. dm_audit_class_type_map &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Creazione di un controllo del server e di una specifica del controllo del server](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

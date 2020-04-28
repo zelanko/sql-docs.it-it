@@ -14,10 +14,10 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a3972d2d92274c3454f8add9fb7b92a001dda359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124053"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
@@ -69,7 +69,7 @@ sp_get_redirected_publisher
  Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

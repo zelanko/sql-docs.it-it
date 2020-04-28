@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135220"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
@@ -40,19 +40,19 @@ ms.locfileid: "68135220"
 |target_object_id|**int**|ID dell'oggetto a cui è associato il predicato di sicurezza.|  
 |predicate_definition|**nvarchar(max)**|Nome completo della funzione che verrà usata come predicato di sicurezza, inclusi gli argomenti. Si noti che il nome `schema.function` può essere normalizzato (vale a dire preceduto da un carattere di escape) come qualsiasi altro elemento nel testo per la coerenza. Ad esempio:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Tipo di predicato utilizzato dai criteri di sicurezza:<br /><br /> 0 = PREDICATO DEL FILTRO<br /><br /> 1 = PREDICATO DI BLOCCO|  
-|predicate_type_desc|**nvarchar (60)**|Tipo di predicato utilizzato dai criteri di sicurezza:<br /><br /> FILTER<br /><br /> BLOCCA|  
-|operation|**int**|Tipo di operazione specificata per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = DOPO L'INSERIMENTO<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  
-|operation_desc|**nvarchar (60)**|Tipo di operazione specificata per il predicato:<br /><br /> NULL<br /><br /> DOPO L'INSERIMENTO<br /><br /> AFTER UPDATE<br /><br /> PRIMA DELL'AGGIORNAMENTO<br /><br /> PRIMA DELL'ELIMINAZIONE|  
+|predicate_type_desc|**nvarchar(60)**|Tipo di predicato utilizzato dai criteri di sicurezza:<br /><br /> FILTER<br /><br /> BLOCCA|  
+|operazione|**int**|Tipo di operazione specificata per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = DOPO L'INSERIMENTO<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  
+|operation_desc|**nvarchar(60)**|Tipo di operazione specificata per il predicato:<br /><br /> NULL<br /><br /> DOPO L'INSERIMENTO<br /><br /> AFTER UPDATE<br /><br /> PRIMA DELL'AGGIORNAMENTO<br /><br /> PRIMA DELL'ELIMINAZIONE|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le entità con l'autorizzazione **ALTER ANY Security Policy** possono accedere a tutti gli oggetti in questa vista del catalogo, nonché a qualsiasi utente con la **definizione della vista** sull'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   
- [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [sys. security_policies &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
+ [CREARE criteri di sicurezza &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

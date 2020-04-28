@@ -22,10 +22,10 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106514"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
@@ -83,6 +83,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

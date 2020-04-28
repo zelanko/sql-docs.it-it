@@ -22,10 +22,10 @@ ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109473"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68109473"
 |priority|**tinyint**|Livello di priorità specificato nella priorità di conversazione. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono elencate le priorità di conversazione utilizzando join per mostrare i nomi del contratto e del servizio locale.  
@@ -66,7 +66,7 @@ ORDER BY priority_name, contract_name,
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [CREAZIONE della priorità di Service BROKER &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys. Services &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [sys. service_contracts &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  

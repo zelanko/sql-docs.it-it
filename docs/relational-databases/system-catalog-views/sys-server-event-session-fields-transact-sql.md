@@ -21,10 +21,10 @@ ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133216"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68133216"
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |object_id|**int**|ID dell'oggetto a cui è associato il campo. Non ammette i valori Null.|  
 |name|**sysname**|Nome del campo. Non ammette i valori Null.|  
-|Valore|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
+|value|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
@@ -47,14 +47,14 @@ ms.locfileid: "68133216"
   
 ||||  
 |-|-|-|  
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |sys.server_event_session_actions.event_session_id|sys. server_event_sessions. event_session_id|Molti-a-uno|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Molti-a-uno|  
 |sys.server_event_session_actions.event_session_id<br /><br /> sys.server_event_session_actions.object_id|sys.server_event_session_targets.event_session_id<br /><br /> sys.server_event_session_targets.target_id|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste del catalogo degli eventi estesi &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo degli eventi estesi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

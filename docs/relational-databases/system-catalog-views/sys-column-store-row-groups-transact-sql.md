@@ -20,10 +20,10 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140006"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68140006"
 |**row_group_id**|**int**|Numero del gruppo di righe associato a questo gruppo di righe. Univoco all'interno della partizione.<br /><br /> -1 = parte finale di una tabella in memoria.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id per il gruppo di righe aperto nell'archivio Delta.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio Delta.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
 |**state**|**tinyint**|Numero ID associato a state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = RIMOZIONE DEFINITIVA|  
-|**state_description**|**nvarchar (60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> INVISIBILE: un segmento compresso nascosto nel processo di compilazione da dati in un archivio Delta. Nelle azioni di lettura verrà utilizzato l'archivio delta fino al completamento del segmento compresso invisibile. Successivamente, il nuovo segmento diventa visibile e l'archivio delta di origine viene rimosso.<br /><br /> APRIRE: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: gruppo di righe compilato ma non ancora compresso dal processo del motore di Tuple.<br /><br /> COMPRESSO: gruppo di righe che è stato riempito e compresso.|  
+|**state_description**|**nvarchar(60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> INVISIBILE: un segmento compresso nascosto nel processo di compilazione da dati in un archivio Delta. Nelle azioni di lettura verrà utilizzato l'archivio delta fino al completamento del segmento compresso invisibile. Successivamente, il nuovo segmento diventa visibile e l'archivio delta di origine viene rimosso.<br /><br /> APRIRE: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: gruppo di righe compilato ma non ancora compresso dal processo del motore di Tuple.<br /><br /> COMPRESSO: gruppo di righe che è stato riempito e compresso.|  
 |**total_rows**|**bigint**|Righe totali archiviate fisicamente nel gruppo di righe. È possibile che alcune siano state eliminate, ma risultano comunque archiviate. Il numero massimo di righe in un gruppo di righe è 1.048.576 (esadecimale FFFFF).|  
 |**deleted_rows**|**bigint**|Righe totali nel gruppo di righe contrassegnate come eliminate. Sempre 0 per i gruppi di righe DELTA.|  
 |**size_in_bytes**|**bigint**|Dimensioni in byte di tutti i dati nel gruppo di righe, esclusi i metadati o i dizionari condivisi, per i gruppi di righe DELTA e COLUMNSTORE.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68140006"
 ## <a name="permissions"></a>Autorizzazioni  
  Restituisce informazioni per una tabella se l'utente dispone dell'autorizzazione **View definition** per la tabella.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene unito la tabella **sys. column_store_row_groups** ad altre tabelle di sistema per restituire informazioni su tabelle specifiche. La colonna `PercentFull` calcolata è una stima dell'efficienza del gruppo di righe. Per trovare informazioni su una singola tabella, rimuovere i trattini dei commenti davanti alla clausola **where** e specificare un nome di tabella.  
@@ -78,14 +78,14 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)     
  [sys. column_store_dictionaries &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
- [sys. column_store_segments &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
+ [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   
 

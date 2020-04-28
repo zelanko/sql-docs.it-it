@@ -20,10 +20,10 @@ ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126683"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
@@ -34,14 +34,13 @@ ms.locfileid: "68126683"
  Per un elenco completo degli eventi di traccia supportati, vedere [SQL Server riferimento alla classe di evento](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare le viste del catalogo di Eventi estesi.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare le viste del catalogo di Eventi estesi.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID della traccia.|  
-|**stato**|**int**|Stato della traccia:<br /><br /> 0 = arrestato<br /><br /> 1 = in esecuzione|  
-|**percorso**|**nvarchar(260)**|Percorso del file di traccia. Il valore è Null quando la traccia è una traccia di un set di righe.|  
+|**id**|**int**|ID della traccia.|  
+|**Stato**|**int**|Stato della traccia:<br /><br /> 0 = arrestato<br /><br /> 1 = in esecuzione|  
+|**path**|**nvarchar(260)**|Percorso del file di traccia. Il valore è Null quando la traccia è una traccia di un set di righe.|  
 |**max_size**|**bigint**|Dimensioni massime in megabyte (MB) per il file di traccia. Il valore è Null quando la traccia è una traccia di un set di righe.|  
 |**stop_time**|**datetime**|Ora di arresto dell'esecuzione della traccia.|  
 |**max_files**|**int**|Numero massimo di file di rollover. Il valore è Null se il numero massimo non è impostato.|  
@@ -59,7 +58,7 @@ ms.locfileid: "68126683"
 |**dropped_event_count**|**int**|Numero totale di eventi eliminati.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

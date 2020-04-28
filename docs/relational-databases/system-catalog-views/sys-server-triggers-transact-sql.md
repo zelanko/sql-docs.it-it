@@ -20,10 +20,10 @@ ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133010"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
@@ -36,17 +36,17 @@ ms.locfileid: "68133010"
 |**nome**|**sysname**|Nome del trigger.|  
 |**object_id**|**int**|ID dell'oggetto.|  
 |**parent_class**|**tinyint**|Classe padre. È sempre:<br /><br /> 100 = Server|  
-|**parent_class_desc**|**nvarchar (60)**|Descrizione della classe padre. È sempre:<br /><br /> SERVER.|  
+|**parent_class_desc**|**nvarchar(60)**|Descrizione della classe padre. È sempre:<br /><br /> SERVER.|  
 |**parent_id**|**int**|Sempre 0 per i trigger nel SERVER.|  
-|**tipo**|**carattere (2)**|Tipo di oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
-|**type_desc**|**nvarchar (60)**|Descrizione della classe del tipo di oggetto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**type**|**char(2)**|Tipo di oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
+|**type_desc**|**nvarchar(60)**|Descrizione della classe del tipo di oggetto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Data di creazione del trigger.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica del trigger tramite un'istruzione ALTER.|  
 |**is_ms_shipped**|**bit**|Trigger creato per conto dell'utente da parte di un componente interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**is_disabled**|**bit**|1 = il trigger è disabilitato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

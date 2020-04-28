@@ -18,10 +18,10 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108584"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)

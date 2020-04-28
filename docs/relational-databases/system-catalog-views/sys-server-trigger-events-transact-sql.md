@@ -20,10 +20,10 @@ ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c226b3c5daef98c9a34c7ac25934a94abc8baabc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132998"
 ---
 # <a name="sysserver_trigger_events-transact-sql"></a>sys.server_trigger_events (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68132998"
 |**is_last**|**bit**|Contrassegna il trigger come l'ultimo da attivare per questo evento.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

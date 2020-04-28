@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107928"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -51,10 +51,10 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Ad esempio, {00026BA1-0000-0000-C000-000000000046} è il CLSID dell'oggetto SQL-DMO **SqlServer** .  
   
- __ **output** objecttoken  
+ _objecttoken_ **output** objecttoken  
  Token dell'oggetto restituito e deve essere una variabile locale di tipo di dati **int**. Questo token dell'oggetto identifica l'oggetto OLE creato e viene utilizzato nelle chiamate alle altre stored procedure di automazione OLE.  
   
- *contesto*  
+ *context*  
  Specifica il contesto di esecuzione in cui viene eseguito il nuovo oggetto OLE. I possibili valori sono i seguenti:  
   
  **1** = solo server OLE in-process (. dll).  

@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108568"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -44,7 +44,7 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *cursore*  
+ *cursor*  
  Handle del cursore. *Cursor* è un parametro obbligatorio che richiede un valore di input **int** . *Cursor* è il valore dell' *handle* generato da SQL Server e restituito dalla routine sp_cursoropen.  
   
  *optype*  
@@ -53,7 +53,7 @@ sp_cursor  cursor, optype, rownum, table
 |valore|Nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Consente di aggiornare una o più righe nel buffer di recupero.  Le righe specificate in *rownum* vengono nuovamente accessibili e aggiornate.|  
-|0x0002|Elimina|Consente di eliminare una o più righe nel buffer di recupero. Le righe specificate in *rownum* vengono nuovamente accessibili ed eliminate.|  
+|0x0002|DELETE|Consente di eliminare una o più righe nel buffer di recupero. Le righe specificate in *rownum* vengono nuovamente accessibili ed eliminate.|  
 |0X0004|INSERT|Inserisce dati senza compilare un'istruzione SQL **Insert** .|  
 |0X0008|REFRESH|Consente di inserire nuovamente dati nel buffer dalle tabelle sottostanti e può essere usato per aggiornare la riga nel caso in cui un aggiornamento o un'eliminazione non riesca a causa del controllo della concorrenza ottimistica oppure dopo un'operazione UPDATE.|  
 |0X10|LOCK|Determina l'acquisizione di un SQL Server U-Lock nella pagina contenente la riga specificata. Tale blocco è compatibile con i blocchi S ma non con i blocchi X o con altri blocchi U. Può essere usato per implementare la funzione di blocco a breve termine.|  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  È valido solo per l'utilizzo con i valori *optype* di aggiornamento, eliminazione, aggiornamento o blocco.  
   
- *tavolo*  
+ *tabella*  
  Nome della tabella che identifica la tabella a cui viene applicato *optype* quando la definizione del cursore include un join o nomi di colonna ambigui restituiti dal parametro del *valore* . Se non è definita una tabella specifica, l'impostazione predefinita è la prima tabella nella clausola FROM. *Table* è un parametro facoltativo che richiede un valore di input stringa. È possibile specificare la stringa come qualsiasi tipo di dati UNICODE o carattere. *Table* può essere un nome di tabella in più parti.  
   
- *valore*  
+ *value*  
  Usato per inserire o aggiornare valori. Il parametro della stringa di *valore* viene usato solo con i valori *optype* di aggiornamento e inserimento. È possibile specificare la stringa come qualsiasi tipo di dati UNICODE o carattere.  
   
 > [!NOTE]  

@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138331"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Impostazioni del progetto (mapping dei tipi) (MySQLToSQL)
@@ -65,7 +65,7 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |bit [49.. 56]|binario [7]|  
 |bit [57.. 64]|binario [8]|  
 |bit [9.. 16]|binario [2]|  
-|BLOB|varbinary(max)|  
+|blob|varbinary(max)|  
 |BLOB [0.. 1]|varbinary [1]|  
 |BLOB [2.. 8000]|varbinary [*]|  
 |BLOB [8001.. *]|varbinary(max)|  
@@ -140,8 +140,8 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |real|float [53]|  
 |Real [*... 255] [\*.. 30|numeric [*] [\*]|  
 |serial|bigint|  
-|smallint|smallint|  
-|smallint [*.. 255]|smallint|  
+|SMALLINT|SMALLINT|  
+|smallint [*.. 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |testo [0.. 1]|nvarchar [1]|  
 |testo [2.. 4000]|nvarchar [*]|  
@@ -149,8 +149,8 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |time|time|  
 |timestamp|Datetime|  
 |tinyblob|varbinary [255]|  
-|tinyint|smallint|  
-|tinyint [*... 255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint [*... 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
 |bigint senza segno|bigint|  
 |bigint senza segno [*.. 255]|bigint|  
@@ -182,17 +182,17 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |Real senza segno [*.. 255 [[\*.. 30|numeric [*] [\*]|  
 |smallint senza segno|INT|  
 |smallint senza segno [*.. 255]|INT|  
-|tinyint senza segno|tinyint|  
-|tinyint senza segno [*.. 255]|tinyint|  
+|tinyint senza segno|TINYINT|  
+|tinyint senza segno [*.. 255]|TINYINT|  
 |varbinary [0.. 1]|varbinary [1]|  
 |varbinary [2.. 8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
 |varchar [0.. 1]|nvarchar [1]|  
 |varchar [2.. 4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|smallint|  
-|anno [2.. 2]|smallint|  
-|anno [4.. 4]|smallint|  
+|year|SMALLINT|  
+|anno [2.. 2]|SMALLINT|  
+|anno [4.. 4]|SMALLINT|  
   
 ##### <a name="add"></a>Add  
 Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  

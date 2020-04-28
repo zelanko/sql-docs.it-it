@@ -18,10 +18,10 @@ ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121156"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "68121156"
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Viste della gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Amministrare i server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

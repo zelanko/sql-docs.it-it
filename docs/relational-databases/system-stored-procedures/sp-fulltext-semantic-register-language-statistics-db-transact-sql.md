@@ -18,10 +18,10 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124207"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
@@ -41,7 +41,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO  
 ```  
   
-##  <a name="Arguments"></a> Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  [ @dbname = ] '*database_name*'  
  Nome del database di statistiche lingua semantica da registrare per l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il database deve essere già collegato. *database_name* è di **tipo sysname**e non può essere null.  
   
@@ -49,7 +49,7 @@ GO
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
- No.  
+ Nessuno.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Il database di statistiche lingua semantica contiene statistiche correlate alla lingua necessarie per l'elaborazione semantica di contenuto testuale.  
@@ -75,7 +75,7 @@ GO
 ## <a name="metadata"></a>Metadati  
  Per informazioni sul database Semantic Language Statistics installato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire una query sulla vista del catalogo [sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni CONTROL SERVER.  
@@ -89,6 +89,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare e configurare la ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
+ [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

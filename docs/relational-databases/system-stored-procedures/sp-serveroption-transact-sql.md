@@ -19,10 +19,10 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104378"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
@@ -42,7 +42,7 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server = ] 'server'`Nome del server per il quale impostare l'opzione. il *Server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @server = ] 'server'`Nome del server per il quale impostare l'opzione. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
 `[ @optname = ] 'option_name'`Opzione da impostare per il server specificato. *option_name* è di tipo **varchar (** 35 **)** e non prevede alcun valore predefinito. *option_name* può essere uno dei valori seguenti.  
   
@@ -52,7 +52,7 @@ sp_serveroption [@server = ] 'server'
 |**nome delle regole di confronto**|Specifica il nome delle regole di confronto utilizzate dall'origine dati remota se **Usa regole di confronto remote** è **true** e l'origine dati non è un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati. È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilizzare questa opzione per accedere a un'origine dei dati OLE DB diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che utilizza regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Il server collegato deve supportare regole di confronto singole da utilizzare per tutte le colonne del server. Non impostare questa opzione quando il server collegato supporta più regole di confronto nella stessa origine dei dati oppure non è possibile stabilire se le regole di confronto del server collegato corrispondono a una delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**timeout connessione**|Valore di timeout in secondi per la connessione a un server collegato.<br /><br /> Se è **0**, usare il valore predefinito **sp_configure** .|  
 |**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite. Può essere utilizzato solo per le voci **sys. Server** aggiunte tramite **sp_addlinkedserver**.|  
-|**dist**|Database di distribuzione.|  
+|**dist**|Server di distribuzione.|  
 |**convalida differita dello schema**|Determina se lo schema delle tabelle remote viene controllato.<br /><br /> Se **true**, ignora il controllo dello schema delle tabelle remote all'inizio della query.|  
 |**pub**|Server di pubblicazione.|  
 |**timeout query**|Timeout per le query eseguite nel server collegato.<br /><br /> Se è **0**, usare il valore predefinito **sp_configure** .|  

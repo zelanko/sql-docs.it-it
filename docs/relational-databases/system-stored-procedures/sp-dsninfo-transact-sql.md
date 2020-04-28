@@ -16,10 +16,10 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124711"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -70,7 +70,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Information Type**|**nvarchar (64)**|Tipi di informazioni quali DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER|  
+|**Tipo di informazioni**|**nvarchar (64)**|Tipi di informazioni quali DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER|  
 |**Valore**|**nvarchar(512)**|Valore del tipo di informazioni associato.|  
   
 ## <a name="remarks"></a>Osservazioni  

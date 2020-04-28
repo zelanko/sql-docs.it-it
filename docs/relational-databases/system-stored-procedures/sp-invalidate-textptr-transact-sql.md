@@ -18,10 +18,10 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68113190"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
@@ -45,8 +45,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
  0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="remarks"></a>Osservazioni  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un massimo di 1.024 puntatori di testo all'interno di righe validi attivi per ogni transazione di un database. In una transazione che si estende su più database, tuttavia, possono essere inclusi 1.024 puntatori di testo all'interno di righe in ogni database. **sp_invalidate_textptr** possibile utilizzare per invalidare i puntatori di testo all'interno di righe e, pertanto, spazio libero per ulteriori puntatori di testo all'interno di righe.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un massimo di 1.024 puntatori di testo all'interno di righe validi attivi per ogni transazione di un database. In una transazione che si estende su più database, tuttavia, possono essere inclusi 1.024 puntatori di testo all'interno di righe in ogni database. **sp_invalidate_textptr** possibile utilizzare per invalidare i puntatori di testo all'interno di righe e, pertanto, spazio libero per ulteriori puntatori di testo all'interno di righe.  
   
  Per altre informazioni sull'opzione text in row, vedere [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
   
@@ -55,9 +54,9 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_tableoption &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [TEXTPTR &#40;&#41;Transact-SQL](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
- [TEXTVALID &#40;&#41;Transact-SQL](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
+ [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
   
   

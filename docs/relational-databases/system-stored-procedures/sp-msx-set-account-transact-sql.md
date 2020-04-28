@@ -18,10 +18,10 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22372412f9c3f905b8978741b556724ca880568c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108024"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
@@ -47,11 +47,10 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- No.  
+ Nessuno.  
   
 ## <a name="remarks"></a>Osservazioni  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le credenziali per archiviare le informazioni relative al nome utente e alla password utilizzate da un server di destinazione per accedere a un server master. Questa procedura imposta le credenziali utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo server di destinazione per accedere al server master.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le credenziali per archiviare le informazioni relative al nome utente e alla password utilizzate da un server di destinazione per accedere a un server master. Questa procedura imposta le credenziali utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo server di destinazione per accedere al server master.  
   
  Le credenziali specificate devono corrispondere a delle credenziali esistenti. Per ulteriori informazioni sulla creazione di una credenziale, vedere [create credential &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
@@ -71,7 +70,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREAZIONE di credenziali &#40;&#41;Transact-SQL](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

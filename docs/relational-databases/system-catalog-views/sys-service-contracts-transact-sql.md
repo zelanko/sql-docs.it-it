@@ -20,10 +20,10 @@ ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28339ce24b1398ce2645e04b8a6352f2b4f598d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132855"
 ---
 # <a name="sysservice_contracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
@@ -38,6 +38,6 @@ ms.locfileid: "68132855"
 |**principal_id**|**int**|Identificatore dell'entità di database proprietaria del contratto. Ammette valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

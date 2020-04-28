@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 063d629ff908210b2c8e042d2c131a3449295ba3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138274"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Convenzioni della sintassi MDX (MDX)
@@ -22,15 +22,14 @@ ms.locfileid: "68138274"
   
 |Convenzione|Uso|  
 |----------------|-----------|  
-|*Corsivo*|Argomenti della sintassi MDX specificati dall'utente.|  
+|*corsivo*|Argomenti della sintassi MDX specificati dall'utente.|  
 |&#124; (barra verticale)|Separazione degli elementi della sintassi racchiusi tra parentesi quadre o graffe. Indica che è possibile scegliere un solo elemento.|  
 |`[ ]` (parentesi quadre)|Elementi della sintassi facoltativi. Le parentesi quadre non devono essere digitate.|  
 |[,] ...n|L'elemento precedente può essere ripetuto il numero di volte desiderato. Gli elementi sono a volte separati da virgole.|  
-|
-  \<label> ::=|Nome di un blocco di sintassi. Questa convenzione viene utilizzata per raggruppare ed etichettare sezioni di sintassi estese oppure un'unità sintattica che è possibile utilizzare in più punti di un'istruzione. Ogni posizione in cui è possibile usare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari \<: etichetta>.|  
+|\<label> ::=|Nome di un blocco di sintassi. Questa convenzione viene utilizzata per raggruppare ed etichettare sezioni di sintassi estese oppure un'unità sintattica che è possibile utilizzare in più punti di un'istruzione. Ogni posizione in cui è possibile usare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari \<: etichetta>.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento al linguaggio MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)  
+ [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

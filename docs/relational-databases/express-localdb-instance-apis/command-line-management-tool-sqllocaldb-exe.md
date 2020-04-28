@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126952"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Strumento di gestione della riga di comando: SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126952"
 ## <a name="sqllocaldb-options"></a>Opzioni di SqlLocalDB  
  SqlLocalDB supporta le opzioni seguenti.  
   
-|Opzione|Risultato|  
+|Opzione|Funzione|  
 |------------|------------------|  
 |`-?`|Viene stampato il testo della Guida.|  
 |`create\|c "instance name" [version-number] [-s]`|Viene creata una nuova istanza del database locale con una versione e un nome specificati.<br /><br /> Se il parametro [version-number] viene omesso, il valore predefinito è la versione della build di SqlLocalDB.<br /><br /> Tramite il parametro -s viene avviata la nuova istanza del database locale dopo la relativa creazione.|  

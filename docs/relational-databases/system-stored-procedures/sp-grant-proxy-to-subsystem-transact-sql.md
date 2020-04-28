@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123816"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -49,7 +49,7 @@ sp_grant_proxy_to_subsystem
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script ActiveX<br /><br /> ** \* Importante \* \* ** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* Importante \* \* ** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**3**|Sistema operativo (**CmdExec**)|  
 |**4**|Agente snapshot repliche|  
 |**5**|Agente lettura log repliche|  
@@ -58,8 +58,8 @@ sp_grant_proxy_to_subsystem
 |**8**|Agente di lettura coda repliche|  
 |**9**|Query di Analysis Services|  
 |**10**|Comando di Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]esecuzione del pacchetto|  
-|**12**|Script PowerShell|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
+|**12**|Script di PowerShell|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema a cui concedere l'accesso. Il **subsystem_name** è di **tipo sysname**e il valore predefinito è null. È necessario specificare *subsystem_id* o *subsystem_name* , ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
@@ -69,14 +69,14 @@ sp_grant_proxy_to_subsystem
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Sistema operativo (**CmdExec**)|  
 |**Snapshot**|Agente snapshot repliche|  
-|**Lettura log**|Agente lettura log repliche|  
+|**LogReader**|Agente lettura log repliche|  
 |**Distribuzione**|agente di distribuzione di replica|  
 |**Merge**|Agente merge repliche|  
-|**Processo QueueReader**|Agente di lettura coda repliche|  
+|**QueueReader**|Agente di lettura coda repliche|  
 |**ANALYSISQUERY**|Query di Analysis Services|  
 |**ANALYSISCOMMAND**|Comando di Analysis Services|  
-|**DTS**|Esecuzione di pacchetti SSIS|  
-|**PowerShell**|Script PowerShell|  
+|**DTS**|Esecuzione pacchetti SSIS|  
+|**PowerShell**|Script di PowerShell|  
 | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Osservazioni  

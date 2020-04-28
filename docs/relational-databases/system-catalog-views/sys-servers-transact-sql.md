@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132953"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68132953"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID locale del server collegato.|  
-|**nome**|**sysname**|Quando **server_id** = 0, il valore restituito è il nome del server.<br /><br /> Quando **server_id** > 0, il valore restituito è il nome locale del server collegato.|  
-|**prodotto**|**sysname**|Nome del prodotto del server collegato. Il valore "SQL Server" indica un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|Quando **server_id** = 0, il valore restituito è il nome del server.<br /><br /> Quando **server_id** > 0, il valore restituito è il nome locale del server collegato.|  
+|**product**|**sysname**|Nome del prodotto del server collegato. Il valore "SQL Server" indica un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
-|**percorso**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
+|**location**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**provider_string**|**nvarchar(4000)**|Proprietà di connessione della stringa del provider OLE DB.<br /><br /> È NULL tranne nei casi in cui il chiamante dispone dell'autorizzazione ALTER ANY LINKED SERVER.|  
 |**Catalogo**|**sysname**|Proprietà di connessione del catalogo OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**connect_timeout**|**int**|Timeout della connessione espresso in secondi. Restituisce 0 se non si specifica alcun valore.|  
@@ -69,13 +69,13 @@ ms.locfileid: "68132953"
   
  Se il mapping predefinito degli account di accesso viene eliminato, solo gli utenti aggiunti esplicitamente come account di accesso collegato o remoto possono visualizzare i server collegati o remoti per cui dispongono di un account di accesso.  Per visualizzare tutti i server collegati e remoti dopo il mapping predefinito degli account di accesso, sono necessarie le autorizzazioni seguenti:  
   
-- `ALTER ANY LINKED SERVER`o`ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` o `ALTER ANY LOGIN ON SERVER`  
 - Appartenenza ai ruoli predefiniti del server **setupadmin** o **sysadmin**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo di server collegati &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

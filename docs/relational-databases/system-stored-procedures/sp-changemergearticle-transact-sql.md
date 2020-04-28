@@ -16,10 +16,10 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104515"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
@@ -82,7 +82,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**2**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte, ma più Sottoscrittori possono ricevere la stessa partizione.|  
 ||**3**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.<br /><br /> Nota: se si specifica un valore pari a **3** per **partition_options**, può essere presente una sola sottoscrizione per ogni partizione di dati nell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.|  
 |**pre_creation_command**|**nessuno**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
-||**eliminare**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
+||**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
 ||**goccia**|Elimina la tabella prima di ricrearla.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
 |**processing_order**||**int** che indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge.|  
@@ -131,7 +131,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|Converte i tipi di dati **geography** e **Geometry** in **varbinary (max)** in modo che le colonne di questi tipi possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica gli indici nelle colonne di tipo **geography** e **Geometry**.|  
 ||NULL|Il sistema genera automaticamente un'opzione di schema valida per l'articolo.|  
-|**stato**|**Active**|Viene eseguito lo script di elaborazione iniziale per la pubblicazione della tabella.|  
+|**Stato**|**active**|Viene eseguito lo script di elaborazione iniziale per la pubblicazione della tabella.|  
 ||**unsynced**|Lo script di elaborazione iniziale per la pubblicazione della tabella viene eseguito in occasione della successiva esecuzione dell'agente snapshot.|  
 |**stream_blob_columns**|**true**|Viene utilizzata l'ottimizzazione del flusso di dati per la replica di colonne BLOB. Tuttavia, alcune funzionalità della replica di tipo merge, come i record logici, potrebbero impedire l'utilizzo dell'ottimizzazione del flusso. *stream_blob_columns* è impostato su true quando FILESTREAM è abilitato. In questo modo, la replica dei dati FILESTREAM può essere eseguita in maniera ottimale e si riduce l'utilizzo della memoria. Per forzare gli articoli di tabella FILESTREAM in modo che non utilizzino flussi blob, impostare *stream_blob_columns* su false.<br /><br /> ** \* Importante \* \* ** L'abilitazione di questa ottimizzazione della memoria potrebbe influire negativamente sulle prestazioni del agente di merge durante la sincronizzazione. È consigliabile utilizzare questa opzione solo se vengono replicate colonne contenenti più megabyte di dati.|  
 ||**false**|Non viene utilizzata l'ottimizzazione per la replica di colonne BLOB.|  
@@ -227,7 +227,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01** e **0x2000**|  
 |**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
 |**proc schema only**|**0x01** e **0x2000**|  
-|**tavolo**|Tutte le opzioni.|  
+|**tabella**|Tutte le opzioni.|  
 |**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
   
 ## <a name="example"></a>Esempio  

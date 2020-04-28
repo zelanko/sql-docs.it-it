@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135307"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68135307"
 |schema_id|**int**|ID dello schema in cui si trova l'oggetto.|  
 |parent_object_id|**int**|ID dell'oggetto a cui appartiene il criterio. Deve essere 0.|  
 |type|**vachar (2)**|Deve essere **SP**.|  
-|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
+|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Data UTC di creazione del criterio di sicurezza.|  
 |modify_date|**datetime**|Data UTC dell'ultima modifica del criterio di sicurezza.|  
 |is_ms_shipped|**bit**|Sempre false.|  
@@ -56,9 +56,9 @@ ms.locfileid: "68135307"
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   
  [sys. security_predicates &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [CREARE criteri di sicurezza &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

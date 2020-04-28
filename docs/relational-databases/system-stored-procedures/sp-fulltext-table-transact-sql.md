@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124141"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68124141"
   Contrassegna una tabella per l'indicizzazione full-text oppure elimina tale contrassegno.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare in alternativa [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_fulltext_table
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Create**|Crea i metadati per un indice full-text per la tabella a cui fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono risiedere nella *fulltext_catalog_name*. Questa azione indica inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
+|**Crea**|Crea i metadati per un indice full-text per la tabella a cui fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono risiedere nella *fulltext_catalog_name*. Questa azione indica inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
 |**Goccia**|Elimina i metadati nell'indice full-text per *qualified_table_name*. Se l'indice full-text è attivo, viene disattivato automaticamente prima dell'eliminazione. Non è necessario rimuovere le colonne prima di eliminare l'indice full-text.|  
 |**Attivare**|Attiva la possibilità di raccogliere i dati dell'indice full-text per *qualified_table_name*, dopo che sono stati disattivati. Per poter attivare un indice full-text, è necessario che l'indice includa almeno una colonna.<br /><br /> Un indice full-text viene attivato automaticamente per il popolamento non appena si aggiunge la prima colonna per l'indicizzazione. Se si elimina l'ultima colonna dell'indice, l'indice diventa inattivo. Se il rilevamento delle modifiche è attivato, l'attivazione di un indice non attivo comporta l'avvio di un nuovo processo di popolamento.<br /><br /> Si noti che in questo modo l'indice full-text non viene popolato, ma viene semplicemente registrata la tabella nel catalogo full-text del file system in modo che sia possibile recuperare le righe da *qualified_table_name* durante il popolamento dell'indice full-text successivo.|  
 |**Disattivare**|Disattiva l'indice full-text per *qualified_table_name* in modo che non sia più possibile raccogliere i dati dell'indice full-text per l' *qualified_table_name*. I metadati dell'indice full-text tuttavia vengono conservati e la tabella può essere riattivata.<br /><br /> Se il rilevamento delle modifiche è attivato, la disattivazione di un indice attivo comporta il blocco dello stato dell'indice, ovvero vengono arrestati i processi di popolamento in corso e la distribuzione delle modifiche nell'indice.|  
@@ -66,7 +66,7 @@ sp_fulltext_table
 |**Stop_background_updateindex**|Arresta la propagazione delle modifiche rilevate nell'indice full-text.|  
 |**start_full**|Avvia un popolamento completo dell'indice full-text per la tabella.|  
 |**start_incremental**|Avvia un popolamento incrementale dell'indice full-text per la tabella.|  
-|**Stop**|Arresta un popolamento completo o incrementale.|  
+|**Arresta**|Arresta un popolamento completo o incrementale.|  
   
 `[ @ftcat = ] 'fulltext_catalog_name'`Nome del catalogo full-text esistente valido per un'azione **create** . Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -93,9 +93,7 @@ sp_fulltext_table
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>R. Abilitazione di una tabella per l'indicizzazione full-text  
- Nell'esempio seguente vengono creati i metadati di un indice full-text per la tabella `Document` del database `AdventureWorks`. 
-  `Cat_Desc` è un catalogo full-text. 
-  `PK_Document_DocumentID` è un indice univoco a colonna singola nella tabella `Document`.  
+ Nell'esempio seguente vengono creati i metadati di un indice full-text per la tabella `Document` del database `AdventureWorks`. `Cat_Desc` è un catalogo full-text. `PK_Document_DocumentID` è un indice univoco a colonna singola nella tabella `Document`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,12 +128,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

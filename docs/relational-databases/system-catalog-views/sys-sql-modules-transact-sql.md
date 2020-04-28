@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108996"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68108996"
 |**is_recompiled**|**bit**|Procedura creata con l'opzione WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Modulo dichiarato per restituire un output NULL per ogni input NULL.|  
 |**execute_as_principal_id**|**Int**|ID dell'entità database EXECUTE AS.<br /><br /> Questo valore è NULL per impostazione predefinita e se viene utilizzato EXECUTE AS CALLER.<br /><br /> ID dell'entità specificata se EXECUTE AS SELF o EXECUTE AS \<Principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|**bit**|**Si applica a** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]da a.<br /><br /> 0 = non compilata in modo nativo<br /><br /> 1 = compilata in modo nativo<br /><br /> Il valore predefinito è 0.|  
+|**uses_native_compilation**|**bit**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = non compilata in modo nativo<br /><br /> 1 = compilata in modo nativo<br /><br /> Il valore predefinito è 0.|  
 |**is_inlineable**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versioni successive.<br/><br />Indica se il modulo è inline o meno. La Incorporabilità è basata sulle condizioni specificate [qui](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inline<br /><br /> 1 = è inline. <br /><br /> Per le funzioni definite dall'utente scalari, il valore sarà 1 se la funzione definita dall'utente è inline e 0 in caso contrario. Contiene sempre il valore 1 per funzioni con valori inline e 0 per tutti gli altri tipi di modulo.<br />|  
 |**inline_type**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versioni successive.<br /><br />Indica se l'incorporamento è attualmente attivato per il modulo. <br /><br />0 = l'incorporamento è disattivato<br /><br /> 1 = l'incorporamento è attivato.<br /><br /> Per le funzioni UDF scalari, il valore sarà 1 se l'incorporamento è attivato (in modo esplicito o implicito). Il valore sarà sempre 1 per funzioni con valori inline e 0 per altri tipi di modulo.<br />|  
 
@@ -56,7 +56,7 @@ ms.locfileid: "68108996"
  Queste informazioni sono descritte anche in [sys. dm_db_uncontained_entities &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti il nome, il tipo e la definizione di ogni modulo del database corrente.  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

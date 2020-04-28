@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117897"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
@@ -101,7 +101,7 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys. server_principals &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREAZIONE di un utente &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [sp_dropuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   

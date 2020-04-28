@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133796"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
@@ -40,10 +40,10 @@ ms.locfileid: "68133796"
 |**fulltext_catalog_id**|**int**|ID del catalogo full-text in cui si trova l'indice full-text.|  
 |**is_enabled**|**bit**|1 = L'indice full-text è abilitato.|  
 |**change_tracking_state**|**char (1)**|Stato del rilevamento delle modifiche.<br /><br /> M = Manuale<br /><br /> A = Automatico<br /><br /> O = Disattivato|  
-|**change_tracking_state_desc**|**nvarchar (60)**|Descrizione dello stato del rilevamento delle modifiche.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
+|**change_tracking_state_desc**|**nvarchar(60)**|Descrizione dello stato del rilevamento delle modifiche.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|Ultima ricerca per indicizzazione (popolamento) completata dall'indice full-text.|  
 |**crawl_type**|**char (1)**|Tipo dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> F = Ricerca per indicizzazione completa<br /><br /> I = Ricerca per indicizzazione incrementale basata su timestamp<br /><br /> U = Ricerca per indicizzazione di aggiornamento, in base alle notifiche<br /><br /> P = La ricerca per indicizzazione è stata sospesa|  
-|**crawl_type_desc**|**nvarchar (60)**|Descrizione dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
+|**crawl_type_desc**|**nvarchar(60)**|Descrizione dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Inizio dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> NULL = Nessuno.|  
 |**crawl_end_date**|**datetime**|Fine dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> NULL = Nessuno.|  
 |**incremental_timestamp**|**binario (8)**|Valore di timestamp utilizzato per la successiva ricerca per indicizzazione incrementale.<br /><br /> NULL = Nessuno.|  
@@ -70,10 +70,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. fulltext_index_fragments &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
- [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
+ [sys. fulltext_index_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [sys. fulltext_index_catalog_usages &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   

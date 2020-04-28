@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108608"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108608"
   
  sp_createstats è utile per applicazioni quali quelle di benchmarking quando l'ora di esecuzione delle query è critica e non è possibile attendere la generazione delle statistiche di colonna singola da parte di Query Optimizer. Nella maggior parte dei casi non è necessario usare sp_createstats; il Query Optimizer genera le statistiche di colonna singola necessarie per migliorare i piani di query quando l'opzione **AUTO_CREATE_STATISTICS** è impostata su on.  
   
- Per altre informazioni sulle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md). Per ulteriori informazioni sulla generazione di statistiche a colonna singola, vedere l'opzione **AUTO_CREATE_STATISTICS** in [Opzioni ALTER DATABASE set &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Per ulteriori informazioni sulle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md). Per ulteriori informazioni sulla generazione di statistiche a colonna singola, vedere l'opzione **AUTO_CREATE_STATISTICS** in [Opzioni ALTER DATABASE set &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -90,11 +90,11 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Statistiche](../../relational-databases/statistics/statistics.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [CREAZIONE di statistiche &#40;&#41;Transact-SQL](../../t-sql/statements/create-statistics-transact-sql.md)   
  [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [AGGIORNARE le statistiche &#40;&#41;Transact-SQL](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

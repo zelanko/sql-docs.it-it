@@ -18,10 +18,10 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108328"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
@@ -47,7 +47,7 @@ sp_databases
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|Nome del database. [!INCLUDE[ssDE](../../includes/ssde-md.md)]In questa colonna rappresenta il nome del database archiviato nella vista del catalogo **sys. databases** .|  
 |**DATABASE_SIZE**|**int**|Dimensioni del database in kilobyte.|  
-|**OSSERVAZIONI**|**varchar (254)**|In [!INCLUDE[ssDE](../../includes/ssde-md.md)] questo campo restituisce sempre NULL.|  
+|**COMMENTI**|**varchar (254)**|In [!INCLUDE[ssDE](../../includes/ssde-md.md)] questo campo restituisce sempre NULL.|  
   
 ## <a name="remarks"></a>Osservazioni  
  I nomi di database restituiti possono essere utilizzati come parametri nell'istruzione USE per modificare il contesto del database corrente.  

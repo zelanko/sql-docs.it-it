@@ -20,10 +20,10 @@ ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc2a41cb5f7bbd8e5b0b76ed7b571ffdf80a939f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132884"
 ---
 # <a name="sysservice_contract_usages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
@@ -37,6 +37,6 @@ ms.locfileid: "68132884"
 |**service_contract_id**|**int**|Identificatore del contratto utilizzato dal servizio. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

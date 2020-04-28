@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122507"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
@@ -51,15 +51,15 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Numero di identificazione della lingua.|  
-|**DateFormat**|**nchar (3)**|Formato della data.|  
+|**DateFormat**|**nchar(3)**|Formato della data.|  
 |**DATEFIRST**|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
 |**aggiornamento**|**int**|Versione dell'ultimo aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la lingua specificata.|  
-|**nome**|**sysname**|Nome della lingua.|  
+|**name**|**sysname**|Nome della lingua.|  
 |**alias**|**sysname**|Nome alternativo per la lingua.|  
-|**mesi**|**nvarchar (372)**|Nomi dei mesi.|  
-|**shortmonths**|**nvarchar (132)**|Nomi brevi dei mesi.|  
-|**giorni**|**nvarchar (217)**|Nomi dei giorni.|  
-|**LCID**|**int**|ID delle impostazioni locali di Windows relative alla lingua.|  
+|**months**|**nvarchar(372)**|Nomi dei mesi.|  
+|**shortmonths**|**nvarchar(132)**|Nomi brevi dei mesi.|  
+|**giorni**|**nvarchar(217)**|Nomi dei giorni.|  
+|**lcid**|**int**|ID delle impostazioni locali di Windows relative alla lingua.|  
 |**msglangid**|**smallint**|ID del gruppo di messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -84,7 +84,7 @@ sp_helplanguage;
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [IMPOSTAZIONE della lingua &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107983"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
@@ -72,7 +72,7 @@ sp_notify_operator
  Per poter inviare una notifica a un operatore, è necessario innanzitutto configurare Posta elettronica database e un database host della posta elettronica.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   

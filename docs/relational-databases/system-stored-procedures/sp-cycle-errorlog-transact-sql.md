@@ -18,10 +18,10 @@ ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108343"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
@@ -59,7 +59,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cycle_agent_errorlog &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137754"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -57,7 +57,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**conflict_type**|**int**|Codice che indica il tipo di conflitto:<br /><br /> **1** = UpdateConflict: il conflitto viene rilevato a livello di riga.<br /><br /> **2** = ColumnUpdateConflict: conflitto rilevato a livello di colonna.<br /><br /> **3** = UpdateDeleteWinsConflict: il conflitto viene vinto da Delete.<br /><br /> **4** = UpdateWinsDeleteConflict: il ROWGUID eliminato che perde il conflitto viene registrato in questa tabella.<br /><br /> **5** = UploadInsertFailed: Impossibile applicare l'inserimento dal Sottoscrittore al server di pubblicazione.<br /><br /> **6** = DownloadInsertFailed: Impossibile applicare l'inserimento dal server di pubblicazione nel Sottoscrittore.<br /><br /> **7** = UploadDeleteFailed: Impossibile caricare l'eliminazione nel Sottoscrittore nel server di pubblicazione.<br /><br /> **8** = DownloadDeleteFailed: non è stato possibile scaricare l'eliminazione nel server di pubblicazione nel Sottoscrittore.<br /><br /> **9** = UploadUpdateFailed: Impossibile applicare l'aggiornamento nel Sottoscrittore nel server di pubblicazione.<br /><br /> **10** = DownloadUpdateFailed: Impossibile applicare l'aggiornamento nel server di pubblicazione al Sottoscrittore.|  
 |**reason_code**|**Int**|Codice di errore che può essere sensibile al contesto.|  
 |**reason_text**|**varchar (720)**|Descrizione dell'errore che può essere sensibile al contesto.|  
-|**origin_datasource**|**varchar (255)**|Origine del conflitto.|  
+|**origin_datasource**|**varchar(255)**|Origine del conflitto.|  
 |**pubid**|**uniqueidentifier**|Identificatore della pubblicazione.|  
 |**MSrepl_create_time**|**datetime**|Ora in cui sono state aggiunte le informazioni sui conflitti.|  
   

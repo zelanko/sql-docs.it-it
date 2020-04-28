@@ -20,18 +20,17 @@ ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 329ba87fea8229d8ab5849fcdb728495e1bc1c5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68131544"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API delle stored procedure estese)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Invia messaggio di completamento dei risultati al client.  
   
@@ -59,7 +58,7 @@ count
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client, in questo caso l'handle che ha ricevuto la richiesta del linguaggio. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *stato*  
+ *Stato*  
  Campo a 2 byte per vari flag di *status*. È possibile impostare più flag usando gli operatori logici AND e OR con i valori dei flag di *status*. Nella tabella seguente sono elencati i possibili flag di *status*.  
   
 |Flag di stato|Descrizione|  
@@ -70,7 +69,7 @@ count
  *informazioni*  
  Campo a 2 byte riservato. Impostare questo valore su 0.  
   
- *conteggio*  
+ *count*  
  Campo a 4 byte utilizzato per indicare un conteggio per il set di risultati corrente. Se il flag SRV_DONE_COUNT è impostato nel campo *status*, *count* include un conteggio valido.  
   
 ## <a name="returns"></a>Valori di codice restituiti  

@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133894"
 ---
 # <a name="sysforeign_keys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
@@ -41,16 +41,16 @@ ms.locfileid: "68133894"
 |**is_not_for_replication**|**bit**|Il vincolo FOREIGN KEY è stato creato con l'opzione NOT FOR REPLICATION.|  
 |**is_not_trusted**|**bit**|Il vincolo FOREIGN KEY non è stato verificato dal sistema.|  
 |**delete_referential_action**|**tinyint**|Operazione referenziale dichiarata per il vincolo FOREIGN KEY in caso di eliminazione.<br /><br /> 0 = Nessuna operazione<br /><br /> 1 = Propagazione<br /><br /> 2 = Impostazione su Null<br /><br /> 3 = Impostazione del valore predefinito|  
-|**delete_referential_action_desc**|**nvarchar (60)**|Descrizione dell'operazione referenziale dichiarata per il vincolo FOREIGN KEY in caso di eliminazione:<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**delete_referential_action_desc**|**nvarchar(60)**|Descrizione dell'operazione referenziale dichiarata per il vincolo FOREIGN KEY in caso di eliminazione:<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**update_referential_action**|**tinyint**|Operazione referenziale dichiarata per il vincolo FOREIGN KEY in caso di aggiornamento.<br /><br /> 0 = Nessuna operazione<br /><br /> 1 = Propagazione<br /><br /> 2 = Impostazione su Null<br /><br /> 3 = Impostazione del valore predefinito|  
-|**update_referential_action_desc**|**nvarchar (60)**|Descrizione dell'operazione referenziale dichiarata per il vincolo FOREIGN KEY in caso di aggiornamento:<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**update_referential_action_desc**|**nvarchar(60)**|Descrizione dell'operazione referenziale dichiarata per il vincolo FOREIGN KEY in caso di aggiornamento:<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**is_system_named**|**bit**|1 = Nome generato dal sistema.<br /><br /> 0 = Nome specificato dall'utente.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

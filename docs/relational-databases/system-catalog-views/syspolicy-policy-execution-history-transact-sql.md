@@ -18,10 +18,10 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121108"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68121108"
 |policy_id|**int**|Identificatore dei criteri.|  
 |start_date|**datetime**|Data e ora in cui è stato effettuato un tentativo di esecuzione di questi criteri.|  
 |end_date|**datetime**|Ora in cui è terminata l'esecuzione di questi criteri.|  
-|risultato|**bit**|Esito positivo o negativo dei criteri. 0 = esito negativo, 1 = esito positivo.|  
+|result|**bit**|Esito positivo o negativo dei criteri. 0 = esito negativo, 1 = esito positivo.|  
 |exception_message|**nvarchar(max)**|Messaggio generato da un'eventuale eccezione.|  
 |exception|**nvarchar(max)**|Descrizione dell'eventuale eccezione.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68121108"
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Viste della gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Amministrare i server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

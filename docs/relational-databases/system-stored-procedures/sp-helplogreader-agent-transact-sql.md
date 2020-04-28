@@ -16,10 +16,10 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122442"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
@@ -43,8 +43,8 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID dell'agente.|  
-|**nome**|**nvarchar (100)**|Nome dell'agente.|  
+|**id**|**int**|ID dell'agente.|  
+|**name**|**nvarchar (100)**|Nome dell'agente.|  
 |**publisher_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente durante la connessione al server di pubblicazione. Le possibili modalità sono le seguenti:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows.|  
 |**publisher_login**|**sysname**|Account di accesso utilizzato per la connessione al server di pubblicazione.|  
 |**publisher_password**|**nvarchar (524)**|** \* \* \* \* \* \* \* \* \* ** Per motivi di sicurezza, viene sempre restituito un valore.|  

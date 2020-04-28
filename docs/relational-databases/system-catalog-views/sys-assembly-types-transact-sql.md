@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68118113"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
@@ -38,14 +38,14 @@ ms.locfileid: "68118113"
 |**assembly_class**|**sysname**|Nome della classe all'interno dell'assembly che definisce questo tipo.|  
 |**is_binary_ordered**|**bit**|L'ordinamento dei byte di questo tipo equivale all'ordinamento tramite gli operatori di confronto sul tipo.|  
 |**is_fixed_length**|**bit**|La lunghezza del tipo corrisponde sempre a max_length.|  
-|**prog_id**|**nvarchar (40)**|ProgID del tipo esposto a COM.|  
+|**prog_id**|**nvarchar(40)**|ProgID del tipo esposto a COM.|  
 |**assembly_qualified_name**|**nvarchar(4000)**|Nome di tipo completo dell'assembly. Il nome è in un formato appropriato per essere passato a Type.GetType().|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo di tipi scalari &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
   
   

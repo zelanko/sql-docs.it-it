@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107883"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -44,10 +44,10 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  Token dell'oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
   
- *propertyName*  
+ *propertyname*  
  Nome di proprietà dell'oggetto OLE da restituire.  
   
- ** **output** di PropertyValue  
+ *propertyvalue* **output** di PropertyValue  
  Valore di proprietà restituito. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
  Se la proprietà restituisce un oggetto OLE, *PropertyValue* deve essere una variabile locale di tipo di dati **int**. Un token di oggetto viene archiviato nella variabile locale e questo token dell'oggetto può essere utilizzato con altre stored procedure di automazione OLE.  
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Se *PropertyValue* viene specificato, ma la proprietà non restituisce un valore, si verifica un errore. Viene inoltre generato un errore se la proprietà restituisce una matrice a più di due dimensioni.  
   
- *index*  
+ *Indice*  
  Parametro di indice. Se specificato, *index* deve essere un valore del tipo di dati appropriato.  
   
  Ad alcune proprietà sono associati parametri. Tali proprietà sono denominate proprietà indicizzate e i parametri corrispondenti sono denominati parametri di indice. A una proprietà possono essere associati più parametri di indice.  

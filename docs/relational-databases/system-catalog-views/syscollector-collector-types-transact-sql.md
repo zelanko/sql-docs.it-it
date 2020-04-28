@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124916"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "68124916"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|GUID per un tipo di raccolta. Non ammette i valori Null.|  
-|**nome**|**sysname**|Nome del tipo di raccolta. Non ammette i valori Null.|  
-|**parameter_schema**|**XML**|XML Schema che descrive la configurazione del tipo di agente di raccolta specificato. Questo XML Schema è utilizzato per convalidare la configurazione XML effettiva associata a una particolare istanza dell'elemento della raccolta. Ammette i valori Null.|  
-|**parameter_formatter**|**XML**|Determina il modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. Ammette i valori Null.|  
+|**name**|**sysname**|Nome del tipo di raccolta. Non ammette i valori Null.|  
+|**parameter_schema**|**xml**|XML Schema che descrive la configurazione del tipo di agente di raccolta specificato. Questo XML Schema è utilizzato per convalidare la configurazione XML effettiva associata a una particolare istanza dell'elemento della raccolta. Ammette i valori Null.|  
+|**parameter_formatter**|**xml**|Determina il modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. Ammette i valori Null.|  
 |**collection_package_id**|**uniqueidentifer**|GUID per un pacchetto di raccolta. Non ammette i valori Null.|  
 |**collection_package_path**|**nvarchar(4000)**|Fornisce il percorso al pacchetto di raccolta. Ammette i valori Null.|  
 |**collection_package_name**|**sysname**|Nome del pacchetto di raccolta. Non ammette i valori Null.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68124916"
 |Correzione del tipo di dati per la colonna **upload_package_path** e aggiornamento della descrizione per indicare che ammette valori null.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Viste dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   

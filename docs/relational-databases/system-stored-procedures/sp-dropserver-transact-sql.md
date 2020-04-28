@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124829"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124829"
 
   Rimuove un server dall'elenco dei server remoti e collegati noti nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>Argomenti  
  *Server*  
- Server da rimuovere. il *Server* è di **tipo sysname**e non prevede alcun valore predefinito. il *Server* deve esistere.  
+ Server da rimuovere. *server* è di tipo **sysname**e non prevede alcun valore predefinito. il *Server* deve esistere.  
   
  *droplogins*  
  Indica che è necessario rimuovere anche gli account di accesso al server collegato e remoto correlati per il *Server* se è specificato **droplogins** . **`@droplogins`** è di **carattere (10)** e il valore predefinito è null.  

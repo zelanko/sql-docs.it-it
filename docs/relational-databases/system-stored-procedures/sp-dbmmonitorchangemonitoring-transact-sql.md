@@ -19,10 +19,10 @@ ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108109"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
@@ -48,7 +48,7 @@ sp_dbmmonitorchangemonitoring parameter
   
  Numero di minuti tra gli aggiornamenti della tabella di stato di mirroring del database. L'intervallo predefinito è 1 minuto.  
   
- *valore*  
+ *value*  
  Specifica il nuovo valore per il parametro da modificare.  
   
 |Parametro|Descrizione del valore|  

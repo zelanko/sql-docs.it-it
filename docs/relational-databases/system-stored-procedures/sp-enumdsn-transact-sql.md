@@ -16,10 +16,10 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124585"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
@@ -44,9 +44,9 @@ sp_enumdsn
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Nome origine dati**|**sysname**|Nome dell'origine dei dati.|  
-|**Descrizione**|**varchar (255)**|Descrizione dell'origine dei dati.|  
-|**Tipo**|**int**|Tipo di origine dei dati:<br /><br /> **1** = DSN ODBC<br /><br /> **3** = origine dati OLE DB|  
-|**Nome provider**|**varchar (255)**|Nome del provider OLE DB. Il valore è NULL per DSN ODBC.|  
+|**Descrizione**|**varchar(255)**|Descrizione dell'origine dei dati.|  
+|**Type**|**int**|Tipo di origine dei dati:<br /><br /> **1** = DSN ODBC<br /><br /> **3** = origine dati OLE DB|  
+|**Nome provider**|**varchar(255)**|Nome del provider OLE DB. Il valore è NULL per DSN ODBC.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Ogni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio dispone di un contesto utente. ovvero un set di voci del Registro di sistema che include le definizioni delle origini dei dati ODBC disponibili per l'utente. Il contesto utente dipende dal nome utente utilizzato per l'esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

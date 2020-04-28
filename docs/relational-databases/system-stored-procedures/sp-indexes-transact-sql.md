@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139924"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -81,12 +81,10 @@ sp_indexes [ @table_server = ] 'table_server'
 |TYPE|**smallint**|Tipo di indice:<br /><br /> 0 = Statistiche di una tabella<br /><br /> 1 = Cluster<br /><br /> 2 = Hash<br /><br /> 3 = altro|  
 |ORDINAL_POSITION|**int**|Posizione ordinale della colonna nell'indice. La prima colonna nell'indice è 1. In questa colonna viene sempre restituito un valore.|  
 |COLUMN_NAME|**sysname**|Nome corrispondente alle colonne di TABLE_NAME restituite.|  
-|ASC_OR_DESC|**varchar**|Ordine adottato nelle regole di confronto:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre A.|  
+|ASC_OR_DESC|**varchar**|Ordine adottato nelle regole di confronto:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre A.|  
 |CARDINALITY|**int**|Numero di righe della tabella o valori univoci dell'indice.|  
 |PAGES|**int**|Numero di pagine necessarie per l'archiviazione dell'indice o della tabella.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  

@@ -19,10 +19,10 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130545"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68130545"
  Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ripristino di pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
+ [Ripristina pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Classe di evento database sospetto data page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107908"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
@@ -46,16 +46,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate** o è null. Se viene specificato *objecttoken* , vengono restituite le informazioni sull'errore relative a tale oggetto. Se viene specificato NULL, vengono restituite le informazioni sull'errore relative all'intero batch.  
   
- __ **output** origine  
+ _source_ **output** origine  
  Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- __ **output** Descrizione  
+ _description_ **output** Descrizione  
  Descrizione dell'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- __ **output** di fileguida  
+ _helpfile_ **output** di fileguida  
  File della Guida relativo all'oggetto OLE. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- __ **output** HelpID  
+ _helpid_ **output** HelpID  
  ID di contesto del file della Guida. Se specificato, deve essere una variabile **int** locale.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |------------------|---------------|-----------------|  
 |**Error (Errore) (Error (Errore)e)**|**binario (4)**|Rappresentazione binaria del numero di errore.|  
-|**Origine**|**nvarchar (nn)**|Origine dell'errore.|  
+|**origine**|**nvarchar (nn)**|Origine dell'errore.|  
 |**Descrizione**|**nvarchar (nn)**|Descrizione dell'errore.|  
 |**HelpFile**|**nvarchar (nn)**|File della Guida relativo all'origine.|  
 |**HelpID**|**int**|ID di contesto della Guida nel file di origine della Guida.|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125805"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
@@ -40,6 +40,6 @@ Wtd( [ Member_Expression ] )
  [QTD &#40;&#41;MDX](../mdx/qtd-mdx.md)   
  [MTD &#40;&#41;MDX](../mdx/mtd-mdx.md)   
  [YTD &#40;&#41;MDX](../mdx/ytd-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

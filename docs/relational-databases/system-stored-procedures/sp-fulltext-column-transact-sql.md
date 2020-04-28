@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124344"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -58,7 +58,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**aggiungere**|Aggiunge *column_name* di *qualified_table_name* all'indice full-text inattivo della tabella. Questa azione abilita la colonna per l'indicizzazione full-text.|  
+|**add**|Aggiunge *column_name* di *qualified_table_name* all'indice full-text inattivo della tabella. Questa azione abilita la colonna per l'indicizzazione full-text.|  
 |**goccia**|Rimuove *column_name* di *qualified_table_name* dall'indice full-text inattivo della tabella.|  
   
 `[ @language = ] 'language_term'`Lingua dei dati archiviati nella colonna. Per un elenco delle lingue incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys. Fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -118,7 +118,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_columns_cursor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

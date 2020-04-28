@@ -19,10 +19,10 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121006"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
@@ -48,7 +48,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|Numero di identificazione dell'algoritmo.|  
-|algorithm_tag|**nvarchar (60)**|Tag di identificazione dell'algoritmo.|  
+|algorithm_tag|**nvarchar(60)**|Tag di identificazione dell'algoritmo.|  
 |key_type|**nvarchar(128)**|Mostra il tipo di chiave. Restituisce un valore ASYMMETRIC KEY o SYMMETRIC KEY.|  
 |key_length|**int**|Indica la lunghezza della chiave in bit.|  
   

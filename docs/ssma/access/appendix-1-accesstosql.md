@@ -10,10 +10,10 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca084ec1849ab22940bb1617476637c105e90609
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68115025"
 ---
 # <a name="appendix---1-accesstosql"></a>Appendice-1 (AccessToSQL)

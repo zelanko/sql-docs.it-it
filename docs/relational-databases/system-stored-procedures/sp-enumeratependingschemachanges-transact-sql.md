@@ -16,10 +16,10 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124583"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
@@ -49,8 +49,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 |**article_name**|**sysname**|Nome dell'articolo a cui si applica la modifica dello schema oppure a **livello di pubblicazione** per le modifiche dello schema valide per l'intera pubblicazione.|  
 |**SchemaVersion**|**int**|Numero della modifica dello schema in sospeso.|  
 |**schematype**|**sysname**|Valore di testo che rappresenta il tipo di modifica dello schema.|  
-|**schematext**|**nvarchar(max)**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] che descrive la modifica dello schema.|  
+|**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] che descrive la modifica dello schema.|  
 |**schemastatus**|**nvarchar (10)**|Specifica se è in sospeso una modifica dello schema per l'articolo. I possibili valori sono i seguenti:<br /><br /> **attivo** = modifica dello schema in sospeso<br /><br /> **inactive** = modifica dello schema inattiva<br /><br /> **Skip** = la modifica dello schema non viene replicata|  
 |**schemaguid**|**uniqueidentifier**|Identifica la modifica dello schema.|  
   
@@ -66,7 +65,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_enumeratependingschemachanges**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sysmergeschemachange &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

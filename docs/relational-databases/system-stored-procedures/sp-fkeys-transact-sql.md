@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124397"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
@@ -84,10 +84,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |KEY_SEQ|**smallint**|Numero sequenziale della colonna in una chiave primaria a più colonne. Questo campo restituisce sempre un valore.|  
 |UPDATE_RULE|**smallint**|Azione applicata alla chiave esterna quando l'operazione SQL è un aggiornamento.  Valori possibili:<br /> 0 = modifiche di tipo CASCADE alla chiave esterna.<br /> 1 = modifiche di tipo NO ACTION se la chiave esterna è presente.<br />   2 = impostazione null <br /> 3 = impostazione predefinita |  
 |DELETE_RULE|**smallint**|Azione applicata alla chiave esterna quando l'operazione SQL è un'operazione di eliminazione. Valori possibili:<br /> 0 = modifiche di tipo CASCADE alla chiave esterna.<br /> 1 = modifiche di tipo NO ACTION se la chiave esterna è presente.<br />   2 = impostazione null <br /> 3 = impostazione predefinita |  
-|FK_NAME|**sysname**|Identificatore della chiave esterna. NULL se non è applicabile all'origine dati. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce il nome del vincolo FOREIGN KEY.|  
-|PK_NAME|**sysname**|Identificatore della chiave primaria. NULL se non è applicabile all'origine dati. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce il nome del vincolo PRIMARY KEY.|  
+|FK_NAME|**sysname**|Identificatore della chiave esterna. NULL se non è applicabile all'origine dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce il nome del vincolo FOREIGN KEY.|  
+|PK_NAME|**sysname**|Identificatore della chiave primaria. NULL se non è applicabile all'origine dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce il nome del vincolo PRIMARY KEY.|  
   
  I risultati restituiti vengono ordinati in base a FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME, and KEY_SEQ.  
   
@@ -115,7 +113,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente viene recuperato un elenco delle chiavi esterne per la tabella `DimDate` nel database `AdventureWorksPDW2012`. Non viene restituita alcuna [!INCLUDE[ssDW](../../includes/ssdw-md.md)] riga perché non supporta le chiavi esterne.  
   
 ```sql  
@@ -124,7 +122,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

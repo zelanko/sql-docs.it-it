@@ -23,10 +23,10 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108217"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
@@ -51,8 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Nome del database per il quale deve essere modificato il formato di archiviazione. *database_name* è di **tipo sysname**e non prevede alcun valore predefinito. Se il nome del database viene omesso, viene restituito lo stato del formato di archiviazione vardecimal di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [ @vardecimal_storage_format= ] {' SU ' |' OFF '}  
- Specifica se il formato di archiviazione vardecimal è abilitato. 
-  @vardecimal_storage_format può essere ON oppure OFF. Il parametro è di tipo **varchar (3)** e non prevede alcun valore predefinito. Se viene specificato il nome di un database ma viene omesso @vardecimal_storage_format, viene restituita l'impostazione corrente del database specificato. Questo argomento non ha effetto in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive.  
+ Specifica se il formato di archiviazione vardecimal è abilitato. @vardecimal_storage_format può essere ON oppure OFF. Il parametro è di tipo **varchar (3)** e non prevede alcun valore predefinito. Se viene specificato il nome di un database ma viene omesso @vardecimal_storage_format, viene restituita l'impostazione corrente del database specificato. Questo argomento non ha effetto in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

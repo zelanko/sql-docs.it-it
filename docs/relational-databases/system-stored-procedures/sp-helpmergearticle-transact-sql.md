@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122339"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
@@ -46,21 +46,21 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|Identificatore dell'articolo.|  
-|**nome**|**sysname**|Nome dell'articolo.|  
+|**id**|**int**|Identificatore dell'articolo.|  
+|**name**|**sysname**|Nome dell'articolo.|  
 |**source_owner**|**sysname**|Nome del proprietario dell'oggetto di origine.|  
 |**source_object**|**sysname**|Nome dell'oggetto di origine da cui aggiungere l'articolo.|  
 |**sync_object_owner**|**sysname**|Nome del proprietario della vista che definisce l'articolo pubblicato.|  
 |**sync_object**|**sysname**|Nome dell'oggetto personalizzato utilizzato per stabilire i dati iniziali per la partizione.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione dell'articolo.|  
-|**stato**|**tinyint**|Stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = inattivo<br /><br /> **2** = attivo<br /><br /> **5** = operazione di Data Definition Language (DDL) in sospeso<br /><br /> **6** = operazione DDL con uno snapshot appena generato<br /><br /> Nota: quando un articolo viene reinizializzato, i valori **5** e **6** vengono modificati in **2**.|  
+|**Stato**|**tinyint**|Stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = inattivo<br /><br /> **2** = attivo<br /><br /> **5** = operazione di Data Definition Language (DDL) in sospeso<br /><br /> **6** = operazione DDL con uno snapshot appena generato<br /><br /> Nota: quando un articolo viene reinizializzato, i valori **5** e **6** vengono modificati in **2**.|  
 |**creation_script**|**nvarchar(255)**|Percorso e nome di uno script di schema dell'articolo facoltativo utilizzato per la creazione dell'articolo nel database di sottoscrizione.|  
 |**conflict_table**|**nvarchar (270)**|Nome della tabella in cui sono archiviati i conflitti di inserimento o aggiornamento.|  
 |**article_resolver**|**nvarchar(255)**|Sistema di risoluzione personalizzato per l'articolo.|  
 |**subset_filterclause**|**nvarchar (1000)**|Clausola WHERE che specifica il filtro orizzontale.|  
 |**pre_creation_command**|**tinyint**|Metodo di creazione preliminare. I possibili valori sono i seguenti:<br /><br /> **0** = nessuna<br /><br /> **1** = Elimina<br /><br /> **2** = Elimina<br /><br /> **3** = troncamento|  
 |**schema_option**|**binario (8)**|Mappa di bit dell'opzione di generazione dello schema per l'articolo. Per informazioni su questa opzione bitmap, vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) o [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**tipo**|**smallint**|Tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella<br /><br /> **32** = stored procedure<br /><br /> **64** = vista o vista indicizzata<br /><br /> **128** = funzione definita dall'utente<br /><br /> **160** = solo schema sinonimo|  
+|**type**|**smallint**|Tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella<br /><br /> **32** = stored procedure<br /><br /> **64** = vista o vista indicizzata<br /><br /> **128** = funzione definita dall'utente<br /><br /> **160** = solo schema sinonimo|  
 |**column_tracking**|**int**|Impostazione per il rilevamento a livello di colonna; dove **1** indica che il rilevamento a livello di colonna è attivo e **0** indica che il rilevamento a livello di colonna è disattivato.|  
 |**resolver_info**|**nvarchar(255)**|Nome del sistema di risoluzione dell'articolo.|  
 |**vertical_partition**|**bit**|Se l'articolo è partizionato verticalmente; dove **1** indica che l'articolo è partizionato verticalmente e **0** indica che non lo è.|  

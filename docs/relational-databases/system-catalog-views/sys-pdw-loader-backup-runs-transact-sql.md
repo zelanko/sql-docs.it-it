@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127467"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "68127467"
 |end_time|**datetime**|Ora di completamento dell'operazione, esito negativo o annullato.||  
 |total_elapsed_time|**int**|Tempo totale trascorso tra start_time e l'ora corrente oppure tra start_time e end_time per le esecuzioni completate, annullate o non riuscite.|Se total_elapsed_time supera il valore massimo per un numero intero (24,8 giorni in millisecondi), si verificherà un errore di materializzazione causato da un overflow.<br /><br /> Il valore massimo in millisecondi equivale a 24,8 giorni.|  
 |operation_type|**nvarchar (16)**|Tipo di carico.|' BACKUP ',' LOAD ',' RESTORE '|  
-|mode|**nvarchar (16)**|Modalità all'interno del tipo di esecuzione.|Per operation_type = **backup**<br />**DIFFERENZIALE**<br />**COMPLETO**<br /><br /> Per operation_type = **Load**<br />**AGGIUNGERE**<br />**RICARICARE**<br />**UPSERT**<br /><br /> Per operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|Modalità all'interno del tipo di esecuzione.|Per operation_type = **backup**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Per operation_type = **Load**<br />**AGGIUNGERE**<br />**RICARICARE**<br />**UPSERT**<br /><br /> Per operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Nome del database che rappresenta il contesto di questa operazione||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID dell'utente che ha richiesto l'operazione.||  
-|session_id|**nvarchar (32)**|ID della sessione che esegue l'operazione.|Vedere session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar (32)**|ID della richiesta che esegue l'operazione. Per i caricamenti, questa è la richiesta corrente o più recente associata a questo carico.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|ID della sessione che esegue l'operazione.|Vedere session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|request_id|**nvarchar(32)**|ID della richiesta che esegue l'operazione. Per i caricamenti, questa è la richiesta corrente o più recente associata a questo carico.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|Stato dell'esecuzione.|' CANCELLED ',' COMPLETED ',' FAILED ',' QUEUED ',' RUNNING '|  
 |progress|**int**|Percentuale completata.|Da 0 a 100|  
 |command|**nvarchar(4000)**|Testo completo del comando inviato dall'utente.|Verrà troncato se è più lungo di 4000 caratteri (conteggio di spazi).|  
@@ -47,6 +47,6 @@ ms.locfileid: "68127467"
 |rows_inserted|**bigint**|Numero di righe inserite nella tabella o nelle tabelle di database come parte di questa operazione.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

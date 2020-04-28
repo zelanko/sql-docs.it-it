@@ -18,10 +18,10 @@ ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139716"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68139716"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale.<br /><br /> **2** = Unione.|  
 |**publisher_login**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server l'autenticazione.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o server collegato.|  
+|**publisher_security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server l'autenticazione.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o server collegato.|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di SQL Server.|  
 |**distributor_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -62,13 +62,13 @@ ms.locfileid: "68139716"
 |**internet_password**|**nvarchar (524)**|Password per l'account di accesso utilizzato dal agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di.|  
 |**internet_security_mode**|**int**|Modalità di autenticazione utilizzata per la connessione al server Web che ospita la sincronizzazione Web, dove il valore **1** indica l'autenticazione di Windows e il valore **0** indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di.|  
 |**internet_timeout**|**int**|Intervallo di tempo, in secondi, prima della scadenza di una richiesta di sincronizzazione tramite il Web.|  
-|**nome host**|**sysname**|Specifica il valore per **HOST_NAME** quando questa funzione viene utilizzata nella clausola **where** di un filtro join o di una relazione tra record logici.|  
+|**hostname**|**sysname**|Specifica il valore per **HOST_NAME** quando questa funzione viene utilizzata nella clausola **where** di un filtro join o di una relazione tra record logici.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

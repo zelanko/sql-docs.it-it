@@ -22,10 +22,10 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106466"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
@@ -117,8 +117,7 @@ sys.sp_cdc_enable_table
  **sys. sp_cdc_enable_table** crea anche i processi di acquisizione e pulizia per il database se la tabella di origine è la prima tabella del database da abilitare per Change Data Capture e non sono presenti pubblicazioni transazionali per il database. Imposta la colonna **is_tracked_by_cdc** nella vista del catalogo [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) su 1.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non deve essere in esecuzione quando Change Data Capture viene abilitato per una tabella. Tuttavia, il processo di acquisizione elaborerà il log delle transazioni e scriverà voci nella tabella delle modifiche solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non deve essere in esecuzione quando Change Data Capture viene abilitato per una tabella. Tuttavia, il processo di acquisizione elaborerà il log delle transazioni e scriverà voci nella tabella delle modifiche solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database **db_owner** .  

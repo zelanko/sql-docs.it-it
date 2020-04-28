@@ -19,10 +19,10 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135182"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
@@ -63,8 +63,8 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 |**dbid**|**smallint**|ID del database di contesto attivo al momento della compilazione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente a questo piano. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.<br /><br /> La colonna ammette i valori Null.|  
 |**ObjectId**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
 |**number**|**smallint**|Valore intero della stored procedure numerata. Ad esempio, le procedure utilizzate per l'applicazione **orders** potrebbero essere denominate **orderproc;1**, **orderproc;2** e così via. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
-|**crittografati**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
-|**query_plan**|**XML**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione della query specificato con *plan_handle*. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
+|**encrypted**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
+|**query_plan**|**xml**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione della query specificato con *plan_handle*. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Nelle condizioni seguenti non viene restituito alcun output Showplan nella colonna **query_plan** della tabella restituita per **sys.dm_exec_query_plan**:  
@@ -89,7 +89,7 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
  Per visualizzare i Showplan XML, eseguire le query seguenti nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi fare clic su **ShowPlanXML** nella colonna **query_plan** della tabella restituita da **sys.dm_exec_query_plan**. Il piano Showplan XML verrà visualizzato nel riquadro di riepilogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per salvare lo Showplan XML in un file, fare clic con il pulsante destro del mouse su **ShowplanXml** nella colonna **query_plan** , fare clic su **Salva risultati**con \<nome, denominare il file nel formato *file_name*>. sqlplan; ad esempio, ShowplanXml. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>R. Recupero del piano di query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Recupero del piano di query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
  I piani delle query per vari tipi di batch [!INCLUDE[tsql](../../includes/tsql-md.md)], come batch ad hoc, stored procedure e funzioni definite dall'utente, vengono memorizzati nella cache in un'area della memoria denominata cache dei piani. Ogni piano della query memorizzato nella cache è identificato da un ID univoco denominato handle del piano. È possibile specificare l'handle del piano con la vista a gestione dinamica **sys.dm_exec_query_plan** per recuperare il piano di esecuzione per una query o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] specifico.  
   
  Se l'esecuzione di una query o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] risulta prolungata in una particolare connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile recuperare il piano di esecuzione di tale query o batch per individuare le cause del ritardo. Nell'esempio seguente viene illustrato come recuperare il piano Showplan XML per una query o un batch con esecuzione prolungata.  
@@ -163,11 +163,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [sys. dm_exec_cached_plans &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sys. dm_exec_requests &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sp_who &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [sys. dm_exec_text_query_plan &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   

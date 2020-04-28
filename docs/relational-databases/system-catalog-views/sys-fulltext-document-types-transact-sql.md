@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133847"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68133847"
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|Estensione di file del tipo di documento supportato.<br /><br /> Questo valore può essere utilizzato per identificare il filtro che verrà utilizzato durante l'indicizzazione full-text di colonne di tipo **varbinary (max)** o **Image**.|  
 |**class_id**|**uniqueidentifier**|GUID della classe IFilter che supporta l'estensione di file.|  
-|**percorso**|**nvarchar(260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile solo ai membri del ruolo predefinito del server **serveradmin** .|  
-|**Versione**|**sysname**|Versione della DLL dell'interfaccia IFilter.|  
+|**path**|**nvarchar(260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile solo ai membri del ruolo predefinito del server **serveradmin** .|  
+|**version**|**sysname**|Versione della DLL dell'interfaccia IFilter.|  
 |**manufacturer**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: solo i documenti con il produttore [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
   
 ## <a name="permissions"></a>Autorizzazioni  

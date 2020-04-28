@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103304"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68103304"
 |**handle_id**|**int**|Viene mostrato l'ID univoco di questo handle assegnato dal driver. Non ammette i valori Null.|  
 |**creation_client_thread_id**|**varbinary (8)**|Viene mostrato un campo della richiesta di I/O REQ_PRE_CREATE utilizzata per creare questo handle. Ammette i valori Null.|  
 |**creation_client_process_id**|**varbinary (8)**|Viene mostrato un campo della richiesta di I/O REQ_PRE_CREATE utilizzata per creare questo handle. Ammette i valori Null.|  
-|**filestream_transaction_id**|**varbinary (128)**|Viene mostrato l'ID della transazione associata all'handle specificato. Si tratta del valore restituito dalla funzione **GET_FILESTREAM_TRANSACTION_CONTEXT** . Utilizzare questo campo per aggiungere la vista **sys. dm_filestream_file_io_requests** . Ammette i valori Null.|  
-|**access_type**|**nvarchar (60)**|Non ammette i valori Null.|  
+|**filestream_transaction_id**|**varbinary(128)**|Viene mostrato l'ID della transazione associata all'handle specificato. Si tratta del valore restituito dalla funzione **GET_FILESTREAM_TRANSACTION_CONTEXT** . Utilizzare questo campo per aggiungere la vista **sys. dm_filestream_file_io_requests** . Ammette i valori Null.|  
+|**access_type**|**nvarchar(60)**|Non ammette i valori Null.|  
 |**logical_path**|**nvarchar(256)**|Viene mostrato il nome del percorso logico del file aperto da questo handle. Si tratta dello stesso percorso restituito da **. Metodo PathName** di **varbinary**(**Max**) FileStream. Ammette i valori Null.|  
 |**physical_path**|**nvarchar(256)**|Viene mostrato il nome del percorso NTFS effettivo del file. Si tratta dello stesso percorso restituito da **. Metodo PhysicalPathName** del FileStream **varbinary**(**Max**). Viene abilitato dal flag di traccia 5556. Ammette i valori Null.|  
   

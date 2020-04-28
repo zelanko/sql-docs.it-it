@@ -15,10 +15,10 @@ ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130830"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Funzioni e viste a gestione dinamica relative all'esecuzione (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "68130830"
 >  La vista a gestione dinamica **sys. dm_exec_query_transformation_stats** viene identificata solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -19,16 +19,16 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117910"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Viene aggiunto un dispositivo di backup a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,8 +80,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni possono interferire con l'utilizzo di dispositivi di backup su disco o su file. Assicurarsi che all'account di Windows utilizzato per l'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] siano associate le autorizzazioni per i file appropriate.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta i backup su dispositivi nastro supportati da Windows. Per ulteriori informazioni sui dispositivi nastro supportati da Windows, vedere l'elenco di compatibilità hardware di Windows. Per visualizzare i dispositivi nastro disponibili nel computer, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta i backup su dispositivi nastro supportati da Windows. Per ulteriori informazioni sui dispositivi nastro supportati da Windows, vedere l'elenco di compatibilità hardware di Windows. Per visualizzare i dispositivi nastro disponibili nel computer, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Utilizzare solo i tipi di nastro consigliati dal produttore per l'unità nastro in uso. Se si utilizzano unità DAT (Digital Audio Tape), utilizzare nastri DAT per computer (Digital Data Storage, DDS).  
   
@@ -143,10 +142,10 @@ GO
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys. backup_devices &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

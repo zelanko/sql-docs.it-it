@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133787"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68133787"
   
 ||||  
 |-|-|-|  
-|**Nome colonna**|**Tipo**|**Descrizione**|  
+|**Nome colonna**|**Type**|**Descrizione**|  
 |**database_id**|**int**|ID del database, univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Data in cui il database è stato registrato per l'elaborazione semantica.|  
 |**registered_by**|**int**|ID dell'entità server che ha registrato il database per l'elaborazione semantica.|  
-|**Versione**|**nvarchar(128)**|Informazioni sulla versione più recente specifiche per il database di statistiche lingua semantica.|  
+|**version**|**nvarchar(128)**|Informazioni sulla versione più recente specifiche per il database di statistiche lingua semantica.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "68133787"
 ## <a name="metadata"></a>Metadati  
  Per informazioni sulle lingue supportate per l'indicizzazione semantica, eseguire una query sulla vista del catalogo [sys. fulltext_semantic_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  
@@ -62,6 +62,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare e configurare la ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
+ [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

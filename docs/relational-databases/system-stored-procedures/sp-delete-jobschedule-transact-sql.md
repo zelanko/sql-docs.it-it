@@ -18,10 +18,10 @@ ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130645"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68130645"
 > **Nota: sp_delete_jobschedule** non supporta le pianificazioni associate a più processi. Se uno script esistente chiama **sp_delete_jobschedule** per rimuovere una pianificazione collegata a più di un processo, la procedura restituisce un errore.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   

@@ -20,10 +20,10 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106540"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Poiché i processi di pulizia e di acquisizione vengono creati per impostazione predefinita, questa stored procedure è necessaria solo quando un processo è stato eliminato in modo esplicito e deve essere ricreato.  
   
- Il nome del processo è **CDC.** **pulizia del\_** _nome\_\>del database o CDC. \<_ **** ** _\>nome\_del database Capture, dove<database_name>è il nome del database corrente. \<_**\_** Se esiste già un processo con lo stesso nome, il nome viene aggiunto con un punto (**.**) seguito da un identificatore univoco, ad esempio: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Il nome del processo è **CDC.** **pulizia del\_** _nome\_\>del database o CDC. \<_ **cdc.** *<database_name>* _\>nome\_del database Capture, dove<database_name>è il nome del database corrente. \<_**\_** Se esiste già un processo con lo stesso nome, il nome viene aggiunto con un punto (**.**) seguito da un identificatore univoco, ad esempio: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, utilizzare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

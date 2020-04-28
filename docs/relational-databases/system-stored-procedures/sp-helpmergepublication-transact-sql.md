@@ -16,10 +16,10 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137646"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -78,7 +78,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|Viene indicato se lo snapshot della pubblicazione specificata è pronto:<br /><br /> **0** = lo snapshot è pronto per l'utilizzo.<br /><br /> **1** = lo snapshot non è pronto per l'utilizzo.|  
 |publication_type|**int**|Tipo di pubblicazione:<br /><br /> **0** = snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = Unione.|  
 |pubid|**uniqueidentifier**|Identificatore univoco della pubblicazione.|  
-|snapshot_jobid|**binario (16)**|ID di processo dell'agente snapshot. Per ottenere la voce per il processo snapshot nella tabella di sistema [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) , è necessario convertire il valore esadecimale in **uniqueidentifier**.|  
+|snapshot_jobid|**binary(16)**|ID di processo dell'agente snapshot. Per ottenere la voce per il processo snapshot nella tabella di sistema [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) , è necessario convertire il valore esadecimale in **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Viene determinato se la pubblicazione è abilitata per Internet. Se è **1**, i file di sincronizzazione della pubblicazione vengono inseriti nella `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. La directory FTP (File Transfer Protocol) deve essere creata dall'utente. Se è **0**, la pubblicazione non è abilitata per l'accesso a Internet.|  
 |dynamic_filter|**int**|Indica se viene utilizzato un filtro di riga con parametri. **0** indica che non viene utilizzato un filtro di riga con parametri.|  
 |has_subscription|**bit**|Indica se esistono sottoscrizioni della pubblicazione. **0** indica che al momento non sono presenti sottoscrizioni della pubblicazione.|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Specifica se la funzionalità che consente di copiare i database di sottoscrizione che sottoscrivono la pubblicazione è abilitata. Il valore **0** indica che la copia non è consentita.|  
 |allow_synctoalternate|**int**|Viene specificato se è consentito l'utilizzo di un partner di sincronizzazione alternativo per la sincronizzazione con il server di pubblicazione. Il valore **0** indica che un partner di sincronizzazione non è consentito.|  
 |validate_subscriber_info|**nvarchar (500)**|Viene visualizzato un elenco delle funzioni utilizzate per il recupero delle informazioni sul Sottoscrittore e la convalida dei criteri per i filtri di riga con parametri nel Sottoscrittore. Inoltre, viene facilitata la verifica del partizionamento consistente delle informazioni a ogni operazione di unione.|  
-|backward_comp_level|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Specifica se le informazioni sulla pubblicazione sono pubblicate in Active Directory. Il valore **0** indica che le informazioni sulla pubblicazione non sono disponibili dal Active Directory.<br /><br /> Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni sulla pubblicazione in Active Directory.|  
 |max_concurrent_merge|**int**|Numero massimo di processi di merge simultanei. Se è **0**, non esiste alcun limite al numero di processi di merge simultanei in esecuzione in un determinato momento.|  
 |max_concurrent_dynamic_snapshots|**int**|Numero massimo di sessioni simultanee di snapshot dei dati filtrati eseguibili nella pubblicazione di tipo merge. Se è **0**, non esiste alcun limite al numero massimo di sessioni simultanee di snapshot dei dati filtrati che possono essere eseguite simultaneamente sulla pubblicazione in un determinato momento.|  
@@ -108,7 +108,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_web_synchronization|**bit**|Viene determinato se la pubblicazione è abilitata per la sincronizzazione Web. Il valore **1** indica che la sincronizzazione Web è abilitata.|  
 |web_synchronization_url|**nvarchar (500)**|URL Internet utilizzato per la sincronizzazione Web.|  
 |allow_partition_realignment|**bit**|Viene determinato se le eliminazioni vengono inviate al Sottoscrittore quando la modifica apportata alla riga nel server di pubblicazione comporta un cambiamento di partizione. Il valore **1** indica che le eliminazioni vengono inviate al Sottoscrittore.  Per ulteriori informazioni, vedere [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
-|retention_period_unit|**tinyint**|Viene definita l'unità utilizzata per la definizione del periodo di memorizzazione. Può essere uno dei valori seguenti:<br /><br /> **0** = giorno<br /><br /> **1** = Settimana<br /><br /> **2** = Mese<br /><br /> **3** = Anno|  
+|retention_period_unit|**tinyint**|Viene definita l'unità utilizzata per la definizione del periodo di memorizzazione. I valori possibili sono i seguenti:<br /><br /> **0** = giorno<br /><br /> **1** = Settimana<br /><br /> **2** = Mese<br /><br /> **3** = Anno|  
 |has_downloadonly_articles|**bit**|Specifica se la pubblicazione include articoli di solo download. Il valore **1** indica che sono presenti articoli di solo download.|  
 |decentralized_conflicts|**int**|Viene specificato se i record dei conflitti vengono archiviati nel Sottoscrittore a causa dei quali si è verificato il conflitto. Il valore **0** indica che i record dei conflitti non vengono archiviati nel Sottoscrittore. Il valore 1 indica che i record dei conflitti vengono archiviati nel Sottoscrittore.|  
 |generation_leveling_threshold|**int**|Viene specificato il numero di modifiche contenute in una generazione. Una generazione è una raccolta di modifiche recapitate a un server di pubblicazione o a un Sottoscrittore|  

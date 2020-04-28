@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138407"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
@@ -45,8 +45,8 @@ ms.locfileid: "68138407"
 |**state**|**nvarchar(128)**|Descrittore per lo stato corrente del **dominio AppDomain**. Un AppDomain può trovarsi in stati diversi dalla creazione all'eliminazione. Per ulteriori informazioni, vedere la sezione Osservazioni di questo argomento.|  
 |**strong_refcount**|**int**|Numero di riferimenti sicuri a questo **AppDomain**. Riflette il numero di batch attualmente in esecuzione che utilizzano questo **AppDomain**. Si noti che l'esecuzione di questa visualizzazione creerà un **refcount sicuro**; anche se non è attualmente in esecuzione codice, **strong_refcount** avrà un valore pari a 1.|  
 |**weak_refcount**|**int**|Numero di riferimenti deboli a questo **AppDomain**. Indica il numero di oggetti all'interno dell' **AppDomain** memorizzati nella cache. Quando si esegue un oggetto di database gestito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , lo memorizza nella cache all'interno dell' **AppDomain** per un riutilizzo futuro. In questo modo le prestazioni risultano migliorate.|  
-|**costo**|**int**|Costo del **dominio AppDomain**. Maggiore è il costo, più è probabile che questo **AppDomain** debba essere scaricato con un numero eccessivo di richieste di memoria. Il costo dipende in genere dalla quantità di memoria necessaria per ricreare questo **AppDomain**.|  
-|**valore**|**int**|Valore del **dominio AppDomain**. Più basso è il valore, più è probabile che questo **AppDomain** debba essere scaricato sotto pressione di memoria. Il valore dipende in genere dal numero di connessioni o batch che utilizzano questo **AppDomain**.|  
+|**cost**|**int**|Costo del **dominio AppDomain**. Maggiore è il costo, più è probabile che questo **AppDomain** debba essere scaricato con un numero eccessivo di richieste di memoria. Il costo dipende in genere dalla quantità di memoria necessaria per ricreare questo **AppDomain**.|  
+|**value**|**int**|Valore del **dominio AppDomain**. Più basso è il valore, più è probabile che questo **AppDomain** debba essere scaricato sotto pressione di memoria. Il valore dipende in genere dal numero di connessioni o batch che utilizzano questo **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Tempo totale del processore, in millisecondi, utilizzato da tutti i thread durante l'esecuzione nel dominio dell'applicazione corrente dall'avvio del processo. Equivale a **System. AppDomain. MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Dimensioni totali, in kilobyte, di tutte le allocazioni di memoria eseguite dal dominio dell'applicazione dalla sua creazione, senza sottrarre la memoria raccolta. Equivale a **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Numero di kilobyte rimanenti dall'ultima raccolta di blocco completa e a cui fa riferimento il dominio dell'applicazione corrente. Equivale a **System. AppDomain. MonitoringSurvivedMemorySize**.|  

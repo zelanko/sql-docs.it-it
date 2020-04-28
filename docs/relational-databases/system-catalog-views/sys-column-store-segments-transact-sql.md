@@ -20,10 +20,10 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139995"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
@@ -37,7 +37,7 @@ Restituisce una riga per ogni segmento di colonna in un indice columnstore. È p
 |**hobt_id**|**bigint**|ID dell'heap o dell'indice ad albero B (HoBT) per la tabella a cui appartiene l'indice columnstore.|  
 |**column_id**|**int**|ID della colonna columnstore.|  
 |**segment_id**|**int**|ID di rowgroup. Per compatibilità con le versioni precedenti, il nome della colonna continua a essere chiamato segment_id anche se si tratta dell'ID rowgroup. È possibile identificare in modo univoco un segmento \<utilizzando hobt_id, partition_id, column_id> <segment_id>.|  
-|**Versione**|**int**|Versione del formato del segmento di colonna.|  
+|**version**|**int**|Versione del formato del segmento di colonna.|  
 |**encoding_type**|**int**|Tipo di codifica usato per il segmento:<br /><br /> 1 = VALUE_BASED-non stringa/binario senza dizionario (molto simile a 4 con alcune varianti interne)<br /><br /> 2 = colonna VALUE_HASH_BASED-non stringa/binaria con valori comuni nel dizionario<br /><br /> 3 = colonna STRING_HASH_BASED-String/Binary con valori comuni nel dizionario<br /><br /> 4 = STORE_BY_VALUE_BASED-non stringa/binario senza dizionario<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-String/Binary senza dizionario<br /><br /> Tutte le codifiche sfruttano i vantaggi della codifica di bit e di lunghezza, quando possibile.|  
 |**row_count**|**int**|Numero di righe nel gruppo di righe.|  
 |**has_nulls**|**int**|1 se il segmento di colonna contiene valori Null.|  
@@ -69,17 +69,17 @@ GO
 ## <a name="permissions"></a>Autorizzazioni  
  Tutte le colonne richiedono almeno l'autorizzazione **View definition** per la tabella. Le colonne seguenti restituiscono null a meno che l'utente non disponga anche dell'autorizzazione **Select** : has_nulls, base_id, magnitude, min_data_id, max_data_id e null_value.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
- [sys. column_store_dictionaries &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
 

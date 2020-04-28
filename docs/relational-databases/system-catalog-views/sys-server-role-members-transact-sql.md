@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133031"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68133031"
 ## <a name="permissions"></a>Autorizzazioni  
  Gli account di accesso possono visualizzare l'appartenenza a un ruolo del server e possono visualizzare i principal_id dei membri dei ruoli predefiniti del server. Per visualizzare tutte le appartenenze ai ruoli del server, è richiesta l'autorizzazione **View definition on server Role** o l'appartenenza al ruolo predefinito del server **securityadmin** .  
   
- Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti i nomi e gli ID dei ruoli e i relativi membri.  
@@ -58,7 +58,7 @@ JOIN sys.server_principals AS member
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

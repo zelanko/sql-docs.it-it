@@ -19,10 +19,10 @@ ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd9c138cd574e22d1ce658c4749f2a61c34d8e73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108071"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)

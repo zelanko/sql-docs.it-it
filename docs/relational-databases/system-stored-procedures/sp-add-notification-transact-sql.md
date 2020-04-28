@@ -18,10 +18,10 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68115056"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
@@ -50,7 +50,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
-|**4**|**NET SEND**|  
+|**4**|**net send**|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -61,9 +61,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="remarks"></a>Osservazioni  
  **sp_add_notification** deve essere eseguito dal database **msdb** .  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
   
  Per inviare una notifica in risposta a un avviso, è innanzitutto necessario configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'invio di messaggi.  
   

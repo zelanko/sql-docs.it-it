@@ -16,10 +16,10 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137691"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|ID del filtro join.|  
-|**filtername**|**sysname**|Nome del filtro.|  
+|**NomeFiltro**|**sysname**|Nome del filtro.|  
 |**join article name**|**sysname**|Nome dell'articolo di join.|  
 |**join_filterclause**|**nvarchar (2000)**|Clausola di filtro che qualifica il join.|  
 |**join_unique_key**|**int**|Indica se il join è basato su una chiave univoca.|  

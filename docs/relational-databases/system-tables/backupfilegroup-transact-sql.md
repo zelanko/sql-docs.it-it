@@ -19,10 +19,10 @@ ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122917"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68122917"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Set di backup contenente questo filegroup.|  
-|**nome**|**sysname**|Nome del filegroup|  
+|**name**|**sysname**|Nome del filegroup|  
 |**filegroup_id**|**int**|ID del filegroup, univoco all'interno del database. Corrisponde a **data_space_id** in **sys. filegroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificatore univoco globale per il filegroup. Può essere NULL.|  
-|**tipo**|**carattere (2)**|Tipo di contenuto, può corrispondere a:<br /><br /> FG = Filegroup "Rows"<br /><br /> SL = Filegroup di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**type_desc**|**nvarchar (60)**|Descrizione del tipo di funzione, può corrispondere a:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
+|**type**|**char(2)**|Tipo di contenuto, può corrispondere a:<br /><br /> FG = Filegroup "Rows"<br /><br /> SL = Filegroup di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type_desc**|**nvarchar(60)**|Descrizione del tipo di funzione, può corrispondere a:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|Il filegroup predefinito, utilizzato quando non è specificato alcun filegroup in CREATE TABLE o CREATE INDEX.|  
 |**is_readonly**|**bit**|1 = Il filegroup è di sola lettura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Può essere NULL.|  
@@ -56,10 +56,10 @@ ms.locfileid: "68122917"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di backup e ripristino &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [backupfile &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupmediafamily &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [BackupMediaSet &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

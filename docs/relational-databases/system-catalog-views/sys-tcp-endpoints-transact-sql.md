@@ -20,10 +20,10 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116725"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "68116725"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**< colonne ereditate>**||Eredita le colonne da [sys. Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**porta**|INT|Numero della porta su cui è in attesa l'endpoint. Non ammette i valori Null.|  
+|**port**|INT|Numero della porta su cui è in attesa l'endpoint. Non ammette i valori Null.|  
 |**is_dynamic_port**|bit|1 = Il numero della porta è stato assegnato dinamicamente.<br /><br /> Non ammette i valori Null.|  
 |**ip_address**|**nvarchar (45)**|Indirizzo IP del listener specificato dalla clausola LISTENER_IP. Ammette i valori Null.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Eseguire la query seguente per raccogliere informazioni sugli endpoint e sulle connessioni. Gli endpoint senza connessioni correnti o TCP verranno visualizzati con valori NULL. Aggiungere la **** clausola `WHERE des.session_id = @@SPID` WHERE per restituire informazioni sulla connessione corrente.  
+ Eseguire la query seguente per raccogliere informazioni sugli endpoint e sulle connessioni. Gli endpoint senza connessioni correnti o TCP verranno visualizzati con valori NULL. Aggiungere la **WHERE** clausola `WHERE des.session_id = @@SPID` WHERE per restituire informazioni sulla connessione corrente.  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -56,10 +56,10 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste del catalogo degli endpoint &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119349"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68119349"
 |**media_set_id**|**int**|Numero di identificazione univoco del set di supporti. Identità, chiave primaria.|  
 |**media_uuid**|**uniqueidentifier**|UUID del set di supporti. Tutti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i set di supporti hanno un UUID.<br /><br /> Per le versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di, tuttavia, se un set di supporti contiene un solo gruppo di supporti, la colonna **MEDIA_UUID** potrebbe essere null (**media_family_count** è 1).|  
 |**media_family_count**|**tinyint**|Numero di gruppi di supporti nel set di supporti. Può essere NULL.|  
-|**nome**|**nvarchar(128)**|Nome del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIAname e MEDIADESCRIPTION in [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
+|**name**|**nvarchar(128)**|Nome del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIAname e MEDIADESCRIPTION in [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**Descrizione**|**nvarchar(255)**|Descrizione in formato testo del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIAname e MEDIADESCRIPTION in [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**software_name**|**nvarchar(128)**|Nome del software di backup con cui è stata scritta l'etichetta del supporto. Può essere NULL.|  
 |**software_vendor_id**|**int**|Numero di identificazione del produttore del software con cui è stata scritta l'etichetta del supporto di backup. Può essere NULL.<br /><br /> Il valore per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è esadecimale 0x1200.|  
@@ -53,10 +53,10 @@ ms.locfileid: "68119349"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di backup e ripristino &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [backupfile &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupset &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

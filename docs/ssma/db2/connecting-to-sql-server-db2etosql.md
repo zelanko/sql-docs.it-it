@@ -10,10 +10,10 @@ ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7ab4c1f691820fb19dde7a3e3166abc2ff065b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126639"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Connessione a SQL Server (DB2eToSQL)
@@ -80,8 +80,8 @@ Quando si definiscono le proprietà di connessione, è inoltre necessario specif
   
 ||||||  
 |-|-|-|-|-|  
-|**TIPO di progetto rispetto alla versione del SERVER di destinazione**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />(Versione: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Versione: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versione: 13. x)|Database SQL di Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|Sì|Sì|Sì||  
+|**TIPO di progetto rispetto alla versione del SERVER di destinazione**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Versione: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Versione: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versione: 13. x)|Database SQL di Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Sì|Sì|Sì||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||Sì|Sì||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||Sì||  
 |Database SQL di Azure||||Sì|  
