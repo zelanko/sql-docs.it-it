@@ -18,10 +18,10 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042826"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
@@ -47,16 +47,16 @@ fn_syscollector_get_execution_details ( log_id )
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificatore univoco della voce del log.|  
-|evento|**sysname**|Nome dell'evento che ha generato la voce del log.|  
+|event|**sysname**|Nome dell'evento che ha generato la voce del log.|  
 |computer|**nvarchar**|Computer in cui era in esecuzione il pacchetto al momento della generazione della voce del log.|  
 |operator|**nvarchar**|Nome utente della persona o dell'agente che ha eseguito il pacchetto che ha generato la voce di log.|  
 |source|**nvarchar**|Nome del file eseguibile che ha generato la voce di log.|  
 |sourceid|**uniqueidentifier**|GUID del file eseguibile che ha generato la voce di log.|  
 |executionid|**uniqueidentifier**|GUID dell'istanza di esecuzione del file eseguibile che ha generato la voce del log.|  
-|ora di inizio|**datetime**|Ora di inizio dell'esecuzione del pacchetto.|  
+|starttime|**datetime**|Ora di inizio dell'esecuzione del pacchetto.|  
 |endtime|**datetime**|Ora di completamento dell'esecuzione del pacchetto.|  
 |datacode|**int**|Valore intero che identifica l'evento associato alla voce di log. "0" indica che l'evento non ha restituito alcun identificatore.|  
-|databytes|**immagine**|Matrice di byte che identifica un valore restituito.|  
+|databytes|**image**|Matrice di byte che identifica un valore restituito.|  
 |message|**nvarchar**|Descrizione dell'evento e delle informazioni associate all'evento.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

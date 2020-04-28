@@ -18,10 +18,10 @@ ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029614"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "68029614"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificatore univoco della voce del log.|  
-|evento|**sysname**|Nome dell'evento che ha generato la voce del log.|  
+|event|**sysname**|Nome dell'evento che ha generato la voce del log.|  
 |computer|**nvarchar**|Computer in cui era in esecuzione il pacchetto al momento della generazione della voce del log.|  
 |operator|**nvarchar**|Nome utente della persona che ha eseguito il pacchetto che ha generato la voce del log.|  
 |source|**nvarchar**|Nome del file eseguibile nel pacchetto che ha generato la voce del log.|  
 |sourceid|**uniqueidentifier**|GUID del file eseguibile nel pacchetto che ha generato la voce del log.|  
 |executionid|**uniqueidentifier**|GUID dell'istanza di esecuzione del file eseguibile che ha generato la voce del log.|  
-|ora di inizio|**datetime**|Ora di inizio dell'esecuzione del pacchetto.|  
+|starttime|**datetime**|Ora di inizio dell'esecuzione del pacchetto.|  
 |endtime|**datetime**|Ora del completamento del pacchetto.<br /><br /> Questa funzionalità non è implementata. Il valore nella colonna endtime è sempre uguale al valore nella colonna starttime.|  
 |datacode|**int**|Valore intero facoltativo che in genere indica il risultato dell'esecuzione del contenitore o dell'attività:|  
-|databytes|**immagine**|Matrice di byte facoltativa che contiene informazioni aggiuntive.|  
+|databytes|**image**|Matrice di byte facoltativa che contiene informazioni aggiuntive.|  
 |message|**nvarchar**|Descrizione dell'evento e delle informazioni associate all'evento.|  
   
 ## <a name="see-also"></a>Vedere anche  

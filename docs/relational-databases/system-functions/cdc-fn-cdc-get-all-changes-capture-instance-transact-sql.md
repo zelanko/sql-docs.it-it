@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043055"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Le opzioni possibili sono le seguenti:  
   
- tutti  
+ all  
  Restituisce tutte le modifiche all'interno dell'intervallo LSN specificato. Per le modifiche dovute a un'operazione di aggiornamento, questa opzione restituisce solo la riga che contiene i nuovi valori dopo l'applicazione dell'aggiornamento.  
   
  all update old  
@@ -70,10 +70,10 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**_ _ $ start_lsn**|**binario (10)**|Numero LSN di commit associato alla modifica. Mantiene l'ordine del commit della modifica. Le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
-|**_ _ $ seqval**|**binario (10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
-|**_ _ $ operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) necessaria per applicare la riga di dati di modifica all'origine dati di destinazione. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (i valori di colonna acquisiti sono quelli precedenti l'aggiornamento). Questo valore si applica solo quando è specificata l'opzione di filtro di riga 'all update old'.<br /><br /> 4 = aggiornamento (i valori di colonna acquisiti sono quelli successivi all'aggiornamento).|  
-|**_ _ $ update_mask**|**varbinary (128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Tutti i bit definiti per questo valore sono impostati su 1 quando **_ _ $ operation** = 1 o 2. Quando **_ _ $ operation** = 3 o 4, solo i bit corrispondenti alle colonne modificate sono impostati su 1.|  
+|**__$start_lsn**|**binary(10)**|Numero LSN di commit associato alla modifica. Mantiene l'ordine del commit della modifica. Le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
+|**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
+|**_ _ $ operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) necessaria per applicare la riga di dati di modifica all'origine dati di destinazione. Può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (i valori di colonna acquisiti sono quelli precedenti l'aggiornamento). Questo valore si applica solo quando è specificata l'opzione di filtro di riga 'all update old'.<br /><br /> 4 = aggiornamento (i valori di colonna acquisiti sono quelli successivi all'aggiornamento).|  
+|**__$update_mask**|**varbinary(128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Tutti i bit definiti per questo valore sono impostati su 1 quando **_ _ $ operation** = 1 o 2. Quando **_ _ $ operation** = 3 o 4, solo i bit corrispondenti alle colonne modificate sono impostati su 1.|  
 |**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne acquisite identificate quando l'istanza di acquisizione è stata creata. Se nessuna colonna è stata specificata nell'elenco delle colonne acquisite, vengono restituite tutte le colonne nella tabella di origine.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

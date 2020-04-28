@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018338"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Viste del catalogo degli schemi-sys. schemas
@@ -47,10 +47,10 @@ Gli schemi di database fungono da spazi dei nomi o contenitori per oggetti, ad e
 Ogni schema ha un proprietario. Il proprietario è un' [entità](../../relational-databases/security/authentication-access/principals-database-engine.md)di sicurezza.
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Entità](../../relational-databases/security/authentication-access/principals-database-engine.md)
+[Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
 
 [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 

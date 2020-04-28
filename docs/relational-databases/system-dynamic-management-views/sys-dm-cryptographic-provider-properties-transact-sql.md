@@ -19,10 +19,10 @@ ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005106"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68005106"
 |guid|**uniqueidentifier**|GUID univoco del provider.|  
 |provider_version|**nvarchar(256)**|Versione del provider nel formato '*AA.BB.cccc.dd*'.|  
 |sqlcrypt_version|**nvarchar(256)**|Versione principale dell'API [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di crittografia nel formato '*AA.BB.cccc.dd*'.|  
-|friendly_name|**nvarchar (2048)**|Nome fornito dal provider.|  
+|friendly_name|**nvarchar(2048)**|Nome fornito dal provider.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC o OTHER.|  
 |symmetric_key_support|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
 |symmetric_key_export|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
@@ -55,7 +55,7 @@ ms.locfileid: "68005106"
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [CREAZIONE del PROVIDER di crittografia &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [Funzioni e viste a gestione dinamica relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

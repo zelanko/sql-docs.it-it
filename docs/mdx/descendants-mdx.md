@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67999984"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,7 +48,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *Distanza*  
+ *Distance*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
  *Desc_Flag*  
@@ -103,7 +103,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
 |LEAVES|Restituisce i membri discendenti di tipo foglia tra il membro specificato e il livello specificato oppure alla distanza indicata.|  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono restituiti il membro specificato (United States) e i membri tra il membro specificato (United States) e i membri del livello che precede il livello specificato (City). Vengono quindi restituiti il membro specificato stesso (United States) e i membri del livello State-Province, che precede il livello City. Nell'esempio sono inclusi argomenti impostati come commenti che consentono di testare facilmente altri argomenti per questa funzione.  
+ Nell'esempio seguente vengono restituiti il membro specificato (Stati Uniti) e i membri tra il membro specificato (Stati Uniti) e i membri del livello che precede il livello specificato (City). Vengono quindi restituiti il membro specificato stesso (Stati Uniti) e i membri del livello State-Province, che precede il livello City. Nell'esempio sono inclusi argomenti impostati come commenti che consentono di testare facilmente altri argomenti per questa funzione.  
   
 ```  
 SELECT Descendants  
@@ -162,6 +162,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

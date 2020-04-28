@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038897"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Istruzione e iterazione FLWOR (XQuery)
@@ -94,8 +94,7 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   
-  `$Step` è la variabile iteratore.  
+-   `$Step` è la variabile iteratore.  
   
 -   L' [espressione](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`di percorso genera la sequenza di input. Questa sequenza è la sequenza degli elementi figlio `step` <> nodo elemento del primo <`Location` nodo elemento>.  
   
@@ -300,8 +299,7 @@ SELECT @x.query('
   
 -   L'espressione associata a `$Loc` genera una sequenza di <`Location`> elementi. Per ogni elemento `Location` <>, `$FirstStep` genera una sequenza di un elemento `Step` <>, un singleton.  
   
--   
-  `$Loc` viene specificata nell'espressione associata alla variabile `$FirstStep`.  
+-   `$Loc` viene specificata nell'espressione associata alla variabile `$FirstStep`.  
   
  Risultato:  
   

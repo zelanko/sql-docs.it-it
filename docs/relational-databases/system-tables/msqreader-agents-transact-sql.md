@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032569"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68032569"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID dell'agente di lettura coda.|  
-|**nome**|**nvarchar (100)**|Nome dell'agente di lettura coda.|  
-|**job_id**|**binario (16)**|Numero ID del processo univoco dalla tabella **sysjobs** .|  
+|**id**|**int**|ID dell'agente di lettura coda.|  
+|**name**|**nvarchar (100)**|Nome dell'agente di lettura coda.|  
+|**job_id**|**binary(16)**|Numero ID del processo univoco dalla tabella **sysjobs** .|  
 |**profile_id**|**int**|ID del profilo dalla tabella **MSagent_profiles** .|  
 |**job_step_uid**|**uniqueidentifier**|ID univoco del passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in cui viene avviato l'agente.|  
   

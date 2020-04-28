@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021026"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di test case (SybaseToSQL)
@@ -34,7 +34,7 @@ Al termine del test, viene creato il report del test case. Fare clic sul pulsant
   
 ## <a name="test-case-execution-steps"></a>Passaggi di esecuzione del test case  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 SSMA tester verifica se tutti i prerequisiti sono soddisfatti per l'esecuzione dei test prima dell'avvio del test. Se alcune condizioni non vengono soddisfatte, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  
@@ -49,10 +49,10 @@ Gli oggetti seguenti vengono creati in Sybase nel database SSMATESTER2005db o SS
 |USER_TABLE $ Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
 |USER_TABLE $ AUD|Tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
 |USER_TABLE $ AudId|Tabella|Tabella in cui vengono salvate le righe nuove e modificate.|  
-|USER_TABLE|Visualizza|Rappresentazione semplificata delle modifiche della tabella.|  
-|USER_TABLE $ New|Visualizza|Rappresentazione semplificata delle righe inserite e sovrascritte.|  
-|USER_TABLE $ new_id|Visualizza|Identificazione delle righe inserite e modificate.|  
-|USER_TABLE $ Old|Visualizza|Rappresentazione semplificata delle righe eliminate e sovrascritte.|  
+|USER_TABLE|Visualizzazione|Rappresentazione semplificata delle modifiche della tabella.|  
+|USER_TABLE $ New|Visualizzazione|Rappresentazione semplificata delle righe inserite e sovrascritte.|  
+|USER_TABLE $ new_id|Visualizzazione|Identificazione delle righe inserite e modificate.|  
+|USER_TABLE $ Old|Visualizzazione|Rappresentazione semplificata delle righe eliminate e sovrascritte.|  
   
 Il seguente oggetto viene creato nel database della tabella verificata in Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

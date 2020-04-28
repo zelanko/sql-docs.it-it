@@ -18,10 +18,10 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029631"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
@@ -32,11 +32,11 @@ ms.locfileid: "68029631"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome della colonna o del parametro della procedura.|  
-|**ID**|**int**|ID di oggetto della tabella a cui appartiene la colonna o ID della stored procedure a cui è associato il parametro.|  
+|**id**|**int**|ID di oggetto della tabella a cui appartiene la colonna o ID della stored procedure a cui è associato il parametro.|  
 |**xtype**|**tinyint**|Tipo di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|ID del tipo di dati esteso definito dall'utente.|  
-|**lunghezza**|**bigint**|Lunghezza massima di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|Lunghezza massima di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|ID di colonna o di parametro.|  
@@ -52,12 +52,12 @@ ms.locfileid: "68029631"
 |**offset**|**int**|Offset nella riga in cui appare la colonna.|  
 |**CollationID**|**int**|ID delle regole di confronto della colonna. NULL per colonne non di tipo carattere.|  
 |**linguaggio**|**int**|Identificatore di lingua per la colonna.|  
-|**stato**|**int**|Mappa di bit utilizzata per descrivere una proprietà della colonna o del parametro:<br /><br /> **0x08** = la colonna consente valori null.<br /><br /> **0x10** = il riempimento ANSI era attivo quando sono state aggiunte colonne **varchar** o **varbinary** . Gli spazi vuoti finali vengono conservati per **varchar** e gli zeri finali vengono conservati per le colonne **varbinary** .<br /><br /> **0x40** = il parametro è un parametro di output.<br /><br /> **0x80** = la colonna è una colonna Identity.|  
-|**tipo**|**int**|Tipo di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
-|**Tipo di utente**|**tinyint**|ID del tipo di dati definito dall'utente da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**Stato**|**int**|Mappa di bit utilizzata per descrivere una proprietà della colonna o del parametro:<br /><br /> **0x08** = la colonna consente valori null.<br /><br /> **0x10** = il riempimento ANSI era attivo quando sono state aggiunte colonne **varchar** o **varbinary** . Gli spazi vuoti finali vengono conservati per **varchar** e gli zeri finali vengono conservati per le colonne **varbinary** .<br /><br /> **0x40** = il parametro è un parametro di output.<br /><br /> **0x80** = la colonna è una colonna Identity.|  
+|**type**|**int**|Tipo di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**UserType**|**tinyint**|ID del tipo di dati definito dall'utente da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Livello di precisione della colonna|  
-|**scala**|**int**|Scala della colonna.|  
+|**scale**|**int**|Scala della colonna.|  
 |**IsComputed**|**int**|Flag che indica se si tratta di una colonna calcolata:<br /><br /> **0** = non calcolata.<br /><br /> **1** = calcolato.|  
 |**isoutparam**|**int**|Indica se il parametro della procedura è un parametro di output:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
 |**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> **1** = true.<br /><br /> **0** = false.|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003517"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Istruzioni di manipolazione dei dati MDX (MDX)
@@ -33,6 +33,6 @@ ms.locfileid: "68003517"
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sull'istruzione MDX &#40;&#41;MDX](../mdx/mdx-statement-reference-mdx.md)   
  [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
- [Istruzioni di scripting MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

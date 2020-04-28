@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028666"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Impostazioni del progetto (mapping dei tipi) (SybaseToSQL)
@@ -43,7 +43,7 @@ Fare clic per modificare il tipo di dati selezionato nell'elenco mapping.
 **Rimuovi**  
 Fare clic per rimuovere il mapping dei tipi di dati selezionati dall'elenco mapping.  
   
-**Ripristina impostazioni predefinite**  
+**Ripristina predefiniti**  
 Fare clic per reimpostare l'elenco dei mapping dei tipi sui valori predefiniti di SSMA.  
   
 ## <a name="default-type-mapping"></a>Mapping dei tipi predefiniti  
@@ -52,18 +52,18 @@ La tabella seguente contiene il mapping dei tipi predefinito tra l' [!INCLUDE[ss
 |Tipo di dati ASE|Tipo di dati di SQL Server|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
-|**BINARY**|**BINARY**|  
+|**binary**|**binary**|  
 |**binario [\*.. 8000]**|**Binary [\*]**|  
 |**binario [8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**carattere variabile**|**varchar**|  
+|**char varying**|**varchar**|  
 |**carattere variabile [\*.. 8000]**|**varchar [\*]**|  
 |**carattere variabile [8001...\*]**|**ntext**|  
 |**Char [\*.. 8000]**|**Char [\*]**|  
 |**Char [8001..\*;]**|**ntext**|  
-|**character**|**char**|  
-|**carattere variabile**|**varchar**|  
+|**carattere**|**char**|  
+|**character varying**|**varchar**|  
 |**carattere variabile [\*.. 8000]**|**varchar [\*]**|  
 |**variazione di caratteri [8001..\*]**|**ntext**|  
 |**carattere [\*.. 8000]**|**Char [\*]**|  
@@ -76,11 +76,11 @@ La tabella seguente contiene il mapping dei tipi predefinito tra l' [!INCLUDE[ss
 |**decimal**|**decimal**|  
 |**decimale [\*.. \*]**|**Decimal [\*]**|  
 |**decimale [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
-|**double precision**|**float [53]**|  
+|**precisione doppia**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*.. 15**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
-|**immagine**|**immagine**|  
+|**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
@@ -106,16 +106,16 @@ La tabella seguente contiene il mapping dei tipi predefinito tra l' [!INCLUDE[ss
 |**variabile nchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar [\*.. 4000]**|**nchar [\*]**|  
 |**nchar [4001..\*]**|**nvarchar(max)**|  
-|**numerico**|**numerico**|  
+|**numeric**|**numeric**|  
 |**numerico [\*.. \*]**|**numeric [\*]**|  
 |**numerico [\*.. \*][\*.. \*]**|**numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
-|**reale**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
-|**SMALLMONEY**|**SMALLMONEY**|  
+|**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*.. \*]**|**nvarchar [255]**|  
 |**text**|**text**|  

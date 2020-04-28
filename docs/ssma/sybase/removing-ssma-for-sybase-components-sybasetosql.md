@@ -10,10 +10,10 @@ ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028638"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Rimozione di SSMA per componenti di Sybase (SybaseToSQL)
@@ -24,7 +24,7 @@ Al termine della migrazione dei database da Sybase Adaptive Server Enterprise (A
   
 **Per disinstallare SSMA**  
   
-1.  Nel Pannello di controllo aprire **Installazione applicazioni**.  
+1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
 2.  Selezionare **Microsoft SQL Server Migration Assistant per Sybase**, quindi fare clic su **Rimuovi**.  
   
@@ -35,7 +35,7 @@ Se si è certi che i database migrati non utilizzino oggetti nello schema **sysd
   
 Per disinstallare il pacchetto di estensione  
   
-1.  Nel Pannello di controllo aprire **Installazione applicazioni**.  
+1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
 2.  Selezionare **Microsoft SQL Server Migration Assistant per Sybase Extension Pack**, quindi fare clic su **Rimuovi**.  
   

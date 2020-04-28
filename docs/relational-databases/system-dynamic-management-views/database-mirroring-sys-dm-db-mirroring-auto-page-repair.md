@@ -21,10 +21,10 @@ ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017912"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Mirroring del database-sys. dm_db_mirroring_auto_page_repair
@@ -37,18 +37,18 @@ ms.locfileid: "68017912"
 |**database_id**|**int**|ID del database al quale corrisponde questa riga.|  
 |**file_id**|**int**|ID del file in cui si trova la pagina.|  
 |**page_id**|**bigint**|ID della pagina nel file.|  
-|**error_type**|**int**|Tipo di errore. I valori possibili sono:<br /><br /> **-** 1 = tutti gli errori hardware 823<br /><br /> 1 = Errori 824 diversi da un errore del checksum o da una pagina incompleta, ad esempio l'ID di una pagina danneggiata<br /><br /> 2 = Errore nel checksum<br /><br /> 3 = Pagina incompleta|  
+|**error_type**|**int**|Tipo di errore. I valori possibili sono i seguenti.<br /><br /> **-** 1 = tutti gli errori hardware 823<br /><br /> 1 = Errori 824 diversi da un errore del checksum o da una pagina incompleta, ad esempio l'ID di una pagina danneggiata<br /><br /> 2 = Errore nel checksum<br /><br /> 3 = Pagina incompleta|  
 |**page_status**|**int**|La stato del tentativo di ripristino della pagina:<br /><br /> 2 = in coda per la richiesta dal partner.<br /><br /> 3 = richiesta inviata al partner.<br /><br /> 4 = in coda per il ripristino automatico della pagina (risposta ricevuta dal partner).<br /><br /> 5 = il ripristino automatico della pagina è stato completato e la pagina può essere utilizzata.<br /><br /> 6 = irreparabile. Indica che si è verificato un errore durante il tentativo di ripristino della pagina, ad esempio perché la pagina è danneggiata anche per il partner, il partner è disconnesso o si è verificato un problema di rete. Questo stato non è finale; se il danno si verifica nuovamente nella pagina, questa verrà nuovamente richiesta dal partner.|  
 |**modification_time**|**datetime**|Ora dell'ultima modifica dello stato della pagina.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Correzione automatica della pagina &#40;Gruppi di disponibilità/Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Correzione automatica della pagina &#40;gruppi di disponibilità: mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;&#41;Transact-SQL](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022329"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
@@ -69,7 +69,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   Impossibile utilizzare **sp_migrate_user_to_contained** in un database di sistema.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Quando si esegue la migrazione di utenti, fare attenzione a non disabilitare o eliminare tutti gli account di accesso di amministratore dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se tutti gli account di accesso vengono eliminati, vedere [connettersi a SQL Server quando gli amministratori di sistema sono bloccati](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  Se è presente l'account di accesso **BUILTIN\Administrators** , gli amministratori possono connettersi avviando l'applicazione utilizzando l'opzione **Esegui come amministratore** .  

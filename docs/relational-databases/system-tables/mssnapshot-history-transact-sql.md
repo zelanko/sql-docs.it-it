@@ -18,10 +18,10 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997275"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67997275"
 |**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvia.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**time**|**datetime**|Ora di registrazione del messaggio.|  
-|**durata**|**int**|Durata espressa in secondi della sessione del messaggio.|  
+|**duration**|**int**|Durata espressa in secondi della sessione del messaggio.|  
 |**Commenti**|**nvarchar(255)**|Testo del messaggio.|  
 |**delivered_transactions**|**int**|Numero totale di transazioni recapitate durante la sessione.|  
 |**delivered_commands**|**int**|Numero di comandi recapitati al secondo.|  

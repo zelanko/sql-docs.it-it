@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017079"
 ---
 # <a name="arithmetic-operators"></a>Operatori aritmetici
@@ -24,10 +24,10 @@ ms.locfileid: "68017079"
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|[+ (Aggiungi)](../mdx/add-mdx.md)|Esegue la somma di due numeri.|  
-|[/(Divisione)](../mdx/divide-mdx-operator-reference.md)|Esegue una divisione di un numero per un altro.|  
+|[+ (addizione)](../mdx/add-mdx.md)|Esegue la somma di due numeri.|  
+|[/ (divisione)](../mdx/divide-mdx-operator-reference.md)|Esegue una divisione di un numero per un altro.|  
 |[* (Moltiplicazione)](../mdx/multiply-mdx.md)|Moltiplica due numeri.|  
-|[-(Sottrazione)](../mdx/subtract-mdx.md)|Sottrae un numero da un altro.|  
+|[- (sottrazione)](../mdx/subtract-mdx.md)|Sottrae un numero da un altro.|  
 |^ (elevamento a potenza)|Eleva un numero a un altro numero.|  
   
 > [!NOTE]  

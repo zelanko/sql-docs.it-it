@@ -18,10 +18,10 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029785"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
@@ -31,21 +31,21 @@ ms.locfileid: "68029785"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome del server predefinito.|  
+|**pubblicazione**|**sysname**|Nome del server predefinito.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione predefinito.|  
-|**nome**|**sysname**|Nome della pubblicazione.|  
+|**name**|**sysname**|Nome della pubblicazione.|  
 |**Descrizione**|**nvarchar(255)**|Breve descrizione della pubblicazione.|  
 |**conservazione**|**int**|Periodo di memorizzazione per l'intero set di pubblicazioni, in cui l'unità è indicata dal valore della colonna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica se la pubblicazione viene filtrata:<br /><br /> **0** = non filtrato.<br /><br /> **1** = filtrato.|  
 |**pubid**|**uniqueidentifier**|Numero di identificazione univoco della pubblicazione. Viene generato durante l'aggiunta della pubblicazione.|  
-|**designmasterid**|**uniqueidentifier**|Riservato a un uso futuro.|  
+|**designmasterid**|**uniqueidentifier**|Riservato per utilizzi futuri.|  
 |**ParentID**|**uniqueidentifier**|Indica la pubblicazione padre da cui la pubblicazione corrente di pari livello o subset è stata creata (utilizzato per tipologie gerarchiche di pubblicazione).|  
 |**sync_mode**|**tinyint**|Modalità di sincronizzazione della pubblicazione:<br /><br /> **0** = nativo.<br /><br /> **1** = carattere.|  
 |**allow_push**|**int**|Indica se la pubblicazione consente sottoscrizioni push.<br /><br /> **0** = le sottoscrizioni push non sono consentite.<br /><br /> **1** = le sottoscrizioni push sono consentite.|  
 |**allow_pull**|**int**|Indica se la pubblicazione consente sottoscrizioni pull.<br /><br /> **0** = le sottoscrizioni pull non sono consentite.<br /><br /> **1** = le sottoscrizioni pull sono consentite.|  
 |**allow_anonymous**|**int**|Indica se la pubblicazione consente sottoscrizioni anonime.<br /><br /> **0** = sottoscrizioni anonime non consentite.<br /><br /> **1** = le sottoscrizioni anonime sono consentite.|  
 |**centralized_conflicts**|**int**|Indica se i record dei conflitti vengono archiviati nel server di pubblicazione:<br /><br /> **0** = i record dei conflitti non vengono archiviati nel server di pubblicazione.<br /><br /> **1** = i record dei conflitti vengono archiviati nel server di pubblicazione.|  
-|**stato**|**tinyint**|Riservato a un uso futuro.|  
+|**Stato**|**tinyint**|Riservato per utilizzi futuri.|  
 |**snapshot_ready**|**tinyint**|Indica lo stato dello snapshot della pubblicazione:<br /><br /> **0** = lo snapshot non è pronto per l'utilizzo.<br /><br /> **1** = lo snapshot è pronto per l'utilizzo.<br /><br /> **2** = è necessario creare un nuovo snapshot per la pubblicazione.|  
 |**enabled_for_internet**|**bit**|Indica se i file di sincronizzazione per la pubblicazione sono attivati per Internet tramite il servizio FTP e altri servizi.<br /><br /> **0** = è possibile accedere ai file di sincronizzazione da Internet.<br /><br /> **1** = non è possibile accedere ai file di sincronizzazione da Internet.|  
 |**dynamic_filters**|**bit**|Indica se la pubblicazione viene filtrata utilizzando un filtro di riga con parametri.<br /><br /> **0** = la pubblicazione non è con filtro di riga.<br /><br /> **1** = la pubblicazione è con filtro di riga.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029785"
 |**allow_synctoalternate**|**bit**|Viene specificato se è consentito l'utilizzo di un partner di sincronizzazione alternativo per la sincronizzazione con il server di pubblicazione. **0** indica che un partner di sincronizzazione non è consentito.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Viene visualizzato un elenco delle funzioni utilizzate per il recupero delle informazioni sul Sottoscrittore e la convalida dei criteri per i filtri di riga con parametri nel Sottoscrittore.|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un GUID valido specifica che la pubblicazione è pubblicata nel Active Directory e il GUID è l'oggetto di pubblicazione Active Directory corrispondente **objectGUID**. Se è NULL, la pubblicazione non è pubblicata in Active Directory.|  
-|**backward_comp_level**|**int**|Livello di compatibilità del database. Può avere uno dei valori seguenti:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|Numero massimo di processi di merge simultanei consentiti. Il valore **0** per questa proprietà significa che non esiste alcun limite al numero di processi di merge simultanei in esecuzione in un determinato momento. Questa proprietà consente di impostare un limite al numero di processi di merge simultanei eseguibili contemporaneamente in una pubblicazione di tipo merge. Se è stata pianificata l'esecuzione simultanea di un numero di sessioni maggiore del limite consentito, le sessioni in eccesso vengono inserite in una coda dove rimangono in attesa fino al completamento del processo di merge in esecuzione.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Numero massimo di sessioni simultanee di snapshot di dati filtrati eseguibili nella pubblicazione di tipo merge. Se è **0**, non esiste alcun limite al numero massimo di sessioni simultanee di snapshot dei dati filtrati che possono essere eseguite simultaneamente sulla pubblicazione in un determinato momento. Questa proprietà consente di impostare un limite al numero di sessioni simultanee di snapshot eseguibili contemporaneamente in una pubblicazione di tipo merge. Se è stata pianificata l'esecuzione simultanea di un numero di sessioni maggiore del limite consentito, le sessioni in eccesso vengono inserite in una coda dove rimangono in attesa fino al completamento del processo di merge in esecuzione.|  
 |**use_partition_groups**|**smallint**|Specifica se la pubblicazione utilizza partizioni pre-calcolate.|  
@@ -77,7 +77,7 @@ ms.locfileid: "68029785"
 |**dynamic_snapshot_queue_timeout**|**int**|Specifica la durata, espressa in minuti, dell'attesa nella coda del processo di generazione dello snapshot da parte di un Sottoscrittore in caso di utilizzo di filtri con parametri.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Specifica la durata, espressa in minuti, dell'attesa del completamento del processo di generazione dello snapshot da parte di un Sottoscrittore in caso di utilizzo di filtri con parametri.|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione per la pubblicazione.|  
-|**snapshot_jobid**|**binario (16)**|Identifica il processo dell'agente che genera lo snapshot quando il Sottoscrittore è in grado di inizializzare il processo di generazione dello snapshot.|  
+|**snapshot_jobid**|**binary(16)**|Identifica il processo dell'agente che genera lo snapshot quando il Sottoscrittore è in grado di inizializzare il processo di generazione dello snapshot.|  
 |**allow_web_synchronization**|**bit**|Specifica se la pubblicazione è abilitata per la sincronizzazione Web, dove **1** indica che la sincronizzazione Web è abilitata per la pubblicazione.|  
 |**web_synchronization_url**|**nvarchar (500)**|Specifica il valore predefinito dell'URL Internet utilizzato per la sincronizzazione tramite il Web.|  
 |**allow_partition_realignment**|**bit**|Indica se le eliminazioni vengono inviate al Sottoscrittore quando la modifica della riga nel server di pubblicazione comporta la modifica della partizione corrispondente.<br /><br /> **0** = i dati di una partizione precedente verranno lasciati nel Sottoscrittore, in cui le modifiche apportate a questi dati nel server di pubblicazione non verranno replicate nel Sottoscrittore, ma le modifiche apportate nel Sottoscrittore verranno replicate nel server di pubblicazione.<br /><br /> **1** = Elimina nel Sottoscrittore per riflettere i risultati di una modifica della partizione rimuovendo i dati che non fanno più parte della partizione del Sottoscrittore.<br /><br /> Per ulteriori informazioni, vedere [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Nota: i dati che rimangono nel Sottoscrittore quando questo valore è **0** devono essere considerati come se fossero di sola lettura. Tuttavia, questo non viene applicato rigorosamente dal sistema di replica.|  
@@ -91,6 +91,6 @@ ms.locfileid: "68029785"
  [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

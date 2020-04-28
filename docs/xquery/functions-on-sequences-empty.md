@@ -16,10 +16,10 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004677"
 ---
 # <a name="functions-on-sequences---empty"></a>Funzioni su sequenze - empty
@@ -44,7 +44,7 @@ fn:empty($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>R. Utilizzo della funzione XQuery empty() per determinare se un attributo è presente  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Utilizzo della funzione XQuery empty() per determinare se un attributo è presente  
  Nel processo di produzione per il modello di prodotto 7, questa query restituisce tutti i centri di lavorazione che non dispongono di un attributo **MachineHours** .  
   
 ```  

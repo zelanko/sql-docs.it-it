@@ -15,10 +15,10 @@ ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bd75656f2fa5d90bace8cfddb4b22da1a8c6db94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017945"
 ---
 # <a name="common-language-runtime-related-dynamic-management-views-transact-sql"></a>Viste a gestione dinamica relative a CLR (Common Language Runtime) (Transact-SQL)

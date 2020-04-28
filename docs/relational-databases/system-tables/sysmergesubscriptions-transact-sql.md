@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029780"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
@@ -34,16 +34,16 @@ ms.locfileid: "68029780"
 |subscriber_server|**sysname**|ID del server utilizzato per eseguire il mapping del campo srvid al valore specifico del server nella migrazione di una copia del database di sottoscrizione in un server diverso.|  
 |db_name|**sysname**|Nome del database di sottoscrizione.|  
 |pubid|**uniqueidentifier**|ID della pubblicazione da cui è stata creata la sottoscrizione corrente.|  
-|datasource_type|**int**|Tipo di origine dati:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB Jet.|  
+|datasource_type|**int**|Tipo di origine dati:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB Jet.|  
 |subid|**uniqueidentifier**|Numero di identificazione univoco per la sottoscrizione.|  
-|replnickname|**BINARY**|Nome alternativo compresso per la replica.|  
+|replnickname|**binary**|Nome alternativo compresso per la replica.|  
 |replicastate|**uniqueidentifier**|Identificatore univoco utilizzato per determinare se la sincronizzazione precedente ha avuto esito positivo confrontando il valore nel server di pubblicazione con il valore nel Sottoscrittore.|  
 |status|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo.<br /><br /> **1** = attivo.<br /><br /> **2** = eliminato.|  
 |subscriber_type|**int**|Tipo di Sottoscrittore:<br /><br /> **1** = globale.<br /><br /> **2** = locale.<br /><br /> **3** = anonimo.|  
 |subscription_type|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anonimo.|  
 |sync_type|**tinyint**|Tipo di sincronizzazione:<br /><br /> **1** = automatico.<br /><br /> **2** = nessuna sincronizzazione.|  
 |description|**nvarchar(255)**|Breve descrizione della sottoscrizione.|  
-|priority|**reale**|Viene specificata la priorità della sottoscrizione e viene consentita l'implementazione della risoluzione dei conflitti in base alla priorità Uguale a **0,00** per tutte le sottoscrizioni locali o anonime.|  
+|priority|**real**|Viene specificata la priorità della sottoscrizione e viene consentita l'implementazione della risoluzione dei conflitti in base alla priorità Uguale a **0,00** per tutte le sottoscrizioni locali o anonime.|  
 |recgen|**bigint**|Numero dell'ultima generazione ricevuta.|  
 |recguid|**uniqueidentifier**|ID univoco dell'ultima generazione ricevuta.|  
 |sentgen|**bigint**|Numero dell'ultima generazione inviata.|  

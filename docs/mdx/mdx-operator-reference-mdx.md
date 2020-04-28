@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033915"
 ---
 # <a name="mdx-operator-reference-mdx"></a>Guida di riferimento agli operatori MDX (MDX)
@@ -24,7 +24,7 @@ ms.locfileid: "68033915"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[--&#40;commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Indica un testo di commento specificato dall'utente.|  
+|[-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Indica un testo di commento specificato dall'utente.|  
 |[-&#40;ad eccezione di&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|Esegue un'operazione sui set che restituisce la differenza tra due set, rimuovendo i membri duplicati.|  
 |[-&#40;&#41; &#40;MDX negativo&#41;](../mdx/negative-mdx.md)|Esegue un'operazione unaria che restituisce l'opposto del valore di un'espressione numerica.|  
 |[-&#40;sottrarre&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|Esegue un'operazione aritmetica che sottrae un numero da un altro.|  
@@ -52,6 +52,6 @@ ms.locfileid: "68033915"
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|Esegue un'operazione di esclusione logica tra due espressioni numeriche.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento al linguaggio MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)  
+ [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

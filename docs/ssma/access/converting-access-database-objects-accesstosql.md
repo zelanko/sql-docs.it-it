@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006625"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversione di oggetti di database di Access (AccessToSQL)
@@ -61,7 +61,7 @@ Nella tabella seguente vengono illustrati gli oggetti di accesso che vengono con
 |chiave esterna|chiave esterna|  
 |query|vista<br /><br />La maggior parte delle query SELECT viene convertita in viste. Non viene eseguita la migrazione di altre query, ad esempio query di aggiornamento.<br /><br />Le query SELECT che accettano parametri non vengono convertite, né query tra tabulazioni.|  
 |report|non convertito|  
-|form|non convertito|  
+|Modulo|non convertito|  
 |macro|non convertito|  
 |modulo|non convertito|  
 |valore predefinito|valore predefinito|  
@@ -77,7 +77,7 @@ Per convertire gli oggetti di database di Access, è necessario innanzitutto sel
   
 1.  In Esplora metadati di Access espandere **Access-metabase**, quindi espandere **database**.  
   
-2.  Eseguire almeno una fra le seguenti operazioni:  
+2.  Effettuare una o più delle seguenti operazioni:  
   
     -   Per convertire tutti i database, selezionare la casella di controllo accanto a **database**.  
   
@@ -87,7 +87,7 @@ Per convertire gli oggetti di database di Access, è necessario innanzitutto sel
   
     -   Per convertire o omettere singole tabelle, espandere il database, espandere **tabelle**, quindi selezionare o deselezionare la casella di controllo accanto alla tabella.  
   
-3.  Eseguire una delle operazioni seguenti:  
+3.  Effettua una delle seguenti operazioni:  
   
     -   Per convertire gli schemi, fare clic con il pulsante destro del mouse su **database** e scegliere **Converti schema**.  
   
@@ -110,7 +110,7 @@ Dopo aver convertito i metadati di [!INCLUDE[ssNoVersion](../../includes/ssnover
   
     Spostare il cursore all'esterno della cella della proprietà modificata. A tale scopo, fare clic su un'altra riga o premere il tasto TAB.  
   
-3.  Fare clic su **Apply**.  
+3.  Fare clic su **Applica**.  
   
 È ora possibile visualizzare le modifiche nel codice nella scheda **SQL** .  
   

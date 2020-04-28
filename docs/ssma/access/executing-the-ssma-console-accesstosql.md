@@ -10,10 +10,10 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006565"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Esecuzione della console SSMA (AccessToSQL)

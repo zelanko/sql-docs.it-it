@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026792"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
@@ -46,9 +46,9 @@ ms.locfileid: "68026792"
 |xtp_object_id|**bigint**|ID della tabella ottimizzata per la memoria.|  
 |index_id|**int**|ID dell'indice.|  
 |delta_pages|**bigint**|Numero totale di pagine delta per questo indice nell'albero.|  
-|internal_pages|**bigint**|Solo per uso interno. Numero totale di pagine interne per questo indice nell'albero.|  
+|internal_pages|**bigint**|Per uso interno. Numero totale di pagine interne per questo indice nell'albero.|  
 |leaf_pages|**bigint**|Numero totale di pagine foglia per questo indice nell'albero.|  
-|outstanding_retired_nodes|**bigint**|Solo per uso interno. Numero totale di nodi per questo indice nelle strutture interne.|  
+|outstanding_retired_nodes|**bigint**|Per uso interno. Numero totale di nodi per questo indice nelle strutture interne.|  
 |page_update_count|**bigint**|Numero cumulativo di operazioni di aggiornamento di una pagina nell'indice.|  
 |page_update_retry_count|**bigint**|Numero cumulativo di tentativi di un'operazione di aggiornamento di una pagina nell'indice.|  
 |page_consolidation_count|**bigint**|Numero cumulativo di consolidamenti di pagine nell'indice.|  
@@ -66,6 +66,6 @@ ms.locfileid: "68026792"
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica correlate alle tabelle con ottimizzazione per la memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

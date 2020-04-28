@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032646"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>R. Creazione di un set di raccolta utilizzando valori predefiniti  
- Nell'esempio seguente viene creato un set di raccolta specificando solo i parametri obbligatori. 
-  `@collection_mode` non è obbligatorio, ma per la modalità di raccolta predefinita (cache) è necessario specificare un ID oppure un nome della pianificazione.  
+ Nell'esempio seguente viene creato un set di raccolta specificando solo i parametri obbligatori. `@collection_mode` non è obbligatorio, ma per la modalità di raccolta predefinita (cache) è necessario specificare un ID oppure un nome della pianificazione.  
   
 ```  
 USE msdb;  
@@ -158,8 +157,8 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
- [Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [Creare un set di raccolta personalizzato che utilizza il tipo di agente di raccolta query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

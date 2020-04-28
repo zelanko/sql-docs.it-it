@@ -19,10 +19,10 @@ ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018360"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "68018360"
 
   In questo argomento è incluso un elenco di domande frequenti. Le risposte a queste domande sono query basate sulle viste del catalogo.  
   
-##  <a name="_TOP"></a>Domande frequenti  
+##  <a name="frequently-asked-questions"></a><a name="_TOP"></a>Domande frequenti  
  Nelle sezioni seguenti sono elencate le domande frequenti per categoria.  
   
 ### <a name="data-types"></a>Tipi di dati  
@@ -109,7 +109,7 @@ ms.locfileid: "68018360"
   
 ## <a name="answers"></a>Risposte  
   
-###  <a name="_FAQ1"></a>Ricerca per categorie trovare tutte le tabelle che non dispongono di un indice cluster in un database specificato?  
+###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-clustered-index-in-a-specified-database"></a><a name="_FAQ1"></a>Ricerca per categorie trovare tutte le tabelle che non dispongono di un indice cluster in un database specificato?  
  Prima di eseguire le query seguenti, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -139,9 +139,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a>Ricerca per categorie trovare tutti i proprietari delle entità contenute in uno schema specifico?  
+###  <a name="how-do-i-find-all-the-owners-of-entities-contained-in-a-specified-schema"></a><a name="_FAQ2"></a>Ricerca per categorie trovare tutti i proprietari delle entità contenute in uno schema specifico?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name>` con nomi validi.  
   
 ```  
@@ -167,9 +167,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a>Ricerca per categorie trovare tutte le tabelle che non dispongono di una chiave primaria?  
+###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-primary-key"></a><a name="_FAQ3"></a>Ricerca per categorie trovare tutte le tabelle che non dispongono di una chiave primaria?  
  Prima di eseguire le query seguenti, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -202,9 +202,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a>Ricerca per categorie trovare tutte le tabelle che non dispongono di un indice?  
+###  <a name="how-do-i-find-all-the-tables-that-do-not-have-an-index"></a><a name="_FAQ4"></a>Ricerca per categorie trovare tutte le tabelle che non dispongono di un indice?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -219,9 +219,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a>Ricerca per categorie trovare tutte le tabelle che includono una colonna Identity?  
+###  <a name="how-do-i-find-all-the-tables-that-have-an-identity-column"></a><a name="_FAQ5"></a>Ricerca per categorie trovare tutte le tabelle che includono una colonna Identity?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -254,9 +254,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a>Ricerca per categorie individuare i tipi di dati delle colonne di una tabella specificata?  
+###  <a name="how-do-i-find-the-data-types-of-the-columns-of-a-specified-table"></a><a name="_FAQ7"></a>Ricerca per categorie individuare i tipi di dati delle colonne di una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -279,9 +279,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a>Ricerca per categorie trovare le dipendenze da una funzione specificata?  
+###  <a name="how-do-i-find-the-dependencies-on-a-specified-function"></a><a name="_FAQ8"></a>Ricerca per categorie trovare le dipendenze da una funzione specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.function_name>` con nomi validi.  
   
 ```  
@@ -297,9 +297,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a>Ricerca per categorie trovare tutte le stored procedure in un database?  
+###  <a name="how-do-i-find-all-the-stored-procedures-in-a-database"></a><a name="_FAQ9"></a>Ricerca per categorie trovare tutte le stored procedure in un database?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -316,9 +316,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a>Ricerca per categorie trovare i parametri per una funzione o stored procedure specificata?  
+###  <a name="how-do-i-find-the-parameters-for-a-specified-stored-procedure-or-function"></a><a name="_FAQ10"></a>Ricerca per categorie trovare i parametri per una funzione o stored procedure specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.object_name>` con nomi validi.  
   
 ```  
@@ -342,9 +342,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a>Ricerca per categorie trovare tutte le funzioni definite dall'utente in un database?  
+###  <a name="how-do-i-find-all-the-user-defined-functions-in-a-database"></a><a name="_FAQ12"></a>Ricerca per categorie trovare tutte le funzioni definite dall'utente in un database?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -361,9 +361,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a>Ricerca per categorie trovare tutte le viste in un database?  
+###  <a name="how-do-i-find-all-views-in-a-database"></a><a name="_FAQ13"></a>Ricerca per categorie trovare tutte le viste in un database?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -379,9 +379,9 @@ FROM sys.views;
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a>Ricerca per categorie trovare tutte le entità modificate negli ultimi N giorni?  
+###  <a name="how-do-i-find-all-the-entities-that-have-been-modified-in-the-last-n-days"></a><a name="_FAQ6"></a>Ricerca per categorie trovare tutte le entità modificate negli ultimi N giorni?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<n_days>` con valori validi.  
   
 ```  
@@ -399,9 +399,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a>Ricerca per categorie individuare i tipi di dati LOB di una tabella specificata?  
+###  <a name="how-do-i-find-the-lob-data-types-of-a-specified-table"></a><a name="_FAQ14"></a>Ricerca per categorie individuare i tipi di dati LOB di una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -427,9 +427,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a>Ricerca per categorie visualizzare la definizione di un modulo?  
+###  <a name="how-do-i-view-the-definition-of-a-module"></a><a name="_FAQ15"></a>Ricerca per categorie visualizzare la definizione di un modulo?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.object_name>` con nomi validi.  
   
 ```  
@@ -452,9 +452,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a>Ricerca per categorie visualizzare la definizione di un trigger a livello di server?  
+###  <a name="how-do-i-view-the-definition-of-a-server-level-trigger"></a><a name="_FAQ19"></a>Ricerca per categorie visualizzare la definizione di un trigger a livello di server?  
   
 ```  
 SELECT definition  
@@ -463,9 +463,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a>Ricerca per categorie individuare le colonne di una chiave primaria per una tabella specificata?  
+###  <a name="how-do-i-find-the-columns-of-a-primary-key-for-a-specified-table"></a><a name="_FAQ16"></a>Ricerca per categorie individuare le colonne di una chiave primaria per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -506,9 +506,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a>Ricerca per categorie individuare le colonne di una chiave esterna per una tabella specificata?  
+###  <a name="how-do-i-find-the-columns-of-a-foreign-key-for-a-specified-table"></a><a name="_FAQ17"></a>Ricerca per categorie individuare le colonne di una chiave esterna per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -530,9 +530,9 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a>Ricerca per categorie individuare le autorizzazioni concesse o negate a un'entità specificata?  
+###  <a name="how-do-i-find-the-permissions-granted-or-denied-to-a-specified-principal"></a><a name="_FAQ18"></a>Ricerca per categorie individuare le autorizzazioni concesse o negate a un'entità specificata?  
  Nell'esempio seguente viene creata una funzione per restituire il nome dell'entità per la quale vengono verificate le autorizzazioni. La funzione viene richiamata nelle query seguenti. È necessario creare la funzione in ogni database nel quale si desidera verificare le autorizzazioni.  
   
 ```  
@@ -613,9 +613,9 @@ WHERE grantee_principal_id = DATABASE_PRINCIPAL_ID('public');
 GO  
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a>Ricerca per categorie determinare se una colonna viene utilizzata in un'espressione di colonna calcolata?  
+###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>Ricerca per categorie determinare se una colonna viene utilizzata in un'espressione di colonna calcolata?  
  Prima di eseguire la query seguente, sostituire `<database_name>`, `<schema_name.table_name>`e `<column_name`> con nomi validi.  
   
 ```  
@@ -635,9 +635,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a>Ricerca per categorie trovare tutte le colonne utilizzate in un'espressione di colonna calcolata?  
+###  <a name="how-do-i-find-all-the-columns-that-are-used-in-a-computed-column-expression"></a><a name="_FAQ21"></a>Ricerca per categorie trovare tutte le colonne utilizzate in un'espressione di colonna calcolata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -657,9 +657,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a>Ricerca per categorie trovare le colonne che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
+###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>Ricerca per categorie trovare le colonne che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente o un nome di tipo alias completo di schema valido. La query seguente richiede l'appartenenza al ruolo **db_owner** o le autorizzazioni per visualizzare tutti i metadati della colonna dipendente e della colonna calcolata nel database.  
   
 ```  
@@ -695,9 +695,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a>Ricerca per categorie individuare le colonne calcolate che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
+###  <a name="how-do-i-find-the-computed-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ23"></a>Ricerca per categorie individuare le colonne calcolate che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias.  
   
 ```  
@@ -712,9 +712,9 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a>Ricerca per categorie trovare i parametri che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
+###  <a name="how-do-i-find-the-parameters-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ24"></a>Ricerca per categorie trovare i parametri che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias. La query seguente richiede l'appartenenza al ruolo **db_owner** o le autorizzazioni per visualizzare tutti i metadati della colonna dipendente e della colonna calcolata nel database.  
   
 ```  
@@ -754,9 +754,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a>Ricerca per categorie individuare i vincoli CHECK che dipendono da un tipo CLR definito dall'utente specificato?  
+###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>Ricerca per categorie individuare i vincoli CHECK che dipendono da un tipo CLR definito dall'utente specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un nome di tipo CLR definito dall'utente valido e qualificato dallo schema.  
   
 ```  
@@ -774,9 +774,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a>Ricerca per categorie trovare le viste, le funzioni Transact-SQL e le stored procedure Transact-SQL che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
+###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a>Ricerca per categorie trovare le viste, le funzioni Transact-SQL e le stored procedure Transact-SQL che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias.  
   
  I parametri definiti in una funzione o una procedura vengono associati a schema in modo implicito. Pertanto, i parametri che dipendono da un tipo CLR definito dall'utente o un tipo di alias possono essere visualizzati utilizzando la vista del catalogo [sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) . Le procedure e i trigger non sono associati a schema. Questo significa che le dipendenze tra qualsiasi espressione definita nel corpo della procedura o del trigger e un tipo CLR definito dall'utente o un tipo alias non vengono mantenute. Le viste associate a schema e le funzioni definite dall'utente associate a schemi che dispongono di espressioni che dipendono da un tipo CLR definito dall'utente o da un tipo di alias vengono mantenute nella vista del catalogo **sys. sql_dependencies** . Le dipendenze tra i tipi e le funzioni o le procedure CLR non vengono mantenute.  
@@ -802,9 +802,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a>Ricerca per categorie trovare tutti i vincoli per una tabella specificata?  
+###  <a name="how-do-i-find-all-the-constraints-for-a-specified-table"></a><a name="_FAQ27"></a>Ricerca per categorie trovare tutti i vincoli per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -826,9 +826,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a>Ricerca per categorie trovare tutti gli indici per una tabella specificata?  
+###  <a name="how-do-i-find-all-the-indexes-for-a-specified-table"></a><a name="_FAQ28"></a>Ricerca per categorie trovare tutti gli indici per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -855,9 +855,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a>Ricerca per categorie trovare tutti gli oggetti con un nome di colonna specificato?  
+###  <a name="how-do-i-find-all-the-objects-that-have-a-specified-column-name"></a><a name="_FAQ30"></a>Ricerca per categorie trovare tutti gli oggetti con un nome di colonna specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<column_name>` con nomi validi.  
   
 ```  
@@ -885,9 +885,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a>Ricerca per categorie trovare tutte le tabelle definite dall'utente in un database specificato?  
+###  <a name="how-do-i-find-all-the-user-defined-tables-in-a-specified-database"></a><a name="_FAQ31"></a>Ricerca per categorie trovare tutte le tabelle definite dall'utente in un database specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -899,9 +899,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a>Ricerca per categorie trovare tutte le tabelle e gli indici partizionati?  
+###  <a name="how-do-i-find-all-the-tables-and-indexes-that-are-partitioned"></a><a name="_FAQ32"></a>Ricerca per categorie trovare tutte le tabelle e gli indici partizionati?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -921,9 +921,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a>Ricerca per categorie trovare tutte le statistiche su un oggetto specificato?  
+###  <a name="how-do-i-find-all-the-statistics-on-a-specified-object"></a><a name="_FAQ33"></a>Ricerca per categorie trovare tutte le statistiche su un oggetto specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.object_name>` con un nome di tabella, vista indicizzata o funzione con valori di tabella valido.  
   
 ```  
@@ -940,9 +940,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a>Ricerca per categorie trovare tutte le statistiche e le colonne delle statistiche per un oggetto specificato?  
+###  <a name="how-do-i-find-all-the-statistics-and-statistics-columns-on-a-specified-object"></a><a name="_FAQ34"></a>Ricerca per categorie trovare tutte le statistiche e le colonne delle statistiche per un oggetto specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.object_name>` con un nome di tabella, vista indicizzata o funzione con valori di tabella valido.  
   
 ```  
@@ -961,9 +961,9 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a>Ricerca per categorie trovare la definizione di una vista?  
+###  <a name="how-do-i-find-the-definition-of-a-view"></a><a name="_FAQ35"></a>Ricerca per categorie trovare la definizione di una vista?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.object_name>` con nomi validi.  
   
 ```  
@@ -986,7 +986,7 @@ GO
   
 ```  
   
- [Torna all'inizio](#_TOP)  
+ [TOP](#_TOP)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  

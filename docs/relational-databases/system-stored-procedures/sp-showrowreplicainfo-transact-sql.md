@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032890"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -54,8 +54,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome del server che include il database in cui è stata immessa la voce sulla versione di riga.|  
 |**db_name**|**sysname**|Nome del database in cui è stata immessa la voce.|  
-|**db_nickname**|**binario (6)**|Nome alternativo del database in cui è stata immessa la voce.|  
-|**Versione**|**int**|Versione della voce.|  
+|**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
+|**version**|**int**|Versione della voce.|  
 |**current_state**|**nvarchar (9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> i dati della riga **y** rappresentano lo stato corrente della riga.<br /><br /> i dati di **n** righe non rappresentano lo stato corrente della riga.<br /><br /> n/a>non applicabile. ** \<**<br /><br /> Impossibile determinare lo stato corrente di>sconosciuto. ** \<**|  
 |**rowversion_table**|**nchar (17)**|Indica se le versioni di riga vengono archiviate nella tabella [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o nella tabella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
@@ -66,8 +66,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome del server che include il database in cui è stata immessa la voce sulla versione di colonna.|  
 |**db_name**|**sysname**|Nome del database in cui è stata immessa la voce.|  
-|**db_nickname**|**binario (6)**|Nome alternativo del database in cui è stata immessa la voce.|  
-|**Versione**|**int**|Versione della voce.|  
+|**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
+|**version**|**int**|Versione della voce.|  
 |**colname**|**sysname**|Nome della colonna di articolo rappresentata dalla voce sulla versione di colonna.|  
 |**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di colonna. Questo campo è in genere vuoto.|  
   

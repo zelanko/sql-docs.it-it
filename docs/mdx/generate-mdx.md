@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005902"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Espressione stringa valida che corrisponde in genere al nome del membro corrente (CurrentMember.Name) di ogni tupla nel set specificato.  
   
- *Delimiter*  
+ *Delimitatore*  
  Delimitatore valido espresso come espressione stringa.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  Questo formato della funzione **generate** può essere utile durante il debug dei calcoli, in quanto consente di restituire una stringa che Visualizza i nomi di tutti i membri di un set. Questo potrebbe essere più facile da leggere rispetto alla rigorosa rappresentazione MDX di un set restituito dalla funzione [SetToStr &#40;mdx&#41;](../mdx/settostr-mdx.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

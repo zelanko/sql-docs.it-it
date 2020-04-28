@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032818"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -75,18 +75,18 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|Codice integer di un tipo di dati ODBC. Se non è possibile effettuare il mapping di questo tipo di dati a un tipo ISO, il valore è NULL. Il nome del tipo di dati nativo viene restituito nella colonna **type_name** .|  
 |**TYPE_NAME**|**sysname**|Rappresentazione in forma di stringa del tipo di dati. Corrisponde al nome del tipo di dati visualizzato dal sistema DBMS sottostante.|  
 |**PRECISIONE**|**int**|Numero di cifre significative. Il valore restituito per la colonna **Precision** è in base 10.|  
-|**LUNGHEZZA**|**int**|Dimensioni di trasferimento dei dati.|  
+|**LENGTH**|**int**|Dimensioni di trasferimento dei dati.|  
 |**SCALA**|**smallint**|Numero di cifre a destra del separatore decimale.|  
 |**RADIX**|**smallint**|Base per i tipi di dati numerici.|  
 |**NULLABLE**|**smallint**|Specifica se i valori Null sono supportati o meno:<br /><br /> 1 = È possibile creare il tipo di dati con supporto per valori Null.<br /><br /> 0 = I valori Null non sono supportati.|  
-|**OSSERVAZIONI**|**varchar (** 254 **)**|Descrizione della colonna della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**COMMENTI**|**varchar (** 254 **)**|Descrizione della colonna della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valore predefinito della colonna.|  
-|**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nel campo **Type** del descrittore. Questa colonna corrisponde alla colonna **data_type** , ad eccezione dei tipi di dati **DateTime** e ISO **Interval** . In questa colonna viene sempre restituito un valore.|  
+|**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nel campo **Type** del descrittore. Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**. In questa colonna viene sempre restituito un valore.|  
 |**SQL_DATETIME_SUB**|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **DateTime** e ISO **Interval**, questo campo è null.|  
 |**CHAR_OCTET_LENGTH**|**int**|Lunghezza massima in byte di una colonna con tipo di dati **character** o **Binary** . Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  
 |**ORDINAL_POSITION**|**int**|Posizione ordinale della colonna nella tabella. La prima colonna nella tabella è 1. In questa colonna viene sempre restituito un valore.|  
 |**IS_NULLABLE**|**varchar (254)**|Impostazione relativa al supporto di valori Null nella colonna della tabella. Per determinare il supporto di valori Null vengono seguite le regole ISO. In un sistema DBMS conforme a ISO non vengono restituite stringhe vuote.<br /><br /> Se la colonna ammette valori Null, viene visualizzato YES. In caso contrario viene visualizzato NO.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Il valore restituito per questa colonna è diverso dal valore restituito per la colonna NULLABLE.|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo di dati utilizzato dalle stored procedure estese. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**SS_DATA_TYPE**|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dalle stored procedure estese. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_sproc_columns** è equivalente a **SQLProcedureColumns** in ODBC. I risultati restituiti vengono ordinati in base **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**e l'ordine in cui i parametri vengono visualizzati nella definizione della procedura.  

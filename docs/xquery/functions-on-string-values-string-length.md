@@ -16,10 +16,10 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004658"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funzioni su valori stringa - string-length
@@ -60,7 +60,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>R. Utilizzo della funzione XQuery string-length() per il recupero di prodotti con descrizioni di riepilogo lunghe  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Utilizzo della funzione XQuery string-length() per il recupero di prodotti con descrizioni di riepilogo lunghe  
  Per i prodotti la cui descrizione di riepilogo è maggiore di 50 caratteri, la query seguente recupera l'ID prodotto, la lunghezza della descrizione di riepilogo e il riepilogo stesso, `Summary` l'elemento <>.  
   
 ```  

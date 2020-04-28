@@ -18,10 +18,10 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017718"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
@@ -61,7 +61,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nome parametro|Descrizione|Valore predefinito|  
+|Nome parametro|Descrizione|Default Value|  
 |*AccountRetryAttempts*|Numero di tentativi di invio del messaggio di posta elettronica da parte del processo di posta elettronica esterno, utilizzando ogni account nel profilo specificato.|**1**|  
 |*AccountRetryDelay*|Tempo di attesa, in secondi, del processo di posta elettronica esterno tra tentativi di invio di un messaggio.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Periodo minimo di tempo, in secondi, durante il quale il processo di posta elettronica esterno resta attivo. Quando Posta elettronica database invia molti messaggi, aumentare questo valore per far restare Posta elettronica database attivo ed evitare l'overhead di avvii e arresti frequenti.|**600**|  

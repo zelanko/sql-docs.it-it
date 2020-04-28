@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017156"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
@@ -42,8 +42,7 @@ Level_Expression.AllMembers
  La funzione **AllMembers** restituisce un set contenente tutti i membri, inclusi i membri calcolati, nella gerarchia o nel livello specificato. La funzione **AllMembers** restituisce i membri calcolati anche se la gerarchia o il livello specificato non contiene membri visibili.  
   
 > [!IMPORTANT]  
->  Quando una dimensione contiene una sola gerarchia visibile, è possibile fare riferimento alla gerarchia con il nome della dimensione o della gerarchia poiché in questo caso il nome della dimensione viene risolto in base all'unica gerarchia visibile che contiene. 
-  `Measures.AllMembers` è ad esempio un'espressione MDX valida perché esegue la risoluzione nell'unica gerarchia nella dimensione Measures.  
+>  Quando una dimensione contiene una sola gerarchia visibile, è possibile fare riferimento alla gerarchia con il nome della dimensione o della gerarchia poiché in questo caso il nome della dimensione viene risolto in base all'unica gerarchia visibile che contiene. `Measures.AllMembers` è ad esempio un'espressione MDX valida perché esegue la risoluzione nell'unica gerarchia nella dimensione Measures.  
   
 > [!NOTE]  
 >  La funzione **AllMembers** è semanticamente simile alla funzione [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) .  
@@ -72,6 +71,6 @@ FROM
 ## <a name="see-also"></a>Vedere anche  
  [AddCalculatedMembers &#40;&#41;MDX](../mdx/addcalculatedmembers-mdx.md)   
  [Elementi figlio &#40;&#41;MDX](../mdx/children-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

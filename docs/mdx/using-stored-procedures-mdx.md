@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038011"
 ---
 # <a name="using-stored-procedures-mdx"></a>Utilizzo di stored procedure (MDX)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  La *stored procedure* è la terminologia [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzata in per questi tipi di funzioni. Le versioni precedenti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di hanno chiamato questi tipi di funzioni come *funzioni definite dall'utente*.  
   
 ## <a name="types-of-stored-procedures"></a>Tipi di stored procedure  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta sia assembly COM che assembly CLR. È preferibile utilizzare gli assembly CLR, perché per tali assembly sono disponibili funzionalità di sicurezza più avanzate. Se nel server è installato Microsoft Office Excel, saranno disponibili anche le funzioni di Excel.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta sia assembly COM che assembly CLR. È preferibile utilizzare gli assembly CLR, perché per tali assembly sono disponibili funzionalità di sicurezza più avanzate. Se nel server è installato Microsoft Office Excel, saranno disponibili anche le funzioni di Excel.  
   
 > [!NOTE]  
 >  Gli assembly COM creati con Microsoft Visual Basic, Applications Edition (VBA) vengono registrati automaticamente.  

@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997438"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -49,7 +49,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------|-----------------|  
 |**regole di confronto compatibili**|L'utilizzo di questa opzione influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su true,|  
 |**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
-|**dist**|Database di distribuzione.|  
+|**dist**|Server di distribuzione.|  
 |**dpub**|Server di pubblicazione remoto associato al server di distribuzione corrente.|  
 |**convalida differita dello schema**|Ignora il controllo dello schema delle tabelle remote all'inizio della query.|  
 |**pub**|Server di pubblicazione.|  
@@ -70,8 +70,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome del server.|  
 |**network_name**|**sysname**|Nome di rete del server.|  
-|**stato**|**varchar (** 70 **)**|Stato del server.|  
-|**ID**|**char (** 4 **)**|Numero di identificazione del server.|  
+|**Stato**|**varchar (** 70 **)**|Stato del server.|  
+|**id**|**char (** 4 **)**|Numero di identificazione del server.|  
 |**collation_name**|**sysname**|Regole di confronto del server.|  
 |**connect_timeout**|**int**|Valore di timeout per la connessione al server collegato.|  
 |**query_timeout**|**int**|Valore di timeout per le query eseguite sul server collegato.|  

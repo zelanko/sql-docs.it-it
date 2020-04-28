@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037326"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Stored procedure di sistema (Transact-SQL)
@@ -55,8 +55,8 @@ ms.locfileid: "68037326"
 |[Stored procedure del data warehouse di gestione &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Utilizzato per configurare il data warehouse di gestione.|  
 |[Stored procedure di automazione OLE](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Consentono di abilitare gli oggetti di automazione standard per l'utilizzo all'interno di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] standard.|  
 |[Stored procedure per la gestione basata su criteri](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Consentono di implementare la gestione basata su criteri.|  
-|[Stored procedure di base](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Aggiungere o rimuovere un computer da un gruppo con scalabilità orizzontale di base.|  
-|[Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Utilizzato per ottimizzare le prestazioni.|  
+|[Stored procedure di PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Aggiungere o rimuovere un computer da un gruppo con scalabilità orizzontale di base.|  
+|[Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Utilizzato per ottimizzare le prestazioni.|  
 |[Stored procedure per la replica](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Consentono di gestire le operazioni di replica.|  
 |[Stored procedure per la sicurezza](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Consentono di gestire la sicurezza.|  
 |[Stored procedure di backup di snapshot](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Utilizzato per eliminare il backup FILE_SNAPSHOT insieme a tutti i relativi snapshot o per eliminare un singolo snapshot del file di backup.|  

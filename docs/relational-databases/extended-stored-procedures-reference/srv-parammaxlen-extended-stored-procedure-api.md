@@ -20,18 +20,17 @@ ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8dfa779a664d398a6fb619bf17bf67bb52ab1bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005718"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce la lunghezza massima dei dati di un parametro di chiamata a una stored procedure remota. Questa funzione è stata sostituita dalla funzione **srv_paraminfo**.  
   
@@ -62,14 +61,14 @@ n
   
 |Nuovi tipi di dati|Lunghezza dei dati di input|  
 |--------------------|-----------------------|  
-|**BITN**|**Null:** 1<br /><br /> **Zero:** 1<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
-|**BIGVARCHAR**|**Null:** 255<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGCHAR**|**Null:** 255<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**Null:** 255<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**Null:** 255<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**NCHAR**|**Null:** 255<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**Null:** 255<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**NTEXT**|**Null:** -1<br /><br /> **Zero:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|**BITN**|**NULL:** 1<br /><br /> **Zero:** 1<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/A|  
+|**BIGVARCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGBINARY**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGVARBINARY**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**NCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**NTEXT**|**Null:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> 255:-1 ** \<**|  
   
 ## <a name="remarks"></a>Osservazioni  
  Ogni parametro di stored procedure remota ha una lunghezza massima e una lunghezza effettiva dei dati. Per i tipi di dati a lunghezza fissa standard che non consentono valori Null, le due lunghezze coincidono. Per i tipi di dati a lunghezza variabile, le lunghezze possono essere diverse. Un parametro dichiarato come **varchar(30)** può ad esempio contenere dati con lunghezza pari a 10 byte. La lunghezza effettiva del parametro è 10, mentre la lunghezza massima è 30. La funzione **srv_parammaxlen** ottiene la lunghezza massima dei dati di una stored procedure remota. Per ottenere la lunghezza effettiva di un parametro, usare **srv_paramlen**.  
@@ -81,6 +80,6 @@ n
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_paraminfo &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;API delle stored procedure estese&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

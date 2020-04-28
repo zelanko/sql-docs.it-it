@@ -18,10 +18,10 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010759"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
@@ -47,11 +47,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |-----------------------|-----------------|  
 |sysadmin|Amministratori di sistema|  
 |securityadmin|Amministratori di sicurezza|  
-|serveradmin|Amministratori del server|  
+|serveradmin|Amministratori di server|  
 |setupadmin|Amministratori di installazione|  
 |processadmin|Amministratori di processi|  
 |diskadmin|Amministratori di dischi|  
-|dbcreator|Autori di database|  
+|dbcreator|Creatori di database|  
 |bulkadmin|Può eseguire le istruzioni BULK INSERT|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -63,7 +63,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome del ruolo del server|  
 |MemberName|**sysname**|Nome di un membro di ServerRole|  
-|MemberSID|**varbinary(85)**|ID di sicurezza di MemberName|  
+|MemberSID|**varbinary (85)**|ID di sicurezza di MemberName|  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare sp_helprolemember per visualizzare i membri di un ruolo del database.  
@@ -87,7 +87,7 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ## <a name="see-also"></a>Vedere anche  
  [sp_helprole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

@@ -21,10 +21,10 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044546"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -39,14 +39,14 @@ ms.locfileid: "68044546"
 |-----------------|---------------|-----------------|  
 |**\<Colonne ereditate da sys. Objects>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Tipo di tabella interna:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (ad esempio un indice spaziale)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
-|**internal_type_desc**|**nvarchar (60)**|Descrizione del tipo di tabella interna:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
+|**internal_type_desc**|**nvarchar(60)**|Descrizione del tipo di tabella interna:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
 |**parent_id**|**int**|ID del padre, indipendentemente dal fatto che sia definito o meno a livello di ambito dello schema. 0 in assenza del padre.<br /><br /> **queue_messages** = **object_id** della coda<br /><br /> **xml_index_nodes** = **object_id** dell'indice XML<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** del catalogo full-text<br /><br /> **fulltext_index_map** = **object_id** dell'indice full-text<br /><br /> **query_notification**o **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> **object_id** della tabella per cui è abilitato il rilevamento della tabella = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|ID secondario del padre.<br /><br /> **xml_index_nodes** = **index_id** dell'indice XML<br /><br /> **extended_indexes** = **index_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**o **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Un valore diverso da zero rappresenta l'ID dello spazio dei dati (filegroup o schema di partizione) contenente i dati LOB (Large Object) per questa tabella.|  
-|**filestream_data_space_id**|**int**|Riservato a un uso futuro.|  
+|**filestream_data_space_id**|**int**|Riservato per utilizzi futuri.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Osservazioni  
  Le tabelle interne sono collocate nello stesso filegroup dell'entità padre. È possibile utilizzare la query del catalogo illustrata nell'esempio F seguente per restituire il numero di pagine utilizzate dalle tabelle interne per i dati all'interno di righe, all'esterno di righe e LOB (Large Object).  
@@ -60,7 +60,7 @@ ms.locfileid: "68044546"
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come eseguire query sui metadati delle tabelle interne utilizzando le viste del catalogo.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>R. Visualizzazione delle tabelle interne che ereditano le colonne dalla vista del catalogo sys.objects  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. Visualizzazione delle tabelle interne che ereditano le colonne dalla vista del catalogo sys.objects  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  
@@ -174,7 +174,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

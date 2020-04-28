@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018069"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
@@ -39,28 +39,28 @@ ms.locfileid: "68018069"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**UID**|**smallint**|ID utente, univoco all'interno del database.<br /><br /> 1 = Proprietario del database.<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
-|**stato**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**nome**|**sysname**|Nome utente o di gruppo, univoco all'interno del database.|  
-|**SID**|**varbinary(85)**|Identificatore di sicurezza per la voce specificata.|  
-|**ruoli**|**varbinary (2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**CreateDate**|**datetime**|Data in cui è stato aggiunto l'account.|  
+|**Stato**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**name**|**sysname**|Nome utente o di gruppo, univoco all'interno del database.|  
+|**sid**|**varbinary (85)**|Identificatore di sicurezza per la voce specificata.|  
+|**ruoli**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**createdate**|**datetime**|Data in cui è stato aggiunto l'account.|  
 |**updateDate**|**datetime**|Data dell'ultima modifica dell'account.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
-|**password**|**varbinary (256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**GID**|**smallint**|ID del gruppo a cui appartiene l'utente. Se **UID** corrisponde a **GID**, questa voce definisce un gruppo. Causa un errore di overflow o restituisce NULL se il numero combinato di gruppi e utenti è maggiore di 32.767.|  
-|**environ**|**varchar (255)**|Riservato.|  
+|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**gid**|**smallint**|ID del gruppo a cui appartiene l'utente. Se **UID** corrisponde a **GID**, questa voce definisce un gruppo. Causa un errore di overflow o restituisce NULL se il numero combinato di gruppi e utenti è maggiore di 32.767.|  
+|**environ**|**varchar(255)**|Riservato.|  
 |**HasDBAccess**|**int**|1 = L'account ha accesso al database.|  
-|**accesso**|**int**|1 = L'account è un gruppo di Windows, un utente di Windows oppure un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un account di accesso.|  
+|**islogin**|**int**|1 = L'account è un gruppo di Windows, un utente di Windows oppure un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un account di accesso.|  
 |**isntname**|**int**|1 = L'account è un utente o un gruppo di Windows.|  
 |**isntgroup**|**int**|1 = L'account è un gruppo di Windows.|  
 |**isntuser**|**int**|1 = L'account è un utente di Windows.|  
 |**issqluser**|**int**|1 = L'account è un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**IsAliased**|**int**|1 = L'account è assegnato come alias a un altro utente.|  
+|**isaliased**|**int**|1 = L'account è assegnato come alias a un altro utente.|  
 |**issqlrole**|**int**|1 = L'account è un ruolo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**isapprole**|**int**|1 = L'account è un ruolo applicazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028955"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Note legali (SSMA per Sybase)
@@ -21,7 +21,7 @@ La presente documentazione, incluse le applicazioni di esempio in essa contenute
   
 Obiettivo principale degli esempi inclusi nella documentazione è quello di illustrare un concetto o l'utilizzo comune di un'istruzione o di una clausola specifica. La maggior parte degli esempi non include il codice completo normalmente disponibile in un sistema completo e finale, in quanto una parte dei normali dati di convalida o la gestione degli errori vengono in genere rimossi dagli esempi per mettere in maggiore evidenza il concetto o l'istruzione specifici illustrati nell'esempio stesso. I servizi del Servizio Supporto Tecnico Clienti Microsoft non sono disponibili per gli esempi e il codice sorgente incluso.  
   
-Se non specificato diversamente, le aziende, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, le persone, i luoghi e gli eventi di esempio descritti nel presente documento sono fittizi e nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, persona, luogo o evento è intenzionale o può essere dedotto. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
+Se non specificato diversamente, le aziende, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, le persone, i luoghi e gli eventi di esempio descritti nel presente documento sono fittizi e nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   

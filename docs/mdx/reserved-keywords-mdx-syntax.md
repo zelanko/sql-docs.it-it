@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037065"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Parole chiave riservate (sintassi MDX)
@@ -29,6 +29,6 @@ ms.locfileid: "68037065"
 -   Adottare una convenzione di denominazione che evita l'utilizzo di parole chiave riservate. Se è necessario attribuire a un oggetto un nome simile a una parola chiave riservata, eliminare le consonanti o le vocali da tale parola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elementi della sintassi MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

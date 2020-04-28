@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004536"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestione degli spazi dei nomi in XQuery
@@ -147,7 +147,7 @@ where ProductModelID=19
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [&#40;di dati XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

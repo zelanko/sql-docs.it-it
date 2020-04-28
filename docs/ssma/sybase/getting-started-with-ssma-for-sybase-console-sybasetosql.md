@@ -14,10 +14,10 @@ ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029115"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introduzione con la console di SSMA per Sybase (SybaseToSQL)
@@ -60,7 +60,7 @@ L'interpretazione dei colori dell'output della console viene visualizzata nella 
 |---------|---------------|  
 |Rosso|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
-|Bianco|Comandi file script, tipo di messaggio|  
+|bianco|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultato di un'operazione|  

@@ -18,10 +18,10 @@ ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029752"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68029752"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**filtername**|**sysname**|Nome del filtro utilizzato per creare l'articolo.|  
+|**NomeFiltro**|**sysname**|Nome del filtro utilizzato per creare l'articolo.|  
 |**join_filterid**|**int**|ID dell'oggetto che rappresenta il filtro join.|  
 |**pubid**|**uniqueidentifier**|ID della pubblicazione.|  
 |**artid**|**uniqueidentifier**|ID dell'articolo.|  

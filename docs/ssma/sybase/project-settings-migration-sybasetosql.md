@@ -10,10 +10,10 @@ ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028708"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Impostazioni del progetto (migrazione) (SybaseToSQL)
@@ -48,9 +48,9 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni**
 |**Vincoli CHECK**|Specifica se SSMA deve verificare i vincoli quando inserisce i dati in tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
 |**Timeout migrazione dati**|Specifica il timeout utilizzato durante la migrazione dei dati<br /><br />**Modalità predefinita**: 15<br /><br />**Modalità ottimistica**: 15<br /><br />**Modalità completa**: 15|  
 |**Opzioni di migrazione dei dati estese**|Mostra le opzioni di migrazione dei dati aggiuntive per ogni tabella nella scheda Dettagli separata.<br /><br />**Modalità predefinita**: Nascondi<br /><br />**Modalità ottimistica**: Nascondi<br /><br />**Modalità completa**: Nascondi|  
-|**Attiva trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
-|**Mantieni identità**|Specifica se SSMA conserva i valori Identity di Sybase quando aggiunge dati a SQL Server. Il valore false fa sì che i valori Identity vengano assegnati dalla destinazione.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
-|**Mantieni valori null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
+|**Attive trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
+|**Mantieni valori Identity**|Specifica se SSMA conserva i valori Identity di Sybase quando aggiunge dati a SQL Server. Il valore false fa sì che i valori Identity vengano assegnati dalla destinazione.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
+|**Mantieni valori Null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
 |**In errore**|Interrompe la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompi migrazione:** Arresta l'operazione di migrazione dei dati<br /><br />**Vai alla tabella successiva:** Interrompe la migrazione dei dati alla tabella corrente e procede a quello successivo<br /><br />**Vai al batch successivo:** Interrompe la migrazione dei dati al batch corrente e procede a quello successivo<br /><br />**Modalità predefinita**: passare al batch successivo<br /><br />**Modalità ottimistica**: passare al batch successivo<br /><br />**Modalità completa**: passare al batch successivo|  
 |**Parte frazionaria arrotondata dei numeri**|Specifica se tagliare le parti frazionarie dei dati numerici e decimali durante la migrazione ai tipi Integer o visualizzare il messaggio di errore se la parte frazionaria è non semplice<br /><br />**Modalità predefinita**: No<br /><br />**Modalità ottimistica**: No<br /><br />**Modalità completa**: No|  
 |**Sybase Unicode endian**|Specifica il tipo endian per le stringhe Unicode Sybase. Per questa particolare impostazione è possibile impostare le opzioni seguenti:<br /><br />Little-Endian<br /><br />Big endian<br /><br />**Modalità predefinita**: Little-Endian<br /><br />**Modalità ottimistica**: Little-Endian<br /><br />**Modalità completa**: Little-Endian|  

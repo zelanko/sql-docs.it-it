@@ -12,10 +12,10 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020996"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione degli oggetti interessati (SybaseToSQL)
@@ -39,7 +39,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
   
 -   Regola  
   
--   Predefinito  
+-   Impostazione predefinita  
   
 -   Identità  
   
@@ -48,7 +48,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
 ## <a name="sql"></a>Sql  
 Scheda SQL contiene il SQL "Create Table" della tabella selezionata.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 Scheda dati consente di visualizzare i dati presenti nella tabella selezionata.  
   
 ## <a name="properties"></a>Proprietà  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001292"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68001292"
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|ID dell'unità di allocazione. Valore univoco all'interno di un database.|  
 |type|**tinyint**|Tipo di unità di allocazione:<br /><br /> 0 = Rimossa<br /><br /> 1 = Dati all'interno di righe (tutti i tipi di dati, eccetto i tipi di dati LOB)<br /><br /> 2 = dati LOB (Large Object) (**Text**, **ntext**, **Image**, **XML**, tipi di valore di grandi dimensioni e tipi CLR definiti dall'utente)<br /><br /> 3 = Dati di overflow della riga|  
-|type_desc|**nvarchar (60)**|Descrizione del tipo dell'unità di allocazione:<br /><br /> **ELIMINATO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
+|type_desc|**nvarchar(60)**|Descrizione del tipo dell'unità di allocazione:<br /><br /> **ELIMINATO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|ID del contenitore di archiviazione associato all'unità di allocazione.<br /><br /> Se type = 1 o 3, container_id = sys.partitions.hobt_id.<br /><br /> Se type è 2, allora container_id = sys.partitions.partition_id.<br /><br /> 0 = Unità di allocazione contrassegnata per la rimozione posticipata|  
 |data_space_id|**int**|ID del filegroup contenente l'unità di allocazione.|  
 |total_pages|**bigint**|Numero totale di pagine allocate o riservate dall'unità di allocazione.|  
@@ -47,7 +47,7 @@ ms.locfileid: "68001292"
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da sys.allocation_units subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non corrispondere allo spazio su disco effettivamente disponibile.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   

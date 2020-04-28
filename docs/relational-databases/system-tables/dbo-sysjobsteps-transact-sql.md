@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004729"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68004729"
 |**job_id**|**uniqueidentifier**|ID del processo.|  
 |**step_id**|**int**|ID del passaggio del processo.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
-|**sottosistema**|**nvarchar (40)**|Nome del sottosistema utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il passaggio del processo|  
+|**sottosistema**|**nvarchar(40)**|Nome del sottosistema utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il passaggio del processo|  
 |**comando**|**nvarchar(max)**|Comando che deve essere eseguito dal **sottosistema**.|  
-|**Bandiere**|**int**|Riservato.|  
+|**flags**|**int**|Riservato.|  
 |**additional_parameters**|**ntext**|Riservato.|  
 |**cmdexec_success_code**|**int**|Valore a livello di errore restituito dai passaggi del sottosistema **CmdExec** per indicare l'esito positivo.|  
 |**on_success_action**|**tinyint**|Azione da eseguire quando un passaggio viene eseguito correttamente.|  

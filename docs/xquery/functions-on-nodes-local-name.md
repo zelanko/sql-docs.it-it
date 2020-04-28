@@ -16,10 +16,10 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038867"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni su nodi - local-name
@@ -49,7 +49,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>R. Recupero del nome locale di un nodo specifico  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recupero del nome locale di un nodo specifico  
  La query seguente viene eseguita su un'istanza XML non tipizzata. L'espressione della query, `local-name(/ROOT[1])`, recupera la parte del nome locale del nodo specificato.  
   
 ```  

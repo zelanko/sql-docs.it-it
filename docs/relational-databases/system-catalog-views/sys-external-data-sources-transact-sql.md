@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005188"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68005188"
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|ID oggetto per l'origine dati esterna.||  
 |name|**sysname**|Nome dell'origine dati esterna.||  
-|location|**nvarchar(4000)**|Stringa di connessione, che include il protocollo, l'indirizzo IP e la porta per l'origine dati esterna.||  
+|posizione|**nvarchar(4000)**|Stringa di connessione, che include il protocollo, l'indirizzo IP e la porta per l'origine dati esterna.||  
 |type_desc|**nvarchar(255)**|Tipo di origine dati visualizzato sotto forma di stringa.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
 |type|**tinyint**|Tipo di origine dati visualizzato sotto forma di numero.|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Per il tipo HADOOP, l'indirizzo IP e la posizione della porta di Hadoop Resource Manager. Viene usato per l'invio di un processo in un'origine dati Hadoop.<br /><br /> NULL per altri tipi di origini dati esterne.||  
@@ -40,7 +40,7 @@ ms.locfileid: "68005188"
 |shard_map_name|**sysname**|Per il tipo SHARD_MAP_MANAGER, il nome della mappa partizioni. NULL per altri tipi di origini dati esterne.||  
   
 ## <a name="permissions"></a>Autorizzazioni  
- La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. external_file_formats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

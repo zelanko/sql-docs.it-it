@@ -20,10 +20,10 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017987"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
@@ -36,7 +36,7 @@ ms.locfileid: "68017987"
 |**session_id**|**int**|ID della sessione.<br /><br /> 0 = i dati restituiti in questa riga costituiscono un'aggregazione di tutte le sessioni dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**start_time**|**datetime**|Ora di inizio della sessione.<br /><br /> Quando **session_id** = 0, inizia la raccolta di dati aggregati dell'ora.|  
 |**end_time**|**datetime**|Ora di fine della sessione.<br /><br /> NULL = la sessione è attiva.<br /><br /> Quando **session_id** = 0, l'ora di fine dell'ultima sessione.|  
-|**durata**|**bigint**|Durata della sessione espressa in secondi.<br /><br /> 0 = la sessione non contiene transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, somma della durata (in secondi) di tutte le sessioni con Change Data Capture transazioni.|  
+|**duration**|**bigint**|Durata della sessione espressa in secondi.<br /><br /> 0 = la sessione non contiene transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, somma della durata (in secondi) di tutte le sessioni con Change Data Capture transazioni.|  
 |**scan_phase**|**nvarchar(200)**|La fase corrente della sessione. Di seguito sono riportati i valori possibili e le relative descrizioni:<br /><br /> 1: lettura della configurazione<br />2: prima analisi, compilazione della tabella hash<br />3: seconda analisi<br />4: seconda analisi<br />5: seconda analisi<br />6: controllo delle versioni dello schema<br />7: ultima analisi<br />8: operazione eseguita<br /><br /> Quando **session_id** = 0, questo valore è sempre "aggregate".|  
 |**error_count**|**int**|Numero di errori.<br /><br /> Quando **session_id** = 0, il numero totale di errori in tutte le sessioni.|  
 |**start_lsn**|**nvarchar (23)**|Avvio di LSN per la sessione.<br /><br /> Quando **session_id** = 0, il numero LSN iniziale per l'ultima sessione.|  

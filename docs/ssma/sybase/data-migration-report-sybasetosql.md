@@ -10,20 +10,20 @@ ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029406"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Report di migrazione dati (SybaseToSQL)
 Viene visualizzata la finestra di dialogo **report migrazione dati** dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dei dati a.  
   
 ## <a name="options"></a>Opzioni  
-**Status**  
+**Stato**  
 Mostra lo stato della migrazione dei dati dal database di origine al database di destinazione.  
   
-**Da**  
+**From**  
 Tabella di origine.  
   
 **A**  

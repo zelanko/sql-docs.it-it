@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006561"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di accesso (AccessToSQL)
@@ -57,7 +57,7 @@ Nelle istruzioni seguenti viene descritto come creare un progetto, aggiungere da
   
 2.  Scegliere **Nuovo progetto** dal menu **File**.  
   
-    Viene visualizzata la finestra di dialogo **Nuovo progetto**.  
+    Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
 3.  Nella casella **nome** immettere un nome per il progetto.  
   
@@ -82,7 +82,7 @@ Per ulteriori informazioni sulla creazione di progetti, vedere [creazione e gest
     > [!IMPORTANT]  
     > La casella **di testo nome file o parte intera** non supporta caratteri jolly.  
   
-5.  Fare clic su **analizza**.  
+5.  Fai clic su **Analisi**.  
   
     Viene visualizzata la pagina di analisi. Vengono visualizzati i database che sono stati trovati e lo stato di avanzamento della ricerca. Per arrestare la ricerca, fare clic su **Arresta**.  
   

@@ -20,10 +20,10 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039013"
 ---
 # <a name="conditional-expressions-xquery"></a>Espressioni condizionali (XQuery)

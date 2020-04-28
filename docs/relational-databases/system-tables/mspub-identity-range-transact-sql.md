@@ -18,10 +18,10 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032607"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68032607"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ObjID**|**int**|ID della tabella la cui colonna Identity è gestita dalla replica.|  
+|**objid**|**int**|ID della tabella la cui colonna Identity è gestita dalla replica.|  
 |**intervallo**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella sottoscrizione durante un intervento di regolazione.|  
 |**pub_range**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella pubblicazione durante un intervento di regolazione.|  
 |**current_pub_range**|**bigint**|Intervallo corrente utilizzato dalla pubblicazione. Può essere diverso da *pub_range* se visualizzato dopo essere stato modificato da **sp_changearticle** e prima della regolazione dell'intervallo successivo.|  

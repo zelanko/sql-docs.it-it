@@ -10,10 +10,10 @@ ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 006a90ca082861aea4fecbe6934947afa2020335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006665"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>Connetti a SQL Server (AccessToSQL)
@@ -44,10 +44,10 @@ Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'auten
 **Password**  
 Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, immettere la password per l'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tale istanza di. Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
   
-**Crittografa connessione**  
+**Encrypt Connection**  
 Se si desidera connettersi in modo sicuro a SQL Server, utilizzare la casella di controllo Crittografa connessione selezionando la casella di controllo **Crittografa connessione** .  
   
-**Certificato server attendibile**  
+**TrustServerCertificate**  
 Se si desidera utilizzare questa opzione, selezionare la casella di controllo **certificato server attendibile** .  
   
 > [!NOTE]  

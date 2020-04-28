@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032815"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
@@ -48,11 +48,11 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |-----------|-----------------|  
 |**sysadmin**|Amministratori di sistema|  
 |**securityadmin**|Amministratori di sicurezza|  
-|**serveradmin**|Amministratori del server|  
+|**serveradmin**|Amministratori di server|  
 |**setupadmin**|Amministratori di installazione|  
 |**processadmin**|Amministratori di processi|  
 |**diskadmin**|Amministratori di dischi|  
-|**dbcreator**|Autori di database|  
+|**dbcreator**|Creatori di database|  
 |**bulkadmin**|Può eseguire le istruzioni BULK INSERT|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  

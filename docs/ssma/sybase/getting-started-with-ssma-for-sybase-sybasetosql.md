@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029119"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introduzione con SSMA per SAP ASE (SybaseToSQL)
@@ -82,12 +82,12 @@ La barra degli strumenti del progetto contiene i pulsanti per l'uso di progetti,
 #### <a name="the-migration-toolbar"></a>Barra degli strumenti migrazione  
 La barra degli strumenti di migrazione contiene i comandi seguenti:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |----------|------------|  
 |**Creazione di report**|Converte gli oggetti di SAP ASE selezionati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sintassi, quindi crea un report che mostra l'esito positivo della conversione.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Sybase Metadata Explorer.|  
 |**Converti schema**|Converte gli oggetti di SAP ASE selezionati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in oggetti di database SQL di Azure o.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Sybase Metadata Explorer.|  
 |**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a o al database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi di SAP ASE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o negli schemi del database SQL di Azure e quindi caricare gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in o nel database SQL di Azure.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Sybase Metadata Explorer.|  
-|**Stop**|Arresta il processo corrente, ad esempio la conversione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti in o la sintassi del database SQL di Azure.|  
+|**Arresta**|Arresta il processo corrente, ad esempio la conversione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti in o la sintassi del database SQL di Azure.|  
   
 ### <a name="menus"></a>Menu  
 SSMA contiene i menu seguenti:  
@@ -99,7 +99,7 @@ SSMA contiene i menu seguenti:
 |**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Questa operazione Sincronizza gli oggetti tra la finestra di esplorazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei metadati di Sybase e o SQL Azure Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
 |**Strumenti**|Contiene i comandi per la creazione di report, l'esportazione e la migrazione di oggetti e dati. Consente inoltre di accedere alle **Impostazioni globali** e alle finestre di dialogo **delle impostazioni del progetto** .|  
 |**Tester**|Contiene i comandi per creare test case, visualizzare i risultati dei test e i comandi per la gestione dei backup del database.|  
-|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
+|**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
 Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  

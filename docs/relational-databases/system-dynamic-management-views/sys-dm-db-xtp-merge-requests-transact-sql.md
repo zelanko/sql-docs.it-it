@@ -10,10 +10,10 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026810"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
@@ -30,7 +30,7 @@ Traccia le richieste di unione del database. È possibile che la richiesta merge
 
 | Nome colonna | Tipo di dati | Descrizione |
 | :-- | :-- | :-- |
-| request_state | tinyint | Stato della richiesta di unione:<br/>0 = Richiesta<br/>1 = In sospeso<br/>2 = installato<br/>3 = Abbandonata |
+| request_state | TINYINT | Stato della richiesta di unione:<br/>0 = Richiesta<br/>1 = In sospeso<br/>2 = installato<br/>3 = Abbandonata |
 | request_state_desc | nvarchar(60) | Significati per lo stato corrente della richiesta:<br/><br/>Richiesto: esiste una richiesta di merge.<br/>In sospeso: l'Unione sta per essere elaborata.<br/>Installato: l'Unione è stata completata.<br/>Abbandonato: l'Unione non è stata completata, probabilmente a causa della mancanza di spazio di archiviazione. |
 | destination_file_id | GUID | Identificatore univoco del file di destinazione per l'unione dei file di origine. |
 | lower_bound_tsn | bigint | Timestamp minimo per il file di unione di destinazione. Il timestamp minimo per la transazione di tutti i file di origine da unire. |

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026844"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
@@ -112,7 +112,7 @@ Alcune funzionalità usano tabelle interne che sfruttano gli indici hash, ad ese
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Si noti che non è possibile modificare il BUCKET_COUNT di indice nelle tabelle interne, pertanto l'output di questa query deve essere considerato solo informativo. non è necessaria alcuna azione.  
+Si noti che non è possibile modificare il BUCKET_COUNT di indice nelle tabelle interne, pertanto l'output di questa query deve essere considerato solo informativo. Non è richiesta alcuna azione.  
 
 Non è previsto che la query restituisca alcuna riga a meno che non si usi una funzionalità che utilizza gli indici hash nelle tabelle interne. La tabella ottimizzata per la memoria seguente contiene un indice columnstore. Dopo aver creato questa tabella, vengono visualizzati gli indici hash nelle tabelle interne.
 
@@ -125,6 +125,6 @@ Non è previsto che la query restituisca alcuna riga a meno che non si usi una f
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica correlate alle tabelle con ottimizzazione per la memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

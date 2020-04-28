@@ -22,10 +22,10 @@ ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033085"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Viste del catalogo del server di controllo del mirroring del database-sys. database_mirroring_witnesses
@@ -41,7 +41,7 @@ ms.locfileid: "68033085"
 |**principal_server_name**|**sysname**|Nome del server partner la cui copia del database è attualmente il database principale.|  
 |**mirror_server_name**|**sysname**|Nome del server partner la cui copia del database è attualmente il database mirror.|  
 |**safety_level**|**tinyint**|Impostazione relativa alla protezione delle transazioni per gli aggiornamenti nel database mirror:<br /><br /> 0 = Stato sconosciuto<br /><br /> 1 = protezione disattivata (asincrona)<br /><br /> 2 = protezione completa (sincrona)<br /><br /> L'utilizzo di un server di controllo del mirroring per il failover automatico richiede la protezione completa delle transazioni, ovvero l'impostazione predefinita.|  
-|**safety_level_desc**|**nvarchar (60)**|Descrizione della garanzia di protezione degli aggiornamenti nel database mirror:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Descrizione della garanzia di protezione degli aggiornamenti nel database mirror:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Aggiorna il numero di sequenza per le modifiche apportate al **safety_level**.|  
 |**role_sequence_number**|**int**|Numero di sequenza di aggiornamento per le modifiche dei ruoli principale/mirror rivestiti dai partner per il mirroring.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificatore della relazione di mirroring.|  
@@ -49,10 +49,10 @@ ms.locfileid: "68033085"
 |**is_suspended**|**bit**|Il mirroring del database è sospeso.|  
 |**is_suspended_sequence_number**|**int**|Numero di sequenza per l'impostazione **is_suspended**.|  
 |**partner_sync_state**|**tinyint**|Stato della sincronizzazione della sessione di mirroring:<br /><br /> 5 = i partner sono sincronizzati. Il failover è possibile. Per informazioni sui requisiti per il failover, vedere [cambio di ruolo durante una sessione di mirroring del Database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = i partner non sono sincronizzati. Il failover ora non è possibile.|  
-|**partner_sync_state_desc**|**nvarchar (60)**|Descrizione dello stato di sincronizzazione della sessione di mirroring:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
+|**partner_sync_state_desc**|**nvarchar(60)**|Descrizione dello stato di sincronizzazione della sessione di mirroring:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)   

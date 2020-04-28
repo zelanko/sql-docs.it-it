@@ -10,10 +10,10 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006578"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Modifica mapping dei tipi (AccessToSQL)
@@ -33,7 +33,7 @@ Consente di selezionare il tipo di dati di origine [!INCLUDE[ssNoVersion](../../
   
 Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati in **tipo di origine**:  
   
-**Da**  
+**From**  
 Consente di specificare la lunghezza minima per questo mapping. Per il tipo di dati **Text** , ad esempio, è possibile immettere 10 per specificare che il mapping è relativo a un intervallo che inizia con il **testo (10)**.  
   
 **A**  
@@ -44,6 +44,6 @@ Consente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionar
   
 Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato in **tipo di destinazione**:  
   
-**Sostituisci con**  
+**Replace with**  
 Specificare la lunghezza di destinazione per questo mapping. Per il tipo di dati **nvarchar** , ad esempio, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20)**.  
   

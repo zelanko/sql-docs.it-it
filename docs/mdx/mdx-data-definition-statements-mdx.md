@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038120"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Istruzioni MDX per la definizione dei dati (MDX)
@@ -24,7 +24,7 @@ ms.locfileid: "68038120"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Istruzione ALTER CUBE &#40;&#41;MDX](../mdx/mdx-data-definition-alter-cube.md)|Modifica la struttura di un cubo specificato.|  
+|[Istruzione ALTER CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Modifica la struttura di un cubo specificato.|  
 |[Istruzione CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Crea un'azione che può essere associata a un cubo, a una dimensione, a una gerarchia o a un oggetto subordinato.|  
 |[Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Crea una formula di calcolo che valuta un'espressione MDX su un set di tuple specificato all'interno di un cubo.|  
 |[Istruzione CREATE GLOBAL CUBE &#40;&#41;MDX](../mdx/mdx-data-definition-create-global-cube.md)|Crea e popola un cubo persistente in locale in base a un sottocubo da un cubo nel server. Non è necessaria una connessione al server per connettersi al cubo locale persistente.|  
@@ -42,6 +42,6 @@ ms.locfileid: "68038120"
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sull'istruzione MDX &#40;&#41;MDX](../mdx/mdx-statement-reference-mdx.md)   
  [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Istruzioni di scripting MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

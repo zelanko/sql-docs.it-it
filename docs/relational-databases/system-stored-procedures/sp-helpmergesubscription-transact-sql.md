@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002646"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -59,7 +59,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |-----------|-----------------|  
 |**push** (impostazione predefinita)|Sottoscrizione push|  
 |**tirare**|Sottoscrizione pull|  
-|**both**|Sottoscrizione sia push che pull|  
+|**sia**|Sottoscrizione sia push che pull|  
   
 `[ @found = ] 'found'OUTPUT`Flag che indica la restituzione di righe. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è null. **1** indica che la pubblicazione è stata trovata. **0** indica che la pubblicazione non è stata trovata.  
   
@@ -69,23 +69,23 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nome della sottoscrizione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
-|**publisher**|**sysname**|Nome del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**subscriber**|**sysname**|Nome del Sottoscrittore.|  
+|**Sottoscrittore**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
-|**stato**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa di essere avviati<br /><br /> **1** = uno o più processi vengono avviati<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = è in corso un tentativo di esecuzione di almeno un processo dopo un errore precedente<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
+|**Stato**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa di essere avviati<br /><br /> **1** = uno o più processi vengono avviati<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = è in corso un tentativo di esecuzione di almeno un processo dopo un errore precedente<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = entrambi|  
 |**priorità**|**float (8)**|Numero che indica il livello di priorità della sottoscrizione.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione della sottoscrizione.|  
 |**Descrizione**|**nvarchar(255)**|Breve descrizione della sottoscrizione di tipo merge.|  
-|**merge_jobid**|**binario (16)**|ID di processo dell'agente di merge.|  
+|**merge_jobid**|**binary(16)**|ID di processo dell'agente di merge.|  
 |**full_publication**|**tinyint**|Specifica se la sottoscrizione si riferisce a una pubblicazione completa o filtrata.|  
 |**offload_enabled**|**bit**|Specifica se per un agente di replica è impostata l'esecuzione con ripartizione del carico di lavoro nel Sottoscrittore. Se è NULL, l'agente viene eseguito nel server di pubblicazione.|  
 |**offload_server**|**sysname**|Nome del server in cui è in esecuzione l'agente.|  
 |**use_interactive_resolver**|**int**|Specifica se durante la fase di riconciliazione viene utilizzato il sistema di risoluzione dei conflitti interattivo. Se è **0**, il sistema di risoluzione interattivo non viene utilizzato.|  
-|**nome host**|**sysname**|Valore fornito quando una sottoscrizione viene filtrata in base al valore della funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **** e 0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
+|**hostname**|**sysname**|Valore fornito quando una sottoscrizione viene filtrata in base al valore della funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **0** e 0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**|**sysname**|La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una stringa**\*\*\*\*\***"".|  
   

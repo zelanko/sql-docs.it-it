@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68025789"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68025789"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID del trigger o della notifica degli eventi. Questo valore, insieme al **tipo**, identifica in modo univoco la riga.|  
-|**tipo**|**int**|Evento che attiva il trigger.|  
-|**type_desc**|**nvarchar (60)**|Descrizione dell'evento che attiva il trigger.|  
+|**type**|**int**|Evento che attiva il trigger.|  
+|**type_desc**|**nvarchar(60)**|Descrizione dell'evento che attiva il trigger.|  
 |**is_trigger_event**|**bit**|1 = evento di trigger.<br /><br /> 0 = evento di notifica.|  
 |**event_group_type**|**int**|Gruppo di eventi nel quale viene creato il trigger o la notifica di evento, o null se non viene creato in un gruppo di eventi.|  
-|**event_group_type_desc**|**nvarchar (60)**|Descrizione del gruppo di eventi nel quale viene creato il trigger o la notifica di evento, o null se non viene creato in un gruppo di eventi.|  
+|**event_group_type_desc**|**nvarchar(60)**|Descrizione del gruppo di eventi nel quale viene creato il trigger o la notifica di evento, o null se non viene creato in un gruppo di eventi.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

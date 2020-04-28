@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004831"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
@@ -43,8 +43,7 @@ Restituisce gli attributi a livello di riepilogo e le informazioni sui file di l
 
 *database_id* | NULL | **Impostazione predefinita**
 
-ID del database. 
-  `database_id` è `int`. Gli input validi sono il numero di ID di un `NULL`database, `DEFAULT`o. Il valore predefinito è `NULL`. `NULL`e `DEFAULT` sono valori equivalenti nel contesto del database corrente.  
+ID del database. `database_id` è `int`. Gli input validi sono il numero di ID di un `NULL`database, `DEFAULT`o. Il valore predefinito è `NULL`. `NULL`e `DEFAULT` sono valori equivalenti nel contesto del database corrente.  
 È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Quando si `DB_ID` utilizza senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o superiore.
 
   
@@ -53,7 +52,7 @@ ID del database.
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |ID database |  
-|recovery_model |**nvarchar (60)**   |   Modello di recupero del database. I valori possibili sono: <br /> SEMPLICE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   Modello di recupero del database. I valori possibili sono: <br /> SEMPLICE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   Numero di sequenza iniziale del file di [log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) corrente nel log delle transazioni.|  
 |log_end_lsn    |**nvarchar(24)**   |   numero di sequenza del file di [log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) dell'ultimo record del log nel log delle transazioni.|  
 |current_vlf_sequence_number    |**bigint** |   Numero di sequenza del [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) corrente al momento dell'esecuzione.|  
@@ -62,7 +61,7 @@ ID del database.
 |total_log_size_mb  |**float**  |   Dimensioni totali del log delle transazioni in MB. |  
 |active_vlf_count   |**bigint** |   Numero totale di [file di log virtuali attivi (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) nel log delle transazioni.|  
 |active_log_size_mb |**float**  |   Dimensioni totali del log delle transazioni attive in MB.|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   Motivo della rapina del troncamento del log. Il valore è uguale a `log_reuse_wait_desc` quello della `sys.databases`colonna di.  Per una spiegazione più dettagliata di questi valori, vedere [il log delle transazioni](../../relational-databases/logs/the-transaction-log-sql-server.md). <br />I valori possibili sono: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICA<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ALTRO TEMPORANEO |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Motivo della rapina del troncamento del log. Il valore è uguale a `log_reuse_wait_desc` quello della `sys.databases`colonna di.  Per una spiegazione più dettagliata di questi valori, vedere [il log delle transazioni](../../relational-databases/logs/the-transaction-log-sql-server.md). <br />I valori possibili sono: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICA<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ALTRO TEMPORANEO |  
 |log_backup_time    |**datetime**   |   Ora ultimo backup del log delle transazioni.|   
 |log_backup_lsn |**nvarchar(24)**   |   Ultimo numero di sequenza del file di log del backup del log delle transazioni [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Dimensioni del log in MB dall'ultimo numero di sequenza del file di [log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)del backup del log delle transazioni.|  
@@ -81,7 +80,7 @@ Richiede l' `VIEW DATABASE STATE` autorizzazione nel database.
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>R. Determinazione dei database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza con un numero elevato di VLF   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>R. Determinazione dei database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza con un numero elevato di VLF   
 La query seguente restituisce i database con più di 100 VLF nei file di log. Un numero elevato di VLF può influire sul tempo di avvio, ripristino e ripristino del database.
 
 ```sql  
@@ -91,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. Determinazione dei database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza con backup del log delle transazioni più vecchi di 4 ore   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. Determinazione dei database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza con backup del log delle transazioni più vecchi di 4 ore   
 La query seguente determina gli ultimi tempi di backup del log per i database nell'istanza di.
 
 ```sql  
@@ -101,8 +100,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_log_space_usage &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_info & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

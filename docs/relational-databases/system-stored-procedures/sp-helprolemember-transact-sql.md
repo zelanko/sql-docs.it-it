@@ -18,10 +18,10 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997486"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Nome del ruolo nel database corrente.|  
 |**MemberName**|**sysname**|Nome di un membro di **DbRole.**|  
-|**MemberSID**|**varbinary(85)**|ID di sicurezza di **memberName.**|  
+|**MemberSID**|**varbinary (85)**|ID di sicurezza di **memberName.**|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il database contiene ruoli annidati, **memberName** può essere il nome di un ruolo. **sp_helprolemember** non Mostra l'appartenenza ottenuta tramite ruoli annidati. Se, ad esempio, User1 è un membro di Role1 e Role1 è un membro di Role2, `EXEC sp_helprolemember 'Role2'`, verrà restituito Role1, ma non i membri di Role1 (User1 in questo esempio). Per restituire le appartenenze annidate, è necessario eseguire ripetutamente **sp_helprolemember** per ogni ruolo annidato.  

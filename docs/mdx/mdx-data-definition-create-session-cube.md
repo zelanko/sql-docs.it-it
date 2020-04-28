@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038366"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definizione dei dati MDX - CREATE SESSION CUBE
@@ -156,7 +156,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
 -   Quando si esegue il raggruppamento su una dimensione di un cubo presente sul server, tale raggruppamento riguarderà tutte le dimensioni del cubo basate sulla stessa dimensione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata la creazione di una versione con ambito sessione del cubo Adventure Works, che contiene la misura Reseller Sales Amount, la dimensione Rivenditore, la dimensione Prodotto, la dimensione Geografia e la dimensione Data. All'interno di questo cubo di sessione, vengono creati due gruppi: un gruppo contiene paesi europei e un gruppo contiene paesi dell'America del nord. Questo esempio è una versione semplificata dell'istruzione CREATE SESSION CUBE eseguita da Microsoft Excel quando un utente crea un raggruppamento personalizzato di membri.  
+ Nell'esempio seguente viene illustrata la creazione di una versione con ambito sessione del cubo Adventure Works, che contiene la misura Reseller Sales Amount, la dimensione Rivenditore, la dimensione Prodotto, la dimensione Geografia e la dimensione Data. All'interno di questo cubo di sessione, vengono creati due gruppi: un gruppo contiene paesi Europai e un gruppo contiene paesi dell'America del nord. Questo esempio è una versione semplificata dell'istruzione CREATE SESSION CUBE eseguita da Microsoft Excel quando un utente crea un raggruppamento personalizzato di membri.  
   
 ```  
 CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]   

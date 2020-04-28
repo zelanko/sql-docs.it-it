@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022275"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -60,8 +60,8 @@ sp_revoke_proxy_from_subsystem
 |**8**|Agente di lettura coda repliche|  
 |**9**|Comando di Analysis Services|  
 |**10**|Query di Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]esecuzione del pacchetto|  
-|**12**|Script PowerShell|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
+|**12**|Script di PowerShell|  
   
 `[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema a cui revocare l'accesso. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *subsystem_id* o *subsystem_name* , ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
@@ -76,8 +76,8 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|Agente di lettura coda repliche|  
 |ANALYSISQUERY|Comando di Analysis Services|  
 |ANALYSISCOMMAND|Query di Analysis Services|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]esecuzione del pacchetto|  
-|PowerShell|Script PowerShell|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
+|PowerShell|Script di PowerShell|  
   
 ## <a name="remarks"></a>Osservazioni  
  La revoca dell'accesso a un sottosistema non modifica le autorizzazione per l'entità specificata nel proxy.  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001118"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68001118"
 |lob_data_space_id|**int**||Sempre 0.|  
 |filestream_data_space_id|**int**|ID spazio dati per un filegroup FILESTREAM o[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|ID di colonna massimo utilizzato dalla tabella.||  
-|lock_on_bulk_load|**bit**|La tabella è bloccata durante il caricamento bulk.|Da definire|  
+|lock_on_bulk_load|**bit**|La tabella è bloccata durante il caricamento bulk.|TBD|  
 |uses_ansi_nulls|**bit**|La tabella è stata creata con l'opzione di database SET ANSI_NULLS impostata su ON.|1|  
 |is_replicated|**bit**|1 = la tabella viene pubblicata utilizzando la replica.|0 la replica non è supportata.|  
 |has_replication_filter|**bit**|1 = La tabella è associata a un filtro di replica.|0|  
@@ -41,10 +41,10 @@ ms.locfileid: "68001118"
 |large_value_types_out_of_row|**bit**|1 = I tipi per valori di grandi dimensioni vengono archiviati esternamente alla riga.|Sempre 0.|  
 |is_tracked_by_cdc|**bit**|1 = la tabella è abilitata per Change Data Capture|Sempre 0; Nessun supporto CDC.|  
 |lock_escalation|**tinyint**|Il valore dell'opzione LOCK_ESCALATION per la tabella: 2 = AUTO|Sempre 2.|  
-|lock_escalation_desc|**nvarchar (60)**|Descrizione testuale dell'opzione lock_escalation.|Sempre ꞌ AUTO ꞌ.|  
+|lock_escalation_desc|**nvarchar(60)**|Descrizione testuale dell'opzione lock_escalation.|Sempre ꞌ AUTO ꞌ.|  
 |pdw_node_id|**int**|Identificatore univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|NOT NULL|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

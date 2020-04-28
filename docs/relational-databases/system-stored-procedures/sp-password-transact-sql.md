@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008926"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`Nuova password. *new_password* è di **tipo sysname**e non prevede alcun valore predefinito. Se non si utilizzano parametri denominati, è necessario specificare *old_password* .  
   
 > [!IMPORTANT]  
->  Non utilizzare una password NULL. Usare una password complessa. Per ulteriori informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md).  
+>  Non utilizzare una password NULL. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'`Nome dell'account di accesso interessato dalla modifica della password. *login* è di **tipo sysname**e il valore predefinito è null. l' *account di accesso* deve esistere già e può essere specificato solo dai membri del ruolo predefinito del server **sysadmin** o **securityadmin** .  
+`[ @loginame = ] 'login'`Nome dell'account di accesso interessato dalla modifica della password. *login* è di tipo **sysname** e il valore predefinito è NULL. l' *account di accesso* deve esistere già e può essere specificato solo dai membri del ruolo predefinito del server **sysadmin** o **securityadmin** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

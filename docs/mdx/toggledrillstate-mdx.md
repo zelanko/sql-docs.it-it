@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036616"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
@@ -50,7 +50,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  Vedere [database journal: funzioni set MDX: funzione ToggleDrillState ()](https://go.microsoft.com/fwlink/?LinkId=517759) per scenari ed esempi che coinvolgono questa funzione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono eseguiti il drill-down del membro Australia e il drill-up del membro United States del primo set.  
+ Nell'esempio seguente vengono eseguiti il drill-down del membro Australia e il drill-up del membro Stati Uniti del primo set.  
   
 ```  
 SELECT ToggleDrillState  
@@ -64,6 +64,6 @@ SELECT ToggleDrillState
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

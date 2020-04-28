@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032745"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -74,14 +74,13 @@ sp_statistics [ @table_name = ] 'table_name'
 |**NON_UNIQUE**|**smallint**|NOT NULL.<br /><br /> 0 = Univoco<br /><br /> 1 = Non univoco|  
 |**INDEX_QUALIFIER**|**sysname**|Nome del proprietario dell'indice. In alcuni prodotti DBMS gli indici possono essere creati da utenti diversi dal proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa colonna è sempre uguale a **table_name**.|  
 |**INDEX_NAME**|**sysname**|Nome dell'indice. In questa colonna viene sempre restituito un valore.|  
-|**TYPE**|**smallint**|Questa colonna restituisce sempre un valore:<br /><br /> 0 = Statistiche di una tabella<br /><br /> 1 = Cluster<br /><br /> 2 = Hash<br /><br /> 3 = non cluster|  
+|**TIPO**|**smallint**|Questa colonna restituisce sempre un valore:<br /><br /> 0 = Statistiche di una tabella<br /><br /> 1 = Cluster<br /><br /> 2 = Hash<br /><br /> 3 = non cluster|  
 |**SEQ_IN_INDEX**|**smallint**|Posizione della colonna all'interno dell'indice.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna per ogni colonna dell' **table_name** restituito. In questa colonna viene sempre restituito un valore.|  
 |**CONFRONTO**|**char (1)**|Ordine utilizzato nelle regole di confronto. I possibili valori sono i seguenti:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile|  
 |**CARDINALITÀ**|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
-|**PAGINE**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
-|**FILTER_CONDITION**|**varchar (128)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
+|**PAGES**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -98,7 +97,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono restituite informazioni `DimEmployee` sulla tabella.  
   
 ```  

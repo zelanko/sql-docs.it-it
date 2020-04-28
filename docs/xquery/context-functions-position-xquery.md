@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038986"
 ---
 # <a name="context-functions---position-xquery"></a>Funzioni di contesto - position (XQuery)
@@ -38,9 +38,9 @@ fn:position() as xs:integer
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **FN: position ()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). I confronti basati su tale funzione non riducono la cardinalità durante l'interferenza dei tipi statici.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate **** in diverse colonne di tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML nel database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate **xml** in diverse colonne di tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML nel database.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilizzo della funzione XQuery position() per recuperare le prime due caratteristiche del prodotto  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilizzo della funzione XQuery position() per recuperare le prime due caratteristiche del prodotto  
  La query seguente recupera le prime due funzionalità, ovvero i primi due elementi figlio dell'elemento `Features` <>, dalla descrizione del catalogo del modello di prodotto. Se sono presenti più funzionalità, aggiunge un elemento <`there-is-more/`> al risultato.  
   
 ```  

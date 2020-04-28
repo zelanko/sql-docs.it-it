@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028760"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Impostazioni del progetto (conversione) (SybaseToSQL)
@@ -421,7 +421,7 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 **SUBSTRING - funzione**  
 Nell'ambiente del servizio app `SUBSTRING(expression, start, length)` la funzione restituisce null se viene specificato un valore iniziale maggiore del numero di caratteri nell'espressione o se la lunghezza è uguale a zero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure l'espressione equivalente restituisce una stringa vuota.  
   
--   Per usare il comportamento dell'ambiente del servizio app, selezionare **Sostituisci funzione**. Tutte le chiamate alla funzione SUBSTRING vengono sostituite con una chiamata a SUBSTRING_VARCHAR o SUBSTRING_NVARCHAR o SUBSTRING_VARBINARY funzione definita dall'utente in base al tipo di parametri passati (creati nel database utente con il nome dello schema 2SS ') per emulare Comportamento dell'ambiente del servizio app Sybase.  
+-   Per usare il comportamento dell'ambiente del servizio app, selezionare **Sostituisci funzione**. Tutte le chiamate alla funzione SUBSTRING vengono sostituite con una chiamata a SUBSTRING_VARCHAR o SUBSTRING_NVARCHAR o SUBSTRING_VARBINARY funzione definita dall'utente in base al tipo di parametri passati (creati nel database utente sotto il nome dello schema 2SS ') per emulare il comportamento di Sybase ASE.  
   
 -   Per usare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento/SQL Azure, selezionare **Mantieni sintassi corrente**.  
   

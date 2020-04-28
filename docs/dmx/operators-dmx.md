@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f03c3152e3144b137c079cbdfddeff5b9cd5156
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008171"
 ---
 # <a name="operators-dmx"></a>Operatori (DMX)
@@ -20,8 +20,7 @@ ms.locfileid: "68008171"
 
   È possibile utilizzare gli operatori DMX (Data Mining Extensions) per eseguire operazioni aritmetiche, di confronto, di concatenazione e logiche [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in una query in.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizza gli operatori per eseguire le azioni seguenti:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizza gli operatori per eseguire le azioni seguenti:  
   
 -   Ricercare oggetti o valori che soddisfano una specifica condizione.  
   

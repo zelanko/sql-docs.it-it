@@ -18,10 +18,10 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038910"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funzioni su valori booleani - not 
@@ -43,7 +43,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>R. Utilizzo della funzione XQuery not () per individuare i modelli di prodotto le cui descrizioni del catalogo \<non includono le specifiche> elemento.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Utilizzo della funzione XQuery not () per individuare i modelli di prodotto le cui descrizioni del catalogo \<non includono le specifiche> elemento.  
  La query seguente costruisce codice XML contenente gli ID del modello di prodotto per i quali le descrizioni del catalogo non `Specifications` includono l'elemento <>.  
   
 ```  

@@ -19,10 +19,10 @@ ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004937"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
@@ -40,10 +40,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche incrementali. *object_id* è di **tipo int**.  
+ ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche incrementali. *object_id* è di tipo **int**.  
   
  *stats_id*  
- ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di **tipo int**.  
+ ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di tipo **int**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -59,12 +59,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro (per statistiche filtrate). Se le statistiche non vengono filtrate, unfiltered_rows corrisponde al valore restituito nella colonna rows.|  
 |modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Questa colonna non contiene informazioni per le tabelle ottimizzate per la memoria.|  
   
-## Osservazioni su <a name="Remarks"></a>  
- 
-  `sys.dm_db_incremental_stats_properties` restituisce un set di righe vuoto in base a una delle condizioni seguenti:  
+## <a name="remarks"></a>Osservazioni su <a name="Remarks"></a>  
+ `sys.dm_db_incremental_stats_properties` restituisce un set di righe vuoto in base a una delle condizioni seguenti:  
   
--   
-  `object_id` o `stats_id` è NULL.   
+-   `object_id` o `stats_id` è NULL.   
 -   L'oggetto specificato non viene trovato oppure non corrisponde a una tabella con statistiche incrementali.  
 -   L'ID delle statistiche specificato non corrisponde alle statistiche esistenti per l'ID oggetto specificato.  
 -   L'utente corrente non dispone delle autorizzazioni per visualizzare l'oggetto statistiche.
@@ -88,9 +86,9 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 Per altre informazioni sull'utilizzo, vedere  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
   
 ## <a name="see-also"></a>Vedere anche  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys. stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funzioni e viste a gestione dinamica relative agli oggetti &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

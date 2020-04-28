@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002459"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
@@ -48,8 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è `nvarchar`di e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.
 
-`[ @namespace = ] ' < class > '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, `<class>` è obbligatorio. 
-  `<class>` è `nvarchar(20)`. Gli input validi `DATABASE_DDL_TRIGGER` sono `SERVER_DDL_TRIGGER`e.    
+`[ @namespace = ] ' < class > '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, `<class>` è obbligatorio. `<class>` è `nvarchar(20)`. Gli input validi `DATABASE_DDL_TRIGGER` sono `SERVER_DDL_TRIGGER`e.    
 
 ## <a name="return-code-values"></a>Valori del codice restituito  
 

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005087"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Database di SQL Azure)
@@ -39,7 +39,7 @@ Per restituire informazioni sui collegamenti di replica geografica, usare le vis
 |**database_id**|**int**|ID del database corrente nella vista `sys.databases`.|  
 |**start_date**|**datetimeoffset**|Ora UTC in un data center del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] regionale in cui è stata avviata la copia del database.|  
 |**modify_date**|**datetimeoffset**|Ora UTC in un data center del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] regionale in cui è stata completata la copia del database. Al momento, il nuovo database è transazionalmente coerente con il database primario. Le informazioni di completamento vengono aggiornate ogni minuto.<br /><br />Ora UTC che riflette l'ultimo aggiornamento del campo percent_complete.|  
-|**percent_complete**|**reale**|Percentuale di byte copiati. I valori validi sono compresi tra 0 e 100. Il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] potrebbe recuperare automaticamente da alcuni errori, ad esempio il failover, e riavviare la copia del database. In questo caso, percent_complete inizierebbe di nuovo da 0.|  
+|**percent_complete**|**real**|Percentuale di byte copiati. I valori validi sono compresi tra 0 e 100. Il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] potrebbe recuperare automaticamente da alcuni errori, ad esempio il failover, e riavviare la copia del database. In questo caso, percent_complete inizierebbe di nuovo da 0.|  
 |**error_code**|**int**|Se maggiore di 0, il codice che indica l'errore che si è verificato durante copia. Il valore è uguale a 0 se non si sono verificati errori.|  
 |**error_desc**|**nvarchar (4096)**|Descrizione dell'errore che si è verificato durante la copia.|  
 |**error_severity**|**int**|Restituisce 16 se la copia del database ha esito negativo.|  
