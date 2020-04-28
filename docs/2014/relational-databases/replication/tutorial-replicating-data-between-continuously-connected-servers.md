@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655392"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Esercitazione: Replica di dati tra server con connessione continua
@@ -36,11 +36,11 @@ ms.locfileid: "62655392"
   
     -   Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) o [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Questa edizioni non possono fungere da server di pubblicazione per la replica.  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]database di esempio. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita.  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database di esempio. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita.  
   
 -   Sottoscrittore (destinazione):  
   
-    -   Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)]non può essere un Sottoscrittore nella replica transazionale.  
+    -   Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] non può essere un Sottoscrittore nella replica transazionale.  
   
     > [!NOTE]  
     >  Per impostazione predefinita la replica non è installata in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
@@ -52,15 +52,15 @@ ms.locfileid: "62655392"
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
   
--   [Lezione 1: pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [Lezione 1: Pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [Lezione 2: creazione di una sottoscrizione per la pubblicazione transazionale](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [Lezione 3: convalida della sottoscrizione e misurazione della latenza](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [Lezione 3: Convalida della sottoscrizione e misurazione della latenza](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
  [Avviare l'esercitazione](transactional/transactional-replication.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Concetti di base relativi alla programmazione della replica](concepts/replication-programming-concepts.md)  
   
   

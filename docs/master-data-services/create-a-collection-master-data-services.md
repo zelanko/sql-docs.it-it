@@ -14,10 +14,10 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728527"
 ---
 # <a name="create-a-collection-master-data-services"></a>Creare una raccolta (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73728527"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una raccolta quando si vuole creare elenchi semplici di membri foglia e membri consolidati. Non è necessario includere nelle raccolte tutti i membri dell'entità.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
@@ -55,7 +55,7 @@ ms.locfileid: "73728527"
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Aggiunta di membri a una raccolta &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [Aggiungere membri a una raccolta &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolte &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   

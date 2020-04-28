@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 322a54a4f3bbd5f4880df6f52a085f5d7141d335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844447"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (database SQL di Azure)
@@ -30,9 +30,9 @@ ms.locfileid: "73844447"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
-|action_name|**nvarchar (60)**|Nome dell'azione. Non ammette i valori Null.|  
+|action_name|**nvarchar(60)**|Nome dell'azione. Non ammette i valori Null.|  
 |action_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'azione. Non ammette i valori Null.|  
-|event_name|**nvarchar (60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
+|event_name|**nvarchar(60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
 |event_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'evento. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -40,7 +40,7 @@ ms.locfileid: "73844447"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|A|Relazione|  
+|From|A|Relazione|  
 |----------|--------|------------------|  
 |sys. dm_xe_database_session_event_actions. event_session_address|sys. dm_xe_database_sessions. Address|Molti-a-uno|  
 |sys. dm_xe_database_session_event_actions. action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys. dm_xe_database_session_events. event_package_guid|Molti-a-uno|  

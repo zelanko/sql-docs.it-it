@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400144"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>database tempdb in parallelo data warehouse
@@ -21,7 +21,7 @@ ms.locfileid: "74400144"
   
 Per ulteriori informazioni sui database di sistema, vedere [database di sistema](system-databases.md).  
   
-## <a name="Basics"></a>Termini e concetti chiave  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>Termini e concetti chiave  
 *tabella temporanea locale*  
 Una *tabella temporanea locale* usa il prefisso # prima del nome della tabella ed è una tabella temporanea creata da una sessione utente locale. Ogni sessione può accedere solo ai dati nelle tabelle temporanee locali per la propria sessione.  
   
@@ -51,7 +51,7 @@ SQL Server PDW Elimina le tabelle da **tempdb** nei casi seguenti:
 ## <a name="general-remarks"></a>Osservazioni generali  
 SQL Server PDW esegue le stesse operazioni sulle tabelle temporanee e sulle tabelle permanenti se non diversamente specificato in modo esplicito. Ad esempio, i dati in tabelle temporanee locali, analogamente alle tabelle permanenti, vengono distribuiti o replicati nei nodi di calcolo.  
   
-## <a name="LimitationsRestrictions"></a>Limitazioni e restrizioni  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>Limitazioni e restrizioni  
 Limitazioni e restrizioni relative al database di SQL Server PDW**tempdb** . *Non è possibile:*  
   
 -   Creare una tabella temporanea globale che inizia con # #.  
@@ -82,7 +82,7 @@ Limitazioni e restrizioni sulle tabelle temporanee locali. *Non è possibile:*
 ## <a name="permissions"></a>Autorizzazioni  
 Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a tempdb per impedire a un utente di utilizzarlo, tuttavia questa operazione non è consigliabile poiché in alcune operazioni di routine è richiesto l'utilizzo di tempdb.  
   
-## <a name="RelatedTasks"></a>Attività correlate  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Attività correlate  
   
 |Attività|Descrizione|  
 |---------|---------------|  

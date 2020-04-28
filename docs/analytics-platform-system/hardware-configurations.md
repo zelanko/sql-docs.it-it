@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401129"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurazioni hardware-sistema di piattaforma di analisi
@@ -26,7 +26,7 @@ L'hardware del sistema di piattaforma di analisi (APS) viene progettato con unit
 -   [Configurazioni a più rack](#section2)  
 
   
-## <a name="section1"></a>Configurazioni a un rack  
+## <a name="one-rack-configurations"></a><a name="section1"></a>Configurazioni a un rack  
 Il primo rack nell'appliance contiene i componenti necessari per eseguire PDW. La configurazione minima del dispositivo è un rack e una rete, oltre a un'unità di scala di base. Questi diagrammi mostrano i modi in cui è possibile configurare il primo rack dell'appliance. È possibile avere un nodo di calcolo compreso tra 2 e 9 nel primo rack, a seconda del fornitore dell'hardware.  
   
 ### <a name="first-rack-configurations---dell"></a>Configurazioni del primo rack-DELL  
@@ -39,7 +39,7 @@ La configurazione minima per un'appliance HPE è costituita da 2 nodi di calcolo
   
 ![HPE prime configurazioni di rack per HPE](media/first-rack-configurations-hpe.png "HPE prime configurazioni di rack")  
   
-## <a name="section2"></a>Configurazioni a più rack  
+## <a name="multi-rack-configurations"></a><a name="section2"></a>Configurazioni a più rack  
 Per aggiungere capacità a PDW è possibile aggiungere unità di scala dei dati, oltre a rack aggiuntivi & componenti di rete, in base alle esigenze, per fornire l'alimentazione, la rete e l'infrastruttura rack appropriati. Ogni rete & rack aggiuntiva richiede un host passivo.  
   
 Ogni fornitore di hardware specifica il numero di unità di scala dei dati che è possibile aggiungere data la capacità dell'appliance. È consigliabile aggiungere unità di scala dei dati sufficienti per visualizzare almeno un incremento del 20% delle prestazioni. Ad esempio, l'aggiunta di un'unità di scala dati a un'appliance che dispone già di 20 unità di scala dati può comportare un miglioramento delle prestazioni trascurabile. Il guadagno netto non varrebbe il costo e il lavoro richiesto.  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400937"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componenti data warehouse paralleli-sistema della piattaforma Analytics
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![Software data warehouse parallelo](media/parallel-data-warehouse-software.png "Software data warehouse parallelo")  
   
-## <a name="sec1"></a>Software appliance-elaborazione query e archiviazione dati utente  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>Software appliance-elaborazione query e archiviazione dati utente  
   
 ### <a name="control-node"></a>nodo di controllo  
 Motore MPP  
-Il motore MPP è il cervello del sistema MPP (Massive Parallel Processing). Effettua le seguenti operazioni:  
+Il motore MPP è il cervello del sistema MPP (Massive Parallel Processing). Esegue le operazioni seguenti:  
   
 -   Crea piani di query paralleli e coordina l'esecuzione di query parallele nei nodi di calcolo.  
   
@@ -55,7 +55,7 @@ Il motore MPP è il cervello del sistema MPP (Massive Parallel Processing). Effe
 -   Tiene traccia dello stato dell'hardware e del software.  
   
 ### <a name="data-movement-service-dms"></a>Servizio di spostamento dati (DMS)  
-Il servizio di spostamento dei dati (DMS) fa parte della "salsa segreta" di PDW. Effettua le seguenti operazioni:  
+Il servizio di spostamento dei dati (DMS) fa parte della "salsa segreta" di PDW. Esegue le operazioni seguenti:  
   
 -   Trasferisce i dati da e verso i nodi del SQL Server PDW.  
   
@@ -66,7 +66,7 @@ Il servizio di spostamento dei dati (DMS) fa parte della "salsa segreta" di PDW.
 ### <a name="admin-console"></a>Console di amministrazione  
 La console di amministrazione è un'applicazione Web che presenta le informazioni sullo stato, l'integrità e le prestazioni dell'appliance.  
   
-### <a name="configuration-manager"></a>Gestione configurazione  
+### <a name="configuration-manager"></a>Configuration Manager  
 Il Configuration Manager (dwconfig. exe) è lo strumento usato dagli amministratori di appliance per configurare il sistema di piattaforma di analisi.  
   
 ### <a name="control-node-databases"></a>Database del nodo di controllo  
@@ -127,7 +127,7 @@ Spazi di archiviazione Windows gestisce i dati utente come un pool di archiviazi
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server offre una soluzione di virtualizzazione semplice e affidabile. Il sistema di piattaforma di analisi usa le virtualizzazione per bilanciare le risorse della CPU e fornire disponibilità elevata per i nodi PDW e i componenti dell'infrastruttura Appliance.  
   
-## <a name="sec2"></a>Dati non relazionali
+## <a name="non-relational-data"></a><a name="sec2"></a>Dati non relazionali
 La tecnologia polibase integra SQL Server PDW dati con dati Hadoop esterni. I dati Hadoop possono essere archiviati in una qualsiasi di queste origini dati Hadoop:  
   
 -   Distribuzione Hadoop di Hortonworks  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721007"
 ---
 # <a name="rename-a-stored-procedure"></a>Rinominare una stored procedure
@@ -37,9 +37,9 @@ ms.locfileid: "62721007"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   I nomi delle procedure devono essere conformi alle regole per gli [identificatori](../databases/database-identifiers.md).  
   
@@ -47,16 +47,16 @@ ms.locfileid: "62721007"
   
 -   La modifica del nome o della definizione di una stored procedure può causare un errore degli oggetti dipendenti se questi non vengono aggiornati in base alle modifiche apportate alla stored procedure. Per ulteriori informazioni, vedere [visualizzare le dipendenze di una stored procedure](view-the-dependencies-of-a-stored-procedure.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  CREATE PROCEDURE  
  Sono richieste l'autorizzazione CREATE PROCEDURE per il database e ALTER per lo schema in cui viene creata la procedura oppure è richiesta l'appartenenza al ruolo predefinito **db_ddladmin** del database.  
   
  ALTER PROCEDURE  
  È richiesta l'autorizzazione ALTER per la procedura o l'appartenenza al ruolo predefinito del database **db_ddladmin**.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721007"
   
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
   
-3.  [Determinare le dipendenze del stored procedure](view-the-dependencies-of-a-stored-procedure.md).  
+3.  [Determinare le dipendenze della stored procedure](view-the-dependencies-of-a-stored-procedure.md).  
   
 4.  Espandere **Stored Procedures**, fare clic con il pulsante destro del mouse sulla procedura da rinominare e quindi scegliere **Rinomina**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62721007"
   
 6.  Modificare il nome della stored procedure in qualsiasi oggetto dipendente o script che vi fa riferimento.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   
@@ -110,13 +110,13 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Creazione di una stored procedure](../stored-procedures/create-a-stored-procedure.md)   
  [Modificare una stored procedure](../stored-procedures/modify-a-stored-procedure.md)   
  [Eliminare una stored procedure](../stored-procedures/delete-a-stored-procedure.md)   
- [Visualizzare la definizione di una stored procedure](view-the-definition-of-a-stored-procedure.md)   
+ [Visualizzazione della definizione di una stored procedure](view-the-definition-of-a-stored-procedure.md)   
  [Visualizzare le dipendenze di una stored procedure](view-the-dependencies-of-a-stored-procedure.md)  
   
   

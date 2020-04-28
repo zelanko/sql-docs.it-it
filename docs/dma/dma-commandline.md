@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056623"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Esegui Data Migration Assistant dalla riga di comando
@@ -259,7 +259,7 @@ Questi comandi supportano i consigli per le opzioni di distribuzione di database
 |`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi (ad esempio "USD") | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationOfferName` | Nome dell'offerta (ad esempio, "MS-AZR-0003P"). Per ulteriori informazioni, vedere la pagina dei [Dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationRegionName` | Nome dell'area (ad esempio "Westus") | S <br> (Per i prezzi più recenti)
-|`/SkuRecommendationSubscriptionId` | ID sottoscrizione. | S <br> (Per i prezzi più recenti)
+|`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationDatabasesToRecommend` | Elenco di database separati da spazi da consigliare (ad esempio "Database1" "Database2" "Database3"). I nomi fanno distinzione tra maiuscole e minuscole e devono essere racchiusi tra virgolette doppie. Se omesso, vengono fornite indicazioni per tutti i database. | N
 |`/AzureAuthenticationTenantId` | Tenant di autenticazione. | S <br> (Per i prezzi più recenti)
 |`/AzureAuthenticationClientId` | ID client dell'app AAD usata per l'autenticazione. | S <br> (Per i prezzi più recenti)

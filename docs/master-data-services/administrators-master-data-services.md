@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729798"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
@@ -66,7 +66,7 @@ ms.locfileid: "73729798"
   
 |Tipo di amministratore|Descrizione|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influiscono sull'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influiscono sull'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
 |Amministratore di modelli|Può essere un amministratore di modelli in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nel modello specifico.|  
 |Amministratore di entità|Può essere un amministratore di entità in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nell'entità specifica.<br /><br /> Può approvare gli insiemi di modifiche in sospeso se le modifiche all'entità richiedono l'approvazione.|  
   

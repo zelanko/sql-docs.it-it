@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882344"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
@@ -36,7 +36,7 @@ ms.locfileid: "73882344"
 |Modifica della compressione dello snapshot.|**sp_changepublication**|**compress_snapshot**|Nuovo snapshot.|  
 |Modifica delle opzioni dello snapshot FTP (File Transfer Protocol).|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Nuovo snapshot.|  
 |Modifica della posizione dello script pre- o post-snapshot.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nuovo snapshot (necessario anche se si modifica il contenuto dello script).<br /><br /> È necessario eseguire la reinizializzazione per applicare il nuovo script al Sottoscrittore.|  
-|Abilitare o disabilitare il supporto per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sottoscrittori non.|**sp_changepublication**|**is_enabled_for_het_sub**|Nuovo snapshot.|  
+|Abilitazione o disabilitazione del supporto per Sottoscrittori non [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Nuovo snapshot.|  
 |Modifica del report sui conflitti per le sottoscrizioni ad aggiornamento in coda.|**sp_changepublication**|**centralized_conflicts**|È possibile modificare questa proprietà solo se non esiste alcuna sottoscrizione attiva.|  
 |Modifica dei criteri di risoluzione dei conflitti per le sottoscrizioni ad aggiornamento in coda.|**sp_changepublication**|**conflict_policy**|È possibile modificare questa proprietà solo se non esiste alcuna sottoscrizione attiva.|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73882344"
 |Modifica di un filtro di riga.|**sp_changearticle**|**filtro**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica delle opzioni dello schema.|**sp_changearticle**|**schema_option**|Nuovo snapshot.|  
 |Modifica della modalità di gestione delle tabelle nel Sottoscrittore prima dell'applicazione dello snapshot.|**sp_changearticle**|**pre_creation_cmd**|Nuovo snapshot.|  
-|Modifica dello stato degli articoli.|**sp_changearticle**|**stato**|Nuovo snapshot.|  
+|Modifica dello stato degli articoli.|**sp_changearticle**|**Stato**|Nuovo snapshot.|  
 |Modifica dei comandi INSERT, UPDATE o DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del nome della tabella di destinazione.|**sp_changearticle**|**dest_table**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del proprietario della tabella di destinazione (schema).|**sp_changearticle**|**destination_owner**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
@@ -95,7 +95,7 @@ ms.locfileid: "73882344"
 ## <a name="see-also"></a>Vedere anche  
  [Domande frequenti sull'amministrazione della replica](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Creare e applicare lo snapshot](../create-and-apply-the-snapshot.md)   
- [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md)   
+ [Reinizializza sottoscrizioni](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   
  [sp_articlecolumn &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)   
  [sp_articlefilter &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)   
@@ -109,6 +109,6 @@ ms.locfileid: "73882344"
  [sp_droparticle &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)   
  [sp_dropmergearticle &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)   
  [sp_dropmergefilter &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)   
- [sp_mergearticlecolumn &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
+ [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
   
   

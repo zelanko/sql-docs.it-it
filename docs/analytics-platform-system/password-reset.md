@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400899"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Reimpostazione password-sistema della piattaforma di analisi
@@ -48,7 +48,7 @@ Sia le credenziali di amministratore di dominio sia le credenziali di amministra
   
 2.  Nel riquadro sinistro della **Configuration Manager**fare clic su **reimpostazione password**.  
   
-3.  Selezionare il tipo di amministratore dal menu a discesa **account** , quindi immettere la nuova password nelle caselle **password** e **Conferma password** . Fare clic su **applica** per salvare le modifiche.  
+3.  Selezionare il tipo di amministratore dal menu a discesa **account** , quindi immettere la nuova password nelle caselle **password** e **Conferma password** . Fare clic su **Applica** per salvare le modifiche.  
   
     Le modifiche apportate a questi account non influiscono sulle sessioni attualmente attive, ma verranno applicate al successivo tentativo di accesso per ogni utente.  
   

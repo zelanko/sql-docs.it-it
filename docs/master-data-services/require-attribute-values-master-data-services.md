@@ -14,10 +14,10 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728939"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Richiedere valori di attributo (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728939"
 > [!NOTE]  
 >  I membri a cui mancano valori di attributo basati su dominio non sono visualizzati nelle gerarchie derivate basate su tali relazioni.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Per richiedere valori di attributo  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728939"
   
 2.  Dalla barra dei menu scegliere **Gestisci** e fare clic su **Regole business**.  
   
-3.  Nella pagina **Regole business** selezionare un modello nell'elenco a discesa **Modello** .  
+3.  Nella pagina **regole business** selezionare un modello nell'elenco a discesa **modello** .  
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73728939"
   
     -   [Convalidare membri specifici rispetto a regole business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Convalidare una versione rispetto alle regole business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

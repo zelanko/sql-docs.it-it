@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056527"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Aggiornare SQL Server usando il Data Migration Assistant
@@ -41,7 +41,7 @@ In questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento SQ
 
 1. Per l'origine, immettere il nome dell'istanza SQL Server nel campo **nome server** della sezione **Dettagli del server di origine** . 
 
-2. Consente di selezionare il **tipo di autenticazione** supportato dall'istanza di SQL Server di origine.
+2. Selezionare il **tipo di autenticazione** supportato dall'istanza di SQL Server di origine.
 
 3. Per la destinazione, immettere il nome dell'istanza SQL Server nel campo **nome server** della sezione **Dettagli server di destinazione** . 
 
@@ -95,7 +95,7 @@ Il Data Migration Assistant esegue le convalide sulle cartelle di backup, i dati
 
    ![Selezionare gli account di accesso e avviare la migrazione](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Visualizzare i risultati
+## <a name="view-results"></a>Visualizzazione dei risultati
 
 È possibile monitorare lo stato di avanzamento della migrazione nella pagina **Visualizza risultati** .
 

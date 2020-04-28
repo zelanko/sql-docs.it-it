@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400626"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Accendere o spegnere l'appliance per il sistema di piattaforma di analisi
@@ -25,7 +25,7 @@ Quando queste istruzioni specificano la connessione a un nodo di SQL Server PDW,
   
 Le connessioni ai nodi SQL Server PDW possono essere effettuate usando gli indirizzi IP assegnati ai nodi o dal computer **HST01** usando le applicazioni di **Gestione cluster di failover** (**cluadmin. msc**) o della console di **gestione di Hyper-V** (**virtmgmt. msc**) e facendo clic con il pulsante destro del mouse sul nome del nodo.  
   
-## <a name="PowerOff"></a>Spegnere l'appliance  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Spegnere l'appliance  
   
 ### <a name="before-you-begin"></a>Prima di iniziare  
 Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'appliance. Per terminare tutte le attività:  
@@ -61,7 +61,7 @@ Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'a
   
 9. Arrestare le unità di distribuzione dell'alimentazione (PDU).  
   
-## <a name="PowerOn"></a>Accendere l'appliance  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>Accendere l'appliance  
   
 ### <a name="to-power-on-the-appliance"></a>Per accendere l'appliance  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714764"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
@@ -80,11 +80,11 @@ ms.locfileid: "62714764"
   
  Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Edizione|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edition|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licenze basate su Core<sup>1</sup>|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
-|Developer|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
-|Versione di valutazione|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Sviluppo|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Valutazione|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Business Intelligence|Limitato a meno di 4 socket o 16 core|Valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|  
 |Web|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|  
@@ -98,7 +98,7 @@ ms.locfileid: "62714764"
   
  È necessario disabilitare l'Hyper-Threading quando le prestazioni per processore virtuale sono importanti. È possibile abilitare o disabilitare l'Hyper-Threading utilizzando una impostazione BIOS per il processore durante l'impostazione del BIOS, ma è in genere un'operazione con ambito server che avrà un impatto su tutti i carichi di lavoro in esecuzione sul server. In tale situazione potrebbe essere consigliabile dividere i carichi di lavoro che saranno in esecuzione negli ambienti virtualizzati da quelli che beneficeranno del miglioramento delle prestazioni dell'Hyper-Threading in un ambiente fisico del sistema operativo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Edizioni e componenti di SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Specifiche di capacità massima per SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   

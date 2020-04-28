@@ -14,10 +14,10 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729635"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorizzazioni per raccolte (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "73729635"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri della raccolta e gli attributi dei membri.|  
-|**Creare**|L'utente può creare i membri della raccolta e assegnare i valori di attributo.|  
+|**Crea**|L'utente può creare i membri della raccolta e assegnare i valori di attributo.|  
 |**Aggiornamento**|L'utente può aggiornare i membri della raccolta, gli attributi e le relazioni.|  
 |**Elimina**|L'utente può eliminare membri della raccolta.|  
 |**Nega**|L'accesso ai membri della raccolta è negato.|  

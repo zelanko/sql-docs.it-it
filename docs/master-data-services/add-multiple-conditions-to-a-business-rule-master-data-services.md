@@ -13,10 +13,10 @@ ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728804"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Aggiungere più condizioni a una regola business (Master Data Services)
@@ -28,12 +28,12 @@ ms.locfileid: "73728804"
 > [!NOTE]  
 >  Se si crea una regola di business che usa l'operatore **OR** , considerare la possibilità di creare una regola separata per ogni istruzione condizionale che può essere valutata indipendentemente. È quindi possibile escludere regole in base alle esigenze, offrendo maggiore flessibilità e una più facile risoluzione dei problemi.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente una regola business. Per altre informazioni, vedere [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -43,11 +43,11 @@ ms.locfileid: "73728804"
   
 2.  Dalla barra dei menu scegliere **Gestisci** e fare clic su **Regole business**.  
   
-3.  Nella pagina **regole business/** selezionare un modello dall'elenco a discesa **modello** .  
+3.  Nella pagina **Regole business** selezionare un modello dall'elenco a discesa **Modello** .  
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
-5.  Nell'elenco a discesa **Tipo di membro** selezionare un tipo di membro.  
+5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro.  
   
 6.  Fare clic sulla riga della regola business che si desidera modificare.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73728804"
 ## <a name="see-also"></a>Vedere anche  
  [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Modificare il nome di una regola business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurare regole business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

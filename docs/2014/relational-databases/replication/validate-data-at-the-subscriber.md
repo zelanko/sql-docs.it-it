@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882233"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
@@ -65,7 +65,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 -   Poiché la convalida di set di dati estesi mediante checksum e checksum binari può richiedere quantità elevate di risorse di elaborazione, è opportuno pianificare la convalida in modo che venga eseguita nei periodi di attività minore nei server utilizzati per la replica.    
 -   La replica convalida soltanto le tabelle e non verifica che gli articoli solo schema, ad esempio le stored procedure, presenti nel server di pubblicazione e nel Sottoscrittore corrispondano.    
 -   Il checksum binario può essere utilizzato per qualsiasi tabella pubblicata. Non è possibile convalidare mediante il calcolo del checksum tabelle con filtri colonne o strutture di tabelle logiche con offset di colonna diversi, a causa di istruzioni di tipo ALTER TABLE tramite cui vengono eliminate o aggiunte colonne.    
--   La convalida `checksum` della replica utilizza le funzioni e **binary_checksum** . Per informazioni sul comportamento, vedere [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
+-   Per la convalida della `checksum` replica vengono utilizzate le funzioni e **BINARY_CHECKSUM** . Per informazioni sul comportamento, vedere [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   La convalida eseguita mediante checksum o checksum binario può segnalare erroneamente un problema se nel Sottoscrittore vi sono tipi di dati diversi rispetto al server di pubblicazione. Ciò può verificarsi se si effettua una delle operazioni indicate di seguito.    
     -   Impostazione esplicita delle opzioni per lo schema per l'esecuzione del mapping dei tipi di dati per versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -79,7 +79,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
   
  Per gestire gli errori di convalida, considerare quanto segue:  
   
--   Configurare l'avviso di replica **Replica: la convalida dei dati nel Sottoscrittore non è riuscita.** , in modo che l'utente venga avvisato dell'errore. Per altre informazioni, vedere [Configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio&-41(amministrazione/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configurare l'avviso di replica **Replica: la convalida dei dati nel Sottoscrittore non è riuscita.** , in modo che l'utente venga avvisato dell'errore. Per ulteriori informazioni, vedere [configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio& # 41 (Administration/Configure-predefined-Replication-Alerts-SQL-Server-Management-Studio. MD).  
   
 -   L'errore di convalida rappresenta un problema per l'applicazione utilizzata? Se sì, aggiornare manualmente i dati in modo che siano sincronizzati oppure reinizializzare la sottoscrizione:  
   
@@ -112,7 +112,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 
 #### <a name="all-articles"></a>Tutti gli articoli
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specificare ** \@la pubblicazione** e uno dei valori seguenti per ** \@rowcount_only:**    
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specificare ** \@publication** e uno dei valori seguenti per ** \@rowcount_only**:    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -124,9 +124,9 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
   
 #### <a name="single-article"></a>Singolo articolo 
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@pubblicazione**, il nome dell'articolo per ** \@l'articolo**e uno dei seguenti valori per ** \@rowcount_only:**    
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@publication**, il nome dell'articolo per ** \@article**e uno dei valori seguenti per ** \@rowcount_only**:    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
-    -   **2** - Conteggio righe e checksum binario.  
+    -   **2** -conteggio delle righe e checksum binario.  
   
     > [!NOTE]  
     >  Per eseguire correttamente [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql), è necessario disporre delle autorizzazioni SELECT per tutte le colonne nella tabella di base pubblicata.  
@@ -137,11 +137,11 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 #### <a name="single-subscriber"></a>Singolo sottoscrittore
   
 1.  Nel database di pubblicazione del server di pubblicazione aprire una transazione esplicita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specificare la ** \@** pubblicazione per la pubblicazione, il nome del Sottoscrittore per ** \@il Sottoscrittore**e il nome del database di sottoscrizione per ** \@destination_db.**    
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specificare la pubblicazione per ** \@la pubblicazione**, il nome del Sottoscrittore per ** \@il Sottoscrittore**e il nome del database di sottoscrizione per ** \@destination_db**.    
 3.  (Facoltativo) Ripetere il passaggio 2 per ciascuna sottoscrizione da convalidare.    
-4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@pubblicazione**, il nome dell'articolo per ** \@l'articolo**e uno dei seguenti valori per ** \@rowcount_only:**    
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@publication**, il nome dell'articolo per ** \@article**e uno dei valori seguenti per ** \@rowcount_only**:    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
-    -   **2** - Conteggio righe e checksum binario.  
+    -   **2** -conteggio delle righe e checksum binario.  
   
     > [!NOTE]  
     >  Per eseguire correttamente [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql), è necessario disporre delle autorizzazioni SELECT per tutte le colonne nella tabella di base pubblicata.  
@@ -151,7 +151,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 7.  (Facoltativo) Avviare l'agente di distribuzione, se non è già in esecuzione. Per ulteriori informazioni, vedere [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
 8.  Verificare l'output dell'agente per il risultato della convalida. Per altre informazioni, vedere [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
 
-##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Tutte le sottoscrizioni push a una pubblicazione transazionaleAll push subscriptions to a Transactional Publication 
+##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Tutte le sottoscrizioni push di una pubblicazione transazionale 
 
 ### <a name="using-replication-monitor"></a>Uso di Monitoraggio replica
   
@@ -181,13 +181,13 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  I risultati della convalida possono essere visualizzati in Monitoraggio replica o nella finestra di dialogo **Visualizza stato sincronizzazione** .  
     1.  Espandere la pubblicazione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza stato sincronizzazione**.   
-    2.  Se l'agente non è in esecuzione, fare clic su **Avvia** nella finestra di dialogo **Visualizza stato sincronizzazione.** Nella finestra di dialogo verranno visualizzati messaggi informativi relativi alla convalida.  
+    2.  Se l'agente non è in esecuzione, fare clic su **Avvia** nella finestra di dialogo **Visualizza stato sincronizzazione** . Nella finestra di dialogo verranno visualizzati messaggi informativi relativi alla convalida.  
   
      Se non viene visualizzato alcun messaggio attinente, l'agente deve aver già registrato un messaggio successivo. In questo caso, visualizzare i risultati della convalida in Monitoraggio replica. Per ulteriori informazioni, vedere le procedure per Monitoraggio replica in questo argomento.  
 
 ### <a name="using-transact-sql-t-sql"></a>Uso di Transact-SQL (T-SQL)
 
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specificare ** \@pubblicazione**, il nome del Sottoscrittore per ** \@il Sottoscrittore**, il nome del database della sottoscrizione per ** \@subscriber_db**e uno dei valori seguenti per ** \@** il livello :   
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specificare ** \@la pubblicazione**, il nome del Sottoscrittore per ** \@il Sottoscrittore**, il nome del database di sottoscrizione per ** \@subscriber_db**e uno dei valori seguenti per ** \@Level**:   
     -   **1** : convalida solo mediante conteggio delle righe.    
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -210,15 +210,15 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione di cui si desidera convalidare le sottoscrizioni e quindi scegliere **Convalida tutte le sottoscrizioni**.    
 4.  Nella finestra di dialogo **Convalida tutte le sottoscrizioni** specificare il tipo di convalida da eseguire (solo conteggio delle righe o conteggio delle righe e valori di checksum).    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
-6.  Visualizzare i risultati della convalida in Monitoraggio replica o nella finestra di dialogo **Visualizza stato sincronizzazione.** Eseguire la procedura seguente per ogni sottoscrizione:    
+6.  Visualizzare i risultati della convalida in Monitoraggio replica o nella finestra di dialogo **Visualizza stato sincronizzazione** . Eseguire la procedura seguente per ogni sottoscrizione:    
     1.  Espandere la pubblicazione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza stato sincronizzazione**.   
-    2.  Se l'agente non è in esecuzione, fare clic su **Avvia** nella finestra di dialogo **Visualizza stato sincronizzazione.** Nella finestra di dialogo verranno visualizzati messaggi informativi relativi alla convalida.  
+    2.  Se l'agente non è in esecuzione, fare clic su **Avvia** nella finestra di dialogo **Visualizza stato sincronizzazione** . Nella finestra di dialogo verranno visualizzati messaggi informativi relativi alla convalida.  
   
      Se non viene visualizzato alcun messaggio attinente, l'agente deve aver già registrato un messaggio successivo. In questo caso, visualizzare i risultati della convalida in Monitoraggio replica. Per ulteriori informazioni, vedere le procedure per Monitoraggio replica in questo argomento.  
 
 ### <a name="using-transact-sql-t-sql"></a>Uso di Transact-SQL (T-SQL)
 
-1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specificare ** \@la pubblicazione** e uno dei valori seguenti per ** \@il livello:**    
+1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specificare ** \@publication** e uno dei valori seguenti per ** \@Level**:    
     -   **1** : convalida solo mediante conteggio delle righe.    
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -259,7 +259,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
     3.  Visualizzare le informazioni nella scheda **Cronologia sincronizzazione** all'interno dell'area di testo **Ultimo messaggio della sessione selezionata** .  
   
   
-## <a name="validate-data-using-merge-agent-parameters"></a>Convalidare i dati utilizzando i parametri dell'agente di mergeValidate data using Merge Agent Parameters
+## <a name="validate-data-using-merge-agent-parameters"></a>Convalidare i dati usando parametri agente di merge
   
 1.  Avviare l'agente di merge nel Sottoscrittore (sottoscrizione pull) o nel server di distribuzione (sottoscrizione push) dal prompt dei comandi, mediante una delle modalità indicate di seguito.    
     -   Specificare il valore **1** (conteggio delle righe) o **3** (conteggio delle righe e checksum binario) per il parametro **-Validate** .   

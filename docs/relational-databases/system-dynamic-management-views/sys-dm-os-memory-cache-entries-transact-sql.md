@@ -19,10 +19,10 @@ ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 737de971ca39cdf8c164787ff7703b87c38e92e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983116"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "73983116"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Indirizzo della cache. Non ammette i valori Null.|  
-|**nome**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
-|**tipo**|**varchar(60)**|Tipo di cache. Non ammette i valori Null.|  
+|**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
+|**type**|**varchar(60)**|Tipo di cache. Non ammette i valori Null.|  
 |**entry_address**|**varbinary (8)**|Indirizzo del descrittore della voce di cache. Non ammette i valori Null.|  
 |**entry_data_address**|**varbinary (8)**|Indirizzo dei dati utente nella voce di cache.<br /><br /> 0x00000000 = Indirizzo dei dati della voce non disponibile.<br /><br /> Non ammette i valori Null.|  
 |**in_use_count**|**int**|Numero di utenti simultanei di questa voce di cache. Non ammette i valori Null.|  
@@ -47,9 +47,9 @@ ms.locfileid: "73983116"
 |**original_cost**|**int**|Costo originale della voce. Questo valore è un'approssimazione del numero di I/O, del costo di istruzioni per la CPU e della quantità di memoria utilizzata dalla voce. Maggiore il costo, minori le possibilità che l'elemento venga rimosso dalla cache. Non ammette i valori Null.|  
 |**current_cost**|**int**|Costo corrente della voce di cache. Questo valore viene aggiornato durante il processo di eliminazione delle voci. Il costo corrente viene reimpostato sul valore originale al riutilizzo della voce. Non ammette i valori Null.|  
 |**memory_object_address**|**varbinary (8)**|Indirizzo dell'oggetto di memoria associato. Ammette i valori Null.|  
-|**pages_allocated_count**|**bigint**|**Si applica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]da a.<br /><br /> Numero di pagine da 8 KB per l'archiviazione della voce di cache. Non ammette i valori Null.|  
+|**pages_allocated_count**|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Numero di pagine da 8 KB per l'archiviazione della voce di cache. Non ammette i valori Null.|  
 |**pages_kb**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Quantità di memoria in kilobyte (KB) utilizzata da questa voce di cache.  Non ammette i valori Null.|  
-|**entry_data**|**nvarchar (2048)**|Rappresentazione serializzata della voce archiviata nella cache. Queste informazioni dipendono dall'archiviazione nella cache. Ammette i valori Null.|  
+|**entry_data**|**nvarchar(2048)**|Rappresentazione serializzata della voce archiviata nella cache. Queste informazioni dipendono dall'archiviazione nella cache. Ammette i valori Null.|  
 |**pool_id**|**int**|**Si applica a**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e versioni successive.<br /><br /> ID del pool di risorse associato alla voce. Ammette i valori Null.<br /><br /> non katmai|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   

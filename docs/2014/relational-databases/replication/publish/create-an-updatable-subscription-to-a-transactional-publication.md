@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691591"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (Management Studio)
@@ -62,15 +62,15 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
 5. Connettersi al server di pubblicazione nella finestra di dialogo **Connetti a server** .
 6. Nella pagina **Pubblicazione** selezionare una pubblicazione transazionale abilitata per l'aggiornamento di sottoscrizioni.
 7. Seguire i passaggi della procedura guidata per specificare le opzioni della sottoscrizione, ad esempio il server nel quale deve essere eseguito l'agente di distribuzione.
-8. Nella pagina **Sottoscrizioni aggiornabili** della Creazione guidata nuova sottoscrizione verificare che **Replica** sia selezionato.
+8. Nella pagina **sottoscrizioni aggiornabili** della creazione guidata nuova sottoscrizione verificare che **replica** sia selezionato.
 9. Selezionare un'opzione nell'elenco a discesa **Commit nel server di pubblicazione**:
 
     * Per usare sottoscrizioni ad aggiornamento immediato, selezionare **Commit delle modifiche simultaneo**. Se si seleziona questa opzione e la pubblicazione consente sottoscrizioni ad aggiornamento in coda (impostazione predefinita per le pubblicazioni create con la Creazione guidata nuova pubblicazione), la proprietà della sottoscrizione **update_mode** è impostata su **failover**. Questa modalità consente di passare all'aggiornamento in coda in un momento successivo se necessario.
-    * Per usare sottoscrizioni ad aggiornamento in coda, selezionare **Accoda le modifiche ed esegui il commit appena possibile**. Se si seleziona questa opzione e la pubblicazione consente sottoscrizioni ad aggiornamento immediato (impostazione predefinita per le pubblicazioni create con Creazione guidata nuova pubblicazione) e se il Sottoscrittore esegue SQL Server 2005 o versione successiva, la proprietà della sottoscrizione **update_mode** è impostata su **queued failover**. Questa modalità consente di passare all'aggiornamento immediato in un momento successivo se necessario.
+    * Per usare sottoscrizioni ad aggiornamento in coda, selezionare **Accoda le modifiche ed esegui il commit appena possibile**. Se si seleziona questa opzione e la pubblicazione consente sottoscrizioni ad aggiornamento immediato (impostazione predefinita per le pubblicazioni create con la creazione guidata nuova pubblicazione) e il Sottoscrittore esegue SQL Server 2005 o una versione successiva, la proprietà della sottoscrizione **update_mode** viene impostata sul **failover**in coda. Questa modalità consente di passare all'aggiornamento immediato in un momento successivo se necessario.
 
     Per altre informazioni su come cambiare modalità di aggiornamento, vedere [Passare da una modalità di aggiornamento all'altra per una sottoscrizione transazionale aggiornabile](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-10. La pagina **Account di accesso per sottoscrizioni aggiornabili** viene visualizzata per le sottoscrizioni che usano l'aggiornamento immediato o la cui proprietà **update_mode** è impostata su **failover**. Nella pagina **Account di accesso per sottoscrizioni aggiornabili** specificare un server collegato tramite il quale vengono eseguite le connessioni al server di pubblicazione per sottoscrizioni ad aggiornamento immediato. Le connessioni vengono utilizzate dai trigger che si attivano presso il Sottoscrittore e propagano le modifiche al server di pubblicazione. Selezionare una delle opzioni seguenti:
+10. Viene visualizzata la pagina **account di accesso per sottoscrizioni aggiornabili** per le sottoscrizioni che utilizzano l'aggiornamento immediato o **update_mode** impostate su **failover**in coda. Nella pagina **Account di accesso per sottoscrizioni aggiornabili** specificare un server collegato tramite il quale vengono eseguite le connessioni al server di pubblicazione per sottoscrizioni ad aggiornamento immediato. Le connessioni vengono utilizzate dai trigger che si attivano presso il Sottoscrittore e propagano le modifiche al server di pubblicazione. Selezionare una delle opzioni seguenti:
 
     * **Crea un server collegato che stabilisce la connessione utilizzando l'autenticazione di SQL Server.** Selezionare questa opzione se non è stato definito un server remoto o un server collegato tra il Sottoscrittore e il server di pubblicazione. Durante la replica verrà creato automaticamente un server collegato. È necessario che l'account specificato esista già nel server di pubblicazione.
     * **Usa un server collegato o remoto già definito** Selezionare questa opzione se è stato definito un server remoto o un server collegato tra il Sottoscrittore e il server di pubblicazione tramite [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio o un altro metodo.
@@ -116,7 +116,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
     * `1` - Usare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
     * `2` - Usare un account di accesso esistente e definito dall'utente per il server collegato, creato con [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. Nel server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) specificando `@publication`, `@subscriber`, `@destination_db`, il valore pull per `@subscription_type`e lo stesso valore specificato al passaggio 3 per `@update_mode`.
+6. Nel server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication`specificando `@subscriber`, `@destination_db`,, il valore pull per `@subscription_type`e lo stesso valore specificato nel passaggio 3 per `@update_mode`.
 
 La sottoscrizione pull verrà registrata nel server di pubblicazione. 
 
@@ -190,7 +190,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
     * (Facoltativo) Il valore `0` per `@distributor_security_mode` e le informazioni sull'account di accesso di SQL Server per `@distributor_login` e `@distributor_password`, se è necessario usare l'autenticazione di SQL Server per la connessione al server di distribuzione. 
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
 
-5. Nel server di pubblicazione eseguire [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) per registrare il Sottoscrittore nel server di pubblicazione specificando `@publication`, `@subscriber`, `@destination_db`, il valore pull per `@subscription_type`e lo stesso valore specificato al passaggio 3 per `@update_mode`.
+5. Nel server di pubblicazione eseguire [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) per registrare il Sottoscrittore nel server di `@publication`pubblicazione `@subscriber`, `@destination_db`specificando,,, il `@subscription_type`valore pull per e lo stesso valore specificato nel passaggio `@update_mode`3 per.
 
 La sottoscrizione pull verrà registrata nel server di pubblicazione. 
 
@@ -299,7 +299,7 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Impostazione delle opzioni di risoluzione dei conflitti per l'aggiornamento in coda (SQL Server Management Studio)
-  Per impostare le opzioni di risoluzione dei conflitti per le pubblicazioni che supportano sottoscrizioni ad aggiornamento in coda, usare la pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Per impostare le opzioni di risoluzione dei conflitti per le pubblicazioni che supportano sottoscrizioni ad aggiornamento in coda, usare la pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Per impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda  
   

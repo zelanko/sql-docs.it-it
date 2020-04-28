@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400538"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacità di elaborazione e archiviazione nel sistema della piattaforma Analytics
 I requisiti aziendali determinano il numero di unità di scala dei dati e le dimensioni dei dischi del nodo di calcolo necessari nell'appliance del sistema di piattaforma di analisi (APS). Usare questi calcoli di elaborazione e archiviazione per guidare le decisioni di acquisto e pianificazione della capacità.  
   
   
-## <a name="section1"></a>Pianificazione della capacità di elaborazione  
+## <a name="planning-for-processing-capacity"></a><a name="section1"></a>Pianificazione della capacità di elaborazione  
 Le prestazioni delle query per SQL Server Parallel data warehouse (PDW) dipendono in modo considerevole dal numero di core CPU che lavorano sui dati in parallelo. All'interno dei limiti, l'aumento del parallelismo migliora le prestazioni delle query di elaborazione parallela massiva (MPP). Anche se le dimensioni dei dati sono relativamente ridotte, la potenza del motore di query MPP viene migliorata con un maggiore parallelismo.  
   
 Ad esempio, un appliance con 12 nodi di calcolo ha 192 core CPU che elaborano i dati in parallelo. Questo è il parallelismo a 192 vie! Un appliance con nodi di calcolo 56 ha 896 core che lavorano in parallelo. Questa grandezza del parallelismo non è raggiungibile senza MPP computing.  
@@ -78,10 +78,10 @@ Il sollevamento è il miglioramento della capacità di percentuale aumentando il
 |15|45|720|11.520|25%|  
 |18|54|864|13.824|20%|  
   
-## <a name="section2"></a>Pianificazione della capacità di archiviazione  
+## <a name="planning-for-storage-capacity"></a><a name="section2"></a>Pianificazione della capacità di archiviazione  
 Questa tabella stima che è possibile caricare e archiviare fino a 6 petabyte di dati non compressi in un'appliance del sistema di piattaforma di analisi completamente compilata. 
   
-|Console|Dimensioni dell'unità|Archiviazione dati fisica per nodo di calcolo|Numero massimo di nodi di calcolo per rack|Archiviazione dati massima fisica per rack|Spazio di archiviazione dati massimo stimato per rack|Numero massimo di rack|Archiviazione dati massima stimata per dispositivo|  
+|Vendor|Dimensioni dell'unità|Archiviazione dati fisica per nodo di calcolo|Numero massimo di nodi di calcolo per rack|Archiviazione dati massima fisica per rack|Spazio di archiviazione dati massimo stimato per rack|Numero massimo di rack|Archiviazione dati massima stimata per dispositivo|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2.240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  

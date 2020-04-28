@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401043"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Caricamento dei dati in parallelo data warehouse
@@ -25,7 +25,7 @@ Per caricare i dati, sono necessari uno o più server di caricamento. È possibi
 ## <a name="load-with-dwloader"></a>Caricare con dwloader  
 L'uso del [caricatore da riga di comando dwloader](dwloader.md) rappresenta il modo più rapido per caricare i dati in PDW.  
   
-![Processo di caricamento](media/loading-process.png "Processo di caricamento")  
+![Caricamento del processo](media/loading-process.png "Processo di caricamento")  
   
 dwloader carica i dati direttamente nei nodi di calcolo senza passare i dati attraverso il nodo di controllo. Per caricare i dati, dwloader comunica innanzitutto con il nodo di controllo per ottenere le informazioni di contatto per i nodi di calcolo. dwloader configura un canale di comunicazione con ogni nodo di calcolo e quindi invia blocchi 256 KB di dati ai nodi di calcolo in modo round robin.  
   

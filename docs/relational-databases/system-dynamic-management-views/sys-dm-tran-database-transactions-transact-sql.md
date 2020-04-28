@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a01dc7df9a8269190ae1c1c3cf05de3adaecc662
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982318"
 ---
 # <a name="sysdm_tran_database_transactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
@@ -50,12 +50,12 @@ ms.locfileid: "73982318"
 |database_transaction_log_bytes_reserved|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte riservati all'utilizzo nel log del database per la transazione.|  
 |database_transaction_log_bytes_used_system|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte finora utilizzati nel log del database per le transazioni di sistema per conto della transazione.|  
 |database_transaction_log_bytes_reserved_system|**int**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di byte riservati per l'utilizzo nel log del database per le transazioni di sistema per conto della transazione.|  
-|database_transaction_begin_lsn|**numerico (25, 0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di sequenza del file di log (LSN) del record di inizio per la transazione nel log del database.|  
-|database_transaction_last_lsn|**numerico (25, 0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del log registrato più di recente per la transazione nel log del database.|  
-|database_transaction_most_recent_savepoint_lsn|**numerico (25, 0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del punto di salvataggio più recente per la transazione nel log del database.|  
-|database_transaction_commit_lsn|**numerico (25, 0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del record di log del commit per la transazione nel log del database.|  
-|database_transaction_last_rollback_lsn|**numerico (25, 0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN fino al quale è stato eseguito il rollback più recente. Se non si è verificato alcun rollback, il valore è MaxLSN.|  
-|database_transaction_next_undo_lsn|**numerico (25, 0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del record successivo da annullare.|  
+|database_transaction_begin_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di sequenza del file di log (LSN) del record di inizio per la transazione nel log del database.|  
+|database_transaction_last_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del log registrato più di recente per la transazione nel log del database.|  
+|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del punto di salvataggio più recente per la transazione nel log del database.|  
+|database_transaction_commit_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del record di log del commit per la transazione nel log del database.|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN fino al quale è stato eseguito il rollback più recente. Se non si è verificato alcun rollback, il valore è MaxLSN.|  
+|database_transaction_next_undo_lsn|**numeric(25,0)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> LSN del record successivo da annullare.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni
@@ -66,7 +66,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ## <a name="see-also"></a>Vedere anche  
  [sys. dm_tran_active_transactions &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
  [sys. dm_tran_session_transactions &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

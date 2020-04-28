@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 410c52ff5a6e38e96db990713f8564c6463cfb80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981749"
 ---
 # <a name="syspartition_functions-transact-sql"></a>sys.partition_functions (Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "73981749"
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome della funzione di partizione. Valore univoco all'interno del database.|  
 |**function_id**|**int**|ID della funzione di partizione. Valore univoco all'interno del database.|  
-|**tipo**|**carattere (2)**|Tipo di funzione.<br /><br /> R = Intervallo|  
-|**type_desc**|**nvarchar (60)**|Tipo di funzione.<br /><br /> RANGE|  
+|**type**|**char(2)**|Tipo di funzione.<br /><br /> R = Intervallo|  
+|**type_desc**|**nvarchar(60)**|Tipo di funzione.<br /><br /> RANGE|  
 |**fanout**|**int**|Numero di partizioni create dalla funzione.|  
 |**boundary_value_on_right**|**bit**|Per il partizionamento per intervalli.<br /><br /> 1 = Il valore limite è incluso nell'intervallo RIGHT del limite.<br /><br /> 0 = LEFT.|  
 |**is_system**||**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> 1 = L'oggetto viene utilizzato per i frammenti dell'indice full-text.<br /><br /> 0 = L'oggetto non viene utilizzato per i frammenti dell'indice full-text.|  
@@ -45,12 +45,12 @@ ms.locfileid: "73981749"
 |**modify_date**|**datetime**|Data dell'ultima modifica della funzione eseguita mediante un'istruzione ALTER.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo delle funzioni di partizione &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. partition_range_values &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys. partition_parameters &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729528"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Creare ed eseguire una relazione di sincronizzazione delle entità (Master Data Services)
@@ -23,20 +23,20 @@ ms.locfileid: "73729528"
 
   La sincronizzazione delle entità è una sincronizzazione unidirezionale e ripetibile tra le versioni dell'entità. Consente di condividere i dati delle entità tra i vari modelli.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Prerequisiti per creare una relazione di sincronizzazione delle entità:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello per il modello di destinazione. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario avere almeno l'accesso in lettura all'entità di origine e a tutti i relativi attributi e membri.  
   
  Prerequisiti per eseguire una relazione di sincronizzazione delle entità:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello per il modello di destinazione. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Quando si crea una relazione di sincronizzazione delle entità, tenere presente i fattori seguenti:  
   
@@ -110,15 +110,15 @@ ms.locfileid: "73729528"
   
  Quando si fa clic su un indice, vengono visualizzate le informazioni seguenti.  
   
--   **Errore ultimo tentativo**: Mostra le informazioni sull'errore relative all'ultimo tentativo di sincronizzazione.  
+-   **Errore ultimo tentativo**: informazioni sugli errori dell'ultimo tentativo di sincronizzazione.  
   
--   **Creato da**: nome dell'utente che ha creato la sincronizzazione.  
+-   **Creata da**: nome dell'utente che ha creato la sincronizzazione.  
   
--   Il **: data e ora di creazione**della sincronizzazione.  
+-   **Il**: la data e l'ora di creazione della sincronizzazione.  
   
--   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato la sincronizzazione.  
+-   **Aggiornata da**: nome dell'ultimo utente che ha aggiornato la sincronizzazione.  
   
--   **Il: data**e ora dell'ultimo aggiornamento della sincronizzazione.  
+-   **Il**: la data e l'ora dell'ultimo aggiornamento della sincronizzazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  [Modificare ed eliminare una relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

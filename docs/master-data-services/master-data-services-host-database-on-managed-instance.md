@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729025"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Ospitare un database MDS in un'istanza gestita
@@ -26,7 +26,7 @@ ms.locfileid: "73729025"
 
   Questo articolo illustra come configurare un database di Master Data Services (MDS) in un'istanza gestita.
   
-## <a name="preparation"></a>Operazioni preliminari
+## <a name="preparation"></a>Preparazione
 
 Per preparare, è necessario creare e configurare un'istanza gestita di database SQL di Azure e configurare il computer dell'applicazione Web.
 
@@ -48,7 +48,7 @@ Per preparare, è necessario creare e configurare un'istanza gestita di database
      - Strumenti di gestione Web
      - Console di gestione IIS
      - Servizi Web
-     - Sviluppo di applicazioni
+     - Sviluppo applicazioni
      - Estendibilità .NET 3.5
      - Estendibilità .NET 4.5
      - ASP.NET 3.5
@@ -65,20 +65,20 @@ Per preparare, è necessario creare e configurare un'istanza gestita di database
      - Monitoraggio richieste
      - Prestazioni
      - Compressione contenuto statico
-     - Security
+     - Sicurezza
      - Filtro richieste
      - Autenticazione di Windows
        > [!NOTE]
        > Non installare la pubblicazione WebDAV
 
-   - Caratteristiche:
+   - Funzionalità:
      - .NET Framework 3.5 (inclusi .NET 2.0 e 3.0)
      - .NET Framework 4.5 Advanced Services
      - ASP.NET 4.5
      - WCF Services
      - Attivazione HTTP (obbligatoria)
      - Condivisione porta TCP
-     - Servizio Attivazione processo Windows
+     - Servizio Attivazione dei processi Windows
      - Modello di processo
      - Ambiente .NET
      - API di configurazione
@@ -198,9 +198,9 @@ MDS supporta inoltre l'autenticazione Active Directory password e l'autenticazio
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Aggiornamento [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e versione del database SQL
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Aggiornamento [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e versione del database SQL
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Aggiornamento[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Aggiornamento[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 Installare l' **aggiornamento cumulativo di SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]verranno aggiornate automaticamente.
 
@@ -233,5 +233,5 @@ Per risolvere il problema, è necessario aggiornare la versione del database:
 
 - [Database Master Data Services](../master-data-services/master-data-services-database.md)
 - [Applicazione Web Gestione dati master](../master-data-services/master-data-manager-web-application.md)
-- [Pagina di configurazione del database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [Novità di Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [Pagina Configurazione database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Novità in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)

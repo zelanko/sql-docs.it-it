@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4e4ecf91491a88e002c92a82d321e5712d48ef76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399825"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -30,8 +30,8 @@ ms.locfileid: "74399825"
 |**hobt_id**|**bigint**|ID dell'indice heap o albero B (HoBT) per la tabella con l'indice columnstore.|  
 |**column_id**|**int**|ID della colonna columnstore.|  
 |**dictionary_id**|**int**|ID del dizionario.|  
-|**Versione**|**int**|Versione del formato del dizionario.|  
-|**tipo**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente valori **int**<br /><br /> 2-non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente valori **float**|  
+|**version**|**int**|Versione del formato del dizionario.|  
+|**type**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente valori **int**<br /><br /> 2-non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente valori **float**|  
 |**last_id**|**int**|Ultimo ID dati nel dizionario.|  
 |**entry_count**|**bigint**|Numero di voci nel dizionario.|  
 |**on_disc_size**|**bigint**|Dimensioni del dizionario in byte.|  
@@ -41,7 +41,7 @@ ms.locfileid: "74399825"
  È richiesta l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREARE un indice COLUMNStore &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys. pdw_nodes_column_store_segments &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys. pdw_nodes_column_store_row_groups &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  

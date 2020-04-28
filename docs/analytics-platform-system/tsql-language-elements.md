@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399830"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementi del linguaggio T-SQL per data warehouse paralleli
@@ -30,14 +30,14 @@ Elementi del linguaggio T-SQL per il sistema di piattaforma analitica (APS) SQL 
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [espressioni](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [Soluzione alternativa proprietà identità](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [soluzione alternativa per la proprietà IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
-* [USA](../t-sql/language-elements/use-transact-sql.md)
+* [USARE](../t-sql/language-elements/use-transact-sql.md)
 
 ## <a name="batches-control-of-flow-and-variables"></a>Batch, controllo di flusso e variabili
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
-* [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
+* [DICHIARARE@local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
 * [IF...ELSE](../t-sql/language-elements/if-else-transact-sql.md)
 * [RAISERROR](../t-sql/language-elements/raiserror-transact-sql.md)
 * [SET@local_variable](../t-sql/language-elements/set-local-variable-transact-sql.md)
@@ -46,39 +46,39 @@ Elementi del linguaggio T-SQL per il sistema di piattaforma analitica (APS) SQL 
 * [WHILE](../t-sql/language-elements/while-transact-sql.md)
 
 ## <a name="operators"></a>Operatori
-* [+ (Aggiungi)](../t-sql/language-elements/add-transact-sql.md)
+* [+ (addizione)](../t-sql/language-elements/add-transact-sql.md)
 * [+ (Concatenazione di stringhe)](../t-sql/language-elements/string-concatenation-transact-sql.md)
-* [- (negativo)](../t-sql/language-elements/unary-operators-negative.md)
-* [-(Sottrazione)](../t-sql/language-elements/subtract-transact-sql.md)
+* [-(Negativo)](../t-sql/language-elements/unary-operators-negative.md)
+* [- (sottrazione)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Moltiplicazione)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/(Divisione)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (divisione)](../t-sql/language-elements/divide-transact-sql.md)
 * [Modulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Caratteri jolly con cui trovare una corrispondenza
 * [= (uguale a)](../t-sql/language-elements/equals-transact-sql.md)
-* [> (maggiore di)](../t-sql/language-elements/greater-than-transact-sql.md)
-* [< (minore di)](../t-sql/language-elements/less-than-transact-sql.md)
-* [>= (maggiore o uguale a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [<= (minore o uguale a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [> (Maggiore di)](../t-sql/language-elements/greater-than-transact-sql.md)
+* [< (Minore di)](../t-sql/language-elements/less-than-transact-sql.md)
+* [&gt;= (Maggiore o uguale a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [&lt;= (Minore o uguale a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<>  (diverso da)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Diverso da)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
-* [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
+* [ESISTE](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
 * [NON È](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [o](../t-sql/language-elements/or-transact-sql.md)
+* [O](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operatori bit per bit
 * [& (AND bit per bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (OR bit per bit)](../t-sql/language-elements/bitwise-or-transact-sql.md)
 * [^ (OR esclusivo bit per bit)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (NOT bit per bit)](../t-sql/language-elements/bitwise-not-transact-sql.md)
-* [^ = (Or EQUALs esclusivo bit per bit)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
-* [| = (OR EQUALs bit per bit)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
-* [&= (AND EQUALs bit per bit)](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
+* [^= (OR esclusivo bit per bit EQUALS)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
+* [|= (OR EQUALS bit per bit)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
+* [&amp;= (AND EQUALS bit per bit)](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
 
 ## <a name="functions"></a>Funzioni
 * [@@DATEFIRST](../t-sql/functions/datefirst-transact-sql.md)
@@ -103,7 +103,7 @@ Elementi del linguaggio T-SQL per il sistema di piattaforma analitica (APS) SQL 
 * [COALESCE](../t-sql/language-elements/coalesce-transact-sql.md)
 * [COL_NAME](../t-sql/functions/col-name-transact-sql.md)
 * [COLLATIONPROPERTY](../t-sql/functions/collation-functions-collationproperty-transact-sql.md)
-* [CONCATENA](../t-sql/functions/concat-transact-sql.md)
+* [CONCAT](../t-sql/functions/concat-transact-sql.md)
 * [COS](../t-sql/functions/cos-transact-sql.md)
 * [COT](../t-sql/functions/cot-transact-sql.md)
 * [COUNT](../t-sql/functions/count-transact-sql.md)
@@ -163,7 +163,7 @@ Elementi del linguaggio T-SQL per il sistema di piattaforma analitica (APS) SQL 
 * [OBJECT_NAME](../t-sql/functions/object-name-transact-sql.md)
 * [OBJECTPROPERTY](../t-sql/functions/objectproperty-transact-sql.md)
 * [OIBJECTPROPERTYEX](../t-sql/functions/objectpropertyex-transact-sql.md)
-* [Funzioni scalari ODBC](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
+* [Funzioni scalari ODBCS](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
 * [Clausola OVER](../t-sql/queries/select-over-clause-transact-sql.md)
 * [PARSENAME](../t-sql/functions/parsename-transact-sql.md)
 * [PATINDEX](../t-sql/functions/patindex-transact-sql.md)
@@ -217,7 +217,7 @@ Elementi del linguaggio T-SQL per il sistema di piattaforma analitica (APS) SQL 
 * [TYPEPROPERTY](../t-sql/functions/typeproperty-transact-sql.md)
 * [UNICODE](../t-sql/functions/unicode-transact-sql.md)
 * [UPPER](../t-sql/functions/upper-transact-sql.md)
-* [USER](../t-sql/functions/user-transact-sql.md)
+* [UTENTE](../t-sql/functions/user-transact-sql.md)
 * [USER_NAME](../t-sql/functions/user-name-transact-sql.md)
 * [VAR](../t-sql/functions/var-transact-sql.md)
 * [VARP](../t-sql/functions/varp-transact-sql.md)
@@ -253,27 +253,27 @@ Elementi del linguaggio T-SQL per il sistema di piattaforma analitica (APS) SQL 
 * [sp_tables](../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)
 * [sp_unprepare](../relational-databases/system-stored-procedures/sp-unprepare-transact-sql.md)
 
-## <a name="set-statements"></a>Istruzioni SET
-* [IMPOSTA ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
-* [IMPOSTA ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
+## <a name="set-statements"></a>istruzioni SET
+* [SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
+* [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
 * [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
 * [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
-* [IMPOSTA ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
-* [IMPOSTA ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
-* [IMPOSTA CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+* [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
+* [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
+* [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
-* [IMPOSTA DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
-* [IMPOSTA FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [IMPOSTA IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
-* [IMPOSTA LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [IMPOSTA NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
+* [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
+* [SET IMPLICIT_TRANSACTIONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
-* [IMPOSTA TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
+* [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [IMPOSTA XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per altre informazioni di riferimento, vedere [istruzioni t-SQL](tsql-statements.md) e [viste di sistema t-SQL](tsql-system-views.md).

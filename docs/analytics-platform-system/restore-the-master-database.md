@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400448"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Ripristinare il database master in Analytics Platform System (APS)
@@ -32,7 +32,7 @@ La pagina **Ripristina Master** della SQL Server PDW Configuration Manager conse
   
 3.  Selezionare il backup master da ripristinare.  
   
-4.  Fare clic su **Apply**.  
+4.  Fare clic su **Applica**.  
   
 5.  Per eseguire il ripristino, SQL Server PDW arresterà tutti i servizi Appliance e disconnetterà tutti gli utenti. Al termine del ripristino SQL Server PDW riavvierà i servizi Appliance.  
   

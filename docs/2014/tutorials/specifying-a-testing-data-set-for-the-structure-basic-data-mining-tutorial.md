@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720105"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Specifica di un set di dati di testing per la struttura (Esercitazione di base sul data mining)
@@ -54,7 +54,7 @@ ms.locfileid: "62720105"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 3: Aggiunta ed elaborazione di modelli](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Abilitare il drill-through per un modello di data mining](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
  [Query drill-through &#40;&#41;di data mining](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Specificare i dati di training &#40;creazione guidata modello di data mining&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  

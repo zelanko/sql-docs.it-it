@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056607"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Eseguire la migrazione di SQL Server o SQL Server locali in macchine virtuali di Azure al database SQL di Azure usando il Data Migration Assistant
@@ -37,11 +37,11 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
    ![Crea progetto di migrazione](../dma/media/NewCreate1.png)
 
-## <a name="specify-the-source-server-and-database"></a>Specificare il server di origine e il database
+## <a name="specify-the-source-server-and-database"></a>Specificare il server e il database di origine
 
 1. Per l'origine, in **Connetti al server di origine**, nella casella di testo **nome server** , immettere il nome dell'istanza di SQL Server di origine.
 
-2. Consente di selezionare il **tipo di autenticazione** supportato dall'istanza di SQL Server di origine.
+2. Selezionare il **tipo di autenticazione** supportato dall'istanza di SQL Server di origine.
 
    > [!NOTE]
    > È consigliabile crittografare la connessione selezionando la casella di controllo **Crittografa connessione** in **Connection poperties**.
@@ -81,11 +81,11 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
 5. Selezionare **Avanti**.
 
-## <a name="select-schema-objects"></a>Selezione oggetti dello schema
+## <a name="select-schema-objects"></a>Selezionare gli oggetti dello schema
 
 1. Selezionare gli oggetti dello schema dal database di origine di cui si vuole eseguire la migrazione al database SQL di Azure.
 
-    ![Selezione oggetti dello schema](../dma/media/select-schema-objects.png)
+    ![Selezionare gli oggetti dello schema](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
        > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
@@ -98,7 +98,7 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
     ![Script generato](../dma/media/generated-script.png)
 
-## <a name="deploy-schema"></a>Distribuisci schema
+## <a name="deploy-schema"></a>Distribuire lo schema
 
 1. Selezionare **Distribuisci schema**.
 
@@ -108,13 +108,13 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
 3. Selezionare **Migrate data** per avviare il processo di migrazione dei dati.
 
-4. Selezionare le tabelle con i dati di cui si desidera eseguire la migrazione.
+4. Selezionare le tabelle con i dati di cui eseguire la migrazione.
 
     ![Selezionare le tabelle di cui eseguire la migrazione](../dma/media/select-tables-to-migrate.png) 
 
 5. Selezionare **Avvia migrazione dati**.
 
-Nella schermata finale viene visualizzato lo stato generale.
+La schermata finale mostra lo stato complessivo.
 
    ![Stato migrazione](../dma/media/migration-status.png) 
 

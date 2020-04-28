@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399429"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usare un server d'invio DNS per risolvere i nomi DNS non Appliance nel sistema della piattaforma Analytics
 È possibile configurare un server d'autorizzazione DNS nei nodi Active Directory Domain Services (**_Appliance\_Domain_-ad01** e ** _Appliance\_Domain_-ad02**) dell'appliance del sistema della piattaforma di analisi per consentire agli script e alle applicazioni software di accedere ai server esterni.  
   
-## <a name="ResolveDNS"></a>Uso di un server d'inoltre DNS  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>Uso di un server d'inoltre DNS  
 L'appliance del sistema della piattaforma Analytics è configurata in modo da impedire la risoluzione dei nomi DNS dei server che non si trovano nell'appliance. Alcuni processi, ad esempio Windows Software Update Services (WSUS), dovranno accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo, è possibile configurare il DNS del sistema della piattaforma di analisi in modo da supportare un server d'utilità di un nome esterno che consenta agli host e alle macchine virtuali di sistema della piattaforma di analisi di usare server DNS esterni per risolvere i nomi all'esterno dell'appliance. La configurazione personalizzata dei suffissi DNS non è supportata, quindi è necessario usare nomi di dominio completi per risolvere un nome di server non Appliance.  
   
 **Per creare un server di trasmissione DNS con l'interfaccia utente grafica DNS**  

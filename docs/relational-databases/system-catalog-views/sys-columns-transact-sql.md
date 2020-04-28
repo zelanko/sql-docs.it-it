@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981962"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "73981962"
 |is_sparse|**bit**|1 = La colonna è di tipo sparse. Per altre informazioni, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = La colonna è un set di colonne. Per altre informazioni, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).|  
 |generated_always_type|**tinyint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Identifica quando viene generato il valore della colonna (sarà sempre 0 per le colonne nelle tabelle di sistema):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Per altre informazioni, vedere [tabelle temporali &#40;database relazionali&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar (60)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Descrizione testuale del `generated_always_type`valore di (sempre NOT_APPLICABLE per le colonne nelle tabelle di sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|generated_always_type_desc|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Descrizione testuale del `generated_always_type`valore di (sempre NOT_APPLICABLE per le colonne nelle tabelle di sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Tipo di crittografia:<br /><br /> 1 = crittografia deterministica<br /><br /> 2 = crittografia casuale|  
 |encryption_type_desc|**nvarchar (64)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Descrizione del tipo di crittografia:<br /><br /> CASUALE<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Nome dell'algoritmo di crittografia.<br /><br /> È supportata solo AEAD_AES_256_CBC_HMAC_SHA_512.|  
@@ -86,12 +86,12 @@ ms.locfileid: "73981962"
 
  
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. all_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. system_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  

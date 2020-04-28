@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782651"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -56,44 +56,44 @@ RETCODE bcp_gettypename (
   
 |Nome del tipo BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|È possibile usare il|**decimal**|  
-|**SQLNUMERIC**|È possibile usare il|**numerico**|  
-|**SQLINT1**|È possibile usare il|**tinyint**|  
-|**SQLINT2**|È possibile usare il|**smallint**|  
-|**SQLINT4**|È possibile usare il|**int**|  
-|**SQLMONEY**|È possibile usare il|**money**|  
-|**SQLFLT8**|È possibile usare il|**float**|  
-|**SQLDATETIME**|È possibile usare il|**datetime**|  
-|**SQLBITN**|È possibile usare il|**bit-null**|  
-|**SQLBIT**|È possibile usare il|**bit**|  
+|**SQLDECIMAL**|Prima o dopo|**decimal**|  
+|**SQLNUMERIC**|Prima o dopo|**numeric**|  
+|**SQLINT1**|Prima o dopo|**tinyint**|  
+|**SQLINT2**|Prima o dopo|**smallint**|  
+|**SQLINT4**|Prima o dopo|**int**|  
+|**SQLMONEY**|Prima o dopo|**money**|  
+|**SQLFLT8**|Prima o dopo|**float**|  
+|**SQLDATETIME**|Prima o dopo|**datetime**|  
+|**SQLBITN**|Prima o dopo|**bit-null**|  
+|**SQLBIT**|Prima o dopo|**bit**|  
 |**SQLBIGCHAR**|No|**char**|  
 |**SQLCHARACTER**|No|**char**|  
 |**SQLBIGVARCHAR**|No|**varchar**|  
 |**SQLVARCHAR**|No|**varchar**|  
-|**SQLTEXT**|È possibile usare il|**text**|  
-|**SQLBIGBINARY**|No|**BINARY**|  
+|**SQLTEXT**|Prima o dopo|**text**|  
+|**SQLBIGBINARY**|No|**binary**|  
 |**SQLBINARY**|No|**Binario**|  
 |**SQLBIGVARBINARY**|No|**Varbinary**|  
 |**SQLVARBINARY**|No|**Varbinary**|  
-|**SQLIMAGE**|È possibile usare il|**Immagine**|  
-|**SQLINTN**|È possibile usare il|**int-null**|  
-|**SQLDATETIMN**|È possibile usare il|**datetime-null**|  
-|**SQLMONEYN**|È possibile usare il|**money-null**|  
-|**SQLFLTN**|È possibile usare il|**float-null**|  
-|**SQLAOPSUM**|È possibile usare il|**Somma**|  
-|**SQLAOPAVG**|È possibile usare il|**AVG**|  
-|**SQLAOPCNT**|È possibile usare il|**Conteggio**|  
-|**SQLAOPMIN**|È possibile usare il|**Min**|  
-|**SQLAOPMAX**|È possibile usare il|**Max**|  
-|**SQLDATETIM4**|È possibile usare il|**smalldatetime**|  
-|**SQLMONEY4**|È possibile usare il|**Smallmoney**|  
-|**SQLFLT4**|È possibile usare il|**Real**|  
-|**SQLUNIQUEID**|È possibile usare il|**uniqueidentifier**|  
+|**SQLIMAGE**|Prima o dopo|**Immagine**|  
+|**SQLINTN**|Prima o dopo|**int-null**|  
+|**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
+|**SQLMONEYN**|Prima o dopo|**money-null**|  
+|**SQLFLTN**|Prima o dopo|**float-null**|  
+|**SQLAOPSUM**|Prima o dopo|**Somma**|  
+|**SQLAOPAVG**|Prima o dopo|**AVG**|  
+|**SQLAOPCNT**|Prima o dopo|**Numero**|  
+|**SQLAOPMIN**|Prima o dopo|**Min**|  
+|**SQLAOPMAX**|Prima o dopo|**Max**|  
+|**SQLDATETIM4**|Prima o dopo|**smalldatetime**|  
+|**SQLMONEY4**|Prima o dopo|**Smallmoney**|  
+|**SQLFLT4**|Prima o dopo|**Reale**|  
+|**SQLUNIQUEID**|Prima o dopo|**uniqueidentifier**|  
 |**SQLNCHAR**|No|**Nchar**|  
 |**SQLNVARCHAR**|No|**Nvarchar**|  
-|**SQLNTEXT**|È possibile usare il|**Ntext**|  
-|**SQLVARIANT**|È possibile usare il|**sql_variant**|  
-|**SQLINT8**|È possibile usare il|**Bigint**|  
+|**SQLNTEXT**|Prima o dopo|**Ntext**|  
+|**SQLVARIANT**|Prima o dopo|**sql_variant**|  
+|**SQLINT8**|Prima o dopo|**Bigint**|  
 |**SQLCHARACTER**|Sì|**ntext**|  
 |**SQLBIGCHAR**|Sì|**ntext**|  
 |**SQLBIGVARCHAR**|Sì|**ntext**|  
@@ -105,7 +105,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Sì|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sì|**nvarchar(max)**|  
 |**SQLXML**|Sì|**XML**|  
-|**SQLUDT**|È possibile usare il|**UDT**|  
+|**SQLUDT**|Prima o dopo|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
  I valori dei parametri del token per i tipi data/ora vengono descritti nella colonna "tipo in sqlncli. h" della tabella nelle [modifiche della copia bulk per i tipi di data e ora avanzati &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  

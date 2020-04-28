@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400918"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Monitoraggio delle query attive-data warehouse parallele
 Questo articolo illustra come usare la console di amministrazione e le viste di sistema SQL Server PDW per monitorare le query attive. Per informazioni su questi strumenti, vedere [monitorare l'appliance usando la console di amministrazione e le](monitor-the-appliance-by-using-the-admin-console.md) [visualizzazioni di sistema](tsql-system-views.md) .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Indipendentemente dal metodo utilizzato per monitorare le query attive, l'account di accesso deve disporre delle autorizzazioni descritte in "utilizzare tutta la console di amministrazione" in [concedere le autorizzazioni per l'utilizzo della console di amministrazione](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Monitorare le query attive  
+## <a name="monitor-active-queries"></a><a name="PermsAdminConsole"></a>Monitorare le query attive  
 Per monitorare le query attive, è possibile usare sia la console di amministrazione che le viste di sistema SQL Server PDW. Seguire le istruzioni riportate di seguito.  
   
 ### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Per monitorare le query attive usando la console di amministrazione  

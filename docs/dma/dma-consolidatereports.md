@@ -15,17 +15,17 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056653"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
 Le istruzioni dettagliate riportate di seguito consentono di usare la Data Migration Assistant per eseguire una valutazione con scalabilità corretta per l'aggiornamento SQL Server locale o SQL Server in esecuzione in macchine virtuali di Azure o per la migrazione al database SQL di Azure.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Designare un computer degli strumenti nella rete da cui verrà avviato il DMA. Verificare che il computer disponga della connettività alle destinazioni SQL Server.
 - Scaricare e installare:
@@ -64,7 +64,7 @@ Per caricare i moduli, seguire questa procedura:
 
     A questo punto PowerShell caricherà questi moduli automaticamente all'avvio di una nuova sessione di PowerShell.
 
-## <a name="create-inventory"></a>Creazione di un inventario di SQL Server
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Creazione di un inventario di SQL Server
 
 Prima di eseguire lo script di PowerShell per valutare i server SQL, è necessario compilare un inventario dei server SQL che si desidera valutare.
 
@@ -143,7 +143,7 @@ I parametri associati alla funzione dmaProcessor sono descritti nella tabella se
 |**CreateDMAReporting** | Database di gestione temporanea da creare per l'elaborazione del file JSON.  Se il database specificato esiste già e si imposta questo parametro su uno, gli oggetti non vengono creati.  Questo parametro è utile per ricreare un singolo oggetto che è stato eliminato. |
 |**CreateDataWarehouse** | Crea la data warehouse che verrà utilizzata dal report Power BI. |
 |**databaseName** | Nome del database DMAReporting. |
-|**data warehouse** | Nome del database data warehouse. |
+|**data warehouse** | Il nome del database del data warehouse. |
 |**jsonDirectory** | Directory che contiene il file di valutazione JSON.  Se nella directory sono presenti più file JSON, questi vengono elaborati uno alla volta. |
 
 La funzione dmaProcessor deve richiedere solo alcuni secondi per elaborare un singolo file.

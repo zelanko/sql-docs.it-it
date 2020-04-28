@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095349"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Backup e ripristino dei database e dei log delle transazioni
@@ -37,7 +37,7 @@ ms.locfileid: "74095349"
  Analogamente <xref:Microsoft.SqlServer.Management.Smo.Backup> all'oggetto, <xref:Microsoft.SqlServer.Management.Smo.Restore> l'oggetto non deve essere creato tramite un metodo **create** perché non rappresenta alcun oggetto nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Restore> è un set di proprietà e metodi utilizzati per ripristinare un database.  
   
 ## <a name="examples"></a>Esempi  
- Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Backup di database e log delle transazioni in Visual Basic  
  In questo esempio di codice viene illustrato come eseguire il backup di un database esistente in un file e quindi come ripristinarlo.  
@@ -450,8 +450,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Esecuzione di controlli di integrità dei database in Visual Basic  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di eseguire controlli di integrità dei dati. In questo esempio di codice viene eseguito un controllo del tipo di consistenza di un database nel database specificato. In questo esempio viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, ma è possibile utilizzare allo stesso modo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di eseguire controlli di integrità dei dati. In questo esempio di codice viene eseguito un controllo del tipo di consistenza di un database nel database specificato. In questo esempio viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, ma è possibile utilizzare allo stesso modo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>.  
   
 > [!NOTE]  
 >  Per l'oggetto <xref:System.Collections.Specialized.StringCollection> è necessario un riferimento allo spazio dei nomi tramite l'istruzione `imports System.Collections.Specialized`.  
@@ -481,8 +480,7 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Esecuzione di controlli di integrità dei database in Visual C#  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di eseguire controlli di integrità dei dati. In questo esempio di codice viene eseguito un controllo del tipo di consistenza di un database nel database specificato. In questo esempio viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, ma è possibile utilizzare allo stesso modo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di eseguire controlli di integrità dei dati. In questo esempio di codice viene eseguito un controllo del tipo di consistenza di un database nel database specificato. In questo esempio viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, ma è possibile utilizzare allo stesso modo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>.  
   
 > [!NOTE]  
 >  Per l'oggetto <xref:System.Collections.Specialized.StringCollection> è necessario un riferimento allo spazio dei nomi tramite l'istruzione `imports System.Collections.Specialized`.  
@@ -514,8 +512,7 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>Esecuzione di controlli di integrità dei database in PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di eseguire controlli di integrità dei dati. In questo esempio di codice viene eseguito un controllo del tipo di consistenza di un database nel database specificato. In questo esempio viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, ma è possibile utilizzare allo stesso modo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di eseguire controlli di integrità dei dati. In questo esempio di codice viene eseguito un controllo del tipo di consistenza di un database nel database specificato. In questo esempio viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, ma è possibile utilizzare allo stesso modo <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>.  
   
 > [!NOTE]  
 >  Per l'oggetto <xref:System.Collections.Specialized.StringCollection> è necessario un riferimento allo spazio dei nomi tramite l'istruzione `imports System.Collections.Specialized`.  

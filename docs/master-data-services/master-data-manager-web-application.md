@@ -11,10 +11,10 @@ ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729093"
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
@@ -26,13 +26,13 @@ ms.locfileid: "73729093"
 > [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
 > 
-> **Non è possibile creare un sito Web MDS?**
+> **Impossibile creare un sito Web di MDS**
 > >Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
 > [Non è possibile creare un sito Web MDS tramite un account con privilegi limitati in SQL Server 2016](https://aka.ms/mdssupport) 
   
  L'area funzionale Esplora risorse dell'applicazione Web è la sola area non utilizzata dagli amministratori. Esplora risorse è pensata per quegli utenti che aggiornano i dati master frequentemente. Questi utenti dispongono delle autorizzazioni per i dati necessari per l'esecuzione dei processi.  
   
- [Area funzionale Esplora &#40;Gestione dati master&#41;](../master-data-services/explorer-functional-area-master-data-manager.md)  
+ [Area funzionale Esplora risorse &#40;Gestione dati master&#41;](../master-data-services/explorer-functional-area-master-data-manager.md)  
   
  [Area funzionale Gestione versioni &#40;Gestione dati master&#41;](../master-data-services/version-management-functional-area-master-data-manager.md)  
   

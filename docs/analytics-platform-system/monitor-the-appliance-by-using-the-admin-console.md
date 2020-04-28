@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400938"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorare l'appliance con la console di amministrazione-sistema della piattaforma di analisi
 La console di amministrazione è un'applicazione Web SQL Server PDW che presenta le informazioni sullo stato, l'integrità e le prestazioni dell'appliance. Gli utenti si connettono alla console di amministrazione tramite Internet Explorer.  
   
-## <a name="About"></a>Informazioni sulla console di amministrazione  
+## <a name="about-the-admin-console"></a><a name="About"></a>Informazioni sulla console di amministrazione  
 ![Home console dello strumento](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
@@ -67,7 +67,7 @@ Visualizza i grafici di performance monitor PDW.
 > [!NOTE]  
 > La console di amministrazione ha una risoluzione dello schermo 1024x768. La console di amministrazione Visualizza i risultati migliori con una risoluzione dello schermo di 1280 X 1024 o superiore.  
   
-## <a name="Connect"></a>Connettersi alla console di amministrazione  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>Connettersi alla console di amministrazione  
 Per connettersi alla console di amministrazione, è necessario:  
   
 -   Almeno Internet Explorer versione 10.  
@@ -78,12 +78,12 @@ Per connettersi alla console di amministrazione, è necessario:
   
 Per connettersi alla console di amministrazione, usare Internet Explorer e HTTPS per passare all'indirizzo IP del cluster del nodo di controllo. Ad esempio, se l'indirizzo IP del cluster del nodo di controllo `10.192.63.102`è, `https://10.192.63.102` immettere nella barra degli indirizzi del browser. La prima schermata richiederà l' **account di accesso** e la **password**. Specificare un account di accesso e una password per l'autenticazione SQL Server oppure un account di accesso con autenticazione di Windows e una password di Windows. Se si utilizza un account di accesso con autenticazione di Windows, la console di amministrazione utilizzerà la rappresentazione.  
   
-## <a name="RelatedTasks"></a>Attività della console di amministrazione  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>Attività della console di amministrazione  
 La console di amministrazione consente di monitorare gli elementi seguenti:  
   
 |||  
 |-|-|  
-|**Information Type**|**Come accedere alla console di amministrazione**|  
+|**Tipo di informazioni**|**Come accedere alla console di amministrazione**|  
 |Stato generale dell'appliance|Fare clic su **stato dell'appliance** nel menu superiore oppure **Home**.|  
 |Avvisi|Fare clic su **Avvisi**. Per ulteriori informazioni, vedere informazioni sugli [avvisi della console di amministrazione &#40;&#41;piattaforma di strumenti analitici ](understanding-admin-console-alerts.md).|  
 |Componenti del dispositivo e relativo stato|Fare clic su **stato dell'appliance** nel menu superiore oppure **Home**.|  

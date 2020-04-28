@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399439"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema della piattaforma Analytics
@@ -28,7 +28,7 @@ Con le tecniche di gestione del carico di lavoro in SQL Server PDW, ad esempio, 
   
 -   Risolvere i problemi relativi a un hash join con esecuzione prolungata per verificare se è necessaria una maggiore quantità di memoria e quindi assegnare una maggiore quantità di memoria.  
   
-## <a name="Basics"></a>Nozioni fondamentali sulla gestione del carico  
+## <a name="workload-management-basics"></a><a name="Basics"></a>Nozioni fondamentali sulla gestione del carico  
   
 ### <a name="key-terms"></a>Termini chiave  
 Gestione del carico di lavoro  
@@ -55,13 +55,13 @@ Per allocare, ad esempio, una grande quantità di risorse di sistema a una richi
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>Descrizioni delle classi di risorse  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>Descrizioni delle classi di risorse  
 Nella tabella seguente vengono descritte le classi di risorse e le relative allocazioni di risorse di sistema.  
   
 |Classe di risorse|Importanza della richiesta|Utilizzo massimo della memoria *|Slot di concorrenza (massimo = 32)|Descrizione|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|Media|400 MB|1|Per impostazione predefinita, a ogni account di accesso è consentita una piccola quantità di memoria e risorse di concorrenza per le relative richieste.<br /><br />Quando un account di accesso viene aggiunto a una classe di risorse, la nuova classe ha la precedenza. Quando un account di accesso viene eliminato da tutte le classi di risorse, viene ripristinata l'allocazione di risorse predefinita.|  
-|MediumRC|Media|1200 MB|3|Esempi di richieste che potrebbero richiedere la classe di risorse media:<br /><br />Operazioni CTAS con hash join di grandi dimensioni.<br /><br />Selezionare le operazioni che richiedono una maggiore quantità di memoria per evitare la memorizzazione nella cache su disco.<br /><br />Caricamento dei dati negli indici columnstore cluster.<br /><br />Compilazione, ricompilazione e riorganizzazione di indici columnstore cluster per tabelle di dimensioni ridotte con 10-15 colonne.|  
+|default|Medio|400 MB|1|Per impostazione predefinita, a ogni account di accesso è consentita una piccola quantità di memoria e risorse di concorrenza per le relative richieste.<br /><br />Quando un account di accesso viene aggiunto a una classe di risorse, la nuova classe ha la precedenza. Quando un account di accesso viene eliminato da tutte le classi di risorse, viene ripristinata l'allocazione di risorse predefinita.|  
+|MediumRC|Medio|1200 MB|3|Esempi di richieste che potrebbero richiedere la classe di risorse media:<br /><br />Operazioni CTAS con hash join di grandi dimensioni.<br /><br />Selezionare le operazioni che richiedono una maggiore quantità di memoria per evitare la memorizzazione nella cache su disco.<br /><br />Caricamento dei dati negli indici columnstore cluster.<br /><br />Compilazione, ricompilazione e riorganizzazione di indici columnstore cluster per tabelle di dimensioni ridotte con 10-15 colonne.|  
 |Largerc|Alto|2,8 GB|7|Esempi di richieste che potrebbero richiedere la classe di risorse di grandi dimensioni:<br /><br />Operazioni CTAS di grandi dimensioni con hash join di grandi dimensioni o aggregazioni di grandi dimensioni, ad esempio clausole ORDER BY o GROUP BY di grandi dimensioni.<br /><br />Selezionare le operazioni che richiedono una quantità di memoria molto elevata per operazioni quali hash join o aggregazioni come le clausole ORDER BY o GROUP BY<br /><br />Caricamento dei dati negli indici columnstore cluster.<br /><br />Compilazione, ricompilazione e riorganizzazione di indici columnstore cluster per tabelle di dimensioni ridotte con 10-15 colonne.|  
 |xlargerc|Alto|8,4 GB|22|La classe di risorse molto grande è destinata alle richieste che potrebbero richiedere un consumo di risorse molto elevato in fase di esecuzione.|  
   
@@ -98,7 +98,7 @@ Man mano che le richieste Finish e slot di concorrenza diventano disponibili, SQ
   
 All'interno di ogni classe di risorse, le richieste vengono eseguite in un ordine FIFO (First in First out).  
   
-## <a name="GeneralRemarks"></a>Osservazioni generali  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>Osservazioni generali  
 Se un account di accesso è membro di più di una classe di risorse, la classe con la maggior parte delle risorse avrà la precedenza.  
   
 Quando un account di accesso viene aggiunto o eliminato da una classe di risorse, la modifica viene applicata immediatamente per tutte le richieste future; le richieste correnti in esecuzione o in attesa non sono interessate. Non è necessario che l'account di accesso venga disconnesso e riconnesso per consentire la modifica.  
@@ -119,7 +119,7 @@ Istruzioni e operazioni SQL regolate dalle classi di risorse:
   
 -   CREA INDICE CLUSTER  
   
--   CREARE L'INDICE COLUMNSTORE CLUSTER  
+-   CREATE CLUSTERED COLUMNSTORE INDEX  
   
 -   CREATE TABLE AS SELECT  
   
@@ -131,16 +131,16 @@ Istruzioni e operazioni SQL regolate dalle classi di risorse:
   
 -   UPDATE  
   
--   Elimina  
+-   DELETE  
   
 -   RIPRISTINARE il DATABASE durante il ripristino in un'appliance con più nodi di calcolo.  
   
 -   SELECT, escluse le query solo DMV  
   
-## <a name="Limits"></a>Limitazioni e restrizioni  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>Limitazioni e restrizioni  
 Le classi di risorse regolano le allocazioni di memoria e concorrenza.  Non regolano le operazioni di input/output.  
   
-## <a name="Metadata"></a>Metadati  
+## <a name="metadata"></a><a name="Metadata"></a>Metadati  
 DMV che contengono informazioni sulle classi di risorse e i membri della classe di risorse.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ Viste di sistema correlate esposte dal SQL Server DMV nei nodi di calcolo. Veder
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>Attività correlate  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Attività correlate  
 [Attività di gestione del carico di lavoro](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

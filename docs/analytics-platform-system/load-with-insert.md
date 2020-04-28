@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401025"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Caricare i dati con INSERT in Parallel data warehouse
@@ -21,14 +21,14 @@ ms.locfileid: "74401025"
 È possibile utilizzare l'istruzione TSQL INSERT per caricare dati in una tabella distribuita o replicata SQL Server Parallel data warehouse (PDW). Per ulteriori informazioni su INSERT, vedere [Insert](../t-sql/statements/insert-transact-sql.md). Per le tabelle replicate e tutte le colonne non di distribuzione in una tabella distribuita, PDW utilizza SQL Server per convertire in modo implicito i valori dei dati specificati nell'istruzione nel tipo di dati della colonna di destinazione. Per ulteriori informazioni sulle regole di conversione dei dati SQL Server, vedere [conversione del tipo di dati per SQL](../t-sql/data-types/data-type-conversion-database-engine.md). Per le colonne di distribuzione, tuttavia, PDW supporta solo un subset di conversioni implicite supportate da SQL Server. Pertanto, quando si utilizza l'istruzione INSERT per caricare dati in una colonna di distribuzione, è necessario specificare i dati di origine in uno dei formati definiti nelle tabelle seguenti.  
   
   
-## <a name="InsertingLiteralsBinary"></a>Inserire valori letterali in tipi binari  
+## <a name="insert-literals-into-binary-types"></a><a name="InsertingLiteralsBinary"></a>Inserire valori letterali in tipi binari  
 Nella tabella seguente vengono definiti i tipi letterali accettati, il formato e le regole di conversione per l'inserimento di un valore letterale in una colonna di distribuzione di tipo **Binary** (*n*) o **varbinary**(*n*).  
   
 |Tipo letterale|Format|Regole di conversione|  
 |----------------|----------|--------------------|  
 |Valore letterale binario|0x*hexidecimal_string*<br /><br />Esempio: 0x12Ef|I valori letterali binari devono essere preceduti da 0x.<br /><br />La lunghezza dell'origine dati non può superare il numero di byte specificato per il tipo di dati.<br /><br />Se la lunghezza dell'origine dati è inferiore alla dimensione del tipo di dati **binario** , i dati vengono riempiti a destra con zeri per raggiungere le dimensioni del tipo di dati.|  
   
-## <a name="InsertingLiteralsDateTime"></a>Inserire valori letterali in tipi di data e ora  
+## <a name="insert-literals-into-date-and-time-types"></a><a name="InsertingLiteralsDateTime"></a>Inserire valori letterali in tipi di data e ora  
 I valori letterali di data e ora vengono rappresentati utilizzando valori di carattere in formati specifici, racchiusi tra virgolette singole. Nelle tabelle seguenti vengono definiti i tipi letterali consentiti, il formato e le regole di conversione per l'inserimento di un valore letterale di data o ora in una colonna di distribuzione SQL Server PDW di tipo **DateTime**, **smalldatetime**, **date**, **Time**, **DateTimeOffset**o **datetime2**.  
   
 ### <a name="datetime-data-type"></a>datetime (tipo di dati)  
@@ -84,7 +84,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 |Valore letterale stringa nel formato **Data**|' AAAA-MM-GG '<br /><br />Esempio:' 2007-05-08'|I valori di ora (ora, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Il valore letterale "2007-05-08", ad esempio, viene inserito come "2007-05-08 12:00:00.0000000".|  
 |Valore letterale stringa in formato **datetime2**|' AAAA-MM-GG HH: mm: SS: nnnnnnn '<br /><br />Esempio:' 2007-05-08 12:35:29.1234567'|Se l'origine dati contiene componenti di data e ora che sono minori o uguali al valore specificato in **datetime2**(*n*), i dati vengono inseriti. in caso contrario, viene generato un errore.|  
   
-## <a name="InsertLiteralsNumeric"></a>Inserire valori letterali in tipi numerici  
+## <a name="insert-literals-into-numeric-types"></a><a name="InsertLiteralsNumeric"></a>Inserire valori letterali in tipi numerici  
 Nelle tabelle seguenti vengono definiti i formati accettati e le regole di conversione per l'inserimento di un valore letterale in una colonna di distribuzione SQL Server PDW che utilizza un tipo numerico.  
   
 ### <a name="bit-data-type"></a>bit - tipo di dati  
@@ -140,7 +140,7 @@ I valori letterali Money sono rappresentati come numeri con un separatore decima
 |Valore letterale decimale|nnnnnn. nnnnn<br /><br />Esempio: 123344,34455|Se il numero di cifre dopo il separatore decimale è maggiore di 4, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123344,34455 viene inserito come 123344,3446.|  
 |Valore letterale money|$nnnnnn. nnnn<br /><br />Esempio: $123456,7890|Il simbolo di valuta facoltativo non viene inserito con il valore.<br /><br />Se il numero di cifre dopo il separatore decimale è maggiore di 4, il valore viene arrotondato per eccesso al valore più vicino.|  
   
-## <a name="InsertLiteralsString"></a>Inserimento di valori letterali in tipi stringa  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertLiteralsString"></a>Inserimento di valori letterali in tipi stringa  
 Nelle tabelle seguenti vengono definiti i formati accettati e le regole di conversione per l'inserimento di un valore letterale in una colonna SQL Server PDW che utilizza un tipo stringa.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>tipi di dati char, varchar, nchar e nvarchar  
@@ -158,7 +158,7 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
 ## <a name="see-also"></a>Vedere anche  
  
 [Dati distribuiti](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INSERT](../t-sql/statements/insert-transact-sql.md)  
+[INSERIRE](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

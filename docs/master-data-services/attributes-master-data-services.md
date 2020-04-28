@@ -18,10 +18,10 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728748"
 ---
 # <a name="attributes-master-data-services"></a>Attributi (Master Data Services)
@@ -86,8 +86,8 @@ ms.locfileid: "73728748"
 |Creare un nuovo attributo di collegamento in formato libero.|[Creare un attributo di collegamento &#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
 |Creare un nuovo attributo di file.|[Creare un attributo di file &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Creare un nuovo attributo basato su dominio.|[Creare un attributo basato su dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|Modificare il nome di un attributo esistente.|[Modificare il nome di un attributo e il tipo di dati &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi a un gruppo di Rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Modificare il nome di un attributo esistente.|[Modificare il nome e il tipo di dati di un attributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
+|Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Eliminare un attributo esistente.|[Eliminare un attributo &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |Modificare l'ordine degli attributi.|[Modificare l'ordine degli attributi](../master-data-services/change-the-order-of-attributes.md)|  
 |Creare un attributo di data|[Creare un attributo di data &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
@@ -100,5 +100,5 @@ ms.locfileid: "73728748"
   
 -   [Membri &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Autorizzazioni foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
+-   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

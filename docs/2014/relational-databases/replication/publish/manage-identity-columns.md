@@ -17,25 +17,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cbfad718850df4c66572999735fbee58fb530424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882296"
 ---
 # <a name="manage-identity-columns"></a>Gestione delle colonne Identity
   In questo argomento viene descritto come gestire le colonne Identity in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando gli inserimenti del Sottoscrittore vengono replicati nel server di pubblicazione, è necessario gestire le colonne Identity in modo da evitare l'assegnazione dello stesso valore Identity sia al Sottoscrittore che al server di pubblicazione. È possibile gestire automaticamente intervalli di valori Identity tramite la replica oppure scegliere di gestirli manualmente.  Per informazioni sulle opzioni di gestione degli intervalli di valori Identity fornite dalla replica, vedere [Replicare colonne Identity](replicate-identity-columns.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Quando si pubblica una tabella in più di una pubblicazione, è necessario specificare le stesse opzioni di gestione degli intervalli di valori Identity per entrambi le pubblicazioni. Per altre informazioni, vedere "Pubblicazione di tabelle in più di una pubblicazione" in [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md).  
   
 -   Per creare un numero a incremento automatico da usare in più tabelle o da chiamare dalle applicazioni senza fare riferimento ad alcuna tabella, vedere [Numeri di sequenza](../../sequence-numbers/sequence-numbers.md).  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Specificare un'opzione per la gestione delle colonne Identity nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo -\<Articolo>** della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Creare una pubblicazione](create-a-publication.md). Nella Creazione guidata nuova pubblicazione:  
   
 -   Se si seleziona **Pubblicazione di tipo merge** o **Pubblicazione transazionale con sottoscrizioni aggiornabili** nella pagina **Tipo di pubblicazione** , specificare se si desidera utilizzare la gestione automatica o manuale di intervalli di valori Identity. È consigliabile la gestione automatica, che è l'opzione predefinita. Dopo la pubblicazione della tabella la proprietà non può più essere modificata, mentre è possibile modificare altre proprietà correlate.  
@@ -79,25 +79,25 @@ ms.locfileid: "73882296"
   
 5.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile utilizzare stored procedure di replica per specificare le opzioni di gestione degli intervalli di valori Identity durante la creazione di un articolo.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Per abilitare la gestione automatica degli intervalli di valori Identity durante la definizione di articoli per una pubblicazione transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Se la tabella di origine da pubblicare include una colonna Identity, specificare il valore **auto** per **\@identityrangemanagementoption**, l'intervallo di valori Identity assegnati al server di pubblicazione per **\@pub_identity_range**, l'intervallo di valori Identity assegnato a ciascun Sottoscrittore per **\@identity_range** e la percentuale dei valori Identity totali usata prima dell'assegnazione di un nuovo intervallo di valori Identity per **\@threshold**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Se la tabella di origine da pubblicare include una colonna Identity, specificare il valore **auto** per ** \@identityrangemanagementoption**, l'intervallo di valori Identity assegnato al server di pubblicazione per ** \@pub_identity_range**, l'intervallo di valori Identity assegnati a ogni Sottoscrittore per ** \@identity_range**e la percentuale dei valori Identity totali utilizzati prima che venga assegnato un nuovo intervallo di valori Identity per ** \@la soglia**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
   
     > [!NOTE]  
     >  Assicurarsi che il tipo di dati della colonna Identity sia sufficiente per supportare l'intervallo totale di valori Identity da assegnare a tutti i Sottoscrittori.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Per disabilitare la gestione automatica degli intervalli di valori Identity durante la definizione di articoli per una pubblicazione transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Specificare il valore **manual** per **\@identityrangemanagementoption**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Specificare il valore **Manual** per ** \@identityrangemanagementoption**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
   
 2.  Assegnare intervalli a colonne Identity dell'articolo nel Sottoscrittore per evitare di generare conflitti durante l'aggiornamento dei Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'assegnazione di intervalli per la gestione manuale degli intervalli di valori Identity nell'argomento [Replicare colonne Identity](replicate-identity-columns.md).  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Per attivare la gestione automatica degli intervalli di valori Identity durante la definizione di articoli per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Se la tabella di origine da pubblicare include una colonna Identity, specificare il valore **auto** per **\@identityrangemanagementoption**, l'intervallo di valori Identity assegnati a una sottoscrizione server per **\@pub_identity_range**, l'intervallo di valori Identity assegnato al server di pubblicazione e a ogni sottoscrizione client per **\@identity_range** e la percentuale dei valori Identity totali usata prima dell'assegnazione di un nuovo intervallo di valori Identity per **\@threshold**. Per altre informazioni sull'assegnazione di nuovi intervalli di valori Identity, vedere "Assegnazione degli intervalli di valori Identity" nell'argomento [Replicare colonne Identity](replicate-identity-columns.md). Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Se la tabella di origine da pubblicare include una colonna Identity, specificare il valore **auto** per ** \@identityrangemanagementoption**, l'intervallo di valori Identity assegnati a una sottoscrizione server per ** \@pub_identity_range**, l'intervallo di valori Identity assegnati al server di pubblicazione e ogni sottoscrizione client per ** \@identity_range**e la percentuale dei valori Identity totali utilizzati prima che venga assegnato un nuovo intervallo di valori Identity per ** \@soglia**. Per altre informazioni sull'assegnazione di nuovi intervalli di valori Identity, vedere "Assegnazione degli intervalli di valori Identity" nell'argomento [Replicare colonne Identity](replicate-identity-columns.md). Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
   
     > [!NOTE]  
     >  Assicurarsi che il tipo di dati della colonna Identity sia sufficiente per supportare l'intervallo totale di valori Identity da assegnare a tutti i Sottoscrittori, in particolare ai Sottoscrittori con sottoscrizioni server.  
@@ -106,9 +106,9 @@ ms.locfileid: "73882296"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare uno dei valori seguenti per ** \@identityrangemanagementoption**:  
   
-    -   **manuale** : gli intervalli di valori Identity devono essere assegnati manualmente per l'aggiornamento dei sottoscrittori.  
+    -   **manual** : per aggiornare i Sottoscrittori, gli intervalli di valori Identity devono essere assegnati manualmente.  
   
-    -   **None** : le colonne Identity nel server di pubblicazione non verranno definite come colonne Identity nel Sottoscrittore.  
+    -   **none** : le colonne Identity del server di pubblicazione non verranno definite come tali nel Sottoscrittore.  
   
      Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "73882296"
   
 2.  Se il valore di **identityrangemanagementoption** nel set di risultati è **1**, modificare le impostazioni nel modo seguente:  
   
-    -   Per modificare gli intervalli di valori Identity assegnati, eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identity_range** o **pub_identity_range** per **\@property** e il nuovo valore dell'intervallo per **\@value**.  
+    -   Per modificare gli intervalli di valori Identity assegnati, eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identity_range** o **pub_identity_range** per ** \@la proprietà** e il nuovo valore dell'intervallo per ** \@value**.  
   
-    -   Per modificare la soglia di assegnazione di nuovi intervalli, eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **threshold** per **\@property** e il nuovo valore di soglia per **\@value**.  
+    -   Per modificare la soglia di assegnazione di nuovi intervalli, eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **Threshold** per ** \@Property** e il nuovo valore soglia per ** \@value**.  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>Per modificare le impostazioni relative alla gestione automatica degli intervalli di valori Identity per un articolo esistente di una pubblicazione di tipo merge  
   
@@ -130,15 +130,15 @@ ms.locfileid: "73882296"
   
 2.  Se il valore di **identity_support** nel set di risultati è **1**, modificare le impostazioni nel modo seguente:  
   
-    -   Per modificare gli intervalli di valori Identity assegnati, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identity_range** o **pub_identity_range** per **\@property** e il nuovo valore dell'intervallo per **\@value**.  
+    -   Per modificare gli intervalli di valori Identity assegnati, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identity_range** o **pub_identity_range** per ** \@la proprietà** e il nuovo valore dell'intervallo per ** \@value**.  
   
-    -   Per modificare la soglia di assegnazione di nuovi intervalli, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **threshold** per **\@property** e il nuovo valore di soglia per **\@value**. Per altre informazioni sull'assegnazione di nuovi intervalli di valori Identity, vedere "Assegnazione degli intervalli di valori Identity" nell'argomento [Replicare colonne Identity](replicate-identity-columns.md).  
+    -   Per modificare la soglia di assegnazione di nuovi intervalli, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **Threshold** per ** \@Property** e il nuovo valore soglia per ** \@value**. Per altre informazioni sull'assegnazione di nuovi intervalli di valori Identity, vedere "Assegnazione degli intervalli di valori Identity" nell'argomento [Replicare colonne Identity](replicate-identity-columns.md).  
   
-    -   Per disabilitare la gestione automatica degli intervalli di valori Identity, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identityrangemanagementoption** per **\@property** e **manual** o **none** per **\@value**.  
+    -   Per disabilitare la gestione automatica degli intervalli di valori Identity, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identityrangemanagementoption** per ** \@Property** e **Manual** o **None** per ** \@value**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Replica transazionale peer-to-peer](../transactional/peer-to-peer-transactional-replication.md)   
+ [Concetti relativi alle stored procedure del sistema di replica](../concepts/replication-system-stored-procedures-concepts.md)   
  [Replica colonne Identity](replicate-identity-columns.md)  
   
   

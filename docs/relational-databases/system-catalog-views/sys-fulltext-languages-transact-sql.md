@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981770"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
@@ -35,9 +35,8 @@ ms.locfileid: "73981770"
    
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
-|**nome**|**sysname**|Valore dell'alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID** o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
+|**name**|**sysname**|Valore dell'alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID** o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valori restituiti per le lingue predefinite  
  Nella tabella seguente sono mostrati i valori per le lingue i cui word breaker sono registrati per impostazione predefinita.  
@@ -56,7 +55,7 @@ ms.locfileid: "73981770"
 |Ceco|1029|  
 |Danese|1030|  
 |Olandese|1043|  
-|Inglese|1040|  
+|Inglese|1033|  
 |Francese|1036|  
 |Tedesco|1031|  
 |**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Greco|1032|  
@@ -106,10 +105,10 @@ ms.locfileid: "73981770"
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_fulltext_load_thesaurus_file &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_service &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
+ [Configurare e gestire parole non significative e elenchi per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

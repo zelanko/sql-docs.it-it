@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401120"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Installazione dell'hardware per il dispositivo Analytics Platform System (APS)
 Questo articolo descrive come spostare, decomprimere e installare l'hardware per il dispositivo SQL Server PDW. Questo articolo è esclusivamente informativo e può essere utile per comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che venga riattivato. La partecipazione dei clienti è necessaria per elementi quali l'accesso data center, l'alimentazione elettrica e le connessioni Ethernet.  
   
-## <a name="BeforeMoving"></a>Prima di spostare i componenti dal Dock di caricamento  
+## <a name="before-you-move-any-components-from-the-loading-dock"></a><a name="BeforeMoving"></a>Prima di spostare i componenti dal Dock di caricamento  
 Prima di spostare, decomprimere o rack i componenti dell'appliance, eseguire le attività seguenti.  
   
 |Attività|Descrizione|  
@@ -32,7 +32,7 @@ Prima di spostare, decomprimere o rack i componenti dell'appliance, eseguire le 
 |Proteggere il rack data center|Proteggere il rack data center sul posto usando apparecchiature aggiuntive, come richiesto per la data center posizione, ad esempio cinghie sismiche in aree geografiche soggette a terremoti.|  
 |Preparare l'assistenza per il trasporto dei componenti|Determinare in anticipo l'assistenza, le attrezzature e gli strumenti necessari per gestire ogni componente in modo sicuro e senza causare danni.|  
   
-## <a name="Moving"></a>Spostare i rack dal Dock di caricamento nel Data Center  
+## <a name="move-the-racks-from-the-loading-dock-into-the-data-center"></a><a name="Moving"></a>Spostare i rack dal Dock di caricamento nel Data Center  
 Ogni pallet contiene tutti i componenti per un rack Appliance, inclusi nodi, cavi, cavi e così via.  
   
 Usare il seguente elenco di controllo per spostare ogni rack dell'appliance dal pallet sul dock di caricamento alla posizione del rack nel data center. Spostare prima il rack di controllo, quindi spostare gli altri rack di dati dell'appliance.  
@@ -51,7 +51,7 @@ Usare il seguente elenco di controllo per spostare ogni rack dell'appliance dal 
 |Proteggere il nodo nella data center rack|Proteggere il nodo sul posto nel rack data center.|  
 |Ripetere questi passaggi per il nodo o il componente successivo|Ripetere questi passaggi per spostare il nodo successivo o un altro componente dell'appliance nel data center.|  
   
-## <a name="AfterMoving"></a>Installare componenti aggiuntivi  
+## <a name="install-additional-components"></a><a name="AfterMoving"></a>Installare componenti aggiuntivi  
 Utilizzare l'elenco di controllo seguente per installare i componenti aggiuntivi.  
   
 |Attività|Descrizione||  

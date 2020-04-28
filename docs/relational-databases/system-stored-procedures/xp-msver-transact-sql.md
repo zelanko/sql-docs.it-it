@@ -18,10 +18,10 @@ ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843903"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
@@ -47,7 +47,7 @@ xp_msver [ optname ]
 |**ProductName**|Nome prodotto; ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Versione del prodotto.|  
 |**Lingua**|Lingua della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Piattaforma**|Nome del sistema operativo, del produttore e del tipo di chip del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Platform**|Nome del sistema operativo, del produttore e del tipo di chip del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Commenti**|Informazioni varie relative a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**CompanyName**|Nome del produttore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**FileDescription**|Sistema operativo.|  
@@ -63,7 +63,7 @@ xp_msver [ optname ]
 |**ProcessorActiveMask**|Indica i processori installati nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione che sono avviati e utilizzabili da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |**ProcessorType**|Tipo di processore. Simile alla **piattaforma**.|  
 |**PhysicalMemory**|Quantità di RAM espressa in megabyte (MB) installata nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.|  
-|**Product ID**|Numero di ID del prodotto (PID). Questo numero viene specificato durante l'installazione ed è riportato sull'etichetta della custodia del CD originale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**ID prodotto**|Numero di ID del prodotto (PID). Questo numero viene specificato durante l'installazione ed è riportato sull'etichetta della custodia del CD originale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  1 (esito positivo)  
@@ -76,7 +76,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

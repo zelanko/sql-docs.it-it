@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401004"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento di blocco in parallelo data warehouse
 Informazioni sul modo in cui data warehouse parallelo utilizza il blocco per garantire l'integrità delle transazioni e mantenere la coerenza dei database quando più utenti accedono contemporaneamente ai dati.  
   
-## <a name="Basics"></a>Nozioni fondamentali sui blocchi  
+## <a name="locking-basics"></a><a name="Basics"></a>Nozioni fondamentali sui blocchi  
 **Modalità**  
   
 SQL Server PDW supporta quattro modalità di blocco:  
@@ -27,7 +27,7 @@ SQL Server PDW supporta quattro modalità di blocco:
 Esclusivo  
 Il blocco esclusivo impedisce la scrittura o la lettura dall'oggetto bloccato fino al completamento della transazione che mantiene il blocco esclusivo. Non sono consentiti altri blocchi in modalità mentre è attivo il blocco esclusivo. Ad esempio, DROP TABLE e CREATE DATABASE utilizzano un blocco esclusivo.  
   
-Condiviso  
+Shared  
 Il blocco condiviso impedisce l'avvio di un blocco esclusivo sull'oggetto interessato, ma consente tutte le altre modalità di blocco. Ad esempio, l'istruzione SELECT avvia un blocco condiviso e pertanto consente a più query di accedere simultaneamente ai dati selezionati, ma impedisce gli aggiornamenti ai record letti, fino al completamento dell'istruzione SELECT.  
   
 ExclusiveUpdate  
@@ -38,9 +38,9 @@ Il blocco SharedUpdate impedisce le modalità di blocco Exclusive e ExclusiveUpd
   
 **Classi di risorse**  
   
-I blocchi vengono mantenuti nelle classi di oggetti seguenti: DATABASE, SCHEMA, oggetto (tabella, vista o procedura), applicazione (utilizzata internamente), EXTERNALDATASOURCE, EXTERNALFILEFORMAT e SCHEMARESOLUTION (un blocco a livello di database durante la creazione, la modifica o eliminazione di oggetti dello schema o di utenti di database). Queste classi di oggetti possono essere visualizzate nella colonna object_type di [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
+I blocchi vengono mantenuti nelle classi di oggetti seguenti: DATABASE, SCHEMA, oggetto (tabella, vista o procedura), applicazione (utilizzata internamente), EXTERNALDATASOURCE, EXTERNALFILEFORMAT e SCHEMARESOLUTION (un blocco a livello di database durante la creazione, la modifica o l'eliminazione di oggetti dello schema o di utenti del database). Queste classi di oggetti possono essere visualizzate nella colonna object_type di [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
-## <a name="Remarks"></a>Osservazioni generali  
+## <a name="general-remarks"></a><a name="Remarks"></a>Osservazioni generali  
 I blocchi possono essere applicati a database, tabelle o viste.  
   
 SQL Server PDW non implementa alcun livello di isolamento configurabile. Supporta il livello di isolamento READ_UNCOMMITTED come definito dallo standard ANSI. Tuttavia, poiché le operazioni di lettura vengono eseguite in READ_UNCOMMITTED, pochissime operazioni di blocco si verificano o comportano una contesa nel sistema.  

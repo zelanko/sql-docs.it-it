@@ -11,10 +11,10 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728682"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Estensione delle regole business (Master Data Services)
@@ -65,17 +65,17 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Schema**|**Autorizzazioni**|  
+|**SCHEMA**|**Autorizzazioni**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema.  
   
--   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   Gli script definiti dall'utente sono stati aggiunti al database di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -116,6 +116,6 @@ CREATE PROCEDURE [usr].[YourAction]
 ## <a name="see-also"></a>Vedere anche  
  [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Condizioni della regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Azioni regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Azioni Regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

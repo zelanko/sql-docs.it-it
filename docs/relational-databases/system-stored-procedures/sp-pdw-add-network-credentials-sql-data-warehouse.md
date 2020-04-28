@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844405"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
@@ -62,9 +62,9 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', êžŒpasswordêž
 ## <a name="general-remarks"></a>Osservazioni generali  
  Questa stored procedure aggiunge le credenziali di rete per l'account [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService. L'account NetworkService esegue ogni istanza di SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul nodo di controllo e sui nodi di calcolo. Quando si esegue un'operazione di backup, ad esempio, il nodo di controllo e ogni nodo di calcolo utilizzeranno le credenziali dell'account NetworkService per ottenere le autorizzazioni di lettura e scrittura per il server di destinazione.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-add-credentials-for-performing-a-database-backup"></a>R. Aggiungere le credenziali per l'esecuzione di un backup del database  
+### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Aggiungere le credenziali per l'esecuzione di un backup del database  
  Nell'esempio seguente vengono associate le credenziali nome utente e password per l'utente di dominio seattle\david con un server di destinazione con un indirizzo IP 10.172.63.255. L'utente seattle\david dispone delle autorizzazioni di lettura/scrittura per il server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]le credenziali vengono archiviate e utilizzate per la lettura e la scrittura da e verso il server di destinazione, in base alle esigenze per le operazioni di backup e ripristino.  
   
 ```  

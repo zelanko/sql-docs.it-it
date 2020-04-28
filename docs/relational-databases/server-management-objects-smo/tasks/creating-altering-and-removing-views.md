@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d9c19df941d6bd244acf9c61aeabc5bd52e4776
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095575"
 ---
 # <a name="creating-altering-and-removing-views"></a>Creazione, modifica e rimozione di viste
@@ -27,7 +27,7 @@ ms.locfileid: "74095575"
  La proprietà <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.View> definisce la vista. Equivale all'istruzione SELECT di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per la creazione di una vista.  
   
 ## <a name="example"></a>Esempio  
- Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Creazione, modifica e rimozione di una vista in Visual Basic  
  In questo esempio di codice viene illustrato come creare una vista di due tabelle tramite un inner join. La vista viene creata tramite la modalità testo, di conseguenza è necessario impostare la proprietà <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>.  

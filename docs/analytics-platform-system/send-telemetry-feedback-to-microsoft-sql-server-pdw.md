@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400367"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Invia il feedback di telemetria a Microsoft per il sistema di piattaforma di analisi
@@ -22,10 +22,10 @@ Analytics Platform System ha una funzionalità di telemetria facoltativa che inv
 > [!NOTE]  
 > In questa versione, Microsoft non monitora attivamente i dati di telemetria. I dati vengono raccolti solo a scopo di analisi.  
   
-## <a name="privacy"></a>Privacy  
+## <a name="privacy"></a><a name="privacy"></a>Privacy  
 Per garantire la massima protezione della privacy, APS viene fornito senza abilitare la telemetria. Prima di abilitare questa funzionalità, esaminare l' [informativa sulla Privacy piattaforma di strumenti analitici Microsoft](https://go.microsoft.com/fwlink/?LinkId=400902). Per acconsentire esplicitamente, eseguire lo script di PowerShell descritto di seguito.  
   
-## <a name="enable"></a>Abilita telemetria  
+## <a name="enable-telemetry"></a><a name="enable"></a>Abilita telemetria  
 **Inoltri DNS:** Per inviare dati di telemetria a Microsoft, è necessario che il sistema di piattaforma di analisi si connetta a Internet tramite un server d'inoltro DNS. Per abilitare questa funzionalità, è necessario abilitare l'invio DNS su tutti gli host e le macchine virtuali del carico di lavoro. Richiamare il `Enable-RemoteMonitoring` comando con l' `SetupDnsForwarder` opzione per configurare correttamente l'invio DNS e abilitare la telemetria. Richiamare il `Enable-RemoteMonitoring` comando senza l' `SetupDnsForwarder` opzione quando l'invio DNS è già configurato e si desidera abilitare il monitoraggio heartbeat.  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ Se è stato immesso **n**, non verrà eseguito alcun comando e la funzionalità 
   
 Non si verifica alcun problema nell'esecuzione `Enable-RemoteMonitoring` del comando più volte. Se il server d'invio DNS è già impostato, verrà visualizzato un messaggio di avviso che indica il caso.  
   
-## <a name="disable"></a>Disabilitare la telemetria  
+## <a name="disable-telemetry"></a><a name="disable"></a>Disabilitare la telemetria  
 La disabilitazione della telemetria arresterà tutte le operazioni che comunicano informazioni sullo stato dell'appliance al servizio di monitoraggio APS nel cloud.  
   
 > [!IMPORTANT]  
@@ -111,7 +111,7 @@ Se vengono visualizzati errori o informazioni che portano a ritenere che il coma
 Non si verifica alcun problema nell'esecuzione `Disable-RemoteMonitoring` del comando più volte.  
   
 ## <a name="next-steps"></a>Passaggi successivi
-Per altre informazioni, vedere:
+Per altre informazioni, vedi:
 - [Monitorare l'appliance usando la console di amministrazione &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Monitorare l'appliance usando le viste di sistema &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Monitorare l'appliance usando System Center Operations Manager sistema di piattaforma &#40;Analytics&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

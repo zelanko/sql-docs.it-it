@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190354"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -37,7 +37,7 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nome del tipo di attesa. Per ulteriori informazioni, vedere la sezione [Tipi di attesa](#WaitTypes) di seguito in questo argomento.|  
+|wait_type|**nvarchar(60)**|Nome del tipo di attesa. Per ulteriori informazioni, vedere la sezione [Tipi di attesa](#WaitTypes) di seguito in questo argomento.|  
 |waiting_tasks_count|**bigint**|Numero di attese del tipo specificato. Questo contatore viene incrementato all'inizio di ogni attesa.|  
 |wait_time_ms|**bigint**|Tempo di attesa totale, espresso in millisecondi, per il tipo di attesa specifico. Il tempo comprende signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo di attesa massimo per il tipo di attesa specifico.|  
@@ -49,7 +49,7 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-##  <a name="WaitTypes"></a>Tipi di attese  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipi di attese  
  **Attese risorse** Le attese di risorse si verificano quando un thread di lavoro richiede l'accesso a una risorsa che non è disponibile perché la risorsa è utilizzata da un altro thread di lavoro o non è ancora disponibile. Un esempio di attesa di risorse è rappresentato da blocchi, latch e attese di I/O su rete e su disco. Le attese di blocchi e latch sono attese a livello di oggetti di sincronizzazione.  
   
 **Attesa di code**  
@@ -58,8 +58,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
  **Attese esterne**  
  Questo tipo di attesa si verifica quando un thread di lavoro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa del completamento di un evento esterno, ad esempio una chiamata di stored procedure estesa o una query di server collegato. Se vengono rilevati problemi di blocco, è opportuno ricordare che le attese esterne non sempre implicano che il thread di lavoro sia inattivo in quanto è possibile che il thread di lavoro esegua attivamente codice esterno.  
   
- 
-  `sys.dm_os_wait_stats` visualizza la durata delle attese completate. Questa DMV non visualizza le attese correnti.  
+ `sys.dm_os_wait_stats` visualizza la durata delle attese completate. Questa DMV non visualizza le attese correnti.  
   
  Un thread di lavoro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene considerato in attesa se si verifica uno dei seguenti casi:  
   
@@ -669,7 +668,7 @@ Questo comando reimposta tutti i contatori su 0.
 |PREEMPTIVE_OS_SETFILEVALIDDATA |Solo per uso interno.| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |Solo per uso interno.| 
 |PREEMPTIVE_OS_SQLCLROPS |Solo per uso interno.| 
-|PREEMPTIVE_OS_SQMLAUNCH |Solo per uso interno. <br /> **Si applica a** [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]da a. |  
+|PREEMPTIVE_OS_SQMLAUNCH |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] tramite [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |Solo per uso interno.| 
 |PREEMPTIVE_OS_VERIFYTRUST |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |PREEMPTIVE_OS_VSSOPS |Solo per uso interno.| 
@@ -936,7 +935,7 @@ Questo comando reimposta tutti i contatori su 0.
 |VIA_ACCEPT |Si verifica quando una connessione del provider VIA (Virtual Interface Adapter) viene completata durante l'avvio.| 
 |VIEW_DEFINITION_MUTEX |Si verifica durante la sincronizzazione dell'accesso a definizioni delle viste memorizzate nella cache.| 
 |WAIT_FOR_RESULTS |Si verifica durante l'attesa dell'attivazione di una notifica di query.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Si verifica durante l'attesa del completamento dell'aggiornamento delle statistiche sincrone prima che sia possibile riprendere la compilazione e l'esecuzione delle query.<br /> **Si applica a**: a partire da[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Si verifica durante l'attesa del completamento dell'aggiornamento delle statistiche sincrone prima che sia possibile riprendere la compilazione e l'esecuzione delle query.<br /> **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XLOGREAD_SIGNAL |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 

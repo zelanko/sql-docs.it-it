@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982262"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -83,8 +83,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   Nella riga di dati lo spazio disponibile è sufficiente.  
   
- Quando le stringhe BLOB vengono archiviate nella riga di dati, la lettura e la scrittura delle stringhe di tipo **Text**, **ntext**o **Image** possono essere veloci come la lettura o la scrittura di stringhe di caratteri e binarie. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non accede a pagine separate per la lettura o scrittura di stringhe BLOB.  
+ Quando le stringhe BLOB vengono archiviate nella riga di dati, la lettura e la scrittura delle stringhe di tipo **Text**, **ntext**o **Image** possono essere veloci come la lettura o la scrittura di stringhe di caratteri e binarie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non accede a pagine separate per la lettura o scrittura di stringhe BLOB.  
   
  Se una stringa di tipo **Text**, **ntext**o **Image** è più grande del limite specificato o dello spazio disponibile nella riga, i puntatori vengono invece archiviati nella riga. Le condizioni per l'archiviazione delle stringhe BLOB nella riga devono comunque essere soddisfatte, ovvero lo spazio disponibile nella riga di dati deve essere sufficiente per includervi i puntatori.  
   
@@ -137,7 +136,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>Vedere anche  
  [sys. Tables &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

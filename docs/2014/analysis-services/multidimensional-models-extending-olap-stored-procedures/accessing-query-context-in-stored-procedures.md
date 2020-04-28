@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702673"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Accesso al contesto di query nelle stored procedure
@@ -30,11 +30,11 @@ ms.locfileid: "62702673"
 |**CurrentCube**|Cube|Cubo per il contesto di query corrente.|  
 |**CurrentDatabaseName**|string|Identificatore del database corrente.|  
 |**CurrentConnection**|Connessione|Riferimento all'oggetto connessione nel contesto corrente.|  
-|**Passare**|Integer|Numero della sessione di calcolo per il contesto corrente.|  
+|**Corretto**|Integer|Numero della sessione di calcolo per il contesto corrente.|  
   
  L'oggetto `Context` è presente se in una stored procedure viene utilizzato un modello a oggetti MDX (Multidimensional Expressions), mentre non è disponibile se il modello a oggetti MDX viene utilizzato in un client. L'oggetto `Context` non viene esplicitamente passato a o restituito dalla stored procedure, ma è disponibile durante l'esecuzione della stored procedure stessa.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

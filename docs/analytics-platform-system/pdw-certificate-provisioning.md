@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400897"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisioning del certificato PDW-sistema della piattaforma Analytics
 La pagina di **provisioning del certificato PDW** del sistema di piattaforma di analisi **Configuration Manager** importa o rimuove il certificato usato dall'area PDW. Usando, un certificato per crittografare le connessioni può aiutare a proteggere le comunicazioni con il nodo di controllo tramite SQL Server client, strumenti che usano i driver SQL Server PDW, la [console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md)e i carichi di Integration Services.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Prima di installare il certificato, eseguire le operazioni seguenti:  
   
 1.  Ottenere un certificato protetto. Per ulteriori informazioni su come ottenere un certificato protetto, contattare supporto tecnico Microsoft.  

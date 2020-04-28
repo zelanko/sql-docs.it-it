@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983125"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
@@ -45,9 +45,9 @@ ms.locfileid: "73983125"
 |**virtual_address_space_reserved_kb**|**bigint**|Indica il numero di indirizzi virtuali riservati, in kilobyte (KB), di cui non è stato eseguito il commit né il mapping a pagine fisiche. Non ammette i valori NULL.|  
 |**virtual_address_space_committed_kb**|**bigint**|Specifica la quantità di indirizzo virtuale, in KB, di cui è stato eseguito il commit o il mapping a pagine fisiche. Non ammette i valori NULL.|  
 |**locked_page_allocations_kb**|**bigint**|Specifica la quantità di memoria fisica, in KB, bloccata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori NULL.|  
-|**single_pages_kb**|**bigint**|**Si applica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]da a.<br /><br /> Quantità di memoria riservata, in KB, allocata utilizzando l'allocatore di pagine singole da thread in esecuzione sul nodo. Questa memoria è allocata dal pool di buffer. Questo valore indica il nodo in cui si è verificata la richiesta di allocazione, non la posizione fisica in cui la richiesta di allocazione è stata soddisfatta.|  
+|**single_pages_kb**|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Quantità di memoria riservata, in KB, allocata utilizzando l'allocatore di pagine singole da thread in esecuzione sul nodo. Questa memoria è allocata dal pool di buffer. Questo valore indica il nodo in cui si è verificata la richiesta di allocazione, non la posizione fisica in cui la richiesta di allocazione è stata soddisfatta.|  
 |**pages_kb**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Specifica la quantità di memoria di cui è stato eseguito il commit, in KB, allocata da questo nodo NUMA dall'allocatore di pagine del gestore della memoria. Non ammette i valori NULL.|  
-|**multi_pages_kb**|**bigint**|**Si applica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]da a.<br /><br /> Quantità di memoria riservata, in KB, allocata utilizzando l'allocatore di più pagine da thread in esecuzione sul nodo. Questa memoria è esterna al pool di buffer. Questo valore indica il nodo in cui si sono verificate le richieste di allocazione, non la posizione fisica in cui le richieste di allocazione sono state soddisfatte.|  
+|**multi_pages_kb**|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Quantità di memoria riservata, in KB, allocata utilizzando l'allocatore di più pagine da thread in esecuzione sul nodo. Questa memoria è esterna al pool di buffer. Questo valore indica il nodo in cui si sono verificate le richieste di allocazione, non la posizione fisica in cui le richieste di allocazione sono state soddisfatte.|  
 |**shared_memory_reserved_kb**|**bigint**|Specifica la quantità di memoria condivisa del nodo, in KB, che è stata riservata. Non ammette i valori NULL.|  
 |**shared_memory_committed_kb**|**bigint**|Specifica la quantità di memoria condivisa del nodo, in KB, di cui è stato eseguito il commit. Non ammette i valori NULL.|  
 |**cpu_affinity_mask**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Solo per uso interno. Non ammette i valori NULL.|  

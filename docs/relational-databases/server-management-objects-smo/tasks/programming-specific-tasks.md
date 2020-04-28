@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095203"
 ---
 # <a name="programming-specific-tasks"></a>Programmazione di attività specifiche
@@ -33,12 +33,12 @@ ms.locfileid: "74095203"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Utilizzo di server collegati in SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Viene descritto l'utilizzo in SMO dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> per collegare server OLE-DB.|  
+|[Uso di server collegati in SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Viene descritto l'utilizzo in SMO dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> per collegare server OLE-DB.|  
 |[Configurazione di SQL Server in SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Viene descritto come visualizzare e modificare le impostazioni di configurazione per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO.|  
-|[Utilizzo del partizionamento di tabelle e indici](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|Viene descritto come utilizzare il partizionamento di indici e tabelle in SMO.|  
-|[Utilizzo di filegroup e file per archiviare dati](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|Viene descritto come utilizzare filegroup in SMO.|  
-|[Gestione di servizi e di impostazioni di rete tramite il provider WMI](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|Vengono descritti diversi modi per tenere traccia dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> che rappresenta il provider WMI per la gestione della configurazione.|  
-|[Utilizzo degli oggetti di database](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|Viene descritto come creare classi di istanze che rappresentano oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Uso del partizionamento di tabelle e indici](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|Viene descritto come utilizzare il partizionamento di indici e tabelle in SMO.|  
+|[Uso di filegroup e file per archiviare dati](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|Viene descritto come utilizzare filegroup in SMO.|  
+|[Gestione di servizi e di impostazioni di rete con il provider WMI](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|Vengono descritti diversi modi per tenere traccia dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> che rappresenta il provider WMI per la gestione della configurazione.|  
+|[Uso degli oggetti di database](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|Viene descritto come creare classi di istanze che rappresentano oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Gestione di utenti, ruoli e account di accesso](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|Viene descritto come utilizzare i ruoli di sicurezza in SMO.|  
 |[Concessione, revoca e negazione delle autorizzazioni](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|Viene descritto come utilizzare SMO per concedere, revocare e negare autorizzazioni a utenti o membri di un ruolo.|  
 |[Uso della crittografia](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|Viene descritto come proteggere i dati utilizzando la crittografia in SMO.|  
@@ -48,8 +48,8 @@ ms.locfileid: "74095203"
 |[Trasferimento di dati](../../../relational-databases/server-management-objects-smo/tasks/transferring-data.md)|Viene descritto come trasferire dati in SMO.|  
 |[Utilizzo di Posta elettronica database](../../../relational-databases/server-management-objects-smo/tasks/using-database-mail.md)|Viene descritto l'utilizzo dei servizi di posta elettronica da parte di SMO.|  
 |[Gestione di Service Broker](../../../relational-databases/server-management-objects-smo/tasks/managing-service-broker.md)|Viene descritto come configurare Service Broker tramite SMO.|  
-|[Utilizzo di XML Schema](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)|Viene descritto come utilizzare il tipo di dati XML in SMO.|  
-|[Utilizzo dei sinonimi](../../../relational-databases/server-management-objects-smo/tasks/using-synonyms.md)|Viene descritto come creare sinonimi in SMO.|  
+|[Uso di XML Schema](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)|Viene descritto come utilizzare il tipo di dati XML in SMO.|  
+|[Uso dei sinonimi](../../../relational-databases/server-management-objects-smo/tasks/using-synonyms.md)|Viene descritto come creare sinonimi in SMO.|  
 |[Utilizzo di messaggi](../../../relational-databases/server-management-objects-smo/tasks/using-messages.md)|Viene descritto come utilizzare i messaggi di sistema e come specificare messaggi definiti dall'utente.|  
 |[Implementazione della ricerca full-text](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Viene descritto come implementare cataloghi e indici di ricerca full-text in SMO.|  
 |[Implementazione di endpoint](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Viene descritto come creare endpoint per gestire payload per il mirroring di database, le richieste SOAP e Service Broker.|  

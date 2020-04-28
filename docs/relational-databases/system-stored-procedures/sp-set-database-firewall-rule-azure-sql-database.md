@@ -22,10 +22,10 @@ ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055086"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Database di SQL Azure)
@@ -53,7 +53,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  Nella tabella seguente vengono illustrati gli argomenti e le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]opzioni supportati in.  
   
 > [!NOTE]  
->  I tentativi di connessione di Azure sono consentiti quando ** sia questo campo che `0.0.0.0`il campo start_ip_address è uguale a.  
+>  I tentativi di connessione di Azure sono consentiti quando *start_ip_address* sia questo campo che `0.0.0.0`il campo start_ip_address è uguale a.  
   
 ## <a name="remarks"></a>Osservazioni  
  I nomi delle impostazioni del firewall a livello di database per un database devono essere univoci. Se il nome dell'impostazione del firewall a livello di database fornito per la stored procedure esiste già nella tabella delle impostazioni del firewall a livello di database, gli indirizzi IP iniziale e finale verranno aggiornati. In caso contrario, verrà creata un'impostazione del firewall a livello di database.  

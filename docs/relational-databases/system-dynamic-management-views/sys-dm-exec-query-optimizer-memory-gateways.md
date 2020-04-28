@@ -21,10 +21,10 @@ author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165005"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
@@ -35,7 +35,7 @@ Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'
 |Colonna|Type|Descrizione|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID pool di risorse in Resource Governor|  
-|**nome**|**sysname**|Nome del controllo di compilazione (Gateway Small, gateway medio, Big gateway)|
+|**name**|**sysname**|Nome del controllo di compilazione (Gateway Small, gateway medio, Big gateway)|
 |**max_count**|**int**|Numero massimo configurato di compilazioni simultanee|
 |**active_count**|**int**|Numero attualmente attivo di compilazioni in questo controllo|
 |**waiter_count**|**int**|Il numero di attese in questo controllo|
@@ -53,7 +53,7 @@ Il database SQL di Azure richiede l'autorizzazione VIEW DATABASE STATE nel datab
 ## <a name="remarks"></a>Osservazioni  
 SQL Server usa un approccio con gateway a livelli per limitare il numero di compilazioni simultanee consentite.  Vengono usati tre gateway, tra cui Small, medium e Big. I gateway consentono di evitare l'esaurimento delle risorse di memoria complessive da parte della memoria di compilazione più ampia, richiedendo i consumer.
 
-Attende che un gateway provochi una compilazione posticipata. Oltre ai ritardi nella compilazione, alle richieste limitate viene associato un RESOURCE_SEMAPHORE_QUERY_COMPILE accumulo di tipo wait. Il tipo di attesa RESOURCE_SEMAPHORE_QUERY_COMPILE può indicare che le query utilizzano una grande quantità di memoria per la compilazione e che la memoria è stata esaurita o in alternativa è disponibile una quantità di memoria sufficiente complessiva, tuttavia le unità disponibili in un determinato il gateway è esaurito. L'output di **sys. dm_exec_query_optimizer_memory_gateways** può essere utilizzato per risolvere i problemi relativi agli scenari in cui la memoria disponibile non è sufficiente per la compilazione di un piano di esecuzione della query.  
+Attende che un gateway provochi una compilazione posticipata. Oltre ai ritardi nella compilazione, alle richieste limitate viene associato un RESOURCE_SEMAPHORE_QUERY_COMPILE accumulo di tipo wait. Il tipo di attesa RESOURCE_SEMAPHORE_QUERY_COMPILE potrebbe indicare che le query utilizzano una grande quantità di memoria per la compilazione e che la memoria è stata esaurita o in alternativa è disponibile una quantità di memoria sufficiente nel complesso, ma le unità disponibili in un gateway specifico sono esaurite. L'output di **sys. dm_exec_query_optimizer_memory_gateways** può essere utilizzato per risolvere i problemi relativi agli scenari in cui la memoria disponibile non è sufficiente per la compilazione di un piano di esecuzione della query.  
 
 ## <a name="examples"></a>Esempi  
 
@@ -69,7 +69,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 ```  
 
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](./system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Come usare il comando DBCC MEMORYSTATUS per monitorare l'utilizzo della memoria in SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
 [di attesa per la compilazione di query di grandi dimensioni in RESOURCE_SEMAPHORE_QUERY_COMPILE SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

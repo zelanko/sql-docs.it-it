@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721042"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
@@ -37,9 +37,9 @@ ms.locfileid: "62721042"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Quando una stored procedure viene compilata per la prima volta o viene ricompilata, il piano di query della stored procedure viene ottimizzato per lo stato corrente del database e dei relativi oggetti. Se i dati o la struttura di un database vengono modificati significativamente, con la ricompilazione di una stored procedure viene aggiornato e ottimizzato il piano di query della stored procedure per tali modifiche. Ciò può migliorare le prestazioni di elaborazione della stored procedure.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721042"
   
 -   Se determinate query in una stored procedure utilizzano regolarmente valori atipici o temporanei, le prestazioni della stored procedure possono migliorare tramite l'utilizzo dell'hint per la query RECOMPILE all'interno delle query stesse. Poiché vengono ricompilate solo le query che utilizzano l'hint per la query anziché la stored procedure completa, viene riprodotto il comportamento di ricompilazione a livello di istruzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Oltre all'utilizzo dei valori dei parametri correnti della stored procedure, l'hint per la query RECOMPILE utilizza i valori di qualsiasi variabile locale inclusa nella stored procedure quando si compila l'istruzione. Per altre informazioni, vedere [Hint per la query (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  `WITH RECOMPILE`Opzione  
  Se si utilizza questa opzione alla creazione della definizione della stored procedure, è necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui verrà creata la stored procedure.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62721042"
  `sp_recompile`Stored procedure di sistema  
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Per ricompilare una stored procedure utilizzando l'opzione WITH RECOMPILE  
   
@@ -131,11 +131,11 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Creazione di una stored procedure](../stored-procedures/create-a-stored-procedure.md)   
  [Modificare una stored procedure](../stored-procedures/modify-a-stored-procedure.md)   
  [Rinominare una stored procedure](rename-a-stored-procedure.md)   
- [Visualizzare la definizione di una stored procedure](view-the-definition-of-a-stored-procedure.md)   
+ [Visualizzazione della definizione di una stored procedure](view-the-definition-of-a-stored-procedure.md)   
  [Visualizzare le dipendenze di una stored procedure](view-the-dependencies-of-a-stored-procedure.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   

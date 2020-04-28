@@ -11,10 +11,10 @@ ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729623"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Creare un insieme di modifiche (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73729623"
 
   Un insieme di modifiche è una raccolta delle modifiche in sospeso relative ai dati master. Se l'entità richiede l'approvazione delle modifiche, le modifiche in sospeso devono essere salvate in un insieme di modifiche e quindi inviate per l'approvazione da parte dell'amministratore.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
--   È necessario avere l'autorizzazione per accedere all'area funzionale Visualizzatore. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
+-   È necessario avere l'autorizzazione per accedere all'area funzionale Visualizzatore. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
 -   È necessario almeno l'accesso con diritti di lettura sull'entità o su uno dei relativi attributi.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729623"
   
 3.  Apportare modifiche all'entità e fare clic su**OK**.  
   
-4.  Viene visualizzata **la finestra di dialogo Seleziona insieme di modifiche** .  
+4.  **Scegli un insieme di modifiche** .  
   
 5.  Fare clic su **Nuovo**, immettere un nome per l'insieme di modifiche, quindi scegliere **Salva**. Il nome dell'insieme di modifiche deve essere univoco all'interno di un modello.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "73729623"
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire il commit o inviare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [Approva o rifiuta un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+ [Applicare e rifiutare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

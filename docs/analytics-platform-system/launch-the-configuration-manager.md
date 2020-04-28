@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401049"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Avviare il Configuration Manager nel sistema della piattaforma Analytics
@@ -21,10 +21,10 @@ Questo argomento fornisce istruzioni per l'avvio del **Configuration Manager** p
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 Il**Configuration Manager** di sistema della piattaforma Analytics può essere eseguito solo dall'amministratore di dominio dell'appliance. Per eseguire questo strumento, è necessaria la password per l'amministratore di dominio dell'appliance. Per creare amministratori APS aggiuntivi, vedere [creare un amministratore di dominio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Avviare lo strumento di Configuration Manager  
+## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Avviare lo strumento di Configuration Manager  
 Per eseguire il Configuration Manager, usare Desktop remoto per connettersi al nodo del nodo di controllo PDW (**_PDW_region_-CTL01**) e accedere come _appliance_domain_**\Administrator**. Quando si avvia il programma di **Configuration Manager** , utilizzare l'opzione **Esegui come amministratore** per assicurarsi che vengano utilizzate le credenziali di amministratore.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Per avviare da una finestra del browser  
@@ -39,7 +39,7 @@ Per eseguire il Configuration Manager, usare Desktop remoto per connettersi al n
   
 2.  Al prompt dei comandi, immettere il comando seguente per modificare le directory `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`:.  
   
-3.  Al prompt dei comandi immettere `dwconfig.exe`.  
+3.  Al prompt dei comandi digitare `dwconfig.exe`.  
   
 Una volta avviata la **Configuration Manager** , tutte le funzionalità disponibili vengono elencate nel riquadro sinistro. Nella parte restante di questa sezione viene illustrato come eseguire ogni azione disponibile nello strumento.  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400975"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorare con System Center Operations Manager-Analytics Platform System
@@ -21,7 +21,7 @@ Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sis
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
   
 1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 devono essere installati e in esecuzione.  
   

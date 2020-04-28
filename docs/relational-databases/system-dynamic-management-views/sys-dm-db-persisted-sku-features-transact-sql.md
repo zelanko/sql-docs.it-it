@@ -20,10 +20,10 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981829"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73981829"
 
   Alcune funzionalità del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] comportano una modifica del metodo di archiviazione delle informazioni nei file di database da parte del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Queste funzionalità sono disponibili solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un database che contiene queste funzionalità non può essere spostato a un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non le supporta. Utilizzare la vista a gestione dinamica sys. dm_db_persisted_sku_features per elencare le funzionalità specifiche dell'edizione abilitate nel database corrente.
   
-**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (e versioni successive).
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive).
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "73981829"
   
 -   **ColumnStoreIndex**: indica che almeno una tabella include un indice columnstore. Per consentire lo spostamento di un database in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non supporta questa funzionalità, utilizzare l'istruzione [Drop index](../../t-sql/statements/drop-index-transact-sql.md) o [alter index](../../t-sql/statements/alter-index-transact-sql.md) per rimuovere l'indice columnstore. Per altre informazioni, vedere [indici columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-    **Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (e versioni successive).  
+    **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive).  
   
 -   **Compression**: indica che almeno una tabella o un indice utilizza la compressione dei dati o il formato di archiviazione vardecimal. Per consentire lo spostamento di un database in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non supporta questa funzionalità, utilizzare l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [alter index](../../t-sql/statements/alter-index-transact-sql.md) per rimuovere la compressione dei dati. Per rimuovere il formato di archiviazione vardecimal, utilizzare l'istruzione sp_tableoption. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73981829"
   
 -   **InMemoryOLTP**: indica che il database usa OLTP in memoria. Al database è associato il filegroup MEMORY_OPTIMIZED_DATA. Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-  **Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (e versioni successive). 
+  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive). 
   
 -   **Partizionamento.** Indica che il database contiene tabelle partizionate, indici partizionati, schemi di partizione o funzioni di partizione. Per consentire di spostare un database in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa da Enterprise o Developer, non è sufficiente modificare la tabella affinché sia inclusa in una singola partizione, ma è necessario rimuovere la tabella partizionata. Se la tabella contiene dati, utilizzare SWITCH PARTITION per convertire ogni partizione in una tabella non partizionata. Eliminare quindi la tabella partizionata, lo schema di partizione e la funzione di partizione.  
   
@@ -75,8 +75,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [Edizioni e funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
+ [Edizioni e le funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   

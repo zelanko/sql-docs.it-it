@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400286"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Uso di un database di gestione temporanea in Parallel data warehouse (PDW)
 SQL Server Parallel data warehouse (PDW) utilizza un database di gestione temporanea per archiviare temporaneamente i dati durante il processo di caricamento. Per impostazione predefinita, SQL Server PDW utilizza il database di destinazione come database di gestione temporanea, che può causare la frammentazione della tabella. Per ridurre la frammentazione della tabella, è possibile creare un database di gestione temporanea definito dall'utente. In alternativa, quando il rollback da un errore di caricamento non è un problema, è possibile usare la modalità di caricamento FastAppend per migliorare le prestazioni ignorando la tabella temporanea e caricando direttamente nella tabella di destinazione.  
   
-## <a name="StagingDatabase"></a>Nozioni fondamentali sul database di gestione temporanea  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>Nozioni fondamentali sul database di gestione temporanea  
 Un *database di gestione temporanea* è un database PDW creato dall'utente che archivia i dati temporaneamente mentre viene caricato nell'appliance. Quando si specifica un database di gestione temporanea per un carico, l'appliance copia prima i dati nel database di gestione temporanea e quindi copia i dati dalle tabelle temporanee del database di gestione temporanea a tabelle permanenti nel database di destinazione.  
   
 Quando un database di gestione temporanea non viene specificato per un carico, SQL ServerPDW crea le tabelle temporanee nel database di destinazione e le utilizza per archiviare i dati caricati prima di inserire i dati caricati nelle tabelle di destinazione permanenti.  
@@ -38,7 +38,7 @@ La struttura di archiviazione per ogni tabella di database dipende dalla tabella
   
 -   Per i caricamenti in un indice cluster rowstore, la tabella di staging è un indice cluster rowstore.  
   
-## <a name="Permissions"></a>Autorizzazioni  
+## <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione CREATE (per la creazione di una tabella temporanea) nel database di gestione temporanea. 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>Procedure consigliate per la creazione di un database di gestione temporanea  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>Procedure consigliate per la creazione di un database di gestione temporanea  
   
 1.  Deve essere presente un solo database di gestione temporanea per ogni appliance. Il database di staging può essere condiviso da tutti i processi di caricamento per tutti i database di destinazione.  
   
@@ -61,9 +61,9 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   Le dimensioni del log sono in genere simili a quelle della tabella replicata.  
   
-## <a name="Examples"></a>Esempi  
+## <a name="examples"></a><a name="Examples"></a>Esempi  
   
-### <a name="a-create-a-staging-database"></a>R. Creazione di un database di gestione temporanea 
+### <a name="a-create-a-staging-database"></a>A. Creazione di un database di gestione temporanea 
 Nell'esempio seguente viene creato un database di gestione temporanea, Stagedb, da usare con tutti i carichi nell'appliance. Si supponga di stimare che cinque tabelle replicate di dimensioni pari a 5 GB vengano caricate simultaneamente. Questa concorrenza comporta l'allocazione di almeno 25 GB per la dimensione replicata. Si supponga di stimare che vengano caricate simultaneamente sei tabelle distribuite di dimensioni 100, 200, 400, 500, 500 e 550 GB. Questa concorrenza comporta l'allocazione di almeno 2250 GB per le dimensioni della tabella distribuita.  
   
 ```sql  

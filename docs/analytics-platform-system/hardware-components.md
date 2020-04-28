@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401139"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Componenti hardware per il sistema di piattaforma Analytics
@@ -21,13 +21,13 @@ ms.locfileid: "74401139"
 Analytics Platform System (APS) usa componenti scalabili che consentono di acquistare la quantità corretta di elaborazione e archiviazione in base ai requisiti aziendali. Quando si ordinano i punti di APS, sarà necessaria una combinazione di questi componenti hardware di base. I fornitori di hardware specifici potrebbero utilizzare convenzioni di denominazione diverse o avere componenti aggiuntivi.  
  
   
-## <a name="rackandnetwork"></a>Rack e rete 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>Rack e rete 
  
 I componenti APS sono tutti archiviati in uno o più rack che rientrano nell'data center. Ogni rack è dotato di unità di distribuzione dell'alimentazione (PDU), due commutatori InfiniBand e due commutatori Ethernet.  
   
 ![Rack e rete](media/rack-and-network.png "Rack e rete APS")  
   
-## <a name="datascaleunit"></a>Unità di scala dati
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>Unità di scala dati
  
 Un'unità di scala dati contiene gli host di dati e l'archiviazione diretta (DAS) per l'elaborazione e l'archiviazione dei dati utente. Per aggiungere capacità, è necessario aggiungere unità di scala dati in base alle configurazioni supportate dal fornitore dell'hardware. Con l'aumentare del numero di unità di scalabilità dei dati, è necessario aggiungere altri componenti di rete & rack, in base alle esigenze, per offrire più potenza, rete e infrastruttura rack.  
   
@@ -65,7 +65,7 @@ Il numero totale di dischi per i nodi di calcolo:
   
 **Per le dimensioni dei dischi**, l'archiviazione collegata direttamente può avere unità disco da 1, 2 o 3 terabyte. Tutte le unità di scala dei dati devono avere dischi delle stesse dimensioni.  
   
-## <a name="basescaleunit"></a>Unità di scala di base 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>Unità di scala di base 
  
 L'unità di scala di base contiene il numero minimo di host di sistema cerebrale, host di dati e archiviazione collegata direttamente necessaria per l'appliance. Include i componenti seguenti. 
   

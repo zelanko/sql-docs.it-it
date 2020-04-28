@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702124"
 ---
 # <a name="designing-aggregations-xmla"></a>Progettazione di aggregazioni (XMLA)
@@ -55,12 +55,12 @@ ms.locfileid: "62702124"
   
  L'elemento `Query` contiene un valore delimitato da virgole in cui sono presenti gli argomenti seguenti:  
   
- *Frequency*,*DataSet*[,*DataSet*...]  
+ *Frequency*,*Dataset*[,*Dataset*...]  
   
  *Frequenza*  
  Fattore di ponderazione corrispondente al numero di volte che la query è stata eseguita in precedenza. Se l' `Query` elemento rappresenta una nuova query, il valore *Frequency* rappresenta il fattore di ponderazione utilizzato dal processo di progettazione per valutare la query. Con l'aumentare del valore della frequenza, aumenta il peso associato alla query durante il processo di progettazione.  
   
- *DataSet*  
+ *Set di dati*  
  Stringa numerica che specifica gli attributi di una dimensione da includere nella query. Questa stringa deve avere un numero di caratteri uguale al numero di attributi della dimensione. Il valore zero (0) indica che l'attributo nella posizione ordinale specificata non è incluso nella query per la dimensione specificata, mentre il valore uno (1) indica che l'attributo nella posizione ordinale specificata è incluso nella query per la dimensione specificata.  
   
  La stringa "011" fa riferimento ad esempio a una query relativa a una dimensione con tre attributi, di cui il secondo e il terzo sono inclusi nella query.  
@@ -105,14 +105,14 @@ ms.locfileid: "62702124"
 |------------|---------------|-----------------|  
 |Passaggi|Integer|Numero di passaggi eseguiti dal comando prima di restituire il controllo all'applicazione client.|  
 |Tempo|Long integer|Numero di millisecondi necessari al comando prima di restituire il controllo all'applicazione client.|  
-|Ottimizzazione|DOUBLE|Percentuale stimata di miglioramento delle prestazioni ottenuta dal comando prima di restituire il controllo all'applicazione client.|  
+|Ottimizzazione|Double|Percentuale stimata di miglioramento delle prestazioni ottenuta dal comando prima di restituire il controllo all'applicazione client.|  
 |Archiviazione|Long integer|Numero stimato di byte necessari al comando prima di restituire il controllo all'applicazione client.|  
-|Aggregazioni|Long integer|Numero di aggregazioni definite dal comando prima di restituire il controllo all'applicazione client.|  
+|Aggregations|Long integer|Numero di aggregazioni definite dal comando prima di restituire il controllo all'applicazione client.|  
 |LastStep|Boolean|Indica se i dati nel set di righe rappresentano l'ultimo passaggio del processo di progettazione. Se la proprietà `Materialize` del comando è impostata su true, il valore di questa colonna viene impostato su true.|  
   
  È possibile utilizzare le statistiche relative alla progettazione contenute nel set di righe restituito dopo ogni comando `DesignAggregations` sia nella progettazione di tipo iterativo che in quella di tipo batch. Nella progettazione di tipo iterativo è possibile utilizzare le statistiche relative alla progettazione per determinare e visualizzare lo stato di avanzamento. Quando si progettano le aggregazioni in batch, è possibile utilizzare le statistiche relative alla progettazione per determinare il numero di aggregazioni create dal comando.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

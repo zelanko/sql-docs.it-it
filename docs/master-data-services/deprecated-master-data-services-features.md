@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729351"
 ---
 # <a name="deprecated-master-data-services-features"></a>Funzionalità deprecate di Master Data Services
@@ -56,6 +56,6 @@ Il tipo di log delle transazioni di entità "Attributo" è deprecato. Eseguire l
  Post di blog [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Deprecato: gerarchie esplicite e raccolte) su msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità di Master Data Services sospese](../master-data-services/discontinued-master-data-services-features.md)  
+ [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  
   
   

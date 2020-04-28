@@ -14,10 +14,10 @@ ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa2f891c4f5fc0d582b341ce1000d407fef743b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729475"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Eliminare un'entità (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73729475"
 > [!NOTE]  
 >  I membri dell'entità di tutte le versioni saranno eliminati in modo permanente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-entity"></a>Per eliminare un'entità  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73729475"
   
 4.  Nella griglia nella pagina **Gestisci entità** selezionare la riga per l'entità da eliminare.  
   
-5.  Scegliere **Elimina**.  
+5.  Fare clic su **Elimina**.  
   
 6.  Nella finestra di dialogo di conferma fare clic su **OK**.  
   

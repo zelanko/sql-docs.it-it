@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401171"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Caricatore da riga di comando dwloader per data warehouse paralleli
@@ -222,14 +222,14 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è costituito da uno o più caratteri di escape ASCII o valori esadecimali ASCII.  
   
-|Nome|Escape Character|Carattere esadecimale|  
+|Nome|Carattere escape|Carattere esadecimale|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
 |Avanzamento riga (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgola|','|0x2c|  
-|Virgolette doppie|\\"|0x22|  
+|Virgoletta doppia|\\"|0x22|  
 |Virgoletta singola|\\'|0x27|  
   
 Per specificare il carattere barra verticale nella riga di comando, racchiuderlo tra virgolette doppie, "|". In questo modo si eviterà un'interpretazione errata da parte del parser della riga di comando. Gli altri caratteri sono racchiusi tra virgolette singole.  
@@ -419,7 +419,7 @@ Consigliato solo per l'uso da parte di supporto tecnico Microsoft, *BatchSize* �
   
 A partire da SQL Server 2012 PDW, il nodo di controllo calcola dinamicamente le dimensioni del batch per ogni carico per impostazione predefinita. Questo calcolo automatico si basa su diversi parametri, ad esempio le dimensioni della memoria, il tipo di tabella di destinazione, lo schema della tabella di destinazione, il tipo di carico, le dimensioni del file e la classe di risorse dell'utente.  
   
-Se, ad esempio, la modalità di caricamento è FASTAPPEND e la tabella include un indice columnstore cluster, per impostazione predefinita SQL Server PDW tenterà di usare una dimensione di batch pari a 1.048.576 in modo che RowGroups venga chiuso e venga caricato direttamente nel columnstore senza passare attraverso il Archivio Delta. Se la memoria non consente le dimensioni del batch 1.048.576, dwloader sceglierà un BatchSize più piccolo.  
+Se, ad esempio, la modalità di caricamento è FASTAPPEND e la tabella include un indice columnstore cluster, per impostazione predefinita SQL Server PDW tenterà di usare una dimensione del batch di 1.048.576 in modo che RowGroups venga chiuso e venga caricato direttamente nel columnstore senza passare attraverso l'archivio Delta. Se la memoria non consente le dimensioni del batch 1.048.576, dwloader sceglierà un BatchSize più piccolo.  
   
 Se il tipo di carico è FASTAPPEND, *BatchSize* si applica al caricamento dei dati nella tabella; in caso contrario *BatchSize* si applica al caricamento dei dati nella tabella di staging.  
   

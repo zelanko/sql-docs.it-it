@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095969"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Come creare un progetto SMO Visual C# in Visual Studio .NET
@@ -31,7 +31,7 @@ ms.locfileid: "74095969"
   
 1. Avviare Visual Studio
   
-2. Scegliere **nuovo** dal menu **file** , quindi **progetto**.  Viene visualizzata la finestra di dialogo **Nuovo progetto**.   
+2. Scegliere **nuovo** dal menu **file** , quindi **progetto**.  Verrà visualizzata la finestra di dialogo **Nuovo progetto** .   
   
 3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Nel riquadro **installato** passare a **modelli**\\**Visual C#**\\**Windows** e selezionare **applicazione console**.  
   

@@ -1,5 +1,5 @@
 ---
-title: messaggi di errore
+title: Messaggi di errore
 description: I messaggi di errore di Parallel data warehouse (PDW) segnalano gli errori e i problemi riscontrati dai componenti di PDW e possono includere anche errori di SQL Server emersi tramite PDW. Questi messaggi di errore utilizzano una sintassi coerente per la presentazione delle informazioni. La comprensione di questa sintassi consente di identificare e correggere i problemi.
 author: mzaman1
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401158"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Messaggi di errore in parallelo data warehouse
 
 I messaggi di errore di Parallel data warehouse (PDW) segnalano gli errori e i problemi riscontrati dai componenti di PDW e possono includere anche errori di SQL Server emersi tramite PDW. Questi messaggi di errore utilizzano una sintassi coerente per la presentazione delle informazioni. La comprensione di questa sintassi consente di identificare e correggere i problemi in SQL Server PDW.  
   
-## <a name="Basics"></a>Nozioni di base sui messaggi di errore  
+## <a name="error-message-basics"></a><a name="Basics"></a>Nozioni di base sui messaggi di errore  
 I messaggi di errore restituiti seguono la stessa sintassi.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
