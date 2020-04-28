@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783157"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Servizio SharePoint di Reporting Services e applicazioni di servizio
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è basata sull'architettura del servizio SharePoint e prevede l'utilizzo di un servizio SharePoint e di applicazioni di servizio uno-a-molti. Creando un'applicazione di servizio si rende disponibile il servizio e si genera il database dell'applicazione di servizio. È possibile creare più applicazioni di servizio Reporting Services, tuttavia un'unica applicazione di servizio è sufficiente per la maggior parte degli scenari di distribuzione.  
   
  In questo argomento vengono illustrate le informazioni seguenti:  
@@ -29,14 +28,14 @@ ms.locfileid: "72783157"
   
 -   [Modificare le proprietà dell'applicazione di servizio](#bkmk_editserviceapplication)  
   
--   [Per creare un'applicazione di servizio Reporting Services tramite PowerShell](#bkmk_powershell_create_ssrs_serviceapp)  
+-   [Per creare un'applicazione di servizio Reporting Services utilizzando PowerShell](#bkmk_powershell_create_ssrs_serviceapp)  
   
 -   [Attività correlate](#bkmk_related)  
   
-##  <a name="bkmk_createapp"></a>Creazione di un'applicazione di servizio Reporting Services  
- Per creare applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , è possibile utilizzare Amministrazione centrale SharePoint o script di PowerShell. Per ulteriori informazioni sull'utilizzo di amministrazione centrale SharePoint, vedere la sezione "creare un'applicazione di servizio Reporting Services" in [installare Reporting Services modalità SharePoint per sharepoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). Per uno script di PowerShell di esempio per la creazione di applicazioni di servizio, vedere la sezione relativa a PowerShell più avanti in questo argomento.  
+##  <a name="creating-a-reporting-services-service-application"></a><a name="bkmk_createapp"></a>Creazione di un'applicazione di servizio Reporting Services  
+ Per creare applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , è possibile utilizzare Amministrazione centrale SharePoint o script di PowerShell. Per altre informazioni sull'uso di Amministrazione centrale SharePoint, vedere la sezione "Creare un'applicazione di servizio Reporting Services" in [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). Per uno script di PowerShell di esempio per la creazione di applicazioni di servizio, vedere la sezione relativa a PowerShell più avanti in questo argomento.  
   
-##  <a name="bkmk_associations"></a>Modificare le associazioni dell'applicazione di servizio con un gruppo di proxy  
+##  <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a><a name="bkmk_associations"></a>Modificare le associazioni dell'applicazione di servizio con un gruppo di proxy  
  Nella pagina Nuova per la creazione di un'applicazione di servizio è contenuta la sezione **Associazione applicazione Web**. Questa sezione consente di associare l'applicazione di servizio quando viene creata. Utilizzare i passaggi seguenti per modificare l'associazione e assegnare una configurazione personalizzata all'applicazione di servizio. Lo stesso processo generale può inoltre essere utilizzato per aggiungere il proxy al gruppo predefinito anziché modificare l'associazione dell'applicazione di servizio a un gruppo personalizzato.  
   
 1.  In Gestione applicazioni di Amministrazione centrale SharePoint fare clic su **Configura associazioni applicazione di servizio**.  
@@ -49,7 +48,7 @@ ms.locfileid: "72783157"
   
 5.  Selezionare la casella relativa al proxy e fare clic su **OK**.  
   
-##  <a name="bkmk_editserviceapplication"></a>Modificare le proprietà dell'applicazione di servizio  
+##  <a name="edit-service-application-properties"></a><a name="bkmk_editserviceapplication"></a>Modificare le proprietà dell'applicazione di servizio  
  È possibile riaprire la pagina delle proprietà dell'applicazione di servizio per modificare le proprietà.  
   
 1.  Nel gruppo Gestione applicazioni di amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio**.  
@@ -58,7 +57,7 @@ ms.locfileid: "72783157"
   
 3.  Nella barra multifunzione relativa alle applicazioni di servizio fare clic su **Proprietà**.  
   
-##  <a name="bkmk_powershell_create_ssrs_serviceapp"></a>Per creare un'applicazione di servizio Reporting Services tramite PowerShell  
+##  <a name="to-create-a-reporting-services-service-application-using-powershell"></a><a name="bkmk_powershell_create_ssrs_serviceapp"></a>Per creare un'applicazione di servizio Reporting Services tramite PowerShell  
  È possibile utilizzare PowerShell per creare l'applicazione di servizio e il proxy. Nell'esempio sottostante si presuppone che si conosca quale pool di applicazioni si desidera configurare affinché venga utilizzato dall'applicazione di servizio.  
   
 1.  Aggiungere l'oggetto del pool di applicazioni del nome del pool di applicazioni a una variabile che viene passata in Nuova azione.  
@@ -79,7 +78,7 @@ ms.locfileid: "72783157"
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-##  <a name="bkmk_related"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="bkmk_related"></a> Attività correlate  
   
 |Attività|Collegamento|  
 |----------|----------|  

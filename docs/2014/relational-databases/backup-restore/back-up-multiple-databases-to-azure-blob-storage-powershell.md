@@ -11,18 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783090"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Usare PowerShell per il backup di più database nel servizio Archiviazione BLOB di Azure
   In questo argomento vengono illustrati alcuni script di esempio che possono essere usati per automatizzare i backup nel servizio Archiviazione BLOB di Azure tramite i cmdlet di PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Panoramica dei cmdlet di PowerShell per il backup e il ripristino  
- 
-  `Backup-SqlDatabase` e `Restore-SqlDatabase` sono i due principali cmdlet disponibili per eseguire le operazioni di backup e ripristino. Esistono anche altri cmdlet che possono essere necessari per automatizzare i backup nel servizio di archiviazione BLOB di Azure, ad esempio il set di cmdlet **SqlCredential**. Di seguito è riportato un elenco di cmdlet di PowerShell disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usati nelle operazioni di backup e ripristino:  
+ `Backup-SqlDatabase` e `Restore-SqlDatabase` sono i due principali cmdlet disponibili per eseguire le operazioni di backup e ripristino. Esistono anche altri cmdlet che possono essere necessari per automatizzare i backup nel servizio di archiviazione BLOB di Azure, ad esempio il set di cmdlet **SqlCredential**. Di seguito è riportato un elenco di cmdlet di PowerShell disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usati nelle operazioni di backup e ripristino:  
   
  Backup-SqlDatabase  
  Questo cmdlet viene utilizzato per creare un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -50,7 +49,7 @@ ms.locfileid: "72783090"
   
  Di seguito sono riportate alcune considerazioni per gli script di esempio:  
   
-1.  **Spostamento SQL Server PowerShell percorsi:** Windows PowerShell implementa i cmdlet per esplorare la struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
+1.  **Spostamento all'interno dei percorsi di SQL Server PowerShell:** Windows PowerShell implementa alcuni cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
   
 2.  Cmdlet `Get-ChildItem`: le informazioni restituite da `Get-ChildItem` dipendono dal percorso di PowerShell per SQL Server. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Sempre a titolo di esempio, se il percorso è a livello di oggetto come i database, questo cmdlet restituisce un elenco di oggetti di database.  Per impostazione predefinita il cmdlet `Get-ChildItem` non restituisce oggetti di sistema.  Se si usa il parametro -Force, è possibile visualizzare gli oggetti di sistema.  
   
